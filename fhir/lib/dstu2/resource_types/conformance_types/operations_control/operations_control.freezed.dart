@@ -937,7 +937,9 @@ class _$_Conformance extends _Conformance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceToJson(this);
+    return _$$_ConformanceToJson(
+      this,
+    );
   }
 }
 
@@ -1995,7 +1997,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementToJson(this);
+    return _$$_CapabilityStatementToJson(
+      this,
+    );
   }
 }
 
@@ -2347,7 +2351,9 @@ class _$_ConformanceContact extends _ConformanceContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceContactToJson(this);
+    return _$$_ConformanceContactToJson(
+      this,
+    );
   }
 }
 
@@ -2612,7 +2618,9 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceSoftwareToJson(this);
+    return _$$_ConformanceSoftwareToJson(
+      this,
+    );
   }
 }
 
@@ -2866,7 +2874,9 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceImplementationToJson(this);
+    return _$$_ConformanceImplementationToJson(
+      this,
+    );
   }
 }
 
@@ -3384,7 +3394,9 @@ class _$_ConformanceRest extends _ConformanceRest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestToJson(this);
+    return _$$_ConformanceRestToJson(
+      this,
+    );
   }
 }
 
@@ -3748,7 +3760,9 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceMessagingToJson(this);
+    return _$$_ConformanceMessagingToJson(
+      this,
+    );
   }
 }
 
@@ -4067,7 +4081,9 @@ class _$_ConformanceDocument extends _ConformanceDocument {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceDocumentToJson(this);
+    return _$$_ConformanceDocumentToJson(
+      this,
+    );
   }
 }
 
@@ -4418,7 +4434,9 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestSecurityToJson(this);
+    return _$$_ConformanceRestSecurityToJson(
+      this,
+    );
   }
 }
 
@@ -5119,7 +5137,9 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestResourceToJson(this);
+    return _$$_ConformanceRestResourceToJson(
+      this,
+    );
   }
 }
 
@@ -5444,7 +5464,9 @@ class _$_ConformanceResourceInteraction
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceResourceInteractionToJson(this);
+    return _$$_ConformanceResourceInteractionToJson(
+      this,
+    );
   }
 }
 
@@ -5739,7 +5761,9 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestOperationToJson(this);
+    return _$$_ConformanceRestOperationToJson(
+      this,
+    );
   }
 }
 
@@ -6041,7 +6065,9 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceMessagingEndpointToJson(this);
+    return _$$_ConformanceMessagingEndpointToJson(
+      this,
+    );
   }
 }
 
@@ -6459,7 +6485,9 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceMessagingEventToJson(this);
+    return _$$_ConformanceMessagingEventToJson(
+      this,
+    );
   }
 }
 
@@ -6774,7 +6802,9 @@ class _$_ConformanceSecurityCertificate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceSecurityCertificateToJson(this);
+    return _$$_ConformanceSecurityCertificateToJson(
+      this,
+    );
   }
 }
 
@@ -7039,7 +7069,9 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestInteractionToJson(this);
+    return _$$_ConformanceRestInteractionToJson(
+      this,
+    );
   }
 }
 
@@ -7441,7 +7473,9 @@ class _$_ConformanceResourceSearchParam
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceResourceSearchParamToJson(this);
+    return _$$_ConformanceResourceSearchParamToJson(
+      this,
+    );
   }
 }
 
@@ -8229,7 +8263,9 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionToJson(this);
+    return _$$_OperationDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -8562,7 +8598,9 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionContactToJson(this);
+    return _$$_OperationDefinitionContactToJson(
+      this,
+    );
   }
 }
 
@@ -9013,7 +9051,9 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionParameterToJson(this);
+    return _$$_OperationDefinitionParameterToJson(
+      this,
+    );
   }
 }
 
@@ -9362,7 +9402,9 @@ class _$_OperationDefinitionParameterBinding
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionParameterBindingToJson(this);
+    return _$$_OperationDefinitionParameterBindingToJson(
+      this,
+    );
   }
 }
 
@@ -10089,7 +10131,9 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchParameterToJson(this);
+    return _$$_SearchParameterToJson(
+      this,
+    );
   }
 }
 
@@ -10415,7 +10459,9 @@ class _$_SearchParameterContact extends _SearchParameterContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchParameterContactToJson(this);
+    return _$$_SearchParameterContactToJson(
+      this,
+    );
   }
 }
 

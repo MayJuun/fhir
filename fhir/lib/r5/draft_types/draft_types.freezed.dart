@@ -354,7 +354,9 @@ class _$_Population extends _Population {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PopulationToJson(this);
+    return _$$_PopulationToJson(
+      this,
+    );
   }
 }
 
@@ -721,7 +723,9 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProductShelfLifeToJson(this);
+    return _$$_ProductShelfLifeToJson(
+      this,
+    );
   }
 }
 
@@ -1122,7 +1126,9 @@ class _$_MarketingStatus extends _MarketingStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MarketingStatusToJson(this);
+    return _$$_MarketingStatusToJson(
+      this,
+    );
   }
 }
 

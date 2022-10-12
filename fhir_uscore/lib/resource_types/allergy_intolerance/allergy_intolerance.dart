@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 
+// Project imports:
 import 'allergy_intolerance.enums.dart';
 
 class AllergyIntoleranceUsCore extends Resource {

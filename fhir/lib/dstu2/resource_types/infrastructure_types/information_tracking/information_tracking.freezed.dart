@@ -830,7 +830,9 @@ class _$_Questionnaire extends _Questionnaire {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireToJson(this);
+    return _$$_QuestionnaireToJson(
+      this,
+    );
   }
 }
 
@@ -1392,7 +1394,9 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireGroupToJson(this);
+    return _$$_QuestionnaireGroupToJson(
+      this,
+    );
   }
 }
 
@@ -1907,7 +1911,9 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireGroupQuestionToJson(this);
+    return _$$_QuestionnaireGroupQuestionToJson(
+      this,
+    );
   }
 }
 
@@ -2766,7 +2772,9 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseToJson(this);
+    return _$$_QuestionnaireResponseToJson(
+      this,
+    );
   }
 }
 
@@ -3290,7 +3298,9 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseGroupToJson(this);
+    return _$$_QuestionnaireResponseGroupToJson(
+      this,
+    );
   }
 }
 
@@ -3662,7 +3672,9 @@ class _$_QuestionnaireResponseGroupQuestion
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseGroupQuestionToJson(this);
+    return _$$_QuestionnaireResponseGroupQuestionToJson(
+      this,
+    );
   }
 }
 
@@ -4570,7 +4582,9 @@ class _$_QuestionnaireResponseQuestionAnswer
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseQuestionAnswerToJson(this);
+    return _$$_QuestionnaireResponseQuestionAnswerToJson(
+      this,
+    );
   }
 }
 
@@ -5429,7 +5443,9 @@ class _$_Provenance extends _Provenance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceToJson(this);
+    return _$$_ProvenanceToJson(
+      this,
+    );
   }
 }
 
@@ -5853,7 +5869,9 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceAgentToJson(this);
+    return _$$_ProvenanceAgentToJson(
+      this,
+    );
   }
 }
 
@@ -6290,7 +6308,9 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceEntityToJson(this);
+    return _$$_ProvenanceEntityToJson(
+      this,
+    );
   }
 }
 
@@ -6580,7 +6600,9 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceAgentRelatedAgentToJson(this);
+    return _$$_ProvenanceAgentRelatedAgentToJson(
+      this,
+    );
   }
 }
 
@@ -7128,7 +7150,9 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventToJson(this);
+    return _$$_AuditEventToJson(
+      this,
+    );
   }
 }
 
@@ -7529,7 +7553,9 @@ class _$_AuditEventEvent extends _AuditEventEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventEventToJson(this);
+    return _$$_AuditEventEventToJson(
+      this,
+    );
   }
 }
 
@@ -8087,7 +8113,9 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventParticipantToJson(this);
+    return _$$_AuditEventParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -8436,7 +8464,9 @@ class _$_AuditEventSource extends _AuditEventSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventSourceToJson(this);
+    return _$$_AuditEventSourceToJson(
+      this,
+    );
   }
 }
 
@@ -8958,7 +8988,9 @@ class _$_AuditEventObject extends _AuditEventObject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventObjectToJson(this);
+    return _$$_AuditEventObjectToJson(
+      this,
+    );
   }
 }
 
@@ -9309,7 +9341,9 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventParticipantNetworkToJson(this);
+    return _$$_AuditEventParticipantNetworkToJson(
+      this,
+    );
   }
 }
 
@@ -9604,7 +9638,9 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventObjectDetailToJson(this);
+    return _$$_AuditEventObjectDetailToJson(
+      this,
+    );
   }
 }
 

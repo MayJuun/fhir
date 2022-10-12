@@ -1,11 +1,9 @@
 name: fhir_example
 description: Example for fhir library
-version: 0.3.0-nullsafety.0
-homepage: https://www.fhirfli.dev/
-repository: https://github.com/MayJuun/fhir/tree/main/fhir
 
 environment:
   sdk: '>=2.12.0-0 <3.0.0'
 
 dependencies:
-  fhir: ^0.3.0-nullsafety.0
+  fhir: 
+    path: ../../fhir

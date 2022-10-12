@@ -21,7 +21,9 @@ import 'authenticate/authenticate.dart'
     // ignore: uri_does_not_exist
     if (dart.library.html) 'authenticate/web_authentication.dart';
 
+/// Base Smart FHIR Client used for SMART on FHIR Launches
 class SmartFhirClient extends SecureFhirClient {
+  /// Constructor
   SmartFhirClient({
     required super.fhirUri,
     required super.clientId,
@@ -35,6 +37,8 @@ class SmartFhirClient extends SecureFhirClient {
     this.isDemo = false,
   });
 
+  /// Constructor to assist in building a client from Launch parameters that
+  /// may be present in the launch URL
   factory SmartFhirClient.fromLaunchParameters(
     Uri base,
     Map<String, String> queryParameters, {
@@ -77,12 +81,25 @@ class SmartFhirClient extends SecureFhirClient {
     );
   }
 
+  /// [customUriScheme]
   String? customUriScheme;
+
+  /// [authorizeUrl] - url used for authorization
   FhirUri? authorizeUrl;
+
+  /// [tokenUrl] = url used for obtaining tokens
   FhirUri? tokenUrl;
+
+  /// [responseUrl]
   Uri? responseUrl;
+
+  /// The smart auth client, version is based on if this is a web or mobile app
   BaseAuthentication authClient = createAuthentication();
+
+  /// The actual oauth2 client that
   Client? client;
+
+  /// simple boolean to tell us if this is a demo or not
   bool isDemo;
 
   /// https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html#launch-context-arrives-with-your-access_token
@@ -143,6 +160,8 @@ class SmartFhirClient extends SecureFhirClient {
   /// EHR Launch scenarios.
   String? tenant;
 
+  /// Method to login the client, it does attempt to parse out any of the above
+  /// values that may be passed from the server
   @override
   Future<void> login() async {
     if (!(await isLoggedIn())) {
@@ -221,22 +240,31 @@ class SmartFhirClient extends SecureFhirClient {
     }
   }
 
+  /// Checks if client isSignedIn (same as isLoggedIn), maintained because some
+  /// clients use one and some prefer the other
   @override
   Future<bool> isSignedIn() async =>
       client?.credentials.accessToken != null &&
       (client!.credentials.expiration?.isAfter(DateTime.now()) ?? false);
 
+  /// Checks if client isLoggedIn (same as isSignedIn), maintained because some
+  /// clients use one and some prefer the other
   @override
   Future<bool> isLoggedIn() async =>
       client?.credentials.accessToken != null &&
       (client!.credentials.expiration?.isAfter(DateTime.now()) ?? false);
 
+  /// Logs the client out and deletes any security information that shouldn't be stored
   Future<void> logout() async {
     client?.close();
     client = null;
     authHeaders = null;
   }
 
+  /// Adds authorization headers to the client if needed. All methods check if
+  /// there is a Client as part of the class or if it's null. If it's null
+  /// it calls this method to check for headers, otherwise it assumes that
+  /// any authorization information is within the client object
   @override
   Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {
     headers ??= <String, String>{};
@@ -247,6 +275,10 @@ class SmartFhirClient extends SecureFhirClient {
     return headers;
   }
 
+  /// Sends an HTTP GET request with the given headers to the given URL.
+  /// It checks first to see if there is a client, if there is it uses the client
+  /// assuming it has authorization information, otherwise it calls the [newHeaders]
+  /// method to obtain headers and makes the request
   @override
   Future<http.Response> get(Uri url, {Map<String, String>? headers}) async =>
       client == null
@@ -259,6 +291,10 @@ class SmartFhirClient extends SecureFhirClient {
               headers: headers,
             );
 
+  /// Sends an HTTP PUT request with the given headers to the given URL.
+  /// It checks first to see if there is a client, if there is it uses the client
+  /// assuming it has authorization information, otherwise it calls the [newHeaders]
+  /// method to obtain headers and makes the request
   @override
   Future<http.Response> put(Uri url,
           {Map<String, String>? headers,
@@ -278,27 +314,33 @@ class SmartFhirClient extends SecureFhirClient {
               encoding: encoding,
             );
 
+  /// Sends an HTTP POST request with the given headers to the given URL.
+  /// It checks first to see if there is a client, if there is it uses the client
+  /// assuming it has authorization information, otherwise it calls the [newHeaders]
+  /// method to obtain headers and makes the request
   @override
   Future<http.Response> post(Uri url,
-      {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-    final response = client == null
-        ? await http.post(
-            url,
-            headers: await newHeaders(headers),
-            body: body,
-            encoding: encoding,
-          )
-        : await client!.post(
-            url,
-            headers: headers,
-            body: body,
-            encoding: encoding,
-          );
-    print(response.headers['location']);
-    print(response.headers['Location']);
-    return response;
-  }
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      client == null
+          ? await http.post(
+              url,
+              headers: await newHeaders(headers),
+              body: body,
+              encoding: encoding,
+            )
+          : await client!.post(
+              url,
+              headers: headers,
+              body: body,
+              encoding: encoding,
+            );
 
+  /// Sends an HTTP DELETE request with the given headers to the given URL.
+  /// It checks first to see if there is a client, if there is it uses the client
+  /// assuming it has authorization information, otherwise it calls the [newHeaders]
+  /// method to obtain headers and makes the request
   @override
   Future<http.Response> delete(Uri url,
           {Map<String, String>? headers,
@@ -318,6 +360,10 @@ class SmartFhirClient extends SecureFhirClient {
               encoding: encoding,
             );
 
+  /// Sends an HTTP PATCH request with the given headers to the given URL.
+  /// It checks first to see if there is a client, if there is it uses the client
+  /// assuming it has authorization information, otherwise it calls the [newHeaders]
+  /// method to obtain headers and makes the request
   @override
   Future<http.Response> patch(Uri url,
           {Map<String, String>? headers,
@@ -337,6 +383,8 @@ class SmartFhirClient extends SecureFhirClient {
               encoding: encoding,
             );
 
+  /// Method for requesting the capability Statement (or Conformance Statement)
+  /// Endpoint and taking out the Authentication and Token endpoints
   Future<Map<String, dynamic>> _getCapabilityStatement() async {
     /// Request for the CapabilityStatement (or Conformance)
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
@@ -391,6 +439,7 @@ class SmartFhirClient extends SecureFhirClient {
     return null;
   }
 
+  /// Map of the error codes to check when making requests
   static const _errorCodeMap = {
     400: 'Bad Request',
     401: 'Not Authorized',

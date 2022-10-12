@@ -369,7 +369,9 @@ class _$_Meta extends _Meta {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MetaToJson(this);
+    return _$$_MetaToJson(
+      this,
+    );
   }
 }
 
@@ -699,7 +701,9 @@ class _$_Reference extends _Reference {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReferenceToJson(this);
+    return _$$_ReferenceToJson(
+      this,
+    );
   }
 }
 
@@ -10558,7 +10562,9 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionToJson(this);
+    return _$$_ElementDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -12055,7 +12061,9 @@ class _$_Narrative extends _Narrative {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NarrativeToJson(this);
+    return _$$_NarrativeToJson(
+      this,
+    );
   }
 }
 
@@ -12441,7 +12449,9 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionSlicingToJson(this);
+    return _$$_ElementDefinitionSlicingToJson(
+      this,
+    );
   }
 }
 
@@ -12807,7 +12817,9 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionBaseToJson(this);
+    return _$$_ElementDefinitionBaseToJson(
+      this,
+    );
   }
 }
 
@@ -13175,7 +13187,9 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionTypeToJson(this);
+    return _$$_ElementDefinitionTypeToJson(
+      this,
+    );
   }
 }
 
@@ -13348,7 +13362,9 @@ class _$_TypeCodeExtension extends _TypeCodeExtension {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TypeCodeExtensionToJson(this);
+    return _$$_TypeCodeExtensionToJson(
+      this,
+    );
   }
 }
 
@@ -13815,7 +13831,9 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionConstraintToJson(this);
+    return _$$_ElementDefinitionConstraintToJson(
+      this,
+    );
   }
 }
 
@@ -14215,7 +14233,9 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionBindingToJson(this);
+    return _$$_ElementDefinitionBindingToJson(
+      this,
+    );
   }
 }
 
@@ -14608,7 +14628,9 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionMappingToJson(this);
+    return _$$_ElementDefinitionMappingToJson(
+      this,
+    );
   }
 }
 

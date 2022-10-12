@@ -809,7 +809,9 @@ class _$_Group extends _Group {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupToJson(this);
+    return _$$_GroupToJson(
+      this,
+    );
   }
 }
 
@@ -1290,7 +1292,9 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupCharacteristicToJson(this);
+    return _$$_GroupCharacteristicToJson(
+      this,
+    );
   }
 }
 
@@ -1550,7 +1554,9 @@ class _$_GroupMember extends _GroupMember {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupMemberToJson(this);
+    return _$$_GroupMemberToJson(
+      this,
+    );
   }
 }
 
@@ -2721,7 +2727,9 @@ class _$_Patient extends _Patient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientToJson(this);
+    return _$$_PatientToJson(
+      this,
+    );
   }
 }
 
@@ -3208,7 +3216,9 @@ class _$_PatientContact extends _PatientContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientContactToJson(this);
+    return _$$_PatientContactToJson(
+      this,
+    );
   }
 }
 
@@ -3443,7 +3453,9 @@ class _$_PatientAnimal extends _PatientAnimal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientAnimalToJson(this);
+    return _$$_PatientAnimalToJson(
+      this,
+    );
   }
 }
 
@@ -3654,7 +3666,9 @@ class _$_PatientCommunication extends _PatientCommunication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientCommunicationToJson(this);
+    return _$$_PatientCommunicationToJson(
+      this,
+    );
   }
 }
 
@@ -3864,7 +3878,9 @@ class _$_PatientLink extends _PatientLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientLinkToJson(this);
+    return _$$_PatientLinkToJson(
+      this,
+    );
   }
 }
 
@@ -4657,7 +4673,9 @@ class _$_Person extends _Person {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonToJson(this);
+    return _$$_PersonToJson(
+      this,
+    );
   }
 }
 
@@ -4941,7 +4959,9 @@ class _$_PersonLink extends _PersonLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonLinkToJson(this);
+    return _$$_PersonLinkToJson(
+      this,
+    );
   }
 }
 
@@ -5732,7 +5752,9 @@ class _$_Practitioner extends _Practitioner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerToJson(this);
+    return _$$_PractitionerToJson(
+      this,
+    );
   }
 }
 
@@ -6062,7 +6084,9 @@ class _$_PractitionerQualification extends _PractitionerQualification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerQualificationToJson(this);
+    return _$$_PractitionerQualificationToJson(
+      this,
+    );
   }
 }
 
@@ -6955,7 +6979,9 @@ class _$_PractitionerRole extends _PractitionerRole {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerRoleToJson(this);
+    return _$$_PractitionerRoleToJson(
+      this,
+    );
   }
 }
 
@@ -7392,7 +7418,9 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerRoleAvailableTimeToJson(this);
+    return _$$_PractitionerRoleAvailableTimeToJson(
+      this,
+    );
   }
 }
 
@@ -7638,7 +7666,9 @@ class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerRoleNotAvailableToJson(this);
+    return _$$_PractitionerRoleNotAvailableToJson(
+      this,
+    );
   }
 }
 
@@ -8468,7 +8498,9 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelatedPersonToJson(this);
+    return _$$_RelatedPersonToJson(
+      this,
+    );
   }
 }
 

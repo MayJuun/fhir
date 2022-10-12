@@ -20,6 +20,7 @@ Future<Resource?> request(SmartFhirClient client,
 
         final response = await request2.request();
         print('Response from read:\n${response.toJson()}');
+        return response;
       }
     } else {
       print('Patient to be uploaded:\n${_newPatient.toJson()}');

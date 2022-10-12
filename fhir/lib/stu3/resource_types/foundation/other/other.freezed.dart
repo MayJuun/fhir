@@ -591,7 +591,9 @@ class _$_Basic extends _Basic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BasicToJson(this);
+    return _$$_BasicToJson(
+      this,
+    );
   }
 }
 
@@ -1216,7 +1218,9 @@ class _$_Binary extends _Binary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BinaryToJson(this);
+    return _$$_BinaryToJson(
+      this,
+    );
   }
 }
 
@@ -1924,7 +1928,9 @@ class _$_Bundle extends _Bundle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleToJson(this);
+    return _$$_BundleToJson(
+      this,
+    );
   }
 }
 
@@ -2216,7 +2222,9 @@ class _$_BundleLink extends _BundleLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleLinkToJson(this);
+    return _$$_BundleLinkToJson(
+      this,
+    );
   }
 }
 
@@ -2541,7 +2549,9 @@ class _$_BundleEntry extends _BundleEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleEntryToJson(this);
+    return _$$_BundleEntryToJson(
+      this,
+    );
   }
 }
 
@@ -2788,7 +2798,9 @@ class _$_BundleSearch extends _BundleSearch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleSearchToJson(this);
+    return _$$_BundleSearchToJson(
+      this,
+    );
   }
 }
 
@@ -3243,7 +3255,9 @@ class _$_BundleRequest extends _BundleRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleRequestToJson(this);
+    return _$$_BundleRequestToJson(
+      this,
+    );
   }
 }
 
@@ -3642,7 +3656,9 @@ class _$_BundleResponse extends _BundleResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleResponseToJson(this);
+    return _$$_BundleResponseToJson(
+      this,
+    );
   }
 }
 
@@ -4204,7 +4220,9 @@ class _$_Linkage extends _Linkage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LinkageToJson(this);
+    return _$$_LinkageToJson(
+      this,
+    );
   }
 }
 
@@ -4457,7 +4475,9 @@ class _$_LinkageItem extends _LinkageItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LinkageItemToJson(this);
+    return _$$_LinkageItemToJson(
+      this,
+    );
   }
 }
 
@@ -5619,7 +5639,9 @@ class _$_Media extends _Media {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaToJson(this);
+    return _$$_MediaToJson(
+      this,
+    );
   }
 }
 
@@ -6565,7 +6587,9 @@ class _$_MessageHeader extends _MessageHeader {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageHeaderToJson(this);
+    return _$$_MessageHeaderToJson(
+      this,
+    );
   }
 }
 
@@ -6909,7 +6933,9 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageHeaderDestinationToJson(this);
+    return _$$_MessageHeaderDestinationToJson(
+      this,
+    );
   }
 }
 
@@ -7292,7 +7318,9 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageHeaderSourceToJson(this);
+    return _$$_MessageHeaderSourceToJson(
+      this,
+    );
   }
 }
 
@@ -7586,7 +7614,9 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageHeaderResponseToJson(this);
+    return _$$_MessageHeaderResponseToJson(
+      this,
+    );
   }
 }
 
@@ -8052,7 +8082,9 @@ class _$_OperationOutcome extends _OperationOutcome {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationOutcomeToJson(this);
+    return _$$_OperationOutcomeToJson(
+      this,
+    );
   }
 }
 
@@ -8522,7 +8554,9 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationOutcomeIssueToJson(this);
+    return _$$_OperationOutcomeIssueToJson(
+      this,
+    );
   }
 }
 
@@ -9016,7 +9050,9 @@ class _$_Parameters extends _Parameters {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ParametersToJson(this);
+    return _$$_ParametersToJson(
+      this,
+    );
   }
 }
 
@@ -11372,7 +11408,9 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ParametersParameterToJson(this);
+    return _$$_ParametersParameterToJson(
+      this,
+    );
   }
 }
 
@@ -12417,7 +12455,9 @@ class _$_Subscription extends _Subscription {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubscriptionToJson(this);
+    return _$$_SubscriptionToJson(
+      this,
+    );
   }
 }
 
@@ -12841,7 +12881,9 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubscriptionChannelToJson(this);
+    return _$$_SubscriptionChannelToJson(
+      this,
+    );
   }
 }
 

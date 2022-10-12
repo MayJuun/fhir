@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 
+// Project imports:
 import 'observation.enums.dart';
 
 class ObservationUsCore extends Resource {
@@ -161,7 +163,7 @@ class ObservationUsCore extends Resource {
         ),
       );
 
-  factory ObservationUsCore.PediatricHeadOccipitalFrontalCircumferencePercentile({
+  factory ObservationUsCore.pediatricHeadOccipitalFrontalCircumferencePercentile({
     required Reference subject,
     required double headCircumferencePercentile,
   }) =>

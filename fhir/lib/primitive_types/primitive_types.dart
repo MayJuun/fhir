@@ -2,6 +2,7 @@ export 'base64binary.dart';
 export 'boolean.dart';
 export 'canonical.dart';
 export 'code.dart';
+export 'comparator.dart';
 export 'date.dart';
 export 'decimal.dart';
 export 'fhir_date_time.dart';

@@ -11,7 +11,10 @@ import 'base_authentication.dart';
 
 BaseAuthentication createAuthentication() => WebAuthentication();
 
+/// WebAuthentication Class
 class WebAuthentication implements BaseAuthentication {
+  /// Only method is to authenticate, this launches another window and redirects
+  /// so you will need to remember to put a redirect.html file in your web folder
   @override
   Future<String> authenticate({
     required Uri authorizationUrl,

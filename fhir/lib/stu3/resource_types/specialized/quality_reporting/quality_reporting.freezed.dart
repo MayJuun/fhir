@@ -2123,7 +2123,9 @@ class _$_Measure extends _Measure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureToJson(this);
+    return _$$_MeasureToJson(
+      this,
+    );
   }
 }
 
@@ -2701,7 +2703,9 @@ class _$_MeasureGroup extends _MeasureGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureGroupToJson(this);
+    return _$$_MeasureGroupToJson(
+      this,
+    );
   }
 }
 
@@ -3070,7 +3074,9 @@ class _$_MeasurePopulation extends _MeasurePopulation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasurePopulationToJson(this);
+    return _$$_MeasurePopulationToJson(
+      this,
+    );
   }
 }
 
@@ -3358,7 +3364,9 @@ class _$_MeasureStratifier extends _MeasureStratifier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureStratifierToJson(this);
+    return _$$_MeasureStratifierToJson(
+      this,
+    );
   }
 }
 
@@ -3665,7 +3673,9 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureSupplementalDataToJson(this);
+    return _$$_MeasureSupplementalDataToJson(
+      this,
+    );
   }
 }
 
@@ -4494,7 +4504,9 @@ class _$_MeasureReport extends _MeasureReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureReportToJson(this);
+    return _$$_MeasureReportToJson(
+      this,
+    );
   }
 }
 
@@ -4839,7 +4851,9 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureReportGroupToJson(this);
+    return _$$_MeasureReportGroupToJson(
+      this,
+    );
   }
 }
 
@@ -5129,7 +5143,9 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureReportPopulationToJson(this);
+    return _$$_MeasureReportPopulationToJson(
+      this,
+    );
   }
 }
 
@@ -5322,7 +5338,9 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureReportStratifierToJson(this);
+    return _$$_MeasureReportStratifierToJson(
+      this,
+    );
   }
 }
 
@@ -5584,7 +5602,9 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureReportStratumToJson(this);
+    return _$$_MeasureReportStratumToJson(
+      this,
+    );
   }
 }
 
@@ -5876,7 +5896,9 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasureReportPopulation1ToJson(this);
+    return _$$_MeasureReportPopulation1ToJson(
+      this,
+    );
   }
 }
 

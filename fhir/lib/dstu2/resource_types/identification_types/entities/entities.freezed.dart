@@ -902,7 +902,9 @@ class _$_Location extends _Location {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationToJson(this);
+    return _$$_LocationToJson(
+      this,
+    );
   }
 }
 
@@ -1356,7 +1358,9 @@ class _$_LocationPosition extends _LocationPosition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationPositionToJson(this);
+    return _$$_LocationPositionToJson(
+      this,
+    );
   }
 }
 
@@ -2001,7 +2005,9 @@ class _$_Substance extends _Substance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceToJson(this);
+    return _$$_SubstanceToJson(
+      this,
+    );
   }
 }
 
@@ -2379,7 +2385,9 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceInstanceToJson(this);
+    return _$$_SubstanceInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -2658,7 +2666,9 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceIngredientToJson(this);
+    return _$$_SubstanceIngredientToJson(
+      this,
+    );
   }
 }
 
@@ -3462,7 +3472,9 @@ class _$_Person extends _Person {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonToJson(this);
+    return _$$_PersonToJson(
+      this,
+    );
   }
 }
 
@@ -3831,7 +3843,9 @@ class _$_PersonLink extends _PersonLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonLinkToJson(this);
+    return _$$_PersonLinkToJson(
+      this,
+    );
   }
 }
 
@@ -4838,7 +4852,9 @@ class _$_Contract extends _Contract {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractToJson(this);
+    return _$$_ContractToJson(
+      this,
+    );
   }
 }
 
@@ -5188,7 +5204,9 @@ class _$_ContractActor extends _ContractActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractActorToJson(this);
+    return _$$_ContractActorToJson(
+      this,
+    );
   }
 }
 
@@ -5785,7 +5803,9 @@ class _$_ContractValuedItem extends _ContractValuedItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractValuedItemToJson(this);
+    return _$$_ContractValuedItemToJson(
+      this,
+    );
   }
 }
 
@@ -6106,7 +6126,9 @@ class _$_ContractSigner extends _ContractSigner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractSignerToJson(this);
+    return _$$_ContractSignerToJson(
+      this,
+    );
   }
 }
 
@@ -6718,7 +6740,9 @@ class _$_ContractTerm extends _ContractTerm {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractTermToJson(this);
+    return _$$_ContractTermToJson(
+      this,
+    );
   }
 }
 
@@ -7021,7 +7045,9 @@ class _$_ContractTermActor extends _ContractTermActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractTermActorToJson(this);
+    return _$$_ContractTermActorToJson(
+      this,
+    );
   }
 }
 
@@ -7298,7 +7324,9 @@ class _$_ContractFriendly extends _ContractFriendly {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractFriendlyToJson(this);
+    return _$$_ContractFriendlyToJson(
+      this,
+    );
   }
 }
 
@@ -7574,7 +7602,9 @@ class _$_ContractLegal extends _ContractLegal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractLegalToJson(this);
+    return _$$_ContractLegalToJson(
+      this,
+    );
   }
 }
 
@@ -7850,7 +7880,9 @@ class _$_ContractRule extends _ContractRule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractRuleToJson(this);
+    return _$$_ContractRuleToJson(
+      this,
+    );
   }
 }
 

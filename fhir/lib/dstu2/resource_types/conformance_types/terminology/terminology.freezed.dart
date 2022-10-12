@@ -1302,7 +1302,9 @@ class _$_ValueSet extends _ValueSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetToJson(this);
+    return _$$_ValueSetToJson(
+      this,
+    );
   }
 }
 
@@ -1726,7 +1728,9 @@ class _$_ValueSetContact extends _ValueSetContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetContactToJson(this);
+    return _$$_ValueSetContactToJson(
+      this,
+    );
   }
 }
 
@@ -2155,7 +2159,9 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetCodeSystemToJson(this);
+    return _$$_ValueSetCodeSystemToJson(
+      this,
+    );
   }
 }
 
@@ -2622,7 +2628,9 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetCodeSystemConceptToJson(this);
+    return _$$_ValueSetCodeSystemConceptToJson(
+      this,
+    );
   }
 }
 
@@ -3002,7 +3010,9 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetConceptDesignationToJson(this);
+    return _$$_ValueSetConceptDesignationToJson(
+      this,
+    );
   }
 }
 
@@ -3333,7 +3343,9 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetComposeToJson(this);
+    return _$$_ValueSetComposeToJson(
+      this,
+    );
   }
 }
 
@@ -3742,7 +3754,9 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetComposeIncludeToJson(this);
+    return _$$_ValueSetComposeIncludeToJson(
+      this,
+    );
   }
 }
 
@@ -4136,7 +4150,9 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetIncludeConceptToJson(this);
+    return _$$_ValueSetIncludeConceptToJson(
+      this,
+    );
   }
 }
 
@@ -4555,7 +4571,9 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetIncludeFilterToJson(this);
+    return _$$_ValueSetIncludeFilterToJson(
+      this,
+    );
   }
 }
 
@@ -5089,7 +5107,9 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetExpansionToJson(this);
+    return _$$_ValueSetExpansionToJson(
+      this,
+    );
   }
 }
 
@@ -5741,7 +5761,9 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetExpansionParameterToJson(this);
+    return _$$_ValueSetExpansionParameterToJson(
+      this,
+    );
   }
 }
 
@@ -6327,7 +6349,9 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetExpansionContainsToJson(this);
+    return _$$_ValueSetExpansionContainsToJson(
+      this,
+    );
   }
 }
 
@@ -7626,7 +7650,9 @@ class _$_ConceptMap extends _ConceptMap {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapToJson(this);
+    return _$$_ConceptMapToJson(
+      this,
+    );
   }
 }
 
@@ -8015,7 +8041,9 @@ class _$_ConceptMapContact extends _ConceptMapContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapContactToJson(this);
+    return _$$_ConceptMapContactToJson(
+      this,
+    );
   }
 }
 
@@ -8325,7 +8353,9 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapElementToJson(this);
+    return _$$_ConceptMapElementToJson(
+      this,
+    );
   }
 }
 
@@ -8797,7 +8827,9 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapElementTargetToJson(this);
+    return _$$_ConceptMapElementTargetToJson(
+      this,
+    );
   }
 }
 
@@ -9097,7 +9129,9 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapTargetDependsOnToJson(this);
+    return _$$_ConceptMapTargetDependsOnToJson(
+      this,
+    );
   }
 }
 
@@ -10144,7 +10178,9 @@ class _$_NamingSystem extends _NamingSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NamingSystemToJson(this);
+    return _$$_NamingSystemToJson(
+      this,
+    );
   }
 }
 
@@ -10505,7 +10541,9 @@ class _$_NamingSystemContact extends _NamingSystemContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NamingSystemContactToJson(this);
+    return _$$_NamingSystemContactToJson(
+      this,
+    );
   }
 }
 
@@ -10910,7 +10948,9 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NamingSystemUniqueIdToJson(this);
+    return _$$_NamingSystemUniqueIdToJson(
+      this,
+    );
   }
 }
 

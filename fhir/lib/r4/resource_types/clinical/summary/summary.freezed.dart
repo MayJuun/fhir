@@ -1122,7 +1122,9 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdverseEventToJson(this);
+    return _$$_AdverseEventToJson(
+      this,
+    );
   }
 }
 
@@ -1498,7 +1500,9 @@ class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdverseEventSuspectEntityToJson(this);
+    return _$$_AdverseEventSuspectEntityToJson(
+      this,
+    );
   }
 }
 
@@ -1864,7 +1868,9 @@ class _$_AdverseEventCausality extends _AdverseEventCausality {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdverseEventCausalityToJson(this);
+    return _$$_AdverseEventCausalityToJson(
+      this,
+    );
   }
 }
 
@@ -3118,7 +3124,9 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AllergyIntoleranceToJson(this);
+    return _$$_AllergyIntoleranceToJson(
+      this,
+    );
   }
 }
 
@@ -3730,7 +3738,9 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AllergyIntoleranceReactionToJson(this);
+    return _$$_AllergyIntoleranceReactionToJson(
+      this,
+    );
   }
 }
 
@@ -4978,7 +4988,9 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClinicalImpressionToJson(this);
+    return _$$_ClinicalImpressionToJson(
+      this,
+    );
   }
 }
 
@@ -5369,7 +5381,9 @@ class _$_ClinicalImpressionInvestigation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClinicalImpressionInvestigationToJson(this);
+    return _$$_ClinicalImpressionInvestigationToJson(
+      this,
+    );
   }
 }
 
@@ -5707,7 +5721,9 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClinicalImpressionFindingToJson(this);
+    return _$$_ClinicalImpressionFindingToJson(
+      this,
+    );
   }
 }
 
@@ -7046,7 +7062,9 @@ class _$_Condition extends _Condition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConditionToJson(this);
+    return _$$_ConditionToJson(
+      this,
+    );
   }
 }
 
@@ -7473,7 +7491,9 @@ class _$_ConditionStage extends _ConditionStage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConditionStageToJson(this);
+    return _$$_ConditionStageToJson(
+      this,
+    );
   }
 }
 
@@ -7737,7 +7757,9 @@ class _$_ConditionEvidence extends _ConditionEvidence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConditionEvidenceToJson(this);
+    return _$$_ConditionEvidenceToJson(
+      this,
+    );
   }
 }
 
@@ -8698,7 +8720,9 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DetectedIssueToJson(this);
+    return _$$_DetectedIssueToJson(
+      this,
+    );
   }
 }
 
@@ -9050,7 +9074,9 @@ class _$_DetectedIssueEvidence extends _DetectedIssueEvidence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DetectedIssueEvidenceToJson(this);
+    return _$$_DetectedIssueEvidenceToJson(
+      this,
+    );
   }
 }
 
@@ -9378,7 +9404,9 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DetectedIssueMitigationToJson(this);
+    return _$$_DetectedIssueMitigationToJson(
+      this,
+    );
   }
 }
 
@@ -10901,7 +10929,9 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FamilyMemberHistoryToJson(this);
+    return _$$_FamilyMemberHistoryToJson(
+      this,
+    );
   }
 }
 
@@ -11568,7 +11598,9 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FamilyMemberHistoryConditionToJson(this);
+    return _$$_FamilyMemberHistoryConditionToJson(
+      this,
+    );
   }
 }
 
@@ -13077,7 +13109,9 @@ class _$_Procedure extends _Procedure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcedureToJson(this);
+    return _$$_ProcedureToJson(
+      this,
+    );
   }
 }
 
@@ -13523,7 +13557,9 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcedurePerformerToJson(this);
+    return _$$_ProcedurePerformerToJson(
+      this,
+    );
   }
 }
 
@@ -13799,7 +13835,9 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcedureFocalDeviceToJson(this);
+    return _$$_ProcedureFocalDeviceToJson(
+      this,
+    );
   }
 }
 

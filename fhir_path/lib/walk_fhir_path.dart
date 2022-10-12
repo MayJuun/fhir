@@ -1,12 +1,14 @@
 // Package imports:
+import 'package:antlr4/antlr4.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
 import 'package:fhir/stu3.dart' as stu3;
-import 'package:petitparser/core.dart';
 
 // Project imports:
 import 'fhir_path.dart';
+
+// Project imports:
 
 /// Start here! This is where the fun begins. This is a bit confusing, so we'll
 /// explain the arguments that can be passed.
@@ -84,46 +86,27 @@ List<dynamic> walkFhirPath({
 }
 
 /// Parse a FHIRPath for repeated use with different inputs later.
-ParserList parseFhirPath(String pathExpression) {
+ExpressionContext parseFhirPath(String pathExpression) {
   try {
-    final ast = lexer().parse(pathExpression).value;
-    if (ast is ParserList) {
-      if (ast.isEmpty) {
-        return ast;
-      } else {
-        // Check for combination of IdentifierParser followed by ParenthesisParser
-        // This indicates invalid function name
-        if (ast.value.length > 1) {
-          for (int i = 0; i < ast.value.length - 1; i++) {
-            if ((ast.value[i] is IdentifierParser) &&
-                (ast.value[i + 1] is ParenthesesParser)) {
-              final String functionName =
-                  (ast.value[i] as IdentifierParser).value;
-              throw FhirPathInvalidExpressionException(
-                  'Unknown function: $functionName',
-                  pathExpression: pathExpression);
-            }
-          }
-        }
-
-        return ast;
-      }
-    } else {
-      throw FhirPathInvalidExpressionException(
-          'Parsing did not result in ParserList',
-          pathExpression: pathExpression);
-    }
+    final input = InputStream.fromString(pathExpression);
+    final lexer = FhirPathLexer(input);
+    final tokens = CommonTokenStream(lexer);
+    final parser = FhirPathParser(tokens);
+    parser.buildParseTree = true;
+    final tree = parser.expression();
+    return tree;
   } catch (error) {
-    if (error is ParserException) {
-      throw FhirPathInvalidExpressionException(
-        'Expression could not be parsed: ${error.message}',
-        pathExpression: pathExpression,
-        offset: error.offset,
-        cause: error,
-      );
-    } else {
-      throw error;
-    }
+    // print(error.runtimeType);
+    // if (error is ParserException) {
+    //   throw FhirPathInvalidExpressionException(
+    //     'Expression could not be parsed: ${error.message}',
+    //     pathExpression: pathExpression,
+    //     offset: error.offset,
+    //     cause: error,
+    //   );
+    // } else {
+    throw error;
+    // }
   }
 }
 
@@ -136,7 +119,7 @@ ParserList parseFhirPath(String pathExpression) {
 List<dynamic> executeFhirPath({
   ///
   required Map<String, dynamic>? context,
-  required ParserList parsedFhirPath,
+  required ExpressionContext parsedFhirPath,
   required String pathExpression,
   Map<String, dynamic>? resource,
   Map<String, dynamic>? rootResource,
@@ -166,10 +149,11 @@ List<dynamic> executeFhirPath({
   passedEnvironment.version = version;
 
   try {
-    if (parsedFhirPath.isEmpty) {
+    if (parsedFhirPath.childCount == 0) {
       return [];
     } else {
-      return parsedFhirPath.execute([context], passedEnvironment);
+      return FhirPathDartVisitor(context, passedEnvironment)
+          .execute(parsedFhirPath);
     }
   } catch (error) {
     if (error is FhirPathException) {

@@ -1,5 +1,12 @@
 # fhir_auth
 
+## [0.9.0-2]
+
+* Successfully does external and internal web launches to Epic for patients and for users, although for Epic you do need to ensure that you include the proper launch parameters if you're doing a patient context
+* Updated dependencies
+* Internal launch for patients and users for Epic and Meld (HAPI)
+* External launch for patients and users for Google, Meld (HAPI), and Epic
+
 ## [0.9.0-1]
 
 * Successfully does external and internal web launches to Epic for patients

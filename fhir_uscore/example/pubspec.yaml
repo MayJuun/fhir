@@ -1,0 +1,9 @@
+name: fhir_example
+description: Example for fhir library
+
+environment:
+  sdk: '>=2.12.0-0 <3.0.0'
+
+dependencies:
+  fhir_uscore: 
+    path: ../../fhir_uscore

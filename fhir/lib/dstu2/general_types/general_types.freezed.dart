@@ -292,7 +292,9 @@ class _$_Period extends _Period {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PeriodToJson(this);
+    return _$$_PeriodToJson(
+      this,
+    );
   }
 }
 
@@ -771,7 +773,9 @@ class _$_Coding extends _Coding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodingToJson(this);
+    return _$$_CodingToJson(
+      this,
+    );
   }
 }
 
@@ -1041,7 +1045,9 @@ class _$_Range extends _Range {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RangeToJson(this);
+    return _$$_RangeToJson(
+      this,
+    );
   }
 }
 
@@ -1529,7 +1535,9 @@ class _$_Quantity extends _Quantity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuantityToJson(this);
+    return _$$_QuantityToJson(
+      this,
+    );
   }
 }
 
@@ -2203,7 +2211,9 @@ class _$_Attachment extends _Attachment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AttachmentToJson(this);
+    return _$$_AttachmentToJson(
+      this,
+    );
   }
 }
 
@@ -2496,7 +2506,9 @@ class _$_Ratio extends _Ratio {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RatioToJson(this);
+    return _$$_RatioToJson(
+      this,
+    );
   }
 }
 
@@ -2895,7 +2907,9 @@ class _$_Annotation extends _Annotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AnnotationToJson(this);
+    return _$$_AnnotationToJson(
+      this,
+    );
   }
 }
 
@@ -3444,7 +3458,9 @@ class _$_SampledData extends _SampledData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SampledDataToJson(this);
+    return _$$_SampledDataToJson(
+      this,
+    );
   }
 }
 
@@ -3771,7 +3787,9 @@ class _$_CodeableConcept extends _CodeableConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeableConceptToJson(this);
+    return _$$_CodeableConceptToJson(
+      this,
+    );
   }
 }
 
@@ -4243,7 +4261,9 @@ class _$_Identifier extends _Identifier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IdentifierToJson(this);
+    return _$$_IdentifierToJson(
+      this,
+    );
   }
 }
 
@@ -4759,7 +4779,9 @@ class _$_Signature extends _Signature {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SignatureToJson(this);
+    return _$$_SignatureToJson(
+      this,
+    );
   }
 }
 
@@ -5119,7 +5141,9 @@ class _$_Timing extends _Timing {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TimingToJson(this);
+    return _$$_TimingToJson(
+      this,
+    );
   }
 }
 
@@ -5855,7 +5879,9 @@ class _$_Address extends _Address {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddressToJson(this);
+    return _$$_AddressToJson(
+      this,
+    );
   }
 }
 
@@ -6497,7 +6523,9 @@ class _$_HumanName extends _HumanName {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HumanNameToJson(this);
+    return _$$_HumanNameToJson(
+      this,
+    );
   }
 }
 
@@ -7013,7 +7041,9 @@ class _$_ContactPoint extends _ContactPoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContactPointToJson(this);
+    return _$$_ContactPointToJson(
+      this,
+    );
   }
 }
 
@@ -7926,7 +7956,9 @@ class _$_TimingRepeat extends _TimingRepeat {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TimingRepeatToJson(this);
+    return _$$_TimingRepeatToJson(
+      this,
+    );
   }
 }
 

@@ -1,7 +1,9 @@
-import 'package:http/http.dart';
+// Package imports:
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
+import 'package:http/http.dart';
 
+// Project imports:
 import 'us_core_request_type.dart';
 
 Future<Resource?> makeRequest(

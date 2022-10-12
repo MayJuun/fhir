@@ -188,7 +188,9 @@ class _$_BackboneType extends _BackboneType {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BackboneTypeToJson(this);
+    return _$$_BackboneTypeToJson(
+      this,
+    );
   }
 }
 

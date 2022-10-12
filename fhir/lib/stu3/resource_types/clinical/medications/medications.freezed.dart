@@ -1214,7 +1214,9 @@ class _$_Immunization extends _Immunization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationToJson(this);
+    return _$$_ImmunizationToJson(
+      this,
+    );
   }
 }
 
@@ -1526,7 +1528,9 @@ class _$_ImmunizationPractitioner extends _ImmunizationPractitioner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationPractitionerToJson(this);
+    return _$$_ImmunizationPractitionerToJson(
+      this,
+    );
   }
 }
 
@@ -1705,7 +1709,9 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationExplanationToJson(this);
+    return _$$_ImmunizationExplanationToJson(
+      this,
+    );
   }
 }
 
@@ -1971,7 +1977,9 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationReactionToJson(this);
+    return _$$_ImmunizationReactionToJson(
+      this,
+    );
   }
 }
 
@@ -2452,7 +2460,9 @@ class _$_ImmunizationVaccinationProtocol
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationVaccinationProtocolToJson(this);
+    return _$$_ImmunizationVaccinationProtocolToJson(
+      this,
+    );
   }
 }
 
@@ -3007,7 +3017,9 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationRecommendationToJson(this);
+    return _$$_ImmunizationRecommendationToJson(
+      this,
+    );
   }
 }
 
@@ -3511,7 +3523,9 @@ class _$_ImmunizationRecommendationRecommendation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationRecommendationRecommendationToJson(this);
+    return _$$_ImmunizationRecommendationRecommendationToJson(
+      this,
+    );
   }
 }
 
@@ -3764,7 +3778,9 @@ class _$_ImmunizationRecommendationDateCriterion
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationRecommendationDateCriterionToJson(this);
+    return _$$_ImmunizationRecommendationDateCriterionToJson(
+      this,
+    );
   }
 }
 
@@ -4101,7 +4117,9 @@ class _$_ImmunizationRecommendationProtocol
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationRecommendationProtocolToJson(this);
+    return _$$_ImmunizationRecommendationProtocolToJson(
+      this,
+    );
   }
 }
 
@@ -4905,7 +4923,9 @@ class _$_Medication extends _Medication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationToJson(this);
+    return _$$_MedicationToJson(
+      this,
+    );
   }
 }
 
@@ -5261,7 +5281,9 @@ class _$_MedicationIngredient extends _MedicationIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationIngredientToJson(this);
+    return _$$_MedicationIngredientToJson(
+      this,
+    );
   }
 }
 
@@ -5481,7 +5503,9 @@ class _$_MedicationPackage extends _MedicationPackage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationPackageToJson(this);
+    return _$$_MedicationPackageToJson(
+      this,
+    );
   }
 }
 
@@ -5708,7 +5732,9 @@ class _$_MedicationContent extends _MedicationContent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationContentToJson(this);
+    return _$$_MedicationContentToJson(
+      this,
+    );
   }
 }
 
@@ -5944,7 +5970,9 @@ class _$_MedicationBatch extends _MedicationBatch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationBatchToJson(this);
+    return _$$_MedicationBatchToJson(
+      this,
+    );
   }
 }
 
@@ -7117,7 +7145,9 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationAdministrationToJson(this);
+    return _$$_MedicationAdministrationToJson(
+      this,
+    );
   }
 }
 
@@ -7423,7 +7453,9 @@ class _$_MedicationAdministrationPerformer
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationAdministrationPerformerToJson(this);
+    return _$$_MedicationAdministrationPerformerToJson(
+      this,
+    );
   }
 }
 
@@ -7806,7 +7838,9 @@ class _$_MedicationAdministrationDosage
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationAdministrationDosageToJson(this);
+    return _$$_MedicationAdministrationDosageToJson(
+      this,
+    );
   }
 }
 
@@ -9153,7 +9187,9 @@ class _$_MedicationDispense extends _MedicationDispense {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationDispenseToJson(this);
+    return _$$_MedicationDispenseToJson(
+      this,
+    );
   }
 }
 
@@ -9473,7 +9509,9 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationDispensePerformerToJson(this);
+    return _$$_MedicationDispensePerformerToJson(
+      this,
+    );
   }
 }
 
@@ -9746,7 +9784,9 @@ class _$_MedicationDispenseSubstitution
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationDispenseSubstitutionToJson(this);
+    return _$$_MedicationDispenseSubstitutionToJson(
+      this,
+    );
   }
 }
 
@@ -11047,7 +11087,9 @@ class _$_MedicationRequest extends _MedicationRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestToJson(this);
+    return _$$_MedicationRequestToJson(
+      this,
+    );
   }
 }
 
@@ -11363,7 +11405,9 @@ class _$_MedicationRequestRequester extends _MedicationRequestRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestRequesterToJson(this);
+    return _$$_MedicationRequestRequesterToJson(
+      this,
+    );
   }
 }
 
@@ -11689,7 +11733,9 @@ class _$_MedicationRequestDispenseRequest
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestDispenseRequestToJson(this);
+    return _$$_MedicationRequestDispenseRequestToJson(
+      this,
+    );
   }
 }
 
@@ -11923,7 +11969,9 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestSubstitutionToJson(this);
+    return _$$_MedicationRequestSubstitutionToJson(
+      this,
+    );
   }
 }
 
@@ -13053,7 +13101,9 @@ class _$_MedicationStatement extends _MedicationStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationStatementToJson(this);
+    return _$$_MedicationStatementToJson(
+      this,
+    );
   }
 }
 

@@ -1481,7 +1481,9 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionToJson(this);
+    return _$$_StructureDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -1911,7 +1913,9 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionContactToJson(this);
+    return _$$_StructureDefinitionContactToJson(
+      this,
+    );
   }
 }
 
@@ -2368,7 +2372,9 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionMappingToJson(this);
+    return _$$_StructureDefinitionMappingToJson(
+      this,
+    );
   }
 }
 
@@ -2633,7 +2639,9 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionSnapshotToJson(this);
+    return _$$_StructureDefinitionSnapshotToJson(
+      this,
+    );
   }
 }
 
@@ -2873,7 +2881,9 @@ class _$_StructureDefinitionDifferential
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionDifferentialToJson(this);
+    return _$$_StructureDefinitionDifferentialToJson(
+      this,
+    );
   }
 }
 
@@ -3541,7 +3551,9 @@ class _$_DataElement extends _DataElement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataElementToJson(this);
+    return _$$_DataElementToJson(
+      this,
+    );
   }
 }
 
@@ -3855,7 +3867,9 @@ class _$_DataElementContact extends _DataElementContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataElementContactToJson(this);
+    return _$$_DataElementContactToJson(
+      this,
+    );
   }
 }
 
@@ -4308,7 +4322,9 @@ class _$_DataElementMapping extends _DataElementMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataElementMappingToJson(this);
+    return _$$_DataElementMappingToJson(
+      this,
+    );
   }
 }
 

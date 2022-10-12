@@ -936,7 +936,9 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventToJson(this);
+    return _$$_AuditEventToJson(
+      this,
+    );
   }
 }
 
@@ -1289,7 +1291,9 @@ class _$_AuditEventOutcome extends _AuditEventOutcome {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventOutcomeToJson(this);
+    return _$$_AuditEventOutcomeToJson(
+      this,
+    );
   }
 }
 
@@ -1894,7 +1898,9 @@ class _$_AuditEventAgent extends _AuditEventAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventAgentToJson(this);
+    return _$$_AuditEventAgentToJson(
+      this,
+    );
   }
 }
 
@@ -2230,7 +2236,9 @@ class _$_AuditEventSource extends _AuditEventSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventSourceToJson(this);
+    return _$$_AuditEventSourceToJson(
+      this,
+    );
   }
 }
 
@@ -2640,7 +2648,9 @@ class _$_AuditEventEntity extends _AuditEventEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventEntityToJson(this);
+    return _$$_AuditEventEntityToJson(
+      this,
+    );
   }
 }
 
@@ -3386,7 +3396,9 @@ class _$_AuditEventDetail extends _AuditEventDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventDetailToJson(this);
+    return _$$_AuditEventDetailToJson(
+      this,
+    );
   }
 }
 
@@ -4369,7 +4381,9 @@ class _$_Consent extends _Consent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentToJson(this);
+    return _$$_ConsentToJson(
+      this,
+    );
   }
 }
 
@@ -4741,7 +4755,9 @@ class _$_ConsentPolicyBasis extends _ConsentPolicyBasis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentPolicyBasisToJson(this);
+    return _$$_ConsentPolicyBasisToJson(
+      this,
+    );
   }
 }
 
@@ -5176,7 +5192,9 @@ class _$_ConsentVerification extends _ConsentVerification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentVerificationToJson(this);
+    return _$$_ConsentVerificationToJson(
+      this,
+    );
   }
 }
 
@@ -5770,7 +5788,9 @@ class _$_ConsentProvision extends _ConsentProvision {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentProvisionToJson(this);
+    return _$$_ConsentProvisionToJson(
+      this,
+    );
   }
 }
 
@@ -6079,7 +6099,9 @@ class _$_ConsentActor extends _ConsentActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentActorToJson(this);
+    return _$$_ConsentActorToJson(
+      this,
+    );
   }
 }
 
@@ -6369,7 +6391,9 @@ class _$_ConsentData extends _ConsentData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentDataToJson(this);
+    return _$$_ConsentDataToJson(
+      this,
+    );
   }
 }
 
@@ -7154,7 +7178,9 @@ class _$_Permission extends _Permission {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PermissionToJson(this);
+    return _$$_PermissionToJson(
+      this,
+    );
   }
 }
 
@@ -7512,7 +7538,9 @@ class _$_PermissionProcessingActivity extends _PermissionProcessingActivity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PermissionProcessingActivityToJson(this);
+    return _$$_PermissionProcessingActivityToJson(
+      this,
+    );
   }
 }
 
@@ -7780,7 +7808,9 @@ class _$_PermissionJustification extends _PermissionJustification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PermissionJustificationToJson(this);
+    return _$$_PermissionJustificationToJson(
+      this,
+    );
   }
 }
 
@@ -8685,7 +8715,9 @@ class _$_Provenance extends _Provenance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceToJson(this);
+    return _$$_ProvenanceToJson(
+      this,
+    );
   }
 }
 
@@ -9095,7 +9127,9 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceAgentToJson(this);
+    return _$$_ProvenanceAgentToJson(
+      this,
+    );
   }
 }
 
@@ -9418,7 +9452,9 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceEntityToJson(this);
+    return _$$_ProvenanceEntityToJson(
+      this,
+    );
   }
 }
 

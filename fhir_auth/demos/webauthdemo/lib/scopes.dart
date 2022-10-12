@@ -21,6 +21,11 @@ final epicUserScopes = Scopes(
       resourceType: R4ResourceType.Patient,
       interaction: Interaction.any,
     ),
+    ClinicalScope(
+      role: Role.patient,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.any,
+    ),
   ],
   openid: true,
   offlineAccess: true,

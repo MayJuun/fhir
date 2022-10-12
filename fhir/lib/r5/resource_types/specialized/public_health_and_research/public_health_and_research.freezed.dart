@@ -1657,7 +1657,9 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyToJson(this);
+    return _$$_ResearchStudyToJson(
+      this,
+    );
   }
 }
 
@@ -2128,7 +2130,9 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyLabelToJson(this);
+    return _$$_ResearchStudyLabelToJson(
+      this,
+    );
   }
 }
 
@@ -2458,7 +2462,9 @@ class _$_ResearchStudyFocus extends _ResearchStudyFocus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyFocusToJson(this);
+    return _$$_ResearchStudyFocusToJson(
+      this,
+    );
   }
 }
 
@@ -2741,7 +2747,9 @@ class _$_ResearchStudyClassification extends _ResearchStudyClassification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyClassificationToJson(this);
+    return _$$_ResearchStudyClassificationToJson(
+      this,
+    );
   }
 }
 
@@ -3126,7 +3134,9 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyAssociatedPartyToJson(this);
+    return _$$_ResearchStudyAssociatedPartyToJson(
+      this,
+    );
   }
 }
 
@@ -3464,7 +3474,9 @@ class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyStatusDateToJson(this);
+    return _$$_ResearchStudyStatusDateToJson(
+      this,
+    );
   }
 }
 
@@ -3860,7 +3872,9 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyRecruitmentToJson(this);
+    return _$$_ResearchStudyRecruitmentToJson(
+      this,
+    );
   }
 }
 
@@ -4377,7 +4391,9 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyComparisonGroupToJson(this);
+    return _$$_ResearchStudyComparisonGroupToJson(
+      this,
+    );
   }
 }
 
@@ -4758,7 +4774,9 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyObjectiveToJson(this);
+    return _$$_ResearchStudyObjectiveToJson(
+      this,
+    );
   }
 }
 
@@ -5152,7 +5170,9 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyOutcomeMeasureToJson(this);
+    return _$$_ResearchStudyOutcomeMeasureToJson(
+      this,
+    );
   }
 }
 
@@ -5468,7 +5488,9 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyWebLocationToJson(this);
+    return _$$_ResearchStudyWebLocationToJson(
+      this,
+    );
   }
 }
 
@@ -6237,7 +6259,9 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchSubjectToJson(this);
+    return _$$_ResearchSubjectToJson(
+      this,
+    );
   }
 }
 
@@ -6746,7 +6770,9 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchSubjectProgressToJson(this);
+    return _$$_ResearchSubjectProgressToJson(
+      this,
+    );
   }
 }
 

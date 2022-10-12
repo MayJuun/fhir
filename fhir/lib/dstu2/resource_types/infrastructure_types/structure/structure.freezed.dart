@@ -909,7 +909,9 @@ class _$_Media extends _Media {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaToJson(this);
+    return _$$_MediaToJson(
+      this,
+    );
   }
 }
 
@@ -1389,7 +1391,9 @@ class _$_Binary extends _Binary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BinaryToJson(this);
+    return _$$_BinaryToJson(
+      this,
+    );
   }
 }
 
@@ -1927,7 +1931,9 @@ class _$_Bundle extends _Bundle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleToJson(this);
+    return _$$_BundleToJson(
+      this,
+    );
   }
 }
 
@@ -2308,7 +2314,9 @@ class _$_BundleLink extends _BundleLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleLinkToJson(this);
+    return _$$_BundleLinkToJson(
+      this,
+    );
   }
 }
 
@@ -2751,7 +2759,9 @@ class _$_BundleEntry extends _BundleEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleEntryToJson(this);
+    return _$$_BundleEntryToJson(
+      this,
+    );
   }
 }
 
@@ -3120,7 +3130,9 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleEntrySearchToJson(this);
+    return _$$_BundleEntrySearchToJson(
+      this,
+    );
   }
 }
 
@@ -3698,7 +3710,9 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleEntryRequestToJson(this);
+    return _$$_BundleEntryRequestToJson(
+      this,
+    );
   }
 }
 
@@ -4202,7 +4216,9 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BundleEntryResponseToJson(this);
+    return _$$_BundleEntryResponseToJson(
+      this,
+    );
   }
 }
 
@@ -4839,7 +4855,9 @@ class _$_Basic extends _Basic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BasicToJson(this);
+    return _$$_BasicToJson(
+      this,
+    );
   }
 }
 

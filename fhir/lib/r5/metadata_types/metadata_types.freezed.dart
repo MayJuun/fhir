@@ -242,7 +242,9 @@ class _$_ContactDetail extends _ContactDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContactDetailToJson(this);
+    return _$$_ContactDetailToJson(
+      this,
+    );
   }
 }
 
@@ -616,7 +618,9 @@ class _$_ExtendedContactDetail extends _ExtendedContactDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExtendedContactDetailToJson(this);
+    return _$$_ExtendedContactDetailToJson(
+      this,
+    );
   }
 }
 
@@ -937,7 +941,9 @@ class _$_Contributor extends _Contributor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContributorToJson(this);
+    return _$$_ContributorToJson(
+      this,
+    );
   }
 }
 
@@ -1465,7 +1471,9 @@ class _$_DataRequirement extends _DataRequirement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataRequirementToJson(this);
+    return _$$_DataRequirementToJson(
+      this,
+    );
   }
 }
 
@@ -1861,7 +1869,9 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataRequirementCodeFilterToJson(this);
+    return _$$_DataRequirementCodeFilterToJson(
+      this,
+    );
   }
 }
 
@@ -2318,7 +2328,9 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataRequirementDateFilterToJson(this);
+    return _$$_DataRequirementDateFilterToJson(
+      this,
+    );
   }
 }
 
@@ -2658,7 +2670,9 @@ class _$_DataRequirementSort extends _DataRequirementSort {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataRequirementSortToJson(this);
+    return _$$_DataRequirementSortToJson(
+      this,
+    );
   }
 }
 
@@ -3188,7 +3202,9 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ParameterDefinitionToJson(this);
+    return _$$_ParameterDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -3729,7 +3745,9 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelatedArtifactToJson(this);
+    return _$$_RelatedArtifactToJson(
+      this,
+    );
   }
 }
 
@@ -4282,7 +4300,9 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TriggerDefinitionToJson(this);
+    return _$$_TriggerDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -4657,7 +4677,9 @@ class _$_UsageContext extends _UsageContext {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UsageContextToJson(this);
+    return _$$_UsageContextToJson(
+      this,
+    );
   }
 }
 
@@ -5111,7 +5133,9 @@ class _$_Expression extends _Expression {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExpressionToJson(this);
+    return _$$_ExpressionToJson(
+      this,
+    );
   }
 }
 

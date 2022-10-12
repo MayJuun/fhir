@@ -1,5 +1,11 @@
 # fhir
 
+## [0.9.1]
+
+* Tried to add a lot more comments to individual fields (partly for pub.dev points and partly for ease of use)
+* updated dependencies
+* fhir_yaml is now included in base package
+
 ## [0.9.0]
 
 * Fixed some comparisons in primitive types

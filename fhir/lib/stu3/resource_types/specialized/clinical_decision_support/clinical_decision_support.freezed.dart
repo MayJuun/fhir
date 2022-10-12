@@ -963,7 +963,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GuidanceResponseToJson(this);
+    return _$$_GuidanceResponseToJson(
+      this,
+    );
   }
 }
 

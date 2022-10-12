@@ -1537,7 +1537,9 @@ class _$_CodeSystem extends _CodeSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeSystemToJson(this);
+    return _$$_CodeSystemToJson(
+      this,
+    );
   }
 }
 
@@ -2152,7 +2154,9 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeSystemFilterToJson(this);
+    return _$$_CodeSystemFilterToJson(
+      this,
+    );
   }
 }
 
@@ -2601,7 +2605,9 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeSystemPropertyToJson(this);
+    return _$$_CodeSystemPropertyToJson(
+      this,
+    );
   }
 }
 
@@ -3075,7 +3081,9 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeSystemConceptToJson(this);
+    return _$$_CodeSystemConceptToJson(
+      this,
+    );
   }
 }
 
@@ -3451,7 +3459,9 @@ class _$_CodeSystemDesignation extends _CodeSystemDesignation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeSystemDesignationToJson(this);
+    return _$$_CodeSystemDesignationToJson(
+      this,
+    );
   }
 }
 
@@ -4084,7 +4094,9 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeSystemProperty1ToJson(this);
+    return _$$_CodeSystemProperty1ToJson(
+      this,
+    );
   }
 }
 
@@ -5490,7 +5502,9 @@ class _$_ConceptMap extends _ConceptMap {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapToJson(this);
+    return _$$_ConceptMapToJson(
+      this,
+    );
   }
 }
 
@@ -5933,7 +5947,9 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapGroupToJson(this);
+    return _$$_ConceptMapGroupToJson(
+      this,
+    );
   }
 }
 
@@ -6335,7 +6351,9 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapElementToJson(this);
+    return _$$_ConceptMapElementToJson(
+      this,
+    );
   }
 }
 
@@ -6830,7 +6848,9 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapTargetToJson(this);
+    return _$$_ConceptMapTargetToJson(
+      this,
+    );
   }
 }
 
@@ -7247,7 +7267,9 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapDependsOnToJson(this);
+    return _$$_ConceptMapDependsOnToJson(
+      this,
+    );
   }
 }
 
@@ -7655,7 +7677,9 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMapUnmappedToJson(this);
+    return _$$_ConceptMapUnmappedToJson(
+      this,
+    );
   }
 }
 
@@ -9331,7 +9355,9 @@ class _$_ConceptMap2 extends _ConceptMap2 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMap2ToJson(this);
+    return _$$_ConceptMap2ToJson(
+      this,
+    );
   }
 }
 
@@ -9809,7 +9835,9 @@ class _$_ConceptMap2Group extends _ConceptMap2Group {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMap2GroupToJson(this);
+    return _$$_ConceptMap2GroupToJson(
+      this,
+    );
   }
 }
 
@@ -10229,7 +10257,9 @@ class _$_ConceptMap2Element extends _ConceptMap2Element {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMap2ElementToJson(this);
+    return _$$_ConceptMap2ElementToJson(
+      this,
+    );
   }
 }
 
@@ -10746,7 +10776,9 @@ class _$_ConceptMap2Target extends _ConceptMap2Target {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMap2TargetToJson(this);
+    return _$$_ConceptMap2TargetToJson(
+      this,
+    );
   }
 }
 
@@ -11505,7 +11537,9 @@ class _$_ConceptMap2DependsOn extends _ConceptMap2DependsOn {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMap2DependsOnToJson(this);
+    return _$$_ConceptMap2DependsOnToJson(
+      this,
+    );
   }
 }
 
@@ -11973,7 +12007,9 @@ class _$_ConceptMap2Unmapped extends _ConceptMap2Unmapped {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConceptMap2UnmappedToJson(this);
+    return _$$_ConceptMap2UnmappedToJson(
+      this,
+    );
   }
 }
 
@@ -13629,7 +13665,9 @@ class _$_NamingSystem extends _NamingSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NamingSystemToJson(this);
+    return _$$_NamingSystemToJson(
+      this,
+    );
   }
 }
 
@@ -14310,7 +14348,9 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NamingSystemUniqueIdToJson(this);
+    return _$$_NamingSystemUniqueIdToJson(
+      this,
+    );
   }
 }
 
@@ -15870,7 +15910,9 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesToJson(this);
+    return _$$_TerminologyCapabilitiesToJson(
+      this,
+    );
   }
 }
 
@@ -16348,7 +16390,9 @@ class _$_TerminologyCapabilitiesSoftware
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesSoftwareToJson(this);
+    return _$$_TerminologyCapabilitiesSoftwareToJson(
+      this,
+    );
   }
 }
 
@@ -16688,7 +16732,9 @@ class _$_TerminologyCapabilitiesImplementation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesImplementationToJson(this);
+    return _$$_TerminologyCapabilitiesImplementationToJson(
+      this,
+    );
   }
 }
 
@@ -17019,7 +17065,9 @@ class _$_TerminologyCapabilitiesCodeSystem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesCodeSystemToJson(this);
+    return _$$_TerminologyCapabilitiesCodeSystemToJson(
+      this,
+    );
   }
 }
 
@@ -17545,7 +17593,9 @@ class _$_TerminologyCapabilitiesVersion
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesVersionToJson(this);
+    return _$$_TerminologyCapabilitiesVersionToJson(
+      this,
+    );
   }
 }
 
@@ -17904,7 +17954,9 @@ class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesFilterToJson(this);
+    return _$$_TerminologyCapabilitiesFilterToJson(
+      this,
+    );
   }
 }
 
@@ -18377,7 +18429,9 @@ class _$_TerminologyCapabilitiesExpansion
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesExpansionToJson(this);
+    return _$$_TerminologyCapabilitiesExpansionToJson(
+      this,
+    );
   }
 }
 
@@ -18732,7 +18786,9 @@ class _$_TerminologyCapabilitiesParameter
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesParameterToJson(this);
+    return _$$_TerminologyCapabilitiesParameterToJson(
+      this,
+    );
   }
 }
 
@@ -19022,7 +19078,9 @@ class _$_TerminologyCapabilitiesValidateCode
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesValidateCodeToJson(this);
+    return _$$_TerminologyCapabilitiesValidateCodeToJson(
+      this,
+    );
   }
 }
 
@@ -19301,7 +19359,9 @@ class _$_TerminologyCapabilitiesTranslation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesTranslationToJson(this);
+    return _$$_TerminologyCapabilitiesTranslationToJson(
+      this,
+    );
   }
 }
 
@@ -19579,7 +19639,9 @@ class _$_TerminologyCapabilitiesClosure
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TerminologyCapabilitiesClosureToJson(this);
+    return _$$_TerminologyCapabilitiesClosureToJson(
+      this,
+    );
   }
 }
 
@@ -20849,7 +20911,9 @@ class _$_ValueSet extends _ValueSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetToJson(this);
+    return _$$_ValueSetToJson(
+      this,
+    );
   }
 }
 
@@ -21395,7 +21459,9 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetComposeToJson(this);
+    return _$$_ValueSetComposeToJson(
+      this,
+    );
   }
 }
 
@@ -21865,7 +21931,9 @@ class _$_ValueSetInclude extends _ValueSetInclude {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetIncludeToJson(this);
+    return _$$_ValueSetIncludeToJson(
+      this,
+    );
   }
 }
 
@@ -22234,7 +22302,9 @@ class _$_ValueSetConcept extends _ValueSetConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetConceptToJson(this);
+    return _$$_ValueSetConceptToJson(
+      this,
+    );
   }
 }
 
@@ -22595,7 +22665,9 @@ class _$_ValueSetDesignation extends _ValueSetDesignation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetDesignationToJson(this);
+    return _$$_ValueSetDesignationToJson(
+      this,
+    );
   }
 }
 
@@ -22976,7 +23048,9 @@ class _$_ValueSetFilter extends _ValueSetFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetFilterToJson(this);
+    return _$$_ValueSetFilterToJson(
+      this,
+    );
   }
 }
 
@@ -23495,7 +23569,9 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetExpansionToJson(this);
+    return _$$_ValueSetExpansionToJson(
+      this,
+    );
   }
 }
 
@@ -24168,7 +24244,9 @@ class _$_ValueSetParameter extends _ValueSetParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetParameterToJson(this);
+    return _$$_ValueSetParameterToJson(
+      this,
+    );
   }
 }
 
@@ -24544,7 +24622,9 @@ class _$_ValueSetProperty extends _ValueSetProperty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetPropertyToJson(this);
+    return _$$_ValueSetPropertyToJson(
+      this,
+    );
   }
 }
 
@@ -25162,7 +25242,9 @@ class _$_ValueSetContains extends _ValueSetContains {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetContainsToJson(this);
+    return _$$_ValueSetContainsToJson(
+      this,
+    );
   }
 }
 
@@ -25829,7 +25911,9 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetProperty1ToJson(this);
+    return _$$_ValueSetProperty1ToJson(
+      this,
+    );
   }
 }
 
@@ -26248,7 +26332,9 @@ class _$_ValueSetScope extends _ValueSetScope {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueSetScopeToJson(this);
+    return _$$_ValueSetScopeToJson(
+      this,
+    );
   }
 }
 
