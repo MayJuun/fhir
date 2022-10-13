@@ -217,7 +217,7 @@ void testBasicOperators() {
           walkFhirPath(
               context: resource.toJson(),
               pathExpression: "'String' ~ 'string'"),
-          [false]);
+          [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
@@ -448,7 +448,7 @@ void testBasicOperators() {
           walkFhirPath(
               context: resource.toJson(),
               pathExpression: "'String' !~ 'string'"),
-          [true]);
+          [false]);
       expect(
           walkFhirPath(
               context: resource.toJson(),

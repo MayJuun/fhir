@@ -25,6 +25,7 @@ List? _$visitTotalInvocation(
   TotalInvocationContext ctx,
   FhirPathDartVisitor visitor,
 ) {
+  visitor.context = visitor.environment[r'%$total'];
   return visitor.environment[r'%$total'];
 }
 
@@ -53,7 +54,7 @@ List? _$visitIndexerExpression(
   FhirPathDartVisitor visitor,
 ) {
   if (ctx.expressions().length != 2 && ctx.children != 4) {
-    throw Exception('IndexerExpression passed incorrect context');
+    throw FhirPathException('IndexerExpression passed incorrect context');
   }
   final List? results = visitor.copyWith().visit(ctx.getChild(0)!);
   final List? value = visitor.copyWith().visit(ctx.getChild(2)!);
@@ -79,14 +80,115 @@ List? _$visitAndExpression(
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
-  visitor.context = <dynamic>[
-    lhs != null &&
-        lhs.length == 1 &&
-        lhs.first &&
-        rhs != null &&
-        rhs.length == 1 &&
-        rhs.first
-  ];
+
+  bool? convertValue(dynamic value) => value is bool
+      ? value
+      : value is Boolean
+          ? value.isValid
+              ? value.value
+              : null
+          : value == 1
+              ? true
+              : value == 0
+                  ? false
+                  : [
+                      'true',
+                      't',
+                      'yes',
+                      'y',
+                      '1',
+                      '1.0',
+                    ].contains(lhs.toString().toLowerCase())
+                      ? true
+                      : ['false', 'f', 'no', 'n', '0', '0.0']
+                              .contains(lhs.toString().toLowerCase())
+                          ? false
+                          : null;
+
+  final lhsValue = lhs == null || lhs.isEmpty ? null : convertValue(lhs.first);
+  final rhsValue = rhs == null || rhs.isEmpty ? null : convertValue(rhs.first);
+  if (lhsValue == null) {
+    if (rhsValue == null || rhsValue) {
+      visitor.context = [];
+    } else {
+      visitor.context = [false];
+    }
+  } else if (lhsValue) {
+    if (rhsValue == null) {
+      visitor.context = [];
+    } else {
+      visitor.context = [rhsValue];
+    }
+  } else {
+    visitor.context = [false];
+  }
+
+  return visitor.context;
+}
+
+List? _$visitOrExpression(
+  OrExpressionContext ctx,
+  FhirPathDartVisitor visitor,
+) {
+  if (ctx.childCount != 3) {
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
+  }
+  final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
+  final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
+  final operator = ctx.getChild(1)!.text;
+
+  bool? convertValue(dynamic value) => value is bool
+      ? value
+      : value is Boolean
+          ? value.isValid
+              ? value.value
+              : null
+          : value == 1
+              ? true
+              : value == 0
+                  ? false
+                  : [
+                      'true',
+                      't',
+                      'yes',
+                      'y',
+                      '1',
+                      '1.0',
+                    ].contains(lhs.toString().toLowerCase())
+                      ? true
+                      : ['false', 'f', 'no', 'n', '0', '0.0']
+                              .contains(lhs.toString().toLowerCase())
+                          ? false
+                          : null;
+
+  final lhsValue = lhs == null || lhs.isEmpty ? null : convertValue(lhs.first);
+  final rhsValue = rhs == null || rhs.isEmpty ? null : convertValue(rhs.first);
+  if (operator == 'or') {
+    if (lhsValue == null) {
+      if (rhsValue == null || !rhsValue) {
+        visitor.context = [];
+      } else {
+        visitor.context = [true];
+      }
+    } else if (lhsValue) {
+      visitor.context = [true];
+    } else {
+      if (rhsValue == null) {
+        visitor.context = [];
+      } else {
+        visitor.context = [rhsValue];
+      }
+    }
+  } else if (operator == 'xor') {
+    if (lhsValue == null || rhsValue == null) {
+      visitor.context = [];
+    } else if ((lhsValue && !rhsValue) || (!lhsValue && rhsValue)) {
+      visitor.context = [true];
+    } else {
+      visitor.context = [false];
+    }
+  }
+
   return visitor.context;
 }
 
@@ -104,5 +206,64 @@ List? _$visitUnionExpression(
       visitor.context.add(value);
     }
   }
+  return visitor.context;
+}
+
+List? _$visitMembershipExpression(
+  MembershipExpressionContext ctx,
+  FhirPathDartVisitor visitor,
+) {
+  if (ctx.childCount != 3) {
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
+  }
+  final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
+  final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
+  final operator = ctx.getChild(1)!.text;
+  var objectList = operator == 'in' ? lhs : rhs;
+  if (objectList?.isEmpty ?? true) {
+    visitor.context = [];
+  } else {
+    if (objectList!.length != 1) {
+      throw FhirPathException(
+          'IndexerExpression passed a list with more than one member');
+    }
+    final object = objectList.first;
+    final collection = operator == 'in' ? rhs : lhs;
+    if (collection?.isEmpty ?? true) {
+      visitor.context = [false];
+    } else {
+      visitor.context = [
+        collection!.indexWhere((element) {
+              if (object is FhirDateTime ||
+                  object is Date ||
+                  element is FhirDateTime ||
+                  element is Date) {
+                /// As long as one is, we convert them both to strings then back
+                /// to DateTimes
+                final lhsDateTime = FhirDateTime(object.toString());
+                final rhsDateTime = FhirDateTime(element.toString());
+
+                /// As long as they are both valid we try and compare them
+                if (lhsDateTime.isValid && rhsDateTime.isValid) {
+                  return lhsDateTime == rhsDateTime;
+                } else {
+                  return false;
+                }
+              } else if (object is FhirPathQuantity ||
+                  element is FhirPathQuantity) {
+                if (object is FhirPathQuantity) {
+                  return object == element;
+                } else {
+                  return element == object;
+                }
+              } else {
+                return object == element || element == object;
+              }
+            }) !=
+            -1
+      ];
+    }
+  }
+
   return visitor.context;
 }

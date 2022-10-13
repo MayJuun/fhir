@@ -89,7 +89,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
           .expression();
 
   /// This is purely for testing purposes
-  static const bool printType = true;
+  static const bool printType = false;
 
   /// Prints off the immediate context being used
   void printContextType(ParseTree ctx) {
@@ -143,7 +143,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitOrExpression(OrExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitOrExpression(ctx, this);
   }
 
   @override
@@ -155,7 +155,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitMembershipExpression(MembershipExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitMembershipExpression(ctx, this);
   }
 
   @override
@@ -167,6 +167,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitInvocationExpression(InvocationExpressionContext ctx) {
     printContextType(ctx);
+
     return _$visitInvocationExpression(ctx, this);
   }
 
@@ -185,6 +186,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitTermExpression(TermExpressionContext ctx) {
     printContextType(ctx);
+
     return visitChildren(ctx);
   }
 
@@ -197,6 +199,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitInvocationTerm(InvocationTermContext ctx) {
     printContextType(ctx);
+
     return visitChildren(ctx);
   }
 
@@ -289,6 +292,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitFunctionInvocation(FunctionInvocationContext ctx) {
     printContextType(ctx);
+
     return visitChildren(ctx);
   }
 
@@ -307,12 +311,14 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitTotalInvocation(TotalInvocationContext ctx) {
     printContextType(ctx);
+
     return _$visitTotalInvocation(ctx, this);
   }
 
   @override
   List? visitFunction(FunctionContext ctx) {
     printContextType(ctx);
+
     return _$visitFunction(ctx, this);
   }
 

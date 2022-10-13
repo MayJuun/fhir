@@ -25,26 +25,82 @@ List? _$visitEqualityExpression(
       /// set true as default
       visitor.context = <dynamic>[true];
 
-      /// for each entry in lhs and rhs (we checked above to ensure they
-      /// were the same length)
-      for (var i = 0; i < lhs.length; i++) {
-        /// we check to see if any of the values are DateTimes
-        if (lhs[i] is FhirDateTime ||
-            lhs[i] is Date ||
-            rhs[i] is FhirDateTime ||
-            rhs[i] is Date) {
-          /// As long as one is, we convert them both to strings then back
-          /// to DateTimes
-          final lhsDateTime = FhirDateTime(lhs[i].toString());
-          final rhsDateTime = FhirDateTime(rhs[i].toString());
+      if (equivalent) {
+        lhs.removeWhere((lhsElement) =>
+            rhs.indexWhere((rhsElement) {
+              if (lhsElement is FhirDateTime ||
+                  lhsElement is Date ||
+                  rhsElement is FhirDateTime ||
+                  rhsElement is Date) {
+                /// As long as one is, we convert them both to strings then back
+                /// to DateTimes
+                final lhsDateTime = FhirDateTime(lhsElement.toString());
+                final rhsDateTime = FhirDateTime(rhsElement.toString());
 
-          /// As long as they are both valid we try and compare them
-          if (lhsDateTime.isValid && rhsDateTime.isValid) {
-            try {
-              if (lhsDateTime != rhsDateTime) {
-                if (equivalent) {
-                  visitor.context = <dynamic>[false];
+                /// As long as they are both valid we try and compare them
+                if (lhsDateTime.isValid && rhsDateTime.isValid) {
+                  return lhsDateTime == rhsDateTime;
                 } else {
+                  return false;
+                }
+              } else if (lhsElement is FhirPathQuantity ||
+                  rhsElement is FhirPathQuantity) {
+                if (lhsElement is FhirPathQuantity) {
+                  return lhsElement.equivalent(rhsElement);
+                } else {
+                  return (rhsElement as FhirPathQuantity)
+                      .equivalent(lhsElement);
+                }
+              } else if (lhsElement is num || rhsElement is num) {
+                final sigDigsLhs = num.tryParse(lhsElement.toString())
+                    ?.toStringAsExponential()
+                    .split('e');
+                final sigDigsRhs = num.tryParse(rhsElement.toString())
+                    ?.toStringAsExponential()
+                    .split('e');
+                if (sigDigsLhs == null || sigDigsRhs == null) {
+                  return false;
+                } else {
+                  if (sigDigsLhs.first.length < sigDigsRhs.first.length) {
+                    return num.parse(
+                            '${sigDigsLhs.first}e${sigDigsLhs.last}') ==
+                        num.parse(
+                            '${sigDigsRhs.first.toString().substring(0, sigDigsLhs.first.length)}'
+                            'e${sigDigsRhs.last}');
+                  } else {
+                    return num.parse(
+                            '${sigDigsLhs.first.toString().substring(0, sigDigsRhs.first.length)}'
+                            'e${sigDigsLhs.last}') ==
+                        num.parse('${sigDigsRhs.first}e${sigDigsRhs.last}');
+                  }
+                }
+              } else if (lhsElement is String || rhsElement is String) {
+                return lhsElement.toString().toLowerCase() ==
+                    rhsElement.toString().toLowerCase();
+              } else {
+                return lhsElement == rhsElement || rhsElement == lhsElement;
+              }
+            }) !=
+            -1);
+        visitor.context = <dynamic>[lhs.isEmpty];
+      } else {
+        /// for each entry in lhs and rhs (we checked above to ensure they
+        /// were the same length)
+        for (var i = 0; i < lhs.length; i++) {
+          /// we check to see if any of the values are DateTimes
+          if (lhs[i] is FhirDateTime ||
+              lhs[i] is Date ||
+              rhs[i] is FhirDateTime ||
+              rhs[i] is Date) {
+            /// As long as one is, we convert them both to strings then back
+            /// to DateTimes
+            final lhsDateTime = FhirDateTime(lhs[i].toString());
+            final rhsDateTime = FhirDateTime(rhs[i].toString());
+
+            /// As long as they are both valid we try and compare them
+            if (lhsDateTime.isValid && rhsDateTime.isValid) {
+              try {
+                if (lhsDateTime != rhsDateTime) {
                   var lhsDatePrecision =
                       '-'.allMatches(lhsDateTime.toString()).length;
                   lhsDatePrecision =
@@ -68,39 +124,27 @@ List? _$visitEqualityExpression(
                     visitor.context = <dynamic>[false];
                   }
                 }
-              }
-            } catch (e) {
-              visitor.context = <dynamic>[];
-            }
-          } else {
-            /// If not it means only one is, so this is false
-            visitor.context = <dynamic>[false];
-          }
-        }
-
-        /// If they aren't dateTimes we can just compare them as usual
-        else {
-          if (lhs[i] is FhirPathQuantity || rhs[i] is FhirPathQuantity) {
-            if (lhs[i] is FhirPathQuantity) {
-              if (equivalent) {
-                visitor.context = <dynamic>[
-                  (lhs[i] as FhirPathQuantity).equivalent(rhs[i])
-                ];
-              } else {
-                visitor.context = <dynamic>[lhs[i] == rhs[i]];
+              } catch (e) {
+                visitor.context = <dynamic>[];
               }
             } else {
-              if (equivalent) {
-                visitor.context = <dynamic>[
-                  (rhs[i] as FhirPathQuantity).equivalent(lhs[i])
-                ];
+              /// If not it means only one is, so this is false
+              visitor.context = <dynamic>[false];
+            }
+          }
+
+          /// If they aren't dateTimes we can just compare them as usual
+          else {
+            if (lhs[i] is FhirPathQuantity || rhs[i] is FhirPathQuantity) {
+              if (lhs[i] is FhirPathQuantity) {
+                visitor.context = <dynamic>[lhs[i] == rhs[i]];
               } else {
                 visitor.context = <dynamic>[rhs[i] == lhs[i]];
               }
             }
-          }
-          if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
-            visitor.context = <dynamic>[false];
+            if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
+              visitor.context = <dynamic>[false];
+            }
           }
         }
       }

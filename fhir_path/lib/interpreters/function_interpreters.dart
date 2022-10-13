@@ -827,6 +827,8 @@ List? _$visitFunction(
             if (visitor.context.length >= args.first) {
               visitor.context = visitor.context.sublist(0, args.first);
             }
+          } else {
+            visitor.context = [];
           }
         }
         break;
@@ -1114,10 +1116,14 @@ List? _$visitFunction(
 
               /// If criterion is false and the optional otherwise-result is given
               else if (conditionStatement.childCount == 5) {
+                visitor.identifierOnly = true;
+
                 /// return otherwise-result
                 visitor.context =
                     visitor.copyWith().visit(conditionStatement.getChild(4)!) ??
                         [];
+
+                visitor.identifierOnly = false;
               }
 
               /// UInless the optional otherwise-result is not given, in which
@@ -1149,6 +1155,7 @@ List? _$visitFunction(
           var total = aggregator.childCount == 3
               ? visitor.copyWith().visit(aggregator.getChild(2)!)
               : [];
+
           for (var context in visitor.context) {
             final newEnvironment = visitor.environment;
             newEnvironment[r'%$total'] = total;
