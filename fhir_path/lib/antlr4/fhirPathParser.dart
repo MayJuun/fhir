@@ -283,10 +283,6 @@ class FhirPathParser extends Parser {
         case TOKEN_T__11:
         case TOKEN_T__21:
         case TOKEN_T__22:
-        case TOKEN_T__23:
-        case TOKEN_T__24:
-        case TOKEN_T__25:
-        case TOKEN_T__26:
         case TOKEN_T__27:
         case TOKEN_T__29:
         case TOKEN_T__31:
@@ -295,22 +291,6 @@ class FhirPathParser extends Parser {
         case TOKEN_T__34:
         case TOKEN_T__35:
         case TOKEN_T__36:
-        case TOKEN_T__38:
-        case TOKEN_T__39:
-        case TOKEN_T__40:
-        case TOKEN_T__41:
-        case TOKEN_T__42:
-        case TOKEN_T__43:
-        case TOKEN_T__44:
-        case TOKEN_T__45:
-        case TOKEN_T__46:
-        case TOKEN_T__47:
-        case TOKEN_T__48:
-        case TOKEN_T__49:
-        case TOKEN_T__50:
-        case TOKEN_T__51:
-        case TOKEN_T__52:
-        case TOKEN_T__53:
         case TOKEN_DATE:
         case TOKEN_DATETIME:
         case TOKEN_TIME:
@@ -592,29 +572,9 @@ class FhirPathParser extends Parser {
         case TOKEN_T__11:
         case TOKEN_T__21:
         case TOKEN_T__22:
-        case TOKEN_T__23:
-        case TOKEN_T__24:
-        case TOKEN_T__25:
-        case TOKEN_T__26:
         case TOKEN_T__34:
         case TOKEN_T__35:
         case TOKEN_T__36:
-        case TOKEN_T__38:
-        case TOKEN_T__39:
-        case TOKEN_T__40:
-        case TOKEN_T__41:
-        case TOKEN_T__42:
-        case TOKEN_T__43:
-        case TOKEN_T__44:
-        case TOKEN_T__45:
-        case TOKEN_T__46:
-        case TOKEN_T__47:
-        case TOKEN_T__48:
-        case TOKEN_T__49:
-        case TOKEN_T__50:
-        case TOKEN_T__51:
-        case TOKEN_T__52:
-        case TOKEN_T__53:
         case TOKEN_IDENTIFIER:
         case TOKEN_DELIMITEDIDENTIFIER:
           _localctx = InvocationTermContext(_localctx);
@@ -756,26 +716,6 @@ class FhirPathParser extends Parser {
         case TOKEN_T__11:
         case TOKEN_T__21:
         case TOKEN_T__22:
-        case TOKEN_T__23:
-        case TOKEN_T__24:
-        case TOKEN_T__25:
-        case TOKEN_T__26:
-        case TOKEN_T__38:
-        case TOKEN_T__39:
-        case TOKEN_T__40:
-        case TOKEN_T__41:
-        case TOKEN_T__42:
-        case TOKEN_T__43:
-        case TOKEN_T__44:
-        case TOKEN_T__45:
-        case TOKEN_T__46:
-        case TOKEN_T__47:
-        case TOKEN_T__48:
-        case TOKEN_T__49:
-        case TOKEN_T__50:
-        case TOKEN_T__51:
-        case TOKEN_T__52:
-        case TOKEN_T__53:
         case TOKEN_IDENTIFIER:
         case TOKEN_DELIMITEDIDENTIFIER:
           state = 98;
@@ -859,7 +799,7 @@ class FhirPathParser extends Parser {
       state = 112;
       errorHandler.sync(this);
       _la = tokenStream.LA(1)!;
-      if (((_la) & ~0x3f) == 0 && ((1 << _la) & 4611685740860939056) != 0) {
+      if (((_la) & ~0x3f) == 0 && ((1 << _la) & 4575657493346130736) != 0) {
         state = 111;
         paramList();
       }
@@ -1087,7 +1027,7 @@ class FhirPathParser extends Parser {
       enterOuterAlt(_localctx, 1);
       state = 147;
       _la = tokenStream.LA(1)!;
-      if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 900719375982533376) != 0)) {
+      if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 864691128467725056) != 0)) {
         errorHandler.recoverInline(this);
       } else {
         if (tokenStream.LA(1)! == IntStream.EOF) matchedEOF = true;
@@ -1528,16 +1468,14 @@ class FhirPathParser extends Parser {
     0,
     47,
     54,
-    5,
+    4,
     0,
     8,
     9,
     11,
     12,
     22,
-    27,
-    39,
-    54,
+    23,
     58,
     59,
     169,
