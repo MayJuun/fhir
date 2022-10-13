@@ -55,6 +55,12 @@ abstract class FhirPathVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T? visitAndExpression(AndExpressionContext ctx);
 
+  /// Visit a parse tree produced by the {@code endOfFile}
+  /// labeled alternative in {@link FhirPathParser#expression}.
+  /// [ctx] the parse tree.
+  /// Return the visitor result.
+  T? visitEndOfFile(EndOfFileContext ctx);
+
   /// Visit a parse tree produced by the {@code membershipExpression}
   /// labeled alternative in {@link FhirPathParser#expression}.
   /// [ctx] the parse tree.

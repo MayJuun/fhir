@@ -19,7 +19,8 @@ expression:
 	| expression 'and' expression						# andExpression
 	| expression ('or' | 'xor') expression				# orExpression
 	| expression 'implies' expression					# impliesExpression
-	; //| (IDENTIFIER)? '=>' expression                             #lambdaExpression
+	| EOF												# endOfFile
+	; //| (IDENTIFIER)? '=>' expression                 #lambdaExpression
 
 term:
 	invocation				# invocationTerm

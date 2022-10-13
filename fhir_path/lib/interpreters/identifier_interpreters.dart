@@ -16,7 +16,8 @@ List? _$visitIdentifier(
   } else {
     final results = (ctx.childCount == 0 ||
             (ctx.childCount == 1 &&
-                ctx.getChild(0).runtimeType == TerminalNodeImpl))
+                (ctx.getChild(0).runtimeType == TerminalNodeImpl ||
+                    ctx.getChild(0).runtimeType == ErrorNodeImpl)))
         ? visitor.context
         : visitor.copyWith().visitChildren(ctx) ?? <dynamic>[];
     final finalResults = [];

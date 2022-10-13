@@ -94,7 +94,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   /// Prints off the immediate context being used
   void printContextType(ParseTree ctx) {
     if (printType) {
-      print('${ctx.runtimeType} : ${ctx.text}');
+      // print('${ctx.runtimeType} : ${ctx.text}');
       // developer.log('TYPECONTEXT: ${_context}');
     }
   }
@@ -151,6 +151,9 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
     printContextType(ctx);
     return _$visitAndExpression(ctx, this);
   }
+
+  @override
+  List? visitEndOfFile(EndOfFileContext ctx) => visitChildren(ctx);
 
   @override
   List? visitMembershipExpression(MembershipExpressionContext ctx) {

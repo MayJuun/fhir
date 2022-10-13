@@ -274,7 +274,7 @@ class FhirPathParser extends Parser {
     try {
       int _alt;
       enterOuterAlt(_localctx, 1);
-      state = 32;
+      state = 33;
       errorHandler.sync(this);
       switch (tokenStream.LA(1)!) {
         case TOKEN_T__7:
@@ -320,31 +320,38 @@ class FhirPathParser extends Parser {
             consume();
           }
           state = 31;
-          expression(11);
+          expression(12);
+          break;
+        case TOKEN_EOF:
+          _localctx = EndOfFileContext(_localctx);
+          context = _localctx;
+          _prevctx = _localctx;
+          state = 32;
+          match(TOKEN_EOF);
           break;
         default:
           throw NoViableAltException(this);
       }
       context!.stop = tokenStream.LT(-1);
-      state = 74;
+      state = 75;
       errorHandler.sync(this);
       _alt = interpreter!.adaptivePredict(tokenStream, 2, context);
       while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
         if (_alt == 1) {
           if (parseListeners != null) triggerExitRuleEvent();
           _prevctx = _localctx;
-          state = 72;
+          state = 73;
           errorHandler.sync(this);
           switch (interpreter!.adaptivePredict(tokenStream, 1, context)) {
             case 1:
               _localctx = MultiplicativeExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 34;
-              if (!(precpred(context, 10))) {
-                throw FailedPredicateException(this, "precpred(context, 10)");
-              }
               state = 35;
+              if (!(precpred(context, 11))) {
+                throw FailedPredicateException(this, "precpred(context, 11)");
+              }
+              state = 36;
               _la = tokenStream.LA(1)!;
               if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 960) != 0)) {
                 errorHandler.recoverInline(this);
@@ -353,18 +360,18 @@ class FhirPathParser extends Parser {
                 errorHandler.reportMatch(this);
                 consume();
               }
-              state = 36;
-              expression(11);
+              state = 37;
+              expression(12);
               break;
             case 2:
               _localctx = AdditiveExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 37;
-              if (!(precpred(context, 9))) {
-                throw FailedPredicateException(this, "precpred(context, 9)");
-              }
               state = 38;
+              if (!(precpred(context, 10))) {
+                throw FailedPredicateException(this, "precpred(context, 10)");
+              }
+              state = 39;
               _la = tokenStream.LA(1)!;
               if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 1072) != 0)) {
                 errorHandler.recoverInline(this);
@@ -373,31 +380,31 @@ class FhirPathParser extends Parser {
                 errorHandler.reportMatch(this);
                 consume();
               }
-              state = 39;
-              expression(10);
+              state = 40;
+              expression(11);
               break;
             case 3:
               _localctx = UnionExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 40;
-              if (!(precpred(context, 7))) {
-                throw FailedPredicateException(this, "precpred(context, 7)");
-              }
               state = 41;
-              match(TOKEN_T__12);
+              if (!(precpred(context, 8))) {
+                throw FailedPredicateException(this, "precpred(context, 8)");
+              }
               state = 42;
-              expression(8);
+              match(TOKEN_T__12);
+              state = 43;
+              expression(9);
               break;
             case 4:
               _localctx = InequalityExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 43;
-              if (!(precpred(context, 6))) {
-                throw FailedPredicateException(this, "precpred(context, 6)");
-              }
               state = 44;
+              if (!(precpred(context, 7))) {
+                throw FailedPredicateException(this, "precpred(context, 7)");
+              }
+              state = 45;
               _la = tokenStream.LA(1)!;
               if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 245760) != 0)) {
                 errorHandler.recoverInline(this);
@@ -406,18 +413,18 @@ class FhirPathParser extends Parser {
                 errorHandler.reportMatch(this);
                 consume();
               }
-              state = 45;
-              expression(7);
+              state = 46;
+              expression(8);
               break;
             case 5:
               _localctx = EqualityExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 46;
-              if (!(precpred(context, 5))) {
-                throw FailedPredicateException(this, "precpred(context, 5)");
-              }
               state = 47;
+              if (!(precpred(context, 6))) {
+                throw FailedPredicateException(this, "precpred(context, 6)");
+              }
+              state = 48;
               _la = tokenStream.LA(1)!;
               if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 3932160) != 0)) {
                 errorHandler.recoverInline(this);
@@ -426,18 +433,18 @@ class FhirPathParser extends Parser {
                 errorHandler.reportMatch(this);
                 consume();
               }
-              state = 48;
-              expression(6);
+              state = 49;
+              expression(7);
               break;
             case 6:
               _localctx = MembershipExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 49;
-              if (!(precpred(context, 4))) {
-                throw FailedPredicateException(this, "precpred(context, 4)");
-              }
               state = 50;
+              if (!(precpred(context, 5))) {
+                throw FailedPredicateException(this, "precpred(context, 5)");
+              }
+              state = 51;
               _la = tokenStream.LA(1)!;
               if (!(_la == TOKEN_T__21 || _la == TOKEN_T__22)) {
                 errorHandler.recoverInline(this);
@@ -446,31 +453,31 @@ class FhirPathParser extends Parser {
                 errorHandler.reportMatch(this);
                 consume();
               }
-              state = 51;
-              expression(5);
+              state = 52;
+              expression(6);
               break;
             case 7:
               _localctx = AndExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 52;
-              if (!(precpred(context, 3))) {
-                throw FailedPredicateException(this, "precpred(context, 3)");
-              }
               state = 53;
-              match(TOKEN_T__23);
+              if (!(precpred(context, 4))) {
+                throw FailedPredicateException(this, "precpred(context, 4)");
+              }
               state = 54;
-              expression(4);
+              match(TOKEN_T__23);
+              state = 55;
+              expression(5);
               break;
             case 8:
               _localctx = OrExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 55;
-              if (!(precpred(context, 2))) {
-                throw FailedPredicateException(this, "precpred(context, 2)");
-              }
               state = 56;
+              if (!(precpred(context, 3))) {
+                throw FailedPredicateException(this, "precpred(context, 3)");
+              }
+              state = 57;
               _la = tokenStream.LA(1)!;
               if (!(_la == TOKEN_T__24 || _la == TOKEN_T__25)) {
                 errorHandler.recoverInline(this);
@@ -479,59 +486,59 @@ class FhirPathParser extends Parser {
                 errorHandler.reportMatch(this);
                 consume();
               }
-              state = 57;
-              expression(3);
+              state = 58;
+              expression(4);
               break;
             case 9:
               _localctx = ImpliesExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 58;
-              if (!(precpred(context, 1))) {
-                throw FailedPredicateException(this, "precpred(context, 1)");
-              }
               state = 59;
-              match(TOKEN_T__26);
+              if (!(precpred(context, 2))) {
+                throw FailedPredicateException(this, "precpred(context, 2)");
+              }
               state = 60;
-              expression(2);
+              match(TOKEN_T__26);
+              state = 61;
+              expression(3);
               break;
             case 10:
               _localctx = InvocationExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 61;
-              if (!(precpred(context, 13))) {
-                throw FailedPredicateException(this, "precpred(context, 13)");
-              }
               state = 62;
-              match(TOKEN_T__0);
+              if (!(precpred(context, 14))) {
+                throw FailedPredicateException(this, "precpred(context, 14)");
+              }
               state = 63;
+              match(TOKEN_T__0);
+              state = 64;
               invocation();
               break;
             case 11:
               _localctx = IndexerExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 64;
-              if (!(precpred(context, 12))) {
-                throw FailedPredicateException(this, "precpred(context, 12)");
-              }
               state = 65;
-              match(TOKEN_T__1);
+              if (!(precpred(context, 13))) {
+                throw FailedPredicateException(this, "precpred(context, 13)");
+              }
               state = 66;
-              expression(0);
+              match(TOKEN_T__1);
               state = 67;
+              expression(0);
+              state = 68;
               match(TOKEN_T__2);
               break;
             case 12:
               _localctx = TypeExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
               pushNewRecursionContext(_localctx, _startState, RULE_expression);
-              state = 69;
-              if (!(precpred(context, 8))) {
-                throw FailedPredicateException(this, "precpred(context, 8)");
-              }
               state = 70;
+              if (!(precpred(context, 9))) {
+                throw FailedPredicateException(this, "precpred(context, 9)");
+              }
+              state = 71;
               _la = tokenStream.LA(1)!;
               if (!(_la == TOKEN_T__10 || _la == TOKEN_T__11)) {
                 errorHandler.recoverInline(this);
@@ -540,12 +547,12 @@ class FhirPathParser extends Parser {
                 errorHandler.reportMatch(this);
                 consume();
               }
-              state = 71;
+              state = 72;
               typeSpecifier();
               break;
           }
         }
-        state = 76;
+        state = 77;
         errorHandler.sync(this);
         _alt = interpreter!.adaptivePredict(tokenStream, 2, context);
       }
@@ -563,7 +570,7 @@ class FhirPathParser extends Parser {
     dynamic _localctx = TermContext(context, state);
     enterRule(_localctx, 2, RULE_term);
     try {
-      state = 84;
+      state = 85;
       errorHandler.sync(this);
       switch (tokenStream.LA(1)!) {
         case TOKEN_T__7:
@@ -579,7 +586,7 @@ class FhirPathParser extends Parser {
         case TOKEN_DELIMITEDIDENTIFIER:
           _localctx = InvocationTermContext(_localctx);
           enterOuterAlt(_localctx, 1);
-          state = 77;
+          state = 78;
           invocation();
           break;
         case TOKEN_T__29:
@@ -592,23 +599,23 @@ class FhirPathParser extends Parser {
         case TOKEN_NUMBER:
           _localctx = LiteralTermContext(_localctx);
           enterOuterAlt(_localctx, 2);
-          state = 78;
+          state = 79;
           literal();
           break;
         case TOKEN_T__33:
           _localctx = ExternalConstantTermContext(_localctx);
           enterOuterAlt(_localctx, 3);
-          state = 79;
+          state = 80;
           externalConstant();
           break;
         case TOKEN_T__27:
           _localctx = ParenthesizedTermContext(_localctx);
           enterOuterAlt(_localctx, 4);
-          state = 80;
-          match(TOKEN_T__27);
           state = 81;
-          expression(0);
+          match(TOKEN_T__27);
           state = 82;
+          expression(0);
+          state = 83;
           match(TOKEN_T__28);
           break;
         default:
@@ -629,21 +636,21 @@ class FhirPathParser extends Parser {
     enterRule(_localctx, 4, RULE_literal);
     int _la;
     try {
-      state = 95;
+      state = 96;
       errorHandler.sync(this);
       switch (interpreter!.adaptivePredict(tokenStream, 4, context)) {
         case 1:
           _localctx = NullLiteralContext(_localctx);
           enterOuterAlt(_localctx, 1);
-          state = 86;
-          match(TOKEN_T__29);
           state = 87;
+          match(TOKEN_T__29);
+          state = 88;
           match(TOKEN_T__30);
           break;
         case 2:
           _localctx = BooleanLiteralContext(_localctx);
           enterOuterAlt(_localctx, 2);
-          state = 88;
+          state = 89;
           _la = tokenStream.LA(1)!;
           if (!(_la == TOKEN_T__31 || _la == TOKEN_T__32)) {
             errorHandler.recoverInline(this);
@@ -656,37 +663,37 @@ class FhirPathParser extends Parser {
         case 3:
           _localctx = StringLiteralContext(_localctx);
           enterOuterAlt(_localctx, 3);
-          state = 89;
+          state = 90;
           match(TOKEN_STRING);
           break;
         case 4:
           _localctx = NumberLiteralContext(_localctx);
           enterOuterAlt(_localctx, 4);
-          state = 90;
+          state = 91;
           match(TOKEN_NUMBER);
           break;
         case 5:
           _localctx = DateLiteralContext(_localctx);
           enterOuterAlt(_localctx, 5);
-          state = 91;
+          state = 92;
           match(TOKEN_DATE);
           break;
         case 6:
           _localctx = DateTimeLiteralContext(_localctx);
           enterOuterAlt(_localctx, 6);
-          state = 92;
+          state = 93;
           match(TOKEN_DATETIME);
           break;
         case 7:
           _localctx = TimeLiteralContext(_localctx);
           enterOuterAlt(_localctx, 7);
-          state = 93;
+          state = 94;
           match(TOKEN_TIME);
           break;
         case 8:
           _localctx = QuantityLiteralContext(_localctx);
           enterOuterAlt(_localctx, 8);
-          state = 94;
+          state = 95;
           quantity();
           break;
       }
@@ -705,9 +712,9 @@ class FhirPathParser extends Parser {
     enterRule(_localctx, 6, RULE_externalConstant);
     try {
       enterOuterAlt(_localctx, 1);
-      state = 97;
+      state = 98;
       match(TOKEN_T__33);
-      state = 100;
+      state = 101;
       errorHandler.sync(this);
       switch (tokenStream.LA(1)!) {
         case TOKEN_T__7:
@@ -718,11 +725,11 @@ class FhirPathParser extends Parser {
         case TOKEN_T__22:
         case TOKEN_IDENTIFIER:
         case TOKEN_DELIMITEDIDENTIFIER:
-          state = 98;
+          state = 99;
           identifier();
           break;
         case TOKEN_STRING:
-          state = 99;
+          state = 100;
           match(TOKEN_STRING);
           break;
         default:
@@ -742,37 +749,37 @@ class FhirPathParser extends Parser {
     dynamic _localctx = InvocationContext(context, state);
     enterRule(_localctx, 8, RULE_invocation);
     try {
-      state = 107;
+      state = 108;
       errorHandler.sync(this);
       switch (interpreter!.adaptivePredict(tokenStream, 6, context)) {
         case 1:
           _localctx = MemberInvocationContext(_localctx);
           enterOuterAlt(_localctx, 1);
-          state = 102;
+          state = 103;
           identifier();
           break;
         case 2:
           _localctx = FunctionInvocationContext(_localctx);
           enterOuterAlt(_localctx, 2);
-          state = 103;
+          state = 104;
           function();
           break;
         case 3:
           _localctx = ThisInvocationContext(_localctx);
           enterOuterAlt(_localctx, 3);
-          state = 104;
+          state = 105;
           match(TOKEN_T__34);
           break;
         case 4:
           _localctx = IndexInvocationContext(_localctx);
           enterOuterAlt(_localctx, 4);
-          state = 105;
+          state = 106;
           match(TOKEN_T__35);
           break;
         case 5:
           _localctx = TotalInvocationContext(_localctx);
           enterOuterAlt(_localctx, 5);
-          state = 106;
+          state = 107;
           match(TOKEN_T__36);
           break;
       }
@@ -792,19 +799,21 @@ class FhirPathParser extends Parser {
     int _la;
     try {
       enterOuterAlt(_localctx, 1);
-      state = 109;
-      identifier();
       state = 110;
+      identifier();
+      state = 111;
       match(TOKEN_T__27);
-      state = 112;
+      state = 113;
       errorHandler.sync(this);
       _la = tokenStream.LA(1)!;
-      if (((_la) & ~0x3f) == 0 && ((1 << _la) & 4575657493346130736) != 0) {
-        state = 111;
+      if ((((_la - -1)) & ~0x3f) == 0 &&
+          ((1 << (_la - -1)) & BigInt.parse('9151314986692261473').toInt()) !=
+              0) {
+        state = 112;
         paramList();
       }
 
-      state = 114;
+      state = 115;
       match(TOKEN_T__28);
     } on RecognitionException catch (re) {
       _localctx.exception = re;
@@ -822,17 +831,17 @@ class FhirPathParser extends Parser {
     int _la;
     try {
       enterOuterAlt(_localctx, 1);
-      state = 116;
+      state = 117;
       expression(0);
-      state = 121;
+      state = 122;
       errorHandler.sync(this);
       _la = tokenStream.LA(1)!;
       while (_la == TOKEN_T__37) {
-        state = 117;
-        match(TOKEN_T__37);
         state = 118;
+        match(TOKEN_T__37);
+        state = 119;
         expression(0);
-        state = 123;
+        state = 124;
         errorHandler.sync(this);
         _la = tokenStream.LA(1)!;
       }
@@ -851,13 +860,13 @@ class FhirPathParser extends Parser {
     enterRule(_localctx, 14, RULE_quantity);
     try {
       enterOuterAlt(_localctx, 1);
-      state = 124;
+      state = 125;
       match(TOKEN_NUMBER);
-      state = 126;
+      state = 127;
       errorHandler.sync(this);
       switch (interpreter!.adaptivePredict(tokenStream, 9, context)) {
         case 1:
-          state = 125;
+          state = 126;
           unit();
           break;
       }
@@ -875,7 +884,7 @@ class FhirPathParser extends Parser {
     dynamic _localctx = UnitContext(context, state);
     enterRule(_localctx, 16, RULE_unit);
     try {
-      state = 131;
+      state = 132;
       errorHandler.sync(this);
       switch (tokenStream.LA(1)!) {
         case TOKEN_T__38:
@@ -887,7 +896,7 @@ class FhirPathParser extends Parser {
         case TOKEN_T__44:
         case TOKEN_T__45:
           enterOuterAlt(_localctx, 1);
-          state = 128;
+          state = 129;
           dateTimePrecision();
           break;
         case TOKEN_T__46:
@@ -899,12 +908,12 @@ class FhirPathParser extends Parser {
         case TOKEN_T__52:
         case TOKEN_T__53:
           enterOuterAlt(_localctx, 2);
-          state = 129;
+          state = 130;
           pluralDateTimePrecision();
           break;
         case TOKEN_STRING:
           enterOuterAlt(_localctx, 3);
-          state = 130;
+          state = 131;
           match(TOKEN_STRING);
           break;
         default:
@@ -926,7 +935,7 @@ class FhirPathParser extends Parser {
     int _la;
     try {
       enterOuterAlt(_localctx, 1);
-      state = 133;
+      state = 134;
       _la = tokenStream.LA(1)!;
       if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 140187732541440) != 0)) {
         errorHandler.recoverInline(this);
@@ -951,7 +960,7 @@ class FhirPathParser extends Parser {
     int _la;
     try {
       enterOuterAlt(_localctx, 1);
-      state = 135;
+      state = 136;
       _la = tokenStream.LA(1)!;
       if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 35888059530608640) != 0)) {
         errorHandler.recoverInline(this);
@@ -975,7 +984,7 @@ class FhirPathParser extends Parser {
     enterRule(_localctx, 22, RULE_typeSpecifier);
     try {
       enterOuterAlt(_localctx, 1);
-      state = 137;
+      state = 138;
       qualifiedIdentifier();
     } on RecognitionException catch (re) {
       _localctx.exception = re;
@@ -993,19 +1002,19 @@ class FhirPathParser extends Parser {
     try {
       int _alt;
       enterOuterAlt(_localctx, 1);
-      state = 139;
+      state = 140;
       identifier();
-      state = 144;
+      state = 145;
       errorHandler.sync(this);
       _alt = interpreter!.adaptivePredict(tokenStream, 11, context);
       while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
         if (_alt == 1) {
-          state = 140;
-          match(TOKEN_T__0);
           state = 141;
+          match(TOKEN_T__0);
+          state = 142;
           identifier();
         }
-        state = 146;
+        state = 147;
         errorHandler.sync(this);
         _alt = interpreter!.adaptivePredict(tokenStream, 11, context);
       }
@@ -1025,7 +1034,7 @@ class FhirPathParser extends Parser {
     int _la;
     try {
       enterOuterAlt(_localctx, 1);
-      state = 147;
+      state = 148;
       _la = tokenStream.LA(1)!;
       if (!(((_la) & ~0x3f) == 0 && ((1 << _la) & 864691128467725056) != 0)) {
         errorHandler.recoverInline(this);
@@ -1056,29 +1065,29 @@ class FhirPathParser extends Parser {
   bool _expression_sempred(dynamic _localctx, int predIndex) {
     switch (predIndex) {
       case 0:
-        return precpred(context, 10);
+        return precpred(context, 11);
       case 1:
-        return precpred(context, 9);
+        return precpred(context, 10);
       case 2:
-        return precpred(context, 7);
-      case 3:
-        return precpred(context, 6);
-      case 4:
-        return precpred(context, 5);
-      case 5:
-        return precpred(context, 4);
-      case 6:
-        return precpred(context, 3);
-      case 7:
-        return precpred(context, 2);
-      case 8:
-        return precpred(context, 1);
-      case 9:
-        return precpred(context, 13);
-      case 10:
-        return precpred(context, 12);
-      case 11:
         return precpred(context, 8);
+      case 3:
+        return precpred(context, 7);
+      case 4:
+        return precpred(context, 6);
+      case 5:
+        return precpred(context, 5);
+      case 6:
+        return precpred(context, 4);
+      case 7:
+        return precpred(context, 3);
+      case 8:
+        return precpred(context, 2);
+      case 9:
+        return precpred(context, 14);
+      case 10:
+        return precpred(context, 13);
+      case 11:
+        return precpred(context, 9);
     }
     return true;
   }
@@ -1087,7 +1096,7 @@ class FhirPathParser extends Parser {
     4,
     1,
     64,
-    150,
+    151,
     2,
     0,
     7,
@@ -1152,9 +1161,11 @@ class FhirPathParser extends Parser {
     0,
     1,
     0,
+    1,
+    0,
     3,
     0,
-    33,
+    34,
     8,
     0,
     1,
@@ -1235,14 +1246,14 @@ class FhirPathParser extends Parser {
     0,
     5,
     0,
-    73,
+    74,
     8,
     0,
     10,
     0,
     12,
     0,
-    76,
+    77,
     9,
     0,
     1,
@@ -1261,7 +1272,7 @@ class FhirPathParser extends Parser {
     1,
     3,
     1,
-    85,
+    86,
     8,
     1,
     1,
@@ -1284,7 +1295,7 @@ class FhirPathParser extends Parser {
     2,
     3,
     2,
-    96,
+    97,
     8,
     2,
     1,
@@ -1295,7 +1306,7 @@ class FhirPathParser extends Parser {
     3,
     3,
     3,
-    101,
+    102,
     8,
     3,
     1,
@@ -1310,7 +1321,7 @@ class FhirPathParser extends Parser {
     4,
     3,
     4,
-    108,
+    109,
     8,
     4,
     1,
@@ -1321,7 +1332,7 @@ class FhirPathParser extends Parser {
     5,
     3,
     5,
-    113,
+    114,
     8,
     5,
     1,
@@ -1336,14 +1347,14 @@ class FhirPathParser extends Parser {
     6,
     5,
     6,
-    120,
+    121,
     8,
     6,
     10,
     6,
     12,
     6,
-    123,
+    124,
     9,
     6,
     1,
@@ -1352,7 +1363,7 @@ class FhirPathParser extends Parser {
     7,
     3,
     7,
-    127,
+    128,
     8,
     7,
     1,
@@ -1363,7 +1374,7 @@ class FhirPathParser extends Parser {
     8,
     3,
     8,
-    132,
+    133,
     8,
     8,
     1,
@@ -1386,14 +1397,14 @@ class FhirPathParser extends Parser {
     12,
     5,
     12,
-    143,
+    144,
     8,
     12,
     10,
     12,
     12,
     12,
-    146,
+    147,
     9,
     12,
     1,
@@ -1478,87 +1489,87 @@ class FhirPathParser extends Parser {
     23,
     58,
     59,
-    169,
+    171,
     0,
-    32,
+    33,
     1,
     0,
     0,
     0,
     2,
-    84,
+    85,
     1,
     0,
     0,
     0,
     4,
-    95,
+    96,
     1,
     0,
     0,
     0,
     6,
-    97,
+    98,
     1,
     0,
     0,
     0,
     8,
-    107,
+    108,
     1,
     0,
     0,
     0,
     10,
-    109,
+    110,
     1,
     0,
     0,
     0,
     12,
-    116,
+    117,
     1,
     0,
     0,
     0,
     14,
-    124,
+    125,
     1,
     0,
     0,
     0,
     16,
-    131,
+    132,
     1,
     0,
     0,
     0,
     18,
-    133,
+    134,
     1,
     0,
     0,
     0,
     20,
-    135,
+    136,
     1,
     0,
     0,
     0,
     22,
-    137,
+    138,
     1,
     0,
     0,
     0,
     24,
-    139,
+    140,
     1,
     0,
     0,
     0,
     26,
-    147,
+    148,
     1,
     0,
     0,
@@ -1570,7 +1581,7 @@ class FhirPathParser extends Parser {
     -1,
     0,
     29,
-    33,
+    34,
     3,
     2,
     1,
@@ -1582,667 +1593,673 @@ class FhirPathParser extends Parser {
     0,
     0,
     31,
-    33,
+    34,
     3,
     0,
     0,
-    11,
+    12,
     32,
+    34,
+    5,
+    0,
+    0,
+    1,
+    33,
     28,
     1,
     0,
     0,
     0,
-    32,
+    33,
     30,
     1,
     0,
     0,
     0,
     33,
-    74,
+    32,
     1,
     0,
     0,
     0,
     34,
-    35,
-    10,
-    10,
+    75,
+    1,
+    0,
     0,
     0,
     35,
     36,
+    10,
+    11,
+    0,
+    0,
+    36,
+    37,
     7,
     1,
     0,
     0,
-    36,
-    73,
+    37,
+    74,
     3,
     0,
     0,
-    11,
-    37,
-    38,
-    10,
-    9,
-    0,
-    0,
+    12,
     38,
     39,
+    10,
+    10,
+    0,
+    0,
+    39,
+    40,
     7,
     2,
     0,
     0,
-    39,
-    73,
+    40,
+    74,
     3,
     0,
     0,
-    10,
-    40,
-    41,
-    10,
-    7,
-    0,
-    0,
+    11,
     41,
     42,
+    10,
+    8,
+    0,
+    0,
+    42,
+    43,
     5,
     13,
     0,
     0,
-    42,
-    73,
+    43,
+    74,
+    3,
+    0,
+    0,
+    9,
+    44,
+    45,
+    10,
+    7,
+    0,
+    0,
+    45,
+    46,
+    7,
+    3,
+    0,
+    0,
+    46,
+    74,
     3,
     0,
     0,
     8,
-    43,
-    44,
+    47,
+    48,
     10,
     6,
     0,
     0,
-    44,
-    45,
-    7,
-    3,
-    0,
-    0,
-    45,
-    73,
-    3,
-    0,
-    0,
-    7,
-    46,
-    47,
-    10,
-    5,
-    0,
-    0,
-    47,
     48,
-    7,
-    4,
-    0,
-    0,
-    48,
-    73,
-    3,
-    0,
-    0,
-    6,
     49,
-    50,
-    10,
+    7,
     4,
     0,
     0,
+    49,
+    74,
+    3,
+    0,
+    0,
+    7,
     50,
     51,
+    10,
+    5,
+    0,
+    0,
+    51,
+    52,
     7,
     5,
     0,
     0,
-    51,
-    73,
-    3,
-    0,
-    0,
-    5,
     52,
-    53,
-    10,
+    74,
     3,
     0,
     0,
+    6,
     53,
     54,
+    10,
+    4,
+    0,
+    0,
+    54,
+    55,
     5,
     24,
     0,
     0,
-    54,
-    73,
+    55,
+    74,
     3,
     0,
     0,
-    4,
-    55,
-    56,
-    10,
-    2,
-    0,
-    0,
+    5,
     56,
     57,
+    10,
+    3,
+    0,
+    0,
+    57,
+    58,
     7,
     6,
     0,
     0,
-    57,
-    73,
-    3,
-    0,
-    0,
-    3,
     58,
-    59,
-    10,
-    1,
+    74,
+    3,
     0,
     0,
+    4,
     59,
     60,
+    10,
+    2,
+    0,
+    0,
+    60,
+    61,
     5,
     27,
     0,
     0,
-    60,
-    73,
+    61,
+    74,
     3,
     0,
     0,
-    2,
-    61,
+    3,
     62,
+    63,
+    10,
+    14,
+    0,
+    0,
+    63,
+    64,
+    5,
+    1,
+    0,
+    0,
+    64,
+    74,
+    3,
+    8,
+    4,
+    0,
+    65,
+    66,
     10,
     13,
     0,
     0,
-    62,
-    63,
-    5,
-    1,
-    0,
-    0,
-    63,
-    73,
-    3,
-    8,
-    4,
-    0,
-    64,
-    65,
-    10,
-    12,
-    0,
-    0,
-    65,
     66,
+    67,
     5,
     2,
     0,
     0,
-    66,
     67,
+    68,
     3,
     0,
     0,
     0,
-    67,
     68,
+    69,
     5,
     3,
     0,
     0,
-    68,
-    73,
+    69,
+    74,
     1,
     0,
     0,
     0,
-    69,
     70,
+    71,
     10,
-    8,
+    9,
     0,
     0,
-    70,
     71,
+    72,
     7,
     7,
     0,
     0,
-    71,
-    73,
+    72,
+    74,
     3,
     22,
     11,
     0,
-    72,
-    34,
-    1,
-    0,
-    0,
-    0,
-    72,
-    37,
-    1,
-    0,
-    0,
-    0,
-    72,
-    40,
-    1,
-    0,
-    0,
-    0,
-    72,
-    43,
-    1,
-    0,
-    0,
-    0,
-    72,
-    46,
-    1,
-    0,
-    0,
-    0,
-    72,
-    49,
-    1,
-    0,
-    0,
-    0,
-    72,
-    52,
-    1,
-    0,
-    0,
-    0,
-    72,
-    55,
-    1,
-    0,
-    0,
-    0,
-    72,
-    58,
-    1,
-    0,
-    0,
-    0,
-    72,
-    61,
-    1,
-    0,
-    0,
-    0,
-    72,
-    64,
-    1,
-    0,
-    0,
-    0,
-    72,
-    69,
+    73,
+    35,
     1,
     0,
     0,
     0,
     73,
+    38,
+    1,
+    0,
+    0,
+    0,
+    73,
+    41,
+    1,
+    0,
+    0,
+    0,
+    73,
+    44,
+    1,
+    0,
+    0,
+    0,
+    73,
+    47,
+    1,
+    0,
+    0,
+    0,
+    73,
+    50,
+    1,
+    0,
+    0,
+    0,
+    73,
+    53,
+    1,
+    0,
+    0,
+    0,
+    73,
+    56,
+    1,
+    0,
+    0,
+    0,
+    73,
+    59,
+    1,
+    0,
+    0,
+    0,
+    73,
+    62,
+    1,
+    0,
+    0,
+    0,
+    73,
+    65,
+    1,
+    0,
+    0,
+    0,
+    73,
+    70,
+    1,
+    0,
+    0,
+    0,
+    74,
+    77,
+    1,
+    0,
+    0,
+    0,
+    75,
+    73,
+    1,
+    0,
+    0,
+    0,
+    75,
     76,
     1,
     0,
     0,
     0,
-    74,
-    72,
-    1,
-    0,
-    0,
-    0,
-    74,
-    75,
-    1,
-    0,
-    0,
-    0,
-    75,
-    1,
-    1,
-    0,
-    0,
-    0,
     76,
-    74,
+    1,
     1,
     0,
     0,
     0,
     77,
-    85,
+    75,
+    1,
+    0,
+    0,
+    0,
+    78,
+    86,
     3,
     8,
     4,
     0,
-    78,
-    85,
+    79,
+    86,
     3,
     4,
     2,
     0,
-    79,
-    85,
+    80,
+    86,
     3,
     6,
     3,
     0,
-    80,
     81,
+    82,
     5,
     28,
     0,
     0,
-    81,
     82,
+    83,
     3,
     0,
     0,
     0,
-    82,
     83,
+    84,
     5,
     29,
     0,
     0,
-    83,
+    84,
+    86,
+    1,
+    0,
+    0,
+    0,
     85,
-    1,
-    0,
-    0,
-    0,
-    84,
-    77,
-    1,
-    0,
-    0,
-    0,
-    84,
     78,
     1,
     0,
     0,
     0,
-    84,
+    85,
     79,
     1,
     0,
     0,
     0,
-    84,
+    85,
     80,
     1,
     0,
     0,
     0,
     85,
-    3,
+    81,
     1,
     0,
     0,
     0,
     86,
+    3,
+    1,
+    0,
+    0,
+    0,
     87,
+    88,
     5,
     30,
     0,
     0,
-    87,
-    96,
+    88,
+    97,
     5,
     31,
     0,
     0,
-    88,
-    96,
+    89,
+    97,
     7,
     8,
     0,
     0,
-    89,
-    96,
+    90,
+    97,
     5,
     60,
     0,
     0,
-    90,
-    96,
+    91,
+    97,
     5,
     61,
     0,
     0,
-    91,
-    96,
+    92,
+    97,
     5,
     55,
     0,
     0,
-    92,
-    96,
+    93,
+    97,
     5,
     56,
     0,
     0,
-    93,
-    96,
+    94,
+    97,
     5,
     57,
     0,
     0,
-    94,
-    96,
+    95,
+    97,
     3,
     14,
     7,
     0,
-    95,
-    86,
+    96,
+    87,
     1,
     0,
     0,
     0,
-    95,
-    88,
-    1,
-    0,
-    0,
-    0,
-    95,
+    96,
     89,
     1,
     0,
     0,
     0,
-    95,
+    96,
     90,
     1,
     0,
     0,
     0,
-    95,
+    96,
     91,
     1,
     0,
     0,
     0,
-    95,
+    96,
     92,
     1,
     0,
     0,
     0,
-    95,
+    96,
     93,
     1,
     0,
     0,
     0,
-    95,
+    96,
     94,
     1,
     0,
     0,
     0,
     96,
-    5,
+    95,
     1,
     0,
     0,
     0,
     97,
-    100,
+    5,
+    1,
+    0,
+    0,
+    0,
+    98,
+    101,
     5,
     34,
     0,
     0,
-    98,
-    101,
+    99,
+    102,
     3,
     26,
     13,
     0,
-    99,
-    101,
+    100,
+    102,
     5,
     60,
     0,
     0,
-    100,
-    98,
-    1,
-    0,
-    0,
-    0,
-    100,
+    101,
     99,
     1,
     0,
     0,
     0,
     101,
+    100,
+    1,
+    0,
+    0,
+    0,
+    102,
     7,
     1,
     0,
     0,
     0,
-    102,
-    108,
+    103,
+    109,
     3,
     26,
     13,
     0,
-    103,
-    108,
+    104,
+    109,
     3,
     10,
     5,
     0,
-    104,
-    108,
+    105,
+    109,
     5,
     35,
     0,
     0,
-    105,
-    108,
+    106,
+    109,
     5,
     36,
     0,
     0,
-    106,
-    108,
+    107,
+    109,
     5,
     37,
     0,
     0,
-    107,
-    102,
-    1,
-    0,
-    0,
-    0,
-    107,
+    108,
     103,
     1,
     0,
     0,
     0,
-    107,
+    108,
     104,
     1,
     0,
     0,
     0,
-    107,
+    108,
     105,
     1,
     0,
     0,
     0,
-    107,
+    108,
     106,
     1,
     0,
     0,
     0,
     108,
-    9,
+    107,
     1,
     0,
     0,
     0,
     109,
+    9,
+    1,
+    0,
+    0,
+    0,
     110,
+    111,
     3,
     26,
     13,
     0,
-    110,
-    112,
+    111,
+    113,
     5,
     28,
     0,
     0,
-    111,
-    113,
+    112,
+    114,
     3,
     12,
     6,
     0,
-    112,
-    111,
-    1,
-    0,
-    0,
-    0,
-    112,
     113,
+    112,
     1,
     0,
     0,
@@ -2255,257 +2272,263 @@ class FhirPathParser extends Parser {
     0,
     114,
     115,
+    1,
+    0,
+    0,
+    0,
+    115,
+    116,
     5,
     29,
     0,
     0,
-    115,
+    116,
     11,
     1,
     0,
     0,
     0,
-    116,
-    121,
+    117,
+    122,
     3,
     0,
     0,
     0,
-    117,
     118,
+    119,
     5,
     38,
     0,
     0,
-    118,
-    120,
+    119,
+    121,
     3,
     0,
     0,
     0,
-    119,
-    117,
-    1,
-    0,
-    0,
-    0,
     120,
+    118,
+    1,
+    0,
+    0,
+    0,
+    121,
+    124,
+    1,
+    0,
+    0,
+    0,
+    122,
+    120,
+    1,
+    0,
+    0,
+    0,
+    122,
     123,
     1,
     0,
     0,
     0,
-    121,
-    119,
-    1,
-    0,
-    0,
-    0,
-    121,
-    122,
-    1,
-    0,
-    0,
-    0,
-    122,
+    123,
     13,
-    1,
-    0,
-    0,
-    0,
-    123,
-    121,
     1,
     0,
     0,
     0,
     124,
-    126,
+    122,
+    1,
+    0,
+    0,
+    0,
+    125,
+    127,
     5,
     61,
     0,
     0,
-    125,
-    127,
+    126,
+    128,
     3,
     16,
     8,
     0,
-    126,
-    125,
-    1,
-    0,
-    0,
-    0,
-    126,
     127,
+    126,
     1,
     0,
     0,
     0,
     127,
+    128,
+    1,
+    0,
+    0,
+    0,
+    128,
     15,
     1,
     0,
     0,
     0,
-    128,
-    132,
+    129,
+    133,
     3,
     18,
     9,
     0,
-    129,
-    132,
+    130,
+    133,
     3,
     20,
     10,
     0,
-    130,
-    132,
+    131,
+    133,
     5,
     60,
     0,
     0,
-    131,
-    128,
-    1,
-    0,
-    0,
-    0,
-    131,
+    132,
     129,
     1,
     0,
     0,
     0,
-    131,
+    132,
     130,
     1,
     0,
     0,
     0,
     132,
-    17,
+    131,
     1,
     0,
     0,
     0,
     133,
+    17,
+    1,
+    0,
+    0,
+    0,
     134,
+    135,
     7,
     9,
     0,
     0,
-    134,
+    135,
     19,
     1,
     0,
     0,
     0,
-    135,
     136,
+    137,
     7,
     10,
     0,
     0,
-    136,
+    137,
     21,
     1,
     0,
     0,
     0,
-    137,
     138,
+    139,
     3,
     24,
     12,
     0,
-    138,
+    139,
     23,
     1,
     0,
     0,
     0,
-    139,
+    140,
+    145,
+    3,
+    26,
+    13,
+    0,
+    141,
+    142,
+    5,
+    1,
+    0,
+    0,
+    142,
     144,
     3,
     26,
     13,
     0,
-    140,
-    141,
-    5,
-    1,
-    0,
-    0,
-    141,
     143,
-    3,
-    26,
-    13,
-    0,
-    142,
-    140,
+    141,
     1,
     0,
     0,
     0,
+    144,
+    147,
+    1,
+    0,
+    0,
+    0,
+    145,
     143,
+    1,
+    0,
+    0,
+    0,
+    145,
     146,
     1,
     0,
     0,
     0,
-    144,
-    142,
-    1,
-    0,
-    0,
-    0,
-    144,
-    145,
-    1,
-    0,
-    0,
-    0,
-    145,
+    146,
     25,
     1,
     0,
     0,
     0,
-    146,
-    144,
+    147,
+    145,
     1,
     0,
     0,
     0,
-    147,
     148,
+    149,
     7,
     11,
     0,
     0,
-    148,
+    149,
     27,
     1,
     0,
     0,
     0,
     12,
-    32,
-    72,
-    74,
-    84,
-    95,
-    100,
-    107,
-    112,
-    121,
-    126,
-    131,
-    144
+    33,
+    73,
+    75,
+    85,
+    96,
+    101,
+    108,
+    113,
+    122,
+    127,
+    132,
+    145
   ];
 
   static final ATN _ATN = ATNDeserializer().deserialize(_serializedATN);
@@ -2835,6 +2858,21 @@ class AndExpressionContext extends ExpressionContext {
   T? accept<T>(ParseTreeVisitor<T> visitor) {
     if (visitor is FhirPathVisitor<T>) {
       return visitor.visitAndExpression(this);
+    } else {
+      return visitor.visitChildren(this);
+    }
+  }
+}
+
+class EndOfFileContext extends ExpressionContext {
+  TerminalNode? EOF() => getToken(FhirPathParser.TOKEN_EOF, 0);
+  EndOfFileContext(ExpressionContext ctx) {
+    copyFrom(ctx);
+  }
+  @override
+  T? accept<T>(ParseTreeVisitor<T> visitor) {
+    if (visitor is FhirPathVisitor<T>) {
+      return visitor.visitEndOfFile(this);
     } else {
       return visitor.visitChildren(this);
     }

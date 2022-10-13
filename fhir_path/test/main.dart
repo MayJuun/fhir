@@ -5,21 +5,21 @@
 // import 'package:fhir_path/fhir_path.dart';
 
 void main() async {
-  final bigNum1 = double.parse('4611685740860939056').toInt();
+  final bigNum1 = BigInt.parse('4611685740860939056').toInt();
   final bigNum2 = 4611685740860939056;
 
   print(bigNum1 == bigNum2);
   print(bigNum1);
   print(bigNum2);
 
-  // [29, 61, 35, 58, 34, 60, 32, 33, 30, 28, 37, 5].forEach((element) {
-  //   print(((element) & ~0x3f) == 0 && ((1 << element) & bigNum1) != 0);
-  // });
-  // print('\n');
+  [29, 61, 35, 58, 34, 60, 32, 33, 30, 28, 37, 5].forEach((element) {
+    print(((element) & ~0x3f) == 0 && ((1 << element) & bigNum1) != 0);
+  });
+  print('\n');
 
-  // [29, 61, 35, 58, 34, 60, 32, 33, 30, 28, 37, 5].forEach((element) {
-  //   print(((element) & ~0x3f) == 0 && ((1 << element) & bigNum2) != 0);
-  // });
+  [29, 61, 35, 58, 34, 60, 32, 33, 30, 28, 37, 5].forEach((element) {
+    print(((element) & ~0x3f) == 0 && ((1 << element) & bigNum2) != 0);
+  });
 
   // final numList = [
   //   29,

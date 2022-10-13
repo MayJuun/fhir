@@ -57,6 +57,11 @@ class FhirPathBaseVisitor<T> extends ParseTreeVisitor<T>
   /// The default implementation returns the result of calling
   /// [visitChildren] on [ctx].
   @override
+  T? visitEndOfFile(EndOfFileContext ctx) => visitChildren(ctx);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [ctx].
+  @override
   T? visitMembershipExpression(MembershipExpressionContext ctx) =>
       visitChildren(ctx);
 
