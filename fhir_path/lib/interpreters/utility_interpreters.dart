@@ -192,6 +192,58 @@ List? _$visitOrExpression(
   return visitor.context;
 }
 
+List? _$visitImpliesExpression(
+  ImpliesExpressionContext ctx,
+  FhirPathDartVisitor visitor,
+) {
+  if (ctx.childCount != 3) {
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
+  }
+  final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
+  final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
+
+  bool? convertValue(dynamic value) => value is bool
+      ? value
+      : value is Boolean
+          ? value.isValid
+              ? value.value
+              : null
+          : value == 1
+              ? true
+              : value == 0
+                  ? false
+                  : [
+                      'true',
+                      't',
+                      'yes',
+                      'y',
+                      '1',
+                      '1.0',
+                    ].contains(lhs.toString().toLowerCase())
+                      ? true
+                      : ['false', 'f', 'no', 'n', '0', '0.0']
+                              .contains(lhs.toString().toLowerCase())
+                          ? false
+                          : null;
+
+  final lhsValue = lhs == null || lhs.isEmpty ? null : convertValue(lhs.first);
+  final rhsValue = rhs == null || rhs.isEmpty ? null : convertValue(rhs.first);
+
+  if (lhsValue == null) {
+    if (rhsValue == null || !rhsValue) {
+      visitor.context = [];
+    } else {
+      visitor.context = [true];
+    }
+  } else if (lhsValue) {
+    visitor.context = rhsValue == null ? [] : [rhsValue];
+  } else {
+    visitor.context = [true];
+  }
+
+  return visitor.context;
+}
+
 List? _$visitUnionExpression(
   UnionExpressionContext ctx,
   FhirPathDartVisitor visitor,

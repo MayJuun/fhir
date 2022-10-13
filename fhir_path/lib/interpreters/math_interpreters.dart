@@ -96,165 +96,192 @@ List? _$visitAdditiveExpression(
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)!.text;
 
-  if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
-    return <dynamic>[];
-  } else if (lhs!.length != 1 || rhs!.length != 1) {
-    throw FhirPathEvaluationException(
-        'Additiv operators require each operand to result in a '
-        'single object. The "+" operator was passed the following:\n'
-        'Operand 1: $lhs\n'
-        'Operand 2: $rhs',
-        operation: operator,
-        collection: visitor.context);
-  } else if (operator == '+') {
-    switch (lhs.first.runtimeType) {
-      case int:
-        if (rhs.first is num) {
-          visitor.context = <dynamic>[lhs.first + rhs.first];
-        } else {
-          throw _wrongTypes('+', [lhs, rhs], visitor.context);
-        }
-        break;
-      case double:
-        if (rhs.first is num) {
-          visitor.context = <dynamic>[lhs.first + rhs.first];
-        } else {
-          throw _wrongTypes('+', [lhs, rhs], visitor.context);
-        }
-        break;
-      case FhirPathQuantity:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (lhs.first as FhirPathQuantity) + (rhs.first as FhirPathQuantity)
-          ];
-        } else {
-          throw _wrongTypes('+', [lhs, rhs], visitor.context);
-        }
-        break;
-      case FhirDateTime:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (rhs.first as FhirPathQuantity).add(lhs.first).toString()
-          ];
-        } else {
-          throw _wrongTypes('+', [lhs, rhs], visitor.context);
-        }
-        break;
-      case Date:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (rhs.first as FhirPathQuantity).add(lhs.first).toString()
-          ];
-        } else {
-          throw _wrongTypes('+', [lhs, rhs], visitor.context);
-        }
-        break;
-      case Time:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (rhs.first as FhirPathQuantity).add(lhs.first).toString()
-          ];
-        } else {
-          throw _wrongTypes('+', [lhs, rhs], visitor.context);
-        }
-        break;
-      case String:
-        if (rhs.first is String) {
-          visitor.context = <dynamic>[lhs.first + rhs.first];
-        } else if (rhs.first is FhirPathQuantity) {
-          if (FhirDateTime(lhs.first).isValid) {
+  if (operator == '&') {
+    final lhsString = (lhs?.isEmpty ?? true)
+        ? ''
+        : lhs!.length != 1
+            ? null
+            : lhs.first;
+    final rhsString = (rhs?.isEmpty ?? true)
+        ? ''
+        : rhs!.length != 1
+            ? null
+            : rhs.first;
+    if (lhsString == null ||
+        rhsString == null ||
+        lhsString is! String ||
+        rhsString is! String) {
+      throw FhirPathEvaluationException(
+          'Additive operators require each operand to result in a '
+          'single String. The "&" operator was passed the following:\n'
+          'Operand 1: $lhs\n'
+          'Operand 2: $rhs',
+          operation: operator,
+          collection: visitor.context);
+    } else {
+      visitor.context = ['$lhsString$rhsString'];
+    }
+  } else {
+    if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
+      return <dynamic>[];
+    } else if (lhs!.length != 1 || rhs!.length != 1) {
+      throw FhirPathEvaluationException(
+          'Additive operators require each operand to result in a '
+          'single object. The "+" operator was passed the following:\n'
+          'Operand 1: $lhs\n'
+          'Operand 2: $rhs',
+          operation: operator,
+          collection: visitor.context);
+    } else if (operator == '+') {
+      switch (lhs.first.runtimeType) {
+        case int:
+          if (rhs.first is num) {
+            visitor.context = <dynamic>[lhs.first + rhs.first];
+          } else {
+            throw _wrongTypes('+', [lhs, rhs], visitor.context);
+          }
+          break;
+        case double:
+          if (rhs.first is num) {
+            visitor.context = <dynamic>[lhs.first + rhs.first];
+          } else {
+            throw _wrongTypes('+', [lhs, rhs], visitor.context);
+          }
+          break;
+        case FhirPathQuantity:
+          if (rhs.first is FhirPathQuantity) {
             visitor.context = <dynamic>[
-              (rhs.first as FhirPathQuantity)
-                  .add(FhirDateTime(lhs.first))
-                  .toString()
-            ];
-          } else if (Time(lhs.first).isValid) {
-            visitor.context = <dynamic>[
-              (rhs.first as FhirPathQuantity).add(Time(lhs.first)).toString()
+              (lhs.first as FhirPathQuantity) + (rhs.first as FhirPathQuantity)
             ];
           } else {
             throw _wrongTypes('+', [lhs, rhs], visitor.context);
           }
-        }
-        break;
-      default:
-        throw _wrongTypes('+', [lhs, rhs], visitor.context);
-    }
-  } else if (operator == '-') {
-    switch (lhs.first.runtimeType) {
-      case int:
-        if (rhs.first is num) {
-          visitor.context = <dynamic>[lhs.first - rhs.first];
-        } else {
-          throw _wrongTypes('-', [lhs, rhs], visitor.context);
-        }
-        break;
-      case double:
-        if (rhs.first is num) {
-          visitor.context = <dynamic>[lhs.first - rhs.first];
-        } else {
-          throw _wrongTypes('-', [lhs, rhs], visitor.context);
-        }
-        break;
-      case FhirPathQuantity:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (lhs.first as FhirPathQuantity) - (rhs.first as FhirPathQuantity)
-          ];
-        } else {
-          throw _wrongTypes('-', [lhs, rhs], visitor.context);
-        }
-        break;
-      case FhirDateTime:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (rhs.first as FhirPathQuantity).subtract(lhs.first).toString()
-          ];
-        } else {
-          throw _wrongTypes('-', [lhs, rhs], visitor.context);
-        }
-        break;
-      case Date:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (rhs.first as FhirPathQuantity).subtract(lhs.first).toString()
-          ];
-        } else {
-          throw _wrongTypes('-', [lhs, rhs], visitor.context);
-        }
-        break;
-      case Time:
-        if (rhs.first is FhirPathQuantity) {
-          visitor.context = <dynamic>[
-            (rhs.first as FhirPathQuantity).subtract(lhs.first).toString()
-          ];
-        } else {
-          throw _wrongTypes('-', [lhs, rhs], visitor.context);
-        }
-        break;
-      case String:
-        if (rhs.first is String) {
-          visitor.context = <dynamic>[lhs.first - rhs.first];
-        } else if (rhs.first is FhirPathQuantity) {
-          if (FhirDateTime(lhs.first).isValid) {
+          break;
+        case FhirDateTime:
+          if (rhs.first is FhirPathQuantity) {
             visitor.context = <dynamic>[
-              (rhs.first as FhirPathQuantity)
-                  .subtract(FhirDateTime(lhs.first))
-                  .toString()
+              (rhs.first as FhirPathQuantity).add(lhs.first).toString()
             ];
-          } else if (Time(lhs.first).isValid) {
+          } else {
+            throw _wrongTypes('+', [lhs, rhs], visitor.context);
+          }
+          break;
+        case Date:
+          if (rhs.first is FhirPathQuantity) {
             visitor.context = <dynamic>[
-              (rhs.first as FhirPathQuantity)
-                  .subtract(Time(lhs.first))
-                  .toString()
+              (rhs.first as FhirPathQuantity).add(lhs.first).toString()
+            ];
+          } else {
+            throw _wrongTypes('+', [lhs, rhs], visitor.context);
+          }
+          break;
+        case Time:
+          if (rhs.first is FhirPathQuantity) {
+            visitor.context = <dynamic>[
+              (rhs.first as FhirPathQuantity).add(lhs.first).toString()
+            ];
+          } else {
+            throw _wrongTypes('+', [lhs, rhs], visitor.context);
+          }
+          break;
+        case String:
+          if (rhs.first is String) {
+            visitor.context = <dynamic>[lhs.first + rhs.first];
+          } else if (rhs.first is FhirPathQuantity) {
+            if (FhirDateTime(lhs.first).isValid) {
+              visitor.context = <dynamic>[
+                (rhs.first as FhirPathQuantity)
+                    .add(FhirDateTime(lhs.first))
+                    .toString()
+              ];
+            } else if (Time(lhs.first).isValid) {
+              visitor.context = <dynamic>[
+                (rhs.first as FhirPathQuantity).add(Time(lhs.first)).toString()
+              ];
+            } else {
+              throw _wrongTypes('+', [lhs, rhs], visitor.context);
+            }
+          }
+          break;
+        default:
+          throw _wrongTypes('+', [lhs, rhs], visitor.context);
+      }
+    } else if (operator == '-') {
+      switch (lhs.first.runtimeType) {
+        case int:
+          if (rhs.first is num) {
+            visitor.context = <dynamic>[lhs.first - rhs.first];
+          } else {
+            throw _wrongTypes('-', [lhs, rhs], visitor.context);
+          }
+          break;
+        case double:
+          if (rhs.first is num) {
+            visitor.context = <dynamic>[lhs.first - rhs.first];
+          } else {
+            throw _wrongTypes('-', [lhs, rhs], visitor.context);
+          }
+          break;
+        case FhirPathQuantity:
+          if (rhs.first is FhirPathQuantity) {
+            visitor.context = <dynamic>[
+              (lhs.first as FhirPathQuantity) - (rhs.first as FhirPathQuantity)
             ];
           } else {
             throw _wrongTypes('-', [lhs, rhs], visitor.context);
           }
-        }
-        break;
-      default:
-        throw _wrongTypes('-', [lhs, rhs], visitor.context);
+          break;
+        case FhirDateTime:
+          if (rhs.first is FhirPathQuantity) {
+            visitor.context = <dynamic>[
+              (rhs.first as FhirPathQuantity).subtract(lhs.first).toString()
+            ];
+          } else {
+            throw _wrongTypes('-', [lhs, rhs], visitor.context);
+          }
+          break;
+        case Date:
+          if (rhs.first is FhirPathQuantity) {
+            visitor.context = <dynamic>[
+              (rhs.first as FhirPathQuantity).subtract(lhs.first).toString()
+            ];
+          } else {
+            throw _wrongTypes('-', [lhs, rhs], visitor.context);
+          }
+          break;
+        case Time:
+          if (rhs.first is FhirPathQuantity) {
+            visitor.context = <dynamic>[
+              (rhs.first as FhirPathQuantity).subtract(lhs.first).toString()
+            ];
+          } else {
+            throw _wrongTypes('-', [lhs, rhs], visitor.context);
+          }
+          break;
+        case String:
+          if (rhs.first is String) {
+            visitor.context = <dynamic>[lhs.first - rhs.first];
+          } else if (rhs.first is FhirPathQuantity) {
+            if (FhirDateTime(lhs.first).isValid) {
+              visitor.context = <dynamic>[
+                (rhs.first as FhirPathQuantity)
+                    .subtract(FhirDateTime(lhs.first))
+                    .toString()
+              ];
+            } else if (Time(lhs.first).isValid) {
+              visitor.context = <dynamic>[
+                (rhs.first as FhirPathQuantity)
+                    .subtract(Time(lhs.first))
+                    .toString()
+              ];
+            } else {
+              throw _wrongTypes('-', [lhs, rhs], visitor.context);
+            }
+          }
+          break;
+        default:
+          throw _wrongTypes('-', [lhs, rhs], visitor.context);
+      }
     }
   }
 
@@ -336,7 +363,7 @@ List? _$visitMultiplicativeExpression(
     } else if (operator == 'mod') {
       if (lhs.first is num && rhs.first is num) {
         visitor.context = (rhs.first != 0)
-            ? <dynamic>[((lhs.first % rhs.first) as num).truncate()]
+            ? <dynamic>[((lhs.first % rhs.first) as num)]
             : <dynamic>[];
       } else {
         throw FhirPathEvaluationException(

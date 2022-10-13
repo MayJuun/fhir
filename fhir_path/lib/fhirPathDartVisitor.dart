@@ -180,7 +180,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitImpliesExpression(ImpliesExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitImpliesExpression(ctx, this);
   }
 
   @override
