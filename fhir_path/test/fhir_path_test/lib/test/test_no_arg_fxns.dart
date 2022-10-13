@@ -763,8 +763,36 @@ void testNoArgFxns() {
           [true]);
     });
 
-    // /// ToDo: toQuantity
-    // /// ToDo: convertsToQuantity
+    test('toQuantity', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'4 days'.toQuantity()"),
+          [FhirPathQuantity(4, 'days')]);
+
+      // ToDo: toQuantity - more units
+      // expect(
+      //     walkFhirPath(
+      //         context: resource.toJson(),
+      //         pathExpression: "'10 \'mg[Hg]\''.toQuantity()"),
+      //     ['true']);
+    });
+
+    test('toQuantity', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'4 days'.convertsToQuantity()"),
+          [true]);
+
+      // TODO: still need to work on recognizing Quantity
+      // expect(
+      //     walkFhirPath(
+      //         context: resource.toJson(),
+      //         pathExpression: "'10 \'mg[Hg]\''.convertsToQuantity()"),
+      //     ['true']);
+    });
+
     test('toString', () {
       expect(
           walkFhirPath(
