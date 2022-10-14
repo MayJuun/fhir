@@ -89,7 +89,6 @@ class TailParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
-    print(results);
     if (results.length < 2) {
       return [];
     } else {

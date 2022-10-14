@@ -1248,9 +1248,6 @@ void testNoArgFxns() {
       final endTimeOfDay = Time(
           DateTime.now().toIso8601String().split('T').last.substring(0, 12));
 
-      print(startTimeOfDay);
-      print(resultTimeOfDay);
-      print(endTimeOfDay);
       expect(
           startTimeOfDay <= resultTimeOfDay && endTimeOfDay >= resultTimeOfDay,
           true);

@@ -33,10 +33,7 @@ Parser<FhirPathParser> lexer() {
       .map((value) => ParenthesesParser(operatorValues(value[1]))));
 
   /// Complete the lexing and again, passes to operatorValues
-  return tokenizer.plus().end().map((value) {
-    print(value);
-    return operatorValues(value);
-  });
+  return tokenizer.plus().end().map((value) => operatorValues(value));
 }
 
 /// This ensures that any response is a ParserList (this allows easy recursion when

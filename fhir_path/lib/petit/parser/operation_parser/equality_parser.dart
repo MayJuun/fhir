@@ -14,8 +14,7 @@ class EqualsParser extends OperatorParser {
   List execute(List results, Map<String, dynamic> passed) {
     final lhs = before.execute(results.toList(), passed);
     final rhs = after.execute(results.toList(), passed);
-    print('LHS: $lhs');
-    print('RHS: $rhs');
+
     if (lhs.isEmpty || rhs.isEmpty) {
       return [];
     } else if (lhs.length != rhs.length) {
