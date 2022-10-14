@@ -1236,8 +1236,12 @@ void testNoArgFxns() {
           walkFhirPath(context: resource.toJson(), pathExpression: "now()");
       final endNow = DateTime.now();
       expect(
-          toDateTime(startNow).isBefore(toDateTime(resultNow.first)) &&
-              endNow.isAfter(toDateTime(resultNow.first)),
+          (toDateTime(startNow).isBefore(toDateTime(resultNow.first)) ||
+                  toDateTime(startNow)
+                      .isAtSameMomentAs(toDateTime(resultNow.first))) &&
+              (endNow.isAfter(toDateTime(resultNow.first)) ||
+                  toDateTime(endNow)
+                      .isAtSameMomentAs(toDateTime(resultNow.first))),
           true);
 
       final startTimeOfDay = Time(
@@ -1247,11 +1251,9 @@ void testNoArgFxns() {
           .first;
       final endTimeOfDay = Time(
           DateTime.now().toIso8601String().split('T').last.substring(0, 12));
-
       expect(
           startTimeOfDay <= resultTimeOfDay && endTimeOfDay >= resultTimeOfDay,
           true);
-
       expect(
           walkFhirPath(context: resource.toJson(), pathExpression: "today()")
               .first,

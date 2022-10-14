@@ -5,6 +5,8 @@
 * Rewrote the whole thing using antlr only to find out it doesn't transpile properly to javascript (grumble, grumble, stupid multi-platforms)
 * Both are included currently, although the petit_parser version is the default as it currently is more robust
 * More specific support for Quantities - but not as widely supported because you can actually work with them now, more will be added in the future
+* Petit tests pass on android, Linux and web
+* Antlr tests pass on android and Linux
 
 ## [0.9.0-1]
 
