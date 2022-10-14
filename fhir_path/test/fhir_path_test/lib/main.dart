@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
                 RunTests('Antlr Tests', antlrFhirPathTest),
                 SizedBox(height: 8),
                 RunTests('Petit Tests', petitFhirPathTest),
+                SizedBox(height: 8),
               ],
             )),
           ),
@@ -43,8 +44,8 @@ class _RunTestsState extends State<RunTests> {
     String buttonText = 'Perform ${widget.testName}';
     return TextButton(
       child: Container(
-          height: 300,
-          width: 300,
+          height: 100,
+          width: 100,
           color: Colors.blue,
           child: Center(
             child: Text(
