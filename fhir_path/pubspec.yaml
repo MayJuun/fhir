@@ -16,6 +16,7 @@ dependencies:
   # units_converter: ^2.0.1
   units_converter:
     path: ../../units_converter
+  petitparser: ^5.0.0
 
 dev_dependencies:
   import_sorter: ^4.6.0

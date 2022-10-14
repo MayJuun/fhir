@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'test/fhir_path_test.dart';
+import 'antlr_test/antlr_fhir_path_test.dart';
+import 'petit_test/petit_fhir_path_test.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,23 +14,33 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.light(),
         home: SafeArea(
           child: Scaffold(
-            body: Center(child: RunTests()),
+            body: Center(
+                child: Column(
+              children: [
+                RunTests('Antlr Tests', antlrFhirPathTest),
+                SizedBox(height: 8),
+                RunTests('Petit Tests', petitFhirPathTest),
+              ],
+            )),
           ),
         ),
       );
 }
 
 class RunTests extends StatefulWidget {
-  const RunTests({super.key});
+  const RunTests(this.testName, this.test, {super.key});
+
+  final String testName;
+  final void Function() test;
 
   @override
   State<RunTests> createState() => _RunTestsState();
 }
 
 class _RunTestsState extends State<RunTests> {
-  String buttonText = 'Perform Test';
   @override
   Widget build(BuildContext context) {
+    String buttonText = 'Perform ${widget.testName}';
     return TextButton(
       child: Container(
           height: 300,
@@ -43,9 +54,9 @@ class _RunTestsState extends State<RunTests> {
           )),
       onPressed: () {
         try {
-          fhirPathTest();
+          widget.test();
           setState(() {
-            buttonText = 'running tests';
+            buttonText = 'running ${widget.testName}';
           });
         } catch (e) {
           setState(() {
