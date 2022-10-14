@@ -12,40 +12,72 @@ class EqualsParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
-    if (executedBefore.isEmpty || executedAfter.isEmpty) {
+    final lhs = before.execute(results.toList(), passed);
+    final rhs = after.execute(results.toList(), passed);
+    print('LHS: $lhs');
+    print('RHS: $rhs');
+    if (lhs.isEmpty || rhs.isEmpty) {
       return [];
-    } else if (executedBefore.length != executedAfter.length) {
+    } else if (lhs.length != rhs.length) {
       return [false];
     } else {
-      for (var i = 0; i < executedBefore.length; i++) {
-        if (executedBefore[i] is FhirDateTime || executedBefore[i] is Date) {
-          if (executedAfter[i] is FhirDateTime || executedAfter[i] is Date) {
-            final beforeString = executedBefore[i].toString();
-            final afterString = executedAfter[i].toString();
-            final longerString = beforeString.length > afterString.length
-                ? beforeString
-                : afterString;
-            final shorterString =
-                longerString == beforeString ? afterString : beforeString;
-            if (shorterString !=
-                longerString.substring(0, shorterString.length)) {
-              return [false];
-            } else {
-              for (var j = shorterString.length; j < longerString.length; j++) {
-                if (num.tryParse(longerString[j]) != null &&
-                    longerString[j] != '0') {
-                  return [];
+      /// for each entry in lhs and rhs (we checked above to ensure they
+      /// were the same length)
+      for (var i = 0; i < lhs.length; i++) {
+        /// we check to see if any of the values are DateTimes
+        if (lhs[i] is FhirDateTime ||
+            lhs[i] is Date ||
+            rhs[i] is FhirDateTime ||
+            rhs[i] is Date) {
+          /// As long as one is, we convert them both to strings then back
+          /// to DateTimes
+          final lhsDateTime = FhirDateTime(lhs[i].toString());
+          final rhsDateTime = FhirDateTime(rhs[i].toString());
+
+          /// As long as they are both valid we try and compare them
+          if (lhsDateTime.isValid && rhsDateTime.isValid) {
+            try {
+              if (lhsDateTime != rhsDateTime) {
+                var lhsDatePrecision =
+                    '-'.allMatches(lhsDateTime.toString()).length;
+                lhsDatePrecision = lhsDatePrecision > 2 ? 2 : lhsDatePrecision;
+                var rhsDatePrecision =
+                    '-'.allMatches(rhsDateTime.toString()).length;
+                rhsDatePrecision = rhsDatePrecision > 2 ? 2 : rhsDatePrecision;
+                var lhsTimePrecision =
+                    ':'.allMatches(lhsDateTime.toString()).length;
+                lhsTimePrecision = lhsTimePrecision > 2 ? 2 : lhsTimePrecision;
+                var rhsTimePrecision =
+                    ':'.allMatches(rhsDateTime.toString()).length;
+                rhsTimePrecision = rhsTimePrecision > 2 ? 2 : rhsTimePrecision;
+                if (lhsDatePrecision != rhsDatePrecision ||
+                    lhsTimePrecision != rhsTimePrecision) {
+                  return <dynamic>[];
+                } else {
+                  return <dynamic>[false];
                 }
               }
+            } catch (e) {
+              return <dynamic>[];
             }
           } else {
-            return [false];
+            /// If not it means only one is, so this is false
+            return <dynamic>[false];
           }
-        } else if ((executedBefore[i] != executedAfter[i] &&
-            executedAfter[i] != executedBefore[i])) {
-          return [false];
+        }
+
+        /// If they aren't dateTimes we can just compare them as usual
+        else {
+          if (lhs[i] is FhirPathQuantity || rhs[i] is FhirPathQuantity) {
+            if (lhs[i] is FhirPathQuantity) {
+              return <dynamic>[lhs[i] == rhs[i]];
+            } else {
+              return <dynamic>[rhs[i] == lhs[i]];
+            }
+          }
+          if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
+            return <dynamic>[false];
+          }
         }
       }
       return [true];
@@ -97,93 +129,61 @@ class EquivalentParser extends OperatorParser {
     } else if (executedBefore.length != executedAfter.length) {
       return [false];
     } else {
-      for (var i = 0; i < executedBefore.length; i++) {
-        if (executedBefore[i] is FhirDateTime || executedBefore[i] is Date) {
-          if (executedAfter[i] is FhirDateTime || executedAfter[i] is Date) {
-            final beforeString = executedBefore[i].toString();
-            final afterString = executedAfter[i].toString();
-            final longerString = beforeString.length > afterString.length
-                ? beforeString
-                : afterString;
-            final shorterString =
-                longerString == beforeString ? afterString : beforeString;
-            if (shorterString !=
-                longerString.substring(0, shorterString.length)) {
-              return [false];
-            } else {
-              for (var j = shorterString.length; j < longerString.length; j++) {
-                if (num.tryParse(longerString[j]) != null &&
-                    longerString[j] != '0') {
-                  return [false];
-                }
-              }
-            }
-          } else {
-            return [false];
-          }
-        } else if (executedBefore[i] is int) {
-          if (executedBefore[i] != executedAfter[i] &&
-              executedAfter[i] != executedBefore[i]) {
-            return [false];
-          }
-        } else if (executedBefore[i] is double) {
-          if (executedAfter[i] is double) {
-            final beforeString = executedBefore[i].toString();
-            final afterString = executedAfter[i].toString();
-            final numberBeforeString = beforeString.split('.').first;
-            final numberAfterString = afterString.split('.').first;
-            if (numberBeforeString.length != numberAfterString.length) {
-              return [false];
-            } else if (numberBeforeString != numberAfterString) {
-              return [false];
-            } else {
-              final partialNumberBeforeString = !beforeString.contains('.')
-                  ? null
-                  : beforeString.split('.').last;
-              final partialNumberAfterString = !afterString.contains('.')
-                  ? null
-                  : afterString.split('.').last;
-              if ((partialNumberBeforeString == null &&
-                      partialNumberAfterString != null) ||
-                  (partialNumberBeforeString != null &&
-                      partialNumberAfterString == null)) {
-                return [false];
+      executedBefore.removeWhere((lhsElement) =>
+          executedAfter.indexWhere((rhsElement) {
+            if (lhsElement is FhirDateTime ||
+                lhsElement is Date ||
+                rhsElement is FhirDateTime ||
+                rhsElement is Date) {
+              /// As long as one is, we convert them both to strings then back
+              /// to DateTimes
+              final lhsDateTime = FhirDateTime(lhsElement.toString());
+              final rhsDateTime = FhirDateTime(rhsElement.toString());
+
+              /// As long as they are both valid we try and compare them
+              if (lhsDateTime.isValid && rhsDateTime.isValid) {
+                return lhsDateTime == rhsDateTime;
               } else {
-                final beforeIndex =
-                    partialNumberBeforeString!.lastIndexOf(RegExp(r'[1-9]'));
-                final afterIndex =
-                    partialNumberAfterString!.lastIndexOf(RegExp(r'[1-9]'));
-                final index =
-                    beforeIndex > afterIndex ? afterIndex : beforeIndex;
-                if ((index == -1
-                        ? partialNumberBeforeString
-                        : partialNumberBeforeString.substring(0, index + 1)) !=
-                    (index == -1
-                        ? partialNumberAfterString
-                        : partialNumberAfterString.substring(0, index + 1))) {
-                  return [false];
+                return false;
+              }
+            } else if (lhsElement is FhirPathQuantity ||
+                rhsElement is FhirPathQuantity) {
+              if (lhsElement is FhirPathQuantity) {
+                return lhsElement.equivalent(rhsElement);
+              } else {
+                return (rhsElement as FhirPathQuantity).equivalent(lhsElement);
+              }
+            } else if (lhsElement is num || rhsElement is num) {
+              final sigDigsLhs = num.tryParse(lhsElement.toString())
+                  ?.toStringAsExponential()
+                  .split('e');
+              final sigDigsRhs = num.tryParse(rhsElement.toString())
+                  ?.toStringAsExponential()
+                  .split('e');
+              if (sigDigsLhs == null || sigDigsRhs == null) {
+                return false;
+              } else {
+                if (sigDigsLhs.first.length < sigDigsRhs.first.length) {
+                  return num.parse('${sigDigsLhs.first}e${sigDigsLhs.last}') ==
+                      num.parse(
+                          '${sigDigsRhs.first.toString().substring(0, sigDigsLhs.first.length)}'
+                          'e${sigDigsRhs.last}');
+                } else {
+                  return num.parse(
+                          '${sigDigsLhs.first.toString().substring(0, sigDigsRhs.first.length)}'
+                          'e${sigDigsLhs.last}') ==
+                      num.parse('${sigDigsRhs.first}e${sigDigsRhs.last}');
                 }
               }
+            } else if (lhsElement is String || rhsElement is String) {
+              return lhsElement.toString().toLowerCase() ==
+                  rhsElement.toString().toLowerCase();
+            } else {
+              return lhsElement == rhsElement || rhsElement == lhsElement;
             }
-          } else {
-            return [false];
-          }
-        } else if (executedBefore[i] is bool && executedAfter[i] is bool) {
-          if (executedBefore[i] != executedAfter[i]) {
-            return [false];
-          }
-        } else if (executedBefore[i] is String && executedAfter[i] is String) {
-          if ((executedBefore[i] as String).toLowerCase() !=
-              (executedAfter[i] as String).toLowerCase()) {
-            return [false];
-          }
-        } else {
-          if (executedBefore[i] != executedAfter[i]) {
-            return [false];
-          }
-        }
-      }
-      return [true];
+          }) !=
+          -1);
+      return [executedBefore.isEmpty];
     }
   }
 

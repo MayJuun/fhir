@@ -1236,17 +1236,21 @@ void testNoArgFxns() {
           walkFhirPath(context: resource.toJson(), pathExpression: "now()");
       final endNow = DateTime.now();
       expect(
-          startNow.isBefore(resultNow.first) && endNow.isAfter(resultNow.first),
+          toDateTime(startNow).isBefore(toDateTime(resultNow.first)) &&
+              endNow.isAfter(toDateTime(resultNow.first)),
           true);
 
       final startTimeOfDay = Time(
-          DateTime.now().toIso8601String().split('T').last.substring(0, 11));
+          DateTime.now().toIso8601String().split('T').last.substring(0, 12));
       final resultTimeOfDay = walkFhirPath(
               context: resource.toJson(), pathExpression: "timeOfDay()")
           .first;
       final endTimeOfDay = Time(
-          DateTime.now().toIso8601String().split('T').last.substring(0, 11));
+          DateTime.now().toIso8601String().split('T').last.substring(0, 12));
 
+      print(startTimeOfDay);
+      print(resultTimeOfDay);
+      print(endTimeOfDay);
       expect(
           startTimeOfDay <= resultTimeOfDay && endTimeOfDay >= resultTimeOfDay,
           true);
@@ -1363,3 +1367,9 @@ final resource = Patient(
     ),
   ],
 );
+
+DateTime toDateTime(dynamic dateTime) => dateTime is DateTime
+    ? dateTime
+    : dateTime is FhirDateTime && dateTime.isValid
+        ? dateTime.value!
+        : DateTime.now();

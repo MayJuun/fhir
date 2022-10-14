@@ -612,14 +612,16 @@ void testArgFxns() {
     });
     test('combine', () {
       expect(
-          walkFhirPath(
-              context: resource.toJson(),
-              pathExpression: walkPath("%a.combine(%b)"),
-              environment: {
-                '%a': [1, 1, 2, 3],
-                '%b': [2, 3]
-              }),
-          [1, 1, 2, 3, 2, 3]);
+          deepEquals(
+              walkFhirPath(
+                  context: resource.toJson(),
+                  pathExpression: walkPath("%a.combine(%b)"),
+                  environment: {
+                    '%a': [1, 1, 2, 3],
+                    '%b': [2, 3]
+                  }),
+              [1, 1, 2, 3, 2, 3]),
+          true);
       expect(
           walkFhirPath(
               context: resource.toJson(),

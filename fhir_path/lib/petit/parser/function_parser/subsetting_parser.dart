@@ -89,6 +89,7 @@ class TailParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
+    print(results);
     if (results.length < 2) {
       return [];
     } else {
@@ -165,7 +166,7 @@ class TakeParser extends FunctionParser {
   /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
-    return value.length != 1 || value.first is! IntegerParser
+    final newResults = value.length != 1 || value.first is! IntegerParser
         ? throw FhirPathEvaluationException(
             'The argument passed to the .take() function was not valid:',
             operation: '.take()',
@@ -175,11 +176,12 @@ class TakeParser extends FunctionParser {
                 'The value for .take() was not a number: $value',
                 operation: '.take()',
                 arguments: value)
-            : executedValue.first <= 0 ||
-                    results.isEmpty ||
-                    executedValue.first >= results.length
-                ? results
-                : results.sublist(0, executedValue.first);
+            : executedValue.first <= 0 || results.isEmpty
+                ? []
+                : executedValue.first >= results.length
+                    ? results
+                    : results.sublist(0, executedValue.first);
+    return newResults;
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

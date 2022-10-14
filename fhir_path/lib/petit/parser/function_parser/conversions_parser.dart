@@ -631,18 +631,36 @@ class ConvertsToQuantityParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
-  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
-      ? []
-      : results.length > 1
-          ? throw _conversionException('.convertsToQuantity()', results)
-          : (results.first is num ||
-                  results.first is FhirPathQuantity ||
-                  results.first is bool)
-              ? [true]
-              : (results.first is String &&
-                      ToQuantityParser().execute(results, passed).isNotEmpty)
-                  ? [true]
-                  : [false];
+  List execute(List results, Map<String, dynamic> passed) {
+    if (results.isEmpty) {
+      return [];
+    } else {
+      /// if there's more than 1 item in context, throw exception
+      if (results.length > 1) {
+        throw _conversionException('.convertsToQuantity()', results);
+      }
+
+      /// otherwise if the first item is a Quantity already, a num or a
+      /// bool, this is considered true
+      else if (results.first is FhirPathQuantity ||
+          results.first is num ||
+          results.first is bool) {
+        return [true];
+      }
+
+      /// If it's a string & convertible to a Quantity using the Regex
+      else if (results.first is String &&
+          FhirPathQuantity.fhirPathQuantityRegex
+              .hasMatch(results.first.replaceAll(r"\'", "'"))) {
+        return [true];
+      }
+
+      /// Otherwise it's definitely false
+      else {
+        return [false];
+      }
+    }
+  }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in

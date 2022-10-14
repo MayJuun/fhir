@@ -20,6 +20,8 @@ class IsParser extends OperatorParser {
     final executedAfter = after.length == 1 && after.first is IdentifierParser
         ? [(after.first as IdentifierParser).value]
         : after.execute(results.toList(), passed);
+    print('BEFORE: $executedBefore');
+    print('AFTER: $executedAfter');
 
     return executedBefore.isEmpty ||
             executedBefore.length != 1 ||

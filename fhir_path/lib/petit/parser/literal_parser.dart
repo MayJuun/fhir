@@ -273,11 +273,11 @@ class IdentifierParser extends ValueParser<String> {
                 ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                     .contains(identifierName)
                 : stu3.ResourceUtils.resourceTypeFromStringMap.keys
-                        .contains(identifierName) &&
-                    (passed.hasNoContext
-                        ? false
-                        : passed.context?['resourceType'] == identifierName)) {
-      finalResults.add(passed.context);
+                    .contains(identifierName)) {
+      if (!passed.hasNoContext &&
+          passed.context?['resourceType'] == identifierName) {
+        finalResults.add(passed.context);
+      }
     } else {
       results.forEachIndexed((i, r) {
         if (r is Map) {

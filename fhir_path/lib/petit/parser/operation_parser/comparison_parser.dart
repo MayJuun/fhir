@@ -158,7 +158,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
     return false;
   }
 
-  bool? makeComparison(dynamic param1, dynamic param2) {
+  bool? makeComparison(Comparator comparator, dynamic param1, dynamic param2) {
     try {
       switch (comparator) {
         case Comparator.gt:
@@ -193,68 +193,118 @@ List executeComparisons(List results, ParserList before, ParserList after,
           'Param1: $param2 - ${param2.runtimeType} - Valid? ${param2.isValid}\n');
 
   bool? compareNumbers(num param1, dynamic param2) => param2 is num
-      ? makeComparison(param1, param2)
+      ? makeComparison(comparator, param1, param2)
       : param2 is FhirNumber && param2.isValid
-          ? makeComparison(param1, param2.valueNumber)
+          ? makeComparison(comparator, param1, param2.valueNumber)
           : throw cannotCompareException(param1, param2);
 
   bool? compareDateTimes(FhirDateTimeBase param1, dynamic param2) =>
       param2 is FhirDateTimeBase
           ? param1.isValid && param2.isValid
-              ? makeComparison(param1, param2)
+              ? makeComparison(comparator, param1, param2)
               : throw invalidException(param1, param2)
           : throw cannotCompareException(param1, param2);
 
   bool? compareTimes(Time param1, dynamic param2) => param2 is Time
       ? param1.isValid && param2.isValid
-          ? makeComparison(param1, param2)
+          ? makeComparison(comparator, param1, param2)
           : throw invalidException(param1, param2)
       : throw cannotCompareException(param1, param2);
 
-  bool? compare(dynamic param1, dynamic param2) {
-    switch (param1.runtimeType) {
+  bool? compare(Comparator comparator, dynamic lhs, dynamic rhs) {
+    switch (lhs.runtimeType) {
       case num:
-        return compareNumbers(param1, param2);
+        return rhs is num
+            ? makeComparison(comparator, lhs, rhs)
+            : rhs is FhirNumber && rhs.isValid
+                ? makeComparison(comparator, lhs, rhs.valueNumber)
+                : rhs is String && num.tryParse(rhs) != null
+                    ? makeComparison(comparator, lhs, num.parse(rhs))
+                    : throw cannotCompareException(lhs, rhs);
       case int:
-        return compareNumbers(param1, param2);
+        return rhs is num
+            ? makeComparison(comparator, lhs, rhs)
+            : rhs is FhirNumber && rhs.isValid
+                ? makeComparison(comparator, lhs, rhs.valueNumber)
+                : rhs is String && num.tryParse(rhs) != null
+                    ? makeComparison(comparator, lhs, num.parse(rhs))
+                    : throw cannotCompareException(lhs, rhs);
       case double:
-        return compareNumbers(param1, param2);
+        return rhs is num
+            ? makeComparison(comparator, lhs, rhs)
+            : rhs is FhirNumber && rhs.isValid
+                ? makeComparison(comparator, lhs, rhs.valueNumber)
+                : rhs is String && num.tryParse(rhs) != null
+                    ? makeComparison(comparator, lhs, num.parse(rhs))
+                    : throw cannotCompareException(lhs, rhs);
       case Date:
-        return compareDateTimes(param1, param2);
+        return rhs is FhirDateTimeBase
+            ? lhs.isValid && rhs.isValid
+                ? makeComparison(comparator, lhs, rhs)
+                : throw invalidException(lhs, rhs)
+            : rhs is String && FhirDateTime(rhs).isValid
+                ? makeComparison(comparator, lhs, rhs)
+                : throw cannotCompareException(lhs, rhs);
+      case DateTime:
+        return (rhs is FhirDateTimeBase && rhs.isValid)
+            ? makeComparison(comparator, FhirDateTime(lhs), rhs)
+            : rhs is DateTime
+                ? makeComparison(
+                    comparator, FhirDateTime(lhs), FhirDateTime(rhs))
+                : rhs is String && FhirDateTime(rhs).isValid
+                    ? makeComparison(
+                        comparator, FhirDateTime(lhs), FhirDateTime(rhs))
+                    : throw cannotCompareException(lhs, rhs);
       case FhirDateTime:
-        return compareDateTimes(param1, param2);
+        return rhs is FhirDateTimeBase
+            ? lhs.isValid && rhs.isValid
+                ? makeComparison(comparator, lhs, rhs)
+                : throw invalidException(lhs, rhs)
+            : rhs is String && FhirDateTime(rhs).isValid
+                ? makeComparison(comparator, lhs, FhirDateTime(rhs))
+                : throw cannotCompareException(lhs, rhs);
       case Time:
-        return compareTimes(param1, param2);
-      // todo
-      // case FhirPathQuantity:
-      //   compareValue = FhirPathQuantity(param1);
-      //   break;
-      // Default should be when param1 is a String
+        return rhs is Time
+            ? lhs.isValid && rhs.isValid
+                ? makeComparison(comparator, lhs, rhs)
+                : throw invalidException(lhs, rhs)
+            : rhs is String && Time(rhs).isValid
+                ? makeComparison(comparator, lhs, Time(rhs))
+                : throw cannotCompareException(lhs, rhs);
+      case FhirPathQuantity:
+        return rhs is FhirPathQuantity
+            ? makeComparison(comparator, lhs, rhs)
+            : rhs is String
+                ? makeComparison(
+                    comparator, lhs, FhirPathQuantity.fromString(rhs))
+                : throw cannotCompareException(lhs, rhs);
+
+      /// Default should be when lhs is a String
       default:
         {
-          if (param2 is String) {
+          if (rhs is String) {
             return (comparator == Comparator.gt || comparator == Comparator.lt)
-                ? param1 == param2
+                ? lhs == rhs
                     ? false
                     : comparator == Comparator.gt
-                        ? stringGt(param1, param2)
-                        : !stringGt(param1, param2)
-                : param1 == param2
+                        ? stringGt(lhs, rhs)
+                        : !stringGt(lhs, rhs)
+                : lhs == rhs
                     ? true
                     : comparator == Comparator.gte
-                        ? stringGt(param1, param2)
-                        : !stringGt(param1, param2);
-          } else if (param2 is Time && Time(param1).isValid) {
-            return makeComparison(Time(param1), param2);
-          } else if ((param2 is Date || param2 is FhirDateTime) &&
-              FhirDateTime(param1).isValid) {
-            return makeComparison(FhirDateTime(param1), param2);
+                        ? stringGt(lhs, rhs)
+                        : !stringGt(lhs, rhs);
+          } else if (rhs is Time && Time(lhs).isValid) {
+            return makeComparison(comparator, Time(lhs), rhs);
+          } else if ((rhs is Date || rhs is FhirDateTime) &&
+              FhirDateTime(lhs).isValid) {
+            return makeComparison(comparator, FhirDateTime(lhs), rhs);
           }
           throw FhirPathEvaluationException(
-              'Can only compare Strings to other Strings',
-              operation: 'comparator',
-              arguments: [param1, param2],
-              collection: results);
+            'Can only compare Strings to other Strings',
+            operation: '$comparator',
+            arguments: [lhs, rhs],
+          );
         }
     }
   }
@@ -272,7 +322,13 @@ List executeComparisons(List results, ParserList before, ParserList after,
 
   if (lhs.isEmpty || rhs.isEmpty) {
     return [];
-  } else {
+  } else if (lhs.length != 1 || rhs.length != 1) {
+    throw _wrongArgLength(
+      comparator.toString(),
+      ['Left-hand side: $lhs', 'Right-hand side: $rhs'],
+    );
+  }
+  {
     if (!_allowedTypes.contains(lhs.first.runtimeType) ||
         !_allowedTypes.contains(rhs.first.runtimeType)) {
       final functionName = comparator == Comparator.gt
@@ -289,15 +345,13 @@ List executeComparisons(List results, ParserList before, ParserList after,
           'RHS: $rhs',
           operation: functionName,
           arguments: [before, after]);
+    } else if (where) {
+      results.retainWhere((element) =>
+          compare(comparator, element[lhs.first], rhs.first) ?? false);
+      return results;
     } else {
-      if (where) {
-        results.retainWhere(
-            (element) => compare(element[lhs.first], rhs.first) ?? false);
-        return results;
-      } else {
-        final newResult = compare(lhs.first, rhs.first);
-        return newResult == null ? [] : [newResult];
-      }
+      final newResult = compare(comparator, lhs.first, rhs.first);
+      return newResult == null ? [] : [newResult];
     }
   }
 }
@@ -312,3 +366,10 @@ const _allowedTypes = [
   Time,
   FhirPathQuantity,
 ];
+
+Exception _wrongArgLength(String functionName, List value) =>
+    FhirPathEvaluationException(
+        'The function $functionName must have an argument that '
+        'evaluates to 0 or 1 item.',
+        operation: functionName,
+        arguments: value);

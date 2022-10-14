@@ -1,27 +1,27 @@
-// // Package imports:
-// import 'package:petitparser/petitparser.dart';
+// Package imports:
+import 'package:petitparser/petitparser.dart';
 
-// /******************************************************************************
-//  * These are the unit types that can be used in FHIRPath using the UCUM
-//  * specification (which has not yet been fully implemented)
-//  * ***************************************************************************/
+/******************************************************************************
+ * These are the unit types that can be used in FHIRPath using the UCUM
+ * specification (which has not yet been fully implemented)
+ * ***************************************************************************/
 
-// final durationLexer = (string('milliseconds') |
-//     string('seconds') |
-//     string('minutes') |
-//     string('hours') |
-//     string('days') |
-//     string('weeks') |
-//     string('months') |
-//     string('years') |
-//     string('millisecond') |
-//     string('second') |
-//     string('minute') |
-//     string('hour') |
-//     string('day') |
-//     string('week') |
-//     string('month') |
-//     string('year'));
+final durationLexer = (string('milliseconds') |
+    string('seconds') |
+    string('minutes') |
+    string('hours') |
+    string('days') |
+    string('weeks') |
+    string('months') |
+    string('years') |
+    string('millisecond') |
+    string('second') |
+    string('minute') |
+    string('hour') |
+    string('day') |
+    string('week') |
+    string('month') |
+    string('year'));
 
 // // any code in curly braces is a valid UCUM comment
 // final unitLexer = (string("'{") & (char('}').neg()).plus() & string("}'")) |

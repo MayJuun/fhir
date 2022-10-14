@@ -112,7 +112,6 @@ List? _$visitFunction(
             visitor.context = <dynamic>[];
           } else {
             visitor.context.removeAt(0);
-            visitor.context = visitor.context;
           }
         }
         break;
