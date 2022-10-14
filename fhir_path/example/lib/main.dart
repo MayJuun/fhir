@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:example/resource.dart';
-import 'package:fhir_path/fhir_path.dart';
+import 'package:fhir_path/petit/petit_fhir_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/link.dart';
