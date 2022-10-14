@@ -8,10 +8,11 @@ environment:
   sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
+  crypt: ^4.2.1
   collection: ^1.16.0
-  # fhir: ^0.9.0
-  fhir:
-    path: ../fhir
+  fhir: ^0.9.1
+  # fhir:
+  #   path: ../fhir
   flutter:
     sdk: flutter
   flutter_web_plugins:

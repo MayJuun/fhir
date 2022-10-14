@@ -3,6 +3,8 @@
 ## [0.9.1]
 
 * Updated dependencies
+* Added better comments
+* Added both OperationOutcome.status and OperationOutcome.severity
 
 ## [0.9.0]
 

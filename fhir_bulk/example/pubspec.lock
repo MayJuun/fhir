@@ -39,9 +39,9 @@ packages:
   fhir:
     dependency: transitive
     description:
-      path: "../../fhir"
-      relative: true
-    source: path
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.9.1"
   fhir_bulk:
     dependency: "direct main"

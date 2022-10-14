@@ -6,6 +6,7 @@
 * Updated dependencies
 * Internal launch for patients and users for Epic and Meld (HAPI)
 * External launch for patients and users for Google, Meld (HAPI), and Epic
+* Cannot read id (location) with resources created in Epic (CORS issue), so you may need to include an identifier
 
 ## [0.9.0-1]
 

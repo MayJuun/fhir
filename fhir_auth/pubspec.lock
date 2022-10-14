@@ -134,6 +134,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.1"
+  crypt:
+    dependency: "direct main"
+    description:
+      name: crypt
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.1"
   crypto:
     dependency: transitive
     description:
@@ -151,9 +158,9 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../fhir"
-      relative: true
-    source: path
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.9.1"
   file:
     dependency: transitive

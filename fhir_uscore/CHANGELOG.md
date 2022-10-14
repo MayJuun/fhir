@@ -3,7 +3,7 @@
 ## [0.9.1]
 
 * updated dependencies
-* added comments
+* will add comments at some point
 
 ## [0.9.0-1]
 
