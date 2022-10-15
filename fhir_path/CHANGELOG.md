@@ -1,5 +1,9 @@
 # fhir_path
 
+## [0.9.2]
+
+* Trying to fix lints for extra points
+
 ## [0.9.1]
 
 * Rewrote the whole thing using antlr only to find out it doesn't transpile properly to javascript (grumble, grumble, stupid multi-platforms)

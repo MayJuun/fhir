@@ -797,10 +797,10 @@ final durationLexer = string('milliseconds') |
 //         string("'uU/mL'") |
 //         string("'uV'")
 //     // minute: since this is an apostrophe, it can only be used in escaped form.
-    // TODO(Dokotela): Figure out proper escape sequence
+// TODO(Dokotela): Figure out proper escape sequence
 //     // string(r"\\'\\'") |
 //     // second: since these are apostrophes, it can only be used in escaped form.
-    // TODO(Dokotela): Figure out proper escape sequence
+// TODO(Dokotela): Figure out proper escape sequence
 //     // string(r"\\''\\'") |
 //     // an empty unit = '1'
 //     // string("''"
