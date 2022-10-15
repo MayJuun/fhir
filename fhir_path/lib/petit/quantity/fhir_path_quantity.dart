@@ -9,6 +9,7 @@ import 'package:units_converter/units_converter.dart';
 // Project imports:
 import '../utils/exceptions.dart';
 import 'quantity.dart';
+import 'ratios.dart';
 
 class FhirPathQuantity {
   factory FhirPathQuantity.fromString(String quantityString) {

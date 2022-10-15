@@ -9,6 +9,7 @@ import 'package:units_converter/units_converter.dart';
 // Project imports:
 import '../utils/duration_code.dart';
 import '../utils/exceptions.dart';
+import 'ratios.dart';
 import 'string_unit_to_property.dart';
 import 'unit_code.dart';
 

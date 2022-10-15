@@ -1,6 +1,8 @@
 #!/bin/bash
 
+location="us-east4"
 projectId="demos-322021"
+repository="containers"
 projectName="fhir-path-test"
 
 ####### Get Build Number #######
@@ -16,24 +18,24 @@ version=${fullVersion#*+}
 gcloud config set project $projectId
 # gcloud auth login
 
-# placeholder script in case a command fails to run on an M1 machine. If so, just add $m1 to the command and it should work as intended
-# if [[ $(uname -m) == 'arm64' ]]; then
-#     m1="arch -x86_64"
-# else
-#     m1=""
-# fi
+# # placeholder script in case a command fails to run on an M1 machine. If so, just add $m1 to the command and it should work as intended
+# # if [[ $(uname -m) == 'arm64' ]]; then
+# #     m1="arch -x86_64"
+# # else
+# #     m1=""
+# # fi
 
-#########################################
-# BUILD FLUTTER WEB ASSETS
-# change to primary app directory & build flutter web & go back to main level
-cd $appDir && flutter build web --web-renderer canvaskit
+# #########################################
+# # BUILD FLUTTER WEB ASSETS
+# # change to primary app directory & build flutter web & go back to main level
+cd $appDir && flutter build web --web-renderer canvaskit && cd ..
 
 #########################################
 # COPY NEW WEB ASSETS AND WELL-KNOWN FILES
 # clear web directory from server
-cd .. && rm -rf server/web
+rm -rf server/web
 
-# copy the built web folder to the server directory
+# # copy the built web folder to the server directory
 cp -r $appDir/build/web server/web
 
 #########################################
@@ -59,26 +61,28 @@ if [[ $(uname -m) == 'arm64' ]]; then
     # You must first push, then pull the Docker image
     # Seems weird, but that's how multi-arch works apparently
 
-    # docker buildx build -t gcr.io/$projectId/$projectName:v$version --push --platform linux/amd64 .
-    # docker image pull gcr.io/$projectId/$projectName:v$version
+    docker buildx build -t gcr.io/$projectId/$projectName:v$version --push --platform linux/amd64 .
+    docker image pull gcr.io/$projectId/$projectName:v$version
 
     cd ..
 
-    # # deploy on google cloud
-    # gcloud run deploy $projectName --image gcr.io/$projectId/$projectName:v$version
+    # deploy on google cloud
+    gcloud run deploy $projectName --image gcr.io/$projectId/$projectName:v$version
 
 else
-    # Create docker container and upload it
-    docker build -t gcr.io/$projectId/$projectName:v$version .
-    docker push gcr.io/$projectId/$projectName:v$version
+
+    # tag the docker container
+    docker tag $projectName $location-docker.pkg.dev/$projectId/$repository/$projectName
+
+    # push the tagged image into the artifact registry
+    docker push $location-docker.pkg.dev/$projectId/$repository/$projectName
 
     # return back to root directory
     cd ..
 
     # deploy on google cloud
-    gcloud run deploy $projectName --image gcr.io/$projectId/$projectName:v$version
+    gcloud run deploy $projectName --image $location-docker.pkg.dev/$projectId/$repository/$projectName
 fi
-
 
 ############ NOTE: ############
 # 1) To test locally on a physical phone, first build with `docker build -t $projectName .` You can comment out the lines after

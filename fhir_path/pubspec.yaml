@@ -13,9 +13,9 @@ dependencies:
   fhir: ^0.9.1
   # fhir:
   #   path: ../fhir
-  # units_converter: ^2.0.1
-  units_converter:
-    path: ../../units_converter
+  units_converter: ^2.0.1
+  # units_converter:
+  #   path: ../../units_converter
   petitparser: ^5.0.0
 
 dev_dependencies:

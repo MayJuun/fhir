@@ -271,9 +271,9 @@ packages:
   units_converter:
     dependency: transitive
     description:
-      path: "../../../units_converter"
-      relative: true
-    source: path
+      name: units_converter
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "2.0.1"
   url_launcher:
     dependency: "direct main"
