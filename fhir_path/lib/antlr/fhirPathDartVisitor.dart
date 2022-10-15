@@ -3,8 +3,8 @@
 
 // Dart imports:
 import 'dart:convert';
-import 'dart:math';
 import 'dart:developer' as developer;
+import 'dart:math';
 
 // Package imports:
 import 'package:antlr4/antlr4.dart';

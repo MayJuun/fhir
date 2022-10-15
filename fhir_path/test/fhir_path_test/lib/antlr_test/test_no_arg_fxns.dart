@@ -1,7 +1,9 @@
 // Package imports:
 import 'package:fhir/r4.dart';
-import 'package:fhir_path/antlr/antlr_fhir_path.dart';
 import 'package:test/test.dart';
+
+// Project imports:
+import 'package:fhir_path/antlr/antlr_fhir_path.dart';
 
 void testNoArgFxns() {
   group('Functions w/o Arguments: ', () {
