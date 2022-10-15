@@ -322,6 +322,18 @@ This is my [Azure tutorial](https://www.fhirfli.dev/azure-fhir-setup), it's not 
 
 While I can't say I've done much with this, I wanted to ensure we have the capability. Luckily, it's actually SUPER easy to accomplish if you already have a Web App that works. You'll need to setup your web client just like it says above, but this time make sure you really take note of the launch URI (and obviously the redirect URI). Take a look at the ehrlaunchdemo if you get confused. One of the things I changed recently is I removed the need to include the ClientID as part of the code itself (it's not a secret, but one less thing to hard code). It now passes in the iss and the clientId as part of the launchUrl, which also makes it more flexible. In the launch url, you'll need to specify it to include the ClientId, it will automatically include the iss, and the launch token. You'll need to pass this to the Smart client you create. The client will check if there's a launch token. If there is, it will include launch as a scope, and the token as a parameter. And that's it!
 
+## Epic Integration
+
+That's not actually the way to spell it, but I'm worried they'll break my thumbs if I write it out the whole way. For this, we have authenticated against their online sandbox. They don't allow full FHIR
+functionality in terms of creating resources, but they do allow a number of them to be read. So for this, in the demos section you will now find all of the following:
+
+  1. Patient reading own data from mobile app
+  2. Patient reading own data from pwa
+  3. Patient reading own data from desktop app 
+  4. Clinician create andread patient data from mobile app
+  5. Clinician create andread patient data from mobile app
+  6. Clinician create andread patient data from mobile app
+
 ## Suggestions and Complaints
 
 As I mentioned above, this is the most difficult package I've tried to publish. Mostly because authentication is a huge pain in the ass. Anyone who has suggestions or wants to open a PR is welcome. If you would like to contact me directly, my email is grey@fhirfli.dev.

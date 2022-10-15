@@ -1,34 +1,36 @@
 import 'dart:convert';
 
 import 'package:example/resource.dart';
-import 'package:fhir_path/fhir_path.dart';
+import 'package:fhir_path/petit/petit_fhir_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/link.dart';
 import 'package:yaml_writer/yaml_writer.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'FHIRPath Demo in Dart/Flutter',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: MyHomePage(title: 'FHIRPath Demo in Dart/Flutter'),
+        home: const MyHomePage(title: 'FHIRPath Demo in Dart/Flutter'),
         debugShowCheckedModeBanner: false,
       );
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   final TextEditingController path =
       TextEditingController(text: patientSampleFhirPath);
   final TextEditingController resource =
@@ -49,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         final pathResult =
             walkFhirPath(context: inputJson, pathExpression: path.text);
         if (jsonCode == outputFormat) {
-          JsonEncoder encoder = new JsonEncoder.withIndent('  ');
+          JsonEncoder encoder = const JsonEncoder.withIndent('  ');
           displayString = encoder.convert(jsonDecode(jsonEncode(pathResult)));
         } else {
           displayString = YAMLWriter().write(pathResult);
@@ -73,10 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
             builder: (ctx, openLink) {
               return TextButton.icon(
                 onPressed: openLink,
-                label: Text(
+                label: const Text(
                     'Completely Inspired By: https://hl7.github.io/fhirpath.js/',
                     style: TextStyle(color: Colors.white)),
-                icon: Icon(Icons.read_more, color: Colors.white),
+                icon: const Icon(Icons.read_more, color: Colors.white),
               );
             },
           ),
@@ -93,9 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Row(
                     children: [
-                      Text('Samples',
+                      const Text('Samples',
                           style: TextStyle(fontWeight: FontWeight.bold)),
-                      SizedBox(width: 8.0),
+                      const SizedBox(width: 8.0),
                       DropdownButton<String>(
                         value: dropdownValue,
                         onChanged: (String? newValue) {
@@ -122,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   TextFormField(
                     controller: path,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Enter FHIRPath expression'),
                     onChanged: (_) => _runPath(),
@@ -132,10 +134,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       expands: true,
                       maxLines: null,
                       textAlignVertical: TextAlignVertical.top,
-                      style:
-                          TextStyle(fontFamily: 'SourceCodePro', fontSize: 12),
+                      style: const TextStyle(
+                          fontFamily: 'SourceCodePro', fontSize: 12),
                       controller: resource,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Enter JSON FHIR Resource Here',
                       ),
@@ -145,12 +147,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            SizedBox(width: 20),
+            const SizedBox(width: 20),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     IconButton(
                       icon: const Icon(Icons.copy),
@@ -159,8 +161,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           ClipboardData(text: displayString),
                         ).then((_) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: const Text(
+                            const SnackBar(
+                              content: Text(
                                 'Result copied to clipboard',
                               ),
                             ),
@@ -168,7 +170,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         });
                       },
                     ),
-                    Text(
+                    const Text(
                       'Results',
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -191,7 +193,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           _runPath();
                         }),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Expanded(
                     child: SingleChildScrollView(
                       child: SizedBox(
@@ -199,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Text(
                           displayString,
                           textAlign: TextAlign.start,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontFamily: 'SourceCodePro', fontSize: 12),
                         ),
                       ),

@@ -75,7 +75,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -302,7 +302,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
 Map<String, dynamic> _$$_PaymentReconciliationToJson(
     _$_PaymentReconciliation instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

@@ -7,10 +7,9 @@ part of 'support.dart';
 // **************************************************************************
 
 _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Coverage) ??
-          R5ResourceType.Coverage,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Coverage,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -101,7 +100,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
 
 Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -153,10 +152,13 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -167,20 +169,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -191,6 +193,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -215,11 +218,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -227,6 +232,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -236,12 +242,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -255,6 +255,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -268,6 +269,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -297,6 +299,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
   R5ResourceType.TestReport: 'TestReport',
   R5ResourceType.TestScript: 'TestScript',
+  R5ResourceType.Transport: 'Transport',
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
@@ -429,10 +432,9 @@ Map<String, dynamic> _$$_CoverageExceptionToJson(
 _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityRequest(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.CoverageEligibilityRequest) ??
-          R5ResourceType.CoverageEligibilityRequest,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.CoverageEligibilityRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -519,7 +521,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
 Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
     _$_CoverageEligibilityRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -790,10 +792,9 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestDiagnosisToJson(
 _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityResponse(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.CoverageEligibilityResponse) ??
-          R5ResourceType.CoverageEligibilityResponse,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.CoverageEligibilityResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -854,9 +855,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
       request: Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: $enumDecodeNullable(
-          _$CoverageEligibilityResponseOutcomeEnumMap, json['outcome'],
-          unknownValue: CoverageEligibilityResponseOutcome.unknown),
+      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -885,7 +884,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
 Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
     _$_CoverageEligibilityResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -922,8 +921,7 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
   val['request'] = instance.request.toJson();
-  writeNotNull(
-      'outcome', _$CoverageEligibilityResponseOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
@@ -936,14 +934,6 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$CoverageEligibilityResponseOutcomeEnumMap = {
-  CoverageEligibilityResponseOutcome.queued: 'queued',
-  CoverageEligibilityResponseOutcome.complete: 'complete',
-  CoverageEligibilityResponseOutcome.error: 'error',
-  CoverageEligibilityResponseOutcome.partial: 'partial',
-  CoverageEligibilityResponseOutcome.unknown: 'unknown',
-};
 
 _$_CoverageEligibilityResponseInsurance
     _$$_CoverageEligibilityResponseInsuranceFromJson(
@@ -1122,7 +1112,9 @@ _$_CoverageEligibilityResponseBenefit
               ? null
               : Element.fromJson(
                   json['_allowedUnsignedInt'] as Map<String, dynamic>),
-          allowedString: json['allowedString'] as String?,
+          allowedString: json['allowedString'] == null
+              ? null
+              : Markdown.fromJson(json['allowedString']),
           allowedStringElement: json['_allowedString'] == null
               ? null
               : Element.fromJson(
@@ -1137,7 +1129,9 @@ _$_CoverageEligibilityResponseBenefit
               ? null
               : Element.fromJson(
                   json['_usedUnsignedInt'] as Map<String, dynamic>),
-          usedString: json['usedString'] as String?,
+          usedString: json['usedString'] == null
+              ? null
+              : Markdown.fromJson(json['usedString']),
           usedStringElement: json['_usedString'] == null
               ? null
               : Element.fromJson(json['_usedString'] as Map<String, dynamic>),
@@ -1165,12 +1159,12 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseBenefitToJson(
   writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt?.toJson());
   writeNotNull(
       '_allowedUnsignedInt', instance.allowedUnsignedIntElement?.toJson());
-  writeNotNull('allowedString', instance.allowedString);
+  writeNotNull('allowedString', instance.allowedString?.toJson());
   writeNotNull('_allowedString', instance.allowedStringElement?.toJson());
   writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
   writeNotNull('usedUnsignedInt', instance.usedUnsignedInt?.toJson());
   writeNotNull('_usedUnsignedInt', instance.usedUnsignedIntElement?.toJson());
-  writeNotNull('usedString', instance.usedString);
+  writeNotNull('usedString', instance.usedString?.toJson());
   writeNotNull('_usedString', instance.usedStringElement?.toJson());
   writeNotNull('usedMoney', instance.usedMoney?.toJson());
   return val;
@@ -1210,10 +1204,9 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
 
 _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
     _$_EnrollmentRequest(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.EnrollmentRequest) ??
-          R5ResourceType.EnrollmentRequest,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.EnrollmentRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1271,7 +1264,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_EnrollmentRequestToJson(
     _$_EnrollmentRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1309,10 +1302,9 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
 _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
         Map<String, dynamic> json) =>
     _$_EnrollmentResponse(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.EnrollmentResponse) ??
-          R5ResourceType.EnrollmentResponse,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.EnrollmentResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1350,9 +1342,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: $enumDecodeNullable(
-          _$EnrollmentResponseOutcomeEnumMap, json['outcome'],
-          unknownValue: EnrollmentResponseOutcome.unknown),
+      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -1377,7 +1367,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
 Map<String, dynamic> _$$_EnrollmentResponseToJson(
     _$_EnrollmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1404,7 +1394,7 @@ Map<String, dynamic> _$$_EnrollmentResponseToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('request', instance.request?.toJson());
-  writeNotNull('outcome', _$EnrollmentResponseOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
@@ -1414,11 +1404,3 @@ Map<String, dynamic> _$$_EnrollmentResponseToJson(
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   return val;
 }
-
-const _$EnrollmentResponseOutcomeEnumMap = {
-  EnrollmentResponseOutcome.queued: 'queued',
-  EnrollmentResponseOutcome.complete: 'complete',
-  EnrollmentResponseOutcome.error: 'error',
-  EnrollmentResponseOutcome.partial: 'partial',
-  EnrollmentResponseOutcome.unknown: 'unknown',
-};

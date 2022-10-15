@@ -12,51 +12,38 @@ part of 'special_types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
   return _Narrative.fromJson(json);
 }
 
 /// @nodoc
-class _$NarrativeTearOff {
-  const _$NarrativeTearOff();
-
-  _Narrative call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required String div}) {
-    return _Narrative(
-      id: id,
-      extension_: extension_,
-      status: status,
-      statusElement: statusElement,
-      div: div,
-    );
-  }
-
-  Narrative fromJson(Map<String, Object?> json) {
-    return Narrative.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Narrative = _$NarrativeTearOff();
-
-/// @nodoc
 mixin _$Narrative {
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [status] The status of the narrative - whether it\u0027s entirely generated
+  /// (from just the defined data or the extensions too), or whether a human
+  /// authored it and it may contain additional data.
   @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] (_status) Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [div] The actual narrative content, a stripped down version of XHTML.
   String get div => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -135,10 +122,10 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
-  factory _$NarrativeCopyWith(
-          _Narrative value, $Res Function(_Narrative) then) =
-      __$NarrativeCopyWithImpl<$Res>;
+abstract class _$$_NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
+  factory _$$_NarrativeCopyWith(
+          _$_Narrative value, $Res Function(_$_Narrative) then) =
+      __$$_NarrativeCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -155,13 +142,14 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
-    implements _$NarrativeCopyWith<$Res> {
-  __$NarrativeCopyWithImpl(_Narrative _value, $Res Function(_Narrative) _then)
-      : super(_value, (v) => _then(v as _Narrative));
+class __$$_NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
+    implements _$$_NarrativeCopyWith<$Res> {
+  __$$_NarrativeCopyWithImpl(
+      _$_Narrative _value, $Res Function(_$_Narrative) _then)
+      : super(_value, (v) => _then(v as _$_Narrative));
 
   @override
-  _Narrative get _value => super._value as _Narrative;
+  _$_Narrative get _value => super._value as _$_Narrative;
 
   @override
   $Res call({
@@ -171,13 +159,13 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
     Object? statusElement = freezed,
     Object? div = freezed,
   }) {
-    return _then(_Narrative(
+    return _then(_$_Narrative(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       status: status == freezed
@@ -201,26 +189,57 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
 class _$_Narrative extends _Narrative {
   _$_Narrative(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown) this.status,
       @JsonKey(name: '_status') this.statusElement,
       required this.div})
-      : super._();
+      : _extension_ = extension_,
+        super._();
 
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
       _$$_NarrativeFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] The status of the narrative - whether it\u0027s entirely generated
+  /// (from just the defined data or the extensions too), or whether a human
+  /// authored it and it may contain additional data.
   @override
   @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   final NarrativeStatus? status;
+
+  /// [statusElement] (_status) Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [div] The actual narrative content, a stripped down version of XHTML.
   @override
   final String div;
 
@@ -233,67 +252,387 @@ class _$_Narrative extends _Narrative {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Narrative &&
+            other is _$_Narrative &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.div, div));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(statusElement),
       const DeepCollectionEquality().hash(div));
 
   @JsonKey(ignore: true)
   @override
-  _$NarrativeCopyWith<_Narrative> get copyWith =>
-      __$NarrativeCopyWithImpl<_Narrative>(this, _$identity);
+  _$$_NarrativeCopyWith<_$_Narrative> get copyWith =>
+      __$$_NarrativeCopyWithImpl<_$_Narrative>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NarrativeToJson(this);
+    return _$$_NarrativeToJson(
+      this,
+    );
   }
 }
 
 abstract class _Narrative extends Narrative {
   factory _Narrative(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+          final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
+          final NarrativeStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      required String div}) = _$_Narrative;
+          final Element? statusElement,
+      required final String div}) = _$_Narrative;
   _Narrative._() : super._();
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [status] The status of the narrative - whether it\u0027s entirely generated
+  /// (from just the defined data or the extensions too), or whether a human
+  /// authored it and it may contain additional data.
   @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus? get status;
   @override
+
+  /// [statusElement] (_status) Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [div] The actual narrative content, a stripped down version of XHTML.
   String get div;
   @override
   @JsonKey(ignore: true)
-  _$NarrativeCopyWith<_Narrative> get copyWith =>
+  _$$_NarrativeCopyWith<_$_Narrative> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CodeableReference _$CodeableReferenceFromJson(Map<String, dynamic> json) {
+  return _CodeableReference.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CodeableReference {
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.",
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [concept] A reference to a concept - e.g. the information is identified by
+  /// its general class to the degree of precision found in the terminology.",
+  CodeableConcept? get concept => throw _privateConstructorUsedError;
+
+  /// [reference] A reference to a resource the provides exact details about the
+  /// information being referenced.
+  Reference? get reference => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CodeableReferenceCopyWith<CodeableReference> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CodeableReferenceCopyWith<$Res> {
+  factory $CodeableReferenceCopyWith(
+          CodeableReference value, $Res Function(CodeableReference) then) =
+      _$CodeableReferenceCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? concept,
+      Reference? reference});
+
+  $CodeableConceptCopyWith<$Res>? get concept;
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class _$CodeableReferenceCopyWithImpl<$Res>
+    implements $CodeableReferenceCopyWith<$Res> {
+  _$CodeableReferenceCopyWithImpl(this._value, this._then);
+
+  final CodeableReference _value;
+  // ignore: unused_field
+  final $Res Function(CodeableReference) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? concept = freezed,
+    Object? reference = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      concept: concept == freezed
+          ? _value.concept
+          : concept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get concept {
+    if (_value.concept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.concept!, (value) {
+      return _then(_value.copyWith(concept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reference!, (value) {
+      return _then(_value.copyWith(reference: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CodeableReferenceCopyWith<$Res>
+    implements $CodeableReferenceCopyWith<$Res> {
+  factory _$$_CodeableReferenceCopyWith(_$_CodeableReference value,
+          $Res Function(_$_CodeableReference) then) =
+      __$$_CodeableReferenceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? concept,
+      Reference? reference});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get concept;
+  @override
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class __$$_CodeableReferenceCopyWithImpl<$Res>
+    extends _$CodeableReferenceCopyWithImpl<$Res>
+    implements _$$_CodeableReferenceCopyWith<$Res> {
+  __$$_CodeableReferenceCopyWithImpl(
+      _$_CodeableReference _value, $Res Function(_$_CodeableReference) _then)
+      : super(_value, (v) => _then(v as _$_CodeableReference));
+
+  @override
+  _$_CodeableReference get _value => super._value as _$_CodeableReference;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? concept = freezed,
+    Object? reference = freezed,
+  }) {
+    return _then(_$_CodeableReference(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      concept: concept == freezed
+          ? _value.concept
+          : concept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CodeableReference extends _CodeableReference {
+  _$_CodeableReference(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.concept,
+      this.reference})
+      : _extension_ = extension_,
+        super._();
+
+  factory _$_CodeableReference.fromJson(Map<String, dynamic> json) =>
+      _$$_CodeableReferenceFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.",
+  @override
+  final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [concept] A reference to a concept - e.g. the information is identified by
+  /// its general class to the degree of precision found in the terminology.",
+  @override
+  final CodeableConcept? concept;
+
+  /// [reference] A reference to a resource the provides exact details about the
+  /// information being referenced.
+  @override
+  final Reference? reference;
+
+  @override
+  String toString() {
+    return 'CodeableReference(id: $id, extension_: $extension_, concept: $concept, reference: $reference)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CodeableReference &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality().equals(other.concept, concept) &&
+            const DeepCollectionEquality().equals(other.reference, reference));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(concept),
+      const DeepCollectionEquality().hash(reference));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CodeableReferenceCopyWith<_$_CodeableReference> get copyWith =>
+      __$$_CodeableReferenceCopyWithImpl<_$_CodeableReference>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CodeableReferenceToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CodeableReference extends CodeableReference {
+  factory _CodeableReference(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final CodeableConcept? concept,
+      final Reference? reference}) = _$_CodeableReference;
+  _CodeableReference._() : super._();
+
+  factory _CodeableReference.fromJson(Map<String, dynamic> json) =
+      _$_CodeableReference.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.",
+  String? get id;
+  @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [concept] A reference to a concept - e.g. the information is identified by
+  /// its general class to the degree of precision found in the terminology.",
+  CodeableConcept? get concept;
+  @override
+
+  /// [reference] A reference to a resource the provides exact details about the
+  /// information being referenced.
+  Reference? get reference;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CodeableReferenceCopyWith<_$_CodeableReference> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -302,53 +641,64 @@ Reference _$ReferenceFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ReferenceTearOff {
-  const _$ReferenceTearOff();
-
-  _Reference call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      String? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      FhirUri? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      Identifier? identifier,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement}) {
-    return _Reference(
-      id: id,
-      extension_: extension_,
-      reference: reference,
-      referenceElement: referenceElement,
-      type: type,
-      typeElement: typeElement,
-      identifier: identifier,
-      display: display,
-      displayElement: displayElement,
-    );
-  }
-
-  Reference fromJson(Map<String, Object?> json) {
-    return Reference.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Reference = _$ReferenceTearOff();
-
-/// @nodoc
 mixin _$Reference {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [reference] A reference to a location at which the other resource is
+  /// found. The reference may be a relative reference, in which case it is
+  /// relative to the service base URL, or an absolute URL that resolves to the
+  /// location where the resource is found. The reference may be version
+  /// specific or not. If the reference is not to a FHIR RESTful server, then it
+  /// should be assumed to be version specific. Internal fragment references
+  ///  (start with '#') refer to contained resources.
   String? get reference => throw _privateConstructorUsedError;
+
+  /// [referenceElement] Extensions for reference
   @JsonKey(name: '_reference')
   Element? get referenceElement => throw _privateConstructorUsedError;
+
+  /// [type] The expected type of the target of the reference. If both
+  /// Reference.type and Reference.reference are populated and
+  ///  Reference.reference is a FHIR URL, both SHALL be consistent.
+  /// The type is the Canonical URL of Resource Definition that is the type this
+  /// reference refers to. References are URLs that are relative to
+  /// http://hl7.org/fhir/StructureDefinition/ e.g. "Patient" is a reference to
+  /// http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only
+  /// allowed for logical models (and can only be used in references in logical
+  ///  models, not resources).
   FhirUri? get type => throw _privateConstructorUsedError;
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+
+  /// [identifier] An identifier for the target resource. This is used when
+  /// there is no way to reference the other resource directly, either because
+  /// the entity it represents is not available through a FHIR server, or
+  /// because there is no way for the author of the resource to convert a known
+  /// identifier to an actual location. There is no requirement that a
+  /// Reference.identifier point to something that is actually exposed as a FHIR
+  /// instance, but it SHALL point to a business concept that would be expected
+  /// to be exposed as a FHIR instance, and that instance would need to be of a
+  ///  FHIR resource type allowed by the reference.
   Identifier? get identifier => throw _privateConstructorUsedError;
+
+  /// [display] Plain text narrative that identifies the resource in addition
+  ///  to the resource reference.
   String? get display => throw _privateConstructorUsedError;
+
+  /// [displayElement] Extensions for display
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
 
@@ -485,10 +835,10 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
-  factory _$ReferenceCopyWith(
-          _Reference value, $Res Function(_Reference) then) =
-      __$ReferenceCopyWithImpl<$Res>;
+abstract class _$$_ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
+  factory _$$_ReferenceCopyWith(
+          _$_Reference value, $Res Function(_$_Reference) then) =
+      __$$_ReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -512,13 +862,14 @@ abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
-    implements _$ReferenceCopyWith<$Res> {
-  __$ReferenceCopyWithImpl(_Reference _value, $Res Function(_Reference) _then)
-      : super(_value, (v) => _then(v as _Reference));
+class __$$_ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
+    implements _$$_ReferenceCopyWith<$Res> {
+  __$$_ReferenceCopyWithImpl(
+      _$_Reference _value, $Res Function(_$_Reference) _then)
+      : super(_value, (v) => _then(v as _$_Reference));
 
   @override
-  _Reference get _value => super._value as _Reference;
+  _$_Reference get _value => super._value as _$_Reference;
 
   @override
   $Res call({
@@ -532,13 +883,13 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
     Object? display = freezed,
     Object? displayElement = freezed,
   }) {
-    return _then(_Reference(
+    return _then(_$_Reference(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       reference: reference == freezed
@@ -578,7 +929,7 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
 class _$_Reference extends _Reference {
   _$_Reference(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.reference,
       @JsonKey(name: '_reference') this.referenceElement,
       this.type,
@@ -586,30 +937,90 @@ class _$_Reference extends _Reference {
       this.identifier,
       this.display,
       @JsonKey(name: '_display') this.displayElement})
-      : super._();
+      : _extension_ = extension_,
+        super._();
 
   factory _$_Reference.fromJson(Map<String, dynamic> json) =>
       _$$_ReferenceFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [reference] A reference to a location at which the other resource is
+  /// found. The reference may be a relative reference, in which case it is
+  /// relative to the service base URL, or an absolute URL that resolves to the
+  /// location where the resource is found. The reference may be version
+  /// specific or not. If the reference is not to a FHIR RESTful server, then it
+  /// should be assumed to be version specific. Internal fragment references
+  ///  (start with '#') refer to contained resources.
   @override
   final String? reference;
+
+  /// [referenceElement] Extensions for reference
   @override
   @JsonKey(name: '_reference')
   final Element? referenceElement;
+
+  /// [type] The expected type of the target of the reference. If both
+  /// Reference.type and Reference.reference are populated and
+  ///  Reference.reference is a FHIR URL, both SHALL be consistent.
+  /// The type is the Canonical URL of Resource Definition that is the type this
+  /// reference refers to. References are URLs that are relative to
+  /// http://hl7.org/fhir/StructureDefinition/ e.g. "Patient" is a reference to
+  /// http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only
+  /// allowed for logical models (and can only be used in references in logical
+  ///  models, not resources).
   @override
   final FhirUri? type;
+
+  /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+
+  /// [identifier] An identifier for the target resource. This is used when
+  /// there is no way to reference the other resource directly, either because
+  /// the entity it represents is not available through a FHIR server, or
+  /// because there is no way for the author of the resource to convert a known
+  /// identifier to an actual location. There is no requirement that a
+  /// Reference.identifier point to something that is actually exposed as a FHIR
+  /// instance, but it SHALL point to a business concept that would be expected
+  /// to be exposed as a FHIR instance, and that instance would need to be of a
+  ///  FHIR resource type allowed by the reference.
   @override
   final Identifier? identifier;
+
+  /// [display] Plain text narrative that identifies the resource in addition
+  ///  to the resource reference.
   @override
   final String? display;
+
+  /// [displayElement] Extensions for display
   @override
   @JsonKey(name: '_display')
   final Element? displayElement;
@@ -623,10 +1034,10 @@ class _$_Reference extends _Reference {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Reference &&
+            other is _$_Reference &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.reference, reference) &&
             const DeepCollectionEquality()
                 .equals(other.referenceElement, referenceElement) &&
@@ -640,11 +1051,12 @@ class _$_Reference extends _Reference {
                 .equals(other.displayElement, displayElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(reference),
       const DeepCollectionEquality().hash(referenceElement),
       const DeepCollectionEquality().hash(type),
@@ -655,56 +1067,105 @@ class _$_Reference extends _Reference {
 
   @JsonKey(ignore: true)
   @override
-  _$ReferenceCopyWith<_Reference> get copyWith =>
-      __$ReferenceCopyWithImpl<_Reference>(this, _$identity);
+  _$$_ReferenceCopyWith<_$_Reference> get copyWith =>
+      __$$_ReferenceCopyWithImpl<_$_Reference>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReferenceToJson(this);
+    return _$$_ReferenceToJson(
+      this,
+    );
   }
 }
 
 abstract class _Reference extends Reference {
   factory _Reference(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      String? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      FhirUri? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      Identifier? identifier,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement}) = _$_Reference;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final String? reference,
+      @JsonKey(name: '_reference') final Element? referenceElement,
+      final FhirUri? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final Identifier? identifier,
+      final String? display,
+      @JsonKey(name: '_display') final Element? displayElement}) = _$_Reference;
   _Reference._() : super._();
 
   factory _Reference.fromJson(Map<String, dynamic> json) =
       _$_Reference.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [reference] A reference to a location at which the other resource is
+  /// found. The reference may be a relative reference, in which case it is
+  /// relative to the service base URL, or an absolute URL that resolves to the
+  /// location where the resource is found. The reference may be version
+  /// specific or not. If the reference is not to a FHIR RESTful server, then it
+  /// should be assumed to be version specific. Internal fragment references
+  ///  (start with '#') refer to contained resources.
   String? get reference;
   @override
+
+  /// [referenceElement] Extensions for reference
   @JsonKey(name: '_reference')
   Element? get referenceElement;
   @override
+
+  /// [type] The expected type of the target of the reference. If both
+  /// Reference.type and Reference.reference are populated and
+  ///  Reference.reference is a FHIR URL, both SHALL be consistent.
+  /// The type is the Canonical URL of Resource Definition that is the type this
+  /// reference refers to. References are URLs that are relative to
+  /// http://hl7.org/fhir/StructureDefinition/ e.g. "Patient" is a reference to
+  /// http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only
+  /// allowed for logical models (and can only be used in references in logical
+  ///  models, not resources).
   FhirUri? get type;
   @override
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+
+  /// [identifier] An identifier for the target resource. This is used when
+  /// there is no way to reference the other resource directly, either because
+  /// the entity it represents is not available through a FHIR server, or
+  /// because there is no way for the author of the resource to convert a known
+  /// identifier to an actual location. There is no requirement that a
+  /// Reference.identifier point to something that is actually exposed as a FHIR
+  /// instance, but it SHALL point to a business concept that would be expected
+  /// to be exposed as a FHIR instance, and that instance would need to be of a
+  ///  FHIR resource type allowed by the reference.
   Identifier? get identifier;
   @override
+
+  /// [display] Plain text narrative that identifies the resource in addition
+  ///  to the resource reference.
   String? get display;
   @override
+
+  /// [displayElement] Extensions for display
   @JsonKey(name: '_display')
   Element? get displayElement;
   @override
   @JsonKey(ignore: true)
-  _$ReferenceCopyWith<_Reference> get copyWith =>
+  _$$_ReferenceCopyWith<_$_Reference> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -713,60 +1174,61 @@ Meta _$MetaFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MetaTearOff {
-  const _$MetaTearOff();
-
-  _Meta call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Id? versionId,
-      @JsonKey(name: '_versionId') Element? versionIdElement,
-      Instant? lastUpdated,
-      @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      FhirUri? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      List<Canonical>? profile,
-      List<Coding>? security,
-      List<Coding>? tag}) {
-    return _Meta(
-      id: id,
-      extension_: extension_,
-      versionId: versionId,
-      versionIdElement: versionIdElement,
-      lastUpdated: lastUpdated,
-      lastUpdatedElement: lastUpdatedElement,
-      source: source,
-      sourceElement: sourceElement,
-      profile: profile,
-      security: security,
-      tag: tag,
-    );
-  }
-
-  Meta fromJson(Map<String, Object?> json) {
-    return Meta.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Meta = _$MetaTearOff();
-
-/// @nodoc
 mixin _$Meta {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [versionId] The version specific identifier, as it appears in the version
+  /// portion of the URL. This value changes when the resource is created,
+  ///  updated, or deleted.
   Id? get versionId => throw _privateConstructorUsedError;
+
+  /// [versionIdElement] Extensions for versionId
   @JsonKey(name: '_versionId')
   Element? get versionIdElement => throw _privateConstructorUsedError;
+
+  /// [lastUpdated] When the resource last changed - e.g. when the version
+  ///  changed.
   Instant? get lastUpdated => throw _privateConstructorUsedError;
+
+  /// [lastUpdatedElement] Extensions for lastUpdated
   @JsonKey(name: '_lastUpdated')
   Element? get lastUpdatedElement => throw _privateConstructorUsedError;
+
+  /// [source] A uri that identifies the source system of the resource. This
+  /// provides a minimal amount of [[[Provenance]]] information that can be used
+  /// to track or differentiate the source of information in the resource. The
+  /// source may identify another FHIR server, document, message, database,
+  ///  etc.
   FhirUri? get source => throw _privateConstructorUsedError;
+
+  /// [sourceElement] Extensions for source
   @JsonKey(name: '_source')
   Element? get sourceElement => throw _privateConstructorUsedError;
+
+  /// [profile] A list of profiles (references to [[[StructureDefinition]]]
+  /// resources) that this resource claims to conform to. The URL is a reference
+  ///  to [[[StructureDefinition.url]]].
   List<Canonical>? get profile => throw _privateConstructorUsedError;
+
+  /// [security] Security labels applied to this resource. These tags connect
+  ///  specific resources to the overall security policy and infrastructure.
   List<Coding>? get security => throw _privateConstructorUsedError;
+
+  /// [tag] Tags applied to this resource. Tags are intended to be used to
+  /// identify and relate resources to process and workflow, and applications
+  /// are not required to consider the tags when interpreting the meaning of a
+  ///  resource.
   List<Coding>? get tag => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -901,9 +1363,9 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
-  factory _$MetaCopyWith(_Meta value, $Res Function(_Meta) then) =
-      __$MetaCopyWithImpl<$Res>;
+abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
+  factory _$$_MetaCopyWith(_$_Meta value, $Res Function(_$_Meta) then) =
+      __$$_MetaCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -927,13 +1389,13 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
-    implements _$MetaCopyWith<$Res> {
-  __$MetaCopyWithImpl(_Meta _value, $Res Function(_Meta) _then)
-      : super(_value, (v) => _then(v as _Meta));
+class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
+    implements _$$_MetaCopyWith<$Res> {
+  __$$_MetaCopyWithImpl(_$_Meta _value, $Res Function(_$_Meta) _then)
+      : super(_value, (v) => _then(v as _$_Meta));
 
   @override
-  _Meta get _value => super._value as _Meta;
+  _$_Meta get _value => super._value as _$_Meta;
 
   @override
   $Res call({
@@ -949,13 +1411,13 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
     Object? security = freezed,
     Object? tag = freezed,
   }) {
-    return _then(_Meta(
+    return _then(_$_Meta(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       versionId: versionId == freezed
@@ -983,15 +1445,15 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
           : sourceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       profile: profile == freezed
-          ? _value.profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       security: security == freezed
-          ? _value.security
+          ? _value._security
           : security // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       tag: tag == freezed
-          ? _value.tag
+          ? _value._tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
     ));
@@ -1003,46 +1465,133 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
 class _$_Meta extends _Meta {
   _$_Meta(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.versionId,
       @JsonKey(name: '_versionId') this.versionIdElement,
       this.lastUpdated,
       @JsonKey(name: '_lastUpdated') this.lastUpdatedElement,
       this.source,
       @JsonKey(name: '_source') this.sourceElement,
-      this.profile,
-      this.security,
-      this.tag})
-      : super._();
+      final List<Canonical>? profile,
+      final List<Coding>? security,
+      final List<Coding>? tag})
+      : _extension_ = extension_,
+        _profile = profile,
+        _security = security,
+        _tag = tag,
+        super._();
 
   factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [versionId] The version specific identifier, as it appears in the version
+  /// portion of the URL. This value changes when the resource is created,
+  ///  updated, or deleted.
   @override
   final Id? versionId;
+
+  /// [versionIdElement] Extensions for versionId
   @override
   @JsonKey(name: '_versionId')
   final Element? versionIdElement;
+
+  /// [lastUpdated] When the resource last changed - e.g. when the version
+  ///  changed.
   @override
   final Instant? lastUpdated;
+
+  /// [lastUpdatedElement] Extensions for lastUpdated
   @override
   @JsonKey(name: '_lastUpdated')
   final Element? lastUpdatedElement;
+
+  /// [source] A uri that identifies the source system of the resource. This
+  /// provides a minimal amount of [[[Provenance]]] information that can be used
+  /// to track or differentiate the source of information in the resource. The
+  /// source may identify another FHIR server, document, message, database,
+  ///  etc.
   @override
   final FhirUri? source;
+
+  /// [sourceElement] Extensions for source
   @override
   @JsonKey(name: '_source')
   final Element? sourceElement;
+
+  /// [profile] A list of profiles (references to [[[StructureDefinition]]]
+  /// resources) that this resource claims to conform to. The URL is a reference
+  ///  to [[[StructureDefinition.url]]].
+  final List<Canonical>? _profile;
+
+  /// [profile] A list of profiles (references to [[[StructureDefinition]]]
+  /// resources) that this resource claims to conform to. The URL is a reference
+  ///  to [[[StructureDefinition.url]]].
   @override
-  final List<Canonical>? profile;
+  List<Canonical>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [security] Security labels applied to this resource. These tags connect
+  ///  specific resources to the overall security policy and infrastructure.
+  final List<Coding>? _security;
+
+  /// [security] Security labels applied to this resource. These tags connect
+  ///  specific resources to the overall security policy and infrastructure.
   @override
-  final List<Coding>? security;
+  List<Coding>? get security {
+    final value = _security;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [tag] Tags applied to this resource. Tags are intended to be used to
+  /// identify and relate resources to process and workflow, and applications
+  /// are not required to consider the tags when interpreting the meaning of a
+  ///  resource.
+  final List<Coding>? _tag;
+
+  /// [tag] Tags applied to this resource. Tags are intended to be used to
+  /// identify and relate resources to process and workflow, and applications
+  /// are not required to consider the tags when interpreting the meaning of a
+  ///  resource.
   @override
-  final List<Coding>? tag;
+  List<Coding>? get tag {
+    final value = _tag;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1053,10 +1602,10 @@ class _$_Meta extends _Meta {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Meta &&
+            other is _$_Meta &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.versionId, versionId) &&
             const DeepCollectionEquality()
                 .equals(other.versionIdElement, versionIdElement) &&
@@ -1067,83 +1616,127 @@ class _$_Meta extends _Meta {
             const DeepCollectionEquality().equals(other.source, source) &&
             const DeepCollectionEquality()
                 .equals(other.sourceElement, sourceElement) &&
-            const DeepCollectionEquality().equals(other.profile, profile) &&
-            const DeepCollectionEquality().equals(other.security, security) &&
-            const DeepCollectionEquality().equals(other.tag, tag));
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other._security, _security) &&
+            const DeepCollectionEquality().equals(other._tag, _tag));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(versionId),
       const DeepCollectionEquality().hash(versionIdElement),
       const DeepCollectionEquality().hash(lastUpdated),
       const DeepCollectionEquality().hash(lastUpdatedElement),
       const DeepCollectionEquality().hash(source),
       const DeepCollectionEquality().hash(sourceElement),
-      const DeepCollectionEquality().hash(profile),
-      const DeepCollectionEquality().hash(security),
-      const DeepCollectionEquality().hash(tag));
+      const DeepCollectionEquality().hash(_profile),
+      const DeepCollectionEquality().hash(_security),
+      const DeepCollectionEquality().hash(_tag));
 
   @JsonKey(ignore: true)
   @override
-  _$MetaCopyWith<_Meta> get copyWith =>
-      __$MetaCopyWithImpl<_Meta>(this, _$identity);
+  _$$_MetaCopyWith<_$_Meta> get copyWith =>
+      __$$_MetaCopyWithImpl<_$_Meta>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MetaToJson(this);
+    return _$$_MetaToJson(
+      this,
+    );
   }
 }
 
 abstract class _Meta extends Meta {
   factory _Meta(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Id? versionId,
-      @JsonKey(name: '_versionId') Element? versionIdElement,
-      Instant? lastUpdated,
-      @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      FhirUri? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      List<Canonical>? profile,
-      List<Coding>? security,
-      List<Coding>? tag}) = _$_Meta;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final Id? versionId,
+      @JsonKey(name: '_versionId') final Element? versionIdElement,
+      final Instant? lastUpdated,
+      @JsonKey(name: '_lastUpdated') final Element? lastUpdatedElement,
+      final FhirUri? source,
+      @JsonKey(name: '_source') final Element? sourceElement,
+      final List<Canonical>? profile,
+      final List<Coding>? security,
+      final List<Coding>? tag}) = _$_Meta;
   _Meta._() : super._();
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [versionId] The version specific identifier, as it appears in the version
+  /// portion of the URL. This value changes when the resource is created,
+  ///  updated, or deleted.
   Id? get versionId;
   @override
+
+  /// [versionIdElement] Extensions for versionId
   @JsonKey(name: '_versionId')
   Element? get versionIdElement;
   @override
+
+  /// [lastUpdated] When the resource last changed - e.g. when the version
+  ///  changed.
   Instant? get lastUpdated;
   @override
+
+  /// [lastUpdatedElement] Extensions for lastUpdated
   @JsonKey(name: '_lastUpdated')
   Element? get lastUpdatedElement;
   @override
+
+  /// [source] A uri that identifies the source system of the resource. This
+  /// provides a minimal amount of [[[Provenance]]] information that can be used
+  /// to track or differentiate the source of information in the resource. The
+  /// source may identify another FHIR server, document, message, database,
+  ///  etc.
   FhirUri? get source;
   @override
+
+  /// [sourceElement] Extensions for source
   @JsonKey(name: '_source')
   Element? get sourceElement;
   @override
+
+  /// [profile] A list of profiles (references to [[[StructureDefinition]]]
+  /// resources) that this resource claims to conform to. The URL is a reference
+  ///  to [[[StructureDefinition.url]]].
   List<Canonical>? get profile;
   @override
+
+  /// [security] Security labels applied to this resource. These tags connect
+  ///  specific resources to the overall security policy and infrastructure.
   List<Coding>? get security;
   @override
+
+  /// [tag] Tags applied to this resource. Tags are intended to be used to
+  /// identify and relate resources to process and workflow, and applications
+  /// are not required to consider the tags when interpreting the meaning of a
+  ///  resource.
   List<Coding>? get tag;
   @override
   @JsonKey(ignore: true)
-  _$MetaCopyWith<_Meta> get copyWith => throw _privateConstructorUsedError;
+  _$$_MetaCopyWith<_$_Meta> get copyWith => throw _privateConstructorUsedError;
 }
 
 Dosage _$DosageFromJson(Map<String, dynamic> json) {
@@ -1151,95 +1744,105 @@ Dosage _$DosageFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$DosageTearOff {
-  const _$DosageTearOff();
-
-  _Dosage call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? sequence,
-      @JsonKey(name: '_sequence') Element? sequenceElement,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement,
-      List<CodeableConcept>? additionalInstruction,
-      String? patientInstruction,
-      @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
-      Timing? timing,
-      Boolean? asNeededBoolean,
-      @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
-      CodeableConcept? asNeededCodeableConcept,
-      CodeableConcept? site,
-      CodeableConcept? route,
-      CodeableConcept? method,
-      List<DosageDoseAndRate>? doseAndRate,
-      Ratio? maxDosePerPeriod,
-      Quantity? maxDosePerAdministration,
-      Quantity? maxDosePerLifetime}) {
-    return _Dosage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      sequence: sequence,
-      sequenceElement: sequenceElement,
-      text: text,
-      textElement: textElement,
-      additionalInstruction: additionalInstruction,
-      patientInstruction: patientInstruction,
-      patientInstructionElement: patientInstructionElement,
-      timing: timing,
-      asNeededBoolean: asNeededBoolean,
-      asNeededBooleanElement: asNeededBooleanElement,
-      asNeededCodeableConcept: asNeededCodeableConcept,
-      site: site,
-      route: route,
-      method: method,
-      doseAndRate: doseAndRate,
-      maxDosePerPeriod: maxDosePerPeriod,
-      maxDosePerAdministration: maxDosePerAdministration,
-      maxDosePerLifetime: maxDosePerLifetime,
-    );
-  }
-
-  Dosage fromJson(Map<String, Object?> json) {
-    return Dosage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Dosage = _$DosageTearOff();
-
-/// @nodoc
 mixin _$Dosage {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [sequence] Indicates the order in which the dosage instructions should be
+  ///  applied or interpreted.
   Integer? get sequence => throw _privateConstructorUsedError;
+
+  /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
+
+  /// [text] Free text dosage instructions e.g. SIG.
   String? get text => throw _privateConstructorUsedError;
+
+  /// [textElement] Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
+
+  /// [additionalInstruction] Supplemental instructions to the patient on how
+  /// to take the medication  (e.g. "with meals" or"take half to one hour before
+  /// food") or warnings for the patient about the medication (e.g. "may cause
+  ///  drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
   List<CodeableConcept>? get additionalInstruction =>
       throw _privateConstructorUsedError;
+
+  /// [patientInstruction] Instructions in terms that are understood by the
+  ///  patient or consumer.
   String? get patientInstruction => throw _privateConstructorUsedError;
+
+  /// [patientInstructionElement] Extensions for patientInstruction
   @JsonKey(name: '_patientInstruction')
   Element? get patientInstructionElement => throw _privateConstructorUsedError;
+
+  /// [timing] When medication should be administered.
   Timing? get timing => throw _privateConstructorUsedError;
+
+  /// [asNeededBoolean] Indicates whether the Medication is only taken when
+  /// needed within a specific dosing schedule (Boolean option), or it indicates
+  ///  the precondition for taking the Medication (CodeableConcept).
   Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+
+  /// [asNeededBooleanElement] Extensions for asNeededBoolean
   @JsonKey(name: '_asNeededBoolean')
   Element? get asNeededBooleanElement => throw _privateConstructorUsedError;
+
+  /// [asNeededCodeableConcept] Indicates whether the Medication is only taken
+  /// when needed within a specific dosing schedule (Boolean option), or it
+  ///  indicates the precondition for taking the Medication (CodeableConcept).
   CodeableConcept? get asNeededCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [site] Body site to administer to.
   CodeableConcept? get site => throw _privateConstructorUsedError;
+
+  /// [route] How drug should enter body.
   CodeableConcept? get route => throw _privateConstructorUsedError;
+
+  /// [method] Technique for administering medication.
   CodeableConcept? get method => throw _privateConstructorUsedError;
+
+  /// [doseAndRate] The amount of medication administered.
   List<DosageDoseAndRate>? get doseAndRate =>
       throw _privateConstructorUsedError;
+
+  /// [maxDosePerPeriod] Upper limit on medication per unit of time.
   Ratio? get maxDosePerPeriod => throw _privateConstructorUsedError;
+
+  /// [maxDosePerAdministration] Upper limit on medication per administration.
   Quantity? get maxDosePerAdministration => throw _privateConstructorUsedError;
+
+  /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
+  ///  patient.
   Quantity? get maxDosePerLifetime => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1543,9 +2146,9 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
-  factory _$DosageCopyWith(_Dosage value, $Res Function(_Dosage) then) =
-      __$DosageCopyWithImpl<$Res>;
+abstract class _$$_DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
+  factory _$$_DosageCopyWith(_$_Dosage value, $Res Function(_$_Dosage) then) =
+      __$$_DosageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -1597,13 +2200,13 @@ abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
-    implements _$DosageCopyWith<$Res> {
-  __$DosageCopyWithImpl(_Dosage _value, $Res Function(_Dosage) _then)
-      : super(_value, (v) => _then(v as _Dosage));
+class __$$_DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
+    implements _$$_DosageCopyWith<$Res> {
+  __$$_DosageCopyWithImpl(_$_Dosage _value, $Res Function(_$_Dosage) _then)
+      : super(_value, (v) => _then(v as _$_Dosage));
 
   @override
-  _Dosage get _value => super._value as _Dosage;
+  _$_Dosage get _value => super._value as _$_Dosage;
 
   @override
   $Res call({
@@ -1629,17 +2232,17 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
     Object? maxDosePerAdministration = freezed,
     Object? maxDosePerLifetime = freezed,
   }) {
-    return _then(_Dosage(
+    return _then(_$_Dosage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       sequence: sequence == freezed
@@ -1659,7 +2262,7 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
           : textElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       additionalInstruction: additionalInstruction == freezed
-          ? _value.additionalInstruction
+          ? _value._additionalInstruction
           : additionalInstruction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       patientInstruction: patientInstruction == freezed
@@ -1699,7 +2302,7 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
           : method // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       doseAndRate: doseAndRate == freezed
-          ? _value.doseAndRate
+          ? _value._doseAndRate
           : doseAndRate // ignore: cast_nullable_to_non_nullable
               as List<DosageDoseAndRate>?,
       maxDosePerPeriod: maxDosePerPeriod == freezed
@@ -1723,13 +2326,13 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
 class _$_Dosage extends _Dosage {
   _$_Dosage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       this.text,
       @JsonKey(name: '_text') this.textElement,
-      this.additionalInstruction,
+      final List<CodeableConcept>? additionalInstruction,
       this.patientInstruction,
       @JsonKey(name: '_patientInstruction') this.patientInstructionElement,
       this.timing,
@@ -1739,60 +2342,185 @@ class _$_Dosage extends _Dosage {
       this.site,
       this.route,
       this.method,
-      this.doseAndRate,
+      final List<DosageDoseAndRate>? doseAndRate,
       this.maxDosePerPeriod,
       this.maxDosePerAdministration,
       this.maxDosePerLifetime})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _additionalInstruction = additionalInstruction,
+        _doseAndRate = doseAndRate,
+        super._();
 
   factory _$_Dosage.fromJson(Map<String, dynamic> json) =>
       _$$_DosageFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [sequence] Indicates the order in which the dosage instructions should be
+  ///  applied or interpreted.
   @override
   final Integer? sequence;
+
+  /// [sequenceElement] Extensions for sequence
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
+
+  /// [text] Free text dosage instructions e.g. SIG.
   @override
   final String? text;
+
+  /// [textElement] Extensions for text
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
+
+  /// [additionalInstruction] Supplemental instructions to the patient on how
+  /// to take the medication  (e.g. "with meals" or"take half to one hour before
+  /// food") or warnings for the patient about the medication (e.g. "may cause
+  ///  drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
+  final List<CodeableConcept>? _additionalInstruction;
+
+  /// [additionalInstruction] Supplemental instructions to the patient on how
+  /// to take the medication  (e.g. "with meals" or"take half to one hour before
+  /// food") or warnings for the patient about the medication (e.g. "may cause
+  ///  drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
   @override
-  final List<CodeableConcept>? additionalInstruction;
+  List<CodeableConcept>? get additionalInstruction {
+    final value = _additionalInstruction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [patientInstruction] Instructions in terms that are understood by the
+  ///  patient or consumer.
   @override
   final String? patientInstruction;
+
+  /// [patientInstructionElement] Extensions for patientInstruction
   @override
   @JsonKey(name: '_patientInstruction')
   final Element? patientInstructionElement;
+
+  /// [timing] When medication should be administered.
   @override
   final Timing? timing;
+
+  /// [asNeededBoolean] Indicates whether the Medication is only taken when
+  /// needed within a specific dosing schedule (Boolean option), or it indicates
+  ///  the precondition for taking the Medication (CodeableConcept).
   @override
   final Boolean? asNeededBoolean;
+
+  /// [asNeededBooleanElement] Extensions for asNeededBoolean
   @override
   @JsonKey(name: '_asNeededBoolean')
   final Element? asNeededBooleanElement;
+
+  /// [asNeededCodeableConcept] Indicates whether the Medication is only taken
+  /// when needed within a specific dosing schedule (Boolean option), or it
+  ///  indicates the precondition for taking the Medication (CodeableConcept).
   @override
   final CodeableConcept? asNeededCodeableConcept;
+
+  /// [site] Body site to administer to.
   @override
   final CodeableConcept? site;
+
+  /// [route] How drug should enter body.
   @override
   final CodeableConcept? route;
+
+  /// [method] Technique for administering medication.
   @override
   final CodeableConcept? method;
+
+  /// [doseAndRate] The amount of medication administered.
+  final List<DosageDoseAndRate>? _doseAndRate;
+
+  /// [doseAndRate] The amount of medication administered.
   @override
-  final List<DosageDoseAndRate>? doseAndRate;
+  List<DosageDoseAndRate>? get doseAndRate {
+    final value = _doseAndRate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [maxDosePerPeriod] Upper limit on medication per unit of time.
   @override
   final Ratio? maxDosePerPeriod;
+
+  /// [maxDosePerAdministration] Upper limit on medication per administration.
   @override
   final Quantity? maxDosePerAdministration;
+
+  /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
+  ///  patient.
   @override
   final Quantity? maxDosePerLifetime;
 
@@ -1805,12 +2533,12 @@ class _$_Dosage extends _Dosage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Dosage &&
+            other is _$_Dosage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.sequence, sequence) &&
             const DeepCollectionEquality()
                 .equals(other.sequenceElement, sequenceElement) &&
@@ -1818,7 +2546,7 @@ class _$_Dosage extends _Dosage {
             const DeepCollectionEquality()
                 .equals(other.textElement, textElement) &&
             const DeepCollectionEquality()
-                .equals(other.additionalInstruction, additionalInstruction) &&
+                .equals(other._additionalInstruction, _additionalInstruction) &&
             const DeepCollectionEquality()
                 .equals(other.patientInstruction, patientInstruction) &&
             const DeepCollectionEquality().equals(
@@ -1834,7 +2562,7 @@ class _$_Dosage extends _Dosage {
             const DeepCollectionEquality().equals(other.route, route) &&
             const DeepCollectionEquality().equals(other.method, method) &&
             const DeepCollectionEquality()
-                .equals(other.doseAndRate, doseAndRate) &&
+                .equals(other._doseAndRate, _doseAndRate) &&
             const DeepCollectionEquality()
                 .equals(other.maxDosePerPeriod, maxDosePerPeriod) &&
             const DeepCollectionEquality().equals(
@@ -1843,17 +2571,18 @@ class _$_Dosage extends _Dosage {
                 .equals(other.maxDosePerLifetime, maxDosePerLifetime));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(sequence),
         const DeepCollectionEquality().hash(sequenceElement),
         const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(textElement),
-        const DeepCollectionEquality().hash(additionalInstruction),
+        const DeepCollectionEquality().hash(_additionalInstruction),
         const DeepCollectionEquality().hash(patientInstruction),
         const DeepCollectionEquality().hash(patientInstructionElement),
         const DeepCollectionEquality().hash(timing),
@@ -1863,7 +2592,7 @@ class _$_Dosage extends _Dosage {
         const DeepCollectionEquality().hash(site),
         const DeepCollectionEquality().hash(route),
         const DeepCollectionEquality().hash(method),
-        const DeepCollectionEquality().hash(doseAndRate),
+        const DeepCollectionEquality().hash(_doseAndRate),
         const DeepCollectionEquality().hash(maxDosePerPeriod),
         const DeepCollectionEquality().hash(maxDosePerAdministration),
         const DeepCollectionEquality().hash(maxDosePerLifetime)
@@ -1871,92 +2600,170 @@ class _$_Dosage extends _Dosage {
 
   @JsonKey(ignore: true)
   @override
-  _$DosageCopyWith<_Dosage> get copyWith =>
-      __$DosageCopyWithImpl<_Dosage>(this, _$identity);
+  _$$_DosageCopyWith<_$_Dosage> get copyWith =>
+      __$$_DosageCopyWithImpl<_$_Dosage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DosageToJson(this);
+    return _$$_DosageToJson(
+      this,
+    );
   }
 }
 
 abstract class _Dosage extends Dosage {
   factory _Dosage(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? sequence,
-      @JsonKey(name: '_sequence') Element? sequenceElement,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement,
-      List<CodeableConcept>? additionalInstruction,
-      String? patientInstruction,
-      @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
-      Timing? timing,
-      Boolean? asNeededBoolean,
-      @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
-      CodeableConcept? asNeededCodeableConcept,
-      CodeableConcept? site,
-      CodeableConcept? route,
-      CodeableConcept? method,
-      List<DosageDoseAndRate>? doseAndRate,
-      Ratio? maxDosePerPeriod,
-      Quantity? maxDosePerAdministration,
-      Quantity? maxDosePerLifetime}) = _$_Dosage;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Integer? sequence,
+      @JsonKey(name: '_sequence')
+          final Element? sequenceElement,
+      final String? text,
+      @JsonKey(name: '_text')
+          final Element? textElement,
+      final List<CodeableConcept>? additionalInstruction,
+      final String? patientInstruction,
+      @JsonKey(name: '_patientInstruction')
+          final Element? patientInstructionElement,
+      final Timing? timing,
+      final Boolean? asNeededBoolean,
+      @JsonKey(name: '_asNeededBoolean')
+          final Element? asNeededBooleanElement,
+      final CodeableConcept? asNeededCodeableConcept,
+      final CodeableConcept? site,
+      final CodeableConcept? route,
+      final CodeableConcept? method,
+      final List<DosageDoseAndRate>? doseAndRate,
+      final Ratio? maxDosePerPeriod,
+      final Quantity? maxDosePerAdministration,
+      final Quantity? maxDosePerLifetime}) = _$_Dosage;
   _Dosage._() : super._();
 
   factory _Dosage.fromJson(Map<String, dynamic> json) = _$_Dosage.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [sequence] Indicates the order in which the dosage instructions should be
+  ///  applied or interpreted.
   Integer? get sequence;
   @override
+
+  /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
+
+  /// [text] Free text dosage instructions e.g. SIG.
   String? get text;
   @override
+
+  /// [textElement] Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
+
+  /// [additionalInstruction] Supplemental instructions to the patient on how
+  /// to take the medication  (e.g. "with meals" or"take half to one hour before
+  /// food") or warnings for the patient about the medication (e.g. "may cause
+  ///  drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
   List<CodeableConcept>? get additionalInstruction;
   @override
+
+  /// [patientInstruction] Instructions in terms that are understood by the
+  ///  patient or consumer.
   String? get patientInstruction;
   @override
+
+  /// [patientInstructionElement] Extensions for patientInstruction
   @JsonKey(name: '_patientInstruction')
   Element? get patientInstructionElement;
   @override
+
+  /// [timing] When medication should be administered.
   Timing? get timing;
   @override
+
+  /// [asNeededBoolean] Indicates whether the Medication is only taken when
+  /// needed within a specific dosing schedule (Boolean option), or it indicates
+  ///  the precondition for taking the Medication (CodeableConcept).
   Boolean? get asNeededBoolean;
   @override
+
+  /// [asNeededBooleanElement] Extensions for asNeededBoolean
   @JsonKey(name: '_asNeededBoolean')
   Element? get asNeededBooleanElement;
   @override
+
+  /// [asNeededCodeableConcept] Indicates whether the Medication is only taken
+  /// when needed within a specific dosing schedule (Boolean option), or it
+  ///  indicates the precondition for taking the Medication (CodeableConcept).
   CodeableConcept? get asNeededCodeableConcept;
   @override
+
+  /// [site] Body site to administer to.
   CodeableConcept? get site;
   @override
+
+  /// [route] How drug should enter body.
   CodeableConcept? get route;
   @override
+
+  /// [method] Technique for administering medication.
   CodeableConcept? get method;
   @override
+
+  /// [doseAndRate] The amount of medication administered.
   List<DosageDoseAndRate>? get doseAndRate;
   @override
+
+  /// [maxDosePerPeriod] Upper limit on medication per unit of time.
   Ratio? get maxDosePerPeriod;
   @override
+
+  /// [maxDosePerAdministration] Upper limit on medication per administration.
   Quantity? get maxDosePerAdministration;
   @override
+
+  /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
+  ///  patient.
   Quantity? get maxDosePerLifetime;
   @override
   @JsonKey(ignore: true)
-  _$DosageCopyWith<_Dosage> get copyWith => throw _privateConstructorUsedError;
+  _$$_DosageCopyWith<_$_Dosage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DosageDoseAndRate _$DosageDoseAndRateFromJson(Map<String, dynamic> json) {
@@ -1964,52 +2771,53 @@ DosageDoseAndRate _$DosageDoseAndRateFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$DosageDoseAndRateTearOff {
-  const _$DosageDoseAndRateTearOff();
-
-  _DosageDoseAndRate call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Range? doseRange,
-      Quantity? doseQuantity,
-      Ratio? rateRatio,
-      Range? rateRange,
-      Quantity? rateQuantity}) {
-    return _DosageDoseAndRate(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      doseRange: doseRange,
-      doseQuantity: doseQuantity,
-      rateRatio: rateRatio,
-      rateRange: rateRange,
-      rateQuantity: rateQuantity,
-    );
-  }
-
-  DosageDoseAndRate fromJson(Map<String, Object?> json) {
-    return DosageDoseAndRate.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DosageDoseAndRate = _$DosageDoseAndRateTearOff();
-
-/// @nodoc
 mixin _$DosageDoseAndRate {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The kind of dose or rate specified, for example, ordered or
+  ///  calculated.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [doseRange] Amount of medication per dose.
   Range? get doseRange => throw _privateConstructorUsedError;
+
+  /// [doseQuantity] Amount of medication per dose.
   Quantity? get doseQuantity => throw _privateConstructorUsedError;
+
+  /// [rateRatio] Amount of medication per unit of time.
   Ratio? get rateRatio => throw _privateConstructorUsedError;
+
+  /// [rateRange] Amount of medication per unit of time.
   Range? get rateRange => throw _privateConstructorUsedError;
+
+  /// [rateQuantity] Amount of medication per unit of time.
   Quantity? get rateQuantity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2171,11 +2979,11 @@ class _$DosageDoseAndRateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DosageDoseAndRateCopyWith<$Res>
+abstract class _$$_DosageDoseAndRateCopyWith<$Res>
     implements $DosageDoseAndRateCopyWith<$Res> {
-  factory _$DosageDoseAndRateCopyWith(
-          _DosageDoseAndRate value, $Res Function(_DosageDoseAndRate) then) =
-      __$DosageDoseAndRateCopyWithImpl<$Res>;
+  factory _$$_DosageDoseAndRateCopyWith(_$_DosageDoseAndRate value,
+          $Res Function(_$_DosageDoseAndRate) then) =
+      __$$_DosageDoseAndRateCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -2203,15 +3011,15 @@ abstract class _$DosageDoseAndRateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DosageDoseAndRateCopyWithImpl<$Res>
+class __$$_DosageDoseAndRateCopyWithImpl<$Res>
     extends _$DosageDoseAndRateCopyWithImpl<$Res>
-    implements _$DosageDoseAndRateCopyWith<$Res> {
-  __$DosageDoseAndRateCopyWithImpl(
-      _DosageDoseAndRate _value, $Res Function(_DosageDoseAndRate) _then)
-      : super(_value, (v) => _then(v as _DosageDoseAndRate));
+    implements _$$_DosageDoseAndRateCopyWith<$Res> {
+  __$$_DosageDoseAndRateCopyWithImpl(
+      _$_DosageDoseAndRate _value, $Res Function(_$_DosageDoseAndRate) _then)
+      : super(_value, (v) => _then(v as _$_DosageDoseAndRate));
 
   @override
-  _DosageDoseAndRate get _value => super._value as _DosageDoseAndRate;
+  _$_DosageDoseAndRate get _value => super._value as _$_DosageDoseAndRate;
 
   @override
   $Res call({
@@ -2225,17 +3033,17 @@ class __$DosageDoseAndRateCopyWithImpl<$Res>
     Object? rateRange = freezed,
     Object? rateQuantity = freezed,
   }) {
-    return _then(_DosageDoseAndRate(
+    return _then(_$_DosageDoseAndRate(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -2271,36 +3079,107 @@ class __$DosageDoseAndRateCopyWithImpl<$Res>
 class _$_DosageDoseAndRate extends _DosageDoseAndRate {
   _$_DosageDoseAndRate(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.doseRange,
       this.doseQuantity,
       this.rateRatio,
       this.rateRange,
       this.rateQuantity})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
       _$$_DosageDoseAndRateFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] The kind of dose or rate specified, for example, ordered or
+  ///  calculated.
   @override
   final CodeableConcept? type;
+
+  /// [doseRange] Amount of medication per dose.
   @override
   final Range? doseRange;
+
+  /// [doseQuantity] Amount of medication per dose.
   @override
   final Quantity? doseQuantity;
+
+  /// [rateRatio] Amount of medication per unit of time.
   @override
   final Ratio? rateRatio;
+
+  /// [rateRange] Amount of medication per unit of time.
   @override
   final Range? rateRange;
+
+  /// [rateQuantity] Amount of medication per unit of time.
   @override
   final Quantity? rateQuantity;
 
@@ -2313,12 +3192,12 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DosageDoseAndRate &&
+            other is _$_DosageDoseAndRate &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.doseRange, doseRange) &&
             const DeepCollectionEquality()
@@ -2329,12 +3208,13 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
                 .equals(other.rateQuantity, rateQuantity));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(doseRange),
       const DeepCollectionEquality().hash(doseQuantity),
@@ -2344,53 +3224,93 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
 
   @JsonKey(ignore: true)
   @override
-  _$DosageDoseAndRateCopyWith<_DosageDoseAndRate> get copyWith =>
-      __$DosageDoseAndRateCopyWithImpl<_DosageDoseAndRate>(this, _$identity);
+  _$$_DosageDoseAndRateCopyWith<_$_DosageDoseAndRate> get copyWith =>
+      __$$_DosageDoseAndRateCopyWithImpl<_$_DosageDoseAndRate>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DosageDoseAndRateToJson(this);
+    return _$$_DosageDoseAndRateToJson(
+      this,
+    );
   }
 }
 
 abstract class _DosageDoseAndRate extends DosageDoseAndRate {
   factory _DosageDoseAndRate(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Range? doseRange,
-      Quantity? doseQuantity,
-      Ratio? rateRatio,
-      Range? rateRange,
-      Quantity? rateQuantity}) = _$_DosageDoseAndRate;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      final Range? doseRange,
+      final Quantity? doseQuantity,
+      final Ratio? rateRatio,
+      final Range? rateRange,
+      final Quantity? rateQuantity}) = _$_DosageDoseAndRate;
   _DosageDoseAndRate._() : super._();
 
   factory _DosageDoseAndRate.fromJson(Map<String, dynamic> json) =
       _$_DosageDoseAndRate.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The kind of dose or rate specified, for example, ordered or
+  ///  calculated.
   CodeableConcept? get type;
   @override
+
+  /// [doseRange] Amount of medication per dose.
   Range? get doseRange;
   @override
+
+  /// [doseQuantity] Amount of medication per dose.
   Quantity? get doseQuantity;
   @override
+
+  /// [rateRatio] Amount of medication per unit of time.
   Ratio? get rateRatio;
   @override
+
+  /// [rateRange] Amount of medication per unit of time.
   Range? get rateRange;
   @override
+
+  /// [rateQuantity] Amount of medication per unit of time.
   Quantity? get rateQuantity;
   @override
   @JsonKey(ignore: true)
-  _$DosageDoseAndRateCopyWith<_DosageDoseAndRate> get copyWith =>
+  _$$_DosageDoseAndRateCopyWith<_$_DosageDoseAndRate> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2399,1129 +3319,2068 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ElementDefinitionTearOff {
-  const _$ElementDefinitionTearOff();
-
-  _ElementDefinition call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      List<ElementDefinitionRepresentation>? representation,
-      @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
-      String? sliceName,
-      @JsonKey(name: '_sliceName')
-          Element? sliceNameElement,
-      Boolean? sliceIsConstraining,
-      @JsonKey(name: '_sliceIsConstraining')
-          Element? sliceIsConstrainingElement,
-      String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
-      List<Coding>? code,
-      ElementDefinitionSlicing? slicing,
-      String? short,
-      @JsonKey(name: '_short')
-          Element? shortElement,
-      Markdown? definition,
-      @JsonKey(name: '_definition')
-          Element? definitionElement,
-      Markdown? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
-      Markdown? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      List<String>? alias,
-      @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
-      UnsignedInt? min,
-      @JsonKey(name: '_min')
-          Element? minElement,
-      String? max,
-      @JsonKey(name: '_max')
-          Element? maxElement,
-      ElementDefinitionBase? base,
-      FhirUri? contentReference,
-      @JsonKey(name: '_contentReference')
-          Element? contentReferenceElement,
-      List<ElementDefinitionType>? type,
-      Base64Binary? defaultValueBase64Binary,
-      @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
-      Boolean? defaultValueBoolean,
-      @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
-      Canonical? defaultValueCanonical,
-      @JsonKey(name: '_defaultValueCanonical')
-          Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
-      Date? defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
-      FhirDateTime? defaultValueDateTime,
-      @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
-      Decimal? defaultValueDecimal,
-      @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
-      Id? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
-      Instant? defaultValueInstant,
-      @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
-      Integer? defaultValueInteger,
-      @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
-      Markdown? defaultValueMarkdown,
-      @JsonKey(name: '_defaultValueMarkdown')
-          Element? defaultValueMarkdownElement,
-      Oid? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
-      PositiveInt? defaultValuePositiveInt,
-      @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
-      String? defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
-      Time? defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
-      UnsignedInt? defaultValueUnsignedInt,
-      @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
-      FhirUri? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
-      FhirUrl? defaultValueUrl,
-      @JsonKey(name: '_defaultValueUrl')
-          Element? defaultValueUrlElement,
-      Uuid? defaultValueUuid,
-      @JsonKey(name: '_defaultValueUuid')
-          Element? defaultValueUuidElement,
-      Address? defaultValueAddress,
-      Age? defaultValueAge,
-      Annotation? defaultValueAnnotation,
-      Attachment? defaultValueAttachment,
-      CodeableConcept? defaultValueCodeableConcept,
-      Coding? defaultValueCoding,
-      ContactPoint? defaultValueContactPoint,
-      Count? defaultValueCount,
-      Distance? defaultValueDistance,
-      FhirDuration? defaultValueDuration,
-      HumanName? defaultValueHumanName,
-      Identifier? defaultValueIdentifier,
-      Money? defaultValueMoney,
-      Period? defaultValuePeriod,
-      Quantity? defaultValueQuantity,
-      Range? defaultValueRange,
-      Ratio? defaultValueRatio,
-      Reference? defaultValueReference,
-      SampledData? defaultValueSampledData,
-      Signature? defaultValueSignature,
-      Timing? defaultValueTiming,
-      ContactDetail? defaultValueContactDetail,
-      Contributor? defaultValueContributor,
-      DataRequirement? defaultValueDataRequirement,
-      Expression? defaultValueExpression,
-      ParameterDefinition? defaultValueParameterDefinition,
-      RelatedArtifact? defaultValueRelatedArtifact,
-      TriggerDefinition? defaultValueTriggerDefinition,
-      UsageContext? defaultValueUsageContext,
-      Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
-      Markdown? meaningWhenMissing,
-      @JsonKey(name: '_meaningWhenMissing')
-          Element? meaningWhenMissingElement,
-      String? orderMeaning,
-      @JsonKey(name: '_orderMeaning')
-          Element? orderMeaningElement,
-      Base64Binary? fixedBase64Binary,
-      @JsonKey(name: '_fixedBase64Binary')
-          Element? fixedBase64BinaryElement,
-      Boolean? fixedBoolean,
-      @JsonKey(name: '_fixedBoolean')
-          Element? fixedBooleanElement,
-      Canonical? fixedCanonical,
-      @JsonKey(name: '_fixedCanonical')
-          Element? fixedCanonicalElement,
-      Code? fixedCode,
-      @JsonKey(name: '_fixedCode')
-          Element? fixedCodeElement,
-      Date? fixedDate,
-      @JsonKey(name: '_fixedDate')
-          Element? fixedDateElement,
-      FhirDateTime? fixedDateTime,
-      @JsonKey(name: '_fixedDateTime')
-          Element? fixedDateTimeElement,
-      Decimal? fixedDecimal,
-      @JsonKey(name: '_fixedDecimal')
-          Element? fixedDecimalElement,
-      Id? fixedId,
-      @JsonKey(name: '_fixedId')
-          Element? fixedIdElement,
-      Instant? fixedInstant,
-      @JsonKey(name: '_fixedInstant')
-          Element? fixedInstantElement,
-      Integer? fixedInteger,
-      @JsonKey(name: '_fixedInteger')
-          Element? fixedIntegerElement,
-      Markdown? fixedMarkdown,
-      @JsonKey(name: '_fixedMarkdown')
-          Element? fixedMarkdownElement,
-      Oid? fixedOid,
-      @JsonKey(name: '_fixedOid')
-          Element? fixedOidElement,
-      PositiveInt? fixedPositiveInt,
-      @JsonKey(name: '_fixedPositiveInt')
-          Element? fixedPositiveIntElement,
-      String? fixedString,
-      @JsonKey(name: '_fixedString')
-          Element? fixedStringElement,
-      Time? fixedTime,
-      @JsonKey(name: '_fixedTime')
-          Element? fixedTimeElement,
-      UnsignedInt? fixedUnsignedInt,
-      @JsonKey(name: '_fixedUnsignedInt')
-          Element? fixedUnsignedIntElement,
-      FhirUri? fixedUri,
-      @JsonKey(name: '_fixedUri')
-          Element? fixedUriElement,
-      FhirUrl? fixedUrl,
-      @JsonKey(name: '_fixedUrl')
-          Element? fixedUrlElement,
-      Uuid? fixedUuid,
-      @JsonKey(name: '_fixedUuid')
-          Element? fixedUuidElement,
-      Address? fixedAddress,
-      Age? fixedAge,
-      Annotation? fixedAnnotation,
-      Attachment? fixedAttachment,
-      CodeableConcept? fixedCodeableConcept,
-      Coding? fixedCoding,
-      ContactPoint? fixedContactPoint,
-      Count? fixedCount,
-      Distance? fixedDistance,
-      FhirDuration? fixedDuration,
-      HumanName? fixedHumanName,
-      Identifier? fixedIdentifier,
-      Money? fixedMoney,
-      Period? fixedPeriod,
-      Quantity? fixedQuantity,
-      Range? fixedRange,
-      Ratio? fixedRatio,
-      Reference? fixedReference,
-      SampledData? fixedSampledData,
-      Signature? fixedSignature,
-      Timing? fixedTiming,
-      ContactDetail? fixedContactDetail,
-      Contributor? fixedContributor,
-      DataRequirement? fixedDataRequirement,
-      Expression? fixedExpression,
-      ParameterDefinition? fixedParameterDefinition,
-      RelatedArtifact? fixedRelatedArtifact,
-      TriggerDefinition? fixedTriggerDefinition,
-      UsageContext? fixedUsageContext,
-      Dosage? fixedDosage,
-      Meta? fixedMeta,
-      Base64Binary? patternBase64Binary,
-      @JsonKey(name: '_patternBase64Binary')
-          Element? patternBase64BinaryElement,
-      Boolean? patternBoolean,
-      @JsonKey(name: '_patternBoolean')
-          Element? patternBooleanElement,
-      Canonical? patternCanonical,
-      @JsonKey(name: '_patternCanonical')
-          Element? patternCanonicalElement,
-      Code? patternCode,
-      @JsonKey(name: '_patternCode')
-          Element? patternCodeElement,
-      Date? patternDate,
-      @JsonKey(name: '_patternDate')
-          Element? patternDateElement,
-      FhirDateTime? patternDateTime,
-      @JsonKey(name: '_patternDateTime')
-          Element? patternDateTimeElement,
-      Decimal? patternDecimal,
-      @JsonKey(name: '_patternDecimal')
-          Element? patternDecimalElement,
-      Id? patternId,
-      @JsonKey(name: '_patternId')
-          Element? patternIdElement,
-      Instant? patternInstant,
-      @JsonKey(name: '_patternInstant')
-          Element? patternInstantElement,
-      Integer? patternInteger,
-      @JsonKey(name: '_patternInteger')
-          Element? patternIntegerElement,
-      Markdown? patternMarkdown,
-      @JsonKey(name: '_patternMarkdown')
-          Element? patternMarkdownElement,
-      Oid? patternOid,
-      @JsonKey(name: '_patternOid')
-          Element? patternOidElement,
-      PositiveInt? patternPositiveInt,
-      @JsonKey(name: '_patternPositiveInt')
-          Element? patternPositiveIntElement,
-      String? patternString,
-      @JsonKey(name: '_patternString')
-          Element? patternStringElement,
-      Time? patternTime,
-      @JsonKey(name: '_patternTime')
-          Element? patternTimeElement,
-      UnsignedInt? patternUnsignedInt,
-      @JsonKey(name: '_patternUnsignedInt')
-          Element? patternUnsignedIntElement,
-      FhirUri? patternUri,
-      @JsonKey(name: '_patternUri')
-          Element? patternUriElement,
-      FhirUrl? patternUrl,
-      @JsonKey(name: '_patternUrl')
-          Element? patternUrlElement,
-      Uuid? patternUuid,
-      @JsonKey(name: '_patternUuid')
-          Element? patternUuidElement,
-      Address? patternAddress,
-      Age? patternAge,
-      Annotation? patternAnnotation,
-      Attachment? patternAttachment,
-      CodeableConcept? patternCodeableConcept,
-      Coding? patternCoding,
-      ContactPoint? patternContactPoint,
-      Count? patternCount,
-      Distance? patternDistance,
-      FhirDuration? patternDuration,
-      HumanName? patternHumanName,
-      Identifier? patternIdentifier,
-      Money? patternMoney,
-      Period? patternPeriod,
-      Quantity? patternQuantity,
-      Range? patternRange,
-      Ratio? patternRatio,
-      Reference? patternReference,
-      SampledData? patternSampledData,
-      Signature? patternSignature,
-      Timing? patternTiming,
-      ContactDetail? patternContactDetail,
-      Contributor? patternContributor,
-      DataRequirement? patternDataRequirement,
-      Expression? patternExpression,
-      ParameterDefinition? patternParameterDefinition,
-      RelatedArtifact? patternRelatedArtifact,
-      TriggerDefinition? patternTriggerDefinition,
-      UsageContext? patternUsageContext,
-      Dosage? patternDosage,
-      Meta? patternMeta,
-      List<ElementDefinitionExample>? example,
-      Date? minValueDate,
-      @JsonKey(name: '_minValueDate')
-          Element? minValueDateElement,
-      FhirDateTime? minValueDateTime,
-      @JsonKey(name: '_minValueDateTime')
-          Element? minValueDateTimeElement,
-      Instant? minValueInstant,
-      @JsonKey(name: '_minValueInstant')
-          Element? minValueInstantElement,
-      Time? minValueTime,
-      @JsonKey(name: '_minValueTime')
-          Element? minValueTimeElement,
-      Decimal? minValueDecimal,
-      @JsonKey(name: '_minValueDecimal')
-          Element? minValueDecimalElement,
-      Integer? minValueInteger,
-      @JsonKey(name: '_minValueInteger')
-          Element? minValueIntegerElement,
-      PositiveInt? minValuePositiveInt,
-      @JsonKey(name: '_minValuePositiveInt')
-          Element? minValuePositiveIntElement,
-      UnsignedInt? minValueUnsignedInt,
-      @JsonKey(name: '_minValueUnsignedInt')
-          Element? minValueUnsignedIntElement,
-      Quantity? minValueQuantity,
-      Date? maxValueDate,
-      @JsonKey(name: '_maxValueDate')
-          Element? maxValueDateElement,
-      FhirDateTime? maxValueDateTime,
-      @JsonKey(name: '_maxValueDateTime')
-          Element? maxValueDateTimeElement,
-      Instant? maxValueInstant,
-      @JsonKey(name: '_maxValueInstant')
-          Element? maxValueInstantElement,
-      Time? maxValueTime,
-      @JsonKey(name: '_maxValueTime')
-          Element? maxValueTimeElement,
-      Decimal? maxValueDecimal,
-      @JsonKey(name: '_maxValueDecimal')
-          Element? maxValueDecimalElement,
-      Integer? maxValueInteger,
-      @JsonKey(name: '_maxValueInteger')
-          Element? maxValueIntegerElement,
-      PositiveInt? maxValuePositiveInt,
-      @JsonKey(name: '_maxValuePositiveInt')
-          Element? maxValuePositiveIntElement,
-      UnsignedInt? maxValueUnsignedInt,
-      @JsonKey(name: '_maxValueUnsignedInt')
-          Element? maxValueUnsignedIntElement,
-      Quantity? maxValueQuantity,
-      Integer? maxLength,
-      @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
-      List<Id>? condition,
-      @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
-      @JsonKey(name: '_mustSupport')
-          Element? mustSupportElement,
-      Boolean? isModifier,
-      @JsonKey(name: '_isModifier')
-          Element? isModifierElement,
-      String? isModifierReason,
-      @JsonKey(name: '_isModifierReason')
-          Element? isModifierReasonElement,
-      Boolean? isSummary,
-      @JsonKey(name: '_isSummary')
-          Element? isSummaryElement,
-      ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping}) {
-    return _ElementDefinition(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      path: path,
-      pathElement: pathElement,
-      representation: representation,
-      representationElement: representationElement,
-      sliceName: sliceName,
-      sliceNameElement: sliceNameElement,
-      sliceIsConstraining: sliceIsConstraining,
-      sliceIsConstrainingElement: sliceIsConstrainingElement,
-      label: label,
-      labelElement: labelElement,
-      code: code,
-      slicing: slicing,
-      short: short,
-      shortElement: shortElement,
-      definition: definition,
-      definitionElement: definitionElement,
-      comment: comment,
-      commentElement: commentElement,
-      requirements: requirements,
-      requirementsElement: requirementsElement,
-      alias: alias,
-      aliasElement: aliasElement,
-      min: min,
-      minElement: minElement,
-      max: max,
-      maxElement: maxElement,
-      base: base,
-      contentReference: contentReference,
-      contentReferenceElement: contentReferenceElement,
-      type: type,
-      defaultValueBase64Binary: defaultValueBase64Binary,
-      defaultValueBase64BinaryElement: defaultValueBase64BinaryElement,
-      defaultValueBoolean: defaultValueBoolean,
-      defaultValueBooleanElement: defaultValueBooleanElement,
-      defaultValueCanonical: defaultValueCanonical,
-      defaultValueCanonicalElement: defaultValueCanonicalElement,
-      defaultValueCode: defaultValueCode,
-      defaultValueCodeElement: defaultValueCodeElement,
-      defaultValueDate: defaultValueDate,
-      defaultValueDateElement: defaultValueDateElement,
-      defaultValueDateTime: defaultValueDateTime,
-      defaultValueDateTimeElement: defaultValueDateTimeElement,
-      defaultValueDecimal: defaultValueDecimal,
-      defaultValueDecimalElement: defaultValueDecimalElement,
-      defaultValueId: defaultValueId,
-      defaultValueIdElement: defaultValueIdElement,
-      defaultValueInstant: defaultValueInstant,
-      defaultValueInstantElement: defaultValueInstantElement,
-      defaultValueInteger: defaultValueInteger,
-      defaultValueIntegerElement: defaultValueIntegerElement,
-      defaultValueMarkdown: defaultValueMarkdown,
-      defaultValueMarkdownElement: defaultValueMarkdownElement,
-      defaultValueOid: defaultValueOid,
-      defaultValueOidElement: defaultValueOidElement,
-      defaultValuePositiveInt: defaultValuePositiveInt,
-      defaultValuePositiveIntElement: defaultValuePositiveIntElement,
-      defaultValueString: defaultValueString,
-      defaultValueStringElement: defaultValueStringElement,
-      defaultValueTime: defaultValueTime,
-      defaultValueTimeElement: defaultValueTimeElement,
-      defaultValueUnsignedInt: defaultValueUnsignedInt,
-      defaultValueUnsignedIntElement: defaultValueUnsignedIntElement,
-      defaultValueUri: defaultValueUri,
-      defaultValueUriElement: defaultValueUriElement,
-      defaultValueUrl: defaultValueUrl,
-      defaultValueUrlElement: defaultValueUrlElement,
-      defaultValueUuid: defaultValueUuid,
-      defaultValueUuidElement: defaultValueUuidElement,
-      defaultValueAddress: defaultValueAddress,
-      defaultValueAge: defaultValueAge,
-      defaultValueAnnotation: defaultValueAnnotation,
-      defaultValueAttachment: defaultValueAttachment,
-      defaultValueCodeableConcept: defaultValueCodeableConcept,
-      defaultValueCoding: defaultValueCoding,
-      defaultValueContactPoint: defaultValueContactPoint,
-      defaultValueCount: defaultValueCount,
-      defaultValueDistance: defaultValueDistance,
-      defaultValueDuration: defaultValueDuration,
-      defaultValueHumanName: defaultValueHumanName,
-      defaultValueIdentifier: defaultValueIdentifier,
-      defaultValueMoney: defaultValueMoney,
-      defaultValuePeriod: defaultValuePeriod,
-      defaultValueQuantity: defaultValueQuantity,
-      defaultValueRange: defaultValueRange,
-      defaultValueRatio: defaultValueRatio,
-      defaultValueReference: defaultValueReference,
-      defaultValueSampledData: defaultValueSampledData,
-      defaultValueSignature: defaultValueSignature,
-      defaultValueTiming: defaultValueTiming,
-      defaultValueContactDetail: defaultValueContactDetail,
-      defaultValueContributor: defaultValueContributor,
-      defaultValueDataRequirement: defaultValueDataRequirement,
-      defaultValueExpression: defaultValueExpression,
-      defaultValueParameterDefinition: defaultValueParameterDefinition,
-      defaultValueRelatedArtifact: defaultValueRelatedArtifact,
-      defaultValueTriggerDefinition: defaultValueTriggerDefinition,
-      defaultValueUsageContext: defaultValueUsageContext,
-      defaultValueDosage: defaultValueDosage,
-      defaultValueMeta: defaultValueMeta,
-      meaningWhenMissing: meaningWhenMissing,
-      meaningWhenMissingElement: meaningWhenMissingElement,
-      orderMeaning: orderMeaning,
-      orderMeaningElement: orderMeaningElement,
-      fixedBase64Binary: fixedBase64Binary,
-      fixedBase64BinaryElement: fixedBase64BinaryElement,
-      fixedBoolean: fixedBoolean,
-      fixedBooleanElement: fixedBooleanElement,
-      fixedCanonical: fixedCanonical,
-      fixedCanonicalElement: fixedCanonicalElement,
-      fixedCode: fixedCode,
-      fixedCodeElement: fixedCodeElement,
-      fixedDate: fixedDate,
-      fixedDateElement: fixedDateElement,
-      fixedDateTime: fixedDateTime,
-      fixedDateTimeElement: fixedDateTimeElement,
-      fixedDecimal: fixedDecimal,
-      fixedDecimalElement: fixedDecimalElement,
-      fixedId: fixedId,
-      fixedIdElement: fixedIdElement,
-      fixedInstant: fixedInstant,
-      fixedInstantElement: fixedInstantElement,
-      fixedInteger: fixedInteger,
-      fixedIntegerElement: fixedIntegerElement,
-      fixedMarkdown: fixedMarkdown,
-      fixedMarkdownElement: fixedMarkdownElement,
-      fixedOid: fixedOid,
-      fixedOidElement: fixedOidElement,
-      fixedPositiveInt: fixedPositiveInt,
-      fixedPositiveIntElement: fixedPositiveIntElement,
-      fixedString: fixedString,
-      fixedStringElement: fixedStringElement,
-      fixedTime: fixedTime,
-      fixedTimeElement: fixedTimeElement,
-      fixedUnsignedInt: fixedUnsignedInt,
-      fixedUnsignedIntElement: fixedUnsignedIntElement,
-      fixedUri: fixedUri,
-      fixedUriElement: fixedUriElement,
-      fixedUrl: fixedUrl,
-      fixedUrlElement: fixedUrlElement,
-      fixedUuid: fixedUuid,
-      fixedUuidElement: fixedUuidElement,
-      fixedAddress: fixedAddress,
-      fixedAge: fixedAge,
-      fixedAnnotation: fixedAnnotation,
-      fixedAttachment: fixedAttachment,
-      fixedCodeableConcept: fixedCodeableConcept,
-      fixedCoding: fixedCoding,
-      fixedContactPoint: fixedContactPoint,
-      fixedCount: fixedCount,
-      fixedDistance: fixedDistance,
-      fixedDuration: fixedDuration,
-      fixedHumanName: fixedHumanName,
-      fixedIdentifier: fixedIdentifier,
-      fixedMoney: fixedMoney,
-      fixedPeriod: fixedPeriod,
-      fixedQuantity: fixedQuantity,
-      fixedRange: fixedRange,
-      fixedRatio: fixedRatio,
-      fixedReference: fixedReference,
-      fixedSampledData: fixedSampledData,
-      fixedSignature: fixedSignature,
-      fixedTiming: fixedTiming,
-      fixedContactDetail: fixedContactDetail,
-      fixedContributor: fixedContributor,
-      fixedDataRequirement: fixedDataRequirement,
-      fixedExpression: fixedExpression,
-      fixedParameterDefinition: fixedParameterDefinition,
-      fixedRelatedArtifact: fixedRelatedArtifact,
-      fixedTriggerDefinition: fixedTriggerDefinition,
-      fixedUsageContext: fixedUsageContext,
-      fixedDosage: fixedDosage,
-      fixedMeta: fixedMeta,
-      patternBase64Binary: patternBase64Binary,
-      patternBase64BinaryElement: patternBase64BinaryElement,
-      patternBoolean: patternBoolean,
-      patternBooleanElement: patternBooleanElement,
-      patternCanonical: patternCanonical,
-      patternCanonicalElement: patternCanonicalElement,
-      patternCode: patternCode,
-      patternCodeElement: patternCodeElement,
-      patternDate: patternDate,
-      patternDateElement: patternDateElement,
-      patternDateTime: patternDateTime,
-      patternDateTimeElement: patternDateTimeElement,
-      patternDecimal: patternDecimal,
-      patternDecimalElement: patternDecimalElement,
-      patternId: patternId,
-      patternIdElement: patternIdElement,
-      patternInstant: patternInstant,
-      patternInstantElement: patternInstantElement,
-      patternInteger: patternInteger,
-      patternIntegerElement: patternIntegerElement,
-      patternMarkdown: patternMarkdown,
-      patternMarkdownElement: patternMarkdownElement,
-      patternOid: patternOid,
-      patternOidElement: patternOidElement,
-      patternPositiveInt: patternPositiveInt,
-      patternPositiveIntElement: patternPositiveIntElement,
-      patternString: patternString,
-      patternStringElement: patternStringElement,
-      patternTime: patternTime,
-      patternTimeElement: patternTimeElement,
-      patternUnsignedInt: patternUnsignedInt,
-      patternUnsignedIntElement: patternUnsignedIntElement,
-      patternUri: patternUri,
-      patternUriElement: patternUriElement,
-      patternUrl: patternUrl,
-      patternUrlElement: patternUrlElement,
-      patternUuid: patternUuid,
-      patternUuidElement: patternUuidElement,
-      patternAddress: patternAddress,
-      patternAge: patternAge,
-      patternAnnotation: patternAnnotation,
-      patternAttachment: patternAttachment,
-      patternCodeableConcept: patternCodeableConcept,
-      patternCoding: patternCoding,
-      patternContactPoint: patternContactPoint,
-      patternCount: patternCount,
-      patternDistance: patternDistance,
-      patternDuration: patternDuration,
-      patternHumanName: patternHumanName,
-      patternIdentifier: patternIdentifier,
-      patternMoney: patternMoney,
-      patternPeriod: patternPeriod,
-      patternQuantity: patternQuantity,
-      patternRange: patternRange,
-      patternRatio: patternRatio,
-      patternReference: patternReference,
-      patternSampledData: patternSampledData,
-      patternSignature: patternSignature,
-      patternTiming: patternTiming,
-      patternContactDetail: patternContactDetail,
-      patternContributor: patternContributor,
-      patternDataRequirement: patternDataRequirement,
-      patternExpression: patternExpression,
-      patternParameterDefinition: patternParameterDefinition,
-      patternRelatedArtifact: patternRelatedArtifact,
-      patternTriggerDefinition: patternTriggerDefinition,
-      patternUsageContext: patternUsageContext,
-      patternDosage: patternDosage,
-      patternMeta: patternMeta,
-      example: example,
-      minValueDate: minValueDate,
-      minValueDateElement: minValueDateElement,
-      minValueDateTime: minValueDateTime,
-      minValueDateTimeElement: minValueDateTimeElement,
-      minValueInstant: minValueInstant,
-      minValueInstantElement: minValueInstantElement,
-      minValueTime: minValueTime,
-      minValueTimeElement: minValueTimeElement,
-      minValueDecimal: minValueDecimal,
-      minValueDecimalElement: minValueDecimalElement,
-      minValueInteger: minValueInteger,
-      minValueIntegerElement: minValueIntegerElement,
-      minValuePositiveInt: minValuePositiveInt,
-      minValuePositiveIntElement: minValuePositiveIntElement,
-      minValueUnsignedInt: minValueUnsignedInt,
-      minValueUnsignedIntElement: minValueUnsignedIntElement,
-      minValueQuantity: minValueQuantity,
-      maxValueDate: maxValueDate,
-      maxValueDateElement: maxValueDateElement,
-      maxValueDateTime: maxValueDateTime,
-      maxValueDateTimeElement: maxValueDateTimeElement,
-      maxValueInstant: maxValueInstant,
-      maxValueInstantElement: maxValueInstantElement,
-      maxValueTime: maxValueTime,
-      maxValueTimeElement: maxValueTimeElement,
-      maxValueDecimal: maxValueDecimal,
-      maxValueDecimalElement: maxValueDecimalElement,
-      maxValueInteger: maxValueInteger,
-      maxValueIntegerElement: maxValueIntegerElement,
-      maxValuePositiveInt: maxValuePositiveInt,
-      maxValuePositiveIntElement: maxValuePositiveIntElement,
-      maxValueUnsignedInt: maxValueUnsignedInt,
-      maxValueUnsignedIntElement: maxValueUnsignedIntElement,
-      maxValueQuantity: maxValueQuantity,
-      maxLength: maxLength,
-      maxLengthElement: maxLengthElement,
-      condition: condition,
-      conditionElement: conditionElement,
-      constraint: constraint,
-      mustSupport: mustSupport,
-      mustSupportElement: mustSupportElement,
-      isModifier: isModifier,
-      isModifierElement: isModifierElement,
-      isModifierReason: isModifierReason,
-      isModifierReasonElement: isModifierReasonElement,
-      isSummary: isSummary,
-      isSummaryElement: isSummaryElement,
-      binding: binding,
-      mapping: mapping,
-    );
-  }
-
-  ElementDefinition fromJson(Map<String, Object?> json) {
-    return ElementDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinition = _$ElementDefinitionTearOff();
-
-/// @nodoc
 mixin _$ElementDefinition {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [path] The path identifies the element and is expressed as a
+  /// "."-separated list of ancestor elements, beginning with the name of the
+  ///  resource or extension.
   String? get path => throw _privateConstructorUsedError;
+
+  /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
+
+  /// [representation] Codes that define how this element is represented in
+  ///  instances, when the deviation varies from the normal case.
   List<ElementDefinitionRepresentation>? get representation =>
       throw _privateConstructorUsedError;
+
+  /// [representationElement] Extensions for representation
   @JsonKey(name: '_representation')
   List<Element?>? get representationElement =>
       throw _privateConstructorUsedError;
+
+  /// [sliceName] The name of this element definition slice, when slicing is
+  /// working. The name must be a token with no dots or spaces. This is a unique
+  /// name referring to a specific set of constraints applied to this element,
+  ///  used to provide a name to different slices of the same element.
   String? get sliceName => throw _privateConstructorUsedError;
+
+  /// [sliceNameElement] Extensions for sliceName
   @JsonKey(name: '_sliceName')
   Element? get sliceNameElement => throw _privateConstructorUsedError;
+
+  /// [sliceIsConstraining] If true, indicates that this slice definition is
+  /// constraining a slice definition with the same name in an inherited
+  /// profile. If false, the slice is not overriding any slice in an inherited
+  /// profile. If missing, the slice might or might not be overriding a slice in
+  ///  an inherited profile, depending on the sliceName.
   Boolean? get sliceIsConstraining => throw _privateConstructorUsedError;
+
+  /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
   @JsonKey(name: '_sliceIsConstraining')
   Element? get sliceIsConstrainingElement => throw _privateConstructorUsedError;
+
+  /// [label] A single preferred label which is the text to display beside the
+  /// element indicating its meaning or to use to prompt for the element in a
+  ///  user display or form.
   String? get label => throw _privateConstructorUsedError;
+
+  /// [labelElement] Extensions for label
   @JsonKey(name: '_label')
   Element? get labelElement => throw _privateConstructorUsedError;
+
+  /// [code] A code that has the same meaning as the element in a particular
+  ///  terminology.
   List<Coding>? get code => throw _privateConstructorUsedError;
+
+  /// [slicing] Indicates that the element is sliced into a set of alternative
+  /// definitions (i.e. in a structure definition, there are multiple different
+  /// constraints on a single element in the base resource). Slicing can be used
+  /// in any resource that has cardinality ..* on the base resource, or any
+  /// resource with a choice of types. The set of slices is any elements that
+  /// come after this in the element sequence that have the same path, until a
+  ///  shorter path occurs (the shorter path terminates the set).
   ElementDefinitionSlicing? get slicing => throw _privateConstructorUsedError;
+
+  /// [short] A concise description of what this element means (e.g. for use in
+  ///  autogenerated summaries).
   String? get short => throw _privateConstructorUsedError;
+
+  /// [shortElement] Extensions for short
   @JsonKey(name: '_short')
   Element? get shortElement => throw _privateConstructorUsedError;
+
+  /// [definition] Provides a complete explanation of the meaning of the data
+  /// element for human readability.  For the case of elements derived from
+  /// existing elements (e.g. constraints), the definition SHALL be consistent
+  /// with the base definition, but convey the meaning of the element in the
+  /// particular context of use of the resource. (Note: The text you are reading
+  ///  is specified in ElementDefinition.definition).
   Markdown? get definition => throw _privateConstructorUsedError;
+
+  /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
   Element? get definitionElement => throw _privateConstructorUsedError;
+
+  /// [comment] Explanatory notes and implementation guidance about the data
+  /// element, including notes about how to use the data properly, exceptions to
+  /// proper use, etc. (Note: The text you are reading is specified in
+  ///  ElementDefinition.comment).
   Markdown? get comment => throw _privateConstructorUsedError;
+
+  /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
   Element? get commentElement => throw _privateConstructorUsedError;
+
+  /// [requirements] This element is for traceability of why the element was
+  /// created and why the constraints exist as they do. This may be used to
+  /// point to source materials or specifications that drove the structure of
+  ///  this element.
   Markdown? get requirements => throw _privateConstructorUsedError;
+
+  /// [requirementsElement] Extensions for requirements
   @JsonKey(name: '_requirements')
   Element? get requirementsElement => throw _privateConstructorUsedError;
+
+  /// [alias] Identifies additional names by which this element might also be
+  ///  known.
   List<String>? get alias => throw _privateConstructorUsedError;
+
+  /// [aliasElement] Extensions for alias
   @JsonKey(name: '_alias')
   List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+
+  /// [min] The minimum number of times this element SHALL appear in the
+  ///  instance.
   UnsignedInt? get min => throw _privateConstructorUsedError;
+
+  /// [minElement] Extensions for min
   @JsonKey(name: '_min')
   Element? get minElement => throw _privateConstructorUsedError;
+
+  /// [max] The maximum number of times this element is permitted to appear in
+  ///  the instance.
   String? get max => throw _privateConstructorUsedError;
+
+  /// [maxElement] Extensions for max
   @JsonKey(name: '_max')
   Element? get maxElement => throw _privateConstructorUsedError;
+
+  /// [base] Information about the base definition of the element, provided to
+  /// make it unnecessary for tools to trace the deviation of the element
+  /// through the derived and related profiles. When the element definition is
+  /// not the original definition of an element - i.g. either in a constraint on
+  /// another type, or for elements from a super type in a snap shot - then the
+  /// information in provided in the element definition may be different to the
+  /// base definition. On the original definition of the element, it will be
+  ///  same.
   ElementDefinitionBase? get base => throw _privateConstructorUsedError;
+
+  /// [contentReference] Identifies an element defined elsewhere in the
+  /// definition whose content rules should be applied to the current element.
+  /// ContentReferences bring across all the rules that are in the
+  /// ElementDefinition for the element, including definitions, cardinality
+  ///  constraints, bindings, invariants etc.
   FhirUri? get contentReference => throw _privateConstructorUsedError;
+
+  /// [contentReferenceElement] Extensions for contentReference
   @JsonKey(name: '_contentReference')
   Element? get contentReferenceElement => throw _privateConstructorUsedError;
+
+  /// [type] The data type or resource that the value of this element is
+  ///  permitted to be.
   List<ElementDefinitionType>? get type => throw _privateConstructorUsedError;
+
+  /// [defaultValueBase64Binary] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Base64Binary? get defaultValueBase64Binary =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueBoolean] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
+
+  /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
   @JsonKey(name: '_defaultValueBoolean')
   Element? get defaultValueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueCanonical] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Canonical? get defaultValueCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueCode] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Code? get defaultValueCode => throw _privateConstructorUsedError;
+
+  /// [defaultValueCodeElement] Extensions for defaultValueCode
   @JsonKey(name: '_defaultValueCode')
   Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueDate] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Date? get defaultValueDate => throw _privateConstructorUsedError;
+
+  /// [defaultValueDateElement] Extensions for defaultValueDate
   @JsonKey(name: '_defaultValueDate')
   Element? get defaultValueDateElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueDateTime] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirDateTime? get defaultValueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueDateTime')
   Element? get defaultValueDateTimeElement =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueDecimal] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
+
+  /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
   @JsonKey(name: '_defaultValueDecimal')
   Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueId] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Id? get defaultValueId => throw _privateConstructorUsedError;
+
+  /// [defaultValueIdElement] Extensions for defaultValueId
   @JsonKey(name: '_defaultValueId')
   Element? get defaultValueIdElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueInstant] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Instant? get defaultValueInstant => throw _privateConstructorUsedError;
+
+  /// [defaultValueInstantElement] Extensions for defaultValueInstant
   @JsonKey(name: '_defaultValueInstant')
   Element? get defaultValueInstantElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueInteger] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Integer? get defaultValueInteger => throw _privateConstructorUsedError;
+
+  /// [defaultValueIntegerElement] Extensions for defaultValueInteger
   @JsonKey(name: '_defaultValueInteger')
   Element? get defaultValueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueMarkdown] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Markdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueMarkdown')
   Element? get defaultValueMarkdownElement =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueOid] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Oid? get defaultValueOid => throw _privateConstructorUsedError;
+
+  /// [defaultValueOidElement] Extensions for defaultValueOid
   @JsonKey(name: '_defaultValueOid')
   Element? get defaultValueOidElement => throw _privateConstructorUsedError;
+
+  /// [defaultValuePositiveInt] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   PositiveInt? get defaultValuePositiveInt =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValuePositiveInt')
   Element? get defaultValuePositiveIntElement =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueString] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   String? get defaultValueString => throw _privateConstructorUsedError;
+
+  /// [defaultValueStringElement] Extensions for defaultValueString
   @JsonKey(name: '_defaultValueString')
   Element? get defaultValueStringElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueTime] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Time? get defaultValueTime => throw _privateConstructorUsedError;
+
+  /// [defaultValueTimeElement] Extensions for defaultValueTime
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueUnsignedInt] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   UnsignedInt? get defaultValueUnsignedInt =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueUnsignedInt')
   Element? get defaultValueUnsignedIntElement =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueUri] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
+
+  /// [defaultValueUriElement] Extensions for defaultValueUri
   @JsonKey(name: '_defaultValueUri')
   Element? get defaultValueUriElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueUrl] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirUrl? get defaultValueUrl => throw _privateConstructorUsedError;
+
+  /// [defaultValueUrlElement] Extensions for defaultValueUrl
   @JsonKey(name: '_defaultValueUrl')
   Element? get defaultValueUrlElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueUuid] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Uuid? get defaultValueUuid => throw _privateConstructorUsedError;
+
+  /// [defaultValueUuidElement] Extensions for defaultValueUuid
   @JsonKey(name: '_defaultValueUuid')
   Element? get defaultValueUuidElement => throw _privateConstructorUsedError;
+
+  /// [defaultValueAddress] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Address? get defaultValueAddress => throw _privateConstructorUsedError;
+
+  /// [defaultValueAge] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Age? get defaultValueAge => throw _privateConstructorUsedError;
+
+  /// [defaultValueAnnotation] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Annotation? get defaultValueAnnotation => throw _privateConstructorUsedError;
+
+  /// [defaultValueAttachment] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
+
+  /// [defaultValueCodeableConcept] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   CodeableConcept? get defaultValueCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get defaultValueCodeableReference =>
+      throw _privateConstructorUsedError;
+
+  /// [defaultValueCoding] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Coding? get defaultValueCoding => throw _privateConstructorUsedError;
+
+  /// [defaultValueContactPoint] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ContactPoint? get defaultValueContactPoint =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueCount] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Count? get defaultValueCount => throw _privateConstructorUsedError;
+
+  /// [defaultValueDistance] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Distance? get defaultValueDistance => throw _privateConstructorUsedError;
+
+  /// [defaultValueDuration] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirDuration? get defaultValueDuration => throw _privateConstructorUsedError;
+
+  /// [defaultValueHumanName] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   HumanName? get defaultValueHumanName => throw _privateConstructorUsedError;
+
+  /// [defaultValueIdentifier] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Identifier? get defaultValueIdentifier => throw _privateConstructorUsedError;
+
+  /// [defaultValueMoney] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Money? get defaultValueMoney => throw _privateConstructorUsedError;
+
+  /// [defaultValuePeriod] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Period? get defaultValuePeriod => throw _privateConstructorUsedError;
+
+  /// [defaultValueQuantity] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
+
+  /// [defaultValueRange] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Range? get defaultValueRange => throw _privateConstructorUsedError;
+
+  /// [defaultValueRatio] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
+  RatioRange? get defaultValueRatioRange => throw _privateConstructorUsedError;
+
+  /// [defaultValueReference] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Reference? get defaultValueReference => throw _privateConstructorUsedError;
+
+  /// [defaultValueSampledData] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   SampledData? get defaultValueSampledData =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueSignature] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Signature? get defaultValueSignature => throw _privateConstructorUsedError;
+
+  /// [defaultValueTiming] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Timing? get defaultValueTiming => throw _privateConstructorUsedError;
+
+  /// [defaultValueContactDetail] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ContactDetail? get defaultValueContactDetail =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueContributor] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Contributor? get defaultValueContributor =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueDataRequirement] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   DataRequirement? get defaultValueDataRequirement =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueExpression] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Expression? get defaultValueExpression => throw _privateConstructorUsedError;
+
+  /// [defaultValueParameterDefinition] The value that should be used if there
+  /// is no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ParameterDefinition? get defaultValueParameterDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueRelatedArtifact] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   RelatedArtifact? get defaultValueRelatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueTriggerDefinition] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   TriggerDefinition? get defaultValueTriggerDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueUsageContext] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   UsageContext? get defaultValueUsageContext =>
       throw _privateConstructorUsedError;
+
+  /// [defaultValueDosage] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Dosage? get defaultValueDosage => throw _privateConstructorUsedError;
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
+
+  /// [meaningWhenMissing] The Implicit meaning that is to be understood when
+  /// this element is missing (e.g. 'when this element is missing, the period is
+  ///  ongoing').
   Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
+
+  /// [meaningWhenMissingElement] Extensions for meaningWhenMissing
   @JsonKey(name: '_meaningWhenMissing')
   Element? get meaningWhenMissingElement => throw _privateConstructorUsedError;
+
+  /// [orderMeaning] If present, indicates that the order of the repeating
+  /// element has meaning and describes what that meaning is.  If absent, it
+  ///  means that the order of the element has no meaning.
   String? get orderMeaning => throw _privateConstructorUsedError;
+
+  /// [orderMeaningElement] Extensions for orderMeaning
   @JsonKey(name: '_orderMeaning')
   Element? get orderMeaningElement => throw _privateConstructorUsedError;
+
+  /// [fixedBase64Binary] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   Base64Binary? get fixedBase64Binary => throw _privateConstructorUsedError;
+
+  /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
   @JsonKey(name: '_fixedBase64Binary')
   Element? get fixedBase64BinaryElement => throw _privateConstructorUsedError;
+
+  /// [fixedBoolean] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Boolean? get fixedBoolean => throw _privateConstructorUsedError;
+
+  /// [fixedBooleanElement] Extensions for fixedBoolean
   @JsonKey(name: '_fixedBoolean')
   Element? get fixedBooleanElement => throw _privateConstructorUsedError;
+
+  /// [fixedCanonical] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Canonical? get fixedCanonical => throw _privateConstructorUsedError;
+
+  /// [fixedCanonicalElement] Extensions for fixedCanonical
   @JsonKey(name: '_fixedCanonical')
   Element? get fixedCanonicalElement => throw _privateConstructorUsedError;
+
+  /// [fixedCode] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Code? get fixedCode => throw _privateConstructorUsedError;
+
+  /// [fixedCodeElement] Extensions for fixedCode
   @JsonKey(name: '_fixedCode')
   Element? get fixedCodeElement => throw _privateConstructorUsedError;
+
+  /// [fixedDate] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Date? get fixedDate => throw _privateConstructorUsedError;
+
+  /// [fixedDateElement] Extensions for fixedDate
   @JsonKey(name: '_fixedDate')
   Element? get fixedDateElement => throw _privateConstructorUsedError;
+
+  /// [fixedDateTime] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirDateTime? get fixedDateTime => throw _privateConstructorUsedError;
+
+  /// [fixedDateTimeElement] Extensions for fixedDateTime
   @JsonKey(name: '_fixedDateTime')
   Element? get fixedDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [fixedDecimal] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Decimal? get fixedDecimal => throw _privateConstructorUsedError;
+
+  /// [fixedDecimalElement] Extensions for fixedDecimal
   @JsonKey(name: '_fixedDecimal')
   Element? get fixedDecimalElement => throw _privateConstructorUsedError;
+
+  /// [fixedId] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Id? get fixedId => throw _privateConstructorUsedError;
+
+  /// [fixedIdElement] Extensions for fixedId
   @JsonKey(name: '_fixedId')
   Element? get fixedIdElement => throw _privateConstructorUsedError;
+
+  /// [fixedInstant] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Instant? get fixedInstant => throw _privateConstructorUsedError;
+
+  /// [fixedInstantElement] Extensions for fixedInstant
   @JsonKey(name: '_fixedInstant')
   Element? get fixedInstantElement => throw _privateConstructorUsedError;
+
+  /// [fixedInteger] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Integer? get fixedInteger => throw _privateConstructorUsedError;
+
+  /// [fixedIntegerElement] Extensions for fixedInteger
   @JsonKey(name: '_fixedInteger')
   Element? get fixedIntegerElement => throw _privateConstructorUsedError;
+
+  /// [fixedMarkdown] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Markdown? get fixedMarkdown => throw _privateConstructorUsedError;
+
+  /// [fixedMarkdownElement] Extensions for fixedMarkdown
   @JsonKey(name: '_fixedMarkdown')
   Element? get fixedMarkdownElement => throw _privateConstructorUsedError;
+
+  /// [fixedOid] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Oid? get fixedOid => throw _privateConstructorUsedError;
+
+  /// [fixedOidElement] Extensions for fixedOid
   @JsonKey(name: '_fixedOid')
   Element? get fixedOidElement => throw _privateConstructorUsedError;
+
+  /// [fixedPositiveInt] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   PositiveInt? get fixedPositiveInt => throw _privateConstructorUsedError;
+
+  /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
   @JsonKey(name: '_fixedPositiveInt')
   Element? get fixedPositiveIntElement => throw _privateConstructorUsedError;
+
+  /// [fixedString] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   String? get fixedString => throw _privateConstructorUsedError;
+
+  /// [fixedStringElement] Extensions for fixedString
   @JsonKey(name: '_fixedString')
   Element? get fixedStringElement => throw _privateConstructorUsedError;
+
+  /// [fixedTime] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Time? get fixedTime => throw _privateConstructorUsedError;
+
+  /// [fixedTimeElement] Extensions for fixedTime
   @JsonKey(name: '_fixedTime')
   Element? get fixedTimeElement => throw _privateConstructorUsedError;
+
+  /// [fixedUnsignedInt] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   UnsignedInt? get fixedUnsignedInt => throw _privateConstructorUsedError;
+
+  /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
   @JsonKey(name: '_fixedUnsignedInt')
   Element? get fixedUnsignedIntElement => throw _privateConstructorUsedError;
+
+  /// [fixedUri] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirUri? get fixedUri => throw _privateConstructorUsedError;
+
+  /// [fixedUriElement] Extensions for fixedUri
   @JsonKey(name: '_fixedUri')
   Element? get fixedUriElement => throw _privateConstructorUsedError;
+
+  /// [fixedUrl] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirUrl? get fixedUrl => throw _privateConstructorUsedError;
+
+  /// [fixedUrlElement] Extensions for fixedUrl
   @JsonKey(name: '_fixedUrl')
   Element? get fixedUrlElement => throw _privateConstructorUsedError;
+
+  /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Uuid? get fixedUuid => throw _privateConstructorUsedError;
+
+  /// [fixedUuidElement] Extensions for fixedUuid
   @JsonKey(name: '_fixedUuid')
   Element? get fixedUuidElement => throw _privateConstructorUsedError;
+
+  /// [fixedAddress] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Address? get fixedAddress => throw _privateConstructorUsedError;
+
+  /// [fixedAge] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Age? get fixedAge => throw _privateConstructorUsedError;
+
+  /// [fixedAnnotation] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Annotation? get fixedAnnotation => throw _privateConstructorUsedError;
+
+  /// [fixedAttachment] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Attachment? get fixedAttachment => throw _privateConstructorUsedError;
+
+  /// [fixedCodeableConcept] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   CodeableConcept? get fixedCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get fixedCodeableReference =>
+      throw _privateConstructorUsedError;
+
+  /// [fixedCoding] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Coding? get fixedCoding => throw _privateConstructorUsedError;
+
+  /// [fixedContactPoint] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
+
+  /// [fixedCount] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Count? get fixedCount => throw _privateConstructorUsedError;
+
+  /// [fixedDistance] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Distance? get fixedDistance => throw _privateConstructorUsedError;
+
+  /// [fixedDuration] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirDuration? get fixedDuration => throw _privateConstructorUsedError;
+
+  /// [fixedHumanName] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   HumanName? get fixedHumanName => throw _privateConstructorUsedError;
+
+  /// [fixedIdentifier] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Identifier? get fixedIdentifier => throw _privateConstructorUsedError;
+
+  /// [fixedMoney] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Money? get fixedMoney => throw _privateConstructorUsedError;
+
+  /// [fixedPeriod] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Period? get fixedPeriod => throw _privateConstructorUsedError;
+
+  /// [fixedQuantity] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Quantity? get fixedQuantity => throw _privateConstructorUsedError;
+
+  /// [fixedRange] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Range? get fixedRange => throw _privateConstructorUsedError;
+
+  /// [fixedRatio] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Ratio? get fixedRatio => throw _privateConstructorUsedError;
+  RatioRange? get fixedRatioRange => throw _privateConstructorUsedError;
+
+  /// [fixedReference] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Reference? get fixedReference => throw _privateConstructorUsedError;
+
+  /// [fixedSampledData] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   SampledData? get fixedSampledData => throw _privateConstructorUsedError;
+
+  /// [fixedSignature] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Signature? get fixedSignature => throw _privateConstructorUsedError;
+
+  /// [fixedTiming] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Timing? get fixedTiming => throw _privateConstructorUsedError;
+
+  /// [fixedContactDetail] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ContactDetail? get fixedContactDetail => throw _privateConstructorUsedError;
+
+  /// [fixedContributor] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Contributor? get fixedContributor => throw _privateConstructorUsedError;
+
+  /// [fixedDataRequirement] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   DataRequirement? get fixedDataRequirement =>
       throw _privateConstructorUsedError;
+
+  /// [fixedExpression] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Expression? get fixedExpression => throw _privateConstructorUsedError;
+
+  /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
+  /// value  for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ParameterDefinition? get fixedParameterDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [fixedRelatedArtifact] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   RelatedArtifact? get fixedRelatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [fixedTriggerDefinition] Specifies a value that SHALL be exactly the
+  /// value  for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   TriggerDefinition? get fixedTriggerDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [fixedUsageContext] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   UsageContext? get fixedUsageContext => throw _privateConstructorUsedError;
+
+  /// [fixedDosage] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Dosage? get fixedDosage => throw _privateConstructorUsedError;
-  Meta? get fixedMeta => throw _privateConstructorUsedError;
+
+  /// [patternBase64Binary] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
+
+  /// [patternBase64BinaryElement] Extensions for patternBase64Binary
   @JsonKey(name: '_patternBase64Binary')
   Element? get patternBase64BinaryElement => throw _privateConstructorUsedError;
+
+  /// [patternBoolean] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Boolean? get patternBoolean => throw _privateConstructorUsedError;
+
+  /// [patternBooleanElement] Extensions for patternBoolean
   @JsonKey(name: '_patternBoolean')
   Element? get patternBooleanElement => throw _privateConstructorUsedError;
+
+  /// [patternCanonical] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Canonical? get patternCanonical => throw _privateConstructorUsedError;
+
+  /// [patternCanonicalElement] Extensions for patternCanonical
   @JsonKey(name: '_patternCanonical')
   Element? get patternCanonicalElement => throw _privateConstructorUsedError;
+
+  /// [patternCode] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Code? get patternCode => throw _privateConstructorUsedError;
+
+  /// [patternCodeElement] Extensions for patternCode
   @JsonKey(name: '_patternCode')
   Element? get patternCodeElement => throw _privateConstructorUsedError;
+
+  /// [patternDate] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Date? get patternDate => throw _privateConstructorUsedError;
+
+  /// [patternDateElement] Extensions for patternDate
   @JsonKey(name: '_patternDate')
   Element? get patternDateElement => throw _privateConstructorUsedError;
+
+  /// [patternDateTime] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirDateTime? get patternDateTime => throw _privateConstructorUsedError;
+
+  /// [patternDateTimeElement] Extensions for patternDateTime
   @JsonKey(name: '_patternDateTime')
   Element? get patternDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [patternDecimal] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Decimal? get patternDecimal => throw _privateConstructorUsedError;
+
+  /// [patternDecimalElement] Extensions for patternDecimal
   @JsonKey(name: '_patternDecimal')
   Element? get patternDecimalElement => throw _privateConstructorUsedError;
+
+  /// [patternId] Specifies a value that the value in the instance SHALL follow
+  /// - that is, any value in the pattern must be found in the instance. Other
+  /// additional values may be found too. This is effectively constraint by
+  ///  example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Id? get patternId => throw _privateConstructorUsedError;
+
+  /// [patternIdElement] Extensions for patternId
   @JsonKey(name: '_patternId')
   Element? get patternIdElement => throw _privateConstructorUsedError;
+
+  /// [patternInstant] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Instant? get patternInstant => throw _privateConstructorUsedError;
+
+  /// [patternInstantElement] Extensions for patternInstant
   @JsonKey(name: '_patternInstant')
   Element? get patternInstantElement => throw _privateConstructorUsedError;
+
+  /// [patternInteger] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Integer? get patternInteger => throw _privateConstructorUsedError;
+
+  /// [patternIntegerElement] Extensions for patternInteger
   @JsonKey(name: '_patternInteger')
   Element? get patternIntegerElement => throw _privateConstructorUsedError;
+
+  /// [patternMarkdown] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Markdown? get patternMarkdown => throw _privateConstructorUsedError;
+
+  /// [patternMarkdownElement] Extensions for patternMarkdown
   @JsonKey(name: '_patternMarkdown')
   Element? get patternMarkdownElement => throw _privateConstructorUsedError;
+
+  /// [patternOid] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Oid? get patternOid => throw _privateConstructorUsedError;
+
+  /// [patternOidElement] Extensions for patternOid
   @JsonKey(name: '_patternOid')
   Element? get patternOidElement => throw _privateConstructorUsedError;
+
+  /// [patternPositiveInt] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   PositiveInt? get patternPositiveInt => throw _privateConstructorUsedError;
+
+  /// [patternPositiveIntElement] Extensions for patternPositiveInt
   @JsonKey(name: '_patternPositiveInt')
   Element? get patternPositiveIntElement => throw _privateConstructorUsedError;
+
+  /// [patternString] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   String? get patternString => throw _privateConstructorUsedError;
+
+  /// [patternStringElement] Extensions for patternString
   @JsonKey(name: '_patternString')
   Element? get patternStringElement => throw _privateConstructorUsedError;
+
+  /// [patternTime] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Time? get patternTime => throw _privateConstructorUsedError;
+
+  /// [patternTimeElement] Extensions for patternTime
   @JsonKey(name: '_patternTime')
   Element? get patternTimeElement => throw _privateConstructorUsedError;
+
+  /// [patternUnsignedInt] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   UnsignedInt? get patternUnsignedInt => throw _privateConstructorUsedError;
+
+  /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
   @JsonKey(name: '_patternUnsignedInt')
   Element? get patternUnsignedIntElement => throw _privateConstructorUsedError;
+
+  /// [patternUri] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirUri? get patternUri => throw _privateConstructorUsedError;
+
+  /// [patternUriElement] Extensions for patternUri
   @JsonKey(name: '_patternUri')
   Element? get patternUriElement => throw _privateConstructorUsedError;
+
+  /// [patternUrl] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirUrl? get patternUrl => throw _privateConstructorUsedError;
+
+  /// [patternUrlElement] Extensions for patternUrl
   @JsonKey(name: '_patternUrl')
   Element? get patternUrlElement => throw _privateConstructorUsedError;
+
+  /// [patternUuid] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Uuid? get patternUuid => throw _privateConstructorUsedError;
+
+  /// [patternUuidElement] Extensions for patternUuid
   @JsonKey(name: '_patternUuid')
   Element? get patternUuidElement => throw _privateConstructorUsedError;
+
+  /// [patternAddress] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Address? get patternAddress => throw _privateConstructorUsedError;
+
+  /// [patternAge] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Age? get patternAge => throw _privateConstructorUsedError;
+
+  /// [patternAnnotation] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Annotation? get patternAnnotation => throw _privateConstructorUsedError;
+
+  /// [patternAttachment] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Attachment? get patternAttachment => throw _privateConstructorUsedError;
+
+  /// [patternCodeableConcept] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   CodeableConcept? get patternCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get patternCodeableReference =>
+      throw _privateConstructorUsedError;
+
+  /// [patternCoding] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Coding? get patternCoding => throw _privateConstructorUsedError;
+
+  /// [patternContactPoint] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
+
+  /// [patternCount] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Count? get patternCount => throw _privateConstructorUsedError;
+
+  /// [patternDistance] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Distance? get patternDistance => throw _privateConstructorUsedError;
+
+  /// [patternDuration] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirDuration? get patternDuration => throw _privateConstructorUsedError;
+
+  /// [patternHumanName] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   HumanName? get patternHumanName => throw _privateConstructorUsedError;
+
+  /// [patternIdentifier] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Identifier? get patternIdentifier => throw _privateConstructorUsedError;
+
+  /// [patternMoney] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Money? get patternMoney => throw _privateConstructorUsedError;
+
+  /// [patternPeriod] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Period? get patternPeriod => throw _privateConstructorUsedError;
+
+  /// [patternQuantity] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Quantity? get patternQuantity => throw _privateConstructorUsedError;
+
+  /// [patternRange] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Range? get patternRange => throw _privateConstructorUsedError;
+
+  /// [patternRatio] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Ratio? get patternRatio => throw _privateConstructorUsedError;
+  RatioRange? get patternRatioRange => throw _privateConstructorUsedError;
+
+  /// [patternReference] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Reference? get patternReference => throw _privateConstructorUsedError;
+
+  /// [patternSampledData] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   SampledData? get patternSampledData => throw _privateConstructorUsedError;
+
+  /// [patternSignature] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Signature? get patternSignature => throw _privateConstructorUsedError;
+
+  /// [patternTiming] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Timing? get patternTiming => throw _privateConstructorUsedError;
+
+  /// [patternContactDetail] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   ContactDetail? get patternContactDetail => throw _privateConstructorUsedError;
+
+  /// [patternContributor] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Contributor? get patternContributor => throw _privateConstructorUsedError;
+
+  /// [patternDataRequirement] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   DataRequirement? get patternDataRequirement =>
       throw _privateConstructorUsedError;
+
+  /// [patternExpression] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Expression? get patternExpression => throw _privateConstructorUsedError;
+
+  /// [patternParameterDefinition] Specifies a value that the value in the
+  /// instance SHALL follow - that is, any value in the pattern must be found in
+  /// the instance. Other additional values may be found too. This is
+  ///  effectively constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   ParameterDefinition? get patternParameterDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [patternRelatedArtifact] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   RelatedArtifact? get patternRelatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [patternTriggerDefinition] Specifies a value that the value in the
+  /// instance SHALL follow - that is, any value in the pattern must be found in
+  /// the instance. Other additional values may be found too. This is
+  ///  effectively constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   TriggerDefinition? get patternTriggerDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [patternUsageContext] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   UsageContext? get patternUsageContext => throw _privateConstructorUsedError;
+
+  /// [patternDosage] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Dosage? get patternDosage => throw _privateConstructorUsedError;
-  Meta? get patternMeta => throw _privateConstructorUsedError;
+
+  /// [example] A sample value for this element demonstrating the type of
+  ///  information that would typically be found in the element.
   List<ElementDefinitionExample>? get example =>
       throw _privateConstructorUsedError;
+
+  /// [minValueDate] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Date? get minValueDate => throw _privateConstructorUsedError;
+
+  /// [minValueDateElement] Extensions for minValueDate
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement => throw _privateConstructorUsedError;
+
+  /// [minValueDateTime] The minimum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
+
+  /// [minValueDateTimeElement] Extensions for minValueDateTime
   @JsonKey(name: '_minValueDateTime')
   Element? get minValueDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [minValueInstant] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Instant? get minValueInstant => throw _privateConstructorUsedError;
+
+  /// [minValueInstantElement] Extensions for minValueInstant
   @JsonKey(name: '_minValueInstant')
   Element? get minValueInstantElement => throw _privateConstructorUsedError;
+
+  /// [minValueTime] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Time? get minValueTime => throw _privateConstructorUsedError;
+
+  /// [minValueTimeElement] Extensions for minValueTime
   @JsonKey(name: '_minValueTime')
   Element? get minValueTimeElement => throw _privateConstructorUsedError;
+
+  /// [minValueDecimal] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Decimal? get minValueDecimal => throw _privateConstructorUsedError;
+
+  /// [minValueDecimalElement] Extensions for minValueDecimal
   @JsonKey(name: '_minValueDecimal')
   Element? get minValueDecimalElement => throw _privateConstructorUsedError;
+
+  /// [minValueInteger] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Integer? get minValueInteger => throw _privateConstructorUsedError;
+
+  /// [minValueIntegerElement] Extensions for minValueInteger
   @JsonKey(name: '_minValueInteger')
   Element? get minValueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [minValuePositiveInt] The minimum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   PositiveInt? get minValuePositiveInt => throw _privateConstructorUsedError;
+
+  /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
   @JsonKey(name: '_minValuePositiveInt')
   Element? get minValuePositiveIntElement => throw _privateConstructorUsedError;
+
+  /// [minValueUnsignedInt] The minimum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   UnsignedInt? get minValueUnsignedInt => throw _privateConstructorUsedError;
+
+  /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
   @JsonKey(name: '_minValueUnsignedInt')
   Element? get minValueUnsignedIntElement => throw _privateConstructorUsedError;
+
+  /// [minValueQuantity] The minimum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Quantity? get minValueQuantity => throw _privateConstructorUsedError;
+
+  /// [maxValueDate] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Date? get maxValueDate => throw _privateConstructorUsedError;
+
+  /// [maxValueDateElement] Extensions for maxValueDate
   @JsonKey(name: '_maxValueDate')
   Element? get maxValueDateElement => throw _privateConstructorUsedError;
+
+  /// [maxValueDateTime] The maximum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
+
+  /// [maxValueDateTimeElement] Extensions for maxValueDateTime
   @JsonKey(name: '_maxValueDateTime')
   Element? get maxValueDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [maxValueInstant] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Instant? get maxValueInstant => throw _privateConstructorUsedError;
+
+  /// [maxValueInstantElement] Extensions for maxValueInstant
   @JsonKey(name: '_maxValueInstant')
   Element? get maxValueInstantElement => throw _privateConstructorUsedError;
+
+  /// [maxValueTime] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Time? get maxValueTime => throw _privateConstructorUsedError;
+
+  /// [maxValueTimeElement] Extensions for maxValueTime
   @JsonKey(name: '_maxValueTime')
   Element? get maxValueTimeElement => throw _privateConstructorUsedError;
+
+  /// [maxValueDecimal] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Decimal? get maxValueDecimal => throw _privateConstructorUsedError;
+
+  /// [maxValueDecimalElement] Extensions for maxValueDecimal
   @JsonKey(name: '_maxValueDecimal')
   Element? get maxValueDecimalElement => throw _privateConstructorUsedError;
+
+  /// [maxValueInteger] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Integer? get maxValueInteger => throw _privateConstructorUsedError;
+
+  /// [maxValueIntegerElement] Extensions for maxValueInteger
   @JsonKey(name: '_maxValueInteger')
   Element? get maxValueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [maxValuePositiveInt] The maximum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   PositiveInt? get maxValuePositiveInt => throw _privateConstructorUsedError;
+
+  /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
   @JsonKey(name: '_maxValuePositiveInt')
   Element? get maxValuePositiveIntElement => throw _privateConstructorUsedError;
+
+  /// [maxValueUnsignedInt] The maximum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   UnsignedInt? get maxValueUnsignedInt => throw _privateConstructorUsedError;
+
+  /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
   @JsonKey(name: '_maxValueUnsignedInt')
   Element? get maxValueUnsignedIntElement => throw _privateConstructorUsedError;
+
+  /// [maxValueQuantity] The maximum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Quantity? get maxValueQuantity => throw _privateConstructorUsedError;
+
+  /// [maxLength] Indicates the maximum length in characters that is permitted
+  /// to be present in conformant instances and which is expected to be
+  ///  supported by conformant consumers that support the element.
   Integer? get maxLength => throw _privateConstructorUsedError;
+
+  /// [maxLengthElement] Extensions for maxLength
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement => throw _privateConstructorUsedError;
+
+  /// [condition] A reference to an invariant that may make additional
+  ///  statements about the cardinality or value in the instance.
   List<Id>? get condition => throw _privateConstructorUsedError;
+
+  /// [conditionElement] Extensions for condition
   @JsonKey(name: '_condition')
   List<Element?>? get conditionElement => throw _privateConstructorUsedError;
+
+  /// [constraint] Formal constraints such as co-occurrence and other
+  /// constraints that can be computationally evaluated within the context of
+  ///  the instance.
   List<ElementDefinitionConstraint>? get constraint =>
       throw _privateConstructorUsedError;
+
+  /// [mustSupport] If true, implementations that produce or consume resources
+  /// SHALL provide "support" for the element in some meaningful way.  If false,
+  /// the element may be ignored and not supported. If false, whether to
+  /// populate or use the data element in any way is at the discretion of the
+  ///  implementation.
   Boolean? get mustSupport => throw _privateConstructorUsedError;
+
+  /// [mustSupportElement] Extensions for mustSupport
   @JsonKey(name: '_mustSupport')
   Element? get mustSupportElement => throw _privateConstructorUsedError;
+
+  /// [isModifier] If true, the value of this element affects the
+  /// interpretation of the element or resource that contains it, and the value
+  /// of the element cannot be ignored. Typically, this is used for status,
+  /// negation and qualification codes. The effect of this is that the element
+  /// cannot be ignored by systems: they SHALL either recognize the element and
+  /// process it, and/or a pre-determination has been made that it is not
+  ///  relevant to their particular system.
   Boolean? get isModifier => throw _privateConstructorUsedError;
+
+  /// [isModifierElement] Extensions for isModifier
   @JsonKey(name: '_isModifier')
   Element? get isModifierElement => throw _privateConstructorUsedError;
+
+  /// [isModifierReason] Explains how that element affects the interpretation
+  ///  of the resource or element that contains it.
   String? get isModifierReason => throw _privateConstructorUsedError;
+
+  /// [isModifierReasonElement] Extensions for isModifierReason
   @JsonKey(name: '_isModifierReason')
   Element? get isModifierReasonElement => throw _privateConstructorUsedError;
+
+  /// [isSummary] Whether the element should be included if a client requests a
+  ///  search with the parameter _summary=true.
   Boolean? get isSummary => throw _privateConstructorUsedError;
+
+  /// [isSummaryElement] Extensions for isSummary
   @JsonKey(name: '_isSummary')
   Element? get isSummaryElement => throw _privateConstructorUsedError;
+
+  /// [binding] Binds to a value set if this element is coded (code, Coding,
+  ///  CodeableConcept, Quantity), or the data types (string, uri).
   ElementDefinitionBinding? get binding => throw _privateConstructorUsedError;
+
+  /// [mapping] Identifies a concept from an external specification that
+  ///  roughly corresponds to this element.
   List<ElementDefinitionMapping>? get mapping =>
       throw _privateConstructorUsedError;
 
@@ -3646,6 +5505,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? defaultValueAnnotation,
       Attachment? defaultValueAttachment,
       CodeableConcept? defaultValueCodeableConcept,
+      CodeableReference? defaultValueCodeableReference,
       Coding? defaultValueCoding,
       ContactPoint? defaultValueContactPoint,
       Count? defaultValueCount,
@@ -3658,6 +5518,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? defaultValueQuantity,
       Range? defaultValueRange,
       Ratio? defaultValueRatio,
+      RatioRange? defaultValueRatioRange,
       Reference? defaultValueReference,
       SampledData? defaultValueSampledData,
       Signature? defaultValueSignature,
@@ -3671,7 +5532,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? defaultValueTriggerDefinition,
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
       Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
@@ -3740,6 +5600,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? fixedAnnotation,
       Attachment? fixedAttachment,
       CodeableConcept? fixedCodeableConcept,
+      CodeableReference? fixedCodeableReference,
       Coding? fixedCoding,
       ContactPoint? fixedContactPoint,
       Count? fixedCount,
@@ -3752,6 +5613,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? fixedQuantity,
       Range? fixedRange,
       Ratio? fixedRatio,
+      RatioRange? fixedRatioRange,
       Reference? fixedReference,
       SampledData? fixedSampledData,
       Signature? fixedSignature,
@@ -3765,7 +5627,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Meta? fixedMeta,
       Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
@@ -3828,6 +5689,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? patternAnnotation,
       Attachment? patternAttachment,
       CodeableConcept? patternCodeableConcept,
+      CodeableReference? patternCodeableReference,
       Coding? patternCoding,
       ContactPoint? patternContactPoint,
       Count? patternCount,
@@ -3840,6 +5702,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? patternQuantity,
       Range? patternRange,
       Ratio? patternRatio,
+      RatioRange? patternRatioRange,
       Reference? patternReference,
       SampledData? patternSampledData,
       Signature? patternSignature,
@@ -3853,7 +5716,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? patternTriggerDefinition,
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
-      Meta? patternMeta,
       List<ElementDefinitionExample>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -3964,6 +5826,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get defaultValueAnnotation;
   $AttachmentCopyWith<$Res>? get defaultValueAttachment;
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference;
   $CodingCopyWith<$Res>? get defaultValueCoding;
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint;
   $CountCopyWith<$Res>? get defaultValueCount;
@@ -3976,6 +5839,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get defaultValueQuantity;
   $RangeCopyWith<$Res>? get defaultValueRange;
   $RatioCopyWith<$Res>? get defaultValueRatio;
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange;
   $ReferenceCopyWith<$Res>? get defaultValueReference;
   $SampledDataCopyWith<$Res>? get defaultValueSampledData;
   $SignatureCopyWith<$Res>? get defaultValueSignature;
@@ -3989,7 +5853,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get defaultValueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get defaultValueUsageContext;
   $DosageCopyWith<$Res>? get defaultValueDosage;
-  $MetaCopyWith<$Res>? get defaultValueMeta;
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   $ElementCopyWith<$Res>? get orderMeaningElement;
   $ElementCopyWith<$Res>? get fixedBase64BinaryElement;
@@ -4016,6 +5879,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get fixedAnnotation;
   $AttachmentCopyWith<$Res>? get fixedAttachment;
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference;
   $CodingCopyWith<$Res>? get fixedCoding;
   $ContactPointCopyWith<$Res>? get fixedContactPoint;
   $CountCopyWith<$Res>? get fixedCount;
@@ -4028,6 +5892,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get fixedQuantity;
   $RangeCopyWith<$Res>? get fixedRange;
   $RatioCopyWith<$Res>? get fixedRatio;
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange;
   $ReferenceCopyWith<$Res>? get fixedReference;
   $SampledDataCopyWith<$Res>? get fixedSampledData;
   $SignatureCopyWith<$Res>? get fixedSignature;
@@ -4041,7 +5906,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get fixedTriggerDefinition;
   $UsageContextCopyWith<$Res>? get fixedUsageContext;
   $DosageCopyWith<$Res>? get fixedDosage;
-  $MetaCopyWith<$Res>? get fixedMeta;
   $ElementCopyWith<$Res>? get patternBase64BinaryElement;
   $ElementCopyWith<$Res>? get patternBooleanElement;
   $ElementCopyWith<$Res>? get patternCanonicalElement;
@@ -4066,6 +5930,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get patternAnnotation;
   $AttachmentCopyWith<$Res>? get patternAttachment;
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference;
   $CodingCopyWith<$Res>? get patternCoding;
   $ContactPointCopyWith<$Res>? get patternContactPoint;
   $CountCopyWith<$Res>? get patternCount;
@@ -4078,6 +5943,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get patternQuantity;
   $RangeCopyWith<$Res>? get patternRange;
   $RatioCopyWith<$Res>? get patternRatio;
+  $RatioRangeCopyWith<$Res>? get patternRatioRange;
   $ReferenceCopyWith<$Res>? get patternReference;
   $SampledDataCopyWith<$Res>? get patternSampledData;
   $SignatureCopyWith<$Res>? get patternSignature;
@@ -4091,7 +5957,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get patternTriggerDefinition;
   $UsageContextCopyWith<$Res>? get patternUsageContext;
   $DosageCopyWith<$Res>? get patternDosage;
-  $MetaCopyWith<$Res>? get patternMeta;
   $ElementCopyWith<$Res>? get minValueDateElement;
   $ElementCopyWith<$Res>? get minValueDateTimeElement;
   $ElementCopyWith<$Res>? get minValueInstantElement;
@@ -4205,6 +6070,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueAnnotation = freezed,
     Object? defaultValueAttachment = freezed,
     Object? defaultValueCodeableConcept = freezed,
+    Object? defaultValueCodeableReference = freezed,
     Object? defaultValueCoding = freezed,
     Object? defaultValueContactPoint = freezed,
     Object? defaultValueCount = freezed,
@@ -4217,6 +6083,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueQuantity = freezed,
     Object? defaultValueRange = freezed,
     Object? defaultValueRatio = freezed,
+    Object? defaultValueRatioRange = freezed,
     Object? defaultValueReference = freezed,
     Object? defaultValueSampledData = freezed,
     Object? defaultValueSignature = freezed,
@@ -4230,7 +6097,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueTriggerDefinition = freezed,
     Object? defaultValueUsageContext = freezed,
     Object? defaultValueDosage = freezed,
-    Object? defaultValueMeta = freezed,
     Object? meaningWhenMissing = freezed,
     Object? meaningWhenMissingElement = freezed,
     Object? orderMeaning = freezed,
@@ -4278,6 +6144,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedAnnotation = freezed,
     Object? fixedAttachment = freezed,
     Object? fixedCodeableConcept = freezed,
+    Object? fixedCodeableReference = freezed,
     Object? fixedCoding = freezed,
     Object? fixedContactPoint = freezed,
     Object? fixedCount = freezed,
@@ -4290,6 +6157,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedQuantity = freezed,
     Object? fixedRange = freezed,
     Object? fixedRatio = freezed,
+    Object? fixedRatioRange = freezed,
     Object? fixedReference = freezed,
     Object? fixedSampledData = freezed,
     Object? fixedSignature = freezed,
@@ -4303,7 +6171,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedTriggerDefinition = freezed,
     Object? fixedUsageContext = freezed,
     Object? fixedDosage = freezed,
-    Object? fixedMeta = freezed,
     Object? patternBase64Binary = freezed,
     Object? patternBase64BinaryElement = freezed,
     Object? patternBoolean = freezed,
@@ -4347,6 +6214,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternAnnotation = freezed,
     Object? patternAttachment = freezed,
     Object? patternCodeableConcept = freezed,
+    Object? patternCodeableReference = freezed,
     Object? patternCoding = freezed,
     Object? patternContactPoint = freezed,
     Object? patternCount = freezed,
@@ -4359,6 +6227,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternQuantity = freezed,
     Object? patternRange = freezed,
     Object? patternRatio = freezed,
+    Object? patternRatioRange = freezed,
     Object? patternReference = freezed,
     Object? patternSampledData = freezed,
     Object? patternSignature = freezed,
@@ -4372,7 +6241,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternTriggerDefinition = freezed,
     Object? patternUsageContext = freezed,
     Object? patternDosage = freezed,
-    Object? patternMeta = freezed,
     Object? example = freezed,
     Object? minValueDate = freezed,
     Object? minValueDateElement = freezed,
@@ -4730,6 +6598,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      defaultValueCodeableReference: defaultValueCodeableReference == freezed
+          ? _value.defaultValueCodeableReference
+          : defaultValueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
@@ -4778,6 +6650,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      defaultValueRatioRange: defaultValueRatioRange == freezed
+          ? _value.defaultValueRatioRange
+          : defaultValueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
@@ -4831,10 +6707,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueDosage
           : defaultValueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      defaultValueMeta: defaultValueMeta == freezed
-          ? _value.defaultValueMeta
-          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       meaningWhenMissing: meaningWhenMissing == freezed
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
@@ -5023,6 +6895,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      fixedCodeableReference: fixedCodeableReference == freezed
+          ? _value.fixedCodeableReference
+          : fixedCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       fixedCoding: fixedCoding == freezed
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
@@ -5071,6 +6947,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      fixedRatioRange: fixedRatioRange == freezed
+          ? _value.fixedRatioRange
+          : fixedRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       fixedReference: fixedReference == freezed
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
@@ -5123,10 +7003,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedDosage
           : fixedDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      fixedMeta: fixedMeta == freezed
-          ? _value.fixedMeta
-          : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       patternBase64Binary: patternBase64Binary == freezed
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
@@ -5299,6 +7175,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      patternCodeableReference: patternCodeableReference == freezed
+          ? _value.patternCodeableReference
+          : patternCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       patternCoding: patternCoding == freezed
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
@@ -5347,6 +7227,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      patternRatioRange: patternRatioRange == freezed
+          ? _value.patternRatioRange
+          : patternRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       patternReference: patternReference == freezed
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
@@ -5399,10 +7283,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternDosage
           : patternDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      patternMeta: patternMeta == freezed
-          ? _value.patternMeta
-          : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       example: example == freezed
           ? _value.example
           : example // ignore: cast_nullable_to_non_nullable
@@ -6019,6 +7899,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference {
+    if (_value.defaultValueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(
+        _value.defaultValueCodeableReference!, (value) {
+      return _then(_value.copyWith(defaultValueCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get defaultValueCoding {
     if (_value.defaultValueCoding == null) {
       return null;
@@ -6148,6 +8040,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.defaultValueRatio!, (value) {
       return _then(_value.copyWith(defaultValueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange {
+    if (_value.defaultValueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.defaultValueRatioRange!, (value) {
+      return _then(_value.copyWith(defaultValueRatioRange: value));
     });
   }
 
@@ -6297,17 +8200,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.defaultValueDosage!, (value) {
       return _then(_value.copyWith(defaultValueDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get defaultValueMeta {
-    if (_value.defaultValueMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
-      return _then(_value.copyWith(defaultValueMeta: value));
     });
   }
 
@@ -6599,6 +8491,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference {
+    if (_value.fixedCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.fixedCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(fixedCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get fixedCoding {
     if (_value.fixedCoding == null) {
       return null;
@@ -6727,6 +8631,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.fixedRatio!, (value) {
       return _then(_value.copyWith(fixedRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange {
+    if (_value.fixedRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.fixedRatioRange!, (value) {
+      return _then(_value.copyWith(fixedRatioRange: value));
     });
   }
 
@@ -6874,17 +8789,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.fixedDosage!, (value) {
       return _then(_value.copyWith(fixedDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get fixedMeta {
-    if (_value.fixedMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.fixedMeta!, (value) {
-      return _then(_value.copyWith(fixedMeta: value));
     });
   }
 
@@ -7154,6 +9058,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference {
+    if (_value.patternCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.patternCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(patternCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get patternCoding {
     if (_value.patternCoding == null) {
       return null;
@@ -7282,6 +9198,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.patternRatio!, (value) {
       return _then(_value.copyWith(patternRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get patternRatioRange {
+    if (_value.patternRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.patternRatioRange!, (value) {
+      return _then(_value.copyWith(patternRatioRange: value));
     });
   }
 
@@ -7429,17 +9356,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.patternDosage!, (value) {
       return _then(_value.copyWith(patternDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get patternMeta {
-    if (_value.patternMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.patternMeta!, (value) {
-      return _then(_value.copyWith(patternMeta: value));
     });
   }
 
@@ -7709,11 +9625,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionCopyWith<$Res>
+abstract class _$$_ElementDefinitionCopyWith<$Res>
     implements $ElementDefinitionCopyWith<$Res> {
-  factory _$ElementDefinitionCopyWith(
-          _ElementDefinition value, $Res Function(_ElementDefinition) then) =
-      __$ElementDefinitionCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionCopyWith(_$_ElementDefinition value,
+          $Res Function(_$_ElementDefinition) then) =
+      __$$_ElementDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -7825,6 +9741,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Annotation? defaultValueAnnotation,
       Attachment? defaultValueAttachment,
       CodeableConcept? defaultValueCodeableConcept,
+      CodeableReference? defaultValueCodeableReference,
       Coding? defaultValueCoding,
       ContactPoint? defaultValueContactPoint,
       Count? defaultValueCount,
@@ -7837,6 +9754,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Quantity? defaultValueQuantity,
       Range? defaultValueRange,
       Ratio? defaultValueRatio,
+      RatioRange? defaultValueRatioRange,
       Reference? defaultValueReference,
       SampledData? defaultValueSampledData,
       Signature? defaultValueSignature,
@@ -7850,7 +9768,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       TriggerDefinition? defaultValueTriggerDefinition,
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
       Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
@@ -7919,6 +9836,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Annotation? fixedAnnotation,
       Attachment? fixedAttachment,
       CodeableConcept? fixedCodeableConcept,
+      CodeableReference? fixedCodeableReference,
       Coding? fixedCoding,
       ContactPoint? fixedContactPoint,
       Count? fixedCount,
@@ -7931,6 +9849,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Quantity? fixedQuantity,
       Range? fixedRange,
       Ratio? fixedRatio,
+      RatioRange? fixedRatioRange,
       Reference? fixedReference,
       SampledData? fixedSampledData,
       Signature? fixedSignature,
@@ -7944,7 +9863,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Meta? fixedMeta,
       Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
@@ -8007,6 +9925,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Annotation? patternAnnotation,
       Attachment? patternAttachment,
       CodeableConcept? patternCodeableConcept,
+      CodeableReference? patternCodeableReference,
       Coding? patternCoding,
       ContactPoint? patternContactPoint,
       Count? patternCount,
@@ -8019,6 +9938,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Quantity? patternQuantity,
       Range? patternRange,
       Ratio? patternRatio,
+      RatioRange? patternRatioRange,
       Reference? patternReference,
       SampledData? patternSampledData,
       Signature? patternSignature,
@@ -8032,7 +9952,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       TriggerDefinition? patternTriggerDefinition,
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
-      Meta? patternMeta,
       List<ElementDefinitionExample>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -8181,6 +10100,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get defaultValueCoding;
   @override
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint;
@@ -8204,6 +10125,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get defaultValueRange;
   @override
   $RatioCopyWith<$Res>? get defaultValueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get defaultValueReference;
   @override
@@ -8230,8 +10153,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get defaultValueUsageContext;
   @override
   $DosageCopyWith<$Res>? get defaultValueDosage;
-  @override
-  $MetaCopyWith<$Res>? get defaultValueMeta;
   @override
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   @override
@@ -8285,6 +10206,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get fixedCoding;
   @override
   $ContactPointCopyWith<$Res>? get fixedContactPoint;
@@ -8308,6 +10231,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get fixedRange;
   @override
   $RatioCopyWith<$Res>? get fixedRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get fixedReference;
   @override
@@ -8334,8 +10259,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get fixedUsageContext;
   @override
   $DosageCopyWith<$Res>? get fixedDosage;
-  @override
-  $MetaCopyWith<$Res>? get fixedMeta;
   @override
   $ElementCopyWith<$Res>? get patternBase64BinaryElement;
   @override
@@ -8385,6 +10308,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get patternCoding;
   @override
   $ContactPointCopyWith<$Res>? get patternContactPoint;
@@ -8408,6 +10333,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get patternRange;
   @override
   $RatioCopyWith<$Res>? get patternRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get patternRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get patternReference;
   @override
@@ -8434,8 +10361,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get patternUsageContext;
   @override
   $DosageCopyWith<$Res>? get patternDosage;
-  @override
-  $MetaCopyWith<$Res>? get patternMeta;
   @override
   $ElementCopyWith<$Res>? get minValueDateElement;
   @override
@@ -8487,15 +10412,15 @@ abstract class _$ElementDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionCopyWithImpl<$Res>
+class __$$_ElementDefinitionCopyWithImpl<$Res>
     extends _$ElementDefinitionCopyWithImpl<$Res>
-    implements _$ElementDefinitionCopyWith<$Res> {
-  __$ElementDefinitionCopyWithImpl(
-      _ElementDefinition _value, $Res Function(_ElementDefinition) _then)
-      : super(_value, (v) => _then(v as _ElementDefinition));
+    implements _$$_ElementDefinitionCopyWith<$Res> {
+  __$$_ElementDefinitionCopyWithImpl(
+      _$_ElementDefinition _value, $Res Function(_$_ElementDefinition) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinition));
 
   @override
-  _ElementDefinition get _value => super._value as _ElementDefinition;
+  _$_ElementDefinition get _value => super._value as _$_ElementDefinition;
 
   @override
   $Res call({
@@ -8575,6 +10500,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueAnnotation = freezed,
     Object? defaultValueAttachment = freezed,
     Object? defaultValueCodeableConcept = freezed,
+    Object? defaultValueCodeableReference = freezed,
     Object? defaultValueCoding = freezed,
     Object? defaultValueContactPoint = freezed,
     Object? defaultValueCount = freezed,
@@ -8587,6 +10513,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueQuantity = freezed,
     Object? defaultValueRange = freezed,
     Object? defaultValueRatio = freezed,
+    Object? defaultValueRatioRange = freezed,
     Object? defaultValueReference = freezed,
     Object? defaultValueSampledData = freezed,
     Object? defaultValueSignature = freezed,
@@ -8600,7 +10527,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueTriggerDefinition = freezed,
     Object? defaultValueUsageContext = freezed,
     Object? defaultValueDosage = freezed,
-    Object? defaultValueMeta = freezed,
     Object? meaningWhenMissing = freezed,
     Object? meaningWhenMissingElement = freezed,
     Object? orderMeaning = freezed,
@@ -8648,6 +10574,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedAnnotation = freezed,
     Object? fixedAttachment = freezed,
     Object? fixedCodeableConcept = freezed,
+    Object? fixedCodeableReference = freezed,
     Object? fixedCoding = freezed,
     Object? fixedContactPoint = freezed,
     Object? fixedCount = freezed,
@@ -8660,6 +10587,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedQuantity = freezed,
     Object? fixedRange = freezed,
     Object? fixedRatio = freezed,
+    Object? fixedRatioRange = freezed,
     Object? fixedReference = freezed,
     Object? fixedSampledData = freezed,
     Object? fixedSignature = freezed,
@@ -8673,7 +10601,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedTriggerDefinition = freezed,
     Object? fixedUsageContext = freezed,
     Object? fixedDosage = freezed,
-    Object? fixedMeta = freezed,
     Object? patternBase64Binary = freezed,
     Object? patternBase64BinaryElement = freezed,
     Object? patternBoolean = freezed,
@@ -8717,6 +10644,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? patternAnnotation = freezed,
     Object? patternAttachment = freezed,
     Object? patternCodeableConcept = freezed,
+    Object? patternCodeableReference = freezed,
     Object? patternCoding = freezed,
     Object? patternContactPoint = freezed,
     Object? patternCount = freezed,
@@ -8729,6 +10657,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? patternQuantity = freezed,
     Object? patternRange = freezed,
     Object? patternRatio = freezed,
+    Object? patternRatioRange = freezed,
     Object? patternReference = freezed,
     Object? patternSampledData = freezed,
     Object? patternSignature = freezed,
@@ -8742,7 +10671,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? patternTriggerDefinition = freezed,
     Object? patternUsageContext = freezed,
     Object? patternDosage = freezed,
-    Object? patternMeta = freezed,
     Object? example = freezed,
     Object? minValueDate = freezed,
     Object? minValueDateElement = freezed,
@@ -8794,17 +10722,17 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? binding = freezed,
     Object? mapping = freezed,
   }) {
-    return _then(_ElementDefinition(
+    return _then(_$_ElementDefinition(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: path == freezed
@@ -8816,11 +10744,11 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       representation: representation == freezed
-          ? _value.representation
+          ? _value._representation
           : representation // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionRepresentation>?,
       representationElement: representationElement == freezed
-          ? _value.representationElement
+          ? _value._representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       sliceName: sliceName == freezed
@@ -8848,7 +10776,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : labelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       code: code == freezed
-          ? _value.code
+          ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       slicing: slicing == freezed
@@ -8888,11 +10816,11 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       alias: alias == freezed
-          ? _value.alias
+          ? _value._alias
           : alias // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       aliasElement: aliasElement == freezed
-          ? _value.aliasElement
+          ? _value._aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       min: min == freezed
@@ -8924,7 +10852,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : contentReferenceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       type: type == freezed
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionType>?,
       defaultValueBase64Binary: defaultValueBase64Binary == freezed
@@ -9100,6 +11028,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      defaultValueCodeableReference: defaultValueCodeableReference == freezed
+          ? _value.defaultValueCodeableReference
+          : defaultValueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
@@ -9148,6 +11080,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      defaultValueRatioRange: defaultValueRatioRange == freezed
+          ? _value.defaultValueRatioRange
+          : defaultValueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
@@ -9201,10 +11137,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueDosage
           : defaultValueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      defaultValueMeta: defaultValueMeta == freezed
-          ? _value.defaultValueMeta
-          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       meaningWhenMissing: meaningWhenMissing == freezed
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
@@ -9393,6 +11325,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      fixedCodeableReference: fixedCodeableReference == freezed
+          ? _value.fixedCodeableReference
+          : fixedCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       fixedCoding: fixedCoding == freezed
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
@@ -9441,6 +11377,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      fixedRatioRange: fixedRatioRange == freezed
+          ? _value.fixedRatioRange
+          : fixedRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       fixedReference: fixedReference == freezed
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
@@ -9493,10 +11433,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedDosage
           : fixedDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      fixedMeta: fixedMeta == freezed
-          ? _value.fixedMeta
-          : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       patternBase64Binary: patternBase64Binary == freezed
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
@@ -9669,6 +11605,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      patternCodeableReference: patternCodeableReference == freezed
+          ? _value.patternCodeableReference
+          : patternCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       patternCoding: patternCoding == freezed
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
@@ -9717,6 +11657,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      patternRatioRange: patternRatioRange == freezed
+          ? _value.patternRatioRange
+          : patternRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       patternReference: patternReference == freezed
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
@@ -9769,12 +11713,8 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternDosage
           : patternDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      patternMeta: patternMeta == freezed
-          ? _value.patternMeta
-          : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       example: example == freezed
-          ? _value.example
+          ? _value._example
           : example // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionExample>?,
       minValueDate: minValueDate == freezed
@@ -9922,15 +11862,15 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       condition: condition == freezed
-          ? _value.condition
+          ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       conditionElement: conditionElement == freezed
-          ? _value.conditionElement
+          ? _value._conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       constraint: constraint == freezed
-          ? _value.constraint
+          ? _value._constraint
           : constraint // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionConstraint>?,
       mustSupport: mustSupport == freezed
@@ -9970,7 +11910,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : binding // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBinding?,
       mapping: mapping == freezed
-          ? _value.mapping
+          ? _value._mapping
           : mapping // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionMapping>?,
     ));
@@ -9983,14 +11923,14 @@ class _$_ElementDefinition extends _ElementDefinition {
   _$_ElementDefinition(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.path,
       @JsonKey(name: '_path')
           this.pathElement,
-      this.representation,
+      final List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          this.representationElement,
+          final List<Element?>? representationElement,
       this.sliceName,
       @JsonKey(name: '_sliceName')
           this.sliceNameElement,
@@ -10000,7 +11940,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.label,
       @JsonKey(name: '_label')
           this.labelElement,
-      this.code,
+      final List<Coding>? code,
       this.slicing,
       this.short,
       @JsonKey(name: '_short')
@@ -10014,9 +11954,9 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.requirements,
       @JsonKey(name: '_requirements')
           this.requirementsElement,
-      this.alias,
+      final List<String>? alias,
       @JsonKey(name: '_alias')
-          this.aliasElement,
+          final List<Element?>? aliasElement,
       this.min,
       @JsonKey(name: '_min')
           this.minElement,
@@ -10027,7 +11967,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.contentReference,
       @JsonKey(name: '_contentReference')
           this.contentReferenceElement,
-      this.type,
+      final List<ElementDefinitionType>? type,
       this.defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           this.defaultValueBase64BinaryElement,
@@ -10090,6 +12030,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueAnnotation,
       this.defaultValueAttachment,
       this.defaultValueCodeableConcept,
+      this.defaultValueCodeableReference,
       this.defaultValueCoding,
       this.defaultValueContactPoint,
       this.defaultValueCount,
@@ -10102,6 +12043,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueQuantity,
       this.defaultValueRange,
       this.defaultValueRatio,
+      this.defaultValueRatioRange,
       this.defaultValueReference,
       this.defaultValueSampledData,
       this.defaultValueSignature,
@@ -10115,7 +12057,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueTriggerDefinition,
       this.defaultValueUsageContext,
       this.defaultValueDosage,
-      this.defaultValueMeta,
       this.meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           this.meaningWhenMissingElement,
@@ -10184,6 +12125,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedAnnotation,
       this.fixedAttachment,
       this.fixedCodeableConcept,
+      this.fixedCodeableReference,
       this.fixedCoding,
       this.fixedContactPoint,
       this.fixedCount,
@@ -10196,6 +12138,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedQuantity,
       this.fixedRange,
       this.fixedRatio,
+      this.fixedRatioRange,
       this.fixedReference,
       this.fixedSampledData,
       this.fixedSignature,
@@ -10209,7 +12152,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedTriggerDefinition,
       this.fixedUsageContext,
       this.fixedDosage,
-      this.fixedMeta,
       this.patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           this.patternBase64BinaryElement,
@@ -10272,6 +12214,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternAnnotation,
       this.patternAttachment,
       this.patternCodeableConcept,
+      this.patternCodeableReference,
       this.patternCoding,
       this.patternContactPoint,
       this.patternCount,
@@ -10284,6 +12227,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternQuantity,
       this.patternRange,
       this.patternRatio,
+      this.patternRatioRange,
       this.patternReference,
       this.patternSampledData,
       this.patternSignature,
@@ -10297,8 +12241,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternTriggerDefinition,
       this.patternUsageContext,
       this.patternDosage,
-      this.patternMeta,
-      this.example,
+      final List<ElementDefinitionExample>? example,
       this.minValueDate,
       @JsonKey(name: '_minValueDate')
           this.minValueDateElement,
@@ -10352,10 +12295,10 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.maxLength,
       @JsonKey(name: '_maxLength')
           this.maxLengthElement,
-      this.condition,
+      final List<Id>? condition,
       @JsonKey(name: '_condition')
-          this.conditionElement,
-      this.constraint,
+          final List<Element?>? conditionElement,
+      final List<ElementDefinitionConstraint>? constraint,
       this.mustSupport,
       @JsonKey(name: '_mustSupport')
           this.mustSupportElement,
@@ -10369,718 +12312,2500 @@ class _$_ElementDefinition extends _ElementDefinition {
       @JsonKey(name: '_isSummary')
           this.isSummaryElement,
       this.binding,
-      this.mapping})
-      : super._();
+      final List<ElementDefinitionMapping>? mapping})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _representation = representation,
+        _representationElement = representationElement,
+        _code = code,
+        _alias = alias,
+        _aliasElement = aliasElement,
+        _type = type,
+        _example = example,
+        _condition = condition,
+        _conditionElement = conditionElement,
+        _constraint = constraint,
+        _mapping = mapping,
+        super._();
 
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [path] The path identifies the element and is expressed as a
+  /// "."-separated list of ancestor elements, beginning with the name of the
+  ///  resource or extension.
   @override
   final String? path;
+
+  /// [pathElement] Extensions for path
   @override
   @JsonKey(name: '_path')
   final Element? pathElement;
+
+  /// [representation] Codes that define how this element is represented in
+  ///  instances, when the deviation varies from the normal case.
+  final List<ElementDefinitionRepresentation>? _representation;
+
+  /// [representation] Codes that define how this element is represented in
+  ///  instances, when the deviation varies from the normal case.
   @override
-  final List<ElementDefinitionRepresentation>? representation;
+  List<ElementDefinitionRepresentation>? get representation {
+    final value = _representation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [representationElement] Extensions for representation
+  final List<Element?>? _representationElement;
+
+  /// [representationElement] Extensions for representation
   @override
   @JsonKey(name: '_representation')
-  final List<Element?>? representationElement;
+  List<Element?>? get representationElement {
+    final value = _representationElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [sliceName] The name of this element definition slice, when slicing is
+  /// working. The name must be a token with no dots or spaces. This is a unique
+  /// name referring to a specific set of constraints applied to this element,
+  ///  used to provide a name to different slices of the same element.
   @override
   final String? sliceName;
+
+  /// [sliceNameElement] Extensions for sliceName
   @override
   @JsonKey(name: '_sliceName')
   final Element? sliceNameElement;
+
+  /// [sliceIsConstraining] If true, indicates that this slice definition is
+  /// constraining a slice definition with the same name in an inherited
+  /// profile. If false, the slice is not overriding any slice in an inherited
+  /// profile. If missing, the slice might or might not be overriding a slice in
+  ///  an inherited profile, depending on the sliceName.
   @override
   final Boolean? sliceIsConstraining;
+
+  /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
   @override
   @JsonKey(name: '_sliceIsConstraining')
   final Element? sliceIsConstrainingElement;
+
+  /// [label] A single preferred label which is the text to display beside the
+  /// element indicating its meaning or to use to prompt for the element in a
+  ///  user display or form.
   @override
   final String? label;
+
+  /// [labelElement] Extensions for label
   @override
   @JsonKey(name: '_label')
   final Element? labelElement;
+
+  /// [code] A code that has the same meaning as the element in a particular
+  ///  terminology.
+  final List<Coding>? _code;
+
+  /// [code] A code that has the same meaning as the element in a particular
+  ///  terminology.
   @override
-  final List<Coding>? code;
+  List<Coding>? get code {
+    final value = _code;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [slicing] Indicates that the element is sliced into a set of alternative
+  /// definitions (i.e. in a structure definition, there are multiple different
+  /// constraints on a single element in the base resource). Slicing can be used
+  /// in any resource that has cardinality ..* on the base resource, or any
+  /// resource with a choice of types. The set of slices is any elements that
+  /// come after this in the element sequence that have the same path, until a
+  ///  shorter path occurs (the shorter path terminates the set).
   @override
   final ElementDefinitionSlicing? slicing;
+
+  /// [short] A concise description of what this element means (e.g. for use in
+  ///  autogenerated summaries).
   @override
   final String? short;
+
+  /// [shortElement] Extensions for short
   @override
   @JsonKey(name: '_short')
   final Element? shortElement;
+
+  /// [definition] Provides a complete explanation of the meaning of the data
+  /// element for human readability.  For the case of elements derived from
+  /// existing elements (e.g. constraints), the definition SHALL be consistent
+  /// with the base definition, but convey the meaning of the element in the
+  /// particular context of use of the resource. (Note: The text you are reading
+  ///  is specified in ElementDefinition.definition).
   @override
   final Markdown? definition;
+
+  /// [definitionElement] Extensions for definition
   @override
   @JsonKey(name: '_definition')
   final Element? definitionElement;
+
+  /// [comment] Explanatory notes and implementation guidance about the data
+  /// element, including notes about how to use the data properly, exceptions to
+  /// proper use, etc. (Note: The text you are reading is specified in
+  ///  ElementDefinition.comment).
   @override
   final Markdown? comment;
+
+  /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
   final Element? commentElement;
+
+  /// [requirements] This element is for traceability of why the element was
+  /// created and why the constraints exist as they do. This may be used to
+  /// point to source materials or specifications that drove the structure of
+  ///  this element.
   @override
   final Markdown? requirements;
+
+  /// [requirementsElement] Extensions for requirements
   @override
   @JsonKey(name: '_requirements')
   final Element? requirementsElement;
+
+  /// [alias] Identifies additional names by which this element might also be
+  ///  known.
+  final List<String>? _alias;
+
+  /// [alias] Identifies additional names by which this element might also be
+  ///  known.
   @override
-  final List<String>? alias;
+  List<String>? get alias {
+    final value = _alias;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [aliasElement] Extensions for alias
+  final List<Element?>? _aliasElement;
+
+  /// [aliasElement] Extensions for alias
   @override
   @JsonKey(name: '_alias')
-  final List<Element?>? aliasElement;
+  List<Element?>? get aliasElement {
+    final value = _aliasElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [min] The minimum number of times this element SHALL appear in the
+  ///  instance.
   @override
   final UnsignedInt? min;
+
+  /// [minElement] Extensions for min
   @override
   @JsonKey(name: '_min')
   final Element? minElement;
+
+  /// [max] The maximum number of times this element is permitted to appear in
+  ///  the instance.
   @override
   final String? max;
+
+  /// [maxElement] Extensions for max
   @override
   @JsonKey(name: '_max')
   final Element? maxElement;
+
+  /// [base] Information about the base definition of the element, provided to
+  /// make it unnecessary for tools to trace the deviation of the element
+  /// through the derived and related profiles. When the element definition is
+  /// not the original definition of an element - i.g. either in a constraint on
+  /// another type, or for elements from a super type in a snap shot - then the
+  /// information in provided in the element definition may be different to the
+  /// base definition. On the original definition of the element, it will be
+  ///  same.
   @override
   final ElementDefinitionBase? base;
+
+  /// [contentReference] Identifies an element defined elsewhere in the
+  /// definition whose content rules should be applied to the current element.
+  /// ContentReferences bring across all the rules that are in the
+  /// ElementDefinition for the element, including definitions, cardinality
+  ///  constraints, bindings, invariants etc.
   @override
   final FhirUri? contentReference;
+
+  /// [contentReferenceElement] Extensions for contentReference
   @override
   @JsonKey(name: '_contentReference')
   final Element? contentReferenceElement;
+
+  /// [type] The data type or resource that the value of this element is
+  ///  permitted to be.
+  final List<ElementDefinitionType>? _type;
+
+  /// [type] The data type or resource that the value of this element is
+  ///  permitted to be.
   @override
-  final List<ElementDefinitionType>? type;
+  List<ElementDefinitionType>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [defaultValueBase64Binary] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Base64Binary? defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   final Element? defaultValueBase64BinaryElement;
+
+  /// [defaultValueBoolean] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Boolean? defaultValueBoolean;
+
+  /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
   @override
   @JsonKey(name: '_defaultValueBoolean')
   final Element? defaultValueBooleanElement;
+
+  /// [defaultValueCanonical] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Canonical? defaultValueCanonical;
   @override
   @JsonKey(name: '_defaultValueCanonical')
   final Element? defaultValueCanonicalElement;
+
+  /// [defaultValueCode] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Code? defaultValueCode;
+
+  /// [defaultValueCodeElement] Extensions for defaultValueCode
   @override
   @JsonKey(name: '_defaultValueCode')
   final Element? defaultValueCodeElement;
+
+  /// [defaultValueDate] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Date? defaultValueDate;
+
+  /// [defaultValueDateElement] Extensions for defaultValueDate
   @override
   @JsonKey(name: '_defaultValueDate')
   final Element? defaultValueDateElement;
+
+  /// [defaultValueDateTime] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final FhirDateTime? defaultValueDateTime;
   @override
   @JsonKey(name: '_defaultValueDateTime')
   final Element? defaultValueDateTimeElement;
+
+  /// [defaultValueDecimal] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Decimal? defaultValueDecimal;
+
+  /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
   @override
   @JsonKey(name: '_defaultValueDecimal')
   final Element? defaultValueDecimalElement;
+
+  /// [defaultValueId] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Id? defaultValueId;
+
+  /// [defaultValueIdElement] Extensions for defaultValueId
   @override
   @JsonKey(name: '_defaultValueId')
   final Element? defaultValueIdElement;
+
+  /// [defaultValueInstant] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Instant? defaultValueInstant;
+
+  /// [defaultValueInstantElement] Extensions for defaultValueInstant
   @override
   @JsonKey(name: '_defaultValueInstant')
   final Element? defaultValueInstantElement;
+
+  /// [defaultValueInteger] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Integer? defaultValueInteger;
+
+  /// [defaultValueIntegerElement] Extensions for defaultValueInteger
   @override
   @JsonKey(name: '_defaultValueInteger')
   final Element? defaultValueIntegerElement;
+
+  /// [defaultValueMarkdown] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Markdown? defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkdown')
   final Element? defaultValueMarkdownElement;
+
+  /// [defaultValueOid] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Oid? defaultValueOid;
+
+  /// [defaultValueOidElement] Extensions for defaultValueOid
   @override
   @JsonKey(name: '_defaultValueOid')
   final Element? defaultValueOidElement;
+
+  /// [defaultValuePositiveInt] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final PositiveInt? defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
   final Element? defaultValuePositiveIntElement;
+
+  /// [defaultValueString] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final String? defaultValueString;
+
+  /// [defaultValueStringElement] Extensions for defaultValueString
   @override
   @JsonKey(name: '_defaultValueString')
   final Element? defaultValueStringElement;
+
+  /// [defaultValueTime] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Time? defaultValueTime;
+
+  /// [defaultValueTimeElement] Extensions for defaultValueTime
   @override
   @JsonKey(name: '_defaultValueTime')
   final Element? defaultValueTimeElement;
+
+  /// [defaultValueUnsignedInt] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final UnsignedInt? defaultValueUnsignedInt;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
   final Element? defaultValueUnsignedIntElement;
+
+  /// [defaultValueUri] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final FhirUri? defaultValueUri;
+
+  /// [defaultValueUriElement] Extensions for defaultValueUri
   @override
   @JsonKey(name: '_defaultValueUri')
   final Element? defaultValueUriElement;
+
+  /// [defaultValueUrl] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final FhirUrl? defaultValueUrl;
+
+  /// [defaultValueUrlElement] Extensions for defaultValueUrl
   @override
   @JsonKey(name: '_defaultValueUrl')
   final Element? defaultValueUrlElement;
+
+  /// [defaultValueUuid] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Uuid? defaultValueUuid;
+
+  /// [defaultValueUuidElement] Extensions for defaultValueUuid
   @override
   @JsonKey(name: '_defaultValueUuid')
   final Element? defaultValueUuidElement;
+
+  /// [defaultValueAddress] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Address? defaultValueAddress;
+
+  /// [defaultValueAge] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Age? defaultValueAge;
+
+  /// [defaultValueAnnotation] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Annotation? defaultValueAnnotation;
+
+  /// [defaultValueAttachment] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Attachment? defaultValueAttachment;
+
+  /// [defaultValueCodeableConcept] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final CodeableConcept? defaultValueCodeableConcept;
   @override
+  final CodeableReference? defaultValueCodeableReference;
+
+  /// [defaultValueCoding] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
+  @override
   final Coding? defaultValueCoding;
+
+  /// [defaultValueContactPoint] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final ContactPoint? defaultValueContactPoint;
+
+  /// [defaultValueCount] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Count? defaultValueCount;
+
+  /// [defaultValueDistance] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Distance? defaultValueDistance;
+
+  /// [defaultValueDuration] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final FhirDuration? defaultValueDuration;
+
+  /// [defaultValueHumanName] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final HumanName? defaultValueHumanName;
+
+  /// [defaultValueIdentifier] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Identifier? defaultValueIdentifier;
+
+  /// [defaultValueMoney] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Money? defaultValueMoney;
+
+  /// [defaultValuePeriod] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Period? defaultValuePeriod;
+
+  /// [defaultValueQuantity] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Quantity? defaultValueQuantity;
+
+  /// [defaultValueRange] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Range? defaultValueRange;
+
+  /// [defaultValueRatio] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Ratio? defaultValueRatio;
   @override
+  final RatioRange? defaultValueRatioRange;
+
+  /// [defaultValueReference] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
+  @override
   final Reference? defaultValueReference;
+
+  /// [defaultValueSampledData] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final SampledData? defaultValueSampledData;
+
+  /// [defaultValueSignature] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Signature? defaultValueSignature;
+
+  /// [defaultValueTiming] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Timing? defaultValueTiming;
+
+  /// [defaultValueContactDetail] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final ContactDetail? defaultValueContactDetail;
+
+  /// [defaultValueContributor] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Contributor? defaultValueContributor;
+
+  /// [defaultValueDataRequirement] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final DataRequirement? defaultValueDataRequirement;
+
+  /// [defaultValueExpression] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final Expression? defaultValueExpression;
+
+  /// [defaultValueParameterDefinition] The value that should be used if there
+  /// is no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final ParameterDefinition? defaultValueParameterDefinition;
+
+  /// [defaultValueRelatedArtifact] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final RelatedArtifact? defaultValueRelatedArtifact;
+
+  /// [defaultValueTriggerDefinition] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final TriggerDefinition? defaultValueTriggerDefinition;
+
+  /// [defaultValueUsageContext] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   @override
   final UsageContext? defaultValueUsageContext;
+
+  /// [defaultValueDosage] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   @override
   final Dosage? defaultValueDosage;
-  @override
-  final Meta? defaultValueMeta;
+
+  /// [meaningWhenMissing] The Implicit meaning that is to be understood when
+  /// this element is missing (e.g. 'when this element is missing, the period is
+  ///  ongoing').
   @override
   final Markdown? meaningWhenMissing;
+
+  /// [meaningWhenMissingElement] Extensions for meaningWhenMissing
   @override
   @JsonKey(name: '_meaningWhenMissing')
   final Element? meaningWhenMissingElement;
+
+  /// [orderMeaning] If present, indicates that the order of the repeating
+  /// element has meaning and describes what that meaning is.  If absent, it
+  ///  means that the order of the element has no meaning.
   @override
   final String? orderMeaning;
+
+  /// [orderMeaningElement] Extensions for orderMeaning
   @override
   @JsonKey(name: '_orderMeaning')
   final Element? orderMeaningElement;
+
+  /// [fixedBase64Binary] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final Base64Binary? fixedBase64Binary;
+
+  /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
   @override
   @JsonKey(name: '_fixedBase64Binary')
   final Element? fixedBase64BinaryElement;
+
+  /// [fixedBoolean] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Boolean? fixedBoolean;
+
+  /// [fixedBooleanElement] Extensions for fixedBoolean
   @override
   @JsonKey(name: '_fixedBoolean')
   final Element? fixedBooleanElement;
+
+  /// [fixedCanonical] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Canonical? fixedCanonical;
+
+  /// [fixedCanonicalElement] Extensions for fixedCanonical
   @override
   @JsonKey(name: '_fixedCanonical')
   final Element? fixedCanonicalElement;
+
+  /// [fixedCode] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Code? fixedCode;
+
+  /// [fixedCodeElement] Extensions for fixedCode
   @override
   @JsonKey(name: '_fixedCode')
   final Element? fixedCodeElement;
+
+  /// [fixedDate] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Date? fixedDate;
+
+  /// [fixedDateElement] Extensions for fixedDate
   @override
   @JsonKey(name: '_fixedDate')
   final Element? fixedDateElement;
+
+  /// [fixedDateTime] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final FhirDateTime? fixedDateTime;
+
+  /// [fixedDateTimeElement] Extensions for fixedDateTime
   @override
   @JsonKey(name: '_fixedDateTime')
   final Element? fixedDateTimeElement;
+
+  /// [fixedDecimal] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Decimal? fixedDecimal;
+
+  /// [fixedDecimalElement] Extensions for fixedDecimal
   @override
   @JsonKey(name: '_fixedDecimal')
   final Element? fixedDecimalElement;
+
+  /// [fixedId] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Id? fixedId;
+
+  /// [fixedIdElement] Extensions for fixedId
   @override
   @JsonKey(name: '_fixedId')
   final Element? fixedIdElement;
+
+  /// [fixedInstant] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Instant? fixedInstant;
+
+  /// [fixedInstantElement] Extensions for fixedInstant
   @override
   @JsonKey(name: '_fixedInstant')
   final Element? fixedInstantElement;
+
+  /// [fixedInteger] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Integer? fixedInteger;
+
+  /// [fixedIntegerElement] Extensions for fixedInteger
   @override
   @JsonKey(name: '_fixedInteger')
   final Element? fixedIntegerElement;
+
+  /// [fixedMarkdown] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Markdown? fixedMarkdown;
+
+  /// [fixedMarkdownElement] Extensions for fixedMarkdown
   @override
   @JsonKey(name: '_fixedMarkdown')
   final Element? fixedMarkdownElement;
+
+  /// [fixedOid] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Oid? fixedOid;
+
+  /// [fixedOidElement] Extensions for fixedOid
   @override
   @JsonKey(name: '_fixedOid')
   final Element? fixedOidElement;
+
+  /// [fixedPositiveInt] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final PositiveInt? fixedPositiveInt;
+
+  /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
   @override
   @JsonKey(name: '_fixedPositiveInt')
   final Element? fixedPositiveIntElement;
+
+  /// [fixedString] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final String? fixedString;
+
+  /// [fixedStringElement] Extensions for fixedString
   @override
   @JsonKey(name: '_fixedString')
   final Element? fixedStringElement;
+
+  /// [fixedTime] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Time? fixedTime;
+
+  /// [fixedTimeElement] Extensions for fixedTime
   @override
   @JsonKey(name: '_fixedTime')
   final Element? fixedTimeElement;
+
+  /// [fixedUnsignedInt] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final UnsignedInt? fixedUnsignedInt;
+
+  /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
   @override
   @JsonKey(name: '_fixedUnsignedInt')
   final Element? fixedUnsignedIntElement;
+
+  /// [fixedUri] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final FhirUri? fixedUri;
+
+  /// [fixedUriElement] Extensions for fixedUri
   @override
   @JsonKey(name: '_fixedUri')
   final Element? fixedUriElement;
+
+  /// [fixedUrl] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final FhirUrl? fixedUrl;
+
+  /// [fixedUrlElement] Extensions for fixedUrl
   @override
   @JsonKey(name: '_fixedUrl')
   final Element? fixedUrlElement;
+
+  /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Uuid? fixedUuid;
+
+  /// [fixedUuidElement] Extensions for fixedUuid
   @override
   @JsonKey(name: '_fixedUuid')
   final Element? fixedUuidElement;
+
+  /// [fixedAddress] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Address? fixedAddress;
+
+  /// [fixedAge] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Age? fixedAge;
+
+  /// [fixedAnnotation] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Annotation? fixedAnnotation;
+
+  /// [fixedAttachment] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Attachment? fixedAttachment;
+
+  /// [fixedCodeableConcept] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final CodeableConcept? fixedCodeableConcept;
   @override
+  final CodeableReference? fixedCodeableReference;
+
+  /// [fixedCoding] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
+  @override
   final Coding? fixedCoding;
+
+  /// [fixedContactPoint] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final ContactPoint? fixedContactPoint;
+
+  /// [fixedCount] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Count? fixedCount;
+
+  /// [fixedDistance] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Distance? fixedDistance;
+
+  /// [fixedDuration] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final FhirDuration? fixedDuration;
+
+  /// [fixedHumanName] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final HumanName? fixedHumanName;
+
+  /// [fixedIdentifier] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Identifier? fixedIdentifier;
+
+  /// [fixedMoney] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Money? fixedMoney;
+
+  /// [fixedPeriod] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Period? fixedPeriod;
+
+  /// [fixedQuantity] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Quantity? fixedQuantity;
+
+  /// [fixedRange] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Range? fixedRange;
+
+  /// [fixedRatio] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Ratio? fixedRatio;
   @override
+  final RatioRange? fixedRatioRange;
+
+  /// [fixedReference] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
+  @override
   final Reference? fixedReference;
+
+  /// [fixedSampledData] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final SampledData? fixedSampledData;
+
+  /// [fixedSignature] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Signature? fixedSignature;
+
+  /// [fixedTiming] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Timing? fixedTiming;
+
+  /// [fixedContactDetail] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final ContactDetail? fixedContactDetail;
+
+  /// [fixedContributor] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Contributor? fixedContributor;
+
+  /// [fixedDataRequirement] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final DataRequirement? fixedDataRequirement;
+
+  /// [fixedExpression] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Expression? fixedExpression;
+
+  /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
+  /// value  for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final ParameterDefinition? fixedParameterDefinition;
+
+  /// [fixedRelatedArtifact] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final RelatedArtifact? fixedRelatedArtifact;
+
+  /// [fixedTriggerDefinition] Specifies a value that SHALL be exactly the
+  /// value  for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final TriggerDefinition? fixedTriggerDefinition;
+
+  /// [fixedUsageContext] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   @override
   final UsageContext? fixedUsageContext;
+
+  /// [fixedDosage] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
   final Dosage? fixedDosage;
-  @override
-  final Meta? fixedMeta;
+
+  /// [patternBase64Binary] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Base64Binary? patternBase64Binary;
+
+  /// [patternBase64BinaryElement] Extensions for patternBase64Binary
   @override
   @JsonKey(name: '_patternBase64Binary')
   final Element? patternBase64BinaryElement;
+
+  /// [patternBoolean] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Boolean? patternBoolean;
+
+  /// [patternBooleanElement] Extensions for patternBoolean
   @override
   @JsonKey(name: '_patternBoolean')
   final Element? patternBooleanElement;
+
+  /// [patternCanonical] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Canonical? patternCanonical;
+
+  /// [patternCanonicalElement] Extensions for patternCanonical
   @override
   @JsonKey(name: '_patternCanonical')
   final Element? patternCanonicalElement;
+
+  /// [patternCode] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Code? patternCode;
+
+  /// [patternCodeElement] Extensions for patternCode
   @override
   @JsonKey(name: '_patternCode')
   final Element? patternCodeElement;
+
+  /// [patternDate] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Date? patternDate;
+
+  /// [patternDateElement] Extensions for patternDate
   @override
   @JsonKey(name: '_patternDate')
   final Element? patternDateElement;
+
+  /// [patternDateTime] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final FhirDateTime? patternDateTime;
+
+  /// [patternDateTimeElement] Extensions for patternDateTime
   @override
   @JsonKey(name: '_patternDateTime')
   final Element? patternDateTimeElement;
+
+  /// [patternDecimal] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Decimal? patternDecimal;
+
+  /// [patternDecimalElement] Extensions for patternDecimal
   @override
   @JsonKey(name: '_patternDecimal')
   final Element? patternDecimalElement;
+
+  /// [patternId] Specifies a value that the value in the instance SHALL follow
+  /// - that is, any value in the pattern must be found in the instance. Other
+  /// additional values may be found too. This is effectively constraint by
+  ///  example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Id? patternId;
+
+  /// [patternIdElement] Extensions for patternId
   @override
   @JsonKey(name: '_patternId')
   final Element? patternIdElement;
+
+  /// [patternInstant] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Instant? patternInstant;
+
+  /// [patternInstantElement] Extensions for patternInstant
   @override
   @JsonKey(name: '_patternInstant')
   final Element? patternInstantElement;
+
+  /// [patternInteger] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Integer? patternInteger;
+
+  /// [patternIntegerElement] Extensions for patternInteger
   @override
   @JsonKey(name: '_patternInteger')
   final Element? patternIntegerElement;
+
+  /// [patternMarkdown] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Markdown? patternMarkdown;
+
+  /// [patternMarkdownElement] Extensions for patternMarkdown
   @override
   @JsonKey(name: '_patternMarkdown')
   final Element? patternMarkdownElement;
+
+  /// [patternOid] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Oid? patternOid;
+
+  /// [patternOidElement] Extensions for patternOid
   @override
   @JsonKey(name: '_patternOid')
   final Element? patternOidElement;
+
+  /// [patternPositiveInt] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final PositiveInt? patternPositiveInt;
+
+  /// [patternPositiveIntElement] Extensions for patternPositiveInt
   @override
   @JsonKey(name: '_patternPositiveInt')
   final Element? patternPositiveIntElement;
+
+  /// [patternString] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final String? patternString;
+
+  /// [patternStringElement] Extensions for patternString
   @override
   @JsonKey(name: '_patternString')
   final Element? patternStringElement;
+
+  /// [patternTime] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Time? patternTime;
+
+  /// [patternTimeElement] Extensions for patternTime
   @override
   @JsonKey(name: '_patternTime')
   final Element? patternTimeElement;
+
+  /// [patternUnsignedInt] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final UnsignedInt? patternUnsignedInt;
+
+  /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
   @override
   @JsonKey(name: '_patternUnsignedInt')
   final Element? patternUnsignedIntElement;
+
+  /// [patternUri] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final FhirUri? patternUri;
+
+  /// [patternUriElement] Extensions for patternUri
   @override
   @JsonKey(name: '_patternUri')
   final Element? patternUriElement;
+
+  /// [patternUrl] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final FhirUrl? patternUrl;
+
+  /// [patternUrlElement] Extensions for patternUrl
   @override
   @JsonKey(name: '_patternUrl')
   final Element? patternUrlElement;
+
+  /// [patternUuid] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Uuid? patternUuid;
+
+  /// [patternUuidElement] Extensions for patternUuid
   @override
   @JsonKey(name: '_patternUuid')
   final Element? patternUuidElement;
+
+  /// [patternAddress] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Address? patternAddress;
+
+  /// [patternAge] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Age? patternAge;
+
+  /// [patternAnnotation] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Annotation? patternAnnotation;
+
+  /// [patternAttachment] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Attachment? patternAttachment;
+
+  /// [patternCodeableConcept] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final CodeableConcept? patternCodeableConcept;
   @override
+  final CodeableReference? patternCodeableReference;
+
+  /// [patternCoding] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
+  @override
   final Coding? patternCoding;
+
+  /// [patternContactPoint] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final ContactPoint? patternContactPoint;
+
+  /// [patternCount] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Count? patternCount;
+
+  /// [patternDistance] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Distance? patternDistance;
+
+  /// [patternDuration] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final FhirDuration? patternDuration;
+
+  /// [patternHumanName] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final HumanName? patternHumanName;
+
+  /// [patternIdentifier] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Identifier? patternIdentifier;
+
+  /// [patternMoney] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Money? patternMoney;
+
+  /// [patternPeriod] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Period? patternPeriod;
+
+  /// [patternQuantity] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Quantity? patternQuantity;
+
+  /// [patternRange] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Range? patternRange;
+
+  /// [patternRatio] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Ratio? patternRatio;
   @override
+  final RatioRange? patternRatioRange;
+
+  /// [patternReference] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
+  @override
   final Reference? patternReference;
+
+  /// [patternSampledData] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final SampledData? patternSampledData;
+
+  /// [patternSignature] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Signature? patternSignature;
+
+  /// [patternTiming] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Timing? patternTiming;
+
+  /// [patternContactDetail] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final ContactDetail? patternContactDetail;
+
+  /// [patternContributor] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Contributor? patternContributor;
+
+  /// [patternDataRequirement] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final DataRequirement? patternDataRequirement;
+
+  /// [patternExpression] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Expression? patternExpression;
+
+  /// [patternParameterDefinition] Specifies a value that the value in the
+  /// instance SHALL follow - that is, any value in the pattern must be found in
+  /// the instance. Other additional values may be found too. This is
+  ///  effectively constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final ParameterDefinition? patternParameterDefinition;
+
+  /// [patternRelatedArtifact] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final RelatedArtifact? patternRelatedArtifact;
+
+  /// [patternTriggerDefinition] Specifies a value that the value in the
+  /// instance SHALL follow - that is, any value in the pattern must be found in
+  /// the instance. Other additional values may be found too. This is
+  ///  effectively constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final TriggerDefinition? patternTriggerDefinition;
+
+  /// [patternUsageContext] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final UsageContext? patternUsageContext;
+
+  /// [patternDosage] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   @override
   final Dosage? patternDosage;
+
+  /// [example] A sample value for this element demonstrating the type of
+  ///  information that would typically be found in the element.
+  final List<ElementDefinitionExample>? _example;
+
+  /// [example] A sample value for this element demonstrating the type of
+  ///  information that would typically be found in the element.
   @override
-  final Meta? patternMeta;
-  @override
-  final List<ElementDefinitionExample>? example;
+  List<ElementDefinitionExample>? get example {
+    final value = _example;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [minValueDate] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Date? minValueDate;
+
+  /// [minValueDateElement] Extensions for minValueDate
   @override
   @JsonKey(name: '_minValueDate')
   final Element? minValueDateElement;
+
+  /// [minValueDateTime] The minimum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final FhirDateTime? minValueDateTime;
+
+  /// [minValueDateTimeElement] Extensions for minValueDateTime
   @override
   @JsonKey(name: '_minValueDateTime')
   final Element? minValueDateTimeElement;
+
+  /// [minValueInstant] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Instant? minValueInstant;
+
+  /// [minValueInstantElement] Extensions for minValueInstant
   @override
   @JsonKey(name: '_minValueInstant')
   final Element? minValueInstantElement;
+
+  /// [minValueTime] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Time? minValueTime;
+
+  /// [minValueTimeElement] Extensions for minValueTime
   @override
   @JsonKey(name: '_minValueTime')
   final Element? minValueTimeElement;
+
+  /// [minValueDecimal] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Decimal? minValueDecimal;
+
+  /// [minValueDecimalElement] Extensions for minValueDecimal
   @override
   @JsonKey(name: '_minValueDecimal')
   final Element? minValueDecimalElement;
+
+  /// [minValueInteger] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Integer? minValueInteger;
+
+  /// [minValueIntegerElement] Extensions for minValueInteger
   @override
   @JsonKey(name: '_minValueInteger')
   final Element? minValueIntegerElement;
+
+  /// [minValuePositiveInt] The minimum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   @override
   final PositiveInt? minValuePositiveInt;
+
+  /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
   @override
   @JsonKey(name: '_minValuePositiveInt')
   final Element? minValuePositiveIntElement;
+
+  /// [minValueUnsignedInt] The minimum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   @override
   final UnsignedInt? minValueUnsignedInt;
+
+  /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
   @override
   @JsonKey(name: '_minValueUnsignedInt')
   final Element? minValueUnsignedIntElement;
+
+  /// [minValueQuantity] The minimum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Quantity? minValueQuantity;
+
+  /// [maxValueDate] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Date? maxValueDate;
+
+  /// [maxValueDateElement] Extensions for maxValueDate
   @override
   @JsonKey(name: '_maxValueDate')
   final Element? maxValueDateElement;
+
+  /// [maxValueDateTime] The maximum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final FhirDateTime? maxValueDateTime;
+
+  /// [maxValueDateTimeElement] Extensions for maxValueDateTime
   @override
   @JsonKey(name: '_maxValueDateTime')
   final Element? maxValueDateTimeElement;
+
+  /// [maxValueInstant] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Instant? maxValueInstant;
+
+  /// [maxValueInstantElement] Extensions for maxValueInstant
   @override
   @JsonKey(name: '_maxValueInstant')
   final Element? maxValueInstantElement;
+
+  /// [maxValueTime] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Time? maxValueTime;
+
+  /// [maxValueTimeElement] Extensions for maxValueTime
   @override
   @JsonKey(name: '_maxValueTime')
   final Element? maxValueTimeElement;
+
+  /// [maxValueDecimal] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Decimal? maxValueDecimal;
+
+  /// [maxValueDecimalElement] Extensions for maxValueDecimal
   @override
   @JsonKey(name: '_maxValueDecimal')
   final Element? maxValueDecimalElement;
+
+  /// [maxValueInteger] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Integer? maxValueInteger;
+
+  /// [maxValueIntegerElement] Extensions for maxValueInteger
   @override
   @JsonKey(name: '_maxValueInteger')
   final Element? maxValueIntegerElement;
+
+  /// [maxValuePositiveInt] The maximum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   @override
   final PositiveInt? maxValuePositiveInt;
+
+  /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
   @override
   @JsonKey(name: '_maxValuePositiveInt')
   final Element? maxValuePositiveIntElement;
+
+  /// [maxValueUnsignedInt] The maximum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   @override
   final UnsignedInt? maxValueUnsignedInt;
+
+  /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
   @override
   @JsonKey(name: '_maxValueUnsignedInt')
   final Element? maxValueUnsignedIntElement;
+
+  /// [maxValueQuantity] The maximum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   @override
   final Quantity? maxValueQuantity;
+
+  /// [maxLength] Indicates the maximum length in characters that is permitted
+  /// to be present in conformant instances and which is expected to be
+  ///  supported by conformant consumers that support the element.
   @override
   final Integer? maxLength;
+
+  /// [maxLengthElement] Extensions for maxLength
   @override
   @JsonKey(name: '_maxLength')
   final Element? maxLengthElement;
+
+  /// [condition] A reference to an invariant that may make additional
+  ///  statements about the cardinality or value in the instance.
+  final List<Id>? _condition;
+
+  /// [condition] A reference to an invariant that may make additional
+  ///  statements about the cardinality or value in the instance.
   @override
-  final List<Id>? condition;
+  List<Id>? get condition {
+    final value = _condition;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [conditionElement] Extensions for condition
+  final List<Element?>? _conditionElement;
+
+  /// [conditionElement] Extensions for condition
   @override
   @JsonKey(name: '_condition')
-  final List<Element?>? conditionElement;
+  List<Element?>? get conditionElement {
+    final value = _conditionElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [constraint] Formal constraints such as co-occurrence and other
+  /// constraints that can be computationally evaluated within the context of
+  ///  the instance.
+  final List<ElementDefinitionConstraint>? _constraint;
+
+  /// [constraint] Formal constraints such as co-occurrence and other
+  /// constraints that can be computationally evaluated within the context of
+  ///  the instance.
   @override
-  final List<ElementDefinitionConstraint>? constraint;
+  List<ElementDefinitionConstraint>? get constraint {
+    final value = _constraint;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [mustSupport] If true, implementations that produce or consume resources
+  /// SHALL provide "support" for the element in some meaningful way.  If false,
+  /// the element may be ignored and not supported. If false, whether to
+  /// populate or use the data element in any way is at the discretion of the
+  ///  implementation.
   @override
   final Boolean? mustSupport;
+
+  /// [mustSupportElement] Extensions for mustSupport
   @override
   @JsonKey(name: '_mustSupport')
   final Element? mustSupportElement;
+
+  /// [isModifier] If true, the value of this element affects the
+  /// interpretation of the element or resource that contains it, and the value
+  /// of the element cannot be ignored. Typically, this is used for status,
+  /// negation and qualification codes. The effect of this is that the element
+  /// cannot be ignored by systems: they SHALL either recognize the element and
+  /// process it, and/or a pre-determination has been made that it is not
+  ///  relevant to their particular system.
   @override
   final Boolean? isModifier;
+
+  /// [isModifierElement] Extensions for isModifier
   @override
   @JsonKey(name: '_isModifier')
   final Element? isModifierElement;
+
+  /// [isModifierReason] Explains how that element affects the interpretation
+  ///  of the resource or element that contains it.
   @override
   final String? isModifierReason;
+
+  /// [isModifierReasonElement] Extensions for isModifierReason
   @override
   @JsonKey(name: '_isModifierReason')
   final Element? isModifierReasonElement;
+
+  /// [isSummary] Whether the element should be included if a client requests a
+  ///  search with the parameter _summary=true.
   @override
   final Boolean? isSummary;
+
+  /// [isSummaryElement] Extensions for isSummary
   @override
   @JsonKey(name: '_isSummary')
   final Element? isSummaryElement;
+
+  /// [binding] Binds to a value set if this element is coded (code, Coding,
+  ///  CodeableConcept, Quantity), or the data types (string, uri).
   @override
   final ElementDefinitionBinding? binding;
+
+  /// [mapping] Identifies a concept from an external specification that
+  ///  roughly corresponds to this element.
+  final List<ElementDefinitionMapping>? _mapping;
+
+  /// [mapping] Identifies a concept from an external specification that
+  ///  roughly corresponds to this element.
   @override
-  final List<ElementDefinitionMapping>? mapping;
+  List<ElementDefinitionMapping>? get mapping {
+    final value = _mapping;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, sliceIsConstraining: $sliceIsConstraining, sliceIsConstrainingElement: $sliceIsConstrainingElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonical: $defaultValueCanonical, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueUrl: $defaultValueUrl, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, defaultValueMeta: $defaultValueMeta, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedCanonical: $fixedCanonical, fixedCanonicalElement: $fixedCanonicalElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedUrl: $fixedUrl, fixedUrlElement: $fixedUrlElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, fixedMeta: $fixedMeta, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternCanonical: $patternCanonical, patternCanonicalElement: $patternCanonicalElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternId: $patternId, patternIdElement: $patternIdElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternString: $patternString, patternStringElement: $patternStringElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternUrl: $patternUrl, patternUrlElement: $patternUrlElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, patternMeta: $patternMeta, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isModifierReason: $isModifierReason, isModifierReasonElement: $isModifierReasonElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
+    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, sliceIsConstraining: $sliceIsConstraining, sliceIsConstrainingElement: $sliceIsConstrainingElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonical: $defaultValueCanonical, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueUrl: $defaultValueUrl, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCodeableReference: $defaultValueCodeableReference, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueRatioRange: $defaultValueRatioRange, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedCanonical: $fixedCanonical, fixedCanonicalElement: $fixedCanonicalElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedUrl: $fixedUrl, fixedUrlElement: $fixedUrlElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCodeableReference: $fixedCodeableReference, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedRatioRange: $fixedRatioRange, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternCanonical: $patternCanonical, patternCanonicalElement: $patternCanonicalElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternId: $patternId, patternIdElement: $patternIdElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternString: $patternString, patternStringElement: $patternStringElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternUrl: $patternUrl, patternUrlElement: $patternUrlElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCodeableReference: $patternCodeableReference, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternRatioRange: $patternRatioRange, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isModifierReason: $isModifierReason, isModifierReasonElement: $isModifierReasonElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinition &&
+            other is _$_ElementDefinition &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.path, path) &&
             const DeepCollectionEquality()
                 .equals(other.pathElement, pathElement) &&
             const DeepCollectionEquality()
-                .equals(other.representation, representation) &&
+                .equals(other._representation, _representation) &&
             const DeepCollectionEquality()
-                .equals(other.representationElement, representationElement) &&
+                .equals(other._representationElement, _representationElement) &&
             const DeepCollectionEquality().equals(other.sliceName, sliceName) &&
             const DeepCollectionEquality()
                 .equals(other.sliceNameElement, sliceNameElement) &&
@@ -11091,7 +14816,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.label, label) &&
             const DeepCollectionEquality()
                 .equals(other.labelElement, labelElement) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other._code, _code) &&
             const DeepCollectionEquality().equals(other.slicing, slicing) &&
             const DeepCollectionEquality().equals(other.short, short) &&
             const DeepCollectionEquality()
@@ -11107,9 +14832,9 @@ class _$_ElementDefinition extends _ElementDefinition {
                 .equals(other.requirements, requirements) &&
             const DeepCollectionEquality()
                 .equals(other.requirementsElement, requirementsElement) &&
-            const DeepCollectionEquality().equals(other.alias, alias) &&
+            const DeepCollectionEquality().equals(other._alias, _alias) &&
             const DeepCollectionEquality()
-                .equals(other.aliasElement, aliasElement) &&
+                .equals(other._aliasElement, _aliasElement) &&
             const DeepCollectionEquality().equals(other.min, min) &&
             const DeepCollectionEquality()
                 .equals(other.minElement, minElement) &&
@@ -11121,7 +14846,7 @@ class _$_ElementDefinition extends _ElementDefinition {
                 .equals(other.contentReference, contentReference) &&
             const DeepCollectionEquality().equals(
                 other.contentReferenceElement, contentReferenceElement) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             const DeepCollectionEquality().equals(
                 other.defaultValueBase64Binary, defaultValueBase64Binary) &&
             const DeepCollectionEquality().equals(
@@ -11186,6 +14911,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueAnnotation, defaultValueAnnotation) &&
             const DeepCollectionEquality().equals(other.defaultValueAttachment, defaultValueAttachment) &&
             const DeepCollectionEquality().equals(other.defaultValueCodeableConcept, defaultValueCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.defaultValueCodeableReference, defaultValueCodeableReference) &&
             const DeepCollectionEquality().equals(other.defaultValueCoding, defaultValueCoding) &&
             const DeepCollectionEquality().equals(other.defaultValueContactPoint, defaultValueContactPoint) &&
             const DeepCollectionEquality().equals(other.defaultValueCount, defaultValueCount) &&
@@ -11198,6 +14924,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueQuantity, defaultValueQuantity) &&
             const DeepCollectionEquality().equals(other.defaultValueRange, defaultValueRange) &&
             const DeepCollectionEquality().equals(other.defaultValueRatio, defaultValueRatio) &&
+            const DeepCollectionEquality().equals(other.defaultValueRatioRange, defaultValueRatioRange) &&
             const DeepCollectionEquality().equals(other.defaultValueReference, defaultValueReference) &&
             const DeepCollectionEquality().equals(other.defaultValueSampledData, defaultValueSampledData) &&
             const DeepCollectionEquality().equals(other.defaultValueSignature, defaultValueSignature) &&
@@ -11211,7 +14938,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueTriggerDefinition, defaultValueTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.defaultValueUsageContext, defaultValueUsageContext) &&
             const DeepCollectionEquality().equals(other.defaultValueDosage, defaultValueDosage) &&
-            const DeepCollectionEquality().equals(other.defaultValueMeta, defaultValueMeta) &&
             const DeepCollectionEquality().equals(other.meaningWhenMissing, meaningWhenMissing) &&
             const DeepCollectionEquality().equals(other.meaningWhenMissingElement, meaningWhenMissingElement) &&
             const DeepCollectionEquality().equals(other.orderMeaning, orderMeaning) &&
@@ -11259,6 +14985,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedAnnotation, fixedAnnotation) &&
             const DeepCollectionEquality().equals(other.fixedAttachment, fixedAttachment) &&
             const DeepCollectionEquality().equals(other.fixedCodeableConcept, fixedCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.fixedCodeableReference, fixedCodeableReference) &&
             const DeepCollectionEquality().equals(other.fixedCoding, fixedCoding) &&
             const DeepCollectionEquality().equals(other.fixedContactPoint, fixedContactPoint) &&
             const DeepCollectionEquality().equals(other.fixedCount, fixedCount) &&
@@ -11271,6 +14998,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedQuantity, fixedQuantity) &&
             const DeepCollectionEquality().equals(other.fixedRange, fixedRange) &&
             const DeepCollectionEquality().equals(other.fixedRatio, fixedRatio) &&
+            const DeepCollectionEquality().equals(other.fixedRatioRange, fixedRatioRange) &&
             const DeepCollectionEquality().equals(other.fixedReference, fixedReference) &&
             const DeepCollectionEquality().equals(other.fixedSampledData, fixedSampledData) &&
             const DeepCollectionEquality().equals(other.fixedSignature, fixedSignature) &&
@@ -11284,7 +15012,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedTriggerDefinition, fixedTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.fixedUsageContext, fixedUsageContext) &&
             const DeepCollectionEquality().equals(other.fixedDosage, fixedDosage) &&
-            const DeepCollectionEquality().equals(other.fixedMeta, fixedMeta) &&
             const DeepCollectionEquality().equals(other.patternBase64Binary, patternBase64Binary) &&
             const DeepCollectionEquality().equals(other.patternBase64BinaryElement, patternBase64BinaryElement) &&
             const DeepCollectionEquality().equals(other.patternBoolean, patternBoolean) &&
@@ -11328,6 +15055,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternAnnotation, patternAnnotation) &&
             const DeepCollectionEquality().equals(other.patternAttachment, patternAttachment) &&
             const DeepCollectionEquality().equals(other.patternCodeableConcept, patternCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.patternCodeableReference, patternCodeableReference) &&
             const DeepCollectionEquality().equals(other.patternCoding, patternCoding) &&
             const DeepCollectionEquality().equals(other.patternContactPoint, patternContactPoint) &&
             const DeepCollectionEquality().equals(other.patternCount, patternCount) &&
@@ -11340,6 +15068,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternQuantity, patternQuantity) &&
             const DeepCollectionEquality().equals(other.patternRange, patternRange) &&
             const DeepCollectionEquality().equals(other.patternRatio, patternRatio) &&
+            const DeepCollectionEquality().equals(other.patternRatioRange, patternRatioRange) &&
             const DeepCollectionEquality().equals(other.patternReference, patternReference) &&
             const DeepCollectionEquality().equals(other.patternSampledData, patternSampledData) &&
             const DeepCollectionEquality().equals(other.patternSignature, patternSignature) &&
@@ -11353,8 +15082,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternTriggerDefinition, patternTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.patternUsageContext, patternUsageContext) &&
             const DeepCollectionEquality().equals(other.patternDosage, patternDosage) &&
-            const DeepCollectionEquality().equals(other.patternMeta, patternMeta) &&
-            const DeepCollectionEquality().equals(other.example, example) &&
+            const DeepCollectionEquality().equals(other._example, _example) &&
             const DeepCollectionEquality().equals(other.minValueDate, minValueDate) &&
             const DeepCollectionEquality().equals(other.minValueDateElement, minValueDateElement) &&
             const DeepCollectionEquality().equals(other.minValueDateTime, minValueDateTime) &&
@@ -11391,9 +15119,9 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.maxValueQuantity, maxValueQuantity) &&
             const DeepCollectionEquality().equals(other.maxLength, maxLength) &&
             const DeepCollectionEquality().equals(other.maxLengthElement, maxLengthElement) &&
-            const DeepCollectionEquality().equals(other.condition, condition) &&
-            const DeepCollectionEquality().equals(other.conditionElement, conditionElement) &&
-            const DeepCollectionEquality().equals(other.constraint, constraint) &&
+            const DeepCollectionEquality().equals(other._condition, _condition) &&
+            const DeepCollectionEquality().equals(other._conditionElement, _conditionElement) &&
+            const DeepCollectionEquality().equals(other._constraint, _constraint) &&
             const DeepCollectionEquality().equals(other.mustSupport, mustSupport) &&
             const DeepCollectionEquality().equals(other.mustSupportElement, mustSupportElement) &&
             const DeepCollectionEquality().equals(other.isModifier, isModifier) &&
@@ -11403,26 +15131,27 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.isSummary, isSummary) &&
             const DeepCollectionEquality().equals(other.isSummaryElement, isSummaryElement) &&
             const DeepCollectionEquality().equals(other.binding, binding) &&
-            const DeepCollectionEquality().equals(other.mapping, mapping));
+            const DeepCollectionEquality().equals(other._mapping, _mapping));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(path),
         const DeepCollectionEquality().hash(pathElement),
-        const DeepCollectionEquality().hash(representation),
-        const DeepCollectionEquality().hash(representationElement),
+        const DeepCollectionEquality().hash(_representation),
+        const DeepCollectionEquality().hash(_representationElement),
         const DeepCollectionEquality().hash(sliceName),
         const DeepCollectionEquality().hash(sliceNameElement),
         const DeepCollectionEquality().hash(sliceIsConstraining),
         const DeepCollectionEquality().hash(sliceIsConstrainingElement),
         const DeepCollectionEquality().hash(label),
         const DeepCollectionEquality().hash(labelElement),
-        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(_code),
         const DeepCollectionEquality().hash(slicing),
         const DeepCollectionEquality().hash(short),
         const DeepCollectionEquality().hash(shortElement),
@@ -11432,8 +15161,8 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(commentElement),
         const DeepCollectionEquality().hash(requirements),
         const DeepCollectionEquality().hash(requirementsElement),
-        const DeepCollectionEquality().hash(alias),
-        const DeepCollectionEquality().hash(aliasElement),
+        const DeepCollectionEquality().hash(_alias),
+        const DeepCollectionEquality().hash(_aliasElement),
         const DeepCollectionEquality().hash(min),
         const DeepCollectionEquality().hash(minElement),
         const DeepCollectionEquality().hash(max),
@@ -11441,7 +15170,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(base),
         const DeepCollectionEquality().hash(contentReference),
         const DeepCollectionEquality().hash(contentReferenceElement),
-        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(_type),
         const DeepCollectionEquality().hash(defaultValueBase64Binary),
         const DeepCollectionEquality().hash(defaultValueBase64BinaryElement),
         const DeepCollectionEquality().hash(defaultValueBoolean),
@@ -11485,6 +15214,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueAnnotation),
         const DeepCollectionEquality().hash(defaultValueAttachment),
         const DeepCollectionEquality().hash(defaultValueCodeableConcept),
+        const DeepCollectionEquality().hash(defaultValueCodeableReference),
         const DeepCollectionEquality().hash(defaultValueCoding),
         const DeepCollectionEquality().hash(defaultValueContactPoint),
         const DeepCollectionEquality().hash(defaultValueCount),
@@ -11497,6 +15227,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueQuantity),
         const DeepCollectionEquality().hash(defaultValueRange),
         const DeepCollectionEquality().hash(defaultValueRatio),
+        const DeepCollectionEquality().hash(defaultValueRatioRange),
         const DeepCollectionEquality().hash(defaultValueReference),
         const DeepCollectionEquality().hash(defaultValueSampledData),
         const DeepCollectionEquality().hash(defaultValueSignature),
@@ -11510,7 +15241,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueTriggerDefinition),
         const DeepCollectionEquality().hash(defaultValueUsageContext),
         const DeepCollectionEquality().hash(defaultValueDosage),
-        const DeepCollectionEquality().hash(defaultValueMeta),
         const DeepCollectionEquality().hash(meaningWhenMissing),
         const DeepCollectionEquality().hash(meaningWhenMissingElement),
         const DeepCollectionEquality().hash(orderMeaning),
@@ -11558,6 +15288,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedAnnotation),
         const DeepCollectionEquality().hash(fixedAttachment),
         const DeepCollectionEquality().hash(fixedCodeableConcept),
+        const DeepCollectionEquality().hash(fixedCodeableReference),
         const DeepCollectionEquality().hash(fixedCoding),
         const DeepCollectionEquality().hash(fixedContactPoint),
         const DeepCollectionEquality().hash(fixedCount),
@@ -11570,6 +15301,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedQuantity),
         const DeepCollectionEquality().hash(fixedRange),
         const DeepCollectionEquality().hash(fixedRatio),
+        const DeepCollectionEquality().hash(fixedRatioRange),
         const DeepCollectionEquality().hash(fixedReference),
         const DeepCollectionEquality().hash(fixedSampledData),
         const DeepCollectionEquality().hash(fixedSignature),
@@ -11583,7 +15315,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedTriggerDefinition),
         const DeepCollectionEquality().hash(fixedUsageContext),
         const DeepCollectionEquality().hash(fixedDosage),
-        const DeepCollectionEquality().hash(fixedMeta),
         const DeepCollectionEquality().hash(patternBase64Binary),
         const DeepCollectionEquality().hash(patternBase64BinaryElement),
         const DeepCollectionEquality().hash(patternBoolean),
@@ -11627,6 +15358,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternAnnotation),
         const DeepCollectionEquality().hash(patternAttachment),
         const DeepCollectionEquality().hash(patternCodeableConcept),
+        const DeepCollectionEquality().hash(patternCodeableReference),
         const DeepCollectionEquality().hash(patternCoding),
         const DeepCollectionEquality().hash(patternContactPoint),
         const DeepCollectionEquality().hash(patternCount),
@@ -11639,6 +15371,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternQuantity),
         const DeepCollectionEquality().hash(patternRange),
         const DeepCollectionEquality().hash(patternRatio),
+        const DeepCollectionEquality().hash(patternRatioRange),
         const DeepCollectionEquality().hash(patternReference),
         const DeepCollectionEquality().hash(patternSampledData),
         const DeepCollectionEquality().hash(patternSignature),
@@ -11652,8 +15385,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternTriggerDefinition),
         const DeepCollectionEquality().hash(patternUsageContext),
         const DeepCollectionEquality().hash(patternDosage),
-        const DeepCollectionEquality().hash(patternMeta),
-        const DeepCollectionEquality().hash(example),
+        const DeepCollectionEquality().hash(_example),
         const DeepCollectionEquality().hash(minValueDate),
         const DeepCollectionEquality().hash(minValueDateElement),
         const DeepCollectionEquality().hash(minValueDateTime),
@@ -11690,9 +15422,9 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(maxValueQuantity),
         const DeepCollectionEquality().hash(maxLength),
         const DeepCollectionEquality().hash(maxLengthElement),
-        const DeepCollectionEquality().hash(condition),
-        const DeepCollectionEquality().hash(conditionElement),
-        const DeepCollectionEquality().hash(constraint),
+        const DeepCollectionEquality().hash(_condition),
+        const DeepCollectionEquality().hash(_conditionElement),
+        const DeepCollectionEquality().hash(_constraint),
         const DeepCollectionEquality().hash(mustSupport),
         const DeepCollectionEquality().hash(mustSupportElement),
         const DeepCollectionEquality().hash(isModifier),
@@ -11702,1102 +15434,2748 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(isSummary),
         const DeepCollectionEquality().hash(isSummaryElement),
         const DeepCollectionEquality().hash(binding),
-        const DeepCollectionEquality().hash(mapping)
+        const DeepCollectionEquality().hash(_mapping)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith =>
-      __$ElementDefinitionCopyWithImpl<_ElementDefinition>(this, _$identity);
+  _$$_ElementDefinitionCopyWith<_$_ElementDefinition> get copyWith =>
+      __$$_ElementDefinitionCopyWithImpl<_$_ElementDefinition>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionToJson(this);
+    return _$$_ElementDefinitionToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinition extends ElementDefinition {
   factory _ElementDefinition(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? path,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? path,
       @JsonKey(name: '_path')
-          Element? pathElement,
-      List<ElementDefinitionRepresentation>? representation,
+          final Element? pathElement,
+      final List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
-      String? sliceName,
+          final List<Element?>? representationElement,
+      final String? sliceName,
       @JsonKey(name: '_sliceName')
-          Element? sliceNameElement,
-      Boolean? sliceIsConstraining,
+          final Element? sliceNameElement,
+      final Boolean? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
-          Element? sliceIsConstrainingElement,
-      String? label,
+          final Element? sliceIsConstrainingElement,
+      final String? label,
       @JsonKey(name: '_label')
-          Element? labelElement,
-      List<Coding>? code,
-      ElementDefinitionSlicing? slicing,
-      String? short,
+          final Element? labelElement,
+      final List<Coding>? code,
+      final ElementDefinitionSlicing? slicing,
+      final String? short,
       @JsonKey(name: '_short')
-          Element? shortElement,
-      Markdown? definition,
+          final Element? shortElement,
+      final Markdown? definition,
       @JsonKey(name: '_definition')
-          Element? definitionElement,
-      Markdown? comment,
+          final Element? definitionElement,
+      final Markdown? comment,
       @JsonKey(name: '_comment')
-          Element? commentElement,
-      Markdown? requirements,
+          final Element? commentElement,
+      final Markdown? requirements,
       @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      List<String>? alias,
+          final Element? requirementsElement,
+      final List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
-      UnsignedInt? min,
+          final List<Element?>? aliasElement,
+      final UnsignedInt? min,
       @JsonKey(name: '_min')
-          Element? minElement,
-      String? max,
+          final Element? minElement,
+      final String? max,
       @JsonKey(name: '_max')
-          Element? maxElement,
-      ElementDefinitionBase? base,
-      FhirUri? contentReference,
+          final Element? maxElement,
+      final ElementDefinitionBase? base,
+      final FhirUri? contentReference,
       @JsonKey(name: '_contentReference')
-          Element? contentReferenceElement,
-      List<ElementDefinitionType>? type,
-      Base64Binary? defaultValueBase64Binary,
+          final Element? contentReferenceElement,
+      final List<ElementDefinitionType>? type,
+      final Base64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
-      Boolean? defaultValueBoolean,
+          final Element? defaultValueBase64BinaryElement,
+      final Boolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
-      Canonical? defaultValueCanonical,
+          final Element? defaultValueBooleanElement,
+      final Canonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
-          Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
+          final Element? defaultValueCanonicalElement,
+      final Code? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
-      Date? defaultValueDate,
+          final Element? defaultValueCodeElement,
+      final Date? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
-      FhirDateTime? defaultValueDateTime,
+          final Element? defaultValueDateElement,
+      final FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
-      Decimal? defaultValueDecimal,
+          final Element? defaultValueDateTimeElement,
+      final Decimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
-      Id? defaultValueId,
+          final Element? defaultValueDecimalElement,
+      final Id? defaultValueId,
       @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
-      Instant? defaultValueInstant,
+          final Element? defaultValueIdElement,
+      final Instant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
-      Integer? defaultValueInteger,
+          final Element? defaultValueInstantElement,
+      final Integer? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
-      Markdown? defaultValueMarkdown,
+          final Element? defaultValueIntegerElement,
+      final Markdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
-          Element? defaultValueMarkdownElement,
-      Oid? defaultValueOid,
+          final Element? defaultValueMarkdownElement,
+      final Oid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
-      PositiveInt? defaultValuePositiveInt,
+          final Element? defaultValueOidElement,
+      final PositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
-      String? defaultValueString,
+          final Element? defaultValuePositiveIntElement,
+      final String? defaultValueString,
       @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
-      Time? defaultValueTime,
+          final Element? defaultValueStringElement,
+      final Time? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
-      UnsignedInt? defaultValueUnsignedInt,
+          final Element? defaultValueTimeElement,
+      final UnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
-      FhirUri? defaultValueUri,
+          final Element? defaultValueUnsignedIntElement,
+      final FhirUri? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
-      FhirUrl? defaultValueUrl,
+          final Element? defaultValueUriElement,
+      final FhirUrl? defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
-          Element? defaultValueUrlElement,
-      Uuid? defaultValueUuid,
+          final Element? defaultValueUrlElement,
+      final Uuid? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
-          Element? defaultValueUuidElement,
-      Address? defaultValueAddress,
-      Age? defaultValueAge,
-      Annotation? defaultValueAnnotation,
-      Attachment? defaultValueAttachment,
-      CodeableConcept? defaultValueCodeableConcept,
-      Coding? defaultValueCoding,
-      ContactPoint? defaultValueContactPoint,
-      Count? defaultValueCount,
-      Distance? defaultValueDistance,
-      FhirDuration? defaultValueDuration,
-      HumanName? defaultValueHumanName,
-      Identifier? defaultValueIdentifier,
-      Money? defaultValueMoney,
-      Period? defaultValuePeriod,
-      Quantity? defaultValueQuantity,
-      Range? defaultValueRange,
-      Ratio? defaultValueRatio,
-      Reference? defaultValueReference,
-      SampledData? defaultValueSampledData,
-      Signature? defaultValueSignature,
-      Timing? defaultValueTiming,
-      ContactDetail? defaultValueContactDetail,
-      Contributor? defaultValueContributor,
-      DataRequirement? defaultValueDataRequirement,
-      Expression? defaultValueExpression,
-      ParameterDefinition? defaultValueParameterDefinition,
-      RelatedArtifact? defaultValueRelatedArtifact,
-      TriggerDefinition? defaultValueTriggerDefinition,
-      UsageContext? defaultValueUsageContext,
-      Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
-      Markdown? meaningWhenMissing,
+          final Element? defaultValueUuidElement,
+      final Address? defaultValueAddress,
+      final Age? defaultValueAge,
+      final Annotation? defaultValueAnnotation,
+      final Attachment? defaultValueAttachment,
+      final CodeableConcept? defaultValueCodeableConcept,
+      final CodeableReference? defaultValueCodeableReference,
+      final Coding? defaultValueCoding,
+      final ContactPoint? defaultValueContactPoint,
+      final Count? defaultValueCount,
+      final Distance? defaultValueDistance,
+      final FhirDuration? defaultValueDuration,
+      final HumanName? defaultValueHumanName,
+      final Identifier? defaultValueIdentifier,
+      final Money? defaultValueMoney,
+      final Period? defaultValuePeriod,
+      final Quantity? defaultValueQuantity,
+      final Range? defaultValueRange,
+      final Ratio? defaultValueRatio,
+      final RatioRange? defaultValueRatioRange,
+      final Reference? defaultValueReference,
+      final SampledData? defaultValueSampledData,
+      final Signature? defaultValueSignature,
+      final Timing? defaultValueTiming,
+      final ContactDetail? defaultValueContactDetail,
+      final Contributor? defaultValueContributor,
+      final DataRequirement? defaultValueDataRequirement,
+      final Expression? defaultValueExpression,
+      final ParameterDefinition? defaultValueParameterDefinition,
+      final RelatedArtifact? defaultValueRelatedArtifact,
+      final TriggerDefinition? defaultValueTriggerDefinition,
+      final UsageContext? defaultValueUsageContext,
+      final Dosage? defaultValueDosage,
+      final Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
-          Element? meaningWhenMissingElement,
-      String? orderMeaning,
+          final Element? meaningWhenMissingElement,
+      final String? orderMeaning,
       @JsonKey(name: '_orderMeaning')
-          Element? orderMeaningElement,
-      Base64Binary? fixedBase64Binary,
+          final Element? orderMeaningElement,
+      final Base64Binary? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
-          Element? fixedBase64BinaryElement,
-      Boolean? fixedBoolean,
+          final Element? fixedBase64BinaryElement,
+      final Boolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
-          Element? fixedBooleanElement,
-      Canonical? fixedCanonical,
+          final Element? fixedBooleanElement,
+      final Canonical? fixedCanonical,
       @JsonKey(name: '_fixedCanonical')
-          Element? fixedCanonicalElement,
-      Code? fixedCode,
+          final Element? fixedCanonicalElement,
+      final Code? fixedCode,
       @JsonKey(name: '_fixedCode')
-          Element? fixedCodeElement,
-      Date? fixedDate,
+          final Element? fixedCodeElement,
+      final Date? fixedDate,
       @JsonKey(name: '_fixedDate')
-          Element? fixedDateElement,
-      FhirDateTime? fixedDateTime,
+          final Element? fixedDateElement,
+      final FhirDateTime? fixedDateTime,
       @JsonKey(name: '_fixedDateTime')
-          Element? fixedDateTimeElement,
-      Decimal? fixedDecimal,
+          final Element? fixedDateTimeElement,
+      final Decimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
-          Element? fixedDecimalElement,
-      Id? fixedId,
+          final Element? fixedDecimalElement,
+      final Id? fixedId,
       @JsonKey(name: '_fixedId')
-          Element? fixedIdElement,
-      Instant? fixedInstant,
+          final Element? fixedIdElement,
+      final Instant? fixedInstant,
       @JsonKey(name: '_fixedInstant')
-          Element? fixedInstantElement,
-      Integer? fixedInteger,
+          final Element? fixedInstantElement,
+      final Integer? fixedInteger,
       @JsonKey(name: '_fixedInteger')
-          Element? fixedIntegerElement,
-      Markdown? fixedMarkdown,
+          final Element? fixedIntegerElement,
+      final Markdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
-          Element? fixedMarkdownElement,
-      Oid? fixedOid,
+          final Element? fixedMarkdownElement,
+      final Oid? fixedOid,
       @JsonKey(name: '_fixedOid')
-          Element? fixedOidElement,
-      PositiveInt? fixedPositiveInt,
+          final Element? fixedOidElement,
+      final PositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
-          Element? fixedPositiveIntElement,
-      String? fixedString,
+          final Element? fixedPositiveIntElement,
+      final String? fixedString,
       @JsonKey(name: '_fixedString')
-          Element? fixedStringElement,
-      Time? fixedTime,
+          final Element? fixedStringElement,
+      final Time? fixedTime,
       @JsonKey(name: '_fixedTime')
-          Element? fixedTimeElement,
-      UnsignedInt? fixedUnsignedInt,
+          final Element? fixedTimeElement,
+      final UnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
-          Element? fixedUnsignedIntElement,
-      FhirUri? fixedUri,
+          final Element? fixedUnsignedIntElement,
+      final FhirUri? fixedUri,
       @JsonKey(name: '_fixedUri')
-          Element? fixedUriElement,
-      FhirUrl? fixedUrl,
+          final Element? fixedUriElement,
+      final FhirUrl? fixedUrl,
       @JsonKey(name: '_fixedUrl')
-          Element? fixedUrlElement,
-      Uuid? fixedUuid,
+          final Element? fixedUrlElement,
+      final Uuid? fixedUuid,
       @JsonKey(name: '_fixedUuid')
-          Element? fixedUuidElement,
-      Address? fixedAddress,
-      Age? fixedAge,
-      Annotation? fixedAnnotation,
-      Attachment? fixedAttachment,
-      CodeableConcept? fixedCodeableConcept,
-      Coding? fixedCoding,
-      ContactPoint? fixedContactPoint,
-      Count? fixedCount,
-      Distance? fixedDistance,
-      FhirDuration? fixedDuration,
-      HumanName? fixedHumanName,
-      Identifier? fixedIdentifier,
-      Money? fixedMoney,
-      Period? fixedPeriod,
-      Quantity? fixedQuantity,
-      Range? fixedRange,
-      Ratio? fixedRatio,
-      Reference? fixedReference,
-      SampledData? fixedSampledData,
-      Signature? fixedSignature,
-      Timing? fixedTiming,
-      ContactDetail? fixedContactDetail,
-      Contributor? fixedContributor,
-      DataRequirement? fixedDataRequirement,
-      Expression? fixedExpression,
-      ParameterDefinition? fixedParameterDefinition,
-      RelatedArtifact? fixedRelatedArtifact,
-      TriggerDefinition? fixedTriggerDefinition,
-      UsageContext? fixedUsageContext,
-      Dosage? fixedDosage,
-      Meta? fixedMeta,
-      Base64Binary? patternBase64Binary,
+          final Element? fixedUuidElement,
+      final Address? fixedAddress,
+      final Age? fixedAge,
+      final Annotation? fixedAnnotation,
+      final Attachment? fixedAttachment,
+      final CodeableConcept? fixedCodeableConcept,
+      final CodeableReference? fixedCodeableReference,
+      final Coding? fixedCoding,
+      final ContactPoint? fixedContactPoint,
+      final Count? fixedCount,
+      final Distance? fixedDistance,
+      final FhirDuration? fixedDuration,
+      final HumanName? fixedHumanName,
+      final Identifier? fixedIdentifier,
+      final Money? fixedMoney,
+      final Period? fixedPeriod,
+      final Quantity? fixedQuantity,
+      final Range? fixedRange,
+      final Ratio? fixedRatio,
+      final RatioRange? fixedRatioRange,
+      final Reference? fixedReference,
+      final SampledData? fixedSampledData,
+      final Signature? fixedSignature,
+      final Timing? fixedTiming,
+      final ContactDetail? fixedContactDetail,
+      final Contributor? fixedContributor,
+      final DataRequirement? fixedDataRequirement,
+      final Expression? fixedExpression,
+      final ParameterDefinition? fixedParameterDefinition,
+      final RelatedArtifact? fixedRelatedArtifact,
+      final TriggerDefinition? fixedTriggerDefinition,
+      final UsageContext? fixedUsageContext,
+      final Dosage? fixedDosage,
+      final Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
-          Element? patternBase64BinaryElement,
-      Boolean? patternBoolean,
+          final Element? patternBase64BinaryElement,
+      final Boolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
-          Element? patternBooleanElement,
-      Canonical? patternCanonical,
+          final Element? patternBooleanElement,
+      final Canonical? patternCanonical,
       @JsonKey(name: '_patternCanonical')
-          Element? patternCanonicalElement,
-      Code? patternCode,
+          final Element? patternCanonicalElement,
+      final Code? patternCode,
       @JsonKey(name: '_patternCode')
-          Element? patternCodeElement,
-      Date? patternDate,
+          final Element? patternCodeElement,
+      final Date? patternDate,
       @JsonKey(name: '_patternDate')
-          Element? patternDateElement,
-      FhirDateTime? patternDateTime,
+          final Element? patternDateElement,
+      final FhirDateTime? patternDateTime,
       @JsonKey(name: '_patternDateTime')
-          Element? patternDateTimeElement,
-      Decimal? patternDecimal,
+          final Element? patternDateTimeElement,
+      final Decimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
-          Element? patternDecimalElement,
-      Id? patternId,
+          final Element? patternDecimalElement,
+      final Id? patternId,
       @JsonKey(name: '_patternId')
-          Element? patternIdElement,
-      Instant? patternInstant,
+          final Element? patternIdElement,
+      final Instant? patternInstant,
       @JsonKey(name: '_patternInstant')
-          Element? patternInstantElement,
-      Integer? patternInteger,
+          final Element? patternInstantElement,
+      final Integer? patternInteger,
       @JsonKey(name: '_patternInteger')
-          Element? patternIntegerElement,
-      Markdown? patternMarkdown,
+          final Element? patternIntegerElement,
+      final Markdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
-          Element? patternMarkdownElement,
-      Oid? patternOid,
+          final Element? patternMarkdownElement,
+      final Oid? patternOid,
       @JsonKey(name: '_patternOid')
-          Element? patternOidElement,
-      PositiveInt? patternPositiveInt,
+          final Element? patternOidElement,
+      final PositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
-          Element? patternPositiveIntElement,
-      String? patternString,
+          final Element? patternPositiveIntElement,
+      final String? patternString,
       @JsonKey(name: '_patternString')
-          Element? patternStringElement,
-      Time? patternTime,
+          final Element? patternStringElement,
+      final Time? patternTime,
       @JsonKey(name: '_patternTime')
-          Element? patternTimeElement,
-      UnsignedInt? patternUnsignedInt,
+          final Element? patternTimeElement,
+      final UnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
-          Element? patternUnsignedIntElement,
-      FhirUri? patternUri,
+          final Element? patternUnsignedIntElement,
+      final FhirUri? patternUri,
       @JsonKey(name: '_patternUri')
-          Element? patternUriElement,
-      FhirUrl? patternUrl,
+          final Element? patternUriElement,
+      final FhirUrl? patternUrl,
       @JsonKey(name: '_patternUrl')
-          Element? patternUrlElement,
-      Uuid? patternUuid,
+          final Element? patternUrlElement,
+      final Uuid? patternUuid,
       @JsonKey(name: '_patternUuid')
-          Element? patternUuidElement,
-      Address? patternAddress,
-      Age? patternAge,
-      Annotation? patternAnnotation,
-      Attachment? patternAttachment,
-      CodeableConcept? patternCodeableConcept,
-      Coding? patternCoding,
-      ContactPoint? patternContactPoint,
-      Count? patternCount,
-      Distance? patternDistance,
-      FhirDuration? patternDuration,
-      HumanName? patternHumanName,
-      Identifier? patternIdentifier,
-      Money? patternMoney,
-      Period? patternPeriod,
-      Quantity? patternQuantity,
-      Range? patternRange,
-      Ratio? patternRatio,
-      Reference? patternReference,
-      SampledData? patternSampledData,
-      Signature? patternSignature,
-      Timing? patternTiming,
-      ContactDetail? patternContactDetail,
-      Contributor? patternContributor,
-      DataRequirement? patternDataRequirement,
-      Expression? patternExpression,
-      ParameterDefinition? patternParameterDefinition,
-      RelatedArtifact? patternRelatedArtifact,
-      TriggerDefinition? patternTriggerDefinition,
-      UsageContext? patternUsageContext,
-      Dosage? patternDosage,
-      Meta? patternMeta,
-      List<ElementDefinitionExample>? example,
-      Date? minValueDate,
+          final Element? patternUuidElement,
+      final Address? patternAddress,
+      final Age? patternAge,
+      final Annotation? patternAnnotation,
+      final Attachment? patternAttachment,
+      final CodeableConcept? patternCodeableConcept,
+      final CodeableReference? patternCodeableReference,
+      final Coding? patternCoding,
+      final ContactPoint? patternContactPoint,
+      final Count? patternCount,
+      final Distance? patternDistance,
+      final FhirDuration? patternDuration,
+      final HumanName? patternHumanName,
+      final Identifier? patternIdentifier,
+      final Money? patternMoney,
+      final Period? patternPeriod,
+      final Quantity? patternQuantity,
+      final Range? patternRange,
+      final Ratio? patternRatio,
+      final RatioRange? patternRatioRange,
+      final Reference? patternReference,
+      final SampledData? patternSampledData,
+      final Signature? patternSignature,
+      final Timing? patternTiming,
+      final ContactDetail? patternContactDetail,
+      final Contributor? patternContributor,
+      final DataRequirement? patternDataRequirement,
+      final Expression? patternExpression,
+      final ParameterDefinition? patternParameterDefinition,
+      final RelatedArtifact? patternRelatedArtifact,
+      final TriggerDefinition? patternTriggerDefinition,
+      final UsageContext? patternUsageContext,
+      final Dosage? patternDosage,
+      final List<ElementDefinitionExample>? example,
+      final Date? minValueDate,
       @JsonKey(name: '_minValueDate')
-          Element? minValueDateElement,
-      FhirDateTime? minValueDateTime,
+          final Element? minValueDateElement,
+      final FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
-          Element? minValueDateTimeElement,
-      Instant? minValueInstant,
+          final Element? minValueDateTimeElement,
+      final Instant? minValueInstant,
       @JsonKey(name: '_minValueInstant')
-          Element? minValueInstantElement,
-      Time? minValueTime,
+          final Element? minValueInstantElement,
+      final Time? minValueTime,
       @JsonKey(name: '_minValueTime')
-          Element? minValueTimeElement,
-      Decimal? minValueDecimal,
+          final Element? minValueTimeElement,
+      final Decimal? minValueDecimal,
       @JsonKey(name: '_minValueDecimal')
-          Element? minValueDecimalElement,
-      Integer? minValueInteger,
+          final Element? minValueDecimalElement,
+      final Integer? minValueInteger,
       @JsonKey(name: '_minValueInteger')
-          Element? minValueIntegerElement,
-      PositiveInt? minValuePositiveInt,
+          final Element? minValueIntegerElement,
+      final PositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
-          Element? minValuePositiveIntElement,
-      UnsignedInt? minValueUnsignedInt,
+          final Element? minValuePositiveIntElement,
+      final UnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
-          Element? minValueUnsignedIntElement,
-      Quantity? minValueQuantity,
-      Date? maxValueDate,
+          final Element? minValueUnsignedIntElement,
+      final Quantity? minValueQuantity,
+      final Date? maxValueDate,
       @JsonKey(name: '_maxValueDate')
-          Element? maxValueDateElement,
-      FhirDateTime? maxValueDateTime,
+          final Element? maxValueDateElement,
+      final FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
-          Element? maxValueDateTimeElement,
-      Instant? maxValueInstant,
+          final Element? maxValueDateTimeElement,
+      final Instant? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
-          Element? maxValueInstantElement,
-      Time? maxValueTime,
+          final Element? maxValueInstantElement,
+      final Time? maxValueTime,
       @JsonKey(name: '_maxValueTime')
-          Element? maxValueTimeElement,
-      Decimal? maxValueDecimal,
+          final Element? maxValueTimeElement,
+      final Decimal? maxValueDecimal,
       @JsonKey(name: '_maxValueDecimal')
-          Element? maxValueDecimalElement,
-      Integer? maxValueInteger,
+          final Element? maxValueDecimalElement,
+      final Integer? maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
-          Element? maxValueIntegerElement,
-      PositiveInt? maxValuePositiveInt,
+          final Element? maxValueIntegerElement,
+      final PositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
-          Element? maxValuePositiveIntElement,
-      UnsignedInt? maxValueUnsignedInt,
+          final Element? maxValuePositiveIntElement,
+      final UnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
-          Element? maxValueUnsignedIntElement,
-      Quantity? maxValueQuantity,
-      Integer? maxLength,
+          final Element? maxValueUnsignedIntElement,
+      final Quantity? maxValueQuantity,
+      final Integer? maxLength,
       @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
-      List<Id>? condition,
+          final Element? maxLengthElement,
+      final List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
+          final List<Element?>? conditionElement,
+      final List<ElementDefinitionConstraint>? constraint,
+      final Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
-          Element? mustSupportElement,
-      Boolean? isModifier,
+          final Element? mustSupportElement,
+      final Boolean? isModifier,
       @JsonKey(name: '_isModifier')
-          Element? isModifierElement,
-      String? isModifierReason,
+          final Element? isModifierElement,
+      final String? isModifierReason,
       @JsonKey(name: '_isModifierReason')
-          Element? isModifierReasonElement,
-      Boolean? isSummary,
+          final Element? isModifierReasonElement,
+      final Boolean? isSummary,
       @JsonKey(name: '_isSummary')
-          Element? isSummaryElement,
-      ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
+          final Element? isSummaryElement,
+      final ElementDefinitionBinding? binding,
+      final List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
   _ElementDefinition._() : super._();
 
   factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinition.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [path] The path identifies the element and is expressed as a
+  /// "."-separated list of ancestor elements, beginning with the name of the
+  ///  resource or extension.
   String? get path;
   @override
+
+  /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
+
+  /// [representation] Codes that define how this element is represented in
+  ///  instances, when the deviation varies from the normal case.
   List<ElementDefinitionRepresentation>? get representation;
   @override
+
+  /// [representationElement] Extensions for representation
   @JsonKey(name: '_representation')
   List<Element?>? get representationElement;
   @override
+
+  /// [sliceName] The name of this element definition slice, when slicing is
+  /// working. The name must be a token with no dots or spaces. This is a unique
+  /// name referring to a specific set of constraints applied to this element,
+  ///  used to provide a name to different slices of the same element.
   String? get sliceName;
   @override
+
+  /// [sliceNameElement] Extensions for sliceName
   @JsonKey(name: '_sliceName')
   Element? get sliceNameElement;
   @override
+
+  /// [sliceIsConstraining] If true, indicates that this slice definition is
+  /// constraining a slice definition with the same name in an inherited
+  /// profile. If false, the slice is not overriding any slice in an inherited
+  /// profile. If missing, the slice might or might not be overriding a slice in
+  ///  an inherited profile, depending on the sliceName.
   Boolean? get sliceIsConstraining;
   @override
+
+  /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
   @JsonKey(name: '_sliceIsConstraining')
   Element? get sliceIsConstrainingElement;
   @override
+
+  /// [label] A single preferred label which is the text to display beside the
+  /// element indicating its meaning or to use to prompt for the element in a
+  ///  user display or form.
   String? get label;
   @override
+
+  /// [labelElement] Extensions for label
   @JsonKey(name: '_label')
   Element? get labelElement;
   @override
+
+  /// [code] A code that has the same meaning as the element in a particular
+  ///  terminology.
   List<Coding>? get code;
   @override
+
+  /// [slicing] Indicates that the element is sliced into a set of alternative
+  /// definitions (i.e. in a structure definition, there are multiple different
+  /// constraints on a single element in the base resource). Slicing can be used
+  /// in any resource that has cardinality ..* on the base resource, or any
+  /// resource with a choice of types. The set of slices is any elements that
+  /// come after this in the element sequence that have the same path, until a
+  ///  shorter path occurs (the shorter path terminates the set).
   ElementDefinitionSlicing? get slicing;
   @override
+
+  /// [short] A concise description of what this element means (e.g. for use in
+  ///  autogenerated summaries).
   String? get short;
   @override
+
+  /// [shortElement] Extensions for short
   @JsonKey(name: '_short')
   Element? get shortElement;
   @override
+
+  /// [definition] Provides a complete explanation of the meaning of the data
+  /// element for human readability.  For the case of elements derived from
+  /// existing elements (e.g. constraints), the definition SHALL be consistent
+  /// with the base definition, but convey the meaning of the element in the
+  /// particular context of use of the resource. (Note: The text you are reading
+  ///  is specified in ElementDefinition.definition).
   Markdown? get definition;
   @override
+
+  /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
   Element? get definitionElement;
   @override
+
+  /// [comment] Explanatory notes and implementation guidance about the data
+  /// element, including notes about how to use the data properly, exceptions to
+  /// proper use, etc. (Note: The text you are reading is specified in
+  ///  ElementDefinition.comment).
   Markdown? get comment;
   @override
+
+  /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
   Element? get commentElement;
   @override
+
+  /// [requirements] This element is for traceability of why the element was
+  /// created and why the constraints exist as they do. This may be used to
+  /// point to source materials or specifications that drove the structure of
+  ///  this element.
   Markdown? get requirements;
   @override
+
+  /// [requirementsElement] Extensions for requirements
   @JsonKey(name: '_requirements')
   Element? get requirementsElement;
   @override
+
+  /// [alias] Identifies additional names by which this element might also be
+  ///  known.
   List<String>? get alias;
   @override
+
+  /// [aliasElement] Extensions for alias
   @JsonKey(name: '_alias')
   List<Element?>? get aliasElement;
   @override
+
+  /// [min] The minimum number of times this element SHALL appear in the
+  ///  instance.
   UnsignedInt? get min;
   @override
+
+  /// [minElement] Extensions for min
   @JsonKey(name: '_min')
   Element? get minElement;
   @override
+
+  /// [max] The maximum number of times this element is permitted to appear in
+  ///  the instance.
   String? get max;
   @override
+
+  /// [maxElement] Extensions for max
   @JsonKey(name: '_max')
   Element? get maxElement;
   @override
+
+  /// [base] Information about the base definition of the element, provided to
+  /// make it unnecessary for tools to trace the deviation of the element
+  /// through the derived and related profiles. When the element definition is
+  /// not the original definition of an element - i.g. either in a constraint on
+  /// another type, or for elements from a super type in a snap shot - then the
+  /// information in provided in the element definition may be different to the
+  /// base definition. On the original definition of the element, it will be
+  ///  same.
   ElementDefinitionBase? get base;
   @override
+
+  /// [contentReference] Identifies an element defined elsewhere in the
+  /// definition whose content rules should be applied to the current element.
+  /// ContentReferences bring across all the rules that are in the
+  /// ElementDefinition for the element, including definitions, cardinality
+  ///  constraints, bindings, invariants etc.
   FhirUri? get contentReference;
   @override
+
+  /// [contentReferenceElement] Extensions for contentReference
   @JsonKey(name: '_contentReference')
   Element? get contentReferenceElement;
   @override
+
+  /// [type] The data type or resource that the value of this element is
+  ///  permitted to be.
   List<ElementDefinitionType>? get type;
   @override
+
+  /// [defaultValueBase64Binary] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Base64Binary? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement;
   @override
+
+  /// [defaultValueBoolean] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Boolean? get defaultValueBoolean;
   @override
+
+  /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
   @JsonKey(name: '_defaultValueBoolean')
   Element? get defaultValueBooleanElement;
   @override
+
+  /// [defaultValueCanonical] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Canonical? get defaultValueCanonical;
   @override
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement;
   @override
+
+  /// [defaultValueCode] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Code? get defaultValueCode;
   @override
+
+  /// [defaultValueCodeElement] Extensions for defaultValueCode
   @JsonKey(name: '_defaultValueCode')
   Element? get defaultValueCodeElement;
   @override
+
+  /// [defaultValueDate] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Date? get defaultValueDate;
   @override
+
+  /// [defaultValueDateElement] Extensions for defaultValueDate
   @JsonKey(name: '_defaultValueDate')
   Element? get defaultValueDateElement;
   @override
+
+  /// [defaultValueDateTime] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirDateTime? get defaultValueDateTime;
   @override
   @JsonKey(name: '_defaultValueDateTime')
   Element? get defaultValueDateTimeElement;
   @override
+
+  /// [defaultValueDecimal] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Decimal? get defaultValueDecimal;
   @override
+
+  /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
   @JsonKey(name: '_defaultValueDecimal')
   Element? get defaultValueDecimalElement;
   @override
+
+  /// [defaultValueId] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Id? get defaultValueId;
   @override
+
+  /// [defaultValueIdElement] Extensions for defaultValueId
   @JsonKey(name: '_defaultValueId')
   Element? get defaultValueIdElement;
   @override
+
+  /// [defaultValueInstant] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Instant? get defaultValueInstant;
   @override
+
+  /// [defaultValueInstantElement] Extensions for defaultValueInstant
   @JsonKey(name: '_defaultValueInstant')
   Element? get defaultValueInstantElement;
   @override
+
+  /// [defaultValueInteger] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Integer? get defaultValueInteger;
   @override
+
+  /// [defaultValueIntegerElement] Extensions for defaultValueInteger
   @JsonKey(name: '_defaultValueInteger')
   Element? get defaultValueIntegerElement;
   @override
+
+  /// [defaultValueMarkdown] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Markdown? get defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkdown')
   Element? get defaultValueMarkdownElement;
   @override
+
+  /// [defaultValueOid] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Oid? get defaultValueOid;
   @override
+
+  /// [defaultValueOidElement] Extensions for defaultValueOid
   @JsonKey(name: '_defaultValueOid')
   Element? get defaultValueOidElement;
   @override
+
+  /// [defaultValuePositiveInt] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   PositiveInt? get defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
   Element? get defaultValuePositiveIntElement;
   @override
+
+  /// [defaultValueString] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   String? get defaultValueString;
   @override
+
+  /// [defaultValueStringElement] Extensions for defaultValueString
   @JsonKey(name: '_defaultValueString')
   Element? get defaultValueStringElement;
   @override
+
+  /// [defaultValueTime] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Time? get defaultValueTime;
   @override
+
+  /// [defaultValueTimeElement] Extensions for defaultValueTime
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement;
   @override
+
+  /// [defaultValueUnsignedInt] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   UnsignedInt? get defaultValueUnsignedInt;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
   Element? get defaultValueUnsignedIntElement;
   @override
+
+  /// [defaultValueUri] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirUri? get defaultValueUri;
   @override
+
+  /// [defaultValueUriElement] Extensions for defaultValueUri
   @JsonKey(name: '_defaultValueUri')
   Element? get defaultValueUriElement;
   @override
+
+  /// [defaultValueUrl] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirUrl? get defaultValueUrl;
   @override
+
+  /// [defaultValueUrlElement] Extensions for defaultValueUrl
   @JsonKey(name: '_defaultValueUrl')
   Element? get defaultValueUrlElement;
   @override
+
+  /// [defaultValueUuid] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Uuid? get defaultValueUuid;
   @override
+
+  /// [defaultValueUuidElement] Extensions for defaultValueUuid
   @JsonKey(name: '_defaultValueUuid')
   Element? get defaultValueUuidElement;
   @override
+
+  /// [defaultValueAddress] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Address? get defaultValueAddress;
   @override
+
+  /// [defaultValueAge] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Age? get defaultValueAge;
   @override
+
+  /// [defaultValueAnnotation] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Annotation? get defaultValueAnnotation;
   @override
+
+  /// [defaultValueAttachment] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Attachment? get defaultValueAttachment;
   @override
+
+  /// [defaultValueCodeableConcept] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   CodeableConcept? get defaultValueCodeableConcept;
   @override
+  CodeableReference? get defaultValueCodeableReference;
+  @override
+
+  /// [defaultValueCoding] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Coding? get defaultValueCoding;
   @override
+
+  /// [defaultValueContactPoint] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ContactPoint? get defaultValueContactPoint;
   @override
+
+  /// [defaultValueCount] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Count? get defaultValueCount;
   @override
+
+  /// [defaultValueDistance] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Distance? get defaultValueDistance;
   @override
+
+  /// [defaultValueDuration] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   FhirDuration? get defaultValueDuration;
   @override
+
+  /// [defaultValueHumanName] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   HumanName? get defaultValueHumanName;
   @override
+
+  /// [defaultValueIdentifier] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Identifier? get defaultValueIdentifier;
   @override
+
+  /// [defaultValueMoney] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Money? get defaultValueMoney;
   @override
+
+  /// [defaultValuePeriod] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Period? get defaultValuePeriod;
   @override
+
+  /// [defaultValueQuantity] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Quantity? get defaultValueQuantity;
   @override
+
+  /// [defaultValueRange] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Range? get defaultValueRange;
   @override
+
+  /// [defaultValueRatio] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Ratio? get defaultValueRatio;
   @override
+  RatioRange? get defaultValueRatioRange;
+  @override
+
+  /// [defaultValueReference] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Reference? get defaultValueReference;
   @override
+
+  /// [defaultValueSampledData] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   SampledData? get defaultValueSampledData;
   @override
+
+  /// [defaultValueSignature] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Signature? get defaultValueSignature;
   @override
+
+  /// [defaultValueTiming] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Timing? get defaultValueTiming;
   @override
+
+  /// [defaultValueContactDetail] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ContactDetail? get defaultValueContactDetail;
   @override
+
+  /// [defaultValueContributor] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Contributor? get defaultValueContributor;
   @override
+
+  /// [defaultValueDataRequirement] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   DataRequirement? get defaultValueDataRequirement;
   @override
+
+  /// [defaultValueExpression] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   Expression? get defaultValueExpression;
   @override
+
+  /// [defaultValueParameterDefinition] The value that should be used if there
+  /// is no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ParameterDefinition? get defaultValueParameterDefinition;
   @override
+
+  /// [defaultValueRelatedArtifact] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   RelatedArtifact? get defaultValueRelatedArtifact;
   @override
+
+  /// [defaultValueTriggerDefinition] The value that should be used if there is
+  /// no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   TriggerDefinition? get defaultValueTriggerDefinition;
   @override
+
+  /// [defaultValueUsageContext] The value that should be used if there is no
+  /// value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   UsageContext? get defaultValueUsageContext;
   @override
+
+  /// [defaultValueDosage] The value that should be used if there is no value
+  /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
+  ///  false').
   Dosage? get defaultValueDosage;
   @override
-  Meta? get defaultValueMeta;
-  @override
+
+  /// [meaningWhenMissing] The Implicit meaning that is to be understood when
+  /// this element is missing (e.g. 'when this element is missing, the period is
+  ///  ongoing').
   Markdown? get meaningWhenMissing;
   @override
+
+  /// [meaningWhenMissingElement] Extensions for meaningWhenMissing
   @JsonKey(name: '_meaningWhenMissing')
   Element? get meaningWhenMissingElement;
   @override
+
+  /// [orderMeaning] If present, indicates that the order of the repeating
+  /// element has meaning and describes what that meaning is.  If absent, it
+  ///  means that the order of the element has no meaning.
   String? get orderMeaning;
   @override
+
+  /// [orderMeaningElement] Extensions for orderMeaning
   @JsonKey(name: '_orderMeaning')
   Element? get orderMeaningElement;
   @override
+
+  /// [fixedBase64Binary] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   Base64Binary? get fixedBase64Binary;
   @override
+
+  /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
   @JsonKey(name: '_fixedBase64Binary')
   Element? get fixedBase64BinaryElement;
   @override
+
+  /// [fixedBoolean] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Boolean? get fixedBoolean;
   @override
+
+  /// [fixedBooleanElement] Extensions for fixedBoolean
   @JsonKey(name: '_fixedBoolean')
   Element? get fixedBooleanElement;
   @override
+
+  /// [fixedCanonical] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Canonical? get fixedCanonical;
   @override
+
+  /// [fixedCanonicalElement] Extensions for fixedCanonical
   @JsonKey(name: '_fixedCanonical')
   Element? get fixedCanonicalElement;
   @override
+
+  /// [fixedCode] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Code? get fixedCode;
   @override
+
+  /// [fixedCodeElement] Extensions for fixedCode
   @JsonKey(name: '_fixedCode')
   Element? get fixedCodeElement;
   @override
+
+  /// [fixedDate] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Date? get fixedDate;
   @override
+
+  /// [fixedDateElement] Extensions for fixedDate
   @JsonKey(name: '_fixedDate')
   Element? get fixedDateElement;
   @override
+
+  /// [fixedDateTime] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirDateTime? get fixedDateTime;
   @override
+
+  /// [fixedDateTimeElement] Extensions for fixedDateTime
   @JsonKey(name: '_fixedDateTime')
   Element? get fixedDateTimeElement;
   @override
+
+  /// [fixedDecimal] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Decimal? get fixedDecimal;
   @override
+
+  /// [fixedDecimalElement] Extensions for fixedDecimal
   @JsonKey(name: '_fixedDecimal')
   Element? get fixedDecimalElement;
   @override
+
+  /// [fixedId] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Id? get fixedId;
   @override
+
+  /// [fixedIdElement] Extensions for fixedId
   @JsonKey(name: '_fixedId')
   Element? get fixedIdElement;
   @override
+
+  /// [fixedInstant] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Instant? get fixedInstant;
   @override
+
+  /// [fixedInstantElement] Extensions for fixedInstant
   @JsonKey(name: '_fixedInstant')
   Element? get fixedInstantElement;
   @override
+
+  /// [fixedInteger] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Integer? get fixedInteger;
   @override
+
+  /// [fixedIntegerElement] Extensions for fixedInteger
   @JsonKey(name: '_fixedInteger')
   Element? get fixedIntegerElement;
   @override
+
+  /// [fixedMarkdown] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Markdown? get fixedMarkdown;
   @override
+
+  /// [fixedMarkdownElement] Extensions for fixedMarkdown
   @JsonKey(name: '_fixedMarkdown')
   Element? get fixedMarkdownElement;
   @override
+
+  /// [fixedOid] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Oid? get fixedOid;
   @override
+
+  /// [fixedOidElement] Extensions for fixedOid
   @JsonKey(name: '_fixedOid')
   Element? get fixedOidElement;
   @override
+
+  /// [fixedPositiveInt] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   PositiveInt? get fixedPositiveInt;
   @override
+
+  /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
   @JsonKey(name: '_fixedPositiveInt')
   Element? get fixedPositiveIntElement;
   @override
+
+  /// [fixedString] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   String? get fixedString;
   @override
+
+  /// [fixedStringElement] Extensions for fixedString
   @JsonKey(name: '_fixedString')
   Element? get fixedStringElement;
   @override
+
+  /// [fixedTime] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Time? get fixedTime;
   @override
+
+  /// [fixedTimeElement] Extensions for fixedTime
   @JsonKey(name: '_fixedTime')
   Element? get fixedTimeElement;
   @override
+
+  /// [fixedUnsignedInt] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   UnsignedInt? get fixedUnsignedInt;
   @override
+
+  /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
   @JsonKey(name: '_fixedUnsignedInt')
   Element? get fixedUnsignedIntElement;
   @override
+
+  /// [fixedUri] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirUri? get fixedUri;
   @override
+
+  /// [fixedUriElement] Extensions for fixedUri
   @JsonKey(name: '_fixedUri')
   Element? get fixedUriElement;
   @override
+
+  /// [fixedUrl] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirUrl? get fixedUrl;
   @override
+
+  /// [fixedUrlElement] Extensions for fixedUrl
   @JsonKey(name: '_fixedUrl')
   Element? get fixedUrlElement;
   @override
+
+  /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Uuid? get fixedUuid;
   @override
+
+  /// [fixedUuidElement] Extensions for fixedUuid
   @JsonKey(name: '_fixedUuid')
   Element? get fixedUuidElement;
   @override
+
+  /// [fixedAddress] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Address? get fixedAddress;
   @override
+
+  /// [fixedAge] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Age? get fixedAge;
   @override
+
+  /// [fixedAnnotation] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Annotation? get fixedAnnotation;
   @override
+
+  /// [fixedAttachment] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Attachment? get fixedAttachment;
   @override
+
+  /// [fixedCodeableConcept] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   CodeableConcept? get fixedCodeableConcept;
   @override
+  CodeableReference? get fixedCodeableReference;
+  @override
+
+  /// [fixedCoding] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Coding? get fixedCoding;
   @override
+
+  /// [fixedContactPoint] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ContactPoint? get fixedContactPoint;
   @override
+
+  /// [fixedCount] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Count? get fixedCount;
   @override
+
+  /// [fixedDistance] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Distance? get fixedDistance;
   @override
+
+  /// [fixedDuration] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   FhirDuration? get fixedDuration;
   @override
+
+  /// [fixedHumanName] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   HumanName? get fixedHumanName;
   @override
+
+  /// [fixedIdentifier] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Identifier? get fixedIdentifier;
   @override
+
+  /// [fixedMoney] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Money? get fixedMoney;
   @override
+
+  /// [fixedPeriod] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Period? get fixedPeriod;
   @override
+
+  /// [fixedQuantity] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Quantity? get fixedQuantity;
   @override
+
+  /// [fixedRange] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Range? get fixedRange;
   @override
+
+  /// [fixedRatio] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Ratio? get fixedRatio;
   @override
+  RatioRange? get fixedRatioRange;
+  @override
+
+  /// [fixedReference] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Reference? get fixedReference;
   @override
+
+  /// [fixedSampledData] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   SampledData? get fixedSampledData;
   @override
+
+  /// [fixedSignature] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Signature? get fixedSignature;
   @override
+
+  /// [fixedTiming] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Timing? get fixedTiming;
   @override
+
+  /// [fixedContactDetail] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ContactDetail? get fixedContactDetail;
   @override
+
+  /// [fixedContributor] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Contributor? get fixedContributor;
   @override
+
+  /// [fixedDataRequirement] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   DataRequirement? get fixedDataRequirement;
   @override
+
+  /// [fixedExpression] Specifies a value that SHALL be exactly the value  for
+  /// this element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Expression? get fixedExpression;
   @override
+
+  /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
+  /// value  for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ParameterDefinition? get fixedParameterDefinition;
   @override
+
+  /// [fixedRelatedArtifact] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   RelatedArtifact? get fixedRelatedArtifact;
   @override
+
+  /// [fixedTriggerDefinition] Specifies a value that SHALL be exactly the
+  /// value  for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   TriggerDefinition? get fixedTriggerDefinition;
   @override
+
+  /// [fixedUsageContext] Specifies a value that SHALL be exactly the value
+  /// for this element in the instance. For purposes of comparison,
+  /// non-significant whitespace is ignored, and all values must be an exact
+  /// match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   UsageContext? get fixedUsageContext;
   @override
+
+  /// [fixedDosage] Specifies a value that SHALL be exactly the value  for this
+  /// element in the instance. For purposes of comparison, non-significant
+  /// whitespace is ignored, and all values must be an exact match (case and
+  ///  accent sensitive). Missing elements/attributes must also be missing.
   Dosage? get fixedDosage;
   @override
-  Meta? get fixedMeta;
-  @override
+
+  /// [patternBase64Binary] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Base64Binary? get patternBase64Binary;
   @override
+
+  /// [patternBase64BinaryElement] Extensions for patternBase64Binary
   @JsonKey(name: '_patternBase64Binary')
   Element? get patternBase64BinaryElement;
   @override
+
+  /// [patternBoolean] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Boolean? get patternBoolean;
   @override
+
+  /// [patternBooleanElement] Extensions for patternBoolean
   @JsonKey(name: '_patternBoolean')
   Element? get patternBooleanElement;
   @override
+
+  /// [patternCanonical] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Canonical? get patternCanonical;
   @override
+
+  /// [patternCanonicalElement] Extensions for patternCanonical
   @JsonKey(name: '_patternCanonical')
   Element? get patternCanonicalElement;
   @override
+
+  /// [patternCode] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Code? get patternCode;
   @override
+
+  /// [patternCodeElement] Extensions for patternCode
   @JsonKey(name: '_patternCode')
   Element? get patternCodeElement;
   @override
+
+  /// [patternDate] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Date? get patternDate;
   @override
+
+  /// [patternDateElement] Extensions for patternDate
   @JsonKey(name: '_patternDate')
   Element? get patternDateElement;
   @override
+
+  /// [patternDateTime] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirDateTime? get patternDateTime;
   @override
+
+  /// [patternDateTimeElement] Extensions for patternDateTime
   @JsonKey(name: '_patternDateTime')
   Element? get patternDateTimeElement;
   @override
+
+  /// [patternDecimal] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Decimal? get patternDecimal;
   @override
+
+  /// [patternDecimalElement] Extensions for patternDecimal
   @JsonKey(name: '_patternDecimal')
   Element? get patternDecimalElement;
   @override
+
+  /// [patternId] Specifies a value that the value in the instance SHALL follow
+  /// - that is, any value in the pattern must be found in the instance. Other
+  /// additional values may be found too. This is effectively constraint by
+  ///  example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Id? get patternId;
   @override
+
+  /// [patternIdElement] Extensions for patternId
   @JsonKey(name: '_patternId')
   Element? get patternIdElement;
   @override
+
+  /// [patternInstant] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Instant? get patternInstant;
   @override
+
+  /// [patternInstantElement] Extensions for patternInstant
   @JsonKey(name: '_patternInstant')
   Element? get patternInstantElement;
   @override
+
+  /// [patternInteger] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Integer? get patternInteger;
   @override
+
+  /// [patternIntegerElement] Extensions for patternInteger
   @JsonKey(name: '_patternInteger')
   Element? get patternIntegerElement;
   @override
+
+  /// [patternMarkdown] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Markdown? get patternMarkdown;
   @override
+
+  /// [patternMarkdownElement] Extensions for patternMarkdown
   @JsonKey(name: '_patternMarkdown')
   Element? get patternMarkdownElement;
   @override
+
+  /// [patternOid] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Oid? get patternOid;
   @override
+
+  /// [patternOidElement] Extensions for patternOid
   @JsonKey(name: '_patternOid')
   Element? get patternOidElement;
   @override
+
+  /// [patternPositiveInt] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   PositiveInt? get patternPositiveInt;
   @override
+
+  /// [patternPositiveIntElement] Extensions for patternPositiveInt
   @JsonKey(name: '_patternPositiveInt')
   Element? get patternPositiveIntElement;
   @override
+
+  /// [patternString] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   String? get patternString;
   @override
+
+  /// [patternStringElement] Extensions for patternString
   @JsonKey(name: '_patternString')
   Element? get patternStringElement;
   @override
+
+  /// [patternTime] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Time? get patternTime;
   @override
+
+  /// [patternTimeElement] Extensions for patternTime
   @JsonKey(name: '_patternTime')
   Element? get patternTimeElement;
   @override
+
+  /// [patternUnsignedInt] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   UnsignedInt? get patternUnsignedInt;
   @override
+
+  /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
   @JsonKey(name: '_patternUnsignedInt')
   Element? get patternUnsignedIntElement;
   @override
+
+  /// [patternUri] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirUri? get patternUri;
   @override
+
+  /// [patternUriElement] Extensions for patternUri
   @JsonKey(name: '_patternUri')
   Element? get patternUriElement;
   @override
+
+  /// [patternUrl] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirUrl? get patternUrl;
   @override
+
+  /// [patternUrlElement] Extensions for patternUrl
   @JsonKey(name: '_patternUrl')
   Element? get patternUrlElement;
   @override
+
+  /// [patternUuid] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Uuid? get patternUuid;
   @override
+
+  /// [patternUuidElement] Extensions for patternUuid
   @JsonKey(name: '_patternUuid')
   Element? get patternUuidElement;
   @override
+
+  /// [patternAddress] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Address? get patternAddress;
   @override
+
+  /// [patternAge] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Age? get patternAge;
   @override
+
+  /// [patternAnnotation] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Annotation? get patternAnnotation;
   @override
+
+  /// [patternAttachment] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Attachment? get patternAttachment;
   @override
+
+  /// [patternCodeableConcept] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   CodeableConcept? get patternCodeableConcept;
   @override
+  CodeableReference? get patternCodeableReference;
+  @override
+
+  /// [patternCoding] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Coding? get patternCoding;
   @override
+
+  /// [patternContactPoint] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   ContactPoint? get patternContactPoint;
   @override
+
+  /// [patternCount] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Count? get patternCount;
   @override
+
+  /// [patternDistance] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Distance? get patternDistance;
   @override
+
+  /// [patternDuration] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   FhirDuration? get patternDuration;
   @override
+
+  /// [patternHumanName] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   HumanName? get patternHumanName;
   @override
+
+  /// [patternIdentifier] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Identifier? get patternIdentifier;
   @override
+
+  /// [patternMoney] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Money? get patternMoney;
   @override
+
+  /// [patternPeriod] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Period? get patternPeriod;
   @override
+
+  /// [patternQuantity] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Quantity? get patternQuantity;
   @override
+
+  /// [patternRange] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Range? get patternRange;
   @override
+
+  /// [patternRatio] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Ratio? get patternRatio;
   @override
+  RatioRange? get patternRatioRange;
+  @override
+
+  /// [patternReference] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Reference? get patternReference;
   @override
+
+  /// [patternSampledData] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   SampledData? get patternSampledData;
   @override
+
+  /// [patternSignature] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Signature? get patternSignature;
   @override
+
+  /// [patternTiming] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Timing? get patternTiming;
   @override
+
+  /// [patternContactDetail] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   ContactDetail? get patternContactDetail;
   @override
+
+  /// [patternContributor] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Contributor? get patternContributor;
   @override
+
+  /// [patternDataRequirement] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   DataRequirement? get patternDataRequirement;
   @override
+
+  /// [patternExpression] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Expression? get patternExpression;
   @override
+
+  /// [patternParameterDefinition] Specifies a value that the value in the
+  /// instance SHALL follow - that is, any value in the pattern must be found in
+  /// the instance. Other additional values may be found too. This is
+  ///  effectively constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   ParameterDefinition? get patternParameterDefinition;
   @override
+
+  /// [patternRelatedArtifact] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   RelatedArtifact? get patternRelatedArtifact;
   @override
+
+  /// [patternTriggerDefinition] Specifies a value that the value in the
+  /// instance SHALL follow - that is, any value in the pattern must be found in
+  /// the instance. Other additional values may be found too. This is
+  ///  effectively constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   TriggerDefinition? get patternTriggerDefinition;
   @override
+
+  /// [patternUsageContext] Specifies a value that the value in the instance
+  /// SHALL follow - that is, any value in the pattern must be found in the
+  /// instance. Other additional values may be found too. This is effectively
+  ///  constraint by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   UsageContext? get patternUsageContext;
   @override
+
+  /// [patternDosage] Specifies a value that the value in the instance SHALL
+  /// follow - that is, any value in the pattern must be found in the instance.
+  /// Other additional values may be found too. This is effectively constraint
+  ///  by example.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain an array, it means that each element
+  /// provided in the pattern[x] array must (recursively) match at least one
+  ///  element from the instance array.
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  /// property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
+  /// 1. If primitive: it must match exactly the pattern value
+  /// 2. If a complex object: it must match (recursively) the pattern value
+  /// 3. If an array: it must match (recursively) the pattern value.
   Dosage? get patternDosage;
   @override
-  Meta? get patternMeta;
-  @override
+
+  /// [example] A sample value for this element demonstrating the type of
+  ///  information that would typically be found in the element.
   List<ElementDefinitionExample>? get example;
   @override
+
+  /// [minValueDate] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Date? get minValueDate;
   @override
+
+  /// [minValueDateElement] Extensions for minValueDate
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement;
   @override
+
+  /// [minValueDateTime] The minimum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   FhirDateTime? get minValueDateTime;
   @override
+
+  /// [minValueDateTimeElement] Extensions for minValueDateTime
   @JsonKey(name: '_minValueDateTime')
   Element? get minValueDateTimeElement;
   @override
+
+  /// [minValueInstant] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Instant? get minValueInstant;
   @override
+
+  /// [minValueInstantElement] Extensions for minValueInstant
   @JsonKey(name: '_minValueInstant')
   Element? get minValueInstantElement;
   @override
+
+  /// [minValueTime] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Time? get minValueTime;
   @override
+
+  /// [minValueTimeElement] Extensions for minValueTime
   @JsonKey(name: '_minValueTime')
   Element? get minValueTimeElement;
   @override
+
+  /// [minValueDecimal] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Decimal? get minValueDecimal;
   @override
+
+  /// [minValueDecimalElement] Extensions for minValueDecimal
   @JsonKey(name: '_minValueDecimal')
   Element? get minValueDecimalElement;
   @override
+
+  /// [minValueInteger] The minimum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Integer? get minValueInteger;
   @override
+
+  /// [minValueIntegerElement] Extensions for minValueInteger
   @JsonKey(name: '_minValueInteger')
   Element? get minValueIntegerElement;
   @override
+
+  /// [minValuePositiveInt] The minimum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   PositiveInt? get minValuePositiveInt;
   @override
+
+  /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
   @JsonKey(name: '_minValuePositiveInt')
   Element? get minValuePositiveIntElement;
   @override
+
+  /// [minValueUnsignedInt] The minimum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   UnsignedInt? get minValueUnsignedInt;
   @override
+
+  /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
   @JsonKey(name: '_minValueUnsignedInt')
   Element? get minValueUnsignedIntElement;
   @override
+
+  /// [minValueQuantity] The minimum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Quantity? get minValueQuantity;
   @override
+
+  /// [maxValueDate] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Date? get maxValueDate;
   @override
+
+  /// [maxValueDateElement] Extensions for maxValueDate
   @JsonKey(name: '_maxValueDate')
   Element? get maxValueDateElement;
   @override
+
+  /// [maxValueDateTime] The maximum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   FhirDateTime? get maxValueDateTime;
   @override
+
+  /// [maxValueDateTimeElement] Extensions for maxValueDateTime
   @JsonKey(name: '_maxValueDateTime')
   Element? get maxValueDateTimeElement;
   @override
+
+  /// [maxValueInstant] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Instant? get maxValueInstant;
   @override
+
+  /// [maxValueInstantElement] Extensions for maxValueInstant
   @JsonKey(name: '_maxValueInstant')
   Element? get maxValueInstantElement;
   @override
+
+  /// [maxValueTime] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Time? get maxValueTime;
   @override
+
+  /// [maxValueTimeElement] Extensions for maxValueTime
   @JsonKey(name: '_maxValueTime')
   Element? get maxValueTimeElement;
   @override
+
+  /// [maxValueDecimal] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Decimal? get maxValueDecimal;
   @override
+
+  /// [maxValueDecimalElement] Extensions for maxValueDecimal
   @JsonKey(name: '_maxValueDecimal')
   Element? get maxValueDecimalElement;
   @override
+
+  /// [maxValueInteger] The maximum allowed value for the element. The value is
+  /// inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Integer? get maxValueInteger;
   @override
+
+  /// [maxValueIntegerElement] Extensions for maxValueInteger
   @JsonKey(name: '_maxValueInteger')
   Element? get maxValueIntegerElement;
   @override
+
+  /// [maxValuePositiveInt] The maximum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   PositiveInt? get maxValuePositiveInt;
   @override
+
+  /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
   @JsonKey(name: '_maxValuePositiveInt')
   Element? get maxValuePositiveIntElement;
   @override
+
+  /// [maxValueUnsignedInt] The maximum allowed value for the element. The
+  /// value is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   UnsignedInt? get maxValueUnsignedInt;
   @override
+
+  /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
   @JsonKey(name: '_maxValueUnsignedInt')
   Element? get maxValueUnsignedIntElement;
   @override
+
+  /// [maxValueQuantity] The maximum allowed value for the element. The value
+  /// is inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   Quantity? get maxValueQuantity;
   @override
+
+  /// [maxLength] Indicates the maximum length in characters that is permitted
+  /// to be present in conformant instances and which is expected to be
+  ///  supported by conformant consumers that support the element.
   Integer? get maxLength;
   @override
+
+  /// [maxLengthElement] Extensions for maxLength
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement;
   @override
+
+  /// [condition] A reference to an invariant that may make additional
+  ///  statements about the cardinality or value in the instance.
   List<Id>? get condition;
   @override
+
+  /// [conditionElement] Extensions for condition
   @JsonKey(name: '_condition')
   List<Element?>? get conditionElement;
   @override
+
+  /// [constraint] Formal constraints such as co-occurrence and other
+  /// constraints that can be computationally evaluated within the context of
+  ///  the instance.
   List<ElementDefinitionConstraint>? get constraint;
   @override
+
+  /// [mustSupport] If true, implementations that produce or consume resources
+  /// SHALL provide "support" for the element in some meaningful way.  If false,
+  /// the element may be ignored and not supported. If false, whether to
+  /// populate or use the data element in any way is at the discretion of the
+  ///  implementation.
   Boolean? get mustSupport;
   @override
+
+  /// [mustSupportElement] Extensions for mustSupport
   @JsonKey(name: '_mustSupport')
   Element? get mustSupportElement;
   @override
+
+  /// [isModifier] If true, the value of this element affects the
+  /// interpretation of the element or resource that contains it, and the value
+  /// of the element cannot be ignored. Typically, this is used for status,
+  /// negation and qualification codes. The effect of this is that the element
+  /// cannot be ignored by systems: they SHALL either recognize the element and
+  /// process it, and/or a pre-determination has been made that it is not
+  ///  relevant to their particular system.
   Boolean? get isModifier;
   @override
+
+  /// [isModifierElement] Extensions for isModifier
   @JsonKey(name: '_isModifier')
   Element? get isModifierElement;
   @override
+
+  /// [isModifierReason] Explains how that element affects the interpretation
+  ///  of the resource or element that contains it.
   String? get isModifierReason;
   @override
+
+  /// [isModifierReasonElement] Extensions for isModifierReason
   @JsonKey(name: '_isModifierReason')
   Element? get isModifierReasonElement;
   @override
+
+  /// [isSummary] Whether the element should be included if a client requests a
+  ///  search with the parameter _summary=true.
   Boolean? get isSummary;
   @override
+
+  /// [isSummaryElement] Extensions for isSummary
   @JsonKey(name: '_isSummary')
   Element? get isSummaryElement;
   @override
+
+  /// [binding] Binds to a value set if this element is coded (code, Coding,
+  ///  CodeableConcept, Quantity), or the data types (string, uri).
   ElementDefinitionBinding? get binding;
   @override
+
+  /// [mapping] Identifies a concept from an external specification that
+  ///  roughly corresponds to this element.
   List<ElementDefinitionMapping>? get mapping;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith =>
+  _$$_ElementDefinitionCopyWith<_$_ElementDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -12807,65 +18185,67 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionSlicingTearOff {
-  const _$ElementDefinitionSlicingTearOff();
-
-  _ElementDefinitionSlicing call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<ElementDefinitionDiscriminator>? discriminator,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Boolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement}) {
-    return _ElementDefinitionSlicing(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      discriminator: discriminator,
-      description: description,
-      descriptionElement: descriptionElement,
-      ordered: ordered,
-      orderedElement: orderedElement,
-      rules: rules,
-      rulesElement: rulesElement,
-    );
-  }
-
-  ElementDefinitionSlicing fromJson(Map<String, Object?> json) {
-    return ElementDefinitionSlicing.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionSlicing = _$ElementDefinitionSlicingTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionSlicing {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [discriminator] Designates which child elements are used to discriminate
+  /// between the slices when processing an instance. If one or more
+  /// discriminators are provided, the value of the child elements in the
+  /// instance data SHALL completely distinguish which slice the element in the
+  /// resource matches based on the allowed values for those elements in each of
+  ///  the slices.
   List<ElementDefinitionDiscriminator>? get discriminator =>
       throw _privateConstructorUsedError;
+
+  /// [description] A human-readable text description of how the slicing works.
+  /// If there is no discriminator, this is required to be present to provide
+  /// whatever information is possible about how the slices can be
+  ///  differentiated.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [ordered] If the matching elements have to occur in the same order as
+  ///  defined in the profile.
   Boolean? get ordered => throw _privateConstructorUsedError;
+
+  /// [orderedElement] Extensions for ordered
   @JsonKey(name: '_ordered')
   Element? get orderedElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
   ElementDefinitionSlicingRules? get rules =>
       throw _privateConstructorUsedError;
+
+  /// [rulesElement] Extensions for rules
   @JsonKey(name: '_rules')
   Element? get rulesElement => throw _privateConstructorUsedError;
 
@@ -13003,11 +18383,12 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionSlicingCopyWith<$Res>
+abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
     implements $ElementDefinitionSlicingCopyWith<$Res> {
-  factory _$ElementDefinitionSlicingCopyWith(_ElementDefinitionSlicing value,
-          $Res Function(_ElementDefinitionSlicing) then) =
-      __$ElementDefinitionSlicingCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionSlicingCopyWith(
+          _$_ElementDefinitionSlicing value,
+          $Res Function(_$_ElementDefinitionSlicing) then) =
+      __$$_ElementDefinitionSlicingCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -13035,16 +18416,16 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionSlicingCopyWithImpl<$Res>
+class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
     extends _$ElementDefinitionSlicingCopyWithImpl<$Res>
-    implements _$ElementDefinitionSlicingCopyWith<$Res> {
-  __$ElementDefinitionSlicingCopyWithImpl(_ElementDefinitionSlicing _value,
-      $Res Function(_ElementDefinitionSlicing) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionSlicing));
+    implements _$$_ElementDefinitionSlicingCopyWith<$Res> {
+  __$$_ElementDefinitionSlicingCopyWithImpl(_$_ElementDefinitionSlicing _value,
+      $Res Function(_$_ElementDefinitionSlicing) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionSlicing));
 
   @override
-  _ElementDefinitionSlicing get _value =>
-      super._value as _ElementDefinitionSlicing;
+  _$_ElementDefinitionSlicing get _value =>
+      super._value as _$_ElementDefinitionSlicing;
 
   @override
   $Res call({
@@ -13059,21 +18440,21 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
     Object? rules = freezed,
     Object? rulesElement = freezed,
   }) {
-    return _then(_ElementDefinitionSlicing(
+    return _then(_$_ElementDefinitionSlicing(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       discriminator: discriminator == freezed
-          ? _value.discriminator
+          ? _value._discriminator
           : discriminator // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionDiscriminator>?,
       description: description == freezed
@@ -13110,9 +18491,9 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   _$_ElementDefinitionSlicing(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.discriminator,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<ElementDefinitionDiscriminator>? discriminator,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
@@ -13123,33 +18504,126 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
           this.rules,
       @JsonKey(name: '_rules')
           this.rulesElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _discriminator = discriminator,
+        super._();
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionSlicingFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [discriminator] Designates which child elements are used to discriminate
+  /// between the slices when processing an instance. If one or more
+  /// discriminators are provided, the value of the child elements in the
+  /// instance data SHALL completely distinguish which slice the element in the
+  /// resource matches based on the allowed values for those elements in each of
+  ///  the slices.
+  final List<ElementDefinitionDiscriminator>? _discriminator;
+
+  /// [discriminator] Designates which child elements are used to discriminate
+  /// between the slices when processing an instance. If one or more
+  /// discriminators are provided, the value of the child elements in the
+  /// instance data SHALL completely distinguish which slice the element in the
+  /// resource matches based on the allowed values for those elements in each of
+  ///  the slices.
   @override
-  final List<ElementDefinitionDiscriminator>? discriminator;
+  List<ElementDefinitionDiscriminator>? get discriminator {
+    final value = _discriminator;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] A human-readable text description of how the slicing works.
+  /// If there is no discriminator, this is required to be present to provide
+  /// whatever information is possible about how the slices can be
+  ///  differentiated.
   @override
   final String? description;
+
+  /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [ordered] If the matching elements have to occur in the same order as
+  ///  defined in the profile.
   @override
   final Boolean? ordered;
+
+  /// [orderedElement] Extensions for ordered
   @override
   @JsonKey(name: '_ordered')
   final Element? orderedElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
   final ElementDefinitionSlicingRules? rules;
+
+  /// [rulesElement] Extensions for rules
   @override
   @JsonKey(name: '_rules')
   final Element? rulesElement;
@@ -13163,14 +18637,14 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionSlicing &&
+            other is _$_ElementDefinitionSlicing &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.discriminator, discriminator) &&
+                .equals(other._discriminator, _discriminator) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
@@ -13183,13 +18657,14 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
                 .equals(other.rulesElement, rulesElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(discriminator),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_discriminator),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
       const DeepCollectionEquality().hash(ordered),
@@ -13199,67 +18674,114 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith =>
-      __$ElementDefinitionSlicingCopyWithImpl<_ElementDefinitionSlicing>(
-          this, _$identity);
+  _$$_ElementDefinitionSlicingCopyWith<_$_ElementDefinitionSlicing>
+      get copyWith => __$$_ElementDefinitionSlicingCopyWithImpl<
+          _$_ElementDefinitionSlicing>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionSlicingToJson(this);
+    return _$$_ElementDefinitionSlicingToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   factory _ElementDefinitionSlicing(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<ElementDefinitionDiscriminator>? discriminator,
-      String? description,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<ElementDefinitionDiscriminator>? discriminator,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Boolean? ordered,
+          final Element? descriptionElement,
+      final Boolean? ordered,
       @JsonKey(name: '_ordered')
-          Element? orderedElement,
+          final Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          ElementDefinitionSlicingRules? rules,
+          final ElementDefinitionSlicingRules? rules,
       @JsonKey(name: '_rules')
-          Element? rulesElement}) = _$_ElementDefinitionSlicing;
+          final Element? rulesElement}) = _$_ElementDefinitionSlicing;
   _ElementDefinitionSlicing._() : super._();
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [discriminator] Designates which child elements are used to discriminate
+  /// between the slices when processing an instance. If one or more
+  /// discriminators are provided, the value of the child elements in the
+  /// instance data SHALL completely distinguish which slice the element in the
+  /// resource matches based on the allowed values for those elements in each of
+  ///  the slices.
   List<ElementDefinitionDiscriminator>? get discriminator;
   @override
+
+  /// [description] A human-readable text description of how the slicing works.
+  /// If there is no discriminator, this is required to be present to provide
+  /// whatever information is possible about how the slices can be
+  ///  differentiated.
   String? get description;
   @override
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [ordered] If the matching elements have to occur in the same order as
+  ///  defined in the profile.
   Boolean? get ordered;
   @override
+
+  /// [orderedElement] Extensions for ordered
   @JsonKey(name: '_ordered')
   Element? get orderedElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
   ElementDefinitionSlicingRules? get rules;
   @override
+
+  /// [rulesElement] Extensions for rules
   @JsonKey(name: '_rules')
   Element? get rulesElement;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElementDefinitionSlicingCopyWith<_$_ElementDefinitionSlicing>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
@@ -13268,54 +18790,49 @@ ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionDiscriminatorTearOff {
-  const _$ElementDefinitionDiscriminatorTearOff();
-
-  _ElementDefinitionDiscriminator call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement}) {
-    return _ElementDefinitionDiscriminator(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      typeElement: typeElement,
-      path: path,
-      pathElement: pathElement,
-    );
-  }
-
-  ElementDefinitionDiscriminator fromJson(Map<String, Object?> json) {
-    return ElementDefinitionDiscriminator.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionDiscriminator =
-    _$ElementDefinitionDiscriminatorTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionDiscriminator {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
   ElementDefinitionDiscriminatorType? get type =>
       throw _privateConstructorUsedError;
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+
+  /// [path] A FHIRPath expression, using [the simple subset of
+  /// FHIRPath](fhirpath.html#simple), that is used to identify the element on
+  ///  which discrimination is based.
   String? get path => throw _privateConstructorUsedError;
+
+  /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
 
@@ -13423,12 +18940,12 @@ class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionDiscriminatorCopyWith<$Res>
+abstract class _$$_ElementDefinitionDiscriminatorCopyWith<$Res>
     implements $ElementDefinitionDiscriminatorCopyWith<$Res> {
-  factory _$ElementDefinitionDiscriminatorCopyWith(
-          _ElementDefinitionDiscriminator value,
-          $Res Function(_ElementDefinitionDiscriminator) then) =
-      __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionDiscriminatorCopyWith(
+          _$_ElementDefinitionDiscriminator value,
+          $Res Function(_$_ElementDefinitionDiscriminator) then) =
+      __$$_ElementDefinitionDiscriminatorCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -13450,17 +18967,17 @@ abstract class _$ElementDefinitionDiscriminatorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
+class __$$_ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     extends _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
-    implements _$ElementDefinitionDiscriminatorCopyWith<$Res> {
-  __$ElementDefinitionDiscriminatorCopyWithImpl(
-      _ElementDefinitionDiscriminator _value,
-      $Res Function(_ElementDefinitionDiscriminator) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionDiscriminator));
+    implements _$$_ElementDefinitionDiscriminatorCopyWith<$Res> {
+  __$$_ElementDefinitionDiscriminatorCopyWithImpl(
+      _$_ElementDefinitionDiscriminator _value,
+      $Res Function(_$_ElementDefinitionDiscriminator) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionDiscriminator));
 
   @override
-  _ElementDefinitionDiscriminator get _value =>
-      super._value as _ElementDefinitionDiscriminator;
+  _$_ElementDefinitionDiscriminator get _value =>
+      super._value as _$_ElementDefinitionDiscriminator;
 
   @override
   $Res call({
@@ -13472,17 +18989,17 @@ class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     Object? path = freezed,
     Object? pathElement = freezed,
   }) {
-    return _then(_ElementDefinitionDiscriminator(
+    return _then(_$_ElementDefinitionDiscriminator(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -13512,8 +19029,8 @@ class _$_ElementDefinitionDiscriminator
   _$_ElementDefinitionDiscriminator(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
           this.type,
       @JsonKey(name: '_type')
@@ -13521,27 +19038,94 @@ class _$_ElementDefinitionDiscriminator
       this.path,
       @JsonKey(name: '_path')
           this.pathElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ElementDefinitionDiscriminator.fromJson(
           Map<String, dynamic> json) =>
       _$$_ElementDefinitionDiscriminatorFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
   final ElementDefinitionDiscriminatorType? type;
+
+  /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+
+  /// [path] A FHIRPath expression, using [the simple subset of
+  /// FHIRPath](fhirpath.html#simple), that is used to identify the element on
+  ///  which discrimination is based.
   @override
   final String? path;
+
+  /// [pathElement] Extensions for path
   @override
   @JsonKey(name: '_path')
   final Element? pathElement;
@@ -13555,12 +19139,12 @@ class _$_ElementDefinitionDiscriminator
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionDiscriminator &&
+            other is _$_ElementDefinitionDiscriminator &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -13569,12 +19153,13 @@ class _$_ElementDefinitionDiscriminator
                 .equals(other.pathElement, pathElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(typeElement),
       const DeepCollectionEquality().hash(path),
@@ -13582,56 +19167,90 @@ class _$_ElementDefinitionDiscriminator
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionDiscriminatorCopyWith<_ElementDefinitionDiscriminator>
-      get copyWith => __$ElementDefinitionDiscriminatorCopyWithImpl<
-          _ElementDefinitionDiscriminator>(this, _$identity);
+  _$$_ElementDefinitionDiscriminatorCopyWith<_$_ElementDefinitionDiscriminator>
+      get copyWith => __$$_ElementDefinitionDiscriminatorCopyWithImpl<
+          _$_ElementDefinitionDiscriminator>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionDiscriminatorToJson(this);
+    return _$$_ElementDefinitionDiscriminatorToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionDiscriminator
     extends ElementDefinitionDiscriminator {
   factory _ElementDefinitionDiscriminator(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          ElementDefinitionDiscriminatorType? type,
+          final ElementDefinitionDiscriminatorType? type,
       @JsonKey(name: '_type')
-          Element? typeElement,
-      String? path,
+          final Element? typeElement,
+      final String? path,
       @JsonKey(name: '_path')
-          Element? pathElement}) = _$_ElementDefinitionDiscriminator;
+          final Element? pathElement}) = _$_ElementDefinitionDiscriminator;
   _ElementDefinitionDiscriminator._() : super._();
 
   factory _ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionDiscriminator.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
   ElementDefinitionDiscriminatorType? get type;
   @override
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+
+  /// [path] A FHIRPath expression, using [the simple subset of
+  /// FHIRPath](fhirpath.html#simple), that is used to identify the element on
+  ///  which discrimination is based.
   String? get path;
   @override
+
+  /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionDiscriminatorCopyWith<_ElementDefinitionDiscriminator>
+  _$$_ElementDefinitionDiscriminatorCopyWith<_$_ElementDefinitionDiscriminator>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -13641,54 +19260,57 @@ ElementDefinitionBase _$ElementDefinitionBaseFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionBaseTearOff {
-  const _$ElementDefinitionBaseTearOff();
-
-  _ElementDefinitionBase call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? path,
-      @JsonKey(name: '_path') Element? pathElement,
-      UnsignedInt? min,
-      @JsonKey(name: '_min') Element? minElement,
-      String? max,
-      @JsonKey(name: '_max') Element? maxElement}) {
-    return _ElementDefinitionBase(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      path: path,
-      pathElement: pathElement,
-      min: min,
-      minElement: minElement,
-      max: max,
-      maxElement: maxElement,
-    );
-  }
-
-  ElementDefinitionBase fromJson(Map<String, Object?> json) {
-    return ElementDefinitionBase.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionBase = _$ElementDefinitionBaseTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionBase {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [path] The Path that identifies the base element - this matches the
+  /// ElementDefinition.path for that element. Across FHIR, there is only one
+  /// base definition of any element - that is, an element definition on a
+  ///  [[[StructureDefinition]]] without a StructureDefinition.base.
   String? get path => throw _privateConstructorUsedError;
+
+  /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
+
+  /// [min] Minimum cardinality of the base element identified by the path.
   UnsignedInt? get min => throw _privateConstructorUsedError;
+
+  /// [minElement] Extensions for min
   @JsonKey(name: '_min')
   Element? get minElement => throw _privateConstructorUsedError;
+
+  /// [max] Maximum cardinality of the base element identified by the path.
   String? get max => throw _privateConstructorUsedError;
+
+  /// [maxElement] Extensions for max
   @JsonKey(name: '_max')
   Element? get maxElement => throw _privateConstructorUsedError;
 
@@ -13815,11 +19437,11 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionBaseCopyWith<$Res>
+abstract class _$$_ElementDefinitionBaseCopyWith<$Res>
     implements $ElementDefinitionBaseCopyWith<$Res> {
-  factory _$ElementDefinitionBaseCopyWith(_ElementDefinitionBase value,
-          $Res Function(_ElementDefinitionBase) then) =
-      __$ElementDefinitionBaseCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionBaseCopyWith(_$_ElementDefinitionBase value,
+          $Res Function(_$_ElementDefinitionBase) then) =
+      __$$_ElementDefinitionBaseCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -13841,15 +19463,16 @@ abstract class _$ElementDefinitionBaseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionBaseCopyWithImpl<$Res>
+class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
     extends _$ElementDefinitionBaseCopyWithImpl<$Res>
-    implements _$ElementDefinitionBaseCopyWith<$Res> {
-  __$ElementDefinitionBaseCopyWithImpl(_ElementDefinitionBase _value,
-      $Res Function(_ElementDefinitionBase) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionBase));
+    implements _$$_ElementDefinitionBaseCopyWith<$Res> {
+  __$$_ElementDefinitionBaseCopyWithImpl(_$_ElementDefinitionBase _value,
+      $Res Function(_$_ElementDefinitionBase) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionBase));
 
   @override
-  _ElementDefinitionBase get _value => super._value as _ElementDefinitionBase;
+  _$_ElementDefinitionBase get _value =>
+      super._value as _$_ElementDefinitionBase;
 
   @override
   $Res call({
@@ -13863,17 +19486,17 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
     Object? max = freezed,
     Object? maxElement = freezed,
   }) {
-    return _then(_ElementDefinitionBase(
+    return _then(_$_ElementDefinitionBase(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: path == freezed
@@ -13909,38 +19532,111 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
 class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   _$_ElementDefinitionBase(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.path,
       @JsonKey(name: '_path') this.pathElement,
       this.min,
       @JsonKey(name: '_min') this.minElement,
       this.max,
       @JsonKey(name: '_max') this.maxElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionBaseFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [path] The Path that identifies the base element - this matches the
+  /// ElementDefinition.path for that element. Across FHIR, there is only one
+  /// base definition of any element - that is, an element definition on a
+  ///  [[[StructureDefinition]]] without a StructureDefinition.base.
   @override
   final String? path;
+
+  /// [pathElement] Extensions for path
   @override
   @JsonKey(name: '_path')
   final Element? pathElement;
+
+  /// [min] Minimum cardinality of the base element identified by the path.
   @override
   final UnsignedInt? min;
+
+  /// [minElement] Extensions for min
   @override
   @JsonKey(name: '_min')
   final Element? minElement;
+
+  /// [max] Maximum cardinality of the base element identified by the path.
   @override
   final String? max;
+
+  /// [maxElement] Extensions for max
   @override
   @JsonKey(name: '_max')
   final Element? maxElement;
@@ -13954,12 +19650,12 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionBase &&
+            other is _$_ElementDefinitionBase &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.path, path) &&
             const DeepCollectionEquality()
                 .equals(other.pathElement, pathElement) &&
@@ -13971,12 +19667,13 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
                 .equals(other.maxElement, maxElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(path),
       const DeepCollectionEquality().hash(pathElement),
       const DeepCollectionEquality().hash(min),
@@ -13986,57 +19683,99 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith =>
-      __$ElementDefinitionBaseCopyWithImpl<_ElementDefinitionBase>(
+  _$$_ElementDefinitionBaseCopyWith<_$_ElementDefinitionBase> get copyWith =>
+      __$$_ElementDefinitionBaseCopyWithImpl<_$_ElementDefinitionBase>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionBaseToJson(this);
+    return _$$_ElementDefinitionBaseToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   factory _ElementDefinitionBase(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? path,
-      @JsonKey(name: '_path') Element? pathElement,
-      UnsignedInt? min,
-      @JsonKey(name: '_min') Element? minElement,
-      String? max,
-      @JsonKey(name: '_max') Element? maxElement}) = _$_ElementDefinitionBase;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? path,
+          @JsonKey(name: '_path') final Element? pathElement,
+          final UnsignedInt? min,
+          @JsonKey(name: '_min') final Element? minElement,
+          final String? max,
+          @JsonKey(name: '_max') final Element? maxElement}) =
+      _$_ElementDefinitionBase;
   _ElementDefinitionBase._() : super._();
 
   factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBase.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [path] The Path that identifies the base element - this matches the
+  /// ElementDefinition.path for that element. Across FHIR, there is only one
+  /// base definition of any element - that is, an element definition on a
+  ///  [[[StructureDefinition]]] without a StructureDefinition.base.
   String? get path;
   @override
+
+  /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
+
+  /// [min] Minimum cardinality of the base element identified by the path.
   UnsignedInt? get min;
   @override
+
+  /// [minElement] Extensions for min
   @JsonKey(name: '_min')
   Element? get minElement;
   @override
+
+  /// [max] Maximum cardinality of the base element identified by the path.
   String? get max;
   @override
+
+  /// [maxElement] Extensions for max
   @JsonKey(name: '_max')
   Element? get maxElement;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith =>
+  _$$_ElementDefinitionBaseCopyWith<_$_ElementDefinitionBase> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -14046,73 +19785,83 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionTypeTearOff {
-  const _$ElementDefinitionTypeTearOff();
-
-  _ElementDefinitionType call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
-      List<Canonical>? profile,
-      @JsonKey(name: '_profile')
-          List<Element?>? profileElement,
-      List<Canonical>? targetProfile,
-      List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          ElementDefinitionTypeVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement}) {
-    return _ElementDefinitionType(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      codeElement: codeElement,
-      profile: profile,
-      profileElement: profileElement,
-      targetProfile: targetProfile,
-      aggregation: aggregation,
-      aggregationElement: aggregationElement,
-      versioning: versioning,
-      versioningElement: versioningElement,
-    );
-  }
-
-  ElementDefinitionType fromJson(Map<String, Object?> json) {
-    return ElementDefinitionType.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionType = _$ElementDefinitionTypeTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionType {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] URL of Data type or Resource that is a(or the) type used for this
+  /// element. References are URLs that are relative to
+  /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
+  /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
+  ///  allowed in logical models.
   FhirUri? get code => throw _privateConstructorUsedError;
+
+  /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
+
+  /// [profile] Identifies a profile structure or implementation Guide that
+  /// applies to the datatype this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the type SHALL
+  ///  conform to at least one profile defined in the implementation guide.
   List<Canonical>? get profile => throw _privateConstructorUsedError;
   @JsonKey(name: '_profile')
   List<Element?>? get profileElement => throw _privateConstructorUsedError;
+
+  /// [targetProfile] Used when the type is "Reference" or "canonical", and
+  /// identifies a profile structure or implementation Guide that applies to the
+  /// target of the reference this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the target
+  /// resource SHALL conform to at least one profile defined in the
+  ///  implementation guide.
   List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
+
+  /// [aggregation] If the type is a reference to another resource, how the
+  /// resource is or can be aggregated - is it a contained resource, or a
+  ///  reference, and if the context is a bundle, is it included in the bundle.
   List<ElementDefinitionTypeAggregation>? get aggregation =>
       throw _privateConstructorUsedError;
+
+  /// [aggregationElement] Extensions for aggregation
   @JsonKey(name: '_aggregation')
   List<Element?>? get aggregationElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning =>
       throw _privateConstructorUsedError;
+
+  /// [versioningElement] Extensions for versioning
   @JsonKey(name: '_versioning')
   Element? get versioningElement => throw _privateConstructorUsedError;
 
@@ -14251,11 +20000,11 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionTypeCopyWith<$Res>
+abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
     implements $ElementDefinitionTypeCopyWith<$Res> {
-  factory _$ElementDefinitionTypeCopyWith(_ElementDefinitionType value,
-          $Res Function(_ElementDefinitionType) then) =
-      __$ElementDefinitionTypeCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionTypeCopyWith(_$_ElementDefinitionType value,
+          $Res Function(_$_ElementDefinitionType) then) =
+      __$$_ElementDefinitionTypeCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -14284,15 +20033,16 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionTypeCopyWithImpl<$Res>
+class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
     extends _$ElementDefinitionTypeCopyWithImpl<$Res>
-    implements _$ElementDefinitionTypeCopyWith<$Res> {
-  __$ElementDefinitionTypeCopyWithImpl(_ElementDefinitionType _value,
-      $Res Function(_ElementDefinitionType) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionType));
+    implements _$$_ElementDefinitionTypeCopyWith<$Res> {
+  __$$_ElementDefinitionTypeCopyWithImpl(_$_ElementDefinitionType _value,
+      $Res Function(_$_ElementDefinitionType) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionType));
 
   @override
-  _ElementDefinitionType get _value => super._value as _ElementDefinitionType;
+  _$_ElementDefinitionType get _value =>
+      super._value as _$_ElementDefinitionType;
 
   @override
   $Res call({
@@ -14309,17 +20059,17 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     Object? versioning = freezed,
     Object? versioningElement = freezed,
   }) {
-    return _then(_ElementDefinitionType(
+    return _then(_$_ElementDefinitionType(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -14331,23 +20081,23 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           : codeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       profile: profile == freezed
-          ? _value.profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       profileElement: profileElement == freezed
-          ? _value.profileElement
+          ? _value._profileElement
           : profileElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       targetProfile: targetProfile == freezed
-          ? _value.targetProfile
+          ? _value._targetProfile
           : targetProfile // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       aggregation: aggregation == freezed
-          ? _value.aggregation
+          ? _value._aggregation
           : aggregation // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionTypeAggregation>?,
       aggregationElement: aggregationElement == freezed
-          ? _value.aggregationElement
+          ? _value._aggregationElement
           : aggregationElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       versioning: versioning == freezed
@@ -14368,54 +20118,207 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   _$_ElementDefinitionType(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.code,
       @JsonKey(name: '_code')
           this.codeElement,
-      this.profile,
+      final List<Canonical>? profile,
       @JsonKey(name: '_profile')
-          this.profileElement,
-      this.targetProfile,
-      this.aggregation,
+          final List<Element?>? profileElement,
+      final List<Canonical>? targetProfile,
+      final List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          this.aggregationElement,
+          final List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           this.versioning,
       @JsonKey(name: '_versioning')
           this.versioningElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _profile = profile,
+        _profileElement = profileElement,
+        _targetProfile = targetProfile,
+        _aggregation = aggregation,
+        _aggregationElement = aggregationElement,
+        super._();
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionTypeFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [code] URL of Data type or Resource that is a(or the) type used for this
+  /// element. References are URLs that are relative to
+  /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
+  /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
+  ///  allowed in logical models.
   @override
   final FhirUri? code;
+
+  /// [codeElement] Extensions for code
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
+
+  /// [profile] Identifies a profile structure or implementation Guide that
+  /// applies to the datatype this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the type SHALL
+  ///  conform to at least one profile defined in the implementation guide.
+  final List<Canonical>? _profile;
+
+  /// [profile] Identifies a profile structure or implementation Guide that
+  /// applies to the datatype this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the type SHALL
+  ///  conform to at least one profile defined in the implementation guide.
   @override
-  final List<Canonical>? profile;
+  List<Canonical>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element?>? _profileElement;
   @override
   @JsonKey(name: '_profile')
-  final List<Element?>? profileElement;
+  List<Element?>? get profileElement {
+    final value = _profileElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [targetProfile] Used when the type is "Reference" or "canonical", and
+  /// identifies a profile structure or implementation Guide that applies to the
+  /// target of the reference this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the target
+  /// resource SHALL conform to at least one profile defined in the
+  ///  implementation guide.
+  final List<Canonical>? _targetProfile;
+
+  /// [targetProfile] Used when the type is "Reference" or "canonical", and
+  /// identifies a profile structure or implementation Guide that applies to the
+  /// target of the reference this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the target
+  /// resource SHALL conform to at least one profile defined in the
+  ///  implementation guide.
   @override
-  final List<Canonical>? targetProfile;
+  List<Canonical>? get targetProfile {
+    final value = _targetProfile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [aggregation] If the type is a reference to another resource, how the
+  /// resource is or can be aggregated - is it a contained resource, or a
+  ///  reference, and if the context is a bundle, is it included in the bundle.
+  final List<ElementDefinitionTypeAggregation>? _aggregation;
+
+  /// [aggregation] If the type is a reference to another resource, how the
+  /// resource is or can be aggregated - is it a contained resource, or a
+  ///  reference, and if the context is a bundle, is it included in the bundle.
   @override
-  final List<ElementDefinitionTypeAggregation>? aggregation;
+  List<ElementDefinitionTypeAggregation>? get aggregation {
+    final value = _aggregation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [aggregationElement] Extensions for aggregation
+  final List<Element?>? _aggregationElement;
+
+  /// [aggregationElement] Extensions for aggregation
   @override
   @JsonKey(name: '_aggregation')
-  final List<Element?>? aggregationElement;
+  List<Element?>? get aggregationElement {
+    final value = _aggregationElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   final ElementDefinitionTypeVersioning? versioning;
+
+  /// [versioningElement] Extensions for versioning
   @override
   @JsonKey(name: '_versioning')
   final Element? versioningElement;
@@ -14429,116 +20332,177 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionType &&
+            other is _$_ElementDefinitionType &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.codeElement, codeElement) &&
-            const DeepCollectionEquality().equals(other.profile, profile) &&
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
             const DeepCollectionEquality()
-                .equals(other.profileElement, profileElement) &&
+                .equals(other._profileElement, _profileElement) &&
             const DeepCollectionEquality()
-                .equals(other.targetProfile, targetProfile) &&
+                .equals(other._targetProfile, _targetProfile) &&
             const DeepCollectionEquality()
-                .equals(other.aggregation, aggregation) &&
+                .equals(other._aggregation, _aggregation) &&
             const DeepCollectionEquality()
-                .equals(other.aggregationElement, aggregationElement) &&
+                .equals(other._aggregationElement, _aggregationElement) &&
             const DeepCollectionEquality()
                 .equals(other.versioning, versioning) &&
             const DeepCollectionEquality()
                 .equals(other.versioningElement, versioningElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeElement),
-      const DeepCollectionEquality().hash(profile),
-      const DeepCollectionEquality().hash(profileElement),
-      const DeepCollectionEquality().hash(targetProfile),
-      const DeepCollectionEquality().hash(aggregation),
-      const DeepCollectionEquality().hash(aggregationElement),
+      const DeepCollectionEquality().hash(_profile),
+      const DeepCollectionEquality().hash(_profileElement),
+      const DeepCollectionEquality().hash(_targetProfile),
+      const DeepCollectionEquality().hash(_aggregation),
+      const DeepCollectionEquality().hash(_aggregationElement),
       const DeepCollectionEquality().hash(versioning),
       const DeepCollectionEquality().hash(versioningElement));
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith =>
-      __$ElementDefinitionTypeCopyWithImpl<_ElementDefinitionType>(
+  _$$_ElementDefinitionTypeCopyWith<_$_ElementDefinitionType> get copyWith =>
+      __$$_ElementDefinitionTypeCopyWithImpl<_$_ElementDefinitionType>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionTypeToJson(this);
+    return _$$_ElementDefinitionTypeToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionType extends ElementDefinitionType {
   factory _ElementDefinitionType(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? code,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? code,
       @JsonKey(name: '_code')
-          Element? codeElement,
-      List<Canonical>? profile,
+          final Element? codeElement,
+      final List<Canonical>? profile,
       @JsonKey(name: '_profile')
-          List<Element?>? profileElement,
-      List<Canonical>? targetProfile,
-      List<ElementDefinitionTypeAggregation>? aggregation,
+          final List<Element?>? profileElement,
+      final List<Canonical>? targetProfile,
+      final List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
+          final List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          ElementDefinitionTypeVersioning? versioning,
+          final ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
-          Element? versioningElement}) = _$_ElementDefinitionType;
+          final Element? versioningElement}) = _$_ElementDefinitionType;
   _ElementDefinitionType._() : super._();
 
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionType.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] URL of Data type or Resource that is a(or the) type used for this
+  /// element. References are URLs that are relative to
+  /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
+  /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
+  ///  allowed in logical models.
   FhirUri? get code;
   @override
+
+  /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement;
   @override
+
+  /// [profile] Identifies a profile structure or implementation Guide that
+  /// applies to the datatype this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the type SHALL
+  ///  conform to at least one profile defined in the implementation guide.
   List<Canonical>? get profile;
   @override
   @JsonKey(name: '_profile')
   List<Element?>? get profileElement;
   @override
+
+  /// [targetProfile] Used when the type is "Reference" or "canonical", and
+  /// identifies a profile structure or implementation Guide that applies to the
+  /// target of the reference this element refers to. If any profiles are
+  /// specified, then the content must conform to at least one of them. The URL
+  /// can be a local reference - to a contained StructureDefinition, or a
+  /// reference to another StructureDefinition or Implementation Guide by a
+  /// canonical URL. When an implementation guide is specified, the target
+  /// resource SHALL conform to at least one profile defined in the
+  ///  implementation guide.
   List<Canonical>? get targetProfile;
   @override
+
+  /// [aggregation] If the type is a reference to another resource, how the
+  /// resource is or can be aggregated - is it a contained resource, or a
+  ///  reference, and if the context is a bundle, is it included in the bundle.
   List<ElementDefinitionTypeAggregation>? get aggregation;
   @override
+
+  /// [aggregationElement] Extensions for aggregation
   @JsonKey(name: '_aggregation')
   List<Element?>? get aggregationElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning;
   @override
+
+  /// [versioningElement] Extensions for versioning
   @JsonKey(name: '_versioning')
   Element? get versioningElement;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith =>
+  _$$_ElementDefinitionTypeCopyWith<_$_ElementDefinitionType> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -14548,272 +20512,325 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionExampleTearOff {
-  const _$ElementDefinitionExampleTearOff();
-
-  _ElementDefinitionExample call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? label,
-      @JsonKey(name: '_label') Element? labelElement,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      FhirUrl? valueUrl,
-      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
-      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Address? valueAddress,
-      Age? valueAge,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      CodeableConcept? valueCodeableConcept,
-      Coding? valueCoding,
-      ContactPoint? valueContactPoint,
-      Count? valueCount,
-      Distance? valueDistance,
-      FhirDuration? valueDuration,
-      HumanName? valueHumanName,
-      Identifier? valueIdentifier,
-      Money? valueMoney,
-      Period? valuePeriod,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Ratio? valueRatio,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      Timing? valueTiming,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
-      ParameterDefinition? valueParameterDefinition,
-      RelatedArtifact? valueRelatedArtifact,
-      TriggerDefinition? valueTriggerDefinition,
-      UsageContext? valueUsageContext,
-      Dosage? valueDosage,
-      Meta? valueMeta}) {
-    return _ElementDefinitionExample(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      label: label,
-      labelElement: labelElement,
-      valueBase64Binary: valueBase64Binary,
-      valueBase64BinaryElement: valueBase64BinaryElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueCanonical: valueCanonical,
-      valueCanonicalElement: valueCanonicalElement,
-      valueCode: valueCode,
-      valueCodeElement: valueCodeElement,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valueDecimal: valueDecimal,
-      valueDecimalElement: valueDecimalElement,
-      valueId: valueId,
-      valueIdElement: valueIdElement,
-      valueInstant: valueInstant,
-      valueInstantElement: valueInstantElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueMarkdown: valueMarkdown,
-      valueMarkdownElement: valueMarkdownElement,
-      valueOid: valueOid,
-      valueOidElement: valueOidElement,
-      valuePositiveInt: valuePositiveInt,
-      valuePositiveIntElement: valuePositiveIntElement,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueUnsignedInt: valueUnsignedInt,
-      valueUnsignedIntElement: valueUnsignedIntElement,
-      valueUri: valueUri,
-      valueUriElement: valueUriElement,
-      valueUrl: valueUrl,
-      valueUrlElement: valueUrlElement,
-      valueUuid: valueUuid,
-      valueUuidElement: valueUuidElement,
-      valueAddress: valueAddress,
-      valueAge: valueAge,
-      valueAnnotation: valueAnnotation,
-      valueAttachment: valueAttachment,
-      valueCodeableConcept: valueCodeableConcept,
-      valueCoding: valueCoding,
-      valueContactPoint: valueContactPoint,
-      valueCount: valueCount,
-      valueDistance: valueDistance,
-      valueDuration: valueDuration,
-      valueHumanName: valueHumanName,
-      valueIdentifier: valueIdentifier,
-      valueMoney: valueMoney,
-      valuePeriod: valuePeriod,
-      valueQuantity: valueQuantity,
-      valueRange: valueRange,
-      valueRatio: valueRatio,
-      valueReference: valueReference,
-      valueSampledData: valueSampledData,
-      valueSignature: valueSignature,
-      valueTiming: valueTiming,
-      valueContactDetail: valueContactDetail,
-      valueContributor: valueContributor,
-      valueDataRequirement: valueDataRequirement,
-      valueExpression: valueExpression,
-      valueParameterDefinition: valueParameterDefinition,
-      valueRelatedArtifact: valueRelatedArtifact,
-      valueTriggerDefinition: valueTriggerDefinition,
-      valueUsageContext: valueUsageContext,
-      valueDosage: valueDosage,
-      valueMeta: valueMeta,
-    );
-  }
-
-  ElementDefinitionExample fromJson(Map<String, Object?> json) {
-    return ElementDefinitionExample.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionExample = _$ElementDefinitionExampleTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionExample {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [label] Describes the purpose of this example amoung the set of examples.
   String? get label => throw _privateConstructorUsedError;
+
+  /// [labelElement] Extensions for label
   @JsonKey(name: '_label')
   Element? get labelElement => throw _privateConstructorUsedError;
+
+  /// [valueBase64Binary] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+
+  /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+
+  /// [valueBoolean] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [valueCanonical] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Canonical? get valueCanonical => throw _privateConstructorUsedError;
+
+  /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
+
+  /// [valueCode] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Code? get valueCode => throw _privateConstructorUsedError;
+
+  /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
+
+  /// [valueDate] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Date? get valueDate => throw _privateConstructorUsedError;
+
+  /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
+
+  /// [valueDateTime] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [valueDecimal] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Decimal? get valueDecimal => throw _privateConstructorUsedError;
+
+  /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
+
+  /// [valueId] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Id? get valueId => throw _privateConstructorUsedError;
+
+  /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
+
+  /// [valueInstant] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Instant? get valueInstant => throw _privateConstructorUsedError;
+
+  /// [valueInstantElement] Extensions for valueInstant
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement => throw _privateConstructorUsedError;
+
+  /// [valueInteger] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Integer? get valueInteger => throw _privateConstructorUsedError;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [valueMarkdown] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+
+  /// [valueMarkdownElement] Extensions for valueMarkdown
   @JsonKey(name: '_valueMarkdown')
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
+
+  /// [valueOid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Oid? get valueOid => throw _privateConstructorUsedError;
+
+  /// [valueOidElement] Extensions for valueOid
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement => throw _privateConstructorUsedError;
+
+  /// [valuePositiveInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+
+  /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @JsonKey(name: '_valuePositiveInt')
   Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
+
+  /// [valueString] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   String? get valueString => throw _privateConstructorUsedError;
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement => throw _privateConstructorUsedError;
+
+  /// [valueTime] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Time? get valueTime => throw _privateConstructorUsedError;
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
+
+  /// [valueUnsignedInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+
+  /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @JsonKey(name: '_valueUnsignedInt')
   Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
+
+  /// [valueUri] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   FhirUri? get valueUri => throw _privateConstructorUsedError;
+
+  /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
   Element? get valueUriElement => throw _privateConstructorUsedError;
+
+  /// [valueUrl] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   FhirUrl? get valueUrl => throw _privateConstructorUsedError;
+
+  /// [valueUrlElement] Extensions for valueUrl
   @JsonKey(name: '_valueUrl')
   Element? get valueUrlElement => throw _privateConstructorUsedError;
+
+  /// [valueUuid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Uuid? get valueUuid => throw _privateConstructorUsedError;
+
+  /// [valueUuidElement] Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
   Element? get valueUuidElement => throw _privateConstructorUsedError;
+
+  /// [valueAddress] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Address? get valueAddress => throw _privateConstructorUsedError;
+
+  /// [valueAge] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Age? get valueAge => throw _privateConstructorUsedError;
+
+  /// [valueAnnotation] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Annotation? get valueAnnotation => throw _privateConstructorUsedError;
+
+  /// [valueAttachment] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
+
+  /// [valueCoding] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Coding? get valueCoding => throw _privateConstructorUsedError;
+
+  /// [valueContactPoint] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
+
+  /// [valueCount] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Count? get valueCount => throw _privateConstructorUsedError;
+
+  /// [valueDistance] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Distance? get valueDistance => throw _privateConstructorUsedError;
+
+  /// [valueDuration] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   FhirDuration? get valueDuration => throw _privateConstructorUsedError;
+
+  /// [valueHumanName] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
+
+  /// [valueIdentifier] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Identifier? get valueIdentifier => throw _privateConstructorUsedError;
+
+  /// [valueMoney] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Money? get valueMoney => throw _privateConstructorUsedError;
+
+  /// [valuePeriod] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Period? get valuePeriod => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [valueRatio] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Ratio? get valueRatio => throw _privateConstructorUsedError;
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
+
+  /// [valueReference] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Reference? get valueReference => throw _privateConstructorUsedError;
+
+  /// [valueSampledData] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
+
+  /// [valueSignature] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Signature? get valueSignature => throw _privateConstructorUsedError;
+
+  /// [valueTiming] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Timing? get valueTiming => throw _privateConstructorUsedError;
+
+  /// [valueContactDetail] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
+
+  /// [valueContributor] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Contributor? get valueContributor => throw _privateConstructorUsedError;
+
+  /// [valueDataRequirement] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   DataRequirement? get valueDataRequirement =>
       throw _privateConstructorUsedError;
+
+  /// [valueExpression] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Expression? get valueExpression => throw _privateConstructorUsedError;
+
+  /// [valueParameterDefinition] The actual value for the element, which must
+  ///  be one of the types allowed for this element.
   ParameterDefinition? get valueParameterDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [valueRelatedArtifact] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   RelatedArtifact? get valueRelatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [valueTriggerDefinition] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   TriggerDefinition? get valueTriggerDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [valueUsageContext] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
+
+  /// [valueDosage] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Dosage? get valueDosage => throw _privateConstructorUsedError;
+
+  /// [valueMeta] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Meta? get valueMeta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -14876,6 +20893,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -14888,6 +20906,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Quantity? valueQuantity,
       Range? valueRange,
       Ratio? valueRatio,
+      RatioRange? valueRatioRange,
       Reference? valueReference,
       SampledData? valueSampledData,
       Signature? valueSignature,
@@ -14928,6 +20947,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get valueAnnotation;
   $AttachmentCopyWith<$Res>? get valueAttachment;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
   $CodingCopyWith<$Res>? get valueCoding;
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
@@ -14940,6 +20960,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get valueQuantity;
   $RangeCopyWith<$Res>? get valueRange;
   $RatioCopyWith<$Res>? get valueRatio;
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
   $ReferenceCopyWith<$Res>? get valueReference;
   $SampledDataCopyWith<$Res>? get valueSampledData;
   $SignatureCopyWith<$Res>? get valueSignature;
@@ -15015,6 +21036,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -15027,6 +21049,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
     Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
     Object? valueReference = freezed,
     Object? valueSampledData = freezed,
     Object? valueSignature = freezed,
@@ -15235,6 +21258,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -15283,6 +21310,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueRatio
           : valueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference // ignore: cast_nullable_to_non_nullable
@@ -15619,6 +21650,18 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference {
+    if (_value.valueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.valueCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get valueCoding {
     if (_value.valueCoding == null) {
       return null;
@@ -15747,6 +21790,17 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
       return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange {
+    if (_value.valueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.valueRatioRange!, (value) {
+      return _then(_value.copyWith(valueRatioRange: value));
     });
   }
 
@@ -15910,11 +21964,12 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionExampleCopyWith<$Res>
+abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
     implements $ElementDefinitionExampleCopyWith<$Res> {
-  factory _$ElementDefinitionExampleCopyWith(_ElementDefinitionExample value,
-          $Res Function(_ElementDefinitionExample) then) =
-      __$ElementDefinitionExampleCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionExampleCopyWith(
+          _$_ElementDefinitionExample value,
+          $Res Function(_$_ElementDefinitionExample) then) =
+      __$$_ElementDefinitionExampleCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -15965,6 +22020,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -15977,6 +22033,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       Quantity? valueQuantity,
       Range? valueRange,
       Ratio? valueRatio,
+      RatioRange? valueRatioRange,
       Reference? valueReference,
       SampledData? valueSampledData,
       Signature? valueSignature,
@@ -16043,6 +22100,8 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get valueCoding;
   @override
   $ContactPointCopyWith<$Res>? get valueContactPoint;
@@ -16066,6 +22125,8 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
   $RangeCopyWith<$Res>? get valueRange;
   @override
   $RatioCopyWith<$Res>? get valueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get valueReference;
   @override
@@ -16097,16 +22158,16 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionExampleCopyWithImpl<$Res>
+class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
     extends _$ElementDefinitionExampleCopyWithImpl<$Res>
-    implements _$ElementDefinitionExampleCopyWith<$Res> {
-  __$ElementDefinitionExampleCopyWithImpl(_ElementDefinitionExample _value,
-      $Res Function(_ElementDefinitionExample) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionExample));
+    implements _$$_ElementDefinitionExampleCopyWith<$Res> {
+  __$$_ElementDefinitionExampleCopyWithImpl(_$_ElementDefinitionExample _value,
+      $Res Function(_$_ElementDefinitionExample) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionExample));
 
   @override
-  _ElementDefinitionExample get _value =>
-      super._value as _ElementDefinitionExample;
+  _$_ElementDefinitionExample get _value =>
+      super._value as _$_ElementDefinitionExample;
 
   @override
   $Res call({
@@ -16158,6 +22219,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -16170,6 +22232,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
     Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
     Object? valueReference = freezed,
     Object? valueSampledData = freezed,
     Object? valueSignature = freezed,
@@ -16185,17 +22248,17 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueDosage = freezed,
     Object? valueMeta = freezed,
   }) {
-    return _then(_ElementDefinitionExample(
+    return _then(_$_ElementDefinitionExample(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       label: label == freezed
@@ -16378,6 +22441,10 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -16426,6 +22493,10 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueRatio
           : valueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference // ignore: cast_nullable_to_non_nullable
@@ -16491,8 +22562,8 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
 class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   _$_ElementDefinitionExample(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.label,
       @JsonKey(name: '_label') this.labelElement,
       this.valueBase64Binary,
@@ -16538,6 +22609,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueAnnotation,
       this.valueAttachment,
       this.valueCodeableConcept,
+      this.valueCodeableReference,
       this.valueCoding,
       this.valueContactPoint,
       this.valueCount,
@@ -16550,6 +22622,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueQuantity,
       this.valueRange,
       this.valueRatio,
+      this.valueRatioRange,
       this.valueReference,
       this.valueSampledData,
       this.valueSignature,
@@ -16564,196 +22637,450 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueUsageContext,
       this.valueDosage,
       this.valueMeta})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionExampleFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [label] Describes the purpose of this example amoung the set of examples.
   @override
   final String? label;
+
+  /// [labelElement] Extensions for label
   @override
   @JsonKey(name: '_label')
   final Element? labelElement;
+
+  /// [valueBase64Binary] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   @override
   final Base64Binary? valueBase64Binary;
+
+  /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @override
   @JsonKey(name: '_valueBase64Binary')
   final Element? valueBase64BinaryElement;
+
+  /// [valueBoolean] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Boolean? valueBoolean;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
+
+  /// [valueCanonical] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Canonical? valueCanonical;
+
+  /// [valueCanonicalElement] Extensions for valueCanonical
   @override
   @JsonKey(name: '_valueCanonical')
   final Element? valueCanonicalElement;
+
+  /// [valueCode] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Code? valueCode;
+
+  /// [valueCodeElement] Extensions for valueCode
   @override
   @JsonKey(name: '_valueCode')
   final Element? valueCodeElement;
+
+  /// [valueDate] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Date? valueDate;
+
+  /// [valueDateElement] Extensions for valueDate
   @override
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
+
+  /// [valueDateTime] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final FhirDateTime? valueDateTime;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
+
+  /// [valueDecimal] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Decimal? valueDecimal;
+
+  /// [valueDecimalElement] Extensions for valueDecimal
   @override
   @JsonKey(name: '_valueDecimal')
   final Element? valueDecimalElement;
+
+  /// [valueId] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Id? valueId;
+
+  /// [valueIdElement] Extensions for valueId
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
+
+  /// [valueInstant] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Instant? valueInstant;
+
+  /// [valueInstantElement] Extensions for valueInstant
   @override
   @JsonKey(name: '_valueInstant')
   final Element? valueInstantElement;
+
+  /// [valueInteger] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Integer? valueInteger;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @override
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
+
+  /// [valueMarkdown] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Markdown? valueMarkdown;
+
+  /// [valueMarkdownElement] Extensions for valueMarkdown
   @override
   @JsonKey(name: '_valueMarkdown')
   final Element? valueMarkdownElement;
+
+  /// [valueOid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Oid? valueOid;
+
+  /// [valueOidElement] Extensions for valueOid
   @override
   @JsonKey(name: '_valueOid')
   final Element? valueOidElement;
+
+  /// [valuePositiveInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final PositiveInt? valuePositiveInt;
+
+  /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @override
   @JsonKey(name: '_valuePositiveInt')
   final Element? valuePositiveIntElement;
+
+  /// [valueString] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final String? valueString;
+
+  /// [valueStringElement] Extensions for valueString
   @override
   @JsonKey(name: '_valueString')
   final Element? valueStringElement;
+
+  /// [valueTime] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Time? valueTime;
+
+  /// [valueTimeElement] Extensions for valueTime
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
+
+  /// [valueUnsignedInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final UnsignedInt? valueUnsignedInt;
+
+  /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @override
   @JsonKey(name: '_valueUnsignedInt')
   final Element? valueUnsignedIntElement;
+
+  /// [valueUri] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final FhirUri? valueUri;
+
+  /// [valueUriElement] Extensions for valueUri
   @override
   @JsonKey(name: '_valueUri')
   final Element? valueUriElement;
+
+  /// [valueUrl] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final FhirUrl? valueUrl;
+
+  /// [valueUrlElement] Extensions for valueUrl
   @override
   @JsonKey(name: '_valueUrl')
   final Element? valueUrlElement;
+
+  /// [valueUuid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Uuid? valueUuid;
+
+  /// [valueUuidElement] Extensions for valueUuid
   @override
   @JsonKey(name: '_valueUuid')
   final Element? valueUuidElement;
+
+  /// [valueAddress] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Address? valueAddress;
+
+  /// [valueAge] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Age? valueAge;
+
+  /// [valueAnnotation] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Annotation? valueAnnotation;
+
+  /// [valueAttachment] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Attachment? valueAttachment;
+
+  /// [valueCodeableConcept] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
+  final CodeableReference? valueCodeableReference;
+
+  /// [valueCoding] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
+  @override
   final Coding? valueCoding;
+
+  /// [valueContactPoint] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   @override
   final ContactPoint? valueContactPoint;
+
+  /// [valueCount] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Count? valueCount;
+
+  /// [valueDistance] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Distance? valueDistance;
+
+  /// [valueDuration] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final FhirDuration? valueDuration;
+
+  /// [valueHumanName] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final HumanName? valueHumanName;
+
+  /// [valueIdentifier] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Identifier? valueIdentifier;
+
+  /// [valueMoney] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Money? valueMoney;
+
+  /// [valuePeriod] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Period? valuePeriod;
+
+  /// [valueQuantity] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Quantity? valueQuantity;
+
+  /// [valueRange] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Range? valueRange;
+
+  /// [valueRatio] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Ratio? valueRatio;
   @override
+  final RatioRange? valueRatioRange;
+
+  /// [valueReference] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
+  @override
   final Reference? valueReference;
+
+  /// [valueSampledData] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final SampledData? valueSampledData;
+
+  /// [valueSignature] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Signature? valueSignature;
+
+  /// [valueTiming] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Timing? valueTiming;
+
+  /// [valueContactDetail] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   @override
   final ContactDetail? valueContactDetail;
+
+  /// [valueContributor] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Contributor? valueContributor;
+
+  /// [valueDataRequirement] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   @override
   final DataRequirement? valueDataRequirement;
+
+  /// [valueExpression] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   @override
   final Expression? valueExpression;
+
+  /// [valueParameterDefinition] The actual value for the element, which must
+  ///  be one of the types allowed for this element.
   @override
   final ParameterDefinition? valueParameterDefinition;
+
+  /// [valueRelatedArtifact] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   @override
   final RelatedArtifact? valueRelatedArtifact;
+
+  /// [valueTriggerDefinition] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   @override
   final TriggerDefinition? valueTriggerDefinition;
+
+  /// [valueUsageContext] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   @override
   final UsageContext? valueUsageContext;
+
+  /// [valueDosage] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Dosage? valueDosage;
+
+  /// [valueMeta] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   @override
   final Meta? valueMeta;
 
   @override
   String toString() {
-    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueRatioRange: $valueRatioRange, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionExample &&
+            other is _$_ElementDefinitionExample &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.label, label) &&
             const DeepCollectionEquality()
                 .equals(other.labelElement, labelElement) &&
@@ -16835,6 +23162,8 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
             const DeepCollectionEquality()
+                .equals(other.valueCodeableReference, valueCodeableReference) &&
+            const DeepCollectionEquality()
                 .equals(other.valueCoding, valueCoding) &&
             const DeepCollectionEquality()
                 .equals(other.valueContactPoint, valueContactPoint) &&
@@ -16844,14 +23173,14 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
                 .equals(other.valueDistance, valueDistance) &&
             const DeepCollectionEquality()
                 .equals(other.valueDuration, valueDuration) &&
-            const DeepCollectionEquality()
-                .equals(other.valueHumanName, valueHumanName) &&
+            const DeepCollectionEquality().equals(other.valueHumanName, valueHumanName) &&
             const DeepCollectionEquality().equals(other.valueIdentifier, valueIdentifier) &&
             const DeepCollectionEquality().equals(other.valueMoney, valueMoney) &&
             const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod) &&
             const DeepCollectionEquality().equals(other.valueQuantity, valueQuantity) &&
             const DeepCollectionEquality().equals(other.valueRange, valueRange) &&
             const DeepCollectionEquality().equals(other.valueRatio, valueRatio) &&
+            const DeepCollectionEquality().equals(other.valueRatioRange, valueRatioRange) &&
             const DeepCollectionEquality().equals(other.valueReference, valueReference) &&
             const DeepCollectionEquality().equals(other.valueSampledData, valueSampledData) &&
             const DeepCollectionEquality().equals(other.valueSignature, valueSignature) &&
@@ -16868,12 +23197,13 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
             const DeepCollectionEquality().equals(other.valueMeta, valueMeta));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(label),
         const DeepCollectionEquality().hash(labelElement),
         const DeepCollectionEquality().hash(valueBase64Binary),
@@ -16919,6 +23249,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
         const DeepCollectionEquality().hash(valueAnnotation),
         const DeepCollectionEquality().hash(valueAttachment),
         const DeepCollectionEquality().hash(valueCodeableConcept),
+        const DeepCollectionEquality().hash(valueCodeableReference),
         const DeepCollectionEquality().hash(valueCoding),
         const DeepCollectionEquality().hash(valueContactPoint),
         const DeepCollectionEquality().hash(valueCount),
@@ -16931,6 +23262,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
         const DeepCollectionEquality().hash(valueQuantity),
         const DeepCollectionEquality().hash(valueRange),
         const DeepCollectionEquality().hash(valueRatio),
+        const DeepCollectionEquality().hash(valueRatioRange),
         const DeepCollectionEquality().hash(valueReference),
         const DeepCollectionEquality().hash(valueSampledData),
         const DeepCollectionEquality().hash(valueSignature),
@@ -16949,270 +23281,515 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionExampleCopyWith<_ElementDefinitionExample> get copyWith =>
-      __$ElementDefinitionExampleCopyWithImpl<_ElementDefinitionExample>(
-          this, _$identity);
+  _$$_ElementDefinitionExampleCopyWith<_$_ElementDefinitionExample>
+      get copyWith => __$$_ElementDefinitionExampleCopyWithImpl<
+          _$_ElementDefinitionExample>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionExampleToJson(this);
+    return _$$_ElementDefinitionExampleToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   factory _ElementDefinitionExample(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? label,
-      @JsonKey(name: '_label') Element? labelElement,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      FhirUrl? valueUrl,
-      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
-      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Address? valueAddress,
-      Age? valueAge,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      CodeableConcept? valueCodeableConcept,
-      Coding? valueCoding,
-      ContactPoint? valueContactPoint,
-      Count? valueCount,
-      Distance? valueDistance,
-      FhirDuration? valueDuration,
-      HumanName? valueHumanName,
-      Identifier? valueIdentifier,
-      Money? valueMoney,
-      Period? valuePeriod,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Ratio? valueRatio,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      Timing? valueTiming,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
-      ParameterDefinition? valueParameterDefinition,
-      RelatedArtifact? valueRelatedArtifact,
-      TriggerDefinition? valueTriggerDefinition,
-      UsageContext? valueUsageContext,
-      Dosage? valueDosage,
-      Meta? valueMeta}) = _$_ElementDefinitionExample;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? label,
+      @JsonKey(name: '_label')
+          final Element? labelElement,
+      final Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary')
+          final Element? valueBase64BinaryElement,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          final Element? valueBooleanElement,
+      final Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical')
+          final Element? valueCanonicalElement,
+      final Code? valueCode,
+      @JsonKey(name: '_valueCode')
+          final Element? valueCodeElement,
+      final Date? valueDate,
+      @JsonKey(name: '_valueDate')
+          final Element? valueDateElement,
+      final FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime')
+          final Element? valueDateTimeElement,
+      final Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal')
+          final Element? valueDecimalElement,
+      final Id? valueId,
+      @JsonKey(name: '_valueId')
+          final Element? valueIdElement,
+      final Instant? valueInstant,
+      @JsonKey(name: '_valueInstant')
+          final Element? valueInstantElement,
+      final Integer? valueInteger,
+      @JsonKey(name: '_valueInteger')
+          final Element? valueIntegerElement,
+      final Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown')
+          final Element? valueMarkdownElement,
+      final Oid? valueOid,
+      @JsonKey(name: '_valueOid')
+          final Element? valueOidElement,
+      final PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt')
+          final Element? valuePositiveIntElement,
+      final String? valueString,
+      @JsonKey(name: '_valueString')
+          final Element? valueStringElement,
+      final Time? valueTime,
+      @JsonKey(name: '_valueTime')
+          final Element? valueTimeElement,
+      final UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt')
+          final Element? valueUnsignedIntElement,
+      final FhirUri? valueUri,
+      @JsonKey(name: '_valueUri')
+          final Element? valueUriElement,
+      final FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl')
+          final Element? valueUrlElement,
+      final Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid')
+          final Element? valueUuidElement,
+      final Address? valueAddress,
+      final Age? valueAge,
+      final Annotation? valueAnnotation,
+      final Attachment? valueAttachment,
+      final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
+      final Coding? valueCoding,
+      final ContactPoint? valueContactPoint,
+      final Count? valueCount,
+      final Distance? valueDistance,
+      final FhirDuration? valueDuration,
+      final HumanName? valueHumanName,
+      final Identifier? valueIdentifier,
+      final Money? valueMoney,
+      final Period? valuePeriod,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Ratio? valueRatio,
+      final RatioRange? valueRatioRange,
+      final Reference? valueReference,
+      final SampledData? valueSampledData,
+      final Signature? valueSignature,
+      final Timing? valueTiming,
+      final ContactDetail? valueContactDetail,
+      final Contributor? valueContributor,
+      final DataRequirement? valueDataRequirement,
+      final Expression? valueExpression,
+      final ParameterDefinition? valueParameterDefinition,
+      final RelatedArtifact? valueRelatedArtifact,
+      final TriggerDefinition? valueTriggerDefinition,
+      final UsageContext? valueUsageContext,
+      final Dosage? valueDosage,
+      final Meta? valueMeta}) = _$_ElementDefinitionExample;
   _ElementDefinitionExample._() : super._();
 
   factory _ElementDefinitionExample.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionExample.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [label] Describes the purpose of this example amoung the set of examples.
   String? get label;
   @override
+
+  /// [labelElement] Extensions for label
   @JsonKey(name: '_label')
   Element? get labelElement;
   @override
+
+  /// [valueBase64Binary] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   Base64Binary? get valueBase64Binary;
   @override
+
+  /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement;
   @override
+
+  /// [valueBoolean] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Boolean? get valueBoolean;
   @override
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   @override
+
+  /// [valueCanonical] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Canonical? get valueCanonical;
   @override
+
+  /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
   Element? get valueCanonicalElement;
   @override
+
+  /// [valueCode] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Code? get valueCode;
   @override
+
+  /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement;
   @override
+
+  /// [valueDate] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Date? get valueDate;
   @override
+
+  /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement;
   @override
+
+  /// [valueDateTime] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   FhirDateTime? get valueDateTime;
   @override
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
+
+  /// [valueDecimal] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Decimal? get valueDecimal;
   @override
+
+  /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement;
   @override
+
+  /// [valueId] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Id? get valueId;
   @override
+
+  /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement;
   @override
+
+  /// [valueInstant] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Instant? get valueInstant;
   @override
+
+  /// [valueInstantElement] Extensions for valueInstant
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement;
   @override
+
+  /// [valueInteger] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Integer? get valueInteger;
   @override
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement;
   @override
+
+  /// [valueMarkdown] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Markdown? get valueMarkdown;
   @override
+
+  /// [valueMarkdownElement] Extensions for valueMarkdown
   @JsonKey(name: '_valueMarkdown')
   Element? get valueMarkdownElement;
   @override
+
+  /// [valueOid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Oid? get valueOid;
   @override
+
+  /// [valueOidElement] Extensions for valueOid
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement;
   @override
+
+  /// [valuePositiveInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   PositiveInt? get valuePositiveInt;
   @override
+
+  /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @JsonKey(name: '_valuePositiveInt')
   Element? get valuePositiveIntElement;
   @override
+
+  /// [valueString] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   String? get valueString;
   @override
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement;
   @override
+
+  /// [valueTime] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Time? get valueTime;
   @override
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
   @override
+
+  /// [valueUnsignedInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   UnsignedInt? get valueUnsignedInt;
   @override
+
+  /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @JsonKey(name: '_valueUnsignedInt')
   Element? get valueUnsignedIntElement;
   @override
+
+  /// [valueUri] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   FhirUri? get valueUri;
   @override
+
+  /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
   Element? get valueUriElement;
   @override
+
+  /// [valueUrl] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   FhirUrl? get valueUrl;
   @override
+
+  /// [valueUrlElement] Extensions for valueUrl
   @JsonKey(name: '_valueUrl')
   Element? get valueUrlElement;
   @override
+
+  /// [valueUuid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Uuid? get valueUuid;
   @override
+
+  /// [valueUuidElement] Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
   Element? get valueUuidElement;
   @override
+
+  /// [valueAddress] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Address? get valueAddress;
   @override
+
+  /// [valueAge] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Age? get valueAge;
   @override
+
+  /// [valueAnnotation] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Annotation? get valueAnnotation;
   @override
+
+  /// [valueAttachment] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Attachment? get valueAttachment;
   @override
+
+  /// [valueCodeableConcept] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   CodeableConcept? get valueCodeableConcept;
   @override
+  CodeableReference? get valueCodeableReference;
+  @override
+
+  /// [valueCoding] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Coding? get valueCoding;
   @override
+
+  /// [valueContactPoint] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ContactPoint? get valueContactPoint;
   @override
+
+  /// [valueCount] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Count? get valueCount;
   @override
+
+  /// [valueDistance] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Distance? get valueDistance;
   @override
+
+  /// [valueDuration] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   FhirDuration? get valueDuration;
   @override
+
+  /// [valueHumanName] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   HumanName? get valueHumanName;
   @override
+
+  /// [valueIdentifier] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Identifier? get valueIdentifier;
   @override
+
+  /// [valueMoney] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Money? get valueMoney;
   @override
+
+  /// [valuePeriod] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Period? get valuePeriod;
   @override
+
+  /// [valueQuantity] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Quantity? get valueQuantity;
   @override
+
+  /// [valueRange] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Range? get valueRange;
   @override
+
+  /// [valueRatio] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Ratio? get valueRatio;
   @override
+  RatioRange? get valueRatioRange;
+  @override
+
+  /// [valueReference] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Reference? get valueReference;
   @override
+
+  /// [valueSampledData] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   SampledData? get valueSampledData;
   @override
+
+  /// [valueSignature] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Signature? get valueSignature;
   @override
+
+  /// [valueTiming] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Timing? get valueTiming;
   @override
+
+  /// [valueContactDetail] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ContactDetail? get valueContactDetail;
   @override
+
+  /// [valueContributor] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Contributor? get valueContributor;
   @override
+
+  /// [valueDataRequirement] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   DataRequirement? get valueDataRequirement;
   @override
+
+  /// [valueExpression] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   Expression? get valueExpression;
   @override
+
+  /// [valueParameterDefinition] The actual value for the element, which must
+  ///  be one of the types allowed for this element.
   ParameterDefinition? get valueParameterDefinition;
   @override
+
+  /// [valueRelatedArtifact] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   RelatedArtifact? get valueRelatedArtifact;
   @override
+
+  /// [valueTriggerDefinition] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   TriggerDefinition? get valueTriggerDefinition;
   @override
+
+  /// [valueUsageContext] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   UsageContext? get valueUsageContext;
   @override
+
+  /// [valueDosage] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Dosage? get valueDosage;
   @override
+
+  /// [valueMeta] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   Meta? get valueMeta;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionExampleCopyWith<_ElementDefinitionExample> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElementDefinitionExampleCopyWith<_$_ElementDefinitionExample>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
@@ -17221,89 +23798,86 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionConstraintTearOff {
-  const _$ElementDefinitionConstraintTearOff();
-
-  _ElementDefinitionConstraint call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
-      String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
-      String? human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
-      String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
-      String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
-      Canonical? source}) {
-    return _ElementDefinitionConstraint(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      key: key,
-      keyElement: keyElement,
-      requirements: requirements,
-      requirementsElement: requirementsElement,
-      severity: severity,
-      severityElement: severityElement,
-      human: human,
-      humanElement: humanElement,
-      expression: expression,
-      expressionElement: expressionElement,
-      xpath: xpath,
-      xpathElement: xpathElement,
-      source: source,
-    );
-  }
-
-  ElementDefinitionConstraint fromJson(Map<String, Object?> json) {
-    return ElementDefinitionConstraint.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionConstraint = _$ElementDefinitionConstraintTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionConstraint {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [key] Allows identification of which elements have their cardinalities
+  /// impacted by the constraint.  Will not be referenced for constraints that
+  ///  do not affect cardinality.
   Id? get key => throw _privateConstructorUsedError;
+
+  /// [keyElement] Extensions for key
   @JsonKey(name: '_key')
   Element? get keyElement => throw _privateConstructorUsedError;
+
+  /// [requirements] Description of why this constraint is necessary or
+  ///  appropriate.
   String? get requirements => throw _privateConstructorUsedError;
+
+  /// [requirementsElement] Extensions for requirements
   @JsonKey(name: '_requirements')
   Element? get requirementsElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
   ElementDefinitionConstraintSeverity? get severity =>
       throw _privateConstructorUsedError;
+
+  /// [severityElement] Extensions for severity
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
+
+  /// [human] Text that can be used to describe the constraint in messages
+  ///  identifying that the constraint has been violated.
   String? get human => throw _privateConstructorUsedError;
+
+  /// [humanElement] Extensions for human
   @JsonKey(name: '_human')
   Element? get humanElement => throw _privateConstructorUsedError;
+
+  /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that
+  ///  can be executed to see if this constraint is met.
   String? get expression => throw _privateConstructorUsedError;
+
+  /// [expressionElement] Extensions for expression
   @JsonKey(name: '_expression')
   Element? get expressionElement => throw _privateConstructorUsedError;
+
+  /// [xpath] An XPath expression of constraint that can be executed to see if
+  ///  this constraint is met.
   String? get xpath => throw _privateConstructorUsedError;
+
+  /// [xpathElement] Extensions for xpath
   @JsonKey(name: '_xpath')
   Element? get xpathElement => throw _privateConstructorUsedError;
+
+  /// [source] A reference to the original source of the constraint, for
+  ///  traceability purposes.
   Canonical? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -17516,12 +24090,12 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionConstraintCopyWith<$Res>
+abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
     implements $ElementDefinitionConstraintCopyWith<$Res> {
-  factory _$ElementDefinitionConstraintCopyWith(
-          _ElementDefinitionConstraint value,
-          $Res Function(_ElementDefinitionConstraint) then) =
-      __$ElementDefinitionConstraintCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionConstraintCopyWith(
+          _$_ElementDefinitionConstraint value,
+          $Res Function(_$_ElementDefinitionConstraint) then) =
+      __$$_ElementDefinitionConstraintCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -17564,17 +24138,17 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionConstraintCopyWithImpl<$Res>
+class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
     extends _$ElementDefinitionConstraintCopyWithImpl<$Res>
-    implements _$ElementDefinitionConstraintCopyWith<$Res> {
-  __$ElementDefinitionConstraintCopyWithImpl(
-      _ElementDefinitionConstraint _value,
-      $Res Function(_ElementDefinitionConstraint) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionConstraint));
+    implements _$$_ElementDefinitionConstraintCopyWith<$Res> {
+  __$$_ElementDefinitionConstraintCopyWithImpl(
+      _$_ElementDefinitionConstraint _value,
+      $Res Function(_$_ElementDefinitionConstraint) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionConstraint));
 
   @override
-  _ElementDefinitionConstraint get _value =>
-      super._value as _ElementDefinitionConstraint;
+  _$_ElementDefinitionConstraint get _value =>
+      super._value as _$_ElementDefinitionConstraint;
 
   @override
   $Res call({
@@ -17595,17 +24169,17 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
     Object? xpathElement = freezed,
     Object? source = freezed,
   }) {
-    return _then(_ElementDefinitionConstraint(
+    return _then(_$_ElementDefinitionConstraint(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       key: key == freezed
@@ -17670,8 +24244,8 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   _$_ElementDefinitionConstraint(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.key,
       @JsonKey(name: '_key')
           this.keyElement,
@@ -17692,49 +24266,138 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       @JsonKey(name: '_xpath')
           this.xpathElement,
       this.source})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionConstraintFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [key] Allows identification of which elements have their cardinalities
+  /// impacted by the constraint.  Will not be referenced for constraints that
+  ///  do not affect cardinality.
   @override
   final Id? key;
+
+  /// [keyElement] Extensions for key
   @override
   @JsonKey(name: '_key')
   final Element? keyElement;
+
+  /// [requirements] Description of why this constraint is necessary or
+  ///  appropriate.
   @override
   final String? requirements;
+
+  /// [requirementsElement] Extensions for requirements
   @override
   @JsonKey(name: '_requirements')
   final Element? requirementsElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
   final ElementDefinitionConstraintSeverity? severity;
+
+  /// [severityElement] Extensions for severity
   @override
   @JsonKey(name: '_severity')
   final Element? severityElement;
+
+  /// [human] Text that can be used to describe the constraint in messages
+  ///  identifying that the constraint has been violated.
   @override
   final String? human;
+
+  /// [humanElement] Extensions for human
   @override
   @JsonKey(name: '_human')
   final Element? humanElement;
+
+  /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that
+  ///  can be executed to see if this constraint is met.
   @override
   final String? expression;
+
+  /// [expressionElement] Extensions for expression
   @override
   @JsonKey(name: '_expression')
   final Element? expressionElement;
+
+  /// [xpath] An XPath expression of constraint that can be executed to see if
+  ///  this constraint is met.
   @override
   final String? xpath;
+
+  /// [xpathElement] Extensions for xpath
   @override
   @JsonKey(name: '_xpath')
   final Element? xpathElement;
+
+  /// [source] A reference to the original source of the constraint, for
+  ///  traceability purposes.
   @override
   final Canonical? source;
 
@@ -17747,12 +24410,12 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionConstraint &&
+            other is _$_ElementDefinitionConstraint &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.key, key) &&
             const DeepCollectionEquality()
                 .equals(other.keyElement, keyElement) &&
@@ -17776,12 +24439,13 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
             const DeepCollectionEquality().equals(other.source, source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(key),
       const DeepCollectionEquality().hash(keyElement),
       const DeepCollectionEquality().hash(requirements),
@@ -17798,91 +24462,148 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
-      get copyWith => __$ElementDefinitionConstraintCopyWithImpl<
-          _ElementDefinitionConstraint>(this, _$identity);
+  _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
+      get copyWith => __$$_ElementDefinitionConstraintCopyWithImpl<
+          _$_ElementDefinitionConstraint>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionConstraintToJson(this);
+    return _$$_ElementDefinitionConstraintToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionConstraint
     extends ElementDefinitionConstraint {
   factory _ElementDefinitionConstraint(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? key,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Id? key,
       @JsonKey(name: '_key')
-          Element? keyElement,
-      String? requirements,
+          final Element? keyElement,
+      final String? requirements,
       @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+          final Element? requirementsElement,
       @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
+          final ElementDefinitionConstraintSeverity? severity,
       @JsonKey(name: '_severity')
-          Element? severityElement,
-      String? human,
+          final Element? severityElement,
+      final String? human,
       @JsonKey(name: '_human')
-          Element? humanElement,
-      String? expression,
+          final Element? humanElement,
+      final String? expression,
       @JsonKey(name: '_expression')
-          Element? expressionElement,
-      String? xpath,
+          final Element? expressionElement,
+      final String? xpath,
       @JsonKey(name: '_xpath')
-          Element? xpathElement,
-      Canonical? source}) = _$_ElementDefinitionConstraint;
+          final Element? xpathElement,
+      final Canonical? source}) = _$_ElementDefinitionConstraint;
   _ElementDefinitionConstraint._() : super._();
 
   factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionConstraint.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [key] Allows identification of which elements have their cardinalities
+  /// impacted by the constraint.  Will not be referenced for constraints that
+  ///  do not affect cardinality.
   Id? get key;
   @override
+
+  /// [keyElement] Extensions for key
   @JsonKey(name: '_key')
   Element? get keyElement;
   @override
+
+  /// [requirements] Description of why this constraint is necessary or
+  ///  appropriate.
   String? get requirements;
   @override
+
+  /// [requirementsElement] Extensions for requirements
   @JsonKey(name: '_requirements')
   Element? get requirementsElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
   ElementDefinitionConstraintSeverity? get severity;
   @override
+
+  /// [severityElement] Extensions for severity
   @JsonKey(name: '_severity')
   Element? get severityElement;
   @override
+
+  /// [human] Text that can be used to describe the constraint in messages
+  ///  identifying that the constraint has been violated.
   String? get human;
   @override
+
+  /// [humanElement] Extensions for human
   @JsonKey(name: '_human')
   Element? get humanElement;
   @override
+
+  /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that
+  ///  can be executed to see if this constraint is met.
   String? get expression;
   @override
+
+  /// [expressionElement] Extensions for expression
   @JsonKey(name: '_expression')
   Element? get expressionElement;
   @override
+
+  /// [xpath] An XPath expression of constraint that can be executed to see if
+  ///  this constraint is met.
   String? get xpath;
   @override
+
+  /// [xpathElement] Extensions for xpath
   @JsonKey(name: '_xpath')
   Element? get xpathElement;
   @override
+
+  /// [source] A reference to the original source of the constraint, for
+  ///  traceability purposes.
   Canonical? get source;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
+  _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -17892,57 +24613,52 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionBindingTearOff {
-  const _$ElementDefinitionBindingTearOff();
-
-  _ElementDefinitionBinding call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Canonical? valueSet}) {
-    return _ElementDefinitionBinding(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      strength: strength,
-      strengthElement: strengthElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      valueSet: valueSet,
-    );
-  }
-
-  ElementDefinitionBinding fromJson(Map<String, Object?> json) {
-    return ElementDefinitionBinding.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionBinding = _$ElementDefinitionBindingTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionBinding {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
   ElementDefinitionBindingStrength? get strength =>
       throw _privateConstructorUsedError;
+
+  /// [strengthElement] Extensions for strength
   @JsonKey(name: '_strength')
   Element? get strengthElement => throw _privateConstructorUsedError;
+
+  /// [description] Describes the intended use of this particular set of codes.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [valueSet] Refers to the value set that identifies the set of codes the
+  ///  binding refers to.
   Canonical? get valueSet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -18054,11 +24770,12 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionBindingCopyWith<$Res>
+abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
     implements $ElementDefinitionBindingCopyWith<$Res> {
-  factory _$ElementDefinitionBindingCopyWith(_ElementDefinitionBinding value,
-          $Res Function(_ElementDefinitionBinding) then) =
-      __$ElementDefinitionBindingCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionBindingCopyWith(
+          _$_ElementDefinitionBinding value,
+          $Res Function(_$_ElementDefinitionBinding) then) =
+      __$$_ElementDefinitionBindingCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -18081,16 +24798,16 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionBindingCopyWithImpl<$Res>
+class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
     extends _$ElementDefinitionBindingCopyWithImpl<$Res>
-    implements _$ElementDefinitionBindingCopyWith<$Res> {
-  __$ElementDefinitionBindingCopyWithImpl(_ElementDefinitionBinding _value,
-      $Res Function(_ElementDefinitionBinding) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionBinding));
+    implements _$$_ElementDefinitionBindingCopyWith<$Res> {
+  __$$_ElementDefinitionBindingCopyWithImpl(_$_ElementDefinitionBinding _value,
+      $Res Function(_$_ElementDefinitionBinding) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionBinding));
 
   @override
-  _ElementDefinitionBinding get _value =>
-      super._value as _ElementDefinitionBinding;
+  _$_ElementDefinitionBinding get _value =>
+      super._value as _$_ElementDefinitionBinding;
 
   @override
   $Res call({
@@ -18103,17 +24820,17 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? valueSet = freezed,
   }) {
-    return _then(_ElementDefinitionBinding(
+    return _then(_$_ElementDefinitionBinding(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       strength: strength == freezed
@@ -18146,8 +24863,8 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
           this.strength,
       @JsonKey(name: '_strength')
@@ -18156,29 +24873,97 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       @JsonKey(name: '_description')
           this.descriptionElement,
       this.valueSet})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionBindingFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
   final ElementDefinitionBindingStrength? strength;
+
+  /// [strengthElement] Extensions for strength
   @override
   @JsonKey(name: '_strength')
   final Element? strengthElement;
+
+  /// [description] Describes the intended use of this particular set of codes.
   @override
   final String? description;
+
+  /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [valueSet] Refers to the value set that identifies the set of codes the
+  ///  binding refers to.
   @override
   final Canonical? valueSet;
 
@@ -18191,12 +24976,12 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionBinding &&
+            other is _$_ElementDefinitionBinding &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.strength, strength) &&
             const DeepCollectionEquality()
                 .equals(other.strengthElement, strengthElement) &&
@@ -18207,12 +24992,13 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
             const DeepCollectionEquality().equals(other.valueSet, valueSet));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(strength),
       const DeepCollectionEquality().hash(strengthElement),
       const DeepCollectionEquality().hash(description),
@@ -18221,59 +25007,94 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith =>
-      __$ElementDefinitionBindingCopyWithImpl<_ElementDefinitionBinding>(
-          this, _$identity);
+  _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
+      get copyWith => __$$_ElementDefinitionBindingCopyWithImpl<
+          _$_ElementDefinitionBinding>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionBindingToJson(this);
+    return _$$_ElementDefinitionBindingToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   factory _ElementDefinitionBinding(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
+          final ElementDefinitionBindingStrength? strength,
       @JsonKey(name: '_strength')
-          Element? strengthElement,
-      String? description,
+          final Element? strengthElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Canonical? valueSet}) = _$_ElementDefinitionBinding;
+          final Element? descriptionElement,
+      final Canonical? valueSet}) = _$_ElementDefinitionBinding;
   _ElementDefinitionBinding._() : super._();
 
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBinding.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
   ElementDefinitionBindingStrength? get strength;
   @override
+
+  /// [strengthElement] Extensions for strength
   @JsonKey(name: '_strength')
   Element? get strengthElement;
   @override
+
+  /// [description] Describes the intended use of this particular set of codes.
   String? get description;
   @override
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [valueSet] Refers to the value set that identifies the set of codes the
+  ///  binding refers to.
   Canonical? get valueSet;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
@@ -18282,61 +25103,63 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
 }
 
 /// @nodoc
-class _$ElementDefinitionMappingTearOff {
-  const _$ElementDefinitionMappingTearOff();
-
-  _ElementDefinitionMapping call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? identity,
-      @JsonKey(name: '_identity') Element? identityElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      String? map,
-      @JsonKey(name: '_map') Element? mapElement,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement}) {
-    return _ElementDefinitionMapping(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identity: identity,
-      identityElement: identityElement,
-      language: language,
-      languageElement: languageElement,
-      map: map,
-      mapElement: mapElement,
-      comment: comment,
-      commentElement: commentElement,
-    );
-  }
-
-  ElementDefinitionMapping fromJson(Map<String, Object?> json) {
-    return ElementDefinitionMapping.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionMapping = _$ElementDefinitionMappingTearOff();
-
-/// @nodoc
 mixin _$ElementDefinitionMapping {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identity] An internal reference to the definition of a mapping.
   Id? get identity => throw _privateConstructorUsedError;
+
+  /// [identityElement] Extensions for identity
   @JsonKey(name: '_identity')
   Element? get identityElement => throw _privateConstructorUsedError;
+
+  /// [language] Identifies the computable language in which mapping.map is
+  ///  expressed.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [map] Expresses what part of the target specification corresponds to this
+  ///  element.
   String? get map => throw _privateConstructorUsedError;
+
+  /// [mapElement] Extensions for map
   @JsonKey(name: '_map')
   Element? get mapElement => throw _privateConstructorUsedError;
+
+  /// [comment] Comments that provide information about the mapping or its use.
   String? get comment => throw _privateConstructorUsedError;
+
+  /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
   Element? get commentElement => throw _privateConstructorUsedError;
 
@@ -18487,11 +25310,12 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionMappingCopyWith<$Res>
+abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
     implements $ElementDefinitionMappingCopyWith<$Res> {
-  factory _$ElementDefinitionMappingCopyWith(_ElementDefinitionMapping value,
-          $Res Function(_ElementDefinitionMapping) then) =
-      __$ElementDefinitionMappingCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionMappingCopyWith(
+          _$_ElementDefinitionMapping value,
+          $Res Function(_$_ElementDefinitionMapping) then) =
+      __$$_ElementDefinitionMappingCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -18517,16 +25341,16 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionMappingCopyWithImpl<$Res>
+class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
     extends _$ElementDefinitionMappingCopyWithImpl<$Res>
-    implements _$ElementDefinitionMappingCopyWith<$Res> {
-  __$ElementDefinitionMappingCopyWithImpl(_ElementDefinitionMapping _value,
-      $Res Function(_ElementDefinitionMapping) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionMapping));
+    implements _$$_ElementDefinitionMappingCopyWith<$Res> {
+  __$$_ElementDefinitionMappingCopyWithImpl(_$_ElementDefinitionMapping _value,
+      $Res Function(_$_ElementDefinitionMapping) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionMapping));
 
   @override
-  _ElementDefinitionMapping get _value =>
-      super._value as _ElementDefinitionMapping;
+  _$_ElementDefinitionMapping get _value =>
+      super._value as _$_ElementDefinitionMapping;
 
   @override
   $Res call({
@@ -18542,17 +25366,17 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_ElementDefinitionMapping(
+    return _then(_$_ElementDefinitionMapping(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identity: identity == freezed
@@ -18596,8 +25420,8 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
 class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   _$_ElementDefinitionMapping(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identity,
       @JsonKey(name: '_identity') this.identityElement,
       this.language,
@@ -18606,35 +25430,111 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
       @JsonKey(name: '_map') this.mapElement,
       this.comment,
       @JsonKey(name: '_comment') this.commentElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionMappingFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identity] An internal reference to the definition of a mapping.
   @override
   final Id? identity;
+
+  /// [identityElement] Extensions for identity
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
+
+  /// [language] Identifies the computable language in which mapping.map is
+  ///  expressed.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [map] Expresses what part of the target specification corresponds to this
+  ///  element.
   @override
   final String? map;
+
+  /// [mapElement] Extensions for map
   @override
   @JsonKey(name: '_map')
   final Element? mapElement;
+
+  /// [comment] Comments that provide information about the mapping or its use.
   @override
   final String? comment;
+
+  /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
   final Element? commentElement;
@@ -18648,12 +25548,12 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionMapping &&
+            other is _$_ElementDefinitionMapping &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.identity, identity) &&
             const DeepCollectionEquality()
                 .equals(other.identityElement, identityElement) &&
@@ -18668,12 +25568,13 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
                 .equals(other.commentElement, commentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(identity),
       const DeepCollectionEquality().hash(identityElement),
       const DeepCollectionEquality().hash(language),
@@ -18685,29 +25586,31 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith =>
-      __$ElementDefinitionMappingCopyWithImpl<_ElementDefinitionMapping>(
-          this, _$identity);
+  _$$_ElementDefinitionMappingCopyWith<_$_ElementDefinitionMapping>
+      get copyWith => __$$_ElementDefinitionMappingCopyWithImpl<
+          _$_ElementDefinitionMapping>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementDefinitionMappingToJson(this);
+    return _$$_ElementDefinitionMappingToJson(
+      this,
+    );
   }
 }
 
 abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   factory _ElementDefinitionMapping(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Id? identity,
-          @JsonKey(name: '_identity') Element? identityElement,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          String? map,
-          @JsonKey(name: '_map') Element? mapElement,
-          String? comment,
-          @JsonKey(name: '_comment') Element? commentElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Id? identity,
+          @JsonKey(name: '_identity') final Element? identityElement,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final String? map,
+          @JsonKey(name: '_map') final Element? mapElement,
+          final String? comment,
+          @JsonKey(name: '_comment') final Element? commentElement}) =
       _$_ElementDefinitionMapping;
   _ElementDefinitionMapping._() : super._();
 
@@ -18715,34 +25618,76 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
       _$_ElementDefinitionMapping.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identity] An internal reference to the definition of a mapping.
   Id? get identity;
   @override
+
+  /// [identityElement] Extensions for identity
   @JsonKey(name: '_identity')
   Element? get identityElement;
   @override
+
+  /// [language] Identifies the computable language in which mapping.map is
+  ///  expressed.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [map] Expresses what part of the target specification corresponds to this
+  ///  element.
   String? get map;
   @override
+
+  /// [mapElement] Extensions for map
   @JsonKey(name: '_map')
   Element? get mapElement;
   @override
+
+  /// [comment] Comments that provide information about the mapping or its use.
   String? get comment;
   @override
+
+  /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
   Element? get commentElement;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElementDefinitionMappingCopyWith<_$_ElementDefinitionMapping>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -74,7 +74,7 @@
             "key": "cnl-0",
             "severity": "warning",
             "human": "Name should be usable as an identifier for the module by machine processing applications such as code generation",
-            "expression": "name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
+            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "xpath": "not(exists(f:name/@value)) or matches(f:name/@value, \u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/ActivityDefinition"
           }
@@ -115,7 +115,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -222,10 +222,6 @@
         "isSummary": false,
         "binding": {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
-              "valueString": "A human language."
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
@@ -802,6 +798,7 @@
         "path": "ActivityDefinition.subject[x]",
         "short": "Type of individual the activity definition is intended for",
         "definition": "A code, group definition, or canonical reference that describes  or identifies the intended subject of the activity being defined.  Canonical references are allowed to support the definition of protocols for drug and substance quality specifications, and is allowed to reference a MedicinalProductDefinition, SubstanceDefinition, AdministrableProductDefinition, ManufacturedItemDefinition, or PackagedProductDefinition resource.",
+        "comment": "Note that the choice of canonical for the subject element was introduced in R4B to support pharmaceutical quality use cases. To ensure as much backwards-compatibility as possible, it is recommended to only use the new canonical type with these use cases.",
         "min": 0,
         "max": "1",
         "base": {
@@ -2131,7 +2128,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2848,7 +2845,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"

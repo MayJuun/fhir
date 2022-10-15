@@ -8,6 +8,7 @@ enum AccountStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ClaimResponseOutcome {
   @JsonValue('complete')
   complete,
@@ -16,6 +17,7 @@ enum ClaimResponseOutcome {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ClaimType {
   @JsonValue('institutional')
   institutional,
@@ -30,6 +32,7 @@ enum ClaimType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ClaimUse {
   @JsonValue('complete')
   complete,

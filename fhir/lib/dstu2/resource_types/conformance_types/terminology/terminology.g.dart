@@ -119,7 +119,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
 
 Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -149,7 +149,7 @@ Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$ValueSetStatusEnumMap[instance.status];
+  val['status'] = _$ValueSetStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -687,7 +687,7 @@ Map<String, dynamic> _$$_ValueSetIncludeFilterToJson(
   writeNotNull('fhir_comments', instance.fhirComments);
   val['property'] = instance.property.toJson();
   writeNotNull('_property', instance.propertyElement?.toJson());
-  val['op'] = _$FilterOpEnumMap[instance.op];
+  val['op'] = _$FilterOpEnumMap[instance.op]!;
   writeNotNull('_op', instance.opElement?.toJson());
   val['value'] = instance.value.toJson();
   writeNotNull('_value', instance.valueElement?.toJson());
@@ -1033,7 +1033,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1062,7 +1062,7 @@ Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
   writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$ConceptMapStatusEnumMap[instance.status];
+  val['status'] = _$ConceptMapStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -1228,7 +1228,7 @@ Map<String, dynamic> _$$_ConceptMapElementTargetToJson(
   writeNotNull('codeSystem', instance.codeSystem?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
-  val['equivalence'] = _$TargetEquivalenceEnumMap[instance.equivalence];
+  val['equivalence'] = _$TargetEquivalenceEnumMap[instance.equivalence]!;
   writeNotNull('_equivalence', instance.equivalenceElement?.toJson());
   writeNotNull('comments', instance.comments);
   writeNotNull('_comments', instance.commentsElement?.toJson());
@@ -1373,7 +1373,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1397,9 +1397,9 @@ Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['name'] = instance.name;
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$NamingSystemStatusEnumMap[instance.status];
+  val['status'] = _$NamingSystemStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
-  val['kind'] = _$NamingSystemKindEnumMap[instance.kind];
+  val['kind'] = _$NamingSystemKindEnumMap[instance.kind]!;
   writeNotNull('_kind', instance.kindElement?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('_publisher', instance.publisherElement?.toJson());
@@ -1515,7 +1515,7 @@ Map<String, dynamic> _$$_NamingSystemUniqueIdToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = _$UniqueIdTypeEnumMap[instance.type];
+  val['type'] = _$UniqueIdTypeEnumMap[instance.type]!;
   writeNotNull('_type', instance.typeElement?.toJson());
   val['value'] = instance.value;
   writeNotNull('_value', instance.valueElement?.toJson());

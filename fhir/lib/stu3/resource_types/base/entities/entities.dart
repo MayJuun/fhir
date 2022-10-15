@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'entities.enums.dart';
 part 'entities.freezed.dart';
@@ -58,10 +55,6 @@ class Device with Resource, _$Device {
     List<Annotation>? note,
     List<CodeableConcept>? safety,
   }) = _Device;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
@@ -173,10 +166,6 @@ class DeviceComponent with Resource, _$DeviceComponent {
     CodeableConcept? languageCode,
   }) = _DeviceComponent;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
       ? DeviceComponent.fromJson(
@@ -267,10 +256,6 @@ class DeviceMetric with Resource, _$DeviceMetric {
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
@@ -378,10 +363,6 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _Endpoint;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Endpoint.fromYaml(dynamic yaml) => yaml is String
       ? Endpoint.fromJson(
@@ -461,10 +442,6 @@ class HealthcareService with Resource, _$HealthcareService {
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _HealthcareService;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
@@ -619,10 +596,6 @@ class Location with Resource, _$Location {
     List<Reference>? endpoint,
   }) = _Location;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Location.fromYaml(dynamic yaml) => yaml is String
       ? Location.fromJson(
@@ -726,10 +699,6 @@ class Organization with Resource, _$Organization {
     List<Reference>? endpoint,
   }) = _Organization;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(
@@ -826,10 +795,6 @@ class Substance with Resource, _$Substance {
     List<SubstanceInstance>? instance,
     List<SubstanceIngredient>? ingredient,
   }) = _Substance;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Substance.fromYaml(dynamic yaml) => yaml is String

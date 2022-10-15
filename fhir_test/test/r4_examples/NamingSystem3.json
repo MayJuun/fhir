@@ -1,0 +1,1 @@
+{"resourceType":"NamingSystem","id":"tx-ucum","name":"UCUM: (UnitsOfMeasure.org)","status":"draft","kind":"codesystem","date":"2015-08-21","publisher":"HL7, Inc","description":"Case Sensitive Codes","uniqueId":[{"type":"uri","value":"http://unitsofmeasure.org","preferred":true},{"type":"oid","value":"2.16.840.1.113883.6.8","preferred":false}]}

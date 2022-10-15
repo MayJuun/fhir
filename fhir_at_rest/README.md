@@ -47,7 +47,7 @@ When possible enums are used and that includes resourceTypes, to ensure data qua
 
 ### Read Request
 Let's try and read Patient, id: 12345. (Side note: most of these classs are (freezed)[https://pub.dev/packages/freezed] unions. Meaning they function the same for all versions of FHIR, just replace the R4 below with dstu2, stu3, or r5).
-```
+```dart
   var request = FhirRequest.read(
     base: Uri.parse('http://hapi.fhir.org/baseR4'),
     type: R4ResourceType.Patient,
@@ -62,7 +62,7 @@ GET http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType
 
 I'll mention what happens with this request and how to handle the response below. There are two other options that can be added to most requests. ```_pretty``` and ```_summary```. ```_pretty``` requests the response to be nicely formatted for human readability, generally used for debugging and development. ```_summary``` is a predefined short form of the resource in response. 
 Example:
-```
+```dart
   final request = FhirRequest.read(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
@@ -81,7 +81,7 @@ GET http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType%26_pretty%3Dtr
 ### Vread Request
 
 This is very similar to a read request. The difference is that we specify which version of the resource we want.
-```
+```dart
       final request = FhirRequest.vRead(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
@@ -97,7 +97,7 @@ GET http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format%3D$mimeType
 
 ### Update
 This is obviously different because we're sending data instead of asking for it. We use ```PUT```. We also pass in a resource.
-```
+```dart
       final patient = Patient(id: Id('12345'));
       final request = FhirRequest.update(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -113,7 +113,7 @@ This function also passes the resource as a Map to the MakeRequest Function. All
 
 ### Patch
 Same request format as Update, but using ```PATCH```, and also requiring a resource.
-```
+```dart
       final patient = Patient(id: Id('12345'));
       final request = FhirRequest.patch(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -128,7 +128,7 @@ PATCH http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType
 
 ### Delete
 This one is pretty straightforward. Just need the base, type and id, and it will perform a ```DELETE``` request.
-```
+```dart
       final request = FhirRequest.delete(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
@@ -142,7 +142,7 @@ DELETE http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType
 ```
 ### Create
 Same request format as Update, but using ```POST```, and also requiring a resource.
-```
+```dart
       final patient = Patient(id: Id('12345'));
       final request = FhirRequest.create(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -160,7 +160,7 @@ One important thing to note on create is that no ID is provided in the request, 
 ### Capabilities
 This is to request the server's capabilities. It uses a ```GET``` and can pass in a ```Mode``` parameter. ```Mode``` may be ```full```, ```normative```, or ```terminology```. If none is passed, it will default to ```full```.
 
-```
+```dart
       final request = FhirRequest.capabilities(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         mode: Mode.normative,
@@ -173,7 +173,7 @@ https://hapi.fhir.org/baseR4/metadata?mode=normative&_format=json
 ```
 ### Batch
 Batch and Transactions function very similarly. They both use ```POST```. They both ONLY accept a Bundle as a resource. Before sending, they both ensure that the resource is a bundle, that the bundle type is either Batch or Transaction (respectively) and will also check and each entry in the bundle has a request and that request has a method. If these conditions are not true, the request will be denied at the server, so it's just easier to check and not waste the bandwidth.
-```
+```dart
       final Bundle bundle = Bundle(id: Id('12345'));
       final request = FhirRequest.transaction(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -186,7 +186,7 @@ This succeeds in creating an empty bundle, with the following request:
 POST http://hapi.fhir.org/baseR4?_format%3D$mimeType
 ```
 However, this will fail because the entry does not have a request:
-```
+```dart
       final Bundle bundle = Bundle(
           resourceType: R4ResourceType.Bundle,
           type: BundleType.batch,
@@ -199,7 +199,7 @@ However, this will fail because the entry does not have a request:
   makeReq10 = await request.request(newBundle);
 ```
 This will also fail because the request does not have a method:
-```
+```dart
       final Bundle bundle = Bundle(
           resourceType: R4ResourceType.Bundle,
           type: BundleType.batch,
@@ -212,7 +212,7 @@ This will also fail because the request does not have a method:
   makeReq10 = await req10.request(newBundle);
 ```
 However this one will succeed:
-```
+```dart
       final Bundle bundle = Bundle(
           resourceType: R4ResourceType.Bundle,
           type: BundleType.batch,
@@ -232,7 +232,7 @@ However this one will succeed:
 
 ### Transaction
 Transactions are almost the same as batches. The form and function is almost equivalent. The difference is on the server side. The actions performed on a batch request are performed independently (so some may succeed even if others fail), but a transaction request is treated as a single atomic change, so either the entire request succeeds or it doesn't.
-```
+```dart
       final Bundle bundle = Bundle(
           resourceType: R4ResourceType.Bundle,
           type: BundleType.transaction,
@@ -256,7 +256,7 @@ POST http://hapi.fhir.org/baseR4?_format%3D$mimeType
  
 ### History
 This interaction retrieves the history of a single resource (arguments: base, type, and id), all resources of that type (arguments: base, type), or all resources supported by the system (arguments: base). These all use a ```GET```. 
-```
+```dart
       final request = FhirRequest.history(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Observation,
@@ -269,7 +269,7 @@ Result:
 GET http://hapi.fhir.org/baseR4/Observation/12345/_history?_format%3D$mimeType
 ```
 There are a number of parameters that can also be passed to a history request. These are ```_count```, ```_since```, ```_at```, and ```_list```. ```_count``` is an integer and defines the number of search results per page. ```_since``` is an Instant and will request only versions created on or after the value given. ```_at``` requests only resources that were current at some point in time specified. ```_list``` allows a specification of specific resources.
-```
+```dart
       final List<String> parameters = [
         '_count=10',
         '_since=2020-10-08T16:58:07.241117Z',
@@ -297,7 +297,7 @@ Searching is challenging. I've tried to detail it by showing examples how you wo
 ToDo: text/filter
 
 Basic formatting for the search request is as follows:
-```
+```dart
   var request = SearchRequest.r4(
     base: //base fhir URL,
     type: //whatever resource you're looking for
@@ -308,7 +308,7 @@ Basic formatting for the search request is as follows:
 [Parameters are all lists](https://www.hl7.org/fhir/search.html#ptypes), and are of the following types: ```SearchComposite, SearchDate, SearchNumber, SearchQuantity, SearchReference, SearchSpecial, SearchString, SearchToken, SearchUri```.
 
 These basic examples are from the [HL7 Summary of searching](https://www.hl7.org/fhir/search.html#standard). To search for the patient with an id of 23:
-```
+```dart
       final List<String> parameters = ['_id=12345'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -324,7 +324,7 @@ GET http://hapi.fhir.org/baseR4/Patient?_format%3D$mimeType%26_id%3D12345
 
 
 To search for all observations that have changed since 2010-10-01:
-```
+```dart
       final List<String> parameters = ['_lastUpdated=gt2010-10-01'];
       final request = FhirRequest.search(
           base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -337,7 +337,7 @@ Result:
 GET http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26_lastUpdated%3Dgt2010-10-01
 ```
 ```_tag``` is an example of a searchToken type.
-```
+```dart
       final List<String> parameters = [
         '_tag=http://acme.org/codes|needs-review'
       ];
@@ -353,7 +353,7 @@ Result:
 GET http://hapi.fhir.org/baseR4/Condition?_format%3D$mimeType%26_tag%3Dhttp%3A%2F%2Facme.org%2Fcodes%7Cneeds-review
 ```
 ```_profile``` is a type of searchUrl
-```
+```dart
       final List<String> parameters = ['_profile=http://acme.org/codes'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -367,7 +367,7 @@ Result:
 GET http://hapi.fhir.org/baseR4/DiagnosticReport?_format%3D$mimeType%26_profile%3Dhttp%3A%2F%2Facme.org%2Fcodes
 ```
 [Modifiers](https://www.hl7.org/fhir/search.html#modifiers) are defined per resource. All interactions (except combination) can contain a password called ```:missing```. To search for all patients that don't have a gender (you can also use ```:missing=false``` if you want to search patients that do have a recorded gender):
-```
+```dart
       final List<String> parameters = ['gender:missing=true'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -381,7 +381,7 @@ Result:
 GET http://hapi.fhir.org/baseR4/Patient?_format%3D$mimeType%26gender%3Amissing%3Dtrue
 ```
 For strings, options are ```:exact``` or ```:contains```.
-```
+```dart
       final List<String> parameters = ['_text:exact=Stark'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -401,7 +401,7 @@ Similarly ```:text``` can be used in a searchToken, ```:[type]``` can be used in
 #### *Number, Date and Quantity*
 
 For ordered types (number, date and quantity), the following values can be used: ```eq, ne, gt, lt, ge, le, sa, eb, and ap```. They are equivalent to ==, !=, >, <, >=, <=, starts after, ends before, approximately the same as (usually applied as ~10%). If not prefix, eq is ```assumed```. See the HL7 link for more details. Once again, using this prefix:
-```
+```dart
       final List<String> parameters = ['_lastUpdated=le2010-10-01'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -416,7 +416,7 @@ GET http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26_lastUpdated%3
 ```
 #### *Date*
 There are some specifications on exaclty how the comparisons are done using dates, [you can find them here](https://www.hl7.org/fhir/search.html#date). One more example is finding an event between two dates.
-```
+```dart
       final List<String> parameters = [
         'birthdate=ge2010-01-01',
         'birthdate=le2011-12-31',
@@ -434,7 +434,7 @@ GET http://hapi.fhir.org/baseR4/Patient?_format%3D$mimeType%26birthdate%3Dge2010
 ```
 #### *String*
 Searching for strings is pretty straight forward. You can add the modifier ```:contains=``` and the search will return any patient with a given part containing the string in any position, ```:exact=``` would match a name exactly (no longer, no shorter, and is case sensitive). For the sake of time, I included all of them in a single query:
-```
+```dart
       final List<String> parameters = [
         'given=eve',
         'given:contains=eve',
@@ -463,7 +463,7 @@ For a ```URI``` search, the prefixes are ```:above=``` and ```:below=```. This b
 Just read the HL7 page for a description, it's easier. A token can contain a system, a code or both. And can contain the prefixes, ```:text, :not, :above, :below, :in, :not-in, and :of-type```. I'm including a number of examples (all stolen from the above link, so HL7 please don't be mad).
 
 Search for all the patients with an identifier with key = "2345" in the system "https://acme.org/patient"
-```
+```dart
       final List<String> parameters = [
         'identifier=http://acme.org/patient|2345'
       ];
@@ -477,9 +477,10 @@ Search for all the patients with an identifier with key = "2345" in the system "
 Result:
 ```
 GET http://hapi.fhir.org/baseR4/Patient?_format%3D$mimeType%26identifier%3Dhttp%3A%2F%2Facme.org%2Fpatient%7C2345
-
-Search for any Composition that does not contain an Allergies and adverse reaction section. Note that this search does not return "any document that has a section that is not an Allergies and adverse reaction section" (e.g. in the presence of multiple possible matches, the negation applies to the set, not each individual entry)
 ```
+Search for any Composition that does not contain an Allergies and adverse reaction section. Note that this search does not return "any document that has a section that is not an Allergies and adverse reaction section" (e.g. in the presence of multiple possible matches, the negation applies to the set, not each individual entry)
+
+```dart
       final List<String> parameters = ['section:not=48765-2'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -488,12 +489,13 @@ Search for any Composition that does not contain an Allergies and adverse reacti
       );
   response = await request.request();
 ```
+
 Result:
 ```
 GEhttp://hapi.fhir.org/baseR4/Composition?_format%3D$mimeType%26section%3Anot%3D48765-2
 
 Search for any condition in the SNOMED CT value set "https://snomed.info/sct?fhir_vs=isa/126851005" that includes all descendants of "Neoplasm of liver"
-```
+```dart
       final List<String> parameters = [
         'code:in=http://snomed.info/sct?fhir_vs=isa/126851005'
       ];
@@ -509,7 +511,7 @@ Result:
 GEThttp://hapi.fhir.org/baseR4/Condition?_format%3D$mimeType%26code%3Ain%3Dhttp%3A%2F%2Fsnomed.info%2Fsct%3Ffhir_vs%3Disa%2F126851005
 ```
 Search for the Medical Record Number 446053 - this is useful where the system id for the MRN is not known
-```
+```dart
       final List<String> parameters = [
         'identifier:of-type=http://terminology.hl7.org/CodeSystem/v2-0203|MR|446053'
       ];
@@ -530,7 +532,7 @@ Please note that for the prefix ```:of-type``` it requires ALL 3 parameters, a s
 
 #### *Quantity*
 For quantity you're allowed to define a prefix, number, system and code. Sysem and code are similar to Token above, except that if you put a system, you also need a code, but otherwise both are optional. So you could just put  a number (```5.4```), you could put a number and a code (```5.4||mg```) or a number, system and a code (```5.4|https://unitsofmeasure.org|mg```). Putting them all together to search for all the observations where the value of is about 5.4 mg where mg is understood as a UCUM unit
-```
+```dart
       final List<String> parameters = [
         'value-quantity=ap5.4|http://unitsofmeasure.org|mg'
       ];
@@ -547,7 +549,7 @@ GET http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26value-quantity
 ```
 #### *Reference*
 A reference takes an id, a type and id, or a url. Using just a url looks like this:
-```
+```dart
       final List<String> parameters = ['subject=Patient/123'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -560,7 +562,7 @@ final response = await request.request();
 GET http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26subject%3DPatient%2F123
 ```
 While using a type and id looks like this:
-```
+```dart
       final List<String> parameters = ['subject=Patient/123'];
       final request = FhirRequest.search(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),

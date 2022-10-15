@@ -118,7 +118,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
 Map<String, dynamic> _$$_ImplementationGuideToJson(
     _$_ImplementationGuide instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -146,7 +146,7 @@ Map<String, dynamic> _$$_ImplementationGuideToJson(
   writeNotNull('_version', instance.versionElement?.toJson());
   val['name'] = instance.name;
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$ImplementationGuideStatusEnumMap[instance.status];
+  val['status'] = _$ImplementationGuideStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -347,7 +347,7 @@ Map<String, dynamic> _$$_ImplementationGuideDependencyToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = _$DependencyTypeEnumMap[instance.type];
+  val['type'] = _$DependencyTypeEnumMap[instance.type]!;
   val['uri'] = instance.uri.toJson();
   writeNotNull('_uri', instance.uriElement?.toJson());
   return val;
@@ -484,7 +484,7 @@ Map<String, dynamic> _$$_ImplementationGuidePageToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['source'] = instance.source.toJson();
   val['name'] = instance.name;
-  val['kind'] = _$PageKindEnumMap[instance.kind];
+  val['kind'] = _$PageKindEnumMap[instance.kind]!;
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('package', instance.package);
   writeNotNull('format', instance.format?.toJson());
@@ -549,7 +549,7 @@ Map<String, dynamic> _$$_ImplementationGuidePackageResourceToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['purpose'] = _$ResourcePurposeEnumMap[instance.purpose];
+  val['purpose'] = _$ResourcePurposeEnumMap[instance.purpose]!;
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description);
   writeNotNull('acronym', instance.acronym);
@@ -679,7 +679,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -706,7 +706,7 @@ Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
   writeNotNull('version', instance.version);
   val['name'] = instance.name;
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$TestScriptStatusEnumMap[instance.status];
+  val['status'] = _$TestScriptStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());

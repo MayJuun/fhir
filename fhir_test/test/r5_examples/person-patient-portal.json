@@ -27,6 +27,7 @@
       }
     }
   ],
+  "active": true,
   "name": [
     {
       "use": "official",
@@ -62,7 +63,6 @@
     "reference": "http://www.goodhealth.com/Organization/12",
     "display": "Goodhealth Patient Portal"
   },
-  "active": true,
   "link": [
     {
       "target": {

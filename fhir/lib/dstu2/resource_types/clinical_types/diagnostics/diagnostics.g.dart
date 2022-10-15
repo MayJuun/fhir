@@ -151,7 +151,7 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -176,7 +176,7 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['status'] = _$ObservationStatusEnumMap[instance.status];
+  val['status'] = _$ObservationStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.toJson());
   val['code'] = instance.code.toJson();
@@ -624,7 +624,7 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -648,7 +648,7 @@ Map<String, dynamic> _$$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['status'] = _$DiagnosticReportStatusEnumMap[instance.status];
+  val['status'] = _$DiagnosticReportStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.toJson());
   val['code'] = instance.code.toJson();
@@ -790,7 +790,7 @@ _$_DiagnosticOrder _$$_DiagnosticOrderFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DiagnosticOrderToJson(_$_DiagnosticOrder instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -889,7 +889,7 @@ Map<String, dynamic> _$$_DiagnosticOrderEventToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['status'] = _$EventStatusEnumMap[instance.status];
+  val['status'] = _$EventStatusEnumMap[instance.status]!;
   writeNotNull('description', instance.description?.toJson());
   val['dateTime'] = instance.dateTime.toJson();
   writeNotNull('actor', instance.actor?.toJson());
@@ -1048,7 +1048,7 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
 
 Map<String, dynamic> _$$_SpecimenToJson(_$_Specimen instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1309,7 +1309,7 @@ _$_BodySite _$$_BodySiteFromJson(Map<String, dynamic> json) => _$_BodySite(
 
 Map<String, dynamic> _$$_BodySiteToJson(_$_BodySite instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1425,7 +1425,7 @@ _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ImagingStudyToJson(_$_ImagingStudy instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1682,7 +1682,7 @@ _$_ImagingObjectSelection _$$_ImagingObjectSelectionFromJson(
 Map<String, dynamic> _$$_ImagingObjectSelectionToJson(
     _$_ImagingObjectSelection instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

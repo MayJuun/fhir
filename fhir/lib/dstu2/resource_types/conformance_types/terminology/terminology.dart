@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'terminology.enums.dart';
 part 'terminology.freezed.dart';
@@ -65,10 +62,6 @@ class ValueSet with Resource, _$ValueSet {
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
   }) = _ValueSet;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String
@@ -674,10 +667,6 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_date') Element? dateElement,
   }) = _ConceptMap;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMap.fromJson(
@@ -926,10 +915,6 @@ class NamingSystem with Resource, _$NamingSystem {
     required List<NamingSystemUniqueId> uniqueId,
     Reference? replacedBy,
   }) = _NamingSystem;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String

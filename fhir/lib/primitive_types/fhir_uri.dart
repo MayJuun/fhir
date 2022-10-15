@@ -6,6 +6,9 @@ import 'dart:convert';
 // Package imports:
 import 'package:yaml/yaml.dart';
 
+// Project imports:
+import 'primitive_type_exceptions.dart';
+
 class FhirUri {
   const FhirUri._(this._valueString, this._valueUri, this._isValid);
 
@@ -16,7 +19,8 @@ class FhirUri {
       final Uri? tempUri = Uri.tryParse(inValue);
       return FhirUri._(inValue, tempUri, tempUri != null);
     }
-    throw ArgumentError('FhirUri cannot be constructed from $inValue.');
+    throw CannotBeConstructed<FhirUri>(
+        'FhirUri cannot be constructed from $inValue.');
   }
 
   factory FhirUri.fromJson(dynamic json) => FhirUri(json);
@@ -25,7 +29,7 @@ class FhirUri {
       ? FhirUri.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FhirUri.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<FhirUri>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;

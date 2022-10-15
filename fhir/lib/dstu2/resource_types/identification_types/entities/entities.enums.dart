@@ -10,6 +10,7 @@ enum LocationStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum LocationMode {
   @JsonValue('instance')
   instance,
@@ -18,6 +19,7 @@ enum LocationMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum PersonGender {
   @JsonValue('male')
   male,
@@ -28,6 +30,7 @@ enum PersonGender {
   @JsonValue('unknown')
   unknown,
 }
+
 enum LinkAssurance {
   @JsonValue('level1')
   level1,

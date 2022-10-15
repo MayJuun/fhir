@@ -1,0 +1,1 @@
+{"resourceType":"NamingSystem","id":"template-status-code","name":"TemplateStatusCode","status":"active","kind":"codesystem","date":"2022-05-06T17:02:42+00:00","uniqueId":[{"type":"uri","value":"http://hl7.org/fhir/template-status-code","preferred":true},{"type":"oid","value":"2.16.840.1.113883.4.642.1.0","preferred":false}]}

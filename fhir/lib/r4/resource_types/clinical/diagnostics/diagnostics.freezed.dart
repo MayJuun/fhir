@@ -12,107 +12,119 @@ part of 'diagnostics.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 BodyStructure _$BodyStructureFromJson(Map<String, dynamic> json) {
   return _BodyStructure.fromJson(json);
 }
 
 /// @nodoc
-class _$BodyStructureTearOff {
-  const _$BodyStructureTearOff();
-
-  _BodyStructure call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-          R4ResourceType resourceType = R4ResourceType.BodyStructure,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
-      CodeableConcept? morphology,
-      CodeableConcept? location,
-      List<CodeableConcept>? locationQualifier,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<Attachment>? image,
-      required Reference patient}) {
-    return _BodyStructure(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      active: active,
-      activeElement: activeElement,
-      morphology: morphology,
-      location: location,
-      locationQualifier: locationQualifier,
-      description: description,
-      descriptionElement: descriptionElement,
-      image: image,
-      patient: patient,
-    );
-  }
-
-  BodyStructure fromJson(Map<String, Object?> json) {
-    return BodyStructure.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BodyStructure = _$BodyStructureTearOff();
-
-/// @nodoc
 mixin _$BodyStructure {
   @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifier for this instance of the anatomical structure.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [active] Whether this body site is in active use.
   Boolean? get active => throw _privateConstructorUsedError;
+
+  /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
+
+  /// [morphology] The kind of structure being represented by the body
+  /// structure at `BodyStructure.location`.  This can define both normal and
+  ///  abnormal morphologies.
   CodeableConcept? get morphology => throw _privateConstructorUsedError;
+
+  /// [location] The anatomical location or region of the specimen, lesion, or
+  ///  body structure.
   CodeableConcept? get location => throw _privateConstructorUsedError;
+
+  /// [locationQualifier] Qualifier to refine the anatomical location.  These
+  /// include qualifiers for laterality, relative location, directionality,
+  ///  number, and plane.
   List<CodeableConcept>? get locationQualifier =>
       throw _privateConstructorUsedError;
+
+  /// [description] A summary, characterization or explanation of the body
+  ///  structure.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [image] Image or images used to identify a location.
   List<Attachment>? get image => throw _privateConstructorUsedError;
+
+  /// [patient] The person to which the body site belongs.
   Reference get patient => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -129,7 +141,7 @@ abstract class $BodyStructureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -207,7 +219,7 @@ class _$BodyStructureCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -384,16 +396,16 @@ class _$BodyStructureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$BodyStructureCopyWith<$Res>
+abstract class _$$_BodyStructureCopyWith<$Res>
     implements $BodyStructureCopyWith<$Res> {
-  factory _$BodyStructureCopyWith(
-          _BodyStructure value, $Res Function(_BodyStructure) then) =
-      __$BodyStructureCopyWithImpl<$Res>;
+  factory _$$_BodyStructureCopyWith(
+          _$_BodyStructure value, $Res Function(_$_BodyStructure) then) =
+      __$$_BodyStructureCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -440,15 +452,15 @@ abstract class _$BodyStructureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BodyStructureCopyWithImpl<$Res>
+class __$$_BodyStructureCopyWithImpl<$Res>
     extends _$BodyStructureCopyWithImpl<$Res>
-    implements _$BodyStructureCopyWith<$Res> {
-  __$BodyStructureCopyWithImpl(
-      _BodyStructure _value, $Res Function(_BodyStructure) _then)
-      : super(_value, (v) => _then(v as _BodyStructure));
+    implements _$$_BodyStructureCopyWith<$Res> {
+  __$$_BodyStructureCopyWithImpl(
+      _$_BodyStructure _value, $Res Function(_$_BodyStructure) _then)
+      : super(_value, (v) => _then(v as _$_BodyStructure));
 
   @override
-  _BodyStructure get _value => super._value as _BodyStructure;
+  _$_BodyStructure get _value => super._value as _$_BodyStructure;
 
   @override
   $Res call({
@@ -474,7 +486,7 @@ class __$BodyStructureCopyWithImpl<$Res>
     Object? image = freezed,
     Object? patient = freezed,
   }) {
-    return _then(_BodyStructure(
+    return _then(_$_BodyStructure(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -482,7 +494,7 @@ class __$BodyStructureCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -508,19 +520,19 @@ class __$BodyStructureCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       active: active == freezed
@@ -540,7 +552,7 @@ class __$BodyStructureCopyWithImpl<$Res>
           : location // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       locationQualifier: locationQualifier == freezed
-          ? _value.locationQualifier
+          ? _value._locationQualifier
           : locationQualifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       description: description == freezed
@@ -552,7 +564,7 @@ class __$BodyStructureCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       image: image == freezed
-          ? _value.image
+          ? _value._image
           : image // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
       patient: patient == freezed
@@ -578,23 +590,29 @@ class _$_BodyStructure extends _BodyStructure {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.active,
       @JsonKey(name: '_active')
           this.activeElement,
       this.morphology,
       this.location,
-      this.locationQualifier,
+      final List<CodeableConcept>? locationQualifier,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.image,
+      final List<Attachment>? image,
       required this.patient})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _locationQualifier = locationQualifier,
+        _image = image,
+        super._();
 
   factory _$_BodyStructure.fromJson(Map<String, dynamic> json) =>
       _$$_BodyStructureFromJson(json);
@@ -602,49 +620,196 @@ class _$_BodyStructure extends _BodyStructure {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Identifier for this instance of the anatomical structure.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Identifier for this instance of the anatomical structure.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [active] Whether this body site is in active use.
   @override
   final Boolean? active;
+
+  /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
   final Element? activeElement;
+
+  /// [morphology] The kind of structure being represented by the body
+  /// structure at `BodyStructure.location`.  This can define both normal and
+  ///  abnormal morphologies.
   @override
   final CodeableConcept? morphology;
+
+  /// [location] The anatomical location or region of the specimen, lesion, or
+  ///  body structure.
   @override
   final CodeableConcept? location;
+
+  /// [locationQualifier] Qualifier to refine the anatomical location.  These
+  /// include qualifiers for laterality, relative location, directionality,
+  ///  number, and plane.
+  final List<CodeableConcept>? _locationQualifier;
+
+  /// [locationQualifier] Qualifier to refine the anatomical location.  These
+  /// include qualifiers for laterality, relative location, directionality,
+  ///  number, and plane.
   @override
-  final List<CodeableConcept>? locationQualifier;
+  List<CodeableConcept>? get locationQualifier {
+    final value = _locationQualifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] A summary, characterization or explanation of the body
+  ///  structure.
   @override
   final String? description;
+
+  /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [image] Image or images used to identify a location.
+  final List<Attachment>? _image;
+
+  /// [image] Image or images used to identify a location.
   @override
-  final List<Attachment>? image;
+  List<Attachment>? get image {
+    final value = _image;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [patient] The person to which the body site belongs.
   @override
   final Reference patient;
 
@@ -657,7 +822,7 @@ class _$_BodyStructure extends _BodyStructure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BodyStructure &&
+            other is _$_BodyStructure &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -670,13 +835,14 @@ class _$_BodyStructure extends _BodyStructure {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.active, active) &&
             const DeepCollectionEquality()
                 .equals(other.activeElement, activeElement) &&
@@ -684,15 +850,16 @@ class _$_BodyStructure extends _BodyStructure {
                 .equals(other.morphology, morphology) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality()
-                .equals(other.locationQualifier, locationQualifier) &&
+                .equals(other._locationQualifier, _locationQualifier) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other._image, _image) &&
             const DeepCollectionEquality().equals(other.patient, patient));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -704,61 +871,63 @@ class _$_BodyStructure extends _BodyStructure {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(active),
         const DeepCollectionEquality().hash(activeElement),
         const DeepCollectionEquality().hash(morphology),
         const DeepCollectionEquality().hash(location),
-        const DeepCollectionEquality().hash(locationQualifier),
+        const DeepCollectionEquality().hash(_locationQualifier),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(image),
+        const DeepCollectionEquality().hash(_image),
         const DeepCollectionEquality().hash(patient)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$BodyStructureCopyWith<_BodyStructure> get copyWith =>
-      __$BodyStructureCopyWithImpl<_BodyStructure>(this, _$identity);
+  _$$_BodyStructureCopyWith<_$_BodyStructure> get copyWith =>
+      __$$_BodyStructureCopyWithImpl<_$_BodyStructure>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BodyStructureToJson(this);
+    return _$$_BodyStructureToJson(
+      this,
+    );
   }
 }
 
 abstract class _BodyStructure extends BodyStructure {
   factory _BodyStructure(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Boolean? active,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Boolean? active,
       @JsonKey(name: '_active')
-          Element? activeElement,
-      CodeableConcept? morphology,
-      CodeableConcept? location,
-      List<CodeableConcept>? locationQualifier,
-      String? description,
+          final Element? activeElement,
+      final CodeableConcept? morphology,
+      final CodeableConcept? location,
+      final List<CodeableConcept>? locationQualifier,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<Attachment>? image,
-      required Reference patient}) = _$_BodyStructure;
+          final Element? descriptionElement,
+      final List<Attachment>? image,
+      required final Reference patient}) = _$_BodyStructure;
   _BodyStructure._() : super._();
 
   factory _BodyStructure.fromJson(Map<String, dynamic> json) =
@@ -768,53 +937,130 @@ abstract class _BodyStructure extends BodyStructure {
   @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifier for this instance of the anatomical structure.
   List<Identifier>? get identifier;
   @override
+
+  /// [active] Whether this body site is in active use.
   Boolean? get active;
   @override
+
+  /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
   Element? get activeElement;
   @override
+
+  /// [morphology] The kind of structure being represented by the body
+  /// structure at `BodyStructure.location`.  This can define both normal and
+  ///  abnormal morphologies.
   CodeableConcept? get morphology;
   @override
+
+  /// [location] The anatomical location or region of the specimen, lesion, or
+  ///  body structure.
   CodeableConcept? get location;
   @override
+
+  /// [locationQualifier] Qualifier to refine the anatomical location.  These
+  /// include qualifiers for laterality, relative location, directionality,
+  ///  number, and plane.
   List<CodeableConcept>? get locationQualifier;
   @override
+
+  /// [description] A summary, characterization or explanation of the body
+  ///  structure.
   String? get description;
   @override
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [image] Image or images used to identify a location.
   List<Attachment>? get image;
   @override
+
+  /// [patient] The person to which the body site belongs.
   Reference get patient;
   @override
   @JsonKey(ignore: true)
-  _$BodyStructureCopyWith<_BodyStructure> get copyWith =>
+  _$$_BodyStructureCopyWith<_$_BodyStructure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -823,145 +1069,177 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$DiagnosticReportTearOff {
-  const _$DiagnosticReportTearOff();
-
-  _DiagnosticReport call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-          R4ResourceType resourceType = R4ResourceType.DiagnosticReport,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          DiagnosticReportStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? category,
-      required CodeableConcept code,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      Instant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
-      List<Reference>? performer,
-      List<Reference>? resultsInterpreter,
-      List<Reference>? specimen,
-      List<Reference>? result,
-      List<Reference>? imagingStudy,
-      List<DiagnosticReportMedia>? media,
-      String? conclusion,
-      @JsonKey(name: '_conclusion')
-          Element? conclusionElement,
-      List<CodeableConcept>? conclusionCode,
-      List<Attachment>? presentedForm}) {
-    return _DiagnosticReport(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      status: status,
-      statusElement: statusElement,
-      category: category,
-      code: code,
-      subject: subject,
-      encounter: encounter,
-      effectiveDateTime: effectiveDateTime,
-      effectiveDateTimeElement: effectiveDateTimeElement,
-      effectivePeriod: effectivePeriod,
-      issued: issued,
-      issuedElement: issuedElement,
-      performer: performer,
-      resultsInterpreter: resultsInterpreter,
-      specimen: specimen,
-      result: result,
-      imagingStudy: imagingStudy,
-      media: media,
-      conclusion: conclusion,
-      conclusionElement: conclusionElement,
-      conclusionCode: conclusionCode,
-      presentedForm: presentedForm,
-    );
-  }
-
-  DiagnosticReport fromJson(Map<String, Object?> json) {
-    return DiagnosticReport.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DiagnosticReport = _$DiagnosticReportTearOff();
-
-/// @nodoc
 mixin _$DiagnosticReport {
   @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifiers assigned to this report by the performer or
+  ///  other systems.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [basedOn] Details concerning a service requested.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  DiagnosticReportStatus? get status => throw _privateConstructorUsedError;
+
+  /// [status] The status of the diagnostic report.
+  Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [category] A code that classifies the clinical discipline, department or
+  /// diagnostic service that created the report (e.g. cardiology, biochemistry,
+  /// hematology, MRI). This is used for searching, sorting and display
+  ///  purposes.
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [code] A code or name that describes this diagnostic report.
   CodeableConcept get code => throw _privateConstructorUsedError;
+
+  /// [subject] The subject of the report. Usually, but not always, this is a
+  /// patient. However, diagnostic services also perform analyses on specimens
+  ///  collected from a variety of other sources.
   Reference? get subject => throw _privateConstructorUsedError;
+
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
+  ///  interaction) which this DiagnosticReport is about.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [effectiveDateTime] The time or time-period the observed values are
+  /// related to. When the subject of the report is a patient, this is usually
+  /// either the time of the procedure or of specimen collection(s), but very
+  /// often the source of the date/time is not known, only the date/time
+  ///  itself.
   FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The time or time-period the observed values are related
+  /// to. When the subject of the report is a patient, this is usually either
+  /// the time of the procedure or of specimen collection(s), but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [issued] The date and time that this version of the report was made
+  /// available to providers, typically after the report was reviewed and
+  ///  verified.
   Instant? get issued => throw _privateConstructorUsedError;
+
+  /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
+
+  /// [performer] The diagnostic service that is responsible for issuing the
+  ///  report.
   List<Reference>? get performer => throw _privateConstructorUsedError;
+
+  /// [resultsInterpreter] The practitioner or organization that is responsible
+  ///  for the report's conclusions and interpretations.
   List<Reference>? get resultsInterpreter => throw _privateConstructorUsedError;
+
+  /// [specimen] Details about the specimens on which this diagnostic report is
+  ///  based.
   List<Reference>? get specimen => throw _privateConstructorUsedError;
+
+  /// [result] [Observations](observation.html)  that are part of this
+  ///  diagnostic report.
   List<Reference>? get result => throw _privateConstructorUsedError;
+
+  /// [imagingStudy] One or more links to full details of any imaging performed
+  /// during the diagnostic investigation. Typically, this is imaging performed
+  /// by DICOM enabled modalities, but this is not required. A fully enabled
+  /// PACS viewer can use this information to provide views of the source
+  ///  images.
   List<Reference>? get imagingStudy => throw _privateConstructorUsedError;
+
+  /// [media] A list of key images associated with this report. The images are
+  /// generally created during the diagnostic process, and may be directly of
+  ///  the patient, or of treated specimens (i.e. slides of interest).
   List<DiagnosticReportMedia>? get media => throw _privateConstructorUsedError;
+
+  /// [conclusion] Concise and clinically contextualized summary conclusion
+  ///  (interpretation/impression) of the diagnostic report.
   String? get conclusion => throw _privateConstructorUsedError;
+
+  /// [conclusionElement] Extensions for conclusion
   @JsonKey(name: '_conclusion')
   Element? get conclusionElement => throw _privateConstructorUsedError;
+
+  /// [conclusionCode] One or more codes that represent the summary conclusion
+  ///  (interpretation/impression) of the diagnostic report.
   List<CodeableConcept>? get conclusionCode =>
       throw _privateConstructorUsedError;
+
+  /// [presentedForm] Rich text representation of the entire result as issued
+  /// by the diagnostic service. Multiple formats are allowed but they SHALL be
+  ///  semantically equivalent.
   List<Attachment>? get presentedForm => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -978,7 +1256,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -993,8 +1271,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          DiagnosticReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -1088,7 +1365,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1136,7 +1413,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DiagnosticReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1350,16 +1627,16 @@ class _$DiagnosticReportCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DiagnosticReportCopyWith<$Res>
+abstract class _$$_DiagnosticReportCopyWith<$Res>
     implements $DiagnosticReportCopyWith<$Res> {
-  factory _$DiagnosticReportCopyWith(
-          _DiagnosticReport value, $Res Function(_DiagnosticReport) then) =
-      __$DiagnosticReportCopyWithImpl<$Res>;
+  factory _$$_DiagnosticReportCopyWith(
+          _$_DiagnosticReport value, $Res Function(_$_DiagnosticReport) then) =
+      __$$_DiagnosticReportCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1374,8 +1651,7 @@ abstract class _$DiagnosticReportCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          DiagnosticReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -1428,15 +1704,15 @@ abstract class _$DiagnosticReportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DiagnosticReportCopyWithImpl<$Res>
+class __$$_DiagnosticReportCopyWithImpl<$Res>
     extends _$DiagnosticReportCopyWithImpl<$Res>
-    implements _$DiagnosticReportCopyWith<$Res> {
-  __$DiagnosticReportCopyWithImpl(
-      _DiagnosticReport _value, $Res Function(_DiagnosticReport) _then)
-      : super(_value, (v) => _then(v as _DiagnosticReport));
+    implements _$$_DiagnosticReportCopyWith<$Res> {
+  __$$_DiagnosticReportCopyWithImpl(
+      _$_DiagnosticReport _value, $Res Function(_$_DiagnosticReport) _then)
+      : super(_value, (v) => _then(v as _$_DiagnosticReport));
 
   @override
-  _DiagnosticReport get _value => super._value as _DiagnosticReport;
+  _$_DiagnosticReport get _value => super._value as _$_DiagnosticReport;
 
   @override
   $Res call({
@@ -1475,7 +1751,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
     Object? conclusionCode = freezed,
     Object? presentedForm = freezed,
   }) {
-    return _then(_DiagnosticReport(
+    return _then(_$_DiagnosticReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1483,7 +1759,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1509,35 +1785,35 @@ class __$DiagnosticReportCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DiagnosticReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       code: code == freezed
@@ -1573,27 +1849,27 @@ class __$DiagnosticReportCopyWithImpl<$Res>
           : issuedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       performer: performer == freezed
-          ? _value.performer
+          ? _value._performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       resultsInterpreter: resultsInterpreter == freezed
-          ? _value.resultsInterpreter
+          ? _value._resultsInterpreter
           : resultsInterpreter // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       specimen: specimen == freezed
-          ? _value.specimen
+          ? _value._specimen
           : specimen // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       result: result == freezed
-          ? _value.result
+          ? _value._result
           : result // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       imagingStudy: imagingStudy == freezed
-          ? _value.imagingStudy
+          ? _value._imagingStudy
           : imagingStudy // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       media: media == freezed
-          ? _value.media
+          ? _value._media
           : media // ignore: cast_nullable_to_non_nullable
               as List<DiagnosticReportMedia>?,
       conclusion: conclusion == freezed
@@ -1605,11 +1881,11 @@ class __$DiagnosticReportCopyWithImpl<$Res>
           : conclusionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       conclusionCode: conclusionCode == freezed
-          ? _value.conclusionCode
+          ? _value._conclusionCode
           : conclusionCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       presentedForm: presentedForm == freezed
-          ? _value.presentedForm
+          ? _value._presentedForm
           : presentedForm // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
     ));
@@ -1631,17 +1907,16 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          this.status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.category,
+      final List<CodeableConcept>? category,
       required this.code,
       this.subject,
       this.encounter,
@@ -1652,18 +1927,32 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       this.issued,
       @JsonKey(name: '_issued')
           this.issuedElement,
-      this.performer,
-      this.resultsInterpreter,
-      this.specimen,
-      this.result,
-      this.imagingStudy,
-      this.media,
+      final List<Reference>? performer,
+      final List<Reference>? resultsInterpreter,
+      final List<Reference>? specimen,
+      final List<Reference>? result,
+      final List<Reference>? imagingStudy,
+      final List<DiagnosticReportMedia>? media,
       this.conclusion,
       @JsonKey(name: '_conclusion')
           this.conclusionElement,
-      this.conclusionCode,
-      this.presentedForm})
-      : super._();
+      final List<CodeableConcept>? conclusionCode,
+      final List<Attachment>? presentedForm})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _category = category,
+        _performer = performer,
+        _resultsInterpreter = resultsInterpreter,
+        _specimen = specimen,
+        _result = result,
+        _imagingStudy = imagingStudy,
+        _media = media,
+        _conclusionCode = conclusionCode,
+        _presentedForm = presentedForm,
+        super._();
 
   factory _$_DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$$_DiagnosticReportFromJson(json);
@@ -1671,80 +1960,355 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Identifiers assigned to this report by the performer or
+  ///  other systems.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Identifiers assigned to this report by the performer or
+  ///  other systems.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [basedOn] Details concerning a service requested.
+  final List<Reference>? _basedOn;
+
+  /// [basedOn] Details concerning a service requested.
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] The status of the diagnostic report.
   @override
-  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  final DiagnosticReportStatus? status;
+  final Code? status;
+
+  /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [category] A code that classifies the clinical discipline, department or
+  /// diagnostic service that created the report (e.g. cardiology, biochemistry,
+  /// hematology, MRI). This is used for searching, sorting and display
+  ///  purposes.
+  final List<CodeableConcept>? _category;
+
+  /// [category] A code that classifies the clinical discipline, department or
+  /// diagnostic service that created the report (e.g. cardiology, biochemistry,
+  /// hematology, MRI). This is used for searching, sorting and display
+  ///  purposes.
   @override
-  final List<CodeableConcept>? category;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [code] A code or name that describes this diagnostic report.
   @override
   final CodeableConcept code;
+
+  /// [subject] The subject of the report. Usually, but not always, this is a
+  /// patient. However, diagnostic services also perform analyses on specimens
+  ///  collected from a variety of other sources.
   @override
   final Reference? subject;
+
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
+  ///  interaction) which this DiagnosticReport is about.
   @override
   final Reference? encounter;
+
+  /// [effectiveDateTime] The time or time-period the observed values are
+  /// related to. When the subject of the report is a patient, this is usually
+  /// either the time of the procedure or of specimen collection(s), but very
+  /// often the source of the date/time is not known, only the date/time
+  ///  itself.
   @override
   final FhirDateTime? effectiveDateTime;
+
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @override
   @JsonKey(name: '_effectiveDateTime')
   final Element? effectiveDateTimeElement;
+
+  /// [effectivePeriod] The time or time-period the observed values are related
+  /// to. When the subject of the report is a patient, this is usually either
+  /// the time of the procedure or of specimen collection(s), but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   @override
   final Period? effectivePeriod;
+
+  /// [issued] The date and time that this version of the report was made
+  /// available to providers, typically after the report was reviewed and
+  ///  verified.
   @override
   final Instant? issued;
+
+  /// [issuedElement] Extensions for issued
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
+
+  /// [performer] The diagnostic service that is responsible for issuing the
+  ///  report.
+  final List<Reference>? _performer;
+
+  /// [performer] The diagnostic service that is responsible for issuing the
+  ///  report.
   @override
-  final List<Reference>? performer;
+  List<Reference>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [resultsInterpreter] The practitioner or organization that is responsible
+  ///  for the report's conclusions and interpretations.
+  final List<Reference>? _resultsInterpreter;
+
+  /// [resultsInterpreter] The practitioner or organization that is responsible
+  ///  for the report's conclusions and interpretations.
   @override
-  final List<Reference>? resultsInterpreter;
+  List<Reference>? get resultsInterpreter {
+    final value = _resultsInterpreter;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [specimen] Details about the specimens on which this diagnostic report is
+  ///  based.
+  final List<Reference>? _specimen;
+
+  /// [specimen] Details about the specimens on which this diagnostic report is
+  ///  based.
   @override
-  final List<Reference>? specimen;
+  List<Reference>? get specimen {
+    final value = _specimen;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [result] [Observations](observation.html)  that are part of this
+  ///  diagnostic report.
+  final List<Reference>? _result;
+
+  /// [result] [Observations](observation.html)  that are part of this
+  ///  diagnostic report.
   @override
-  final List<Reference>? result;
+  List<Reference>? get result {
+    final value = _result;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [imagingStudy] One or more links to full details of any imaging performed
+  /// during the diagnostic investigation. Typically, this is imaging performed
+  /// by DICOM enabled modalities, but this is not required. A fully enabled
+  /// PACS viewer can use this information to provide views of the source
+  ///  images.
+  final List<Reference>? _imagingStudy;
+
+  /// [imagingStudy] One or more links to full details of any imaging performed
+  /// during the diagnostic investigation. Typically, this is imaging performed
+  /// by DICOM enabled modalities, but this is not required. A fully enabled
+  /// PACS viewer can use this information to provide views of the source
+  ///  images.
   @override
-  final List<Reference>? imagingStudy;
+  List<Reference>? get imagingStudy {
+    final value = _imagingStudy;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [media] A list of key images associated with this report. The images are
+  /// generally created during the diagnostic process, and may be directly of
+  ///  the patient, or of treated specimens (i.e. slides of interest).
+  final List<DiagnosticReportMedia>? _media;
+
+  /// [media] A list of key images associated with this report. The images are
+  /// generally created during the diagnostic process, and may be directly of
+  ///  the patient, or of treated specimens (i.e. slides of interest).
   @override
-  final List<DiagnosticReportMedia>? media;
+  List<DiagnosticReportMedia>? get media {
+    final value = _media;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [conclusion] Concise and clinically contextualized summary conclusion
+  ///  (interpretation/impression) of the diagnostic report.
   @override
   final String? conclusion;
+
+  /// [conclusionElement] Extensions for conclusion
   @override
   @JsonKey(name: '_conclusion')
   final Element? conclusionElement;
+
+  /// [conclusionCode] One or more codes that represent the summary conclusion
+  ///  (interpretation/impression) of the diagnostic report.
+  final List<CodeableConcept>? _conclusionCode;
+
+  /// [conclusionCode] One or more codes that represent the summary conclusion
+  ///  (interpretation/impression) of the diagnostic report.
   @override
-  final List<CodeableConcept>? conclusionCode;
+  List<CodeableConcept>? get conclusionCode {
+    final value = _conclusionCode;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [presentedForm] Rich text representation of the entire result as issued
+  /// by the diagnostic service. Multiple formats are allowed but they SHALL be
+  ///  semantically equivalent.
+  final List<Attachment>? _presentedForm;
+
+  /// [presentedForm] Rich text representation of the entire result as issued
+  /// by the diagnostic service. Multiple formats are allowed but they SHALL be
+  ///  semantically equivalent.
   @override
-  final List<Attachment>? presentedForm;
+  List<Attachment>? get presentedForm {
+    final value = _presentedForm;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1755,7 +2319,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DiagnosticReport &&
+            other is _$_DiagnosticReport &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1768,18 +2332,19 @@ class _$_DiagnosticReport extends _DiagnosticReport {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality().equals(other.encounter, encounter) &&
@@ -1792,24 +2357,26 @@ class _$_DiagnosticReport extends _DiagnosticReport {
             const DeepCollectionEquality().equals(other.issued, issued) &&
             const DeepCollectionEquality()
                 .equals(other.issuedElement, issuedElement) &&
-            const DeepCollectionEquality().equals(other.performer, performer) &&
             const DeepCollectionEquality()
-                .equals(other.resultsInterpreter, resultsInterpreter) &&
-            const DeepCollectionEquality().equals(other.specimen, specimen) &&
-            const DeepCollectionEquality().equals(other.result, result) &&
+                .equals(other._performer, _performer) &&
             const DeepCollectionEquality()
-                .equals(other.imagingStudy, imagingStudy) &&
-            const DeepCollectionEquality().equals(other.media, media) &&
+                .equals(other._resultsInterpreter, _resultsInterpreter) &&
+            const DeepCollectionEquality().equals(other._specimen, _specimen) &&
+            const DeepCollectionEquality().equals(other._result, _result) &&
+            const DeepCollectionEquality()
+                .equals(other._imagingStudy, _imagingStudy) &&
+            const DeepCollectionEquality().equals(other._media, _media) &&
             const DeepCollectionEquality()
                 .equals(other.conclusion, conclusion) &&
             const DeepCollectionEquality()
                 .equals(other.conclusionElement, conclusionElement) &&
             const DeepCollectionEquality()
-                .equals(other.conclusionCode, conclusionCode) &&
+                .equals(other._conclusionCode, _conclusionCode) &&
             const DeepCollectionEquality()
-                .equals(other.presentedForm, presentedForm));
+                .equals(other._presentedForm, _presentedForm));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1821,14 +2388,14 @@ class _$_DiagnosticReport extends _DiagnosticReport {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(code),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(encounter),
@@ -1837,74 +2404,75 @@ class _$_DiagnosticReport extends _DiagnosticReport {
         const DeepCollectionEquality().hash(effectivePeriod),
         const DeepCollectionEquality().hash(issued),
         const DeepCollectionEquality().hash(issuedElement),
-        const DeepCollectionEquality().hash(performer),
-        const DeepCollectionEquality().hash(resultsInterpreter),
-        const DeepCollectionEquality().hash(specimen),
-        const DeepCollectionEquality().hash(result),
-        const DeepCollectionEquality().hash(imagingStudy),
-        const DeepCollectionEquality().hash(media),
+        const DeepCollectionEquality().hash(_performer),
+        const DeepCollectionEquality().hash(_resultsInterpreter),
+        const DeepCollectionEquality().hash(_specimen),
+        const DeepCollectionEquality().hash(_result),
+        const DeepCollectionEquality().hash(_imagingStudy),
+        const DeepCollectionEquality().hash(_media),
         const DeepCollectionEquality().hash(conclusion),
         const DeepCollectionEquality().hash(conclusionElement),
-        const DeepCollectionEquality().hash(conclusionCode),
-        const DeepCollectionEquality().hash(presentedForm)
+        const DeepCollectionEquality().hash(_conclusionCode),
+        const DeepCollectionEquality().hash(_presentedForm)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$DiagnosticReportCopyWith<_DiagnosticReport> get copyWith =>
-      __$DiagnosticReportCopyWithImpl<_DiagnosticReport>(this, _$identity);
+  _$$_DiagnosticReportCopyWith<_$_DiagnosticReport> get copyWith =>
+      __$$_DiagnosticReportCopyWithImpl<_$_DiagnosticReport>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DiagnosticReportToJson(this);
+    return _$$_DiagnosticReportToJson(
+      this,
+    );
   }
 }
 
 abstract class _DiagnosticReport extends DiagnosticReport {
   factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          DiagnosticReportStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? category,
-      required CodeableConcept code,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
+          final Element? statusElement,
+      final List<CodeableConcept>? category,
+      required final CodeableConcept code,
+      final Reference? subject,
+      final Reference? encounter,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      Instant? issued,
+          final Element? effectiveDateTimeElement,
+      final Period? effectivePeriod,
+      final Instant? issued,
       @JsonKey(name: '_issued')
-          Element? issuedElement,
-      List<Reference>? performer,
-      List<Reference>? resultsInterpreter,
-      List<Reference>? specimen,
-      List<Reference>? result,
-      List<Reference>? imagingStudy,
-      List<DiagnosticReportMedia>? media,
-      String? conclusion,
+          final Element? issuedElement,
+      final List<Reference>? performer,
+      final List<Reference>? resultsInterpreter,
+      final List<Reference>? specimen,
+      final List<Reference>? result,
+      final List<Reference>? imagingStudy,
+      final List<DiagnosticReportMedia>? media,
+      final String? conclusion,
       @JsonKey(name: '_conclusion')
-          Element? conclusionElement,
-      List<CodeableConcept>? conclusionCode,
-      List<Attachment>? presentedForm}) = _$_DiagnosticReport;
+          final Element? conclusionElement,
+      final List<CodeableConcept>? conclusionCode,
+      final List<Attachment>? presentedForm}) = _$_DiagnosticReport;
   _DiagnosticReport._() : super._();
 
   factory _DiagnosticReport.fromJson(Map<String, dynamic> json) =
@@ -1914,82 +2482,208 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifiers assigned to this report by the performer or
+  ///  other systems.
   List<Identifier>? get identifier;
   @override
+
+  /// [basedOn] Details concerning a service requested.
   List<Reference>? get basedOn;
   @override
-  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  DiagnosticReportStatus? get status;
+
+  /// [status] The status of the diagnostic report.
+  Code? get status;
   @override
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [category] A code that classifies the clinical discipline, department or
+  /// diagnostic service that created the report (e.g. cardiology, biochemistry,
+  /// hematology, MRI). This is used for searching, sorting and display
+  ///  purposes.
   List<CodeableConcept>? get category;
   @override
+
+  /// [code] A code or name that describes this diagnostic report.
   CodeableConcept get code;
   @override
+
+  /// [subject] The subject of the report. Usually, but not always, this is a
+  /// patient. However, diagnostic services also perform analyses on specimens
+  ///  collected from a variety of other sources.
   Reference? get subject;
   @override
+
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
+  ///  interaction) which this DiagnosticReport is about.
   Reference? get encounter;
   @override
+
+  /// [effectiveDateTime] The time or time-period the observed values are
+  /// related to. When the subject of the report is a patient, this is usually
+  /// either the time of the procedure or of specimen collection(s), but very
+  /// often the source of the date/time is not known, only the date/time
+  ///  itself.
   FhirDateTime? get effectiveDateTime;
   @override
+
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement;
   @override
+
+  /// [effectivePeriod] The time or time-period the observed values are related
+  /// to. When the subject of the report is a patient, this is usually either
+  /// the time of the procedure or of specimen collection(s), but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Period? get effectivePeriod;
   @override
+
+  /// [issued] The date and time that this version of the report was made
+  /// available to providers, typically after the report was reviewed and
+  ///  verified.
   Instant? get issued;
   @override
+
+  /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
   Element? get issuedElement;
   @override
+
+  /// [performer] The diagnostic service that is responsible for issuing the
+  ///  report.
   List<Reference>? get performer;
   @override
+
+  /// [resultsInterpreter] The practitioner or organization that is responsible
+  ///  for the report's conclusions and interpretations.
   List<Reference>? get resultsInterpreter;
   @override
+
+  /// [specimen] Details about the specimens on which this diagnostic report is
+  ///  based.
   List<Reference>? get specimen;
   @override
+
+  /// [result] [Observations](observation.html)  that are part of this
+  ///  diagnostic report.
   List<Reference>? get result;
   @override
+
+  /// [imagingStudy] One or more links to full details of any imaging performed
+  /// during the diagnostic investigation. Typically, this is imaging performed
+  /// by DICOM enabled modalities, but this is not required. A fully enabled
+  /// PACS viewer can use this information to provide views of the source
+  ///  images.
   List<Reference>? get imagingStudy;
   @override
+
+  /// [media] A list of key images associated with this report. The images are
+  /// generally created during the diagnostic process, and may be directly of
+  ///  the patient, or of treated specimens (i.e. slides of interest).
   List<DiagnosticReportMedia>? get media;
   @override
+
+  /// [conclusion] Concise and clinically contextualized summary conclusion
+  ///  (interpretation/impression) of the diagnostic report.
   String? get conclusion;
   @override
+
+  /// [conclusionElement] Extensions for conclusion
   @JsonKey(name: '_conclusion')
   Element? get conclusionElement;
   @override
+
+  /// [conclusionCode] One or more codes that represent the summary conclusion
+  ///  (interpretation/impression) of the diagnostic report.
   List<CodeableConcept>? get conclusionCode;
   @override
+
+  /// [presentedForm] Rich text representation of the entire result as issued
+  /// by the diagnostic service. Multiple formats are allowed but they SHALL be
+  ///  semantically equivalent.
   List<Attachment>? get presentedForm;
   @override
   @JsonKey(ignore: true)
-  _$DiagnosticReportCopyWith<_DiagnosticReport> get copyWith =>
+  _$$_DiagnosticReportCopyWith<_$_DiagnosticReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1999,44 +2693,46 @@ DiagnosticReportMedia _$DiagnosticReportMediaFromJson(
 }
 
 /// @nodoc
-class _$DiagnosticReportMediaTearOff {
-  const _$DiagnosticReportMediaTearOff();
-
-  _DiagnosticReportMedia call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement,
-      required Reference link}) {
-    return _DiagnosticReportMedia(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      comment: comment,
-      commentElement: commentElement,
-      link: link,
-    );
-  }
-
-  DiagnosticReportMedia fromJson(Map<String, Object?> json) {
-    return DiagnosticReportMedia.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DiagnosticReportMedia = _$DiagnosticReportMediaTearOff();
-
-/// @nodoc
 mixin _$DiagnosticReportMedia {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [comment] A comment about the image. Typically, this is used to provide
+  /// an explanation for why the image is included, or to draw the viewer's
+  ///  attention to important features.
   String? get comment => throw _privateConstructorUsedError;
+
+  /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
   Element? get commentElement => throw _privateConstructorUsedError;
+
+  /// [link] Reference to the image source.
   Reference get link => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2128,11 +2824,11 @@ class _$DiagnosticReportMediaCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DiagnosticReportMediaCopyWith<$Res>
+abstract class _$$_DiagnosticReportMediaCopyWith<$Res>
     implements $DiagnosticReportMediaCopyWith<$Res> {
-  factory _$DiagnosticReportMediaCopyWith(_DiagnosticReportMedia value,
-          $Res Function(_DiagnosticReportMedia) then) =
-      __$DiagnosticReportMediaCopyWithImpl<$Res>;
+  factory _$$_DiagnosticReportMediaCopyWith(_$_DiagnosticReportMedia value,
+          $Res Function(_$_DiagnosticReportMedia) then) =
+      __$$_DiagnosticReportMediaCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -2149,15 +2845,16 @@ abstract class _$DiagnosticReportMediaCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DiagnosticReportMediaCopyWithImpl<$Res>
+class __$$_DiagnosticReportMediaCopyWithImpl<$Res>
     extends _$DiagnosticReportMediaCopyWithImpl<$Res>
-    implements _$DiagnosticReportMediaCopyWith<$Res> {
-  __$DiagnosticReportMediaCopyWithImpl(_DiagnosticReportMedia _value,
-      $Res Function(_DiagnosticReportMedia) _then)
-      : super(_value, (v) => _then(v as _DiagnosticReportMedia));
+    implements _$$_DiagnosticReportMediaCopyWith<$Res> {
+  __$$_DiagnosticReportMediaCopyWithImpl(_$_DiagnosticReportMedia _value,
+      $Res Function(_$_DiagnosticReportMedia) _then)
+      : super(_value, (v) => _then(v as _$_DiagnosticReportMedia));
 
   @override
-  _DiagnosticReportMedia get _value => super._value as _DiagnosticReportMedia;
+  _$_DiagnosticReportMedia get _value =>
+      super._value as _$_DiagnosticReportMedia;
 
   @override
   $Res call({
@@ -2168,17 +2865,17 @@ class __$DiagnosticReportMediaCopyWithImpl<$Res>
     Object? commentElement = freezed,
     Object? link = freezed,
   }) {
-    return _then(_DiagnosticReportMedia(
+    return _then(_$_DiagnosticReportMedia(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       comment: comment == freezed
@@ -2202,28 +2899,94 @@ class __$DiagnosticReportMediaCopyWithImpl<$Res>
 class _$_DiagnosticReportMedia extends _DiagnosticReportMedia {
   _$_DiagnosticReportMedia(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.comment,
       @JsonKey(name: '_comment') this.commentElement,
       required this.link})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =>
       _$$_DiagnosticReportMediaFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [comment] A comment about the image. Typically, this is used to provide
+  /// an explanation for why the image is included, or to draw the viewer's
+  ///  attention to important features.
   @override
   final String? comment;
+
+  /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
   final Element? commentElement;
+
+  /// [link] Reference to the image source.
   @override
   final Reference link;
 
@@ -2236,70 +2999,105 @@ class _$_DiagnosticReportMedia extends _DiagnosticReportMedia {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DiagnosticReportMedia &&
+            other is _$_DiagnosticReportMedia &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.comment, comment) &&
             const DeepCollectionEquality()
                 .equals(other.commentElement, commentElement) &&
             const DeepCollectionEquality().equals(other.link, link));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(comment),
       const DeepCollectionEquality().hash(commentElement),
       const DeepCollectionEquality().hash(link));
 
   @JsonKey(ignore: true)
   @override
-  _$DiagnosticReportMediaCopyWith<_DiagnosticReportMedia> get copyWith =>
-      __$DiagnosticReportMediaCopyWithImpl<_DiagnosticReportMedia>(
+  _$$_DiagnosticReportMediaCopyWith<_$_DiagnosticReportMedia> get copyWith =>
+      __$$_DiagnosticReportMediaCopyWithImpl<_$_DiagnosticReportMedia>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DiagnosticReportMediaToJson(this);
+    return _$$_DiagnosticReportMediaToJson(
+      this,
+    );
   }
 }
 
 abstract class _DiagnosticReportMedia extends DiagnosticReportMedia {
   factory _DiagnosticReportMedia(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement,
-      required Reference link}) = _$_DiagnosticReportMedia;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? comment,
+      @JsonKey(name: '_comment') final Element? commentElement,
+      required final Reference link}) = _$_DiagnosticReportMedia;
   _DiagnosticReportMedia._() : super._();
 
   factory _DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =
       _$_DiagnosticReportMedia.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [comment] A comment about the image. Typically, this is used to provide
+  /// an explanation for why the image is included, or to draw the viewer's
+  ///  attention to important features.
   String? get comment;
   @override
+
+  /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
   Element? get commentElement;
   @override
+
+  /// [link] Reference to the image source.
   Reference get link;
   @override
   @JsonKey(ignore: true)
-  _$DiagnosticReportMediaCopyWith<_DiagnosticReportMedia> get copyWith =>
+  _$$_DiagnosticReportMediaCopyWith<_$_DiagnosticReportMedia> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2308,153 +3106,178 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ImagingStudyTearOff {
-  const _$ImagingStudyTearOff();
-
-  _ImagingStudy call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-          R4ResourceType resourceType = R4ResourceType.ImagingStudy,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          ImagingStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<Coding>? modality,
-      required Reference subject,
-      Reference? encounter,
-      FhirDateTime? started,
-      @JsonKey(name: '_started')
-          Element? startedElement,
-      List<Reference>? basedOn,
-      Reference? referrer,
-      List<Reference>? interpreter,
-      List<Reference>? endpoint,
-      UnsignedInt? numberOfSeries,
-      @JsonKey(name: '_numberOfSeries')
-          Element? numberOfSeriesElement,
-      UnsignedInt? numberOfInstances,
-      @JsonKey(name: '_numberOfInstances')
-          Element? numberOfInstancesElement,
-      Reference? procedureReference,
-      List<CodeableConcept>? procedureCode,
-      Reference? location,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<ImagingStudySeries>? series}) {
-    return _ImagingStudy(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      modality: modality,
-      subject: subject,
-      encounter: encounter,
-      started: started,
-      startedElement: startedElement,
-      basedOn: basedOn,
-      referrer: referrer,
-      interpreter: interpreter,
-      endpoint: endpoint,
-      numberOfSeries: numberOfSeries,
-      numberOfSeriesElement: numberOfSeriesElement,
-      numberOfInstances: numberOfInstances,
-      numberOfInstancesElement: numberOfInstancesElement,
-      procedureReference: procedureReference,
-      procedureCode: procedureCode,
-      location: location,
-      reasonCode: reasonCode,
-      reasonReference: reasonReference,
-      note: note,
-      description: description,
-      descriptionElement: descriptionElement,
-      series: series,
-    );
-  }
-
-  ImagingStudy fromJson(Map<String, Object?> json) {
-    return ImagingStudy.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImagingStudy = _$ImagingStudyTearOff();
-
-/// @nodoc
 mixin _$ImagingStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifiers for the ImagingStudy such as DICOM Study
+  ///  Instance UID, and Accession Number.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-  ImagingStudyStatus? get status => throw _privateConstructorUsedError;
+
+  /// [status] The current state of the ImagingStudy.
+  Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [modality] A list of all the series.modality values that are actual
+  /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
+  ///  set OID 1.2.840.10008.6.1.19).
   List<Coding>? get modality => throw _privateConstructorUsedError;
+
+  /// [subject] The subject, typically a patient, of the imaging study.
   Reference get subject => throw _privateConstructorUsedError;
+
+  /// [encounter] The healthcare event (e.g. a patient and healthcare provider
+  ///  interaction) during which this ImagingStudy is made.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [started] Date and time the study started.
   FhirDateTime? get started => throw _privateConstructorUsedError;
+
+  /// [startedElement] Extensions for started
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
+
+  /// [basedOn] A list of the diagnostic requests that resulted in this imaging
+  ///  study being performed.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [referrer] The requesting/referring physician.
   Reference? get referrer => throw _privateConstructorUsedError;
+
+  /// [interpreter] Who read the study and interpreted the images or other
+  ///  content.
   List<Reference>? get interpreter => throw _privateConstructorUsedError;
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for the study. See implementation notes for information about
+  /// using DICOM endpoints. A study-level endpoint applies to each series in
+  /// the study, unless overridden by a series-level endpoint with the same
+  ///  Endpoint.connectionType.
   List<Reference>? get endpoint => throw _privateConstructorUsedError;
+
+  /// [numberOfSeries] Number of Series in the Study. This value given may be
+  /// larger than the number of series elements this Resource contains due to
+  /// resource availability, security, or other factors. This element should be
+  ///  present if any series elements are present.
   UnsignedInt? get numberOfSeries => throw _privateConstructorUsedError;
+
+  /// [numberOfSeriesElement] Extensions for numberOfSeries
   @JsonKey(name: '_numberOfSeries')
   Element? get numberOfSeriesElement => throw _privateConstructorUsedError;
+
+  /// [numberOfInstances] Number of SOP Instances in Study. This value given
+  /// may be larger than the number of instance elements this resource contains
+  /// due to resource availability, security, or other factors. This element
+  ///  should be present if any instance elements are present.
   UnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
+
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement => throw _privateConstructorUsedError;
+
+  /// [procedureReference] The procedure which this ImagingStudy was part of.
   Reference? get procedureReference => throw _privateConstructorUsedError;
+
+  /// [procedureCode] The code for the performed procedure type.
   List<CodeableConcept>? get procedureCode =>
       throw _privateConstructorUsedError;
+
+  /// [location] The principal physical location where the ImagingStudy was
+  ///  performed.
   Reference? get location => throw _privateConstructorUsedError;
+
+  /// [reasonCode] Description of clinical condition indicating why the
+  ///  ImagingStudy was requested.
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+
+  /// [reasonReference] Indicates another resource whose existence justifies
+  ///  this Study.
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
+
+  /// [note] Per the recommended DICOM mapping, this element is derived from
+  /// the Study Description attribute (0008,1030). Observations or findings
+  /// about the imaging study should be recorded in another resource, e.g.
+  ///  Observation, and not in this element.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [description] The Imaging Manager description of the study.
+  /// Institution-generated description or classification of the Study
+  ///  (component) performed.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [series] Each study has one or more series of images or other content.
   List<ImagingStudySeries>? get series => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2471,7 +3294,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2485,8 +3308,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          ImagingStudyStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Coding>? modality,
@@ -2587,7 +3409,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2631,7 +3453,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ImagingStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2879,16 +3701,16 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ImagingStudyCopyWith<$Res>
+abstract class _$$_ImagingStudyCopyWith<$Res>
     implements $ImagingStudyCopyWith<$Res> {
-  factory _$ImagingStudyCopyWith(
-          _ImagingStudy value, $Res Function(_ImagingStudy) then) =
-      __$ImagingStudyCopyWithImpl<$Res>;
+  factory _$$_ImagingStudyCopyWith(
+          _$_ImagingStudy value, $Res Function(_$_ImagingStudy) then) =
+      __$$_ImagingStudyCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2902,8 +3724,7 @@ abstract class _$ImagingStudyCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          ImagingStudyStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Coding>? modality,
@@ -2964,14 +3785,15 @@ abstract class _$ImagingStudyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
-    implements _$ImagingStudyCopyWith<$Res> {
-  __$ImagingStudyCopyWithImpl(
-      _ImagingStudy _value, $Res Function(_ImagingStudy) _then)
-      : super(_value, (v) => _then(v as _ImagingStudy));
+class __$$_ImagingStudyCopyWithImpl<$Res>
+    extends _$ImagingStudyCopyWithImpl<$Res>
+    implements _$$_ImagingStudyCopyWith<$Res> {
+  __$$_ImagingStudyCopyWithImpl(
+      _$_ImagingStudy _value, $Res Function(_$_ImagingStudy) _then)
+      : super(_value, (v) => _then(v as _$_ImagingStudy));
 
   @override
-  _ImagingStudy get _value => super._value as _ImagingStudy;
+  _$_ImagingStudy get _value => super._value as _$_ImagingStudy;
 
   @override
   $Res call({
@@ -3012,7 +3834,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? series = freezed,
   }) {
-    return _then(_ImagingStudy(
+    return _then(_$_ImagingStudy(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3020,7 +3842,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3046,31 +3868,31 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ImagingStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       modality: modality == freezed
-          ? _value.modality
+          ? _value._modality
           : modality // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       subject: subject == freezed
@@ -3090,7 +3912,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : startedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       referrer: referrer == freezed
@@ -3098,11 +3920,11 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : referrer // ignore: cast_nullable_to_non_nullable
               as Reference?,
       interpreter: interpreter == freezed
-          ? _value.interpreter
+          ? _value._interpreter
           : interpreter // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       endpoint: endpoint == freezed
-          ? _value.endpoint
+          ? _value._endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       numberOfSeries: numberOfSeries == freezed
@@ -3126,7 +3948,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : procedureReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       procedureCode: procedureCode == freezed
-          ? _value.procedureCode
+          ? _value._procedureCode
           : procedureCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       location: location == freezed
@@ -3134,15 +3956,15 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : location // ignore: cast_nullable_to_non_nullable
               as Reference?,
       reasonCode: reasonCode == freezed
-          ? _value.reasonCode
+          ? _value._reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       reasonReference: reasonReference == freezed
-          ? _value.reasonReference
+          ? _value._reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       description: description == freezed
@@ -3154,7 +3976,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       series: series == freezed
-          ? _value.series
+          ? _value._series
           : series // ignore: cast_nullable_to_non_nullable
               as List<ImagingStudySeries>?,
     ));
@@ -3176,25 +3998,24 @@ class _$_ImagingStudy extends _ImagingStudy {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          this.status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.modality,
+      final List<Coding>? modality,
       required this.subject,
       this.encounter,
       this.started,
       @JsonKey(name: '_started')
           this.startedElement,
-      this.basedOn,
+      final List<Reference>? basedOn,
       this.referrer,
-      this.interpreter,
-      this.endpoint,
+      final List<Reference>? interpreter,
+      final List<Reference>? endpoint,
       this.numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           this.numberOfSeriesElement,
@@ -3202,16 +4023,29 @@ class _$_ImagingStudy extends _ImagingStudy {
       @JsonKey(name: '_numberOfInstances')
           this.numberOfInstancesElement,
       this.procedureReference,
-      this.procedureCode,
+      final List<CodeableConcept>? procedureCode,
       this.location,
-      this.reasonCode,
-      this.reasonReference,
-      this.note,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<Annotation>? note,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.series})
-      : super._();
+      final List<ImagingStudySeries>? series})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _modality = modality,
+        _basedOn = basedOn,
+        _interpreter = interpreter,
+        _endpoint = endpoint,
+        _procedureCode = procedureCode,
+        _reasonCode = reasonCode,
+        _reasonReference = reasonReference,
+        _note = note,
+        _series = series,
+        super._();
 
   factory _$_ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingStudyFromJson(json);
@@ -3219,85 +4053,347 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Identifiers for the ImagingStudy such as DICOM Study
+  ///  Instance UID, and Accession Number.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Identifiers for the ImagingStudy such as DICOM Study
+  ///  Instance UID, and Accession Number.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] The current state of the ImagingStudy.
   @override
-  @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-  final ImagingStudyStatus? status;
+  final Code? status;
+
+  /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [modality] A list of all the series.modality values that are actual
+  /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
+  ///  set OID 1.2.840.10008.6.1.19).
+  final List<Coding>? _modality;
+
+  /// [modality] A list of all the series.modality values that are actual
+  /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
+  ///  set OID 1.2.840.10008.6.1.19).
   @override
-  final List<Coding>? modality;
+  List<Coding>? get modality {
+    final value = _modality;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [subject] The subject, typically a patient, of the imaging study.
   @override
   final Reference subject;
+
+  /// [encounter] The healthcare event (e.g. a patient and healthcare provider
+  ///  interaction) during which this ImagingStudy is made.
   @override
   final Reference? encounter;
+
+  /// [started] Date and time the study started.
   @override
   final FhirDateTime? started;
+
+  /// [startedElement] Extensions for started
   @override
   @JsonKey(name: '_started')
   final Element? startedElement;
+
+  /// [basedOn] A list of the diagnostic requests that resulted in this imaging
+  ///  study being performed.
+  final List<Reference>? _basedOn;
+
+  /// [basedOn] A list of the diagnostic requests that resulted in this imaging
+  ///  study being performed.
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [referrer] The requesting/referring physician.
   @override
   final Reference? referrer;
+
+  /// [interpreter] Who read the study and interpreted the images or other
+  ///  content.
+  final List<Reference>? _interpreter;
+
+  /// [interpreter] Who read the study and interpreted the images or other
+  ///  content.
   @override
-  final List<Reference>? interpreter;
+  List<Reference>? get interpreter {
+    final value = _interpreter;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for the study. See implementation notes for information about
+  /// using DICOM endpoints. A study-level endpoint applies to each series in
+  /// the study, unless overridden by a series-level endpoint with the same
+  ///  Endpoint.connectionType.
+  final List<Reference>? _endpoint;
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for the study. See implementation notes for information about
+  /// using DICOM endpoints. A study-level endpoint applies to each series in
+  /// the study, unless overridden by a series-level endpoint with the same
+  ///  Endpoint.connectionType.
   @override
-  final List<Reference>? endpoint;
+  List<Reference>? get endpoint {
+    final value = _endpoint;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [numberOfSeries] Number of Series in the Study. This value given may be
+  /// larger than the number of series elements this Resource contains due to
+  /// resource availability, security, or other factors. This element should be
+  ///  present if any series elements are present.
   @override
   final UnsignedInt? numberOfSeries;
+
+  /// [numberOfSeriesElement] Extensions for numberOfSeries
   @override
   @JsonKey(name: '_numberOfSeries')
   final Element? numberOfSeriesElement;
+
+  /// [numberOfInstances] Number of SOP Instances in Study. This value given
+  /// may be larger than the number of instance elements this resource contains
+  /// due to resource availability, security, or other factors. This element
+  ///  should be present if any instance elements are present.
   @override
   final UnsignedInt? numberOfInstances;
+
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   @override
   @JsonKey(name: '_numberOfInstances')
   final Element? numberOfInstancesElement;
+
+  /// [procedureReference] The procedure which this ImagingStudy was part of.
   @override
   final Reference? procedureReference;
+
+  /// [procedureCode] The code for the performed procedure type.
+  final List<CodeableConcept>? _procedureCode;
+
+  /// [procedureCode] The code for the performed procedure type.
   @override
-  final List<CodeableConcept>? procedureCode;
+  List<CodeableConcept>? get procedureCode {
+    final value = _procedureCode;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [location] The principal physical location where the ImagingStudy was
+  ///  performed.
   @override
   final Reference? location;
+
+  /// [reasonCode] Description of clinical condition indicating why the
+  ///  ImagingStudy was requested.
+  final List<CodeableConcept>? _reasonCode;
+
+  /// [reasonCode] Description of clinical condition indicating why the
+  ///  ImagingStudy was requested.
   @override
-  final List<CodeableConcept>? reasonCode;
+  List<CodeableConcept>? get reasonCode {
+    final value = _reasonCode;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [reasonReference] Indicates another resource whose existence justifies
+  ///  this Study.
+  final List<Reference>? _reasonReference;
+
+  /// [reasonReference] Indicates another resource whose existence justifies
+  ///  this Study.
   @override
-  final List<Reference>? reasonReference;
+  List<Reference>? get reasonReference {
+    final value = _reasonReference;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [note] Per the recommended DICOM mapping, this element is derived from
+  /// the Study Description attribute (0008,1030). Observations or findings
+  /// about the imaging study should be recorded in another resource, e.g.
+  ///  Observation, and not in this element.
+  final List<Annotation>? _note;
+
+  /// [note] Per the recommended DICOM mapping, this element is derived from
+  /// the Study Description attribute (0008,1030). Observations or findings
+  /// about the imaging study should be recorded in another resource, e.g.
+  ///  Observation, and not in this element.
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] The Imaging Manager description of the study.
+  /// Institution-generated description or classification of the Study
+  ///  (component) performed.
   @override
   final String? description;
+
+  /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [series] Each study has one or more series of images or other content.
+  final List<ImagingStudySeries>? _series;
+
+  /// [series] Each study has one or more series of images or other content.
   @override
-  final List<ImagingStudySeries>? series;
+  List<ImagingStudySeries>? get series {
+    final value = _series;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3308,7 +4404,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImagingStudy &&
+            other is _$_ImagingStudy &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -3321,27 +4417,28 @@ class _$_ImagingStudy extends _ImagingStudy {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.modality, modality) &&
+            const DeepCollectionEquality().equals(other._modality, _modality) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality().equals(other.encounter, encounter) &&
             const DeepCollectionEquality().equals(other.started, started) &&
             const DeepCollectionEquality()
                 .equals(other.startedElement, startedElement) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             const DeepCollectionEquality().equals(other.referrer, referrer) &&
             const DeepCollectionEquality()
-                .equals(other.interpreter, interpreter) &&
-            const DeepCollectionEquality().equals(other.endpoint, endpoint) &&
+                .equals(other._interpreter, _interpreter) &&
+            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
             const DeepCollectionEquality()
                 .equals(other.numberOfSeries, numberOfSeries) &&
             const DeepCollectionEquality()
@@ -3353,20 +4450,21 @@ class _$_ImagingStudy extends _ImagingStudy {
             const DeepCollectionEquality()
                 .equals(other.procedureReference, procedureReference) &&
             const DeepCollectionEquality()
-                .equals(other.procedureCode, procedureCode) &&
+                .equals(other._procedureCode, _procedureCode) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality()
-                .equals(other.reasonCode, reasonCode) &&
+                .equals(other._reasonCode, _reasonCode) &&
             const DeepCollectionEquality()
-                .equals(other.reasonReference, reasonReference) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+                .equals(other._reasonReference, _reasonReference) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.series, series));
+            const DeepCollectionEquality().equals(other._series, _series));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3378,95 +4476,96 @@ class _$_ImagingStudy extends _ImagingStudy {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(modality),
+        const DeepCollectionEquality().hash(_modality),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(encounter),
         const DeepCollectionEquality().hash(started),
         const DeepCollectionEquality().hash(startedElement),
-        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(referrer),
-        const DeepCollectionEquality().hash(interpreter),
-        const DeepCollectionEquality().hash(endpoint),
+        const DeepCollectionEquality().hash(_interpreter),
+        const DeepCollectionEquality().hash(_endpoint),
         const DeepCollectionEquality().hash(numberOfSeries),
         const DeepCollectionEquality().hash(numberOfSeriesElement),
         const DeepCollectionEquality().hash(numberOfInstances),
         const DeepCollectionEquality().hash(numberOfInstancesElement),
         const DeepCollectionEquality().hash(procedureReference),
-        const DeepCollectionEquality().hash(procedureCode),
+        const DeepCollectionEquality().hash(_procedureCode),
         const DeepCollectionEquality().hash(location),
-        const DeepCollectionEquality().hash(reasonCode),
-        const DeepCollectionEquality().hash(reasonReference),
-        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(_reasonCode),
+        const DeepCollectionEquality().hash(_reasonReference),
+        const DeepCollectionEquality().hash(_note),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(series)
+        const DeepCollectionEquality().hash(_series)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ImagingStudyCopyWith<_ImagingStudy> get copyWith =>
-      __$ImagingStudyCopyWithImpl<_ImagingStudy>(this, _$identity);
+  _$$_ImagingStudyCopyWith<_$_ImagingStudy> get copyWith =>
+      __$$_ImagingStudyCopyWithImpl<_$_ImagingStudy>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudyToJson(this);
+    return _$$_ImagingStudyToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImagingStudy extends ImagingStudy {
   factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          ImagingStudyStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<Coding>? modality,
-      required Reference subject,
-      Reference? encounter,
-      FhirDateTime? started,
+          final Element? statusElement,
+      final List<Coding>? modality,
+      required final Reference subject,
+      final Reference? encounter,
+      final FhirDateTime? started,
       @JsonKey(name: '_started')
-          Element? startedElement,
-      List<Reference>? basedOn,
-      Reference? referrer,
-      List<Reference>? interpreter,
-      List<Reference>? endpoint,
-      UnsignedInt? numberOfSeries,
+          final Element? startedElement,
+      final List<Reference>? basedOn,
+      final Reference? referrer,
+      final List<Reference>? interpreter,
+      final List<Reference>? endpoint,
+      final UnsignedInt? numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
-          Element? numberOfSeriesElement,
-      UnsignedInt? numberOfInstances,
+          final Element? numberOfSeriesElement,
+      final UnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
-          Element? numberOfInstancesElement,
-      Reference? procedureReference,
-      List<CodeableConcept>? procedureCode,
-      Reference? location,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note,
-      String? description,
+          final Element? numberOfInstancesElement,
+      final Reference? procedureReference,
+      final List<CodeableConcept>? procedureCode,
+      final Reference? location,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<Annotation>? note,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<ImagingStudySeries>? series}) = _$_ImagingStudy;
+          final Element? descriptionElement,
+      final List<ImagingStudySeries>? series}) = _$_ImagingStudy;
   _ImagingStudy._() : super._();
 
   factory _ImagingStudy.fromJson(Map<String, dynamic> json) =
@@ -3476,87 +4575,211 @@ abstract class _ImagingStudy extends ImagingStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifiers for the ImagingStudy such as DICOM Study
+  ///  Instance UID, and Accession Number.
   List<Identifier>? get identifier;
   @override
-  @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-  ImagingStudyStatus? get status;
+
+  /// [status] The current state of the ImagingStudy.
+  Code? get status;
   @override
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [modality] A list of all the series.modality values that are actual
+  /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
+  ///  set OID 1.2.840.10008.6.1.19).
   List<Coding>? get modality;
   @override
+
+  /// [subject] The subject, typically a patient, of the imaging study.
   Reference get subject;
   @override
+
+  /// [encounter] The healthcare event (e.g. a patient and healthcare provider
+  ///  interaction) during which this ImagingStudy is made.
   Reference? get encounter;
   @override
+
+  /// [started] Date and time the study started.
   FhirDateTime? get started;
   @override
+
+  /// [startedElement] Extensions for started
   @JsonKey(name: '_started')
   Element? get startedElement;
   @override
+
+  /// [basedOn] A list of the diagnostic requests that resulted in this imaging
+  ///  study being performed.
   List<Reference>? get basedOn;
   @override
+
+  /// [referrer] The requesting/referring physician.
   Reference? get referrer;
   @override
+
+  /// [interpreter] Who read the study and interpreted the images or other
+  ///  content.
   List<Reference>? get interpreter;
   @override
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for the study. See implementation notes for information about
+  /// using DICOM endpoints. A study-level endpoint applies to each series in
+  /// the study, unless overridden by a series-level endpoint with the same
+  ///  Endpoint.connectionType.
   List<Reference>? get endpoint;
   @override
+
+  /// [numberOfSeries] Number of Series in the Study. This value given may be
+  /// larger than the number of series elements this Resource contains due to
+  /// resource availability, security, or other factors. This element should be
+  ///  present if any series elements are present.
   UnsignedInt? get numberOfSeries;
   @override
+
+  /// [numberOfSeriesElement] Extensions for numberOfSeries
   @JsonKey(name: '_numberOfSeries')
   Element? get numberOfSeriesElement;
   @override
+
+  /// [numberOfInstances] Number of SOP Instances in Study. This value given
+  /// may be larger than the number of instance elements this resource contains
+  /// due to resource availability, security, or other factors. This element
+  ///  should be present if any instance elements are present.
   UnsignedInt? get numberOfInstances;
   @override
+
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement;
   @override
+
+  /// [procedureReference] The procedure which this ImagingStudy was part of.
   Reference? get procedureReference;
   @override
+
+  /// [procedureCode] The code for the performed procedure type.
   List<CodeableConcept>? get procedureCode;
   @override
+
+  /// [location] The principal physical location where the ImagingStudy was
+  ///  performed.
   Reference? get location;
   @override
+
+  /// [reasonCode] Description of clinical condition indicating why the
+  ///  ImagingStudy was requested.
   List<CodeableConcept>? get reasonCode;
   @override
+
+  /// [reasonReference] Indicates another resource whose existence justifies
+  ///  this Study.
   List<Reference>? get reasonReference;
   @override
+
+  /// [note] Per the recommended DICOM mapping, this element is derived from
+  /// the Study Description attribute (0008,1030). Observations or findings
+  /// about the imaging study should be recorded in another resource, e.g.
+  ///  Observation, and not in this element.
   List<Annotation>? get note;
   @override
+
+  /// [description] The Imaging Manager description of the study.
+  /// Institution-generated description or classification of the Study
+  ///  (component) performed.
   String? get description;
   @override
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [series] Each study has one or more series of images or other content.
   List<ImagingStudySeries>? get series;
   @override
   @JsonKey(ignore: true)
-  _$ImagingStudyCopyWith<_ImagingStudy> get copyWith =>
+  _$$_ImagingStudyCopyWith<_$_ImagingStudy> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3565,91 +4788,107 @@ ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ImagingStudySeriesTearOff {
-  const _$ImagingStudySeriesTearOff();
-
-  _ImagingStudySeries call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? uid,
-      @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      required Coding modality,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      UnsignedInt? numberOfInstances,
-      @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
-      List<Reference>? endpoint,
-      Coding? bodySite,
-      Coding? laterality,
-      List<Reference>? specimen,
-      FhirDateTime? started,
-      @JsonKey(name: '_started') Element? startedElement,
-      List<ImagingStudyPerformer>? performer,
-      List<ImagingStudyInstance>? instance}) {
-    return _ImagingStudySeries(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      uid: uid,
-      uidElement: uidElement,
-      number: number,
-      numberElement: numberElement,
-      modality: modality,
-      description: description,
-      descriptionElement: descriptionElement,
-      numberOfInstances: numberOfInstances,
-      numberOfInstancesElement: numberOfInstancesElement,
-      endpoint: endpoint,
-      bodySite: bodySite,
-      laterality: laterality,
-      specimen: specimen,
-      started: started,
-      startedElement: startedElement,
-      performer: performer,
-      instance: instance,
-    );
-  }
-
-  ImagingStudySeries fromJson(Map<String, Object?> json) {
-    return ImagingStudySeries.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImagingStudySeries = _$ImagingStudySeriesTearOff();
-
-/// @nodoc
 mixin _$ImagingStudySeries {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [uid] The DICOM Series Instance UID for the series.
   Id? get uid => throw _privateConstructorUsedError;
+
+  /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
+
+  /// [number] The numeric identifier of this series in the study.
   UnsignedInt? get number => throw _privateConstructorUsedError;
+
+  /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
+
+  /// [modality] The modality of this series sequence.
   Coding get modality => throw _privateConstructorUsedError;
+
+  /// [description] A description of the series.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [numberOfInstances] Number of SOP Instances in the Study. The value given
+  /// may be larger than the number of instance elements this resource contains
+  /// due to resource availability, security, or other factors. This element
+  ///  should be present if any instance elements are present.
   UnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
+
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement => throw _privateConstructorUsedError;
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for this series. See implementation notes for information about
+  /// using DICOM endpoints. A series-level endpoint, if present, has precedence
+  ///  over a study-level endpoint with the same Endpoint.connectionType.
   List<Reference>? get endpoint => throw _privateConstructorUsedError;
+
+  /// [bodySite] The anatomic structures examined. See DICOM Part 16 Annex L
+  /// (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM
+  /// to SNOMED-CT mappings. The bodySite may indicate the laterality of body
+  /// part imaged; if so, it shall be consistent with any content of
+  ///  ImagingStudy.series.laterality.
   Coding? get bodySite => throw _privateConstructorUsedError;
+
+  /// [laterality] The laterality of the (possibly paired) anatomic structures
+  /// examined. E.g., the left knee, both lungs, or unpaired abdomen. If
+  /// present, shall be consistent with any laterality information indicated in
+  ///  ImagingStudy.series.bodySite.
   Coding? get laterality => throw _privateConstructorUsedError;
+
+  /// [specimen] The specimen imaged, e.g., for whole slide imaging of a
+  ///  biopsy.
   List<Reference>? get specimen => throw _privateConstructorUsedError;
+
+  /// [started] The date and time the series was started.
   FhirDateTime? get started => throw _privateConstructorUsedError;
+
+  /// [startedElement] Extensions for started
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
+
+  /// [performer] Indicates who or what performed the series and how they were
+  ///  involved.
   List<ImagingStudyPerformer>? get performer =>
       throw _privateConstructorUsedError;
+
+  /// [instance] A single SOP instance within the series, e.g. an image, or
+  ///  presentation state.
   List<ImagingStudyInstance>? get instance =>
       throw _privateConstructorUsedError;
 
@@ -3898,11 +5137,11 @@ class _$ImagingStudySeriesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImagingStudySeriesCopyWith<$Res>
+abstract class _$$_ImagingStudySeriesCopyWith<$Res>
     implements $ImagingStudySeriesCopyWith<$Res> {
-  factory _$ImagingStudySeriesCopyWith(
-          _ImagingStudySeries value, $Res Function(_ImagingStudySeries) then) =
-      __$ImagingStudySeriesCopyWithImpl<$Res>;
+  factory _$$_ImagingStudySeriesCopyWith(_$_ImagingStudySeries value,
+          $Res Function(_$_ImagingStudySeries) then) =
+      __$$_ImagingStudySeriesCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -3945,15 +5184,15 @@ abstract class _$ImagingStudySeriesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImagingStudySeriesCopyWithImpl<$Res>
+class __$$_ImagingStudySeriesCopyWithImpl<$Res>
     extends _$ImagingStudySeriesCopyWithImpl<$Res>
-    implements _$ImagingStudySeriesCopyWith<$Res> {
-  __$ImagingStudySeriesCopyWithImpl(
-      _ImagingStudySeries _value, $Res Function(_ImagingStudySeries) _then)
-      : super(_value, (v) => _then(v as _ImagingStudySeries));
+    implements _$$_ImagingStudySeriesCopyWith<$Res> {
+  __$$_ImagingStudySeriesCopyWithImpl(
+      _$_ImagingStudySeries _value, $Res Function(_$_ImagingStudySeries) _then)
+      : super(_value, (v) => _then(v as _$_ImagingStudySeries));
 
   @override
-  _ImagingStudySeries get _value => super._value as _ImagingStudySeries;
+  _$_ImagingStudySeries get _value => super._value as _$_ImagingStudySeries;
 
   @override
   $Res call({
@@ -3978,17 +5217,17 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
     Object? performer = freezed,
     Object? instance = freezed,
   }) {
-    return _then(_ImagingStudySeries(
+    return _then(_$_ImagingStudySeries(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       uid: uid == freezed
@@ -4028,7 +5267,7 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       endpoint: endpoint == freezed
-          ? _value.endpoint
+          ? _value._endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       bodySite: bodySite == freezed
@@ -4040,7 +5279,7 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
           : laterality // ignore: cast_nullable_to_non_nullable
               as Coding?,
       specimen: specimen == freezed
-          ? _value.specimen
+          ? _value._specimen
           : specimen // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       started: started == freezed
@@ -4052,11 +5291,11 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
           : startedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       performer: performer == freezed
-          ? _value.performer
+          ? _value._performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<ImagingStudyPerformer>?,
       instance: instance == freezed
-          ? _value.instance
+          ? _value._instance
           : instance // ignore: cast_nullable_to_non_nullable
               as List<ImagingStudyInstance>?,
     ));
@@ -4068,8 +5307,8 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
 class _$_ImagingStudySeries extends _ImagingStudySeries {
   _$_ImagingStudySeries(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.uid,
       @JsonKey(name: '_uid') this.uidElement,
       this.number,
@@ -4079,65 +5318,215 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       @JsonKey(name: '_description') this.descriptionElement,
       this.numberOfInstances,
       @JsonKey(name: '_numberOfInstances') this.numberOfInstancesElement,
-      this.endpoint,
+      final List<Reference>? endpoint,
       this.bodySite,
       this.laterality,
-      this.specimen,
+      final List<Reference>? specimen,
       this.started,
       @JsonKey(name: '_started') this.startedElement,
-      this.performer,
-      this.instance})
-      : super._();
+      final List<ImagingStudyPerformer>? performer,
+      final List<ImagingStudyInstance>? instance})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _endpoint = endpoint,
+        _specimen = specimen,
+        _performer = performer,
+        _instance = instance,
+        super._();
 
   factory _$_ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingStudySeriesFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [uid] The DICOM Series Instance UID for the series.
   @override
   final Id? uid;
+
+  /// [uidElement] Extensions for uid
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
+
+  /// [number] The numeric identifier of this series in the study.
   @override
   final UnsignedInt? number;
+
+  /// [numberElement] Extensions for number
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
+
+  /// [modality] The modality of this series sequence.
   @override
   final Coding modality;
+
+  /// [description] A description of the series.
   @override
   final String? description;
+
+  /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [numberOfInstances] Number of SOP Instances in the Study. The value given
+  /// may be larger than the number of instance elements this resource contains
+  /// due to resource availability, security, or other factors. This element
+  ///  should be present if any instance elements are present.
   @override
   final UnsignedInt? numberOfInstances;
+
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   @override
   @JsonKey(name: '_numberOfInstances')
   final Element? numberOfInstancesElement;
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for this series. See implementation notes for information about
+  /// using DICOM endpoints. A series-level endpoint, if present, has precedence
+  ///  over a study-level endpoint with the same Endpoint.connectionType.
+  final List<Reference>? _endpoint;
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for this series. See implementation notes for information about
+  /// using DICOM endpoints. A series-level endpoint, if present, has precedence
+  ///  over a study-level endpoint with the same Endpoint.connectionType.
   @override
-  final List<Reference>? endpoint;
+  List<Reference>? get endpoint {
+    final value = _endpoint;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [bodySite] The anatomic structures examined. See DICOM Part 16 Annex L
+  /// (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM
+  /// to SNOMED-CT mappings. The bodySite may indicate the laterality of body
+  /// part imaged; if so, it shall be consistent with any content of
+  ///  ImagingStudy.series.laterality.
   @override
   final Coding? bodySite;
+
+  /// [laterality] The laterality of the (possibly paired) anatomic structures
+  /// examined. E.g., the left knee, both lungs, or unpaired abdomen. If
+  /// present, shall be consistent with any laterality information indicated in
+  ///  ImagingStudy.series.bodySite.
   @override
   final Coding? laterality;
+
+  /// [specimen] The specimen imaged, e.g., for whole slide imaging of a
+  ///  biopsy.
+  final List<Reference>? _specimen;
+
+  /// [specimen] The specimen imaged, e.g., for whole slide imaging of a
+  ///  biopsy.
   @override
-  final List<Reference>? specimen;
+  List<Reference>? get specimen {
+    final value = _specimen;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [started] The date and time the series was started.
   @override
   final FhirDateTime? started;
+
+  /// [startedElement] Extensions for started
   @override
   @JsonKey(name: '_started')
   final Element? startedElement;
+
+  /// [performer] Indicates who or what performed the series and how they were
+  ///  involved.
+  final List<ImagingStudyPerformer>? _performer;
+
+  /// [performer] Indicates who or what performed the series and how they were
+  ///  involved.
   @override
-  final List<ImagingStudyPerformer>? performer;
+  List<ImagingStudyPerformer>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [instance] A single SOP instance within the series, e.g. an image, or
+  ///  presentation state.
+  final List<ImagingStudyInstance>? _instance;
+
+  /// [instance] A single SOP instance within the series, e.g. an image, or
+  ///  presentation state.
   @override
-  final List<ImagingStudyInstance>? instance;
+  List<ImagingStudyInstance>? get instance {
+    final value = _instance;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -4148,12 +5537,12 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImagingStudySeries &&
+            other is _$_ImagingStudySeries &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.uid, uid) &&
             const DeepCollectionEquality()
                 .equals(other.uidElement, uidElement) &&
@@ -4169,24 +5558,26 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
                 .equals(other.numberOfInstances, numberOfInstances) &&
             const DeepCollectionEquality().equals(
                 other.numberOfInstancesElement, numberOfInstancesElement) &&
-            const DeepCollectionEquality().equals(other.endpoint, endpoint) &&
+            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
             const DeepCollectionEquality().equals(other.bodySite, bodySite) &&
             const DeepCollectionEquality()
                 .equals(other.laterality, laterality) &&
-            const DeepCollectionEquality().equals(other.specimen, specimen) &&
+            const DeepCollectionEquality().equals(other._specimen, _specimen) &&
             const DeepCollectionEquality().equals(other.started, started) &&
             const DeepCollectionEquality()
                 .equals(other.startedElement, startedElement) &&
-            const DeepCollectionEquality().equals(other.performer, performer) &&
-            const DeepCollectionEquality().equals(other.instance, instance));
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
+            const DeepCollectionEquality().equals(other._instance, _instance));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(uid),
         const DeepCollectionEquality().hash(uidElement),
         const DeepCollectionEquality().hash(number),
@@ -4196,103 +5587,186 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
         const DeepCollectionEquality().hash(descriptionElement),
         const DeepCollectionEquality().hash(numberOfInstances),
         const DeepCollectionEquality().hash(numberOfInstancesElement),
-        const DeepCollectionEquality().hash(endpoint),
+        const DeepCollectionEquality().hash(_endpoint),
         const DeepCollectionEquality().hash(bodySite),
         const DeepCollectionEquality().hash(laterality),
-        const DeepCollectionEquality().hash(specimen),
+        const DeepCollectionEquality().hash(_specimen),
         const DeepCollectionEquality().hash(started),
         const DeepCollectionEquality().hash(startedElement),
-        const DeepCollectionEquality().hash(performer),
-        const DeepCollectionEquality().hash(instance)
+        const DeepCollectionEquality().hash(_performer),
+        const DeepCollectionEquality().hash(_instance)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ImagingStudySeriesCopyWith<_ImagingStudySeries> get copyWith =>
-      __$ImagingStudySeriesCopyWithImpl<_ImagingStudySeries>(this, _$identity);
+  _$$_ImagingStudySeriesCopyWith<_$_ImagingStudySeries> get copyWith =>
+      __$$_ImagingStudySeriesCopyWithImpl<_$_ImagingStudySeries>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudySeriesToJson(this);
+    return _$$_ImagingStudySeriesToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImagingStudySeries extends ImagingStudySeries {
   factory _ImagingStudySeries(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? uid,
-      @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      required Coding modality,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      UnsignedInt? numberOfInstances,
-      @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
-      List<Reference>? endpoint,
-      Coding? bodySite,
-      Coding? laterality,
-      List<Reference>? specimen,
-      FhirDateTime? started,
-      @JsonKey(name: '_started') Element? startedElement,
-      List<ImagingStudyPerformer>? performer,
-      List<ImagingStudyInstance>? instance}) = _$_ImagingStudySeries;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Id? uid,
+      @JsonKey(name: '_uid')
+          final Element? uidElement,
+      final UnsignedInt? number,
+      @JsonKey(name: '_number')
+          final Element? numberElement,
+      required final Coding modality,
+      final String? description,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
+      final UnsignedInt? numberOfInstances,
+      @JsonKey(name: '_numberOfInstances')
+          final Element? numberOfInstancesElement,
+      final List<Reference>? endpoint,
+      final Coding? bodySite,
+      final Coding? laterality,
+      final List<Reference>? specimen,
+      final FhirDateTime? started,
+      @JsonKey(name: '_started')
+          final Element? startedElement,
+      final List<ImagingStudyPerformer>? performer,
+      final List<ImagingStudyInstance>? instance}) = _$_ImagingStudySeries;
   _ImagingStudySeries._() : super._();
 
   factory _ImagingStudySeries.fromJson(Map<String, dynamic> json) =
       _$_ImagingStudySeries.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [uid] The DICOM Series Instance UID for the series.
   Id? get uid;
   @override
+
+  /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
   Element? get uidElement;
   @override
+
+  /// [number] The numeric identifier of this series in the study.
   UnsignedInt? get number;
   @override
+
+  /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
   Element? get numberElement;
   @override
+
+  /// [modality] The modality of this series sequence.
   Coding get modality;
   @override
+
+  /// [description] A description of the series.
   String? get description;
   @override
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [numberOfInstances] Number of SOP Instances in the Study. The value given
+  /// may be larger than the number of instance elements this resource contains
+  /// due to resource availability, security, or other factors. This element
+  ///  should be present if any instance elements are present.
   UnsignedInt? get numberOfInstances;
   @override
+
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement;
   @override
+
+  /// [endpoint] The network service providing access (e.g., query, view, or
+  /// retrieval) for this series. See implementation notes for information about
+  /// using DICOM endpoints. A series-level endpoint, if present, has precedence
+  ///  over a study-level endpoint with the same Endpoint.connectionType.
   List<Reference>? get endpoint;
   @override
+
+  /// [bodySite] The anatomic structures examined. See DICOM Part 16 Annex L
+  /// (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM
+  /// to SNOMED-CT mappings. The bodySite may indicate the laterality of body
+  /// part imaged; if so, it shall be consistent with any content of
+  ///  ImagingStudy.series.laterality.
   Coding? get bodySite;
   @override
+
+  /// [laterality] The laterality of the (possibly paired) anatomic structures
+  /// examined. E.g., the left knee, both lungs, or unpaired abdomen. If
+  /// present, shall be consistent with any laterality information indicated in
+  ///  ImagingStudy.series.bodySite.
   Coding? get laterality;
   @override
+
+  /// [specimen] The specimen imaged, e.g., for whole slide imaging of a
+  ///  biopsy.
   List<Reference>? get specimen;
   @override
+
+  /// [started] The date and time the series was started.
   FhirDateTime? get started;
   @override
+
+  /// [startedElement] Extensions for started
   @JsonKey(name: '_started')
   Element? get startedElement;
   @override
+
+  /// [performer] Indicates who or what performed the series and how they were
+  ///  involved.
   List<ImagingStudyPerformer>? get performer;
   @override
+
+  /// [instance] A single SOP instance within the series, e.g. an image, or
+  ///  presentation state.
   List<ImagingStudyInstance>? get instance;
   @override
   @JsonKey(ignore: true)
-  _$ImagingStudySeriesCopyWith<_ImagingStudySeries> get copyWith =>
+  _$$_ImagingStudySeriesCopyWith<_$_ImagingStudySeries> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4302,40 +5776,41 @@ ImagingStudyPerformer _$ImagingStudyPerformerFromJson(
 }
 
 /// @nodoc
-class _$ImagingStudyPerformerTearOff {
-  const _$ImagingStudyPerformerTearOff();
-
-  _ImagingStudyPerformer call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) {
-    return _ImagingStudyPerformer(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      function: function,
-      actor: actor,
-    );
-  }
-
-  ImagingStudyPerformer fromJson(Map<String, Object?> json) {
-    return ImagingStudyPerformer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImagingStudyPerformer = _$ImagingStudyPerformerTearOff();
-
-/// @nodoc
 mixin _$ImagingStudyPerformer {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [function] Distinguishes the type of involvement of the performer in the
+  ///  series.
   CodeableConcept? get function => throw _privateConstructorUsedError;
+
+  /// [actor] Indicates who or what performed the series.
   Reference get actor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4421,11 +5896,11 @@ class _$ImagingStudyPerformerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImagingStudyPerformerCopyWith<$Res>
+abstract class _$$_ImagingStudyPerformerCopyWith<$Res>
     implements $ImagingStudyPerformerCopyWith<$Res> {
-  factory _$ImagingStudyPerformerCopyWith(_ImagingStudyPerformer value,
-          $Res Function(_ImagingStudyPerformer) then) =
-      __$ImagingStudyPerformerCopyWithImpl<$Res>;
+  factory _$$_ImagingStudyPerformerCopyWith(_$_ImagingStudyPerformer value,
+          $Res Function(_$_ImagingStudyPerformer) then) =
+      __$$_ImagingStudyPerformerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -4441,15 +5916,16 @@ abstract class _$ImagingStudyPerformerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImagingStudyPerformerCopyWithImpl<$Res>
+class __$$_ImagingStudyPerformerCopyWithImpl<$Res>
     extends _$ImagingStudyPerformerCopyWithImpl<$Res>
-    implements _$ImagingStudyPerformerCopyWith<$Res> {
-  __$ImagingStudyPerformerCopyWithImpl(_ImagingStudyPerformer _value,
-      $Res Function(_ImagingStudyPerformer) _then)
-      : super(_value, (v) => _then(v as _ImagingStudyPerformer));
+    implements _$$_ImagingStudyPerformerCopyWith<$Res> {
+  __$$_ImagingStudyPerformerCopyWithImpl(_$_ImagingStudyPerformer _value,
+      $Res Function(_$_ImagingStudyPerformer) _then)
+      : super(_value, (v) => _then(v as _$_ImagingStudyPerformer));
 
   @override
-  _ImagingStudyPerformer get _value => super._value as _ImagingStudyPerformer;
+  _$_ImagingStudyPerformer get _value =>
+      super._value as _$_ImagingStudyPerformer;
 
   @override
   $Res call({
@@ -4459,17 +5935,17 @@ class __$ImagingStudyPerformerCopyWithImpl<$Res>
     Object? function = freezed,
     Object? actor = freezed,
   }) {
-    return _then(_ImagingStudyPerformer(
+    return _then(_$_ImagingStudyPerformer(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       function: function == freezed
@@ -4489,24 +5965,87 @@ class __$ImagingStudyPerformerCopyWithImpl<$Res>
 class _$_ImagingStudyPerformer extends _ImagingStudyPerformer {
   _$_ImagingStudyPerformer(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.function,
       required this.actor})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImagingStudyPerformer.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingStudyPerformerFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [function] Distinguishes the type of involvement of the performer in the
+  ///  series.
   @override
   final CodeableConcept? function;
+
+  /// [actor] Indicates who or what performed the series.
   @override
   final Reference actor;
 
@@ -4519,63 +6058,95 @@ class _$_ImagingStudyPerformer extends _ImagingStudyPerformer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImagingStudyPerformer &&
+            other is _$_ImagingStudyPerformer &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.function, function) &&
             const DeepCollectionEquality().equals(other.actor, actor));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(function),
       const DeepCollectionEquality().hash(actor));
 
   @JsonKey(ignore: true)
   @override
-  _$ImagingStudyPerformerCopyWith<_ImagingStudyPerformer> get copyWith =>
-      __$ImagingStudyPerformerCopyWithImpl<_ImagingStudyPerformer>(
+  _$$_ImagingStudyPerformerCopyWith<_$_ImagingStudyPerformer> get copyWith =>
+      __$$_ImagingStudyPerformerCopyWithImpl<_$_ImagingStudyPerformer>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudyPerformerToJson(this);
+    return _$$_ImagingStudyPerformerToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImagingStudyPerformer extends ImagingStudyPerformer {
   factory _ImagingStudyPerformer(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) = _$_ImagingStudyPerformer;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? function,
+      required final Reference actor}) = _$_ImagingStudyPerformer;
   _ImagingStudyPerformer._() : super._();
 
   factory _ImagingStudyPerformer.fromJson(Map<String, dynamic> json) =
       _$_ImagingStudyPerformer.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [function] Distinguishes the type of involvement of the performer in the
+  ///  series.
   CodeableConcept? get function;
   @override
+
+  /// [actor] Indicates who or what performed the series.
   Reference get actor;
   @override
   @JsonKey(ignore: true)
-  _$ImagingStudyPerformerCopyWith<_ImagingStudyPerformer> get copyWith =>
+  _$$_ImagingStudyPerformerCopyWith<_$_ImagingStudyPerformer> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4584,57 +6155,57 @@ ImagingStudyInstance _$ImagingStudyInstanceFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ImagingStudyInstanceTearOff {
-  const _$ImagingStudyInstanceTearOff();
-
-  _ImagingStudyInstance call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? uid,
-      @JsonKey(name: '_uid') Element? uidElement,
-      required Coding sopClass,
-      UnsignedInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      String? title,
-      @JsonKey(name: '_title') Element? titleElement}) {
-    return _ImagingStudyInstance(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      uid: uid,
-      uidElement: uidElement,
-      sopClass: sopClass,
-      number: number,
-      numberElement: numberElement,
-      title: title,
-      titleElement: titleElement,
-    );
-  }
-
-  ImagingStudyInstance fromJson(Map<String, Object?> json) {
-    return ImagingStudyInstance.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImagingStudyInstance = _$ImagingStudyInstanceTearOff();
-
-/// @nodoc
 mixin _$ImagingStudyInstance {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   Id? get uid => throw _privateConstructorUsedError;
+
+  /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
+
+  /// [sopClass] DICOM instance  type.
   Coding get sopClass => throw _privateConstructorUsedError;
+
+  /// [number] The number of instance in the series.
   UnsignedInt? get number => throw _privateConstructorUsedError;
+
+  /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
+
+  /// [title] The description of the instance.
   String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
 
@@ -4775,11 +6346,11 @@ class _$ImagingStudyInstanceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImagingStudyInstanceCopyWith<$Res>
+abstract class _$$_ImagingStudyInstanceCopyWith<$Res>
     implements $ImagingStudyInstanceCopyWith<$Res> {
-  factory _$ImagingStudyInstanceCopyWith(_ImagingStudyInstance value,
-          $Res Function(_ImagingStudyInstance) then) =
-      __$ImagingStudyInstanceCopyWithImpl<$Res>;
+  factory _$$_ImagingStudyInstanceCopyWith(_$_ImagingStudyInstance value,
+          $Res Function(_$_ImagingStudyInstance) then) =
+      __$$_ImagingStudyInstanceCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -4804,15 +6375,15 @@ abstract class _$ImagingStudyInstanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImagingStudyInstanceCopyWithImpl<$Res>
+class __$$_ImagingStudyInstanceCopyWithImpl<$Res>
     extends _$ImagingStudyInstanceCopyWithImpl<$Res>
-    implements _$ImagingStudyInstanceCopyWith<$Res> {
-  __$ImagingStudyInstanceCopyWithImpl(
-      _ImagingStudyInstance _value, $Res Function(_ImagingStudyInstance) _then)
-      : super(_value, (v) => _then(v as _ImagingStudyInstance));
+    implements _$$_ImagingStudyInstanceCopyWith<$Res> {
+  __$$_ImagingStudyInstanceCopyWithImpl(_$_ImagingStudyInstance _value,
+      $Res Function(_$_ImagingStudyInstance) _then)
+      : super(_value, (v) => _then(v as _$_ImagingStudyInstance));
 
   @override
-  _ImagingStudyInstance get _value => super._value as _ImagingStudyInstance;
+  _$_ImagingStudyInstance get _value => super._value as _$_ImagingStudyInstance;
 
   @override
   $Res call({
@@ -4827,17 +6398,17 @@ class __$ImagingStudyInstanceCopyWithImpl<$Res>
     Object? title = freezed,
     Object? titleElement = freezed,
   }) {
-    return _then(_ImagingStudyInstance(
+    return _then(_$_ImagingStudyInstance(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       uid: uid == freezed
@@ -4877,8 +6448,8 @@ class __$ImagingStudyInstanceCopyWithImpl<$Res>
 class _$_ImagingStudyInstance extends _ImagingStudyInstance {
   _$_ImagingStudyInstance(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.uid,
       @JsonKey(name: '_uid') this.uidElement,
       required this.sopClass,
@@ -4886,32 +6457,104 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
       @JsonKey(name: '_number') this.numberElement,
       this.title,
       @JsonKey(name: '_title') this.titleElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingStudyInstanceFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   @override
   final Id? uid;
+
+  /// [uidElement] Extensions for uid
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
+
+  /// [sopClass] DICOM instance  type.
   @override
   final Coding sopClass;
+
+  /// [number] The number of instance in the series.
   @override
   final UnsignedInt? number;
+
+  /// [numberElement] Extensions for number
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
+
+  /// [title] The description of the instance.
   @override
   final String? title;
+
+  /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
@@ -4925,12 +6568,12 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImagingStudyInstance &&
+            other is _$_ImagingStudyInstance &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.uid, uid) &&
             const DeepCollectionEquality()
                 .equals(other.uidElement, uidElement) &&
@@ -4943,12 +6586,13 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
                 .equals(other.titleElement, titleElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(uid),
       const DeepCollectionEquality().hash(uidElement),
       const DeepCollectionEquality().hash(sopClass),
@@ -4959,28 +6603,30 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
   @JsonKey(ignore: true)
   @override
-  _$ImagingStudyInstanceCopyWith<_ImagingStudyInstance> get copyWith =>
-      __$ImagingStudyInstanceCopyWithImpl<_ImagingStudyInstance>(
+  _$$_ImagingStudyInstanceCopyWith<_$_ImagingStudyInstance> get copyWith =>
+      __$$_ImagingStudyInstanceCopyWithImpl<_$_ImagingStudyInstance>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudyInstanceToJson(this);
+    return _$$_ImagingStudyInstanceToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   factory _ImagingStudyInstance(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Id? uid,
-          @JsonKey(name: '_uid') Element? uidElement,
-          required Coding sopClass,
-          UnsignedInt? number,
-          @JsonKey(name: '_number') Element? numberElement,
-          String? title,
-          @JsonKey(name: '_title') Element? titleElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Id? uid,
+          @JsonKey(name: '_uid') final Element? uidElement,
+          required final Coding sopClass,
+          final UnsignedInt? number,
+          @JsonKey(name: '_number') final Element? numberElement,
+          final String? title,
+          @JsonKey(name: '_title') final Element? titleElement}) =
       _$_ImagingStudyInstance;
   _ImagingStudyInstance._() : super._();
 
@@ -4988,32 +6634,70 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
       _$_ImagingStudyInstance.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   Id? get uid;
   @override
+
+  /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
   Element? get uidElement;
   @override
+
+  /// [sopClass] DICOM instance  type.
   Coding get sopClass;
   @override
+
+  /// [number] The number of instance in the series.
   UnsignedInt? get number;
   @override
+
+  /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
   Element? get numberElement;
   @override
+
+  /// [title] The description of the instance.
   String? get title;
   @override
+
+  /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
   @JsonKey(ignore: true)
-  _$ImagingStudyInstanceCopyWith<_ImagingStudyInstance> get copyWith =>
+  _$$_ImagingStudyInstanceCopyWith<_$_ImagingStudyInstance> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5022,176 +6706,194 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MediaTearOff {
-  const _$MediaTearOff();
-
-  _Media call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Media)
-          R4ResourceType resourceType = R4ResourceType.Media,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      CodeableConcept? modality,
-      CodeableConcept? view,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? createdDateTime,
-      @JsonKey(name: '_createdDateTime')
-          Element? createdDateTimeElement,
-      Period? createdPeriod,
-      Instant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
-      @JsonKey(name: 'operator')
-          Reference? operator_,
-      List<CodeableConcept>? reasonCode,
-      CodeableConcept? bodySite,
-      String? deviceName,
-      @JsonKey(name: '_deviceName')
-          Element? deviceNameElement,
-      Reference? device,
-      PositiveInt? height,
-      @JsonKey(name: '_height')
-          Element? heightElement,
-      PositiveInt? width,
-      @JsonKey(name: '_width')
-          Element? widthElement,
-      PositiveInt? frames,
-      @JsonKey(name: '_frames')
-          Element? framesElement,
-      Decimal? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
-      required Attachment content,
-      List<Annotation>? note}) {
-    return _Media(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      type: type,
-      modality: modality,
-      view: view,
-      subject: subject,
-      encounter: encounter,
-      createdDateTime: createdDateTime,
-      createdDateTimeElement: createdDateTimeElement,
-      createdPeriod: createdPeriod,
-      issued: issued,
-      issuedElement: issuedElement,
-      operator_: operator_,
-      reasonCode: reasonCode,
-      bodySite: bodySite,
-      deviceName: deviceName,
-      deviceNameElement: deviceNameElement,
-      device: device,
-      height: height,
-      heightElement: heightElement,
-      width: width,
-      widthElement: widthElement,
-      frames: frames,
-      framesElement: framesElement,
-      duration: duration,
-      durationElement: durationElement,
-      content: content,
-      note: note,
-    );
-  }
-
-  Media fromJson(Map<String, Object?> json) {
-    return Media.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Media = _$MediaTearOff();
-
-/// @nodoc
 mixin _$Media {
   @JsonKey(unknownEnumValue: R4ResourceType.Media)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifiers associated with the image - these may include
+  /// identifiers for the image itself, identifiers for the context of its
+  /// collection (e.g. series ids) and context ids such as accession numbers or
+  ///  other workflow identifiers.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [basedOn] A procedure that is fulfilled in whole or in part by the
+  ///  creation of this media.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [partOf] A larger event of which this particular event is a component or
+  ///  step.
   List<Reference>? get partOf => throw _privateConstructorUsedError;
+
+  /// [status] The current state of the {{title}}.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [type] A code that classifies whether the media is an image, video or
+  ///  audio recording or some other media category.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [modality] Details of the type of the media - usually, how it was
+  /// acquired (what type of device). If images sourced from a DICOM system, are
+  ///  wrapped in a Media resource, then this is the modality.
   CodeableConcept? get modality => throw _privateConstructorUsedError;
+
+  /// [view] The name of the imaging view e.g. Lateral or Antero-posterior
+  ///  (AP).
   CodeableConcept? get view => throw _privateConstructorUsedError;
+
+  /// [subject] Who/What this Media is a record of.
   Reference? get subject => throw _privateConstructorUsedError;
+
+  /// [encounter] The encounter that establishes the context for this media.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [createdDateTime] The date and time(s) at which the media was collected.
   FhirDateTime? get createdDateTime => throw _privateConstructorUsedError;
+
+  /// [createdDateTimeElement] Extensions for createdDateTime
   @JsonKey(name: '_createdDateTime')
   Element? get createdDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [createdPeriod] The date and time(s) at which the media was collected.
   Period? get createdPeriod => throw _privateConstructorUsedError;
+
+  /// [issued] The date and time this version of the media was made available
+  ///  to providers, typically after having been reviewed.
   Instant? get issued => throw _privateConstructorUsedError;
+
+  /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
+
+  /// [operator] The person who administered the collection of the image.
   @JsonKey(name: 'operator')
   Reference? get operator_ => throw _privateConstructorUsedError;
+
+  /// [reasonCode] Describes why the event occurred in coded or textual form.
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+
+  /// [bodySite] Indicates the site on the subject's body where the observation
+  ///  was made (i.e. the target site).
   CodeableConcept? get bodySite => throw _privateConstructorUsedError;
+
+  /// [deviceName] The name of the device / manufacturer of the device  that
+  ///  was used to make the recording.
   String? get deviceName => throw _privateConstructorUsedError;
+
+  /// [deviceNameElement] Extensions for deviceName
   @JsonKey(name: '_deviceName')
   Element? get deviceNameElement => throw _privateConstructorUsedError;
+
+  /// [device] The device used to collect the media.
   Reference? get device => throw _privateConstructorUsedError;
+
+  /// [height] Height of the image in pixels (photo/video).
   PositiveInt? get height => throw _privateConstructorUsedError;
+
+  /// [heightElement] Extensions for height
   @JsonKey(name: '_height')
   Element? get heightElement => throw _privateConstructorUsedError;
+
+  /// [width] Width of the image in pixels (photo/video).
   PositiveInt? get width => throw _privateConstructorUsedError;
+
+  /// [widthElement] Extensions for width
   @JsonKey(name: '_width')
   Element? get widthElement => throw _privateConstructorUsedError;
+
+  /// [frames] The number of frames in a photo. This is used with a multi-page
+  /// fax, or an imaging acquisition context that takes multiple slices in a
+  /// single image, or an animated gif. If there is more than one frame, this
+  /// SHALL have a value in order to alert interface software that a multi-frame
+  ///  capable rendering widget is required.
   PositiveInt? get frames => throw _privateConstructorUsedError;
+
+  /// [framesElement] Extensions for frames
   @JsonKey(name: '_frames')
   Element? get framesElement => throw _privateConstructorUsedError;
+
+  /// [duration] The duration of the recording in seconds - for audio and
+  ///  video.
   Decimal? get duration => throw _privateConstructorUsedError;
+
+  /// [durationElement] Extensions for duration
   @JsonKey(name: '_duration')
   Element? get durationElement => throw _privateConstructorUsedError;
+
+  /// [content] The actual content of the media - inline or by direct reference
+  ///  to the media source file.
   Attachment get content => throw _privateConstructorUsedError;
+
+  /// [note] Comments made about the media by the performer, subject or other
+  ///  participants.
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5206,7 +6908,7 @@ abstract class $MediaCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5345,7 +7047,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5749,14 +7451,14 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
-  factory _$MediaCopyWith(_Media value, $Res Function(_Media) then) =
-      __$MediaCopyWithImpl<$Res>;
+abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
+  factory _$$_MediaCopyWith(_$_Media value, $Res Function(_$_Media) then) =
+      __$$_MediaCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5857,13 +7559,13 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
-    implements _$MediaCopyWith<$Res> {
-  __$MediaCopyWithImpl(_Media _value, $Res Function(_Media) _then)
-      : super(_value, (v) => _then(v as _Media));
+class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
+    implements _$$_MediaCopyWith<$Res> {
+  __$$_MediaCopyWithImpl(_$_Media _value, $Res Function(_$_Media) _then)
+      : super(_value, (v) => _then(v as _$_Media));
 
   @override
-  _Media get _value => super._value as _Media;
+  _$_Media get _value => super._value as _$_Media;
 
   @override
   $Res call({
@@ -5910,7 +7612,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     Object? content = freezed,
     Object? note = freezed,
   }) {
-    return _then(_Media(
+    return _then(_$_Media(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5918,7 +7620,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5944,27 +7646,27 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: partOf == freezed
-          ? _value.partOf
+          ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
@@ -6020,7 +7722,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : operator_ // ignore: cast_nullable_to_non_nullable
               as Reference?,
       reasonCode: reasonCode == freezed
-          ? _value.reasonCode
+          ? _value._reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       bodySite: bodySite == freezed
@@ -6076,7 +7778,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : content // ignore: cast_nullable_to_non_nullable
               as Attachment,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -6098,13 +7800,13 @@ class _$_Media extends _Media {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.basedOn,
-      this.partOf,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -6122,7 +7824,7 @@ class _$_Media extends _Media {
           this.issuedElement,
       @JsonKey(name: 'operator')
           this.operator_,
-      this.reasonCode,
+      final List<CodeableConcept>? reasonCode,
       this.bodySite,
       this.deviceName,
       @JsonKey(name: '_deviceName')
@@ -6141,8 +7843,16 @@ class _$_Media extends _Media {
       @JsonKey(name: '_duration')
           this.durationElement,
       required this.content,
-      this.note})
-      : super._();
+      final List<Annotation>? note})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _reasonCode = reasonCode,
+        _note = note,
+        super._();
 
   factory _$_Media.fromJson(Map<String, dynamic> json) =>
       _$$_MediaFromJson(json);
@@ -6150,100 +7860,322 @@ class _$_Media extends _Media {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Media)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Identifiers associated with the image - these may include
+  /// identifiers for the image itself, identifiers for the context of its
+  /// collection (e.g. series ids) and context ids such as accession numbers or
+  ///  other workflow identifiers.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Identifiers associated with the image - these may include
+  /// identifiers for the image itself, identifiers for the context of its
+  /// collection (e.g. series ids) and context ids such as accession numbers or
+  ///  other workflow identifiers.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [basedOn] A procedure that is fulfilled in whole or in part by the
+  ///  creation of this media.
+  final List<Reference>? _basedOn;
+
+  /// [basedOn] A procedure that is fulfilled in whole or in part by the
+  ///  creation of this media.
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [partOf] A larger event of which this particular event is a component or
+  ///  step.
+  final List<Reference>? _partOf;
+
+  /// [partOf] A larger event of which this particular event is a component or
+  ///  step.
   @override
-  final List<Reference>? partOf;
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] The current state of the {{title}}.
   @override
   final Code? status;
+
+  /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [type] A code that classifies whether the media is an image, video or
+  ///  audio recording or some other media category.
   @override
   final CodeableConcept? type;
+
+  /// [modality] Details of the type of the media - usually, how it was
+  /// acquired (what type of device). If images sourced from a DICOM system, are
+  ///  wrapped in a Media resource, then this is the modality.
   @override
   final CodeableConcept? modality;
+
+  /// [view] The name of the imaging view e.g. Lateral or Antero-posterior
+  ///  (AP).
   @override
   final CodeableConcept? view;
+
+  /// [subject] Who/What this Media is a record of.
   @override
   final Reference? subject;
+
+  /// [encounter] The encounter that establishes the context for this media.
   @override
   final Reference? encounter;
+
+  /// [createdDateTime] The date and time(s) at which the media was collected.
   @override
   final FhirDateTime? createdDateTime;
+
+  /// [createdDateTimeElement] Extensions for createdDateTime
   @override
   @JsonKey(name: '_createdDateTime')
   final Element? createdDateTimeElement;
+
+  /// [createdPeriod] The date and time(s) at which the media was collected.
   @override
   final Period? createdPeriod;
+
+  /// [issued] The date and time this version of the media was made available
+  ///  to providers, typically after having been reviewed.
   @override
   final Instant? issued;
+
+  /// [issuedElement] Extensions for issued
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
+
+  /// [operator] The person who administered the collection of the image.
   @override
   @JsonKey(name: 'operator')
   final Reference? operator_;
+
+  /// [reasonCode] Describes why the event occurred in coded or textual form.
+  final List<CodeableConcept>? _reasonCode;
+
+  /// [reasonCode] Describes why the event occurred in coded or textual form.
   @override
-  final List<CodeableConcept>? reasonCode;
+  List<CodeableConcept>? get reasonCode {
+    final value = _reasonCode;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [bodySite] Indicates the site on the subject's body where the observation
+  ///  was made (i.e. the target site).
   @override
   final CodeableConcept? bodySite;
+
+  /// [deviceName] The name of the device / manufacturer of the device  that
+  ///  was used to make the recording.
   @override
   final String? deviceName;
+
+  /// [deviceNameElement] Extensions for deviceName
   @override
   @JsonKey(name: '_deviceName')
   final Element? deviceNameElement;
+
+  /// [device] The device used to collect the media.
   @override
   final Reference? device;
+
+  /// [height] Height of the image in pixels (photo/video).
   @override
   final PositiveInt? height;
+
+  /// [heightElement] Extensions for height
   @override
   @JsonKey(name: '_height')
   final Element? heightElement;
+
+  /// [width] Width of the image in pixels (photo/video).
   @override
   final PositiveInt? width;
+
+  /// [widthElement] Extensions for width
   @override
   @JsonKey(name: '_width')
   final Element? widthElement;
+
+  /// [frames] The number of frames in a photo. This is used with a multi-page
+  /// fax, or an imaging acquisition context that takes multiple slices in a
+  /// single image, or an animated gif. If there is more than one frame, this
+  /// SHALL have a value in order to alert interface software that a multi-frame
+  ///  capable rendering widget is required.
   @override
   final PositiveInt? frames;
+
+  /// [framesElement] Extensions for frames
   @override
   @JsonKey(name: '_frames')
   final Element? framesElement;
+
+  /// [duration] The duration of the recording in seconds - for audio and
+  ///  video.
   @override
   final Decimal? duration;
+
+  /// [durationElement] Extensions for duration
   @override
   @JsonKey(name: '_duration')
   final Element? durationElement;
+
+  /// [content] The actual content of the media - inline or by direct reference
+  ///  to the media source file.
   @override
   final Attachment content;
+
+  /// [note] Comments made about the media by the performer, subject or other
+  ///  participants.
+  final List<Annotation>? _note;
+
+  /// [note] Comments made about the media by the performer, subject or other
+  ///  participants.
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -6254,7 +8186,7 @@ class _$_Media extends _Media {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Media &&
+            other is _$_Media &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -6267,15 +8199,16 @@ class _$_Media extends _Media {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
-            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -6295,7 +8228,7 @@ class _$_Media extends _Media {
                 .equals(other.issuedElement, issuedElement) &&
             const DeepCollectionEquality().equals(other.operator_, operator_) &&
             const DeepCollectionEquality()
-                .equals(other.reasonCode, reasonCode) &&
+                .equals(other._reasonCode, _reasonCode) &&
             const DeepCollectionEquality().equals(other.bodySite, bodySite) &&
             const DeepCollectionEquality()
                 .equals(other.deviceName, deviceName) &&
@@ -6315,9 +8248,10 @@ class _$_Media extends _Media {
             const DeepCollectionEquality()
                 .equals(other.durationElement, durationElement) &&
             const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality().equals(other.note, note));
+            const DeepCollectionEquality().equals(other._note, _note));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -6329,12 +8263,12 @@ class _$_Media extends _Media {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(basedOn),
-        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(_partOf),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(type),
@@ -6348,7 +8282,7 @@ class _$_Media extends _Media {
         const DeepCollectionEquality().hash(issued),
         const DeepCollectionEquality().hash(issuedElement),
         const DeepCollectionEquality().hash(operator_),
-        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(_reasonCode),
         const DeepCollectionEquality().hash(bodySite),
         const DeepCollectionEquality().hash(deviceName),
         const DeepCollectionEquality().hash(deviceNameElement),
@@ -6362,77 +8296,79 @@ class _$_Media extends _Media {
         const DeepCollectionEquality().hash(duration),
         const DeepCollectionEquality().hash(durationElement),
         const DeepCollectionEquality().hash(content),
-        const DeepCollectionEquality().hash(note)
+        const DeepCollectionEquality().hash(_note)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MediaCopyWith<_Media> get copyWith =>
-      __$MediaCopyWithImpl<_Media>(this, _$identity);
+  _$$_MediaCopyWith<_$_Media> get copyWith =>
+      __$$_MediaCopyWithImpl<_$_Media>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaToJson(this);
+    return _$$_MediaToJson(
+      this,
+    );
   }
 }
 
 abstract class _Media extends Media {
   factory _Media(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      CodeableConcept? modality,
-      CodeableConcept? view,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? createdDateTime,
+          final Element? statusElement,
+      final CodeableConcept? type,
+      final CodeableConcept? modality,
+      final CodeableConcept? view,
+      final Reference? subject,
+      final Reference? encounter,
+      final FhirDateTime? createdDateTime,
       @JsonKey(name: '_createdDateTime')
-          Element? createdDateTimeElement,
-      Period? createdPeriod,
-      Instant? issued,
+          final Element? createdDateTimeElement,
+      final Period? createdPeriod,
+      final Instant? issued,
       @JsonKey(name: '_issued')
-          Element? issuedElement,
+          final Element? issuedElement,
       @JsonKey(name: 'operator')
-          Reference? operator_,
-      List<CodeableConcept>? reasonCode,
-      CodeableConcept? bodySite,
-      String? deviceName,
+          final Reference? operator_,
+      final List<CodeableConcept>? reasonCode,
+      final CodeableConcept? bodySite,
+      final String? deviceName,
       @JsonKey(name: '_deviceName')
-          Element? deviceNameElement,
-      Reference? device,
-      PositiveInt? height,
+          final Element? deviceNameElement,
+      final Reference? device,
+      final PositiveInt? height,
       @JsonKey(name: '_height')
-          Element? heightElement,
-      PositiveInt? width,
+          final Element? heightElement,
+      final PositiveInt? width,
       @JsonKey(name: '_width')
-          Element? widthElement,
-      PositiveInt? frames,
+          final Element? widthElement,
+      final PositiveInt? frames,
       @JsonKey(name: '_frames')
-          Element? framesElement,
-      Decimal? duration,
+          final Element? framesElement,
+      final Decimal? duration,
       @JsonKey(name: '_duration')
-          Element? durationElement,
-      required Attachment content,
-      List<Annotation>? note}) = _$_Media;
+          final Element? durationElement,
+      required final Attachment content,
+      final List<Annotation>? note}) = _$_Media;
   _Media._() : super._();
 
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
@@ -6441,102 +8377,235 @@ abstract class _Media extends Media {
   @JsonKey(unknownEnumValue: R4ResourceType.Media)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifiers associated with the image - these may include
+  /// identifiers for the image itself, identifiers for the context of its
+  /// collection (e.g. series ids) and context ids such as accession numbers or
+  ///  other workflow identifiers.
   List<Identifier>? get identifier;
   @override
+
+  /// [basedOn] A procedure that is fulfilled in whole or in part by the
+  ///  creation of this media.
   List<Reference>? get basedOn;
   @override
+
+  /// [partOf] A larger event of which this particular event is a component or
+  ///  step.
   List<Reference>? get partOf;
   @override
+
+  /// [status] The current state of the {{title}}.
   Code? get status;
   @override
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [type] A code that classifies whether the media is an image, video or
+  ///  audio recording or some other media category.
   CodeableConcept? get type;
   @override
+
+  /// [modality] Details of the type of the media - usually, how it was
+  /// acquired (what type of device). If images sourced from a DICOM system, are
+  ///  wrapped in a Media resource, then this is the modality.
   CodeableConcept? get modality;
   @override
+
+  /// [view] The name of the imaging view e.g. Lateral or Antero-posterior
+  ///  (AP).
   CodeableConcept? get view;
   @override
+
+  /// [subject] Who/What this Media is a record of.
   Reference? get subject;
   @override
+
+  /// [encounter] The encounter that establishes the context for this media.
   Reference? get encounter;
   @override
+
+  /// [createdDateTime] The date and time(s) at which the media was collected.
   FhirDateTime? get createdDateTime;
   @override
+
+  /// [createdDateTimeElement] Extensions for createdDateTime
   @JsonKey(name: '_createdDateTime')
   Element? get createdDateTimeElement;
   @override
+
+  /// [createdPeriod] The date and time(s) at which the media was collected.
   Period? get createdPeriod;
   @override
+
+  /// [issued] The date and time this version of the media was made available
+  ///  to providers, typically after having been reviewed.
   Instant? get issued;
   @override
+
+  /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
   Element? get issuedElement;
   @override
+
+  /// [operator] The person who administered the collection of the image.
   @JsonKey(name: 'operator')
   Reference? get operator_;
   @override
+
+  /// [reasonCode] Describes why the event occurred in coded or textual form.
   List<CodeableConcept>? get reasonCode;
   @override
+
+  /// [bodySite] Indicates the site on the subject's body where the observation
+  ///  was made (i.e. the target site).
   CodeableConcept? get bodySite;
   @override
+
+  /// [deviceName] The name of the device / manufacturer of the device  that
+  ///  was used to make the recording.
   String? get deviceName;
   @override
+
+  /// [deviceNameElement] Extensions for deviceName
   @JsonKey(name: '_deviceName')
   Element? get deviceNameElement;
   @override
+
+  /// [device] The device used to collect the media.
   Reference? get device;
   @override
+
+  /// [height] Height of the image in pixels (photo/video).
   PositiveInt? get height;
   @override
+
+  /// [heightElement] Extensions for height
   @JsonKey(name: '_height')
   Element? get heightElement;
   @override
+
+  /// [width] Width of the image in pixels (photo/video).
   PositiveInt? get width;
   @override
+
+  /// [widthElement] Extensions for width
   @JsonKey(name: '_width')
   Element? get widthElement;
   @override
+
+  /// [frames] The number of frames in a photo. This is used with a multi-page
+  /// fax, or an imaging acquisition context that takes multiple slices in a
+  /// single image, or an animated gif. If there is more than one frame, this
+  /// SHALL have a value in order to alert interface software that a multi-frame
+  ///  capable rendering widget is required.
   PositiveInt? get frames;
   @override
+
+  /// [framesElement] Extensions for frames
   @JsonKey(name: '_frames')
   Element? get framesElement;
   @override
+
+  /// [duration] The duration of the recording in seconds - for audio and
+  ///  video.
   Decimal? get duration;
   @override
+
+  /// [durationElement] Extensions for duration
   @JsonKey(name: '_duration')
   Element? get durationElement;
   @override
+
+  /// [content] The actual content of the media - inline or by direct reference
+  ///  to the media source file.
   Attachment get content;
   @override
+
+  /// [note] Comments made about the media by the performer, subject or other
+  ///  participants.
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$MediaCopyWith<_Media> get copyWith => throw _privateConstructorUsedError;
+  _$$_MediaCopyWith<_$_Media> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) {
@@ -6544,139 +8613,160 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MolecularSequenceTearOff {
-  const _$MolecularSequenceTearOff();
-
-  _MolecularSequence call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-          R4ResourceType resourceType = R4ResourceType.MolecularSequence,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-          MolecularSequenceType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      Integer? coordinateSystem,
-      @JsonKey(name: '_coordinateSystem')
-          Element? coordinateSystemElement,
-      Reference? patient,
-      Reference? specimen,
-      Reference? device,
-      Reference? performer,
-      Quantity? quantity,
-      MolecularSequenceReferenceSeq? referenceSeq,
-      List<MolecularSequenceVariant>? variant,
-      String? observedSeq,
-      @JsonKey(name: '_observedSeq')
-          Element? observedSeqElement,
-      List<MolecularSequenceQuality>? quality,
-      Integer? readCoverage,
-      @JsonKey(name: '_readCoverage')
-          Element? readCoverageElement,
-      List<MolecularSequenceRepository>? repository,
-      List<Reference>? pointer,
-      List<MolecularSequenceStructureVariant>? structureVariant}) {
-    return _MolecularSequence(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      typeElement: typeElement,
-      coordinateSystem: coordinateSystem,
-      coordinateSystemElement: coordinateSystemElement,
-      patient: patient,
-      specimen: specimen,
-      device: device,
-      performer: performer,
-      quantity: quantity,
-      referenceSeq: referenceSeq,
-      variant: variant,
-      observedSeq: observedSeq,
-      observedSeqElement: observedSeqElement,
-      quality: quality,
-      readCoverage: readCoverage,
-      readCoverageElement: readCoverageElement,
-      repository: repository,
-      pointer: pointer,
-      structureVariant: structureVariant,
-    );
-  }
-
-  MolecularSequence fromJson(Map<String, Object?> json) {
-    return MolecularSequence.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequence = _$MolecularSequenceTearOff();
-
-/// @nodoc
 mixin _$MolecularSequence {
   @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A unique identifier for this particular sequence instance.
+  ///  This is a FHIR-defined id.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-  MolecularSequenceType? get type => throw _privateConstructorUsedError;
+
+  /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
+  Code? get type => throw _privateConstructorUsedError;
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+
+  /// [coordinateSystem] Whether the sequence is numbered starting at 0
+  /// (0-based numbering or coordinates, inclusive start, exclusive end) or
+  ///  starting at 1 (1-based numbering, inclusive start and inclusive end).
   Integer? get coordinateSystem => throw _privateConstructorUsedError;
+
+  /// [coordinateSystemElement] Extensions for coordinateSystem
   @JsonKey(name: '_coordinateSystem')
   Element? get coordinateSystemElement => throw _privateConstructorUsedError;
+
+  /// [patient] The patient whose sequencing results are described by this
+  ///  resource.
   Reference? get patient => throw _privateConstructorUsedError;
+
+  /// [specimen] Specimen used for sequencing.
   Reference? get specimen => throw _privateConstructorUsedError;
+
+  /// [device] The method for sequencing, for example, chip information.
   Reference? get device => throw _privateConstructorUsedError;
+
+  /// [performer] The organization or lab that should be responsible for this
+  ///  result.
   Reference? get performer => throw _privateConstructorUsedError;
+
+  /// [quantity] The number of copies of the sequence of interest. (RNASeq).
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [referenceSeq] A sequence that is used as a reference to describe
+  ///  variants that are present in a sequence analyzed.
   MolecularSequenceReferenceSeq? get referenceSeq =>
       throw _privateConstructorUsedError;
+
+  /// [variant] The definition of variant here originates from Sequence
+  /// ontology
+  /// ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This
+  /// element can represent amino acid or nucleic sequence change(including
+  /// insertion,deletion,SNP,etc.)  It can represent some complex mutation or
+  ///  segment variation with the assist of CIGAR string.
   List<MolecularSequenceVariant>? get variant =>
       throw _privateConstructorUsedError;
+
+  /// [observedSeq] Sequence that was observed. It is the result marked by
+  /// referenceSeq along with variant records on referenceSeq. This shall start
+  ///  from referenceSeq.windowStart and end by referenceSeq.windowEnd.
   String? get observedSeq => throw _privateConstructorUsedError;
+
+  /// [observedSeqElement] Extensions for observedSeq
   @JsonKey(name: '_observedSeq')
   Element? get observedSeqElement => throw _privateConstructorUsedError;
+
+  /// [quality] An experimental feature attribute that defines the quality of
+  /// the feature in a quantitative way, such as a phred quality score
+  /// ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
   List<MolecularSequenceQuality>? get quality =>
       throw _privateConstructorUsedError;
+
+  /// [readCoverage] Coverage (read depth or depth) is the average number of
+  ///  reads representing a given nucleotide in the reconstructed sequence.
   Integer? get readCoverage => throw _privateConstructorUsedError;
+
+  /// [readCoverageElement] Extensions for readCoverage
   @JsonKey(name: '_readCoverage')
   Element? get readCoverageElement => throw _privateConstructorUsedError;
+
+  /// [repository] Configurations of the external repository. The repository
+  /// shall store target's observedSeq or records related with target's
+  ///  observedSeq.
   List<MolecularSequenceRepository>? get repository =>
       throw _privateConstructorUsedError;
+
+  /// [pointer] Pointer to next atomic sequence which at most contains one
+  ///  variant.
   List<Reference>? get pointer => throw _privateConstructorUsedError;
+
+  /// [structureVariant] Information about chromosome structure variation.
   List<MolecularSequenceStructureVariant>? get structureVariant =>
       throw _privateConstructorUsedError;
 
@@ -6694,7 +8784,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6708,8 +8798,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-          MolecularSequenceType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer? coordinateSystem,
@@ -6800,7 +8889,7 @@ class _$MolecularSequenceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6844,7 +8933,7 @@ class _$MolecularSequenceCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7077,16 +9166,16 @@ class _$MolecularSequenceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceCopyWith<$Res>
+abstract class _$$_MolecularSequenceCopyWith<$Res>
     implements $MolecularSequenceCopyWith<$Res> {
-  factory _$MolecularSequenceCopyWith(
-          _MolecularSequence value, $Res Function(_MolecularSequence) then) =
-      __$MolecularSequenceCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceCopyWith(_$_MolecularSequence value,
+          $Res Function(_$_MolecularSequence) then) =
+      __$$_MolecularSequenceCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7100,8 +9189,7 @@ abstract class _$MolecularSequenceCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-          MolecularSequenceType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer? coordinateSystem,
@@ -7156,15 +9244,15 @@ abstract class _$MolecularSequenceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceCopyWithImpl<$Res>
+class __$$_MolecularSequenceCopyWithImpl<$Res>
     extends _$MolecularSequenceCopyWithImpl<$Res>
-    implements _$MolecularSequenceCopyWith<$Res> {
-  __$MolecularSequenceCopyWithImpl(
-      _MolecularSequence _value, $Res Function(_MolecularSequence) _then)
-      : super(_value, (v) => _then(v as _MolecularSequence));
+    implements _$$_MolecularSequenceCopyWith<$Res> {
+  __$$_MolecularSequenceCopyWithImpl(
+      _$_MolecularSequence _value, $Res Function(_$_MolecularSequence) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequence));
 
   @override
-  _MolecularSequence get _value => super._value as _MolecularSequence;
+  _$_MolecularSequence get _value => super._value as _$_MolecularSequence;
 
   @override
   $Res call({
@@ -7200,7 +9288,7 @@ class __$MolecularSequenceCopyWithImpl<$Res>
     Object? pointer = freezed,
     Object? structureVariant = freezed,
   }) {
-    return _then(_MolecularSequence(
+    return _then(_$_MolecularSequence(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7208,7 +9296,7 @@ class __$MolecularSequenceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7234,25 +9322,25 @@ class __$MolecularSequenceCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7290,7 +9378,7 @@ class __$MolecularSequenceCopyWithImpl<$Res>
           : referenceSeq // ignore: cast_nullable_to_non_nullable
               as MolecularSequenceReferenceSeq?,
       variant: variant == freezed
-          ? _value.variant
+          ? _value._variant
           : variant // ignore: cast_nullable_to_non_nullable
               as List<MolecularSequenceVariant>?,
       observedSeq: observedSeq == freezed
@@ -7302,7 +9390,7 @@ class __$MolecularSequenceCopyWithImpl<$Res>
           : observedSeqElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       quality: quality == freezed
-          ? _value.quality
+          ? _value._quality
           : quality // ignore: cast_nullable_to_non_nullable
               as List<MolecularSequenceQuality>?,
       readCoverage: readCoverage == freezed
@@ -7314,15 +9402,15 @@ class __$MolecularSequenceCopyWithImpl<$Res>
           : readCoverageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       repository: repository == freezed
-          ? _value.repository
+          ? _value._repository
           : repository // ignore: cast_nullable_to_non_nullable
               as List<MolecularSequenceRepository>?,
       pointer: pointer == freezed
-          ? _value.pointer
+          ? _value._pointer
           : pointer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       structureVariant: structureVariant == freezed
-          ? _value.structureVariant
+          ? _value._structureVariant
           : structureVariant // ignore: cast_nullable_to_non_nullable
               as List<MolecularSequenceStructureVariant>?,
     ));
@@ -7344,13 +9432,12 @@ class _$_MolecularSequence extends _MolecularSequence {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-          this.type,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.coordinateSystem,
@@ -7362,18 +9449,27 @@ class _$_MolecularSequence extends _MolecularSequence {
       this.performer,
       this.quantity,
       this.referenceSeq,
-      this.variant,
+      final List<MolecularSequenceVariant>? variant,
       this.observedSeq,
       @JsonKey(name: '_observedSeq')
           this.observedSeqElement,
-      this.quality,
+      final List<MolecularSequenceQuality>? quality,
       this.readCoverage,
       @JsonKey(name: '_readCoverage')
           this.readCoverageElement,
-      this.repository,
-      this.pointer,
-      this.structureVariant})
-      : super._();
+      final List<MolecularSequenceRepository>? repository,
+      final List<Reference>? pointer,
+      final List<MolecularSequenceStructureVariant>? structureVariant})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _variant = variant,
+        _quality = quality,
+        _repository = repository,
+        _pointer = pointer,
+        _structureVariant = structureVariant,
+        super._();
 
   factory _$_MolecularSequence.fromJson(Map<String, dynamic> json) =>
       _$$_MolecularSequenceFromJson(json);
@@ -7381,74 +9477,286 @@ class _$_MolecularSequence extends _MolecularSequence {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] A unique identifier for this particular sequence instance.
+  ///  This is a FHIR-defined id.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] A unique identifier for this particular sequence instance.
+  ///  This is a FHIR-defined id.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-  final MolecularSequenceType? type;
+  final Code? type;
+
+  /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+
+  /// [coordinateSystem] Whether the sequence is numbered starting at 0
+  /// (0-based numbering or coordinates, inclusive start, exclusive end) or
+  ///  starting at 1 (1-based numbering, inclusive start and inclusive end).
   @override
   final Integer? coordinateSystem;
+
+  /// [coordinateSystemElement] Extensions for coordinateSystem
   @override
   @JsonKey(name: '_coordinateSystem')
   final Element? coordinateSystemElement;
+
+  /// [patient] The patient whose sequencing results are described by this
+  ///  resource.
   @override
   final Reference? patient;
+
+  /// [specimen] Specimen used for sequencing.
   @override
   final Reference? specimen;
+
+  /// [device] The method for sequencing, for example, chip information.
   @override
   final Reference? device;
+
+  /// [performer] The organization or lab that should be responsible for this
+  ///  result.
   @override
   final Reference? performer;
+
+  /// [quantity] The number of copies of the sequence of interest. (RNASeq).
   @override
   final Quantity? quantity;
+
+  /// [referenceSeq] A sequence that is used as a reference to describe
+  ///  variants that are present in a sequence analyzed.
   @override
   final MolecularSequenceReferenceSeq? referenceSeq;
+
+  /// [variant] The definition of variant here originates from Sequence
+  /// ontology
+  /// ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This
+  /// element can represent amino acid or nucleic sequence change(including
+  /// insertion,deletion,SNP,etc.)  It can represent some complex mutation or
+  ///  segment variation with the assist of CIGAR string.
+  final List<MolecularSequenceVariant>? _variant;
+
+  /// [variant] The definition of variant here originates from Sequence
+  /// ontology
+  /// ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This
+  /// element can represent amino acid or nucleic sequence change(including
+  /// insertion,deletion,SNP,etc.)  It can represent some complex mutation or
+  ///  segment variation with the assist of CIGAR string.
   @override
-  final List<MolecularSequenceVariant>? variant;
+  List<MolecularSequenceVariant>? get variant {
+    final value = _variant;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [observedSeq] Sequence that was observed. It is the result marked by
+  /// referenceSeq along with variant records on referenceSeq. This shall start
+  ///  from referenceSeq.windowStart and end by referenceSeq.windowEnd.
   @override
   final String? observedSeq;
+
+  /// [observedSeqElement] Extensions for observedSeq
   @override
   @JsonKey(name: '_observedSeq')
   final Element? observedSeqElement;
+
+  /// [quality] An experimental feature attribute that defines the quality of
+  /// the feature in a quantitative way, such as a phred quality score
+  /// ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
+  final List<MolecularSequenceQuality>? _quality;
+
+  /// [quality] An experimental feature attribute that defines the quality of
+  /// the feature in a quantitative way, such as a phred quality score
+  /// ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
   @override
-  final List<MolecularSequenceQuality>? quality;
+  List<MolecularSequenceQuality>? get quality {
+    final value = _quality;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [readCoverage] Coverage (read depth or depth) is the average number of
+  ///  reads representing a given nucleotide in the reconstructed sequence.
   @override
   final Integer? readCoverage;
+
+  /// [readCoverageElement] Extensions for readCoverage
   @override
   @JsonKey(name: '_readCoverage')
   final Element? readCoverageElement;
+
+  /// [repository] Configurations of the external repository. The repository
+  /// shall store target's observedSeq or records related with target's
+  ///  observedSeq.
+  final List<MolecularSequenceRepository>? _repository;
+
+  /// [repository] Configurations of the external repository. The repository
+  /// shall store target's observedSeq or records related with target's
+  ///  observedSeq.
   @override
-  final List<MolecularSequenceRepository>? repository;
+  List<MolecularSequenceRepository>? get repository {
+    final value = _repository;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [pointer] Pointer to next atomic sequence which at most contains one
+  ///  variant.
+  final List<Reference>? _pointer;
+
+  /// [pointer] Pointer to next atomic sequence which at most contains one
+  ///  variant.
   @override
-  final List<Reference>? pointer;
+  List<Reference>? get pointer {
+    final value = _pointer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [structureVariant] Information about chromosome structure variation.
+  final List<MolecularSequenceStructureVariant>? _structureVariant;
+
+  /// [structureVariant] Information about chromosome structure variation.
   @override
-  final List<MolecularSequenceStructureVariant>? structureVariant;
+  List<MolecularSequenceStructureVariant>? get structureVariant {
+    final value = _structureVariant;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -7459,7 +9767,7 @@ class _$_MolecularSequence extends _MolecularSequence {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequence &&
+            other is _$_MolecularSequence &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -7472,13 +9780,14 @@ class _$_MolecularSequence extends _MolecularSequence {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -7493,23 +9802,24 @@ class _$_MolecularSequence extends _MolecularSequence {
             const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality()
                 .equals(other.referenceSeq, referenceSeq) &&
-            const DeepCollectionEquality().equals(other.variant, variant) &&
+            const DeepCollectionEquality().equals(other._variant, _variant) &&
             const DeepCollectionEquality()
                 .equals(other.observedSeq, observedSeq) &&
             const DeepCollectionEquality()
                 .equals(other.observedSeqElement, observedSeqElement) &&
-            const DeepCollectionEquality().equals(other.quality, quality) &&
+            const DeepCollectionEquality().equals(other._quality, _quality) &&
             const DeepCollectionEquality()
                 .equals(other.readCoverage, readCoverage) &&
             const DeepCollectionEquality()
                 .equals(other.readCoverageElement, readCoverageElement) &&
             const DeepCollectionEquality()
-                .equals(other.repository, repository) &&
-            const DeepCollectionEquality().equals(other.pointer, pointer) &&
+                .equals(other._repository, _repository) &&
+            const DeepCollectionEquality().equals(other._pointer, _pointer) &&
             const DeepCollectionEquality()
-                .equals(other.structureVariant, structureVariant));
+                .equals(other._structureVariant, _structureVariant));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -7521,10 +9831,10 @@ class _$_MolecularSequence extends _MolecularSequence {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(typeElement),
         const DeepCollectionEquality().hash(coordinateSystem),
@@ -7535,70 +9845,72 @@ class _$_MolecularSequence extends _MolecularSequence {
         const DeepCollectionEquality().hash(performer),
         const DeepCollectionEquality().hash(quantity),
         const DeepCollectionEquality().hash(referenceSeq),
-        const DeepCollectionEquality().hash(variant),
+        const DeepCollectionEquality().hash(_variant),
         const DeepCollectionEquality().hash(observedSeq),
         const DeepCollectionEquality().hash(observedSeqElement),
-        const DeepCollectionEquality().hash(quality),
+        const DeepCollectionEquality().hash(_quality),
         const DeepCollectionEquality().hash(readCoverage),
         const DeepCollectionEquality().hash(readCoverageElement),
-        const DeepCollectionEquality().hash(repository),
-        const DeepCollectionEquality().hash(pointer),
-        const DeepCollectionEquality().hash(structureVariant)
+        const DeepCollectionEquality().hash(_repository),
+        const DeepCollectionEquality().hash(_pointer),
+        const DeepCollectionEquality().hash(_structureVariant)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceCopyWith<_MolecularSequence> get copyWith =>
-      __$MolecularSequenceCopyWithImpl<_MolecularSequence>(this, _$identity);
+  _$$_MolecularSequenceCopyWith<_$_MolecularSequence> get copyWith =>
+      __$$_MolecularSequenceCopyWithImpl<_$_MolecularSequence>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceToJson(this);
+    return _$$_MolecularSequenceToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequence extends MolecularSequence {
   factory _MolecularSequence(
           {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-              R4ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
+              final R4ResourceType resourceType,
+          final String? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
-              Element? implicitRulesElement,
-          Code? language,
+              final Element? implicitRulesElement,
+          final Code? language,
           @JsonKey(name: '_language')
-              Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
+              final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
-          @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-              MolecularSequenceType? type,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final Code? type,
           @JsonKey(name: '_type')
-              Element? typeElement,
-          Integer? coordinateSystem,
+              final Element? typeElement,
+          final Integer? coordinateSystem,
           @JsonKey(name: '_coordinateSystem')
-              Element? coordinateSystemElement,
-          Reference? patient,
-          Reference? specimen,
-          Reference? device,
-          Reference? performer,
-          Quantity? quantity,
-          MolecularSequenceReferenceSeq? referenceSeq,
-          List<MolecularSequenceVariant>? variant,
-          String? observedSeq,
+              final Element? coordinateSystemElement,
+          final Reference? patient,
+          final Reference? specimen,
+          final Reference? device,
+          final Reference? performer,
+          final Quantity? quantity,
+          final MolecularSequenceReferenceSeq? referenceSeq,
+          final List<MolecularSequenceVariant>? variant,
+          final String? observedSeq,
           @JsonKey(name: '_observedSeq')
-              Element? observedSeqElement,
-          List<MolecularSequenceQuality>? quality,
-          Integer? readCoverage,
+              final Element? observedSeqElement,
+          final List<MolecularSequenceQuality>? quality,
+          final Integer? readCoverage,
           @JsonKey(name: '_readCoverage')
-              Element? readCoverageElement,
-          List<MolecularSequenceRepository>? repository,
-          List<Reference>? pointer,
-          List<MolecularSequenceStructureVariant>? structureVariant}) =
+              final Element? readCoverageElement,
+          final List<MolecularSequenceRepository>? repository,
+          final List<Reference>? pointer,
+          final List<MolecularSequenceStructureVariant>? structureVariant}) =
       _$_MolecularSequence;
   _MolecularSequence._() : super._();
 
@@ -7609,76 +9921,185 @@ abstract class _MolecularSequence extends MolecularSequence {
   @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A unique identifier for this particular sequence instance.
+  ///  This is a FHIR-defined id.
   List<Identifier>? get identifier;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-  MolecularSequenceType? get type;
+
+  /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
+  Code? get type;
   @override
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+
+  /// [coordinateSystem] Whether the sequence is numbered starting at 0
+  /// (0-based numbering or coordinates, inclusive start, exclusive end) or
+  ///  starting at 1 (1-based numbering, inclusive start and inclusive end).
   Integer? get coordinateSystem;
   @override
+
+  /// [coordinateSystemElement] Extensions for coordinateSystem
   @JsonKey(name: '_coordinateSystem')
   Element? get coordinateSystemElement;
   @override
+
+  /// [patient] The patient whose sequencing results are described by this
+  ///  resource.
   Reference? get patient;
   @override
+
+  /// [specimen] Specimen used for sequencing.
   Reference? get specimen;
   @override
+
+  /// [device] The method for sequencing, for example, chip information.
   Reference? get device;
   @override
+
+  /// [performer] The organization or lab that should be responsible for this
+  ///  result.
   Reference? get performer;
   @override
+
+  /// [quantity] The number of copies of the sequence of interest. (RNASeq).
   Quantity? get quantity;
   @override
+
+  /// [referenceSeq] A sequence that is used as a reference to describe
+  ///  variants that are present in a sequence analyzed.
   MolecularSequenceReferenceSeq? get referenceSeq;
   @override
+
+  /// [variant] The definition of variant here originates from Sequence
+  /// ontology
+  /// ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This
+  /// element can represent amino acid or nucleic sequence change(including
+  /// insertion,deletion,SNP,etc.)  It can represent some complex mutation or
+  ///  segment variation with the assist of CIGAR string.
   List<MolecularSequenceVariant>? get variant;
   @override
+
+  /// [observedSeq] Sequence that was observed. It is the result marked by
+  /// referenceSeq along with variant records on referenceSeq. This shall start
+  ///  from referenceSeq.windowStart and end by referenceSeq.windowEnd.
   String? get observedSeq;
   @override
+
+  /// [observedSeqElement] Extensions for observedSeq
   @JsonKey(name: '_observedSeq')
   Element? get observedSeqElement;
   @override
+
+  /// [quality] An experimental feature attribute that defines the quality of
+  /// the feature in a quantitative way, such as a phred quality score
+  /// ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
   List<MolecularSequenceQuality>? get quality;
   @override
+
+  /// [readCoverage] Coverage (read depth or depth) is the average number of
+  ///  reads representing a given nucleotide in the reconstructed sequence.
   Integer? get readCoverage;
   @override
+
+  /// [readCoverageElement] Extensions for readCoverage
   @JsonKey(name: '_readCoverage')
   Element? get readCoverageElement;
   @override
+
+  /// [repository] Configurations of the external repository. The repository
+  /// shall store target's observedSeq or records related with target's
+  ///  observedSeq.
   List<MolecularSequenceRepository>? get repository;
   @override
+
+  /// [pointer] Pointer to next atomic sequence which at most contains one
+  ///  variant.
   List<Reference>? get pointer;
   @override
+
+  /// [structureVariant] Information about chromosome structure variation.
   List<MolecularSequenceStructureVariant>? get structureVariant;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceCopyWith<_MolecularSequence> get copyWith =>
+  _$$_MolecularSequenceCopyWith<_$_MolecularSequence> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7688,100 +10109,103 @@ MolecularSequenceReferenceSeq _$MolecularSequenceReferenceSeqFromJson(
 }
 
 /// @nodoc
-class _$MolecularSequenceReferenceSeqTearOff {
-  const _$MolecularSequenceReferenceSeqTearOff();
-
-  _MolecularSequenceReferenceSeq
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? chromosome,
-          String? genomeBuild,
-          @JsonKey(name: '_genomeBuild')
-              Element? genomeBuildElement,
-          @JsonKey(
-              unknownEnumValue:
-                  MolecularSequenceReferenceSeqOrientation.unknown)
-              MolecularSequenceReferenceSeqOrientation? orientation,
-          @JsonKey(name: '_orientation')
-              Element? orientationElement,
-          CodeableConcept? referenceSeqId,
-          Reference? referenceSeqPointer,
-          String? referenceSeqString,
-          @JsonKey(name: '_referenceSeqString')
-              Element? referenceSeqStringElement,
-          @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-              MolecularSequenceReferenceSeqStrand? strand,
-          @JsonKey(name: '_strand')
-              Element? strandElement,
-          Integer? windowStart,
-          @JsonKey(name: '_windowStart')
-              Element? windowStartElement,
-          Integer? windowEnd,
-          @JsonKey(name: '_windowEnd')
-              Element? windowEndElement}) {
-    return _MolecularSequenceReferenceSeq(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      chromosome: chromosome,
-      genomeBuild: genomeBuild,
-      genomeBuildElement: genomeBuildElement,
-      orientation: orientation,
-      orientationElement: orientationElement,
-      referenceSeqId: referenceSeqId,
-      referenceSeqPointer: referenceSeqPointer,
-      referenceSeqString: referenceSeqString,
-      referenceSeqStringElement: referenceSeqStringElement,
-      strand: strand,
-      strandElement: strandElement,
-      windowStart: windowStart,
-      windowStartElement: windowStartElement,
-      windowEnd: windowEnd,
-      windowEndElement: windowEndElement,
-    );
-  }
-
-  MolecularSequenceReferenceSeq fromJson(Map<String, Object?> json) {
-    return MolecularSequenceReferenceSeq.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceReferenceSeq = _$MolecularSequenceReferenceSeqTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceReferenceSeq {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [chromosome] Structural unit composed of a nucleic acid molecule which
+  /// controls its own replication through the interaction of specific proteins
+  /// at one or more origins of replication
+  /// ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).
   CodeableConcept? get chromosome => throw _privateConstructorUsedError;
+
+  /// [genomeBuild] The Genome Build used for reference, following GRCh build
+  /// versions e.g. 'GRCh 37'.  Version number must be included if a versioned
+  ///  release of a primary build was used.
   String? get genomeBuild => throw _privateConstructorUsedError;
+
+  /// [genomeBuildElement] Extensions for genomeBuild
   @JsonKey(name: '_genomeBuild')
   Element? get genomeBuildElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-  MolecularSequenceReferenceSeqOrientation? get orientation =>
-      throw _privateConstructorUsedError;
+
+  /// [orientation] A relative reference to a DNA strand based on gene
+  /// orientation. The strand that contains the open reading frame of the gene
+  /// is the "sense" strand, and the opposite complementary strand is the
+  ///  "antisense" strand.
+  Code? get orientation => throw _privateConstructorUsedError;
+
+  /// [orientationElement] Extensions for orientation
   @JsonKey(name: '_orientation')
   Element? get orientationElement => throw _privateConstructorUsedError;
+
+  /// [referenceSeqId] Reference identifier of reference sequence submitted to
+  /// NCBI. It must match the type in the MolecularSequence.type field. For
+  /// example, the prefix, “NG_” identifies reference sequence for genes, “NM_”
+  ///  for messenger RNA transcripts, and “NP_” for amino acid sequences.
   CodeableConcept? get referenceSeqId => throw _privateConstructorUsedError;
+
+  /// [referenceSeqPointer] A pointer to another MolecularSequence entity as
+  ///  reference sequence.
   Reference? get referenceSeqPointer => throw _privateConstructorUsedError;
+
+  /// [referenceSeqString] A string like "ACGT".
   String? get referenceSeqString => throw _privateConstructorUsedError;
+
+  /// [referenceSeqStringElement] Extensions for referenceSeqString
   @JsonKey(name: '_referenceSeqString')
   Element? get referenceSeqStringElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-  MolecularSequenceReferenceSeqStrand? get strand =>
-      throw _privateConstructorUsedError;
+
+  /// [strand] An absolute reference to a strand. The Watson strand is the
+  /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
+  ///  strand as the one whose 5'-end is on the long arm.
+  Code? get strand => throw _privateConstructorUsedError;
+
+  /// [strandElement] Extensions for strand
   @JsonKey(name: '_strand')
   Element? get strandElement => throw _privateConstructorUsedError;
+
+  /// [windowStart] Start position of the window on the reference sequence. If
+  /// the coordinate system is either 0-based or 1-based, then start position is
+  ///  inclusive.
   Integer? get windowStart => throw _privateConstructorUsedError;
+
+  /// [windowStartElement] Extensions for windowStart
   @JsonKey(name: '_windowStart')
   Element? get windowStartElement => throw _privateConstructorUsedError;
+
+  /// [windowEnd] End position of the window on the reference sequence. If the
+  /// coordinate system is 0-based then end is exclusive and does not include
+  /// the last position. If the coordinate system is 1-base, then end is
+  ///  inclusive and includes the last position.
   Integer? get windowEnd => throw _privateConstructorUsedError;
+
+  /// [windowEndElement] Extensions for windowEnd
   @JsonKey(name: '_windowEnd')
   Element? get windowEndElement => throw _privateConstructorUsedError;
 
@@ -7797,37 +10221,25 @@ abstract class $MolecularSequenceReferenceSeqCopyWith<$Res> {
           MolecularSequenceReferenceSeq value,
           $Res Function(MolecularSequenceReferenceSeq) then) =
       _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>;
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? chromosome,
-          String? genomeBuild,
-          @JsonKey(name: '_genomeBuild')
-              Element? genomeBuildElement,
-          @JsonKey(
-              unknownEnumValue:
-                  MolecularSequenceReferenceSeqOrientation.unknown)
-              MolecularSequenceReferenceSeqOrientation? orientation,
-          @JsonKey(name: '_orientation')
-              Element? orientationElement,
-          CodeableConcept? referenceSeqId,
-          Reference? referenceSeqPointer,
-          String? referenceSeqString,
-          @JsonKey(name: '_referenceSeqString')
-              Element? referenceSeqStringElement,
-          @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-              MolecularSequenceReferenceSeqStrand? strand,
-          @JsonKey(name: '_strand')
-              Element? strandElement,
-          Integer? windowStart,
-          @JsonKey(name: '_windowStart')
-              Element? windowStartElement,
-          Integer? windowEnd,
-          @JsonKey(name: '_windowEnd')
-              Element? windowEndElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? chromosome,
+      String? genomeBuild,
+      @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
+      Code? orientation,
+      @JsonKey(name: '_orientation') Element? orientationElement,
+      CodeableConcept? referenceSeqId,
+      Reference? referenceSeqPointer,
+      String? referenceSeqString,
+      @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
+      Code? strand,
+      @JsonKey(name: '_strand') Element? strandElement,
+      Integer? windowStart,
+      @JsonKey(name: '_windowStart') Element? windowStartElement,
+      Integer? windowEnd,
+      @JsonKey(name: '_windowEnd') Element? windowEndElement});
 
   $CodeableConceptCopyWith<$Res>? get chromosome;
   $ElementCopyWith<$Res>? get genomeBuildElement;
@@ -7898,7 +10310,7 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       orientation: orientation == freezed
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqOrientation?,
+              as Code?,
       orientationElement: orientationElement == freezed
           ? _value.orientationElement
           : orientationElement // ignore: cast_nullable_to_non_nullable
@@ -7922,7 +10334,7 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       strand: strand == freezed
           ? _value.strand
           : strand // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqStrand?,
+              as Code?,
       strandElement: strandElement == freezed
           ? _value.strandElement
           : strandElement // ignore: cast_nullable_to_non_nullable
@@ -8047,44 +10459,32 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceReferenceSeqCopyWith<$Res>
+abstract class _$$_MolecularSequenceReferenceSeqCopyWith<$Res>
     implements $MolecularSequenceReferenceSeqCopyWith<$Res> {
-  factory _$MolecularSequenceReferenceSeqCopyWith(
-          _MolecularSequenceReferenceSeq value,
-          $Res Function(_MolecularSequenceReferenceSeq) then) =
-      __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceReferenceSeqCopyWith(
+          _$_MolecularSequenceReferenceSeq value,
+          $Res Function(_$_MolecularSequenceReferenceSeq) then) =
+      __$$_MolecularSequenceReferenceSeqCopyWithImpl<$Res>;
   @override
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? chromosome,
-          String? genomeBuild,
-          @JsonKey(name: '_genomeBuild')
-              Element? genomeBuildElement,
-          @JsonKey(
-              unknownEnumValue:
-                  MolecularSequenceReferenceSeqOrientation.unknown)
-              MolecularSequenceReferenceSeqOrientation? orientation,
-          @JsonKey(name: '_orientation')
-              Element? orientationElement,
-          CodeableConcept? referenceSeqId,
-          Reference? referenceSeqPointer,
-          String? referenceSeqString,
-          @JsonKey(name: '_referenceSeqString')
-              Element? referenceSeqStringElement,
-          @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-              MolecularSequenceReferenceSeqStrand? strand,
-          @JsonKey(name: '_strand')
-              Element? strandElement,
-          Integer? windowStart,
-          @JsonKey(name: '_windowStart')
-              Element? windowStartElement,
-          Integer? windowEnd,
-          @JsonKey(name: '_windowEnd')
-              Element? windowEndElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? chromosome,
+      String? genomeBuild,
+      @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
+      Code? orientation,
+      @JsonKey(name: '_orientation') Element? orientationElement,
+      CodeableConcept? referenceSeqId,
+      Reference? referenceSeqPointer,
+      String? referenceSeqString,
+      @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
+      Code? strand,
+      @JsonKey(name: '_strand') Element? strandElement,
+      Integer? windowStart,
+      @JsonKey(name: '_windowStart') Element? windowStartElement,
+      Integer? windowEnd,
+      @JsonKey(name: '_windowEnd') Element? windowEndElement});
 
   @override
   $CodeableConceptCopyWith<$Res>? get chromosome;
@@ -8107,17 +10507,17 @@ abstract class _$MolecularSequenceReferenceSeqCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
+class __$$_MolecularSequenceReferenceSeqCopyWithImpl<$Res>
     extends _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
-    implements _$MolecularSequenceReferenceSeqCopyWith<$Res> {
-  __$MolecularSequenceReferenceSeqCopyWithImpl(
-      _MolecularSequenceReferenceSeq _value,
-      $Res Function(_MolecularSequenceReferenceSeq) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceReferenceSeq));
+    implements _$$_MolecularSequenceReferenceSeqCopyWith<$Res> {
+  __$$_MolecularSequenceReferenceSeqCopyWithImpl(
+      _$_MolecularSequenceReferenceSeq _value,
+      $Res Function(_$_MolecularSequenceReferenceSeq) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceReferenceSeq));
 
   @override
-  _MolecularSequenceReferenceSeq get _value =>
-      super._value as _MolecularSequenceReferenceSeq;
+  _$_MolecularSequenceReferenceSeq get _value =>
+      super._value as _$_MolecularSequenceReferenceSeq;
 
   @override
   $Res call({
@@ -8140,17 +10540,17 @@ class __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
     Object? windowEnd = freezed,
     Object? windowEndElement = freezed,
   }) {
-    return _then(_MolecularSequenceReferenceSeq(
+    return _then(_$_MolecularSequenceReferenceSeq(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       chromosome: chromosome == freezed
@@ -8168,7 +10568,7 @@ class __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       orientation: orientation == freezed
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqOrientation?,
+              as Code?,
       orientationElement: orientationElement == freezed
           ? _value.orientationElement
           : orientationElement // ignore: cast_nullable_to_non_nullable
@@ -8192,7 +10592,7 @@ class __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       strand: strand == freezed
           ? _value.strand
           : strand // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqStrand?,
+              as Code?,
       strandElement: strandElement == freezed
           ? _value.strandElement
           : strandElement // ignore: cast_nullable_to_non_nullable
@@ -8222,80 +10622,176 @@ class __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
 class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
   _$_MolecularSequenceReferenceSeq(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.chromosome,
       this.genomeBuild,
-      @JsonKey(name: '_genomeBuild')
-          this.genomeBuildElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-          this.orientation,
-      @JsonKey(name: '_orientation')
-          this.orientationElement,
+      @JsonKey(name: '_genomeBuild') this.genomeBuildElement,
+      this.orientation,
+      @JsonKey(name: '_orientation') this.orientationElement,
       this.referenceSeqId,
       this.referenceSeqPointer,
       this.referenceSeqString,
-      @JsonKey(name: '_referenceSeqString')
-          this.referenceSeqStringElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-          this.strand,
-      @JsonKey(name: '_strand')
-          this.strandElement,
+      @JsonKey(name: '_referenceSeqString') this.referenceSeqStringElement,
+      this.strand,
+      @JsonKey(name: '_strand') this.strandElement,
       this.windowStart,
-      @JsonKey(name: '_windowStart')
-          this.windowStartElement,
+      @JsonKey(name: '_windowStart') this.windowStartElement,
       this.windowEnd,
-      @JsonKey(name: '_windowEnd')
-          this.windowEndElement})
-      : super._();
+      @JsonKey(name: '_windowEnd') this.windowEndElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MolecularSequenceReferenceSeq.fromJson(
           Map<String, dynamic> json) =>
       _$$_MolecularSequenceReferenceSeqFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [chromosome] Structural unit composed of a nucleic acid molecule which
+  /// controls its own replication through the interaction of specific proteins
+  /// at one or more origins of replication
+  /// ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).
   @override
   final CodeableConcept? chromosome;
+
+  /// [genomeBuild] The Genome Build used for reference, following GRCh build
+  /// versions e.g. 'GRCh 37'.  Version number must be included if a versioned
+  ///  release of a primary build was used.
   @override
   final String? genomeBuild;
+
+  /// [genomeBuildElement] Extensions for genomeBuild
   @override
   @JsonKey(name: '_genomeBuild')
   final Element? genomeBuildElement;
+
+  /// [orientation] A relative reference to a DNA strand based on gene
+  /// orientation. The strand that contains the open reading frame of the gene
+  /// is the "sense" strand, and the opposite complementary strand is the
+  ///  "antisense" strand.
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-  final MolecularSequenceReferenceSeqOrientation? orientation;
+  final Code? orientation;
+
+  /// [orientationElement] Extensions for orientation
   @override
   @JsonKey(name: '_orientation')
   final Element? orientationElement;
+
+  /// [referenceSeqId] Reference identifier of reference sequence submitted to
+  /// NCBI. It must match the type in the MolecularSequence.type field. For
+  /// example, the prefix, “NG_” identifies reference sequence for genes, “NM_”
+  ///  for messenger RNA transcripts, and “NP_” for amino acid sequences.
   @override
   final CodeableConcept? referenceSeqId;
+
+  /// [referenceSeqPointer] A pointer to another MolecularSequence entity as
+  ///  reference sequence.
   @override
   final Reference? referenceSeqPointer;
+
+  /// [referenceSeqString] A string like "ACGT".
   @override
   final String? referenceSeqString;
+
+  /// [referenceSeqStringElement] Extensions for referenceSeqString
   @override
   @JsonKey(name: '_referenceSeqString')
   final Element? referenceSeqStringElement;
+
+  /// [strand] An absolute reference to a strand. The Watson strand is the
+  /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
+  ///  strand as the one whose 5'-end is on the long arm.
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-  final MolecularSequenceReferenceSeqStrand? strand;
+  final Code? strand;
+
+  /// [strandElement] Extensions for strand
   @override
   @JsonKey(name: '_strand')
   final Element? strandElement;
+
+  /// [windowStart] Start position of the window on the reference sequence. If
+  /// the coordinate system is either 0-based or 1-based, then start position is
+  ///  inclusive.
   @override
   final Integer? windowStart;
+
+  /// [windowStartElement] Extensions for windowStart
   @override
   @JsonKey(name: '_windowStart')
   final Element? windowStartElement;
+
+  /// [windowEnd] End position of the window on the reference sequence. If the
+  /// coordinate system is 0-based then end is exclusive and does not include
+  /// the last position. If the coordinate system is 1-base, then end is
+  ///  inclusive and includes the last position.
   @override
   final Integer? windowEnd;
+
+  /// [windowEndElement] Extensions for windowEnd
   @override
   @JsonKey(name: '_windowEnd')
   final Element? windowEndElement;
@@ -8309,12 +10805,12 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceReferenceSeq &&
+            other is _$_MolecularSequenceReferenceSeq &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.chromosome, chromosome) &&
             const DeepCollectionEquality()
@@ -8345,12 +10841,13 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
                 .equals(other.windowEndElement, windowEndElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(chromosome),
       const DeepCollectionEquality().hash(genomeBuild),
       const DeepCollectionEquality().hash(genomeBuildElement),
@@ -8369,99 +10866,170 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceReferenceSeqCopyWith<_MolecularSequenceReferenceSeq>
-      get copyWith => __$MolecularSequenceReferenceSeqCopyWithImpl<
-          _MolecularSequenceReferenceSeq>(this, _$identity);
+  _$$_MolecularSequenceReferenceSeqCopyWith<_$_MolecularSequenceReferenceSeq>
+      get copyWith => __$$_MolecularSequenceReferenceSeqCopyWithImpl<
+          _$_MolecularSequenceReferenceSeq>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceReferenceSeqToJson(this);
+    return _$$_MolecularSequenceReferenceSeqToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceReferenceSeq
     extends MolecularSequenceReferenceSeq {
   factory _MolecularSequenceReferenceSeq(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? chromosome,
-      String? genomeBuild,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? chromosome,
+      final String? genomeBuild,
       @JsonKey(name: '_genomeBuild')
-          Element? genomeBuildElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-          MolecularSequenceReferenceSeqOrientation? orientation,
+          final Element? genomeBuildElement,
+      final Code? orientation,
       @JsonKey(name: '_orientation')
-          Element? orientationElement,
-      CodeableConcept? referenceSeqId,
-      Reference? referenceSeqPointer,
-      String? referenceSeqString,
+          final Element? orientationElement,
+      final CodeableConcept? referenceSeqId,
+      final Reference? referenceSeqPointer,
+      final String? referenceSeqString,
       @JsonKey(name: '_referenceSeqString')
-          Element? referenceSeqStringElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-          MolecularSequenceReferenceSeqStrand? strand,
+          final Element? referenceSeqStringElement,
+      final Code? strand,
       @JsonKey(name: '_strand')
-          Element? strandElement,
-      Integer? windowStart,
+          final Element? strandElement,
+      final Integer? windowStart,
       @JsonKey(name: '_windowStart')
-          Element? windowStartElement,
-      Integer? windowEnd,
+          final Element? windowStartElement,
+      final Integer? windowEnd,
       @JsonKey(name: '_windowEnd')
-          Element? windowEndElement}) = _$_MolecularSequenceReferenceSeq;
+          final Element? windowEndElement}) = _$_MolecularSequenceReferenceSeq;
   _MolecularSequenceReferenceSeq._() : super._();
 
   factory _MolecularSequenceReferenceSeq.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceReferenceSeq.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [chromosome] Structural unit composed of a nucleic acid molecule which
+  /// controls its own replication through the interaction of specific proteins
+  /// at one or more origins of replication
+  /// ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).
   CodeableConcept? get chromosome;
   @override
+
+  /// [genomeBuild] The Genome Build used for reference, following GRCh build
+  /// versions e.g. 'GRCh 37'.  Version number must be included if a versioned
+  ///  release of a primary build was used.
   String? get genomeBuild;
   @override
+
+  /// [genomeBuildElement] Extensions for genomeBuild
   @JsonKey(name: '_genomeBuild')
   Element? get genomeBuildElement;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-  MolecularSequenceReferenceSeqOrientation? get orientation;
+
+  /// [orientation] A relative reference to a DNA strand based on gene
+  /// orientation. The strand that contains the open reading frame of the gene
+  /// is the "sense" strand, and the opposite complementary strand is the
+  ///  "antisense" strand.
+  Code? get orientation;
   @override
+
+  /// [orientationElement] Extensions for orientation
   @JsonKey(name: '_orientation')
   Element? get orientationElement;
   @override
+
+  /// [referenceSeqId] Reference identifier of reference sequence submitted to
+  /// NCBI. It must match the type in the MolecularSequence.type field. For
+  /// example, the prefix, “NG_” identifies reference sequence for genes, “NM_”
+  ///  for messenger RNA transcripts, and “NP_” for amino acid sequences.
   CodeableConcept? get referenceSeqId;
   @override
+
+  /// [referenceSeqPointer] A pointer to another MolecularSequence entity as
+  ///  reference sequence.
   Reference? get referenceSeqPointer;
   @override
+
+  /// [referenceSeqString] A string like "ACGT".
   String? get referenceSeqString;
   @override
+
+  /// [referenceSeqStringElement] Extensions for referenceSeqString
   @JsonKey(name: '_referenceSeqString')
   Element? get referenceSeqStringElement;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-  MolecularSequenceReferenceSeqStrand? get strand;
+
+  /// [strand] An absolute reference to a strand. The Watson strand is the
+  /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
+  ///  strand as the one whose 5'-end is on the long arm.
+  Code? get strand;
   @override
+
+  /// [strandElement] Extensions for strand
   @JsonKey(name: '_strand')
   Element? get strandElement;
   @override
+
+  /// [windowStart] Start position of the window on the reference sequence. If
+  /// the coordinate system is either 0-based or 1-based, then start position is
+  ///  inclusive.
   Integer? get windowStart;
   @override
+
+  /// [windowStartElement] Extensions for windowStart
   @JsonKey(name: '_windowStart')
   Element? get windowStartElement;
   @override
+
+  /// [windowEnd] End position of the window on the reference sequence. If the
+  /// coordinate system is 0-based then end is exclusive and does not include
+  /// the last position. If the coordinate system is 1-base, then end is
+  ///  inclusive and includes the last position.
   Integer? get windowEnd;
   @override
+
+  /// [windowEndElement] Extensions for windowEnd
   @JsonKey(name: '_windowEnd')
   Element? get windowEndElement;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceReferenceSeqCopyWith<_MolecularSequenceReferenceSeq>
+  _$$_MolecularSequenceReferenceSeqCopyWith<_$_MolecularSequenceReferenceSeq>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8471,72 +11039,92 @@ MolecularSequenceVariant _$MolecularSequenceVariantFromJson(
 }
 
 /// @nodoc
-class _$MolecularSequenceVariantTearOff {
-  const _$MolecularSequenceVariantTearOff();
-
-  _MolecularSequenceVariant call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end') Element? endElement,
-      String? observedAllele,
-      @JsonKey(name: '_observedAllele') Element? observedAlleleElement,
-      String? referenceAllele,
-      @JsonKey(name: '_referenceAllele') Element? referenceAlleleElement,
-      String? cigar,
-      @JsonKey(name: '_cigar') Element? cigarElement,
-      Reference? variantPointer}) {
-    return _MolecularSequenceVariant(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      observedAllele: observedAllele,
-      observedAlleleElement: observedAlleleElement,
-      referenceAllele: referenceAllele,
-      referenceAlleleElement: referenceAlleleElement,
-      cigar: cigar,
-      cigarElement: cigarElement,
-      variantPointer: variantPointer,
-    );
-  }
-
-  MolecularSequenceVariant fromJson(Map<String, Object?> json) {
-    return MolecularSequenceVariant.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceVariant = _$MolecularSequenceVariantTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceVariant {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [start] Start position of the variant on the  reference sequence. If the
+  /// coordinate system is either 0-based or 1-based, then start position is
+  ///  inclusive.
   Integer? get start => throw _privateConstructorUsedError;
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
+
+  /// [end] End position of the variant on the reference sequence. If the
+  /// coordinate system is 0-based then end is exclusive and does not include
+  /// the last position. If the coordinate system is 1-base, then end is
+  ///  inclusive and includes the last position.
   Integer? get end => throw _privateConstructorUsedError;
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
+
+  /// [observedAllele] An allele is one of a set of coexisting sequence
+  /// variants of a gene
+  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+  /// Nucleotide(s)/amino acids from start position of sequence to stop position
+  /// of sequence on the positive (+) strand of the observed  sequence. When the
+  /// sequence  type is DNA, it should be the sequence on the positive (+)
+  ///  strand. This will lay in the range between variant.start and variant.end.
   String? get observedAllele => throw _privateConstructorUsedError;
+
+  /// [observedAlleleElement] Extensions for observedAllele
   @JsonKey(name: '_observedAllele')
   Element? get observedAlleleElement => throw _privateConstructorUsedError;
+
+  /// [referenceAllele] An allele is one of a set of coexisting sequence
+  /// variants of a gene
+  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+  /// Nucleotide(s)/amino acids from start position of sequence to stop position
+  /// of sequence on the positive (+) strand of the reference sequence. When the
+  /// sequence  type is DNA, it should be the sequence on the positive (+)
+  ///  strand. This will lay in the range between variant.start and variant.end.
   String? get referenceAllele => throw _privateConstructorUsedError;
+
+  /// [referenceAlleleElement] Extensions for referenceAllele
   @JsonKey(name: '_referenceAllele')
   Element? get referenceAlleleElement => throw _privateConstructorUsedError;
+
+  /// [cigar] Extended CIGAR string for aligning the sequence with reference
+  /// bases. See detailed documentation
+  /// (http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
   String? get cigar => throw _privateConstructorUsedError;
+
+  /// [cigarElement] Extensions for cigar
   @JsonKey(name: '_cigar')
   Element? get cigarElement => throw _privateConstructorUsedError;
+
+  /// [variantPointer] A pointer to an Observation containing variant
+  ///  information.
   Reference? get variantPointer => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8728,11 +11316,12 @@ class _$MolecularSequenceVariantCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceVariantCopyWith<$Res>
+abstract class _$$_MolecularSequenceVariantCopyWith<$Res>
     implements $MolecularSequenceVariantCopyWith<$Res> {
-  factory _$MolecularSequenceVariantCopyWith(_MolecularSequenceVariant value,
-          $Res Function(_MolecularSequenceVariant) then) =
-      __$MolecularSequenceVariantCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceVariantCopyWith(
+          _$_MolecularSequenceVariant value,
+          $Res Function(_$_MolecularSequenceVariant) then) =
+      __$$_MolecularSequenceVariantCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -8765,16 +11354,16 @@ abstract class _$MolecularSequenceVariantCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceVariantCopyWithImpl<$Res>
+class __$$_MolecularSequenceVariantCopyWithImpl<$Res>
     extends _$MolecularSequenceVariantCopyWithImpl<$Res>
-    implements _$MolecularSequenceVariantCopyWith<$Res> {
-  __$MolecularSequenceVariantCopyWithImpl(_MolecularSequenceVariant _value,
-      $Res Function(_MolecularSequenceVariant) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceVariant));
+    implements _$$_MolecularSequenceVariantCopyWith<$Res> {
+  __$$_MolecularSequenceVariantCopyWithImpl(_$_MolecularSequenceVariant _value,
+      $Res Function(_$_MolecularSequenceVariant) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceVariant));
 
   @override
-  _MolecularSequenceVariant get _value =>
-      super._value as _MolecularSequenceVariant;
+  _$_MolecularSequenceVariant get _value =>
+      super._value as _$_MolecularSequenceVariant;
 
   @override
   $Res call({
@@ -8793,17 +11382,17 @@ class __$MolecularSequenceVariantCopyWithImpl<$Res>
     Object? cigarElement = freezed,
     Object? variantPointer = freezed,
   }) {
-    return _then(_MolecularSequenceVariant(
+    return _then(_$_MolecularSequenceVariant(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       start: start == freezed
@@ -8859,8 +11448,8 @@ class __$MolecularSequenceVariantCopyWithImpl<$Res>
 class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
   _$_MolecularSequenceVariant(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.start,
       @JsonKey(name: '_start') this.startElement,
       this.end,
@@ -8872,43 +11461,143 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
       this.cigar,
       @JsonKey(name: '_cigar') this.cigarElement,
       this.variantPointer})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MolecularSequenceVariant.fromJson(Map<String, dynamic> json) =>
       _$$_MolecularSequenceVariantFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [start] Start position of the variant on the  reference sequence. If the
+  /// coordinate system is either 0-based or 1-based, then start position is
+  ///  inclusive.
   @override
   final Integer? start;
+
+  /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
+
+  /// [end] End position of the variant on the reference sequence. If the
+  /// coordinate system is 0-based then end is exclusive and does not include
+  /// the last position. If the coordinate system is 1-base, then end is
+  ///  inclusive and includes the last position.
   @override
   final Integer? end;
+
+  /// [endElement] Extensions for end
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
+
+  /// [observedAllele] An allele is one of a set of coexisting sequence
+  /// variants of a gene
+  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+  /// Nucleotide(s)/amino acids from start position of sequence to stop position
+  /// of sequence on the positive (+) strand of the observed  sequence. When the
+  /// sequence  type is DNA, it should be the sequence on the positive (+)
+  ///  strand. This will lay in the range between variant.start and variant.end.
   @override
   final String? observedAllele;
+
+  /// [observedAlleleElement] Extensions for observedAllele
   @override
   @JsonKey(name: '_observedAllele')
   final Element? observedAlleleElement;
+
+  /// [referenceAllele] An allele is one of a set of coexisting sequence
+  /// variants of a gene
+  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+  /// Nucleotide(s)/amino acids from start position of sequence to stop position
+  /// of sequence on the positive (+) strand of the reference sequence. When the
+  /// sequence  type is DNA, it should be the sequence on the positive (+)
+  ///  strand. This will lay in the range between variant.start and variant.end.
   @override
   final String? referenceAllele;
+
+  /// [referenceAlleleElement] Extensions for referenceAllele
   @override
   @JsonKey(name: '_referenceAllele')
   final Element? referenceAlleleElement;
+
+  /// [cigar] Extended CIGAR string for aligning the sequence with reference
+  /// bases. See detailed documentation
+  /// (http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
   @override
   final String? cigar;
+
+  /// [cigarElement] Extensions for cigar
   @override
   @JsonKey(name: '_cigar')
   final Element? cigarElement;
+
+  /// [variantPointer] A pointer to an Observation containing variant
+  ///  information.
   @override
   final Reference? variantPointer;
 
@@ -8921,12 +11610,12 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceVariant &&
+            other is _$_MolecularSequenceVariant &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.start, start) &&
             const DeepCollectionEquality()
                 .equals(other.startElement, startElement) &&
@@ -8948,12 +11637,13 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
                 .equals(other.variantPointer, variantPointer));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(start),
       const DeepCollectionEquality().hash(startElement),
       const DeepCollectionEquality().hash(end),
@@ -8968,75 +11658,143 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceVariantCopyWith<_MolecularSequenceVariant> get copyWith =>
-      __$MolecularSequenceVariantCopyWithImpl<_MolecularSequenceVariant>(
-          this, _$identity);
+  _$$_MolecularSequenceVariantCopyWith<_$_MolecularSequenceVariant>
+      get copyWith => __$$_MolecularSequenceVariantCopyWithImpl<
+          _$_MolecularSequenceVariant>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceVariantToJson(this);
+    return _$$_MolecularSequenceVariantToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceVariant extends MolecularSequenceVariant {
   factory _MolecularSequenceVariant(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end') Element? endElement,
-      String? observedAllele,
-      @JsonKey(name: '_observedAllele') Element? observedAlleleElement,
-      String? referenceAllele,
-      @JsonKey(name: '_referenceAllele') Element? referenceAlleleElement,
-      String? cigar,
-      @JsonKey(name: '_cigar') Element? cigarElement,
-      Reference? variantPointer}) = _$_MolecularSequenceVariant;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Integer? start,
+      @JsonKey(name: '_start') final Element? startElement,
+      final Integer? end,
+      @JsonKey(name: '_end') final Element? endElement,
+      final String? observedAllele,
+      @JsonKey(name: '_observedAllele') final Element? observedAlleleElement,
+      final String? referenceAllele,
+      @JsonKey(name: '_referenceAllele') final Element? referenceAlleleElement,
+      final String? cigar,
+      @JsonKey(name: '_cigar') final Element? cigarElement,
+      final Reference? variantPointer}) = _$_MolecularSequenceVariant;
   _MolecularSequenceVariant._() : super._();
 
   factory _MolecularSequenceVariant.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceVariant.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [start] Start position of the variant on the  reference sequence. If the
+  /// coordinate system is either 0-based or 1-based, then start position is
+  ///  inclusive.
   Integer? get start;
   @override
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement;
   @override
+
+  /// [end] End position of the variant on the reference sequence. If the
+  /// coordinate system is 0-based then end is exclusive and does not include
+  /// the last position. If the coordinate system is 1-base, then end is
+  ///  inclusive and includes the last position.
   Integer? get end;
   @override
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement;
   @override
+
+  /// [observedAllele] An allele is one of a set of coexisting sequence
+  /// variants of a gene
+  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+  /// Nucleotide(s)/amino acids from start position of sequence to stop position
+  /// of sequence on the positive (+) strand of the observed  sequence. When the
+  /// sequence  type is DNA, it should be the sequence on the positive (+)
+  ///  strand. This will lay in the range between variant.start and variant.end.
   String? get observedAllele;
   @override
+
+  /// [observedAlleleElement] Extensions for observedAllele
   @JsonKey(name: '_observedAllele')
   Element? get observedAlleleElement;
   @override
+
+  /// [referenceAllele] An allele is one of a set of coexisting sequence
+  /// variants of a gene
+  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+  /// Nucleotide(s)/amino acids from start position of sequence to stop position
+  /// of sequence on the positive (+) strand of the reference sequence. When the
+  /// sequence  type is DNA, it should be the sequence on the positive (+)
+  ///  strand. This will lay in the range between variant.start and variant.end.
   String? get referenceAllele;
   @override
+
+  /// [referenceAlleleElement] Extensions for referenceAllele
   @JsonKey(name: '_referenceAllele')
   Element? get referenceAlleleElement;
   @override
+
+  /// [cigar] Extended CIGAR string for aligning the sequence with reference
+  /// bases. See detailed documentation
+  /// (http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
   String? get cigar;
   @override
+
+  /// [cigarElement] Extensions for cigar
   @JsonKey(name: '_cigar')
   Element? get cigarElement;
   @override
+
+  /// [variantPointer] A pointer to an Observation containing variant
+  ///  information.
   Reference? get variantPointer;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceVariantCopyWith<_MolecularSequenceVariant> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_MolecularSequenceVariantCopyWith<_$_MolecularSequenceVariant>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MolecularSequenceQuality _$MolecularSequenceQualityFromJson(
@@ -9045,137 +11803,147 @@ MolecularSequenceQuality _$MolecularSequenceQualityFromJson(
 }
 
 /// @nodoc
-class _$MolecularSequenceQualityTearOff {
-  const _$MolecularSequenceQualityTearOff();
-
-  _MolecularSequenceQuality call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          MolecularSequenceQualityType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      CodeableConcept? standardSequence,
-      Integer? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
-      Quantity? score,
-      CodeableConcept? method,
-      Decimal? truthTP,
-      @JsonKey(name: '_truthTP')
-          Element? truthTPElement,
-      Decimal? queryTP,
-      @JsonKey(name: '_queryTP')
-          Element? queryTPElement,
-      Decimal? truthFN,
-      @JsonKey(name: '_truthFN')
-          Element? truthFNElement,
-      Decimal? queryFP,
-      @JsonKey(name: '_queryFP')
-          Element? queryFPElement,
-      Decimal? gtFP,
-      @JsonKey(name: '_gtFP')
-          Element? gtFPElement,
-      Decimal? precision,
-      @JsonKey(name: '_precision')
-          Element? precisionElement,
-      Decimal? recall,
-      @JsonKey(name: '_recall')
-          Element? recallElement,
-      Decimal? fScore,
-      @JsonKey(name: '_fScore')
-          Element? fScoreElement,
-      MolecularSequenceRoc? roc}) {
-    return _MolecularSequenceQuality(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      typeElement: typeElement,
-      standardSequence: standardSequence,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      score: score,
-      method: method,
-      truthTP: truthTP,
-      truthTPElement: truthTPElement,
-      queryTP: queryTP,
-      queryTPElement: queryTPElement,
-      truthFN: truthFN,
-      truthFNElement: truthFNElement,
-      queryFP: queryFP,
-      queryFPElement: queryFPElement,
-      gtFP: gtFP,
-      gtFPElement: gtFPElement,
-      precision: precision,
-      precisionElement: precisionElement,
-      recall: recall,
-      recallElement: recallElement,
-      fScore: fScore,
-      fScoreElement: fScoreElement,
-      roc: roc,
-    );
-  }
-
-  MolecularSequenceQuality fromJson(Map<String, Object?> json) {
-    return MolecularSequenceQuality.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceQuality = _$MolecularSequenceQualityTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceQuality {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-  MolecularSequenceQualityType? get type => throw _privateConstructorUsedError;
+
+  /// [type] INDEL / SNP / Undefined variant.
+  Code? get type => throw _privateConstructorUsedError;
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+
+  /// [standardSequence] Gold standard sequence used for comparing against.
   CodeableConcept? get standardSequence => throw _privateConstructorUsedError;
+
+  /// [start] Start position of the sequence. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   Integer? get start => throw _privateConstructorUsedError;
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
+
+  /// [end] End position of the sequence. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   Integer? get end => throw _privateConstructorUsedError;
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
+
+  /// [score] The score of an experimentally derived feature such as a p-value
+  /// ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
   Quantity? get score => throw _privateConstructorUsedError;
+
+  /// [method] Which method is used to get sequence quality.
   CodeableConcept? get method => throw _privateConstructorUsedError;
+
+  /// [truthTP] True positives, from the perspective of the truth data, i.e.
+  /// the number of sites in the Truth Call Set for which there are paths
+  /// through the Query Call Set that are consistent with all of the alleles at
+  /// this site, and for which there is an accurate genotype call for the
+  ///  event.
   Decimal? get truthTP => throw _privateConstructorUsedError;
+
+  /// [truthTPElement] Extensions for truthTP
   @JsonKey(name: '_truthTP')
   Element? get truthTPElement => throw _privateConstructorUsedError;
+
+  /// [queryTP] True positives, from the perspective of the query data, i.e.
+  /// the number of sites in the Query Call Set for which there are paths
+  /// through the Truth Call Set that are consistent with all of the alleles at
+  /// this site, and for which there is an accurate genotype call for the
+  ///  event.
   Decimal? get queryTP => throw _privateConstructorUsedError;
+
+  /// [queryTPElement] Extensions for queryTP
   @JsonKey(name: '_queryTP')
   Element? get queryTPElement => throw _privateConstructorUsedError;
+
+  /// [truthFN] False negatives, i.e. the number of sites in the Truth Call Set
+  /// for which there is no path through the Query Call Set that is consistent
+  /// with all of the alleles at this site, or sites for which there is an
+  /// inaccurate genotype call for the event. Sites with correct variant but
+  ///  incorrect genotype are counted here.
   Decimal? get truthFN => throw _privateConstructorUsedError;
+
+  /// [truthFNElement] Extensions for truthFN
   @JsonKey(name: '_truthFN')
   Element? get truthFNElement => throw _privateConstructorUsedError;
+
+  /// [queryFP] False positives, i.e. the number of sites in the Query Call Set
+  /// for which there is no path through the Truth Call Set that is consistent
+  /// with this site. Sites with correct variant but incorrect genotype are
+  ///  counted here.
   Decimal? get queryFP => throw _privateConstructorUsedError;
+
+  /// [queryFPElement] Extensions for queryFP
   @JsonKey(name: '_queryFP')
   Element? get queryFPElement => throw _privateConstructorUsedError;
+
+  /// [gtFP] The number of false positives where the non-REF alleles in the
+  /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
+  ///  query is 0/1 or similar).
   Decimal? get gtFP => throw _privateConstructorUsedError;
+
+  /// [gtFPElement] Extensions for gtFP
   @JsonKey(name: '_gtFP')
   Element? get gtFPElement => throw _privateConstructorUsedError;
+
+  /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
   Decimal? get precision => throw _privateConstructorUsedError;
+
+  /// [precisionElement] Extensions for precision
   @JsonKey(name: '_precision')
   Element? get precisionElement => throw _privateConstructorUsedError;
+
+  /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
   Decimal? get recall => throw _privateConstructorUsedError;
+
+  /// [recallElement] Extensions for recall
   @JsonKey(name: '_recall')
   Element? get recallElement => throw _privateConstructorUsedError;
+
+  /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
+  ///  precision * recall / (precision + recall).
   Decimal? get fScore => throw _privateConstructorUsedError;
+
+  /// [fScoreElement] Extensions for fScore
   @JsonKey(name: '_fScore')
   Element? get fScoreElement => throw _privateConstructorUsedError;
+
+  /// [roc] Receiver Operator Characteristic (ROC) Curve  to give
+  ///  sensitivity/specificity tradeoff.
   MolecularSequenceRoc? get roc => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9191,46 +11959,33 @@ abstract class $MolecularSequenceQualityCopyWith<$Res> {
       _$MolecularSequenceQualityCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          MolecularSequenceQualityType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? standardSequence,
       Integer? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       Integer? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       Quantity? score,
       CodeableConcept? method,
       Decimal? truthTP,
-      @JsonKey(name: '_truthTP')
-          Element? truthTPElement,
+      @JsonKey(name: '_truthTP') Element? truthTPElement,
       Decimal? queryTP,
-      @JsonKey(name: '_queryTP')
-          Element? queryTPElement,
+      @JsonKey(name: '_queryTP') Element? queryTPElement,
       Decimal? truthFN,
-      @JsonKey(name: '_truthFN')
-          Element? truthFNElement,
+      @JsonKey(name: '_truthFN') Element? truthFNElement,
       Decimal? queryFP,
-      @JsonKey(name: '_queryFP')
-          Element? queryFPElement,
+      @JsonKey(name: '_queryFP') Element? queryFPElement,
       Decimal? gtFP,
-      @JsonKey(name: '_gtFP')
-          Element? gtFPElement,
+      @JsonKey(name: '_gtFP') Element? gtFPElement,
       Decimal? precision,
-      @JsonKey(name: '_precision')
-          Element? precisionElement,
+      @JsonKey(name: '_precision') Element? precisionElement,
       Decimal? recall,
-      @JsonKey(name: '_recall')
-          Element? recallElement,
+      @JsonKey(name: '_recall') Element? recallElement,
       Decimal? fScore,
-      @JsonKey(name: '_fScore')
-          Element? fScoreElement,
+      @JsonKey(name: '_fScore') Element? fScoreElement,
       MolecularSequenceRoc? roc});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -9307,7 +12062,7 @@ class _$MolecularSequenceQualityCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceQualityType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -9578,54 +12333,42 @@ class _$MolecularSequenceQualityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceQualityCopyWith<$Res>
+abstract class _$$_MolecularSequenceQualityCopyWith<$Res>
     implements $MolecularSequenceQualityCopyWith<$Res> {
-  factory _$MolecularSequenceQualityCopyWith(_MolecularSequenceQuality value,
-          $Res Function(_MolecularSequenceQuality) then) =
-      __$MolecularSequenceQualityCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceQualityCopyWith(
+          _$_MolecularSequenceQuality value,
+          $Res Function(_$_MolecularSequenceQuality) then) =
+      __$$_MolecularSequenceQualityCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          MolecularSequenceQualityType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? standardSequence,
       Integer? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       Integer? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       Quantity? score,
       CodeableConcept? method,
       Decimal? truthTP,
-      @JsonKey(name: '_truthTP')
-          Element? truthTPElement,
+      @JsonKey(name: '_truthTP') Element? truthTPElement,
       Decimal? queryTP,
-      @JsonKey(name: '_queryTP')
-          Element? queryTPElement,
+      @JsonKey(name: '_queryTP') Element? queryTPElement,
       Decimal? truthFN,
-      @JsonKey(name: '_truthFN')
-          Element? truthFNElement,
+      @JsonKey(name: '_truthFN') Element? truthFNElement,
       Decimal? queryFP,
-      @JsonKey(name: '_queryFP')
-          Element? queryFPElement,
+      @JsonKey(name: '_queryFP') Element? queryFPElement,
       Decimal? gtFP,
-      @JsonKey(name: '_gtFP')
-          Element? gtFPElement,
+      @JsonKey(name: '_gtFP') Element? gtFPElement,
       Decimal? precision,
-      @JsonKey(name: '_precision')
-          Element? precisionElement,
+      @JsonKey(name: '_precision') Element? precisionElement,
       Decimal? recall,
-      @JsonKey(name: '_recall')
-          Element? recallElement,
+      @JsonKey(name: '_recall') Element? recallElement,
       Decimal? fScore,
-      @JsonKey(name: '_fScore')
-          Element? fScoreElement,
+      @JsonKey(name: '_fScore') Element? fScoreElement,
       MolecularSequenceRoc? roc});
 
   @override
@@ -9661,16 +12404,16 @@ abstract class _$MolecularSequenceQualityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceQualityCopyWithImpl<$Res>
+class __$$_MolecularSequenceQualityCopyWithImpl<$Res>
     extends _$MolecularSequenceQualityCopyWithImpl<$Res>
-    implements _$MolecularSequenceQualityCopyWith<$Res> {
-  __$MolecularSequenceQualityCopyWithImpl(_MolecularSequenceQuality _value,
-      $Res Function(_MolecularSequenceQuality) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceQuality));
+    implements _$$_MolecularSequenceQualityCopyWith<$Res> {
+  __$$_MolecularSequenceQualityCopyWithImpl(_$_MolecularSequenceQuality _value,
+      $Res Function(_$_MolecularSequenceQuality) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceQuality));
 
   @override
-  _MolecularSequenceQuality get _value =>
-      super._value as _MolecularSequenceQuality;
+  _$_MolecularSequenceQuality get _value =>
+      super._value as _$_MolecularSequenceQuality;
 
   @override
   $Res call({
@@ -9704,23 +12447,23 @@ class __$MolecularSequenceQualityCopyWithImpl<$Res>
     Object? fScoreElement = freezed,
     Object? roc = freezed,
   }) {
-    return _then(_MolecularSequenceQuality(
+    return _then(_$_MolecularSequenceQuality(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceQualityType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -9830,121 +12573,241 @@ class __$MolecularSequenceQualityCopyWithImpl<$Res>
 class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
   _$_MolecularSequenceQuality(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.standardSequence,
       this.start,
-      @JsonKey(name: '_start')
-          this.startElement,
+      @JsonKey(name: '_start') this.startElement,
       this.end,
-      @JsonKey(name: '_end')
-          this.endElement,
+      @JsonKey(name: '_end') this.endElement,
       this.score,
       this.method,
       this.truthTP,
-      @JsonKey(name: '_truthTP')
-          this.truthTPElement,
+      @JsonKey(name: '_truthTP') this.truthTPElement,
       this.queryTP,
-      @JsonKey(name: '_queryTP')
-          this.queryTPElement,
+      @JsonKey(name: '_queryTP') this.queryTPElement,
       this.truthFN,
-      @JsonKey(name: '_truthFN')
-          this.truthFNElement,
+      @JsonKey(name: '_truthFN') this.truthFNElement,
       this.queryFP,
-      @JsonKey(name: '_queryFP')
-          this.queryFPElement,
+      @JsonKey(name: '_queryFP') this.queryFPElement,
       this.gtFP,
-      @JsonKey(name: '_gtFP')
-          this.gtFPElement,
+      @JsonKey(name: '_gtFP') this.gtFPElement,
       this.precision,
-      @JsonKey(name: '_precision')
-          this.precisionElement,
+      @JsonKey(name: '_precision') this.precisionElement,
       this.recall,
-      @JsonKey(name: '_recall')
-          this.recallElement,
+      @JsonKey(name: '_recall') this.recallElement,
       this.fScore,
-      @JsonKey(name: '_fScore')
-          this.fScoreElement,
+      @JsonKey(name: '_fScore') this.fScoreElement,
       this.roc})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MolecularSequenceQuality.fromJson(Map<String, dynamic> json) =>
       _$$_MolecularSequenceQualityFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] INDEL / SNP / Undefined variant.
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-  final MolecularSequenceQualityType? type;
+  final Code? type;
+
+  /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+
+  /// [standardSequence] Gold standard sequence used for comparing against.
   @override
   final CodeableConcept? standardSequence;
+
+  /// [start] Start position of the sequence. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   @override
   final Integer? start;
+
+  /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
+
+  /// [end] End position of the sequence. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   @override
   final Integer? end;
+
+  /// [endElement] Extensions for end
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
+
+  /// [score] The score of an experimentally derived feature such as a p-value
+  /// ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
   @override
   final Quantity? score;
+
+  /// [method] Which method is used to get sequence quality.
   @override
   final CodeableConcept? method;
+
+  /// [truthTP] True positives, from the perspective of the truth data, i.e.
+  /// the number of sites in the Truth Call Set for which there are paths
+  /// through the Query Call Set that are consistent with all of the alleles at
+  /// this site, and for which there is an accurate genotype call for the
+  ///  event.
   @override
   final Decimal? truthTP;
+
+  /// [truthTPElement] Extensions for truthTP
   @override
   @JsonKey(name: '_truthTP')
   final Element? truthTPElement;
+
+  /// [queryTP] True positives, from the perspective of the query data, i.e.
+  /// the number of sites in the Query Call Set for which there are paths
+  /// through the Truth Call Set that are consistent with all of the alleles at
+  /// this site, and for which there is an accurate genotype call for the
+  ///  event.
   @override
   final Decimal? queryTP;
+
+  /// [queryTPElement] Extensions for queryTP
   @override
   @JsonKey(name: '_queryTP')
   final Element? queryTPElement;
+
+  /// [truthFN] False negatives, i.e. the number of sites in the Truth Call Set
+  /// for which there is no path through the Query Call Set that is consistent
+  /// with all of the alleles at this site, or sites for which there is an
+  /// inaccurate genotype call for the event. Sites with correct variant but
+  ///  incorrect genotype are counted here.
   @override
   final Decimal? truthFN;
+
+  /// [truthFNElement] Extensions for truthFN
   @override
   @JsonKey(name: '_truthFN')
   final Element? truthFNElement;
+
+  /// [queryFP] False positives, i.e. the number of sites in the Query Call Set
+  /// for which there is no path through the Truth Call Set that is consistent
+  /// with this site. Sites with correct variant but incorrect genotype are
+  ///  counted here.
   @override
   final Decimal? queryFP;
+
+  /// [queryFPElement] Extensions for queryFP
   @override
   @JsonKey(name: '_queryFP')
   final Element? queryFPElement;
+
+  /// [gtFP] The number of false positives where the non-REF alleles in the
+  /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
+  ///  query is 0/1 or similar).
   @override
   final Decimal? gtFP;
+
+  /// [gtFPElement] Extensions for gtFP
   @override
   @JsonKey(name: '_gtFP')
   final Element? gtFPElement;
+
+  /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
   @override
   final Decimal? precision;
+
+  /// [precisionElement] Extensions for precision
   @override
   @JsonKey(name: '_precision')
   final Element? precisionElement;
+
+  /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
   @override
   final Decimal? recall;
+
+  /// [recallElement] Extensions for recall
   @override
   @JsonKey(name: '_recall')
   final Element? recallElement;
+
+  /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
+  ///  precision * recall / (precision + recall).
   @override
   final Decimal? fScore;
+
+  /// [fScoreElement] Extensions for fScore
   @override
   @JsonKey(name: '_fScore')
   final Element? fScoreElement;
+
+  /// [roc] Receiver Operator Characteristic (ROC) Curve  to give
+  ///  sensitivity/specificity tradeoff.
   @override
   final MolecularSequenceRoc? roc;
 
@@ -9957,12 +12820,12 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceQuality &&
+            other is _$_MolecularSequenceQuality &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -10003,12 +12866,13 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
             const DeepCollectionEquality().equals(other.roc, roc));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(typeElement),
         const DeepCollectionEquality().hash(standardSequence),
@@ -10039,140 +12903,228 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceQualityCopyWith<_MolecularSequenceQuality> get copyWith =>
-      __$MolecularSequenceQualityCopyWithImpl<_MolecularSequenceQuality>(
-          this, _$identity);
+  _$$_MolecularSequenceQualityCopyWith<_$_MolecularSequenceQuality>
+      get copyWith => __$$_MolecularSequenceQualityCopyWithImpl<
+          _$_MolecularSequenceQuality>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceQualityToJson(this);
+    return _$$_MolecularSequenceQualityToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   factory _MolecularSequenceQuality(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          MolecularSequenceQualityType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      CodeableConcept? standardSequence,
-      Integer? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
-      Quantity? score,
-      CodeableConcept? method,
-      Decimal? truthTP,
-      @JsonKey(name: '_truthTP')
-          Element? truthTPElement,
-      Decimal? queryTP,
-      @JsonKey(name: '_queryTP')
-          Element? queryTPElement,
-      Decimal? truthFN,
-      @JsonKey(name: '_truthFN')
-          Element? truthFNElement,
-      Decimal? queryFP,
-      @JsonKey(name: '_queryFP')
-          Element? queryFPElement,
-      Decimal? gtFP,
-      @JsonKey(name: '_gtFP')
-          Element? gtFPElement,
-      Decimal? precision,
-      @JsonKey(name: '_precision')
-          Element? precisionElement,
-      Decimal? recall,
-      @JsonKey(name: '_recall')
-          Element? recallElement,
-      Decimal? fScore,
-      @JsonKey(name: '_fScore')
-          Element? fScoreElement,
-      MolecularSequenceRoc? roc}) = _$_MolecularSequenceQuality;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final CodeableConcept? standardSequence,
+      final Integer? start,
+      @JsonKey(name: '_start') final Element? startElement,
+      final Integer? end,
+      @JsonKey(name: '_end') final Element? endElement,
+      final Quantity? score,
+      final CodeableConcept? method,
+      final Decimal? truthTP,
+      @JsonKey(name: '_truthTP') final Element? truthTPElement,
+      final Decimal? queryTP,
+      @JsonKey(name: '_queryTP') final Element? queryTPElement,
+      final Decimal? truthFN,
+      @JsonKey(name: '_truthFN') final Element? truthFNElement,
+      final Decimal? queryFP,
+      @JsonKey(name: '_queryFP') final Element? queryFPElement,
+      final Decimal? gtFP,
+      @JsonKey(name: '_gtFP') final Element? gtFPElement,
+      final Decimal? precision,
+      @JsonKey(name: '_precision') final Element? precisionElement,
+      final Decimal? recall,
+      @JsonKey(name: '_recall') final Element? recallElement,
+      final Decimal? fScore,
+      @JsonKey(name: '_fScore') final Element? fScoreElement,
+      final MolecularSequenceRoc? roc}) = _$_MolecularSequenceQuality;
   _MolecularSequenceQuality._() : super._();
 
   factory _MolecularSequenceQuality.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceQuality.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-  MolecularSequenceQualityType? get type;
+
+  /// [type] INDEL / SNP / Undefined variant.
+  Code? get type;
   @override
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+
+  /// [standardSequence] Gold standard sequence used for comparing against.
   CodeableConcept? get standardSequence;
   @override
+
+  /// [start] Start position of the sequence. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   Integer? get start;
   @override
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement;
   @override
+
+  /// [end] End position of the sequence. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   Integer? get end;
   @override
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement;
   @override
+
+  /// [score] The score of an experimentally derived feature such as a p-value
+  /// ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
   Quantity? get score;
   @override
+
+  /// [method] Which method is used to get sequence quality.
   CodeableConcept? get method;
   @override
+
+  /// [truthTP] True positives, from the perspective of the truth data, i.e.
+  /// the number of sites in the Truth Call Set for which there are paths
+  /// through the Query Call Set that are consistent with all of the alleles at
+  /// this site, and for which there is an accurate genotype call for the
+  ///  event.
   Decimal? get truthTP;
   @override
+
+  /// [truthTPElement] Extensions for truthTP
   @JsonKey(name: '_truthTP')
   Element? get truthTPElement;
   @override
+
+  /// [queryTP] True positives, from the perspective of the query data, i.e.
+  /// the number of sites in the Query Call Set for which there are paths
+  /// through the Truth Call Set that are consistent with all of the alleles at
+  /// this site, and for which there is an accurate genotype call for the
+  ///  event.
   Decimal? get queryTP;
   @override
+
+  /// [queryTPElement] Extensions for queryTP
   @JsonKey(name: '_queryTP')
   Element? get queryTPElement;
   @override
+
+  /// [truthFN] False negatives, i.e. the number of sites in the Truth Call Set
+  /// for which there is no path through the Query Call Set that is consistent
+  /// with all of the alleles at this site, or sites for which there is an
+  /// inaccurate genotype call for the event. Sites with correct variant but
+  ///  incorrect genotype are counted here.
   Decimal? get truthFN;
   @override
+
+  /// [truthFNElement] Extensions for truthFN
   @JsonKey(name: '_truthFN')
   Element? get truthFNElement;
   @override
+
+  /// [queryFP] False positives, i.e. the number of sites in the Query Call Set
+  /// for which there is no path through the Truth Call Set that is consistent
+  /// with this site. Sites with correct variant but incorrect genotype are
+  ///  counted here.
   Decimal? get queryFP;
   @override
+
+  /// [queryFPElement] Extensions for queryFP
   @JsonKey(name: '_queryFP')
   Element? get queryFPElement;
   @override
+
+  /// [gtFP] The number of false positives where the non-REF alleles in the
+  /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
+  ///  query is 0/1 or similar).
   Decimal? get gtFP;
   @override
+
+  /// [gtFPElement] Extensions for gtFP
   @JsonKey(name: '_gtFP')
   Element? get gtFPElement;
   @override
+
+  /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
   Decimal? get precision;
   @override
+
+  /// [precisionElement] Extensions for precision
   @JsonKey(name: '_precision')
   Element? get precisionElement;
   @override
+
+  /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
   Decimal? get recall;
   @override
+
+  /// [recallElement] Extensions for recall
   @JsonKey(name: '_recall')
   Element? get recallElement;
   @override
+
+  /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
+  ///  precision * recall / (precision + recall).
   Decimal? get fScore;
   @override
+
+  /// [fScoreElement] Extensions for fScore
   @JsonKey(name: '_fScore')
   Element? get fScoreElement;
   @override
+
+  /// [roc] Receiver Operator Characteristic (ROC) Curve  to give
+  ///  sensitivity/specificity tradeoff.
   MolecularSequenceRoc? get roc;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceQualityCopyWith<_MolecularSequenceQuality> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_MolecularSequenceQualityCopyWith<_$_MolecularSequenceQuality>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MolecularSequenceRoc _$MolecularSequenceRocFromJson(Map<String, dynamic> json) {
@@ -10180,82 +13132,89 @@ MolecularSequenceRoc _$MolecularSequenceRocFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MolecularSequenceRocTearOff {
-  const _$MolecularSequenceRocTearOff();
-
-  _MolecularSequenceRoc call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Integer>? score,
-      @JsonKey(name: '_score') List<Element?>? scoreElement,
-      List<Integer>? numTP,
-      @JsonKey(name: '_numTP') List<Element?>? numTPElement,
-      List<Integer>? numFP,
-      @JsonKey(name: '_numFP') List<Element?>? numFPElement,
-      List<Integer>? numFN,
-      @JsonKey(name: '_numFN') List<Element?>? numFNElement,
-      List<Decimal>? precision,
-      @JsonKey(name: '_precision') List<Element?>? precisionElement,
-      List<Decimal>? sensitivity,
-      @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
-      List<Decimal>? fMeasure,
-      @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement}) {
-    return _MolecularSequenceRoc(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      score: score,
-      scoreElement: scoreElement,
-      numTP: numTP,
-      numTPElement: numTPElement,
-      numFP: numFP,
-      numFPElement: numFPElement,
-      numFN: numFN,
-      numFNElement: numFNElement,
-      precision: precision,
-      precisionElement: precisionElement,
-      sensitivity: sensitivity,
-      sensitivityElement: sensitivityElement,
-      fMeasure: fMeasure,
-      fMeasureElement: fMeasureElement,
-    );
-  }
-
-  MolecularSequenceRoc fromJson(Map<String, Object?> json) {
-    return MolecularSequenceRoc.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceRoc = _$MolecularSequenceRocTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceRoc {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [score] Invidual data point representing the GQ (genotype quality) score
+  ///  threshold.
   List<Integer>? get score => throw _privateConstructorUsedError;
+
+  /// [scoreElement] Extensions for score
   @JsonKey(name: '_score')
   List<Element?>? get scoreElement => throw _privateConstructorUsedError;
+
+  /// [numTP] The number of true positives if the GQ score threshold was set to
+  ///  "score" field value.
   List<Integer>? get numTP => throw _privateConstructorUsedError;
+
+  /// [numTPElement] Extensions for numTP
   @JsonKey(name: '_numTP')
   List<Element?>? get numTPElement => throw _privateConstructorUsedError;
+
+  /// [numFP] The number of false positives if the GQ score threshold was set
+  ///  to "score" field value.
   List<Integer>? get numFP => throw _privateConstructorUsedError;
+
+  /// [numFPElement] Extensions for numFP
   @JsonKey(name: '_numFP')
   List<Element?>? get numFPElement => throw _privateConstructorUsedError;
+
+  /// [numFN] The number of false negatives if the GQ score threshold was set
+  ///  to "score" field value.
   List<Integer>? get numFN => throw _privateConstructorUsedError;
+
+  /// [numFNElement] Extensions for numFN
   @JsonKey(name: '_numFN')
   List<Element?>? get numFNElement => throw _privateConstructorUsedError;
+
+  /// [precision] Calculated precision if the GQ score threshold was set to
+  ///  "score" field value.
   List<Decimal>? get precision => throw _privateConstructorUsedError;
+
+  /// [precisionElement] Extensions for precision
   @JsonKey(name: '_precision')
   List<Element?>? get precisionElement => throw _privateConstructorUsedError;
+
+  /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
+  ///  "score" field value.
   List<Decimal>? get sensitivity => throw _privateConstructorUsedError;
+
+  /// [sensitivityElement] Extensions for sensitivity
   @JsonKey(name: '_sensitivity')
   List<Element?>? get sensitivityElement => throw _privateConstructorUsedError;
+
+  /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
+  ///  field value.
   List<Decimal>? get fMeasure => throw _privateConstructorUsedError;
+
+  /// [fMeasureElement] Extensions for fMeasure
   @JsonKey(name: '_fMeasure')
   List<Element?>? get fMeasureElement => throw _privateConstructorUsedError;
 
@@ -10393,11 +13352,11 @@ class _$MolecularSequenceRocCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceRocCopyWith<$Res>
+abstract class _$$_MolecularSequenceRocCopyWith<$Res>
     implements $MolecularSequenceRocCopyWith<$Res> {
-  factory _$MolecularSequenceRocCopyWith(_MolecularSequenceRoc value,
-          $Res Function(_MolecularSequenceRoc) then) =
-      __$MolecularSequenceRocCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceRocCopyWith(_$_MolecularSequenceRoc value,
+          $Res Function(_$_MolecularSequenceRoc) then) =
+      __$$_MolecularSequenceRocCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -10420,15 +13379,15 @@ abstract class _$MolecularSequenceRocCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceRocCopyWithImpl<$Res>
+class __$$_MolecularSequenceRocCopyWithImpl<$Res>
     extends _$MolecularSequenceRocCopyWithImpl<$Res>
-    implements _$MolecularSequenceRocCopyWith<$Res> {
-  __$MolecularSequenceRocCopyWithImpl(
-      _MolecularSequenceRoc _value, $Res Function(_MolecularSequenceRoc) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceRoc));
+    implements _$$_MolecularSequenceRocCopyWith<$Res> {
+  __$$_MolecularSequenceRocCopyWithImpl(_$_MolecularSequenceRoc _value,
+      $Res Function(_$_MolecularSequenceRoc) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceRoc));
 
   @override
-  _MolecularSequenceRoc get _value => super._value as _MolecularSequenceRoc;
+  _$_MolecularSequenceRoc get _value => super._value as _$_MolecularSequenceRoc;
 
   @override
   $Res call({
@@ -10450,73 +13409,73 @@ class __$MolecularSequenceRocCopyWithImpl<$Res>
     Object? fMeasure = freezed,
     Object? fMeasureElement = freezed,
   }) {
-    return _then(_MolecularSequenceRoc(
+    return _then(_$_MolecularSequenceRoc(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       score: score == freezed
-          ? _value.score
+          ? _value._score
           : score // ignore: cast_nullable_to_non_nullable
               as List<Integer>?,
       scoreElement: scoreElement == freezed
-          ? _value.scoreElement
+          ? _value._scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       numTP: numTP == freezed
-          ? _value.numTP
+          ? _value._numTP
           : numTP // ignore: cast_nullable_to_non_nullable
               as List<Integer>?,
       numTPElement: numTPElement == freezed
-          ? _value.numTPElement
+          ? _value._numTPElement
           : numTPElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       numFP: numFP == freezed
-          ? _value.numFP
+          ? _value._numFP
           : numFP // ignore: cast_nullable_to_non_nullable
               as List<Integer>?,
       numFPElement: numFPElement == freezed
-          ? _value.numFPElement
+          ? _value._numFPElement
           : numFPElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       numFN: numFN == freezed
-          ? _value.numFN
+          ? _value._numFN
           : numFN // ignore: cast_nullable_to_non_nullable
               as List<Integer>?,
       numFNElement: numFNElement == freezed
-          ? _value.numFNElement
+          ? _value._numFNElement
           : numFNElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       precision: precision == freezed
-          ? _value.precision
+          ? _value._precision
           : precision // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       precisionElement: precisionElement == freezed
-          ? _value.precisionElement
+          ? _value._precisionElement
           : precisionElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       sensitivity: sensitivity == freezed
-          ? _value.sensitivity
+          ? _value._sensitivity
           : sensitivity // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       sensitivityElement: sensitivityElement == freezed
-          ? _value.sensitivityElement
+          ? _value._sensitivityElement
           : sensitivityElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       fMeasure: fMeasure == freezed
-          ? _value.fMeasure
+          ? _value._fMeasure
           : fMeasure // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       fMeasureElement: fMeasureElement == freezed
-          ? _value.fMeasureElement
+          ? _value._fMeasureElement
           : fMeasureElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
     ));
@@ -10528,69 +13487,295 @@ class __$MolecularSequenceRocCopyWithImpl<$Res>
 class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
   _$_MolecularSequenceRoc(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.score,
-      @JsonKey(name: '_score') this.scoreElement,
-      this.numTP,
-      @JsonKey(name: '_numTP') this.numTPElement,
-      this.numFP,
-      @JsonKey(name: '_numFP') this.numFPElement,
-      this.numFN,
-      @JsonKey(name: '_numFN') this.numFNElement,
-      this.precision,
-      @JsonKey(name: '_precision') this.precisionElement,
-      this.sensitivity,
-      @JsonKey(name: '_sensitivity') this.sensitivityElement,
-      this.fMeasure,
-      @JsonKey(name: '_fMeasure') this.fMeasureElement})
-      : super._();
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Integer>? score,
+      @JsonKey(name: '_score') final List<Element?>? scoreElement,
+      final List<Integer>? numTP,
+      @JsonKey(name: '_numTP') final List<Element?>? numTPElement,
+      final List<Integer>? numFP,
+      @JsonKey(name: '_numFP') final List<Element?>? numFPElement,
+      final List<Integer>? numFN,
+      @JsonKey(name: '_numFN') final List<Element?>? numFNElement,
+      final List<Decimal>? precision,
+      @JsonKey(name: '_precision') final List<Element?>? precisionElement,
+      final List<Decimal>? sensitivity,
+      @JsonKey(name: '_sensitivity') final List<Element?>? sensitivityElement,
+      final List<Decimal>? fMeasure,
+      @JsonKey(name: '_fMeasure') final List<Element?>? fMeasureElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _score = score,
+        _scoreElement = scoreElement,
+        _numTP = numTP,
+        _numTPElement = numTPElement,
+        _numFP = numFP,
+        _numFPElement = numFPElement,
+        _numFN = numFN,
+        _numFNElement = numFNElement,
+        _precision = precision,
+        _precisionElement = precisionElement,
+        _sensitivity = sensitivity,
+        _sensitivityElement = sensitivityElement,
+        _fMeasure = fMeasure,
+        _fMeasureElement = fMeasureElement,
+        super._();
 
   factory _$_MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =>
       _$$_MolecularSequenceRocFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [score] Invidual data point representing the GQ (genotype quality) score
+  ///  threshold.
+  final List<Integer>? _score;
+
+  /// [score] Invidual data point representing the GQ (genotype quality) score
+  ///  threshold.
   @override
-  final List<Integer>? score;
+  List<Integer>? get score {
+    final value = _score;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [scoreElement] Extensions for score
+  final List<Element?>? _scoreElement;
+
+  /// [scoreElement] Extensions for score
   @override
   @JsonKey(name: '_score')
-  final List<Element?>? scoreElement;
+  List<Element?>? get scoreElement {
+    final value = _scoreElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [numTP] The number of true positives if the GQ score threshold was set to
+  ///  "score" field value.
+  final List<Integer>? _numTP;
+
+  /// [numTP] The number of true positives if the GQ score threshold was set to
+  ///  "score" field value.
   @override
-  final List<Integer>? numTP;
+  List<Integer>? get numTP {
+    final value = _numTP;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [numTPElement] Extensions for numTP
+  final List<Element?>? _numTPElement;
+
+  /// [numTPElement] Extensions for numTP
   @override
   @JsonKey(name: '_numTP')
-  final List<Element?>? numTPElement;
+  List<Element?>? get numTPElement {
+    final value = _numTPElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [numFP] The number of false positives if the GQ score threshold was set
+  ///  to "score" field value.
+  final List<Integer>? _numFP;
+
+  /// [numFP] The number of false positives if the GQ score threshold was set
+  ///  to "score" field value.
   @override
-  final List<Integer>? numFP;
+  List<Integer>? get numFP {
+    final value = _numFP;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [numFPElement] Extensions for numFP
+  final List<Element?>? _numFPElement;
+
+  /// [numFPElement] Extensions for numFP
   @override
   @JsonKey(name: '_numFP')
-  final List<Element?>? numFPElement;
+  List<Element?>? get numFPElement {
+    final value = _numFPElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [numFN] The number of false negatives if the GQ score threshold was set
+  ///  to "score" field value.
+  final List<Integer>? _numFN;
+
+  /// [numFN] The number of false negatives if the GQ score threshold was set
+  ///  to "score" field value.
   @override
-  final List<Integer>? numFN;
+  List<Integer>? get numFN {
+    final value = _numFN;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [numFNElement] Extensions for numFN
+  final List<Element?>? _numFNElement;
+
+  /// [numFNElement] Extensions for numFN
   @override
   @JsonKey(name: '_numFN')
-  final List<Element?>? numFNElement;
+  List<Element?>? get numFNElement {
+    final value = _numFNElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [precision] Calculated precision if the GQ score threshold was set to
+  ///  "score" field value.
+  final List<Decimal>? _precision;
+
+  /// [precision] Calculated precision if the GQ score threshold was set to
+  ///  "score" field value.
   @override
-  final List<Decimal>? precision;
+  List<Decimal>? get precision {
+    final value = _precision;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [precisionElement] Extensions for precision
+  final List<Element?>? _precisionElement;
+
+  /// [precisionElement] Extensions for precision
   @override
   @JsonKey(name: '_precision')
-  final List<Element?>? precisionElement;
+  List<Element?>? get precisionElement {
+    final value = _precisionElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
+  ///  "score" field value.
+  final List<Decimal>? _sensitivity;
+
+  /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
+  ///  "score" field value.
   @override
-  final List<Decimal>? sensitivity;
+  List<Decimal>? get sensitivity {
+    final value = _sensitivity;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [sensitivityElement] Extensions for sensitivity
+  final List<Element?>? _sensitivityElement;
+
+  /// [sensitivityElement] Extensions for sensitivity
   @override
   @JsonKey(name: '_sensitivity')
-  final List<Element?>? sensitivityElement;
+  List<Element?>? get sensitivityElement {
+    final value = _sensitivityElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
+  ///  field value.
+  final List<Decimal>? _fMeasure;
+
+  /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
+  ///  field value.
   @override
-  final List<Decimal>? fMeasure;
+  List<Decimal>? get fMeasure {
+    final value = _fMeasure;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [fMeasureElement] Extensions for fMeasure
+  final List<Element?>? _fMeasureElement;
+
+  /// [fMeasureElement] Extensions for fMeasure
   @override
   @JsonKey(name: '_fMeasure')
-  final List<Element?>? fMeasureElement;
+  List<Element?>? get fMeasureElement {
+    final value = _fMeasureElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -10601,139 +13786,209 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceRoc &&
+            other is _$_MolecularSequenceRoc &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.score, score) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._score, _score) &&
             const DeepCollectionEquality()
-                .equals(other.scoreElement, scoreElement) &&
-            const DeepCollectionEquality().equals(other.numTP, numTP) &&
+                .equals(other._scoreElement, _scoreElement) &&
+            const DeepCollectionEquality().equals(other._numTP, _numTP) &&
             const DeepCollectionEquality()
-                .equals(other.numTPElement, numTPElement) &&
-            const DeepCollectionEquality().equals(other.numFP, numFP) &&
+                .equals(other._numTPElement, _numTPElement) &&
+            const DeepCollectionEquality().equals(other._numFP, _numFP) &&
             const DeepCollectionEquality()
-                .equals(other.numFPElement, numFPElement) &&
-            const DeepCollectionEquality().equals(other.numFN, numFN) &&
+                .equals(other._numFPElement, _numFPElement) &&
+            const DeepCollectionEquality().equals(other._numFN, _numFN) &&
             const DeepCollectionEquality()
-                .equals(other.numFNElement, numFNElement) &&
-            const DeepCollectionEquality().equals(other.precision, precision) &&
+                .equals(other._numFNElement, _numFNElement) &&
             const DeepCollectionEquality()
-                .equals(other.precisionElement, precisionElement) &&
+                .equals(other._precision, _precision) &&
             const DeepCollectionEquality()
-                .equals(other.sensitivity, sensitivity) &&
+                .equals(other._precisionElement, _precisionElement) &&
             const DeepCollectionEquality()
-                .equals(other.sensitivityElement, sensitivityElement) &&
-            const DeepCollectionEquality().equals(other.fMeasure, fMeasure) &&
+                .equals(other._sensitivity, _sensitivity) &&
             const DeepCollectionEquality()
-                .equals(other.fMeasureElement, fMeasureElement));
+                .equals(other._sensitivityElement, _sensitivityElement) &&
+            const DeepCollectionEquality().equals(other._fMeasure, _fMeasure) &&
+            const DeepCollectionEquality()
+                .equals(other._fMeasureElement, _fMeasureElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(score),
-      const DeepCollectionEquality().hash(scoreElement),
-      const DeepCollectionEquality().hash(numTP),
-      const DeepCollectionEquality().hash(numTPElement),
-      const DeepCollectionEquality().hash(numFP),
-      const DeepCollectionEquality().hash(numFPElement),
-      const DeepCollectionEquality().hash(numFN),
-      const DeepCollectionEquality().hash(numFNElement),
-      const DeepCollectionEquality().hash(precision),
-      const DeepCollectionEquality().hash(precisionElement),
-      const DeepCollectionEquality().hash(sensitivity),
-      const DeepCollectionEquality().hash(sensitivityElement),
-      const DeepCollectionEquality().hash(fMeasure),
-      const DeepCollectionEquality().hash(fMeasureElement));
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_score),
+      const DeepCollectionEquality().hash(_scoreElement),
+      const DeepCollectionEquality().hash(_numTP),
+      const DeepCollectionEquality().hash(_numTPElement),
+      const DeepCollectionEquality().hash(_numFP),
+      const DeepCollectionEquality().hash(_numFPElement),
+      const DeepCollectionEquality().hash(_numFN),
+      const DeepCollectionEquality().hash(_numFNElement),
+      const DeepCollectionEquality().hash(_precision),
+      const DeepCollectionEquality().hash(_precisionElement),
+      const DeepCollectionEquality().hash(_sensitivity),
+      const DeepCollectionEquality().hash(_sensitivityElement),
+      const DeepCollectionEquality().hash(_fMeasure),
+      const DeepCollectionEquality().hash(_fMeasureElement));
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceRocCopyWith<_MolecularSequenceRoc> get copyWith =>
-      __$MolecularSequenceRocCopyWithImpl<_MolecularSequenceRoc>(
+  _$$_MolecularSequenceRocCopyWith<_$_MolecularSequenceRoc> get copyWith =>
+      __$$_MolecularSequenceRocCopyWithImpl<_$_MolecularSequenceRoc>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceRocToJson(this);
+    return _$$_MolecularSequenceRocToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
   factory _MolecularSequenceRoc(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Integer>? score,
-          @JsonKey(name: '_score') List<Element?>? scoreElement,
-          List<Integer>? numTP,
-          @JsonKey(name: '_numTP') List<Element?>? numTPElement,
-          List<Integer>? numFP,
-          @JsonKey(name: '_numFP') List<Element?>? numFPElement,
-          List<Integer>? numFN,
-          @JsonKey(name: '_numFN') List<Element?>? numFNElement,
-          List<Decimal>? precision,
-          @JsonKey(name: '_precision') List<Element?>? precisionElement,
-          List<Decimal>? sensitivity,
-          @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
-          List<Decimal>? fMeasure,
-          @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement}) =
-      _$_MolecularSequenceRoc;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Integer>? score,
+      @JsonKey(name: '_score')
+          final List<Element?>? scoreElement,
+      final List<Integer>? numTP,
+      @JsonKey(name: '_numTP')
+          final List<Element?>? numTPElement,
+      final List<Integer>? numFP,
+      @JsonKey(name: '_numFP')
+          final List<Element?>? numFPElement,
+      final List<Integer>? numFN,
+      @JsonKey(name: '_numFN')
+          final List<Element?>? numFNElement,
+      final List<Decimal>? precision,
+      @JsonKey(name: '_precision')
+          final List<Element?>? precisionElement,
+      final List<Decimal>? sensitivity,
+      @JsonKey(name: '_sensitivity')
+          final List<Element?>? sensitivityElement,
+      final List<Decimal>? fMeasure,
+      @JsonKey(name: '_fMeasure')
+          final List<Element?>? fMeasureElement}) = _$_MolecularSequenceRoc;
   _MolecularSequenceRoc._() : super._();
 
   factory _MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceRoc.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [score] Invidual data point representing the GQ (genotype quality) score
+  ///  threshold.
   List<Integer>? get score;
   @override
+
+  /// [scoreElement] Extensions for score
   @JsonKey(name: '_score')
   List<Element?>? get scoreElement;
   @override
+
+  /// [numTP] The number of true positives if the GQ score threshold was set to
+  ///  "score" field value.
   List<Integer>? get numTP;
   @override
+
+  /// [numTPElement] Extensions for numTP
   @JsonKey(name: '_numTP')
   List<Element?>? get numTPElement;
   @override
+
+  /// [numFP] The number of false positives if the GQ score threshold was set
+  ///  to "score" field value.
   List<Integer>? get numFP;
   @override
+
+  /// [numFPElement] Extensions for numFP
   @JsonKey(name: '_numFP')
   List<Element?>? get numFPElement;
   @override
+
+  /// [numFN] The number of false negatives if the GQ score threshold was set
+  ///  to "score" field value.
   List<Integer>? get numFN;
   @override
+
+  /// [numFNElement] Extensions for numFN
   @JsonKey(name: '_numFN')
   List<Element?>? get numFNElement;
   @override
+
+  /// [precision] Calculated precision if the GQ score threshold was set to
+  ///  "score" field value.
   List<Decimal>? get precision;
   @override
+
+  /// [precisionElement] Extensions for precision
   @JsonKey(name: '_precision')
   List<Element?>? get precisionElement;
   @override
+
+  /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
+  ///  "score" field value.
   List<Decimal>? get sensitivity;
   @override
+
+  /// [sensitivityElement] Extensions for sensitivity
   @JsonKey(name: '_sensitivity')
   List<Element?>? get sensitivityElement;
   @override
+
+  /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
+  ///  field value.
   List<Decimal>? get fMeasure;
   @override
+
+  /// [fMeasureElement] Extensions for fMeasure
   @JsonKey(name: '_fMeasure')
   List<Element?>? get fMeasureElement;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceRocCopyWith<_MolecularSequenceRoc> get copyWith =>
+  _$$_MolecularSequenceRocCopyWith<_$_MolecularSequenceRoc> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -10743,85 +13998,82 @@ MolecularSequenceRepository _$MolecularSequenceRepositoryFromJson(
 }
 
 /// @nodoc
-class _$MolecularSequenceRepositoryTearOff {
-  const _$MolecularSequenceRepositoryTearOff();
-
-  _MolecularSequenceRepository call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          MolecularSequenceRepositoryType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      String? datasetId,
-      @JsonKey(name: '_datasetId')
-          Element? datasetIdElement,
-      String? variantsetId,
-      @JsonKey(name: '_variantsetId')
-          Element? variantsetIdElement,
-      String? readsetId,
-      @JsonKey(name: '_readsetId')
-          Element? readsetIdElement}) {
-    return _MolecularSequenceRepository(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      typeElement: typeElement,
-      url: url,
-      urlElement: urlElement,
-      name: name,
-      nameElement: nameElement,
-      datasetId: datasetId,
-      datasetIdElement: datasetIdElement,
-      variantsetId: variantsetId,
-      variantsetIdElement: variantsetIdElement,
-      readsetId: readsetId,
-      readsetIdElement: readsetIdElement,
-    );
-  }
-
-  MolecularSequenceRepository fromJson(Map<String, Object?> json) {
-    return MolecularSequenceRepository.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceRepository = _$MolecularSequenceRepositoryTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceRepository {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-  MolecularSequenceRepositoryType? get type =>
-      throw _privateConstructorUsedError;
+
+  /// [type] Click and see / RESTful API / Need login to see / RESTful API with
+  ///  authentication / Other ways to see resource.
+  Code? get type => throw _privateConstructorUsedError;
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+
+  /// [url] URI of an external repository which contains further details about
+  ///  the genetics data.
   FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [name] URI of an external repository which contains further details about
+  ///  the genetics data.
   String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [datasetId] Id of the variant in this external repository. The server
+  /// will understand how to use this id to call for more info about datasets in
+  ///  external repository.
   String? get datasetId => throw _privateConstructorUsedError;
+
+  /// [datasetIdElement] Extensions for datasetId
   @JsonKey(name: '_datasetId')
   Element? get datasetIdElement => throw _privateConstructorUsedError;
+
+  /// [variantsetId] Id of the variantset in this external repository. The
+  /// server will understand how to use this id to call for more info about
+  ///  variantsets in external repository.
   String? get variantsetId => throw _privateConstructorUsedError;
+
+  /// [variantsetIdElement] Extensions for variantsetId
   @JsonKey(name: '_variantsetId')
   Element? get variantsetIdElement => throw _privateConstructorUsedError;
+
+  /// [readsetId] Id of the read in this external repository.
   String? get readsetId => throw _privateConstructorUsedError;
+
+  /// [readsetIdElement] Extensions for readsetId
   @JsonKey(name: '_readsetId')
   Element? get readsetIdElement => throw _privateConstructorUsedError;
 
@@ -10839,28 +14091,20 @@ abstract class $MolecularSequenceRepositoryCopyWith<$Res> {
       _$MolecularSequenceRepositoryCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          MolecularSequenceRepositoryType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? datasetId,
-      @JsonKey(name: '_datasetId')
-          Element? datasetIdElement,
+      @JsonKey(name: '_datasetId') Element? datasetIdElement,
       String? variantsetId,
-      @JsonKey(name: '_variantsetId')
-          Element? variantsetIdElement,
+      @JsonKey(name: '_variantsetId') Element? variantsetIdElement,
       String? readsetId,
-      @JsonKey(name: '_readsetId')
-          Element? readsetIdElement});
+      @JsonKey(name: '_readsetId') Element? readsetIdElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get urlElement;
@@ -10913,7 +14157,7 @@ class _$MolecularSequenceRepositoryCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceRepositoryType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -11029,37 +14273,29 @@ class _$MolecularSequenceRepositoryCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceRepositoryCopyWith<$Res>
+abstract class _$$_MolecularSequenceRepositoryCopyWith<$Res>
     implements $MolecularSequenceRepositoryCopyWith<$Res> {
-  factory _$MolecularSequenceRepositoryCopyWith(
-          _MolecularSequenceRepository value,
-          $Res Function(_MolecularSequenceRepository) then) =
-      __$MolecularSequenceRepositoryCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceRepositoryCopyWith(
+          _$_MolecularSequenceRepository value,
+          $Res Function(_$_MolecularSequenceRepository) then) =
+      __$$_MolecularSequenceRepositoryCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          MolecularSequenceRepositoryType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? datasetId,
-      @JsonKey(name: '_datasetId')
-          Element? datasetIdElement,
+      @JsonKey(name: '_datasetId') Element? datasetIdElement,
       String? variantsetId,
-      @JsonKey(name: '_variantsetId')
-          Element? variantsetIdElement,
+      @JsonKey(name: '_variantsetId') Element? variantsetIdElement,
       String? readsetId,
-      @JsonKey(name: '_readsetId')
-          Element? readsetIdElement});
+      @JsonKey(name: '_readsetId') Element? readsetIdElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -11076,17 +14312,17 @@ abstract class _$MolecularSequenceRepositoryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceRepositoryCopyWithImpl<$Res>
+class __$$_MolecularSequenceRepositoryCopyWithImpl<$Res>
     extends _$MolecularSequenceRepositoryCopyWithImpl<$Res>
-    implements _$MolecularSequenceRepositoryCopyWith<$Res> {
-  __$MolecularSequenceRepositoryCopyWithImpl(
-      _MolecularSequenceRepository _value,
-      $Res Function(_MolecularSequenceRepository) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceRepository));
+    implements _$$_MolecularSequenceRepositoryCopyWith<$Res> {
+  __$$_MolecularSequenceRepositoryCopyWithImpl(
+      _$_MolecularSequenceRepository _value,
+      $Res Function(_$_MolecularSequenceRepository) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceRepository));
 
   @override
-  _MolecularSequenceRepository get _value =>
-      super._value as _MolecularSequenceRepository;
+  _$_MolecularSequenceRepository get _value =>
+      super._value as _$_MolecularSequenceRepository;
 
   @override
   $Res call({
@@ -11106,23 +14342,23 @@ class __$MolecularSequenceRepositoryCopyWithImpl<$Res>
     Object? readsetId = freezed,
     Object? readsetIdElement = freezed,
   }) {
-    return _then(_MolecularSequenceRepository(
+    return _then(_$_MolecularSequenceRepository(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceRepositoryType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -11176,68 +14412,148 @@ class __$MolecularSequenceRepositoryCopyWithImpl<$Res>
 class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
   _$_MolecularSequenceRepository(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.datasetId,
-      @JsonKey(name: '_datasetId')
-          this.datasetIdElement,
+      @JsonKey(name: '_datasetId') this.datasetIdElement,
       this.variantsetId,
-      @JsonKey(name: '_variantsetId')
-          this.variantsetIdElement,
+      @JsonKey(name: '_variantsetId') this.variantsetIdElement,
       this.readsetId,
-      @JsonKey(name: '_readsetId')
-          this.readsetIdElement})
-      : super._();
+      @JsonKey(name: '_readsetId') this.readsetIdElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =>
       _$$_MolecularSequenceRepositoryFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] Click and see / RESTful API / Need login to see / RESTful API with
+  ///  authentication / Other ways to see resource.
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-  final MolecularSequenceRepositoryType? type;
+  final Code? type;
+
+  /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+
+  /// [url] URI of an external repository which contains further details about
+  ///  the genetics data.
   @override
   final FhirUri? url;
+
+  /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+
+  /// [name] URI of an external repository which contains further details about
+  ///  the genetics data.
   @override
   final String? name;
+
+  /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
+
+  /// [datasetId] Id of the variant in this external repository. The server
+  /// will understand how to use this id to call for more info about datasets in
+  ///  external repository.
   @override
   final String? datasetId;
+
+  /// [datasetIdElement] Extensions for datasetId
   @override
   @JsonKey(name: '_datasetId')
   final Element? datasetIdElement;
+
+  /// [variantsetId] Id of the variantset in this external repository. The
+  /// server will understand how to use this id to call for more info about
+  ///  variantsets in external repository.
   @override
   final String? variantsetId;
+
+  /// [variantsetIdElement] Extensions for variantsetId
   @override
   @JsonKey(name: '_variantsetId')
   final Element? variantsetIdElement;
+
+  /// [readsetId] Id of the read in this external repository.
   @override
   final String? readsetId;
+
+  /// [readsetIdElement] Extensions for readsetId
   @override
   @JsonKey(name: '_readsetId')
   final Element? readsetIdElement;
@@ -11251,12 +14567,12 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceRepository &&
+            other is _$_MolecularSequenceRepository &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -11278,12 +14594,13 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
                 .equals(other.readsetIdElement, readsetIdElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(typeElement),
       const DeepCollectionEquality().hash(url),
@@ -11299,88 +14616,137 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceRepositoryCopyWith<_MolecularSequenceRepository>
-      get copyWith => __$MolecularSequenceRepositoryCopyWithImpl<
-          _MolecularSequenceRepository>(this, _$identity);
+  _$$_MolecularSequenceRepositoryCopyWith<_$_MolecularSequenceRepository>
+      get copyWith => __$$_MolecularSequenceRepositoryCopyWithImpl<
+          _$_MolecularSequenceRepository>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceRepositoryToJson(this);
+    return _$$_MolecularSequenceRepositoryToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceRepository
     extends MolecularSequenceRepository {
   factory _MolecularSequenceRepository(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          MolecularSequenceRepositoryType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      String? datasetId,
-      @JsonKey(name: '_datasetId')
-          Element? datasetIdElement,
-      String? variantsetId,
-      @JsonKey(name: '_variantsetId')
-          Element? variantsetIdElement,
-      String? readsetId,
-      @JsonKey(name: '_readsetId')
-          Element? readsetIdElement}) = _$_MolecularSequenceRepository;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Code? type,
+          @JsonKey(name: '_type') final Element? typeElement,
+          final FhirUri? url,
+          @JsonKey(name: '_url') final Element? urlElement,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? datasetId,
+          @JsonKey(name: '_datasetId') final Element? datasetIdElement,
+          final String? variantsetId,
+          @JsonKey(name: '_variantsetId') final Element? variantsetIdElement,
+          final String? readsetId,
+          @JsonKey(name: '_readsetId') final Element? readsetIdElement}) =
+      _$_MolecularSequenceRepository;
   _MolecularSequenceRepository._() : super._();
 
   factory _MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceRepository.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-  MolecularSequenceRepositoryType? get type;
+
+  /// [type] Click and see / RESTful API / Need login to see / RESTful API with
+  ///  authentication / Other ways to see resource.
+  Code? get type;
   @override
+
+  /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+
+  /// [url] URI of an external repository which contains further details about
+  ///  the genetics data.
   FhirUri? get url;
   @override
+
+  /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+
+  /// [name] URI of an external repository which contains further details about
+  ///  the genetics data.
   String? get name;
   @override
+
+  /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+
+  /// [datasetId] Id of the variant in this external repository. The server
+  /// will understand how to use this id to call for more info about datasets in
+  ///  external repository.
   String? get datasetId;
   @override
+
+  /// [datasetIdElement] Extensions for datasetId
   @JsonKey(name: '_datasetId')
   Element? get datasetIdElement;
   @override
+
+  /// [variantsetId] Id of the variantset in this external repository. The
+  /// server will understand how to use this id to call for more info about
+  ///  variantsets in external repository.
   String? get variantsetId;
   @override
+
+  /// [variantsetIdElement] Extensions for variantsetId
   @JsonKey(name: '_variantsetId')
   Element? get variantsetIdElement;
   @override
+
+  /// [readsetId] Id of the read in this external repository.
   String? get readsetId;
   @override
+
+  /// [readsetIdElement] Extensions for readsetId
   @JsonKey(name: '_readsetId')
   Element? get readsetIdElement;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceRepositoryCopyWith<_MolecularSequenceRepository>
+  _$$_MolecularSequenceRepositoryCopyWith<_$_MolecularSequenceRepository>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11390,58 +14756,59 @@ MolecularSequenceStructureVariant _$MolecularSequenceStructureVariantFromJson(
 }
 
 /// @nodoc
-class _$MolecularSequenceStructureVariantTearOff {
-  const _$MolecularSequenceStructureVariantTearOff();
-
-  _MolecularSequenceStructureVariant call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? variantType,
-      Boolean? exact,
-      @JsonKey(name: '_exact') Element? exactElement,
-      Integer? length,
-      @JsonKey(name: '_length') Element? lengthElement,
-      MolecularSequenceOuter? outer,
-      MolecularSequenceInner? inner}) {
-    return _MolecularSequenceStructureVariant(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      variantType: variantType,
-      exact: exact,
-      exactElement: exactElement,
-      length: length,
-      lengthElement: lengthElement,
-      outer: outer,
-      inner: inner,
-    );
-  }
-
-  MolecularSequenceStructureVariant fromJson(Map<String, Object?> json) {
-    return MolecularSequenceStructureVariant.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceStructureVariant =
-    _$MolecularSequenceStructureVariantTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceStructureVariant {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [variantType] Information about chromosome structure variation DNA change
+  ///  type.
   CodeableConcept? get variantType => throw _privateConstructorUsedError;
+
+  /// [exact] Used to indicate if the outer and inner start-end values have the
+  ///  same meaning.
   Boolean? get exact => throw _privateConstructorUsedError;
+
+  /// [exactElement] Extensions for exact
   @JsonKey(name: '_exact')
   Element? get exactElement => throw _privateConstructorUsedError;
+
+  /// [length] Length of the variant chromosome.
   Integer? get length => throw _privateConstructorUsedError;
+
+  /// [lengthElement] Extensions for length
   @JsonKey(name: '_length')
   Element? get lengthElement => throw _privateConstructorUsedError;
+
+  /// [outer] Structural variant outer.
   MolecularSequenceOuter? get outer => throw _privateConstructorUsedError;
+
+  /// [inner] Structural variant inner.
   MolecularSequenceInner? get inner => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11598,12 +14965,12 @@ class _$MolecularSequenceStructureVariantCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceStructureVariantCopyWith<$Res>
+abstract class _$$_MolecularSequenceStructureVariantCopyWith<$Res>
     implements $MolecularSequenceStructureVariantCopyWith<$Res> {
-  factory _$MolecularSequenceStructureVariantCopyWith(
-          _MolecularSequenceStructureVariant value,
-          $Res Function(_MolecularSequenceStructureVariant) then) =
-      __$MolecularSequenceStructureVariantCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceStructureVariantCopyWith(
+          _$_MolecularSequenceStructureVariant value,
+          $Res Function(_$_MolecularSequenceStructureVariant) then) =
+      __$$_MolecularSequenceStructureVariantCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -11630,17 +14997,17 @@ abstract class _$MolecularSequenceStructureVariantCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceStructureVariantCopyWithImpl<$Res>
+class __$$_MolecularSequenceStructureVariantCopyWithImpl<$Res>
     extends _$MolecularSequenceStructureVariantCopyWithImpl<$Res>
-    implements _$MolecularSequenceStructureVariantCopyWith<$Res> {
-  __$MolecularSequenceStructureVariantCopyWithImpl(
-      _MolecularSequenceStructureVariant _value,
-      $Res Function(_MolecularSequenceStructureVariant) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceStructureVariant));
+    implements _$$_MolecularSequenceStructureVariantCopyWith<$Res> {
+  __$$_MolecularSequenceStructureVariantCopyWithImpl(
+      _$_MolecularSequenceStructureVariant _value,
+      $Res Function(_$_MolecularSequenceStructureVariant) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceStructureVariant));
 
   @override
-  _MolecularSequenceStructureVariant get _value =>
-      super._value as _MolecularSequenceStructureVariant;
+  _$_MolecularSequenceStructureVariant get _value =>
+      super._value as _$_MolecularSequenceStructureVariant;
 
   @override
   $Res call({
@@ -11655,17 +15022,17 @@ class __$MolecularSequenceStructureVariantCopyWithImpl<$Res>
     Object? outer = freezed,
     Object? inner = freezed,
   }) {
-    return _then(_MolecularSequenceStructureVariant(
+    return _then(_$_MolecularSequenceStructureVariant(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       variantType: variantType == freezed
@@ -11706,8 +15073,8 @@ class _$_MolecularSequenceStructureVariant
     extends _MolecularSequenceStructureVariant {
   _$_MolecularSequenceStructureVariant(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.variantType,
       this.exact,
       @JsonKey(name: '_exact') this.exactElement,
@@ -11715,33 +15082,107 @@ class _$_MolecularSequenceStructureVariant
       @JsonKey(name: '_length') this.lengthElement,
       this.outer,
       this.inner})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MolecularSequenceStructureVariant.fromJson(
           Map<String, dynamic> json) =>
       _$$_MolecularSequenceStructureVariantFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [variantType] Information about chromosome structure variation DNA change
+  ///  type.
   @override
   final CodeableConcept? variantType;
+
+  /// [exact] Used to indicate if the outer and inner start-end values have the
+  ///  same meaning.
   @override
   final Boolean? exact;
+
+  /// [exactElement] Extensions for exact
   @override
   @JsonKey(name: '_exact')
   final Element? exactElement;
+
+  /// [length] Length of the variant chromosome.
   @override
   final Integer? length;
+
+  /// [lengthElement] Extensions for length
   @override
   @JsonKey(name: '_length')
   final Element? lengthElement;
+
+  /// [outer] Structural variant outer.
   @override
   final MolecularSequenceOuter? outer;
+
+  /// [inner] Structural variant inner.
   @override
   final MolecularSequenceInner? inner;
 
@@ -11754,12 +15195,12 @@ class _$_MolecularSequenceStructureVariant
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceStructureVariant &&
+            other is _$_MolecularSequenceStructureVariant &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.variantType, variantType) &&
             const DeepCollectionEquality().equals(other.exact, exact) &&
@@ -11772,12 +15213,13 @@ class _$_MolecularSequenceStructureVariant
             const DeepCollectionEquality().equals(other.inner, inner));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(variantType),
       const DeepCollectionEquality().hash(exact),
       const DeepCollectionEquality().hash(exactElement),
@@ -11788,30 +15230,33 @@ class _$_MolecularSequenceStructureVariant
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceStructureVariantCopyWith<
-          _MolecularSequenceStructureVariant>
-      get copyWith => __$MolecularSequenceStructureVariantCopyWithImpl<
-          _MolecularSequenceStructureVariant>(this, _$identity);
+  _$$_MolecularSequenceStructureVariantCopyWith<
+          _$_MolecularSequenceStructureVariant>
+      get copyWith => __$$_MolecularSequenceStructureVariantCopyWithImpl<
+          _$_MolecularSequenceStructureVariant>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceStructureVariantToJson(this);
+    return _$$_MolecularSequenceStructureVariantToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceStructureVariant
     extends MolecularSequenceStructureVariant {
   factory _MolecularSequenceStructureVariant(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? variantType,
-      Boolean? exact,
-      @JsonKey(name: '_exact') Element? exactElement,
-      Integer? length,
-      @JsonKey(name: '_length') Element? lengthElement,
-      MolecularSequenceOuter? outer,
-      MolecularSequenceInner? inner}) = _$_MolecularSequenceStructureVariant;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? variantType,
+          final Boolean? exact,
+          @JsonKey(name: '_exact') final Element? exactElement,
+          final Integer? length,
+          @JsonKey(name: '_length') final Element? lengthElement,
+          final MolecularSequenceOuter? outer,
+          final MolecularSequenceInner? inner}) =
+      _$_MolecularSequenceStructureVariant;
   _MolecularSequenceStructureVariant._() : super._();
 
   factory _MolecularSequenceStructureVariant.fromJson(
@@ -11819,32 +15264,72 @@ abstract class _MolecularSequenceStructureVariant
       _$_MolecularSequenceStructureVariant.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [variantType] Information about chromosome structure variation DNA change
+  ///  type.
   CodeableConcept? get variantType;
   @override
+
+  /// [exact] Used to indicate if the outer and inner start-end values have the
+  ///  same meaning.
   Boolean? get exact;
   @override
+
+  /// [exactElement] Extensions for exact
   @JsonKey(name: '_exact')
   Element? get exactElement;
   @override
+
+  /// [length] Length of the variant chromosome.
   Integer? get length;
   @override
+
+  /// [lengthElement] Extensions for length
   @JsonKey(name: '_length')
   Element? get lengthElement;
   @override
+
+  /// [outer] Structural variant outer.
   MolecularSequenceOuter? get outer;
   @override
+
+  /// [inner] Structural variant inner.
   MolecularSequenceInner? get inner;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceStructureVariantCopyWith<
-          _MolecularSequenceStructureVariant>
+  _$$_MolecularSequenceStructureVariantCopyWith<
+          _$_MolecularSequenceStructureVariant>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11854,47 +15339,51 @@ MolecularSequenceOuter _$MolecularSequenceOuterFromJson(
 }
 
 /// @nodoc
-class _$MolecularSequenceOuterTearOff {
-  const _$MolecularSequenceOuterTearOff();
-
-  _MolecularSequenceOuter call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end') Element? endElement}) {
-    return _MolecularSequenceOuter(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-    );
-  }
-
-  MolecularSequenceOuter fromJson(Map<String, Object?> json) {
-    return MolecularSequenceOuter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceOuter = _$MolecularSequenceOuterTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceOuter {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [start] Structural variant outer start. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   Integer? get start => throw _privateConstructorUsedError;
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
+
+  /// [end] Structural variant outer end. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   Integer? get end => throw _privateConstructorUsedError;
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
 
@@ -11997,11 +15486,11 @@ class _$MolecularSequenceOuterCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceOuterCopyWith<$Res>
+abstract class _$$_MolecularSequenceOuterCopyWith<$Res>
     implements $MolecularSequenceOuterCopyWith<$Res> {
-  factory _$MolecularSequenceOuterCopyWith(_MolecularSequenceOuter value,
-          $Res Function(_MolecularSequenceOuter) then) =
-      __$MolecularSequenceOuterCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceOuterCopyWith(_$_MolecularSequenceOuter value,
+          $Res Function(_$_MolecularSequenceOuter) then) =
+      __$$_MolecularSequenceOuterCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -12019,15 +15508,16 @@ abstract class _$MolecularSequenceOuterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceOuterCopyWithImpl<$Res>
+class __$$_MolecularSequenceOuterCopyWithImpl<$Res>
     extends _$MolecularSequenceOuterCopyWithImpl<$Res>
-    implements _$MolecularSequenceOuterCopyWith<$Res> {
-  __$MolecularSequenceOuterCopyWithImpl(_MolecularSequenceOuter _value,
-      $Res Function(_MolecularSequenceOuter) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceOuter));
+    implements _$$_MolecularSequenceOuterCopyWith<$Res> {
+  __$$_MolecularSequenceOuterCopyWithImpl(_$_MolecularSequenceOuter _value,
+      $Res Function(_$_MolecularSequenceOuter) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceOuter));
 
   @override
-  _MolecularSequenceOuter get _value => super._value as _MolecularSequenceOuter;
+  _$_MolecularSequenceOuter get _value =>
+      super._value as _$_MolecularSequenceOuter;
 
   @override
   $Res call({
@@ -12039,17 +15529,17 @@ class __$MolecularSequenceOuterCopyWithImpl<$Res>
     Object? end = freezed,
     Object? endElement = freezed,
   }) {
-    return _then(_MolecularSequenceOuter(
+    return _then(_$_MolecularSequenceOuter(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       start: start == freezed
@@ -12077,31 +15567,101 @@ class __$MolecularSequenceOuterCopyWithImpl<$Res>
 class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
   _$_MolecularSequenceOuter(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.start,
       @JsonKey(name: '_start') this.startElement,
       this.end,
       @JsonKey(name: '_end') this.endElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MolecularSequenceOuter.fromJson(Map<String, dynamic> json) =>
       _$$_MolecularSequenceOuterFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [start] Structural variant outer start. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   @override
   final Integer? start;
+
+  /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
+
+  /// [end] Structural variant outer end. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   @override
   final Integer? end;
+
+  /// [endElement] Extensions for end
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
@@ -12115,12 +15675,12 @@ class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceOuter &&
+            other is _$_MolecularSequenceOuter &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.start, start) &&
             const DeepCollectionEquality()
                 .equals(other.startElement, startElement) &&
@@ -12129,12 +15689,13 @@ class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
                 .equals(other.endElement, endElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(start),
       const DeepCollectionEquality().hash(startElement),
       const DeepCollectionEquality().hash(end),
@@ -12142,50 +15703,89 @@ class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceOuterCopyWith<_MolecularSequenceOuter> get copyWith =>
-      __$MolecularSequenceOuterCopyWithImpl<_MolecularSequenceOuter>(
+  _$$_MolecularSequenceOuterCopyWith<_$_MolecularSequenceOuter> get copyWith =>
+      __$$_MolecularSequenceOuterCopyWithImpl<_$_MolecularSequenceOuter>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceOuterToJson(this);
+    return _$$_MolecularSequenceOuterToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceOuter extends MolecularSequenceOuter {
   factory _MolecularSequenceOuter(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end') Element? endElement}) = _$_MolecularSequenceOuter;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Integer? start,
+          @JsonKey(name: '_start') final Element? startElement,
+          final Integer? end,
+          @JsonKey(name: '_end') final Element? endElement}) =
+      _$_MolecularSequenceOuter;
   _MolecularSequenceOuter._() : super._();
 
   factory _MolecularSequenceOuter.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceOuter.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [start] Structural variant outer start. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   Integer? get start;
   @override
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement;
   @override
+
+  /// [end] Structural variant outer end. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   Integer? get end;
   @override
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceOuterCopyWith<_MolecularSequenceOuter> get copyWith =>
+  _$$_MolecularSequenceOuterCopyWith<_$_MolecularSequenceOuter> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -12195,47 +15795,51 @@ MolecularSequenceInner _$MolecularSequenceInnerFromJson(
 }
 
 /// @nodoc
-class _$MolecularSequenceInnerTearOff {
-  const _$MolecularSequenceInnerTearOff();
-
-  _MolecularSequenceInner call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end') Element? endElement}) {
-    return _MolecularSequenceInner(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-    );
-  }
-
-  MolecularSequenceInner fromJson(Map<String, Object?> json) {
-    return MolecularSequenceInner.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MolecularSequenceInner = _$MolecularSequenceInnerTearOff();
-
-/// @nodoc
 mixin _$MolecularSequenceInner {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [start] Structural variant inner start. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   Integer? get start => throw _privateConstructorUsedError;
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
+
+  /// [end] Structural variant inner end. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   Integer? get end => throw _privateConstructorUsedError;
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
 
@@ -12338,11 +15942,11 @@ class _$MolecularSequenceInnerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MolecularSequenceInnerCopyWith<$Res>
+abstract class _$$_MolecularSequenceInnerCopyWith<$Res>
     implements $MolecularSequenceInnerCopyWith<$Res> {
-  factory _$MolecularSequenceInnerCopyWith(_MolecularSequenceInner value,
-          $Res Function(_MolecularSequenceInner) then) =
-      __$MolecularSequenceInnerCopyWithImpl<$Res>;
+  factory _$$_MolecularSequenceInnerCopyWith(_$_MolecularSequenceInner value,
+          $Res Function(_$_MolecularSequenceInner) then) =
+      __$$_MolecularSequenceInnerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -12360,15 +15964,16 @@ abstract class _$MolecularSequenceInnerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MolecularSequenceInnerCopyWithImpl<$Res>
+class __$$_MolecularSequenceInnerCopyWithImpl<$Res>
     extends _$MolecularSequenceInnerCopyWithImpl<$Res>
-    implements _$MolecularSequenceInnerCopyWith<$Res> {
-  __$MolecularSequenceInnerCopyWithImpl(_MolecularSequenceInner _value,
-      $Res Function(_MolecularSequenceInner) _then)
-      : super(_value, (v) => _then(v as _MolecularSequenceInner));
+    implements _$$_MolecularSequenceInnerCopyWith<$Res> {
+  __$$_MolecularSequenceInnerCopyWithImpl(_$_MolecularSequenceInner _value,
+      $Res Function(_$_MolecularSequenceInner) _then)
+      : super(_value, (v) => _then(v as _$_MolecularSequenceInner));
 
   @override
-  _MolecularSequenceInner get _value => super._value as _MolecularSequenceInner;
+  _$_MolecularSequenceInner get _value =>
+      super._value as _$_MolecularSequenceInner;
 
   @override
   $Res call({
@@ -12380,17 +15985,17 @@ class __$MolecularSequenceInnerCopyWithImpl<$Res>
     Object? end = freezed,
     Object? endElement = freezed,
   }) {
-    return _then(_MolecularSequenceInner(
+    return _then(_$_MolecularSequenceInner(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       start: start == freezed
@@ -12418,31 +16023,101 @@ class __$MolecularSequenceInnerCopyWithImpl<$Res>
 class _$_MolecularSequenceInner extends _MolecularSequenceInner {
   _$_MolecularSequenceInner(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.start,
       @JsonKey(name: '_start') this.startElement,
       this.end,
       @JsonKey(name: '_end') this.endElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MolecularSequenceInner.fromJson(Map<String, dynamic> json) =>
       _$$_MolecularSequenceInnerFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [start] Structural variant inner start. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   @override
   final Integer? start;
+
+  /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
+
+  /// [end] Structural variant inner end. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   @override
   final Integer? end;
+
+  /// [endElement] Extensions for end
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
@@ -12456,12 +16131,12 @@ class _$_MolecularSequenceInner extends _MolecularSequenceInner {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MolecularSequenceInner &&
+            other is _$_MolecularSequenceInner &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.start, start) &&
             const DeepCollectionEquality()
                 .equals(other.startElement, startElement) &&
@@ -12470,12 +16145,13 @@ class _$_MolecularSequenceInner extends _MolecularSequenceInner {
                 .equals(other.endElement, endElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(start),
       const DeepCollectionEquality().hash(startElement),
       const DeepCollectionEquality().hash(end),
@@ -12483,50 +16159,89 @@ class _$_MolecularSequenceInner extends _MolecularSequenceInner {
 
   @JsonKey(ignore: true)
   @override
-  _$MolecularSequenceInnerCopyWith<_MolecularSequenceInner> get copyWith =>
-      __$MolecularSequenceInnerCopyWithImpl<_MolecularSequenceInner>(
+  _$$_MolecularSequenceInnerCopyWith<_$_MolecularSequenceInner> get copyWith =>
+      __$$_MolecularSequenceInnerCopyWithImpl<_$_MolecularSequenceInner>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceInnerToJson(this);
+    return _$$_MolecularSequenceInnerToJson(
+      this,
+    );
   }
 }
 
 abstract class _MolecularSequenceInner extends MolecularSequenceInner {
   factory _MolecularSequenceInner(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Integer? end,
-      @JsonKey(name: '_end') Element? endElement}) = _$_MolecularSequenceInner;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Integer? start,
+          @JsonKey(name: '_start') final Element? startElement,
+          final Integer? end,
+          @JsonKey(name: '_end') final Element? endElement}) =
+      _$_MolecularSequenceInner;
   _MolecularSequenceInner._() : super._();
 
   factory _MolecularSequenceInner.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceInner.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [start] Structural variant inner start. If the coordinate system is
+  ///  either 0-based or 1-based, then start position is inclusive.
   Integer? get start;
   @override
+
+  /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement;
   @override
+
+  /// [end] Structural variant inner end. If the coordinate system is 0-based
+  /// then end is exclusive and does not include the last position. If the
+  /// coordinate system is 1-base, then end is inclusive and includes the last
+  ///  position.
   Integer? get end;
   @override
+
+  /// [endElement] Extensions for end
   @JsonKey(name: '_end')
   Element? get endElement;
   @override
   @JsonKey(ignore: true)
-  _$MolecularSequenceInnerCopyWith<_MolecularSequenceInner> get copyWith =>
+  _$$_MolecularSequenceInnerCopyWith<_$_MolecularSequenceInner> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -12535,226 +16250,287 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ObservationTearOff {
-  const _$ObservationTearOff();
-
-  _Observation call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
-          R4ResourceType resourceType = R4ResourceType.Observation,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          ObservationStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? category,
-      required CodeableConcept code,
-      Reference? subject,
-      List<Reference>? focus,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      Timing? effectiveTiming,
-      Instant? effectiveInstant,
-      @JsonKey(name: '_effectiveInstant')
-          Element? effectiveInstantElement,
-      Instant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
-      List<Reference>? performer,
-      Quantity? valueQuantity,
-      CodeableConcept? valueCodeableConcept,
-      String? valueString,
-      @JsonKey(name: '_valueString')
-          Element? valueStringElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          Element? valueBooleanElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger')
-          Element? valueIntegerElement,
-      Range? valueRange,
-      Ratio? valueRatio,
-      SampledData? valueSampledData,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime')
-          Element? valueTimeElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          Element? valueDateTimeElement,
-      Period? valuePeriod,
-      CodeableConcept? dataAbsentReason,
-      List<CodeableConcept>? interpretation,
-      List<Annotation>? note,
-      CodeableConcept? bodySite,
-      CodeableConcept? method,
-      Reference? specimen,
-      Reference? device,
-      List<ObservationReferenceRange>? referenceRange,
-      List<Reference>? hasMember,
-      List<Reference>? derivedFrom,
-      List<ObservationComponent>? component}) {
-    return _Observation(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      category: category,
-      code: code,
-      subject: subject,
-      focus: focus,
-      encounter: encounter,
-      effectiveDateTime: effectiveDateTime,
-      effectiveDateTimeElement: effectiveDateTimeElement,
-      effectivePeriod: effectivePeriod,
-      effectiveTiming: effectiveTiming,
-      effectiveInstant: effectiveInstant,
-      effectiveInstantElement: effectiveInstantElement,
-      issued: issued,
-      issuedElement: issuedElement,
-      performer: performer,
-      valueQuantity: valueQuantity,
-      valueCodeableConcept: valueCodeableConcept,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueRange: valueRange,
-      valueRatio: valueRatio,
-      valueSampledData: valueSampledData,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valuePeriod: valuePeriod,
-      dataAbsentReason: dataAbsentReason,
-      interpretation: interpretation,
-      note: note,
-      bodySite: bodySite,
-      method: method,
-      specimen: specimen,
-      device: device,
-      referenceRange: referenceRange,
-      hasMember: hasMember,
-      derivedFrom: derivedFrom,
-      component: component,
-    );
-  }
-
-  Observation fromJson(Map<String, Object?> json) {
-    return Observation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Observation = _$ObservationTearOff();
-
-/// @nodoc
 mixin _$Observation {
   @JsonKey(unknownEnumValue: R4ResourceType.Observation)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A unique identifier assigned to this observation.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
+  /// by this event.  For example, a MedicationRequest may require a patient to
+  ///  have laboratory test performed before  it is dispensed.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [partOf] A larger event of which this particular Observation is a
+  ///  component or step.  For example,  an observation as part of a procedure.
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  ObservationStatus? get status => throw _privateConstructorUsedError;
+
+  /// [status] The status of the result value.
+  Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [category] A code that classifies the general type of observation being
+  ///  made.
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [code] Describes what was observed. Sometimes this is called the
+  ///  observation "name".
   CodeableConcept get code => throw _privateConstructorUsedError;
+
+  /// [subject] The patient, or group of patients, location, or device this
+  /// observation is about and into whose record the observation is placed. If
+  /// the actual focus of the observation is different from the subject (or a
+  /// sample of, part, or region of the subject), the `focus` element or the
+  ///  `code` itself specifies the actual focus of the observation.
   Reference? get subject => throw _privateConstructorUsedError;
+
+  /// [focus] The actual focus of an observation when it is not the patient of
+  /// record representing something or someone associated with the patient such
+  /// as a spouse, parent, fetus, or donor. For example, fetus observations in a
+  /// mother's record.  The focus of an observation could also be an existing
+  /// condition,  an intervention, the subject's diet,  another observation of
+  /// the subject,  or a body structure such as tumor or implanted device.   An
+  /// example use case would be using the Observation resource to capture
+  /// whether the mother is trained to change her child's tracheostomy tube. In
+  /// this example, the child is the patient of record and the mother is the
+  ///  focus.
   List<Reference>? get focus => throw _privateConstructorUsedError;
+
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
+  ///  interaction) during which this observation is made.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [effectiveDateTime] The time or time-period the observed value is
+  /// asserted as being true. For biological subjects - e.g. human patients -
+  /// this is usually called the "physiologically relevant time". This is
+  /// usually either the time of the procedure or of specimen collection, but
+  /// very often the source of the date/time is not known, only the date/time
+  ///  itself.
   FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [effectiveTiming] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Timing? get effectiveTiming => throw _privateConstructorUsedError;
+
+  /// [effectiveInstant] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Instant? get effectiveInstant => throw _privateConstructorUsedError;
+
+  /// [effectiveInstantElement] Extensions for effectiveInstant
   @JsonKey(name: '_effectiveInstant')
   Element? get effectiveInstantElement => throw _privateConstructorUsedError;
+
+  /// [issued] The date and time this version of the observation was made
+  /// available to providers, typically after the results have been reviewed and
+  ///  verified.
   Instant? get issued => throw _privateConstructorUsedError;
+
+  /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
+
+  /// [performer] Who was responsible for asserting the observed value as
+  ///  "true".
   List<Reference>? get performer => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] The information determined as a result of making
+  ///  the observation, if the information has a simple value.
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [valueString] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   String? get valueString => throw _privateConstructorUsedError;
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement => throw _privateConstructorUsedError;
+
+  /// [valueBoolean] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [valueInteger] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Integer? get valueInteger => throw _privateConstructorUsedError;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [valueRange] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [valueRatio] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Ratio? get valueRatio => throw _privateConstructorUsedError;
+
+  /// [valueSampledData] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
+
+  /// [valueTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Time? get valueTime => throw _privateConstructorUsedError;
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
+
+  /// [valueDateTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [valuePeriod] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Period? get valuePeriod => throw _privateConstructorUsedError;
+
+  /// [dataAbsentReason] Provides a reason why the expected value in the
+  ///  element Observation.value[x] is missing.
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
   List<CodeableConcept>? get interpretation =>
       throw _privateConstructorUsedError;
+
+  /// [note] Comments about the observation or the results.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [bodySite] Indicates the site on the subject's body where the observation
+  ///  was made (i.e. the target site).
   CodeableConcept? get bodySite => throw _privateConstructorUsedError;
+
+  /// [method] Indicates the mechanism used to perform the observation.
   CodeableConcept? get method => throw _privateConstructorUsedError;
+
+  /// [specimen] The specimen that was used when this observation was made.
   Reference? get specimen => throw _privateConstructorUsedError;
+
+  /// [device] The device used to generate the observation data.
   Reference? get device => throw _privateConstructorUsedError;
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  /// a normal or recommended range.  Multiple reference ranges are interpreted
+  /// as an "OR".   In other words, to represent two distinct target
+  ///  populations, two `referenceRange` elements would be used.
   List<ObservationReferenceRange>? get referenceRange =>
       throw _privateConstructorUsedError;
+
+  /// [hasMember] This observation is a group observation (e.g. a battery, a
+  /// panel of tests, a set of vital sign measurements) that includes the target
+  ///  as a member of the group.
   List<Reference>? get hasMember => throw _privateConstructorUsedError;
+
+  /// [derivedFrom] The target resource that represents a measurement from
+  /// which this observation value is derived. For example, a calculated anion
+  ///  gap or a fetal measurement based on an ultrasound image.
   List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
+
+  /// [component] Some observations have multiple component observations.
+  /// These component observations are expressed as separate code value pairs
+  /// that share the same attributes.  Examples include systolic and diastolic
+  /// component observations for blood pressure measurement and multiple
+  ///  component observations for genetics observations.
   List<ObservationComponent>? get component =>
       throw _privateConstructorUsedError;
 
@@ -12772,7 +16548,7 @@ abstract class $ObservationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12788,8 +16564,7 @@ abstract class $ObservationCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          ObservationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -12949,7 +16724,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -13001,7 +16776,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ObservationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -13491,16 +17266,16 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ObservationCopyWith<$Res>
+abstract class _$$_ObservationCopyWith<$Res>
     implements $ObservationCopyWith<$Res> {
-  factory _$ObservationCopyWith(
-          _Observation value, $Res Function(_Observation) then) =
-      __$ObservationCopyWithImpl<$Res>;
+  factory _$$_ObservationCopyWith(
+          _$_Observation value, $Res Function(_$_Observation) then) =
+      __$$_ObservationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13516,8 +17291,7 @@ abstract class _$ObservationCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          ObservationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -13631,14 +17405,14 @@ abstract class _$ObservationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
-    implements _$ObservationCopyWith<$Res> {
-  __$ObservationCopyWithImpl(
-      _Observation _value, $Res Function(_Observation) _then)
-      : super(_value, (v) => _then(v as _Observation));
+class __$$_ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
+    implements _$$_ObservationCopyWith<$Res> {
+  __$$_ObservationCopyWithImpl(
+      _$_Observation _value, $Res Function(_$_Observation) _then)
+      : super(_value, (v) => _then(v as _$_Observation));
 
   @override
-  _Observation get _value => super._value as _Observation;
+  _$_Observation get _value => super._value as _$_Observation;
 
   @override
   $Res call({
@@ -13700,7 +17474,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object? derivedFrom = freezed,
     Object? component = freezed,
   }) {
-    return _then(_Observation(
+    return _then(_$_Observation(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -13708,7 +17482,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -13734,39 +17508,39 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: partOf == freezed
-          ? _value.partOf
+          ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ObservationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       code: code == freezed
@@ -13778,7 +17552,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
       focus: focus == freezed
-          ? _value.focus
+          ? _value._focus
           : focus // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       encounter: encounter == freezed
@@ -13818,7 +17592,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           : issuedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       performer: performer == freezed
-          ? _value.performer
+          ? _value._performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       valueQuantity: valueQuantity == freezed
@@ -13890,11 +17664,11 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           : dataAbsentReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       interpretation: interpretation == freezed
-          ? _value.interpretation
+          ? _value._interpretation
           : interpretation // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       bodySite: bodySite == freezed
@@ -13914,19 +17688,19 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           : device // ignore: cast_nullable_to_non_nullable
               as Reference?,
       referenceRange: referenceRange == freezed
-          ? _value.referenceRange
+          ? _value._referenceRange
           : referenceRange // ignore: cast_nullable_to_non_nullable
               as List<ObservationReferenceRange>?,
       hasMember: hasMember == freezed
-          ? _value.hasMember
+          ? _value._hasMember
           : hasMember // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       derivedFrom: derivedFrom == freezed
-          ? _value.derivedFrom
+          ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       component: component == freezed
-          ? _value.component
+          ? _value._component
           : component // ignore: cast_nullable_to_non_nullable
               as List<ObservationComponent>?,
     ));
@@ -13948,21 +17722,20 @@ class _$_Observation extends _Observation {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.basedOn,
-      this.partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          this.status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.category,
+      final List<CodeableConcept>? category,
       required this.code,
       this.subject,
-      this.focus,
+      final List<Reference>? focus,
       this.encounter,
       this.effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
@@ -13975,7 +17748,7 @@ class _$_Observation extends _Observation {
       this.issued,
       @JsonKey(name: '_issued')
           this.issuedElement,
-      this.performer,
+      final List<Reference>? performer,
       this.valueQuantity,
       this.valueCodeableConcept,
       this.valueString,
@@ -13998,17 +17771,32 @@ class _$_Observation extends _Observation {
           this.valueDateTimeElement,
       this.valuePeriod,
       this.dataAbsentReason,
-      this.interpretation,
-      this.note,
+      final List<CodeableConcept>? interpretation,
+      final List<Annotation>? note,
       this.bodySite,
       this.method,
       this.specimen,
       this.device,
-      this.referenceRange,
-      this.hasMember,
-      this.derivedFrom,
-      this.component})
-      : super._();
+      final List<ObservationReferenceRange>? referenceRange,
+      final List<Reference>? hasMember,
+      final List<Reference>? derivedFrom,
+      final List<ObservationComponent>? component})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _category = category,
+        _focus = focus,
+        _performer = performer,
+        _interpretation = interpretation,
+        _note = note,
+        _referenceRange = referenceRange,
+        _hasMember = hasMember,
+        _derivedFrom = derivedFrom,
+        _component = component,
+        super._();
 
   factory _$_Observation.fromJson(Map<String, dynamic> json) =>
       _$$_ObservationFromJson(json);
@@ -14016,131 +17804,503 @@ class _$_Observation extends _Observation {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Observation)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] A unique identifier assigned to this observation.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] A unique identifier assigned to this observation.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
+  /// by this event.  For example, a MedicationRequest may require a patient to
+  ///  have laboratory test performed before  it is dispensed.
+  final List<Reference>? _basedOn;
+
+  /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
+  /// by this event.  For example, a MedicationRequest may require a patient to
+  ///  have laboratory test performed before  it is dispensed.
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [partOf] A larger event of which this particular Observation is a
+  ///  component or step.  For example,  an observation as part of a procedure.
+  final List<Reference>? _partOf;
+
+  /// [partOf] A larger event of which this particular Observation is a
+  ///  component or step.  For example,  an observation as part of a procedure.
   @override
-  final List<Reference>? partOf;
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] The status of the result value.
   @override
-  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  final ObservationStatus? status;
+  final Code? status;
+
+  /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [category] A code that classifies the general type of observation being
+  ///  made.
+  final List<CodeableConcept>? _category;
+
+  /// [category] A code that classifies the general type of observation being
+  ///  made.
   @override
-  final List<CodeableConcept>? category;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [code] Describes what was observed. Sometimes this is called the
+  ///  observation "name".
   @override
   final CodeableConcept code;
+
+  /// [subject] The patient, or group of patients, location, or device this
+  /// observation is about and into whose record the observation is placed. If
+  /// the actual focus of the observation is different from the subject (or a
+  /// sample of, part, or region of the subject), the `focus` element or the
+  ///  `code` itself specifies the actual focus of the observation.
   @override
   final Reference? subject;
+
+  /// [focus] The actual focus of an observation when it is not the patient of
+  /// record representing something or someone associated with the patient such
+  /// as a spouse, parent, fetus, or donor. For example, fetus observations in a
+  /// mother's record.  The focus of an observation could also be an existing
+  /// condition,  an intervention, the subject's diet,  another observation of
+  /// the subject,  or a body structure such as tumor or implanted device.   An
+  /// example use case would be using the Observation resource to capture
+  /// whether the mother is trained to change her child's tracheostomy tube. In
+  /// this example, the child is the patient of record and the mother is the
+  ///  focus.
+  final List<Reference>? _focus;
+
+  /// [focus] The actual focus of an observation when it is not the patient of
+  /// record representing something or someone associated with the patient such
+  /// as a spouse, parent, fetus, or donor. For example, fetus observations in a
+  /// mother's record.  The focus of an observation could also be an existing
+  /// condition,  an intervention, the subject's diet,  another observation of
+  /// the subject,  or a body structure such as tumor or implanted device.   An
+  /// example use case would be using the Observation resource to capture
+  /// whether the mother is trained to change her child's tracheostomy tube. In
+  /// this example, the child is the patient of record and the mother is the
+  ///  focus.
   @override
-  final List<Reference>? focus;
+  List<Reference>? get focus {
+    final value = _focus;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
+  ///  interaction) during which this observation is made.
   @override
   final Reference? encounter;
+
+  /// [effectiveDateTime] The time or time-period the observed value is
+  /// asserted as being true. For biological subjects - e.g. human patients -
+  /// this is usually called the "physiologically relevant time". This is
+  /// usually either the time of the procedure or of specimen collection, but
+  /// very often the source of the date/time is not known, only the date/time
+  ///  itself.
   @override
   final FhirDateTime? effectiveDateTime;
+
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @override
   @JsonKey(name: '_effectiveDateTime')
   final Element? effectiveDateTimeElement;
+
+  /// [effectivePeriod] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   @override
   final Period? effectivePeriod;
+
+  /// [effectiveTiming] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   @override
   final Timing? effectiveTiming;
+
+  /// [effectiveInstant] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   @override
   final Instant? effectiveInstant;
+
+  /// [effectiveInstantElement] Extensions for effectiveInstant
   @override
   @JsonKey(name: '_effectiveInstant')
   final Element? effectiveInstantElement;
+
+  /// [issued] The date and time this version of the observation was made
+  /// available to providers, typically after the results have been reviewed and
+  ///  verified.
   @override
   final Instant? issued;
+
+  /// [issuedElement] Extensions for issued
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
+
+  /// [performer] Who was responsible for asserting the observed value as
+  ///  "true".
+  final List<Reference>? _performer;
+
+  /// [performer] Who was responsible for asserting the observed value as
+  ///  "true".
   @override
-  final List<Reference>? performer;
+  List<Reference>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [valueQuantity] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Quantity? valueQuantity;
+
+  /// [valueCodeableConcept] The information determined as a result of making
+  ///  the observation, if the information has a simple value.
   @override
   final CodeableConcept? valueCodeableConcept;
+
+  /// [valueString] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final String? valueString;
+
+  /// [valueStringElement] Extensions for valueString
   @override
   @JsonKey(name: '_valueString')
   final Element? valueStringElement;
+
+  /// [valueBoolean] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Boolean? valueBoolean;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
+
+  /// [valueInteger] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Integer? valueInteger;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @override
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
+
+  /// [valueRange] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Range? valueRange;
+
+  /// [valueRatio] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Ratio? valueRatio;
+
+  /// [valueSampledData] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final SampledData? valueSampledData;
+
+  /// [valueTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Time? valueTime;
+
+  /// [valueTimeElement] Extensions for valueTime
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
+
+  /// [valueDateTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final FhirDateTime? valueDateTime;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
+
+  /// [valuePeriod] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Period? valuePeriod;
+
+  /// [dataAbsentReason] Provides a reason why the expected value in the
+  ///  element Observation.value[x] is missing.
   @override
   final CodeableConcept? dataAbsentReason;
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
+  final List<CodeableConcept>? _interpretation;
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
   @override
-  final List<CodeableConcept>? interpretation;
+  List<CodeableConcept>? get interpretation {
+    final value = _interpretation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [note] Comments about the observation or the results.
+  final List<Annotation>? _note;
+
+  /// [note] Comments about the observation or the results.
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [bodySite] Indicates the site on the subject's body where the observation
+  ///  was made (i.e. the target site).
   @override
   final CodeableConcept? bodySite;
+
+  /// [method] Indicates the mechanism used to perform the observation.
   @override
   final CodeableConcept? method;
+
+  /// [specimen] The specimen that was used when this observation was made.
   @override
   final Reference? specimen;
+
+  /// [device] The device used to generate the observation data.
   @override
   final Reference? device;
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  /// a normal or recommended range.  Multiple reference ranges are interpreted
+  /// as an "OR".   In other words, to represent two distinct target
+  ///  populations, two `referenceRange` elements would be used.
+  final List<ObservationReferenceRange>? _referenceRange;
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  /// a normal or recommended range.  Multiple reference ranges are interpreted
+  /// as an "OR".   In other words, to represent two distinct target
+  ///  populations, two `referenceRange` elements would be used.
   @override
-  final List<ObservationReferenceRange>? referenceRange;
+  List<ObservationReferenceRange>? get referenceRange {
+    final value = _referenceRange;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [hasMember] This observation is a group observation (e.g. a battery, a
+  /// panel of tests, a set of vital sign measurements) that includes the target
+  ///  as a member of the group.
+  final List<Reference>? _hasMember;
+
+  /// [hasMember] This observation is a group observation (e.g. a battery, a
+  /// panel of tests, a set of vital sign measurements) that includes the target
+  ///  as a member of the group.
   @override
-  final List<Reference>? hasMember;
+  List<Reference>? get hasMember {
+    final value = _hasMember;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [derivedFrom] The target resource that represents a measurement from
+  /// which this observation value is derived. For example, a calculated anion
+  ///  gap or a fetal measurement based on an ultrasound image.
+  final List<Reference>? _derivedFrom;
+
+  /// [derivedFrom] The target resource that represents a measurement from
+  /// which this observation value is derived. For example, a calculated anion
+  ///  gap or a fetal measurement based on an ultrasound image.
   @override
-  final List<Reference>? derivedFrom;
+  List<Reference>? get derivedFrom {
+    final value = _derivedFrom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [component] Some observations have multiple component observations.
+  /// These component observations are expressed as separate code value pairs
+  /// that share the same attributes.  Examples include systolic and diastolic
+  /// component observations for blood pressure measurement and multiple
+  ///  component observations for genetics observations.
+  final List<ObservationComponent>? _component;
+
+  /// [component] Some observations have multiple component observations.
+  /// These component observations are expressed as separate code value pairs
+  /// that share the same attributes.  Examples include systolic and diastolic
+  /// component observations for blood pressure measurement and multiple
+  ///  component observations for genetics observations.
   @override
-  final List<ObservationComponent>? component;
+  List<ObservationComponent>? get component {
+    final value = _component;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -14151,7 +18311,7 @@ class _$_Observation extends _Observation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Observation &&
+            other is _$_Observation &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -14164,22 +18324,23 @@ class _$_Observation extends _Observation {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
-            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
-            const DeepCollectionEquality().equals(other.focus, focus) &&
+            const DeepCollectionEquality().equals(other._focus, _focus) &&
             const DeepCollectionEquality().equals(other.encounter, encounter) &&
             const DeepCollectionEquality()
                 .equals(other.effectiveDateTime, effectiveDateTime) &&
@@ -14196,7 +18357,8 @@ class _$_Observation extends _Observation {
             const DeepCollectionEquality().equals(other.issued, issued) &&
             const DeepCollectionEquality()
                 .equals(other.issuedElement, issuedElement) &&
-            const DeepCollectionEquality().equals(other.performer, performer) &&
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
             const DeepCollectionEquality()
                 .equals(other.valueQuantity, valueQuantity) &&
             const DeepCollectionEquality()
@@ -14231,20 +18393,23 @@ class _$_Observation extends _Observation {
             const DeepCollectionEquality()
                 .equals(other.dataAbsentReason, dataAbsentReason) &&
             const DeepCollectionEquality()
-                .equals(other.interpretation, interpretation) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+                .equals(other._interpretation, _interpretation) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality().equals(other.bodySite, bodySite) &&
             const DeepCollectionEquality().equals(other.method, method) &&
             const DeepCollectionEquality().equals(other.specimen, specimen) &&
             const DeepCollectionEquality().equals(other.device, device) &&
             const DeepCollectionEquality()
-                .equals(other.referenceRange, referenceRange) &&
-            const DeepCollectionEquality().equals(other.hasMember, hasMember) &&
+                .equals(other._referenceRange, _referenceRange) &&
             const DeepCollectionEquality()
-                .equals(other.derivedFrom, derivedFrom) &&
-            const DeepCollectionEquality().equals(other.component, component));
+                .equals(other._hasMember, _hasMember) &&
+            const DeepCollectionEquality()
+                .equals(other._derivedFrom, _derivedFrom) &&
+            const DeepCollectionEquality()
+                .equals(other._component, _component));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -14256,18 +18421,18 @@ class _$_Observation extends _Observation {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(basedOn),
-        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(_partOf),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(code),
         const DeepCollectionEquality().hash(subject),
-        const DeepCollectionEquality().hash(focus),
+        const DeepCollectionEquality().hash(_focus),
         const DeepCollectionEquality().hash(encounter),
         const DeepCollectionEquality().hash(effectiveDateTime),
         const DeepCollectionEquality().hash(effectiveDateTimeElement),
@@ -14277,7 +18442,7 @@ class _$_Observation extends _Observation {
         const DeepCollectionEquality().hash(effectiveInstantElement),
         const DeepCollectionEquality().hash(issued),
         const DeepCollectionEquality().hash(issuedElement),
-        const DeepCollectionEquality().hash(performer),
+        const DeepCollectionEquality().hash(_performer),
         const DeepCollectionEquality().hash(valueQuantity),
         const DeepCollectionEquality().hash(valueCodeableConcept),
         const DeepCollectionEquality().hash(valueString),
@@ -14295,102 +18460,103 @@ class _$_Observation extends _Observation {
         const DeepCollectionEquality().hash(valueDateTimeElement),
         const DeepCollectionEquality().hash(valuePeriod),
         const DeepCollectionEquality().hash(dataAbsentReason),
-        const DeepCollectionEquality().hash(interpretation),
-        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(_interpretation),
+        const DeepCollectionEquality().hash(_note),
         const DeepCollectionEquality().hash(bodySite),
         const DeepCollectionEquality().hash(method),
         const DeepCollectionEquality().hash(specimen),
         const DeepCollectionEquality().hash(device),
-        const DeepCollectionEquality().hash(referenceRange),
-        const DeepCollectionEquality().hash(hasMember),
-        const DeepCollectionEquality().hash(derivedFrom),
-        const DeepCollectionEquality().hash(component)
+        const DeepCollectionEquality().hash(_referenceRange),
+        const DeepCollectionEquality().hash(_hasMember),
+        const DeepCollectionEquality().hash(_derivedFrom),
+        const DeepCollectionEquality().hash(_component)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ObservationCopyWith<_Observation> get copyWith =>
-      __$ObservationCopyWithImpl<_Observation>(this, _$identity);
+  _$$_ObservationCopyWith<_$_Observation> get copyWith =>
+      __$$_ObservationCopyWithImpl<_$_Observation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationToJson(this);
+    return _$$_ObservationToJson(
+      this,
+    );
   }
 }
 
 abstract class _Observation extends Observation {
   factory _Observation(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          ObservationStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? category,
-      required CodeableConcept code,
-      Reference? subject,
-      List<Reference>? focus,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
+          final Element? statusElement,
+      final List<CodeableConcept>? category,
+      required final CodeableConcept code,
+      final Reference? subject,
+      final List<Reference>? focus,
+      final Reference? encounter,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      Timing? effectiveTiming,
-      Instant? effectiveInstant,
+          final Element? effectiveDateTimeElement,
+      final Period? effectivePeriod,
+      final Timing? effectiveTiming,
+      final Instant? effectiveInstant,
       @JsonKey(name: '_effectiveInstant')
-          Element? effectiveInstantElement,
-      Instant? issued,
+          final Element? effectiveInstantElement,
+      final Instant? issued,
       @JsonKey(name: '_issued')
-          Element? issuedElement,
-      List<Reference>? performer,
-      Quantity? valueQuantity,
-      CodeableConcept? valueCodeableConcept,
-      String? valueString,
+          final Element? issuedElement,
+      final List<Reference>? performer,
+      final Quantity? valueQuantity,
+      final CodeableConcept? valueCodeableConcept,
+      final String? valueString,
       @JsonKey(name: '_valueString')
-          Element? valueStringElement,
-      Boolean? valueBoolean,
+          final Element? valueStringElement,
+      final Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
-          Element? valueBooleanElement,
-      Integer? valueInteger,
+          final Element? valueBooleanElement,
+      final Integer? valueInteger,
       @JsonKey(name: '_valueInteger')
-          Element? valueIntegerElement,
-      Range? valueRange,
-      Ratio? valueRatio,
-      SampledData? valueSampledData,
-      Time? valueTime,
+          final Element? valueIntegerElement,
+      final Range? valueRange,
+      final Ratio? valueRatio,
+      final SampledData? valueSampledData,
+      final Time? valueTime,
       @JsonKey(name: '_valueTime')
-          Element? valueTimeElement,
-      FhirDateTime? valueDateTime,
+          final Element? valueTimeElement,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
-          Element? valueDateTimeElement,
-      Period? valuePeriod,
-      CodeableConcept? dataAbsentReason,
-      List<CodeableConcept>? interpretation,
-      List<Annotation>? note,
-      CodeableConcept? bodySite,
-      CodeableConcept? method,
-      Reference? specimen,
-      Reference? device,
-      List<ObservationReferenceRange>? referenceRange,
-      List<Reference>? hasMember,
-      List<Reference>? derivedFrom,
-      List<ObservationComponent>? component}) = _$_Observation;
+          final Element? valueDateTimeElement,
+      final Period? valuePeriod,
+      final CodeableConcept? dataAbsentReason,
+      final List<CodeableConcept>? interpretation,
+      final List<Annotation>? note,
+      final CodeableConcept? bodySite,
+      final CodeableConcept? method,
+      final Reference? specimen,
+      final Reference? device,
+      final List<ObservationReferenceRange>? referenceRange,
+      final List<Reference>? hasMember,
+      final List<Reference>? derivedFrom,
+      final List<ObservationComponent>? component}) = _$_Observation;
   _Observation._() : super._();
 
   factory _Observation.fromJson(Map<String, dynamic> json) =
@@ -14400,133 +18566,339 @@ abstract class _Observation extends Observation {
   @JsonKey(unknownEnumValue: R4ResourceType.Observation)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A unique identifier assigned to this observation.
   List<Identifier>? get identifier;
   @override
+
+  /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
+  /// by this event.  For example, a MedicationRequest may require a patient to
+  ///  have laboratory test performed before  it is dispensed.
   List<Reference>? get basedOn;
   @override
+
+  /// [partOf] A larger event of which this particular Observation is a
+  ///  component or step.  For example,  an observation as part of a procedure.
   List<Reference>? get partOf;
   @override
-  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  ObservationStatus? get status;
+
+  /// [status] The status of the result value.
+  Code? get status;
   @override
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [category] A code that classifies the general type of observation being
+  ///  made.
   List<CodeableConcept>? get category;
   @override
+
+  /// [code] Describes what was observed. Sometimes this is called the
+  ///  observation "name".
   CodeableConcept get code;
   @override
+
+  /// [subject] The patient, or group of patients, location, or device this
+  /// observation is about and into whose record the observation is placed. If
+  /// the actual focus of the observation is different from the subject (or a
+  /// sample of, part, or region of the subject), the `focus` element or the
+  ///  `code` itself specifies the actual focus of the observation.
   Reference? get subject;
   @override
+
+  /// [focus] The actual focus of an observation when it is not the patient of
+  /// record representing something or someone associated with the patient such
+  /// as a spouse, parent, fetus, or donor. For example, fetus observations in a
+  /// mother's record.  The focus of an observation could also be an existing
+  /// condition,  an intervention, the subject's diet,  another observation of
+  /// the subject,  or a body structure such as tumor or implanted device.   An
+  /// example use case would be using the Observation resource to capture
+  /// whether the mother is trained to change her child's tracheostomy tube. In
+  /// this example, the child is the patient of record and the mother is the
+  ///  focus.
   List<Reference>? get focus;
   @override
+
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
+  ///  interaction) during which this observation is made.
   Reference? get encounter;
   @override
+
+  /// [effectiveDateTime] The time or time-period the observed value is
+  /// asserted as being true. For biological subjects - e.g. human patients -
+  /// this is usually called the "physiologically relevant time". This is
+  /// usually either the time of the procedure or of specimen collection, but
+  /// very often the source of the date/time is not known, only the date/time
+  ///  itself.
   FhirDateTime? get effectiveDateTime;
   @override
+
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement;
   @override
+
+  /// [effectivePeriod] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Period? get effectivePeriod;
   @override
+
+  /// [effectiveTiming] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Timing? get effectiveTiming;
   @override
+
+  /// [effectiveInstant] The time or time-period the observed value is asserted
+  /// as being true. For biological subjects - e.g. human patients - this is
+  /// usually called the "physiologically relevant time". This is usually either
+  /// the time of the procedure or of specimen collection, but very often the
+  ///  source of the date/time is not known, only the date/time itself.
   Instant? get effectiveInstant;
   @override
+
+  /// [effectiveInstantElement] Extensions for effectiveInstant
   @JsonKey(name: '_effectiveInstant')
   Element? get effectiveInstantElement;
   @override
+
+  /// [issued] The date and time this version of the observation was made
+  /// available to providers, typically after the results have been reviewed and
+  ///  verified.
   Instant? get issued;
   @override
+
+  /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
   Element? get issuedElement;
   @override
+
+  /// [performer] Who was responsible for asserting the observed value as
+  ///  "true".
   List<Reference>? get performer;
   @override
+
+  /// [valueQuantity] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Quantity? get valueQuantity;
   @override
+
+  /// [valueCodeableConcept] The information determined as a result of making
+  ///  the observation, if the information has a simple value.
   CodeableConcept? get valueCodeableConcept;
   @override
+
+  /// [valueString] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   String? get valueString;
   @override
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement;
   @override
+
+  /// [valueBoolean] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Boolean? get valueBoolean;
   @override
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   @override
+
+  /// [valueInteger] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Integer? get valueInteger;
   @override
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement;
   @override
+
+  /// [valueRange] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Range? get valueRange;
   @override
+
+  /// [valueRatio] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Ratio? get valueRatio;
   @override
+
+  /// [valueSampledData] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   SampledData? get valueSampledData;
   @override
+
+  /// [valueTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Time? get valueTime;
   @override
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
   @override
+
+  /// [valueDateTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   FhirDateTime? get valueDateTime;
   @override
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
+
+  /// [valuePeriod] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Period? get valuePeriod;
   @override
+
+  /// [dataAbsentReason] Provides a reason why the expected value in the
+  ///  element Observation.value[x] is missing.
   CodeableConcept? get dataAbsentReason;
   @override
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
   List<CodeableConcept>? get interpretation;
   @override
+
+  /// [note] Comments about the observation or the results.
   List<Annotation>? get note;
   @override
+
+  /// [bodySite] Indicates the site on the subject's body where the observation
+  ///  was made (i.e. the target site).
   CodeableConcept? get bodySite;
   @override
+
+  /// [method] Indicates the mechanism used to perform the observation.
   CodeableConcept? get method;
   @override
+
+  /// [specimen] The specimen that was used when this observation was made.
   Reference? get specimen;
   @override
+
+  /// [device] The device used to generate the observation data.
   Reference? get device;
   @override
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  /// a normal or recommended range.  Multiple reference ranges are interpreted
+  /// as an "OR".   In other words, to represent two distinct target
+  ///  populations, two `referenceRange` elements would be used.
   List<ObservationReferenceRange>? get referenceRange;
   @override
+
+  /// [hasMember] This observation is a group observation (e.g. a battery, a
+  /// panel of tests, a set of vital sign measurements) that includes the target
+  ///  as a member of the group.
   List<Reference>? get hasMember;
   @override
+
+  /// [derivedFrom] The target resource that represents a measurement from
+  /// which this observation value is derived. For example, a calculated anion
+  ///  gap or a fetal measurement based on an ultrasound image.
   List<Reference>? get derivedFrom;
   @override
+
+  /// [component] Some observations have multiple component observations.
+  /// These component observations are expressed as separate code value pairs
+  /// that share the same attributes.  Examples include systolic and diastolic
+  /// component observations for blood pressure measurement and multiple
+  ///  component observations for genetics observations.
   List<ObservationComponent>? get component;
   @override
   @JsonKey(ignore: true)
-  _$ObservationCopyWith<_Observation> get copyWith =>
+  _$$_ObservationCopyWith<_$_Observation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -14536,55 +18908,71 @@ ObservationReferenceRange _$ObservationReferenceRangeFromJson(
 }
 
 /// @nodoc
-class _$ObservationReferenceRangeTearOff {
-  const _$ObservationReferenceRangeTearOff();
-
-  _ObservationReferenceRange call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Quantity? low,
-      Quantity? high,
-      CodeableConcept? type,
-      List<CodeableConcept>? appliesTo,
-      Range? age,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement}) {
-    return _ObservationReferenceRange(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      low: low,
-      high: high,
-      type: type,
-      appliesTo: appliesTo,
-      age: age,
-      text: text,
-      textElement: textElement,
-    );
-  }
-
-  ObservationReferenceRange fromJson(Map<String, Object?> json) {
-    return ObservationReferenceRange.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ObservationReferenceRange = _$ObservationReferenceRangeTearOff();
-
-/// @nodoc
 mixin _$ObservationReferenceRange {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [low] The value of the low bound of the reference range.  The low bound
+  /// of the reference range endpoint is inclusive of the value (e.g.  reference
+  /// range is >=5 - <=9). If the low bound is omitted,  it is assumed to be
+  ///  meaningless (e.g. reference range is <=2.3).
   Quantity? get low => throw _privateConstructorUsedError;
+
+  /// [high] The value of the high bound of the reference range.  The high
+  /// bound of the reference range endpoint is inclusive of the value (e.g.
+  /// reference range is >=5 - <=9). If the high bound is omitted,  it is
+  ///  assumed to be meaningless (e.g. reference range is >= 2.3).
   Quantity? get high => throw _privateConstructorUsedError;
+
+  /// [type] Codes to indicate the what part of the targeted reference
+  ///  population it applies to. For example, the normal or therapeutic range.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [appliesTo] Codes to indicate the target population this reference range
+  /// applies to.  For example, a reference range may be based on the normal
+  /// population or a particular sex or race.  Multiple `appliesTo`  are
+  /// interpreted as an "AND" of the target populations.  For example, to
+  /// represent a target population of African American females, both a code of
+  ///  female and a code for African American would be used.
   List<CodeableConcept>? get appliesTo => throw _privateConstructorUsedError;
+
+  /// [age] The age at which this reference range is applicable. This is a
+  ///  neonatal age (e.g. number of weeks at term) if the meaning says so.
   Range? get age => throw _privateConstructorUsedError;
+
+  /// [text] Text based reference range in an observation which may be used
+  /// when a quantitative range is not appropriate for an observation.  An
+  /// example would be a reference value of "Negative" or a list or table of
+  ///  "normals".
   String? get text => throw _privateConstructorUsedError;
+
+  /// [textElement] Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
 
@@ -14741,11 +19129,12 @@ class _$ObservationReferenceRangeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ObservationReferenceRangeCopyWith<$Res>
+abstract class _$$_ObservationReferenceRangeCopyWith<$Res>
     implements $ObservationReferenceRangeCopyWith<$Res> {
-  factory _$ObservationReferenceRangeCopyWith(_ObservationReferenceRange value,
-          $Res Function(_ObservationReferenceRange) then) =
-      __$ObservationReferenceRangeCopyWithImpl<$Res>;
+  factory _$$_ObservationReferenceRangeCopyWith(
+          _$_ObservationReferenceRange value,
+          $Res Function(_$_ObservationReferenceRange) then) =
+      __$$_ObservationReferenceRangeCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -14772,16 +19161,17 @@ abstract class _$ObservationReferenceRangeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ObservationReferenceRangeCopyWithImpl<$Res>
+class __$$_ObservationReferenceRangeCopyWithImpl<$Res>
     extends _$ObservationReferenceRangeCopyWithImpl<$Res>
-    implements _$ObservationReferenceRangeCopyWith<$Res> {
-  __$ObservationReferenceRangeCopyWithImpl(_ObservationReferenceRange _value,
-      $Res Function(_ObservationReferenceRange) _then)
-      : super(_value, (v) => _then(v as _ObservationReferenceRange));
+    implements _$$_ObservationReferenceRangeCopyWith<$Res> {
+  __$$_ObservationReferenceRangeCopyWithImpl(
+      _$_ObservationReferenceRange _value,
+      $Res Function(_$_ObservationReferenceRange) _then)
+      : super(_value, (v) => _then(v as _$_ObservationReferenceRange));
 
   @override
-  _ObservationReferenceRange get _value =>
-      super._value as _ObservationReferenceRange;
+  _$_ObservationReferenceRange get _value =>
+      super._value as _$_ObservationReferenceRange;
 
   @override
   $Res call({
@@ -14796,17 +19186,17 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
     Object? text = freezed,
     Object? textElement = freezed,
   }) {
-    return _then(_ObservationReferenceRange(
+    return _then(_$_ObservationReferenceRange(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       low: low == freezed
@@ -14822,7 +19212,7 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       appliesTo: appliesTo == freezed
-          ? _value.appliesTo
+          ? _value._appliesTo
           : appliesTo // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       age: age == freezed
@@ -14846,39 +19236,141 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
 class _$_ObservationReferenceRange extends _ObservationReferenceRange {
   _$_ObservationReferenceRange(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.low,
       this.high,
       this.type,
-      this.appliesTo,
+      final List<CodeableConcept>? appliesTo,
       this.age,
       this.text,
       @JsonKey(name: '_text') this.textElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _appliesTo = appliesTo,
+        super._();
 
   factory _$_ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$$_ObservationReferenceRangeFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [low] The value of the low bound of the reference range.  The low bound
+  /// of the reference range endpoint is inclusive of the value (e.g.  reference
+  /// range is >=5 - <=9). If the low bound is omitted,  it is assumed to be
+  ///  meaningless (e.g. reference range is <=2.3).
   @override
   final Quantity? low;
+
+  /// [high] The value of the high bound of the reference range.  The high
+  /// bound of the reference range endpoint is inclusive of the value (e.g.
+  /// reference range is >=5 - <=9). If the high bound is omitted,  it is
+  ///  assumed to be meaningless (e.g. reference range is >= 2.3).
   @override
   final Quantity? high;
+
+  /// [type] Codes to indicate the what part of the targeted reference
+  ///  population it applies to. For example, the normal or therapeutic range.
   @override
   final CodeableConcept? type;
+
+  /// [appliesTo] Codes to indicate the target population this reference range
+  /// applies to.  For example, a reference range may be based on the normal
+  /// population or a particular sex or race.  Multiple `appliesTo`  are
+  /// interpreted as an "AND" of the target populations.  For example, to
+  /// represent a target population of African American females, both a code of
+  ///  female and a code for African American would be used.
+  final List<CodeableConcept>? _appliesTo;
+
+  /// [appliesTo] Codes to indicate the target population this reference range
+  /// applies to.  For example, a reference range may be based on the normal
+  /// population or a particular sex or race.  Multiple `appliesTo`  are
+  /// interpreted as an "AND" of the target populations.  For example, to
+  /// represent a target population of African American females, both a code of
+  ///  female and a code for African American would be used.
   @override
-  final List<CodeableConcept>? appliesTo;
+  List<CodeableConcept>? get appliesTo {
+    final value = _appliesTo;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [age] The age at which this reference range is applicable. This is a
+  ///  neonatal age (e.g. number of weeks at term) if the meaning says so.
   @override
   final Range? age;
+
+  /// [text] Text based reference range in an observation which may be used
+  /// when a quantitative range is not appropriate for an observation.  An
+  /// example would be a reference value of "Negative" or a list or table of
+  ///  "normals".
   @override
   final String? text;
+
+  /// [textElement] Extensions for text
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
@@ -14892,61 +19384,64 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ObservationReferenceRange &&
+            other is _$_ObservationReferenceRange &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.low, low) &&
             const DeepCollectionEquality().equals(other.high, high) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.appliesTo, appliesTo) &&
+            const DeepCollectionEquality()
+                .equals(other._appliesTo, _appliesTo) &&
             const DeepCollectionEquality().equals(other.age, age) &&
             const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality()
                 .equals(other.textElement, textElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(low),
       const DeepCollectionEquality().hash(high),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(appliesTo),
+      const DeepCollectionEquality().hash(_appliesTo),
       const DeepCollectionEquality().hash(age),
       const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(textElement));
 
   @JsonKey(ignore: true)
   @override
-  _$ObservationReferenceRangeCopyWith<_ObservationReferenceRange>
-      get copyWith =>
-          __$ObservationReferenceRangeCopyWithImpl<_ObservationReferenceRange>(
-              this, _$identity);
+  _$$_ObservationReferenceRangeCopyWith<_$_ObservationReferenceRange>
+      get copyWith => __$$_ObservationReferenceRangeCopyWithImpl<
+          _$_ObservationReferenceRange>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationReferenceRangeToJson(this);
+    return _$$_ObservationReferenceRangeToJson(
+      this,
+    );
   }
 }
 
 abstract class _ObservationReferenceRange extends ObservationReferenceRange {
   factory _ObservationReferenceRange(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Quantity? low,
-          Quantity? high,
-          CodeableConcept? type,
-          List<CodeableConcept>? appliesTo,
-          Range? age,
-          String? text,
-          @JsonKey(name: '_text') Element? textElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Quantity? low,
+          final Quantity? high,
+          final CodeableConcept? type,
+          final List<CodeableConcept>? appliesTo,
+          final Range? age,
+          final String? text,
+          @JsonKey(name: '_text') final Element? textElement}) =
       _$_ObservationReferenceRange;
   _ObservationReferenceRange._() : super._();
 
@@ -14954,30 +19449,84 @@ abstract class _ObservationReferenceRange extends ObservationReferenceRange {
       _$_ObservationReferenceRange.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [low] The value of the low bound of the reference range.  The low bound
+  /// of the reference range endpoint is inclusive of the value (e.g.  reference
+  /// range is >=5 - <=9). If the low bound is omitted,  it is assumed to be
+  ///  meaningless (e.g. reference range is <=2.3).
   Quantity? get low;
   @override
+
+  /// [high] The value of the high bound of the reference range.  The high
+  /// bound of the reference range endpoint is inclusive of the value (e.g.
+  /// reference range is >=5 - <=9). If the high bound is omitted,  it is
+  ///  assumed to be meaningless (e.g. reference range is >= 2.3).
   Quantity? get high;
   @override
+
+  /// [type] Codes to indicate the what part of the targeted reference
+  ///  population it applies to. For example, the normal or therapeutic range.
   CodeableConcept? get type;
   @override
+
+  /// [appliesTo] Codes to indicate the target population this reference range
+  /// applies to.  For example, a reference range may be based on the normal
+  /// population or a particular sex or race.  Multiple `appliesTo`  are
+  /// interpreted as an "AND" of the target populations.  For example, to
+  /// represent a target population of African American females, both a code of
+  ///  female and a code for African American would be used.
   List<CodeableConcept>? get appliesTo;
   @override
+
+  /// [age] The age at which this reference range is applicable. This is a
+  ///  neonatal age (e.g. number of weeks at term) if the meaning says so.
   Range? get age;
   @override
+
+  /// [text] Text based reference range in an observation which may be used
+  /// when a quantitative range is not appropriate for an observation.  An
+  /// example would be a reference value of "Negative" or a list or table of
+  ///  "normals".
   String? get text;
   @override
+
+  /// [textElement] Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
   @JsonKey(ignore: true)
-  _$ObservationReferenceRangeCopyWith<_ObservationReferenceRange>
+  _$$_ObservationReferenceRangeCopyWith<_$_ObservationReferenceRange>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -14986,101 +19535,116 @@ ObservationComponent _$ObservationComponentFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ObservationComponentTearOff {
-  const _$ObservationComponentTearOff();
-
-  _ObservationComponent call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept code,
-      Quantity? valueQuantity,
-      CodeableConcept? valueCodeableConcept,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Range? valueRange,
-      Ratio? valueRatio,
-      SampledData? valueSampledData,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Period? valuePeriod,
-      CodeableConcept? dataAbsentReason,
-      List<CodeableConcept>? interpretation,
-      List<ObservationReferenceRange>? referenceRange}) {
-    return _ObservationComponent(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      valueQuantity: valueQuantity,
-      valueCodeableConcept: valueCodeableConcept,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueRange: valueRange,
-      valueRatio: valueRatio,
-      valueSampledData: valueSampledData,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valuePeriod: valuePeriod,
-      dataAbsentReason: dataAbsentReason,
-      interpretation: interpretation,
-      referenceRange: referenceRange,
-    );
-  }
-
-  ObservationComponent fromJson(Map<String, Object?> json) {
-    return ObservationComponent.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ObservationComponent = _$ObservationComponentTearOff();
-
-/// @nodoc
 mixin _$ObservationComponent {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] Describes what was observed. Sometimes this is called the
+  ///  observation "code".
   CodeableConcept get code => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] The information determined as a result of making
+  ///  the observation, if the information has a simple value.
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [valueString] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   String? get valueString => throw _privateConstructorUsedError;
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement => throw _privateConstructorUsedError;
+
+  /// [valueBoolean] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [valueInteger] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Integer? get valueInteger => throw _privateConstructorUsedError;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [valueRange] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [valueRatio] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Ratio? get valueRatio => throw _privateConstructorUsedError;
+
+  /// [valueSampledData] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
+
+  /// [valueTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Time? get valueTime => throw _privateConstructorUsedError;
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
+
+  /// [valueDateTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [valuePeriod] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Period? get valuePeriod => throw _privateConstructorUsedError;
+
+  /// [dataAbsentReason] Provides a reason why the expected value in the
+  ///  element Observation.component.value[x] is missing.
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
   List<CodeableConcept>? get interpretation =>
       throw _privateConstructorUsedError;
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  ///  a normal or recommended range.
   List<ObservationReferenceRange>? get referenceRange =>
       throw _privateConstructorUsedError;
 
@@ -15408,11 +19972,11 @@ class _$ObservationComponentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ObservationComponentCopyWith<$Res>
+abstract class _$$_ObservationComponentCopyWith<$Res>
     implements $ObservationComponentCopyWith<$Res> {
-  factory _$ObservationComponentCopyWith(_ObservationComponent value,
-          $Res Function(_ObservationComponent) then) =
-      __$ObservationComponentCopyWithImpl<$Res>;
+  factory _$$_ObservationComponentCopyWith(_$_ObservationComponent value,
+          $Res Function(_$_ObservationComponent) then) =
+      __$$_ObservationComponentCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -15468,15 +20032,15 @@ abstract class _$ObservationComponentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ObservationComponentCopyWithImpl<$Res>
+class __$$_ObservationComponentCopyWithImpl<$Res>
     extends _$ObservationComponentCopyWithImpl<$Res>
-    implements _$ObservationComponentCopyWith<$Res> {
-  __$ObservationComponentCopyWithImpl(
-      _ObservationComponent _value, $Res Function(_ObservationComponent) _then)
-      : super(_value, (v) => _then(v as _ObservationComponent));
+    implements _$$_ObservationComponentCopyWith<$Res> {
+  __$$_ObservationComponentCopyWithImpl(_$_ObservationComponent _value,
+      $Res Function(_$_ObservationComponent) _then)
+      : super(_value, (v) => _then(v as _$_ObservationComponent));
 
   @override
-  _ObservationComponent get _value => super._value as _ObservationComponent;
+  _$_ObservationComponent get _value => super._value as _$_ObservationComponent;
 
   @override
   $Res call({
@@ -15504,17 +20068,17 @@ class __$ObservationComponentCopyWithImpl<$Res>
     Object? interpretation = freezed,
     Object? referenceRange = freezed,
   }) {
-    return _then(_ObservationComponent(
+    return _then(_$_ObservationComponent(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -15590,11 +20154,11 @@ class __$ObservationComponentCopyWithImpl<$Res>
           : dataAbsentReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       interpretation: interpretation == freezed
-          ? _value.interpretation
+          ? _value._interpretation
           : interpretation // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       referenceRange: referenceRange == freezed
-          ? _value.referenceRange
+          ? _value._referenceRange
           : referenceRange // ignore: cast_nullable_to_non_nullable
               as List<ObservationReferenceRange>?,
     ));
@@ -15606,8 +20170,8 @@ class __$ObservationComponentCopyWithImpl<$Res>
 class _$_ObservationComponent extends _ObservationComponent {
   _$_ObservationComponent(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.code,
       this.valueQuantity,
       this.valueCodeableConcept,
@@ -15626,65 +20190,198 @@ class _$_ObservationComponent extends _ObservationComponent {
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
       this.valuePeriod,
       this.dataAbsentReason,
-      this.interpretation,
-      this.referenceRange})
-      : super._();
+      final List<CodeableConcept>? interpretation,
+      final List<ObservationReferenceRange>? referenceRange})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _interpretation = interpretation,
+        _referenceRange = referenceRange,
+        super._();
 
   factory _$_ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$$_ObservationComponentFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [code] Describes what was observed. Sometimes this is called the
+  ///  observation "code".
   @override
   final CodeableConcept code;
+
+  /// [valueQuantity] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Quantity? valueQuantity;
+
+  /// [valueCodeableConcept] The information determined as a result of making
+  ///  the observation, if the information has a simple value.
   @override
   final CodeableConcept? valueCodeableConcept;
+
+  /// [valueString] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final String? valueString;
+
+  /// [valueStringElement] Extensions for valueString
   @override
   @JsonKey(name: '_valueString')
   final Element? valueStringElement;
+
+  /// [valueBoolean] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Boolean? valueBoolean;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
+
+  /// [valueInteger] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Integer? valueInteger;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @override
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
+
+  /// [valueRange] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Range? valueRange;
+
+  /// [valueRatio] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Ratio? valueRatio;
+
+  /// [valueSampledData] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final SampledData? valueSampledData;
+
+  /// [valueTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Time? valueTime;
+
+  /// [valueTimeElement] Extensions for valueTime
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
+
+  /// [valueDateTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final FhirDateTime? valueDateTime;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
+
+  /// [valuePeriod] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   @override
   final Period? valuePeriod;
+
+  /// [dataAbsentReason] Provides a reason why the expected value in the
+  ///  element Observation.component.value[x] is missing.
   @override
   final CodeableConcept? dataAbsentReason;
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
+  final List<CodeableConcept>? _interpretation;
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
   @override
-  final List<CodeableConcept>? interpretation;
+  List<CodeableConcept>? get interpretation {
+    final value = _interpretation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  ///  a normal or recommended range.
+  final List<ObservationReferenceRange>? _referenceRange;
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  ///  a normal or recommended range.
   @override
-  final List<ObservationReferenceRange>? referenceRange;
+  List<ObservationReferenceRange>? get referenceRange {
+    final value = _referenceRange;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -15695,12 +20392,12 @@ class _$_ObservationComponent extends _ObservationComponent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ObservationComponent &&
+            other is _$_ObservationComponent &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.valueQuantity, valueQuantity) &&
@@ -15736,17 +20433,18 @@ class _$_ObservationComponent extends _ObservationComponent {
             const DeepCollectionEquality()
                 .equals(other.dataAbsentReason, dataAbsentReason) &&
             const DeepCollectionEquality()
-                .equals(other.interpretation, interpretation) &&
+                .equals(other._interpretation, _interpretation) &&
             const DeepCollectionEquality()
-                .equals(other.referenceRange, referenceRange));
+                .equals(other._referenceRange, _referenceRange));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(code),
         const DeepCollectionEquality().hash(valueQuantity),
         const DeepCollectionEquality().hash(valueCodeableConcept),
@@ -15765,47 +20463,49 @@ class _$_ObservationComponent extends _ObservationComponent {
         const DeepCollectionEquality().hash(valueDateTimeElement),
         const DeepCollectionEquality().hash(valuePeriod),
         const DeepCollectionEquality().hash(dataAbsentReason),
-        const DeepCollectionEquality().hash(interpretation),
-        const DeepCollectionEquality().hash(referenceRange)
+        const DeepCollectionEquality().hash(_interpretation),
+        const DeepCollectionEquality().hash(_referenceRange)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ObservationComponentCopyWith<_ObservationComponent> get copyWith =>
-      __$ObservationComponentCopyWithImpl<_ObservationComponent>(
+  _$$_ObservationComponentCopyWith<_$_ObservationComponent> get copyWith =>
+      __$$_ObservationComponentCopyWithImpl<_$_ObservationComponent>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationComponentToJson(this);
+    return _$$_ObservationComponentToJson(
+      this,
+    );
   }
 }
 
 abstract class _ObservationComponent extends ObservationComponent {
   factory _ObservationComponent(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept code,
-          Quantity? valueQuantity,
-          CodeableConcept? valueCodeableConcept,
-          String? valueString,
-          @JsonKey(name: '_valueString') Element? valueStringElement,
-          Boolean? valueBoolean,
-          @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-          Integer? valueInteger,
-          @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-          Range? valueRange,
-          Ratio? valueRatio,
-          SampledData? valueSampledData,
-          Time? valueTime,
-          @JsonKey(name: '_valueTime') Element? valueTimeElement,
-          FhirDateTime? valueDateTime,
-          @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-          Period? valuePeriod,
-          CodeableConcept? dataAbsentReason,
-          List<CodeableConcept>? interpretation,
-          List<ObservationReferenceRange>? referenceRange}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept code,
+          final Quantity? valueQuantity,
+          final CodeableConcept? valueCodeableConcept,
+          final String? valueString,
+          @JsonKey(name: '_valueString') final Element? valueStringElement,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final Integer? valueInteger,
+          @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
+          final Range? valueRange,
+          final Ratio? valueRatio,
+          final SampledData? valueSampledData,
+          final Time? valueTime,
+          @JsonKey(name: '_valueTime') final Element? valueTimeElement,
+          final FhirDateTime? valueDateTime,
+          @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
+          final Period? valuePeriod,
+          final CodeableConcept? dataAbsentReason,
+          final List<CodeableConcept>? interpretation,
+          final List<ObservationReferenceRange>? referenceRange}) =
       _$_ObservationComponent;
   _ObservationComponent._() : super._();
 
@@ -15813,60 +20513,139 @@ abstract class _ObservationComponent extends ObservationComponent {
       _$_ObservationComponent.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] Describes what was observed. Sometimes this is called the
+  ///  observation "code".
   CodeableConcept get code;
   @override
+
+  /// [valueQuantity] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Quantity? get valueQuantity;
   @override
+
+  /// [valueCodeableConcept] The information determined as a result of making
+  ///  the observation, if the information has a simple value.
   CodeableConcept? get valueCodeableConcept;
   @override
+
+  /// [valueString] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   String? get valueString;
   @override
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement;
   @override
+
+  /// [valueBoolean] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Boolean? get valueBoolean;
   @override
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   @override
+
+  /// [valueInteger] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Integer? get valueInteger;
   @override
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement;
   @override
+
+  /// [valueRange] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Range? get valueRange;
   @override
+
+  /// [valueRatio] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Ratio? get valueRatio;
   @override
+
+  /// [valueSampledData] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   SampledData? get valueSampledData;
   @override
+
+  /// [valueTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Time? get valueTime;
   @override
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
   @override
+
+  /// [valueDateTime] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   FhirDateTime? get valueDateTime;
   @override
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
+
+  /// [valuePeriod] The information determined as a result of making the
+  ///  observation, if the information has a simple value.
   Period? get valuePeriod;
   @override
+
+  /// [dataAbsentReason] Provides a reason why the expected value in the
+  ///  element Observation.component.value[x] is missing.
   CodeableConcept? get dataAbsentReason;
   @override
+
+  /// [interpretation] A categorical assessment of an observation value.  For
+  ///  example, high, low, normal.
   List<CodeableConcept>? get interpretation;
   @override
+
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
+  ///  a normal or recommended range.
   List<ObservationReferenceRange>? get referenceRange;
   @override
   @JsonKey(ignore: true)
-  _$ObservationComponentCopyWith<_ObservationComponent> get copyWith =>
+  _$$_ObservationComponentCopyWith<_$_ObservationComponent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -15876,115 +20655,132 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 }
 
 /// @nodoc
-class _$QuestionnaireResponseTearOff {
-  const _$QuestionnaireResponseTearOff();
-
-  _QuestionnaireResponse call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-          R4ResourceType resourceType = R4ResourceType.QuestionnaireResponse,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Canonical? questionnaire,
-      @JsonKey(name: '_questionnaire')
-          Element? questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? authored,
-      @JsonKey(name: '_authored')
-          Element? authoredElement,
-      Reference? author,
-      Reference? source,
-      List<QuestionnaireResponseItem>? item}) {
-    return _QuestionnaireResponse(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      partOf: partOf,
-      questionnaire: questionnaire,
-      questionnaireElement: questionnaireElement,
-      status: status,
-      statusElement: statusElement,
-      subject: subject,
-      encounter: encounter,
-      authored: authored,
-      authoredElement: authoredElement,
-      author: author,
-      source: source,
-      item: item,
-    );
-  }
-
-  QuestionnaireResponse fromJson(Map<String, Object?> json) {
-    return QuestionnaireResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $QuestionnaireResponse = _$QuestionnaireResponseTearOff();
-
-/// @nodoc
 mixin _$QuestionnaireResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A business identifier assigned to a particular completed (or
+  ///  partially completed) questionnaire.
   Identifier? get identifier => throw _privateConstructorUsedError;
+
+  /// [basedOn] The order, proposal or plan that is fulfilled in whole or in
+  /// part by this QuestionnaireResponse.  For example, a ServiceRequest seeking
+  /// an intake assessment or a decision support recommendation to assess for
+  ///  post-partum depression.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [partOf] A procedure or observation that this questionnaire was performed
+  /// as part of the execution of.  For example, the surgery a checklist was
+  ///  executed as part of.
   List<Reference>? get partOf => throw _privateConstructorUsedError;
+
+  /// [questionnaire] The Questionnaire that defines and organizes the
+  ///  questions for which answers are being provided.
   Canonical? get questionnaire => throw _privateConstructorUsedError;
+
+  /// [questionnaireElement] Extensions for [questionnaire].
   @JsonKey(name: '_questionnaire')
   Element? get questionnaireElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-  QuestionnaireResponseStatus? get status => throw _privateConstructorUsedError;
+
+  /// [status] The position of the questionnaire response within its overall
+  ///  lifecycle.
+  Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [subject] The subject of the questionnaire response.  This could be a
+  /// patient, organization, practitioner, device, etc.  This is who/what the
+  ///  answers apply to, but is not necessarily the source of information.
   Reference? get subject => throw _privateConstructorUsedError;
+
+  /// [encounter] The Encounter during which this questionnaire response was
+  ///  created or to which the creation of this record is tightly associated.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [authored] The date and/or time that this set of answers were last
+  ///  changed.
   FhirDateTime? get authored => throw _privateConstructorUsedError;
+
+  /// [authoredElement] Extensions for authored
   @JsonKey(name: '_authored')
   Element? get authoredElement => throw _privateConstructorUsedError;
+
+  /// [author] Person who received the answers to the questions in the
+  ///  QuestionnaireResponse and recorded them in the system.
   Reference? get author => throw _privateConstructorUsedError;
+
+  /// [source] The person who answered the questions about the subject.
   Reference? get source => throw _privateConstructorUsedError;
+
+  /// [item] A group or question item from the original questionnaire for which
+  ///  answers are provided.
   List<QuestionnaireResponseItem>? get item =>
       throw _privateConstructorUsedError;
 
@@ -16002,7 +20798,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16021,8 +20817,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       Canonical? questionnaire,
       @JsonKey(name: '_questionnaire')
           Element? questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -16093,7 +20888,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -16153,7 +20948,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16323,16 +21118,16 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$QuestionnaireResponseCopyWith<$Res>
+abstract class _$$_QuestionnaireResponseCopyWith<$Res>
     implements $QuestionnaireResponseCopyWith<$Res> {
-  factory _$QuestionnaireResponseCopyWith(_QuestionnaireResponse value,
-          $Res Function(_QuestionnaireResponse) then) =
-      __$QuestionnaireResponseCopyWithImpl<$Res>;
+  factory _$$_QuestionnaireResponseCopyWith(_$_QuestionnaireResponse value,
+          $Res Function(_$_QuestionnaireResponse) then) =
+      __$$_QuestionnaireResponseCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16351,8 +21146,7 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       Canonical? questionnaire,
       @JsonKey(name: '_questionnaire')
           Element? questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -16391,15 +21185,16 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$QuestionnaireResponseCopyWithImpl<$Res>
+class __$$_QuestionnaireResponseCopyWithImpl<$Res>
     extends _$QuestionnaireResponseCopyWithImpl<$Res>
-    implements _$QuestionnaireResponseCopyWith<$Res> {
-  __$QuestionnaireResponseCopyWithImpl(_QuestionnaireResponse _value,
-      $Res Function(_QuestionnaireResponse) _then)
-      : super(_value, (v) => _then(v as _QuestionnaireResponse));
+    implements _$$_QuestionnaireResponseCopyWith<$Res> {
+  __$$_QuestionnaireResponseCopyWithImpl(_$_QuestionnaireResponse _value,
+      $Res Function(_$_QuestionnaireResponse) _then)
+      : super(_value, (v) => _then(v as _$_QuestionnaireResponse));
 
   @override
-  _QuestionnaireResponse get _value => super._value as _QuestionnaireResponse;
+  _$_QuestionnaireResponse get _value =>
+      super._value as _$_QuestionnaireResponse;
 
   @override
   $Res call({
@@ -16429,7 +21224,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
     Object? source = freezed,
     Object? item = freezed,
   }) {
-    return _then(_QuestionnaireResponse(
+    return _then(_$_QuestionnaireResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -16437,7 +21232,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -16463,15 +21258,15 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -16479,11 +21274,11 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: partOf == freezed
-          ? _value.partOf
+          ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       questionnaire: questionnaire == freezed
@@ -16497,7 +21292,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16527,7 +21322,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
       item: item == freezed
-          ? _value.item
+          ? _value._item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseItem>?,
     ));
@@ -16549,18 +21344,17 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
-      this.basedOn,
-      this.partOf,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
       this.questionnaire,
       @JsonKey(name: '_questionnaire')
           this.questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.subject,
@@ -16570,8 +21364,14 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
           this.authoredElement,
       this.author,
       this.source,
-      this.item})
-      : super._();
+      final List<QuestionnaireResponseItem>? item})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _item = item,
+        super._();
 
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireResponseFromJson(json);
@@ -16579,61 +21379,227 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] A business identifier assigned to a particular completed (or
+  ///  partially completed) questionnaire.
   @override
   final Identifier? identifier;
+
+  /// [basedOn] The order, proposal or plan that is fulfilled in whole or in
+  /// part by this QuestionnaireResponse.  For example, a ServiceRequest seeking
+  /// an intake assessment or a decision support recommendation to assess for
+  ///  post-partum depression.
+  final List<Reference>? _basedOn;
+
+  /// [basedOn] The order, proposal or plan that is fulfilled in whole or in
+  /// part by this QuestionnaireResponse.  For example, a ServiceRequest seeking
+  /// an intake assessment or a decision support recommendation to assess for
+  ///  post-partum depression.
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [partOf] A procedure or observation that this questionnaire was performed
+  /// as part of the execution of.  For example, the surgery a checklist was
+  ///  executed as part of.
+  final List<Reference>? _partOf;
+
+  /// [partOf] A procedure or observation that this questionnaire was performed
+  /// as part of the execution of.  For example, the surgery a checklist was
+  ///  executed as part of.
   @override
-  final List<Reference>? partOf;
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [questionnaire] The Questionnaire that defines and organizes the
+  ///  questions for which answers are being provided.
   @override
   final Canonical? questionnaire;
+
+  /// [questionnaireElement] Extensions for [questionnaire].
   @override
   @JsonKey(name: '_questionnaire')
   final Element? questionnaireElement;
+
+  /// [status] The position of the questionnaire response within its overall
+  ///  lifecycle.
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-  final QuestionnaireResponseStatus? status;
+  final Code? status;
+
+  /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [subject] The subject of the questionnaire response.  This could be a
+  /// patient, organization, practitioner, device, etc.  This is who/what the
+  ///  answers apply to, but is not necessarily the source of information.
   @override
   final Reference? subject;
+
+  /// [encounter] The Encounter during which this questionnaire response was
+  ///  created or to which the creation of this record is tightly associated.
   @override
   final Reference? encounter;
+
+  /// [authored] The date and/or time that this set of answers were last
+  ///  changed.
   @override
   final FhirDateTime? authored;
+
+  /// [authoredElement] Extensions for authored
   @override
   @JsonKey(name: '_authored')
   final Element? authoredElement;
+
+  /// [author] Person who received the answers to the questions in the
+  ///  QuestionnaireResponse and recorded them in the system.
   @override
   final Reference? author;
+
+  /// [source] The person who answered the questions about the subject.
   @override
   final Reference? source;
+
+  /// [item] A group or question item from the original questionnaire for which
+  ///  answers are provided.
+  final List<QuestionnaireResponseItem>? _item;
+
+  /// [item] A group or question item from the original questionnaire for which
+  ///  answers are provided.
   @override
-  final List<QuestionnaireResponseItem>? item;
+  List<QuestionnaireResponseItem>? get item {
+    final value = _item;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -16644,7 +21610,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _QuestionnaireResponse &&
+            other is _$_QuestionnaireResponse &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -16657,15 +21623,16 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
-            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             const DeepCollectionEquality()
                 .equals(other.questionnaire, questionnaire) &&
             const DeepCollectionEquality()
@@ -16680,9 +21647,10 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
                 .equals(other.authoredElement, authoredElement) &&
             const DeepCollectionEquality().equals(other.author, author) &&
             const DeepCollectionEquality().equals(other.source, source) &&
-            const DeepCollectionEquality().equals(other.item, item));
+            const DeepCollectionEquality().equals(other._item, _item));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -16694,12 +21662,12 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(basedOn),
-        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(_partOf),
         const DeepCollectionEquality().hash(questionnaire),
         const DeepCollectionEquality().hash(questionnaireElement),
         const DeepCollectionEquality().hash(status),
@@ -16710,56 +21678,57 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         const DeepCollectionEquality().hash(authoredElement),
         const DeepCollectionEquality().hash(author),
         const DeepCollectionEquality().hash(source),
-        const DeepCollectionEquality().hash(item)
+        const DeepCollectionEquality().hash(_item)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$QuestionnaireResponseCopyWith<_QuestionnaireResponse> get copyWith =>
-      __$QuestionnaireResponseCopyWithImpl<_QuestionnaireResponse>(
+  _$$_QuestionnaireResponseCopyWith<_$_QuestionnaireResponse> get copyWith =>
+      __$$_QuestionnaireResponseCopyWithImpl<_$_QuestionnaireResponse>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseToJson(this);
+    return _$$_QuestionnaireResponseToJson(
+      this,
+    );
   }
 }
 
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Canonical? questionnaire,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final Canonical? questionnaire,
       @JsonKey(name: '_questionnaire')
-          Element? questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus? status,
+          final Element? questionnaireElement,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? authored,
+          final Element? statusElement,
+      final Reference? subject,
+      final Reference? encounter,
+      final FhirDateTime? authored,
       @JsonKey(name: '_authored')
-          Element? authoredElement,
-      Reference? author,
-      Reference? source,
-      List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponse;
+          final Element? authoredElement,
+      final Reference? author,
+      final Reference? source,
+      final List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponse;
   _QuestionnaireResponse._() : super._();
 
   factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
@@ -16769,63 +21738,155 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A business identifier assigned to a particular completed (or
+  ///  partially completed) questionnaire.
   Identifier? get identifier;
   @override
+
+  /// [basedOn] The order, proposal or plan that is fulfilled in whole or in
+  /// part by this QuestionnaireResponse.  For example, a ServiceRequest seeking
+  /// an intake assessment or a decision support recommendation to assess for
+  ///  post-partum depression.
   List<Reference>? get basedOn;
   @override
+
+  /// [partOf] A procedure or observation that this questionnaire was performed
+  /// as part of the execution of.  For example, the surgery a checklist was
+  ///  executed as part of.
   List<Reference>? get partOf;
   @override
+
+  /// [questionnaire] The Questionnaire that defines and organizes the
+  ///  questions for which answers are being provided.
   Canonical? get questionnaire;
   @override
+
+  /// [questionnaireElement] Extensions for [questionnaire].
   @JsonKey(name: '_questionnaire')
   Element? get questionnaireElement;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-  QuestionnaireResponseStatus? get status;
+
+  /// [status] The position of the questionnaire response within its overall
+  ///  lifecycle.
+  Code? get status;
   @override
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [subject] The subject of the questionnaire response.  This could be a
+  /// patient, organization, practitioner, device, etc.  This is who/what the
+  ///  answers apply to, but is not necessarily the source of information.
   Reference? get subject;
   @override
+
+  /// [encounter] The Encounter during which this questionnaire response was
+  ///  created or to which the creation of this record is tightly associated.
   Reference? get encounter;
   @override
+
+  /// [authored] The date and/or time that this set of answers were last
+  ///  changed.
   FhirDateTime? get authored;
   @override
+
+  /// [authoredElement] Extensions for authored
   @JsonKey(name: '_authored')
   Element? get authoredElement;
   @override
+
+  /// [author] Person who received the answers to the questions in the
+  ///  QuestionnaireResponse and recorded them in the system.
   Reference? get author;
   @override
+
+  /// [source] The person who answered the questions about the subject.
   Reference? get source;
   @override
+
+  /// [item] A group or question item from the original questionnaire for which
+  ///  answers are provided.
   List<QuestionnaireResponseItem>? get item;
   @override
   @JsonKey(ignore: true)
-  _$QuestionnaireResponseCopyWith<_QuestionnaireResponse> get copyWith =>
+  _$$_QuestionnaireResponseCopyWith<_$_QuestionnaireResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -16835,62 +21896,65 @@ QuestionnaireResponseItem _$QuestionnaireResponseItemFromJson(
 }
 
 /// @nodoc
-class _$QuestionnaireResponseItemTearOff {
-  const _$QuestionnaireResponseItemTearOff();
-
-  _QuestionnaireResponseItem call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? linkId,
-      @JsonKey(name: '_linkId') Element? linkIdElement,
-      FhirUri? definition,
-      @JsonKey(name: '_definition') Element? definitionElement,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement,
-      List<QuestionnaireResponseAnswer>? answer,
-      List<QuestionnaireResponseItem>? item}) {
-    return _QuestionnaireResponseItem(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      linkId: linkId,
-      linkIdElement: linkIdElement,
-      definition: definition,
-      definitionElement: definitionElement,
-      text: text,
-      textElement: textElement,
-      answer: answer,
-      item: item,
-    );
-  }
-
-  QuestionnaireResponseItem fromJson(Map<String, Object?> json) {
-    return QuestionnaireResponseItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $QuestionnaireResponseItem = _$QuestionnaireResponseItemTearOff();
-
-/// @nodoc
 mixin _$QuestionnaireResponseItem {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [linkId] The item from the Questionnaire that corresponds to this item in
+  ///  the QuestionnaireResponse resource.
   String? get linkId => throw _privateConstructorUsedError;
+
+  /// [linkIdElement] Extensions for linkId
   @JsonKey(name: '_linkId')
   Element? get linkIdElement => throw _privateConstructorUsedError;
+
+  /// [definition] A reference to an [[[ElementDefinition]]] that provides the
+  ///  details for the item.
   FhirUri? get definition => throw _privateConstructorUsedError;
+
+  /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
   Element? get definitionElement => throw _privateConstructorUsedError;
+
+  /// [text] Text that is displayed above the contents of the group or as the
+  ///  text of the question being answered.
   String? get text => throw _privateConstructorUsedError;
+
+  /// [textElement] Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
+
+  /// [answer] The respondent's answer(s) to the question.
   List<QuestionnaireResponseAnswer>? get answer =>
       throw _privateConstructorUsedError;
+
+  /// [item] Questions or sub-groups nested beneath a question or group.
   List<QuestionnaireResponseItem>? get item =>
       throw _privateConstructorUsedError;
 
@@ -17029,11 +22093,12 @@ class _$QuestionnaireResponseItemCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$QuestionnaireResponseItemCopyWith<$Res>
+abstract class _$$_QuestionnaireResponseItemCopyWith<$Res>
     implements $QuestionnaireResponseItemCopyWith<$Res> {
-  factory _$QuestionnaireResponseItemCopyWith(_QuestionnaireResponseItem value,
-          $Res Function(_QuestionnaireResponseItem) then) =
-      __$QuestionnaireResponseItemCopyWithImpl<$Res>;
+  factory _$$_QuestionnaireResponseItemCopyWith(
+          _$_QuestionnaireResponseItem value,
+          $Res Function(_$_QuestionnaireResponseItem) then) =
+      __$$_QuestionnaireResponseItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -17057,16 +22122,17 @@ abstract class _$QuestionnaireResponseItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$QuestionnaireResponseItemCopyWithImpl<$Res>
+class __$$_QuestionnaireResponseItemCopyWithImpl<$Res>
     extends _$QuestionnaireResponseItemCopyWithImpl<$Res>
-    implements _$QuestionnaireResponseItemCopyWith<$Res> {
-  __$QuestionnaireResponseItemCopyWithImpl(_QuestionnaireResponseItem _value,
-      $Res Function(_QuestionnaireResponseItem) _then)
-      : super(_value, (v) => _then(v as _QuestionnaireResponseItem));
+    implements _$$_QuestionnaireResponseItemCopyWith<$Res> {
+  __$$_QuestionnaireResponseItemCopyWithImpl(
+      _$_QuestionnaireResponseItem _value,
+      $Res Function(_$_QuestionnaireResponseItem) _then)
+      : super(_value, (v) => _then(v as _$_QuestionnaireResponseItem));
 
   @override
-  _QuestionnaireResponseItem get _value =>
-      super._value as _QuestionnaireResponseItem;
+  _$_QuestionnaireResponseItem get _value =>
+      super._value as _$_QuestionnaireResponseItem;
 
   @override
   $Res call({
@@ -17082,17 +22148,17 @@ class __$QuestionnaireResponseItemCopyWithImpl<$Res>
     Object? answer = freezed,
     Object? item = freezed,
   }) {
-    return _then(_QuestionnaireResponseItem(
+    return _then(_$_QuestionnaireResponseItem(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       linkId: linkId == freezed
@@ -17120,11 +22186,11 @@ class __$QuestionnaireResponseItemCopyWithImpl<$Res>
           : textElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       answer: answer == freezed
-          ? _value.answer
+          ? _value._answer
           : answer // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseAnswer>?,
       item: item == freezed
-          ? _value.item
+          ? _value._item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseItem>?,
     ));
@@ -17136,47 +22202,142 @@ class __$QuestionnaireResponseItemCopyWithImpl<$Res>
 class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
   _$_QuestionnaireResponseItem(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.linkId,
       @JsonKey(name: '_linkId') this.linkIdElement,
       this.definition,
       @JsonKey(name: '_definition') this.definitionElement,
       this.text,
       @JsonKey(name: '_text') this.textElement,
-      this.answer,
-      this.item})
-      : super._();
+      final List<QuestionnaireResponseAnswer>? answer,
+      final List<QuestionnaireResponseItem>? item})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _answer = answer,
+        _item = item,
+        super._();
 
   factory _$_QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireResponseItemFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [linkId] The item from the Questionnaire that corresponds to this item in
+  ///  the QuestionnaireResponse resource.
   @override
   final String? linkId;
+
+  /// [linkIdElement] Extensions for linkId
   @override
   @JsonKey(name: '_linkId')
   final Element? linkIdElement;
+
+  /// [definition] A reference to an [[[ElementDefinition]]] that provides the
+  ///  details for the item.
   @override
   final FhirUri? definition;
+
+  /// [definitionElement] Extensions for definition
   @override
   @JsonKey(name: '_definition')
   final Element? definitionElement;
+
+  /// [text] Text that is displayed above the contents of the group or as the
+  ///  text of the question being answered.
   @override
   final String? text;
+
+  /// [textElement] Extensions for text
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
+
+  /// [answer] The respondent's answer(s) to the question.
+  final List<QuestionnaireResponseAnswer>? _answer;
+
+  /// [answer] The respondent's answer(s) to the question.
   @override
-  final List<QuestionnaireResponseAnswer>? answer;
+  List<QuestionnaireResponseAnswer>? get answer {
+    final value = _answer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [item] Questions or sub-groups nested beneath a question or group.
+  final List<QuestionnaireResponseItem>? _item;
+
+  /// [item] Questions or sub-groups nested beneath a question or group.
   @override
-  final List<QuestionnaireResponseItem>? item;
+  List<QuestionnaireResponseItem>? get item {
+    final value = _item;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -17187,12 +22348,12 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _QuestionnaireResponseItem &&
+            other is _$_QuestionnaireResponseItem &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.linkId, linkId) &&
             const DeepCollectionEquality()
                 .equals(other.linkIdElement, linkIdElement) &&
@@ -17203,85 +22364,131 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
             const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality()
                 .equals(other.textElement, textElement) &&
-            const DeepCollectionEquality().equals(other.answer, answer) &&
-            const DeepCollectionEquality().equals(other.item, item));
+            const DeepCollectionEquality().equals(other._answer, _answer) &&
+            const DeepCollectionEquality().equals(other._item, _item));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(linkId),
       const DeepCollectionEquality().hash(linkIdElement),
       const DeepCollectionEquality().hash(definition),
       const DeepCollectionEquality().hash(definitionElement),
       const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(textElement),
-      const DeepCollectionEquality().hash(answer),
-      const DeepCollectionEquality().hash(item));
+      const DeepCollectionEquality().hash(_answer),
+      const DeepCollectionEquality().hash(_item));
 
   @JsonKey(ignore: true)
   @override
-  _$QuestionnaireResponseItemCopyWith<_QuestionnaireResponseItem>
-      get copyWith =>
-          __$QuestionnaireResponseItemCopyWithImpl<_QuestionnaireResponseItem>(
-              this, _$identity);
+  _$$_QuestionnaireResponseItemCopyWith<_$_QuestionnaireResponseItem>
+      get copyWith => __$$_QuestionnaireResponseItemCopyWithImpl<
+          _$_QuestionnaireResponseItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseItemToJson(this);
+    return _$$_QuestionnaireResponseItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _QuestionnaireResponseItem extends QuestionnaireResponseItem {
   factory _QuestionnaireResponseItem(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? linkId,
-      @JsonKey(name: '_linkId') Element? linkIdElement,
-      FhirUri? definition,
-      @JsonKey(name: '_definition') Element? definitionElement,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement,
-      List<QuestionnaireResponseAnswer>? answer,
-      List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponseItem;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? linkId,
+          @JsonKey(name: '_linkId') final Element? linkIdElement,
+          final FhirUri? definition,
+          @JsonKey(name: '_definition') final Element? definitionElement,
+          final String? text,
+          @JsonKey(name: '_text') final Element? textElement,
+          final List<QuestionnaireResponseAnswer>? answer,
+          final List<QuestionnaireResponseItem>? item}) =
+      _$_QuestionnaireResponseItem;
   _QuestionnaireResponseItem._() : super._();
 
   factory _QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponseItem.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [linkId] The item from the Questionnaire that corresponds to this item in
+  ///  the QuestionnaireResponse resource.
   String? get linkId;
   @override
+
+  /// [linkIdElement] Extensions for linkId
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
   @override
+
+  /// [definition] A reference to an [[[ElementDefinition]]] that provides the
+  ///  details for the item.
   FhirUri? get definition;
   @override
+
+  /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
   Element? get definitionElement;
   @override
+
+  /// [text] Text that is displayed above the contents of the group or as the
+  ///  text of the question being answered.
   String? get text;
   @override
+
+  /// [textElement] Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
+
+  /// [answer] The respondent's answer(s) to the question.
   List<QuestionnaireResponseAnswer>? get answer;
   @override
+
+  /// [item] Questions or sub-groups nested beneath a question or group.
   List<QuestionnaireResponseItem>? get item;
   @override
   @JsonKey(ignore: true)
-  _$QuestionnaireResponseItemCopyWith<_QuestionnaireResponseItem>
+  _$$_QuestionnaireResponseItemCopyWith<_$_QuestionnaireResponseItem>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -17291,105 +22498,118 @@ QuestionnaireResponseAnswer _$QuestionnaireResponseAnswerFromJson(
 }
 
 /// @nodoc
-class _$QuestionnaireResponseAnswerTearOff {
-  const _$QuestionnaireResponseAnswerTearOff();
-
-  _QuestionnaireResponseAnswer call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Attachment? valueAttachment,
-      Coding? valueCoding,
-      Quantity? valueQuantity,
-      Reference? valueReference,
-      List<QuestionnaireResponseItem>? item}) {
-    return _QuestionnaireResponseAnswer(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueDecimal: valueDecimal,
-      valueDecimalElement: valueDecimalElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueUri: valueUri,
-      valueUriElement: valueUriElement,
-      valueAttachment: valueAttachment,
-      valueCoding: valueCoding,
-      valueQuantity: valueQuantity,
-      valueReference: valueReference,
-      item: item,
-    );
-  }
-
-  QuestionnaireResponseAnswer fromJson(Map<String, Object?> json) {
-    return QuestionnaireResponseAnswer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $QuestionnaireResponseAnswer = _$QuestionnaireResponseAnswerTearOff();
-
-/// @nodoc
 mixin _$QuestionnaireResponseAnswer {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [valueBoolean] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [valueDecimal] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Decimal? get valueDecimal => throw _privateConstructorUsedError;
+
+  /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
+
+  /// [valueInteger] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Integer? get valueInteger => throw _privateConstructorUsedError;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [valueDate] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   Date? get valueDate => throw _privateConstructorUsedError;
+
+  /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
+
+  /// [valueDateTime] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [valueTime] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   Time? get valueTime => throw _privateConstructorUsedError;
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
+
+  /// [valueString] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   String? get valueString => throw _privateConstructorUsedError;
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement => throw _privateConstructorUsedError;
+
+  /// [valueUri] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   FhirUri? get valueUri => throw _privateConstructorUsedError;
+
+  /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
   Element? get valueUriElement => throw _privateConstructorUsedError;
+
+  /// [valueAttachment] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
+
+  /// [valueCoding] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Coding? get valueCoding => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueReference] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Reference? get valueReference => throw _privateConstructorUsedError;
+
+  /// [item] Nested groups and/or questions found within this particular
+  ///  answer.
   List<QuestionnaireResponseItem>? get item =>
       throw _privateConstructorUsedError;
 
@@ -17715,12 +22935,12 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$QuestionnaireResponseAnswerCopyWith<$Res>
+abstract class _$$_QuestionnaireResponseAnswerCopyWith<$Res>
     implements $QuestionnaireResponseAnswerCopyWith<$Res> {
-  factory _$QuestionnaireResponseAnswerCopyWith(
-          _QuestionnaireResponseAnswer value,
-          $Res Function(_QuestionnaireResponseAnswer) then) =
-      __$QuestionnaireResponseAnswerCopyWithImpl<$Res>;
+  factory _$$_QuestionnaireResponseAnswerCopyWith(
+          _$_QuestionnaireResponseAnswer value,
+          $Res Function(_$_QuestionnaireResponseAnswer) then) =
+      __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -17775,17 +22995,17 @@ abstract class _$QuestionnaireResponseAnswerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
+class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
     extends _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
-    implements _$QuestionnaireResponseAnswerCopyWith<$Res> {
-  __$QuestionnaireResponseAnswerCopyWithImpl(
-      _QuestionnaireResponseAnswer _value,
-      $Res Function(_QuestionnaireResponseAnswer) _then)
-      : super(_value, (v) => _then(v as _QuestionnaireResponseAnswer));
+    implements _$$_QuestionnaireResponseAnswerCopyWith<$Res> {
+  __$$_QuestionnaireResponseAnswerCopyWithImpl(
+      _$_QuestionnaireResponseAnswer _value,
+      $Res Function(_$_QuestionnaireResponseAnswer) _then)
+      : super(_value, (v) => _then(v as _$_QuestionnaireResponseAnswer));
 
   @override
-  _QuestionnaireResponseAnswer get _value =>
-      super._value as _QuestionnaireResponseAnswer;
+  _$_QuestionnaireResponseAnswer get _value =>
+      super._value as _$_QuestionnaireResponseAnswer;
 
   @override
   $Res call({
@@ -17814,17 +23034,17 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
     Object? valueReference = freezed,
     Object? item = freezed,
   }) {
-    return _then(_QuestionnaireResponseAnswer(
+    return _then(_$_QuestionnaireResponseAnswer(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       valueBoolean: valueBoolean == freezed
@@ -17908,7 +23128,7 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
           : valueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       item: item == freezed
-          ? _value.item
+          ? _value._item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseItem>?,
     ));
@@ -17920,8 +23140,8 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
 class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   _$_QuestionnaireResponseAnswer(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueDecimal,
@@ -17942,69 +23162,192 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
       this.valueCoding,
       this.valueQuantity,
       this.valueReference,
-      this.item})
-      : super._();
+      final List<QuestionnaireResponseItem>? item})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _item = item,
+        super._();
 
   factory _$_QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireResponseAnswerFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [valueBoolean] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final Boolean? valueBoolean;
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
+
+  /// [valueDecimal] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final Decimal? valueDecimal;
+
+  /// [valueDecimalElement] Extensions for valueDecimal
   @override
   @JsonKey(name: '_valueDecimal')
   final Element? valueDecimalElement;
+
+  /// [valueInteger] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final Integer? valueInteger;
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @override
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
+
+  /// [valueDate] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   @override
   final Date? valueDate;
+
+  /// [valueDateElement] Extensions for valueDate
   @override
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
+
+  /// [valueDateTime] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final FhirDateTime? valueDateTime;
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
+
+  /// [valueTime] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   @override
   final Time? valueTime;
+
+  /// [valueTimeElement] Extensions for valueTime
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
+
+  /// [valueString] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final String? valueString;
+
+  /// [valueStringElement] Extensions for valueString
   @override
   @JsonKey(name: '_valueString')
   final Element? valueStringElement;
+
+  /// [valueUri] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   @override
   final FhirUri? valueUri;
+
+  /// [valueUriElement] Extensions for valueUri
   @override
   @JsonKey(name: '_valueUri')
   final Element? valueUriElement;
+
+  /// [valueAttachment] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final Attachment? valueAttachment;
+
+  /// [valueCoding] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final Coding? valueCoding;
+
+  /// [valueQuantity] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final Quantity? valueQuantity;
+
+  /// [valueReference] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   @override
   final Reference? valueReference;
+
+  /// [item] Nested groups and/or questions found within this particular
+  ///  answer.
+  final List<QuestionnaireResponseItem>? _item;
+
+  /// [item] Nested groups and/or questions found within this particular
+  ///  answer.
   @override
-  final List<QuestionnaireResponseItem>? item;
+  List<QuestionnaireResponseItem>? get item {
+    final value = _item;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -18015,12 +23358,12 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _QuestionnaireResponseAnswer &&
+            other is _$_QuestionnaireResponseAnswer &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.valueBoolean, valueBoolean) &&
             const DeepCollectionEquality()
@@ -18058,15 +23401,16 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
                 .equals(other.valueQuantity, valueQuantity) &&
             const DeepCollectionEquality()
                 .equals(other.valueReference, valueReference) &&
-            const DeepCollectionEquality().equals(other.item, item));
+            const DeepCollectionEquality().equals(other._item, _item));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(valueBoolean),
         const DeepCollectionEquality().hash(valueBooleanElement),
         const DeepCollectionEquality().hash(valueDecimal),
@@ -18087,113 +23431,195 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
         const DeepCollectionEquality().hash(valueCoding),
         const DeepCollectionEquality().hash(valueQuantity),
         const DeepCollectionEquality().hash(valueReference),
-        const DeepCollectionEquality().hash(item)
+        const DeepCollectionEquality().hash(_item)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$QuestionnaireResponseAnswerCopyWith<_QuestionnaireResponseAnswer>
-      get copyWith => __$QuestionnaireResponseAnswerCopyWithImpl<
-          _QuestionnaireResponseAnswer>(this, _$identity);
+  _$$_QuestionnaireResponseAnswerCopyWith<_$_QuestionnaireResponseAnswer>
+      get copyWith => __$$_QuestionnaireResponseAnswerCopyWithImpl<
+          _$_QuestionnaireResponseAnswer>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseAnswerToJson(this);
+    return _$$_QuestionnaireResponseAnswerToJson(
+      this,
+    );
   }
 }
 
 abstract class _QuestionnaireResponseAnswer
     extends QuestionnaireResponseAnswer {
   factory _QuestionnaireResponseAnswer(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Attachment? valueAttachment,
-      Coding? valueCoding,
-      Quantity? valueQuantity,
-      Reference? valueReference,
-      List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponseAnswer;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final Decimal? valueDecimal,
+          @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
+          final Integer? valueInteger,
+          @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
+          final Date? valueDate,
+          @JsonKey(name: '_valueDate') final Element? valueDateElement,
+          final FhirDateTime? valueDateTime,
+          @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
+          final Time? valueTime,
+          @JsonKey(name: '_valueTime') final Element? valueTimeElement,
+          final String? valueString,
+          @JsonKey(name: '_valueString') final Element? valueStringElement,
+          final FhirUri? valueUri,
+          @JsonKey(name: '_valueUri') final Element? valueUriElement,
+          final Attachment? valueAttachment,
+          final Coding? valueCoding,
+          final Quantity? valueQuantity,
+          final Reference? valueReference,
+          final List<QuestionnaireResponseItem>? item}) =
+      _$_QuestionnaireResponseAnswer;
   _QuestionnaireResponseAnswer._() : super._();
 
   factory _QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponseAnswer.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [valueBoolean] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Boolean? get valueBoolean;
   @override
+
+  /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   @override
+
+  /// [valueDecimal] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Decimal? get valueDecimal;
   @override
+
+  /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement;
   @override
+
+  /// [valueInteger] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Integer? get valueInteger;
   @override
+
+  /// [valueIntegerElement] Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement;
   @override
+
+  /// [valueDate] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   Date? get valueDate;
   @override
+
+  /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement;
   @override
+
+  /// [valueDateTime] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   FhirDateTime? get valueDateTime;
   @override
+
+  /// [valueDateTimeElement] Extensions for valueDateTime
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
+
+  /// [valueTime] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   Time? get valueTime;
   @override
+
+  /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
   @override
+
+  /// [valueString] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   String? get valueString;
   @override
+
+  /// [valueStringElement] Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement;
   @override
+
+  /// [valueUri] The answer (or one of the answers) provided by the respondent
+  ///  to the question.
   FhirUri? get valueUri;
   @override
+
+  /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
   Element? get valueUriElement;
   @override
+
+  /// [valueAttachment] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Attachment? get valueAttachment;
   @override
+
+  /// [valueCoding] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Coding? get valueCoding;
   @override
+
+  /// [valueQuantity] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Quantity? get valueQuantity;
   @override
+
+  /// [valueReference] The answer (or one of the answers) provided by the
+  ///  respondent to the question.
   Reference? get valueReference;
   @override
+
+  /// [item] Nested groups and/or questions found within this particular
+  ///  answer.
   List<QuestionnaireResponseItem>? get item;
   @override
   @JsonKey(ignore: true)
-  _$QuestionnaireResponseAnswerCopyWith<_QuestionnaireResponseAnswer>
+  _$$_QuestionnaireResponseAnswerCopyWith<_$_QuestionnaireResponseAnswer>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -18202,117 +23628,132 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$SpecimenTearOff {
-  const _$SpecimenTearOff();
-
-  _Specimen call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-          R4ResourceType resourceType = R4ResourceType.Specimen,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Identifier? accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          SpecimenStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      Reference? subject,
-      FhirDateTime? receivedTime,
-      @JsonKey(name: '_receivedTime')
-          Element? receivedTimeElement,
-      List<Reference>? parent,
-      List<Reference>? request,
-      SpecimenCollection? collection,
-      List<SpecimenProcessing>? processing,
-      List<SpecimenContainer>? container,
-      List<CodeableConcept>? condition,
-      List<Annotation>? note}) {
-    return _Specimen(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      accessionIdentifier: accessionIdentifier,
-      status: status,
-      statusElement: statusElement,
-      type: type,
-      subject: subject,
-      receivedTime: receivedTime,
-      receivedTimeElement: receivedTimeElement,
-      parent: parent,
-      request: request,
-      collection: collection,
-      processing: processing,
-      container: container,
-      condition: condition,
-      note: note,
-    );
-  }
-
-  Specimen fromJson(Map<String, Object?> json) {
-    return Specimen.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Specimen = _$SpecimenTearOff();
-
-/// @nodoc
 mixin _$Specimen {
   @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Id for specimen.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [accessionIdentifier] The identifier assigned by the lab when
+  /// accessioning specimen(s). This is not necessarily the same as the specimen
+  ///  identifier, depending on local lab procedures.
   Identifier? get accessionIdentifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-  SpecimenStatus? get status => throw _privateConstructorUsedError;
+
+  /// [status] The availability of the specimen.
+  Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [type] The kind of material that forms the specimen.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [subject] Where the specimen came from. This may be from patient(s), from
+  /// a location (e.g., the source of an environmental sample), or a sampling of
+  ///  a substance or a device.
   Reference? get subject => throw _privateConstructorUsedError;
+
+  /// [receivedTime] Time when specimen was received for processing or testing.
   FhirDateTime? get receivedTime => throw _privateConstructorUsedError;
+
+  /// [receivedTimeElement] Extensions for receivedTime
   @JsonKey(name: '_receivedTime')
   Element? get receivedTimeElement => throw _privateConstructorUsedError;
+
+  /// [parent] Reference to the parent (source) specimen which is used when the
+  ///  specimen was either derived from or a component of another specimen.
   List<Reference>? get parent => throw _privateConstructorUsedError;
+
+  /// [request] Details concerning a service request that required a specimen
+  ///  to be collected.
   List<Reference>? get request => throw _privateConstructorUsedError;
+
+  /// [collection] Details concerning the specimen collection.
   SpecimenCollection? get collection => throw _privateConstructorUsedError;
+
+  /// [processing] Details concerning processing and processing steps for the
+  ///  specimen.
   List<SpecimenProcessing>? get processing =>
       throw _privateConstructorUsedError;
+
+  /// [container] The container holding the specimen.  The recursive nature of
+  ///  containers; i.e. blood in tube in tray in rack is not addressed here.
   List<SpecimenContainer>? get container => throw _privateConstructorUsedError;
+
+  /// [condition] A mode or state of being that describes the nature of the
+  ///  specimen.
   List<CodeableConcept>? get condition => throw _privateConstructorUsedError;
+
+  /// [note] To communicate any details or issues about the specimen or during
+  /// the specimen collection. (for example: broken vial, sent with patient,
+  ///  frozen).
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -18328,7 +23769,7 @@ abstract class $SpecimenCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18343,8 +23784,7 @@ abstract class $SpecimenCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          SpecimenStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -18417,7 +23857,7 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -18465,7 +23905,7 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SpecimenStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18629,14 +24069,15 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
-  factory _$SpecimenCopyWith(_Specimen value, $Res Function(_Specimen) then) =
-      __$SpecimenCopyWithImpl<$Res>;
+abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
+  factory _$$_SpecimenCopyWith(
+          _$_Specimen value, $Res Function(_$_Specimen) then) =
+      __$$_SpecimenCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18651,8 +24092,7 @@ abstract class _$SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          SpecimenStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -18691,13 +24131,14 @@ abstract class _$SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
-    implements _$SpecimenCopyWith<$Res> {
-  __$SpecimenCopyWithImpl(_Specimen _value, $Res Function(_Specimen) _then)
-      : super(_value, (v) => _then(v as _Specimen));
+class __$$_SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
+    implements _$$_SpecimenCopyWith<$Res> {
+  __$$_SpecimenCopyWithImpl(
+      _$_Specimen _value, $Res Function(_$_Specimen) _then)
+      : super(_value, (v) => _then(v as _$_Specimen));
 
   @override
-  _Specimen get _value => super._value as _Specimen;
+  _$_Specimen get _value => super._value as _$_Specimen;
 
   @override
   $Res call({
@@ -18728,7 +24169,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
     Object? condition = freezed,
     Object? note = freezed,
   }) {
-    return _then(_Specimen(
+    return _then(_$_Specimen(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -18736,7 +24177,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -18762,19 +24203,19 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       accessionIdentifier: accessionIdentifier == freezed
@@ -18784,7 +24225,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SpecimenStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18806,11 +24247,11 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
           : receivedTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       parent: parent == freezed
-          ? _value.parent
+          ? _value._parent
           : parent // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       request: request == freezed
-          ? _value.request
+          ? _value._request
           : request // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       collection: collection == freezed
@@ -18818,19 +24259,19 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
           : collection // ignore: cast_nullable_to_non_nullable
               as SpecimenCollection?,
       processing: processing == freezed
-          ? _value.processing
+          ? _value._processing
           : processing // ignore: cast_nullable_to_non_nullable
               as List<SpecimenProcessing>?,
       container: container == freezed
-          ? _value.container
+          ? _value._container
           : container // ignore: cast_nullable_to_non_nullable
               as List<SpecimenContainer>?,
       condition: condition == freezed
-          ? _value.condition
+          ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -18852,14 +24293,13 @@ class _$_Specimen extends _Specimen {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.type,
@@ -18867,14 +24307,24 @@ class _$_Specimen extends _Specimen {
       this.receivedTime,
       @JsonKey(name: '_receivedTime')
           this.receivedTimeElement,
-      this.parent,
-      this.request,
+      final List<Reference>? parent,
+      final List<Reference>? request,
       this.collection,
-      this.processing,
-      this.container,
-      this.condition,
-      this.note})
-      : super._();
+      final List<SpecimenProcessing>? processing,
+      final List<SpecimenContainer>? container,
+      final List<CodeableConcept>? condition,
+      final List<Annotation>? note})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _parent = parent,
+        _request = request,
+        _processing = processing,
+        _container = container,
+        _condition = condition,
+        _note = note,
+        super._();
 
   factory _$_Specimen.fromJson(Map<String, dynamic> json) =>
       _$$_SpecimenFromJson(json);
@@ -18882,62 +24332,260 @@ class _$_Specimen extends _Specimen {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  final Id? id;
+  final String? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Id for specimen.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Id for specimen.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [accessionIdentifier] The identifier assigned by the lab when
+  /// accessioning specimen(s). This is not necessarily the same as the specimen
+  ///  identifier, depending on local lab procedures.
   @override
   final Identifier? accessionIdentifier;
+
+  /// [status] The availability of the specimen.
   @override
-  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-  final SpecimenStatus? status;
+  final Code? status;
+
+  /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [type] The kind of material that forms the specimen.
   @override
   final CodeableConcept? type;
+
+  /// [subject] Where the specimen came from. This may be from patient(s), from
+  /// a location (e.g., the source of an environmental sample), or a sampling of
+  ///  a substance or a device.
   @override
   final Reference? subject;
+
+  /// [receivedTime] Time when specimen was received for processing or testing.
   @override
   final FhirDateTime? receivedTime;
+
+  /// [receivedTimeElement] Extensions for receivedTime
   @override
   @JsonKey(name: '_receivedTime')
   final Element? receivedTimeElement;
+
+  /// [parent] Reference to the parent (source) specimen which is used when the
+  ///  specimen was either derived from or a component of another specimen.
+  final List<Reference>? _parent;
+
+  /// [parent] Reference to the parent (source) specimen which is used when the
+  ///  specimen was either derived from or a component of another specimen.
   @override
-  final List<Reference>? parent;
+  List<Reference>? get parent {
+    final value = _parent;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [request] Details concerning a service request that required a specimen
+  ///  to be collected.
+  final List<Reference>? _request;
+
+  /// [request] Details concerning a service request that required a specimen
+  ///  to be collected.
   @override
-  final List<Reference>? request;
+  List<Reference>? get request {
+    final value = _request;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [collection] Details concerning the specimen collection.
   @override
   final SpecimenCollection? collection;
+
+  /// [processing] Details concerning processing and processing steps for the
+  ///  specimen.
+  final List<SpecimenProcessing>? _processing;
+
+  /// [processing] Details concerning processing and processing steps for the
+  ///  specimen.
   @override
-  final List<SpecimenProcessing>? processing;
+  List<SpecimenProcessing>? get processing {
+    final value = _processing;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [container] The container holding the specimen.  The recursive nature of
+  ///  containers; i.e. blood in tube in tray in rack is not addressed here.
+  final List<SpecimenContainer>? _container;
+
+  /// [container] The container holding the specimen.  The recursive nature of
+  ///  containers; i.e. blood in tube in tray in rack is not addressed here.
   @override
-  final List<SpecimenContainer>? container;
+  List<SpecimenContainer>? get container {
+    final value = _container;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [condition] A mode or state of being that describes the nature of the
+  ///  specimen.
+  final List<CodeableConcept>? _condition;
+
+  /// [condition] A mode or state of being that describes the nature of the
+  ///  specimen.
   @override
-  final List<CodeableConcept>? condition;
+  List<CodeableConcept>? get condition {
+    final value = _condition;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [note] To communicate any details or issues about the specimen or during
+  /// the specimen collection. (for example: broken vial, sent with patient,
+  ///  frozen).
+  final List<Annotation>? _note;
+
+  /// [note] To communicate any details or issues about the specimen or during
+  /// the specimen collection. (for example: broken vial, sent with patient,
+  ///  frozen).
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -18948,7 +24596,7 @@ class _$_Specimen extends _Specimen {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Specimen &&
+            other is _$_Specimen &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -18961,13 +24609,14 @@ class _$_Specimen extends _Specimen {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
                 .equals(other.accessionIdentifier, accessionIdentifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
@@ -18979,17 +24628,20 @@ class _$_Specimen extends _Specimen {
                 .equals(other.receivedTime, receivedTime) &&
             const DeepCollectionEquality()
                 .equals(other.receivedTimeElement, receivedTimeElement) &&
-            const DeepCollectionEquality().equals(other.parent, parent) &&
-            const DeepCollectionEquality().equals(other.request, request) &&
+            const DeepCollectionEquality().equals(other._parent, _parent) &&
+            const DeepCollectionEquality().equals(other._request, _request) &&
             const DeepCollectionEquality()
                 .equals(other.collection, collection) &&
             const DeepCollectionEquality()
-                .equals(other.processing, processing) &&
-            const DeepCollectionEquality().equals(other.container, container) &&
-            const DeepCollectionEquality().equals(other.condition, condition) &&
-            const DeepCollectionEquality().equals(other.note, note));
+                .equals(other._processing, _processing) &&
+            const DeepCollectionEquality()
+                .equals(other._container, _container) &&
+            const DeepCollectionEquality()
+                .equals(other._condition, _condition) &&
+            const DeepCollectionEquality().equals(other._note, _note));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -19001,10 +24653,10 @@ class _$_Specimen extends _Specimen {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(accessionIdentifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
@@ -19012,61 +24664,62 @@ class _$_Specimen extends _Specimen {
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(receivedTime),
         const DeepCollectionEquality().hash(receivedTimeElement),
-        const DeepCollectionEquality().hash(parent),
-        const DeepCollectionEquality().hash(request),
+        const DeepCollectionEquality().hash(_parent),
+        const DeepCollectionEquality().hash(_request),
         const DeepCollectionEquality().hash(collection),
-        const DeepCollectionEquality().hash(processing),
-        const DeepCollectionEquality().hash(container),
-        const DeepCollectionEquality().hash(condition),
-        const DeepCollectionEquality().hash(note)
+        const DeepCollectionEquality().hash(_processing),
+        const DeepCollectionEquality().hash(_container),
+        const DeepCollectionEquality().hash(_condition),
+        const DeepCollectionEquality().hash(_note)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$SpecimenCopyWith<_Specimen> get copyWith =>
-      __$SpecimenCopyWithImpl<_Specimen>(this, _$identity);
+  _$$_SpecimenCopyWith<_$_Specimen> get copyWith =>
+      __$$_SpecimenCopyWithImpl<_$_Specimen>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenToJson(this);
+    return _$$_SpecimenToJson(
+      this,
+    );
   }
 }
 
 abstract class _Specimen extends Specimen {
   factory _Specimen(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Identifier? accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          SpecimenStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Identifier? accessionIdentifier,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      Reference? subject,
-      FhirDateTime? receivedTime,
+          final Element? statusElement,
+      final CodeableConcept? type,
+      final Reference? subject,
+      final FhirDateTime? receivedTime,
       @JsonKey(name: '_receivedTime')
-          Element? receivedTimeElement,
-      List<Reference>? parent,
-      List<Reference>? request,
-      SpecimenCollection? collection,
-      List<SpecimenProcessing>? processing,
-      List<SpecimenContainer>? container,
-      List<CodeableConcept>? condition,
-      List<Annotation>? note}) = _$_Specimen;
+          final Element? receivedTimeElement,
+      final List<Reference>? parent,
+      final List<Reference>? request,
+      final SpecimenCollection? collection,
+      final List<SpecimenProcessing>? processing,
+      final List<SpecimenContainer>? container,
+      final List<CodeableConcept>? condition,
+      final List<Annotation>? note}) = _$_Specimen;
   _Specimen._() : super._();
 
   factory _Specimen.fromJson(Map<String, dynamic> json) = _$_Specimen.fromJson;
@@ -19075,64 +24728,155 @@ abstract class _Specimen extends Specimen {
   @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
   R4ResourceType get resourceType;
   @override
-  Id? get id;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  String? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Id for specimen.
   List<Identifier>? get identifier;
   @override
+
+  /// [accessionIdentifier] The identifier assigned by the lab when
+  /// accessioning specimen(s). This is not necessarily the same as the specimen
+  ///  identifier, depending on local lab procedures.
   Identifier? get accessionIdentifier;
   @override
-  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-  SpecimenStatus? get status;
+
+  /// [status] The availability of the specimen.
+  Code? get status;
   @override
+
+  /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [type] The kind of material that forms the specimen.
   CodeableConcept? get type;
   @override
+
+  /// [subject] Where the specimen came from. This may be from patient(s), from
+  /// a location (e.g., the source of an environmental sample), or a sampling of
+  ///  a substance or a device.
   Reference? get subject;
   @override
+
+  /// [receivedTime] Time when specimen was received for processing or testing.
   FhirDateTime? get receivedTime;
   @override
+
+  /// [receivedTimeElement] Extensions for receivedTime
   @JsonKey(name: '_receivedTime')
   Element? get receivedTimeElement;
   @override
+
+  /// [parent] Reference to the parent (source) specimen which is used when the
+  ///  specimen was either derived from or a component of another specimen.
   List<Reference>? get parent;
   @override
+
+  /// [request] Details concerning a service request that required a specimen
+  ///  to be collected.
   List<Reference>? get request;
   @override
+
+  /// [collection] Details concerning the specimen collection.
   SpecimenCollection? get collection;
   @override
+
+  /// [processing] Details concerning processing and processing steps for the
+  ///  specimen.
   List<SpecimenProcessing>? get processing;
   @override
+
+  /// [container] The container holding the specimen.  The recursive nature of
+  ///  containers; i.e. blood in tube in tray in rack is not addressed here.
   List<SpecimenContainer>? get container;
   @override
+
+  /// [condition] A mode or state of being that describes the nature of the
+  ///  specimen.
   List<CodeableConcept>? get condition;
   @override
+
+  /// [note] To communicate any details or issues about the specimen or during
+  /// the specimen collection. (for example: broken vial, sent with patient,
+  ///  frozen).
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$SpecimenCopyWith<_Specimen> get copyWith =>
+  _$$_SpecimenCopyWith<_$_Specimen> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -19141,66 +24885,76 @@ SpecimenCollection _$SpecimenCollectionFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$SpecimenCollectionTearOff {
-  const _$SpecimenCollectionTearOff();
-
-  _SpecimenCollection call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference? collector,
-      FhirDateTime? collectedDateTime,
-      @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
-      Period? collectedPeriod,
-      FhirDuration? duration,
-      Quantity? quantity,
-      CodeableConcept? method,
-      CodeableConcept? bodySite,
-      CodeableConcept? fastingStatusCodeableConcept,
-      FhirDuration? fastingStatusDuration}) {
-    return _SpecimenCollection(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      collector: collector,
-      collectedDateTime: collectedDateTime,
-      collectedDateTimeElement: collectedDateTimeElement,
-      collectedPeriod: collectedPeriod,
-      duration: duration,
-      quantity: quantity,
-      method: method,
-      bodySite: bodySite,
-      fastingStatusCodeableConcept: fastingStatusCodeableConcept,
-      fastingStatusDuration: fastingStatusDuration,
-    );
-  }
-
-  SpecimenCollection fromJson(Map<String, Object?> json) {
-    return SpecimenCollection.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SpecimenCollection = _$SpecimenCollectionTearOff();
-
-/// @nodoc
 mixin _$SpecimenCollection {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [collector] Person who collected the specimen.
   Reference? get collector => throw _privateConstructorUsedError;
+
+  /// [collectedDateTime] Time when specimen was collected from subject - the
+  ///  physiologically relevant time.
   FhirDateTime? get collectedDateTime => throw _privateConstructorUsedError;
+
+  /// [collectedDateTimeElement] Extensions for collectedDateTime
   @JsonKey(name: '_collectedDateTime')
   Element? get collectedDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [collectedPeriod] Time when specimen was collected from subject - the
+  ///  physiologically relevant time.
   Period? get collectedPeriod => throw _privateConstructorUsedError;
+
+  /// [duration] The span of time over which the collection of a specimen
+  ///  occurred.
   FhirDuration? get duration => throw _privateConstructorUsedError;
+
+  /// [quantity] The quantity of specimen collected; for instance the volume of
+  /// a blood sample, or the physical measurement of an anatomic pathology
+  ///  sample.
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [method] A coded value specifying the technique that is used to perform
+  ///  the procedure.
   CodeableConcept? get method => throw _privateConstructorUsedError;
+
+  /// [bodySite] Anatomical location from which the specimen was collected (if
+  /// subject is a patient). This is the target site.  This element is not used
+  ///  for environmental specimens.
   CodeableConcept? get bodySite => throw _privateConstructorUsedError;
+
+  /// [fastingStatusCodeableConcept] Abstinence or reduction from some or all
+  ///  food, drink, or both, for a period of time prior to sample collection.
   CodeableConcept? get fastingStatusCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [fastingStatusDuration] Abstinence or reduction from some or all food,
+  ///  drink, or both, for a period of time prior to sample collection.
   FhirDuration? get fastingStatusDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -19423,11 +25177,11 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SpecimenCollectionCopyWith<$Res>
+abstract class _$$_SpecimenCollectionCopyWith<$Res>
     implements $SpecimenCollectionCopyWith<$Res> {
-  factory _$SpecimenCollectionCopyWith(
-          _SpecimenCollection value, $Res Function(_SpecimenCollection) then) =
-      __$SpecimenCollectionCopyWithImpl<$Res>;
+  factory _$$_SpecimenCollectionCopyWith(_$_SpecimenCollection value,
+          $Res Function(_$_SpecimenCollection) then) =
+      __$$_SpecimenCollectionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -19465,15 +25219,15 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SpecimenCollectionCopyWithImpl<$Res>
+class __$$_SpecimenCollectionCopyWithImpl<$Res>
     extends _$SpecimenCollectionCopyWithImpl<$Res>
-    implements _$SpecimenCollectionCopyWith<$Res> {
-  __$SpecimenCollectionCopyWithImpl(
-      _SpecimenCollection _value, $Res Function(_SpecimenCollection) _then)
-      : super(_value, (v) => _then(v as _SpecimenCollection));
+    implements _$$_SpecimenCollectionCopyWith<$Res> {
+  __$$_SpecimenCollectionCopyWithImpl(
+      _$_SpecimenCollection _value, $Res Function(_$_SpecimenCollection) _then)
+      : super(_value, (v) => _then(v as _$_SpecimenCollection));
 
   @override
-  _SpecimenCollection get _value => super._value as _SpecimenCollection;
+  _$_SpecimenCollection get _value => super._value as _$_SpecimenCollection;
 
   @override
   $Res call({
@@ -19491,17 +25245,17 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
     Object? fastingStatusCodeableConcept = freezed,
     Object? fastingStatusDuration = freezed,
   }) {
-    return _then(_SpecimenCollection(
+    return _then(_$_SpecimenCollection(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       collector: collector == freezed
@@ -19553,8 +25307,8 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
 class _$_SpecimenCollection extends _SpecimenCollection {
   _$_SpecimenCollection(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.collector,
       this.collectedDateTime,
       @JsonKey(name: '_collectedDateTime') this.collectedDateTimeElement,
@@ -19565,37 +25319,125 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       this.bodySite,
       this.fastingStatusCodeableConcept,
       this.fastingStatusDuration})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$$_SpecimenCollectionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [collector] Person who collected the specimen.
   @override
   final Reference? collector;
+
+  /// [collectedDateTime] Time when specimen was collected from subject - the
+  ///  physiologically relevant time.
   @override
   final FhirDateTime? collectedDateTime;
+
+  /// [collectedDateTimeElement] Extensions for collectedDateTime
   @override
   @JsonKey(name: '_collectedDateTime')
   final Element? collectedDateTimeElement;
+
+  /// [collectedPeriod] Time when specimen was collected from subject - the
+  ///  physiologically relevant time.
   @override
   final Period? collectedPeriod;
+
+  /// [duration] The span of time over which the collection of a specimen
+  ///  occurred.
   @override
   final FhirDuration? duration;
+
+  /// [quantity] The quantity of specimen collected; for instance the volume of
+  /// a blood sample, or the physical measurement of an anatomic pathology
+  ///  sample.
   @override
   final Quantity? quantity;
+
+  /// [method] A coded value specifying the technique that is used to perform
+  ///  the procedure.
   @override
   final CodeableConcept? method;
+
+  /// [bodySite] Anatomical location from which the specimen was collected (if
+  /// subject is a patient). This is the target site.  This element is not used
+  ///  for environmental specimens.
   @override
   final CodeableConcept? bodySite;
+
+  /// [fastingStatusCodeableConcept] Abstinence or reduction from some or all
+  ///  food, drink, or both, for a period of time prior to sample collection.
   @override
   final CodeableConcept? fastingStatusCodeableConcept;
+
+  /// [fastingStatusDuration] Abstinence or reduction from some or all food,
+  ///  drink, or both, for a period of time prior to sample collection.
   @override
   final FhirDuration? fastingStatusDuration;
 
@@ -19608,12 +25450,12 @@ class _$_SpecimenCollection extends _SpecimenCollection {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SpecimenCollection &&
+            other is _$_SpecimenCollection &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.collector, collector) &&
             const DeepCollectionEquality()
                 .equals(other.collectedDateTime, collectedDateTime) &&
@@ -19632,12 +25474,13 @@ class _$_SpecimenCollection extends _SpecimenCollection {
                 .equals(other.fastingStatusDuration, fastingStatusDuration));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(collector),
       const DeepCollectionEquality().hash(collectedDateTime),
       const DeepCollectionEquality().hash(collectedDateTimeElement),
@@ -19651,66 +25494,125 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 
   @JsonKey(ignore: true)
   @override
-  _$SpecimenCollectionCopyWith<_SpecimenCollection> get copyWith =>
-      __$SpecimenCollectionCopyWithImpl<_SpecimenCollection>(this, _$identity);
+  _$$_SpecimenCollectionCopyWith<_$_SpecimenCollection> get copyWith =>
+      __$$_SpecimenCollectionCopyWithImpl<_$_SpecimenCollection>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenCollectionToJson(this);
+    return _$$_SpecimenCollectionToJson(
+      this,
+    );
   }
 }
 
 abstract class _SpecimenCollection extends SpecimenCollection {
   factory _SpecimenCollection(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference? collector,
-      FhirDateTime? collectedDateTime,
-      @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
-      Period? collectedPeriod,
-      FhirDuration? duration,
-      Quantity? quantity,
-      CodeableConcept? method,
-      CodeableConcept? bodySite,
-      CodeableConcept? fastingStatusCodeableConcept,
-      FhirDuration? fastingStatusDuration}) = _$_SpecimenCollection;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Reference? collector,
+      final FhirDateTime? collectedDateTime,
+      @JsonKey(name: '_collectedDateTime')
+          final Element? collectedDateTimeElement,
+      final Period? collectedPeriod,
+      final FhirDuration? duration,
+      final Quantity? quantity,
+      final CodeableConcept? method,
+      final CodeableConcept? bodySite,
+      final CodeableConcept? fastingStatusCodeableConcept,
+      final FhirDuration? fastingStatusDuration}) = _$_SpecimenCollection;
   _SpecimenCollection._() : super._();
 
   factory _SpecimenCollection.fromJson(Map<String, dynamic> json) =
       _$_SpecimenCollection.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [collector] Person who collected the specimen.
   Reference? get collector;
   @override
+
+  /// [collectedDateTime] Time when specimen was collected from subject - the
+  ///  physiologically relevant time.
   FhirDateTime? get collectedDateTime;
   @override
+
+  /// [collectedDateTimeElement] Extensions for collectedDateTime
   @JsonKey(name: '_collectedDateTime')
   Element? get collectedDateTimeElement;
   @override
+
+  /// [collectedPeriod] Time when specimen was collected from subject - the
+  ///  physiologically relevant time.
   Period? get collectedPeriod;
   @override
+
+  /// [duration] The span of time over which the collection of a specimen
+  ///  occurred.
   FhirDuration? get duration;
   @override
+
+  /// [quantity] The quantity of specimen collected; for instance the volume of
+  /// a blood sample, or the physical measurement of an anatomic pathology
+  ///  sample.
   Quantity? get quantity;
   @override
+
+  /// [method] A coded value specifying the technique that is used to perform
+  ///  the procedure.
   CodeableConcept? get method;
   @override
+
+  /// [bodySite] Anatomical location from which the specimen was collected (if
+  /// subject is a patient). This is the target site.  This element is not used
+  ///  for environmental specimens.
   CodeableConcept? get bodySite;
   @override
+
+  /// [fastingStatusCodeableConcept] Abstinence or reduction from some or all
+  ///  food, drink, or both, for a period of time prior to sample collection.
   CodeableConcept? get fastingStatusCodeableConcept;
   @override
+
+  /// [fastingStatusDuration] Abstinence or reduction from some or all food,
+  ///  drink, or both, for a period of time prior to sample collection.
   FhirDuration? get fastingStatusDuration;
   @override
   @JsonKey(ignore: true)
-  _$SpecimenCollectionCopyWith<_SpecimenCollection> get copyWith =>
+  _$$_SpecimenCollectionCopyWith<_$_SpecimenCollection> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -19719,57 +25621,62 @@ SpecimenProcessing _$SpecimenProcessingFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$SpecimenProcessingTearOff {
-  const _$SpecimenProcessingTearOff();
-
-  _SpecimenProcessing call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? procedure,
-      List<Reference>? additive,
-      FhirDateTime? timeDateTime,
-      @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
-      Period? timePeriod}) {
-    return _SpecimenProcessing(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      description: description,
-      descriptionElement: descriptionElement,
-      procedure: procedure,
-      additive: additive,
-      timeDateTime: timeDateTime,
-      timeDateTimeElement: timeDateTimeElement,
-      timePeriod: timePeriod,
-    );
-  }
-
-  SpecimenProcessing fromJson(Map<String, Object?> json) {
-    return SpecimenProcessing.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SpecimenProcessing = _$SpecimenProcessingTearOff();
-
-/// @nodoc
 mixin _$SpecimenProcessing {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [description] Textual description of procedure.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [procedure] A coded value specifying the procedure used to process the
+  ///  specimen.
   CodeableConcept? get procedure => throw _privateConstructorUsedError;
+
+  /// [additive] Material used in the processing step.
   List<Reference>? get additive => throw _privateConstructorUsedError;
+
+  /// [timeDateTime] A record of the time or period when the specimen
+  /// processing occurred.  For example the time of sample fixation or the
+  ///  period of time the sample was in formalin.
   FhirDateTime? get timeDateTime => throw _privateConstructorUsedError;
+
+  /// [timeDateTimeElement] Extensions for timeDateTime
   @JsonKey(name: '_timeDateTime')
   Element? get timeDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [timePeriod] A record of the time or period when the specimen processing
+  /// occurred.  For example the time of sample fixation or the period of time
+  ///  the sample was in formalin.
   Period? get timePeriod => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -19913,11 +25820,11 @@ class _$SpecimenProcessingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SpecimenProcessingCopyWith<$Res>
+abstract class _$$_SpecimenProcessingCopyWith<$Res>
     implements $SpecimenProcessingCopyWith<$Res> {
-  factory _$SpecimenProcessingCopyWith(
-          _SpecimenProcessing value, $Res Function(_SpecimenProcessing) then) =
-      __$SpecimenProcessingCopyWithImpl<$Res>;
+  factory _$$_SpecimenProcessingCopyWith(_$_SpecimenProcessing value,
+          $Res Function(_$_SpecimenProcessing) then) =
+      __$$_SpecimenProcessingCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -19942,15 +25849,15 @@ abstract class _$SpecimenProcessingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SpecimenProcessingCopyWithImpl<$Res>
+class __$$_SpecimenProcessingCopyWithImpl<$Res>
     extends _$SpecimenProcessingCopyWithImpl<$Res>
-    implements _$SpecimenProcessingCopyWith<$Res> {
-  __$SpecimenProcessingCopyWithImpl(
-      _SpecimenProcessing _value, $Res Function(_SpecimenProcessing) _then)
-      : super(_value, (v) => _then(v as _SpecimenProcessing));
+    implements _$$_SpecimenProcessingCopyWith<$Res> {
+  __$$_SpecimenProcessingCopyWithImpl(
+      _$_SpecimenProcessing _value, $Res Function(_$_SpecimenProcessing) _then)
+      : super(_value, (v) => _then(v as _$_SpecimenProcessing));
 
   @override
-  _SpecimenProcessing get _value => super._value as _SpecimenProcessing;
+  _$_SpecimenProcessing get _value => super._value as _$_SpecimenProcessing;
 
   @override
   $Res call({
@@ -19965,17 +25872,17 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
     Object? timeDateTimeElement = freezed,
     Object? timePeriod = freezed,
   }) {
-    return _then(_SpecimenProcessing(
+    return _then(_$_SpecimenProcessing(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: description == freezed
@@ -19991,7 +25898,7 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
           : procedure // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       additive: additive == freezed
-          ? _value.additive
+          ? _value._additive
           : additive // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       timeDateTime: timeDateTime == freezed
@@ -20015,41 +25922,127 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
 class _$_SpecimenProcessing extends _SpecimenProcessing {
   _$_SpecimenProcessing(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.procedure,
-      this.additive,
+      final List<Reference>? additive,
       this.timeDateTime,
       @JsonKey(name: '_timeDateTime') this.timeDateTimeElement,
       this.timePeriod})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _additive = additive,
+        super._();
 
   factory _$_SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
       _$$_SpecimenProcessingFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] Textual description of procedure.
   @override
   final String? description;
+
+  /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [procedure] A coded value specifying the procedure used to process the
+  ///  specimen.
   @override
   final CodeableConcept? procedure;
+
+  /// [additive] Material used in the processing step.
+  final List<Reference>? _additive;
+
+  /// [additive] Material used in the processing step.
   @override
-  final List<Reference>? additive;
+  List<Reference>? get additive {
+    final value = _additive;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [timeDateTime] A record of the time or period when the specimen
+  /// processing occurred.  For example the time of sample fixation or the
+  ///  period of time the sample was in formalin.
   @override
   final FhirDateTime? timeDateTime;
+
+  /// [timeDateTimeElement] Extensions for timeDateTime
   @override
   @JsonKey(name: '_timeDateTime')
   final Element? timeDateTimeElement;
+
+  /// [timePeriod] A record of the time or period when the specimen processing
+  /// occurred.  For example the time of sample fixation or the period of time
+  ///  the sample was in formalin.
   @override
   final Period? timePeriod;
 
@@ -20062,18 +26055,18 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SpecimenProcessing &&
+            other is _$_SpecimenProcessing &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality().equals(other.procedure, procedure) &&
-            const DeepCollectionEquality().equals(other.additive, additive) &&
+            const DeepCollectionEquality().equals(other._additive, _additive) &&
             const DeepCollectionEquality()
                 .equals(other.timeDateTime, timeDateTime) &&
             const DeepCollectionEquality()
@@ -20082,74 +26075,121 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
                 .equals(other.timePeriod, timePeriod));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
       const DeepCollectionEquality().hash(procedure),
-      const DeepCollectionEquality().hash(additive),
+      const DeepCollectionEquality().hash(_additive),
       const DeepCollectionEquality().hash(timeDateTime),
       const DeepCollectionEquality().hash(timeDateTimeElement),
       const DeepCollectionEquality().hash(timePeriod));
 
   @JsonKey(ignore: true)
   @override
-  _$SpecimenProcessingCopyWith<_SpecimenProcessing> get copyWith =>
-      __$SpecimenProcessingCopyWithImpl<_SpecimenProcessing>(this, _$identity);
+  _$$_SpecimenProcessingCopyWith<_$_SpecimenProcessing> get copyWith =>
+      __$$_SpecimenProcessingCopyWithImpl<_$_SpecimenProcessing>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenProcessingToJson(this);
+    return _$$_SpecimenProcessingToJson(
+      this,
+    );
   }
 }
 
 abstract class _SpecimenProcessing extends SpecimenProcessing {
   factory _SpecimenProcessing(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? procedure,
-      List<Reference>? additive,
-      FhirDateTime? timeDateTime,
-      @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
-      Period? timePeriod}) = _$_SpecimenProcessing;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final CodeableConcept? procedure,
+      final List<Reference>? additive,
+      final FhirDateTime? timeDateTime,
+      @JsonKey(name: '_timeDateTime') final Element? timeDateTimeElement,
+      final Period? timePeriod}) = _$_SpecimenProcessing;
   _SpecimenProcessing._() : super._();
 
   factory _SpecimenProcessing.fromJson(Map<String, dynamic> json) =
       _$_SpecimenProcessing.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [description] Textual description of procedure.
   String? get description;
   @override
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [procedure] A coded value specifying the procedure used to process the
+  ///  specimen.
   CodeableConcept? get procedure;
   @override
+
+  /// [additive] Material used in the processing step.
   List<Reference>? get additive;
   @override
+
+  /// [timeDateTime] A record of the time or period when the specimen
+  /// processing occurred.  For example the time of sample fixation or the
+  ///  period of time the sample was in formalin.
   FhirDateTime? get timeDateTime;
   @override
+
+  /// [timeDateTimeElement] Extensions for timeDateTime
   @JsonKey(name: '_timeDateTime')
   Element? get timeDateTimeElement;
   @override
+
+  /// [timePeriod] A record of the time or period when the specimen processing
+  /// occurred.  For example the time of sample fixation or the period of time
+  ///  the sample was in formalin.
   Period? get timePeriod;
   @override
   @JsonKey(ignore: true)
-  _$SpecimenProcessingCopyWith<_SpecimenProcessing> get copyWith =>
+  _$$_SpecimenProcessingCopyWith<_$_SpecimenProcessing> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -20158,60 +26198,68 @@ SpecimenContainer _$SpecimenContainerFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$SpecimenContainerTearOff {
-  const _$SpecimenContainerTearOff();
-
-  _SpecimenContainer call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? type,
-      Quantity? capacity,
-      Quantity? specimenQuantity,
-      CodeableConcept? additiveCodeableConcept,
-      Reference? additiveReference}) {
-    return _SpecimenContainer(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      description: description,
-      descriptionElement: descriptionElement,
-      type: type,
-      capacity: capacity,
-      specimenQuantity: specimenQuantity,
-      additiveCodeableConcept: additiveCodeableConcept,
-      additiveReference: additiveReference,
-    );
-  }
-
-  SpecimenContainer fromJson(Map<String, Object?> json) {
-    return SpecimenContainer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SpecimenContainer = _$SpecimenContainerTearOff();
-
-/// @nodoc
 mixin _$SpecimenContainer {
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Id for container. There may be multiple; a manufacturer's
+  /// bar code, lab assigned identifier, etc. The container ID may differ from
+  ///  the specimen id in some circumstances.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [description] Textual description of the container.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [type] The type of container associated with the specimen (e.g. slide,
+  ///  aliquot, etc.).
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [capacity] The capacity (volume or other measure) the container may
+  ///  contain.
   Quantity? get capacity => throw _privateConstructorUsedError;
+
+  /// [specimenQuantity] The quantity of specimen in the container; may be
+  /// volume, dimensions, or other appropriate measurements, depending on the
+  ///  specimen type.
   Quantity? get specimenQuantity => throw _privateConstructorUsedError;
+
+  /// [additiveCodeableConcept] Introduced substance to preserve, maintain or
+  ///  enhance the specimen. Examples: Formalin, Citrate, EDTA.
   CodeableConcept? get additiveCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [additiveReference] Introduced substance to preserve, maintain or enhance
+  ///  the specimen. Examples: Formalin, Citrate, EDTA.
   Reference? get additiveReference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20386,11 +26434,11 @@ class _$SpecimenContainerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SpecimenContainerCopyWith<$Res>
+abstract class _$$_SpecimenContainerCopyWith<$Res>
     implements $SpecimenContainerCopyWith<$Res> {
-  factory _$SpecimenContainerCopyWith(
-          _SpecimenContainer value, $Res Function(_SpecimenContainer) then) =
-      __$SpecimenContainerCopyWithImpl<$Res>;
+  factory _$$_SpecimenContainerCopyWith(_$_SpecimenContainer value,
+          $Res Function(_$_SpecimenContainer) then) =
+      __$$_SpecimenContainerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -20420,15 +26468,15 @@ abstract class _$SpecimenContainerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SpecimenContainerCopyWithImpl<$Res>
+class __$$_SpecimenContainerCopyWithImpl<$Res>
     extends _$SpecimenContainerCopyWithImpl<$Res>
-    implements _$SpecimenContainerCopyWith<$Res> {
-  __$SpecimenContainerCopyWithImpl(
-      _SpecimenContainer _value, $Res Function(_SpecimenContainer) _then)
-      : super(_value, (v) => _then(v as _SpecimenContainer));
+    implements _$$_SpecimenContainerCopyWith<$Res> {
+  __$$_SpecimenContainerCopyWithImpl(
+      _$_SpecimenContainer _value, $Res Function(_$_SpecimenContainer) _then)
+      : super(_value, (v) => _then(v as _$_SpecimenContainer));
 
   @override
-  _SpecimenContainer get _value => super._value as _SpecimenContainer;
+  _$_SpecimenContainer get _value => super._value as _$_SpecimenContainer;
 
   @override
   $Res call({
@@ -20444,21 +26492,21 @@ class __$SpecimenContainerCopyWithImpl<$Res>
     Object? additiveCodeableConcept = freezed,
     Object? additiveReference = freezed,
   }) {
-    return _then(_SpecimenContainer(
+    return _then(_$_SpecimenContainer(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       description: description == freezed
@@ -20498,9 +26546,9 @@ class __$SpecimenContainerCopyWithImpl<$Res>
 class _$_SpecimenContainer extends _SpecimenContainer {
   _$_SpecimenContainer(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.type,
@@ -20508,33 +26556,126 @@ class _$_SpecimenContainer extends _SpecimenContainer {
       this.specimenQuantity,
       this.additiveCodeableConcept,
       this.additiveReference})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
 
   factory _$_SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$$_SpecimenContainerFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Id for container. There may be multiple; a manufacturer's
+  /// bar code, lab assigned identifier, etc. The container ID may differ from
+  ///  the specimen id in some circumstances.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Id for container. There may be multiple; a manufacturer's
+  /// bar code, lab assigned identifier, etc. The container ID may differ from
+  ///  the specimen id in some circumstances.
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] Textual description of the container.
   @override
   final String? description;
+
+  /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [type] The type of container associated with the specimen (e.g. slide,
+  ///  aliquot, etc.).
   @override
   final CodeableConcept? type;
+
+  /// [capacity] The capacity (volume or other measure) the container may
+  ///  contain.
   @override
   final Quantity? capacity;
+
+  /// [specimenQuantity] The quantity of specimen in the container; may be
+  /// volume, dimensions, or other appropriate measurements, depending on the
+  ///  specimen type.
   @override
   final Quantity? specimenQuantity;
+
+  /// [additiveCodeableConcept] Introduced substance to preserve, maintain or
+  ///  enhance the specimen. Examples: Formalin, Citrate, EDTA.
   @override
   final CodeableConcept? additiveCodeableConcept;
+
+  /// [additiveReference] Introduced substance to preserve, maintain or enhance
+  ///  the specimen. Examples: Formalin, Citrate, EDTA.
   @override
   final Reference? additiveReference;
 
@@ -20547,14 +26688,14 @@ class _$_SpecimenContainer extends _SpecimenContainer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SpecimenContainer &&
+            other is _$_SpecimenContainer &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
@@ -20569,13 +26710,14 @@ class _$_SpecimenContainer extends _SpecimenContainer {
                 .equals(other.additiveReference, additiveReference));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_identifier),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
       const DeepCollectionEquality().hash(type),
@@ -20586,59 +26728,110 @@ class _$_SpecimenContainer extends _SpecimenContainer {
 
   @JsonKey(ignore: true)
   @override
-  _$SpecimenContainerCopyWith<_SpecimenContainer> get copyWith =>
-      __$SpecimenContainerCopyWithImpl<_SpecimenContainer>(this, _$identity);
+  _$$_SpecimenContainerCopyWith<_$_SpecimenContainer> get copyWith =>
+      __$$_SpecimenContainerCopyWithImpl<_$_SpecimenContainer>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenContainerToJson(this);
+    return _$$_SpecimenContainerToJson(
+      this,
+    );
   }
 }
 
 abstract class _SpecimenContainer extends SpecimenContainer {
   factory _SpecimenContainer(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? type,
-      Quantity? capacity,
-      Quantity? specimenQuantity,
-      CodeableConcept? additiveCodeableConcept,
-      Reference? additiveReference}) = _$_SpecimenContainer;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final CodeableConcept? type,
+      final Quantity? capacity,
+      final Quantity? specimenQuantity,
+      final CodeableConcept? additiveCodeableConcept,
+      final Reference? additiveReference}) = _$_SpecimenContainer;
   _SpecimenContainer._() : super._();
 
   factory _SpecimenContainer.fromJson(Map<String, dynamic> json) =
       _$_SpecimenContainer.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Id for container. There may be multiple; a manufacturer's
+  /// bar code, lab assigned identifier, etc. The container ID may differ from
+  ///  the specimen id in some circumstances.
   List<Identifier>? get identifier;
   @override
+
+  /// [description] Textual description of the container.
   String? get description;
   @override
+
+  /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [type] The type of container associated with the specimen (e.g. slide,
+  ///  aliquot, etc.).
   CodeableConcept? get type;
   @override
+
+  /// [capacity] The capacity (volume or other measure) the container may
+  ///  contain.
   Quantity? get capacity;
   @override
+
+  /// [specimenQuantity] The quantity of specimen in the container; may be
+  /// volume, dimensions, or other appropriate measurements, depending on the
+  ///  specimen type.
   Quantity? get specimenQuantity;
   @override
+
+  /// [additiveCodeableConcept] Introduced substance to preserve, maintain or
+  ///  enhance the specimen. Examples: Formalin, Citrate, EDTA.
   CodeableConcept? get additiveCodeableConcept;
   @override
+
+  /// [additiveReference] Introduced substance to preserve, maintain or enhance
+  ///  the specimen. Examples: Formalin, Citrate, EDTA.
   Reference? get additiveReference;
   @override
   @JsonKey(ignore: true)
-  _$SpecimenContainerCopyWith<_SpecimenContainer> get copyWith =>
+  _$$_SpecimenContainerCopyWith<_$_SpecimenContainer> get copyWith =>
       throw _privateConstructorUsedError;
 }

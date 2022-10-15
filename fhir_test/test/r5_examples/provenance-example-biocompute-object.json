@@ -14,11 +14,9 @@
     "start": "2017-06-06"
   },
   "recorded": "2016-06-09T08:12:14+10:00",
-  "reason": [
-    {
-      "text": "antiviral resistance detection"
-    }
-  ],
+  "activity": {
+    "text": "antiviral resistance detection"
+  },
   "agent": [
     {
       "type": {

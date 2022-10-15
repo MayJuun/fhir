@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'security.enums.dart';
 part 'security.freezed.dart';
@@ -47,10 +44,6 @@ class AuditEvent with Resource, _$AuditEvent {
     required AuditEventSource source,
     List<AuditEventEntity>? entity,
   }) = _AuditEvent;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
@@ -346,10 +339,6 @@ class Consent with Resource, _$Consent {
     List<ConsentData>? data,
     List<ConsentExcept>? except,
   }) = _Consent;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Consent.fromYaml(dynamic yaml) => yaml is String
@@ -656,10 +645,6 @@ class Provenance with Resource, _$Provenance {
     List<ProvenanceEntity>? entity,
     List<Signature>? signature,
   }) = _Provenance;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String

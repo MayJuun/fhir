@@ -26,6 +26,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.ActivityDefinition:
       return (resource as ActivityDefinition)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.AdministrableProductDefinition:
+      return (resource as AdministrableProductDefinition)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.AdverseEvent:
       return (resource as AdverseEvent)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
@@ -74,6 +77,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.ChargeItemDefinition:
       return (resource as ChargeItemDefinition)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.Citation:
+      return (resource as Citation)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Claim:
       return (resource as Claim)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
@@ -82,6 +88,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.ClinicalImpression:
       return (resource as ClinicalImpression)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.ClinicalUseDefinition:
+      return (resource as ClinicalUseDefinition)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.CodeSystem:
       return (resource as CodeSystem)
@@ -146,9 +155,6 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.DocumentReference:
       return (resource as DocumentReference)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.EffectEvidenceSynthesis:
-      return (resource as EffectEvidenceSynthesis)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Encounter:
       return (resource as Encounter)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
@@ -169,6 +175,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Evidence:
       return (resource as Evidence)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.EvidenceReport:
+      return (resource as EvidenceReport)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.EvidenceVariable:
       return (resource as EvidenceVariable)
@@ -215,6 +224,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.ImplementationGuide:
       return (resource as ImplementationGuide)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.Ingredient:
+      return (resource as Ingredient)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.InsurancePlan:
       return (resource as InsurancePlan)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
@@ -232,6 +244,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Location:
       return (resource as Location)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.ManufacturedItemDefinition:
+      return (resource as ManufacturedItemDefinition)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Measure:
       return (resource as Measure)
@@ -260,35 +275,8 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.MedicationStatement:
       return (resource as MedicationStatement)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProduct:
-      return (resource as MedicinalProduct)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductAuthorization:
-      return (resource as MedicinalProductAuthorization)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductContraindication:
-      return (resource as MedicinalProductContraindication)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductIndication:
-      return (resource as MedicinalProductIndication)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductIngredient:
-      return (resource as MedicinalProductIngredient)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductInteraction:
-      return (resource as MedicinalProductInteraction)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductManufactured:
-      return (resource as MedicinalProductManufactured)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductPackaged:
-      return (resource as MedicinalProductPackaged)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductPharmaceutical:
-      return (resource as MedicinalProductPharmaceutical)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.MedicinalProductUndesirableEffect:
-      return (resource as MedicinalProductUndesirableEffect)
+    case R4ResourceType.MedicinalProductDefinition:
+      return (resource as MedicinalProductDefinition)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.MessageDefinition:
       return (resource as MessageDefinition)
@@ -304,6 +292,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.NutritionOrder:
       return (resource as NutritionOrder)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.NutritionProduct:
+      return (resource as NutritionProduct)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Observation:
       return (resource as Observation)
@@ -322,6 +313,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.OrganizationAffiliation:
       return (resource as OrganizationAffiliation)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.PackagedProductDefinition:
+      return (resource as PackagedProductDefinition)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Parameters:
       return (resource as Parameters)
@@ -359,6 +353,9 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.QuestionnaireResponse:
       return (resource as QuestionnaireResponse)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.RegulatedAuthorization:
+      return (resource as RegulatedAuthorization)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.RelatedPerson:
       return (resource as RelatedPerson)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
@@ -379,9 +376,6 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.RiskAssessment:
       return (resource as RiskAssessment)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.RiskEvidenceSynthesis:
-      return (resource as RiskEvidenceSynthesis)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Schedule:
       return (resource as Schedule)
@@ -410,26 +404,17 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.Subscription:
       return (resource as Subscription)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.SubscriptionStatus:
+      return (resource as SubscriptionStatus)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+    case R4ResourceType.SubscriptionTopic:
+      return (resource as SubscriptionTopic)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Substance:
       return (resource as Substance)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.SubstanceNucleicAcid:
-      return (resource as SubstanceNucleicAcid)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.SubstancePolymer:
-      return (resource as SubstancePolymer)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.SubstanceProtein:
-      return (resource as SubstanceProtein)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.SubstanceReferenceInformation:
-      return (resource as SubstanceReferenceInformation)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.SubstanceSourceMaterial:
-      return (resource as SubstanceSourceMaterial)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.SubstanceSpecification:
-      return (resource as SubstanceSpecification)
+    case R4ResourceType.SubstanceDefinition:
+      return (resource as SubstanceDefinition)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.SupplyDelivery:
       return (resource as SupplyDelivery)

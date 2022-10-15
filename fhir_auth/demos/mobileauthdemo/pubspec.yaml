@@ -1,0 +1,27 @@
+name: mobileauthdemo
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  # fhir: ^0.9.0
+  fhir:
+    path: ../../../fhir
+  # fhir_at_rest: ^0.9.0
+  fhir_at_rest:
+    path: ../../../fhir_at_rest
+  fhir_auth:
+    path: ../../../fhir_auth
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/

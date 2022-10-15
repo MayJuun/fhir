@@ -39,14 +39,62 @@ Map<String, dynamic> _$$_ContactDetailToJson(_$_ContactDetail instance) {
   return val;
 }
 
+_$_ExtendedContactDetail _$$_ExtendedContactDetailFromJson(
+        Map<String, dynamic> json) =>
+    _$_ExtendedContactDetail(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      purpose: json['purpose'] == null
+          ? null
+          : CodeableConcept.fromJson(json['purpose'] as Map<String, dynamic>),
+      name: json['name'] == null
+          ? null
+          : HumanName.fromJson(json['name'] as Map<String, dynamic>),
+      telecom: (json['telecom'] as List<dynamic>?)
+          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      address: json['address'] == null
+          ? null
+          : Address.fromJson(json['address'] as Map<String, dynamic>),
+      organization: json['organization'] == null
+          ? null
+          : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_ExtendedContactDetailToJson(
+    _$_ExtendedContactDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('purpose', instance.purpose?.toJson());
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
+  writeNotNull('address', instance.address?.toJson());
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}
+
 _$_Contributor _$$_ContributorFromJson(Map<String, dynamic> json) =>
     _$_Contributor(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
-          unknownValue: ContributorType.unknown),
+      type: $enumDecodeNullable(_$ContributorTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -84,7 +132,6 @@ const _$ContributorTypeEnumMap = {
   ContributorType.editor: 'editor',
   ContributorType.reviewer: 'reviewer',
   ContributorType.endorser: 'endorser',
-  ContributorType.unknown: 'unknown',
 };
 
 _$_DataRequirement _$$_DataRequirementFromJson(Map<String, dynamic> json) =>
@@ -286,8 +333,7 @@ _$_DataRequirementSort _$$_DataRequirementSortFromJson(
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
       direction: $enumDecodeNullable(
-          _$DataRequirementSortDirectionEnumMap, json['direction'],
-          unknownValue: DataRequirementSortDirection.unknown),
+          _$DataRequirementSortDirectionEnumMap, json['direction']),
       directionElement: json['_direction'] == null
           ? null
           : Element.fromJson(json['_direction'] as Map<String, dynamic>),
@@ -319,7 +365,6 @@ Map<String, dynamic> _$$_DataRequirementSortToJson(
 const _$DataRequirementSortDirectionEnumMap = {
   DataRequirementSortDirection.ascending: 'ascending',
   DataRequirementSortDirection.descending: 'descending',
-  DataRequirementSortDirection.unknown: 'unknown',
 };
 
 _$_ParameterDefinition _$$_ParameterDefinitionFromJson(
@@ -392,11 +437,13 @@ _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
-          unknownValue: RelatedArtifactType.unknown),
+      type: $enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
+      classifier: (json['classifier'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
       label: json['label'] as String?,
       labelElement: json['_label'] == null
           ? null
@@ -410,16 +457,16 @@ _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
       citationElement: json['_citation'] == null
           ? null
           : Element.fromJson(json['_citation'] as Map<String, dynamic>),
-      url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
-      urlElement: json['_url'] == null
-          ? null
-          : Element.fromJson(json['_url'] as Map<String, dynamic>),
       document: json['document'] == null
           ? null
           : Attachment.fromJson(json['document'] as Map<String, dynamic>),
       resource: json['resource'] == null
           ? null
           : Canonical.fromJson(json['resource']),
+      resourceReference: json['resourceReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['resourceReference'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
@@ -436,16 +483,17 @@ Map<String, dynamic> _$$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull(
+      'classifier', instance.classifier?.map((e) => e.toJson()).toList());
   writeNotNull('label', instance.label);
   writeNotNull('_label', instance.labelElement?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull('_display', instance.displayElement?.toJson());
   writeNotNull('citation', instance.citation?.toJson());
   writeNotNull('_citation', instance.citationElement?.toJson());
-  writeNotNull('url', instance.url?.toJson());
-  writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('document', instance.document?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('resourceReference', instance.resourceReference?.toJson());
   return val;
 }
 
@@ -458,7 +506,30 @@ const _$RelatedArtifactTypeEnumMap = {
   RelatedArtifactType.derived_from: 'derived-from',
   RelatedArtifactType.depends_on: 'depends-on',
   RelatedArtifactType.composed_of: 'composed-of',
-  RelatedArtifactType.unknown: 'unknown',
+  RelatedArtifactType.part_of: 'part-of',
+  RelatedArtifactType.amends: 'amends',
+  RelatedArtifactType.amended_with: 'amended-with',
+  RelatedArtifactType.appends: 'appends',
+  RelatedArtifactType.appended_with: 'appended-with',
+  RelatedArtifactType.cites: 'cites',
+  RelatedArtifactType.cited_by: 'cited-by',
+  RelatedArtifactType.comments_on: 'comments-on',
+  RelatedArtifactType.comment_in: 'comment-in',
+  RelatedArtifactType.contains: 'contains',
+  RelatedArtifactType.contained_in: 'contained-in',
+  RelatedArtifactType.corrects: 'corrects',
+  RelatedArtifactType.correction_in: 'correction-in',
+  RelatedArtifactType.replaces: 'replaces',
+  RelatedArtifactType.replaced_with: 'replaced-with',
+  RelatedArtifactType.retracts: 'retracts',
+  RelatedArtifactType.retracted_by: 'retracted-by',
+  RelatedArtifactType.signs: 'signs',
+  RelatedArtifactType.similar_to: 'similar-to',
+  RelatedArtifactType.supports: 'supports',
+  RelatedArtifactType.supported_with: 'supported-with',
+  RelatedArtifactType.transforms: 'transforms',
+  RelatedArtifactType.transformed_into: 'transformed-into',
+  RelatedArtifactType.transformed_with: 'transformed-with',
 };
 
 _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
@@ -467,8 +538,7 @@ _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
-          unknownValue: TriggerDefinitionType.unknown),
+      type: $enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -538,7 +608,6 @@ const _$TriggerDefinitionTypeEnumMap = {
   TriggerDefinitionType.data_removed: 'data-removed',
   TriggerDefinitionType.data_accessed: 'data-accessed',
   TriggerDefinitionType.data_access_ended: 'data-access-ended',
-  TriggerDefinitionType.unknown: 'unknown',
 };
 
 _$_UsageContext _$$_UsageContextFromJson(Map<String, dynamic> json) =>

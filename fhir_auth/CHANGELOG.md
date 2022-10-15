@@ -1,5 +1,39 @@
 # fhir_auth
 
+## [0.9.0-2]
+
+* Successfully does external and internal web launches to Epic for patients and for users, although for Epic you do need to ensure that you include the proper launch parameters if you're doing a patient context
+* Updated dependencies
+* Internal launch for patients and users for Epic and Meld (HAPI)
+* External launch for patients and users for Google, Meld (HAPI), and Epic
+* Cannot read id (location) with resources created in Epic (CORS issue), so you may need to include an identifier
+
+## [0.9.0-1]
+
+* Successfully does external and internal web launches to Epic for patients
+* For users, successfully logs in externally, doesn't return all needed headers
+
+## [0.8.1]
+
+* Added demos
+    1. External Web demos - aidbox, google, hapi, meld, epic
+    2. Internal EHR demos (all web) - meld & epic
+    3. External Mobile demos - aidbox, google, hapi, meld
+* Updated to new granular SMART scopes (not in use yet, usually)
+* Added system, in addition to patient & user scopes
+* Had to add new authorizationCodeGrant (extended from Oauth2) to save some of the passed FHIR values
+* Added epic client class for values it may pass at launch
+
+## [0.8.0]
+
+* Updated Dependencies
+* Fhir 0.8.0
+* Flutter 3.0.0
+* All Clients are now extensions of http.Client, so they can be passed to fhir_at_rest, and so all requests have been removed from fhir_auth for easier maintenance
+* Moved All demos to demo folder
+* Same client for each FHIR version, as the only difference for authentication is getting the endpoints
+* For web, you will need to include a version of the redirect.html that is included in the lib directory
+
 ## [0.6.1]
 
 * Updated dependencies

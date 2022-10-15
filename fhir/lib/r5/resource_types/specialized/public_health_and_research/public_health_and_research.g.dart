@@ -8,10 +8,9 @@ part of 'public_health_and_research.dart';
 
 _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
     _$_ResearchStudy(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ResearchStudy) ??
-          R5ResourceType.ResearchStudy,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ResearchStudy,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -74,8 +73,7 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$ResearchStudyStatusEnumMap, json['status'],
-          unknownValue: ResearchStudyStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -179,7 +177,7 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -218,7 +216,7 @@ Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
       instance.relatedArtifact?.map((e) => e.toJson()).toList());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('status', _$ResearchStudyStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('primaryPurposeType', instance.primaryPurposeType?.toJson());
   writeNotNull('phase', instance.phase?.toJson());
@@ -265,10 +263,13 @@ Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -279,20 +280,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -303,6 +304,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -327,11 +329,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -339,6 +343,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -348,12 +353,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -367,6 +366,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -380,6 +380,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -409,27 +410,10 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
   R5ResourceType.TestReport: 'TestReport',
   R5ResourceType.TestScript: 'TestScript',
+  R5ResourceType.Transport: 'Transport',
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
-};
-
-const _$ResearchStudyStatusEnumMap = {
-  ResearchStudyStatus.active: 'active',
-  ResearchStudyStatus.administratively_completed: 'administratively-completed',
-  ResearchStudyStatus.approved: 'approved',
-  ResearchStudyStatus.closed_to_accrual: 'closed-to-accrual',
-  ResearchStudyStatus.closed_to_accrual_and_intervention:
-      'closed-to-accrual-and-intervention',
-  ResearchStudyStatus.completed: 'completed',
-  ResearchStudyStatus.disapproved: 'disapproved',
-  ResearchStudyStatus.in_review: 'in-review',
-  ResearchStudyStatus.temporarily_closed_to_accrual:
-      'temporarily-closed-to-accrual',
-  ResearchStudyStatus.temporarily_closed_to_accrual_and_intervention:
-      'temporarily-closed-to-accrual-and-intervention',
-  ResearchStudyStatus.withdrawn: 'withdrawn',
-  ResearchStudyStatus.unknown: 'unknown',
 };
 
 _$_ResearchStudyLabel _$$_ResearchStudyLabelFromJson(
@@ -572,6 +556,9 @@ _$_ResearchStudyAssociatedParty _$$_ResearchStudyAssociatedPartyFromJson(
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
       role: CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+      period: (json['period'] as List<dynamic>?)
+          ?.map((e) => Period.fromJson(e as Map<String, dynamic>))
+          .toList(),
       classifier: (json['classifier'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -598,6 +585,7 @@ Map<String, dynamic> _$$_ResearchStudyAssociatedPartyToJson(
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   val['role'] = instance.role.toJson();
+  writeNotNull('period', instance.period?.map((e) => e.toJson()).toList());
   writeNotNull(
       'classifier', instance.classifier?.map((e) => e.toJson()).toList());
   writeNotNull('party', instance.party?.toJson());
@@ -879,9 +867,10 @@ _$_ResearchStudyWebLocation _$$_ResearchStudyWebLocationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null
+      classifier: json['classifier'] == null
           ? null
-          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+          : CodeableConcept.fromJson(
+              json['classifier'] as Map<String, dynamic>),
       url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
       urlElement: json['_url'] == null
           ? null
@@ -903,7 +892,7 @@ Map<String, dynamic> _$$_ResearchStudyWebLocationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('classifier', instance.classifier?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
@@ -911,10 +900,9 @@ Map<String, dynamic> _$$_ResearchStudyWebLocationToJson(
 
 _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
     _$_ResearchSubject(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ResearchSubject) ??
-          R5ResourceType.ResearchSubject,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ResearchSubject,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -945,9 +933,7 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(
-          _$ResearchSubjectStatusEnumMap, json['status'],
-          unknownValue: ResearchSubjectStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -975,7 +961,7 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -999,7 +985,7 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$ResearchSubjectStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('progress', instance.progress?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
@@ -1012,13 +998,6 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
   writeNotNull('consent', instance.consent?.toJson());
   return val;
 }
-
-const _$ResearchSubjectStatusEnumMap = {
-  ResearchSubjectStatus.draft: 'draft',
-  ResearchSubjectStatus.active: 'active',
-  ResearchSubjectStatus.retired: 'retired',
-  ResearchSubjectStatus.unknown: 'unknown',
-};
 
 _$_ResearchSubjectProgress _$$_ResearchSubjectProgressFromJson(
         Map<String, dynamic> json) =>

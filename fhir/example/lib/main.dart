@@ -3,7 +3,7 @@ import 'package:fhir/r4.dart';
 
 void main() {
   final patient = Patient(
-    id: Id('12345'),
+    id: '12345',
     active: Boolean(true),
     name: <HumanName>[
       HumanName(
@@ -12,7 +12,7 @@ void main() {
       ),
     ],
     address: <Address>[Address(postalCode: '12345')],
-    gender: PatientGender.male,
+    gender: Code('male'),
     birthDate: Date(DateTime(3071, 04, 25)),
   );
 
@@ -75,7 +75,7 @@ void main() {
 
   final observation = Observation(
     subject: Reference(reference: 'Patient/12345'),
-    status: ObservationStatus.final_,
+    status: Code('final'),
     category: [
       CodeableConcept(
         coding: [

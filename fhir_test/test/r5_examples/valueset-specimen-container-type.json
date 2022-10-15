@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "specimen-container-type",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  434711009 (Specimen container)\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  706041008 (Device for body fluid and tissue collection/transfer/processing)\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -33,8 +33,10 @@
     }
   ],
   "version": "4.6.0",
-  "name": "SpecimenContainer",
+  "name": "SpecimenContainerType",
+  "title": "Specimen Container Type",
   "status": "draft",
+  "experimental": true,
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -46,7 +48,7 @@
       ]
     }
   ],
-  "description": "Containers which may hold specimens or specimen containers. Include codes  SNOMED CT(http://snomed.info/sct) where concept is-a 434711009 (Specimen container (physical object))",
+  "description": "Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 706041008 |Device for body fluid and tissue collection/transfer/processing (physical object)|",
   "copyright": "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org",
   "compose": {
     "include": [
@@ -56,7 +58,7 @@
           {
             "property": "concept",
             "op": "is-a",
-            "value": "434711009"
+            "value": "706041008"
           }
         ]
       }

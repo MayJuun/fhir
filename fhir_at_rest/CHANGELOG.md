@@ -1,5 +1,45 @@
 # fhir_at_rest
 
+## [0.9.1]
+
+* Updated dependencies
+* Added better comments
+* Added both OperationOutcome.status and OperationOutcome.severity
+
+## [0.9.0]
+
+* Improved exception throwing
+* Better checking on return values
+
+## [0.8.4]
+
+* Epic passes responds to successful queries with an empty body, but puts a location (which is a reference) to the resource involved
+* Now passes back an Informational OperationOutcome for successful requests, along with details of the request made, and the location (reference) to the resource involved
+* Still trying to improve error messages
+* Fixed the content-type for patches
+
+## [0.8.3]
+
+* Freezed constructors don't really need to be private. And occasionally you may want to have the ability to cast them.
+
+## [0.8.2]
+
+* Trying to return more useful error messages when something fails.
+
+## [0.8.1]
+
+* It's annoying that headers were required for requests, especially if they weren't used
+* Now headers are optional
+
+## [0.8.0]
+
+* Updated to be in line with base FHIR package and with Flutter 3.0.0
+
+## [0.7.0]
+
+* updated dependencies (including Freezed 2.0)
+* Updated to fhir 0.7.0
+
 ## [0.6.3]
 
 * updated dependencies

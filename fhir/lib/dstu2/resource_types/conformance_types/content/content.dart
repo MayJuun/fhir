@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'content.enums.dart';
 part 'content.freezed.dart';
@@ -74,10 +71,6 @@ class StructureDefinition with Resource, _$StructureDefinition {
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
   }) = _StructureDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -313,10 +306,6 @@ class DataElement with Resource, _$DataElement {
     List<DataElementMapping>? mapping,
     required List<ElementDefinition> element,
   }) = _DataElement;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DataElement.fromYaml(dynamic yaml) => yaml is String

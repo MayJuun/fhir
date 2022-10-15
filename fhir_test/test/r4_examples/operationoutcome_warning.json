@@ -1,1 +1,0 @@
-{"resourceType":"OperationOutcome","id":"warning","text":{"status":"generated","div":"<div xmlns=\"http://www.w3.org/1999/xhtml\">There is no matching patient for MRN 123456</div>"},"issue":[{"severity":"warning","code":"not-found","details":{"text":"There is no matching patient for MRN 123456"}}]}

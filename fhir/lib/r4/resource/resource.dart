@@ -4,14 +4,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r4.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'resource.g.dart';
 part 'resource_from_json.dart';
@@ -27,7 +24,7 @@ part 'resource_types_enum.dart';
 /// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
 class Resource {
-  Id? id;
+  String? id;
   R4ResourceType? resourceType;
   Meta? meta;
   FhirUri? implicitRules;
@@ -67,7 +64,7 @@ class Resource {
               ' it is neither a yaml string nor a yaml map.');
 
   static Resource copyWith({
-    Id? id,
+    String? id,
     R4ResourceType? resourceType,
     Meta? meta,
     FhirUri? implicitRules,
@@ -98,7 +95,7 @@ class Resource {
       }
     }
 
-    writeNotNull('id', id?.toJson());
+    writeNotNull('id', id);
     writeNotNull('resourceType', resourceType);
     writeNotNull('meta', meta?.toJson());
     writeNotNull('implicitRules', implicitRules?.toJson());

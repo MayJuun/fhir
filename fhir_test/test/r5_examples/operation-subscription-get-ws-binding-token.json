@@ -3,7 +3,7 @@
   "id": "Subscription-get-ws-binding-token",
   "text": {
     "status": "extensions",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eget-ws-binding-token\u003c/h2\u003e\u003cp\u003eOPERATION: get-ws-binding-token\u003c/p\u003e\u003cp\u003eThe official URL for this operation definition is: \u003c/p\u003e\u003cpre\u003ehttp://hl7.org/fhir/OperationDefinition/Subscription-get-ws-binding-token\u003c/pre\u003e\u003cdiv\u003e\u003cp\u003eThis operation is used to get a token for a websocket client to use in order to bind to one or more subscriptions.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eURL: [base]/Subscription/$get-ws-binding-token\u003c/p\u003e\u003cp\u003eURL: [base]/Subscription/[id]/$get-ws-binding-token\u003c/p\u003e\u003cp\u003eParameters\u003c/p\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eName\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCardinality\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eBinding\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDocumentation\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eids\u003c/td\u003e\u003ctd\u003e0..*\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#id\"\u003eid\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eAt the Resource level, one or more parameters containing one or more comma-delimited FHIR ids of Subscriptions to get tokens for.  In the absense of any specified ids, the server returns tokens for all Subscriptions available to the caller with a channel-type of websocket.  At the Instance level, this parameter is ignored.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003ereturn\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"parameters.html\"\u003eParameters\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe returned Parameters MUST include a valueString named \u0026quot;token\u0026quot; and a valueDateTime named \u0026quot;expiration\u0026quot;.  The returned Parameters MAY include a valueString named \u0026quot;subscriptions\u0026quot; with a comma-delimited list of subscriptions covered by this token.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cdiv/\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eget-ws-binding-token\u003c/h2\u003e\u003cp\u003eOPERATION: get-ws-binding-token\u003c/p\u003e\u003cp\u003eThe official URL for this operation definition is: \u003c/p\u003e\u003cpre\u003ehttp://hl7.org/fhir/OperationDefinition/Subscription-get-ws-binding-token\u003c/pre\u003e\u003cdiv\u003e\u003cp\u003eThis operation is used to get a token for a websocket client to use in order to bind to one or more subscriptions.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eURL: [base]/Subscription/$get-ws-binding-token\u003c/p\u003e\u003cp\u003eURL: [base]/Subscription/[id]/$get-ws-binding-token\u003c/p\u003e\u003cp\u003eParameters\u003c/p\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eName\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCardinality\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eBinding\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDocumentation\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eid\u003c/td\u003e\u003ctd\u003e0..*\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#id\"\u003eid\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eAt the Instance level, this parameter is ignored. At the Resource level, one or more parameters containing a FHIR id for a Subscription to get a token for. In the absense of any specified ids, the server may either return a token for all Subscriptions available to the caller with a channel-type of websocket or fail the request.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003etoken\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#string\"\u003estring\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eAn access token that a client may use to show authorization during a websocket connection.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003eexpiration\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#dateTime\"\u003edateTime\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe date and time this token is valid until.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003esubscription\u003c/td\u003e\u003ctd\u003e0..*\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#string\"\u003estring\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe subscriptions this token is valid for.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003ewebsocket-url\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#url\"\u003eurl\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe URL the client should use to connect to Websockets.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cdiv/\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -21,7 +21,7 @@
   "title": "Get a binding token for use in a websocket connection",
   "status": "draft",
   "kind": "operation",
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -48,20 +48,44 @@
   "instance": true,
   "parameter": [
     {
-      "name": "ids",
+      "name": "id",
       "use": "in",
       "min": 0,
       "max": "*",
-      "documentation": "At the Resource level, one or more parameters containing one or more comma-delimited FHIR ids of Subscriptions to get tokens for.  In the absense of any specified ids, the server returns tokens for all Subscriptions available to the caller with a channel-type of websocket.  At the Instance level, this parameter is ignored.",
+      "documentation": "At the Instance level, this parameter is ignored. At the Resource level, one or more parameters containing a FHIR id for a Subscription to get a token for. In the absense of any specified ids, the server may either return a token for all Subscriptions available to the caller with a channel-type of websocket or fail the request.",
       "type": "id"
     },
     {
-      "name": "return",
+      "name": "token",
       "use": "out",
       "min": 1,
       "max": "1",
-      "documentation": "The returned Parameters MUST include a valueString named \"token\" and a valueDateTime named \"expiration\".  The returned Parameters MAY include a valueString named \"subscriptions\" with a comma-delimited list of subscriptions covered by this token.",
-      "type": "Parameters"
+      "documentation": "An access token that a client may use to show authorization during a websocket connection.",
+      "type": "string"
+    },
+    {
+      "name": "expiration",
+      "use": "out",
+      "min": 1,
+      "max": "1",
+      "documentation": "The date and time this token is valid until.",
+      "type": "dateTime"
+    },
+    {
+      "name": "subscription",
+      "use": "out",
+      "min": 0,
+      "max": "*",
+      "documentation": "The subscriptions this token is valid for.",
+      "type": "string"
+    },
+    {
+      "name": "websocket-url",
+      "use": "out",
+      "min": 1,
+      "max": "1",
+      "documentation": "The URL the client should use to connect to Websockets.",
+      "type": "url"
     }
   ]
 }

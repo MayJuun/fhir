@@ -6,6 +6,9 @@ import 'dart:convert';
 // Package imports:
 import 'package:yaml/yaml.dart';
 
+// Project imports:
+import 'primitive_type_exceptions.dart';
+
 class Code {
   const Code._(this._valueString, this._valueCode, this._isValid);
 
@@ -26,7 +29,7 @@ class Code {
       ? Code.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Code.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Code>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;

@@ -16,6 +16,7 @@ enum GroupType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AvailableTimeDaysOfWeek {
   @JsonValue('mon')
   mon,

@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'operations_control.enums.dart';
 part 'operations_control.freezed.dart';
@@ -58,10 +55,6 @@ class Conformance with Resource, _$Conformance {
     List<ConformanceMessaging>? messaging,
     List<ConformanceDocument>? document,
   }) = _Conformance;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Conformance.fromYaml(dynamic yaml) => yaml is String
@@ -134,10 +127,6 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     List<ConformanceMessaging>? messaging,
     List<ConformanceDocument>? document,
   }) = _CapabilityStatement;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
@@ -893,10 +882,6 @@ class OperationDefinition with Resource, _$OperationDefinition {
     List<OperationDefinitionParameter>? parameter,
   }) = _OperationDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinition.fromJson(
@@ -1089,10 +1074,6 @@ class SearchParameter with Resource, _$SearchParameter {
         SearchParameterXpathUsage? xpathUsage,
     List<Code>? target,
   }) = _SearchParameter;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String

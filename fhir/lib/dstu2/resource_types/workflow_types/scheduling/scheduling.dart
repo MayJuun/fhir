@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'scheduling.enums.dart';
 part 'scheduling.freezed.dart';
@@ -53,10 +50,6 @@ class Appointment with Resource, _$Appointment {
     @JsonKey(name: '_comment') Element? commentElement,
     required List<AppointmentParticipant> participant,
   }) = _Appointment;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
@@ -166,10 +159,6 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _AppointmentResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentResponse.fromJson(
@@ -222,10 +211,6 @@ class Schedule with Resource, _$Schedule {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _Schedule;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
@@ -286,10 +271,6 @@ class Slot with Resource, _$Slot {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _Slot;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Slot.fromYaml(dynamic yaml) => yaml is String

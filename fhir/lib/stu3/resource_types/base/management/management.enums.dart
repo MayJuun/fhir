@@ -115,7 +115,7 @@ enum LibraryStatus {
   unknown,
 }
 
-enum List_Status {
+enum ListStatus {
   @JsonValue('current')
   current,
   @JsonValue('retired')
@@ -126,7 +126,7 @@ enum List_Status {
   unknown,
 }
 
-enum List_Mode {
+enum ListMode {
   @JsonValue('working')
   working,
   @JsonValue('snapshot')

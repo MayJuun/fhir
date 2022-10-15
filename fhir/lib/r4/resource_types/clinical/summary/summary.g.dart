@@ -12,7 +12,7 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AdverseEvent) ??
           R4ResourceType.AdverseEvent,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -42,9 +42,8 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      actuality: $enumDecodeNullable(
-          _$AdverseEventActualityEnumMap, json['actuality'],
-          unknownValue: AdverseEventActuality.unknown),
+      actuality:
+          json['actuality'] == null ? null : Code.fromJson(json['actuality']),
       actualityElement: json['_actuality'] == null
           ? null
           : Element.fromJson(json['_actuality'] as Map<String, dynamic>),
@@ -113,7 +112,7 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AdverseEventToJson(_$_AdverseEvent instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -122,7 +121,7 @@ Map<String, dynamic> _$$_AdverseEventToJson(_$_AdverseEvent instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -136,7 +135,7 @@ Map<String, dynamic> _$$_AdverseEventToJson(_$_AdverseEvent instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('actuality', _$AdverseEventActualityEnumMap[instance.actuality]);
+  writeNotNull('actuality', instance.actuality?.toJson());
   writeNotNull('_actuality', instance.actualityElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('event', instance.event?.toJson());
@@ -170,6 +169,8 @@ Map<String, dynamic> _$$_AdverseEventToJson(_$_AdverseEvent instance) {
 const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Account: 'Account',
   R4ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R4ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R4ResourceType.AdverseEvent: 'AdverseEvent',
   R4ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R4ResourceType.Appointment: 'Appointment',
@@ -186,9 +187,11 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.CatalogEntry: 'CatalogEntry',
   R4ResourceType.ChargeItem: 'ChargeItem',
   R4ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R4ResourceType.Citation: 'Citation',
   R4ResourceType.Claim: 'Claim',
   R4ResourceType.ClaimResponse: 'ClaimResponse',
   R4ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R4ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R4ResourceType.CodeSystem: 'CodeSystem',
   R4ResourceType.Communication: 'Communication',
   R4ResourceType.CommunicationRequest: 'CommunicationRequest',
@@ -210,7 +213,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.DiagnosticReport: 'DiagnosticReport',
   R4ResourceType.DocumentManifest: 'DocumentManifest',
   R4ResourceType.DocumentReference: 'DocumentReference',
-  R4ResourceType.EffectEvidenceSynthesis: 'EffectEvidenceSynthesis',
   R4ResourceType.Encounter: 'Encounter',
   R4ResourceType.Endpoint: 'Endpoint',
   R4ResourceType.EnrollmentRequest: 'EnrollmentRequest',
@@ -218,6 +220,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.EpisodeOfCare: 'EpisodeOfCare',
   R4ResourceType.EventDefinition: 'EventDefinition',
   R4ResourceType.Evidence: 'Evidence',
+  R4ResourceType.EvidenceReport: 'EvidenceReport',
   R4ResourceType.EvidenceVariable: 'EvidenceVariable',
   R4ResourceType.ExampleScenario: 'ExampleScenario',
   R4ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
@@ -233,12 +236,14 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R4ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R4ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R4ResourceType.Ingredient: 'Ingredient',
   R4ResourceType.InsurancePlan: 'InsurancePlan',
   R4ResourceType.Invoice: 'Invoice',
   R4ResourceType.Library: 'Library',
   R4ResourceType.Linkage: 'Linkage',
   R4ResourceType.List_: 'List',
   R4ResourceType.Location: 'Location',
+  R4ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R4ResourceType.Measure: 'Measure',
   R4ResourceType.MeasureReport: 'MeasureReport',
   R4ResourceType.Media: 'Media',
@@ -248,30 +253,20 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.MedicationKnowledge: 'MedicationKnowledge',
   R4ResourceType.MedicationRequest: 'MedicationRequest',
   R4ResourceType.MedicationStatement: 'MedicationStatement',
-  R4ResourceType.MedicinalProduct: 'MedicinalProduct',
-  R4ResourceType.MedicinalProductAuthorization: 'MedicinalProductAuthorization',
-  R4ResourceType.MedicinalProductContraindication:
-      'MedicinalProductContraindication',
-  R4ResourceType.MedicinalProductIndication: 'MedicinalProductIndication',
-  R4ResourceType.MedicinalProductIngredient: 'MedicinalProductIngredient',
-  R4ResourceType.MedicinalProductInteraction: 'MedicinalProductInteraction',
-  R4ResourceType.MedicinalProductManufactured: 'MedicinalProductManufactured',
-  R4ResourceType.MedicinalProductPackaged: 'MedicinalProductPackaged',
-  R4ResourceType.MedicinalProductPharmaceutical:
-      'MedicinalProductPharmaceutical',
-  R4ResourceType.MedicinalProductUndesirableEffect:
-      'MedicinalProductUndesirableEffect',
+  R4ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
   R4ResourceType.MessageDefinition: 'MessageDefinition',
   R4ResourceType.MessageHeader: 'MessageHeader',
   R4ResourceType.MolecularSequence: 'MolecularSequence',
   R4ResourceType.NamingSystem: 'NamingSystem',
   R4ResourceType.NutritionOrder: 'NutritionOrder',
+  R4ResourceType.NutritionProduct: 'NutritionProduct',
   R4ResourceType.Observation: 'Observation',
   R4ResourceType.ObservationDefinition: 'ObservationDefinition',
   R4ResourceType.OperationDefinition: 'OperationDefinition',
   R4ResourceType.OperationOutcome: 'OperationOutcome',
   R4ResourceType.Organization: 'Organization',
   R4ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R4ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R4ResourceType.Parameters: 'Parameters',
   R4ResourceType.Patient: 'Patient',
   R4ResourceType.PaymentNotice: 'PaymentNotice',
@@ -284,6 +279,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Provenance: 'Provenance',
   R4ResourceType.Questionnaire: 'Questionnaire',
   R4ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R4ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R4ResourceType.RelatedPerson: 'RelatedPerson',
   R4ResourceType.RequestGroup: 'RequestGroup',
   R4ResourceType.ResearchDefinition: 'ResearchDefinition',
@@ -291,7 +287,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ResearchStudy: 'ResearchStudy',
   R4ResourceType.ResearchSubject: 'ResearchSubject',
   R4ResourceType.RiskAssessment: 'RiskAssessment',
-  R4ResourceType.RiskEvidenceSynthesis: 'RiskEvidenceSynthesis',
   R4ResourceType.Schedule: 'Schedule',
   R4ResourceType.SearchParameter: 'SearchParameter',
   R4ResourceType.ServiceRequest: 'ServiceRequest',
@@ -301,13 +296,10 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.StructureDefinition: 'StructureDefinition',
   R4ResourceType.StructureMap: 'StructureMap',
   R4ResourceType.Subscription: 'Subscription',
+  R4ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R4ResourceType.SubscriptionTopic: 'SubscriptionTopic',
   R4ResourceType.Substance: 'Substance',
-  R4ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
-  R4ResourceType.SubstancePolymer: 'SubstancePolymer',
-  R4ResourceType.SubstanceProtein: 'SubstanceProtein',
-  R4ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
-  R4ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
-  R4ResourceType.SubstanceSpecification: 'SubstanceSpecification',
+  R4ResourceType.SubstanceDefinition: 'SubstanceDefinition',
   R4ResourceType.SupplyDelivery: 'SupplyDelivery',
   R4ResourceType.SupplyRequest: 'SupplyRequest',
   R4ResourceType.Task: 'Task',
@@ -317,12 +309,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ValueSet: 'ValueSet',
   R4ResourceType.VerificationResult: 'VerificationResult',
   R4ResourceType.VisionPrescription: 'VisionPrescription',
-};
-
-const _$AdverseEventActualityEnumMap = {
-  AdverseEventActuality.actual: 'actual',
-  AdverseEventActuality.potential: 'potential',
-  AdverseEventActuality.unknown: 'unknown',
 };
 
 _$_AdverseEventSuspectEntity _$$_AdverseEventSuspectEntityFromJson(
@@ -421,7 +407,7 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AllergyIntolerance) ??
           R4ResourceType.AllergyIntolerance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -459,21 +445,20 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
           ? null
           : CodeableConcept.fromJson(
               json['verificationStatus'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(_$AllergyIntoleranceTypeEnumMap, json['type'],
-          unknownValue: AllergyIntoleranceType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       category: (json['category'] as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$AllergyIntoleranceCategoryEnumMap, e))
+          ?.map((e) => Code.fromJson(e))
           .toList(),
       categoryElement: (json['_category'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      criticality: $enumDecodeNullable(
-          _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
-          unknownValue: AllergyIntoleranceCriticality.unknown),
+      criticality: json['criticality'] == null
+          ? null
+          : Code.fromJson(json['criticality']),
       criticalityElement: json['_criticality'] == null
           ? null
           : Element.fromJson(json['_criticality'] as Map<String, dynamic>),
@@ -533,7 +518,7 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
 Map<String, dynamic> _$$_AllergyIntoleranceToJson(
     _$_AllergyIntolerance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -542,7 +527,7 @@ Map<String, dynamic> _$$_AllergyIntoleranceToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -559,17 +544,12 @@ Map<String, dynamic> _$$_AllergyIntoleranceToJson(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
   writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
-  writeNotNull('type', _$AllergyIntoleranceTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull(
-      'category',
-      instance.category
-          ?.map((e) => _$AllergyIntoleranceCategoryEnumMap[e])
-          .toList());
+  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull(
       '_category', instance.categoryElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('criticality',
-      _$AllergyIntoleranceCriticalityEnumMap[instance.criticality]);
+  writeNotNull('criticality', instance.criticality?.toJson());
   writeNotNull('_criticality', instance.criticalityElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   val['patient'] = instance.patient.toJson();
@@ -591,27 +571,6 @@ Map<String, dynamic> _$$_AllergyIntoleranceToJson(
   writeNotNull('reaction', instance.reaction?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$AllergyIntoleranceTypeEnumMap = {
-  AllergyIntoleranceType.allergy: 'allergy',
-  AllergyIntoleranceType.intolerance: 'intolerance',
-  AllergyIntoleranceType.unknown: 'unknown',
-};
-
-const _$AllergyIntoleranceCategoryEnumMap = {
-  AllergyIntoleranceCategory.food: 'food',
-  AllergyIntoleranceCategory.medication: 'medication',
-  AllergyIntoleranceCategory.environment: 'environment',
-  AllergyIntoleranceCategory.biologic: 'biologic',
-  AllergyIntoleranceCategory.unknown: 'unknown',
-};
-
-const _$AllergyIntoleranceCriticalityEnumMap = {
-  AllergyIntoleranceCriticality.low: 'low',
-  AllergyIntoleranceCriticality.high: 'high',
-  AllergyIntoleranceCriticality.unable_to_assess: 'unable-to-assess',
-  AllergyIntoleranceCriticality.unknown: 'unknown',
-};
 
 _$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
         Map<String, dynamic> json) =>
@@ -638,9 +597,8 @@ _$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
       onsetElement: json['_onset'] == null
           ? null
           : Element.fromJson(json['_onset'] as Map<String, dynamic>),
-      severity: $enumDecodeNullable(
-          _$AllergyIntoleranceReactionSeverityEnumMap, json['severity'],
-          unknownValue: AllergyIntoleranceReactionSeverity.unknown),
+      severity:
+          json['severity'] == null ? null : Code.fromJson(json['severity']),
       severityElement: json['_severity'] == null
           ? null
           : Element.fromJson(json['_severity'] as Map<String, dynamic>),
@@ -674,20 +632,12 @@ Map<String, dynamic> _$$_AllergyIntoleranceReactionToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('onset', instance.onset?.toJson());
   writeNotNull('_onset', instance.onsetElement?.toJson());
-  writeNotNull('severity',
-      _$AllergyIntoleranceReactionSeverityEnumMap[instance.severity]);
+  writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('exposureRoute', instance.exposureRoute?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$AllergyIntoleranceReactionSeverityEnumMap = {
-  AllergyIntoleranceReactionSeverity.mild: 'mild',
-  AllergyIntoleranceReactionSeverity.moderate: 'moderate',
-  AllergyIntoleranceReactionSeverity.severe: 'severe',
-  AllergyIntoleranceReactionSeverity.unknown: 'unknown',
-};
 
 _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
         Map<String, dynamic> json) =>
@@ -696,7 +646,7 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ClinicalImpression) ??
           R4ResourceType.ClinicalImpression,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -805,7 +755,7 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
 Map<String, dynamic> _$$_ClinicalImpressionToJson(
     _$_ClinicalImpression instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -814,7 +764,7 @@ Map<String, dynamic> _$$_ClinicalImpressionToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -950,7 +900,7 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Condition) ??
           R4ResourceType.Condition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1068,7 +1018,7 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
 
 Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1077,7 +1027,7 @@ Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1209,7 +1159,7 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DetectedIssue) ??
           R4ResourceType.DetectedIssue,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1246,9 +1196,8 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      severity: $enumDecodeNullable(
-          _$DetectedIssueSeverityEnumMap, json['severity'],
-          unknownValue: DetectedIssueSeverity.unknown),
+      severity:
+          json['severity'] == null ? null : Code.fromJson(json['severity']),
       severityElement: json['_severity'] == null
           ? null
           : Element.fromJson(json['_severity'] as Map<String, dynamic>),
@@ -1293,7 +1242,7 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1302,7 +1251,7 @@ Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1320,7 +1269,7 @@ Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('severity', _$DetectedIssueSeverityEnumMap[instance.severity]);
+  writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('identifiedDateTime', instance.identifiedDateTime?.toJson());
@@ -1339,13 +1288,6 @@ Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
       'mitigation', instance.mitigation?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$DetectedIssueSeverityEnumMap = {
-  DetectedIssueSeverity.high: 'high',
-  DetectedIssueSeverity.moderate: 'moderate',
-  DetectedIssueSeverity.low: 'low',
-  DetectedIssueSeverity.unknown: 'unknown',
-};
 
 _$_DetectedIssueEvidence _$$_DetectedIssueEvidenceFromJson(
         Map<String, dynamic> json) =>
@@ -1434,7 +1376,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.FamilyMemberHistory) ??
           R4ResourceType.FamilyMemberHistory,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1474,9 +1416,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(
-          _$FamilyMemberHistoryStatusEnumMap, json['status'],
-          unknownValue: FamilyMemberHistoryStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1566,7 +1506,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
 Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
     _$_FamilyMemberHistory instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1575,7 +1515,7 @@ Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1596,7 +1536,7 @@ Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
       instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('status', _$FamilyMemberHistoryStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
   val['patient'] = instance.patient.toJson();
@@ -1634,14 +1574,6 @@ Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
       'condition', instance.condition?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$FamilyMemberHistoryStatusEnumMap = {
-  FamilyMemberHistoryStatus.partial: 'partial',
-  FamilyMemberHistoryStatus.completed: 'completed',
-  FamilyMemberHistoryStatus.entered_in_error: 'entered-in-error',
-  FamilyMemberHistoryStatus.health_unknown: 'health-unknown',
-  FamilyMemberHistoryStatus.unknown: 'unknown',
-};
 
 _$_FamilyMemberHistoryCondition _$$_FamilyMemberHistoryConditionFromJson(
         Map<String, dynamic> json) =>
@@ -1716,7 +1648,7 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Procedure) ??
           R4ResourceType.Procedure,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1852,7 +1784,7 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
 
 Map<String, dynamic> _$$_ProcedureToJson(_$_Procedure instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1861,7 +1793,7 @@ Map<String, dynamic> _$$_ProcedureToJson(_$_Procedure instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());

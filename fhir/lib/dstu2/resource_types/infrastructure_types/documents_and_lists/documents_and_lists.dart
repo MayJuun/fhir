@@ -4,14 +4,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'documents_and_lists.enums.dart';
 part 'documents_and_lists.freezed.dart';
@@ -54,10 +51,6 @@ class Composition with Resource, _$Composition {
     Reference? encounter,
     List<CompositionSection>? section,
   }) = _Composition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Composition.fromYaml(dynamic yaml) => yaml is String
@@ -262,10 +255,6 @@ class DocumentManifest with Resource, _$DocumentManifest {
     List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
       ? DocumentManifest.fromJson(
@@ -417,10 +406,6 @@ class DocumentReference with Resource, _$DocumentReference {
     required List<DocumentReferenceContent> content,
     DocumentReferenceContext? context,
   }) = _DocumentReference;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
@@ -661,10 +646,6 @@ class List_ with Resource, _$List_ {
     List<ListEntry>? entry,
     CodeableConcept? emptyReason,
   }) = _List_;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory List_.fromYaml(dynamic yaml) => yaml is String

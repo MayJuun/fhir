@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'exchange.enums.dart';
 part 'exchange.freezed.dart';
@@ -44,10 +41,6 @@ class MessageHeader with Resource, _$MessageHeader {
     CodeableConcept? reason,
     List<Reference>? data,
   }) = _MessageHeader;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
@@ -237,10 +230,6 @@ class OperationOutcome with Resource, _$OperationOutcome {
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(
@@ -330,10 +319,6 @@ class Parameters with Resource, _$Parameters {
     @JsonKey(name: '_language') Element? languageElement,
     List<ParametersParameter>? parameter,
   }) = _Parameters;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
@@ -472,10 +457,6 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(name: '_end') Element? endElement,
     List<Coding>? tag,
   }) = _Subscription;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Subscription.fromYaml(dynamic yaml) => yaml is String

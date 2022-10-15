@@ -12,6 +12,7 @@ enum ConditionClinicalStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ConditionVerificationStatus {
   @JsonValue('provisional')
   provisional,
@@ -26,6 +27,7 @@ enum ConditionVerificationStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DetectedIssueSeverity {
   @JsonValue('high')
   high,
@@ -36,6 +38,7 @@ enum DetectedIssueSeverity {
   @JsonValue('unknown')
   unknown,
 }
+
 enum FamilyMemberHistoryStatus {
   @JsonValue('partial')
   partial,
@@ -48,6 +51,7 @@ enum FamilyMemberHistoryStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum FamilyMemberHistoryGender {
   @JsonValue('male')
   male,
@@ -58,6 +62,7 @@ enum FamilyMemberHistoryGender {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ProcedureStatus {
   @JsonValue('in-progress')
   in_progress,
@@ -70,6 +75,7 @@ enum ProcedureStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ClinicalImpressionStatus {
   @JsonValue('in-progress')
   in_progress,
@@ -80,6 +86,7 @@ enum ClinicalImpressionStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AllergyIntoleranceStatus {
   @JsonValue('active')
   active,
@@ -98,6 +105,7 @@ enum AllergyIntoleranceStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AllergyIntoleranceCriticality {
   @JsonValue('CRITL')
   critl,
@@ -108,6 +116,7 @@ enum AllergyIntoleranceCriticality {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AllergyIntoleranceType {
   @JsonValue('allergy')
   allergy,
@@ -116,6 +125,7 @@ enum AllergyIntoleranceType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AllergyIntoleranceCategory {
   @JsonValue('food')
   food,
@@ -128,6 +138,7 @@ enum AllergyIntoleranceCategory {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ReactionCertainty {
   @JsonValue('unlikely')
   unlikely,
@@ -138,6 +149,7 @@ enum ReactionCertainty {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ReactionSeverity {
   @JsonValue('mild')
   mild,

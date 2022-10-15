@@ -7,10 +7,9 @@ part of 'quality_reporting_and_testing.dart';
 // **************************************************************************
 
 _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Measure) ??
-          R5ResourceType.Measure,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Measure,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -57,8 +56,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$MeasureStatusEnumMap, json['status'],
-          unknownValue: MeasureStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -227,7 +225,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
 
 Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -259,7 +257,7 @@ Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$MeasureStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -332,10 +330,13 @@ Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -346,20 +347,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -370,6 +371,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -394,11 +396,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -406,6 +410,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -415,12 +420,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -434,6 +433,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -447,6 +447,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -476,16 +477,10 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
   R5ResourceType.TestReport: 'TestReport',
   R5ResourceType.TestScript: 'TestScript',
+  R5ResourceType.Transport: 'Transport',
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
-};
-
-const _$MeasureStatusEnumMap = {
-  MeasureStatus.draft: 'draft',
-  MeasureStatus.active: 'active',
-  MeasureStatus.retired: 'retired',
-  MeasureStatus.unknown: 'unknown',
 };
 
 _$_MeasureGroup _$$_MeasureGroupFromJson(Map<String, dynamic> json) =>
@@ -750,10 +745,9 @@ Map<String, dynamic> _$$_MeasureSupplementalDataToJson(
 
 _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
     _$_MeasureReport(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.MeasureReport) ??
-          R5ResourceType.MeasureReport,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.MeasureReport,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -784,13 +778,11 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$MeasureReportStatusEnumMap, json['status'],
-          unknownValue: MeasureReportStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(_$MeasureReportTypeEnumMap, json['type'],
-          unknownValue: MeasureReportType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -832,7 +824,7 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MeasureReportToJson(_$_MeasureReport instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -856,9 +848,9 @@ Map<String, dynamic> _$$_MeasureReportToJson(_$_MeasureReport instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$MeasureReportStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('type', _$MeasureReportTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('dataUpdateType', instance.dataUpdateType?.toJson());
   writeNotNull('_dataUpdateType', instance.dataUpdateTypeElement?.toJson());
@@ -876,21 +868,6 @@ Map<String, dynamic> _$$_MeasureReportToJson(_$_MeasureReport instance) {
       instance.evaluatedResource?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$MeasureReportStatusEnumMap = {
-  MeasureReportStatus.complete: 'complete',
-  MeasureReportStatus.pending: 'pending',
-  MeasureReportStatus.error: 'error',
-  MeasureReportStatus.unknown: 'unknown',
-};
-
-const _$MeasureReportTypeEnumMap = {
-  MeasureReportType.individual: 'individual',
-  MeasureReportType.subject_list: 'subject-list',
-  MeasureReportType.summary: 'summary',
-  MeasureReportType.data_collection: 'data-collection',
-  MeasureReportType.unknown: 'unknown',
-};
 
 _$_MeasureReportGroup _$$_MeasureReportGroupFromJson(
         Map<String, dynamic> json) =>
@@ -1258,10 +1235,9 @@ Map<String, dynamic> _$$_MeasureReportPopulation1ToJson(
 
 _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
     _$_TestReport(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.TestReport) ??
-          R5ResourceType.TestReport,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.TestReport,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1296,15 +1272,12 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$TestReportStatusEnumMap, json['status'],
-          unknownValue: TestReportStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      testScript:
-          Reference.fromJson(json['testScript'] as Map<String, dynamic>),
-      result: $enumDecodeNullable(_$TestReportResultEnumMap, json['result'],
-          unknownValue: TestReportResult.unknown),
+      testScript: Canonical.fromJson(json['testScript']),
+      result: json['result'] == null ? null : Code.fromJson(json['result']),
       resultElement: json['_result'] == null
           ? null
           : Element.fromJson(json['_result'] as Map<String, dynamic>),
@@ -1339,7 +1312,7 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TestReportToJson(_$_TestReport instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1364,10 +1337,10 @@ Map<String, dynamic> _$$_TestReportToJson(_$_TestReport instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('status', _$TestReportStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   val['testScript'] = instance.testScript.toJson();
-  writeNotNull('result', _$TestReportResultEnumMap[instance.result]);
+  writeNotNull('result', instance.result?.toJson());
   writeNotNull('_result', instance.resultElement?.toJson());
   writeNotNull('score', instance.score?.toJson());
   writeNotNull('_score', instance.scoreElement?.toJson());
@@ -1383,22 +1356,6 @@ Map<String, dynamic> _$$_TestReportToJson(_$_TestReport instance) {
   return val;
 }
 
-const _$TestReportStatusEnumMap = {
-  TestReportStatus.completed: 'completed',
-  TestReportStatus.in_progress: 'in-progress',
-  TestReportStatus.waiting: 'waiting',
-  TestReportStatus.stopped: 'stopped',
-  TestReportStatus.entered_in_error: 'entered-in-error',
-  TestReportStatus.unknown: 'unknown',
-};
-
-const _$TestReportResultEnumMap = {
-  TestReportResult.pass: 'pass',
-  TestReportResult.fail: 'fail',
-  TestReportResult.pending: 'pending',
-  TestReportResult.unknown: 'unknown',
-};
-
 _$_TestReportParticipant _$$_TestReportParticipantFromJson(
         Map<String, dynamic> json) =>
     _$_TestReportParticipant(
@@ -1409,9 +1366,7 @@ _$_TestReportParticipant _$$_TestReportParticipantFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(
-          _$TestReportParticipantTypeEnumMap, json['type'],
-          unknownValue: TestReportParticipantType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1440,7 +1395,7 @@ Map<String, dynamic> _$$_TestReportParticipantToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', _$TestReportParticipantTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('_uri', instance.uriElement?.toJson());
@@ -1448,13 +1403,6 @@ Map<String, dynamic> _$$_TestReportParticipantToJson(
   writeNotNull('_display', instance.displayElement?.toJson());
   return val;
 }
-
-const _$TestReportParticipantTypeEnumMap = {
-  TestReportParticipantType.test_engine: 'test-engine',
-  TestReportParticipantType.client: 'client',
-  TestReportParticipantType.server: 'server',
-  TestReportParticipantType.unknown: 'unknown',
-};
 
 _$_TestReportSetup _$$_TestReportSetupFromJson(Map<String, dynamic> json) =>
     _$_TestReportSetup(
@@ -1535,9 +1483,7 @@ _$_TestReportOperation _$$_TestReportOperationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      result: $enumDecodeNullable(
-          _$TestReportOperationResultEnumMap, json['result'],
-          unknownValue: TestReportOperationResult.unknown),
+      result: json['result'] == null ? null : Code.fromJson(json['result']),
       resultElement: json['_result'] == null
           ? null
           : Element.fromJson(json['_result'] as Map<String, dynamic>),
@@ -1567,7 +1513,7 @@ Map<String, dynamic> _$$_TestReportOperationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('result', _$TestReportOperationResultEnumMap[instance.result]);
+  writeNotNull('result', instance.result?.toJson());
   writeNotNull('_result', instance.resultElement?.toJson());
   writeNotNull('message', instance.message?.toJson());
   writeNotNull('_message', instance.messageElement?.toJson());
@@ -1575,15 +1521,6 @@ Map<String, dynamic> _$$_TestReportOperationToJson(
   writeNotNull('_detail', instance.detailElement?.toJson());
   return val;
 }
-
-const _$TestReportOperationResultEnumMap = {
-  TestReportOperationResult.pass: 'pass',
-  TestReportOperationResult.skip: 'skip',
-  TestReportOperationResult.fail: 'fail',
-  TestReportOperationResult.warning: 'warning',
-  TestReportOperationResult.error: 'error',
-  TestReportOperationResult.unknown: 'unknown',
-};
 
 _$_TestReportAssert _$$_TestReportAssertFromJson(Map<String, dynamic> json) =>
     _$_TestReportAssert(
@@ -1594,9 +1531,7 @@ _$_TestReportAssert _$$_TestReportAssertFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      result: $enumDecodeNullable(
-          _$TestReportAssertResultEnumMap, json['result'],
-          unknownValue: TestReportAssertResult.unknown),
+      result: json['result'] == null ? null : Code.fromJson(json['result']),
       resultElement: json['_result'] == null
           ? null
           : Element.fromJson(json['_result'] as Map<String, dynamic>),
@@ -1625,7 +1560,7 @@ Map<String, dynamic> _$$_TestReportAssertToJson(_$_TestReportAssert instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('result', _$TestReportAssertResultEnumMap[instance.result]);
+  writeNotNull('result', instance.result?.toJson());
   writeNotNull('_result', instance.resultElement?.toJson());
   writeNotNull('message', instance.message?.toJson());
   writeNotNull('_message', instance.messageElement?.toJson());
@@ -1633,15 +1568,6 @@ Map<String, dynamic> _$$_TestReportAssertToJson(_$_TestReportAssert instance) {
   writeNotNull('_detail', instance.detailElement?.toJson());
   return val;
 }
-
-const _$TestReportAssertResultEnumMap = {
-  TestReportAssertResult.pass: 'pass',
-  TestReportAssertResult.skip: 'skip',
-  TestReportAssertResult.fail: 'fail',
-  TestReportAssertResult.warning: 'warning',
-  TestReportAssertResult.error: 'error',
-  TestReportAssertResult.unknown: 'unknown',
-};
 
 _$_TestReportTest _$$_TestReportTestFromJson(Map<String, dynamic> json) =>
     _$_TestReportTest(
@@ -1793,10 +1719,9 @@ Map<String, dynamic> _$$_TestReportAction2ToJson(
 
 _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
     _$_TestScript(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.TestScript) ??
-          R5ResourceType.TestScript,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.TestScript,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1828,9 +1753,9 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
       urlElement: json['_url'] == null
           ? null
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
-      identifier: json['identifier'] == null
-          ? null
-          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
       version: json['version'] as String?,
       versionElement: json['_version'] == null
           ? null
@@ -1843,8 +1768,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$TestScriptStatusEnumMap, json['status'],
-          unknownValue: TestScriptStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1925,7 +1849,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1949,14 +1873,15 @@ Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version);
   writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$TestScriptStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -1988,13 +1913,6 @@ Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
   writeNotNull('teardown', instance.teardown?.toJson());
   return val;
 }
-
-const _$TestScriptStatusEnumMap = {
-  TestScriptStatus.draft: 'draft',
-  TestScriptStatus.active: 'active',
-  TestScriptStatus.retired: 'retired',
-  TestScriptStatus.unknown: 'unknown',
-};
 
 _$_TestScriptOrigin _$$_TestScriptOriginFromJson(Map<String, dynamic> json) =>
     _$_TestScriptOrigin(
@@ -2475,7 +2393,7 @@ _$_TestScriptOperation _$$_TestScriptOperationFromJson(
           ? null
           : Coding.fromJson(json['type'] as Map<String, dynamic>),
       resource:
-          json['resource'] == null ? null : Code.fromJson(json['resource']),
+          json['resource'] == null ? null : FhirUri.fromJson(json['resource']),
       resourceElement: json['_resource'] == null
           ? null
           : Element.fromJson(json['_resource'] as Map<String, dynamic>),
@@ -2509,9 +2427,7 @@ _$_TestScriptOperation _$$_TestScriptOperationFromJson(
       encodeRequestUrlElement: json['_encodeRequestUrl'] == null
           ? null
           : Element.fromJson(json['_encodeRequestUrl'] as Map<String, dynamic>),
-      method: $enumDecodeNullable(
-          _$TestScriptOperationMethodEnumMap, json['method'],
-          unknownValue: TestScriptOperationMethod.unknown),
+      method: json['method'] == null ? null : Code.fromJson(json['method']),
       methodElement: json['_method'] == null
           ? null
           : Element.fromJson(json['_method'] as Map<String, dynamic>),
@@ -2581,7 +2497,7 @@ Map<String, dynamic> _$$_TestScriptOperationToJson(
   writeNotNull('_destination', instance.destinationElement?.toJson());
   writeNotNull('encodeRequestUrl', instance.encodeRequestUrl?.toJson());
   writeNotNull('_encodeRequestUrl', instance.encodeRequestUrlElement?.toJson());
-  writeNotNull('method', _$TestScriptOperationMethodEnumMap[instance.method]);
+  writeNotNull('method', instance.method?.toJson());
   writeNotNull('_method', instance.methodElement?.toJson());
   writeNotNull('origin', instance.origin?.toJson());
   writeNotNull('_origin', instance.originElement?.toJson());
@@ -2601,17 +2517,6 @@ Map<String, dynamic> _$$_TestScriptOperationToJson(
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
 }
-
-const _$TestScriptOperationMethodEnumMap = {
-  TestScriptOperationMethod.delete: 'delete',
-  TestScriptOperationMethod.get_: 'get',
-  TestScriptOperationMethod.options: 'options',
-  TestScriptOperationMethod.patch: 'patch',
-  TestScriptOperationMethod.post: 'post',
-  TestScriptOperationMethod.put: 'put',
-  TestScriptOperationMethod.head: 'head',
-  TestScriptOperationMethod.unknown: 'unknown',
-};
 
 _$_TestScriptRequestHeader _$$_TestScriptRequestHeaderFromJson(
         Map<String, dynamic> json) =>
@@ -2672,9 +2577,8 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      direction: $enumDecodeNullable(
-          _$TestScriptAssertDirectionEnumMap, json['direction'],
-          unknownValue: TestScriptAssertDirection.unknown),
+      direction:
+          json['direction'] == null ? null : Code.fromJson(json['direction']),
       directionElement: json['_direction'] == null
           ? null
           : Element.fromJson(json['_direction'] as Map<String, dynamic>),
@@ -2718,9 +2622,8 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       navigationLinksElement: json['_navigationLinks'] == null
           ? null
           : Element.fromJson(json['_navigationLinks'] as Map<String, dynamic>),
-      operator_: $enumDecodeNullable(
-          _$TestScriptAssertOperatorEnumMap, json['operator'],
-          unknownValue: TestScriptAssertOperator.unknown),
+      operator_:
+          json['operator'] == null ? null : Code.fromJson(json['operator']),
       operatorElement: json['_operator'] == null
           ? null
           : Element.fromJson(json['_operator'] as Map<String, dynamic>),
@@ -2728,9 +2631,9 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       pathElement: json['_path'] == null
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      requestMethod: $enumDecodeNullable(
-          _$TestScriptAssertRequestMethodEnumMap, json['requestMethod'],
-          unknownValue: TestScriptAssertRequestMethod.unknown),
+      requestMethod: json['requestMethod'] == null
+          ? null
+          : Code.fromJson(json['requestMethod']),
       requestMethodElement: json['_requestMethod'] == null
           ? null
           : Element.fromJson(json['_requestMethod'] as Map<String, dynamic>),
@@ -2743,9 +2646,8 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       resourceElement: json['_resource'] == null
           ? null
           : Element.fromJson(json['_resource'] as Map<String, dynamic>),
-      response: $enumDecodeNullable(
-          _$TestScriptAssertResponseEnumMap, json['response'],
-          unknownValue: TestScriptAssertResponse.unknown),
+      response:
+          json['response'] == null ? null : Code.fromJson(json['response']),
       responseElement: json['_response'] == null
           ? null
           : Element.fromJson(json['_response'] as Map<String, dynamic>),
@@ -2800,8 +2702,7 @@ Map<String, dynamic> _$$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
   writeNotNull('_label', instance.labelElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull(
-      'direction', _$TestScriptAssertDirectionEnumMap[instance.direction]);
+  writeNotNull('direction', instance.direction?.toJson());
   writeNotNull('_direction', instance.directionElement?.toJson());
   writeNotNull('compareToSourceId', instance.compareToSourceId);
   writeNotNull(
@@ -2822,20 +2723,17 @@ Map<String, dynamic> _$$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
   writeNotNull('_minimumId', instance.minimumIdElement?.toJson());
   writeNotNull('navigationLinks', instance.navigationLinks?.toJson());
   writeNotNull('_navigationLinks', instance.navigationLinksElement?.toJson());
-  writeNotNull(
-      'operator', _$TestScriptAssertOperatorEnumMap[instance.operator_]);
+  writeNotNull('operator', instance.operator_?.toJson());
   writeNotNull('_operator', instance.operatorElement?.toJson());
   writeNotNull('path', instance.path);
   writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('requestMethod',
-      _$TestScriptAssertRequestMethodEnumMap[instance.requestMethod]);
+  writeNotNull('requestMethod', instance.requestMethod?.toJson());
   writeNotNull('_requestMethod', instance.requestMethodElement?.toJson());
   writeNotNull('requestURL', instance.requestURL);
   writeNotNull('_requestURL', instance.requestURLElement?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
   writeNotNull('_resource', instance.resourceElement?.toJson());
-  writeNotNull(
-      'response', _$TestScriptAssertResponseEnumMap[instance.response]);
+  writeNotNull('response', instance.response?.toJson());
   writeNotNull('_response', instance.responseElement?.toJson());
   writeNotNull('responseCode', instance.responseCode);
   writeNotNull('_responseCode', instance.responseCodeElement?.toJson());
@@ -2852,54 +2750,6 @@ Map<String, dynamic> _$$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
   writeNotNull('_warningOnly', instance.warningOnlyElement?.toJson());
   return val;
 }
-
-const _$TestScriptAssertDirectionEnumMap = {
-  TestScriptAssertDirection.response: 'response',
-  TestScriptAssertDirection.request: 'request',
-  TestScriptAssertDirection.unknown: 'unknown',
-};
-
-const _$TestScriptAssertOperatorEnumMap = {
-  TestScriptAssertOperator.equals: 'equals',
-  TestScriptAssertOperator.notequals: 'notEquals',
-  TestScriptAssertOperator.in_: 'in',
-  TestScriptAssertOperator.notin: 'notIn',
-  TestScriptAssertOperator.greaterthan: 'greaterThan',
-  TestScriptAssertOperator.lessthan: 'lessThan',
-  TestScriptAssertOperator.empty: 'empty',
-  TestScriptAssertOperator.notempty: 'notEmpty',
-  TestScriptAssertOperator.contains: 'contains',
-  TestScriptAssertOperator.notcontains: 'notContains',
-  TestScriptAssertOperator.eval: 'eval',
-  TestScriptAssertOperator.unknown: 'unknown',
-};
-
-const _$TestScriptAssertRequestMethodEnumMap = {
-  TestScriptAssertRequestMethod.delete: 'delete',
-  TestScriptAssertRequestMethod.get_: 'get',
-  TestScriptAssertRequestMethod.options: 'options',
-  TestScriptAssertRequestMethod.patch: 'patch',
-  TestScriptAssertRequestMethod.post: 'post',
-  TestScriptAssertRequestMethod.put: 'put',
-  TestScriptAssertRequestMethod.head: 'head',
-  TestScriptAssertRequestMethod.unknown: 'unknown',
-};
-
-const _$TestScriptAssertResponseEnumMap = {
-  TestScriptAssertResponse.okay: 'okay',
-  TestScriptAssertResponse.created: 'created',
-  TestScriptAssertResponse.nocontent: 'noContent',
-  TestScriptAssertResponse.notmodified: 'notModified',
-  TestScriptAssertResponse.bad: 'bad',
-  TestScriptAssertResponse.forbidden: 'forbidden',
-  TestScriptAssertResponse.notfound: 'notFound',
-  TestScriptAssertResponse.methodnotallowed: 'methodNotAllowed',
-  TestScriptAssertResponse.conflict: 'conflict',
-  TestScriptAssertResponse.gone: 'gone',
-  TestScriptAssertResponse.preconditionfailed: 'preconditionFailed',
-  TestScriptAssertResponse.unprocessable: 'unprocessable',
-  TestScriptAssertResponse.unknown: 'unknown',
-};
 
 _$_TestScriptTest _$$_TestScriptTestFromJson(Map<String, dynamic> json) =>
     _$_TestScriptTest(

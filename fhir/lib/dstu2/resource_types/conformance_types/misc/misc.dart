@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'misc.enums.dart';
 part 'misc.freezed.dart';
@@ -61,10 +58,6 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     List<FhirUri>? binary,
     required ImplementationGuidePage page,
   }) = _ImplementationGuide;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
@@ -401,10 +394,6 @@ class TestScript with Resource, _$TestScript {
     List<TestScriptTest>? test,
     TestScriptTeardown? teardown,
   }) = _TestScript;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScript.fromYaml(dynamic yaml) => yaml is String

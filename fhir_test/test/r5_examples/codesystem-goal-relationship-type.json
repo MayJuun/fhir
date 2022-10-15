@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "goal-relationship-type",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp/\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003epredecessor\u003ca name\u003d\"goal-relationship-type-predecessor\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePredecessor\u003c/td\u003e\u003ctd\u003eIndicates that the target goal is one which must be met before striving for the current goal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003esuccessor\u003ca name\u003d\"goal-relationship-type-successor\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSuccessor\u003c/td\u003e\u003ctd\u003eIndicates that the target goal is a desired objective once the current goal is met.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ereplacement\u003ca name\u003d\"goal-relationship-type-replacement\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReplacement\u003c/td\u003e\u003ctd\u003eIndicates that this goal has been replaced by the target goal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003emilestone\u003ca name\u003d\"goal-relationship-type-milestone\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMilestone\u003c/td\u003e\u003ctd\u003eIndicates that the target goal is considered to be a \u0026quot;piece\u0026quot; of attaining this goal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eother\u003ca name\u003d\"goal-relationship-type-other\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOther\u003c/td\u003e\u003ctd\u003eIndicates that the relationship is not covered by one of the pre-defined codes.  (An extension may convey more information about the meaning of the relationship.).\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system http://hl7.org/fhir/goal-relationship-type defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003epredecessor\u003ca name\u003d\"goal-relationship-type-predecessor\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePredecessor\u003c/td\u003e\u003ctd\u003eIndicates that the target goal is one which must be met before striving for the current goal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003esuccessor\u003ca name\u003d\"goal-relationship-type-successor\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSuccessor\u003c/td\u003e\u003ctd\u003eIndicates that the target goal is a desired objective once the current goal is met.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ereplacement\u003ca name\u003d\"goal-relationship-type-replacement\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReplacement\u003c/td\u003e\u003ctd\u003eIndicates that this goal has been replaced by the target goal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003emilestone\u003ca name\u003d\"goal-relationship-type-milestone\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMilestone\u003c/td\u003e\u003ctd\u003eIndicates that the target goal is considered to be a \u0026quot;piece\u0026quot; of attaining this goal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eother\u003ca name\u003d\"goal-relationship-type-other\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOther\u003c/td\u003e\u003ctd\u003eIndicates that the relationship is not covered by one of the pre-defined codes.  (An extension may convey more information about the meaning of the relationship.).\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -27,6 +27,7 @@
   "version": "4.6.0",
   "name": "GoalRelationshipType",
   "caseSensitive": true,
+  "content": "complete",
   "concept": [
     {
       "code": "predecessor",

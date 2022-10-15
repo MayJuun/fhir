@@ -16,7 +16,7 @@
   "name": "Definition",
   "title": "definition",
   "status": "draft",
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "Health Level Seven International fhir",
   "contact": [
     {
@@ -262,6 +262,7 @@
             "code": "canonical",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+              "http://hl7.org/fhir/StructureDefinition/ArtifactAssessment",
               "http://hl7.org/fhir/StructureDefinition/EventDefinition",
               "http://hl7.org/fhir/StructureDefinition/EvidenceVariable",
               "http://hl7.org/fhir/StructureDefinition/Measure",
@@ -359,6 +360,7 @@
             "code": "canonical",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+              "http://hl7.org/fhir/StructureDefinition/ArtifactAssessment",
               "http://hl7.org/fhir/StructureDefinition/EventDefinition",
               "http://hl7.org/fhir/StructureDefinition/EvidenceVariable",
               "http://hl7.org/fhir/StructureDefinition/Measure",
@@ -411,6 +413,7 @@
             "code": "canonical",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+              "http://hl7.org/fhir/StructureDefinition/ArtifactAssessment",
               "http://hl7.org/fhir/StructureDefinition/EventDefinition",
               "http://hl7.org/fhir/StructureDefinition/EvidenceVariable",
               "http://hl7.org/fhir/StructureDefinition/Measure",
@@ -474,7 +477,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "The lifecycle status of an artifact."
             },
             {
@@ -585,7 +588,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Codes identifying the type of subject intended to be the recpient or focus of the defined action.  These should ideally be consistent across definition resources."
             },
             {
@@ -842,7 +845,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Countries and regions within which this artifact is targeted for use."
             },
             {
@@ -1089,7 +1092,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Identifies types of practitioners, devices or other agents that are intended to perform a defined action.  While the detailed constraints of relevant agents will vary by resource, some degree of consistency around recommended codes across request and definition resources would be desirable."
             },
             {

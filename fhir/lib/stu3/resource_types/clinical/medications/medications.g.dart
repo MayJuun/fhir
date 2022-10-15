@@ -118,7 +118,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ImmunizationToJson(_$_Immunization instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -488,7 +488,7 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
 Map<String, dynamic> _$$_ImmunizationRecommendationToJson(
     _$_ImmunizationRecommendation instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -727,7 +727,7 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MedicationToJson(_$_Medication instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1014,7 +1014,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
 Map<String, dynamic> _$$_MedicationAdministrationToJson(
     _$_MedicationAdministration instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1288,7 +1288,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
 Map<String, dynamic> _$$_MedicationDispenseToJson(
     _$_MedicationDispense instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1552,7 +1552,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_MedicationRequestToJson(
     _$_MedicationRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1855,7 +1855,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
 Map<String, dynamic> _$$_MedicationStatementToJson(
     _$_MedicationStatement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

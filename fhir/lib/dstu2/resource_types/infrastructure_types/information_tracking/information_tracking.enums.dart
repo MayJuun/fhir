@@ -10,6 +10,7 @@ enum QuestionnaireStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum QuestionnaireResponseStatus {
   @JsonValue('in-progress')
   in_progress,
@@ -20,6 +21,7 @@ enum QuestionnaireResponseStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EntityRole {
   @JsonValue('derivation')
   derivation,
@@ -32,6 +34,7 @@ enum EntityRole {
   @JsonValue('unknown')
   unknown,
 }
+
 enum QuestionType {
   @JsonValue('boolean')
   boolean,

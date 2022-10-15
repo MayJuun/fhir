@@ -12,120 +12,11 @@ part of 'misc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
   return _ImplementationGuide.fromJson(json);
 }
-
-/// @nodoc
-class _$ImplementationGuideTearOff {
-  const _$ImplementationGuideTearOff();
-
-  _ImplementationGuide call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-          Dstu2ResourceType
-              resourceType = Dstu2ResourceType.ImplementationGuide,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      required String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-          required ImplementationGuideStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ImplementationGuideContact>? contact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      Id? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          List<Element?>? fhirVersionElement,
-      List<ImplementationGuideDependency>? dependency,
-      required List<ImplementationGuidePackage> package,
-      List<ImplementationGuideGlobal>? global,
-      List<FhirUri>? binary,
-      required ImplementationGuidePage page}) {
-    return _ImplementationGuide(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      version: version,
-      versionElement: versionElement,
-      name: name,
-      nameElement: nameElement,
-      status: status,
-      statusElement: statusElement,
-      experimental: experimental,
-      experimentalElement: experimentalElement,
-      publisher: publisher,
-      publisherElement: publisherElement,
-      contact: contact,
-      date: date,
-      dateElement: dateElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      useContext: useContext,
-      copyright: copyright,
-      copyrightElement: copyrightElement,
-      fhirVersion: fhirVersion,
-      fhirVersionElement: fhirVersionElement,
-      dependency: dependency,
-      package: package,
-      global: global,
-      binary: binary,
-      page: page,
-    );
-  }
-
-  ImplementationGuide fromJson(Map<String, Object?> json) {
-    return ImplementationGuide.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImplementationGuide = _$ImplementationGuideTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuide {
@@ -628,11 +519,11 @@ class _$ImplementationGuideCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImplementationGuideCopyWith<$Res>
+abstract class _$$_ImplementationGuideCopyWith<$Res>
     implements $ImplementationGuideCopyWith<$Res> {
-  factory _$ImplementationGuideCopyWith(_ImplementationGuide value,
-          $Res Function(_ImplementationGuide) then) =
-      __$ImplementationGuideCopyWithImpl<$Res>;
+  factory _$$_ImplementationGuideCopyWith(_$_ImplementationGuide value,
+          $Res Function(_$_ImplementationGuide) then) =
+      __$$_ImplementationGuideCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
@@ -720,15 +611,15 @@ abstract class _$ImplementationGuideCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImplementationGuideCopyWithImpl<$Res>
+class __$$_ImplementationGuideCopyWithImpl<$Res>
     extends _$ImplementationGuideCopyWithImpl<$Res>
-    implements _$ImplementationGuideCopyWith<$Res> {
-  __$ImplementationGuideCopyWithImpl(
-      _ImplementationGuide _value, $Res Function(_ImplementationGuide) _then)
-      : super(_value, (v) => _then(v as _ImplementationGuide));
+    implements _$$_ImplementationGuideCopyWith<$Res> {
+  __$$_ImplementationGuideCopyWithImpl(_$_ImplementationGuide _value,
+      $Res Function(_$_ImplementationGuide) _then)
+      : super(_value, (v) => _then(v as _$_ImplementationGuide));
 
   @override
-  _ImplementationGuide get _value => super._value as _ImplementationGuide;
+  _$_ImplementationGuide get _value => super._value as _$_ImplementationGuide;
 
   @override
   $Res call({
@@ -771,7 +662,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
     Object? binary = freezed,
     Object? page = freezed,
   }) {
-    return _then(_ImplementationGuide(
+    return _then(_$_ImplementationGuide(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -805,15 +696,15 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: url == freezed
@@ -865,7 +756,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ImplementationGuideContact>?,
       date: date == freezed
@@ -885,7 +776,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       useContext: useContext == freezed
-          ? _value.useContext
+          ? _value._useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       copyright: copyright == freezed
@@ -901,23 +792,23 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : fhirVersion // ignore: cast_nullable_to_non_nullable
               as Id?,
       fhirVersionElement: fhirVersionElement == freezed
-          ? _value.fhirVersionElement
+          ? _value._fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       dependency: dependency == freezed
-          ? _value.dependency
+          ? _value._dependency
           : dependency // ignore: cast_nullable_to_non_nullable
               as List<ImplementationGuideDependency>?,
       package: package == freezed
-          ? _value.package
+          ? _value._package
           : package // ignore: cast_nullable_to_non_nullable
               as List<ImplementationGuidePackage>,
       global: global == freezed
-          ? _value.global
+          ? _value._global
           : global // ignore: cast_nullable_to_non_nullable
               as List<ImplementationGuideGlobal>?,
       binary: binary == freezed
-          ? _value.binary
+          ? _value._binary
           : binary // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       page: page == freezed
@@ -943,10 +834,10 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.url,
       @JsonKey(name: '_url')
           this.urlElement,
@@ -966,26 +857,36 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      this.contact,
+      final List<ImplementationGuideContact>? contact,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.useContext,
+      final List<CodeableConcept>? useContext,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
       this.fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
-      this.dependency,
-      required this.package,
-      this.global,
-      this.binary,
+          final List<Element?>? fhirVersionElement,
+      final List<ImplementationGuideDependency>? dependency,
+      required final List<ImplementationGuidePackage> package,
+      final List<ImplementationGuideGlobal>? global,
+      final List<FhirUri>? binary,
       required this.page})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _useContext = useContext,
+        _fhirVersionElement = fhirVersionElement,
+        _dependency = dependency,
+        _package = package,
+        _global = global,
+        _binary = binary,
+        super._();
 
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$$_ImplementationGuideFromJson(json);
@@ -1009,13 +910,34 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri url;
   @override
@@ -1047,8 +969,15 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+  final List<ImplementationGuideContact>? _contact;
   @override
-  final List<ImplementationGuideContact>? contact;
+  List<ImplementationGuideContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
@@ -1059,8 +988,15 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<CodeableConcept>? _useContext;
   @override
-  final List<CodeableConcept>? useContext;
+  List<CodeableConcept>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? copyright;
   @override
@@ -1068,17 +1004,50 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   final Element? copyrightElement;
   @override
   final Id? fhirVersion;
+  final List<Element?>? _fhirVersionElement;
   @override
   @JsonKey(name: '_fhirVersion')
-  final List<Element?>? fhirVersionElement;
+  List<Element?>? get fhirVersionElement {
+    final value = _fhirVersionElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ImplementationGuideDependency>? _dependency;
   @override
-  final List<ImplementationGuideDependency>? dependency;
+  List<ImplementationGuideDependency>? get dependency {
+    final value = _dependency;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ImplementationGuidePackage> _package;
   @override
-  final List<ImplementationGuidePackage> package;
+  List<ImplementationGuidePackage> get package {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_package);
+  }
+
+  final List<ImplementationGuideGlobal>? _global;
   @override
-  final List<ImplementationGuideGlobal>? global;
+  List<ImplementationGuideGlobal>? get global {
+    final value = _global;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirUri>? _binary;
   @override
-  final List<FhirUri>? binary;
+  List<FhirUri>? get binary {
+    final value = _binary;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final ImplementationGuidePage page;
 
@@ -1091,7 +1060,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImplementationGuide &&
+            other is _$_ImplementationGuide &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1104,11 +1073,12 @@ class _$_ImplementationGuide extends _ImplementationGuide {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
@@ -1128,7 +1098,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
             const DeepCollectionEquality().equals(other.publisher, publisher) &&
             const DeepCollectionEquality()
                 .equals(other.publisherElement, publisherElement) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
@@ -1137,22 +1107,23 @@ class _$_ImplementationGuide extends _ImplementationGuide {
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.useContext, useContext) &&
+                .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality().equals(other.copyright, copyright) &&
             const DeepCollectionEquality()
                 .equals(other.copyrightElement, copyrightElement) &&
             const DeepCollectionEquality()
                 .equals(other.fhirVersion, fhirVersion) &&
             const DeepCollectionEquality()
-                .equals(other.fhirVersionElement, fhirVersionElement) &&
+                .equals(other._fhirVersionElement, _fhirVersionElement) &&
             const DeepCollectionEquality()
-                .equals(other.dependency, dependency) &&
-            const DeepCollectionEquality().equals(other.package, package) &&
-            const DeepCollectionEquality().equals(other.global, global) &&
-            const DeepCollectionEquality().equals(other.binary, binary) &&
+                .equals(other._dependency, _dependency) &&
+            const DeepCollectionEquality().equals(other._package, _package) &&
+            const DeepCollectionEquality().equals(other._global, _global) &&
+            const DeepCollectionEquality().equals(other._binary, _binary) &&
             const DeepCollectionEquality().equals(other.page, page));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1164,9 +1135,9 @@ class _$_ImplementationGuide extends _ImplementationGuide {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(url),
         const DeepCollectionEquality().hash(urlElement),
         const DeepCollectionEquality().hash(version),
@@ -1179,90 +1150,92 @@ class _$_ImplementationGuide extends _ImplementationGuide {
         const DeepCollectionEquality().hash(experimentalElement),
         const DeepCollectionEquality().hash(publisher),
         const DeepCollectionEquality().hash(publisherElement),
-        const DeepCollectionEquality().hash(contact),
+        const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(_useContext),
         const DeepCollectionEquality().hash(copyright),
         const DeepCollectionEquality().hash(copyrightElement),
         const DeepCollectionEquality().hash(fhirVersion),
-        const DeepCollectionEquality().hash(fhirVersionElement),
-        const DeepCollectionEquality().hash(dependency),
-        const DeepCollectionEquality().hash(package),
-        const DeepCollectionEquality().hash(global),
-        const DeepCollectionEquality().hash(binary),
+        const DeepCollectionEquality().hash(_fhirVersionElement),
+        const DeepCollectionEquality().hash(_dependency),
+        const DeepCollectionEquality().hash(_package),
+        const DeepCollectionEquality().hash(_global),
+        const DeepCollectionEquality().hash(_binary),
         const DeepCollectionEquality().hash(page)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith =>
-      __$ImplementationGuideCopyWithImpl<_ImplementationGuide>(
+  _$$_ImplementationGuideCopyWith<_$_ImplementationGuide> get copyWith =>
+      __$$_ImplementationGuideCopyWithImpl<_$_ImplementationGuide>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideToJson(this);
+    return _$$_ImplementationGuideToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImplementationGuide extends ImplementationGuide {
   factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final FhirUri url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
+          final Element? urlElement,
+      final String? version,
       @JsonKey(name: '_version')
-          Element? versionElement,
-      required String name,
+          final Element? versionElement,
+      required final String name,
       @JsonKey(name: '_name')
-          Element? nameElement,
+          final Element? nameElement,
       @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-          required ImplementationGuideStatus status,
+          required final ImplementationGuideStatus status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
+          final Element? statusElement,
+      final Boolean? experimental,
       @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
+          final Element? experimentalElement,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ImplementationGuideContact>? contact,
-      FhirDateTime? date,
+          final Element? publisherElement,
+      final List<ImplementationGuideContact>? contact,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      String? description,
+          final Element? dateElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? copyright,
+          final Element? descriptionElement,
+      final List<CodeableConcept>? useContext,
+      final String? copyright,
       @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      Id? fhirVersion,
+          final Element? copyrightElement,
+      final Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element?>? fhirVersionElement,
-      List<ImplementationGuideDependency>? dependency,
-      required List<ImplementationGuidePackage> package,
-      List<ImplementationGuideGlobal>? global,
-      List<FhirUri>? binary,
-      required ImplementationGuidePage page}) = _$_ImplementationGuide;
+          final List<Element?>? fhirVersionElement,
+      final List<ImplementationGuideDependency>? dependency,
+      required final List<ImplementationGuidePackage> package,
+      final List<ImplementationGuideGlobal>? global,
+      final List<FhirUri>? binary,
+      required final ImplementationGuidePage page}) = _$_ImplementationGuide;
   _ImplementationGuide._() : super._();
 
   factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
@@ -1361,7 +1334,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   ImplementationGuidePage get page;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith =>
+  _$$_ImplementationGuideCopyWith<_$_ImplementationGuide> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1369,33 +1342,6 @@ ImplementationGuideContact _$ImplementationGuideContactFromJson(
     Map<String, dynamic> json) {
   return _ImplementationGuideContact.fromJson(json);
 }
-
-/// @nodoc
-class _$ImplementationGuideContactTearOff {
-  const _$ImplementationGuideContactTearOff();
-
-  _ImplementationGuideContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _ImplementationGuideContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  ImplementationGuideContact fromJson(Map<String, Object?> json) {
-    return ImplementationGuideContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImplementationGuideContact = _$ImplementationGuideContactTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideContact {
@@ -1469,12 +1415,12 @@ class _$ImplementationGuideContactCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImplementationGuideContactCopyWith<$Res>
+abstract class _$$_ImplementationGuideContactCopyWith<$Res>
     implements $ImplementationGuideContactCopyWith<$Res> {
-  factory _$ImplementationGuideContactCopyWith(
-          _ImplementationGuideContact value,
-          $Res Function(_ImplementationGuideContact) then) =
-      __$ImplementationGuideContactCopyWithImpl<$Res>;
+  factory _$$_ImplementationGuideContactCopyWith(
+          _$_ImplementationGuideContact value,
+          $Res Function(_$_ImplementationGuideContact) then) =
+      __$$_ImplementationGuideContactCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -1485,16 +1431,17 @@ abstract class _$ImplementationGuideContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImplementationGuideContactCopyWithImpl<$Res>
+class __$$_ImplementationGuideContactCopyWithImpl<$Res>
     extends _$ImplementationGuideContactCopyWithImpl<$Res>
-    implements _$ImplementationGuideContactCopyWith<$Res> {
-  __$ImplementationGuideContactCopyWithImpl(_ImplementationGuideContact _value,
-      $Res Function(_ImplementationGuideContact) _then)
-      : super(_value, (v) => _then(v as _ImplementationGuideContact));
+    implements _$$_ImplementationGuideContactCopyWith<$Res> {
+  __$$_ImplementationGuideContactCopyWithImpl(
+      _$_ImplementationGuideContact _value,
+      $Res Function(_$_ImplementationGuideContact) _then)
+      : super(_value, (v) => _then(v as _$_ImplementationGuideContact));
 
   @override
-  _ImplementationGuideContact get _value =>
-      super._value as _ImplementationGuideContact;
+  _$_ImplementationGuideContact get _value =>
+      super._value as _$_ImplementationGuideContact;
 
   @override
   $Res call({
@@ -1504,17 +1451,17 @@ class __$ImplementationGuideContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_ImplementationGuideContact(
+    return _then(_$_ImplementationGuideContact(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -1522,7 +1469,7 @@ class __$ImplementationGuideContactCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       telecom: telecom == freezed
-          ? _value.telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -1534,26 +1481,49 @@ class __$ImplementationGuideContactCopyWithImpl<$Res>
 class _$_ImplementationGuideContact extends _ImplementationGuideContact {
   _$_ImplementationGuideContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _telecom = telecom,
+        super._();
 
   factory _$_ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
       _$$_ImplementationGuideContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1564,44 +1534,47 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImplementationGuideContact &&
+            other is _$_ImplementationGuideContact &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.telecom, telecom));
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(telecom));
+      const DeepCollectionEquality().hash(_telecom));
 
   @JsonKey(ignore: true)
   @override
-  _$ImplementationGuideContactCopyWith<_ImplementationGuideContact>
-      get copyWith => __$ImplementationGuideContactCopyWithImpl<
-          _ImplementationGuideContact>(this, _$identity);
+  _$$_ImplementationGuideContactCopyWith<_$_ImplementationGuideContact>
+      get copyWith => __$$_ImplementationGuideContactCopyWithImpl<
+          _$_ImplementationGuideContact>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideContactToJson(this);
+    return _$$_ImplementationGuideContactToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImplementationGuideContact extends ImplementationGuideContact {
   factory _ImplementationGuideContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_ImplementationGuideContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_ImplementationGuideContact;
   _ImplementationGuideContact._() : super._();
 
   factory _ImplementationGuideContact.fromJson(Map<String, dynamic> json) =
@@ -1620,7 +1593,7 @@ abstract class _ImplementationGuideContact extends ImplementationGuideContact {
   List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuideContactCopyWith<_ImplementationGuideContact>
+  _$$_ImplementationGuideContactCopyWith<_$_ImplementationGuideContact>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1628,38 +1601,6 @@ ImplementationGuideDependency _$ImplementationGuideDependencyFromJson(
     Map<String, dynamic> json) {
   return _ImplementationGuideDependency.fromJson(json);
 }
-
-/// @nodoc
-class _$ImplementationGuideDependencyTearOff {
-  const _$ImplementationGuideDependencyTearOff();
-
-  _ImplementationGuideDependency call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: DependencyType.unknown)
-          required DependencyType type,
-      required FhirUri uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement}) {
-    return _ImplementationGuideDependency(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      uri: uri,
-      uriElement: uriElement,
-    );
-  }
-
-  ImplementationGuideDependency fromJson(Map<String, Object?> json) {
-    return ImplementationGuideDependency.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImplementationGuideDependency = _$ImplementationGuideDependencyTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideDependency {
@@ -1756,12 +1697,12 @@ class _$ImplementationGuideDependencyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImplementationGuideDependencyCopyWith<$Res>
+abstract class _$$_ImplementationGuideDependencyCopyWith<$Res>
     implements $ImplementationGuideDependencyCopyWith<$Res> {
-  factory _$ImplementationGuideDependencyCopyWith(
-          _ImplementationGuideDependency value,
-          $Res Function(_ImplementationGuideDependency) then) =
-      __$ImplementationGuideDependencyCopyWithImpl<$Res>;
+  factory _$$_ImplementationGuideDependencyCopyWith(
+          _$_ImplementationGuideDependency value,
+          $Res Function(_$_ImplementationGuideDependency) then) =
+      __$$_ImplementationGuideDependencyCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -1776,17 +1717,17 @@ abstract class _$ImplementationGuideDependencyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImplementationGuideDependencyCopyWithImpl<$Res>
+class __$$_ImplementationGuideDependencyCopyWithImpl<$Res>
     extends _$ImplementationGuideDependencyCopyWithImpl<$Res>
-    implements _$ImplementationGuideDependencyCopyWith<$Res> {
-  __$ImplementationGuideDependencyCopyWithImpl(
-      _ImplementationGuideDependency _value,
-      $Res Function(_ImplementationGuideDependency) _then)
-      : super(_value, (v) => _then(v as _ImplementationGuideDependency));
+    implements _$$_ImplementationGuideDependencyCopyWith<$Res> {
+  __$$_ImplementationGuideDependencyCopyWithImpl(
+      _$_ImplementationGuideDependency _value,
+      $Res Function(_$_ImplementationGuideDependency) _then)
+      : super(_value, (v) => _then(v as _$_ImplementationGuideDependency));
 
   @override
-  _ImplementationGuideDependency get _value =>
-      super._value as _ImplementationGuideDependency;
+  _$_ImplementationGuideDependency get _value =>
+      super._value as _$_ImplementationGuideDependency;
 
   @override
   $Res call({
@@ -1797,17 +1738,17 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
     Object? uri = freezed,
     Object? uriElement = freezed,
   }) {
-    return _then(_ImplementationGuideDependency(
+    return _then(_$_ImplementationGuideDependency(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -1831,12 +1772,14 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
 class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
   _$_ImplementationGuideDependency(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown) required this.type,
       required this.uri,
       @JsonKey(name: '_uri') this.uriElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImplementationGuideDependency.fromJson(
           Map<String, dynamic> json) =>
@@ -1844,11 +1787,25 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: DependencyType.unknown)
   final DependencyType type;
@@ -1867,52 +1824,55 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImplementationGuideDependency &&
+            other is _$_ImplementationGuideDependency &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.uri, uri) &&
             const DeepCollectionEquality()
                 .equals(other.uriElement, uriElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(uri),
       const DeepCollectionEquality().hash(uriElement));
 
   @JsonKey(ignore: true)
   @override
-  _$ImplementationGuideDependencyCopyWith<_ImplementationGuideDependency>
-      get copyWith => __$ImplementationGuideDependencyCopyWithImpl<
-          _ImplementationGuideDependency>(this, _$identity);
+  _$$_ImplementationGuideDependencyCopyWith<_$_ImplementationGuideDependency>
+      get copyWith => __$$_ImplementationGuideDependencyCopyWithImpl<
+          _$_ImplementationGuideDependency>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideDependencyToJson(this);
+    return _$$_ImplementationGuideDependencyToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImplementationGuideDependency
     extends ImplementationGuideDependency {
   factory _ImplementationGuideDependency(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown)
-          required DependencyType type,
-      required FhirUri uri,
+          required final DependencyType type,
+      required final FhirUri uri,
       @JsonKey(name: '_uri')
-          Element? uriElement}) = _$_ImplementationGuideDependency;
+          final Element? uriElement}) = _$_ImplementationGuideDependency;
   _ImplementationGuideDependency._() : super._();
 
   factory _ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =
@@ -1935,7 +1895,7 @@ abstract class _ImplementationGuideDependency
   Element? get uriElement;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuideDependencyCopyWith<_ImplementationGuideDependency>
+  _$$_ImplementationGuideDependencyCopyWith<_$_ImplementationGuideDependency>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1943,37 +1903,6 @@ ImplementationGuidePackage _$ImplementationGuidePackageFromJson(
     Map<String, dynamic> json) {
   return _ImplementationGuidePackage.fromJson(json);
 }
-
-/// @nodoc
-class _$ImplementationGuidePackageTearOff {
-  const _$ImplementationGuidePackageTearOff();
-
-  _ImplementationGuidePackage call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String name,
-      String? description,
-      @JsonKey(required: true)
-          required List<ImplementationGuidePackageResource> resource}) {
-    return _ImplementationGuidePackage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      description: description,
-      resource: resource,
-    );
-  }
-
-  ImplementationGuidePackage fromJson(Map<String, Object?> json) {
-    return ImplementationGuidePackage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImplementationGuidePackage = _$ImplementationGuidePackageTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuidePackage {
@@ -2058,12 +1987,12 @@ class _$ImplementationGuidePackageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImplementationGuidePackageCopyWith<$Res>
+abstract class _$$_ImplementationGuidePackageCopyWith<$Res>
     implements $ImplementationGuidePackageCopyWith<$Res> {
-  factory _$ImplementationGuidePackageCopyWith(
-          _ImplementationGuidePackage value,
-          $Res Function(_ImplementationGuidePackage) then) =
-      __$ImplementationGuidePackageCopyWithImpl<$Res>;
+  factory _$$_ImplementationGuidePackageCopyWith(
+          _$_ImplementationGuidePackage value,
+          $Res Function(_$_ImplementationGuidePackage) then) =
+      __$$_ImplementationGuidePackageCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2077,16 +2006,17 @@ abstract class _$ImplementationGuidePackageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImplementationGuidePackageCopyWithImpl<$Res>
+class __$$_ImplementationGuidePackageCopyWithImpl<$Res>
     extends _$ImplementationGuidePackageCopyWithImpl<$Res>
-    implements _$ImplementationGuidePackageCopyWith<$Res> {
-  __$ImplementationGuidePackageCopyWithImpl(_ImplementationGuidePackage _value,
-      $Res Function(_ImplementationGuidePackage) _then)
-      : super(_value, (v) => _then(v as _ImplementationGuidePackage));
+    implements _$$_ImplementationGuidePackageCopyWith<$Res> {
+  __$$_ImplementationGuidePackageCopyWithImpl(
+      _$_ImplementationGuidePackage _value,
+      $Res Function(_$_ImplementationGuidePackage) _then)
+      : super(_value, (v) => _then(v as _$_ImplementationGuidePackage));
 
   @override
-  _ImplementationGuidePackage get _value =>
-      super._value as _ImplementationGuidePackage;
+  _$_ImplementationGuidePackage get _value =>
+      super._value as _$_ImplementationGuidePackage;
 
   @override
   $Res call({
@@ -2097,17 +2027,17 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
     Object? description = freezed,
     Object? resource = freezed,
   }) {
-    return _then(_ImplementationGuidePackage(
+    return _then(_$_ImplementationGuidePackage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -2119,7 +2049,7 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
       resource: resource == freezed
-          ? _value.resource
+          ? _value._resource
           : resource // ignore: cast_nullable_to_non_nullable
               as List<ImplementationGuidePackageResource>,
     ));
@@ -2131,30 +2061,53 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
 class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   _$_ImplementationGuidePackage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.name,
       this.description,
-      @JsonKey(required: true) required this.resource})
-      : super._();
+      @JsonKey(required: true)
+          required final List<ImplementationGuidePackageResource> resource})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _resource = resource,
+        super._();
 
   factory _$_ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$$_ImplementationGuidePackageFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String name;
   @override
   final String? description;
+  final List<ImplementationGuidePackageResource> _resource;
   @override
   @JsonKey(required: true)
-  final List<ImplementationGuidePackageResource> resource;
+  List<ImplementationGuidePackageResource> get resource {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_resource);
+  }
 
   @override
   String toString() {
@@ -2165,51 +2118,54 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImplementationGuidePackage &&
+            other is _$_ImplementationGuidePackage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.resource, resource));
+            const DeepCollectionEquality().equals(other._resource, _resource));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(resource));
+      const DeepCollectionEquality().hash(_resource));
 
   @JsonKey(ignore: true)
   @override
-  _$ImplementationGuidePackageCopyWith<_ImplementationGuidePackage>
-      get copyWith => __$ImplementationGuidePackageCopyWithImpl<
-          _ImplementationGuidePackage>(this, _$identity);
+  _$$_ImplementationGuidePackageCopyWith<_$_ImplementationGuidePackage>
+      get copyWith => __$$_ImplementationGuidePackageCopyWithImpl<
+          _$_ImplementationGuidePackage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuidePackageToJson(this);
+    return _$$_ImplementationGuidePackageToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   factory _ImplementationGuidePackage(
-          {Id? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required String name,
-          String? description,
-          @JsonKey(required: true)
-              required List<ImplementationGuidePackageResource> resource}) =
-      _$_ImplementationGuidePackage;
+      {final Id? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final String name,
+      final String? description,
+      @JsonKey(required: true)
+          required final List<ImplementationGuidePackageResource>
+              resource}) = _$_ImplementationGuidePackage;
   _ImplementationGuidePackage._() : super._();
 
   factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =
@@ -2231,7 +2187,7 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   List<ImplementationGuidePackageResource> get resource;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuidePackageCopyWith<_ImplementationGuidePackage>
+  _$$_ImplementationGuidePackageCopyWith<_$_ImplementationGuidePackage>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2239,35 +2195,6 @@ ImplementationGuideGlobal _$ImplementationGuideGlobalFromJson(
     Map<String, dynamic> json) {
   return _ImplementationGuideGlobal.fromJson(json);
 }
-
-/// @nodoc
-class _$ImplementationGuideGlobalTearOff {
-  const _$ImplementationGuideGlobalTearOff();
-
-  _ImplementationGuideGlobal call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Code type,
-      @JsonKey(name: '_type') Element? typeElement,
-      required Reference profile}) {
-    return _ImplementationGuideGlobal(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      typeElement: typeElement,
-      profile: profile,
-    );
-  }
-
-  ImplementationGuideGlobal fromJson(Map<String, Object?> json) {
-    return ImplementationGuideGlobal.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImplementationGuideGlobal = _$ImplementationGuideGlobalTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideGlobal {
@@ -2370,11 +2297,12 @@ class _$ImplementationGuideGlobalCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImplementationGuideGlobalCopyWith<$Res>
+abstract class _$$_ImplementationGuideGlobalCopyWith<$Res>
     implements $ImplementationGuideGlobalCopyWith<$Res> {
-  factory _$ImplementationGuideGlobalCopyWith(_ImplementationGuideGlobal value,
-          $Res Function(_ImplementationGuideGlobal) then) =
-      __$ImplementationGuideGlobalCopyWithImpl<$Res>;
+  factory _$$_ImplementationGuideGlobalCopyWith(
+          _$_ImplementationGuideGlobal value,
+          $Res Function(_$_ImplementationGuideGlobal) then) =
+      __$$_ImplementationGuideGlobalCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2391,16 +2319,17 @@ abstract class _$ImplementationGuideGlobalCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImplementationGuideGlobalCopyWithImpl<$Res>
+class __$$_ImplementationGuideGlobalCopyWithImpl<$Res>
     extends _$ImplementationGuideGlobalCopyWithImpl<$Res>
-    implements _$ImplementationGuideGlobalCopyWith<$Res> {
-  __$ImplementationGuideGlobalCopyWithImpl(_ImplementationGuideGlobal _value,
-      $Res Function(_ImplementationGuideGlobal) _then)
-      : super(_value, (v) => _then(v as _ImplementationGuideGlobal));
+    implements _$$_ImplementationGuideGlobalCopyWith<$Res> {
+  __$$_ImplementationGuideGlobalCopyWithImpl(
+      _$_ImplementationGuideGlobal _value,
+      $Res Function(_$_ImplementationGuideGlobal) _then)
+      : super(_value, (v) => _then(v as _$_ImplementationGuideGlobal));
 
   @override
-  _ImplementationGuideGlobal get _value =>
-      super._value as _ImplementationGuideGlobal;
+  _$_ImplementationGuideGlobal get _value =>
+      super._value as _$_ImplementationGuideGlobal;
 
   @override
   $Res call({
@@ -2411,17 +2340,17 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
     Object? typeElement = freezed,
     Object? profile = freezed,
   }) {
-    return _then(_ImplementationGuideGlobal(
+    return _then(_$_ImplementationGuideGlobal(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -2445,23 +2374,39 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
 class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
   _$_ImplementationGuideGlobal(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       @JsonKey(name: '_type') this.typeElement,
       required this.profile})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$$_ImplementationGuideGlobalFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code type;
   @override
@@ -2479,49 +2424,51 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImplementationGuideGlobal &&
+            other is _$_ImplementationGuideGlobal &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
             const DeepCollectionEquality().equals(other.profile, profile));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(typeElement),
       const DeepCollectionEquality().hash(profile));
 
   @JsonKey(ignore: true)
   @override
-  _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal>
-      get copyWith =>
-          __$ImplementationGuideGlobalCopyWithImpl<_ImplementationGuideGlobal>(
-              this, _$identity);
+  _$$_ImplementationGuideGlobalCopyWith<_$_ImplementationGuideGlobal>
+      get copyWith => __$$_ImplementationGuideGlobalCopyWithImpl<
+          _$_ImplementationGuideGlobal>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideGlobalToJson(this);
+    return _$$_ImplementationGuideGlobalToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   factory _ImplementationGuideGlobal(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Code type,
-      @JsonKey(name: '_type') Element? typeElement,
-      required Reference profile}) = _$_ImplementationGuideGlobal;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Code type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      required final Reference profile}) = _$_ImplementationGuideGlobal;
   _ImplementationGuideGlobal._() : super._();
 
   factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
@@ -2543,7 +2490,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   Reference get profile;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal>
+  _$$_ImplementationGuideGlobalCopyWith<_$_ImplementationGuideGlobal>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2551,43 +2498,6 @@ ImplementationGuidePage _$ImplementationGuidePageFromJson(
     Map<String, dynamic> json) {
   return _ImplementationGuidePage.fromJson(json);
 }
-
-/// @nodoc
-class _$ImplementationGuidePageTearOff {
-  const _$ImplementationGuidePageTearOff();
-
-  _ImplementationGuidePage call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri source,
-      required String name,
-      @JsonKey(unknownEnumValue: PageKind.unknown) required PageKind kind,
-      List<Code>? type,
-      List<String>? package,
-      Code? format,
-      List<ImplementationGuidePage>? page}) {
-    return _ImplementationGuidePage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      source: source,
-      name: name,
-      kind: kind,
-      type: type,
-      package: package,
-      format: format,
-      page: page,
-    );
-  }
-
-  ImplementationGuidePage fromJson(Map<String, Object?> json) {
-    return ImplementationGuidePage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImplementationGuidePage = _$ImplementationGuidePageTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuidePage {
@@ -2697,11 +2607,11 @@ class _$ImplementationGuidePageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImplementationGuidePageCopyWith<$Res>
+abstract class _$$_ImplementationGuidePageCopyWith<$Res>
     implements $ImplementationGuidePageCopyWith<$Res> {
-  factory _$ImplementationGuidePageCopyWith(_ImplementationGuidePage value,
-          $Res Function(_ImplementationGuidePage) then) =
-      __$ImplementationGuidePageCopyWithImpl<$Res>;
+  factory _$$_ImplementationGuidePageCopyWith(_$_ImplementationGuidePage value,
+          $Res Function(_$_ImplementationGuidePage) then) =
+      __$$_ImplementationGuidePageCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2717,16 +2627,16 @@ abstract class _$ImplementationGuidePageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImplementationGuidePageCopyWithImpl<$Res>
+class __$$_ImplementationGuidePageCopyWithImpl<$Res>
     extends _$ImplementationGuidePageCopyWithImpl<$Res>
-    implements _$ImplementationGuidePageCopyWith<$Res> {
-  __$ImplementationGuidePageCopyWithImpl(_ImplementationGuidePage _value,
-      $Res Function(_ImplementationGuidePage) _then)
-      : super(_value, (v) => _then(v as _ImplementationGuidePage));
+    implements _$$_ImplementationGuidePageCopyWith<$Res> {
+  __$$_ImplementationGuidePageCopyWithImpl(_$_ImplementationGuidePage _value,
+      $Res Function(_$_ImplementationGuidePage) _then)
+      : super(_value, (v) => _then(v as _$_ImplementationGuidePage));
 
   @override
-  _ImplementationGuidePage get _value =>
-      super._value as _ImplementationGuidePage;
+  _$_ImplementationGuidePage get _value =>
+      super._value as _$_ImplementationGuidePage;
 
   @override
   $Res call({
@@ -2741,17 +2651,17 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
     Object? format = freezed,
     Object? page = freezed,
   }) {
-    return _then(_ImplementationGuidePage(
+    return _then(_$_ImplementationGuidePage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       source: source == freezed
@@ -2767,11 +2677,11 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
           : kind // ignore: cast_nullable_to_non_nullable
               as PageKind,
       type: type == freezed
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
       package: package == freezed
-          ? _value.package
+          ? _value._package
           : package // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       format: format == freezed
@@ -2779,7 +2689,7 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as Code?,
       page: page == freezed
-          ? _value.page
+          ? _value._page
           : page // ignore: cast_nullable_to_non_nullable
               as List<ImplementationGuidePage>?,
     ));
@@ -2791,27 +2701,46 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
 class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   _$_ImplementationGuidePage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.source,
       required this.name,
       @JsonKey(unknownEnumValue: PageKind.unknown) required this.kind,
-      this.type,
-      this.package,
+      final List<Code>? type,
+      final List<String>? package,
       this.format,
-      this.page})
-      : super._();
+      final List<ImplementationGuidePage>? page})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _type = type,
+        _package = package,
+        _page = page,
+        super._();
 
   factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$$_ImplementationGuidePageFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri source;
   @override
@@ -2819,14 +2748,34 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   @override
   @JsonKey(unknownEnumValue: PageKind.unknown)
   final PageKind kind;
+  final List<Code>? _type;
   @override
-  final List<Code>? type;
+  List<Code>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _package;
   @override
-  final List<String>? package;
+  List<String>? get package {
+    final value = _package;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? format;
+  final List<ImplementationGuidePage>? _page;
   @override
-  final List<ImplementationGuidePage>? page;
+  List<ImplementationGuidePage>? get page {
+    final value = _page;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -2837,59 +2786,63 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImplementationGuidePage &&
+            other is _$_ImplementationGuidePage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.source, source) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.kind, kind) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.package, package) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other._package, _package) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.page, page));
+            const DeepCollectionEquality().equals(other._page, _page));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(source),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(kind),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(package),
+      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(_package),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(page));
+      const DeepCollectionEquality().hash(_page));
 
   @JsonKey(ignore: true)
   @override
-  _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith =>
-      __$ImplementationGuidePageCopyWithImpl<_ImplementationGuidePage>(
-          this, _$identity);
+  _$$_ImplementationGuidePageCopyWith<_$_ImplementationGuidePage>
+      get copyWith =>
+          __$$_ImplementationGuidePageCopyWithImpl<_$_ImplementationGuidePage>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuidePageToJson(this);
+    return _$$_ImplementationGuidePageToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   factory _ImplementationGuidePage(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri source,
-      required String name,
-      @JsonKey(unknownEnumValue: PageKind.unknown) required PageKind kind,
-      List<Code>? type,
-      List<String>? package,
-      Code? format,
-      List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final FhirUri source,
+      required final String name,
+      @JsonKey(unknownEnumValue: PageKind.unknown) required final PageKind kind,
+      final List<Code>? type,
+      final List<String>? package,
+      final Code? format,
+      final List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
   _ImplementationGuidePage._() : super._();
 
   factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json) =
@@ -2919,57 +2872,14 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   List<ImplementationGuidePage>? get page;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ImplementationGuidePageCopyWith<_$_ImplementationGuidePage>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuidePackageResource _$ImplementationGuidePackageResourceFromJson(
     Map<String, dynamic> json) {
   return _ImplementationGuidePackageResource.fromJson(json);
 }
-
-/// @nodoc
-class _$ImplementationGuidePackageResourceTearOff {
-  const _$ImplementationGuidePackageResourceTearOff();
-
-  _ImplementationGuidePackageResource call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
-          required ResourcePurpose purpose,
-      String? name,
-      String? description,
-      String? acronym,
-      @JsonKey(name: '_acronym')
-          Element? acronymElement,
-      FhirUri? sourceUri,
-      Reference? sourceReference,
-      Reference? exampleFor}) {
-    return _ImplementationGuidePackageResource(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      purpose: purpose,
-      name: name,
-      description: description,
-      acronym: acronym,
-      acronymElement: acronymElement,
-      sourceUri: sourceUri,
-      sourceReference: sourceReference,
-      exampleFor: exampleFor,
-    );
-  }
-
-  ImplementationGuidePackageResource fromJson(Map<String, Object?> json) {
-    return ImplementationGuidePackageResource.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImplementationGuidePackageResource =
-    _$ImplementationGuidePackageResourceTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuidePackageResource {
@@ -3129,12 +3039,12 @@ class _$ImplementationGuidePackageResourceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImplementationGuidePackageResourceCopyWith<$Res>
+abstract class _$$_ImplementationGuidePackageResourceCopyWith<$Res>
     implements $ImplementationGuidePackageResourceCopyWith<$Res> {
-  factory _$ImplementationGuidePackageResourceCopyWith(
-          _ImplementationGuidePackageResource value,
-          $Res Function(_ImplementationGuidePackageResource) then) =
-      __$ImplementationGuidePackageResourceCopyWithImpl<$Res>;
+  factory _$$_ImplementationGuidePackageResourceCopyWith(
+          _$_ImplementationGuidePackageResource value,
+          $Res Function(_$_ImplementationGuidePackageResource) then) =
+      __$$_ImplementationGuidePackageResourceCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -3161,17 +3071,17 @@ abstract class _$ImplementationGuidePackageResourceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImplementationGuidePackageResourceCopyWithImpl<$Res>
+class __$$_ImplementationGuidePackageResourceCopyWithImpl<$Res>
     extends _$ImplementationGuidePackageResourceCopyWithImpl<$Res>
-    implements _$ImplementationGuidePackageResourceCopyWith<$Res> {
-  __$ImplementationGuidePackageResourceCopyWithImpl(
-      _ImplementationGuidePackageResource _value,
-      $Res Function(_ImplementationGuidePackageResource) _then)
-      : super(_value, (v) => _then(v as _ImplementationGuidePackageResource));
+    implements _$$_ImplementationGuidePackageResourceCopyWith<$Res> {
+  __$$_ImplementationGuidePackageResourceCopyWithImpl(
+      _$_ImplementationGuidePackageResource _value,
+      $Res Function(_$_ImplementationGuidePackageResource) _then)
+      : super(_value, (v) => _then(v as _$_ImplementationGuidePackageResource));
 
   @override
-  _ImplementationGuidePackageResource get _value =>
-      super._value as _ImplementationGuidePackageResource;
+  _$_ImplementationGuidePackageResource get _value =>
+      super._value as _$_ImplementationGuidePackageResource;
 
   @override
   $Res call({
@@ -3187,17 +3097,17 @@ class __$ImplementationGuidePackageResourceCopyWithImpl<$Res>
     Object? sourceReference = freezed,
     Object? exampleFor = freezed,
   }) {
-    return _then(_ImplementationGuidePackageResource(
+    return _then(_$_ImplementationGuidePackageResource(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       purpose: purpose == freezed
@@ -3242,8 +3152,8 @@ class _$_ImplementationGuidePackageResource
     extends _ImplementationGuidePackageResource {
   _$_ImplementationGuidePackageResource(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown) required this.purpose,
       this.name,
       this.description,
@@ -3252,7 +3162,9 @@ class _$_ImplementationGuidePackageResource
       this.sourceUri,
       this.sourceReference,
       this.exampleFor})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImplementationGuidePackageResource.fromJson(
           Map<String, dynamic> json) =>
@@ -3260,11 +3172,25 @@ class _$_ImplementationGuidePackageResource
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
   final ResourcePurpose purpose;
@@ -3293,12 +3219,12 @@ class _$_ImplementationGuidePackageResource
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImplementationGuidePackageResource &&
+            other is _$_ImplementationGuidePackageResource &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.purpose, purpose) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
@@ -3313,12 +3239,13 @@ class _$_ImplementationGuidePackageResource
                 .equals(other.exampleFor, exampleFor));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(purpose),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(description),
@@ -3330,34 +3257,36 @@ class _$_ImplementationGuidePackageResource
 
   @JsonKey(ignore: true)
   @override
-  _$ImplementationGuidePackageResourceCopyWith<
-          _ImplementationGuidePackageResource>
-      get copyWith => __$ImplementationGuidePackageResourceCopyWithImpl<
-          _ImplementationGuidePackageResource>(this, _$identity);
+  _$$_ImplementationGuidePackageResourceCopyWith<
+          _$_ImplementationGuidePackageResource>
+      get copyWith => __$$_ImplementationGuidePackageResourceCopyWithImpl<
+          _$_ImplementationGuidePackageResource>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuidePackageResourceToJson(this);
+    return _$$_ImplementationGuidePackageResourceToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImplementationGuidePackageResource
     extends ImplementationGuidePackageResource {
   factory _ImplementationGuidePackageResource(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
-          required ResourcePurpose purpose,
-      String? name,
-      String? description,
-      String? acronym,
+          required final ResourcePurpose purpose,
+      final String? name,
+      final String? description,
+      final String? acronym,
       @JsonKey(name: '_acronym')
-          Element? acronymElement,
-      FhirUri? sourceUri,
-      Reference? sourceReference,
-      Reference? exampleFor}) = _$_ImplementationGuidePackageResource;
+          final Element? acronymElement,
+      final FhirUri? sourceUri,
+      final Reference? sourceReference,
+      final Reference? exampleFor}) = _$_ImplementationGuidePackageResource;
   _ImplementationGuidePackageResource._() : super._();
 
   factory _ImplementationGuidePackageResource.fromJson(
@@ -3391,124 +3320,14 @@ abstract class _ImplementationGuidePackageResource
   Reference? get exampleFor;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuidePackageResourceCopyWith<
-          _ImplementationGuidePackageResource>
+  _$$_ImplementationGuidePackageResourceCopyWith<
+          _$_ImplementationGuidePackageResource>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
   return _TestScript.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptTearOff {
-  const _$TestScriptTearOff();
-
-  _TestScript call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.TestScript,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
-      required String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          required TestScriptStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Identifier? identifier,
-      Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<TestScriptContact>? contact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? requirements,
-      String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      TestScriptMetadata? metadata,
-      Boolean? multiserver,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
-      TestScriptSetup? setup,
-      List<TestScriptTest>? test,
-      TestScriptTeardown? teardown}) {
-    return _TestScript(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      version: version,
-      name: name,
-      nameElement: nameElement,
-      status: status,
-      statusElement: statusElement,
-      identifier: identifier,
-      experimental: experimental,
-      experimentalElement: experimentalElement,
-      publisher: publisher,
-      publisherElement: publisherElement,
-      contact: contact,
-      date: date,
-      dateElement: dateElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      useContext: useContext,
-      requirements: requirements,
-      copyright: copyright,
-      copyrightElement: copyrightElement,
-      metadata: metadata,
-      multiserver: multiserver,
-      fixture: fixture,
-      profile: profile,
-      variable: variable,
-      setup: setup,
-      test: test,
-      teardown: teardown,
-    );
-  }
-
-  TestScript fromJson(Map<String, Object?> json) {
-    return TestScript.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScript = _$TestScriptTearOff();
 
 /// @nodoc
 mixin _$TestScript {
@@ -4044,10 +3863,11 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
-  factory _$TestScriptCopyWith(
-          _TestScript value, $Res Function(_TestScript) then) =
-      __$TestScriptCopyWithImpl<$Res>;
+abstract class _$$_TestScriptCopyWith<$Res>
+    implements $TestScriptCopyWith<$Res> {
+  factory _$$_TestScriptCopyWith(
+          _$_TestScript value, $Res Function(_$_TestScript) then) =
+      __$$_TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
@@ -4139,14 +3959,14 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
-    implements _$TestScriptCopyWith<$Res> {
-  __$TestScriptCopyWithImpl(
-      _TestScript _value, $Res Function(_TestScript) _then)
-      : super(_value, (v) => _then(v as _TestScript));
+class __$$_TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
+    implements _$$_TestScriptCopyWith<$Res> {
+  __$$_TestScriptCopyWithImpl(
+      _$_TestScript _value, $Res Function(_$_TestScript) _then)
+      : super(_value, (v) => _then(v as _$_TestScript));
 
   @override
-  _TestScript get _value => super._value as _TestScript;
+  _$_TestScript get _value => super._value as _$_TestScript;
 
   @override
   $Res call({
@@ -4191,7 +4011,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     Object? test = freezed,
     Object? teardown = freezed,
   }) {
-    return _then(_TestScript(
+    return _then(_$_TestScript(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4225,15 +4045,15 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: url == freezed
@@ -4285,7 +4105,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<TestScriptContact>?,
       date: date == freezed
@@ -4305,7 +4125,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       useContext: useContext == freezed
-          ? _value.useContext
+          ? _value._useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       requirements: requirements == freezed
@@ -4329,15 +4149,15 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : multiserver // ignore: cast_nullable_to_non_nullable
               as Boolean?,
       fixture: fixture == freezed
-          ? _value.fixture
+          ? _value._fixture
           : fixture // ignore: cast_nullable_to_non_nullable
               as List<TestScriptFixture>?,
       profile: profile == freezed
-          ? _value.profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       variable: variable == freezed
-          ? _value.variable
+          ? _value._variable
           : variable // ignore: cast_nullable_to_non_nullable
               as List<TestScriptVariable>?,
       setup: setup == freezed
@@ -4345,7 +4165,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : setup // ignore: cast_nullable_to_non_nullable
               as TestScriptSetup?,
       test: test == freezed
-          ? _value.test
+          ? _value._test
           : test // ignore: cast_nullable_to_non_nullable
               as List<TestScriptTest>?,
       teardown: teardown == freezed
@@ -4371,10 +4191,10 @@ class _$_TestScript extends _TestScript {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.url,
       @JsonKey(name: '_url')
           this.urlElement,
@@ -4393,27 +4213,36 @@ class _$_TestScript extends _TestScript {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      this.contact,
+      final List<TestScriptContact>? contact,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.useContext,
+      final List<CodeableConcept>? useContext,
       this.requirements,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
       this.metadata,
       this.multiserver,
-      this.fixture,
-      this.profile,
-      this.variable,
+      final List<TestScriptFixture>? fixture,
+      final List<Reference>? profile,
+      final List<TestScriptVariable>? variable,
       this.setup,
-      this.test,
+      final List<TestScriptTest>? test,
       this.teardown})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _useContext = useContext,
+        _fixture = fixture,
+        _profile = profile,
+        _variable = variable,
+        _test = test,
+        super._();
 
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptFromJson(json);
@@ -4437,13 +4266,34 @@ class _$_TestScript extends _TestScript {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri url;
   @override
@@ -4474,8 +4324,15 @@ class _$_TestScript extends _TestScript {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+  final List<TestScriptContact>? _contact;
   @override
-  final List<TestScriptContact>? contact;
+  List<TestScriptContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
@@ -4486,8 +4343,15 @@ class _$_TestScript extends _TestScript {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<CodeableConcept>? _useContext;
   @override
-  final List<CodeableConcept>? useContext;
+  List<CodeableConcept>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? requirements;
   @override
@@ -4499,16 +4363,44 @@ class _$_TestScript extends _TestScript {
   final TestScriptMetadata? metadata;
   @override
   final Boolean? multiserver;
+  final List<TestScriptFixture>? _fixture;
   @override
-  final List<TestScriptFixture>? fixture;
+  List<TestScriptFixture>? get fixture {
+    final value = _fixture;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _profile;
   @override
-  final List<Reference>? profile;
+  List<Reference>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptVariable>? _variable;
   @override
-  final List<TestScriptVariable>? variable;
+  List<TestScriptVariable>? get variable {
+    final value = _variable;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptSetup? setup;
+  final List<TestScriptTest>? _test;
   @override
-  final List<TestScriptTest>? test;
+  List<TestScriptTest>? get test {
+    final value = _test;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptTeardown? teardown;
 
@@ -4521,7 +4413,7 @@ class _$_TestScript extends _TestScript {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScript &&
+            other is _$_TestScript &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -4534,11 +4426,12 @@ class _$_TestScript extends _TestScript {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
@@ -4558,7 +4451,7 @@ class _$_TestScript extends _TestScript {
             const DeepCollectionEquality().equals(other.publisher, publisher) &&
             const DeepCollectionEquality()
                 .equals(other.publisherElement, publisherElement) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
@@ -4567,7 +4460,7 @@ class _$_TestScript extends _TestScript {
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.useContext, useContext) &&
+                .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality()
                 .equals(other.requirements, requirements) &&
             const DeepCollectionEquality().equals(other.copyright, copyright) &&
@@ -4576,14 +4469,15 @@ class _$_TestScript extends _TestScript {
             const DeepCollectionEquality().equals(other.metadata, metadata) &&
             const DeepCollectionEquality()
                 .equals(other.multiserver, multiserver) &&
-            const DeepCollectionEquality().equals(other.fixture, fixture) &&
-            const DeepCollectionEquality().equals(other.profile, profile) &&
-            const DeepCollectionEquality().equals(other.variable, variable) &&
+            const DeepCollectionEquality().equals(other._fixture, _fixture) &&
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other._variable, _variable) &&
             const DeepCollectionEquality().equals(other.setup, setup) &&
-            const DeepCollectionEquality().equals(other.test, test) &&
+            const DeepCollectionEquality().equals(other._test, _test) &&
             const DeepCollectionEquality().equals(other.teardown, teardown));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4595,9 +4489,9 @@ class _$_TestScript extends _TestScript {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(url),
         const DeepCollectionEquality().hash(urlElement),
         const DeepCollectionEquality().hash(version),
@@ -4610,91 +4504,93 @@ class _$_TestScript extends _TestScript {
         const DeepCollectionEquality().hash(experimentalElement),
         const DeepCollectionEquality().hash(publisher),
         const DeepCollectionEquality().hash(publisherElement),
-        const DeepCollectionEquality().hash(contact),
+        const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(_useContext),
         const DeepCollectionEquality().hash(requirements),
         const DeepCollectionEquality().hash(copyright),
         const DeepCollectionEquality().hash(copyrightElement),
         const DeepCollectionEquality().hash(metadata),
         const DeepCollectionEquality().hash(multiserver),
-        const DeepCollectionEquality().hash(fixture),
-        const DeepCollectionEquality().hash(profile),
-        const DeepCollectionEquality().hash(variable),
+        const DeepCollectionEquality().hash(_fixture),
+        const DeepCollectionEquality().hash(_profile),
+        const DeepCollectionEquality().hash(_variable),
         const DeepCollectionEquality().hash(setup),
-        const DeepCollectionEquality().hash(test),
+        const DeepCollectionEquality().hash(_test),
         const DeepCollectionEquality().hash(teardown)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptCopyWith<_TestScript> get copyWith =>
-      __$TestScriptCopyWithImpl<_TestScript>(this, _$identity);
+  _$$_TestScriptCopyWith<_$_TestScript> get copyWith =>
+      __$$_TestScriptCopyWithImpl<_$_TestScript>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptToJson(this);
+    return _$$_TestScriptToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final FhirUri url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
-      required String name,
+          final Element? urlElement,
+      final String? version,
+      required final String name,
       @JsonKey(name: '_name')
-          Element? nameElement,
+          final Element? nameElement,
       @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          required TestScriptStatus status,
+          required final TestScriptStatus status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Identifier? identifier,
-      Boolean? experimental,
+          final Element? statusElement,
+      final Identifier? identifier,
+      final Boolean? experimental,
       @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
+          final Element? experimentalElement,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<TestScriptContact>? contact,
-      FhirDateTime? date,
+          final Element? publisherElement,
+      final List<TestScriptContact>? contact,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      String? description,
+          final Element? dateElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? requirements,
-      String? copyright,
+          final Element? descriptionElement,
+      final List<CodeableConcept>? useContext,
+      final String? requirements,
+      final String? copyright,
       @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      TestScriptMetadata? metadata,
-      Boolean? multiserver,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
-      TestScriptSetup? setup,
-      List<TestScriptTest>? test,
-      TestScriptTeardown? teardown}) = _$_TestScript;
+          final Element? copyrightElement,
+      final TestScriptMetadata? metadata,
+      final Boolean? multiserver,
+      final List<TestScriptFixture>? fixture,
+      final List<Reference>? profile,
+      final List<TestScriptVariable>? variable,
+      final TestScriptSetup? setup,
+      final List<TestScriptTest>? test,
+      final TestScriptTeardown? teardown}) = _$_TestScript;
   _TestScript._() : super._();
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
@@ -4795,40 +4691,13 @@ abstract class _TestScript extends TestScript {
   TestScriptTeardown? get teardown;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptCopyWith<_TestScript> get copyWith =>
+  _$$_TestScriptCopyWith<_$_TestScript> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptContact _$TestScriptContactFromJson(Map<String, dynamic> json) {
   return _TestScriptContact.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptContactTearOff {
-  const _$TestScriptContactTearOff();
-
-  _TestScriptContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _TestScriptContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  TestScriptContact fromJson(Map<String, Object?> json) {
-    return TestScriptContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptContact = _$TestScriptContactTearOff();
 
 /// @nodoc
 mixin _$TestScriptContact {
@@ -4902,11 +4771,11 @@ class _$TestScriptContactCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptContactCopyWith<$Res>
+abstract class _$$_TestScriptContactCopyWith<$Res>
     implements $TestScriptContactCopyWith<$Res> {
-  factory _$TestScriptContactCopyWith(
-          _TestScriptContact value, $Res Function(_TestScriptContact) then) =
-      __$TestScriptContactCopyWithImpl<$Res>;
+  factory _$$_TestScriptContactCopyWith(_$_TestScriptContact value,
+          $Res Function(_$_TestScriptContact) then) =
+      __$$_TestScriptContactCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -4917,15 +4786,15 @@ abstract class _$TestScriptContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptContactCopyWithImpl<$Res>
+class __$$_TestScriptContactCopyWithImpl<$Res>
     extends _$TestScriptContactCopyWithImpl<$Res>
-    implements _$TestScriptContactCopyWith<$Res> {
-  __$TestScriptContactCopyWithImpl(
-      _TestScriptContact _value, $Res Function(_TestScriptContact) _then)
-      : super(_value, (v) => _then(v as _TestScriptContact));
+    implements _$$_TestScriptContactCopyWith<$Res> {
+  __$$_TestScriptContactCopyWithImpl(
+      _$_TestScriptContact _value, $Res Function(_$_TestScriptContact) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptContact));
 
   @override
-  _TestScriptContact get _value => super._value as _TestScriptContact;
+  _$_TestScriptContact get _value => super._value as _$_TestScriptContact;
 
   @override
   $Res call({
@@ -4935,17 +4804,17 @@ class __$TestScriptContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_TestScriptContact(
+    return _then(_$_TestScriptContact(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -4953,7 +4822,7 @@ class __$TestScriptContactCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       telecom: telecom == freezed
-          ? _value.telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -4965,26 +4834,49 @@ class __$TestScriptContactCopyWithImpl<$Res>
 class _$_TestScriptContact extends _TestScriptContact {
   _$_TestScriptContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _telecom = telecom,
+        super._();
 
   factory _$_TestScriptContact.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -4995,43 +4887,47 @@ class _$_TestScriptContact extends _TestScriptContact {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptContact &&
+            other is _$_TestScriptContact &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.telecom, telecom));
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(telecom));
+      const DeepCollectionEquality().hash(_telecom));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptContactCopyWith<_TestScriptContact> get copyWith =>
-      __$TestScriptContactCopyWithImpl<_TestScriptContact>(this, _$identity);
+  _$$_TestScriptContactCopyWith<_$_TestScriptContact> get copyWith =>
+      __$$_TestScriptContactCopyWithImpl<_$_TestScriptContact>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptContactToJson(this);
+    return _$$_TestScriptContactToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptContact extends TestScriptContact {
   factory _TestScriptContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_TestScriptContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_TestScriptContact;
   _TestScriptContact._() : super._();
 
   factory _TestScriptContact.fromJson(Map<String, dynamic> json) =
@@ -5050,42 +4946,13 @@ abstract class _TestScriptContact extends TestScriptContact {
   List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptContactCopyWith<_TestScriptContact> get copyWith =>
+  _$$_TestScriptContactCopyWith<_$_TestScriptContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
   return _TestScriptMetadata.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptMetadataTearOff {
-  const _$TestScriptMetadataTearOff();
-
-  _TestScriptMetadata call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<TestScriptMetadataLink>? link,
-      @JsonKey(required: true)
-          required List<TestScriptMetadataCapability> capability}) {
-    return _TestScriptMetadata(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      link: link,
-      capability: capability,
-    );
-  }
-
-  TestScriptMetadata fromJson(Map<String, Object?> json) {
-    return TestScriptMetadata.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptMetadata = _$TestScriptMetadataTearOff();
 
 /// @nodoc
 mixin _$TestScriptMetadata {
@@ -5161,11 +5028,11 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptMetadataCopyWith<$Res>
+abstract class _$$_TestScriptMetadataCopyWith<$Res>
     implements $TestScriptMetadataCopyWith<$Res> {
-  factory _$TestScriptMetadataCopyWith(
-          _TestScriptMetadata value, $Res Function(_TestScriptMetadata) then) =
-      __$TestScriptMetadataCopyWithImpl<$Res>;
+  factory _$$_TestScriptMetadataCopyWith(_$_TestScriptMetadata value,
+          $Res Function(_$_TestScriptMetadata) then) =
+      __$$_TestScriptMetadataCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -5176,15 +5043,15 @@ abstract class _$TestScriptMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptMetadataCopyWithImpl<$Res>
+class __$$_TestScriptMetadataCopyWithImpl<$Res>
     extends _$TestScriptMetadataCopyWithImpl<$Res>
-    implements _$TestScriptMetadataCopyWith<$Res> {
-  __$TestScriptMetadataCopyWithImpl(
-      _TestScriptMetadata _value, $Res Function(_TestScriptMetadata) _then)
-      : super(_value, (v) => _then(v as _TestScriptMetadata));
+    implements _$$_TestScriptMetadataCopyWith<$Res> {
+  __$$_TestScriptMetadataCopyWithImpl(
+      _$_TestScriptMetadata _value, $Res Function(_$_TestScriptMetadata) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptMetadata));
 
   @override
-  _TestScriptMetadata get _value => super._value as _TestScriptMetadata;
+  _$_TestScriptMetadata get _value => super._value as _$_TestScriptMetadata;
 
   @override
   $Res call({
@@ -5194,25 +5061,25 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
     Object? link = freezed,
     Object? capability = freezed,
   }) {
-    return _then(_TestScriptMetadata(
+    return _then(_$_TestScriptMetadata(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       link: link == freezed
-          ? _value.link
+          ? _value._link
           : link // ignore: cast_nullable_to_non_nullable
               as List<TestScriptMetadataLink>?,
       capability: capability == freezed
-          ? _value.capability
+          ? _value._capability
           : capability // ignore: cast_nullable_to_non_nullable
               as List<TestScriptMetadataCapability>,
     ));
@@ -5224,27 +5091,58 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
 class _$_TestScriptMetadata extends _TestScriptMetadata {
   _$_TestScriptMetadata(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.link,
-      @JsonKey(required: true) required this.capability})
-      : super._();
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<TestScriptMetadataLink>? link,
+      @JsonKey(required: true)
+          required final List<TestScriptMetadataCapability> capability})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _link = link,
+        _capability = capability,
+        super._();
 
   factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptMetadataFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptMetadataLink>? _link;
   @override
-  final List<TestScriptMetadataLink>? link;
+  List<TestScriptMetadataLink>? get link {
+    final value = _link;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptMetadataCapability> _capability;
   @override
   @JsonKey(required: true)
-  final List<TestScriptMetadataCapability> capability;
+  List<TestScriptMetadataCapability> get capability {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_capability);
+  }
 
   @override
   String toString() {
@@ -5255,46 +5153,50 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptMetadata &&
+            other is _$_TestScriptMetadata &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.link, link) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._link, _link) &&
             const DeepCollectionEquality()
-                .equals(other.capability, capability));
+                .equals(other._capability, _capability));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(link),
-      const DeepCollectionEquality().hash(capability));
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_link),
+      const DeepCollectionEquality().hash(_capability));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith =>
-      __$TestScriptMetadataCopyWithImpl<_TestScriptMetadata>(this, _$identity);
+  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
+      __$$_TestScriptMetadataCopyWithImpl<_$_TestScriptMetadata>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptMetadataToJson(this);
+    return _$$_TestScriptMetadataToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptMetadata extends TestScriptMetadata {
   factory _TestScriptMetadata(
-          {Id? id,
+          {final Id? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<TestScriptMetadataLink>? link,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<TestScriptMetadataLink>? link,
           @JsonKey(required: true)
-              required List<TestScriptMetadataCapability> capability}) =
+              required final List<TestScriptMetadataCapability> capability}) =
       _$_TestScriptMetadata;
   _TestScriptMetadata._() : super._();
 
@@ -5315,7 +5217,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   List<TestScriptMetadataCapability> get capability;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith =>
+  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5323,37 +5225,6 @@ TestScriptMetadataLink _$TestScriptMetadataLinkFromJson(
     Map<String, dynamic> json) {
   return _TestScriptMetadataLink.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptMetadataLinkTearOff {
-  const _$TestScriptMetadataLinkTearOff();
-
-  _TestScriptMetadataLink call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri url,
-      @JsonKey(name: '_url') Element? urlElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement}) {
-    return _TestScriptMetadataLink(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      description: description,
-      descriptionElement: descriptionElement,
-    );
-  }
-
-  TestScriptMetadataLink fromJson(Map<String, Object?> json) {
-    return TestScriptMetadataLink.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptMetadataLink = _$TestScriptMetadataLinkTearOff();
 
 /// @nodoc
 mixin _$TestScriptMetadataLink {
@@ -5468,11 +5339,11 @@ class _$TestScriptMetadataLinkCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptMetadataLinkCopyWith<$Res>
+abstract class _$$_TestScriptMetadataLinkCopyWith<$Res>
     implements $TestScriptMetadataLinkCopyWith<$Res> {
-  factory _$TestScriptMetadataLinkCopyWith(_TestScriptMetadataLink value,
-          $Res Function(_TestScriptMetadataLink) then) =
-      __$TestScriptMetadataLinkCopyWithImpl<$Res>;
+  factory _$$_TestScriptMetadataLinkCopyWith(_$_TestScriptMetadataLink value,
+          $Res Function(_$_TestScriptMetadataLink) then) =
+      __$$_TestScriptMetadataLinkCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -5490,15 +5361,16 @@ abstract class _$TestScriptMetadataLinkCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptMetadataLinkCopyWithImpl<$Res>
+class __$$_TestScriptMetadataLinkCopyWithImpl<$Res>
     extends _$TestScriptMetadataLinkCopyWithImpl<$Res>
-    implements _$TestScriptMetadataLinkCopyWith<$Res> {
-  __$TestScriptMetadataLinkCopyWithImpl(_TestScriptMetadataLink _value,
-      $Res Function(_TestScriptMetadataLink) _then)
-      : super(_value, (v) => _then(v as _TestScriptMetadataLink));
+    implements _$$_TestScriptMetadataLinkCopyWith<$Res> {
+  __$$_TestScriptMetadataLinkCopyWithImpl(_$_TestScriptMetadataLink _value,
+      $Res Function(_$_TestScriptMetadataLink) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptMetadataLink));
 
   @override
-  _TestScriptMetadataLink get _value => super._value as _TestScriptMetadataLink;
+  _$_TestScriptMetadataLink get _value =>
+      super._value as _$_TestScriptMetadataLink;
 
   @override
   $Res call({
@@ -5510,17 +5382,17 @@ class __$TestScriptMetadataLinkCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
   }) {
-    return _then(_TestScriptMetadataLink(
+    return _then(_$_TestScriptMetadataLink(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: url == freezed
@@ -5548,24 +5420,40 @@ class __$TestScriptMetadataLinkCopyWithImpl<$Res>
 class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
   _$_TestScriptMetadataLink(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.url,
       @JsonKey(name: '_url') this.urlElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptMetadataLinkFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri url;
   @override
@@ -5586,12 +5474,12 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptMetadataLink &&
+            other is _$_TestScriptMetadataLink &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
@@ -5601,12 +5489,13 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
                 .equals(other.descriptionElement, descriptionElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(url),
       const DeepCollectionEquality().hash(urlElement),
       const DeepCollectionEquality().hash(description),
@@ -5614,25 +5503,27 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptMetadataLinkCopyWith<_TestScriptMetadataLink> get copyWith =>
-      __$TestScriptMetadataLinkCopyWithImpl<_TestScriptMetadataLink>(
+  _$$_TestScriptMetadataLinkCopyWith<_$_TestScriptMetadataLink> get copyWith =>
+      __$$_TestScriptMetadataLinkCopyWithImpl<_$_TestScriptMetadataLink>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptMetadataLinkToJson(this);
+    return _$$_TestScriptMetadataLinkToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
   factory _TestScriptMetadataLink(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required FhirUri url,
-          @JsonKey(name: '_url') Element? urlElement,
-          String? description,
-          @JsonKey(name: '_description') Element? descriptionElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final FhirUri url,
+          @JsonKey(name: '_url') final Element? urlElement,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_TestScriptMetadataLink;
   _TestScriptMetadataLink._() : super._();
 
@@ -5658,7 +5549,7 @@ abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
   Element? get descriptionElement;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptMetadataLinkCopyWith<_TestScriptMetadataLink> get copyWith =>
+  _$$_TestScriptMetadataLinkCopyWith<_$_TestScriptMetadataLink> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5666,51 +5557,6 @@ TestScriptMetadataCapability _$TestScriptMetadataCapabilityFromJson(
     Map<String, dynamic> json) {
   return _TestScriptMetadataCapability.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptMetadataCapabilityTearOff {
-  const _$TestScriptMetadataCapabilityTearOff();
-
-  _TestScriptMetadataCapability call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'required') Boolean? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
-      @JsonKey(name: '_validated') Element? validatedElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Integer? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
-      required Reference conformance}) {
-    return _TestScriptMetadataCapability(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      required_: required_,
-      requiredElement: requiredElement,
-      validated: validated,
-      validatedElement: validatedElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      destination: destination,
-      destinationElement: destinationElement,
-      link: link,
-      linkElement: linkElement,
-      conformance: conformance,
-    );
-  }
-
-  TestScriptMetadataCapability fromJson(Map<String, Object?> json) {
-    return TestScriptMetadataCapability.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptMetadataCapability = _$TestScriptMetadataCapabilityTearOff();
 
 /// @nodoc
 mixin _$TestScriptMetadataCapability {
@@ -5911,12 +5757,12 @@ class _$TestScriptMetadataCapabilityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptMetadataCapabilityCopyWith<$Res>
+abstract class _$$_TestScriptMetadataCapabilityCopyWith<$Res>
     implements $TestScriptMetadataCapabilityCopyWith<$Res> {
-  factory _$TestScriptMetadataCapabilityCopyWith(
-          _TestScriptMetadataCapability value,
-          $Res Function(_TestScriptMetadataCapability) then) =
-      __$TestScriptMetadataCapabilityCopyWithImpl<$Res>;
+  factory _$$_TestScriptMetadataCapabilityCopyWith(
+          _$_TestScriptMetadataCapability value,
+          $Res Function(_$_TestScriptMetadataCapability) then) =
+      __$$_TestScriptMetadataCapabilityCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -5947,17 +5793,17 @@ abstract class _$TestScriptMetadataCapabilityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
+class __$$_TestScriptMetadataCapabilityCopyWithImpl<$Res>
     extends _$TestScriptMetadataCapabilityCopyWithImpl<$Res>
-    implements _$TestScriptMetadataCapabilityCopyWith<$Res> {
-  __$TestScriptMetadataCapabilityCopyWithImpl(
-      _TestScriptMetadataCapability _value,
-      $Res Function(_TestScriptMetadataCapability) _then)
-      : super(_value, (v) => _then(v as _TestScriptMetadataCapability));
+    implements _$$_TestScriptMetadataCapabilityCopyWith<$Res> {
+  __$$_TestScriptMetadataCapabilityCopyWithImpl(
+      _$_TestScriptMetadataCapability _value,
+      $Res Function(_$_TestScriptMetadataCapability) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptMetadataCapability));
 
   @override
-  _TestScriptMetadataCapability get _value =>
-      super._value as _TestScriptMetadataCapability;
+  _$_TestScriptMetadataCapability get _value =>
+      super._value as _$_TestScriptMetadataCapability;
 
   @override
   $Res call({
@@ -5976,17 +5822,17 @@ class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
     Object? linkElement = freezed,
     Object? conformance = freezed,
   }) {
-    return _then(_TestScriptMetadataCapability(
+    return _then(_$_TestScriptMetadataCapability(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       required_: required_ == freezed
@@ -6022,11 +5868,11 @@ class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
           : destinationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       link: link == freezed
-          ? _value.link
+          ? _value._link
           : link // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       linkElement: linkElement == freezed
-          ? _value.linkElement
+          ? _value._linkElement
           : linkElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       conformance: conformance == freezed
@@ -6042,8 +5888,8 @@ class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
 class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
   _$_TestScriptMetadataCapability(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') this.required_,
       @JsonKey(name: '_required') this.requiredElement,
       this.validated,
@@ -6052,21 +5898,39 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
       @JsonKey(name: '_description') this.descriptionElement,
       this.destination,
       @JsonKey(name: '_destination') this.destinationElement,
-      this.link,
-      @JsonKey(name: '_link') this.linkElement,
+      final List<FhirUri>? link,
+      @JsonKey(name: '_link') final List<Element?>? linkElement,
       required this.conformance})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _link = link,
+        _linkElement = linkElement,
+        super._();
 
   factory _$_TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptMetadataCapabilityFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'required')
   final Boolean? required_;
@@ -6088,11 +5952,25 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
   @override
   @JsonKey(name: '_destination')
   final Element? destinationElement;
+  final List<FhirUri>? _link;
   @override
-  final List<FhirUri>? link;
+  List<FhirUri>? get link {
+    final value = _link;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element?>? _linkElement;
   @override
   @JsonKey(name: '_link')
-  final List<Element?>? linkElement;
+  List<Element?>? get linkElement {
+    final value = _linkElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference conformance;
 
@@ -6105,12 +5983,12 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptMetadataCapability &&
+            other is _$_TestScriptMetadataCapability &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.required_, required_) &&
             const DeepCollectionEquality()
                 .equals(other.requiredElement, requiredElement) &&
@@ -6125,19 +6003,20 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
                 .equals(other.destination, destination) &&
             const DeepCollectionEquality()
                 .equals(other.destinationElement, destinationElement) &&
-            const DeepCollectionEquality().equals(other.link, link) &&
+            const DeepCollectionEquality().equals(other._link, _link) &&
             const DeepCollectionEquality()
-                .equals(other.linkElement, linkElement) &&
+                .equals(other._linkElement, _linkElement) &&
             const DeepCollectionEquality()
                 .equals(other.conformance, conformance));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(required_),
       const DeepCollectionEquality().hash(requiredElement),
       const DeepCollectionEquality().hash(validated),
@@ -6146,39 +6025,41 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
       const DeepCollectionEquality().hash(descriptionElement),
       const DeepCollectionEquality().hash(destination),
       const DeepCollectionEquality().hash(destinationElement),
-      const DeepCollectionEquality().hash(link),
-      const DeepCollectionEquality().hash(linkElement),
+      const DeepCollectionEquality().hash(_link),
+      const DeepCollectionEquality().hash(_linkElement),
       const DeepCollectionEquality().hash(conformance));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptMetadataCapabilityCopyWith<_TestScriptMetadataCapability>
-      get copyWith => __$TestScriptMetadataCapabilityCopyWithImpl<
-          _TestScriptMetadataCapability>(this, _$identity);
+  _$$_TestScriptMetadataCapabilityCopyWith<_$_TestScriptMetadataCapability>
+      get copyWith => __$$_TestScriptMetadataCapabilityCopyWithImpl<
+          _$_TestScriptMetadataCapability>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptMetadataCapabilityToJson(this);
+    return _$$_TestScriptMetadataCapabilityToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptMetadataCapability
     extends TestScriptMetadataCapability {
   factory _TestScriptMetadataCapability(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'required') Boolean? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
-      @JsonKey(name: '_validated') Element? validatedElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Integer? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
-      required Reference conformance}) = _$_TestScriptMetadataCapability;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'required') final Boolean? required_,
+      @JsonKey(name: '_required') final Element? requiredElement,
+      final Boolean? validated,
+      @JsonKey(name: '_validated') final Element? validatedElement,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final Integer? destination,
+      @JsonKey(name: '_destination') final Element? destinationElement,
+      final List<FhirUri>? link,
+      @JsonKey(name: '_link') final List<Element?>? linkElement,
+      required final Reference conformance}) = _$_TestScriptMetadataCapability;
   _TestScriptMetadataCapability._() : super._();
 
   factory _TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =
@@ -6221,46 +6102,13 @@ abstract class _TestScriptMetadataCapability
   Reference get conformance;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptMetadataCapabilityCopyWith<_TestScriptMetadataCapability>
+  _$$_TestScriptMetadataCapabilityCopyWith<_$_TestScriptMetadataCapability>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 TestScriptFixture _$TestScriptFixtureFromJson(Map<String, dynamic> json) {
   return _TestScriptFixture.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptFixtureTearOff {
-  const _$TestScriptFixtureTearOff();
-
-  _TestScriptFixture call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? autocreate,
-      @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
-      @JsonKey(name: '_autodelete') Element? autodeleteElement,
-      Reference? resource}) {
-    return _TestScriptFixture(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      autocreate: autocreate,
-      autocreateElement: autocreateElement,
-      autodelete: autodelete,
-      autodeleteElement: autodeleteElement,
-      resource: resource,
-    );
-  }
-
-  TestScriptFixture fromJson(Map<String, Object?> json) {
-    return TestScriptFixture.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptFixture = _$TestScriptFixtureTearOff();
 
 /// @nodoc
 mixin _$TestScriptFixture {
@@ -6394,11 +6242,11 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptFixtureCopyWith<$Res>
+abstract class _$$_TestScriptFixtureCopyWith<$Res>
     implements $TestScriptFixtureCopyWith<$Res> {
-  factory _$TestScriptFixtureCopyWith(
-          _TestScriptFixture value, $Res Function(_TestScriptFixture) then) =
-      __$TestScriptFixtureCopyWithImpl<$Res>;
+  factory _$$_TestScriptFixtureCopyWith(_$_TestScriptFixture value,
+          $Res Function(_$_TestScriptFixture) then) =
+      __$$_TestScriptFixtureCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -6419,15 +6267,15 @@ abstract class _$TestScriptFixtureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptFixtureCopyWithImpl<$Res>
+class __$$_TestScriptFixtureCopyWithImpl<$Res>
     extends _$TestScriptFixtureCopyWithImpl<$Res>
-    implements _$TestScriptFixtureCopyWith<$Res> {
-  __$TestScriptFixtureCopyWithImpl(
-      _TestScriptFixture _value, $Res Function(_TestScriptFixture) _then)
-      : super(_value, (v) => _then(v as _TestScriptFixture));
+    implements _$$_TestScriptFixtureCopyWith<$Res> {
+  __$$_TestScriptFixtureCopyWithImpl(
+      _$_TestScriptFixture _value, $Res Function(_$_TestScriptFixture) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptFixture));
 
   @override
-  _TestScriptFixture get _value => super._value as _TestScriptFixture;
+  _$_TestScriptFixture get _value => super._value as _$_TestScriptFixture;
 
   @override
   $Res call({
@@ -6440,17 +6288,17 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
     Object? autodeleteElement = freezed,
     Object? resource = freezed,
   }) {
-    return _then(_TestScriptFixture(
+    return _then(_$_TestScriptFixture(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       autocreate: autocreate == freezed
@@ -6482,25 +6330,41 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
 class _$_TestScriptFixture extends _TestScriptFixture {
   _$_TestScriptFixture(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.autocreate,
       @JsonKey(name: '_autocreate') this.autocreateElement,
       this.autodelete,
       @JsonKey(name: '_autodelete') this.autodeleteElement,
       this.resource})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptFixtureFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? autocreate;
   @override
@@ -6523,12 +6387,12 @@ class _$_TestScriptFixture extends _TestScriptFixture {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptFixture &&
+            other is _$_TestScriptFixture &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.autocreate, autocreate) &&
             const DeepCollectionEquality()
@@ -6540,12 +6404,13 @@ class _$_TestScriptFixture extends _TestScriptFixture {
             const DeepCollectionEquality().equals(other.resource, resource));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(autocreate),
       const DeepCollectionEquality().hash(autocreateElement),
       const DeepCollectionEquality().hash(autodelete),
@@ -6554,25 +6419,28 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith =>
-      __$TestScriptFixtureCopyWithImpl<_TestScriptFixture>(this, _$identity);
+  _$$_TestScriptFixtureCopyWith<_$_TestScriptFixture> get copyWith =>
+      __$$_TestScriptFixtureCopyWithImpl<_$_TestScriptFixture>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptFixtureToJson(this);
+    return _$$_TestScriptFixtureToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptFixture extends TestScriptFixture {
   factory _TestScriptFixture(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? autocreate,
-      @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
-      @JsonKey(name: '_autodelete') Element? autodeleteElement,
-      Reference? resource}) = _$_TestScriptFixture;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Boolean? autocreate,
+      @JsonKey(name: '_autocreate') final Element? autocreateElement,
+      final Boolean? autodelete,
+      @JsonKey(name: '_autodelete') final Element? autodeleteElement,
+      final Reference? resource}) = _$_TestScriptFixture;
   _TestScriptFixture._() : super._();
 
   factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
@@ -6599,52 +6467,13 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   Reference? get resource;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith =>
+  _$$_TestScriptFixtureCopyWith<_$_TestScriptFixture> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) {
   return _TestScriptVariable.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptVariableTearOff {
-  const _$TestScriptVariableTearOff();
-
-  _TestScriptVariable call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? headerField,
-      @JsonKey(name: '_headerField') Element? headerFieldElement,
-      String? path,
-      @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement}) {
-    return _TestScriptVariable(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      headerField: headerField,
-      headerFieldElement: headerFieldElement,
-      path: path,
-      pathElement: pathElement,
-      sourceId: sourceId,
-      sourceIdElement: sourceIdElement,
-    );
-  }
-
-  TestScriptVariable fromJson(Map<String, Object?> json) {
-    return TestScriptVariable.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptVariable = _$TestScriptVariableTearOff();
 
 /// @nodoc
 mixin _$TestScriptVariable {
@@ -6813,11 +6642,11 @@ class _$TestScriptVariableCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptVariableCopyWith<$Res>
+abstract class _$$_TestScriptVariableCopyWith<$Res>
     implements $TestScriptVariableCopyWith<$Res> {
-  factory _$TestScriptVariableCopyWith(
-          _TestScriptVariable value, $Res Function(_TestScriptVariable) then) =
-      __$TestScriptVariableCopyWithImpl<$Res>;
+  factory _$$_TestScriptVariableCopyWith(_$_TestScriptVariable value,
+          $Res Function(_$_TestScriptVariable) then) =
+      __$$_TestScriptVariableCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -6843,15 +6672,15 @@ abstract class _$TestScriptVariableCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptVariableCopyWithImpl<$Res>
+class __$$_TestScriptVariableCopyWithImpl<$Res>
     extends _$TestScriptVariableCopyWithImpl<$Res>
-    implements _$TestScriptVariableCopyWith<$Res> {
-  __$TestScriptVariableCopyWithImpl(
-      _TestScriptVariable _value, $Res Function(_TestScriptVariable) _then)
-      : super(_value, (v) => _then(v as _TestScriptVariable));
+    implements _$$_TestScriptVariableCopyWith<$Res> {
+  __$$_TestScriptVariableCopyWithImpl(
+      _$_TestScriptVariable _value, $Res Function(_$_TestScriptVariable) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptVariable));
 
   @override
-  _TestScriptVariable get _value => super._value as _TestScriptVariable;
+  _$_TestScriptVariable get _value => super._value as _$_TestScriptVariable;
 
   @override
   $Res call({
@@ -6867,17 +6696,17 @@ class __$TestScriptVariableCopyWithImpl<$Res>
     Object? sourceId = freezed,
     Object? sourceIdElement = freezed,
   }) {
-    return _then(_TestScriptVariable(
+    return _then(_$_TestScriptVariable(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -6921,8 +6750,8 @@ class __$TestScriptVariableCopyWithImpl<$Res>
 class _$_TestScriptVariable extends _TestScriptVariable {
   _$_TestScriptVariable(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.headerField,
@@ -6931,18 +6760,34 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       @JsonKey(name: '_path') this.pathElement,
       this.sourceId,
       @JsonKey(name: '_sourceId') this.sourceIdElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptVariableFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String name;
   @override
@@ -6973,12 +6818,12 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptVariable &&
+            other is _$_TestScriptVariable &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -6994,12 +6839,13 @@ class _$_TestScriptVariable extends _TestScriptVariable {
                 .equals(other.sourceIdElement, sourceIdElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(nameElement),
       const DeepCollectionEquality().hash(headerField),
@@ -7011,28 +6857,31 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith =>
-      __$TestScriptVariableCopyWithImpl<_TestScriptVariable>(this, _$identity);
+  _$$_TestScriptVariableCopyWith<_$_TestScriptVariable> get copyWith =>
+      __$$_TestScriptVariableCopyWithImpl<_$_TestScriptVariable>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptVariableToJson(this);
+    return _$$_TestScriptVariableToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptVariable extends TestScriptVariable {
   factory _TestScriptVariable(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required String name,
-          @JsonKey(name: '_name') Element? nameElement,
-          String? headerField,
-          @JsonKey(name: '_headerField') Element? headerFieldElement,
-          String? path,
-          @JsonKey(name: '_path') Element? pathElement,
-          Id? sourceId,
-          @JsonKey(name: '_sourceId') Element? sourceIdElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final String name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? headerField,
+          @JsonKey(name: '_headerField') final Element? headerFieldElement,
+          final String? path,
+          @JsonKey(name: '_path') final Element? pathElement,
+          final Id? sourceId,
+          @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
 
@@ -7068,40 +6917,13 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   Element? get sourceIdElement;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith =>
+  _$$_TestScriptVariableCopyWith<_$_TestScriptVariable> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptSetup _$TestScriptSetupFromJson(Map<String, dynamic> json) {
   return _TestScriptSetup.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptSetupTearOff {
-  const _$TestScriptSetupTearOff();
-
-  _TestScriptSetup call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction> action}) {
-    return _TestScriptSetup(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      metadata: metadata,
-      action: action,
-    );
-  }
-
-  TestScriptSetup fromJson(Map<String, Object?> json) {
-    return TestScriptSetup.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptSetup = _$TestScriptSetupTearOff();
 
 /// @nodoc
 mixin _$TestScriptSetup {
@@ -7188,11 +7010,11 @@ class _$TestScriptSetupCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptSetupCopyWith<$Res>
+abstract class _$$_TestScriptSetupCopyWith<$Res>
     implements $TestScriptSetupCopyWith<$Res> {
-  factory _$TestScriptSetupCopyWith(
-          _TestScriptSetup value, $Res Function(_TestScriptSetup) then) =
-      __$TestScriptSetupCopyWithImpl<$Res>;
+  factory _$$_TestScriptSetupCopyWith(
+          _$_TestScriptSetup value, $Res Function(_$_TestScriptSetup) then) =
+      __$$_TestScriptSetupCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -7206,15 +7028,15 @@ abstract class _$TestScriptSetupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptSetupCopyWithImpl<$Res>
+class __$$_TestScriptSetupCopyWithImpl<$Res>
     extends _$TestScriptSetupCopyWithImpl<$Res>
-    implements _$TestScriptSetupCopyWith<$Res> {
-  __$TestScriptSetupCopyWithImpl(
-      _TestScriptSetup _value, $Res Function(_TestScriptSetup) _then)
-      : super(_value, (v) => _then(v as _TestScriptSetup));
+    implements _$$_TestScriptSetupCopyWith<$Res> {
+  __$$_TestScriptSetupCopyWithImpl(
+      _$_TestScriptSetup _value, $Res Function(_$_TestScriptSetup) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptSetup));
 
   @override
-  _TestScriptSetup get _value => super._value as _TestScriptSetup;
+  _$_TestScriptSetup get _value => super._value as _$_TestScriptSetup;
 
   @override
   $Res call({
@@ -7224,17 +7046,17 @@ class __$TestScriptSetupCopyWithImpl<$Res>
     Object? metadata = freezed,
     Object? action = freezed,
   }) {
-    return _then(_TestScriptSetup(
+    return _then(_$_TestScriptSetup(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       metadata: metadata == freezed
@@ -7242,7 +7064,7 @@ class __$TestScriptSetupCopyWithImpl<$Res>
           : metadata // ignore: cast_nullable_to_non_nullable
               as TestScriptMetadata?,
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestScriptSetupAction>,
     ));
@@ -7254,26 +7076,47 @@ class __$TestScriptSetupCopyWithImpl<$Res>
 class _$_TestScriptSetup extends _TestScriptSetup {
   _$_TestScriptSetup(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.metadata,
-      required this.action})
-      : super._();
+      required final List<TestScriptSetupAction> action})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _action = action,
+        super._();
 
   factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptSetupFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptMetadata? metadata;
+  final List<TestScriptSetupAction> _action;
   @override
-  final List<TestScriptSetupAction> action;
+  List<TestScriptSetupAction> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -7284,43 +7127,46 @@ class _$_TestScriptSetup extends _TestScriptSetup {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptSetup &&
+            other is _$_TestScriptSetup &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.metadata, metadata) &&
-            const DeepCollectionEquality().equals(other.action, action));
+            const DeepCollectionEquality().equals(other._action, _action));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(metadata),
-      const DeepCollectionEquality().hash(action));
+      const DeepCollectionEquality().hash(_action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith =>
-      __$TestScriptSetupCopyWithImpl<_TestScriptSetup>(this, _$identity);
+  _$$_TestScriptSetupCopyWith<_$_TestScriptSetup> get copyWith =>
+      __$$_TestScriptSetupCopyWithImpl<_$_TestScriptSetup>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptSetupToJson(this);
+    return _$$_TestScriptSetupToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptSetup extends TestScriptSetup {
   factory _TestScriptSetup(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction> action}) = _$_TestScriptSetup;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final TestScriptMetadata? metadata,
+      required final List<TestScriptSetupAction> action}) = _$_TestScriptSetup;
   _TestScriptSetup._() : super._();
 
   factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
@@ -7339,7 +7185,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
   List<TestScriptSetupAction> get action;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith =>
+  _$$_TestScriptSetupCopyWith<_$_TestScriptSetup> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7347,35 +7193,6 @@ TestScriptSetupAction _$TestScriptSetupActionFromJson(
     Map<String, dynamic> json) {
   return _TestScriptSetupAction.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptSetupActionTearOff {
-  const _$TestScriptSetupActionTearOff();
-
-  _TestScriptSetupAction call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      TestScriptActionOperation? operation,
-      @JsonKey(name: 'assert') TestScriptActionAssert? assert_}) {
-    return _TestScriptSetupAction(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      operation: operation,
-      assert_: assert_,
-    );
-  }
-
-  TestScriptSetupAction fromJson(Map<String, Object?> json) {
-    return TestScriptSetupAction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptSetupAction = _$TestScriptSetupActionTearOff();
 
 /// @nodoc
 mixin _$TestScriptSetupAction {
@@ -7484,11 +7301,11 @@ class _$TestScriptSetupActionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptSetupActionCopyWith<$Res>
+abstract class _$$_TestScriptSetupActionCopyWith<$Res>
     implements $TestScriptSetupActionCopyWith<$Res> {
-  factory _$TestScriptSetupActionCopyWith(_TestScriptSetupAction value,
-          $Res Function(_TestScriptSetupAction) then) =
-      __$TestScriptSetupActionCopyWithImpl<$Res>;
+  factory _$$_TestScriptSetupActionCopyWith(_$_TestScriptSetupAction value,
+          $Res Function(_$_TestScriptSetupAction) then) =
+      __$$_TestScriptSetupActionCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -7505,15 +7322,16 @@ abstract class _$TestScriptSetupActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptSetupActionCopyWithImpl<$Res>
+class __$$_TestScriptSetupActionCopyWithImpl<$Res>
     extends _$TestScriptSetupActionCopyWithImpl<$Res>
-    implements _$TestScriptSetupActionCopyWith<$Res> {
-  __$TestScriptSetupActionCopyWithImpl(_TestScriptSetupAction _value,
-      $Res Function(_TestScriptSetupAction) _then)
-      : super(_value, (v) => _then(v as _TestScriptSetupAction));
+    implements _$$_TestScriptSetupActionCopyWith<$Res> {
+  __$$_TestScriptSetupActionCopyWithImpl(_$_TestScriptSetupAction _value,
+      $Res Function(_$_TestScriptSetupAction) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptSetupAction));
 
   @override
-  _TestScriptSetupAction get _value => super._value as _TestScriptSetupAction;
+  _$_TestScriptSetupAction get _value =>
+      super._value as _$_TestScriptSetupAction;
 
   @override
   $Res call({
@@ -7524,21 +7342,21 @@ class __$TestScriptSetupActionCopyWithImpl<$Res>
     Object? operation = freezed,
     Object? assert_ = freezed,
   }) {
-    return _then(_TestScriptSetupAction(
+    return _then(_$_TestScriptSetupAction(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       operation: operation == freezed
@@ -7558,26 +7376,50 @@ class __$TestScriptSetupActionCopyWithImpl<$Res>
 class _$_TestScriptSetupAction extends _TestScriptSetupAction {
   _$_TestScriptSetupAction(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.operation,
       @JsonKey(name: 'assert') this.assert_})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptSetupActionFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptActionOperation? operation;
   @override
@@ -7593,48 +7435,51 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptSetupAction &&
+            other is _$_TestScriptSetupAction &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.operation, operation) &&
             const DeepCollectionEquality().equals(other.assert_, assert_));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(operation),
       const DeepCollectionEquality().hash(assert_));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptSetupActionCopyWith<_TestScriptSetupAction> get copyWith =>
-      __$TestScriptSetupActionCopyWithImpl<_TestScriptSetupAction>(
+  _$$_TestScriptSetupActionCopyWith<_$_TestScriptSetupAction> get copyWith =>
+      __$$_TestScriptSetupActionCopyWithImpl<_$_TestScriptSetupAction>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptSetupActionToJson(this);
+    return _$$_TestScriptSetupActionToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptSetupAction extends TestScriptSetupAction {
   factory _TestScriptSetupAction(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          TestScriptActionOperation? operation,
-          @JsonKey(name: 'assert') TestScriptActionAssert? assert_}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          final TestScriptActionOperation? operation,
+          @JsonKey(name: 'assert') final TestScriptActionAssert? assert_}) =
       _$_TestScriptSetupAction;
   _TestScriptSetupAction._() : super._();
 
@@ -7658,7 +7503,7 @@ abstract class _TestScriptSetupAction extends TestScriptSetupAction {
   TestScriptActionAssert? get assert_;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptSetupActionCopyWith<_TestScriptSetupAction> get copyWith =>
+  _$$_TestScriptSetupActionCopyWith<_$_TestScriptSetupAction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7666,99 +7511,6 @@ TestScriptActionOperation _$TestScriptActionOperationFromJson(
     Map<String, dynamic> json) {
   return _TestScriptActionOperation.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptActionOperationTearOff {
-  const _$TestScriptActionOperationTearOff();
-
-  _TestScriptActionOperation call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      Coding? type,
-      Code? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
-      String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept? accept,
-      @JsonKey(name: '_accept')
-          Element? acceptElement,
-      @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      Integer? destination,
-      @JsonKey(name: '_destination')
-          Element? destinationElement,
-      Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
-      String? params,
-      @JsonKey(name: '_params')
-          Element? paramsElement,
-      List<TestScriptOperationRequestHeader>? requestHeader,
-      Id? responseId,
-      @JsonKey(name: '_responseId')
-          Element? responseIdElement,
-      Id? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
-      Id? targetId,
-      @JsonKey(name: '_targetId')
-          Element? targetIdElement,
-      String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement}) {
-    return _TestScriptActionOperation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      type: type,
-      resource: resource,
-      resourceElement: resourceElement,
-      label: label,
-      labelElement: labelElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      accept: accept,
-      acceptElement: acceptElement,
-      contentType: contentType,
-      contentTypeElement: contentTypeElement,
-      destination: destination,
-      destinationElement: destinationElement,
-      encodeRequestUrl: encodeRequestUrl,
-      encodeRequestUrlElement: encodeRequestUrlElement,
-      params: params,
-      paramsElement: paramsElement,
-      requestHeader: requestHeader,
-      responseId: responseId,
-      responseIdElement: responseIdElement,
-      sourceId: sourceId,
-      sourceIdElement: sourceIdElement,
-      targetId: targetId,
-      targetIdElement: targetIdElement,
-      url: url,
-      urlElement: urlElement,
-    );
-  }
-
-  TestScriptActionOperation fromJson(Map<String, Object?> json) {
-    return TestScriptActionOperation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptActionOperation = _$TestScriptActionOperationTearOff();
 
 /// @nodoc
 mixin _$TestScriptActionOperation {
@@ -8196,11 +7948,12 @@ class _$TestScriptActionOperationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptActionOperationCopyWith<$Res>
+abstract class _$$_TestScriptActionOperationCopyWith<$Res>
     implements $TestScriptActionOperationCopyWith<$Res> {
-  factory _$TestScriptActionOperationCopyWith(_TestScriptActionOperation value,
-          $Res Function(_TestScriptActionOperation) then) =
-      __$TestScriptActionOperationCopyWithImpl<$Res>;
+  factory _$$_TestScriptActionOperationCopyWith(
+          _$_TestScriptActionOperation value,
+          $Res Function(_$_TestScriptActionOperation) then) =
+      __$$_TestScriptActionOperationCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -8279,16 +8032,17 @@ abstract class _$TestScriptActionOperationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptActionOperationCopyWithImpl<$Res>
+class __$$_TestScriptActionOperationCopyWithImpl<$Res>
     extends _$TestScriptActionOperationCopyWithImpl<$Res>
-    implements _$TestScriptActionOperationCopyWith<$Res> {
-  __$TestScriptActionOperationCopyWithImpl(_TestScriptActionOperation _value,
-      $Res Function(_TestScriptActionOperation) _then)
-      : super(_value, (v) => _then(v as _TestScriptActionOperation));
+    implements _$$_TestScriptActionOperationCopyWith<$Res> {
+  __$$_TestScriptActionOperationCopyWithImpl(
+      _$_TestScriptActionOperation _value,
+      $Res Function(_$_TestScriptActionOperation) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptActionOperation));
 
   @override
-  _TestScriptActionOperation get _value =>
-      super._value as _TestScriptActionOperation;
+  _$_TestScriptActionOperation get _value =>
+      super._value as _$_TestScriptActionOperation;
 
   @override
   $Res call({
@@ -8323,21 +8077,21 @@ class __$TestScriptActionOperationCopyWithImpl<$Res>
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
-    return _then(_TestScriptActionOperation(
+    return _then(_$_TestScriptActionOperation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       type: type == freezed
@@ -8409,7 +8163,7 @@ class __$TestScriptActionOperationCopyWithImpl<$Res>
           : paramsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       requestHeader: requestHeader == freezed
-          ? _value.requestHeader
+          ? _value._requestHeader
           : requestHeader // ignore: cast_nullable_to_non_nullable
               as List<TestScriptOperationRequestHeader>?,
       responseId: responseId == freezed
@@ -8453,9 +8207,9 @@ class __$TestScriptActionOperationCopyWithImpl<$Res>
 class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   _$_TestScriptActionOperation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.type,
       this.resource,
       @JsonKey(name: '_resource') this.resourceElement,
@@ -8473,7 +8227,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
       @JsonKey(name: '_encodeRequestUrl') this.encodeRequestUrlElement,
       this.params,
       @JsonKey(name: '_params') this.paramsElement,
-      this.requestHeader,
+      final List<TestScriptOperationRequestHeader>? requestHeader,
       this.responseId,
       @JsonKey(name: '_responseId') this.responseIdElement,
       this.sourceId,
@@ -8482,21 +8236,46 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
       @JsonKey(name: '_targetId') this.targetIdElement,
       this.url,
       @JsonKey(name: '_url') this.urlElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _requestHeader = requestHeader,
+        super._();
 
   factory _$_TestScriptActionOperation.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptActionOperationFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding? type;
   @override
@@ -8541,8 +8320,15 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   @override
   @JsonKey(name: '_params')
   final Element? paramsElement;
+  final List<TestScriptOperationRequestHeader>? _requestHeader;
   @override
-  final List<TestScriptOperationRequestHeader>? requestHeader;
+  List<TestScriptOperationRequestHeader>? get requestHeader {
+    final value = _requestHeader;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Id? responseId;
   @override
@@ -8573,14 +8359,14 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptActionOperation &&
+            other is _$_TestScriptActionOperation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality()
@@ -8611,7 +8397,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
             const DeepCollectionEquality()
                 .equals(other.paramsElement, paramsElement) &&
             const DeepCollectionEquality()
-                .equals(other.requestHeader, requestHeader) &&
+                .equals(other._requestHeader, _requestHeader) &&
             const DeepCollectionEquality()
                 .equals(other.responseId, responseId) &&
             const DeepCollectionEquality()
@@ -8627,13 +8413,14 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
                 .equals(other.urlElement, urlElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(fhirComments),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_fhirComments),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(resource),
         const DeepCollectionEquality().hash(resourceElement),
@@ -8651,7 +8438,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
         const DeepCollectionEquality().hash(encodeRequestUrlElement),
         const DeepCollectionEquality().hash(params),
         const DeepCollectionEquality().hash(paramsElement),
-        const DeepCollectionEquality().hash(requestHeader),
+        const DeepCollectionEquality().hash(_requestHeader),
         const DeepCollectionEquality().hash(responseId),
         const DeepCollectionEquality().hash(responseIdElement),
         const DeepCollectionEquality().hash(sourceId),
@@ -8664,65 +8451,66 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptActionOperationCopyWith<_TestScriptActionOperation>
-      get copyWith =>
-          __$TestScriptActionOperationCopyWithImpl<_TestScriptActionOperation>(
-              this, _$identity);
+  _$$_TestScriptActionOperationCopyWith<_$_TestScriptActionOperation>
+      get copyWith => __$$_TestScriptActionOperationCopyWithImpl<
+          _$_TestScriptActionOperation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptActionOperationToJson(this);
+    return _$$_TestScriptActionOperationToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   factory _TestScriptActionOperation(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      Coding? type,
-      Code? resource,
+          final List<String>? fhirComments,
+      final Coding? type,
+      final Code? resource,
       @JsonKey(name: '_resource')
-          Element? resourceElement,
-      String? label,
+          final Element? resourceElement,
+      final String? label,
       @JsonKey(name: '_label')
-          Element? labelElement,
-      String? description,
+          final Element? labelElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
+          final Element? descriptionElement,
       @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept? accept,
+          final OperationAccept? accept,
       @JsonKey(name: '_accept')
-          Element? acceptElement,
+          final Element? acceptElement,
       @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType? contentType,
+          final OperationContentType? contentType,
       @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      Integer? destination,
+          final Element? contentTypeElement,
+      final Integer? destination,
       @JsonKey(name: '_destination')
-          Element? destinationElement,
-      Boolean? encodeRequestUrl,
+          final Element? destinationElement,
+      final Boolean? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
-      String? params,
+          final Element? encodeRequestUrlElement,
+      final String? params,
       @JsonKey(name: '_params')
-          Element? paramsElement,
-      List<TestScriptOperationRequestHeader>? requestHeader,
-      Id? responseId,
+          final Element? paramsElement,
+      final List<TestScriptOperationRequestHeader>? requestHeader,
+      final Id? responseId,
       @JsonKey(name: '_responseId')
-          Element? responseIdElement,
-      Id? sourceId,
+          final Element? responseIdElement,
+      final Id? sourceId,
       @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
-      Id? targetId,
+          final Element? sourceIdElement,
+      final Id? targetId,
       @JsonKey(name: '_targetId')
-          Element? targetIdElement,
-      String? url,
+          final Element? targetIdElement,
+      final String? url,
       @JsonKey(name: '_url')
-          Element? urlElement}) = _$_TestScriptActionOperation;
+          final Element? urlElement}) = _$_TestScriptActionOperation;
   _TestScriptActionOperation._() : super._();
 
   factory _TestScriptActionOperation.fromJson(Map<String, dynamic> json) =
@@ -8806,7 +8594,7 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   Element? get urlElement;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptActionOperationCopyWith<_TestScriptActionOperation>
+  _$$_TestScriptActionOperationCopyWith<_$_TestScriptActionOperation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8814,38 +8602,6 @@ TestScriptOperationRequestHeader _$TestScriptOperationRequestHeaderFromJson(
     Map<String, dynamic> json) {
   return _TestScriptOperationRequestHeader.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptOperationRequestHeaderTearOff {
-  const _$TestScriptOperationRequestHeaderTearOff();
-
-  _TestScriptOperationRequestHeader call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      FhirExtension? modifierExtension,
-      required String field,
-      @JsonKey(name: '_field') Element? fieldElement,
-      required String value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _TestScriptOperationRequestHeader(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      field: field,
-      fieldElement: fieldElement,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  TestScriptOperationRequestHeader fromJson(Map<String, Object?> json) {
-    return TestScriptOperationRequestHeader.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptOperationRequestHeader =
-    _$TestScriptOperationRequestHeaderTearOff();
 
 /// @nodoc
 mixin _$TestScriptOperationRequestHeader {
@@ -8972,12 +8728,12 @@ class _$TestScriptOperationRequestHeaderCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptOperationRequestHeaderCopyWith<$Res>
+abstract class _$$_TestScriptOperationRequestHeaderCopyWith<$Res>
     implements $TestScriptOperationRequestHeaderCopyWith<$Res> {
-  factory _$TestScriptOperationRequestHeaderCopyWith(
-          _TestScriptOperationRequestHeader value,
-          $Res Function(_TestScriptOperationRequestHeader) then) =
-      __$TestScriptOperationRequestHeaderCopyWithImpl<$Res>;
+  factory _$$_TestScriptOperationRequestHeaderCopyWith(
+          _$_TestScriptOperationRequestHeader value,
+          $Res Function(_$_TestScriptOperationRequestHeader) then) =
+      __$$_TestScriptOperationRequestHeaderCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -8997,17 +8753,17 @@ abstract class _$TestScriptOperationRequestHeaderCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptOperationRequestHeaderCopyWithImpl<$Res>
+class __$$_TestScriptOperationRequestHeaderCopyWithImpl<$Res>
     extends _$TestScriptOperationRequestHeaderCopyWithImpl<$Res>
-    implements _$TestScriptOperationRequestHeaderCopyWith<$Res> {
-  __$TestScriptOperationRequestHeaderCopyWithImpl(
-      _TestScriptOperationRequestHeader _value,
-      $Res Function(_TestScriptOperationRequestHeader) _then)
-      : super(_value, (v) => _then(v as _TestScriptOperationRequestHeader));
+    implements _$$_TestScriptOperationRequestHeaderCopyWith<$Res> {
+  __$$_TestScriptOperationRequestHeaderCopyWithImpl(
+      _$_TestScriptOperationRequestHeader _value,
+      $Res Function(_$_TestScriptOperationRequestHeader) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptOperationRequestHeader));
 
   @override
-  _TestScriptOperationRequestHeader get _value =>
-      super._value as _TestScriptOperationRequestHeader;
+  _$_TestScriptOperationRequestHeader get _value =>
+      super._value as _$_TestScriptOperationRequestHeader;
 
   @override
   $Res call({
@@ -9019,13 +8775,13 @@ class __$TestScriptOperationRequestHeaderCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_TestScriptOperationRequestHeader(
+    return _then(_$_TestScriptOperationRequestHeader(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
@@ -9058,13 +8814,14 @@ class _$_TestScriptOperationRequestHeader
     extends _TestScriptOperationRequestHeader {
   _$_TestScriptOperationRequestHeader(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.modifierExtension,
       required this.field,
       @JsonKey(name: '_field') this.fieldElement,
       required this.value,
       @JsonKey(name: '_value') this.valueElement})
-      : super._();
+      : _extension_ = extension_,
+        super._();
 
   factory _$_TestScriptOperationRequestHeader.fromJson(
           Map<String, dynamic> json) =>
@@ -9072,9 +8829,16 @@ class _$_TestScriptOperationRequestHeader
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirExtension? modifierExtension;
   @override
@@ -9097,10 +8861,10 @@ class _$_TestScriptOperationRequestHeader
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptOperationRequestHeader &&
+            other is _$_TestScriptOperationRequestHeader &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality().equals(other.field, field) &&
@@ -9111,11 +8875,12 @@ class _$_TestScriptOperationRequestHeader
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(modifierExtension),
       const DeepCollectionEquality().hash(field),
       const DeepCollectionEquality().hash(fieldElement),
@@ -9124,26 +8889,29 @@ class _$_TestScriptOperationRequestHeader
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptOperationRequestHeaderCopyWith<_TestScriptOperationRequestHeader>
-      get copyWith => __$TestScriptOperationRequestHeaderCopyWithImpl<
-          _TestScriptOperationRequestHeader>(this, _$identity);
+  _$$_TestScriptOperationRequestHeaderCopyWith<
+          _$_TestScriptOperationRequestHeader>
+      get copyWith => __$$_TestScriptOperationRequestHeaderCopyWithImpl<
+          _$_TestScriptOperationRequestHeader>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptOperationRequestHeaderToJson(this);
+    return _$$_TestScriptOperationRequestHeaderToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptOperationRequestHeader
     extends TestScriptOperationRequestHeader {
   factory _TestScriptOperationRequestHeader(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          FhirExtension? modifierExtension,
-          required String field,
-          @JsonKey(name: '_field') Element? fieldElement,
-          required String value,
-          @JsonKey(name: '_value') Element? valueElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final FhirExtension? modifierExtension,
+          required final String field,
+          @JsonKey(name: '_field') final Element? fieldElement,
+          required final String value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
       _$_TestScriptOperationRequestHeader;
   _TestScriptOperationRequestHeader._() : super._();
 
@@ -9169,7 +8937,8 @@ abstract class _TestScriptOperationRequestHeader
   Element? get valueElement;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptOperationRequestHeaderCopyWith<_TestScriptOperationRequestHeader>
+  _$$_TestScriptOperationRequestHeaderCopyWith<
+          _$_TestScriptOperationRequestHeader>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9177,121 +8946,6 @@ TestScriptActionAssert _$TestScriptActionAssertFromJson(
     Map<String, dynamic> json) {
   return _TestScriptActionAssert.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptActionAssertTearOff {
-  const _$TestScriptActionAssertTearOff();
-
-  _TestScriptActionAssert call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? label,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(unknownEnumValue: AssertDirection.unknown)
-          AssertDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement,
-      String? compareToSourceId,
-      @JsonKey(name: '_compareToSourceId')
-          Element? compareToSourceIdElement,
-      String? compareToSourcePath,
-      @JsonKey(name: '_compareToSourcePath')
-          Element? compareToSourcePathElement,
-      @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      String? headerField,
-      @JsonKey(name: '_headerField')
-          Element? headerFieldElement,
-      String? minimumId,
-      @JsonKey(name: '_minimumId')
-          Element? minimumIdElement,
-      Boolean? navigationLinks,
-      @JsonKey(name: '_navigationLinks')
-          Element? navigationLinksElement,
-      @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-          AssertOperator? operator_,
-      @JsonKey(name: '_operator')
-          Element? operatorElement,
-      String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      Code? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
-      @JsonKey(unknownEnumValue: AssertResponse.unknown)
-          AssertResponse? response,
-      @JsonKey(name: '_response')
-          Element? responseElement,
-      String? responseCode,
-      @JsonKey(name: '_responseCode')
-          Element? responseCodeElement,
-      Id? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
-      Id? validateProfileId,
-      @JsonKey(name: '_validateProfileId')
-          Element? validateProfileIdElement,
-      String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
-      Boolean? warningOnly,
-      @JsonKey(name: '_warningOnly')
-          Element? warningOnlyElement}) {
-    return _TestScriptActionAssert(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      label: label,
-      description: description,
-      descriptionElement: descriptionElement,
-      direction: direction,
-      directionElement: directionElement,
-      compareToSourceId: compareToSourceId,
-      compareToSourceIdElement: compareToSourceIdElement,
-      compareToSourcePath: compareToSourcePath,
-      compareToSourcePathElement: compareToSourcePathElement,
-      contentType: contentType,
-      contentTypeElement: contentTypeElement,
-      headerField: headerField,
-      headerFieldElement: headerFieldElement,
-      minimumId: minimumId,
-      minimumIdElement: minimumIdElement,
-      navigationLinks: navigationLinks,
-      navigationLinksElement: navigationLinksElement,
-      operator_: operator_,
-      operatorElement: operatorElement,
-      path: path,
-      pathElement: pathElement,
-      resource: resource,
-      resourceElement: resourceElement,
-      response: response,
-      responseElement: responseElement,
-      responseCode: responseCode,
-      responseCodeElement: responseCodeElement,
-      sourceId: sourceId,
-      sourceIdElement: sourceIdElement,
-      validateProfileId: validateProfileId,
-      validateProfileIdElement: validateProfileIdElement,
-      value: value,
-      valueElement: valueElement,
-      warningOnly: warningOnly,
-      warningOnlyElement: warningOnlyElement,
-    );
-  }
-
-  TestScriptActionAssert fromJson(Map<String, Object?> json) {
-    return TestScriptActionAssert.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptActionAssert = _$TestScriptActionAssertTearOff();
 
 /// @nodoc
 mixin _$TestScriptActionAssert {
@@ -9844,11 +9498,11 @@ class _$TestScriptActionAssertCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptActionAssertCopyWith<$Res>
+abstract class _$$_TestScriptActionAssertCopyWith<$Res>
     implements $TestScriptActionAssertCopyWith<$Res> {
-  factory _$TestScriptActionAssertCopyWith(_TestScriptActionAssert value,
-          $Res Function(_TestScriptActionAssert) then) =
-      __$TestScriptActionAssertCopyWithImpl<$Res>;
+  factory _$$_TestScriptActionAssertCopyWith(_$_TestScriptActionAssert value,
+          $Res Function(_$_TestScriptActionAssert) then) =
+      __$$_TestScriptActionAssertCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -9949,15 +9603,16 @@ abstract class _$TestScriptActionAssertCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptActionAssertCopyWithImpl<$Res>
+class __$$_TestScriptActionAssertCopyWithImpl<$Res>
     extends _$TestScriptActionAssertCopyWithImpl<$Res>
-    implements _$TestScriptActionAssertCopyWith<$Res> {
-  __$TestScriptActionAssertCopyWithImpl(_TestScriptActionAssert _value,
-      $Res Function(_TestScriptActionAssert) _then)
-      : super(_value, (v) => _then(v as _TestScriptActionAssert));
+    implements _$$_TestScriptActionAssertCopyWith<$Res> {
+  __$$_TestScriptActionAssertCopyWithImpl(_$_TestScriptActionAssert _value,
+      $Res Function(_$_TestScriptActionAssert) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptActionAssert));
 
   @override
-  _TestScriptActionAssert get _value => super._value as _TestScriptActionAssert;
+  _$_TestScriptActionAssert get _value =>
+      super._value as _$_TestScriptActionAssert;
 
   @override
   $Res call({
@@ -10000,17 +9655,17 @@ class __$TestScriptActionAssertCopyWithImpl<$Res>
     Object? warningOnly = freezed,
     Object? warningOnlyElement = freezed,
   }) {
-    return _then(_TestScriptActionAssert(
+    return _then(_$_TestScriptActionAssert(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       label: label == freezed
@@ -10163,8 +9818,8 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
   _$_TestScriptActionAssert(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.label,
       this.description,
       @JsonKey(name: '_description')
@@ -10221,18 +9876,34 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
       this.warningOnly,
       @JsonKey(name: '_warningOnly')
           this.warningOnlyElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_TestScriptActionAssert.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptActionAssertFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? label;
   @override
@@ -10334,12 +10005,12 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptActionAssert &&
+            other is _$_TestScriptActionAssert &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.label, label) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
@@ -10403,12 +10074,13 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
                 .equals(other.warningOnlyElement, warningOnlyElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(label),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
@@ -10448,78 +10120,80 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptActionAssertCopyWith<_TestScriptActionAssert> get copyWith =>
-      __$TestScriptActionAssertCopyWithImpl<_TestScriptActionAssert>(
+  _$$_TestScriptActionAssertCopyWith<_$_TestScriptActionAssert> get copyWith =>
+      __$$_TestScriptActionAssertCopyWithImpl<_$_TestScriptActionAssert>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptActionAssertToJson(this);
+    return _$$_TestScriptActionAssertToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   factory _TestScriptActionAssert(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? label,
-      String? description,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? label,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
+          final Element? descriptionElement,
       @JsonKey(unknownEnumValue: AssertDirection.unknown)
-          AssertDirection? direction,
+          final AssertDirection? direction,
       @JsonKey(name: '_direction')
-          Element? directionElement,
-      String? compareToSourceId,
+          final Element? directionElement,
+      final String? compareToSourceId,
       @JsonKey(name: '_compareToSourceId')
-          Element? compareToSourceIdElement,
-      String? compareToSourcePath,
+          final Element? compareToSourceIdElement,
+      final String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
-          Element? compareToSourcePathElement,
+          final Element? compareToSourcePathElement,
       @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType? contentType,
+          final AssertContentType? contentType,
       @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      String? headerField,
+          final Element? contentTypeElement,
+      final String? headerField,
       @JsonKey(name: '_headerField')
-          Element? headerFieldElement,
-      String? minimumId,
+          final Element? headerFieldElement,
+      final String? minimumId,
       @JsonKey(name: '_minimumId')
-          Element? minimumIdElement,
-      Boolean? navigationLinks,
+          final Element? minimumIdElement,
+      final Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
-          Element? navigationLinksElement,
+          final Element? navigationLinksElement,
       @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-          AssertOperator? operator_,
+          final AssertOperator? operator_,
       @JsonKey(name: '_operator')
-          Element? operatorElement,
-      String? path,
+          final Element? operatorElement,
+      final String? path,
       @JsonKey(name: '_path')
-          Element? pathElement,
-      Code? resource,
+          final Element? pathElement,
+      final Code? resource,
       @JsonKey(name: '_resource')
-          Element? resourceElement,
+          final Element? resourceElement,
       @JsonKey(unknownEnumValue: AssertResponse.unknown)
-          AssertResponse? response,
+          final AssertResponse? response,
       @JsonKey(name: '_response')
-          Element? responseElement,
-      String? responseCode,
+          final Element? responseElement,
+      final String? responseCode,
       @JsonKey(name: '_responseCode')
-          Element? responseCodeElement,
-      Id? sourceId,
+          final Element? responseCodeElement,
+      final Id? sourceId,
       @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
-      Id? validateProfileId,
+          final Element? sourceIdElement,
+      final Id? validateProfileId,
       @JsonKey(name: '_validateProfileId')
-          Element? validateProfileIdElement,
-      String? value,
+          final Element? validateProfileIdElement,
+      final String? value,
       @JsonKey(name: '_value')
-          Element? valueElement,
-      Boolean? warningOnly,
+          final Element? valueElement,
+      final Boolean? warningOnly,
       @JsonKey(name: '_warningOnly')
-          Element? warningOnlyElement}) = _$_TestScriptActionAssert;
+          final Element? warningOnlyElement}) = _$_TestScriptActionAssert;
   _TestScriptActionAssert._() : super._();
 
   factory _TestScriptActionAssert.fromJson(Map<String, dynamic> json) =
@@ -10625,48 +10299,13 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   Element? get warningOnlyElement;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptActionAssertCopyWith<_TestScriptActionAssert> get copyWith =>
+  _$$_TestScriptActionAssertCopyWith<_$_TestScriptActionAssert> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptTest _$TestScriptTestFromJson(Map<String, dynamic> json) {
   return _TestScriptTest.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptTestTearOff {
-  const _$TestScriptTestTearOff();
-
-  _TestScriptTest call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction> action}) {
-    return _TestScriptTest(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      metadata: metadata,
-      action: action,
-    );
-  }
-
-  TestScriptTest fromJson(Map<String, Object?> json) {
-    return TestScriptTest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptTest = _$TestScriptTestTearOff();
 
 /// @nodoc
 mixin _$TestScriptTest {
@@ -10807,11 +10446,11 @@ class _$TestScriptTestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptTestCopyWith<$Res>
+abstract class _$$_TestScriptTestCopyWith<$Res>
     implements $TestScriptTestCopyWith<$Res> {
-  factory _$TestScriptTestCopyWith(
-          _TestScriptTest value, $Res Function(_TestScriptTest) then) =
-      __$TestScriptTestCopyWithImpl<$Res>;
+  factory _$$_TestScriptTestCopyWith(
+          _$_TestScriptTest value, $Res Function(_$_TestScriptTest) then) =
+      __$$_TestScriptTestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -10833,15 +10472,15 @@ abstract class _$TestScriptTestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptTestCopyWithImpl<$Res>
+class __$$_TestScriptTestCopyWithImpl<$Res>
     extends _$TestScriptTestCopyWithImpl<$Res>
-    implements _$TestScriptTestCopyWith<$Res> {
-  __$TestScriptTestCopyWithImpl(
-      _TestScriptTest _value, $Res Function(_TestScriptTest) _then)
-      : super(_value, (v) => _then(v as _TestScriptTest));
+    implements _$$_TestScriptTestCopyWith<$Res> {
+  __$$_TestScriptTestCopyWithImpl(
+      _$_TestScriptTest _value, $Res Function(_$_TestScriptTest) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptTest));
 
   @override
-  _TestScriptTest get _value => super._value as _TestScriptTest;
+  _$_TestScriptTest get _value => super._value as _$_TestScriptTest;
 
   @override
   $Res call({
@@ -10855,17 +10494,17 @@ class __$TestScriptTestCopyWithImpl<$Res>
     Object? metadata = freezed,
     Object? action = freezed,
   }) {
-    return _then(_TestScriptTest(
+    return _then(_$_TestScriptTest(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -10889,7 +10528,7 @@ class __$TestScriptTestCopyWithImpl<$Res>
           : metadata // ignore: cast_nullable_to_non_nullable
               as TestScriptMetadata?,
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestScriptSetupAction>,
     ));
@@ -10901,26 +10540,43 @@ class __$TestScriptTestCopyWithImpl<$Res>
 class _$_TestScriptTest extends _TestScriptTest {
   _$_TestScriptTest(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.metadata,
-      required this.action})
-      : super._();
+      required final List<TestScriptSetupAction> action})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _action = action,
+        super._();
 
   factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptTestFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
   @override
@@ -10933,8 +10589,12 @@ class _$_TestScriptTest extends _TestScriptTest {
   final Element? descriptionElement;
   @override
   final TestScriptMetadata? metadata;
+  final List<TestScriptSetupAction> _action;
   @override
-  final List<TestScriptSetupAction> action;
+  List<TestScriptSetupAction> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -10945,12 +10605,12 @@ class _$_TestScriptTest extends _TestScriptTest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptTest &&
+            other is _$_TestScriptTest &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -10959,44 +10619,47 @@ class _$_TestScriptTest extends _TestScriptTest {
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality().equals(other.metadata, metadata) &&
-            const DeepCollectionEquality().equals(other.action, action));
+            const DeepCollectionEquality().equals(other._action, _action));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(nameElement),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
       const DeepCollectionEquality().hash(metadata),
-      const DeepCollectionEquality().hash(action));
+      const DeepCollectionEquality().hash(_action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptTestCopyWith<_TestScriptTest> get copyWith =>
-      __$TestScriptTestCopyWithImpl<_TestScriptTest>(this, _$identity);
+  _$$_TestScriptTestCopyWith<_$_TestScriptTest> get copyWith =>
+      __$$_TestScriptTestCopyWithImpl<_$_TestScriptTest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptTestToJson(this);
+    return _$$_TestScriptTestToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptTest extends TestScriptTest {
   factory _TestScriptTest(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction> action}) = _$_TestScriptTest;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final TestScriptMetadata? metadata,
+      required final List<TestScriptSetupAction> action}) = _$_TestScriptTest;
   _TestScriptTest._() : super._();
 
   factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
@@ -11025,38 +10688,13 @@ abstract class _TestScriptTest extends TestScriptTest {
   List<TestScriptSetupAction> get action;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptTestCopyWith<_TestScriptTest> get copyWith =>
+  _$$_TestScriptTestCopyWith<_$_TestScriptTest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptTeardown _$TestScriptTeardownFromJson(Map<String, dynamic> json) {
   return _TestScriptTeardown.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptTeardownTearOff {
-  const _$TestScriptTeardownTearOff();
-
-  _TestScriptTeardown call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required List<TestScriptTeardownAction> action}) {
-    return _TestScriptTeardown(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      action: action,
-    );
-  }
-
-  TestScriptTeardown fromJson(Map<String, Object?> json) {
-    return TestScriptTeardown.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptTeardown = _$TestScriptTeardownTearOff();
 
 /// @nodoc
 mixin _$TestScriptTeardown {
@@ -11124,11 +10762,11 @@ class _$TestScriptTeardownCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptTeardownCopyWith<$Res>
+abstract class _$$_TestScriptTeardownCopyWith<$Res>
     implements $TestScriptTeardownCopyWith<$Res> {
-  factory _$TestScriptTeardownCopyWith(
-          _TestScriptTeardown value, $Res Function(_TestScriptTeardown) then) =
-      __$TestScriptTeardownCopyWithImpl<$Res>;
+  factory _$$_TestScriptTeardownCopyWith(_$_TestScriptTeardown value,
+          $Res Function(_$_TestScriptTeardown) then) =
+      __$$_TestScriptTeardownCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -11138,15 +10776,15 @@ abstract class _$TestScriptTeardownCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptTeardownCopyWithImpl<$Res>
+class __$$_TestScriptTeardownCopyWithImpl<$Res>
     extends _$TestScriptTeardownCopyWithImpl<$Res>
-    implements _$TestScriptTeardownCopyWith<$Res> {
-  __$TestScriptTeardownCopyWithImpl(
-      _TestScriptTeardown _value, $Res Function(_TestScriptTeardown) _then)
-      : super(_value, (v) => _then(v as _TestScriptTeardown));
+    implements _$$_TestScriptTeardownCopyWith<$Res> {
+  __$$_TestScriptTeardownCopyWithImpl(
+      _$_TestScriptTeardown _value, $Res Function(_$_TestScriptTeardown) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptTeardown));
 
   @override
-  _TestScriptTeardown get _value => super._value as _TestScriptTeardown;
+  _$_TestScriptTeardown get _value => super._value as _$_TestScriptTeardown;
 
   @override
   $Res call({
@@ -11155,21 +10793,21 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? action = freezed,
   }) {
-    return _then(_TestScriptTeardown(
+    return _then(_$_TestScriptTeardown(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestScriptTeardownAction>,
     ));
@@ -11181,23 +10819,44 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
 class _$_TestScriptTeardown extends _TestScriptTeardown {
   _$_TestScriptTeardown(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      required this.action})
-      : super._();
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final List<TestScriptTeardownAction> action})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _action = action,
+        super._();
 
   factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptTeardownFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptTeardownAction> _action;
   @override
-  final List<TestScriptTeardownAction> action;
+  List<TestScriptTeardownAction> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -11208,40 +10867,45 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptTeardown &&
+            other is _$_TestScriptTeardown &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.action, action));
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._action, _action));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(action));
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith =>
-      __$TestScriptTeardownCopyWithImpl<_TestScriptTeardown>(this, _$identity);
+  _$$_TestScriptTeardownCopyWith<_$_TestScriptTeardown> get copyWith =>
+      __$$_TestScriptTeardownCopyWithImpl<_$_TestScriptTeardown>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptTeardownToJson(this);
+    return _$$_TestScriptTeardownToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptTeardown extends TestScriptTeardown {
   factory _TestScriptTeardown(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required List<TestScriptTeardownAction> action}) = _$_TestScriptTeardown;
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final List<TestScriptTeardownAction> action}) =
+      _$_TestScriptTeardown;
   _TestScriptTeardown._() : super._();
 
   factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
@@ -11258,7 +10922,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
   List<TestScriptTeardownAction> get action;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith =>
+  _$$_TestScriptTeardownCopyWith<_$_TestScriptTeardown> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -11266,33 +10930,6 @@ TestScriptTeardownAction _$TestScriptTeardownActionFromJson(
     Map<String, dynamic> json) {
   return _TestScriptTeardownAction.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptTeardownActionTearOff {
-  const _$TestScriptTeardownActionTearOff();
-
-  _TestScriptTeardownAction call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      TestScriptActionOperation? operation}) {
-    return _TestScriptTeardownAction(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      operation: operation,
-    );
-  }
-
-  TestScriptTeardownAction fromJson(Map<String, Object?> json) {
-    return TestScriptTeardownAction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptTeardownAction = _$TestScriptTeardownActionTearOff();
 
 /// @nodoc
 mixin _$TestScriptTeardownAction {
@@ -11381,11 +11018,12 @@ class _$TestScriptTeardownActionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptTeardownActionCopyWith<$Res>
+abstract class _$$_TestScriptTeardownActionCopyWith<$Res>
     implements $TestScriptTeardownActionCopyWith<$Res> {
-  factory _$TestScriptTeardownActionCopyWith(_TestScriptTeardownAction value,
-          $Res Function(_TestScriptTeardownAction) then) =
-      __$TestScriptTeardownActionCopyWithImpl<$Res>;
+  factory _$$_TestScriptTeardownActionCopyWith(
+          _$_TestScriptTeardownAction value,
+          $Res Function(_$_TestScriptTeardownAction) then) =
+      __$$_TestScriptTeardownActionCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -11399,16 +11037,16 @@ abstract class _$TestScriptTeardownActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptTeardownActionCopyWithImpl<$Res>
+class __$$_TestScriptTeardownActionCopyWithImpl<$Res>
     extends _$TestScriptTeardownActionCopyWithImpl<$Res>
-    implements _$TestScriptTeardownActionCopyWith<$Res> {
-  __$TestScriptTeardownActionCopyWithImpl(_TestScriptTeardownAction _value,
-      $Res Function(_TestScriptTeardownAction) _then)
-      : super(_value, (v) => _then(v as _TestScriptTeardownAction));
+    implements _$$_TestScriptTeardownActionCopyWith<$Res> {
+  __$$_TestScriptTeardownActionCopyWithImpl(_$_TestScriptTeardownAction _value,
+      $Res Function(_$_TestScriptTeardownAction) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptTeardownAction));
 
   @override
-  _TestScriptTeardownAction get _value =>
-      super._value as _TestScriptTeardownAction;
+  _$_TestScriptTeardownAction get _value =>
+      super._value as _$_TestScriptTeardownAction;
 
   @override
   $Res call({
@@ -11418,21 +11056,21 @@ class __$TestScriptTeardownActionCopyWithImpl<$Res>
     Object? fhirComments = freezed,
     Object? operation = freezed,
   }) {
-    return _then(_TestScriptTeardownAction(
+    return _then(_$_TestScriptTeardownAction(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       operation: operation == freezed
@@ -11448,25 +11086,49 @@ class __$TestScriptTeardownActionCopyWithImpl<$Res>
 class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
   _$_TestScriptTeardownAction(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.operation})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptTeardownActionFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptActionOperation? operation;
 
@@ -11479,45 +11141,49 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptTeardownAction &&
+            other is _$_TestScriptTeardownAction &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.operation, operation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(operation));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptTeardownActionCopyWith<_TestScriptTeardownAction> get copyWith =>
-      __$TestScriptTeardownActionCopyWithImpl<_TestScriptTeardownAction>(
-          this, _$identity);
+  _$$_TestScriptTeardownActionCopyWith<_$_TestScriptTeardownAction>
+      get copyWith => __$$_TestScriptTeardownActionCopyWithImpl<
+          _$_TestScriptTeardownAction>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptTeardownActionToJson(this);
+    return _$$_TestScriptTeardownActionToJson(
+      this,
+    );
   }
 }
 
 abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
   factory _TestScriptTeardownAction(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      TestScriptActionOperation? operation}) = _$_TestScriptTeardownAction;
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          final TestScriptActionOperation? operation}) =
+      _$_TestScriptTeardownAction;
   _TestScriptTeardownAction._() : super._();
 
   factory _TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =
@@ -11537,6 +11203,6 @@ abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
   TestScriptActionOperation? get operation;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptTeardownActionCopyWith<_TestScriptTeardownAction> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_TestScriptTeardownActionCopyWith<_$_TestScriptTeardownAction>
+      get copyWith => throw _privateConstructorUsedError;
 }

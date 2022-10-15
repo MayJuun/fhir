@@ -141,7 +141,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
 Map<String, dynamic> _$$_StructureDefinitionToJson(
     _$_StructureDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -173,7 +173,7 @@ Map<String, dynamic> _$$_StructureDefinitionToJson(
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull('_display', instance.displayElement?.toJson());
-  val['status'] = _$StructureDefinitionStatusEnumMap[instance.status];
+  val['status'] = _$StructureDefinitionStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -193,7 +193,7 @@ Map<String, dynamic> _$$_StructureDefinitionToJson(
   writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   writeNotNull('mapping', instance.mapping?.map((e) => e.toJson()).toList());
-  val['kind'] = _$StructureDefinitionKindEnumMap[instance.kind];
+  val['kind'] = _$StructureDefinitionKindEnumMap[instance.kind]!;
   writeNotNull('_kind', instance.kindElement?.toJson());
   writeNotNull('constrainedType', instance.constrainedType?.toJson());
   val['abstract'] = instance.abstract_.toJson();
@@ -549,7 +549,7 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DataElementToJson(_$_DataElement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -574,7 +574,7 @@ Map<String, dynamic> _$$_DataElementToJson(_$_DataElement instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  val['status'] = _$DataElementStatusEnumMap[instance.status];
+  val['status'] = _$DataElementStatusEnumMap[instance.status]!;
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());

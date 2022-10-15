@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "secondary-finding",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
@@ -29,7 +29,7 @@
   "title": "Genetic Observation Secondary Findings",
   "status": "draft",
   "experimental": false,
-  "description": "Codes to denote a guideline or policy statement.when a genetic test result is being shared as a secondary finding.",
+  "description": "Codes to denote a guideline or policy statement when a genetic test result is being shared as a secondary finding.",
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/secondary-finding",
   "content": "complete",

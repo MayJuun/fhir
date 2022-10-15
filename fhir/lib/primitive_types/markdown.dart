@@ -6,6 +6,9 @@ import 'dart:convert';
 // Package imports:
 import 'package:yaml/yaml.dart';
 
+// Project imports:
+import 'primitive_type_exceptions.dart';
+
 class Markdown {
   const Markdown._(this._valueString, this._valueMarkdown, this._isValid);
 
@@ -20,7 +23,7 @@ class Markdown {
       ? Markdown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Markdown.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Markdown>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;

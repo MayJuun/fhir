@@ -13,7 +13,7 @@ _$_BiologicallyDerivedProduct _$$_BiologicallyDerivedProductFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.BiologicallyDerivedProduct) ??
           R4ResourceType.BiologicallyDerivedProduct,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -43,10 +43,9 @@ _$_BiologicallyDerivedProduct _$$_BiologicallyDerivedProductFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      productCategory: $enumDecodeNullable(
-          _$BiologicallyDerivedProductProductCategoryEnumMap,
-          json['productCategory'],
-          unknownValue: BiologicallyDerivedProductProductCategory.unknown),
+      productCategory: json['productCategory'] == null
+          ? null
+          : Code.fromJson(json['productCategory']),
       productCategoryElement: json['_productCategory'] == null
           ? null
           : Element.fromJson(json['_productCategory'] as Map<String, dynamic>),
@@ -54,9 +53,7 @@ _$_BiologicallyDerivedProduct _$$_BiologicallyDerivedProductFromJson(
           ? null
           : CodeableConcept.fromJson(
               json['productCode'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(
-          _$BiologicallyDerivedProductStatusEnumMap, json['status'],
-          unknownValue: BiologicallyDerivedProductStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -92,7 +89,7 @@ _$_BiologicallyDerivedProduct _$$_BiologicallyDerivedProductFromJson(
 Map<String, dynamic> _$$_BiologicallyDerivedProductToJson(
     _$_BiologicallyDerivedProduct instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -101,7 +98,7 @@ Map<String, dynamic> _$$_BiologicallyDerivedProductToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -116,14 +113,10 @@ Map<String, dynamic> _$$_BiologicallyDerivedProductToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'productCategory',
-      _$BiologicallyDerivedProductProductCategoryEnumMap[
-          instance.productCategory]);
+  writeNotNull('productCategory', instance.productCategory?.toJson());
   writeNotNull('_productCategory', instance.productCategoryElement?.toJson());
   writeNotNull('productCode', instance.productCode?.toJson());
-  writeNotNull(
-      'status', _$BiologicallyDerivedProductStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('request', instance.request?.map((e) => e.toJson()).toList());
   writeNotNull('quantity', instance.quantity?.toJson());
@@ -140,6 +133,8 @@ Map<String, dynamic> _$$_BiologicallyDerivedProductToJson(
 const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Account: 'Account',
   R4ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R4ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R4ResourceType.AdverseEvent: 'AdverseEvent',
   R4ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R4ResourceType.Appointment: 'Appointment',
@@ -156,9 +151,11 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.CatalogEntry: 'CatalogEntry',
   R4ResourceType.ChargeItem: 'ChargeItem',
   R4ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R4ResourceType.Citation: 'Citation',
   R4ResourceType.Claim: 'Claim',
   R4ResourceType.ClaimResponse: 'ClaimResponse',
   R4ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R4ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R4ResourceType.CodeSystem: 'CodeSystem',
   R4ResourceType.Communication: 'Communication',
   R4ResourceType.CommunicationRequest: 'CommunicationRequest',
@@ -180,7 +177,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.DiagnosticReport: 'DiagnosticReport',
   R4ResourceType.DocumentManifest: 'DocumentManifest',
   R4ResourceType.DocumentReference: 'DocumentReference',
-  R4ResourceType.EffectEvidenceSynthesis: 'EffectEvidenceSynthesis',
   R4ResourceType.Encounter: 'Encounter',
   R4ResourceType.Endpoint: 'Endpoint',
   R4ResourceType.EnrollmentRequest: 'EnrollmentRequest',
@@ -188,6 +184,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.EpisodeOfCare: 'EpisodeOfCare',
   R4ResourceType.EventDefinition: 'EventDefinition',
   R4ResourceType.Evidence: 'Evidence',
+  R4ResourceType.EvidenceReport: 'EvidenceReport',
   R4ResourceType.EvidenceVariable: 'EvidenceVariable',
   R4ResourceType.ExampleScenario: 'ExampleScenario',
   R4ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
@@ -203,12 +200,14 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R4ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R4ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R4ResourceType.Ingredient: 'Ingredient',
   R4ResourceType.InsurancePlan: 'InsurancePlan',
   R4ResourceType.Invoice: 'Invoice',
   R4ResourceType.Library: 'Library',
   R4ResourceType.Linkage: 'Linkage',
   R4ResourceType.List_: 'List',
   R4ResourceType.Location: 'Location',
+  R4ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R4ResourceType.Measure: 'Measure',
   R4ResourceType.MeasureReport: 'MeasureReport',
   R4ResourceType.Media: 'Media',
@@ -218,30 +217,20 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.MedicationKnowledge: 'MedicationKnowledge',
   R4ResourceType.MedicationRequest: 'MedicationRequest',
   R4ResourceType.MedicationStatement: 'MedicationStatement',
-  R4ResourceType.MedicinalProduct: 'MedicinalProduct',
-  R4ResourceType.MedicinalProductAuthorization: 'MedicinalProductAuthorization',
-  R4ResourceType.MedicinalProductContraindication:
-      'MedicinalProductContraindication',
-  R4ResourceType.MedicinalProductIndication: 'MedicinalProductIndication',
-  R4ResourceType.MedicinalProductIngredient: 'MedicinalProductIngredient',
-  R4ResourceType.MedicinalProductInteraction: 'MedicinalProductInteraction',
-  R4ResourceType.MedicinalProductManufactured: 'MedicinalProductManufactured',
-  R4ResourceType.MedicinalProductPackaged: 'MedicinalProductPackaged',
-  R4ResourceType.MedicinalProductPharmaceutical:
-      'MedicinalProductPharmaceutical',
-  R4ResourceType.MedicinalProductUndesirableEffect:
-      'MedicinalProductUndesirableEffect',
+  R4ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
   R4ResourceType.MessageDefinition: 'MessageDefinition',
   R4ResourceType.MessageHeader: 'MessageHeader',
   R4ResourceType.MolecularSequence: 'MolecularSequence',
   R4ResourceType.NamingSystem: 'NamingSystem',
   R4ResourceType.NutritionOrder: 'NutritionOrder',
+  R4ResourceType.NutritionProduct: 'NutritionProduct',
   R4ResourceType.Observation: 'Observation',
   R4ResourceType.ObservationDefinition: 'ObservationDefinition',
   R4ResourceType.OperationDefinition: 'OperationDefinition',
   R4ResourceType.OperationOutcome: 'OperationOutcome',
   R4ResourceType.Organization: 'Organization',
   R4ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R4ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R4ResourceType.Parameters: 'Parameters',
   R4ResourceType.Patient: 'Patient',
   R4ResourceType.PaymentNotice: 'PaymentNotice',
@@ -254,6 +243,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Provenance: 'Provenance',
   R4ResourceType.Questionnaire: 'Questionnaire',
   R4ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R4ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R4ResourceType.RelatedPerson: 'RelatedPerson',
   R4ResourceType.RequestGroup: 'RequestGroup',
   R4ResourceType.ResearchDefinition: 'ResearchDefinition',
@@ -261,7 +251,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ResearchStudy: 'ResearchStudy',
   R4ResourceType.ResearchSubject: 'ResearchSubject',
   R4ResourceType.RiskAssessment: 'RiskAssessment',
-  R4ResourceType.RiskEvidenceSynthesis: 'RiskEvidenceSynthesis',
   R4ResourceType.Schedule: 'Schedule',
   R4ResourceType.SearchParameter: 'SearchParameter',
   R4ResourceType.ServiceRequest: 'ServiceRequest',
@@ -271,13 +260,10 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.StructureDefinition: 'StructureDefinition',
   R4ResourceType.StructureMap: 'StructureMap',
   R4ResourceType.Subscription: 'Subscription',
+  R4ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R4ResourceType.SubscriptionTopic: 'SubscriptionTopic',
   R4ResourceType.Substance: 'Substance',
-  R4ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
-  R4ResourceType.SubstancePolymer: 'SubstancePolymer',
-  R4ResourceType.SubstanceProtein: 'SubstanceProtein',
-  R4ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
-  R4ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
-  R4ResourceType.SubstanceSpecification: 'SubstanceSpecification',
+  R4ResourceType.SubstanceDefinition: 'SubstanceDefinition',
   R4ResourceType.SupplyDelivery: 'SupplyDelivery',
   R4ResourceType.SupplyRequest: 'SupplyRequest',
   R4ResourceType.Task: 'Task',
@@ -287,21 +273,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ValueSet: 'ValueSet',
   R4ResourceType.VerificationResult: 'VerificationResult',
   R4ResourceType.VisionPrescription: 'VisionPrescription',
-};
-
-const _$BiologicallyDerivedProductProductCategoryEnumMap = {
-  BiologicallyDerivedProductProductCategory.organ: 'organ',
-  BiologicallyDerivedProductProductCategory.tissue: 'tissue',
-  BiologicallyDerivedProductProductCategory.fluid: 'fluid',
-  BiologicallyDerivedProductProductCategory.cells: 'cells',
-  BiologicallyDerivedProductProductCategory.biologicalagent: 'biologicalAgent',
-  BiologicallyDerivedProductProductCategory.unknown: 'unknown',
-};
-
-const _$BiologicallyDerivedProductStatusEnumMap = {
-  BiologicallyDerivedProductStatus.available: 'available',
-  BiologicallyDerivedProductStatus.unavailable: 'unavailable',
-  BiologicallyDerivedProductStatus.unknown: 'unknown',
 };
 
 _$_BiologicallyDerivedProductCollection
@@ -485,9 +456,7 @@ _$_BiologicallyDerivedProductStorage
           temperatureElement: json['_temperature'] == null
               ? null
               : Element.fromJson(json['_temperature'] as Map<String, dynamic>),
-          scale: $enumDecodeNullable(
-              _$BiologicallyDerivedProductStorageScaleEnumMap, json['scale'],
-              unknownValue: BiologicallyDerivedProductStorageScale.unknown),
+          scale: json['scale'] == null ? null : Code.fromJson(json['scale']),
           scaleElement: json['_scale'] == null
               ? null
               : Element.fromJson(json['_scale'] as Map<String, dynamic>),
@@ -515,26 +484,18 @@ Map<String, dynamic> _$$_BiologicallyDerivedProductStorageToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('temperature', instance.temperature?.toJson());
   writeNotNull('_temperature', instance.temperatureElement?.toJson());
-  writeNotNull(
-      'scale', _$BiologicallyDerivedProductStorageScaleEnumMap[instance.scale]);
+  writeNotNull('scale', instance.scale?.toJson());
   writeNotNull('_scale', instance.scaleElement?.toJson());
   writeNotNull('duration', instance.duration?.toJson());
   return val;
 }
-
-const _$BiologicallyDerivedProductStorageScaleEnumMap = {
-  BiologicallyDerivedProductStorageScale.farenheit: 'farenheit',
-  BiologicallyDerivedProductStorageScale.celsius: 'celsius',
-  BiologicallyDerivedProductStorageScale.kelvin: 'kelvin',
-  BiologicallyDerivedProductStorageScale.unknown: 'unknown',
-};
 
 _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Device) ??
           R4ResourceType.Device,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -570,8 +531,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
       udiCarrier: (json['udiCarrier'] as List<dynamic>?)
           ?.map((e) => DeviceUdiCarrier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
-          unknownValue: DeviceStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -659,7 +619,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
 
 Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -668,7 +628,7 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -686,7 +646,7 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull(
       'udiCarrier', instance.udiCarrier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'statusReason', instance.statusReason?.map((e) => e.toJson()).toList());
@@ -726,13 +686,6 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   return val;
 }
 
-const _$DeviceStatusEnumMap = {
-  DeviceStatus.active: 'active',
-  DeviceStatus.inactive: 'inactive',
-  DeviceStatus.entered_in_error: 'entered-in-error',
-  DeviceStatus.unknown: 'unknown',
-};
-
 _$_DeviceUdiCarrier _$$_DeviceUdiCarrierFromJson(Map<String, dynamic> json) =>
     _$_DeviceUdiCarrier(
       id: json['id'] as String?,
@@ -766,9 +719,8 @@ _$_DeviceUdiCarrier _$$_DeviceUdiCarrierFromJson(Map<String, dynamic> json) =>
       carrierHRFElement: json['_carrierHRF'] == null
           ? null
           : Element.fromJson(json['_carrierHRF'] as Map<String, dynamic>),
-      entryType: $enumDecodeNullable(
-          _$DeviceUdiCarrierEntryTypeEnumMap, json['entryType'],
-          unknownValue: DeviceUdiCarrierEntryType.unknown),
+      entryType:
+          json['entryType'] == null ? null : Code.fromJson(json['entryType']),
       entryTypeElement: json['_entryType'] == null
           ? null
           : Element.fromJson(json['_entryType'] as Map<String, dynamic>),
@@ -798,20 +750,10 @@ Map<String, dynamic> _$$_DeviceUdiCarrierToJson(_$_DeviceUdiCarrier instance) {
   writeNotNull('_carrierAIDC', instance.carrierAIDCElement?.toJson());
   writeNotNull('carrierHRF', instance.carrierHRF);
   writeNotNull('_carrierHRF', instance.carrierHRFElement?.toJson());
-  writeNotNull(
-      'entryType', _$DeviceUdiCarrierEntryTypeEnumMap[instance.entryType]);
+  writeNotNull('entryType', instance.entryType?.toJson());
   writeNotNull('_entryType', instance.entryTypeElement?.toJson());
   return val;
 }
-
-const _$DeviceUdiCarrierEntryTypeEnumMap = {
-  DeviceUdiCarrierEntryType.barcode: 'barcode',
-  DeviceUdiCarrierEntryType.rfid: 'rfid',
-  DeviceUdiCarrierEntryType.manual: 'manual',
-  DeviceUdiCarrierEntryType.card: 'card',
-  DeviceUdiCarrierEntryType.self_reported: 'self-reported',
-  DeviceUdiCarrierEntryType.unknown: 'unknown',
-};
 
 _$_DeviceDeviceName _$$_DeviceDeviceNameFromJson(Map<String, dynamic> json) =>
     _$_DeviceDeviceName(
@@ -826,8 +768,7 @@ _$_DeviceDeviceName _$$_DeviceDeviceNameFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(_$DeviceDeviceNameTypeEnumMap, json['type'],
-          unknownValue: DeviceDeviceNameType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -849,20 +790,10 @@ Map<String, dynamic> _$$_DeviceDeviceNameToJson(_$_DeviceDeviceName instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('type', _$DeviceDeviceNameTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   return val;
 }
-
-const _$DeviceDeviceNameTypeEnumMap = {
-  DeviceDeviceNameType.udi_label_name: 'udi-label-name',
-  DeviceDeviceNameType.user_friendly_name: 'user-friendly-name',
-  DeviceDeviceNameType.patient_reported_name: 'patient-reported-name',
-  DeviceDeviceNameType.manufacturer_name: 'manufacturer-name',
-  DeviceDeviceNameType.model_name: 'model-name',
-  DeviceDeviceNameType.other: 'other',
-  DeviceDeviceNameType.unknown: 'unknown',
-};
 
 _$_DeviceSpecialization _$$_DeviceSpecializationFromJson(
         Map<String, dynamic> json) =>
@@ -991,7 +922,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DeviceMetric) ??
           R4ResourceType.DeviceMetric,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1031,21 +962,19 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
       parent: json['parent'] == null
           ? null
           : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-      operationalStatus: $enumDecodeNullable(
-          _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus'],
-          unknownValue: DeviceMetricOperationalStatus.unknown),
+      operationalStatus: json['operationalStatus'] == null
+          ? null
+          : Code.fromJson(json['operationalStatus']),
       operationalStatusElement: json['_operationalStatus'] == null
           ? null
           : Element.fromJson(
               json['_operationalStatus'] as Map<String, dynamic>),
-      color: $enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color'],
-          unknownValue: DeviceMetricColor.unknown),
+      color: json['color'] == null ? null : Code.fromJson(json['color']),
       colorElement: json['_color'] == null
           ? null
           : Element.fromJson(json['_color'] as Map<String, dynamic>),
-      category: $enumDecodeNullable(
-          _$DeviceMetricCategoryEnumMap, json['category'],
-          unknownValue: DeviceMetricCategory.unknown),
+      category:
+          json['category'] == null ? null : Code.fromJson(json['category']),
       categoryElement: json['_category'] == null
           ? null
           : Element.fromJson(json['_category'] as Map<String, dynamic>),
@@ -1060,7 +989,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1069,7 +998,7 @@ Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1088,47 +1017,18 @@ Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
-  writeNotNull('operationalStatus',
-      _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]);
+  writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
   writeNotNull(
       '_operationalStatus', instance.operationalStatusElement?.toJson());
-  writeNotNull('color', _$DeviceMetricColorEnumMap[instance.color]);
+  writeNotNull('color', instance.color?.toJson());
   writeNotNull('_color', instance.colorElement?.toJson());
-  writeNotNull('category', _$DeviceMetricCategoryEnumMap[instance.category]);
+  writeNotNull('category', instance.category?.toJson());
   writeNotNull('_category', instance.categoryElement?.toJson());
   writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
   writeNotNull(
       'calibration', instance.calibration?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$DeviceMetricOperationalStatusEnumMap = {
-  DeviceMetricOperationalStatus.on_: 'on',
-  DeviceMetricOperationalStatus.off: 'off',
-  DeviceMetricOperationalStatus.standby: 'standby',
-  DeviceMetricOperationalStatus.entered_in_error: 'entered-in-error',
-  DeviceMetricOperationalStatus.unknown: 'unknown',
-};
-
-const _$DeviceMetricColorEnumMap = {
-  DeviceMetricColor.black: 'black',
-  DeviceMetricColor.red: 'red',
-  DeviceMetricColor.green: 'green',
-  DeviceMetricColor.yellow: 'yellow',
-  DeviceMetricColor.blue: 'blue',
-  DeviceMetricColor.magenta: 'magenta',
-  DeviceMetricColor.cyan: 'cyan',
-  DeviceMetricColor.white: 'white',
-  DeviceMetricColor.unknown: 'unknown',
-};
-
-const _$DeviceMetricCategoryEnumMap = {
-  DeviceMetricCategory.measurement: 'measurement',
-  DeviceMetricCategory.setting: 'setting',
-  DeviceMetricCategory.calculation: 'calculation',
-  DeviceMetricCategory.unspecified: 'unspecified',
-  DeviceMetricCategory.unknown: 'unknown',
-};
 
 _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
         Map<String, dynamic> json) =>
@@ -1140,15 +1040,11 @@ _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(
-          _$DeviceMetricCalibrationTypeEnumMap, json['type'],
-          unknownValue: DeviceMetricCalibrationType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      state: $enumDecodeNullable(
-          _$DeviceMetricCalibrationStateEnumMap, json['state'],
-          unknownValue: DeviceMetricCalibrationState.unknown),
+      state: json['state'] == null ? null : Code.fromJson(json['state']),
       stateElement: json['_state'] == null
           ? null
           : Element.fromJson(json['_state'] as Map<String, dynamic>),
@@ -1173,37 +1069,348 @@ Map<String, dynamic> _$$_DeviceMetricCalibrationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', _$DeviceMetricCalibrationTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('state', _$DeviceMetricCalibrationStateEnumMap[instance.state]);
+  writeNotNull('state', instance.state?.toJson());
   writeNotNull('_state', instance.stateElement?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());
   return val;
 }
 
-const _$DeviceMetricCalibrationTypeEnumMap = {
-  DeviceMetricCalibrationType.unspecified: 'unspecified',
-  DeviceMetricCalibrationType.offset: 'offset',
-  DeviceMetricCalibrationType.gain: 'gain',
-  DeviceMetricCalibrationType.two_point: 'two-point',
-  DeviceMetricCalibrationType.unknown: 'unknown',
-};
+_$_NutritionProduct _$$_NutritionProductFromJson(Map<String, dynamic> json) =>
+    _$_NutritionProduct(
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.NutritionProduct,
+      id: json['id'] as String?,
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      category: (json['category'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      manufacturer: (json['manufacturer'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      nutrient: (json['nutrient'] as List<dynamic>?)
+          ?.map((e) =>
+              NutritionProductNutrient.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      ingredient: (json['ingredient'] as List<dynamic>?)
+          ?.map((e) =>
+              NutritionProductIngredient.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      knownAllergen: (json['knownAllergen'] as List<dynamic>?)
+          ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      productCharacteristic: (json['productCharacteristic'] as List<dynamic>?)
+          ?.map((e) => NutritionProductCharacteristic.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      instance: (json['instance'] as List<dynamic>?)
+          ?.map((e) =>
+              NutritionProductInstance.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-const _$DeviceMetricCalibrationStateEnumMap = {
-  DeviceMetricCalibrationState.not_calibrated: 'not-calibrated',
-  DeviceMetricCalibrationState.calibration_required: 'calibration-required',
-  DeviceMetricCalibrationState.calibrated: 'calibrated',
-  DeviceMetricCalibrationState.unspecified: 'unspecified',
-  DeviceMetricCalibrationState.unknown: 'unknown',
-};
+Map<String, dynamic> _$$_NutritionProductToJson(_$_NutritionProduct instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull(
+      'manufacturer', instance.manufacturer?.map((e) => e.toJson()).toList());
+  writeNotNull('nutrient', instance.nutrient?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'ingredient', instance.ingredient?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'knownAllergen', instance.knownAllergen?.map((e) => e.toJson()).toList());
+  writeNotNull('productCharacteristic',
+      instance.productCharacteristic?.map((e) => e.toJson()).toList());
+  writeNotNull('instance', instance.instance?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_NutritionProductNutrient _$$_NutritionProductNutrientFromJson(
+        Map<String, dynamic> json) =>
+    _$_NutritionProductNutrient(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      item: json['item'] == null
+          ? null
+          : CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
+      amount: (json['amount'] as List<dynamic>?)
+          ?.map((e) => Ratio.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_NutritionProductNutrientToJson(
+    _$_NutritionProductNutrient instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('item', instance.item?.toJson());
+  writeNotNull('amount', instance.amount?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_NutritionProductIngredient _$$_NutritionProductIngredientFromJson(
+        Map<String, dynamic> json) =>
+    _$_NutritionProductIngredient(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      item: CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
+      amount: (json['amount'] as List<dynamic>?)
+          ?.map((e) => Ratio.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_NutritionProductIngredientToJson(
+    _$_NutritionProductIngredient instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['item'] = instance.item.toJson();
+  writeNotNull('amount', instance.amount?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_NutritionProductCharacteristic _$$_NutritionProductCharacteristicFromJson(
+        Map<String, dynamic> json) =>
+    _$_NutritionProductCharacteristic(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      valueCodeableConcept: json['valueCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['valueCodeableConcept'] as Map<String, dynamic>),
+      valueString: json['valueString'] == null
+          ? null
+          : Markdown.fromJson(json['valueString']),
+      valueStringElement: json['_valueString'] == null
+          ? null
+          : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+      valueQuantity: json['valueQuantity'] == null
+          ? null
+          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+      valueBase64Binary: json['valueBase64Binary'] == null
+          ? null
+          : Base64Binary.fromJson(json['valueBase64Binary']),
+      valueBase64BinaryElement: json['_valueBase64Binary'] == null
+          ? null
+          : Element.fromJson(
+              json['_valueBase64Binary'] as Map<String, dynamic>),
+      valueAttachment: json['valueAttachment'] == null
+          ? null
+          : Attachment.fromJson(
+              json['valueAttachment'] as Map<String, dynamic>),
+      valueBoolean: json['valueBoolean'] == null
+          ? null
+          : Boolean.fromJson(json['valueBoolean']),
+      valueBooleanElement: json['_valueBoolean'] == null
+          ? null
+          : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_NutritionProductCharacteristicToJson(
+    _$_NutritionProductCharacteristic instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueString', instance.valueString?.toJson());
+  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
+  writeNotNull(
+      '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
+  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  return val;
+}
+
+_$_NutritionProductInstance _$$_NutritionProductInstanceFromJson(
+        Map<String, dynamic> json) =>
+    _$_NutritionProductInstance(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      quantity: json['quantity'] == null
+          ? null
+          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String?,
+      nameElement: json['_name'] == null
+          ? null
+          : Element.fromJson(json['_name'] as Map<String, dynamic>),
+      lotNumber: json['lotNumber'] as String?,
+      lotNumberElement: json['_lotNumber'] == null
+          ? null
+          : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
+      expiry:
+          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
+      expiryElement: json['_expiry'] == null
+          ? null
+          : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
+      useBy:
+          json['useBy'] == null ? null : FhirDateTime.fromJson(json['useBy']),
+      useByElement: json['_useBy'] == null
+          ? null
+          : Element.fromJson(json['_useBy'] as Map<String, dynamic>),
+      biologicalSource: json['biologicalSource'] == null
+          ? null
+          : Identifier.fromJson(
+              json['biologicalSource'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_NutritionProductInstanceToJson(
+    _$_NutritionProductInstance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('name', instance.name);
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('lotNumber', instance.lotNumber);
+  writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
+  writeNotNull('expiry', instance.expiry?.toJson());
+  writeNotNull('_expiry', instance.expiryElement?.toJson());
+  writeNotNull('useBy', instance.useBy?.toJson());
+  writeNotNull('_useBy', instance.useByElement?.toJson());
+  writeNotNull('biologicalSource', instance.biologicalSource?.toJson());
+  return val;
+}
 
 _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Substance) ??
           R4ResourceType.Substance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1233,8 +1440,7 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$SubstanceStatusEnumMap, json['status'],
-          unknownValue: SubstanceStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1256,7 +1462,7 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
 
 Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1265,7 +1471,7 @@ Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1280,7 +1486,7 @@ Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$SubstanceStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
@@ -1291,13 +1497,6 @@ Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
       'ingredient', instance.ingredient?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$SubstanceStatusEnumMap = {
-  SubstanceStatus.active: 'active',
-  SubstanceStatus.inactive: 'inactive',
-  SubstanceStatus.entered_in_error: 'entered-in-error',
-  SubstanceStatus.unknown: 'unknown',
-};
 
 _$_SubstanceInstance _$$_SubstanceInstanceFromJson(Map<String, dynamic> json) =>
     _$_SubstanceInstance(

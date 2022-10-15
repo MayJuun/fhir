@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'patient_management.enums.dart';
 part 'patient_management.freezed.dart';
@@ -56,10 +53,6 @@ class Encounter with Resource, _$Encounter {
     Reference? serviceProvider,
     Reference? partOf,
   }) = _Encounter;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
@@ -305,10 +298,6 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     List<EpisodeOfCareCareTeam>? careTeam,
   }) = _EpisodeOfCare;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EpisodeOfCare.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCare.fromJson(
@@ -460,10 +449,6 @@ class Communication with Resource, _$Communication {
     Reference? requestDetail,
   }) = _Communication;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Communication.fromYaml(dynamic yaml) => yaml is String
       ? Communication.fromJson(
@@ -563,10 +548,6 @@ class Flag with Resource, _$Flag {
     Reference? author,
     required CodeableConcept code,
   }) = _Flag;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Flag.fromYaml(dynamic yaml) => yaml is String

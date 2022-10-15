@@ -71,6 +71,10 @@ enum ExpressionLanguage {
   text_fhirpath,
   @JsonValue('application/x-fhir-query')
   application_x_fhir_query,
+  @JsonValue('text/cql-identifier')
+  text_cql_identifier,
+  @JsonValue('text/cql-expression')
+  text_cql_expression,
   @JsonValue('unknown')
   unknown,
 }

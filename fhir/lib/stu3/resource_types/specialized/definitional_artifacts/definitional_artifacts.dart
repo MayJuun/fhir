@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'definitional_artifacts.enums.dart';
 part 'definitional_artifacts.freezed.dart';
@@ -87,10 +84,6 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     Reference? transform,
     List<ActivityDefinitionDynamicValue>? dynamicValue,
   }) = _ActivityDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ActivityDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -264,10 +257,6 @@ class PlanDefinition with Resource, _$PlanDefinition {
     List<PlanDefinitionGoal>? goal,
     List<PlanDefinitionAction>? action,
   }) = _PlanDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PlanDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -687,10 +676,6 @@ class Questionnaire with Resource, _$Questionnaire {
     List<QuestionnaireItem>? item,
   }) = _Questionnaire;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
       ? Questionnaire.fromJson(
@@ -964,10 +949,6 @@ class ServiceDefinition with Resource, _$ServiceDefinition {
     List<DataRequirement>? dataRequirement,
     Reference? operationDefinition,
   }) = _ServiceDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ServiceDefinition.fromYaml(dynamic yaml) => yaml is String

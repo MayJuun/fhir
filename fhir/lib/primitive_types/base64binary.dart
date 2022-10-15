@@ -6,7 +6,8 @@ import 'dart:convert';
 // Package imports:
 import 'package:yaml/yaml.dart';
 
-// import 'package:flutter/foundation.dart';
+// Project imports:
+import 'primitive_type_exceptions.dart';
 
 class Base64Binary {
   const Base64Binary._(
@@ -33,7 +34,7 @@ class Base64Binary {
       ? Base64Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Base64Binary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Base64Binary>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;

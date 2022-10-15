@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'workflow1.enums.dart';
 part 'workflow1.freezed.dart';
@@ -40,10 +37,6 @@ class Order with Resource, _$Order {
     OrderWhen? when,
     required List<Reference> detail,
   }) = _Order;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Order.fromYaml(dynamic yaml) => yaml is String
@@ -140,10 +133,6 @@ class OrderResponse with Resource, _$OrderResponse {
     List<Reference>? fulfillment,
   }) = _OrderResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OrderResponse.fromYaml(dynamic yaml) => yaml is String
       ? OrderResponse.fromJson(
@@ -208,10 +197,6 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     CodeableConcept? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
   }) = _CommunicationRequest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
@@ -324,10 +309,6 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
     @JsonKey(name: '_priority') Element? priorityElement,
   }) = _DeviceUseRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceUseRequest.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUseRequest.fromJson(
@@ -388,10 +369,6 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     FhirDateTime? timingDateTime,
     @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
   }) = _DeviceUseStatement;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String

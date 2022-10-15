@@ -92,7 +92,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -116,7 +116,7 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['status'] = _$AppointmentStatusEnumMap[instance.status];
+  val['status'] = _$AppointmentStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('reason', instance.reason?.toJson());
@@ -294,7 +294,7 @@ Map<String, dynamic> _$$_AppointmentParticipantToJson(
   writeNotNull('actor', instance.actor?.toJson());
   writeNotNull('required', _$ParticipantRequiredEnumMap[instance.required_]);
   writeNotNull('_required', instance.requiredElement?.toJson());
-  val['status'] = _$ParticipantStatusEnumMap[instance.status];
+  val['status'] = _$ParticipantStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   return val;
 }
@@ -387,7 +387,7 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
 Map<String, dynamic> _$$_AppointmentResponseToJson(
     _$_AppointmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -419,8 +419,8 @@ Map<String, dynamic> _$$_AppointmentResponseToJson(
   writeNotNull('participantType',
       instance.participantType?.map((e) => e.toJson()).toList());
   writeNotNull('actor', instance.actor?.toJson());
-  val['participantStatus'] =
-      _$AppointmentResponseParticipantStatusEnumMap[instance.participantStatus];
+  val['participantStatus'] = _$AppointmentResponseParticipantStatusEnumMap[
+      instance.participantStatus]!;
   writeNotNull(
       '_participantStatus', instance.participantStatusElement?.toJson());
   writeNotNull('comment', instance.comment);
@@ -488,7 +488,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
 
 Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -583,7 +583,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
 
 Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -609,7 +609,7 @@ Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
   val['schedule'] = instance.schedule.toJson();
-  val['freeBusyType'] = _$SlotFreeBusyTypeEnumMap[instance.freeBusyType];
+  val['freeBusyType'] = _$SlotFreeBusyTypeEnumMap[instance.freeBusyType]!;
   val['start'] = instance.start.toJson();
   writeNotNull('_start', instance.startElement?.toJson());
   val['end'] = instance.end.toJson();

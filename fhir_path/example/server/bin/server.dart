@@ -1,17 +1,10 @@
-import 'package:functions_framework/serve.dart';
+import 'package:shelf/shelf_io.dart' as io;
 import 'package:shelf_static/shelf_static.dart';
 
-Future<void> main(List<String> args) async {
-  await serve(args, _nameToFunctionTarget);
-}
-
-FunctionTarget? _nameToFunctionTarget(String name) {
-  switch (name) {
-    case 'function':
-      return FunctionTarget.http(
-        createStaticHandler('app/web', defaultDocument: 'index.html'),
-      );
-    default:
-      return null;
-  }
+void main() {
+  io.serve(
+    createStaticHandler('app/web', defaultDocument: 'index.html'),
+    '0.0.0.0',
+    8080,
+  );
 }

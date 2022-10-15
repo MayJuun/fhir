@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "event-status",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -36,8 +36,8 @@
   "name": "EventStatus",
   "title": "EventStatus",
   "status": "draft",
-  "experimental": false,
-  "date": "2021-04-15T12:25:09+10:00",
+  "experimental": true,
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {

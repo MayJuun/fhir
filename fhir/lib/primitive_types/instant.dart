@@ -6,6 +6,7 @@ import 'package:yaml/yaml.dart';
 
 // Project imports:
 import 'fhir_date_time_base.dart';
+import 'primitive_type_exceptions.dart';
 
 class Instant extends FhirDateTimeBase {
   const Instant._(String valueString, DateTime? valueDateTime, bool isValid,
@@ -23,7 +24,7 @@ class Instant extends FhirDateTimeBase {
         return Instant._(inValue, null, false, e);
       }
     } else {
-      throw ArgumentError('Instant cannot be constructed from $inValue.');
+      throw CannotBeConstructed('Instant cannot be constructed from $inValue.');
     }
   }
 
@@ -37,7 +38,7 @@ class Instant extends FhirDateTimeBase {
       ? Instant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Instant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Instant>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   static final RegExp _instantExp = RegExp(
@@ -52,7 +53,7 @@ class Instant extends FhirDateTimeBase {
         throw const FormatException();
       }
     } on FormatException {
-      throw FormatException(
+      throw PrimitiveTypeFormatException<Instant>(
           'FormatException: "$value" is not an Instant, as defined by: '
           'https://www.hl7.org/fhir/datatypes.html#instant');
     }

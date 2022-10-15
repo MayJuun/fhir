@@ -19,7 +19,7 @@
   "version": "4.6.0",
   "name": "base64Binary",
   "status": "active",
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "HL7 FHIR Standard",
   "contact": [
     {
@@ -86,7 +86,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -158,11 +158,11 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "base64Binary"
+                "valueUrl": "base64Binary"
               },
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/regex",
-                "valueString": "(\\s*([0-9a-zA-Z*\\/*\\+\\\u003d]){4}\\s*)+"
+                "valueString": "\\s*([A-Za-z0-9+\\\\/]{4})*(([A-Za-z0-9+\\\\/]{2}\u003d\u003d)|([A-Za-z0-9+\\\\/]{3}\u003d)|([A-Za-z0-9+\\\\/]{4}))\\s*"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -199,11 +199,11 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "base64Binary"
+                "valueUrl": "base64Binary"
               },
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/regex",
-                "valueString": "(\\s*([0-9a-zA-Z*\\/*\\+\\\u003d]){4}\\s*)+"
+                "valueString": "\\s*([A-Za-z0-9+\\\\/]{4})*(([A-Za-z0-9+\\\\/]{2}\u003d\u003d)|([A-Za-z0-9+\\\\/]{3}\u003d)|([A-Za-z0-9+\\\\/]{4}))\\s*"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"

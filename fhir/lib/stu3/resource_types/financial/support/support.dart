@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'support.enums.dart';
 part 'support.freezed.dart';
@@ -55,10 +52,6 @@ class Coverage with Resource, _$Coverage {
     @JsonKey(name: '_network') Element? networkElement,
     List<Reference>? contract,
   }) = _Coverage;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
@@ -188,10 +181,6 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     CodeableConcept? benefitSubCategory,
   }) = _EligibilityRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
       ? EligibilityRequest.fromJson(
@@ -255,10 +244,6 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     CodeableConcept? form,
     List<EligibilityResponseError>? error,
   }) = _EligibilityResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
@@ -480,10 +465,6 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     Reference? coverage,
   }) = _EnrollmentRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(
@@ -542,10 +523,6 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Reference? requestProvider,
     Reference? requestOrganization,
   }) = _EnrollmentResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String

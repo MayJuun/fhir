@@ -12,77 +12,11 @@ part of 'payment.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
   return _PaymentNotice.fromJson(json);
 }
-
-/// @nodoc
-class _$PaymentNoticeTearOff {
-  const _$PaymentNoticeTearOff();
-
-  _PaymentNotice call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.PaymentNotice,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Coding? ruleset,
-      Coding? originalRuleset,
-      FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
-      Reference? target,
-      Reference? provider,
-      Reference? organization,
-      Reference? request,
-      Reference? response,
-      required Coding paymentStatus}) {
-    return _PaymentNotice(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      ruleset: ruleset,
-      originalRuleset: originalRuleset,
-      created: created,
-      createdElement: createdElement,
-      target: target,
-      provider: provider,
-      organization: organization,
-      request: request,
-      response: response,
-      paymentStatus: paymentStatus,
-    );
-  }
-
-  PaymentNotice fromJson(Map<String, Object?> json) {
-    return PaymentNotice.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PaymentNotice = _$PaymentNoticeTearOff();
 
 /// @nodoc
 mixin _$PaymentNotice {
@@ -437,11 +371,11 @@ class _$PaymentNoticeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PaymentNoticeCopyWith<$Res>
+abstract class _$$_PaymentNoticeCopyWith<$Res>
     implements $PaymentNoticeCopyWith<$Res> {
-  factory _$PaymentNoticeCopyWith(
-          _PaymentNotice value, $Res Function(_PaymentNotice) then) =
-      __$PaymentNoticeCopyWithImpl<$Res>;
+  factory _$$_PaymentNoticeCopyWith(
+          _$_PaymentNotice value, $Res Function(_$_PaymentNotice) then) =
+      __$$_PaymentNoticeCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
@@ -501,15 +435,15 @@ abstract class _$PaymentNoticeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PaymentNoticeCopyWithImpl<$Res>
+class __$$_PaymentNoticeCopyWithImpl<$Res>
     extends _$PaymentNoticeCopyWithImpl<$Res>
-    implements _$PaymentNoticeCopyWith<$Res> {
-  __$PaymentNoticeCopyWithImpl(
-      _PaymentNotice _value, $Res Function(_PaymentNotice) _then)
-      : super(_value, (v) => _then(v as _PaymentNotice));
+    implements _$$_PaymentNoticeCopyWith<$Res> {
+  __$$_PaymentNoticeCopyWithImpl(
+      _$_PaymentNotice _value, $Res Function(_$_PaymentNotice) _then)
+      : super(_value, (v) => _then(v as _$_PaymentNotice));
 
   @override
-  _PaymentNotice get _value => super._value as _PaymentNotice;
+  _$_PaymentNotice get _value => super._value as _$_PaymentNotice;
 
   @override
   $Res call({
@@ -536,7 +470,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
     Object? response = freezed,
     Object? paymentStatus = freezed,
   }) {
-    return _then(_PaymentNotice(
+    return _then(_$_PaymentNotice(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -570,19 +504,19 @@ class __$PaymentNoticeCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       ruleset: ruleset == freezed
@@ -644,11 +578,11 @@ class _$_PaymentNotice extends _PaymentNotice {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.ruleset,
       this.originalRuleset,
       this.created,
@@ -660,7 +594,11 @@ class _$_PaymentNotice extends _PaymentNotice {
       this.request,
       this.response,
       required this.paymentStatus})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
 
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$$_PaymentNoticeFromJson(json);
@@ -684,15 +622,43 @@ class _$_PaymentNotice extends _PaymentNotice {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding? ruleset;
   @override
@@ -724,7 +690,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PaymentNotice &&
+            other is _$_PaymentNotice &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -737,13 +703,14 @@ class _$_PaymentNotice extends _PaymentNotice {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.ruleset, ruleset) &&
             const DeepCollectionEquality()
                 .equals(other.originalRuleset, originalRuleset) &&
@@ -760,6 +727,7 @@ class _$_PaymentNotice extends _PaymentNotice {
                 .equals(other.paymentStatus, paymentStatus));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -771,10 +739,10 @@ class _$_PaymentNotice extends _PaymentNotice {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(ruleset),
         const DeepCollectionEquality().hash(originalRuleset),
         const DeepCollectionEquality().hash(created),
@@ -789,44 +757,46 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   @JsonKey(ignore: true)
   @override
-  _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith =>
-      __$PaymentNoticeCopyWithImpl<_PaymentNotice>(this, _$identity);
+  _$$_PaymentNoticeCopyWith<_$_PaymentNotice> get copyWith =>
+      __$$_PaymentNoticeCopyWithImpl<_$_PaymentNotice>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentNoticeToJson(this);
+    return _$$_PaymentNoticeToJson(
+      this,
+    );
   }
 }
 
 abstract class _PaymentNotice extends PaymentNotice {
   factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Coding? ruleset,
-      Coding? originalRuleset,
-      FhirDateTime? created,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Coding? ruleset,
+      final Coding? originalRuleset,
+      final FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element? createdElement,
-      Reference? target,
-      Reference? provider,
-      Reference? organization,
-      Reference? request,
-      Reference? response,
-      required Coding paymentStatus}) = _$_PaymentNotice;
+          final Element? createdElement,
+      final Reference? target,
+      final Reference? provider,
+      final Reference? organization,
+      final Reference? request,
+      final Reference? response,
+      required final Coding paymentStatus}) = _$_PaymentNotice;
   _PaymentNotice._() : super._();
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
@@ -883,7 +853,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   Coding get paymentStatus;
   @override
   @JsonKey(ignore: true)
-  _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith =>
+  _$$_PaymentNoticeCopyWith<_$_PaymentNotice> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -891,90 +861,6 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
     Map<String, dynamic> json) {
   return _PaymentReconciliation.fromJson(json);
 }
-
-/// @nodoc
-class _$PaymentReconciliationTearOff {
-  const _$PaymentReconciliationTearOff();
-
-  _PaymentReconciliation call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
-          Dstu2ResourceType
-              resourceType = Dstu2ResourceType.PaymentReconciliation,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference? request,
-      @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-          PaymentReconciliationOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
-      String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
-      Coding? ruleset,
-      Coding? originalRuleset,
-      FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
-      Period? period,
-      Reference? organization,
-      Reference? requestProvider,
-      Reference? requestOrganization,
-      List<PaymentReconciliationDetail>? detail,
-      Coding? form,
-      required Quantity total,
-      List<PaymentReconciliationNote>? note}) {
-    return _PaymentReconciliation(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      request: request,
-      outcome: outcome,
-      outcomeElement: outcomeElement,
-      disposition: disposition,
-      dispositionElement: dispositionElement,
-      ruleset: ruleset,
-      originalRuleset: originalRuleset,
-      created: created,
-      createdElement: createdElement,
-      period: period,
-      organization: organization,
-      requestProvider: requestProvider,
-      requestOrganization: requestOrganization,
-      detail: detail,
-      form: form,
-      total: total,
-      note: note,
-    );
-  }
-
-  PaymentReconciliation fromJson(Map<String, Object?> json) {
-    return PaymentReconciliation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliation {
@@ -1423,11 +1309,11 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PaymentReconciliationCopyWith<$Res>
+abstract class _$$_PaymentReconciliationCopyWith<$Res>
     implements $PaymentReconciliationCopyWith<$Res> {
-  factory _$PaymentReconciliationCopyWith(_PaymentReconciliation value,
-          $Res Function(_PaymentReconciliation) then) =
-      __$PaymentReconciliationCopyWithImpl<$Res>;
+  factory _$$_PaymentReconciliationCopyWith(_$_PaymentReconciliation value,
+          $Res Function(_$_PaymentReconciliation) then) =
+      __$$_PaymentReconciliationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
@@ -1503,15 +1389,16 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PaymentReconciliationCopyWithImpl<$Res>
+class __$$_PaymentReconciliationCopyWithImpl<$Res>
     extends _$PaymentReconciliationCopyWithImpl<$Res>
-    implements _$PaymentReconciliationCopyWith<$Res> {
-  __$PaymentReconciliationCopyWithImpl(_PaymentReconciliation _value,
-      $Res Function(_PaymentReconciliation) _then)
-      : super(_value, (v) => _then(v as _PaymentReconciliation));
+    implements _$$_PaymentReconciliationCopyWith<$Res> {
+  __$$_PaymentReconciliationCopyWithImpl(_$_PaymentReconciliation _value,
+      $Res Function(_$_PaymentReconciliation) _then)
+      : super(_value, (v) => _then(v as _$_PaymentReconciliation));
 
   @override
-  _PaymentReconciliation get _value => super._value as _PaymentReconciliation;
+  _$_PaymentReconciliation get _value =>
+      super._value as _$_PaymentReconciliation;
 
   @override
   $Res call({
@@ -1545,7 +1432,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
     Object? total = freezed,
     Object? note = freezed,
   }) {
-    return _then(_PaymentReconciliation(
+    return _then(_$_PaymentReconciliation(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1579,19 +1466,19 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       request: request == freezed
@@ -1647,7 +1534,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
           : requestOrganization // ignore: cast_nullable_to_non_nullable
               as Reference?,
       detail: detail == freezed
-          ? _value.detail
+          ? _value._detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationDetail>?,
       form: form == freezed
@@ -1659,7 +1546,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
           : total // ignore: cast_nullable_to_non_nullable
               as Quantity,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationNote>?,
     ));
@@ -1681,11 +1568,11 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.request,
       @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
           this.outcome,
@@ -1703,11 +1590,17 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       this.organization,
       this.requestProvider,
       this.requestOrganization,
-      this.detail,
+      final List<PaymentReconciliationDetail>? detail,
       this.form,
       required this.total,
-      this.note})
-      : super._();
+      final List<PaymentReconciliationNote>? note})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _detail = detail,
+        _note = note,
+        super._();
 
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$$_PaymentReconciliationFromJson(json);
@@ -1731,15 +1624,43 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? request;
   @override
@@ -1770,14 +1691,27 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   final Reference? requestProvider;
   @override
   final Reference? requestOrganization;
+  final List<PaymentReconciliationDetail>? _detail;
   @override
-  final List<PaymentReconciliationDetail>? detail;
+  List<PaymentReconciliationDetail>? get detail {
+    final value = _detail;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding? form;
   @override
   final Quantity total;
+  final List<PaymentReconciliationNote>? _note;
   @override
-  final List<PaymentReconciliationNote>? note;
+  List<PaymentReconciliationNote>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1788,7 +1722,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PaymentReconciliation &&
+            other is _$_PaymentReconciliation &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1801,13 +1735,14 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.request, request) &&
             const DeepCollectionEquality().equals(other.outcome, outcome) &&
             const DeepCollectionEquality()
@@ -1829,12 +1764,13 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
                 .equals(other.requestProvider, requestProvider) &&
             const DeepCollectionEquality()
                 .equals(other.requestOrganization, requestOrganization) &&
-            const DeepCollectionEquality().equals(other.detail, detail) &&
+            const DeepCollectionEquality().equals(other._detail, _detail) &&
             const DeepCollectionEquality().equals(other.form, form) &&
             const DeepCollectionEquality().equals(other.total, total) &&
-            const DeepCollectionEquality().equals(other.note, note));
+            const DeepCollectionEquality().equals(other._note, _note));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1846,10 +1782,10 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(request),
         const DeepCollectionEquality().hash(outcome),
         const DeepCollectionEquality().hash(outcomeElement),
@@ -1863,63 +1799,65 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         const DeepCollectionEquality().hash(organization),
         const DeepCollectionEquality().hash(requestProvider),
         const DeepCollectionEquality().hash(requestOrganization),
-        const DeepCollectionEquality().hash(detail),
+        const DeepCollectionEquality().hash(_detail),
         const DeepCollectionEquality().hash(form),
         const DeepCollectionEquality().hash(total),
-        const DeepCollectionEquality().hash(note)
+        const DeepCollectionEquality().hash(_note)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith =>
-      __$PaymentReconciliationCopyWithImpl<_PaymentReconciliation>(
+  _$$_PaymentReconciliationCopyWith<_$_PaymentReconciliation> get copyWith =>
+      __$$_PaymentReconciliationCopyWithImpl<_$_PaymentReconciliation>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationToJson(this);
+    return _$$_PaymentReconciliationToJson(
+      this,
+    );
   }
 }
 
 abstract class _PaymentReconciliation extends PaymentReconciliation {
   factory _PaymentReconciliation(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference? request,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Reference? request,
       @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-          PaymentReconciliationOutcome? outcome,
+          final PaymentReconciliationOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element? outcomeElement,
-      String? disposition,
+          final Element? outcomeElement,
+      final String? disposition,
       @JsonKey(name: '_disposition')
-          Element? dispositionElement,
-      Coding? ruleset,
-      Coding? originalRuleset,
-      FhirDateTime? created,
+          final Element? dispositionElement,
+      final Coding? ruleset,
+      final Coding? originalRuleset,
+      final FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element? createdElement,
-      Period? period,
-      Reference? organization,
-      Reference? requestProvider,
-      Reference? requestOrganization,
-      List<PaymentReconciliationDetail>? detail,
-      Coding? form,
-      required Quantity total,
-      List<PaymentReconciliationNote>? note}) = _$_PaymentReconciliation;
+          final Element? createdElement,
+      final Period? period,
+      final Reference? organization,
+      final Reference? requestProvider,
+      final Reference? requestOrganization,
+      final List<PaymentReconciliationDetail>? detail,
+      final Coding? form,
+      required final Quantity total,
+      final List<PaymentReconciliationNote>? note}) = _$_PaymentReconciliation;
   _PaymentReconciliation._() : super._();
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
@@ -1993,7 +1931,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   List<PaymentReconciliationNote>? get note;
   @override
   @JsonKey(ignore: true)
-  _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith =>
+  _$$_PaymentReconciliationCopyWith<_$_PaymentReconciliation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2001,45 +1939,6 @@ PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
     Map<String, dynamic> json) {
   return _PaymentReconciliationDetail.fromJson(json);
 }
-
-/// @nodoc
-class _$PaymentReconciliationDetailTearOff {
-  const _$PaymentReconciliationDetailTearOff();
-
-  _PaymentReconciliationDetail call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Coding type,
-      Reference? request,
-      Reference? responce,
-      Reference? submitter,
-      Reference? payee,
-      Date? date,
-      @JsonKey(name: '_date') Element? dateElement,
-      Quantity? amount}) {
-    return _PaymentReconciliationDetail(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      request: request,
-      responce: responce,
-      submitter: submitter,
-      payee: payee,
-      date: date,
-      dateElement: dateElement,
-      amount: amount,
-    );
-  }
-
-  PaymentReconciliationDetail fromJson(Map<String, Object?> json) {
-    return PaymentReconciliationDetail.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PaymentReconciliationDetail = _$PaymentReconciliationDetailTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliationDetail {
@@ -2238,12 +2137,12 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PaymentReconciliationDetailCopyWith<$Res>
+abstract class _$$_PaymentReconciliationDetailCopyWith<$Res>
     implements $PaymentReconciliationDetailCopyWith<$Res> {
-  factory _$PaymentReconciliationDetailCopyWith(
-          _PaymentReconciliationDetail value,
-          $Res Function(_PaymentReconciliationDetail) then) =
-      __$PaymentReconciliationDetailCopyWithImpl<$Res>;
+  factory _$$_PaymentReconciliationDetailCopyWith(
+          _$_PaymentReconciliationDetail value,
+          $Res Function(_$_PaymentReconciliationDetail) then) =
+      __$$_PaymentReconciliationDetailCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2275,17 +2174,17 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PaymentReconciliationDetailCopyWithImpl<$Res>
+class __$$_PaymentReconciliationDetailCopyWithImpl<$Res>
     extends _$PaymentReconciliationDetailCopyWithImpl<$Res>
-    implements _$PaymentReconciliationDetailCopyWith<$Res> {
-  __$PaymentReconciliationDetailCopyWithImpl(
-      _PaymentReconciliationDetail _value,
-      $Res Function(_PaymentReconciliationDetail) _then)
-      : super(_value, (v) => _then(v as _PaymentReconciliationDetail));
+    implements _$$_PaymentReconciliationDetailCopyWith<$Res> {
+  __$$_PaymentReconciliationDetailCopyWithImpl(
+      _$_PaymentReconciliationDetail _value,
+      $Res Function(_$_PaymentReconciliationDetail) _then)
+      : super(_value, (v) => _then(v as _$_PaymentReconciliationDetail));
 
   @override
-  _PaymentReconciliationDetail get _value =>
-      super._value as _PaymentReconciliationDetail;
+  _$_PaymentReconciliationDetail get _value =>
+      super._value as _$_PaymentReconciliationDetail;
 
   @override
   $Res call({
@@ -2301,17 +2200,17 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
     Object? dateElement = freezed,
     Object? amount = freezed,
   }) {
-    return _then(_PaymentReconciliationDetail(
+    return _then(_$_PaymentReconciliationDetail(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -2355,8 +2254,8 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
 class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   _$_PaymentReconciliationDetail(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.request,
       this.responce,
@@ -2365,18 +2264,34 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
       this.date,
       @JsonKey(name: '_date') this.dateElement,
       this.amount})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$$_PaymentReconciliationDetailFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding type;
   @override
@@ -2404,12 +2319,12 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PaymentReconciliationDetail &&
+            other is _$_PaymentReconciliationDetail &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.request, request) &&
             const DeepCollectionEquality().equals(other.responce, responce) &&
@@ -2421,12 +2336,13 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
             const DeepCollectionEquality().equals(other.amount, amount));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(request),
       const DeepCollectionEquality().hash(responce),
@@ -2438,30 +2354,32 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
 
   @JsonKey(ignore: true)
   @override
-  _$PaymentReconciliationDetailCopyWith<_PaymentReconciliationDetail>
-      get copyWith => __$PaymentReconciliationDetailCopyWithImpl<
-          _PaymentReconciliationDetail>(this, _$identity);
+  _$$_PaymentReconciliationDetailCopyWith<_$_PaymentReconciliationDetail>
+      get copyWith => __$$_PaymentReconciliationDetailCopyWithImpl<
+          _$_PaymentReconciliationDetail>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationDetailToJson(this);
+    return _$$_PaymentReconciliationDetailToJson(
+      this,
+    );
   }
 }
 
 abstract class _PaymentReconciliationDetail
     extends PaymentReconciliationDetail {
   factory _PaymentReconciliationDetail(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Coding type,
-      Reference? request,
-      Reference? responce,
-      Reference? submitter,
-      Reference? payee,
-      Date? date,
-      @JsonKey(name: '_date') Element? dateElement,
-      Quantity? amount}) = _$_PaymentReconciliationDetail;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Coding type,
+      final Reference? request,
+      final Reference? responce,
+      final Reference? submitter,
+      final Reference? payee,
+      final Date? date,
+      @JsonKey(name: '_date') final Element? dateElement,
+      final Quantity? amount}) = _$_PaymentReconciliationDetail;
   _PaymentReconciliationDetail._() : super._();
 
   factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =
@@ -2493,7 +2411,7 @@ abstract class _PaymentReconciliationDetail
   Quantity? get amount;
   @override
   @JsonKey(ignore: true)
-  _$PaymentReconciliationDetailCopyWith<_PaymentReconciliationDetail>
+  _$$_PaymentReconciliationDetailCopyWith<_$_PaymentReconciliationDetail>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2501,37 +2419,6 @@ PaymentReconciliationNote _$PaymentReconciliationNoteFromJson(
     Map<String, dynamic> json) {
   return _PaymentReconciliationNote.fromJson(json);
 }
-
-/// @nodoc
-class _$PaymentReconciliationNoteTearOff {
-  const _$PaymentReconciliationNoteTearOff();
-
-  _PaymentReconciliationNote call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Coding? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement}) {
-    return _PaymentReconciliationNote(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      typeElement: typeElement,
-      text: text,
-      textElement: textElement,
-    );
-  }
-
-  PaymentReconciliationNote fromJson(Map<String, Object?> json) {
-    return PaymentReconciliationNote.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PaymentReconciliationNote = _$PaymentReconciliationNoteTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliationNote {
@@ -2658,11 +2545,12 @@ class _$PaymentReconciliationNoteCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PaymentReconciliationNoteCopyWith<$Res>
+abstract class _$$_PaymentReconciliationNoteCopyWith<$Res>
     implements $PaymentReconciliationNoteCopyWith<$Res> {
-  factory _$PaymentReconciliationNoteCopyWith(_PaymentReconciliationNote value,
-          $Res Function(_PaymentReconciliationNote) then) =
-      __$PaymentReconciliationNoteCopyWithImpl<$Res>;
+  factory _$$_PaymentReconciliationNoteCopyWith(
+          _$_PaymentReconciliationNote value,
+          $Res Function(_$_PaymentReconciliationNote) then) =
+      __$$_PaymentReconciliationNoteCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2682,16 +2570,17 @@ abstract class _$PaymentReconciliationNoteCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PaymentReconciliationNoteCopyWithImpl<$Res>
+class __$$_PaymentReconciliationNoteCopyWithImpl<$Res>
     extends _$PaymentReconciliationNoteCopyWithImpl<$Res>
-    implements _$PaymentReconciliationNoteCopyWith<$Res> {
-  __$PaymentReconciliationNoteCopyWithImpl(_PaymentReconciliationNote _value,
-      $Res Function(_PaymentReconciliationNote) _then)
-      : super(_value, (v) => _then(v as _PaymentReconciliationNote));
+    implements _$$_PaymentReconciliationNoteCopyWith<$Res> {
+  __$$_PaymentReconciliationNoteCopyWithImpl(
+      _$_PaymentReconciliationNote _value,
+      $Res Function(_$_PaymentReconciliationNote) _then)
+      : super(_value, (v) => _then(v as _$_PaymentReconciliationNote));
 
   @override
-  _PaymentReconciliationNote get _value =>
-      super._value as _PaymentReconciliationNote;
+  _$_PaymentReconciliationNote get _value =>
+      super._value as _$_PaymentReconciliationNote;
 
   @override
   $Res call({
@@ -2703,17 +2592,17 @@ class __$PaymentReconciliationNoteCopyWithImpl<$Res>
     Object? text = freezed,
     Object? textElement = freezed,
   }) {
-    return _then(_PaymentReconciliationNote(
+    return _then(_$_PaymentReconciliationNote(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -2741,24 +2630,40 @@ class __$PaymentReconciliationNoteCopyWithImpl<$Res>
 class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
   _$_PaymentReconciliationNote(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.text,
       @JsonKey(name: '_text') this.textElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
       _$$_PaymentReconciliationNoteFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding? type;
   @override
@@ -2779,12 +2684,12 @@ class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PaymentReconciliationNote &&
+            other is _$_PaymentReconciliationNote &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -2793,12 +2698,13 @@ class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
                 .equals(other.textElement, textElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(typeElement),
       const DeepCollectionEquality().hash(text),
@@ -2806,26 +2712,27 @@ class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
 
   @JsonKey(ignore: true)
   @override
-  _$PaymentReconciliationNoteCopyWith<_PaymentReconciliationNote>
-      get copyWith =>
-          __$PaymentReconciliationNoteCopyWithImpl<_PaymentReconciliationNote>(
-              this, _$identity);
+  _$$_PaymentReconciliationNoteCopyWith<_$_PaymentReconciliationNote>
+      get copyWith => __$$_PaymentReconciliationNoteCopyWithImpl<
+          _$_PaymentReconciliationNote>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationNoteToJson(this);
+    return _$$_PaymentReconciliationNoteToJson(
+      this,
+    );
   }
 }
 
 abstract class _PaymentReconciliationNote extends PaymentReconciliationNote {
   factory _PaymentReconciliationNote(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Coding? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          String? text,
-          @JsonKey(name: '_text') Element? textElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Coding? type,
+          @JsonKey(name: '_type') final Element? typeElement,
+          final String? text,
+          @JsonKey(name: '_text') final Element? textElement}) =
       _$_PaymentReconciliationNote;
   _PaymentReconciliationNote._() : super._();
 
@@ -2851,6 +2758,6 @@ abstract class _PaymentReconciliationNote extends PaymentReconciliationNote {
   Element? get textElement;
   @override
   @JsonKey(ignore: true)
-  _$PaymentReconciliationNoteCopyWith<_PaymentReconciliationNote>
+  _$$_PaymentReconciliationNoteCopyWith<_$_PaymentReconciliationNote>
       get copyWith => throw _privateConstructorUsedError;
 }

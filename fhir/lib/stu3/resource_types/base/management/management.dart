@@ -4,14 +4,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'management.enums.dart';
 part 'management.freezed.dart';
@@ -57,10 +54,6 @@ class Encounter with Resource, _$Encounter {
     Reference? serviceProvider,
     Reference? partOf,
   }) = _Encounter;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
@@ -369,10 +362,6 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     List<Reference>? account,
   }) = _EpisodeOfCare;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EpisodeOfCare.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCare.fromJson(
@@ -510,10 +499,6 @@ class Flag with Resource, _$Flag {
     Reference? author,
   }) = _Flag;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Flag.fromYaml(dynamic yaml) => yaml is String
       ? Flag.fromJson(
@@ -599,10 +584,6 @@ class Library with Resource, _$Library {
     List<Attachment>? content,
   }) = _Library;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Library.fromYaml(dynamic yaml) => yaml is String
       ? Library.fromJson(
@@ -649,9 +630,9 @@ class List_ with Resource, _$List_ {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    List_Status? status,
+    ListStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List_Mode? mode,
+    ListMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
@@ -666,10 +647,6 @@ class List_ with Resource, _$List_ {
     List<ListEntry>? entry,
     CodeableConcept? emptyReason,
   }) = _List_;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory List_.fromYaml(dynamic yaml) => yaml is String

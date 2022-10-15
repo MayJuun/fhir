@@ -14,6 +14,7 @@ enum CommunicationStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EpisodeOfCareStatus {
   @JsonValue('planned')
   planned,
@@ -30,6 +31,7 @@ enum EpisodeOfCareStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EncounterStatus {
   @JsonValue('planned')
   planned,
@@ -46,6 +48,7 @@ enum EncounterStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EncounterClass {
   @JsonValue('inpatient')
   inpatient,
@@ -71,6 +74,7 @@ enum FlagStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EpisodeOfCareHistoryStatus {
   @JsonValue('planned')
   planned,
@@ -87,6 +91,7 @@ enum EpisodeOfCareHistoryStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EncounterHistoryStatus {
   @JsonValue('planned')
   planned,
@@ -103,6 +108,7 @@ enum EncounterHistoryStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EncounterLocationStatus {
   @JsonValue('planned')
   planned,

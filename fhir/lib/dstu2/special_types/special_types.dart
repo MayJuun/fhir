@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'special_types.enums.dart';
 part 'special_types.freezed.dart';
@@ -353,7 +350,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_minValueUri') Element? minValueUriElement,
     Date? minValueDate,
     @JsonKey(name: '_minValueDate') Element? minValueDateElement,
-    DateTime? minValueDateTime,
+    FhirDateTime? minValueDateTime,
     @JsonKey(name: '_minValueDateTime') Element? minValueDateTimeElement,
     Time? minValueTime,
     @JsonKey(name: '_minValueTime') Element? minValueTimeElement,
@@ -403,7 +400,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueUri') Element? maxValueUriElement,
     Date? maxValueDate,
     @JsonKey(name: '_maxValueDate') Element? maxValueDateElement,
-    DateTime? maxValueDateTime,
+    FhirDateTime? maxValueDateTime,
     @JsonKey(name: '_maxValueDateTime') Element? maxValueDateTimeElement,
     Time? maxValueTime,
     @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,

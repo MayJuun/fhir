@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'other.enums.dart';
 part 'other.freezed.dart';
@@ -47,10 +44,6 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     Reference? requestProvider,
     Reference? requestOrganization,
   }) = _ExplanationOfBenefit;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String

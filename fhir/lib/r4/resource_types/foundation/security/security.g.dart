@@ -12,7 +12,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AuditEvent) ??
           R4ResourceType.AuditEvent,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -43,8 +43,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
       subtype: (json['subtype'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
-      action: $enumDecodeNullable(_$AuditEventActionEnumMap, json['action'],
-          unknownValue: AuditEventAction.unknown),
+      action: json['action'] == null ? null : Code.fromJson(json['action']),
       actionElement: json['_action'] == null
           ? null
           : Element.fromJson(json['_action'] as Map<String, dynamic>),
@@ -56,8 +55,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
-      outcome: $enumDecodeNullable(_$AuditEventOutcomeEnumMap, json['outcome'],
-          unknownValue: AuditEventOutcome.unknown),
+      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -79,7 +77,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -88,7 +86,7 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -103,12 +101,12 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['type'] = instance.type.toJson();
   writeNotNull('subtype', instance.subtype?.map((e) => e.toJson()).toList());
-  writeNotNull('action', _$AuditEventActionEnumMap[instance.action]);
+  writeNotNull('action', instance.action?.toJson());
   writeNotNull('_action', instance.actionElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
-  writeNotNull('outcome', _$AuditEventOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('outcomeDesc', instance.outcomeDesc);
   writeNotNull('_outcomeDesc', instance.outcomeDescElement?.toJson());
@@ -123,6 +121,8 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
 const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Account: 'Account',
   R4ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R4ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R4ResourceType.AdverseEvent: 'AdverseEvent',
   R4ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R4ResourceType.Appointment: 'Appointment',
@@ -139,9 +139,11 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.CatalogEntry: 'CatalogEntry',
   R4ResourceType.ChargeItem: 'ChargeItem',
   R4ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R4ResourceType.Citation: 'Citation',
   R4ResourceType.Claim: 'Claim',
   R4ResourceType.ClaimResponse: 'ClaimResponse',
   R4ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R4ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R4ResourceType.CodeSystem: 'CodeSystem',
   R4ResourceType.Communication: 'Communication',
   R4ResourceType.CommunicationRequest: 'CommunicationRequest',
@@ -163,7 +165,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.DiagnosticReport: 'DiagnosticReport',
   R4ResourceType.DocumentManifest: 'DocumentManifest',
   R4ResourceType.DocumentReference: 'DocumentReference',
-  R4ResourceType.EffectEvidenceSynthesis: 'EffectEvidenceSynthesis',
   R4ResourceType.Encounter: 'Encounter',
   R4ResourceType.Endpoint: 'Endpoint',
   R4ResourceType.EnrollmentRequest: 'EnrollmentRequest',
@@ -171,6 +172,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.EpisodeOfCare: 'EpisodeOfCare',
   R4ResourceType.EventDefinition: 'EventDefinition',
   R4ResourceType.Evidence: 'Evidence',
+  R4ResourceType.EvidenceReport: 'EvidenceReport',
   R4ResourceType.EvidenceVariable: 'EvidenceVariable',
   R4ResourceType.ExampleScenario: 'ExampleScenario',
   R4ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
@@ -186,12 +188,14 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R4ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R4ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R4ResourceType.Ingredient: 'Ingredient',
   R4ResourceType.InsurancePlan: 'InsurancePlan',
   R4ResourceType.Invoice: 'Invoice',
   R4ResourceType.Library: 'Library',
   R4ResourceType.Linkage: 'Linkage',
   R4ResourceType.List_: 'List',
   R4ResourceType.Location: 'Location',
+  R4ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R4ResourceType.Measure: 'Measure',
   R4ResourceType.MeasureReport: 'MeasureReport',
   R4ResourceType.Media: 'Media',
@@ -201,30 +205,20 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.MedicationKnowledge: 'MedicationKnowledge',
   R4ResourceType.MedicationRequest: 'MedicationRequest',
   R4ResourceType.MedicationStatement: 'MedicationStatement',
-  R4ResourceType.MedicinalProduct: 'MedicinalProduct',
-  R4ResourceType.MedicinalProductAuthorization: 'MedicinalProductAuthorization',
-  R4ResourceType.MedicinalProductContraindication:
-      'MedicinalProductContraindication',
-  R4ResourceType.MedicinalProductIndication: 'MedicinalProductIndication',
-  R4ResourceType.MedicinalProductIngredient: 'MedicinalProductIngredient',
-  R4ResourceType.MedicinalProductInteraction: 'MedicinalProductInteraction',
-  R4ResourceType.MedicinalProductManufactured: 'MedicinalProductManufactured',
-  R4ResourceType.MedicinalProductPackaged: 'MedicinalProductPackaged',
-  R4ResourceType.MedicinalProductPharmaceutical:
-      'MedicinalProductPharmaceutical',
-  R4ResourceType.MedicinalProductUndesirableEffect:
-      'MedicinalProductUndesirableEffect',
+  R4ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
   R4ResourceType.MessageDefinition: 'MessageDefinition',
   R4ResourceType.MessageHeader: 'MessageHeader',
   R4ResourceType.MolecularSequence: 'MolecularSequence',
   R4ResourceType.NamingSystem: 'NamingSystem',
   R4ResourceType.NutritionOrder: 'NutritionOrder',
+  R4ResourceType.NutritionProduct: 'NutritionProduct',
   R4ResourceType.Observation: 'Observation',
   R4ResourceType.ObservationDefinition: 'ObservationDefinition',
   R4ResourceType.OperationDefinition: 'OperationDefinition',
   R4ResourceType.OperationOutcome: 'OperationOutcome',
   R4ResourceType.Organization: 'Organization',
   R4ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R4ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R4ResourceType.Parameters: 'Parameters',
   R4ResourceType.Patient: 'Patient',
   R4ResourceType.PaymentNotice: 'PaymentNotice',
@@ -237,6 +231,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Provenance: 'Provenance',
   R4ResourceType.Questionnaire: 'Questionnaire',
   R4ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R4ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R4ResourceType.RelatedPerson: 'RelatedPerson',
   R4ResourceType.RequestGroup: 'RequestGroup',
   R4ResourceType.ResearchDefinition: 'ResearchDefinition',
@@ -244,7 +239,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ResearchStudy: 'ResearchStudy',
   R4ResourceType.ResearchSubject: 'ResearchSubject',
   R4ResourceType.RiskAssessment: 'RiskAssessment',
-  R4ResourceType.RiskEvidenceSynthesis: 'RiskEvidenceSynthesis',
   R4ResourceType.Schedule: 'Schedule',
   R4ResourceType.SearchParameter: 'SearchParameter',
   R4ResourceType.ServiceRequest: 'ServiceRequest',
@@ -254,13 +248,10 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.StructureDefinition: 'StructureDefinition',
   R4ResourceType.StructureMap: 'StructureMap',
   R4ResourceType.Subscription: 'Subscription',
+  R4ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R4ResourceType.SubscriptionTopic: 'SubscriptionTopic',
   R4ResourceType.Substance: 'Substance',
-  R4ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
-  R4ResourceType.SubstancePolymer: 'SubstancePolymer',
-  R4ResourceType.SubstanceProtein: 'SubstanceProtein',
-  R4ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
-  R4ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
-  R4ResourceType.SubstanceSpecification: 'SubstanceSpecification',
+  R4ResourceType.SubstanceDefinition: 'SubstanceDefinition',
   R4ResourceType.SupplyDelivery: 'SupplyDelivery',
   R4ResourceType.SupplyRequest: 'SupplyRequest',
   R4ResourceType.Task: 'Task',
@@ -270,23 +261,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ValueSet: 'ValueSet',
   R4ResourceType.VerificationResult: 'VerificationResult',
   R4ResourceType.VisionPrescription: 'VisionPrescription',
-};
-
-const _$AuditEventActionEnumMap = {
-  AuditEventAction.c: 'C',
-  AuditEventAction.r: 'R',
-  AuditEventAction.u: 'U',
-  AuditEventAction.d: 'D',
-  AuditEventAction.e: 'E',
-  AuditEventAction.unknown: 'unknown',
-};
-
-const _$AuditEventOutcomeEnumMap = {
-  AuditEventOutcome.zero: '0',
-  AuditEventOutcome.four: '4',
-  AuditEventOutcome.eight: '8',
-  AuditEventOutcome.twelve: '12',
-  AuditEventOutcome.unknown: 'unknown',
 };
 
 _$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
@@ -389,8 +363,7 @@ _$_AuditEventNetwork _$$_AuditEventNetworkFromJson(Map<String, dynamic> json) =>
       addressElement: json['_address'] == null
           ? null
           : Element.fromJson(json['_address'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(_$AuditEventNetworkTypeEnumMap, json['type'],
-          unknownValue: AuditEventNetworkType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -413,19 +386,10 @@ Map<String, dynamic> _$$_AuditEventNetworkToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('address', instance.address);
   writeNotNull('_address', instance.addressElement?.toJson());
-  writeNotNull('type', _$AuditEventNetworkTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   return val;
 }
-
-const _$AuditEventNetworkTypeEnumMap = {
-  AuditEventNetworkType.one: '1',
-  AuditEventNetworkType.two: '2',
-  AuditEventNetworkType.three: '3',
-  AuditEventNetworkType.four: '4',
-  AuditEventNetworkType.five: '5',
-  AuditEventNetworkType.unknown: 'unknown',
-};
 
 _$_AuditEventSource _$$_AuditEventSourceFromJson(Map<String, dynamic> json) =>
     _$_AuditEventSource(
@@ -594,7 +558,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Consent) ??
           R4ResourceType.Consent,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -624,8 +588,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$ConsentStatusEnumMap, json['status'],
-          unknownValue: ConsentStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -673,7 +636,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
 
 Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -682,7 +645,7 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -697,7 +660,7 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$ConsentStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   val['scope'] = instance.scope.toJson();
   val['category'] = instance.category.map((e) => e.toJson()).toList();
@@ -717,16 +680,6 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
   writeNotNull('provision', instance.provision?.toJson());
   return val;
 }
-
-const _$ConsentStatusEnumMap = {
-  ConsentStatus.draft: 'draft',
-  ConsentStatus.proposed: 'proposed',
-  ConsentStatus.active: 'active',
-  ConsentStatus.rejected: 'rejected',
-  ConsentStatus.inactive: 'inactive',
-  ConsentStatus.entered_in_error: 'entered-in-error',
-  ConsentStatus.unknown: 'unknown',
-};
 
 _$_ConsentPolicy _$$_ConsentPolicyFromJson(Map<String, dynamic> json) =>
     _$_ConsentPolicy(
@@ -828,8 +781,7 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(_$ConsentProvisionTypeEnumMap, json['type'],
-          unknownValue: ConsentProvisionType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -879,7 +831,7 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', _$ConsentProvisionTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('actor', instance.actor?.map((e) => e.toJson()).toList());
@@ -895,12 +847,6 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
       'provision', instance.provision?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$ConsentProvisionTypeEnumMap = {
-  ConsentProvisionType.deny: 'deny',
-  ConsentProvisionType.permit: 'permit',
-  ConsentProvisionType.unknown: 'unknown',
-};
 
 _$_ConsentActor _$$_ConsentActorFromJson(Map<String, dynamic> json) =>
     _$_ConsentActor(
@@ -943,8 +889,7 @@ _$_ConsentData _$$_ConsentDataFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      meaning: $enumDecodeNullable(_$ConsentDataMeaningEnumMap, json['meaning'],
-          unknownValue: ConsentDataMeaning.unknown),
+      meaning: json['meaning'] == null ? null : Code.fromJson(json['meaning']),
       meaningElement: json['_meaning'] == null
           ? null
           : Element.fromJson(json['_meaning'] as Map<String, dynamic>),
@@ -965,19 +910,11 @@ Map<String, dynamic> _$$_ConsentDataToJson(_$_ConsentData instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('meaning', _$ConsentDataMeaningEnumMap[instance.meaning]);
+  writeNotNull('meaning', instance.meaning?.toJson());
   writeNotNull('_meaning', instance.meaningElement?.toJson());
   val['reference'] = instance.reference.toJson();
   return val;
 }
-
-const _$ConsentDataMeaningEnumMap = {
-  ConsentDataMeaning.instance: 'instance',
-  ConsentDataMeaning.related: 'related',
-  ConsentDataMeaning.dependents: 'dependents',
-  ConsentDataMeaning.authoredby: 'authoredby',
-  ConsentDataMeaning.unknown: 'unknown',
-};
 
 _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
     _$_Provenance(
@@ -985,7 +922,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Provenance) ??
           R4ResourceType.Provenance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1058,7 +995,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1067,7 +1004,7 @@ Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1150,8 +1087,7 @@ _$_ProvenanceEntity _$$_ProvenanceEntityFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      role: $enumDecodeNullable(_$ProvenanceEntityRoleEnumMap, json['role'],
-          unknownValue: ProvenanceEntityRole.unknown),
+      role: json['role'] == null ? null : Code.fromJson(json['role']),
       roleElement: json['_role'] == null
           ? null
           : Element.fromJson(json['_role'] as Map<String, dynamic>),
@@ -1175,18 +1111,9 @@ Map<String, dynamic> _$$_ProvenanceEntityToJson(_$_ProvenanceEntity instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('role', _$ProvenanceEntityRoleEnumMap[instance.role]);
+  writeNotNull('role', instance.role?.toJson());
   writeNotNull('_role', instance.roleElement?.toJson());
   val['what'] = instance.what.toJson();
   writeNotNull('agent', instance.agent?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$ProvenanceEntityRoleEnumMap = {
-  ProvenanceEntityRole.derivation: 'derivation',
-  ProvenanceEntityRole.revision: 'revision',
-  ProvenanceEntityRole.quotation: 'quotation',
-  ProvenanceEntityRole.source: 'source',
-  ProvenanceEntityRole.removal: 'removal',
-  ProvenanceEntityRole.unknown: 'unknown',
-};

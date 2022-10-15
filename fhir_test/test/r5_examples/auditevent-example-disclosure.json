@@ -3,33 +3,43 @@
   "id": "example-disclosure",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\u003cp\u003eDisclosure by some idiot, for marketing reasons, to places unknown, of a Poor Sap, data about Everthing important.\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e type:\u003c/b\u003e Export\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e subtype:\u003c/b\u003e HIPAA Disclosure\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e action:\u003c/b\u003e Read\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e severity:\u003c/b\u003e Notice: normal but signficant condition\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e recorded:\u003c/b\u003e September 22, 2013\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e PurposeOfEvent:\u003c/b\u003e Healthcare Marketing\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e source agent:\u003c/b\u003e user ID\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e source agent location:\u003c/b\u003e Location 1\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e source agent network id:\u003c/b\u003e custodian.net\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e recipient agent:\u003c/b\u003e practitioner ID\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e recipient agent network id:\u003c/b\u003e marketing.land\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e patient:\u003c/b\u003e patient identity\u003c/p\u003e\n\t\t\t\u003cp\u003e\n\t\t\t\t\u003cb\u003e data exposed:\u003c/b\u003e list of data\u003c/p\u003e\n\t\t\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;example-disclosure\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003ecategory\u003c/b\u003e: Export \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-DCM.html\"\u003eDICOM\u003c/a\u003e#110106)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: HIPAA disclosure \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ([not stated]#Disclosure)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eaction\u003c/b\u003e: R\u003c/p\u003e\u003cp\u003e\u003cb\u003eseverity\u003c/b\u003e: notice\u003c/p\u003e\u003cp\u003e\u003cb\u003erecorded\u003c/b\u003e: Sep 22, 2013 12:08:00 AM\u003c/p\u003e\u003ch3\u003eOutcomes\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDetail\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eSuccess (Details: http://terminology.hl7.org/CodeSystem/audit-event-outcome code success \u003d \u0027Success\u0027, stated as \u0027Success\u0027)\u003c/td\u003e\u003ctd\u003eSuccessful Disclosure \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003eauthorization\u003c/b\u003e: healthcare marketing \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActReason.html\"\u003eActReason\u003c/a\u003e#HMARKT)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epatient\u003c/b\u003e: \u003ca href\u003d\"patient-example.html\"\u003ePatient/example\u003c/a\u003e \u0026quot;Peter CHALMERS\u0026quot;\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eagent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Source Role ID \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-DCM.html\"\u003eDICOM\u003c/a\u003e#110153)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ewho\u003c/b\u003e: \u003cspan\u003e: That guy everyone wishes would be caught\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003erequestor\u003c/b\u003e: true\u003c/p\u003e\u003cp\u003e\u003cb\u003elocation\u003c/b\u003e: \u003ca href\u003d\"location-1.html\"\u003eLocation/1\u003c/a\u003e \u0026quot;South Wing, second floor\u0026quot;\u003c/p\u003e\u003cp\u003e\u003cb\u003epolicy\u003c/b\u003e: \u003ca href\u003d\"http://consent.com/yes\"\u003ehttp://consent.com/yes\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enetwork\u003c/b\u003e: custodian.net\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eagent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Destination Role ID \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-DCM.html\"\u003eDICOM\u003c/a\u003e#110152)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ewho\u003c/b\u003e: \u003ca href\u003d\"practitioner-example.html\"\u003ePractitioner/example: Where\u003c/a\u003e \u0026quot;Adam CAREFUL\u0026quot;\u003c/p\u003e\u003cp\u003e\u003cb\u003erequestor\u003c/b\u003e: false\u003c/p\u003e\u003cp\u003e\u003cb\u003enetwork\u003c/b\u003e: marketing.land\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthorization\u003c/b\u003e: healthcare marketing \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActReason.html\"\u003eActReason\u003c/a\u003e#HMARKT)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eSources\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eObserver\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e: Watchers Accounting of Disclosures Application\u003c/span\u003e\u003c/td\u003e\u003ctd\u003eApplication Server \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-security-source-type.html\"\u003eAudit Event Source Type\u003c/a\u003e#4)\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003ch3\u003eEntities\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eWhat\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRole\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eSecurityLabel\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"patient-example.html\"\u003ePatient/example/_history/1: data about Everthing important\u003c/a\u003e \u0026quot;Peter CHALMERS\u0026quot;\u003c/td\u003e\u003ctd\u003eDomain Resource \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-object-role.html\"\u003eAuditEventEntityRole\u003c/a\u003e#4)\u003c/span\u003e\u003c/td\u003e\u003ctd\u003every restricted \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-Confidentiality.html\"\u003eConfidentiality\u003c/a\u003e#V)\u003c/span\u003e, sexually transmitted disease information sensitivity \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActCode.html\"\u003eActCode\u003c/a\u003e#STD)\u003c/span\u003e, delete after use \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActCode.html\"\u003eActCode\u003c/a\u003e#DELAU)\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
-  "type": {
-    "system": "http://dicom.nema.org/resources/ontology/DCM",
-    "code": "110106",
-    "display": "Export"
-  },
-  "subtype": [
+  "category": [
     {
-      "code": "Disclosure",
-      "display": "HIPAA disclosure"
+      "coding": [
+        {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "110106",
+          "display": "Export"
+        }
+      ]
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "code": "Disclosure",
+        "display": "HIPAA disclosure"
+      }
+    ]
+  },
   "action": "R",
   "severity": "notice",
   "recorded": "2013-09-22T00:08:00Z",
   "outcome": {
-    "coding": [
+    "code": {
+      "system": "http://terminology.hl7.org/CodeSystem/audit-event-outcome",
+      "code": "success",
+      "display": "Success"
+    },
+    "detail": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/audit-event-outcome",
-        "code": "0",
-        "display": "Success"
+        "text": "Successful Disclosure"
       }
-    ],
-    "text": "Successful Disclosure"
+    ]
   },
-  "purposeOfEvent": [
+  "authorization": [
     {
       "coding": [
         {
@@ -40,6 +50,9 @@
       ]
     }
   ],
+  "patient": {
+    "reference": "Patient/example"
+  },
   "agent": [
     {
       "type": {
@@ -54,10 +67,9 @@
       "who": {
         "identifier": {
           "value": "SomeIdiot@nowhere"
-        }
+        },
+        "display": "That guy everyone wishes would be caught"
       },
-      "altId": "notMe",
-      "name": "That guy everyone wishes would be caught",
       "requestor": true,
       "location": {
         "reference": "Location/1"
@@ -65,10 +77,7 @@
       "policy": [
         "http://consent.com/yes"
       ],
-      "network": {
-        "address": "custodian.net",
-        "type": "1"
-      }
+      "networkString": "custodian.net"
     },
     {
       "type": {
@@ -85,11 +94,8 @@
         "display": "Where"
       },
       "requestor": false,
-      "network": {
-        "address": "marketing.land",
-        "type": "1"
-      },
-      "purposeOfUse": [
+      "networkString": "marketing.land",
+      "authorization": [
         {
           "coding": [
             {
@@ -103,74 +109,68 @@
     }
   ],
   "source": {
-    "site": "Watcher",
     "observer": {
       "display": "Watchers Accounting of Disclosures Application"
     },
     "type": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/security-source-type",
-        "code": "4",
-        "display": "Application Server"
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/security-source-type",
+            "code": "4",
+            "display": "Application Server"
+          }
+        ]
       }
     ]
   },
   "entity": [
     {
       "what": {
-        "reference": "Patient/example"
-      },
-      "type": {
-        "system": "http://terminology.hl7.org/CodeSystem/audit-entity-type",
-        "code": "1",
-        "display": "Person"
-      },
-      "role": {
-        "system": "http://terminology.hl7.org/CodeSystem/object-role",
-        "code": "1",
-        "display": "Patient"
-      }
-    },
-    {
-      "what": {
         "reference": "Patient/example/_history/1",
         "identifier": {
           "value": "What.id"
-        }
-      },
-      "type": {
-        "system": "http://terminology.hl7.org/CodeSystem/audit-entity-type",
-        "code": "2",
-        "display": "System Object"
+        },
+        "display": "data about Everthing important"
       },
       "role": {
-        "system": "http://terminology.hl7.org/CodeSystem/object-role",
-        "code": "4",
-        "display": "Domain Resource"
-      },
-      "lifecycle": {
-        "system": "http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle",
-        "code": "11",
-        "display": "Disclosure"
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/object-role",
+            "code": "4",
+            "display": "Domain Resource"
+          }
+        ]
       },
       "securityLabel": [
         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-          "code": "V",
-          "display": "very restricted"
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "V",
+              "display": "very restricted"
+            }
+          ]
         },
         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code": "STD",
-          "display": "sexually transmitted disease information sensitivity"
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "STD",
+              "display": "sexually transmitted disease information sensitivity"
+            }
+          ]
         },
         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code": "DELAU",
-          "display": "delete after use"
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "DELAU",
+              "display": "delete after use"
+            }
+          ]
         }
-      ],
-      "name": "data about Everthing important"
+      ]
     }
   ],
   "meta": {

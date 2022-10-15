@@ -1,5 +1,38 @@
 # fhir_path
 
+## [0.9.1]
+
+* Rewrote the whole thing using antlr only to find out it doesn't transpile properly to javascript (grumble, grumble, stupid multi-platforms)
+* Both are included currently, although the petit_parser version is the default as it currently is more robust
+* More specific support for Quantities - but not as widely supported because you can actually work with them now, more will be added in the future
+* Petit tests pass on android, Linux and web
+* Antlr tests pass on android and Linux
+
+## [0.9.0-1]
+
+* Updated to FHIR 0.9.0
+* Updated other dependencies
+* Fixed some errors with comparisons
+* Smaller set of Quantities than previously to try and prevent stack overflow ios web issues
+
+## [0.8.0]
+
+* Updated to FHIR 0.8.0
+* Dart 2.17.0
+* Updated other dependencies
+* Updated equivalent
+* Added some ToDos to README
+
+## [0.7.1]
+
+* Fix lazy evaluation of environment (regression bug introduced in 0.5.0-21)
+* Better documentation of parameters
+* Updated dependencies
+
+## [0.7.0]
+
+* Updated dependencies
+
 ## [0.6.3]
 
 * I want pub points!
@@ -39,9 +72,9 @@
 * Multiple bug fixes and improvements again by [Tilo](https://github.com/tiloc)
 * Ported the FHIRPath test suite from XML to Dart
 * More tests enabled & fixed
-* Fixed .all(XXX), .instersect()
+* Fixed .all(XXX), .intersect()
 * Fixes % to variables, is for DateTime, comparisons for quantities
-* Fixed bug when using $this in nexted iifs
+* Fixed bug when using $this in nested iifs
 
 ## [0.5.0-19]
 

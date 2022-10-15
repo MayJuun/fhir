@@ -51,10 +51,12 @@
       ]
     }
   ],
-  "identifier": {
-    "system": "http://example.org/fhir/NamingSystem/questionnaire-ids",
-    "value": "Q12349876"
-  },
+  "identifier": [
+    {
+      "system": "http://example.org/fhir/NamingSystem/questionnaire-ids",
+      "value": "Q12349876"
+    }
+  ],
   "basedOn": [
     {
       "reference": "#order"

@@ -837,7 +837,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_minValueDate'] as Map<String, dynamic>),
       minValueDateTime: json['minValueDateTime'] == null
           ? null
-          : DateTime.parse(json['minValueDateTime'] as String),
+          : FhirDateTime.fromJson(json['minValueDateTime']),
       minValueDateTimeElement: json['_minValueDateTime'] == null
           ? null
           : Element.fromJson(json['_minValueDateTime'] as Map<String, dynamic>),
@@ -993,7 +993,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_maxValueDate'] as Map<String, dynamic>),
       maxValueDateTime: json['maxValueDateTime'] == null
           ? null
-          : DateTime.parse(json['maxValueDateTime'] as String),
+          : FhirDateTime.fromJson(json['maxValueDateTime']),
       maxValueDateTimeElement: json['_maxValueDateTime'] == null
           ? null
           : Element.fromJson(json['_maxValueDateTime'] as Map<String, dynamic>),
@@ -1428,8 +1428,7 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
   writeNotNull('_minValueUri', instance.minValueUriElement?.toJson());
   writeNotNull('minValueDate', instance.minValueDate?.toJson());
   writeNotNull('_minValueDate', instance.minValueDateElement?.toJson());
-  writeNotNull(
-      'minValueDateTime', instance.minValueDateTime?.toIso8601String());
+  writeNotNull('minValueDateTime', instance.minValueDateTime?.toJson());
   writeNotNull('_minValueDateTime', instance.minValueDateTimeElement?.toJson());
   writeNotNull('minValueTime', instance.minValueTime?.toJson());
   writeNotNull('_minValueTime', instance.minValueTimeElement?.toJson());
@@ -1482,8 +1481,7 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
   writeNotNull('_maxValueUri', instance.maxValueUriElement?.toJson());
   writeNotNull('maxValueDate', instance.maxValueDate?.toJson());
   writeNotNull('_maxValueDate', instance.maxValueDateElement?.toJson());
-  writeNotNull(
-      'maxValueDateTime', instance.maxValueDateTime?.toIso8601String());
+  writeNotNull('maxValueDateTime', instance.maxValueDateTime?.toJson());
   writeNotNull('_maxValueDateTime', instance.maxValueDateTimeElement?.toJson());
   writeNotNull('maxValueTime', instance.maxValueTime?.toJson());
   writeNotNull('_maxValueTime', instance.maxValueTimeElement?.toJson());
@@ -1566,7 +1564,7 @@ Map<String, dynamic> _$$_NarrativeToJson(_$_Narrative instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  val['status'] = _$NarrativeStatusEnumMap[instance.status];
+  val['status'] = _$NarrativeStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   val['div'] = instance.div;
   return val;
@@ -1624,7 +1622,7 @@ Map<String, dynamic> _$$_ElementDefinitionSlicingToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('ordered', instance.ordered?.toJson());
   writeNotNull('_ordered', instance.orderedElement?.toJson());
-  val['rules'] = _$SlicingRulesEnumMap[instance.rules];
+  val['rules'] = _$SlicingRulesEnumMap[instance.rules]!;
   writeNotNull('_rules', instance.rulesElement?.toJson());
   return val;
 }
@@ -1721,7 +1719,7 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
   writeNotNull('_code', instance.codeExtension?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull('aggregation',
-      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e]).toList());
+      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e]!).toList());
   writeNotNull('_aggregation', instance.aggregationElement?.toJson());
   writeNotNull('fhir_comments', instance.fhirElement);
   return val;
@@ -1803,7 +1801,7 @@ Map<String, dynamic> _$$_ElementDefinitionConstraintToJson(
   writeNotNull('_key', instance.keyElement?.toJson());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
-  val['severity'] = _$ConstraintSeverityEnumMap[instance.severity];
+  val['severity'] = _$ConstraintSeverityEnumMap[instance.severity]!;
   writeNotNull('_severity', instance.severityElement?.toJson());
   val['human'] = instance.human;
   writeNotNull('_human', instance.humanElement?.toJson());
@@ -1862,7 +1860,7 @@ Map<String, dynamic> _$$_ElementDefinitionBindingToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   val['strength'] =
-      _$ElementDefinitionBindingStrengthEnumMap[instance.strength];
+      _$ElementDefinitionBindingStrengthEnumMap[instance.strength]!;
   writeNotNull('_strength', instance.strengthElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());

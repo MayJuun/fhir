@@ -105,7 +105,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
 
 Map<String, dynamic> _$$_EncounterToJson(_$_Encounter instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -129,7 +129,7 @@ Map<String, dynamic> _$$_EncounterToJson(_$_Encounter instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['status'] = _$EncounterStatusEnumMap[instance.status];
+  val['status'] = _$EncounterStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'statusHistory', instance.statusHistory?.map((e) => e.toJson()).toList());
@@ -307,7 +307,7 @@ Map<String, dynamic> _$$_EncounterStatusHistoryToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['status'] = _$EncounterHistoryStatusEnumMap[instance.status];
+  val['status'] = _$EncounterHistoryStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   val['period'] = instance.period.toJson();
   return val;
@@ -577,7 +577,7 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -601,7 +601,7 @@ Map<String, dynamic> _$$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['status'] = _$EpisodeOfCareStatusEnumMap[instance.status];
+  val['status'] = _$EpisodeOfCareStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'statusHistory', instance.statusHistory?.map((e) => e.toJson()).toList());
@@ -666,7 +666,7 @@ Map<String, dynamic> _$$_EpisodeOfCareStatusHistoryToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['status'] = _$EpisodeOfCareHistoryStatusEnumMap[instance.status];
+  val['status'] = _$EpisodeOfCareHistoryStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   val['period'] = instance.period.toJson();
   return val;
@@ -806,7 +806,7 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_CommunicationToJson(_$_Communication instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -962,7 +962,7 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
 
 Map<String, dynamic> _$$_FlagToJson(_$_Flag instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -987,7 +987,7 @@ Map<String, dynamic> _$$_FlagToJson(_$_Flag instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('category', instance.category?.toJson());
-  val['status'] = _$FlagStatusEnumMap[instance.status];
+  val['status'] = _$FlagStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
   val['subject'] = instance.subject.toJson();

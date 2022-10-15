@@ -12,7 +12,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentNotice) ??
           R4ResourceType.PaymentNotice,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -81,7 +81,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -90,7 +90,7 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -125,6 +125,8 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
 const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Account: 'Account',
   R4ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R4ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R4ResourceType.AdverseEvent: 'AdverseEvent',
   R4ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R4ResourceType.Appointment: 'Appointment',
@@ -141,9 +143,11 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.CatalogEntry: 'CatalogEntry',
   R4ResourceType.ChargeItem: 'ChargeItem',
   R4ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R4ResourceType.Citation: 'Citation',
   R4ResourceType.Claim: 'Claim',
   R4ResourceType.ClaimResponse: 'ClaimResponse',
   R4ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R4ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R4ResourceType.CodeSystem: 'CodeSystem',
   R4ResourceType.Communication: 'Communication',
   R4ResourceType.CommunicationRequest: 'CommunicationRequest',
@@ -165,7 +169,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.DiagnosticReport: 'DiagnosticReport',
   R4ResourceType.DocumentManifest: 'DocumentManifest',
   R4ResourceType.DocumentReference: 'DocumentReference',
-  R4ResourceType.EffectEvidenceSynthesis: 'EffectEvidenceSynthesis',
   R4ResourceType.Encounter: 'Encounter',
   R4ResourceType.Endpoint: 'Endpoint',
   R4ResourceType.EnrollmentRequest: 'EnrollmentRequest',
@@ -173,6 +176,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.EpisodeOfCare: 'EpisodeOfCare',
   R4ResourceType.EventDefinition: 'EventDefinition',
   R4ResourceType.Evidence: 'Evidence',
+  R4ResourceType.EvidenceReport: 'EvidenceReport',
   R4ResourceType.EvidenceVariable: 'EvidenceVariable',
   R4ResourceType.ExampleScenario: 'ExampleScenario',
   R4ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
@@ -188,12 +192,14 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R4ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R4ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R4ResourceType.Ingredient: 'Ingredient',
   R4ResourceType.InsurancePlan: 'InsurancePlan',
   R4ResourceType.Invoice: 'Invoice',
   R4ResourceType.Library: 'Library',
   R4ResourceType.Linkage: 'Linkage',
   R4ResourceType.List_: 'List',
   R4ResourceType.Location: 'Location',
+  R4ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R4ResourceType.Measure: 'Measure',
   R4ResourceType.MeasureReport: 'MeasureReport',
   R4ResourceType.Media: 'Media',
@@ -203,30 +209,20 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.MedicationKnowledge: 'MedicationKnowledge',
   R4ResourceType.MedicationRequest: 'MedicationRequest',
   R4ResourceType.MedicationStatement: 'MedicationStatement',
-  R4ResourceType.MedicinalProduct: 'MedicinalProduct',
-  R4ResourceType.MedicinalProductAuthorization: 'MedicinalProductAuthorization',
-  R4ResourceType.MedicinalProductContraindication:
-      'MedicinalProductContraindication',
-  R4ResourceType.MedicinalProductIndication: 'MedicinalProductIndication',
-  R4ResourceType.MedicinalProductIngredient: 'MedicinalProductIngredient',
-  R4ResourceType.MedicinalProductInteraction: 'MedicinalProductInteraction',
-  R4ResourceType.MedicinalProductManufactured: 'MedicinalProductManufactured',
-  R4ResourceType.MedicinalProductPackaged: 'MedicinalProductPackaged',
-  R4ResourceType.MedicinalProductPharmaceutical:
-      'MedicinalProductPharmaceutical',
-  R4ResourceType.MedicinalProductUndesirableEffect:
-      'MedicinalProductUndesirableEffect',
+  R4ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
   R4ResourceType.MessageDefinition: 'MessageDefinition',
   R4ResourceType.MessageHeader: 'MessageHeader',
   R4ResourceType.MolecularSequence: 'MolecularSequence',
   R4ResourceType.NamingSystem: 'NamingSystem',
   R4ResourceType.NutritionOrder: 'NutritionOrder',
+  R4ResourceType.NutritionProduct: 'NutritionProduct',
   R4ResourceType.Observation: 'Observation',
   R4ResourceType.ObservationDefinition: 'ObservationDefinition',
   R4ResourceType.OperationDefinition: 'OperationDefinition',
   R4ResourceType.OperationOutcome: 'OperationOutcome',
   R4ResourceType.Organization: 'Organization',
   R4ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R4ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R4ResourceType.Parameters: 'Parameters',
   R4ResourceType.Patient: 'Patient',
   R4ResourceType.PaymentNotice: 'PaymentNotice',
@@ -239,6 +235,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Provenance: 'Provenance',
   R4ResourceType.Questionnaire: 'Questionnaire',
   R4ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R4ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R4ResourceType.RelatedPerson: 'RelatedPerson',
   R4ResourceType.RequestGroup: 'RequestGroup',
   R4ResourceType.ResearchDefinition: 'ResearchDefinition',
@@ -246,7 +243,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ResearchStudy: 'ResearchStudy',
   R4ResourceType.ResearchSubject: 'ResearchSubject',
   R4ResourceType.RiskAssessment: 'RiskAssessment',
-  R4ResourceType.RiskEvidenceSynthesis: 'RiskEvidenceSynthesis',
   R4ResourceType.Schedule: 'Schedule',
   R4ResourceType.SearchParameter: 'SearchParameter',
   R4ResourceType.ServiceRequest: 'ServiceRequest',
@@ -256,13 +252,10 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.StructureDefinition: 'StructureDefinition',
   R4ResourceType.StructureMap: 'StructureMap',
   R4ResourceType.Subscription: 'Subscription',
+  R4ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R4ResourceType.SubscriptionTopic: 'SubscriptionTopic',
   R4ResourceType.Substance: 'Substance',
-  R4ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
-  R4ResourceType.SubstancePolymer: 'SubstancePolymer',
-  R4ResourceType.SubstanceProtein: 'SubstanceProtein',
-  R4ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
-  R4ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
-  R4ResourceType.SubstanceSpecification: 'SubstanceSpecification',
+  R4ResourceType.SubstanceDefinition: 'SubstanceDefinition',
   R4ResourceType.SupplyDelivery: 'SupplyDelivery',
   R4ResourceType.SupplyRequest: 'SupplyRequest',
   R4ResourceType.Task: 'Task',
@@ -281,7 +274,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentReconciliation) ??
           R4ResourceType.PaymentReconciliation,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -333,9 +326,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
       requestor: json['requestor'] == null
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
-      outcome: $enumDecodeNullable(
-          _$PaymentReconciliationOutcomeEnumMap, json['outcome'],
-          unknownValue: PaymentReconciliationOutcome.unknown),
+      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -371,7 +362,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
 Map<String, dynamic> _$$_PaymentReconciliationToJson(
     _$_PaymentReconciliation instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -380,7 +371,7 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -403,8 +394,7 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
   writeNotNull('paymentIssuer', instance.paymentIssuer?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
-  writeNotNull(
-      'outcome', _$PaymentReconciliationOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
@@ -418,14 +408,6 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
       'processNote', instance.processNote?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$PaymentReconciliationOutcomeEnumMap = {
-  PaymentReconciliationOutcome.queued: 'queued',
-  PaymentReconciliationOutcome.complete: 'complete',
-  PaymentReconciliationOutcome.error: 'error',
-  PaymentReconciliationOutcome.partial: 'partial',
-  PaymentReconciliationOutcome.unknown: 'unknown',
-};
 
 _$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
         Map<String, dynamic> json) =>
@@ -507,9 +489,7 @@ _$_PaymentReconciliationProcessNote
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          type: $enumDecodeNullable(
-              _$PaymentReconciliationProcessNoteTypeEnumMap, json['type'],
-              unknownValue: PaymentReconciliationProcessNoteType.unknown),
+          type: json['type'] == null ? null : Code.fromJson(json['type']),
           typeElement: json['_type'] == null
               ? null
               : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -534,17 +514,9 @@ Map<String, dynamic> _$$_PaymentReconciliationProcessNoteToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'type', _$PaymentReconciliationProcessNoteTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   return val;
 }
-
-const _$PaymentReconciliationProcessNoteTypeEnumMap = {
-  PaymentReconciliationProcessNoteType.display: 'display',
-  PaymentReconciliationProcessNoteType.print: 'print',
-  PaymentReconciliationProcessNoteType.printoper: 'printoper',
-  PaymentReconciliationProcessNoteType.unknown: 'unknown',
-};

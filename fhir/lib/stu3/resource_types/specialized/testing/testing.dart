@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'testing.enums.dart';
 part 'testing.freezed.dart';
@@ -51,10 +48,6 @@ class TestReport with Resource, _$TestReport {
     List<TestReportTest>? test,
     TestReportTeardown? teardown,
   }) = _TestReport;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReport.fromYaml(dynamic yaml) => yaml is String
@@ -502,10 +495,6 @@ class TestScript with Resource, _$TestScript {
     List<TestScriptTest>? test,
     TestScriptTeardown? teardown,
   }) = _TestScript;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScript.fromYaml(dynamic yaml) => yaml is String

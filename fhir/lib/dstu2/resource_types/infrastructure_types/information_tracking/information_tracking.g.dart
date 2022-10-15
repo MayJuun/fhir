@@ -77,7 +77,7 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_QuestionnaireToJson(_$_Questionnaire instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -104,7 +104,7 @@ Map<String, dynamic> _$$_QuestionnaireToJson(_$_Questionnaire instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version);
   writeNotNull('_version', instance.versionElement?.toJson());
-  val['status'] = _$QuestionnaireStatusEnumMap[instance.status];
+  val['status'] = _$QuestionnaireStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
@@ -456,7 +456,7 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
 Map<String, dynamic> _$$_QuestionnaireResponseToJson(
     _$_QuestionnaireResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -481,7 +481,7 @@ Map<String, dynamic> _$$_QuestionnaireResponseToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('questionnaire', instance.questionnaire?.toJson());
-  val['status'] = _$QuestionnaireResponseStatusEnumMap[instance.status];
+  val['status'] = _$QuestionnaireResponseStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('author', instance.author?.toJson());
@@ -811,7 +811,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -941,7 +941,7 @@ Map<String, dynamic> _$$_ProvenanceEntityToJson(_$_ProvenanceEntity instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  val['role'] = _$EntityRoleEnumMap[instance.role];
+  val['role'] = _$EntityRoleEnumMap[instance.role]!;
   writeNotNull('_role', instance.roleElement?.toJson());
   val['type'] = instance.type.toJson();
   val['reference'] = instance.reference.toJson();
@@ -1038,7 +1038,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'general.enums.dart';
 part 'general.freezed.dart';
@@ -48,10 +45,6 @@ class Account with Resource, _$Account {
     @JsonKey(name: '_description') Element? descriptionElement,
     List<AccountGuarantor>? guarantor,
   }) = _Account;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Account.fromYaml(dynamic yaml) => yaml is String
@@ -212,10 +205,6 @@ class ChargeItem with Resource, _$ChargeItem {
     List<Reference>? supportingInformation,
   }) = _ChargeItem;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ChargeItem.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItem.fromJson(
@@ -327,10 +316,6 @@ class Contract with Resource, _$Contract {
     List<ContractLegal>? legal,
     List<ContractRule>? rule,
   }) = _Contract;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Contract.fromYaml(dynamic yaml) => yaml is String
@@ -806,10 +791,6 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     List<ExplanationOfBenefitProcessNote>? processNote,
     List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
   }) = _ExplanationOfBenefit;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String

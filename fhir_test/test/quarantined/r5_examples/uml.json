@@ -490,7 +490,7 @@
         },
         {
           "name": "CodeableReference",
-          "documentation": "A reference to a resource (by instance), or instead, a reference to a cencept defined in a terminology or ontology (by class).",
+          "documentation": "A reference to a resource (by instance), or instead, a reference to a concept defined in a terminology or ontology (by class).",
           "class": "Class",
           "type": "Class",
           "abstract": false,
@@ -929,10 +929,16 @@
               "type": "Timing"
             },
             {
-              "name": "asNeeded[x]",
+              "name": "asNeeded",
               "min": "0",
               "max": "1",
-              "type": "boolean|CodeableConcept"
+              "type": "boolean"
+            },
+            {
+              "name": "asNeededFor",
+              "min": "0",
+              "max": "2147483647",
+              "type": "CodeableConcept"
             },
             {
               "name": "site",
@@ -1009,10 +1015,16 @@
               "type": "Timing"
             },
             {
-              "name": "asNeeded[x]",
+              "name": "asNeeded",
               "min": "0",
               "max": "1",
-              "type": "boolean|CodeableConcept"
+              "type": "boolean"
+            },
+            {
+              "name": "asNeededFor",
+              "min": "0",
+              "max": "2147483647",
+              "type": "CodeableConcept"
             },
             {
               "name": "site",
@@ -1065,6 +1077,14 @@
           "type": "Class",
           "abstract": false,
           "specializes": "Quantity",
+          "attributes": [],
+          "associations": []
+        },
+        {
+          "name": "Duration|string",
+          "class": "Class",
+          "type": "Class",
+          "abstract": false,
           "attributes": [],
           "associations": []
         },
@@ -1597,6 +1617,90 @@
           ]
         },
         {
+          "name": "ExtendedContactDetail",
+          "documentation": "Specifies contact information for a specific purpose over a period of time, might be handled/monitored by a specific named person or organization.",
+          "class": "Class",
+          "type": "Class",
+          "abstract": false,
+          "specializes": "DataType",
+          "attributes": [
+            {
+              "name": "purpose",
+              "min": "0",
+              "max": "1",
+              "type": "CodeableConcept"
+            },
+            {
+              "name": "name",
+              "min": "0",
+              "max": "1",
+              "type": "HumanName"
+            },
+            {
+              "name": "telecom",
+              "min": "0",
+              "max": "2147483647",
+              "type": "ContactPoint"
+            },
+            {
+              "name": "address",
+              "min": "0",
+              "max": "1",
+              "type": "Address"
+            },
+            {
+              "name": "organization",
+              "min": "0",
+              "max": "1",
+              "type": "Reference(Organization)"
+            },
+            {
+              "name": "period",
+              "min": "0",
+              "max": "1",
+              "type": "Period"
+            }
+          ],
+          "associations": [
+            {
+              "name": "purpose",
+              "min": "0",
+              "max": "1",
+              "type": "CodeableConcept"
+            },
+            {
+              "name": "name",
+              "min": "0",
+              "max": "1",
+              "type": "HumanName"
+            },
+            {
+              "name": "telecom",
+              "min": "0",
+              "max": "2147483647",
+              "type": "ContactPoint"
+            },
+            {
+              "name": "address",
+              "min": "0",
+              "max": "1",
+              "type": "Address"
+            },
+            {
+              "name": "organization",
+              "min": "0",
+              "max": "1",
+              "type": "Reference(Organization)"
+            },
+            {
+              "name": "period",
+              "min": "0",
+              "max": "1",
+              "type": "Period"
+            }
+          ]
+        },
+        {
           "name": "Extension",
           "documentation": "Optional Extension Element - found in all resources.",
           "class": "Class",
@@ -2041,90 +2145,6 @@
           ]
         },
         {
-          "name": "OrderedDistribution",
-          "documentation": "An ordered list (distribution) of statistics.",
-          "class": "Class",
-          "type": "Class",
-          "abstract": false,
-          "specializes": "BackboneType",
-          "attributes": [
-            {
-              "name": "description",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "note",
-              "min": "0",
-              "max": "2147483647",
-              "type": "Annotation"
-            },
-            {
-              "name": "numberOfIntervals",
-              "min": "1",
-              "max": "1",
-              "type": "integer"
-            },
-            {
-              "name": "bottomOfFirstInterval",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "interval",
-              "min": "1",
-              "max": "2147483647",
-              "type": ""
-            },
-            {
-              "name": "topOfInterval",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            }
-          ],
-          "associations": [
-            {
-              "name": "description",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "note",
-              "min": "0",
-              "max": "2147483647",
-              "type": "Annotation"
-            },
-            {
-              "name": "numberOfIntervals",
-              "min": "1",
-              "max": "1",
-              "type": "integer"
-            },
-            {
-              "name": "bottomOfFirstInterval",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "interval",
-              "min": "1",
-              "max": "2147483647",
-              "type": ""
-            },
-            {
-              "name": "topOfInterval",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            }
-          ]
-        },
-        {
           "name": "ParameterDefinition",
           "documentation": "The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.",
           "class": "Class",
@@ -2327,150 +2347,6 @@
           "associations": []
         },
         {
-          "name": "ProdCharacteristic",
-          "documentation": "The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.",
-          "class": "Class",
-          "type": "Class",
-          "abstract": false,
-          "specializes": "BackboneType",
-          "attributes": [
-            {
-              "name": "height",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "width",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "depth",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "weight",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "nominalVolume",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "externalDiameter",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "shape",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "color",
-              "min": "0",
-              "max": "2147483647",
-              "type": "string"
-            },
-            {
-              "name": "imprint",
-              "min": "0",
-              "max": "2147483647",
-              "type": "string"
-            },
-            {
-              "name": "image",
-              "min": "0",
-              "max": "2147483647",
-              "type": "Attachment"
-            },
-            {
-              "name": "scoring",
-              "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            }
-          ],
-          "associations": [
-            {
-              "name": "height",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "width",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "depth",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "weight",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "nominalVolume",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "externalDiameter",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "shape",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "color",
-              "min": "0",
-              "max": "2147483647",
-              "type": "string"
-            },
-            {
-              "name": "imprint",
-              "min": "0",
-              "max": "2147483647",
-              "type": "string"
-            },
-            {
-              "name": "image",
-              "min": "0",
-              "max": "2147483647",
-              "type": "Attachment"
-            },
-            {
-              "name": "scoring",
-              "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            }
-          ]
-        },
-        {
           "name": "ProductShelfLife",
           "documentation": "The shelf-life and storage information for a medicinal product item or container can be described using this class.",
           "class": "Class",
@@ -2488,7 +2364,7 @@
               "name": "period[x]",
               "min": "0",
               "max": "1",
-              "type": "Quantity|string"
+              "type": "Duration|string"
             },
             {
               "name": "specialPrecautionsForStorage",
@@ -2508,7 +2384,7 @@
               "name": "period[x]",
               "min": "0",
               "max": "1",
-              "type": "Quantity|string"
+              "type": "Duration|string"
             },
             {
               "name": "specialPrecautionsForStorage",
@@ -2589,14 +2465,6 @@
               "type": "code"
             }
           ]
-        },
-        {
-          "name": "Quantity|string",
-          "class": "Class",
-          "type": "Class",
-          "abstract": false,
-          "attributes": [],
-          "associations": []
         },
         {
           "name": "Range",
@@ -2787,6 +2655,14 @@
           ]
         },
         {
+          "name": "Reference(Any)",
+          "class": "Class",
+          "type": "Class",
+          "abstract": false,
+          "attributes": [],
+          "associations": []
+        },
+        {
           "name": "Reference(Organization)",
           "class": "Class",
           "type": "Class",
@@ -2825,6 +2701,12 @@
               "type": "code"
             },
             {
+              "name": "classifier",
+              "min": "0",
+              "max": "2147483647",
+              "type": "CodeableConcept"
+            },
+            {
               "name": "label",
               "min": "0",
               "max": "1",
@@ -2843,12 +2725,6 @@
               "type": "markdown"
             },
             {
-              "name": "url",
-              "min": "0",
-              "max": "1",
-              "type": "url"
-            },
-            {
               "name": "document",
               "min": "0",
               "max": "1",
@@ -2859,6 +2735,12 @@
               "min": "0",
               "max": "1",
               "type": "canonical(Any)"
+            },
+            {
+              "name": "resourceReference",
+              "min": "0",
+              "max": "1",
+              "type": "Reference(Any)"
             }
           ],
           "associations": [
@@ -2869,6 +2751,12 @@
               "type": "code"
             },
             {
+              "name": "classifier",
+              "min": "0",
+              "max": "2147483647",
+              "type": "CodeableConcept"
+            },
+            {
               "name": "label",
               "min": "0",
               "max": "1",
@@ -2887,12 +2775,6 @@
               "type": "markdown"
             },
             {
-              "name": "url",
-              "min": "0",
-              "max": "1",
-              "type": "url"
-            },
-            {
               "name": "document",
               "min": "0",
               "max": "1",
@@ -2903,6 +2785,12 @@
               "min": "0",
               "max": "1",
               "type": "canonical(Any)"
+            },
+            {
+              "name": "resourceReference",
+              "min": "0",
+              "max": "1",
+              "type": "Reference(Any)"
             }
           ]
         },
@@ -3012,19 +2900,19 @@
           "attributes": [
             {
               "name": "type",
-              "min": "1",
+              "min": "0",
               "max": "2147483647",
               "type": "Coding"
             },
             {
               "name": "when",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "instant"
             },
             {
               "name": "who",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "Reference(Practitioner|PractitionerRole|RelatedPerson|Patient|Device|Organization)"
             },
@@ -3056,19 +2944,19 @@
           "associations": [
             {
               "name": "type",
-              "min": "1",
+              "min": "0",
               "max": "2147483647",
               "type": "Coding"
             },
             {
               "name": "when",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "instant"
             },
             {
               "name": "who",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "Reference(Practitioner|PractitionerRole|RelatedPerson|Patient|Device|Organization)"
             },
@@ -3105,138 +2993,6 @@
           "abstract": false,
           "attributes": [],
           "associations": []
-        },
-        {
-          "name": "Statistic",
-          "documentation": "A fact or piece of data from a  study of a large quantity of numerical data.  A mathematical or quantified characteristic of a group of observations.",
-          "class": "Class",
-          "type": "Class",
-          "abstract": false,
-          "specializes": "BackboneType",
-          "attributes": [
-            {
-              "name": "description",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "note",
-              "min": "0",
-              "max": "2147483647",
-              "type": "Annotation"
-            },
-            {
-              "name": "statisticType",
-              "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            },
-            {
-              "name": "category",
-              "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            },
-            {
-              "name": "quantity",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "numberOfEvents",
-              "min": "0",
-              "max": "1",
-              "type": "unsignedInt"
-            },
-            {
-              "name": "numberAffected",
-              "min": "0",
-              "max": "1",
-              "type": "unsignedInt"
-            },
-            {
-              "name": "sampleSize",
-              "min": "0",
-              "max": "1",
-              "type": ""
-            },
-            {
-              "name": "attributeEstimate",
-              "min": "0",
-              "max": "2147483647",
-              "type": ""
-            },
-            {
-              "name": "modelCharacteristic",
-              "min": "0",
-              "max": "2147483647",
-              "type": ""
-            }
-          ],
-          "associations": [
-            {
-              "name": "description",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "note",
-              "min": "0",
-              "max": "2147483647",
-              "type": "Annotation"
-            },
-            {
-              "name": "statisticType",
-              "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            },
-            {
-              "name": "category",
-              "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            },
-            {
-              "name": "quantity",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity"
-            },
-            {
-              "name": "numberOfEvents",
-              "min": "0",
-              "max": "1",
-              "type": "unsignedInt"
-            },
-            {
-              "name": "numberAffected",
-              "min": "0",
-              "max": "1",
-              "type": "unsignedInt"
-            },
-            {
-              "name": "sampleSize",
-              "min": "0",
-              "max": "1",
-              "type": ""
-            },
-            {
-              "name": "attributeEstimate",
-              "min": "0",
-              "max": "2147483647",
-              "type": ""
-            },
-            {
-              "name": "modelCharacteristic",
-              "min": "0",
-              "max": "2147483647",
-              "type": ""
-            }
-          ]
         },
         {
           "name": "Timing",
@@ -3449,14 +3205,6 @@
               "type": "xs:boolean"
             }
           ]
-        },
-        {
-          "name": "boolean|CodeableConcept",
-          "class": "Class",
-          "type": "Class",
-          "abstract": false,
-          "attributes": [],
-          "associations": []
         },
         {
           "name": "canonical",

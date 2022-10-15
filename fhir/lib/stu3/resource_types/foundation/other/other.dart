@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'other.enums.dart';
 part 'other.freezed.dart';
@@ -39,10 +36,6 @@ class Basic with Resource, _$Basic {
     @JsonKey(name: '_created') Element? createdElement,
     Reference? author,
   }) = _Basic;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String
@@ -93,10 +86,6 @@ class Binary with Resource, _$Binary {
     String? content,
     @JsonKey(name: '_content') Element? contentElement,
   }) = _Binary;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
@@ -151,10 +140,6 @@ class Bundle with Resource, _$Bundle {
     List<BundleEntry>? entry,
     Signature? signature,
   }) = _Bundle;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
@@ -427,10 +412,6 @@ class Linkage with Resource, _$Linkage {
     required List<LinkageItem> item,
   }) = _Linkage;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
       ? Linkage.fromJson(
@@ -543,10 +524,6 @@ class Media with Resource, _$Media {
     List<Annotation>? note,
   }) = _Media;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Media.fromYaml(dynamic yaml) => yaml is String
       ? Media.fromJson(
@@ -604,10 +581,6 @@ class MessageHeader with Resource, _$MessageHeader {
     MessageHeaderResponse? response,
     List<Reference>? focus,
   }) = _MessageHeader;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
@@ -787,10 +760,6 @@ class OperationOutcome with Resource, _$OperationOutcome {
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(
@@ -886,10 +855,6 @@ class Parameters with Resource, _$Parameters {
     List<FhirExtension>? modifierExtension,
     List<ParametersParameter>? parameter,
   }) = _Parameters;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
@@ -1061,10 +1026,6 @@ class Subscription with Resource, _$Subscription {
     required SubscriptionChannel channel,
     List<Coding>? tag,
   }) = _Subscription;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Subscription.fromYaml(dynamic yaml) => yaml is String

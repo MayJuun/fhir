@@ -2,58 +2,15 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r5.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'general_types.enums.dart';
 part 'general_types.freezed.dart';
 part 'general_types.g.dart';
-
-@freezed
-class BackboneType with _$BackboneType {
-  BackboneType._();
-  factory BackboneType({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-  }) = _BackboneType;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory BackboneType.fromYaml(dynamic yaml) => yaml is String
-      ? BackboneType.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? BackboneType.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'BackboneType cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BackboneType.fromJson(Map<String, dynamic> json) =>
-      _$BackboneTypeFromJson(json);
-
-  /// Acts like a constructor, returns a [BackboneType], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory BackboneType.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$BackboneTypeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
 
 @freezed
 class Annotation with _$Annotation {
@@ -172,7 +129,7 @@ class Identifier with _$Identifier {
   factory Identifier({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
+    IdentifierUse? use,
     @JsonKey(name: '_use') Element? useElement,
     CodeableConcept? type,
     FhirUri? system,
@@ -312,8 +269,7 @@ class Quantity with _$Quantity {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-        QuantityComparator? comparator,
+    QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -362,8 +318,7 @@ class FhirDuration with _$FhirDuration {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: DurationComparator.unknown)
-        DurationComparator? comparator,
+    DurationComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -412,8 +367,7 @@ class Distance with _$Distance {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: DistanceComparator.unknown)
-        DistanceComparator? comparator,
+    DistanceComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -462,8 +416,7 @@ class Count with _$Count {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: CountComparator.unknown)
-        CountComparator? comparator,
+    CountComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -551,7 +504,7 @@ class Age with _$Age {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: AgeComparator.unknown) AgeComparator? comparator,
+    AgeComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -709,6 +662,57 @@ class Ratio with _$Ratio {
   }
 }
 
+/// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
+@freezed
+class RatioRange with _$RatioRange {
+  RatioRange._();
+
+  /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
+  /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  /// [extension_] "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+  /// [lowNumerator] "The value of the low limit numerator."
+  /// [highNumerator] "The value of the high limit numerator."
+  /// [denominator] "The value of the denominator."
+
+  factory RatioRange({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    Quantity? lowNumerator,
+    Quantity? highNumerator,
+    Quantity? denominator,
+  }) = _RatioRange;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory RatioRange.fromYaml(dynamic yaml) => yaml is String
+      ? RatioRange.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? RatioRange.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'RatioRange cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory RatioRange.fromJson(Map<String, dynamic> json) =>
+      _$RatioRangeFromJson(json);
+
+  /// Acts like a constructor, returns a [RatioRange], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RatioRange.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RatioRangeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
 @freezed
 class SampledData with _$SampledData {
   SampledData._();
@@ -817,7 +821,7 @@ class HumanName with _$HumanName {
   factory HumanName({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
+    HumanNameUse? use,
     @JsonKey(name: '_use') Element? useElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -869,9 +873,9 @@ class Address with _$Address {
   factory Address({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
+    AddressUse? use,
     @JsonKey(name: '_use') Element? useElement,
-    @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
+    AddressType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -927,12 +931,11 @@ class ContactPoint with _$ContactPoint {
   factory ContactPoint({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-        ContactPointSystem? system,
+    ContactPointSystem? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse? use,
+    ContactPointUse? use,
     @JsonKey(name: '_use') Element? useElement,
     PositiveInt? rank,
     @JsonKey(name: '_rank') Element? rankElement,
@@ -1031,8 +1034,7 @@ class TimingRepeat with _$TimingRepeat {
     @JsonKey(name: '_duration') Element? durationElement,
     Decimal? durationMax,
     @JsonKey(name: '_durationMax') Element? durationMaxElement,
-    @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
-        TimingRepeatDurationUnit? durationUnit,
+    TimingRepeatDurationUnit? durationUnit,
     @JsonKey(name: '_durationUnit') Element? durationUnitElement,
     PositiveInt? frequency,
     @JsonKey(name: '_frequency') Element? frequencyElement,
@@ -1042,8 +1044,7 @@ class TimingRepeat with _$TimingRepeat {
     @JsonKey(name: '_period') Element? periodElement,
     Decimal? periodMax,
     @JsonKey(name: '_periodMax') Element? periodMaxElement,
-    @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
-        TimingRepeatPeriodUnit? periodUnit,
+    TimingRepeatPeriodUnit? periodUnit,
     @JsonKey(name: '_periodUnit') Element? periodUnitElement,
     List<Code>? dayOfWeek,
     @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,

@@ -12,149 +12,14 @@ part of 'medications.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
   return _Immunization.fromJson(json);
 }
 
 /// @nodoc
-class _$ImmunizationTearOff {
-  const _$ImmunizationTearOff();
-
-  _Immunization call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-          R5ResourceType resourceType = R5ResourceType.Immunization,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? statusReason,
-      required CodeableConcept vaccineCode,
-      Reference? manufacturer,
-      String? lotNumber,
-      @JsonKey(name: '_lotNumber')
-          Element? lotNumberElement,
-      Date? expirationDate,
-      @JsonKey(name: '_expirationDate')
-          Element? expirationDateElement,
-      required Reference patient,
-      Reference? encounter,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      String? occurrenceString,
-      @JsonKey(name: '_occurrenceString')
-          Element? occurrenceStringElement,
-      FhirDateTime? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
-      Boolean? primarySource,
-      @JsonKey(name: '_primarySource')
-          Element? primarySourceElement,
-      CodeableConcept? informationSourceCodeableConcept,
-      Reference? informationSourceReference,
-      Reference? location,
-      CodeableConcept? site,
-      CodeableConcept? route,
-      Quantity? doseQuantity,
-      List<ImmunizationPerformer>? performer,
-      List<Annotation>? note,
-      List<CodeableReference>? reason,
-      Boolean? isSubpotent,
-      @JsonKey(name: '_isSubpotent')
-          Element? isSubpotentElement,
-      List<CodeableConcept>? subpotentReason,
-      List<ImmunizationEducation>? education,
-      List<CodeableConcept>? programEligibility,
-      CodeableConcept? fundingSource,
-      List<ImmunizationReaction>? reaction,
-      List<ImmunizationProtocolApplied>? protocolApplied}) {
-    return _Immunization(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      instantiatesCanonical: instantiatesCanonical,
-      instantiatesUri: instantiatesUri,
-      instantiatesUriElement: instantiatesUriElement,
-      basedOn: basedOn,
-      status: status,
-      statusElement: statusElement,
-      statusReason: statusReason,
-      vaccineCode: vaccineCode,
-      manufacturer: manufacturer,
-      lotNumber: lotNumber,
-      lotNumberElement: lotNumberElement,
-      expirationDate: expirationDate,
-      expirationDateElement: expirationDateElement,
-      patient: patient,
-      encounter: encounter,
-      occurrenceDateTime: occurrenceDateTime,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
-      occurrenceString: occurrenceString,
-      occurrenceStringElement: occurrenceStringElement,
-      recorded: recorded,
-      recordedElement: recordedElement,
-      primarySource: primarySource,
-      primarySourceElement: primarySourceElement,
-      informationSourceCodeableConcept: informationSourceCodeableConcept,
-      informationSourceReference: informationSourceReference,
-      location: location,
-      site: site,
-      route: route,
-      doseQuantity: doseQuantity,
-      performer: performer,
-      note: note,
-      reason: reason,
-      isSubpotent: isSubpotent,
-      isSubpotentElement: isSubpotentElement,
-      subpotentReason: subpotentReason,
-      education: education,
-      programEligibility: programEligibility,
-      fundingSource: fundingSource,
-      reaction: reaction,
-      protocolApplied: protocolApplied,
-    );
-  }
-
-  Immunization fromJson(Map<String, Object?> json) {
-    return Immunization.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Immunization = _$ImmunizationTearOff();
-
-/// @nodoc
 mixin _$Immunization {
-  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -195,7 +60,7 @@ mixin _$Immunization {
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
-  String? get occurrenceString => throw _privateConstructorUsedError;
+  Markdown? get occurrenceString => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceString')
   Element? get occurrenceStringElement => throw _privateConstructorUsedError;
   FhirDateTime? get recorded => throw _privateConstructorUsedError;
@@ -204,9 +69,7 @@ mixin _$Immunization {
   Boolean? get primarySource => throw _privateConstructorUsedError;
   @JsonKey(name: '_primarySource')
   Element? get primarySourceElement => throw _privateConstructorUsedError;
-  CodeableConcept? get informationSourceCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get informationSourceReference =>
+  CodeableReference? get informationSource =>
       throw _privateConstructorUsedError;
   Reference? get location => throw _privateConstructorUsedError;
   CodeableConcept? get site => throw _privateConstructorUsedError;
@@ -243,55 +106,42 @@ abstract class $ImmunizationCopyWith<$Res> {
           Immunization value, $Res Function(Immunization) then) =
       _$ImmunizationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept vaccineCode,
       Reference? manufacturer,
       String? lotNumber,
-      @JsonKey(name: '_lotNumber')
-          Element? lotNumberElement,
+      @JsonKey(name: '_lotNumber') Element? lotNumberElement,
       Date? expirationDate,
-      @JsonKey(name: '_expirationDate')
-          Element? expirationDateElement,
+      @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       Reference patient,
       Reference? encounter,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      String? occurrenceString,
-      @JsonKey(name: '_occurrenceString')
-          Element? occurrenceStringElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+      Markdown? occurrenceString,
+      @JsonKey(name: '_occurrenceString') Element? occurrenceStringElement,
       FhirDateTime? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       Boolean? primarySource,
-      @JsonKey(name: '_primarySource')
-          Element? primarySourceElement,
-      CodeableConcept? informationSourceCodeableConcept,
-      Reference? informationSourceReference,
+      @JsonKey(name: '_primarySource') Element? primarySourceElement,
+      CodeableReference? informationSource,
       Reference? location,
       CodeableConcept? site,
       CodeableConcept? route,
@@ -300,8 +150,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       List<Annotation>? note,
       List<CodeableReference>? reason,
       Boolean? isSubpotent,
-      @JsonKey(name: '_isSubpotent')
-          Element? isSubpotentElement,
+      @JsonKey(name: '_isSubpotent') Element? isSubpotentElement,
       List<CodeableConcept>? subpotentReason,
       List<ImmunizationEducation>? education,
       List<CodeableConcept>? programEligibility,
@@ -325,8 +174,7 @@ abstract class $ImmunizationCopyWith<$Res> {
   $ElementCopyWith<$Res>? get occurrenceStringElement;
   $ElementCopyWith<$Res>? get recordedElement;
   $ElementCopyWith<$Res>? get primarySourceElement;
-  $CodeableConceptCopyWith<$Res>? get informationSourceCodeableConcept;
-  $ReferenceCopyWith<$Res>? get informationSourceReference;
+  $CodeableReferenceCopyWith<$Res>? get informationSource;
   $ReferenceCopyWith<$Res>? get location;
   $CodeableConceptCopyWith<$Res>? get site;
   $CodeableConceptCopyWith<$Res>? get route;
@@ -380,8 +228,7 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
     Object? recordedElement = freezed,
     Object? primarySource = freezed,
     Object? primarySourceElement = freezed,
-    Object? informationSourceCodeableConcept = freezed,
-    Object? informationSourceReference = freezed,
+    Object? informationSource = freezed,
     Object? location = freezed,
     Object? site = freezed,
     Object? route = freezed,
@@ -518,7 +365,7 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
       occurrenceString: occurrenceString == freezed
           ? _value.occurrenceString
           : occurrenceString // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Markdown?,
       occurrenceStringElement: occurrenceStringElement == freezed
           ? _value.occurrenceStringElement
           : occurrenceStringElement // ignore: cast_nullable_to_non_nullable
@@ -539,15 +386,10 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
           ? _value.primarySourceElement
           : primarySourceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      informationSourceCodeableConcept: informationSourceCodeableConcept ==
-              freezed
-          ? _value.informationSourceCodeableConcept
-          : informationSourceCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      informationSourceReference: informationSourceReference == freezed
-          ? _value.informationSourceReference
-          : informationSourceReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      informationSource: informationSource == freezed
+          ? _value.informationSource
+          : informationSource // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
@@ -780,26 +622,13 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get informationSourceCodeableConcept {
-    if (_value.informationSourceCodeableConcept == null) {
+  $CodeableReferenceCopyWith<$Res>? get informationSource {
+    if (_value.informationSource == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(
-        _value.informationSourceCodeableConcept!, (value) {
-      return _then(_value.copyWith(informationSourceCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get informationSourceReference {
-    if (_value.informationSourceReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.informationSourceReference!,
-        (value) {
-      return _then(_value.copyWith(informationSourceReference: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.informationSource!, (value) {
+      return _then(_value.copyWith(informationSource: value));
     });
   }
 
@@ -871,62 +700,49 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ImmunizationCopyWith<$Res>
+abstract class _$$_ImmunizationCopyWith<$Res>
     implements $ImmunizationCopyWith<$Res> {
-  factory _$ImmunizationCopyWith(
-          _Immunization value, $Res Function(_Immunization) then) =
-      __$ImmunizationCopyWithImpl<$Res>;
+  factory _$$_ImmunizationCopyWith(
+          _$_Immunization value, $Res Function(_$_Immunization) then) =
+      __$$_ImmunizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept vaccineCode,
       Reference? manufacturer,
       String? lotNumber,
-      @JsonKey(name: '_lotNumber')
-          Element? lotNumberElement,
+      @JsonKey(name: '_lotNumber') Element? lotNumberElement,
       Date? expirationDate,
-      @JsonKey(name: '_expirationDate')
-          Element? expirationDateElement,
+      @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       Reference patient,
       Reference? encounter,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      String? occurrenceString,
-      @JsonKey(name: '_occurrenceString')
-          Element? occurrenceStringElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+      Markdown? occurrenceString,
+      @JsonKey(name: '_occurrenceString') Element? occurrenceStringElement,
       FhirDateTime? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       Boolean? primarySource,
-      @JsonKey(name: '_primarySource')
-          Element? primarySourceElement,
-      CodeableConcept? informationSourceCodeableConcept,
-      Reference? informationSourceReference,
+      @JsonKey(name: '_primarySource') Element? primarySourceElement,
+      CodeableReference? informationSource,
       Reference? location,
       CodeableConcept? site,
       CodeableConcept? route,
@@ -935,8 +751,7 @@ abstract class _$ImmunizationCopyWith<$Res>
       List<Annotation>? note,
       List<CodeableReference>? reason,
       Boolean? isSubpotent,
-      @JsonKey(name: '_isSubpotent')
-          Element? isSubpotentElement,
+      @JsonKey(name: '_isSubpotent') Element? isSubpotentElement,
       List<CodeableConcept>? subpotentReason,
       List<ImmunizationEducation>? education,
       List<CodeableConcept>? programEligibility,
@@ -977,9 +792,7 @@ abstract class _$ImmunizationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get primarySourceElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get informationSourceCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get informationSourceReference;
+  $CodeableReferenceCopyWith<$Res>? get informationSource;
   @override
   $ReferenceCopyWith<$Res>? get location;
   @override
@@ -995,14 +808,15 @@ abstract class _$ImmunizationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
-    implements _$ImmunizationCopyWith<$Res> {
-  __$ImmunizationCopyWithImpl(
-      _Immunization _value, $Res Function(_Immunization) _then)
-      : super(_value, (v) => _then(v as _Immunization));
+class __$$_ImmunizationCopyWithImpl<$Res>
+    extends _$ImmunizationCopyWithImpl<$Res>
+    implements _$$_ImmunizationCopyWith<$Res> {
+  __$$_ImmunizationCopyWithImpl(
+      _$_Immunization _value, $Res Function(_$_Immunization) _then)
+      : super(_value, (v) => _then(v as _$_Immunization));
 
   @override
-  _Immunization get _value => super._value as _Immunization;
+  _$_Immunization get _value => super._value as _$_Immunization;
 
   @override
   $Res call({
@@ -1041,8 +855,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
     Object? recordedElement = freezed,
     Object? primarySource = freezed,
     Object? primarySourceElement = freezed,
-    Object? informationSourceCodeableConcept = freezed,
-    Object? informationSourceReference = freezed,
+    Object? informationSource = freezed,
     Object? location = freezed,
     Object? site = freezed,
     Object? route = freezed,
@@ -1059,7 +872,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
     Object? reaction = freezed,
     Object? protocolApplied = freezed,
   }) {
-    return _then(_Immunization(
+    return _then(_$_Immunization(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1093,35 +906,35 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       instantiatesCanonical: instantiatesCanonical == freezed
-          ? _value.instantiatesCanonical
+          ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       instantiatesUri: instantiatesUri == freezed
-          ? _value.instantiatesUri
+          ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
-          ? _value.instantiatesUriElement
+          ? _value._instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
@@ -1179,7 +992,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
       occurrenceString: occurrenceString == freezed
           ? _value.occurrenceString
           : occurrenceString // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Markdown?,
       occurrenceStringElement: occurrenceStringElement == freezed
           ? _value.occurrenceStringElement
           : occurrenceStringElement // ignore: cast_nullable_to_non_nullable
@@ -1200,15 +1013,10 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
           ? _value.primarySourceElement
           : primarySourceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      informationSourceCodeableConcept: informationSourceCodeableConcept ==
-              freezed
-          ? _value.informationSourceCodeableConcept
-          : informationSourceCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      informationSourceReference: informationSourceReference == freezed
-          ? _value.informationSourceReference
-          : informationSourceReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      informationSource: informationSource == freezed
+          ? _value.informationSource
+          : informationSource // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
@@ -1226,15 +1034,15 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
           : doseQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
       performer: performer == freezed
-          ? _value.performer
+          ? _value._performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<ImmunizationPerformer>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       reason: reason == freezed
-          ? _value.reason
+          ? _value._reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
       isSubpotent: isSubpotent == freezed
@@ -1246,15 +1054,15 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
           : isSubpotentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       subpotentReason: subpotentReason == freezed
-          ? _value.subpotentReason
+          ? _value._subpotentReason
           : subpotentReason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       education: education == freezed
-          ? _value.education
+          ? _value._education
           : education // ignore: cast_nullable_to_non_nullable
               as List<ImmunizationEducation>?,
       programEligibility: programEligibility == freezed
-          ? _value.programEligibility
+          ? _value._programEligibility
           : programEligibility // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       fundingSource: fundingSource == freezed
@@ -1262,11 +1070,11 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
           : fundingSource // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       reaction: reaction == freezed
-          ? _value.reaction
+          ? _value._reaction
           : reaction // ignore: cast_nullable_to_non_nullable
               as List<ImmunizationReaction>?,
       protocolApplied: protocolApplied == freezed
-          ? _value.protocolApplied
+          ? _value._protocolApplied
           : protocolApplied // ignore: cast_nullable_to_non_nullable
               as List<ImmunizationProtocolApplied>?,
     ));
@@ -1277,8 +1085,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Immunization extends _Immunization {
   _$_Immunization(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-          this.resourceType = R5ResourceType.Immunization,
+      {this.resourceType = R5ResourceType.Immunization,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1288,16 +1095,16 @@ class _$_Immunization extends _Immunization {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.instantiatesCanonical,
-      this.instantiatesUri,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Canonical>? instantiatesCanonical,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          this.instantiatesUriElement,
-      this.basedOn,
+          final List<Element>? instantiatesUriElement,
+      final List<Reference>? basedOn,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -1324,31 +1131,46 @@ class _$_Immunization extends _Immunization {
       this.primarySource,
       @JsonKey(name: '_primarySource')
           this.primarySourceElement,
-      this.informationSourceCodeableConcept,
-      this.informationSourceReference,
+      this.informationSource,
       this.location,
       this.site,
       this.route,
       this.doseQuantity,
-      this.performer,
-      this.note,
-      this.reason,
+      final List<ImmunizationPerformer>? performer,
+      final List<Annotation>? note,
+      final List<CodeableReference>? reason,
       this.isSubpotent,
       @JsonKey(name: '_isSubpotent')
           this.isSubpotentElement,
-      this.subpotentReason,
-      this.education,
-      this.programEligibility,
+      final List<CodeableConcept>? subpotentReason,
+      final List<ImmunizationEducation>? education,
+      final List<CodeableConcept>? programEligibility,
       this.fundingSource,
-      this.reaction,
-      this.protocolApplied})
-      : super._();
+      final List<ImmunizationReaction>? reaction,
+      final List<ImmunizationProtocolApplied>? protocolApplied})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _instantiatesCanonical = instantiatesCanonical,
+        _instantiatesUri = instantiatesUri,
+        _instantiatesUriElement = instantiatesUriElement,
+        _basedOn = basedOn,
+        _performer = performer,
+        _note = note,
+        _reason = reason,
+        _subpotentReason = subpotentReason,
+        _education = education,
+        _programEligibility = programEligibility,
+        _reaction = reaction,
+        _protocolApplied = protocolApplied,
+        super._();
 
   factory _$_Immunization.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -1366,24 +1188,80 @@ class _$_Immunization extends _Immunization {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Canonical>? _instantiatesCanonical;
   @override
-  final List<Canonical>? instantiatesCanonical;
+  List<Canonical>? get instantiatesCanonical {
+    final value = _instantiatesCanonical;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirUri>? _instantiatesUri;
   @override
-  final List<FhirUri>? instantiatesUri;
+  List<FhirUri>? get instantiatesUri {
+    final value = _instantiatesUri;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _instantiatesUriElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  List<Element>? get instantiatesUriElement {
+    final value = _instantiatesUriElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
@@ -1415,7 +1293,7 @@ class _$_Immunization extends _Immunization {
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
   @override
-  final String? occurrenceString;
+  final Markdown? occurrenceString;
   @override
   @JsonKey(name: '_occurrenceString')
   final Element? occurrenceStringElement;
@@ -1430,9 +1308,7 @@ class _$_Immunization extends _Immunization {
   @JsonKey(name: '_primarySource')
   final Element? primarySourceElement;
   @override
-  final CodeableConcept? informationSourceCodeableConcept;
-  @override
-  final Reference? informationSourceReference;
+  final CodeableReference? informationSource;
   @override
   final Reference? location;
   @override
@@ -1441,40 +1317,95 @@ class _$_Immunization extends _Immunization {
   final CodeableConcept? route;
   @override
   final Quantity? doseQuantity;
+  final List<ImmunizationPerformer>? _performer;
   @override
-  final List<ImmunizationPerformer>? performer;
+  List<ImmunizationPerformer>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableReference>? _reason;
   @override
-  final List<CodeableReference>? reason;
+  List<CodeableReference>? get reason {
+    final value = _reason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? isSubpotent;
   @override
   @JsonKey(name: '_isSubpotent')
   final Element? isSubpotentElement;
+  final List<CodeableConcept>? _subpotentReason;
   @override
-  final List<CodeableConcept>? subpotentReason;
+  List<CodeableConcept>? get subpotentReason {
+    final value = _subpotentReason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ImmunizationEducation>? _education;
   @override
-  final List<ImmunizationEducation>? education;
+  List<ImmunizationEducation>? get education {
+    final value = _education;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _programEligibility;
   @override
-  final List<CodeableConcept>? programEligibility;
+  List<CodeableConcept>? get programEligibility {
+    final value = _programEligibility;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? fundingSource;
+  final List<ImmunizationReaction>? _reaction;
   @override
-  final List<ImmunizationReaction>? reaction;
+  List<ImmunizationReaction>? get reaction {
+    final value = _reaction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ImmunizationProtocolApplied>? _protocolApplied;
   @override
-  final List<ImmunizationProtocolApplied>? protocolApplied;
+  List<ImmunizationProtocolApplied>? get protocolApplied {
+    final value = _protocolApplied;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'Immunization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, status: $status, statusElement: $statusElement, statusReason: $statusReason, vaccineCode: $vaccineCode, manufacturer: $manufacturer, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, patient: $patient, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrenceString: $occurrenceString, occurrenceStringElement: $occurrenceStringElement, recorded: $recorded, recordedElement: $recordedElement, primarySource: $primarySource, primarySourceElement: $primarySourceElement, informationSourceCodeableConcept: $informationSourceCodeableConcept, informationSourceReference: $informationSourceReference, location: $location, site: $site, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reason: $reason, isSubpotent: $isSubpotent, isSubpotentElement: $isSubpotentElement, subpotentReason: $subpotentReason, education: $education, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
+    return 'Immunization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, status: $status, statusElement: $statusElement, statusReason: $statusReason, vaccineCode: $vaccineCode, manufacturer: $manufacturer, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, patient: $patient, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrenceString: $occurrenceString, occurrenceStringElement: $occurrenceStringElement, recorded: $recorded, recordedElement: $recordedElement, primarySource: $primarySource, primarySourceElement: $primarySourceElement, informationSource: $informationSource, location: $location, site: $site, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reason: $reason, isSubpotent: $isSubpotent, isSubpotentElement: $isSubpotentElement, subpotentReason: $subpotentReason, education: $education, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Immunization &&
+            other is _$_Immunization &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1487,20 +1418,21 @@ class _$_Immunization extends _Immunization {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesCanonical, instantiatesCanonical) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesUri, instantiatesUri) &&
+                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesUriElement, instantiatesUriElement) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+                .equals(other._instantiatesUri, _instantiatesUri) &&
+            const DeepCollectionEquality().equals(
+                other._instantiatesUriElement, _instantiatesUriElement) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -1534,35 +1466,35 @@ class _$_Immunization extends _Immunization {
                 .equals(other.primarySource, primarySource) &&
             const DeepCollectionEquality()
                 .equals(other.primarySourceElement, primarySourceElement) &&
-            const DeepCollectionEquality().equals(
-                other.informationSourceCodeableConcept,
-                informationSourceCodeableConcept) &&
-            const DeepCollectionEquality().equals(
-                other.informationSourceReference, informationSourceReference) &&
+            const DeepCollectionEquality()
+                .equals(other.informationSource, informationSource) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality().equals(other.site, site) &&
             const DeepCollectionEquality().equals(other.route, route) &&
             const DeepCollectionEquality()
                 .equals(other.doseQuantity, doseQuantity) &&
-            const DeepCollectionEquality().equals(other.performer, performer) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other._reason, _reason) &&
             const DeepCollectionEquality()
                 .equals(other.isSubpotent, isSubpotent) &&
             const DeepCollectionEquality()
                 .equals(other.isSubpotentElement, isSubpotentElement) &&
             const DeepCollectionEquality()
-                .equals(other.subpotentReason, subpotentReason) &&
-            const DeepCollectionEquality().equals(other.education, education) &&
+                .equals(other._subpotentReason, _subpotentReason) &&
             const DeepCollectionEquality()
-                .equals(other.programEligibility, programEligibility) &&
+                .equals(other._education, _education) &&
+            const DeepCollectionEquality()
+                .equals(other._programEligibility, _programEligibility) &&
             const DeepCollectionEquality()
                 .equals(other.fundingSource, fundingSource) &&
-            const DeepCollectionEquality().equals(other.reaction, reaction) &&
+            const DeepCollectionEquality().equals(other._reaction, _reaction) &&
             const DeepCollectionEquality()
-                .equals(other.protocolApplied, protocolApplied));
+                .equals(other._protocolApplied, _protocolApplied));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1574,14 +1506,14 @@ class _$_Immunization extends _Immunization {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(instantiatesCanonical),
-        const DeepCollectionEquality().hash(instantiatesUri),
-        const DeepCollectionEquality().hash(instantiatesUriElement),
-        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_instantiatesCanonical),
+        const DeepCollectionEquality().hash(_instantiatesUri),
+        const DeepCollectionEquality().hash(_instantiatesUriElement),
+        const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(statusReason),
@@ -1601,110 +1533,109 @@ class _$_Immunization extends _Immunization {
         const DeepCollectionEquality().hash(recordedElement),
         const DeepCollectionEquality().hash(primarySource),
         const DeepCollectionEquality().hash(primarySourceElement),
-        const DeepCollectionEquality().hash(informationSourceCodeableConcept),
-        const DeepCollectionEquality().hash(informationSourceReference),
+        const DeepCollectionEquality().hash(informationSource),
         const DeepCollectionEquality().hash(location),
         const DeepCollectionEquality().hash(site),
         const DeepCollectionEquality().hash(route),
         const DeepCollectionEquality().hash(doseQuantity),
-        const DeepCollectionEquality().hash(performer),
-        const DeepCollectionEquality().hash(note),
-        const DeepCollectionEquality().hash(reason),
+        const DeepCollectionEquality().hash(_performer),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_reason),
         const DeepCollectionEquality().hash(isSubpotent),
         const DeepCollectionEquality().hash(isSubpotentElement),
-        const DeepCollectionEquality().hash(subpotentReason),
-        const DeepCollectionEquality().hash(education),
-        const DeepCollectionEquality().hash(programEligibility),
+        const DeepCollectionEquality().hash(_subpotentReason),
+        const DeepCollectionEquality().hash(_education),
+        const DeepCollectionEquality().hash(_programEligibility),
         const DeepCollectionEquality().hash(fundingSource),
-        const DeepCollectionEquality().hash(reaction),
-        const DeepCollectionEquality().hash(protocolApplied)
+        const DeepCollectionEquality().hash(_reaction),
+        const DeepCollectionEquality().hash(_protocolApplied)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationCopyWith<_Immunization> get copyWith =>
-      __$ImmunizationCopyWithImpl<_Immunization>(this, _$identity);
+  _$$_ImmunizationCopyWith<_$_Immunization> get copyWith =>
+      __$$_ImmunizationCopyWithImpl<_$_Immunization>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationToJson(this);
+    return _$$_ImmunizationToJson(
+      this,
+    );
   }
 }
 
 abstract class _Immunization extends Immunization {
   factory _Immunization(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? statusReason,
-      required CodeableConcept vaccineCode,
-      Reference? manufacturer,
-      String? lotNumber,
-      @JsonKey(name: '_lotNumber')
-          Element? lotNumberElement,
-      Date? expirationDate,
-      @JsonKey(name: '_expirationDate')
-          Element? expirationDateElement,
-      required Reference patient,
-      Reference? encounter,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      String? occurrenceString,
-      @JsonKey(name: '_occurrenceString')
-          Element? occurrenceStringElement,
-      FhirDateTime? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
-      Boolean? primarySource,
-      @JsonKey(name: '_primarySource')
-          Element? primarySourceElement,
-      CodeableConcept? informationSourceCodeableConcept,
-      Reference? informationSourceReference,
-      Reference? location,
-      CodeableConcept? site,
-      CodeableConcept? route,
-      Quantity? doseQuantity,
-      List<ImmunizationPerformer>? performer,
-      List<Annotation>? note,
-      List<CodeableReference>? reason,
-      Boolean? isSubpotent,
-      @JsonKey(name: '_isSubpotent')
-          Element? isSubpotentElement,
-      List<CodeableConcept>? subpotentReason,
-      List<ImmunizationEducation>? education,
-      List<CodeableConcept>? programEligibility,
-      CodeableConcept? fundingSource,
-      List<ImmunizationReaction>? reaction,
-      List<ImmunizationProtocolApplied>? protocolApplied}) = _$_Immunization;
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules')
+              final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language')
+              final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final List<Canonical>? instantiatesCanonical,
+          final List<FhirUri>? instantiatesUri,
+          @JsonKey(name: '_instantiatesUri')
+              final List<Element>? instantiatesUriElement,
+          final List<Reference>? basedOn,
+          final Code? status,
+          @JsonKey(name: '_status')
+              final Element? statusElement,
+          final CodeableConcept? statusReason,
+          required final CodeableConcept vaccineCode,
+          final Reference? manufacturer,
+          final String? lotNumber,
+          @JsonKey(name: '_lotNumber')
+              final Element? lotNumberElement,
+          final Date? expirationDate,
+          @JsonKey(name: '_expirationDate')
+              final Element? expirationDateElement,
+          required final Reference patient,
+          final Reference? encounter,
+          final FhirDateTime? occurrenceDateTime,
+          @JsonKey(name: '_occurrenceDateTime')
+              final Element? occurrenceDateTimeElement,
+          final Markdown? occurrenceString,
+          @JsonKey(name: '_occurrenceString')
+              final Element? occurrenceStringElement,
+          final FhirDateTime? recorded,
+          @JsonKey(name: '_recorded')
+              final Element? recordedElement,
+          final Boolean? primarySource,
+          @JsonKey(name: '_primarySource')
+              final Element? primarySourceElement,
+          final CodeableReference? informationSource,
+          final Reference? location,
+          final CodeableConcept? site,
+          final CodeableConcept? route,
+          final Quantity? doseQuantity,
+          final List<ImmunizationPerformer>? performer,
+          final List<Annotation>? note,
+          final List<CodeableReference>? reason,
+          final Boolean? isSubpotent,
+          @JsonKey(name: '_isSubpotent')
+              final Element? isSubpotentElement,
+          final List<CodeableConcept>? subpotentReason,
+          final List<ImmunizationEducation>? education,
+          final List<CodeableConcept>? programEligibility,
+          final CodeableConcept? fundingSource,
+          final List<ImmunizationReaction>? reaction,
+          final List<ImmunizationProtocolApplied>? protocolApplied}) =
+      _$_Immunization;
   _Immunization._() : super._();
 
   factory _Immunization.fromJson(Map<String, dynamic> json) =
       _$_Immunization.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -1771,7 +1702,7 @@ abstract class _Immunization extends Immunization {
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement;
   @override
-  String? get occurrenceString;
+  Markdown? get occurrenceString;
   @override
   @JsonKey(name: '_occurrenceString')
   Element? get occurrenceStringElement;
@@ -1786,9 +1717,7 @@ abstract class _Immunization extends Immunization {
   @JsonKey(name: '_primarySource')
   Element? get primarySourceElement;
   @override
-  CodeableConcept? get informationSourceCodeableConcept;
-  @override
-  Reference? get informationSourceReference;
+  CodeableReference? get informationSource;
   @override
   Reference? get location;
   @override
@@ -1822,7 +1751,7 @@ abstract class _Immunization extends Immunization {
   List<ImmunizationProtocolApplied>? get protocolApplied;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationCopyWith<_Immunization> get copyWith =>
+  _$$_ImmunizationCopyWith<_$_Immunization> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1830,33 +1759,6 @@ ImmunizationPerformer _$ImmunizationPerformerFromJson(
     Map<String, dynamic> json) {
   return _ImmunizationPerformer.fromJson(json);
 }
-
-/// @nodoc
-class _$ImmunizationPerformerTearOff {
-  const _$ImmunizationPerformerTearOff();
-
-  _ImmunizationPerformer call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) {
-    return _ImmunizationPerformer(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      function: function,
-      actor: actor,
-    );
-  }
-
-  ImmunizationPerformer fromJson(Map<String, Object?> json) {
-    return ImmunizationPerformer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationPerformer = _$ImmunizationPerformerTearOff();
 
 /// @nodoc
 mixin _$ImmunizationPerformer {
@@ -1951,11 +1853,11 @@ class _$ImmunizationPerformerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationPerformerCopyWith<$Res>
+abstract class _$$_ImmunizationPerformerCopyWith<$Res>
     implements $ImmunizationPerformerCopyWith<$Res> {
-  factory _$ImmunizationPerformerCopyWith(_ImmunizationPerformer value,
-          $Res Function(_ImmunizationPerformer) then) =
-      __$ImmunizationPerformerCopyWithImpl<$Res>;
+  factory _$$_ImmunizationPerformerCopyWith(_$_ImmunizationPerformer value,
+          $Res Function(_$_ImmunizationPerformer) then) =
+      __$$_ImmunizationPerformerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -1971,15 +1873,16 @@ abstract class _$ImmunizationPerformerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationPerformerCopyWithImpl<$Res>
+class __$$_ImmunizationPerformerCopyWithImpl<$Res>
     extends _$ImmunizationPerformerCopyWithImpl<$Res>
-    implements _$ImmunizationPerformerCopyWith<$Res> {
-  __$ImmunizationPerformerCopyWithImpl(_ImmunizationPerformer _value,
-      $Res Function(_ImmunizationPerformer) _then)
-      : super(_value, (v) => _then(v as _ImmunizationPerformer));
+    implements _$$_ImmunizationPerformerCopyWith<$Res> {
+  __$$_ImmunizationPerformerCopyWithImpl(_$_ImmunizationPerformer _value,
+      $Res Function(_$_ImmunizationPerformer) _then)
+      : super(_value, (v) => _then(v as _$_ImmunizationPerformer));
 
   @override
-  _ImmunizationPerformer get _value => super._value as _ImmunizationPerformer;
+  _$_ImmunizationPerformer get _value =>
+      super._value as _$_ImmunizationPerformer;
 
   @override
   $Res call({
@@ -1989,17 +1892,17 @@ class __$ImmunizationPerformerCopyWithImpl<$Res>
     Object? function = freezed,
     Object? actor = freezed,
   }) {
-    return _then(_ImmunizationPerformer(
+    return _then(_$_ImmunizationPerformer(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       function: function == freezed
@@ -2019,22 +1922,38 @@ class __$ImmunizationPerformerCopyWithImpl<$Res>
 class _$_ImmunizationPerformer extends _ImmunizationPerformer {
   _$_ImmunizationPerformer(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.function,
       required this.actor})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImmunizationPerformer.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationPerformerFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? function;
   @override
@@ -2049,44 +1968,47 @@ class _$_ImmunizationPerformer extends _ImmunizationPerformer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationPerformer &&
+            other is _$_ImmunizationPerformer &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.function, function) &&
             const DeepCollectionEquality().equals(other.actor, actor));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(function),
       const DeepCollectionEquality().hash(actor));
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationPerformerCopyWith<_ImmunizationPerformer> get copyWith =>
-      __$ImmunizationPerformerCopyWithImpl<_ImmunizationPerformer>(
+  _$$_ImmunizationPerformerCopyWith<_$_ImmunizationPerformer> get copyWith =>
+      __$$_ImmunizationPerformerCopyWithImpl<_$_ImmunizationPerformer>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationPerformerToJson(this);
+    return _$$_ImmunizationPerformerToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationPerformer extends ImmunizationPerformer {
   factory _ImmunizationPerformer(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) = _$_ImmunizationPerformer;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? function,
+      required final Reference actor}) = _$_ImmunizationPerformer;
   _ImmunizationPerformer._() : super._();
 
   factory _ImmunizationPerformer.fromJson(Map<String, dynamic> json) =
@@ -2105,7 +2027,7 @@ abstract class _ImmunizationPerformer extends ImmunizationPerformer {
   Reference get actor;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationPerformerCopyWith<_ImmunizationPerformer> get copyWith =>
+  _$$_ImmunizationPerformerCopyWith<_$_ImmunizationPerformer> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2113,45 +2035,6 @@ ImmunizationEducation _$ImmunizationEducationFromJson(
     Map<String, dynamic> json) {
   return _ImmunizationEducation.fromJson(json);
 }
-
-/// @nodoc
-class _$ImmunizationEducationTearOff {
-  const _$ImmunizationEducationTearOff();
-
-  _ImmunizationEducation call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? documentType,
-      @JsonKey(name: '_documentType') Element? documentTypeElement,
-      FhirUri? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      FhirDateTime? publicationDate,
-      @JsonKey(name: '_publicationDate') Element? publicationDateElement,
-      FhirDateTime? presentationDate,
-      @JsonKey(name: '_presentationDate') Element? presentationDateElement}) {
-    return _ImmunizationEducation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      documentType: documentType,
-      documentTypeElement: documentTypeElement,
-      reference: reference,
-      referenceElement: referenceElement,
-      publicationDate: publicationDate,
-      publicationDateElement: publicationDateElement,
-      presentationDate: presentationDate,
-      presentationDateElement: presentationDateElement,
-    );
-  }
-
-  ImmunizationEducation fromJson(Map<String, Object?> json) {
-    return ImmunizationEducation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationEducation = _$ImmunizationEducationTearOff();
 
 /// @nodoc
 mixin _$ImmunizationEducation {
@@ -2320,11 +2203,11 @@ class _$ImmunizationEducationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationEducationCopyWith<$Res>
+abstract class _$$_ImmunizationEducationCopyWith<$Res>
     implements $ImmunizationEducationCopyWith<$Res> {
-  factory _$ImmunizationEducationCopyWith(_ImmunizationEducation value,
-          $Res Function(_ImmunizationEducation) then) =
-      __$ImmunizationEducationCopyWithImpl<$Res>;
+  factory _$$_ImmunizationEducationCopyWith(_$_ImmunizationEducation value,
+          $Res Function(_$_ImmunizationEducation) then) =
+      __$$_ImmunizationEducationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -2350,15 +2233,16 @@ abstract class _$ImmunizationEducationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationEducationCopyWithImpl<$Res>
+class __$$_ImmunizationEducationCopyWithImpl<$Res>
     extends _$ImmunizationEducationCopyWithImpl<$Res>
-    implements _$ImmunizationEducationCopyWith<$Res> {
-  __$ImmunizationEducationCopyWithImpl(_ImmunizationEducation _value,
-      $Res Function(_ImmunizationEducation) _then)
-      : super(_value, (v) => _then(v as _ImmunizationEducation));
+    implements _$$_ImmunizationEducationCopyWith<$Res> {
+  __$$_ImmunizationEducationCopyWithImpl(_$_ImmunizationEducation _value,
+      $Res Function(_$_ImmunizationEducation) _then)
+      : super(_value, (v) => _then(v as _$_ImmunizationEducation));
 
   @override
-  _ImmunizationEducation get _value => super._value as _ImmunizationEducation;
+  _$_ImmunizationEducation get _value =>
+      super._value as _$_ImmunizationEducation;
 
   @override
   $Res call({
@@ -2374,17 +2258,17 @@ class __$ImmunizationEducationCopyWithImpl<$Res>
     Object? presentationDate = freezed,
     Object? presentationDateElement = freezed,
   }) {
-    return _then(_ImmunizationEducation(
+    return _then(_$_ImmunizationEducation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       documentType: documentType == freezed
@@ -2428,8 +2312,8 @@ class __$ImmunizationEducationCopyWithImpl<$Res>
 class _$_ImmunizationEducation extends _ImmunizationEducation {
   _$_ImmunizationEducation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.documentType,
       @JsonKey(name: '_documentType') this.documentTypeElement,
       this.reference,
@@ -2438,18 +2322,34 @@ class _$_ImmunizationEducation extends _ImmunizationEducation {
       @JsonKey(name: '_publicationDate') this.publicationDateElement,
       this.presentationDate,
       @JsonKey(name: '_presentationDate') this.presentationDateElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImmunizationEducation.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationEducationFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? documentType;
   @override
@@ -2480,12 +2380,12 @@ class _$_ImmunizationEducation extends _ImmunizationEducation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationEducation &&
+            other is _$_ImmunizationEducation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.documentType, documentType) &&
             const DeepCollectionEquality()
@@ -2503,12 +2403,13 @@ class _$_ImmunizationEducation extends _ImmunizationEducation {
                 other.presentationDateElement, presentationDateElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(documentType),
       const DeepCollectionEquality().hash(documentTypeElement),
       const DeepCollectionEquality().hash(reference),
@@ -2520,34 +2421,36 @@ class _$_ImmunizationEducation extends _ImmunizationEducation {
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationEducationCopyWith<_ImmunizationEducation> get copyWith =>
-      __$ImmunizationEducationCopyWithImpl<_ImmunizationEducation>(
+  _$$_ImmunizationEducationCopyWith<_$_ImmunizationEducation> get copyWith =>
+      __$$_ImmunizationEducationCopyWithImpl<_$_ImmunizationEducation>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationEducationToJson(this);
+    return _$$_ImmunizationEducationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationEducation extends ImmunizationEducation {
   factory _ImmunizationEducation(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? documentType,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? documentType,
       @JsonKey(name: '_documentType')
-          Element? documentTypeElement,
-      FhirUri? reference,
+          final Element? documentTypeElement,
+      final FhirUri? reference,
       @JsonKey(name: '_reference')
-          Element? referenceElement,
-      FhirDateTime? publicationDate,
+          final Element? referenceElement,
+      final FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate')
-          Element? publicationDateElement,
-      FhirDateTime? presentationDate,
+          final Element? publicationDateElement,
+      final FhirDateTime? presentationDate,
       @JsonKey(name: '_presentationDate')
-          Element? presentationDateElement}) = _$_ImmunizationEducation;
+          final Element? presentationDateElement}) = _$_ImmunizationEducation;
   _ImmunizationEducation._() : super._();
 
   factory _ImmunizationEducation.fromJson(Map<String, dynamic> json) =
@@ -2582,46 +2485,13 @@ abstract class _ImmunizationEducation extends ImmunizationEducation {
   Element? get presentationDateElement;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationEducationCopyWith<_ImmunizationEducation> get copyWith =>
+  _$$_ImmunizationEducationCopyWith<_$_ImmunizationEducation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
   return _ImmunizationReaction.fromJson(json);
 }
-
-/// @nodoc
-class _$ImmunizationReactionTearOff {
-  const _$ImmunizationReactionTearOff();
-
-  _ImmunizationReaction call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
-      Reference? detail,
-      Boolean? reported,
-      @JsonKey(name: '_reported') Element? reportedElement}) {
-    return _ImmunizationReaction(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      date: date,
-      dateElement: dateElement,
-      detail: detail,
-      reported: reported,
-      reportedElement: reportedElement,
-    );
-  }
-
-  ImmunizationReaction fromJson(Map<String, Object?> json) {
-    return ImmunizationReaction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationReaction = _$ImmunizationReactionTearOff();
 
 /// @nodoc
 mixin _$ImmunizationReaction {
@@ -2633,7 +2503,7 @@ mixin _$ImmunizationReaction {
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
-  Reference? get detail => throw _privateConstructorUsedError;
+  CodeableReference? get manifestation => throw _privateConstructorUsedError;
   Boolean? get reported => throw _privateConstructorUsedError;
   @JsonKey(name: '_reported')
   Element? get reportedElement => throw _privateConstructorUsedError;
@@ -2655,12 +2525,12 @@ abstract class $ImmunizationReactionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
-      Reference? detail,
+      CodeableReference? manifestation,
       Boolean? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   $ElementCopyWith<$Res>? get dateElement;
-  $ReferenceCopyWith<$Res>? get detail;
+  $CodeableReferenceCopyWith<$Res>? get manifestation;
   $ElementCopyWith<$Res>? get reportedElement;
 }
 
@@ -2680,7 +2550,7 @@ class _$ImmunizationReactionCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
-    Object? detail = freezed,
+    Object? manifestation = freezed,
     Object? reported = freezed,
     Object? reportedElement = freezed,
   }) {
@@ -2705,10 +2575,10 @@ class _$ImmunizationReactionCopyWithImpl<$Res>
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      detail: detail == freezed
-          ? _value.detail
-          : detail // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      manifestation: manifestation == freezed
+          ? _value.manifestation
+          : manifestation // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       reported: reported == freezed
           ? _value.reported
           : reported // ignore: cast_nullable_to_non_nullable
@@ -2732,13 +2602,13 @@ class _$ImmunizationReactionCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get detail {
-    if (_value.detail == null) {
+  $CodeableReferenceCopyWith<$Res>? get manifestation {
+    if (_value.manifestation == null) {
       return null;
     }
 
-    return $ReferenceCopyWith<$Res>(_value.detail!, (value) {
-      return _then(_value.copyWith(detail: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.manifestation!, (value) {
+      return _then(_value.copyWith(manifestation: value));
     });
   }
 
@@ -2755,11 +2625,11 @@ class _$ImmunizationReactionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationReactionCopyWith<$Res>
+abstract class _$$_ImmunizationReactionCopyWith<$Res>
     implements $ImmunizationReactionCopyWith<$Res> {
-  factory _$ImmunizationReactionCopyWith(_ImmunizationReaction value,
-          $Res Function(_ImmunizationReaction) then) =
-      __$ImmunizationReactionCopyWithImpl<$Res>;
+  factory _$$_ImmunizationReactionCopyWith(_$_ImmunizationReaction value,
+          $Res Function(_$_ImmunizationReaction) then) =
+      __$$_ImmunizationReactionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -2767,28 +2637,28 @@ abstract class _$ImmunizationReactionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
-      Reference? detail,
+      CodeableReference? manifestation,
       Boolean? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   @override
   $ElementCopyWith<$Res>? get dateElement;
   @override
-  $ReferenceCopyWith<$Res>? get detail;
+  $CodeableReferenceCopyWith<$Res>? get manifestation;
   @override
   $ElementCopyWith<$Res>? get reportedElement;
 }
 
 /// @nodoc
-class __$ImmunizationReactionCopyWithImpl<$Res>
+class __$$_ImmunizationReactionCopyWithImpl<$Res>
     extends _$ImmunizationReactionCopyWithImpl<$Res>
-    implements _$ImmunizationReactionCopyWith<$Res> {
-  __$ImmunizationReactionCopyWithImpl(
-      _ImmunizationReaction _value, $Res Function(_ImmunizationReaction) _then)
-      : super(_value, (v) => _then(v as _ImmunizationReaction));
+    implements _$$_ImmunizationReactionCopyWith<$Res> {
+  __$$_ImmunizationReactionCopyWithImpl(_$_ImmunizationReaction _value,
+      $Res Function(_$_ImmunizationReaction) _then)
+      : super(_value, (v) => _then(v as _$_ImmunizationReaction));
 
   @override
-  _ImmunizationReaction get _value => super._value as _ImmunizationReaction;
+  _$_ImmunizationReaction get _value => super._value as _$_ImmunizationReaction;
 
   @override
   $Res call({
@@ -2797,21 +2667,21 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
-    Object? detail = freezed,
+    Object? manifestation = freezed,
     Object? reported = freezed,
     Object? reportedElement = freezed,
   }) {
-    return _then(_ImmunizationReaction(
+    return _then(_$_ImmunizationReaction(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       date: date == freezed
@@ -2822,10 +2692,10 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      detail: detail == freezed
-          ? _value.detail
-          : detail // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      manifestation: manifestation == freezed
+          ? _value.manifestation
+          : manifestation // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       reported: reported == freezed
           ? _value.reported
           : reported // ignore: cast_nullable_to_non_nullable
@@ -2843,32 +2713,48 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
 class _$_ImmunizationReaction extends _ImmunizationReaction {
   _$_ImmunizationReaction(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.date,
       @JsonKey(name: '_date') this.dateElement,
-      this.detail,
+      this.manifestation,
       this.reported,
       @JsonKey(name: '_reported') this.reportedElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationReactionFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
-  final Reference? detail;
+  final CodeableReference? manifestation;
   @override
   final Boolean? reported;
   @override
@@ -2877,62 +2763,66 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
 
   @override
   String toString() {
-    return 'ImmunizationReaction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, date: $date, dateElement: $dateElement, detail: $detail, reported: $reported, reportedElement: $reportedElement)';
+    return 'ImmunizationReaction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, date: $date, dateElement: $dateElement, manifestation: $manifestation, reported: $reported, reportedElement: $reportedElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationReaction &&
+            other is _$_ImmunizationReaction &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
-            const DeepCollectionEquality().equals(other.detail, detail) &&
+            const DeepCollectionEquality()
+                .equals(other.manifestation, manifestation) &&
             const DeepCollectionEquality().equals(other.reported, reported) &&
             const DeepCollectionEquality()
                 .equals(other.reportedElement, reportedElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(date),
       const DeepCollectionEquality().hash(dateElement),
-      const DeepCollectionEquality().hash(detail),
+      const DeepCollectionEquality().hash(manifestation),
       const DeepCollectionEquality().hash(reported),
       const DeepCollectionEquality().hash(reportedElement));
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationReactionCopyWith<_ImmunizationReaction> get copyWith =>
-      __$ImmunizationReactionCopyWithImpl<_ImmunizationReaction>(
+  _$$_ImmunizationReactionCopyWith<_$_ImmunizationReaction> get copyWith =>
+      __$$_ImmunizationReactionCopyWithImpl<_$_ImmunizationReaction>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationReactionToJson(this);
+    return _$$_ImmunizationReactionToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationReaction extends ImmunizationReaction {
   factory _ImmunizationReaction(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          FhirDateTime? date,
-          @JsonKey(name: '_date') Element? dateElement,
-          Reference? detail,
-          Boolean? reported,
-          @JsonKey(name: '_reported') Element? reportedElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final FhirDateTime? date,
+          @JsonKey(name: '_date') final Element? dateElement,
+          final CodeableReference? manifestation,
+          final Boolean? reported,
+          @JsonKey(name: '_reported') final Element? reportedElement}) =
       _$_ImmunizationReaction;
   _ImmunizationReaction._() : super._();
 
@@ -2952,7 +2842,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
-  Reference? get detail;
+  CodeableReference? get manifestation;
   @override
   Boolean? get reported;
   @override
@@ -2960,7 +2850,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
   Element? get reportedElement;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationReactionCopyWith<_ImmunizationReaction> get copyWith =>
+  _$$_ImmunizationReactionCopyWith<_$_ImmunizationReaction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2968,45 +2858,6 @@ ImmunizationProtocolApplied _$ImmunizationProtocolAppliedFromJson(
     Map<String, dynamic> json) {
   return _ImmunizationProtocolApplied.fromJson(json);
 }
-
-/// @nodoc
-class _$ImmunizationProtocolAppliedTearOff {
-  const _$ImmunizationProtocolAppliedTearOff();
-
-  _ImmunizationProtocolApplied call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? series,
-      @JsonKey(name: '_series') Element? seriesElement,
-      Reference? authority,
-      List<CodeableConcept>? targetDisease,
-      String? doseNumber,
-      @JsonKey(name: '_doseNumber') Element? doseNumberElement,
-      String? seriesDoses,
-      @JsonKey(name: '_seriesDoses') Element? seriesDosesElement}) {
-    return _ImmunizationProtocolApplied(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      series: series,
-      seriesElement: seriesElement,
-      authority: authority,
-      targetDisease: targetDisease,
-      doseNumber: doseNumber,
-      doseNumberElement: doseNumberElement,
-      seriesDoses: seriesDoses,
-      seriesDosesElement: seriesDosesElement,
-    );
-  }
-
-  ImmunizationProtocolApplied fromJson(Map<String, Object?> json) {
-    return ImmunizationProtocolApplied.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationProtocolApplied = _$ImmunizationProtocolAppliedTearOff();
 
 /// @nodoc
 mixin _$ImmunizationProtocolApplied {
@@ -3176,12 +3027,12 @@ class _$ImmunizationProtocolAppliedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationProtocolAppliedCopyWith<$Res>
+abstract class _$$_ImmunizationProtocolAppliedCopyWith<$Res>
     implements $ImmunizationProtocolAppliedCopyWith<$Res> {
-  factory _$ImmunizationProtocolAppliedCopyWith(
-          _ImmunizationProtocolApplied value,
-          $Res Function(_ImmunizationProtocolApplied) then) =
-      __$ImmunizationProtocolAppliedCopyWithImpl<$Res>;
+  factory _$$_ImmunizationProtocolAppliedCopyWith(
+          _$_ImmunizationProtocolApplied value,
+          $Res Function(_$_ImmunizationProtocolApplied) then) =
+      __$$_ImmunizationProtocolAppliedCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -3207,17 +3058,17 @@ abstract class _$ImmunizationProtocolAppliedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationProtocolAppliedCopyWithImpl<$Res>
+class __$$_ImmunizationProtocolAppliedCopyWithImpl<$Res>
     extends _$ImmunizationProtocolAppliedCopyWithImpl<$Res>
-    implements _$ImmunizationProtocolAppliedCopyWith<$Res> {
-  __$ImmunizationProtocolAppliedCopyWithImpl(
-      _ImmunizationProtocolApplied _value,
-      $Res Function(_ImmunizationProtocolApplied) _then)
-      : super(_value, (v) => _then(v as _ImmunizationProtocolApplied));
+    implements _$$_ImmunizationProtocolAppliedCopyWith<$Res> {
+  __$$_ImmunizationProtocolAppliedCopyWithImpl(
+      _$_ImmunizationProtocolApplied _value,
+      $Res Function(_$_ImmunizationProtocolApplied) _then)
+      : super(_value, (v) => _then(v as _$_ImmunizationProtocolApplied));
 
   @override
-  _ImmunizationProtocolApplied get _value =>
-      super._value as _ImmunizationProtocolApplied;
+  _$_ImmunizationProtocolApplied get _value =>
+      super._value as _$_ImmunizationProtocolApplied;
 
   @override
   $Res call({
@@ -3233,17 +3084,17 @@ class __$ImmunizationProtocolAppliedCopyWithImpl<$Res>
     Object? seriesDoses = freezed,
     Object? seriesDosesElement = freezed,
   }) {
-    return _then(_ImmunizationProtocolApplied(
+    return _then(_$_ImmunizationProtocolApplied(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       series: series == freezed
@@ -3259,7 +3110,7 @@ class __$ImmunizationProtocolAppliedCopyWithImpl<$Res>
           : authority // ignore: cast_nullable_to_non_nullable
               as Reference?,
       targetDisease: targetDisease == freezed
-          ? _value.targetDisease
+          ? _value._targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       doseNumber: doseNumber == freezed
@@ -3287,28 +3138,45 @@ class __$ImmunizationProtocolAppliedCopyWithImpl<$Res>
 class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
   _$_ImmunizationProtocolApplied(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.series,
       @JsonKey(name: '_series') this.seriesElement,
       this.authority,
-      this.targetDisease,
+      final List<CodeableConcept>? targetDisease,
       this.doseNumber,
       @JsonKey(name: '_doseNumber') this.doseNumberElement,
       this.seriesDoses,
       @JsonKey(name: '_seriesDoses') this.seriesDosesElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _targetDisease = targetDisease,
+        super._();
 
   factory _$_ImmunizationProtocolApplied.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationProtocolAppliedFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? series;
   @override
@@ -3316,8 +3184,15 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
   final Element? seriesElement;
   @override
   final Reference? authority;
+  final List<CodeableConcept>? _targetDisease;
   @override
-  final List<CodeableConcept>? targetDisease;
+  List<CodeableConcept>? get targetDisease {
+    final value = _targetDisease;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? doseNumber;
   @override
@@ -3338,18 +3213,18 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationProtocolApplied &&
+            other is _$_ImmunizationProtocolApplied &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.series, series) &&
             const DeepCollectionEquality()
                 .equals(other.seriesElement, seriesElement) &&
             const DeepCollectionEquality().equals(other.authority, authority) &&
             const DeepCollectionEquality()
-                .equals(other.targetDisease, targetDisease) &&
+                .equals(other._targetDisease, _targetDisease) &&
             const DeepCollectionEquality()
                 .equals(other.doseNumber, doseNumber) &&
             const DeepCollectionEquality()
@@ -3360,16 +3235,17 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
                 .equals(other.seriesDosesElement, seriesDosesElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(series),
       const DeepCollectionEquality().hash(seriesElement),
       const DeepCollectionEquality().hash(authority),
-      const DeepCollectionEquality().hash(targetDisease),
+      const DeepCollectionEquality().hash(_targetDisease),
       const DeepCollectionEquality().hash(doseNumber),
       const DeepCollectionEquality().hash(doseNumberElement),
       const DeepCollectionEquality().hash(seriesDoses),
@@ -3377,30 +3253,32 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationProtocolAppliedCopyWith<_ImmunizationProtocolApplied>
-      get copyWith => __$ImmunizationProtocolAppliedCopyWithImpl<
-          _ImmunizationProtocolApplied>(this, _$identity);
+  _$$_ImmunizationProtocolAppliedCopyWith<_$_ImmunizationProtocolApplied>
+      get copyWith => __$$_ImmunizationProtocolAppliedCopyWithImpl<
+          _$_ImmunizationProtocolApplied>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationProtocolAppliedToJson(this);
+    return _$$_ImmunizationProtocolAppliedToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationProtocolApplied
     extends ImmunizationProtocolApplied {
   factory _ImmunizationProtocolApplied(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? series,
-          @JsonKey(name: '_series') Element? seriesElement,
-          Reference? authority,
-          List<CodeableConcept>? targetDisease,
-          String? doseNumber,
-          @JsonKey(name: '_doseNumber') Element? doseNumberElement,
-          String? seriesDoses,
-          @JsonKey(name: '_seriesDoses') Element? seriesDosesElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? series,
+          @JsonKey(name: '_series') final Element? seriesElement,
+          final Reference? authority,
+          final List<CodeableConcept>? targetDisease,
+          final String? doseNumber,
+          @JsonKey(name: '_doseNumber') final Element? doseNumberElement,
+          final String? seriesDoses,
+          @JsonKey(name: '_seriesDoses') final Element? seriesDosesElement}) =
       _$_ImmunizationProtocolApplied;
   _ImmunizationProtocolApplied._() : super._();
 
@@ -3435,7 +3313,7 @@ abstract class _ImmunizationProtocolApplied
   Element? get seriesDosesElement;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationProtocolAppliedCopyWith<_ImmunizationProtocolApplied>
+  _$$_ImmunizationProtocolAppliedCopyWith<_$_ImmunizationProtocolApplied>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3445,95 +3323,7 @@ ImmunizationEvaluation _$ImmunizationEvaluationFromJson(
 }
 
 /// @nodoc
-class _$ImmunizationEvaluationTearOff {
-  const _$ImmunizationEvaluationTearOff();
-
-  _ImmunizationEvaluation call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-          R5ResourceType resourceType = R5ResourceType.ImmunizationEvaluation,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required Reference patient,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      Reference? authority,
-      required CodeableConcept targetDisease,
-      required Reference immunizationEvent,
-      required CodeableConcept doseStatus,
-      List<CodeableConcept>? doseStatusReason,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      String? series,
-      @JsonKey(name: '_series')
-          Element? seriesElement,
-      String? doseNumber,
-      @JsonKey(name: '_doseNumber')
-          Element? doseNumberElement,
-      String? seriesDoses,
-      @JsonKey(name: '_seriesDoses')
-          Element? seriesDosesElement}) {
-    return _ImmunizationEvaluation(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      patient: patient,
-      date: date,
-      dateElement: dateElement,
-      authority: authority,
-      targetDisease: targetDisease,
-      immunizationEvent: immunizationEvent,
-      doseStatus: doseStatus,
-      doseStatusReason: doseStatusReason,
-      description: description,
-      descriptionElement: descriptionElement,
-      series: series,
-      seriesElement: seriesElement,
-      doseNumber: doseNumber,
-      doseNumberElement: doseNumberElement,
-      seriesDoses: seriesDoses,
-      seriesDosesElement: seriesDosesElement,
-    );
-  }
-
-  ImmunizationEvaluation fromJson(Map<String, Object?> json) {
-    return ImmunizationEvaluation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationEvaluation = _$ImmunizationEvaluationTearOff();
-
-/// @nodoc
 mixin _$ImmunizationEvaluation {
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -3588,46 +3378,36 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
           $Res Function(ImmunizationEvaluation) then) =
       _$ImmunizationEvaluationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? authority,
       CodeableConcept targetDisease,
       Reference immunizationEvent,
       CodeableConcept doseStatus,
       List<CodeableConcept>? doseStatusReason,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? series,
-      @JsonKey(name: '_series')
-          Element? seriesElement,
+      @JsonKey(name: '_series') Element? seriesElement,
       String? doseNumber,
-      @JsonKey(name: '_doseNumber')
-          Element? doseNumberElement,
+      @JsonKey(name: '_doseNumber') Element? doseNumberElement,
       String? seriesDoses,
-      @JsonKey(name: '_seriesDoses')
-          Element? seriesDosesElement});
+      @JsonKey(name: '_seriesDoses') Element? seriesDosesElement});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3963,53 +3743,43 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationEvaluationCopyWith<$Res>
+abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
     implements $ImmunizationEvaluationCopyWith<$Res> {
-  factory _$ImmunizationEvaluationCopyWith(_ImmunizationEvaluation value,
-          $Res Function(_ImmunizationEvaluation) then) =
-      __$ImmunizationEvaluationCopyWithImpl<$Res>;
+  factory _$$_ImmunizationEvaluationCopyWith(_$_ImmunizationEvaluation value,
+          $Res Function(_$_ImmunizationEvaluation) then) =
+      __$$_ImmunizationEvaluationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? authority,
       CodeableConcept targetDisease,
       Reference immunizationEvent,
       CodeableConcept doseStatus,
       List<CodeableConcept>? doseStatusReason,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? series,
-      @JsonKey(name: '_series')
-          Element? seriesElement,
+      @JsonKey(name: '_series') Element? seriesElement,
       String? doseNumber,
-      @JsonKey(name: '_doseNumber')
-          Element? doseNumberElement,
+      @JsonKey(name: '_doseNumber') Element? doseNumberElement,
       String? seriesDoses,
-      @JsonKey(name: '_seriesDoses')
-          Element? seriesDosesElement});
+      @JsonKey(name: '_seriesDoses') Element? seriesDosesElement});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4044,15 +3814,16 @@ abstract class _$ImmunizationEvaluationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationEvaluationCopyWithImpl<$Res>
+class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
     extends _$ImmunizationEvaluationCopyWithImpl<$Res>
-    implements _$ImmunizationEvaluationCopyWith<$Res> {
-  __$ImmunizationEvaluationCopyWithImpl(_ImmunizationEvaluation _value,
-      $Res Function(_ImmunizationEvaluation) _then)
-      : super(_value, (v) => _then(v as _ImmunizationEvaluation));
+    implements _$$_ImmunizationEvaluationCopyWith<$Res> {
+  __$$_ImmunizationEvaluationCopyWithImpl(_$_ImmunizationEvaluation _value,
+      $Res Function(_$_ImmunizationEvaluation) _then)
+      : super(_value, (v) => _then(v as _$_ImmunizationEvaluation));
 
   @override
-  _ImmunizationEvaluation get _value => super._value as _ImmunizationEvaluation;
+  _$_ImmunizationEvaluation get _value =>
+      super._value as _$_ImmunizationEvaluation;
 
   @override
   $Res call({
@@ -4087,7 +3858,7 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
     Object? seriesDoses = freezed,
     Object? seriesDosesElement = freezed,
   }) {
-    return _then(_ImmunizationEvaluation(
+    return _then(_$_ImmunizationEvaluation(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4121,19 +3892,19 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: status == freezed
@@ -4173,7 +3944,7 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
           : doseStatus // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       doseStatusReason: doseStatusReason == freezed
-          ? _value.doseStatusReason
+          ? _value._doseStatusReason
           : doseStatusReason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       description: description == freezed
@@ -4216,53 +3987,48 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   _$_ImmunizationEvaluation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-          this.resourceType = R5ResourceType.ImmunizationEvaluation,
+      {this.resourceType = R5ResourceType.ImmunizationEvaluation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       required this.patient,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.authority,
       required this.targetDisease,
       required this.immunizationEvent,
       required this.doseStatus,
-      this.doseStatusReason,
+      final List<CodeableConcept>? doseStatusReason,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.series,
-      @JsonKey(name: '_series')
-          this.seriesElement,
+      @JsonKey(name: '_series') this.seriesElement,
       this.doseNumber,
-      @JsonKey(name: '_doseNumber')
-          this.doseNumberElement,
+      @JsonKey(name: '_doseNumber') this.doseNumberElement,
       this.seriesDoses,
-      @JsonKey(name: '_seriesDoses')
-          this.seriesDosesElement})
-      : super._();
+      @JsonKey(name: '_seriesDoses') this.seriesDosesElement})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _doseStatusReason = doseStatusReason,
+        super._();
 
   factory _$_ImmunizationEvaluation.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationEvaluationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -4280,15 +4046,43 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
@@ -4309,8 +4103,15 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   final Reference immunizationEvent;
   @override
   final CodeableConcept doseStatus;
+  final List<CodeableConcept>? _doseStatusReason;
   @override
-  final List<CodeableConcept>? doseStatusReason;
+  List<CodeableConcept>? get doseStatusReason {
+    final value = _doseStatusReason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? description;
   @override
@@ -4341,7 +4142,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationEvaluation &&
+            other is _$_ImmunizationEvaluation &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -4354,13 +4155,14 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -4376,7 +4178,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
             const DeepCollectionEquality()
                 .equals(other.doseStatus, doseStatus) &&
             const DeepCollectionEquality()
-                .equals(other.doseStatusReason, doseStatusReason) &&
+                .equals(other._doseStatusReason, _doseStatusReason) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
@@ -4394,6 +4196,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
                 .equals(other.seriesDosesElement, seriesDosesElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4405,10 +4208,10 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(patient),
@@ -4418,7 +4221,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
         const DeepCollectionEquality().hash(targetDisease),
         const DeepCollectionEquality().hash(immunizationEvent),
         const DeepCollectionEquality().hash(doseStatus),
-        const DeepCollectionEquality().hash(doseStatusReason),
+        const DeepCollectionEquality().hash(_doseStatusReason),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
         const DeepCollectionEquality().hash(series),
@@ -4431,65 +4234,57 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationEvaluationCopyWith<_ImmunizationEvaluation> get copyWith =>
-      __$ImmunizationEvaluationCopyWithImpl<_ImmunizationEvaluation>(
+  _$$_ImmunizationEvaluationCopyWith<_$_ImmunizationEvaluation> get copyWith =>
+      __$$_ImmunizationEvaluationCopyWithImpl<_$_ImmunizationEvaluation>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationEvaluationToJson(this);
+    return _$$_ImmunizationEvaluationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   factory _ImmunizationEvaluation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required Reference patient,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      Reference? authority,
-      required CodeableConcept targetDisease,
-      required Reference immunizationEvent,
-      required CodeableConcept doseStatus,
-      List<CodeableConcept>? doseStatusReason,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      String? series,
-      @JsonKey(name: '_series')
-          Element? seriesElement,
-      String? doseNumber,
-      @JsonKey(name: '_doseNumber')
-          Element? doseNumberElement,
-      String? seriesDoses,
-      @JsonKey(name: '_seriesDoses')
-          Element? seriesDosesElement}) = _$_ImmunizationEvaluation;
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final Code? status,
+          @JsonKey(name: '_status') final Element? statusElement,
+          required final Reference patient,
+          final FhirDateTime? date,
+          @JsonKey(name: '_date') final Element? dateElement,
+          final Reference? authority,
+          required final CodeableConcept targetDisease,
+          required final Reference immunizationEvent,
+          required final CodeableConcept doseStatus,
+          final List<CodeableConcept>? doseStatusReason,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final String? series,
+          @JsonKey(name: '_series') final Element? seriesElement,
+          final String? doseNumber,
+          @JsonKey(name: '_doseNumber') final Element? doseNumberElement,
+          final String? seriesDoses,
+          @JsonKey(name: '_seriesDoses') final Element? seriesDosesElement}) =
+      _$_ImmunizationEvaluation;
   _ImmunizationEvaluation._() : super._();
 
   factory _ImmunizationEvaluation.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationEvaluation.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -4560,7 +4355,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   Element? get seriesDosesElement;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationEvaluationCopyWith<_ImmunizationEvaluation> get copyWith =>
+  _$$_ImmunizationEvaluationCopyWith<_$_ImmunizationEvaluation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4570,72 +4365,7 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 }
 
 /// @nodoc
-class _$ImmunizationRecommendationTearOff {
-  const _$ImmunizationRecommendationTearOff();
-
-  _ImmunizationRecommendation call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-          R5ResourceType
-              resourceType = R5ResourceType.ImmunizationRecommendation,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      required Reference patient,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      Reference? authority,
-      required List<ImmunizationRecommendationRecommendation> recommendation}) {
-    return _ImmunizationRecommendation(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      instantiatesCanonical: instantiatesCanonical,
-      instantiatesUri: instantiatesUri,
-      instantiatesUriElement: instantiatesUriElement,
-      patient: patient,
-      date: date,
-      dateElement: dateElement,
-      authority: authority,
-      recommendation: recommendation,
-    );
-  }
-
-  ImmunizationRecommendation fromJson(Map<String, Object?> json) {
-    return ImmunizationRecommendation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationRecommendation = _$ImmunizationRecommendationTearOff();
-
-/// @nodoc
 mixin _$ImmunizationRecommendation {
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -4678,30 +4408,24 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
           $Res Function(ImmunizationRecommendation) then) =
       _$ImmunizationRecommendationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? authority,
       List<ImmunizationRecommendationRecommendation> recommendation});
 
@@ -4905,38 +4629,32 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationRecommendationCopyWith<$Res>
+abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
     implements $ImmunizationRecommendationCopyWith<$Res> {
-  factory _$ImmunizationRecommendationCopyWith(
-          _ImmunizationRecommendation value,
-          $Res Function(_ImmunizationRecommendation) then) =
-      __$ImmunizationRecommendationCopyWithImpl<$Res>;
+  factory _$$_ImmunizationRecommendationCopyWith(
+          _$_ImmunizationRecommendation value,
+          $Res Function(_$_ImmunizationRecommendation) then) =
+      __$$_ImmunizationRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? authority,
       List<ImmunizationRecommendationRecommendation> recommendation});
 
@@ -4957,16 +4675,17 @@ abstract class _$ImmunizationRecommendationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationRecommendationCopyWithImpl<$Res>
+class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
     extends _$ImmunizationRecommendationCopyWithImpl<$Res>
-    implements _$ImmunizationRecommendationCopyWith<$Res> {
-  __$ImmunizationRecommendationCopyWithImpl(_ImmunizationRecommendation _value,
-      $Res Function(_ImmunizationRecommendation) _then)
-      : super(_value, (v) => _then(v as _ImmunizationRecommendation));
+    implements _$$_ImmunizationRecommendationCopyWith<$Res> {
+  __$$_ImmunizationRecommendationCopyWithImpl(
+      _$_ImmunizationRecommendation _value,
+      $Res Function(_$_ImmunizationRecommendation) _then)
+      : super(_value, (v) => _then(v as _$_ImmunizationRecommendation));
 
   @override
-  _ImmunizationRecommendation get _value =>
-      super._value as _ImmunizationRecommendation;
+  _$_ImmunizationRecommendation get _value =>
+      super._value as _$_ImmunizationRecommendation;
 
   @override
   $Res call({
@@ -4991,7 +4710,7 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
     Object? authority = freezed,
     Object? recommendation = freezed,
   }) {
-    return _then(_ImmunizationRecommendation(
+    return _then(_$_ImmunizationRecommendation(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5025,31 +4744,31 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       instantiatesCanonical: instantiatesCanonical == freezed
-          ? _value.instantiatesCanonical
+          ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       instantiatesUri: instantiatesUri == freezed
-          ? _value.instantiatesUri
+          ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
-          ? _value.instantiatesUriElement
+          ? _value._instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       patient: patient == freezed
@@ -5069,7 +4788,7 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
           : authority // ignore: cast_nullable_to_non_nullable
               as Reference?,
       recommendation: recommendation == freezed
-          ? _value.recommendation
+          ? _value._recommendation
           : recommendation // ignore: cast_nullable_to_non_nullable
               as List<ImmunizationRecommendationRecommendation>,
     ));
@@ -5080,8 +4799,7 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-          this.resourceType = R5ResourceType.ImmunizationRecommendation,
+      {this.resourceType = R5ResourceType.ImmunizationRecommendation,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5091,28 +4809,37 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.instantiatesCanonical,
-      this.instantiatesUri,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Canonical>? instantiatesCanonical,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          this.instantiatesUriElement,
+          final List<Element>? instantiatesUriElement,
       required this.patient,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
       this.authority,
-      required this.recommendation})
-      : super._();
+      required final List<ImmunizationRecommendationRecommendation>
+          recommendation})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _instantiatesCanonical = instantiatesCanonical,
+        _instantiatesUri = instantiatesUri,
+        _instantiatesUriElement = instantiatesUriElement,
+        _recommendation = recommendation,
+        super._();
 
   factory _$_ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationRecommendationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -5130,22 +4857,71 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Canonical>? _instantiatesCanonical;
   @override
-  final List<Canonical>? instantiatesCanonical;
+  List<Canonical>? get instantiatesCanonical {
+    final value = _instantiatesCanonical;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirUri>? _instantiatesUri;
   @override
-  final List<FhirUri>? instantiatesUri;
+  List<FhirUri>? get instantiatesUri {
+    final value = _instantiatesUri;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _instantiatesUriElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  List<Element>? get instantiatesUriElement {
+    final value = _instantiatesUriElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference patient;
   @override
@@ -5155,8 +4931,12 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   final Element? dateElement;
   @override
   final Reference? authority;
+  final List<ImmunizationRecommendationRecommendation> _recommendation;
   @override
-  final List<ImmunizationRecommendationRecommendation> recommendation;
+  List<ImmunizationRecommendationRecommendation> get recommendation {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recommendation);
+  }
 
   @override
   String toString() {
@@ -5167,7 +4947,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationRecommendation &&
+            other is _$_ImmunizationRecommendation &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -5180,28 +4960,30 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesCanonical, instantiatesCanonical) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesUri, instantiatesUri) &&
+                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesUriElement, instantiatesUriElement) &&
+                .equals(other._instantiatesUri, _instantiatesUri) &&
+            const DeepCollectionEquality().equals(
+                other._instantiatesUriElement, _instantiatesUriElement) &&
             const DeepCollectionEquality().equals(other.patient, patient) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
             const DeepCollectionEquality().equals(other.authority, authority) &&
             const DeepCollectionEquality()
-                .equals(other.recommendation, recommendation));
+                .equals(other._recommendation, _recommendation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -5213,60 +4995,61 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(instantiatesCanonical),
-        const DeepCollectionEquality().hash(instantiatesUri),
-        const DeepCollectionEquality().hash(instantiatesUriElement),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_instantiatesCanonical),
+        const DeepCollectionEquality().hash(_instantiatesUri),
+        const DeepCollectionEquality().hash(_instantiatesUriElement),
         const DeepCollectionEquality().hash(patient),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(authority),
-        const DeepCollectionEquality().hash(recommendation)
+        const DeepCollectionEquality().hash(_recommendation)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationRecommendationCopyWith<_ImmunizationRecommendation>
-      get copyWith => __$ImmunizationRecommendationCopyWithImpl<
-          _ImmunizationRecommendation>(this, _$identity);
+  _$$_ImmunizationRecommendationCopyWith<_$_ImmunizationRecommendation>
+      get copyWith => __$$_ImmunizationRecommendationCopyWithImpl<
+          _$_ImmunizationRecommendation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationRecommendationToJson(this);
+    return _$$_ImmunizationRecommendationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   factory _ImmunizationRecommendation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Canonical>? instantiatesCanonical,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      required Reference patient,
-      FhirDateTime? date,
+          final List<Element>? instantiatesUriElement,
+      required final Reference patient,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      Reference? authority,
-      required List<ImmunizationRecommendationRecommendation>
+          final Element? dateElement,
+      final Reference? authority,
+      required final List<ImmunizationRecommendationRecommendation>
           recommendation}) = _$_ImmunizationRecommendation;
   _ImmunizationRecommendation._() : super._();
 
@@ -5274,7 +5057,6 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
       _$_ImmunizationRecommendation.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -5321,7 +5103,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   List<ImmunizationRecommendationRecommendation> get recommendation;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationRecommendationCopyWith<_ImmunizationRecommendation>
+  _$$_ImmunizationRecommendationCopyWith<_$_ImmunizationRecommendation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5330,62 +5112,6 @@ ImmunizationRecommendationRecommendation
         Map<String, dynamic> json) {
   return _ImmunizationRecommendationRecommendation.fromJson(json);
 }
-
-/// @nodoc
-class _$ImmunizationRecommendationRecommendationTearOff {
-  const _$ImmunizationRecommendationRecommendationTearOff();
-
-  _ImmunizationRecommendationRecommendation call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? vaccineCode,
-      List<CodeableConcept>? targetDisease,
-      List<CodeableConcept>? contraindicatedVaccineCode,
-      required CodeableConcept forecastStatus,
-      List<CodeableConcept>? forecastReason,
-      List<ImmunizationRecommendationDateCriterion>? dateCriterion,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      String? series,
-      @JsonKey(name: '_series') Element? seriesElement,
-      String? doseNumber,
-      @JsonKey(name: '_doseNumber') Element? doseNumberElement,
-      String? seriesDoses,
-      @JsonKey(name: '_seriesDoses') Element? seriesDosesElement,
-      List<Reference>? supportingImmunization,
-      List<Reference>? supportingPatientInformation}) {
-    return _ImmunizationRecommendationRecommendation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      vaccineCode: vaccineCode,
-      targetDisease: targetDisease,
-      contraindicatedVaccineCode: contraindicatedVaccineCode,
-      forecastStatus: forecastStatus,
-      forecastReason: forecastReason,
-      dateCriterion: dateCriterion,
-      description: description,
-      descriptionElement: descriptionElement,
-      series: series,
-      seriesElement: seriesElement,
-      doseNumber: doseNumber,
-      doseNumberElement: doseNumberElement,
-      seriesDoses: seriesDoses,
-      seriesDosesElement: seriesDosesElement,
-      supportingImmunization: supportingImmunization,
-      supportingPatientInformation: supportingPatientInformation,
-    );
-  }
-
-  ImmunizationRecommendationRecommendation fromJson(Map<String, Object?> json) {
-    return ImmunizationRecommendationRecommendation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationRecommendationRecommendation =
-    _$ImmunizationRecommendationRecommendationTearOff();
 
 /// @nodoc
 mixin _$ImmunizationRecommendationRecommendation {
@@ -5627,12 +5353,12 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
+abstract class _$$_ImmunizationRecommendationRecommendationCopyWith<$Res>
     implements $ImmunizationRecommendationRecommendationCopyWith<$Res> {
-  factory _$ImmunizationRecommendationRecommendationCopyWith(
-          _ImmunizationRecommendationRecommendation value,
-          $Res Function(_ImmunizationRecommendationRecommendation) then) =
-      __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>;
+  factory _$$_ImmunizationRecommendationRecommendationCopyWith(
+          _$_ImmunizationRecommendationRecommendation value,
+          $Res Function(_$_ImmunizationRecommendationRecommendation) then) =
+      __$$_ImmunizationRecommendationRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -5668,18 +5394,18 @@ abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
+class __$$_ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     extends _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
-    implements _$ImmunizationRecommendationRecommendationCopyWith<$Res> {
-  __$ImmunizationRecommendationRecommendationCopyWithImpl(
-      _ImmunizationRecommendationRecommendation _value,
-      $Res Function(_ImmunizationRecommendationRecommendation) _then)
+    implements _$$_ImmunizationRecommendationRecommendationCopyWith<$Res> {
+  __$$_ImmunizationRecommendationRecommendationCopyWithImpl(
+      _$_ImmunizationRecommendationRecommendation _value,
+      $Res Function(_$_ImmunizationRecommendationRecommendation) _then)
       : super(_value,
-            (v) => _then(v as _ImmunizationRecommendationRecommendation));
+            (v) => _then(v as _$_ImmunizationRecommendationRecommendation));
 
   @override
-  _ImmunizationRecommendationRecommendation get _value =>
-      super._value as _ImmunizationRecommendationRecommendation;
+  _$_ImmunizationRecommendationRecommendation get _value =>
+      super._value as _$_ImmunizationRecommendationRecommendation;
 
   @override
   $Res call({
@@ -5703,29 +5429,29 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     Object? supportingImmunization = freezed,
     Object? supportingPatientInformation = freezed,
   }) {
-    return _then(_ImmunizationRecommendationRecommendation(
+    return _then(_$_ImmunizationRecommendationRecommendation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       vaccineCode: vaccineCode == freezed
-          ? _value.vaccineCode
+          ? _value._vaccineCode
           : vaccineCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       targetDisease: targetDisease == freezed
-          ? _value.targetDisease
+          ? _value._targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       contraindicatedVaccineCode: contraindicatedVaccineCode == freezed
-          ? _value.contraindicatedVaccineCode
+          ? _value._contraindicatedVaccineCode
           : contraindicatedVaccineCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       forecastStatus: forecastStatus == freezed
@@ -5733,11 +5459,11 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
           : forecastStatus // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       forecastReason: forecastReason == freezed
-          ? _value.forecastReason
+          ? _value._forecastReason
           : forecastReason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       dateCriterion: dateCriterion == freezed
-          ? _value.dateCriterion
+          ? _value._dateCriterion
           : dateCriterion // ignore: cast_nullable_to_non_nullable
               as List<ImmunizationRecommendationDateCriterion>?,
       description: description == freezed
@@ -5773,11 +5499,11 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
           : seriesDosesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       supportingImmunization: supportingImmunization == freezed
-          ? _value.supportingImmunization
+          ? _value._supportingImmunization
           : supportingImmunization // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       supportingPatientInformation: supportingPatientInformation == freezed
-          ? _value.supportingPatientInformation
+          ? _value._supportingPatientInformation
           : supportingPatientInformation // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -5790,14 +5516,14 @@ class _$_ImmunizationRecommendationRecommendation
     extends _ImmunizationRecommendationRecommendation {
   _$_ImmunizationRecommendationRecommendation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.vaccineCode,
-      this.targetDisease,
-      this.contraindicatedVaccineCode,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? vaccineCode,
+      final List<CodeableConcept>? targetDisease,
+      final List<CodeableConcept>? contraindicatedVaccineCode,
       required this.forecastStatus,
-      this.forecastReason,
-      this.dateCriterion,
+      final List<CodeableConcept>? forecastReason,
+      final List<ImmunizationRecommendationDateCriterion>? dateCriterion,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.series,
@@ -5806,9 +5532,18 @@ class _$_ImmunizationRecommendationRecommendation
       @JsonKey(name: '_doseNumber') this.doseNumberElement,
       this.seriesDoses,
       @JsonKey(name: '_seriesDoses') this.seriesDosesElement,
-      this.supportingImmunization,
-      this.supportingPatientInformation})
-      : super._();
+      final List<Reference>? supportingImmunization,
+      final List<Reference>? supportingPatientInformation})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _vaccineCode = vaccineCode,
+        _targetDisease = targetDisease,
+        _contraindicatedVaccineCode = contraindicatedVaccineCode,
+        _forecastReason = forecastReason,
+        _dateCriterion = dateCriterion,
+        _supportingImmunization = supportingImmunization,
+        _supportingPatientInformation = supportingPatientInformation,
+        super._();
 
   factory _$_ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =>
@@ -5816,23 +5551,72 @@ class _$_ImmunizationRecommendationRecommendation
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _vaccineCode;
   @override
-  final List<CodeableConcept>? vaccineCode;
+  List<CodeableConcept>? get vaccineCode {
+    final value = _vaccineCode;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _targetDisease;
   @override
-  final List<CodeableConcept>? targetDisease;
+  List<CodeableConcept>? get targetDisease {
+    final value = _targetDisease;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _contraindicatedVaccineCode;
   @override
-  final List<CodeableConcept>? contraindicatedVaccineCode;
+  List<CodeableConcept>? get contraindicatedVaccineCode {
+    final value = _contraindicatedVaccineCode;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept forecastStatus;
+  final List<CodeableConcept>? _forecastReason;
   @override
-  final List<CodeableConcept>? forecastReason;
+  List<CodeableConcept>? get forecastReason {
+    final value = _forecastReason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ImmunizationRecommendationDateCriterion>? _dateCriterion;
   @override
-  final List<ImmunizationRecommendationDateCriterion>? dateCriterion;
+  List<ImmunizationRecommendationDateCriterion>? get dateCriterion {
+    final value = _dateCriterion;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? description;
   @override
@@ -5853,10 +5637,23 @@ class _$_ImmunizationRecommendationRecommendation
   @override
   @JsonKey(name: '_seriesDoses')
   final Element? seriesDosesElement;
+  final List<Reference>? _supportingImmunization;
   @override
-  final List<Reference>? supportingImmunization;
+  List<Reference>? get supportingImmunization {
+    final value = _supportingImmunization;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _supportingPatientInformation;
   @override
-  final List<Reference>? supportingPatientInformation;
+  List<Reference>? get supportingPatientInformation {
+    final value = _supportingPatientInformation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -5867,24 +5664,25 @@ class _$_ImmunizationRecommendationRecommendation
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationRecommendationRecommendation &&
+            other is _$_ImmunizationRecommendationRecommendation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.vaccineCode, vaccineCode) &&
+                .equals(other._vaccineCode, _vaccineCode) &&
             const DeepCollectionEquality()
-                .equals(other.targetDisease, targetDisease) &&
+                .equals(other._targetDisease, _targetDisease) &&
             const DeepCollectionEquality().equals(
-                other.contraindicatedVaccineCode, contraindicatedVaccineCode) &&
+                other._contraindicatedVaccineCode,
+                _contraindicatedVaccineCode) &&
             const DeepCollectionEquality()
                 .equals(other.forecastStatus, forecastStatus) &&
             const DeepCollectionEquality()
-                .equals(other.forecastReason, forecastReason) &&
+                .equals(other._forecastReason, _forecastReason) &&
             const DeepCollectionEquality()
-                .equals(other.dateCriterion, dateCriterion) &&
+                .equals(other._dateCriterion, _dateCriterion) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
@@ -5900,25 +5698,26 @@ class _$_ImmunizationRecommendationRecommendation
                 .equals(other.seriesDoses, seriesDoses) &&
             const DeepCollectionEquality()
                 .equals(other.seriesDosesElement, seriesDosesElement) &&
-            const DeepCollectionEquality()
-                .equals(other.supportingImmunization, supportingImmunization) &&
             const DeepCollectionEquality().equals(
-                other.supportingPatientInformation,
-                supportingPatientInformation));
+                other._supportingImmunization, _supportingImmunization) &&
+            const DeepCollectionEquality().equals(
+                other._supportingPatientInformation,
+                _supportingPatientInformation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(vaccineCode),
-        const DeepCollectionEquality().hash(targetDisease),
-        const DeepCollectionEquality().hash(contraindicatedVaccineCode),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_vaccineCode),
+        const DeepCollectionEquality().hash(_targetDisease),
+        const DeepCollectionEquality().hash(_contraindicatedVaccineCode),
         const DeepCollectionEquality().hash(forecastStatus),
-        const DeepCollectionEquality().hash(forecastReason),
-        const DeepCollectionEquality().hash(dateCriterion),
+        const DeepCollectionEquality().hash(_forecastReason),
+        const DeepCollectionEquality().hash(_dateCriterion),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
         const DeepCollectionEquality().hash(series),
@@ -5927,45 +5726,47 @@ class _$_ImmunizationRecommendationRecommendation
         const DeepCollectionEquality().hash(doseNumberElement),
         const DeepCollectionEquality().hash(seriesDoses),
         const DeepCollectionEquality().hash(seriesDosesElement),
-        const DeepCollectionEquality().hash(supportingImmunization),
-        const DeepCollectionEquality().hash(supportingPatientInformation)
+        const DeepCollectionEquality().hash(_supportingImmunization),
+        const DeepCollectionEquality().hash(_supportingPatientInformation)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationRecommendationRecommendationCopyWith<
-          _ImmunizationRecommendationRecommendation>
-      get copyWith => __$ImmunizationRecommendationRecommendationCopyWithImpl<
-          _ImmunizationRecommendationRecommendation>(this, _$identity);
+  _$$_ImmunizationRecommendationRecommendationCopyWith<
+          _$_ImmunizationRecommendationRecommendation>
+      get copyWith => __$$_ImmunizationRecommendationRecommendationCopyWithImpl<
+          _$_ImmunizationRecommendationRecommendation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationRecommendationRecommendationToJson(this);
+    return _$$_ImmunizationRecommendationRecommendationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationRecommendationRecommendation
     extends ImmunizationRecommendationRecommendation {
   factory _ImmunizationRecommendationRecommendation(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<CodeableConcept>? vaccineCode,
-          List<CodeableConcept>? targetDisease,
-          List<CodeableConcept>? contraindicatedVaccineCode,
-          required CodeableConcept forecastStatus,
-          List<CodeableConcept>? forecastReason,
-          List<ImmunizationRecommendationDateCriterion>? dateCriterion,
-          String? description,
-          @JsonKey(name: '_description') Element? descriptionElement,
-          String? series,
-          @JsonKey(name: '_series') Element? seriesElement,
-          String? doseNumber,
-          @JsonKey(name: '_doseNumber') Element? doseNumberElement,
-          String? seriesDoses,
-          @JsonKey(name: '_seriesDoses') Element? seriesDosesElement,
-          List<Reference>? supportingImmunization,
-          List<Reference>? supportingPatientInformation}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<CodeableConcept>? vaccineCode,
+          final List<CodeableConcept>? targetDisease,
+          final List<CodeableConcept>? contraindicatedVaccineCode,
+          required final CodeableConcept forecastStatus,
+          final List<CodeableConcept>? forecastReason,
+          final List<ImmunizationRecommendationDateCriterion>? dateCriterion,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final String? series,
+          @JsonKey(name: '_series') final Element? seriesElement,
+          final String? doseNumber,
+          @JsonKey(name: '_doseNumber') final Element? doseNumberElement,
+          final String? seriesDoses,
+          @JsonKey(name: '_seriesDoses') final Element? seriesDosesElement,
+          final List<Reference>? supportingImmunization,
+          final List<Reference>? supportingPatientInformation}) =
       _$_ImmunizationRecommendationRecommendation;
   _ImmunizationRecommendationRecommendation._() : super._();
 
@@ -6018,8 +5819,8 @@ abstract class _ImmunizationRecommendationRecommendation
   List<Reference>? get supportingPatientInformation;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationRecommendationRecommendationCopyWith<
-          _ImmunizationRecommendationRecommendation>
+  _$$_ImmunizationRecommendationRecommendationCopyWith<
+          _$_ImmunizationRecommendationRecommendation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6028,36 +5829,6 @@ ImmunizationRecommendationDateCriterion
         Map<String, dynamic> json) {
   return _ImmunizationRecommendationDateCriterion.fromJson(json);
 }
-
-/// @nodoc
-class _$ImmunizationRecommendationDateCriterionTearOff {
-  const _$ImmunizationRecommendationDateCriterionTearOff();
-
-  _ImmunizationRecommendationDateCriterion call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept code,
-      FhirDateTime? value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _ImmunizationRecommendationDateCriterion(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  ImmunizationRecommendationDateCriterion fromJson(Map<String, Object?> json) {
-    return ImmunizationRecommendationDateCriterion.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ImmunizationRecommendationDateCriterion =
-    _$ImmunizationRecommendationDateCriterionTearOff();
 
 /// @nodoc
 mixin _$ImmunizationRecommendationDateCriterion {
@@ -6163,12 +5934,12 @@ class _$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ImmunizationRecommendationDateCriterionCopyWith<$Res>
+abstract class _$$_ImmunizationRecommendationDateCriterionCopyWith<$Res>
     implements $ImmunizationRecommendationDateCriterionCopyWith<$Res> {
-  factory _$ImmunizationRecommendationDateCriterionCopyWith(
-          _ImmunizationRecommendationDateCriterion value,
-          $Res Function(_ImmunizationRecommendationDateCriterion) then) =
-      __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>;
+  factory _$$_ImmunizationRecommendationDateCriterionCopyWith(
+          _$_ImmunizationRecommendationDateCriterion value,
+          $Res Function(_$_ImmunizationRecommendationDateCriterion) then) =
+      __$$_ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -6185,18 +5956,18 @@ abstract class _$ImmunizationRecommendationDateCriterionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
+class __$$_ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
     extends _$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
-    implements _$ImmunizationRecommendationDateCriterionCopyWith<$Res> {
-  __$ImmunizationRecommendationDateCriterionCopyWithImpl(
-      _ImmunizationRecommendationDateCriterion _value,
-      $Res Function(_ImmunizationRecommendationDateCriterion) _then)
+    implements _$$_ImmunizationRecommendationDateCriterionCopyWith<$Res> {
+  __$$_ImmunizationRecommendationDateCriterionCopyWithImpl(
+      _$_ImmunizationRecommendationDateCriterion _value,
+      $Res Function(_$_ImmunizationRecommendationDateCriterion) _then)
       : super(_value,
-            (v) => _then(v as _ImmunizationRecommendationDateCriterion));
+            (v) => _then(v as _$_ImmunizationRecommendationDateCriterion));
 
   @override
-  _ImmunizationRecommendationDateCriterion get _value =>
-      super._value as _ImmunizationRecommendationDateCriterion;
+  _$_ImmunizationRecommendationDateCriterion get _value =>
+      super._value as _$_ImmunizationRecommendationDateCriterion;
 
   @override
   $Res call({
@@ -6207,17 +5978,17 @@ class __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_ImmunizationRecommendationDateCriterion(
+    return _then(_$_ImmunizationRecommendationDateCriterion(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -6242,12 +6013,14 @@ class _$_ImmunizationRecommendationDateCriterion
     extends _ImmunizationRecommendationDateCriterion {
   _$_ImmunizationRecommendationDateCriterion(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.code,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =>
@@ -6255,11 +6028,25 @@ class _$_ImmunizationRecommendationDateCriterion
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept code;
   @override
@@ -6277,50 +6064,53 @@ class _$_ImmunizationRecommendationDateCriterion
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ImmunizationRecommendationDateCriterion &&
+            other is _$_ImmunizationRecommendationDateCriterion &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.value, value) &&
             const DeepCollectionEquality()
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(value),
       const DeepCollectionEquality().hash(valueElement));
 
   @JsonKey(ignore: true)
   @override
-  _$ImmunizationRecommendationDateCriterionCopyWith<
-          _ImmunizationRecommendationDateCriterion>
-      get copyWith => __$ImmunizationRecommendationDateCriterionCopyWithImpl<
-          _ImmunizationRecommendationDateCriterion>(this, _$identity);
+  _$$_ImmunizationRecommendationDateCriterionCopyWith<
+          _$_ImmunizationRecommendationDateCriterion>
+      get copyWith => __$$_ImmunizationRecommendationDateCriterionCopyWithImpl<
+          _$_ImmunizationRecommendationDateCriterion>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationRecommendationDateCriterionToJson(this);
+    return _$$_ImmunizationRecommendationDateCriterionToJson(
+      this,
+    );
   }
 }
 
 abstract class _ImmunizationRecommendationDateCriterion
     extends ImmunizationRecommendationDateCriterion {
   factory _ImmunizationRecommendationDateCriterion(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept code,
-          FhirDateTime? value,
-          @JsonKey(name: '_value') Element? valueElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept code,
+          final FhirDateTime? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ImmunizationRecommendationDateCriterion;
   _ImmunizationRecommendationDateCriterion._() : super._();
 
@@ -6344,8 +6134,8 @@ abstract class _ImmunizationRecommendationDateCriterion
   Element? get valueElement;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationRecommendationDateCriterionCopyWith<
-          _ImmunizationRecommendationDateCriterion>
+  _$$_ImmunizationRecommendationDateCriterionCopyWith<
+          _$_ImmunizationRecommendationDateCriterion>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6354,70 +6144,7 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MedicationTearOff {
-  const _$MedicationTearOff();
-
-  _Medication call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-          R5ResourceType resourceType = R5ResourceType.Medication,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? code,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? sponsor,
-      CodeableConcept? doseForm,
-      Ratio? amount,
-      List<MedicationIngredient>? ingredient,
-      MedicationBatch? batch}) {
-    return _Medication(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      code: code,
-      status: status,
-      statusElement: statusElement,
-      sponsor: sponsor,
-      doseForm: doseForm,
-      amount: amount,
-      ingredient: ingredient,
-      batch: batch,
-    );
-  }
-
-  Medication fromJson(Map<String, Object?> json) {
-    return Medication.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Medication = _$MedicationTearOff();
-
-/// @nodoc
 mixin _$Medication {
-  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -6438,9 +6165,10 @@ mixin _$Medication {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Reference? get sponsor => throw _privateConstructorUsedError;
+  Reference? get marketingAuthorizationHolder =>
+      throw _privateConstructorUsedError;
   CodeableConcept? get doseForm => throw _privateConstructorUsedError;
-  Ratio? get amount => throw _privateConstructorUsedError;
+  Ratio? get totalVolume => throw _privateConstructorUsedError;
   List<MedicationIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
   MedicationBatch? get batch => throw _privateConstructorUsedError;
@@ -6457,29 +6185,24 @@ abstract class $MedicationCopyWith<$Res> {
           Medication value, $Res Function(Medication) then) =
       _$MedicationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? sponsor,
+      @JsonKey(name: '_status') Element? statusElement,
+      Reference? marketingAuthorizationHolder,
       CodeableConcept? doseForm,
-      Ratio? amount,
+      Ratio? totalVolume,
       List<MedicationIngredient>? ingredient,
       MedicationBatch? batch});
 
@@ -6489,9 +6212,9 @@ abstract class $MedicationCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get statusElement;
-  $ReferenceCopyWith<$Res>? get sponsor;
+  $ReferenceCopyWith<$Res>? get marketingAuthorizationHolder;
   $CodeableConceptCopyWith<$Res>? get doseForm;
-  $RatioCopyWith<$Res>? get amount;
+  $RatioCopyWith<$Res>? get totalVolume;
   $MedicationBatchCopyWith<$Res>? get batch;
 }
 
@@ -6520,9 +6243,9 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
     Object? code = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? sponsor = freezed,
+    Object? marketingAuthorizationHolder = freezed,
     Object? doseForm = freezed,
-    Object? amount = freezed,
+    Object? totalVolume = freezed,
     Object? ingredient = freezed,
     Object? batch = freezed,
   }) {
@@ -6587,17 +6310,17 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      sponsor: sponsor == freezed
-          ? _value.sponsor
-          : sponsor // ignore: cast_nullable_to_non_nullable
+      marketingAuthorizationHolder: marketingAuthorizationHolder == freezed
+          ? _value.marketingAuthorizationHolder
+          : marketingAuthorizationHolder // ignore: cast_nullable_to_non_nullable
               as Reference?,
       doseForm: doseForm == freezed
           ? _value.doseForm
           : doseForm // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      amount: amount == freezed
-          ? _value.amount
-          : amount // ignore: cast_nullable_to_non_nullable
+      totalVolume: totalVolume == freezed
+          ? _value.totalVolume
+          : totalVolume // ignore: cast_nullable_to_non_nullable
               as Ratio?,
       ingredient: ingredient == freezed
           ? _value.ingredient
@@ -6677,13 +6400,14 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get sponsor {
-    if (_value.sponsor == null) {
+  $ReferenceCopyWith<$Res>? get marketingAuthorizationHolder {
+    if (_value.marketingAuthorizationHolder == null) {
       return null;
     }
 
-    return $ReferenceCopyWith<$Res>(_value.sponsor!, (value) {
-      return _then(_value.copyWith(sponsor: value));
+    return $ReferenceCopyWith<$Res>(_value.marketingAuthorizationHolder!,
+        (value) {
+      return _then(_value.copyWith(marketingAuthorizationHolder: value));
     });
   }
 
@@ -6699,13 +6423,13 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
   }
 
   @override
-  $RatioCopyWith<$Res>? get amount {
-    if (_value.amount == null) {
+  $RatioCopyWith<$Res>? get totalVolume {
+    if (_value.totalVolume == null) {
       return null;
     }
 
-    return $RatioCopyWith<$Res>(_value.amount!, (value) {
-      return _then(_value.copyWith(amount: value));
+    return $RatioCopyWith<$Res>(_value.totalVolume!, (value) {
+      return _then(_value.copyWith(totalVolume: value));
     });
   }
 
@@ -6722,35 +6446,31 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
-  factory _$MedicationCopyWith(
-          _Medication value, $Res Function(_Medication) then) =
-      __$MedicationCopyWithImpl<$Res>;
+abstract class _$$_MedicationCopyWith<$Res>
+    implements $MedicationCopyWith<$Res> {
+  factory _$$_MedicationCopyWith(
+          _$_Medication value, $Res Function(_$_Medication) then) =
+      __$$_MedicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? sponsor,
+      @JsonKey(name: '_status') Element? statusElement,
+      Reference? marketingAuthorizationHolder,
       CodeableConcept? doseForm,
-      Ratio? amount,
+      Ratio? totalVolume,
       List<MedicationIngredient>? ingredient,
       MedicationBatch? batch});
 
@@ -6767,24 +6487,24 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res>? get sponsor;
+  $ReferenceCopyWith<$Res>? get marketingAuthorizationHolder;
   @override
   $CodeableConceptCopyWith<$Res>? get doseForm;
   @override
-  $RatioCopyWith<$Res>? get amount;
+  $RatioCopyWith<$Res>? get totalVolume;
   @override
   $MedicationBatchCopyWith<$Res>? get batch;
 }
 
 /// @nodoc
-class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
-    implements _$MedicationCopyWith<$Res> {
-  __$MedicationCopyWithImpl(
-      _Medication _value, $Res Function(_Medication) _then)
-      : super(_value, (v) => _then(v as _Medication));
+class __$$_MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
+    implements _$$_MedicationCopyWith<$Res> {
+  __$$_MedicationCopyWithImpl(
+      _$_Medication _value, $Res Function(_$_Medication) _then)
+      : super(_value, (v) => _then(v as _$_Medication));
 
   @override
-  _Medication get _value => super._value as _Medication;
+  _$_Medication get _value => super._value as _$_Medication;
 
   @override
   $Res call({
@@ -6803,13 +6523,13 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
     Object? code = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? sponsor = freezed,
+    Object? marketingAuthorizationHolder = freezed,
     Object? doseForm = freezed,
-    Object? amount = freezed,
+    Object? totalVolume = freezed,
     Object? ingredient = freezed,
     Object? batch = freezed,
   }) {
-    return _then(_Medication(
+    return _then(_$_Medication(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -6843,19 +6563,19 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       code: code == freezed
@@ -6870,20 +6590,20 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      sponsor: sponsor == freezed
-          ? _value.sponsor
-          : sponsor // ignore: cast_nullable_to_non_nullable
+      marketingAuthorizationHolder: marketingAuthorizationHolder == freezed
+          ? _value.marketingAuthorizationHolder
+          : marketingAuthorizationHolder // ignore: cast_nullable_to_non_nullable
               as Reference?,
       doseForm: doseForm == freezed
           ? _value.doseForm
           : doseForm // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      amount: amount == freezed
-          ? _value.amount
-          : amount // ignore: cast_nullable_to_non_nullable
+      totalVolume: totalVolume == freezed
+          ? _value.totalVolume
+          : totalVolume // ignore: cast_nullable_to_non_nullable
               as Ratio?,
       ingredient: ingredient == freezed
-          ? _value.ingredient
+          ? _value._ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
               as List<MedicationIngredient>?,
       batch: batch == freezed
@@ -6898,38 +6618,38 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Medication extends _Medication {
   _$_Medication(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-          this.resourceType = R5ResourceType.Medication,
+      {this.resourceType = R5ResourceType.Medication,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.code,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      this.sponsor,
+      @JsonKey(name: '_status') this.statusElement,
+      this.marketingAuthorizationHolder,
       this.doseForm,
-      this.amount,
-      this.ingredient,
+      this.totalVolume,
+      final List<MedicationIngredient>? ingredient,
       this.batch})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _ingredient = ingredient,
+        super._();
 
   factory _$_Medication.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -6947,15 +6667,43 @@ class _$_Medication extends _Medication {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? code;
   @override
@@ -6964,26 +6712,33 @@ class _$_Medication extends _Medication {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Reference? sponsor;
+  final Reference? marketingAuthorizationHolder;
   @override
   final CodeableConcept? doseForm;
   @override
-  final Ratio? amount;
+  final Ratio? totalVolume;
+  final List<MedicationIngredient>? _ingredient;
   @override
-  final List<MedicationIngredient>? ingredient;
+  List<MedicationIngredient>? get ingredient {
+    final value = _ingredient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final MedicationBatch? batch;
 
   @override
   String toString() {
-    return 'Medication(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement, sponsor: $sponsor, doseForm: $doseForm, amount: $amount, ingredient: $ingredient, batch: $batch)';
+    return 'Medication(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement, marketingAuthorizationHolder: $marketingAuthorizationHolder, doseForm: $doseForm, totalVolume: $totalVolume, ingredient: $ingredient, batch: $batch)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Medication &&
+            other is _$_Medication &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -6996,25 +6751,30 @@ class _$_Medication extends _Medication {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.sponsor, sponsor) &&
+            const DeepCollectionEquality().equals(
+                other.marketingAuthorizationHolder,
+                marketingAuthorizationHolder) &&
             const DeepCollectionEquality().equals(other.doseForm, doseForm) &&
-            const DeepCollectionEquality().equals(other.amount, amount) &&
             const DeepCollectionEquality()
-                .equals(other.ingredient, ingredient) &&
+                .equals(other.totalVolume, totalVolume) &&
+            const DeepCollectionEquality()
+                .equals(other._ingredient, _ingredient) &&
             const DeepCollectionEquality().equals(other.batch, batch));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -7026,65 +6786,61 @@ class _$_Medication extends _Medication {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(code),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(sponsor),
+        const DeepCollectionEquality().hash(marketingAuthorizationHolder),
         const DeepCollectionEquality().hash(doseForm),
-        const DeepCollectionEquality().hash(amount),
-        const DeepCollectionEquality().hash(ingredient),
+        const DeepCollectionEquality().hash(totalVolume),
+        const DeepCollectionEquality().hash(_ingredient),
         const DeepCollectionEquality().hash(batch)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationCopyWith<_Medication> get copyWith =>
-      __$MedicationCopyWithImpl<_Medication>(this, _$identity);
+  _$$_MedicationCopyWith<_$_Medication> get copyWith =>
+      __$$_MedicationCopyWithImpl<_$_Medication>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationToJson(this);
+    return _$$_MedicationToJson(
+      this,
+    );
   }
 }
 
 abstract class _Medication extends Medication {
   factory _Medication(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? code,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? sponsor,
-      CodeableConcept? doseForm,
-      Ratio? amount,
-      List<MedicationIngredient>? ingredient,
-      MedicationBatch? batch}) = _$_Medication;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? code,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final Reference? marketingAuthorizationHolder,
+      final CodeableConcept? doseForm,
+      final Ratio? totalVolume,
+      final List<MedicationIngredient>? ingredient,
+      final MedicationBatch? batch}) = _$_Medication;
   _Medication._() : super._();
 
   factory _Medication.fromJson(Map<String, dynamic> json) =
       _$_Medication.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -7119,18 +6875,18 @@ abstract class _Medication extends Medication {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Reference? get sponsor;
+  Reference? get marketingAuthorizationHolder;
   @override
   CodeableConcept? get doseForm;
   @override
-  Ratio? get amount;
+  Ratio? get totalVolume;
   @override
   List<MedicationIngredient>? get ingredient;
   @override
   MedicationBatch? get batch;
   @override
   @JsonKey(ignore: true)
-  _$MedicationCopyWith<_Medication> get copyWith =>
+  _$$_MedicationCopyWith<_$_Medication> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7139,48 +6895,13 @@ MedicationIngredient _$MedicationIngredientFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MedicationIngredientTearOff {
-  const _$MedicationIngredientTearOff();
-
-  _MedicationIngredient call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
-      Boolean? isActive,
-      @JsonKey(name: '_isActive') Element? isActiveElement,
-      Ratio? strengthRatio,
-      CodeableConcept? strengthCodeableConcept,
-      Quantity? strengthQuantity}) {
-    return _MedicationIngredient(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      item: item,
-      isActive: isActive,
-      isActiveElement: isActiveElement,
-      strengthRatio: strengthRatio,
-      strengthCodeableConcept: strengthCodeableConcept,
-      strengthQuantity: strengthQuantity,
-    );
-  }
-
-  MedicationIngredient fromJson(Map<String, Object?> json) {
-    return MedicationIngredient.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationIngredient = _$MedicationIngredientTearOff();
-
-/// @nodoc
 mixin _$MedicationIngredient {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableReference? get item => throw _privateConstructorUsedError;
+  CodeableReference get item => throw _privateConstructorUsedError;
   Boolean? get isActive => throw _privateConstructorUsedError;
   @JsonKey(name: '_isActive')
   Element? get isActiveElement => throw _privateConstructorUsedError;
@@ -7204,14 +6925,14 @@ abstract class $MedicationIngredientCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
+      CodeableReference item,
       Boolean? isActive,
       @JsonKey(name: '_isActive') Element? isActiveElement,
       Ratio? strengthRatio,
       CodeableConcept? strengthCodeableConcept,
       Quantity? strengthQuantity});
 
-  $CodeableReferenceCopyWith<$Res>? get item;
+  $CodeableReferenceCopyWith<$Res> get item;
   $ElementCopyWith<$Res>? get isActiveElement;
   $RatioCopyWith<$Res>? get strengthRatio;
   $CodeableConceptCopyWith<$Res>? get strengthCodeableConcept;
@@ -7255,7 +6976,7 @@ class _$MedicationIngredientCopyWithImpl<$Res>
       item: item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -7280,12 +7001,8 @@ class _$MedicationIngredientCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res>? get item {
-    if (_value.item == null) {
-      return null;
-    }
-
-    return $CodeableReferenceCopyWith<$Res>(_value.item!, (value) {
+  $CodeableReferenceCopyWith<$Res> get item {
+    return $CodeableReferenceCopyWith<$Res>(_value.item, (value) {
       return _then(_value.copyWith(item: value));
     });
   }
@@ -7337,17 +7054,17 @@ class _$MedicationIngredientCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationIngredientCopyWith<$Res>
+abstract class _$$_MedicationIngredientCopyWith<$Res>
     implements $MedicationIngredientCopyWith<$Res> {
-  factory _$MedicationIngredientCopyWith(_MedicationIngredient value,
-          $Res Function(_MedicationIngredient) then) =
-      __$MedicationIngredientCopyWithImpl<$Res>;
+  factory _$$_MedicationIngredientCopyWith(_$_MedicationIngredient value,
+          $Res Function(_$_MedicationIngredient) then) =
+      __$$_MedicationIngredientCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
+      CodeableReference item,
       Boolean? isActive,
       @JsonKey(name: '_isActive') Element? isActiveElement,
       Ratio? strengthRatio,
@@ -7355,7 +7072,7 @@ abstract class _$MedicationIngredientCopyWith<$Res>
       Quantity? strengthQuantity});
 
   @override
-  $CodeableReferenceCopyWith<$Res>? get item;
+  $CodeableReferenceCopyWith<$Res> get item;
   @override
   $ElementCopyWith<$Res>? get isActiveElement;
   @override
@@ -7367,15 +7084,15 @@ abstract class _$MedicationIngredientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationIngredientCopyWithImpl<$Res>
+class __$$_MedicationIngredientCopyWithImpl<$Res>
     extends _$MedicationIngredientCopyWithImpl<$Res>
-    implements _$MedicationIngredientCopyWith<$Res> {
-  __$MedicationIngredientCopyWithImpl(
-      _MedicationIngredient _value, $Res Function(_MedicationIngredient) _then)
-      : super(_value, (v) => _then(v as _MedicationIngredient));
+    implements _$$_MedicationIngredientCopyWith<$Res> {
+  __$$_MedicationIngredientCopyWithImpl(_$_MedicationIngredient _value,
+      $Res Function(_$_MedicationIngredient) _then)
+      : super(_value, (v) => _then(v as _$_MedicationIngredient));
 
   @override
-  _MedicationIngredient get _value => super._value as _MedicationIngredient;
+  _$_MedicationIngredient get _value => super._value as _$_MedicationIngredient;
 
   @override
   $Res call({
@@ -7389,23 +7106,23 @@ class __$MedicationIngredientCopyWithImpl<$Res>
     Object? strengthCodeableConcept = freezed,
     Object? strengthQuantity = freezed,
   }) {
-    return _then(_MedicationIngredient(
+    return _then(_$_MedicationIngredient(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       item: item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -7435,28 +7152,44 @@ class __$MedicationIngredientCopyWithImpl<$Res>
 class _$_MedicationIngredient extends _MedicationIngredient {
   _$_MedicationIngredient(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.item,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.item,
       this.isActive,
       @JsonKey(name: '_isActive') this.isActiveElement,
       this.strengthRatio,
       this.strengthCodeableConcept,
       this.strengthQuantity})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationIngredient.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationIngredientFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final CodeableReference? item;
+  final CodeableReference item;
   @override
   final Boolean? isActive;
   @override
@@ -7478,12 +7211,12 @@ class _$_MedicationIngredient extends _MedicationIngredient {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationIngredient &&
+            other is _$_MedicationIngredient &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.item, item) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
             const DeepCollectionEquality()
@@ -7496,12 +7229,13 @@ class _$_MedicationIngredient extends _MedicationIngredient {
                 .equals(other.strengthQuantity, strengthQuantity));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(item),
       const DeepCollectionEquality().hash(isActive),
       const DeepCollectionEquality().hash(isActiveElement),
@@ -7511,27 +7245,29 @@ class _$_MedicationIngredient extends _MedicationIngredient {
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationIngredientCopyWith<_MedicationIngredient> get copyWith =>
-      __$MedicationIngredientCopyWithImpl<_MedicationIngredient>(
+  _$$_MedicationIngredientCopyWith<_$_MedicationIngredient> get copyWith =>
+      __$$_MedicationIngredientCopyWithImpl<_$_MedicationIngredient>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationIngredientToJson(this);
+    return _$$_MedicationIngredientToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationIngredient extends MedicationIngredient {
   factory _MedicationIngredient(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
-      Boolean? isActive,
-      @JsonKey(name: '_isActive') Element? isActiveElement,
-      Ratio? strengthRatio,
-      CodeableConcept? strengthCodeableConcept,
-      Quantity? strengthQuantity}) = _$_MedicationIngredient;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableReference item,
+      final Boolean? isActive,
+      @JsonKey(name: '_isActive') final Element? isActiveElement,
+      final Ratio? strengthRatio,
+      final CodeableConcept? strengthCodeableConcept,
+      final Quantity? strengthQuantity}) = _$_MedicationIngredient;
   _MedicationIngredient._() : super._();
 
   factory _MedicationIngredient.fromJson(Map<String, dynamic> json) =
@@ -7545,7 +7281,7 @@ abstract class _MedicationIngredient extends MedicationIngredient {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  CodeableReference? get item;
+  CodeableReference get item;
   @override
   Boolean? get isActive;
   @override
@@ -7559,44 +7295,13 @@ abstract class _MedicationIngredient extends MedicationIngredient {
   Quantity? get strengthQuantity;
   @override
   @JsonKey(ignore: true)
-  _$MedicationIngredientCopyWith<_MedicationIngredient> get copyWith =>
+  _$$_MedicationIngredientCopyWith<_$_MedicationIngredient> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 MedicationBatch _$MedicationBatchFromJson(Map<String, dynamic> json) {
   return _MedicationBatch.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationBatchTearOff {
-  const _$MedicationBatchTearOff();
-
-  _MedicationBatch call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? lotNumber,
-      @JsonKey(name: '_lotNumber') Element? lotNumberElement,
-      FhirDateTime? expirationDate,
-      @JsonKey(name: '_expirationDate') Element? expirationDateElement}) {
-    return _MedicationBatch(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      lotNumber: lotNumber,
-      lotNumberElement: lotNumberElement,
-      expirationDate: expirationDate,
-      expirationDateElement: expirationDateElement,
-    );
-  }
-
-  MedicationBatch fromJson(Map<String, Object?> json) {
-    return MedicationBatch.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationBatch = _$MedicationBatchTearOff();
 
 /// @nodoc
 mixin _$MedicationBatch {
@@ -7711,11 +7416,11 @@ class _$MedicationBatchCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationBatchCopyWith<$Res>
+abstract class _$$_MedicationBatchCopyWith<$Res>
     implements $MedicationBatchCopyWith<$Res> {
-  factory _$MedicationBatchCopyWith(
-          _MedicationBatch value, $Res Function(_MedicationBatch) then) =
-      __$MedicationBatchCopyWithImpl<$Res>;
+  factory _$$_MedicationBatchCopyWith(
+          _$_MedicationBatch value, $Res Function(_$_MedicationBatch) then) =
+      __$$_MedicationBatchCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -7733,15 +7438,15 @@ abstract class _$MedicationBatchCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationBatchCopyWithImpl<$Res>
+class __$$_MedicationBatchCopyWithImpl<$Res>
     extends _$MedicationBatchCopyWithImpl<$Res>
-    implements _$MedicationBatchCopyWith<$Res> {
-  __$MedicationBatchCopyWithImpl(
-      _MedicationBatch _value, $Res Function(_MedicationBatch) _then)
-      : super(_value, (v) => _then(v as _MedicationBatch));
+    implements _$$_MedicationBatchCopyWith<$Res> {
+  __$$_MedicationBatchCopyWithImpl(
+      _$_MedicationBatch _value, $Res Function(_$_MedicationBatch) _then)
+      : super(_value, (v) => _then(v as _$_MedicationBatch));
 
   @override
-  _MedicationBatch get _value => super._value as _MedicationBatch;
+  _$_MedicationBatch get _value => super._value as _$_MedicationBatch;
 
   @override
   $Res call({
@@ -7753,17 +7458,17 @@ class __$MedicationBatchCopyWithImpl<$Res>
     Object? expirationDate = freezed,
     Object? expirationDateElement = freezed,
   }) {
-    return _then(_MedicationBatch(
+    return _then(_$_MedicationBatch(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       lotNumber: lotNumber == freezed
@@ -7791,24 +7496,40 @@ class __$MedicationBatchCopyWithImpl<$Res>
 class _$_MedicationBatch extends _MedicationBatch {
   _$_MedicationBatch(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.lotNumber,
       @JsonKey(name: '_lotNumber') this.lotNumberElement,
       this.expirationDate,
       @JsonKey(name: '_expirationDate') this.expirationDateElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationBatch.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationBatchFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? lotNumber;
   @override
@@ -7829,12 +7550,12 @@ class _$_MedicationBatch extends _MedicationBatch {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationBatch &&
+            other is _$_MedicationBatch &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.lotNumber, lotNumber) &&
             const DeepCollectionEquality()
                 .equals(other.lotNumberElement, lotNumberElement) &&
@@ -7844,12 +7565,13 @@ class _$_MedicationBatch extends _MedicationBatch {
                 .equals(other.expirationDateElement, expirationDateElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(lotNumber),
       const DeepCollectionEquality().hash(lotNumberElement),
       const DeepCollectionEquality().hash(expirationDate),
@@ -7857,25 +7579,29 @@ class _$_MedicationBatch extends _MedicationBatch {
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationBatchCopyWith<_MedicationBatch> get copyWith =>
-      __$MedicationBatchCopyWithImpl<_MedicationBatch>(this, _$identity);
+  _$$_MedicationBatchCopyWith<_$_MedicationBatch> get copyWith =>
+      __$$_MedicationBatchCopyWithImpl<_$_MedicationBatch>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationBatchToJson(this);
+    return _$$_MedicationBatchToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationBatch extends MedicationBatch {
   factory _MedicationBatch(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? lotNumber,
-          @JsonKey(name: '_lotNumber') Element? lotNumberElement,
-          FhirDateTime? expirationDate,
-          @JsonKey(name: '_expirationDate') Element? expirationDateElement}) =
-      _$_MedicationBatch;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? lotNumber,
+      @JsonKey(name: '_lotNumber')
+          final Element? lotNumberElement,
+      final FhirDateTime? expirationDate,
+      @JsonKey(name: '_expirationDate')
+          final Element? expirationDateElement}) = _$_MedicationBatch;
   _MedicationBatch._() : super._();
 
   factory _MedicationBatch.fromJson(Map<String, dynamic> json) =
@@ -7900,7 +7626,7 @@ abstract class _MedicationBatch extends MedicationBatch {
   Element? get expirationDateElement;
   @override
   @JsonKey(ignore: true)
-  _$MedicationBatchCopyWith<_MedicationBatch> get copyWith =>
+  _$$_MedicationBatchCopyWith<_$_MedicationBatch> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7910,107 +7636,7 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 }
 
 /// @nodoc
-class _$MedicationAdministrationTearOff {
-  const _$MedicationAdministrationTearOff();
-
-  _MedicationAdministration call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-          R5ResourceType resourceType = R5ResourceType.MedicationAdministration,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? statusReason,
-      List<CodeableConcept>? category,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      List<Reference>? supportingInformation,
-      FhirDateTime? occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime')
-          Element? occurenceDateTimeElement,
-      Period? occurencePeriod,
-      FhirDateTime? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
-      List<MedicationAdministrationPerformer>? performer,
-      List<CodeableReference>? reason,
-      Reference? request,
-      List<Reference>? device,
-      List<Annotation>? note,
-      MedicationAdministrationDosage? dosage,
-      List<Reference>? eventHistory}) {
-    return _MedicationAdministration(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      instantiatesCanonical: instantiatesCanonical,
-      instantiatesUri: instantiatesUri,
-      instantiatesUriElement: instantiatesUriElement,
-      basedOn: basedOn,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      statusReason: statusReason,
-      category: category,
-      medication: medication,
-      subject: subject,
-      encounter: encounter,
-      supportingInformation: supportingInformation,
-      occurenceDateTime: occurenceDateTime,
-      occurenceDateTimeElement: occurenceDateTimeElement,
-      occurencePeriod: occurencePeriod,
-      recorded: recorded,
-      recordedElement: recordedElement,
-      performer: performer,
-      reason: reason,
-      request: request,
-      device: device,
-      note: note,
-      dosage: dosage,
-      eventHistory: eventHistory,
-    );
-  }
-
-  MedicationAdministration fromJson(Map<String, Object?> json) {
-    return MedicationAdministration.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationAdministration = _$MedicationAdministrationTearOff();
-
-/// @nodoc
 mixin _$MedicationAdministration {
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -8040,7 +7666,7 @@ mixin _$MedicationAdministration {
   Element? get statusElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get statusReason => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
-  CodeableReference? get medication => throw _privateConstructorUsedError;
+  CodeableReference get medication => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
   List<Reference>? get supportingInformation =>
@@ -8052,6 +7678,11 @@ mixin _$MedicationAdministration {
   FhirDateTime? get recorded => throw _privateConstructorUsedError;
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
+  Boolean? get isSubPotent => throw _privateConstructorUsedError;
+  @JsonKey(name: '_isSubPotent')
+  Element? get isSubPotentElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get subPotentReason =>
+      throw _privateConstructorUsedError;
   List<MedicationAdministrationPerformer>? get performer =>
       throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
@@ -8074,44 +7705,39 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
           $Res Function(MedicationAdministration) then) =
       _$MedicationAdministrationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? statusReason,
       List<CodeableConcept>? category,
-      CodeableReference? medication,
+      CodeableReference medication,
       Reference subject,
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime')
-          Element? occurenceDateTimeElement,
+      @JsonKey(name: '_occurenceDateTime') Element? occurenceDateTimeElement,
       Period? occurencePeriod,
       FhirDateTime? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
+      Boolean? isSubPotent,
+      @JsonKey(name: '_isSubPotent') Element? isSubPotentElement,
+      List<CodeableConcept>? subPotentReason,
       List<MedicationAdministrationPerformer>? performer,
       List<CodeableReference>? reason,
       Reference? request,
@@ -8125,12 +7751,13 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $CodeableReferenceCopyWith<$Res> get medication;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
   $ElementCopyWith<$Res>? get occurenceDateTimeElement;
   $PeriodCopyWith<$Res>? get occurencePeriod;
   $ElementCopyWith<$Res>? get recordedElement;
+  $ElementCopyWith<$Res>? get isSubPotentElement;
   $ReferenceCopyWith<$Res>? get request;
   $MedicationAdministrationDosageCopyWith<$Res>? get dosage;
 }
@@ -8176,6 +7803,9 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
     Object? occurencePeriod = freezed,
     Object? recorded = freezed,
     Object? recordedElement = freezed,
+    Object? isSubPotent = freezed,
+    Object? isSubPotentElement = freezed,
+    Object? subPotentReason = freezed,
     Object? performer = freezed,
     Object? reason = freezed,
     Object? request = freezed,
@@ -8272,7 +7902,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -8305,6 +7935,18 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      isSubPotent: isSubPotent == freezed
+          ? _value.isSubPotent
+          : isSubPotent // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      isSubPotentElement: isSubPotentElement == freezed
+          ? _value.isSubPotentElement
+          : isSubPotentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subPotentReason: subPotentReason == freezed
+          ? _value.subPotentReason
+          : subPotentReason // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       performer: performer == freezed
           ? _value.performer
           : performer // ignore: cast_nullable_to_non_nullable
@@ -8392,12 +8034,8 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res>? get medication {
-    if (_value.medication == null) {
-      return null;
-    }
-
-    return $CodeableReferenceCopyWith<$Res>(_value.medication!, (value) {
+  $CodeableReferenceCopyWith<$Res> get medication {
+    return $CodeableReferenceCopyWith<$Res>(_value.medication, (value) {
       return _then(_value.copyWith(medication: value));
     });
   }
@@ -8454,6 +8092,17 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get isSubPotentElement {
+    if (_value.isSubPotentElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.isSubPotentElement!, (value) {
+      return _then(_value.copyWith(isSubPotentElement: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
@@ -8478,51 +8127,47 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationAdministrationCopyWith<$Res>
+abstract class _$$_MedicationAdministrationCopyWith<$Res>
     implements $MedicationAdministrationCopyWith<$Res> {
-  factory _$MedicationAdministrationCopyWith(_MedicationAdministration value,
-          $Res Function(_MedicationAdministration) then) =
-      __$MedicationAdministrationCopyWithImpl<$Res>;
+  factory _$$_MedicationAdministrationCopyWith(
+          _$_MedicationAdministration value,
+          $Res Function(_$_MedicationAdministration) then) =
+      __$$_MedicationAdministrationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? statusReason,
       List<CodeableConcept>? category,
-      CodeableReference? medication,
+      CodeableReference medication,
       Reference subject,
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime')
-          Element? occurenceDateTimeElement,
+      @JsonKey(name: '_occurenceDateTime') Element? occurenceDateTimeElement,
       Period? occurencePeriod,
       FhirDateTime? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
+      Boolean? isSubPotent,
+      @JsonKey(name: '_isSubPotent') Element? isSubPotentElement,
+      List<CodeableConcept>? subPotentReason,
       List<MedicationAdministrationPerformer>? performer,
       List<CodeableReference>? reason,
       Reference? request,
@@ -8542,7 +8187,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $CodeableReferenceCopyWith<$Res> get medication;
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
@@ -8554,22 +8199,24 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get recordedElement;
   @override
+  $ElementCopyWith<$Res>? get isSubPotentElement;
+  @override
   $ReferenceCopyWith<$Res>? get request;
   @override
   $MedicationAdministrationDosageCopyWith<$Res>? get dosage;
 }
 
 /// @nodoc
-class __$MedicationAdministrationCopyWithImpl<$Res>
+class __$$_MedicationAdministrationCopyWithImpl<$Res>
     extends _$MedicationAdministrationCopyWithImpl<$Res>
-    implements _$MedicationAdministrationCopyWith<$Res> {
-  __$MedicationAdministrationCopyWithImpl(_MedicationAdministration _value,
-      $Res Function(_MedicationAdministration) _then)
-      : super(_value, (v) => _then(v as _MedicationAdministration));
+    implements _$$_MedicationAdministrationCopyWith<$Res> {
+  __$$_MedicationAdministrationCopyWithImpl(_$_MedicationAdministration _value,
+      $Res Function(_$_MedicationAdministration) _then)
+      : super(_value, (v) => _then(v as _$_MedicationAdministration));
 
   @override
-  _MedicationAdministration get _value =>
-      super._value as _MedicationAdministration;
+  _$_MedicationAdministration get _value =>
+      super._value as _$_MedicationAdministration;
 
   @override
   $Res call({
@@ -8603,6 +8250,9 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
     Object? occurencePeriod = freezed,
     Object? recorded = freezed,
     Object? recordedElement = freezed,
+    Object? isSubPotent = freezed,
+    Object? isSubPotentElement = freezed,
+    Object? subPotentReason = freezed,
     Object? performer = freezed,
     Object? reason = freezed,
     Object? request = freezed,
@@ -8611,7 +8261,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
     Object? dosage = freezed,
     Object? eventHistory = freezed,
   }) {
-    return _then(_MedicationAdministration(
+    return _then(_$_MedicationAdministration(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -8645,39 +8295,39 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       instantiatesCanonical: instantiatesCanonical == freezed
-          ? _value.instantiatesCanonical
+          ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       instantiatesUri: instantiatesUri == freezed
-          ? _value.instantiatesUri
+          ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
-          ? _value.instantiatesUriElement
+          ? _value._instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: partOf == freezed
-          ? _value.partOf
+          ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
@@ -8689,17 +8339,17 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       statusReason: statusReason == freezed
-          ? _value.statusReason
+          ? _value._statusReason
           : statusReason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -8709,7 +8359,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : encounter // ignore: cast_nullable_to_non_nullable
               as Reference?,
       supportingInformation: supportingInformation == freezed
-          ? _value.supportingInformation
+          ? _value._supportingInformation
           : supportingInformation // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       occurenceDateTime: occurenceDateTime == freezed
@@ -8732,12 +8382,24 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      isSubPotent: isSubPotent == freezed
+          ? _value.isSubPotent
+          : isSubPotent // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      isSubPotentElement: isSubPotentElement == freezed
+          ? _value.isSubPotentElement
+          : isSubPotentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subPotentReason: subPotentReason == freezed
+          ? _value._subPotentReason
+          : subPotentReason // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       performer: performer == freezed
-          ? _value.performer
+          ? _value._performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<MedicationAdministrationPerformer>?,
       reason: reason == freezed
-          ? _value.reason
+          ? _value._reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
       request: request == freezed
@@ -8745,11 +8407,11 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
       device: device == freezed
-          ? _value.device
+          ? _value._device
           : device // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       dosage: dosage == freezed
@@ -8757,7 +8419,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : dosage // ignore: cast_nullable_to_non_nullable
               as MedicationAdministrationDosage?,
       eventHistory: eventHistory == freezed
-          ? _value.eventHistory
+          ? _value._eventHistory
           : eventHistory // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -8768,8 +8430,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-          this.resourceType = R5ResourceType.MedicationAdministration,
+      {this.resourceType = R5ResourceType.MedicationAdministration,
       this.id,
       this.meta,
       this.implicitRules,
@@ -8779,26 +8440,26 @@ class _$_MedicationAdministration extends _MedicationAdministration {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.instantiatesCanonical,
-      this.instantiatesUri,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Canonical>? instantiatesCanonical,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          this.instantiatesUriElement,
-      this.basedOn,
-      this.partOf,
+          final List<Element>? instantiatesUriElement,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.statusReason,
-      this.category,
-      this.medication,
+      final List<CodeableConcept>? statusReason,
+      final List<CodeableConcept>? category,
+      required this.medication,
       required this.subject,
       this.encounter,
-      this.supportingInformation,
+      final List<Reference>? supportingInformation,
       this.occurenceDateTime,
       @JsonKey(name: '_occurenceDateTime')
           this.occurenceDateTimeElement,
@@ -8806,20 +8467,42 @@ class _$_MedicationAdministration extends _MedicationAdministration {
       this.recorded,
       @JsonKey(name: '_recorded')
           this.recordedElement,
-      this.performer,
-      this.reason,
+      this.isSubPotent,
+      @JsonKey(name: '_isSubPotent')
+          this.isSubPotentElement,
+      final List<CodeableConcept>? subPotentReason,
+      final List<MedicationAdministrationPerformer>? performer,
+      final List<CodeableReference>? reason,
       this.request,
-      this.device,
-      this.note,
+      final List<Reference>? device,
+      final List<Annotation>? note,
       this.dosage,
-      this.eventHistory})
-      : super._();
+      final List<Reference>? eventHistory})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _instantiatesCanonical = instantiatesCanonical,
+        _instantiatesUri = instantiatesUri,
+        _instantiatesUriElement = instantiatesUriElement,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _statusReason = statusReason,
+        _category = category,
+        _supportingInformation = supportingInformation,
+        _subPotentReason = subPotentReason,
+        _performer = performer,
+        _reason = reason,
+        _device = device,
+        _note = note,
+        _eventHistory = eventHistory,
+        super._();
 
   factory _$_MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationAdministrationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -8837,43 +8520,127 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Canonical>? _instantiatesCanonical;
   @override
-  final List<Canonical>? instantiatesCanonical;
+  List<Canonical>? get instantiatesCanonical {
+    final value = _instantiatesCanonical;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirUri>? _instantiatesUri;
   @override
-  final List<FhirUri>? instantiatesUri;
+  List<FhirUri>? get instantiatesUri {
+    final value = _instantiatesUri;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _instantiatesUriElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  List<Element>? get instantiatesUriElement {
+    final value = _instantiatesUriElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _partOf;
   @override
-  final List<Reference>? partOf;
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+  final List<CodeableConcept>? _statusReason;
   @override
-  final List<CodeableConcept>? statusReason;
+  List<CodeableConcept>? get statusReason {
+    final value = _statusReason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _category;
   @override
-  final List<CodeableConcept>? category;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final CodeableReference? medication;
+  final CodeableReference medication;
   @override
   final Reference subject;
   @override
   final Reference? encounter;
+  final List<Reference>? _supportingInformation;
   @override
-  final List<Reference>? supportingInformation;
+  List<Reference>? get supportingInformation {
+    final value = _supportingInformation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? occurenceDateTime;
   @override
@@ -8887,30 +8654,78 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
   @override
-  final List<MedicationAdministrationPerformer>? performer;
+  final Boolean? isSubPotent;
   @override
-  final List<CodeableReference>? reason;
+  @JsonKey(name: '_isSubPotent')
+  final Element? isSubPotentElement;
+  final List<CodeableConcept>? _subPotentReason;
+  @override
+  List<CodeableConcept>? get subPotentReason {
+    final value = _subPotentReason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationAdministrationPerformer>? _performer;
+  @override
+  List<MedicationAdministrationPerformer>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableReference>? _reason;
+  @override
+  List<CodeableReference>? get reason {
+    final value = _reason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? request;
+  final List<Reference>? _device;
   @override
-  final List<Reference>? device;
+  List<Reference>? get device {
+    final value = _device;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final MedicationAdministrationDosage? dosage;
+  final List<Reference>? _eventHistory;
   @override
-  final List<Reference>? eventHistory;
+  List<Reference>? get eventHistory {
+    final value = _eventHistory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'MedicationAdministration(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medication: $medication, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, occurenceDateTime: $occurenceDateTime, occurenceDateTimeElement: $occurenceDateTimeElement, occurencePeriod: $occurencePeriod, recorded: $recorded, recordedElement: $recordedElement, performer: $performer, reason: $reason, request: $request, device: $device, note: $note, dosage: $dosage, eventHistory: $eventHistory)';
+    return 'MedicationAdministration(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medication: $medication, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, occurenceDateTime: $occurenceDateTime, occurenceDateTimeElement: $occurenceDateTimeElement, occurencePeriod: $occurencePeriod, recorded: $recorded, recordedElement: $recordedElement, isSubPotent: $isSubPotent, isSubPotentElement: $isSubPotentElement, subPotentReason: $subPotentReason, performer: $performer, reason: $reason, request: $request, device: $device, note: $note, dosage: $dosage, eventHistory: $eventHistory)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationAdministration &&
+            other is _$_MedicationAdministration &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -8923,33 +8738,34 @@ class _$_MedicationAdministration extends _MedicationAdministration {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesCanonical, instantiatesCanonical) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesUri, instantiatesUri) &&
+                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
             const DeepCollectionEquality()
-                .equals(other.instantiatesUriElement, instantiatesUriElement) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
-            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+                .equals(other._instantiatesUri, _instantiatesUri) &&
+            const DeepCollectionEquality().equals(
+                other._instantiatesUriElement, _instantiatesUriElement) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality()
-                .equals(other.statusReason, statusReason) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+                .equals(other._statusReason, _statusReason) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality()
                 .equals(other.medication, medication) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality().equals(other.encounter, encounter) &&
             const DeepCollectionEquality()
-                .equals(other.supportingInformation, supportingInformation) &&
+                .equals(other._supportingInformation, _supportingInformation) &&
             const DeepCollectionEquality()
                 .equals(other.occurenceDateTime, occurenceDateTime) &&
             const DeepCollectionEquality().equals(
@@ -8959,16 +8775,24 @@ class _$_MedicationAdministration extends _MedicationAdministration {
             const DeepCollectionEquality().equals(other.recorded, recorded) &&
             const DeepCollectionEquality()
                 .equals(other.recordedElement, recordedElement) &&
-            const DeepCollectionEquality().equals(other.performer, performer) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality()
+                .equals(other.isSubPotent, isSubPotent) &&
+            const DeepCollectionEquality()
+                .equals(other.isSubPotentElement, isSubPotentElement) &&
+            const DeepCollectionEquality()
+                .equals(other._subPotentReason, _subPotentReason) &&
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
+            const DeepCollectionEquality().equals(other._reason, _reason) &&
             const DeepCollectionEquality().equals(other.request, request) &&
-            const DeepCollectionEquality().equals(other.device, device) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality().equals(other._device, _device) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality().equals(other.dosage, dosage) &&
             const DeepCollectionEquality()
-                .equals(other.eventHistory, eventHistory));
+                .equals(other._eventHistory, _eventHistory));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -8980,103 +8804,110 @@ class _$_MedicationAdministration extends _MedicationAdministration {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(instantiatesCanonical),
-        const DeepCollectionEquality().hash(instantiatesUri),
-        const DeepCollectionEquality().hash(instantiatesUriElement),
-        const DeepCollectionEquality().hash(basedOn),
-        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_instantiatesCanonical),
+        const DeepCollectionEquality().hash(_instantiatesUri),
+        const DeepCollectionEquality().hash(_instantiatesUriElement),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(_partOf),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(statusReason),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(_statusReason),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(medication),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(encounter),
-        const DeepCollectionEquality().hash(supportingInformation),
+        const DeepCollectionEquality().hash(_supportingInformation),
         const DeepCollectionEquality().hash(occurenceDateTime),
         const DeepCollectionEquality().hash(occurenceDateTimeElement),
         const DeepCollectionEquality().hash(occurencePeriod),
         const DeepCollectionEquality().hash(recorded),
         const DeepCollectionEquality().hash(recordedElement),
-        const DeepCollectionEquality().hash(performer),
-        const DeepCollectionEquality().hash(reason),
+        const DeepCollectionEquality().hash(isSubPotent),
+        const DeepCollectionEquality().hash(isSubPotentElement),
+        const DeepCollectionEquality().hash(_subPotentReason),
+        const DeepCollectionEquality().hash(_performer),
+        const DeepCollectionEquality().hash(_reason),
         const DeepCollectionEquality().hash(request),
-        const DeepCollectionEquality().hash(device),
-        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(_device),
+        const DeepCollectionEquality().hash(_note),
         const DeepCollectionEquality().hash(dosage),
-        const DeepCollectionEquality().hash(eventHistory)
+        const DeepCollectionEquality().hash(_eventHistory)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationAdministrationCopyWith<_MedicationAdministration> get copyWith =>
-      __$MedicationAdministrationCopyWithImpl<_MedicationAdministration>(
-          this, _$identity);
+  _$$_MedicationAdministrationCopyWith<_$_MedicationAdministration>
+      get copyWith => __$$_MedicationAdministrationCopyWithImpl<
+          _$_MedicationAdministration>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationAdministrationToJson(this);
+    return _$$_MedicationAdministrationToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationAdministration extends MedicationAdministration {
   factory _MedicationAdministration(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Canonical>? instantiatesCanonical,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+          final List<Element>? instantiatesUriElement,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? statusReason,
-      List<CodeableConcept>? category,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      List<Reference>? supportingInformation,
-      FhirDateTime? occurenceDateTime,
+          final Element? statusElement,
+      final List<CodeableConcept>? statusReason,
+      final List<CodeableConcept>? category,
+      required final CodeableReference medication,
+      required final Reference subject,
+      final Reference? encounter,
+      final List<Reference>? supportingInformation,
+      final FhirDateTime? occurenceDateTime,
       @JsonKey(name: '_occurenceDateTime')
-          Element? occurenceDateTimeElement,
-      Period? occurencePeriod,
-      FhirDateTime? recorded,
+          final Element? occurenceDateTimeElement,
+      final Period? occurencePeriod,
+      final FhirDateTime? recorded,
       @JsonKey(name: '_recorded')
-          Element? recordedElement,
-      List<MedicationAdministrationPerformer>? performer,
-      List<CodeableReference>? reason,
-      Reference? request,
-      List<Reference>? device,
-      List<Annotation>? note,
-      MedicationAdministrationDosage? dosage,
-      List<Reference>? eventHistory}) = _$_MedicationAdministration;
+          final Element? recordedElement,
+      final Boolean? isSubPotent,
+      @JsonKey(name: '_isSubPotent')
+          final Element? isSubPotentElement,
+      final List<CodeableConcept>? subPotentReason,
+      final List<MedicationAdministrationPerformer>? performer,
+      final List<CodeableReference>? reason,
+      final Reference? request,
+      final List<Reference>? device,
+      final List<Annotation>? note,
+      final MedicationAdministrationDosage? dosage,
+      final List<Reference>? eventHistory}) = _$_MedicationAdministration;
   _MedicationAdministration._() : super._();
 
   factory _MedicationAdministration.fromJson(Map<String, dynamic> json) =
       _$_MedicationAdministration.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -9124,7 +8955,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @override
   List<CodeableConcept>? get category;
   @override
-  CodeableReference? get medication;
+  CodeableReference get medication;
   @override
   Reference get subject;
   @override
@@ -9144,6 +8975,13 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @JsonKey(name: '_recorded')
   Element? get recordedElement;
   @override
+  Boolean? get isSubPotent;
+  @override
+  @JsonKey(name: '_isSubPotent')
+  Element? get isSubPotentElement;
+  @override
+  List<CodeableConcept>? get subPotentReason;
+  @override
   List<MedicationAdministrationPerformer>? get performer;
   @override
   List<CodeableReference>? get reason;
@@ -9159,42 +8997,14 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
-  _$MedicationAdministrationCopyWith<_MedicationAdministration> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_MedicationAdministrationCopyWith<_$_MedicationAdministration>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicationAdministrationPerformer _$MedicationAdministrationPerformerFromJson(
     Map<String, dynamic> json) {
   return _MedicationAdministrationPerformer.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationAdministrationPerformerTearOff {
-  const _$MedicationAdministrationPerformerTearOff();
-
-  _MedicationAdministrationPerformer call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) {
-    return _MedicationAdministrationPerformer(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      function: function,
-      actor: actor,
-    );
-  }
-
-  MedicationAdministrationPerformer fromJson(Map<String, Object?> json) {
-    return MedicationAdministrationPerformer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationAdministrationPerformer =
-    _$MedicationAdministrationPerformerTearOff();
 
 /// @nodoc
 mixin _$MedicationAdministrationPerformer {
@@ -9290,12 +9100,12 @@ class _$MedicationAdministrationPerformerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationAdministrationPerformerCopyWith<$Res>
+abstract class _$$_MedicationAdministrationPerformerCopyWith<$Res>
     implements $MedicationAdministrationPerformerCopyWith<$Res> {
-  factory _$MedicationAdministrationPerformerCopyWith(
-          _MedicationAdministrationPerformer value,
-          $Res Function(_MedicationAdministrationPerformer) then) =
-      __$MedicationAdministrationPerformerCopyWithImpl<$Res>;
+  factory _$$_MedicationAdministrationPerformerCopyWith(
+          _$_MedicationAdministrationPerformer value,
+          $Res Function(_$_MedicationAdministrationPerformer) then) =
+      __$$_MedicationAdministrationPerformerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -9311,17 +9121,17 @@ abstract class _$MedicationAdministrationPerformerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationAdministrationPerformerCopyWithImpl<$Res>
+class __$$_MedicationAdministrationPerformerCopyWithImpl<$Res>
     extends _$MedicationAdministrationPerformerCopyWithImpl<$Res>
-    implements _$MedicationAdministrationPerformerCopyWith<$Res> {
-  __$MedicationAdministrationPerformerCopyWithImpl(
-      _MedicationAdministrationPerformer _value,
-      $Res Function(_MedicationAdministrationPerformer) _then)
-      : super(_value, (v) => _then(v as _MedicationAdministrationPerformer));
+    implements _$$_MedicationAdministrationPerformerCopyWith<$Res> {
+  __$$_MedicationAdministrationPerformerCopyWithImpl(
+      _$_MedicationAdministrationPerformer _value,
+      $Res Function(_$_MedicationAdministrationPerformer) _then)
+      : super(_value, (v) => _then(v as _$_MedicationAdministrationPerformer));
 
   @override
-  _MedicationAdministrationPerformer get _value =>
-      super._value as _MedicationAdministrationPerformer;
+  _$_MedicationAdministrationPerformer get _value =>
+      super._value as _$_MedicationAdministrationPerformer;
 
   @override
   $Res call({
@@ -9331,17 +9141,17 @@ class __$MedicationAdministrationPerformerCopyWithImpl<$Res>
     Object? function = freezed,
     Object? actor = freezed,
   }) {
-    return _then(_MedicationAdministrationPerformer(
+    return _then(_$_MedicationAdministrationPerformer(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       function: function == freezed
@@ -9362,11 +9172,13 @@ class _$_MedicationAdministrationPerformer
     extends _MedicationAdministrationPerformer {
   _$_MedicationAdministrationPerformer(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.function,
       required this.actor})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationAdministrationPerformer.fromJson(
           Map<String, dynamic> json) =>
@@ -9374,11 +9186,25 @@ class _$_MedicationAdministrationPerformer
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? function;
   @override
@@ -9393,46 +9219,49 @@ class _$_MedicationAdministrationPerformer
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationAdministrationPerformer &&
+            other is _$_MedicationAdministrationPerformer &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.function, function) &&
             const DeepCollectionEquality().equals(other.actor, actor));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(function),
       const DeepCollectionEquality().hash(actor));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationAdministrationPerformerCopyWith<
-          _MedicationAdministrationPerformer>
-      get copyWith => __$MedicationAdministrationPerformerCopyWithImpl<
-          _MedicationAdministrationPerformer>(this, _$identity);
+  _$$_MedicationAdministrationPerformerCopyWith<
+          _$_MedicationAdministrationPerformer>
+      get copyWith => __$$_MedicationAdministrationPerformerCopyWithImpl<
+          _$_MedicationAdministrationPerformer>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationAdministrationPerformerToJson(this);
+    return _$$_MedicationAdministrationPerformerToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationAdministrationPerformer
     extends MedicationAdministrationPerformer {
   factory _MedicationAdministrationPerformer(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) = _$_MedicationAdministrationPerformer;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? function,
+      required final Reference actor}) = _$_MedicationAdministrationPerformer;
   _MedicationAdministrationPerformer._() : super._();
 
   factory _MedicationAdministrationPerformer.fromJson(
@@ -9452,8 +9281,8 @@ abstract class _MedicationAdministrationPerformer
   Reference get actor;
   @override
   @JsonKey(ignore: true)
-  _$MedicationAdministrationPerformerCopyWith<
-          _MedicationAdministrationPerformer>
+  _$$_MedicationAdministrationPerformerCopyWith<
+          _$_MedicationAdministrationPerformer>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9461,46 +9290,6 @@ MedicationAdministrationDosage _$MedicationAdministrationDosageFromJson(
     Map<String, dynamic> json) {
   return _MedicationAdministrationDosage.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationAdministrationDosageTearOff {
-  const _$MedicationAdministrationDosageTearOff();
-
-  _MedicationAdministrationDosage call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement,
-      CodeableConcept? site,
-      CodeableConcept? route,
-      CodeableConcept? method,
-      Quantity? dose,
-      Ratio? rateRatio,
-      Quantity? rateQuantity}) {
-    return _MedicationAdministrationDosage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      text: text,
-      textElement: textElement,
-      site: site,
-      route: route,
-      method: method,
-      dose: dose,
-      rateRatio: rateRatio,
-      rateQuantity: rateQuantity,
-    );
-  }
-
-  MedicationAdministrationDosage fromJson(Map<String, Object?> json) {
-    return MedicationAdministrationDosage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationAdministrationDosage =
-    _$MedicationAdministrationDosageTearOff();
 
 /// @nodoc
 mixin _$MedicationAdministrationDosage {
@@ -9703,12 +9492,12 @@ class _$MedicationAdministrationDosageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationAdministrationDosageCopyWith<$Res>
+abstract class _$$_MedicationAdministrationDosageCopyWith<$Res>
     implements $MedicationAdministrationDosageCopyWith<$Res> {
-  factory _$MedicationAdministrationDosageCopyWith(
-          _MedicationAdministrationDosage value,
-          $Res Function(_MedicationAdministrationDosage) then) =
-      __$MedicationAdministrationDosageCopyWithImpl<$Res>;
+  factory _$$_MedicationAdministrationDosageCopyWith(
+          _$_MedicationAdministrationDosage value,
+          $Res Function(_$_MedicationAdministrationDosage) then) =
+      __$$_MedicationAdministrationDosageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -9740,17 +9529,17 @@ abstract class _$MedicationAdministrationDosageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationAdministrationDosageCopyWithImpl<$Res>
+class __$$_MedicationAdministrationDosageCopyWithImpl<$Res>
     extends _$MedicationAdministrationDosageCopyWithImpl<$Res>
-    implements _$MedicationAdministrationDosageCopyWith<$Res> {
-  __$MedicationAdministrationDosageCopyWithImpl(
-      _MedicationAdministrationDosage _value,
-      $Res Function(_MedicationAdministrationDosage) _then)
-      : super(_value, (v) => _then(v as _MedicationAdministrationDosage));
+    implements _$$_MedicationAdministrationDosageCopyWith<$Res> {
+  __$$_MedicationAdministrationDosageCopyWithImpl(
+      _$_MedicationAdministrationDosage _value,
+      $Res Function(_$_MedicationAdministrationDosage) _then)
+      : super(_value, (v) => _then(v as _$_MedicationAdministrationDosage));
 
   @override
-  _MedicationAdministrationDosage get _value =>
-      super._value as _MedicationAdministrationDosage;
+  _$_MedicationAdministrationDosage get _value =>
+      super._value as _$_MedicationAdministrationDosage;
 
   @override
   $Res call({
@@ -9766,17 +9555,17 @@ class __$MedicationAdministrationDosageCopyWithImpl<$Res>
     Object? rateRatio = freezed,
     Object? rateQuantity = freezed,
   }) {
-    return _then(_MedicationAdministrationDosage(
+    return _then(_$_MedicationAdministrationDosage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       text: text == freezed
@@ -9821,8 +9610,8 @@ class _$_MedicationAdministrationDosage
     extends _MedicationAdministrationDosage {
   _$_MedicationAdministrationDosage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.text,
       @JsonKey(name: '_text') this.textElement,
       this.site,
@@ -9831,7 +9620,9 @@ class _$_MedicationAdministrationDosage
       this.dose,
       this.rateRatio,
       this.rateQuantity})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationAdministrationDosage.fromJson(
           Map<String, dynamic> json) =>
@@ -9839,11 +9630,25 @@ class _$_MedicationAdministrationDosage
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? text;
   @override
@@ -9871,12 +9676,12 @@ class _$_MedicationAdministrationDosage
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationAdministrationDosage &&
+            other is _$_MedicationAdministrationDosage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality()
                 .equals(other.textElement, textElement) &&
@@ -9889,12 +9694,13 @@ class _$_MedicationAdministrationDosage
                 .equals(other.rateQuantity, rateQuantity));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(textElement),
       const DeepCollectionEquality().hash(site),
@@ -9906,30 +9712,32 @@ class _$_MedicationAdministrationDosage
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationAdministrationDosageCopyWith<_MedicationAdministrationDosage>
-      get copyWith => __$MedicationAdministrationDosageCopyWithImpl<
-          _MedicationAdministrationDosage>(this, _$identity);
+  _$$_MedicationAdministrationDosageCopyWith<_$_MedicationAdministrationDosage>
+      get copyWith => __$$_MedicationAdministrationDosageCopyWithImpl<
+          _$_MedicationAdministrationDosage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationAdministrationDosageToJson(this);
+    return _$$_MedicationAdministrationDosageToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationAdministrationDosage
     extends MedicationAdministrationDosage {
   factory _MedicationAdministrationDosage(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement,
-      CodeableConcept? site,
-      CodeableConcept? route,
-      CodeableConcept? method,
-      Quantity? dose,
-      Ratio? rateRatio,
-      Quantity? rateQuantity}) = _$_MedicationAdministrationDosage;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? text,
+      @JsonKey(name: '_text') final Element? textElement,
+      final CodeableConcept? site,
+      final CodeableConcept? route,
+      final CodeableConcept? method,
+      final Quantity? dose,
+      final Ratio? rateRatio,
+      final Quantity? rateQuantity}) = _$_MedicationAdministrationDosage;
   _MedicationAdministrationDosage._() : super._();
 
   factory _MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =
@@ -9961,7 +9769,7 @@ abstract class _MedicationAdministrationDosage
   Quantity? get rateQuantity;
   @override
   @JsonKey(ignore: true)
-  _$MedicationAdministrationDosageCopyWith<_MedicationAdministrationDosage>
+  _$$_MedicationAdministrationDosageCopyWith<_$_MedicationAdministrationDosage>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9970,115 +9778,7 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MedicationDispenseTearOff {
-  const _$MedicationDispenseTearOff();
-
-  _MedicationDispense call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-          R5ResourceType resourceType = R5ResourceType.MedicationDispense,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableReference? statusReason,
-      List<CodeableConcept>? category,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      List<Reference>? supportingInformation,
-      List<MedicationDispensePerformer>? performer,
-      Reference? location,
-      List<Reference>? authorizingPrescription,
-      CodeableConcept? type,
-      Quantity? quantity,
-      Quantity? daysSupply,
-      FhirDateTime? whenPrepared,
-      @JsonKey(name: '_whenPrepared')
-          Element? whenPreparedElement,
-      FhirDateTime? whenHandedOver,
-      @JsonKey(name: '_whenHandedOver')
-          Element? whenHandedOverElement,
-      Reference? destination,
-      List<Reference>? receiver,
-      List<Annotation>? note,
-      String? renderedDosageInstruction,
-      @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosageInstruction,
-      MedicationDispenseSubstitution? substitution,
-      List<Reference>? detectedIssue,
-      List<Reference>? eventHistory}) {
-    return _MedicationDispense(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      statusReason: statusReason,
-      category: category,
-      medication: medication,
-      subject: subject,
-      encounter: encounter,
-      supportingInformation: supportingInformation,
-      performer: performer,
-      location: location,
-      authorizingPrescription: authorizingPrescription,
-      type: type,
-      quantity: quantity,
-      daysSupply: daysSupply,
-      whenPrepared: whenPrepared,
-      whenPreparedElement: whenPreparedElement,
-      whenHandedOver: whenHandedOver,
-      whenHandedOverElement: whenHandedOverElement,
-      destination: destination,
-      receiver: receiver,
-      note: note,
-      renderedDosageInstruction: renderedDosageInstruction,
-      renderedDosageInstructionElement: renderedDosageInstructionElement,
-      dosageInstruction: dosageInstruction,
-      substitution: substitution,
-      detectedIssue: detectedIssue,
-      eventHistory: eventHistory,
-    );
-  }
-
-  MedicationDispense fromJson(Map<String, Object?> json) {
-    return MedicationDispense.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationDispense = _$MedicationDispenseTearOff();
-
-/// @nodoc
 mixin _$MedicationDispense {
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -10100,9 +9800,13 @@ mixin _$MedicationDispense {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  CodeableReference? get statusReason => throw _privateConstructorUsedError;
+  CodeableReference? get notPerformedReason =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get statusChanged => throw _privateConstructorUsedError;
+  @JsonKey(name: '_statusChanged')
+  Element? get statusChangedElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
-  CodeableReference? get medication => throw _privateConstructorUsedError;
+  CodeableReference get medication => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
   List<Reference>? get supportingInformation =>
@@ -10115,6 +9819,9 @@ mixin _$MedicationDispense {
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Quantity? get daysSupply => throw _privateConstructorUsedError;
+  FhirDateTime? get recorded => throw _privateConstructorUsedError;
+  @JsonKey(name: '_recorded')
+  Element? get recordedElement => throw _privateConstructorUsedError;
   FhirDateTime? get whenPrepared => throw _privateConstructorUsedError;
   @JsonKey(name: '_whenPrepared')
   Element? get whenPreparedElement => throw _privateConstructorUsedError;
@@ -10131,7 +9838,6 @@ mixin _$MedicationDispense {
   List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
   MedicationDispenseSubstitution? get substitution =>
       throw _privateConstructorUsedError;
-  List<Reference>? get detectedIssue => throw _privateConstructorUsedError;
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10146,8 +9852,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
           MedicationDispense value, $Res Function(MedicationDispense) then) =
       _$MedicationDispenseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -10167,9 +9872,12 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableReference? statusReason,
+      CodeableReference? notPerformedReason,
+      FhirDateTime? statusChanged,
+      @JsonKey(name: '_statusChanged')
+          Element? statusChangedElement,
       List<CodeableConcept>? category,
-      CodeableReference? medication,
+      CodeableReference medication,
       Reference subject,
       Reference? encounter,
       List<Reference>? supportingInformation,
@@ -10179,6 +9887,9 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       CodeableConcept? type,
       Quantity? quantity,
       Quantity? daysSupply,
+      FhirDateTime? recorded,
+      @JsonKey(name: '_recorded')
+          Element? recordedElement,
       FhirDateTime? whenPrepared,
       @JsonKey(name: '_whenPrepared')
           Element? whenPreparedElement,
@@ -10193,7 +9904,6 @@ abstract class $MedicationDispenseCopyWith<$Res> {
           Element? renderedDosageInstructionElement,
       List<Dosage>? dosageInstruction,
       MedicationDispenseSubstitution? substitution,
-      List<Reference>? detectedIssue,
       List<Reference>? eventHistory});
 
   $MetaCopyWith<$Res>? get meta;
@@ -10201,14 +9911,16 @@ abstract class $MedicationDispenseCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableReferenceCopyWith<$Res>? get statusReason;
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $CodeableReferenceCopyWith<$Res>? get notPerformedReason;
+  $ElementCopyWith<$Res>? get statusChangedElement;
+  $CodeableReferenceCopyWith<$Res> get medication;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
   $ReferenceCopyWith<$Res>? get location;
   $CodeableConceptCopyWith<$Res>? get type;
   $QuantityCopyWith<$Res>? get quantity;
   $QuantityCopyWith<$Res>? get daysSupply;
+  $ElementCopyWith<$Res>? get recordedElement;
   $ElementCopyWith<$Res>? get whenPreparedElement;
   $ElementCopyWith<$Res>? get whenHandedOverElement;
   $ReferenceCopyWith<$Res>? get destination;
@@ -10243,7 +9955,9 @@ class _$MedicationDispenseCopyWithImpl<$Res>
     Object? partOf = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? statusReason = freezed,
+    Object? notPerformedReason = freezed,
+    Object? statusChanged = freezed,
+    Object? statusChangedElement = freezed,
     Object? category = freezed,
     Object? medication = freezed,
     Object? subject = freezed,
@@ -10255,6 +9969,8 @@ class _$MedicationDispenseCopyWithImpl<$Res>
     Object? type = freezed,
     Object? quantity = freezed,
     Object? daysSupply = freezed,
+    Object? recorded = freezed,
+    Object? recordedElement = freezed,
     Object? whenPrepared = freezed,
     Object? whenPreparedElement = freezed,
     Object? whenHandedOver = freezed,
@@ -10266,7 +9982,6 @@ class _$MedicationDispenseCopyWithImpl<$Res>
     Object? renderedDosageInstructionElement = freezed,
     Object? dosageInstruction = freezed,
     Object? substitution = freezed,
-    Object? detectedIssue = freezed,
     Object? eventHistory = freezed,
   }) {
     return _then(_value.copyWith(
@@ -10334,10 +10049,18 @@ class _$MedicationDispenseCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      statusReason: statusReason == freezed
-          ? _value.statusReason
-          : statusReason // ignore: cast_nullable_to_non_nullable
+      notPerformedReason: notPerformedReason == freezed
+          ? _value.notPerformedReason
+          : notPerformedReason // ignore: cast_nullable_to_non_nullable
               as CodeableReference?,
+      statusChanged: statusChanged == freezed
+          ? _value.statusChanged
+          : statusChanged // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      statusChangedElement: statusChangedElement == freezed
+          ? _value.statusChangedElement
+          : statusChangedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -10345,7 +10068,7 @@ class _$MedicationDispenseCopyWithImpl<$Res>
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -10382,6 +10105,14 @@ class _$MedicationDispenseCopyWithImpl<$Res>
           ? _value.daysSupply
           : daysSupply // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      recorded: recorded == freezed
+          ? _value.recorded
+          : recorded // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      recordedElement: recordedElement == freezed
+          ? _value.recordedElement
+          : recordedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       whenPrepared: whenPrepared == freezed
           ? _value.whenPrepared
           : whenPrepared // ignore: cast_nullable_to_non_nullable
@@ -10427,10 +10158,6 @@ class _$MedicationDispenseCopyWithImpl<$Res>
           ? _value.substitution
           : substitution // ignore: cast_nullable_to_non_nullable
               as MedicationDispenseSubstitution?,
-      detectedIssue: detectedIssue == freezed
-          ? _value.detectedIssue
-          : detectedIssue // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       eventHistory: eventHistory == freezed
           ? _value.eventHistory
           : eventHistory // ignore: cast_nullable_to_non_nullable
@@ -10494,23 +10221,31 @@ class _$MedicationDispenseCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res>? get statusReason {
-    if (_value.statusReason == null) {
+  $CodeableReferenceCopyWith<$Res>? get notPerformedReason {
+    if (_value.notPerformedReason == null) {
       return null;
     }
 
-    return $CodeableReferenceCopyWith<$Res>(_value.statusReason!, (value) {
-      return _then(_value.copyWith(statusReason: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.notPerformedReason!,
+        (value) {
+      return _then(_value.copyWith(notPerformedReason: value));
     });
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res>? get medication {
-    if (_value.medication == null) {
+  $ElementCopyWith<$Res>? get statusChangedElement {
+    if (_value.statusChangedElement == null) {
       return null;
     }
 
-    return $CodeableReferenceCopyWith<$Res>(_value.medication!, (value) {
+    return $ElementCopyWith<$Res>(_value.statusChangedElement!, (value) {
+      return _then(_value.copyWith(statusChangedElement: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get medication {
+    return $CodeableReferenceCopyWith<$Res>(_value.medication, (value) {
       return _then(_value.copyWith(medication: value));
     });
   }
@@ -10578,6 +10313,17 @@ class _$MedicationDispenseCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get recordedElement {
+    if (_value.recordedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.recordedElement!, (value) {
+      return _then(_value.copyWith(recordedElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get whenPreparedElement {
     if (_value.whenPreparedElement == null) {
       return null;
@@ -10636,15 +10382,14 @@ class _$MedicationDispenseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationDispenseCopyWith<$Res>
+abstract class _$$_MedicationDispenseCopyWith<$Res>
     implements $MedicationDispenseCopyWith<$Res> {
-  factory _$MedicationDispenseCopyWith(
-          _MedicationDispense value, $Res Function(_MedicationDispense) then) =
-      __$MedicationDispenseCopyWithImpl<$Res>;
+  factory _$$_MedicationDispenseCopyWith(_$_MedicationDispense value,
+          $Res Function(_$_MedicationDispense) then) =
+      __$$_MedicationDispenseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -10664,9 +10409,12 @@ abstract class _$MedicationDispenseCopyWith<$Res>
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableReference? statusReason,
+      CodeableReference? notPerformedReason,
+      FhirDateTime? statusChanged,
+      @JsonKey(name: '_statusChanged')
+          Element? statusChangedElement,
       List<CodeableConcept>? category,
-      CodeableReference? medication,
+      CodeableReference medication,
       Reference subject,
       Reference? encounter,
       List<Reference>? supportingInformation,
@@ -10676,6 +10424,9 @@ abstract class _$MedicationDispenseCopyWith<$Res>
       CodeableConcept? type,
       Quantity? quantity,
       Quantity? daysSupply,
+      FhirDateTime? recorded,
+      @JsonKey(name: '_recorded')
+          Element? recordedElement,
       FhirDateTime? whenPrepared,
       @JsonKey(name: '_whenPrepared')
           Element? whenPreparedElement,
@@ -10690,7 +10441,6 @@ abstract class _$MedicationDispenseCopyWith<$Res>
           Element? renderedDosageInstructionElement,
       List<Dosage>? dosageInstruction,
       MedicationDispenseSubstitution? substitution,
-      List<Reference>? detectedIssue,
       List<Reference>? eventHistory});
 
   @override
@@ -10704,9 +10454,11 @@ abstract class _$MedicationDispenseCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableReferenceCopyWith<$Res>? get statusReason;
+  $CodeableReferenceCopyWith<$Res>? get notPerformedReason;
   @override
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $ElementCopyWith<$Res>? get statusChangedElement;
+  @override
+  $CodeableReferenceCopyWith<$Res> get medication;
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
@@ -10720,6 +10472,8 @@ abstract class _$MedicationDispenseCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res>? get daysSupply;
   @override
+  $ElementCopyWith<$Res>? get recordedElement;
+  @override
   $ElementCopyWith<$Res>? get whenPreparedElement;
   @override
   $ElementCopyWith<$Res>? get whenHandedOverElement;
@@ -10732,15 +10486,15 @@ abstract class _$MedicationDispenseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationDispenseCopyWithImpl<$Res>
+class __$$_MedicationDispenseCopyWithImpl<$Res>
     extends _$MedicationDispenseCopyWithImpl<$Res>
-    implements _$MedicationDispenseCopyWith<$Res> {
-  __$MedicationDispenseCopyWithImpl(
-      _MedicationDispense _value, $Res Function(_MedicationDispense) _then)
-      : super(_value, (v) => _then(v as _MedicationDispense));
+    implements _$$_MedicationDispenseCopyWith<$Res> {
+  __$$_MedicationDispenseCopyWithImpl(
+      _$_MedicationDispense _value, $Res Function(_$_MedicationDispense) _then)
+      : super(_value, (v) => _then(v as _$_MedicationDispense));
 
   @override
-  _MedicationDispense get _value => super._value as _MedicationDispense;
+  _$_MedicationDispense get _value => super._value as _$_MedicationDispense;
 
   @override
   $Res call({
@@ -10760,7 +10514,9 @@ class __$MedicationDispenseCopyWithImpl<$Res>
     Object? partOf = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? statusReason = freezed,
+    Object? notPerformedReason = freezed,
+    Object? statusChanged = freezed,
+    Object? statusChangedElement = freezed,
     Object? category = freezed,
     Object? medication = freezed,
     Object? subject = freezed,
@@ -10772,6 +10528,8 @@ class __$MedicationDispenseCopyWithImpl<$Res>
     Object? type = freezed,
     Object? quantity = freezed,
     Object? daysSupply = freezed,
+    Object? recorded = freezed,
+    Object? recordedElement = freezed,
     Object? whenPrepared = freezed,
     Object? whenPreparedElement = freezed,
     Object? whenHandedOver = freezed,
@@ -10783,10 +10541,9 @@ class __$MedicationDispenseCopyWithImpl<$Res>
     Object? renderedDosageInstructionElement = freezed,
     Object? dosageInstruction = freezed,
     Object? substitution = freezed,
-    Object? detectedIssue = freezed,
     Object? eventHistory = freezed,
   }) {
-    return _then(_MedicationDispense(
+    return _then(_$_MedicationDispense(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -10820,27 +10577,27 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: partOf == freezed
-          ? _value.partOf
+          ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
@@ -10851,18 +10608,26 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      statusReason: statusReason == freezed
-          ? _value.statusReason
-          : statusReason // ignore: cast_nullable_to_non_nullable
+      notPerformedReason: notPerformedReason == freezed
+          ? _value.notPerformedReason
+          : notPerformedReason // ignore: cast_nullable_to_non_nullable
               as CodeableReference?,
+      statusChanged: statusChanged == freezed
+          ? _value.statusChanged
+          : statusChanged // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      statusChangedElement: statusChangedElement == freezed
+          ? _value.statusChangedElement
+          : statusChangedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -10872,11 +10637,11 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           : encounter // ignore: cast_nullable_to_non_nullable
               as Reference?,
       supportingInformation: supportingInformation == freezed
-          ? _value.supportingInformation
+          ? _value._supportingInformation
           : supportingInformation // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       performer: performer == freezed
-          ? _value.performer
+          ? _value._performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<MedicationDispensePerformer>?,
       location: location == freezed
@@ -10884,7 +10649,7 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           : location // ignore: cast_nullable_to_non_nullable
               as Reference?,
       authorizingPrescription: authorizingPrescription == freezed
-          ? _value.authorizingPrescription
+          ? _value._authorizingPrescription
           : authorizingPrescription // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       type: type == freezed
@@ -10899,6 +10664,14 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           ? _value.daysSupply
           : daysSupply // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      recorded: recorded == freezed
+          ? _value.recorded
+          : recorded // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      recordedElement: recordedElement == freezed
+          ? _value.recordedElement
+          : recordedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       whenPrepared: whenPrepared == freezed
           ? _value.whenPrepared
           : whenPrepared // ignore: cast_nullable_to_non_nullable
@@ -10920,11 +10693,11 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           : destination // ignore: cast_nullable_to_non_nullable
               as Reference?,
       receiver: receiver == freezed
-          ? _value.receiver
+          ? _value._receiver
           : receiver // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       renderedDosageInstruction: renderedDosageInstruction == freezed
@@ -10937,19 +10710,15 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           : renderedDosageInstructionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       dosageInstruction: dosageInstruction == freezed
-          ? _value.dosageInstruction
+          ? _value._dosageInstruction
           : dosageInstruction // ignore: cast_nullable_to_non_nullable
               as List<Dosage>?,
       substitution: substitution == freezed
           ? _value.substitution
           : substitution // ignore: cast_nullable_to_non_nullable
               as MedicationDispenseSubstitution?,
-      detectedIssue: detectedIssue == freezed
-          ? _value.detectedIssue
-          : detectedIssue // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       eventHistory: eventHistory == freezed
-          ? _value.eventHistory
+          ? _value._eventHistory
           : eventHistory // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -10960,8 +10729,7 @@ class __$MedicationDispenseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-          this.resourceType = R5ResourceType.MedicationDispense,
+      {this.resourceType = R5ResourceType.MedicationDispense,
       this.id,
       this.meta,
       this.implicitRules,
@@ -10971,28 +10739,34 @@ class _$_MedicationDispense extends _MedicationDispense {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.basedOn,
-      this.partOf,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.statusReason,
-      this.category,
-      this.medication,
+      this.notPerformedReason,
+      this.statusChanged,
+      @JsonKey(name: '_statusChanged')
+          this.statusChangedElement,
+      final List<CodeableConcept>? category,
+      required this.medication,
       required this.subject,
       this.encounter,
-      this.supportingInformation,
-      this.performer,
+      final List<Reference>? supportingInformation,
+      final List<MedicationDispensePerformer>? performer,
       this.location,
-      this.authorizingPrescription,
+      final List<Reference>? authorizingPrescription,
       this.type,
       this.quantity,
       this.daysSupply,
+      this.recorded,
+      @JsonKey(name: '_recorded')
+          this.recordedElement,
       this.whenPrepared,
       @JsonKey(name: '_whenPrepared')
           this.whenPreparedElement,
@@ -11000,22 +10774,35 @@ class _$_MedicationDispense extends _MedicationDispense {
       @JsonKey(name: '_whenHandedOver')
           this.whenHandedOverElement,
       this.destination,
-      this.receiver,
-      this.note,
+      final List<Reference>? receiver,
+      final List<Annotation>? note,
       this.renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
           this.renderedDosageInstructionElement,
-      this.dosageInstruction,
+      final List<Dosage>? dosageInstruction,
       this.substitution,
-      this.detectedIssue,
-      this.eventHistory})
-      : super._();
+      final List<Reference>? eventHistory})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _category = category,
+        _supportingInformation = supportingInformation,
+        _performer = performer,
+        _authorizingPrescription = authorizingPrescription,
+        _receiver = receiver,
+        _note = note,
+        _dosageInstruction = dosageInstruction,
+        _eventHistory = eventHistory,
+        super._();
 
   factory _$_MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationDispenseFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -11033,48 +10820,128 @@ class _$_MedicationDispense extends _MedicationDispense {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _partOf;
   @override
-  final List<Reference>? partOf;
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final CodeableReference? statusReason;
+  final CodeableReference? notPerformedReason;
   @override
-  final List<CodeableConcept>? category;
+  final FhirDateTime? statusChanged;
   @override
-  final CodeableReference? medication;
+  @JsonKey(name: '_statusChanged')
+  final Element? statusChangedElement;
+  final List<CodeableConcept>? _category;
+  @override
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableReference medication;
   @override
   final Reference subject;
   @override
   final Reference? encounter;
+  final List<Reference>? _supportingInformation;
   @override
-  final List<Reference>? supportingInformation;
+  List<Reference>? get supportingInformation {
+    final value = _supportingInformation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationDispensePerformer>? _performer;
   @override
-  final List<MedicationDispensePerformer>? performer;
+  List<MedicationDispensePerformer>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? location;
+  final List<Reference>? _authorizingPrescription;
   @override
-  final List<Reference>? authorizingPrescription;
+  List<Reference>? get authorizingPrescription {
+    final value = _authorizingPrescription;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
   final Quantity? quantity;
   @override
   final Quantity? daysSupply;
+  @override
+  final FhirDateTime? recorded;
+  @override
+  @JsonKey(name: '_recorded')
+  final Element? recordedElement;
   @override
   final FhirDateTime? whenPrepared;
   @override
@@ -11087,34 +10954,59 @@ class _$_MedicationDispense extends _MedicationDispense {
   final Element? whenHandedOverElement;
   @override
   final Reference? destination;
+  final List<Reference>? _receiver;
   @override
-  final List<Reference>? receiver;
+  List<Reference>? get receiver {
+    final value = _receiver;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? renderedDosageInstruction;
   @override
   @JsonKey(name: '_renderedDosageInstruction')
   final Element? renderedDosageInstructionElement;
+  final List<Dosage>? _dosageInstruction;
   @override
-  final List<Dosage>? dosageInstruction;
+  List<Dosage>? get dosageInstruction {
+    final value = _dosageInstruction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final MedicationDispenseSubstitution? substitution;
+  final List<Reference>? _eventHistory;
   @override
-  final List<Reference>? detectedIssue;
-  @override
-  final List<Reference>? eventHistory;
+  List<Reference>? get eventHistory {
+    final value = _eventHistory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'MedicationDispense(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medication: $medication, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, performer: $performer, location: $location, authorizingPrescription: $authorizingPrescription, type: $type, quantity: $quantity, daysSupply: $daysSupply, whenPrepared: $whenPrepared, whenPreparedElement: $whenPreparedElement, whenHandedOver: $whenHandedOver, whenHandedOverElement: $whenHandedOverElement, destination: $destination, receiver: $receiver, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosageInstruction: $dosageInstruction, substitution: $substitution, detectedIssue: $detectedIssue, eventHistory: $eventHistory)';
+    return 'MedicationDispense(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, notPerformedReason: $notPerformedReason, statusChanged: $statusChanged, statusChangedElement: $statusChangedElement, category: $category, medication: $medication, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, performer: $performer, location: $location, authorizingPrescription: $authorizingPrescription, type: $type, quantity: $quantity, daysSupply: $daysSupply, recorded: $recorded, recordedElement: $recordedElement, whenPrepared: $whenPrepared, whenPreparedElement: $whenPreparedElement, whenHandedOver: $whenHandedOver, whenHandedOverElement: $whenHandedOverElement, destination: $destination, receiver: $receiver, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosageInstruction: $dosageInstruction, substitution: $substitution, eventHistory: $eventHistory)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationDispense &&
+            other is _$_MedicationDispense &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -11127,35 +11019,44 @@ class _$_MedicationDispense extends _MedicationDispense {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
-            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality()
-                .equals(other.statusReason, statusReason) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+                .equals(other.notPerformedReason, notPerformedReason) &&
+            const DeepCollectionEquality()
+                .equals(other.statusChanged, statusChanged) &&
+            const DeepCollectionEquality()
+                .equals(other.statusChangedElement, statusChangedElement) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality()
                 .equals(other.medication, medication) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality().equals(other.encounter, encounter) &&
             const DeepCollectionEquality()
-                .equals(other.supportingInformation, supportingInformation) &&
-            const DeepCollectionEquality().equals(other.performer, performer) &&
+                .equals(other._supportingInformation, _supportingInformation) &&
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality().equals(
-                other.authorizingPrescription, authorizingPrescription) &&
+                other._authorizingPrescription, _authorizingPrescription) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality()
                 .equals(other.daysSupply, daysSupply) &&
+            const DeepCollectionEquality().equals(other.recorded, recorded) &&
+            const DeepCollectionEquality()
+                .equals(other.recordedElement, recordedElement) &&
             const DeepCollectionEquality()
                 .equals(other.whenPrepared, whenPrepared) &&
             const DeepCollectionEquality()
@@ -11166,23 +11067,22 @@ class _$_MedicationDispense extends _MedicationDispense {
                 .equals(other.whenHandedOverElement, whenHandedOverElement) &&
             const DeepCollectionEquality()
                 .equals(other.destination, destination) &&
-            const DeepCollectionEquality().equals(other.receiver, receiver) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality().equals(other._receiver, _receiver) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality().equals(
                 other.renderedDosageInstruction, renderedDosageInstruction) &&
             const DeepCollectionEquality().equals(
                 other.renderedDosageInstructionElement,
                 renderedDosageInstructionElement) &&
             const DeepCollectionEquality()
-                .equals(other.dosageInstruction, dosageInstruction) &&
+                .equals(other._dosageInstruction, _dosageInstruction) &&
             const DeepCollectionEquality()
                 .equals(other.substitution, substitution) &&
             const DeepCollectionEquality()
-                .equals(other.detectedIssue, detectedIssue) &&
-            const DeepCollectionEquality()
-                .equals(other.eventHistory, eventHistory));
+                .equals(other._eventHistory, _eventHistory));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -11194,110 +11094,119 @@ class _$_MedicationDispense extends _MedicationDispense {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(basedOn),
-        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(_partOf),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(statusReason),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(notPerformedReason),
+        const DeepCollectionEquality().hash(statusChanged),
+        const DeepCollectionEquality().hash(statusChangedElement),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(medication),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(encounter),
-        const DeepCollectionEquality().hash(supportingInformation),
-        const DeepCollectionEquality().hash(performer),
+        const DeepCollectionEquality().hash(_supportingInformation),
+        const DeepCollectionEquality().hash(_performer),
         const DeepCollectionEquality().hash(location),
-        const DeepCollectionEquality().hash(authorizingPrescription),
+        const DeepCollectionEquality().hash(_authorizingPrescription),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(quantity),
         const DeepCollectionEquality().hash(daysSupply),
+        const DeepCollectionEquality().hash(recorded),
+        const DeepCollectionEquality().hash(recordedElement),
         const DeepCollectionEquality().hash(whenPrepared),
         const DeepCollectionEquality().hash(whenPreparedElement),
         const DeepCollectionEquality().hash(whenHandedOver),
         const DeepCollectionEquality().hash(whenHandedOverElement),
         const DeepCollectionEquality().hash(destination),
-        const DeepCollectionEquality().hash(receiver),
-        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(_receiver),
+        const DeepCollectionEquality().hash(_note),
         const DeepCollectionEquality().hash(renderedDosageInstruction),
         const DeepCollectionEquality().hash(renderedDosageInstructionElement),
-        const DeepCollectionEquality().hash(dosageInstruction),
+        const DeepCollectionEquality().hash(_dosageInstruction),
         const DeepCollectionEquality().hash(substitution),
-        const DeepCollectionEquality().hash(detectedIssue),
-        const DeepCollectionEquality().hash(eventHistory)
+        const DeepCollectionEquality().hash(_eventHistory)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationDispenseCopyWith<_MedicationDispense> get copyWith =>
-      __$MedicationDispenseCopyWithImpl<_MedicationDispense>(this, _$identity);
+  _$$_MedicationDispenseCopyWith<_$_MedicationDispense> get copyWith =>
+      __$$_MedicationDispenseCopyWithImpl<_$_MedicationDispense>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationDispenseToJson(this);
+    return _$$_MedicationDispenseToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationDispense extends MedicationDispense {
   factory _MedicationDispense(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableReference? statusReason,
-      List<CodeableConcept>? category,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      List<Reference>? supportingInformation,
-      List<MedicationDispensePerformer>? performer,
-      Reference? location,
-      List<Reference>? authorizingPrescription,
-      CodeableConcept? type,
-      Quantity? quantity,
-      Quantity? daysSupply,
-      FhirDateTime? whenPrepared,
+          final Element? statusElement,
+      final CodeableReference? notPerformedReason,
+      final FhirDateTime? statusChanged,
+      @JsonKey(name: '_statusChanged')
+          final Element? statusChangedElement,
+      final List<CodeableConcept>? category,
+      required final CodeableReference medication,
+      required final Reference subject,
+      final Reference? encounter,
+      final List<Reference>? supportingInformation,
+      final List<MedicationDispensePerformer>? performer,
+      final Reference? location,
+      final List<Reference>? authorizingPrescription,
+      final CodeableConcept? type,
+      final Quantity? quantity,
+      final Quantity? daysSupply,
+      final FhirDateTime? recorded,
+      @JsonKey(name: '_recorded')
+          final Element? recordedElement,
+      final FhirDateTime? whenPrepared,
       @JsonKey(name: '_whenPrepared')
-          Element? whenPreparedElement,
-      FhirDateTime? whenHandedOver,
+          final Element? whenPreparedElement,
+      final FhirDateTime? whenHandedOver,
       @JsonKey(name: '_whenHandedOver')
-          Element? whenHandedOverElement,
-      Reference? destination,
-      List<Reference>? receiver,
-      List<Annotation>? note,
-      String? renderedDosageInstruction,
+          final Element? whenHandedOverElement,
+      final Reference? destination,
+      final List<Reference>? receiver,
+      final List<Annotation>? note,
+      final String? renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosageInstruction,
-      MedicationDispenseSubstitution? substitution,
-      List<Reference>? detectedIssue,
-      List<Reference>? eventHistory}) = _$_MedicationDispense;
+          final Element? renderedDosageInstructionElement,
+      final List<Dosage>? dosageInstruction,
+      final MedicationDispenseSubstitution? substitution,
+      final List<Reference>? eventHistory}) = _$_MedicationDispense;
   _MedicationDispense._() : super._();
 
   factory _MedicationDispense.fromJson(Map<String, dynamic> json) =
       _$_MedicationDispense.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -11334,11 +11243,16 @@ abstract class _MedicationDispense extends MedicationDispense {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  CodeableReference? get statusReason;
+  CodeableReference? get notPerformedReason;
+  @override
+  FhirDateTime? get statusChanged;
+  @override
+  @JsonKey(name: '_statusChanged')
+  Element? get statusChangedElement;
   @override
   List<CodeableConcept>? get category;
   @override
-  CodeableReference? get medication;
+  CodeableReference get medication;
   @override
   Reference get subject;
   @override
@@ -11357,6 +11271,11 @@ abstract class _MedicationDispense extends MedicationDispense {
   Quantity? get quantity;
   @override
   Quantity? get daysSupply;
+  @override
+  FhirDateTime? get recorded;
+  @override
+  @JsonKey(name: '_recorded')
+  Element? get recordedElement;
   @override
   FhirDateTime? get whenPrepared;
   @override
@@ -11383,12 +11302,10 @@ abstract class _MedicationDispense extends MedicationDispense {
   @override
   MedicationDispenseSubstitution? get substitution;
   @override
-  List<Reference>? get detectedIssue;
-  @override
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
-  _$MedicationDispenseCopyWith<_MedicationDispense> get copyWith =>
+  _$$_MedicationDispenseCopyWith<_$_MedicationDispense> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -11396,33 +11313,6 @@ MedicationDispensePerformer _$MedicationDispensePerformerFromJson(
     Map<String, dynamic> json) {
   return _MedicationDispensePerformer.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationDispensePerformerTearOff {
-  const _$MedicationDispensePerformerTearOff();
-
-  _MedicationDispensePerformer call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) {
-    return _MedicationDispensePerformer(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      function: function,
-      actor: actor,
-    );
-  }
-
-  MedicationDispensePerformer fromJson(Map<String, Object?> json) {
-    return MedicationDispensePerformer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationDispensePerformer = _$MedicationDispensePerformerTearOff();
 
 /// @nodoc
 mixin _$MedicationDispensePerformer {
@@ -11518,12 +11408,12 @@ class _$MedicationDispensePerformerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationDispensePerformerCopyWith<$Res>
+abstract class _$$_MedicationDispensePerformerCopyWith<$Res>
     implements $MedicationDispensePerformerCopyWith<$Res> {
-  factory _$MedicationDispensePerformerCopyWith(
-          _MedicationDispensePerformer value,
-          $Res Function(_MedicationDispensePerformer) then) =
-      __$MedicationDispensePerformerCopyWithImpl<$Res>;
+  factory _$$_MedicationDispensePerformerCopyWith(
+          _$_MedicationDispensePerformer value,
+          $Res Function(_$_MedicationDispensePerformer) then) =
+      __$$_MedicationDispensePerformerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -11539,17 +11429,17 @@ abstract class _$MedicationDispensePerformerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationDispensePerformerCopyWithImpl<$Res>
+class __$$_MedicationDispensePerformerCopyWithImpl<$Res>
     extends _$MedicationDispensePerformerCopyWithImpl<$Res>
-    implements _$MedicationDispensePerformerCopyWith<$Res> {
-  __$MedicationDispensePerformerCopyWithImpl(
-      _MedicationDispensePerformer _value,
-      $Res Function(_MedicationDispensePerformer) _then)
-      : super(_value, (v) => _then(v as _MedicationDispensePerformer));
+    implements _$$_MedicationDispensePerformerCopyWith<$Res> {
+  __$$_MedicationDispensePerformerCopyWithImpl(
+      _$_MedicationDispensePerformer _value,
+      $Res Function(_$_MedicationDispensePerformer) _then)
+      : super(_value, (v) => _then(v as _$_MedicationDispensePerformer));
 
   @override
-  _MedicationDispensePerformer get _value =>
-      super._value as _MedicationDispensePerformer;
+  _$_MedicationDispensePerformer get _value =>
+      super._value as _$_MedicationDispensePerformer;
 
   @override
   $Res call({
@@ -11559,17 +11449,17 @@ class __$MedicationDispensePerformerCopyWithImpl<$Res>
     Object? function = freezed,
     Object? actor = freezed,
   }) {
-    return _then(_MedicationDispensePerformer(
+    return _then(_$_MedicationDispensePerformer(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       function: function == freezed
@@ -11589,22 +11479,38 @@ class __$MedicationDispensePerformerCopyWithImpl<$Res>
 class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
   _$_MedicationDispensePerformer(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.function,
       required this.actor})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationDispensePerformerFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? function;
   @override
@@ -11619,45 +11525,48 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationDispensePerformer &&
+            other is _$_MedicationDispensePerformer &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.function, function) &&
             const DeepCollectionEquality().equals(other.actor, actor));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(function),
       const DeepCollectionEquality().hash(actor));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationDispensePerformerCopyWith<_MedicationDispensePerformer>
-      get copyWith => __$MedicationDispensePerformerCopyWithImpl<
-          _MedicationDispensePerformer>(this, _$identity);
+  _$$_MedicationDispensePerformerCopyWith<_$_MedicationDispensePerformer>
+      get copyWith => __$$_MedicationDispensePerformerCopyWithImpl<
+          _$_MedicationDispensePerformer>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationDispensePerformerToJson(this);
+    return _$$_MedicationDispensePerformerToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationDispensePerformer
     extends MedicationDispensePerformer {
   factory _MedicationDispensePerformer(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
-      required Reference actor}) = _$_MedicationDispensePerformer;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? function,
+      required final Reference actor}) = _$_MedicationDispensePerformer;
   _MedicationDispensePerformer._() : super._();
 
   factory _MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =
@@ -11676,7 +11585,7 @@ abstract class _MedicationDispensePerformer
   Reference get actor;
   @override
   @JsonKey(ignore: true)
-  _$MedicationDispensePerformerCopyWith<_MedicationDispensePerformer>
+  _$$_MedicationDispensePerformerCopyWith<_$_MedicationDispensePerformer>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11684,40 +11593,6 @@ MedicationDispenseSubstitution _$MedicationDispenseSubstitutionFromJson(
     Map<String, dynamic> json) {
   return _MedicationDispenseSubstitution.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationDispenseSubstitutionTearOff {
-  const _$MedicationDispenseSubstitutionTearOff();
-
-  _MedicationDispenseSubstitution call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? wasSubstituted,
-      @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
-      CodeableConcept? type,
-      List<CodeableConcept>? reason,
-      Reference? responsibleParty}) {
-    return _MedicationDispenseSubstitution(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      wasSubstituted: wasSubstituted,
-      wasSubstitutedElement: wasSubstitutedElement,
-      type: type,
-      reason: reason,
-      responsibleParty: responsibleParty,
-    );
-  }
-
-  MedicationDispenseSubstitution fromJson(Map<String, Object?> json) {
-    return MedicationDispenseSubstitution.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationDispenseSubstitution =
-    _$MedicationDispenseSubstitutionTearOff();
 
 /// @nodoc
 mixin _$MedicationDispenseSubstitution {
@@ -11851,12 +11726,12 @@ class _$MedicationDispenseSubstitutionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationDispenseSubstitutionCopyWith<$Res>
+abstract class _$$_MedicationDispenseSubstitutionCopyWith<$Res>
     implements $MedicationDispenseSubstitutionCopyWith<$Res> {
-  factory _$MedicationDispenseSubstitutionCopyWith(
-          _MedicationDispenseSubstitution value,
-          $Res Function(_MedicationDispenseSubstitution) then) =
-      __$MedicationDispenseSubstitutionCopyWithImpl<$Res>;
+  factory _$$_MedicationDispenseSubstitutionCopyWith(
+          _$_MedicationDispenseSubstitution value,
+          $Res Function(_$_MedicationDispenseSubstitution) then) =
+      __$$_MedicationDispenseSubstitutionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -11877,17 +11752,17 @@ abstract class _$MedicationDispenseSubstitutionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
+class __$$_MedicationDispenseSubstitutionCopyWithImpl<$Res>
     extends _$MedicationDispenseSubstitutionCopyWithImpl<$Res>
-    implements _$MedicationDispenseSubstitutionCopyWith<$Res> {
-  __$MedicationDispenseSubstitutionCopyWithImpl(
-      _MedicationDispenseSubstitution _value,
-      $Res Function(_MedicationDispenseSubstitution) _then)
-      : super(_value, (v) => _then(v as _MedicationDispenseSubstitution));
+    implements _$$_MedicationDispenseSubstitutionCopyWith<$Res> {
+  __$$_MedicationDispenseSubstitutionCopyWithImpl(
+      _$_MedicationDispenseSubstitution _value,
+      $Res Function(_$_MedicationDispenseSubstitution) _then)
+      : super(_value, (v) => _then(v as _$_MedicationDispenseSubstitution));
 
   @override
-  _MedicationDispenseSubstitution get _value =>
-      super._value as _MedicationDispenseSubstitution;
+  _$_MedicationDispenseSubstitution get _value =>
+      super._value as _$_MedicationDispenseSubstitution;
 
   @override
   $Res call({
@@ -11900,17 +11775,17 @@ class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? responsibleParty = freezed,
   }) {
-    return _then(_MedicationDispenseSubstitution(
+    return _then(_$_MedicationDispenseSubstitution(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       wasSubstituted: wasSubstituted == freezed
@@ -11926,7 +11801,7 @@ class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       reason: reason == freezed
-          ? _value.reason
+          ? _value._reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       responsibleParty: responsibleParty == freezed
@@ -11943,14 +11818,17 @@ class _$_MedicationDispenseSubstitution
     extends _MedicationDispenseSubstitution {
   _$_MedicationDispenseSubstitution(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.wasSubstituted,
       @JsonKey(name: '_wasSubstituted') this.wasSubstitutedElement,
       this.type,
-      this.reason,
+      final List<CodeableConcept>? reason,
       this.responsibleParty})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _reason = reason,
+        super._();
 
   factory _$_MedicationDispenseSubstitution.fromJson(
           Map<String, dynamic> json) =>
@@ -11958,11 +11836,25 @@ class _$_MedicationDispenseSubstitution
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? wasSubstituted;
   @override
@@ -11970,8 +11862,15 @@ class _$_MedicationDispenseSubstitution
   final Element? wasSubstitutedElement;
   @override
   final CodeableConcept? type;
+  final List<CodeableConcept>? _reason;
   @override
-  final List<CodeableConcept>? reason;
+  List<CodeableConcept>? get reason {
+    final value = _reason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? responsibleParty;
 
@@ -11984,57 +11883,60 @@ class _$_MedicationDispenseSubstitution
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationDispenseSubstitution &&
+            other is _$_MedicationDispenseSubstitution &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.wasSubstituted, wasSubstituted) &&
             const DeepCollectionEquality()
                 .equals(other.wasSubstitutedElement, wasSubstitutedElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality().equals(other._reason, _reason) &&
             const DeepCollectionEquality()
                 .equals(other.responsibleParty, responsibleParty));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(wasSubstituted),
       const DeepCollectionEquality().hash(wasSubstitutedElement),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(reason),
+      const DeepCollectionEquality().hash(_reason),
       const DeepCollectionEquality().hash(responsibleParty));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationDispenseSubstitutionCopyWith<_MedicationDispenseSubstitution>
-      get copyWith => __$MedicationDispenseSubstitutionCopyWithImpl<
-          _MedicationDispenseSubstitution>(this, _$identity);
+  _$$_MedicationDispenseSubstitutionCopyWith<_$_MedicationDispenseSubstitution>
+      get copyWith => __$$_MedicationDispenseSubstitutionCopyWithImpl<
+          _$_MedicationDispenseSubstitution>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationDispenseSubstitutionToJson(this);
+    return _$$_MedicationDispenseSubstitutionToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationDispenseSubstitution
     extends MedicationDispenseSubstitution {
   factory _MedicationDispenseSubstitution(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? wasSubstituted,
-      @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
-      CodeableConcept? type,
-      List<CodeableConcept>? reason,
-      Reference? responsibleParty}) = _$_MedicationDispenseSubstitution;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Boolean? wasSubstituted,
+      @JsonKey(name: '_wasSubstituted') final Element? wasSubstitutedElement,
+      final CodeableConcept? type,
+      final List<CodeableConcept>? reason,
+      final Reference? responsibleParty}) = _$_MedicationDispenseSubstitution;
   _MedicationDispenseSubstitution._() : super._();
 
   factory _MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =
@@ -12060,7 +11962,7 @@ abstract class _MedicationDispenseSubstitution
   Reference? get responsibleParty;
   @override
   @JsonKey(ignore: true)
-  _$MedicationDispenseSubstitutionCopyWith<_MedicationDispenseSubstitution>
+  _$$_MedicationDispenseSubstitutionCopyWith<_$_MedicationDispenseSubstitution>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -12069,113 +11971,7 @@ MedicationKnowledge _$MedicationKnowledgeFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MedicationKnowledgeTearOff {
-  const _$MedicationKnowledgeTearOff();
-
-  _MedicationKnowledge call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-          R5ResourceType resourceType = R5ResourceType.MedicationKnowledge,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? code,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? author,
-      Reference? sponsor,
-      CodeableConcept? doseForm,
-      Quantity? amount,
-      List<String>? synonym,
-      @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
-      List<MedicationKnowledgeRelatedMedicationKnowledge>?
-          relatedMedicationKnowledge,
-      List<Reference>? associatedMedication,
-      Reference? associatedDefinition,
-      List<CodeableConcept>? productType,
-      List<MedicationKnowledgeMonograph>? monograph,
-      List<MedicationKnowledgeIngredient>? ingredient,
-      List<Reference>? device,
-      Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction')
-          Element? preparationInstructionElement,
-      List<CodeableConcept>? intendedRoute,
-      List<MedicationKnowledgeCost>? cost,
-      List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
-      List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
-      List<MedicationKnowledgeMedicineClassification>? medicineClassification,
-      List<MedicationKnowledgePackaging>? packaging,
-      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
-      List<Reference>? clinicalUseIssue,
-      List<MedicationKnowledgeRegulatory>? regulatory,
-      List<MedicationKnowledgeKineticCharacteristic>? kineticCharacteristic}) {
-    return _MedicationKnowledge(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      code: code,
-      status: status,
-      statusElement: statusElement,
-      author: author,
-      sponsor: sponsor,
-      doseForm: doseForm,
-      amount: amount,
-      synonym: synonym,
-      synonymElement: synonymElement,
-      relatedMedicationKnowledge: relatedMedicationKnowledge,
-      associatedMedication: associatedMedication,
-      associatedDefinition: associatedDefinition,
-      productType: productType,
-      monograph: monograph,
-      ingredient: ingredient,
-      device: device,
-      preparationInstruction: preparationInstruction,
-      preparationInstructionElement: preparationInstructionElement,
-      intendedRoute: intendedRoute,
-      cost: cost,
-      monitoringProgram: monitoringProgram,
-      indicationGuideline: indicationGuideline,
-      medicineClassification: medicineClassification,
-      packaging: packaging,
-      drugCharacteristic: drugCharacteristic,
-      clinicalUseIssue: clinicalUseIssue,
-      regulatory: regulatory,
-      kineticCharacteristic: kineticCharacteristic,
-    );
-  }
-
-  MedicationKnowledge fromJson(Map<String, Object?> json) {
-    return MedicationKnowledge.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledge = _$MedicationKnowledgeTearOff();
-
-/// @nodoc
 mixin _$MedicationKnowledge {
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -12197,28 +11993,21 @@ mixin _$MedicationKnowledge {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get author => throw _privateConstructorUsedError;
-  Reference? get sponsor => throw _privateConstructorUsedError;
-  CodeableConcept? get doseForm => throw _privateConstructorUsedError;
-  Quantity? get amount => throw _privateConstructorUsedError;
-  List<String>? get synonym => throw _privateConstructorUsedError;
-  @JsonKey(name: '_synonym')
-  List<Element>? get synonymElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get intendedJurisdiction =>
+      throw _privateConstructorUsedError;
+  List<String>? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: '_name')
+  List<Element>? get nameElement => throw _privateConstructorUsedError;
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge => throw _privateConstructorUsedError;
   List<Reference>? get associatedMedication =>
       throw _privateConstructorUsedError;
-  Reference? get associatedDefinition => throw _privateConstructorUsedError;
   List<CodeableConcept>? get productType => throw _privateConstructorUsedError;
   List<MedicationKnowledgeMonograph>? get monograph =>
       throw _privateConstructorUsedError;
-  List<MedicationKnowledgeIngredient>? get ingredient =>
-      throw _privateConstructorUsedError;
-  List<Reference>? get device => throw _privateConstructorUsedError;
   Markdown? get preparationInstruction => throw _privateConstructorUsedError;
   @JsonKey(name: '_preparationInstruction')
   Element? get preparationInstructionElement =>
-      throw _privateConstructorUsedError;
-  List<CodeableConcept>? get intendedRoute =>
       throw _privateConstructorUsedError;
   List<MedicationKnowledgeCost>? get cost => throw _privateConstructorUsedError;
   List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram =>
@@ -12229,12 +12018,12 @@ mixin _$MedicationKnowledge {
       throw _privateConstructorUsedError;
   List<MedicationKnowledgePackaging>? get packaging =>
       throw _privateConstructorUsedError;
-  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic =>
-      throw _privateConstructorUsedError;
   List<Reference>? get clinicalUseIssue => throw _privateConstructorUsedError;
+  List<MedicationKnowledgeStorageGuideline>? get storageGuideline =>
+      throw _privateConstructorUsedError;
   List<MedicationKnowledgeRegulatory>? get regulatory =>
       throw _privateConstructorUsedError;
-  List<MedicationKnowledgeKineticCharacteristic>? get kineticCharacteristic =>
+  MedicationKnowledgeDefinitional? get definitional =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -12249,54 +12038,41 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
           MedicationKnowledge value, $Res Function(MedicationKnowledge) then) =
       _$MedicationKnowledgeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? author,
-      Reference? sponsor,
-      CodeableConcept? doseForm,
-      Quantity? amount,
-      List<String>? synonym,
-      @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
+      List<CodeableConcept>? intendedJurisdiction,
+      List<String>? name,
+      @JsonKey(name: '_name') List<Element>? nameElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
-      Reference? associatedDefinition,
       List<CodeableConcept>? productType,
       List<MedicationKnowledgeMonograph>? monograph,
-      List<MedicationKnowledgeIngredient>? ingredient,
-      List<Reference>? device,
       Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction')
-          Element? preparationInstructionElement,
-      List<CodeableConcept>? intendedRoute,
+      @JsonKey(name: '_preparationInstruction') Element? preparationInstructionElement,
       List<MedicationKnowledgeCost>? cost,
       List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
       List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
       List<MedicationKnowledgeMedicineClassification>? medicineClassification,
       List<MedicationKnowledgePackaging>? packaging,
-      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
       List<Reference>? clinicalUseIssue,
+      List<MedicationKnowledgeStorageGuideline>? storageGuideline,
       List<MedicationKnowledgeRegulatory>? regulatory,
-      List<MedicationKnowledgeKineticCharacteristic>? kineticCharacteristic});
+      MedicationKnowledgeDefinitional? definitional});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -12305,11 +12081,8 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res>? get author;
-  $ReferenceCopyWith<$Res>? get sponsor;
-  $CodeableConceptCopyWith<$Res>? get doseForm;
-  $QuantityCopyWith<$Res>? get amount;
-  $ReferenceCopyWith<$Res>? get associatedDefinition;
   $ElementCopyWith<$Res>? get preparationInstructionElement;
+  $MedicationKnowledgeDefinitionalCopyWith<$Res>? get definitional;
 }
 
 /// @nodoc
@@ -12339,30 +12112,24 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? author = freezed,
-    Object? sponsor = freezed,
-    Object? doseForm = freezed,
-    Object? amount = freezed,
-    Object? synonym = freezed,
-    Object? synonymElement = freezed,
+    Object? intendedJurisdiction = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
     Object? relatedMedicationKnowledge = freezed,
     Object? associatedMedication = freezed,
-    Object? associatedDefinition = freezed,
     Object? productType = freezed,
     Object? monograph = freezed,
-    Object? ingredient = freezed,
-    Object? device = freezed,
     Object? preparationInstruction = freezed,
     Object? preparationInstructionElement = freezed,
-    Object? intendedRoute = freezed,
     Object? cost = freezed,
     Object? monitoringProgram = freezed,
     Object? indicationGuideline = freezed,
     Object? medicineClassification = freezed,
     Object? packaging = freezed,
-    Object? drugCharacteristic = freezed,
     Object? clinicalUseIssue = freezed,
+    Object? storageGuideline = freezed,
     Object? regulatory = freezed,
-    Object? kineticCharacteristic = freezed,
+    Object? definitional = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -12429,25 +12196,17 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      sponsor: sponsor == freezed
-          ? _value.sponsor
-          : sponsor // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      doseForm: doseForm == freezed
-          ? _value.doseForm
-          : doseForm // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      amount: amount == freezed
-          ? _value.amount
-          : amount // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      synonym: synonym == freezed
-          ? _value.synonym
-          : synonym // ignore: cast_nullable_to_non_nullable
+      intendedJurisdiction: intendedJurisdiction == freezed
+          ? _value.intendedJurisdiction
+          : intendedJurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      synonymElement: synonymElement == freezed
-          ? _value.synonymElement
-          : synonymElement // ignore: cast_nullable_to_non_nullable
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       relatedMedicationKnowledge: relatedMedicationKnowledge == freezed
           ? _value.relatedMedicationKnowledge
@@ -12457,10 +12216,6 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.associatedMedication
           : associatedMedication // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      associatedDefinition: associatedDefinition == freezed
-          ? _value.associatedDefinition
-          : associatedDefinition // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       productType: productType == freezed
           ? _value.productType
           : productType // ignore: cast_nullable_to_non_nullable
@@ -12469,14 +12224,6 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.monograph
           : monograph // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeMonograph>?,
-      ingredient: ingredient == freezed
-          ? _value.ingredient
-          : ingredient // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeIngredient>?,
-      device: device == freezed
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       preparationInstruction: preparationInstruction == freezed
           ? _value.preparationInstruction
           : preparationInstruction // ignore: cast_nullable_to_non_nullable
@@ -12485,10 +12232,6 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.preparationInstructionElement
           : preparationInstructionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      intendedRoute: intendedRoute == freezed
-          ? _value.intendedRoute
-          : intendedRoute // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
       cost: cost == freezed
           ? _value.cost
           : cost // ignore: cast_nullable_to_non_nullable
@@ -12509,22 +12252,22 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.packaging
           : packaging // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgePackaging>?,
-      drugCharacteristic: drugCharacteristic == freezed
-          ? _value.drugCharacteristic
-          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeDrugCharacteristic>?,
       clinicalUseIssue: clinicalUseIssue == freezed
           ? _value.clinicalUseIssue
           : clinicalUseIssue // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
+      storageGuideline: storageGuideline == freezed
+          ? _value.storageGuideline
+          : storageGuideline // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeStorageGuideline>?,
       regulatory: regulatory == freezed
           ? _value.regulatory
           : regulatory // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeRegulatory>?,
-      kineticCharacteristic: kineticCharacteristic == freezed
-          ? _value.kineticCharacteristic
-          : kineticCharacteristic // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeKineticCharacteristic>?,
+      definitional: definitional == freezed
+          ? _value.definitional
+          : definitional // ignore: cast_nullable_to_non_nullable
+              as MedicationKnowledgeDefinitional?,
     ));
   }
 
@@ -12606,50 +12349,6 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get sponsor {
-    if (_value.sponsor == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.sponsor!, (value) {
-      return _then(_value.copyWith(sponsor: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get doseForm {
-    if (_value.doseForm == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.doseForm!, (value) {
-      return _then(_value.copyWith(doseForm: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res>? get amount {
-    if (_value.amount == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.amount!, (value) {
-      return _then(_value.copyWith(amount: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get associatedDefinition {
-    if (_value.associatedDefinition == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.associatedDefinition!, (value) {
-      return _then(_value.copyWith(associatedDefinition: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res>? get preparationInstructionElement {
     if (_value.preparationInstructionElement == null) {
       return null;
@@ -12660,64 +12359,63 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
       return _then(_value.copyWith(preparationInstructionElement: value));
     });
   }
+
+  @override
+  $MedicationKnowledgeDefinitionalCopyWith<$Res>? get definitional {
+    if (_value.definitional == null) {
+      return null;
+    }
+
+    return $MedicationKnowledgeDefinitionalCopyWith<$Res>(_value.definitional!,
+        (value) {
+      return _then(_value.copyWith(definitional: value));
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeCopyWith<$Res>
     implements $MedicationKnowledgeCopyWith<$Res> {
-  factory _$MedicationKnowledgeCopyWith(_MedicationKnowledge value,
-          $Res Function(_MedicationKnowledge) then) =
-      __$MedicationKnowledgeCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeCopyWith(_$_MedicationKnowledge value,
+          $Res Function(_$_MedicationKnowledge) then) =
+      __$$_MedicationKnowledgeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? author,
-      Reference? sponsor,
-      CodeableConcept? doseForm,
-      Quantity? amount,
-      List<String>? synonym,
-      @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
+      List<CodeableConcept>? intendedJurisdiction,
+      List<String>? name,
+      @JsonKey(name: '_name') List<Element>? nameElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
-      Reference? associatedDefinition,
       List<CodeableConcept>? productType,
       List<MedicationKnowledgeMonograph>? monograph,
-      List<MedicationKnowledgeIngredient>? ingredient,
-      List<Reference>? device,
       Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction')
-          Element? preparationInstructionElement,
-      List<CodeableConcept>? intendedRoute,
+      @JsonKey(name: '_preparationInstruction') Element? preparationInstructionElement,
       List<MedicationKnowledgeCost>? cost,
       List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
       List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
       List<MedicationKnowledgeMedicineClassification>? medicineClassification,
       List<MedicationKnowledgePackaging>? packaging,
-      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
       List<Reference>? clinicalUseIssue,
+      List<MedicationKnowledgeStorageGuideline>? storageGuideline,
       List<MedicationKnowledgeRegulatory>? regulatory,
-      List<MedicationKnowledgeKineticCharacteristic>? kineticCharacteristic});
+      MedicationKnowledgeDefinitional? definitional});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -12734,27 +12432,21 @@ abstract class _$MedicationKnowledgeCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get author;
   @override
-  $ReferenceCopyWith<$Res>? get sponsor;
-  @override
-  $CodeableConceptCopyWith<$Res>? get doseForm;
-  @override
-  $QuantityCopyWith<$Res>? get amount;
-  @override
-  $ReferenceCopyWith<$Res>? get associatedDefinition;
-  @override
   $ElementCopyWith<$Res>? get preparationInstructionElement;
+  @override
+  $MedicationKnowledgeDefinitionalCopyWith<$Res>? get definitional;
 }
 
 /// @nodoc
-class __$MedicationKnowledgeCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeCopyWithImpl<$Res>
     extends _$MedicationKnowledgeCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeCopyWith<$Res> {
-  __$MedicationKnowledgeCopyWithImpl(
-      _MedicationKnowledge _value, $Res Function(_MedicationKnowledge) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledge));
+    implements _$$_MedicationKnowledgeCopyWith<$Res> {
+  __$$_MedicationKnowledgeCopyWithImpl(_$_MedicationKnowledge _value,
+      $Res Function(_$_MedicationKnowledge) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledge));
 
   @override
-  _MedicationKnowledge get _value => super._value as _MedicationKnowledge;
+  _$_MedicationKnowledge get _value => super._value as _$_MedicationKnowledge;
 
   @override
   $Res call({
@@ -12774,32 +12466,26 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? author = freezed,
-    Object? sponsor = freezed,
-    Object? doseForm = freezed,
-    Object? amount = freezed,
-    Object? synonym = freezed,
-    Object? synonymElement = freezed,
+    Object? intendedJurisdiction = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
     Object? relatedMedicationKnowledge = freezed,
     Object? associatedMedication = freezed,
-    Object? associatedDefinition = freezed,
     Object? productType = freezed,
     Object? monograph = freezed,
-    Object? ingredient = freezed,
-    Object? device = freezed,
     Object? preparationInstruction = freezed,
     Object? preparationInstructionElement = freezed,
-    Object? intendedRoute = freezed,
     Object? cost = freezed,
     Object? monitoringProgram = freezed,
     Object? indicationGuideline = freezed,
     Object? medicineClassification = freezed,
     Object? packaging = freezed,
-    Object? drugCharacteristic = freezed,
     Object? clinicalUseIssue = freezed,
+    Object? storageGuideline = freezed,
     Object? regulatory = freezed,
-    Object? kineticCharacteristic = freezed,
+    Object? definitional = freezed,
   }) {
-    return _then(_MedicationKnowledge(
+    return _then(_$_MedicationKnowledge(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -12833,19 +12519,19 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       code: code == freezed
@@ -12864,54 +12550,34 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      sponsor: sponsor == freezed
-          ? _value.sponsor
-          : sponsor // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      doseForm: doseForm == freezed
-          ? _value.doseForm
-          : doseForm // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      amount: amount == freezed
-          ? _value.amount
-          : amount // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      synonym: synonym == freezed
-          ? _value.synonym
-          : synonym // ignore: cast_nullable_to_non_nullable
+      intendedJurisdiction: intendedJurisdiction == freezed
+          ? _value._intendedJurisdiction
+          : intendedJurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      name: name == freezed
+          ? _value._name
+          : name // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      synonymElement: synonymElement == freezed
-          ? _value.synonymElement
-          : synonymElement // ignore: cast_nullable_to_non_nullable
+      nameElement: nameElement == freezed
+          ? _value._nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       relatedMedicationKnowledge: relatedMedicationKnowledge == freezed
-          ? _value.relatedMedicationKnowledge
+          ? _value._relatedMedicationKnowledge
           : relatedMedicationKnowledge // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeRelatedMedicationKnowledge>?,
       associatedMedication: associatedMedication == freezed
-          ? _value.associatedMedication
+          ? _value._associatedMedication
           : associatedMedication // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      associatedDefinition: associatedDefinition == freezed
-          ? _value.associatedDefinition
-          : associatedDefinition // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       productType: productType == freezed
-          ? _value.productType
+          ? _value._productType
           : productType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       monograph: monograph == freezed
-          ? _value.monograph
+          ? _value._monograph
           : monograph // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeMonograph>?,
-      ingredient: ingredient == freezed
-          ? _value.ingredient
-          : ingredient // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeIngredient>?,
-      device: device == freezed
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       preparationInstruction: preparationInstruction == freezed
           ? _value.preparationInstruction
           : preparationInstruction // ignore: cast_nullable_to_non_nullable
@@ -12920,46 +12586,42 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.preparationInstructionElement
           : preparationInstructionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      intendedRoute: intendedRoute == freezed
-          ? _value.intendedRoute
-          : intendedRoute // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
       cost: cost == freezed
-          ? _value.cost
+          ? _value._cost
           : cost // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeCost>?,
       monitoringProgram: monitoringProgram == freezed
-          ? _value.monitoringProgram
+          ? _value._monitoringProgram
           : monitoringProgram // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeMonitoringProgram>?,
       indicationGuideline: indicationGuideline == freezed
-          ? _value.indicationGuideline
+          ? _value._indicationGuideline
           : indicationGuideline // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeIndicationGuideline>?,
       medicineClassification: medicineClassification == freezed
-          ? _value.medicineClassification
+          ? _value._medicineClassification
           : medicineClassification // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeMedicineClassification>?,
       packaging: packaging == freezed
-          ? _value.packaging
+          ? _value._packaging
           : packaging // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgePackaging>?,
-      drugCharacteristic: drugCharacteristic == freezed
-          ? _value.drugCharacteristic
-          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeDrugCharacteristic>?,
       clinicalUseIssue: clinicalUseIssue == freezed
-          ? _value.clinicalUseIssue
+          ? _value._clinicalUseIssue
           : clinicalUseIssue // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
+      storageGuideline: storageGuideline == freezed
+          ? _value._storageGuideline
+          : storageGuideline // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeStorageGuideline>?,
       regulatory: regulatory == freezed
-          ? _value.regulatory
+          ? _value._regulatory
           : regulatory // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeRegulatory>?,
-      kineticCharacteristic: kineticCharacteristic == freezed
-          ? _value.kineticCharacteristic
-          : kineticCharacteristic // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeKineticCharacteristic>?,
+      definitional: definitional == freezed
+          ? _value.definitional
+          : definitional // ignore: cast_nullable_to_non_nullable
+              as MedicationKnowledgeDefinitional?,
     ));
   }
 }
@@ -12968,60 +12630,67 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationKnowledge extends _MedicationKnowledge {
   _$_MedicationKnowledge(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-          this.resourceType = R5ResourceType.MedicationKnowledge,
+      {this.resourceType = R5ResourceType.MedicationKnowledge,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.code,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.author,
-      this.sponsor,
-      this.doseForm,
-      this.amount,
-      this.synonym,
-      @JsonKey(name: '_synonym')
-          this.synonymElement,
-      this.relatedMedicationKnowledge,
-      this.associatedMedication,
-      this.associatedDefinition,
-      this.productType,
-      this.monograph,
-      this.ingredient,
-      this.device,
+      final List<CodeableConcept>? intendedJurisdiction,
+      final List<String>? name,
+      @JsonKey(name: '_name') final List<Element>? nameElement,
+      final List<MedicationKnowledgeRelatedMedicationKnowledge>?
+          relatedMedicationKnowledge,
+      final List<Reference>? associatedMedication,
+      final List<CodeableConcept>? productType,
+      final List<MedicationKnowledgeMonograph>? monograph,
       this.preparationInstruction,
-      @JsonKey(name: '_preparationInstruction')
-          this.preparationInstructionElement,
-      this.intendedRoute,
-      this.cost,
-      this.monitoringProgram,
-      this.indicationGuideline,
-      this.medicineClassification,
-      this.packaging,
-      this.drugCharacteristic,
-      this.clinicalUseIssue,
-      this.regulatory,
-      this.kineticCharacteristic})
-      : super._();
+      @JsonKey(name: '_preparationInstruction') this.preparationInstructionElement,
+      final List<MedicationKnowledgeCost>? cost,
+      final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
+      final List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
+      final List<MedicationKnowledgeMedicineClassification>? medicineClassification,
+      final List<MedicationKnowledgePackaging>? packaging,
+      final List<Reference>? clinicalUseIssue,
+      final List<MedicationKnowledgeStorageGuideline>? storageGuideline,
+      final List<MedicationKnowledgeRegulatory>? regulatory,
+      this.definitional})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _intendedJurisdiction = intendedJurisdiction,
+        _name = name,
+        _nameElement = nameElement,
+        _relatedMedicationKnowledge = relatedMedicationKnowledge,
+        _associatedMedication = associatedMedication,
+        _productType = productType,
+        _monograph = monograph,
+        _cost = cost,
+        _monitoringProgram = monitoringProgram,
+        _indicationGuideline = indicationGuideline,
+        _medicineClassification = medicineClassification,
+        _packaging = packaging,
+        _clinicalUseIssue = clinicalUseIssue,
+        _storageGuideline = storageGuideline,
+        _regulatory = regulatory,
+        super._();
 
   factory _$_MedicationKnowledge.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -13039,15 +12708,43 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? code;
   @override
@@ -13057,68 +12754,163 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   final Element? statusElement;
   @override
   final Reference? author;
+  final List<CodeableConcept>? _intendedJurisdiction;
   @override
-  final Reference? sponsor;
+  List<CodeableConcept>? get intendedJurisdiction {
+    final value = _intendedJurisdiction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _name;
   @override
-  final CodeableConcept? doseForm;
+  List<String>? get name {
+    final value = _name;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _nameElement;
   @override
-  final Quantity? amount;
-  @override
-  final List<String>? synonym;
-  @override
-  @JsonKey(name: '_synonym')
-  final List<Element>? synonymElement;
-  @override
+  @JsonKey(name: '_name')
+  List<Element>? get nameElement {
+    final value = _nameElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<MedicationKnowledgeRelatedMedicationKnowledge>?
-      relatedMedicationKnowledge;
+      _relatedMedicationKnowledge;
   @override
-  final List<Reference>? associatedMedication;
+  List<MedicationKnowledgeRelatedMedicationKnowledge>?
+      get relatedMedicationKnowledge {
+    final value = _relatedMedicationKnowledge;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _associatedMedication;
   @override
-  final Reference? associatedDefinition;
+  List<Reference>? get associatedMedication {
+    final value = _associatedMedication;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _productType;
   @override
-  final List<CodeableConcept>? productType;
+  List<CodeableConcept>? get productType {
+    final value = _productType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeMonograph>? _monograph;
   @override
-  final List<MedicationKnowledgeMonograph>? monograph;
-  @override
-  final List<MedicationKnowledgeIngredient>? ingredient;
-  @override
-  final List<Reference>? device;
+  List<MedicationKnowledgeMonograph>? get monograph {
+    final value = _monograph;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Markdown? preparationInstruction;
   @override
   @JsonKey(name: '_preparationInstruction')
   final Element? preparationInstructionElement;
+  final List<MedicationKnowledgeCost>? _cost;
   @override
-  final List<CodeableConcept>? intendedRoute;
+  List<MedicationKnowledgeCost>? get cost {
+    final value = _cost;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeMonitoringProgram>? _monitoringProgram;
   @override
-  final List<MedicationKnowledgeCost>? cost;
+  List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram {
+    final value = _monitoringProgram;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeIndicationGuideline>? _indicationGuideline;
   @override
-  final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram;
+  List<MedicationKnowledgeIndicationGuideline>? get indicationGuideline {
+    final value = _indicationGuideline;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeMedicineClassification>?
+      _medicineClassification;
   @override
-  final List<MedicationKnowledgeIndicationGuideline>? indicationGuideline;
+  List<MedicationKnowledgeMedicineClassification>? get medicineClassification {
+    final value = _medicineClassification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgePackaging>? _packaging;
   @override
-  final List<MedicationKnowledgeMedicineClassification>? medicineClassification;
+  List<MedicationKnowledgePackaging>? get packaging {
+    final value = _packaging;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _clinicalUseIssue;
   @override
-  final List<MedicationKnowledgePackaging>? packaging;
+  List<Reference>? get clinicalUseIssue {
+    final value = _clinicalUseIssue;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeStorageGuideline>? _storageGuideline;
   @override
-  final List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic;
+  List<MedicationKnowledgeStorageGuideline>? get storageGuideline {
+    final value = _storageGuideline;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeRegulatory>? _regulatory;
   @override
-  final List<Reference>? clinicalUseIssue;
+  List<MedicationKnowledgeRegulatory>? get regulatory {
+    final value = _regulatory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final List<MedicationKnowledgeRegulatory>? regulatory;
-  @override
-  final List<MedicationKnowledgeKineticCharacteristic>? kineticCharacteristic;
+  final MedicationKnowledgeDefinitional? definitional;
 
   @override
   String toString() {
-    return 'MedicationKnowledge(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement, author: $author, sponsor: $sponsor, doseForm: $doseForm, amount: $amount, synonym: $synonym, synonymElement: $synonymElement, relatedMedicationKnowledge: $relatedMedicationKnowledge, associatedMedication: $associatedMedication, associatedDefinition: $associatedDefinition, productType: $productType, monograph: $monograph, ingredient: $ingredient, device: $device, preparationInstruction: $preparationInstruction, preparationInstructionElement: $preparationInstructionElement, intendedRoute: $intendedRoute, cost: $cost, monitoringProgram: $monitoringProgram, indicationGuideline: $indicationGuideline, medicineClassification: $medicineClassification, packaging: $packaging, drugCharacteristic: $drugCharacteristic, clinicalUseIssue: $clinicalUseIssue, regulatory: $regulatory, kineticCharacteristic: $kineticCharacteristic)';
+    return 'MedicationKnowledge(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement, author: $author, intendedJurisdiction: $intendedJurisdiction, name: $name, nameElement: $nameElement, relatedMedicationKnowledge: $relatedMedicationKnowledge, associatedMedication: $associatedMedication, productType: $productType, monograph: $monograph, preparationInstruction: $preparationInstruction, preparationInstructionElement: $preparationInstructionElement, cost: $cost, monitoringProgram: $monitoringProgram, indicationGuideline: $indicationGuideline, medicineClassification: $medicineClassification, packaging: $packaging, clinicalUseIssue: $clinicalUseIssue, storageGuideline: $storageGuideline, regulatory: $regulatory, definitional: $definitional)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledge &&
+            other is _$_MedicationKnowledge &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -13131,61 +12923,58 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.author, author) &&
-            const DeepCollectionEquality().equals(other.sponsor, sponsor) &&
-            const DeepCollectionEquality().equals(other.doseForm, doseForm) &&
-            const DeepCollectionEquality().equals(other.amount, amount) &&
-            const DeepCollectionEquality().equals(other.synonym, synonym) &&
             const DeepCollectionEquality()
-                .equals(other.synonymElement, synonymElement) &&
+                .equals(other._intendedJurisdiction, _intendedJurisdiction) &&
+            const DeepCollectionEquality().equals(other._name, _name) &&
+            const DeepCollectionEquality()
+                .equals(other._nameElement, _nameElement) &&
             const DeepCollectionEquality().equals(
-                other.relatedMedicationKnowledge, relatedMedicationKnowledge) &&
+                other._relatedMedicationKnowledge,
+                _relatedMedicationKnowledge) &&
             const DeepCollectionEquality()
-                .equals(other.associatedMedication, associatedMedication) &&
+                .equals(other._associatedMedication, _associatedMedication) &&
             const DeepCollectionEquality()
-                .equals(other.associatedDefinition, associatedDefinition) &&
+                .equals(other._productType, _productType) &&
             const DeepCollectionEquality()
-                .equals(other.productType, productType) &&
-            const DeepCollectionEquality().equals(other.monograph, monograph) &&
-            const DeepCollectionEquality()
-                .equals(other.ingredient, ingredient) &&
-            const DeepCollectionEquality().equals(other.device, device) &&
+                .equals(other._monograph, _monograph) &&
             const DeepCollectionEquality()
                 .equals(other.preparationInstruction, preparationInstruction) &&
             const DeepCollectionEquality().equals(
                 other.preparationInstructionElement,
                 preparationInstructionElement) &&
+            const DeepCollectionEquality().equals(other._cost, _cost) &&
             const DeepCollectionEquality()
-                .equals(other.intendedRoute, intendedRoute) &&
-            const DeepCollectionEquality().equals(other.cost, cost) &&
+                .equals(other._monitoringProgram, _monitoringProgram) &&
             const DeepCollectionEquality()
-                .equals(other.monitoringProgram, monitoringProgram) &&
+                .equals(other._indicationGuideline, _indicationGuideline) &&
+            const DeepCollectionEquality().equals(
+                other._medicineClassification, _medicineClassification) &&
             const DeepCollectionEquality()
-                .equals(other.indicationGuideline, indicationGuideline) &&
+                .equals(other._packaging, _packaging) &&
             const DeepCollectionEquality()
-                .equals(other.medicineClassification, medicineClassification) &&
-            const DeepCollectionEquality().equals(other.packaging, packaging) &&
+                .equals(other._clinicalUseIssue, _clinicalUseIssue) &&
             const DeepCollectionEquality()
-                .equals(other.drugCharacteristic, drugCharacteristic) &&
+                .equals(other._storageGuideline, _storageGuideline) &&
             const DeepCollectionEquality()
-                .equals(other.clinicalUseIssue, clinicalUseIssue) &&
+                .equals(other._regulatory, _regulatory) &&
             const DeepCollectionEquality()
-                .equals(other.regulatory, regulatory) &&
-            const DeepCollectionEquality()
-                .equals(other.kineticCharacteristic, kineticCharacteristic));
+                .equals(other.definitional, definitional));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -13197,110 +12986,91 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(code),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(author),
-        const DeepCollectionEquality().hash(sponsor),
-        const DeepCollectionEquality().hash(doseForm),
-        const DeepCollectionEquality().hash(amount),
-        const DeepCollectionEquality().hash(synonym),
-        const DeepCollectionEquality().hash(synonymElement),
-        const DeepCollectionEquality().hash(relatedMedicationKnowledge),
-        const DeepCollectionEquality().hash(associatedMedication),
-        const DeepCollectionEquality().hash(associatedDefinition),
-        const DeepCollectionEquality().hash(productType),
-        const DeepCollectionEquality().hash(monograph),
-        const DeepCollectionEquality().hash(ingredient),
-        const DeepCollectionEquality().hash(device),
+        const DeepCollectionEquality().hash(_intendedJurisdiction),
+        const DeepCollectionEquality().hash(_name),
+        const DeepCollectionEquality().hash(_nameElement),
+        const DeepCollectionEquality().hash(_relatedMedicationKnowledge),
+        const DeepCollectionEquality().hash(_associatedMedication),
+        const DeepCollectionEquality().hash(_productType),
+        const DeepCollectionEquality().hash(_monograph),
         const DeepCollectionEquality().hash(preparationInstruction),
         const DeepCollectionEquality().hash(preparationInstructionElement),
-        const DeepCollectionEquality().hash(intendedRoute),
-        const DeepCollectionEquality().hash(cost),
-        const DeepCollectionEquality().hash(monitoringProgram),
-        const DeepCollectionEquality().hash(indicationGuideline),
-        const DeepCollectionEquality().hash(medicineClassification),
-        const DeepCollectionEquality().hash(packaging),
-        const DeepCollectionEquality().hash(drugCharacteristic),
-        const DeepCollectionEquality().hash(clinicalUseIssue),
-        const DeepCollectionEquality().hash(regulatory),
-        const DeepCollectionEquality().hash(kineticCharacteristic)
+        const DeepCollectionEquality().hash(_cost),
+        const DeepCollectionEquality().hash(_monitoringProgram),
+        const DeepCollectionEquality().hash(_indicationGuideline),
+        const DeepCollectionEquality().hash(_medicineClassification),
+        const DeepCollectionEquality().hash(_packaging),
+        const DeepCollectionEquality().hash(_clinicalUseIssue),
+        const DeepCollectionEquality().hash(_storageGuideline),
+        const DeepCollectionEquality().hash(_regulatory),
+        const DeepCollectionEquality().hash(definitional)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeCopyWith<_MedicationKnowledge> get copyWith =>
-      __$MedicationKnowledgeCopyWithImpl<_MedicationKnowledge>(
+  _$$_MedicationKnowledgeCopyWith<_$_MedicationKnowledge> get copyWith =>
+      __$$_MedicationKnowledgeCopyWithImpl<_$_MedicationKnowledge>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeToJson(this);
+    return _$$_MedicationKnowledgeToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledge extends MedicationKnowledge {
   factory _MedicationKnowledge(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? code,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? author,
-      Reference? sponsor,
-      CodeableConcept? doseForm,
-      Quantity? amount,
-      List<String>? synonym,
-      @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
-      List<MedicationKnowledgeRelatedMedicationKnowledge>?
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? code,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final Reference? author,
+      final List<CodeableConcept>? intendedJurisdiction,
+      final List<String>? name,
+      @JsonKey(name: '_name') final List<Element>? nameElement,
+      final List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
-      List<Reference>? associatedMedication,
-      Reference? associatedDefinition,
-      List<CodeableConcept>? productType,
-      List<MedicationKnowledgeMonograph>? monograph,
-      List<MedicationKnowledgeIngredient>? ingredient,
-      List<Reference>? device,
-      Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction')
-          Element? preparationInstructionElement,
-      List<CodeableConcept>? intendedRoute,
-      List<MedicationKnowledgeCost>? cost,
-      List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
-      List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
-      List<MedicationKnowledgeMedicineClassification>? medicineClassification,
-      List<MedicationKnowledgePackaging>? packaging,
-      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
-      List<Reference>? clinicalUseIssue,
-      List<MedicationKnowledgeRegulatory>? regulatory,
-      List<MedicationKnowledgeKineticCharacteristic>?
-          kineticCharacteristic}) = _$_MedicationKnowledge;
+      final List<Reference>? associatedMedication,
+      final List<CodeableConcept>? productType,
+      final List<MedicationKnowledgeMonograph>? monograph,
+      final Markdown? preparationInstruction,
+      @JsonKey(name: '_preparationInstruction') final Element? preparationInstructionElement,
+      final List<MedicationKnowledgeCost>? cost,
+      final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
+      final List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
+      final List<MedicationKnowledgeMedicineClassification>? medicineClassification,
+      final List<MedicationKnowledgePackaging>? packaging,
+      final List<Reference>? clinicalUseIssue,
+      final List<MedicationKnowledgeStorageGuideline>? storageGuideline,
+      final List<MedicationKnowledgeRegulatory>? regulatory,
+      final MedicationKnowledgeDefinitional? definitional}) = _$_MedicationKnowledge;
   _MedicationKnowledge._() : super._();
 
   factory _MedicationKnowledge.fromJson(Map<String, dynamic> json) =
       _$_MedicationKnowledge.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -13337,38 +13107,26 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   @override
   Reference? get author;
   @override
-  Reference? get sponsor;
+  List<CodeableConcept>? get intendedJurisdiction;
   @override
-  CodeableConcept? get doseForm;
+  List<String>? get name;
   @override
-  Quantity? get amount;
-  @override
-  List<String>? get synonym;
-  @override
-  @JsonKey(name: '_synonym')
-  List<Element>? get synonymElement;
+  @JsonKey(name: '_name')
+  List<Element>? get nameElement;
   @override
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge;
   @override
   List<Reference>? get associatedMedication;
   @override
-  Reference? get associatedDefinition;
-  @override
   List<CodeableConcept>? get productType;
   @override
   List<MedicationKnowledgeMonograph>? get monograph;
-  @override
-  List<MedicationKnowledgeIngredient>? get ingredient;
-  @override
-  List<Reference>? get device;
   @override
   Markdown? get preparationInstruction;
   @override
   @JsonKey(name: '_preparationInstruction')
   Element? get preparationInstructionElement;
-  @override
-  List<CodeableConcept>? get intendedRoute;
   @override
   List<MedicationKnowledgeCost>? get cost;
   @override
@@ -13380,16 +13138,16 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   @override
   List<MedicationKnowledgePackaging>? get packaging;
   @override
-  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic;
-  @override
   List<Reference>? get clinicalUseIssue;
+  @override
+  List<MedicationKnowledgeStorageGuideline>? get storageGuideline;
   @override
   List<MedicationKnowledgeRegulatory>? get regulatory;
   @override
-  List<MedicationKnowledgeKineticCharacteristic>? get kineticCharacteristic;
+  MedicationKnowledgeDefinitional? get definitional;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeCopyWith<_MedicationKnowledge> get copyWith =>
+  _$$_MedicationKnowledgeCopyWith<_$_MedicationKnowledge> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -13398,35 +13156,6 @@ MedicationKnowledgeRelatedMedicationKnowledge
         Map<String, dynamic> json) {
   return _MedicationKnowledgeRelatedMedicationKnowledge.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeRelatedMedicationKnowledgeTearOff {
-  const _$MedicationKnowledgeRelatedMedicationKnowledgeTearOff();
-
-  _MedicationKnowledgeRelatedMedicationKnowledge call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      required List<Reference> reference}) {
-    return _MedicationKnowledgeRelatedMedicationKnowledge(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      reference: reference,
-    );
-  }
-
-  MedicationKnowledgeRelatedMedicationKnowledge fromJson(
-      Map<String, Object?> json) {
-    return MedicationKnowledgeRelatedMedicationKnowledge.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeRelatedMedicationKnowledge =
-    _$MedicationKnowledgeRelatedMedicationKnowledgeTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeRelatedMedicationKnowledge {
@@ -13512,12 +13241,13 @@ class _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res>
     implements $MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res> {
-  factory _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWith(
-          _MedicationKnowledgeRelatedMedicationKnowledge value,
-          $Res Function(_MedicationKnowledgeRelatedMedicationKnowledge) then) =
-      __$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWith(
+          _$_MedicationKnowledgeRelatedMedicationKnowledge value,
+          $Res Function(_$_MedicationKnowledgeRelatedMedicationKnowledge)
+              then) =
+      __$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -13531,18 +13261,20 @@ abstract class _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
     extends _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res> {
-  __$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl(
-      _MedicationKnowledgeRelatedMedicationKnowledge _value,
-      $Res Function(_MedicationKnowledgeRelatedMedicationKnowledge) _then)
-      : super(_value,
-            (v) => _then(v as _MedicationKnowledgeRelatedMedicationKnowledge));
+    implements _$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res> {
+  __$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl(
+      _$_MedicationKnowledgeRelatedMedicationKnowledge _value,
+      $Res Function(_$_MedicationKnowledgeRelatedMedicationKnowledge) _then)
+      : super(
+            _value,
+            (v) =>
+                _then(v as _$_MedicationKnowledgeRelatedMedicationKnowledge));
 
   @override
-  _MedicationKnowledgeRelatedMedicationKnowledge get _value =>
-      super._value as _MedicationKnowledgeRelatedMedicationKnowledge;
+  _$_MedicationKnowledgeRelatedMedicationKnowledge get _value =>
+      super._value as _$_MedicationKnowledgeRelatedMedicationKnowledge;
 
   @override
   $Res call({
@@ -13552,17 +13284,17 @@ class __$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
     Object? type = freezed,
     Object? reference = freezed,
   }) {
-    return _then(_MedicationKnowledgeRelatedMedicationKnowledge(
+    return _then(_$_MedicationKnowledgeRelatedMedicationKnowledge(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -13570,7 +13302,7 @@ class __$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       reference: reference == freezed
-          ? _value.reference
+          ? _value._reference
           : reference // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
     ));
@@ -13583,11 +13315,14 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
     extends _MedicationKnowledgeRelatedMedicationKnowledge {
   _$_MedicationKnowledgeRelatedMedicationKnowledge(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
-      required this.reference})
-      : super._();
+      required final List<Reference> reference})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _reference = reference,
+        super._();
 
   factory _$_MedicationKnowledgeRelatedMedicationKnowledge.fromJson(
           Map<String, dynamic> json) =>
@@ -13595,15 +13330,33 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
+  final List<Reference> _reference;
   @override
-  final List<Reference> reference;
+  List<Reference> get reference {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_reference);
+  }
 
   @override
   String toString() {
@@ -13614,47 +13367,52 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeRelatedMedicationKnowledge &&
+            other is _$_MedicationKnowledgeRelatedMedicationKnowledge &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.reference, reference));
+            const DeepCollectionEquality()
+                .equals(other._reference, _reference));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(reference));
+      const DeepCollectionEquality().hash(_reference));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<
-          _MedicationKnowledgeRelatedMedicationKnowledge>
+  _$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<
+          _$_MedicationKnowledgeRelatedMedicationKnowledge>
       get copyWith =>
-          __$MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<
-              _MedicationKnowledgeRelatedMedicationKnowledge>(this, _$identity);
+          __$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<
+                  _$_MedicationKnowledgeRelatedMedicationKnowledge>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeRelatedMedicationKnowledgeToJson(this);
+    return _$$_MedicationKnowledgeRelatedMedicationKnowledgeToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeRelatedMedicationKnowledge
     extends MedicationKnowledgeRelatedMedicationKnowledge {
   factory _MedicationKnowledgeRelatedMedicationKnowledge(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept type,
-          required List<Reference> reference}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          required final List<Reference> reference}) =
       _$_MedicationKnowledgeRelatedMedicationKnowledge;
   _MedicationKnowledgeRelatedMedicationKnowledge._() : super._();
 
@@ -13675,8 +13433,8 @@ abstract class _MedicationKnowledgeRelatedMedicationKnowledge
   List<Reference> get reference;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<
-          _MedicationKnowledgeRelatedMedicationKnowledge>
+  _$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<
+          _$_MedicationKnowledgeRelatedMedicationKnowledge>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -13684,33 +13442,6 @@ MedicationKnowledgeMonograph _$MedicationKnowledgeMonographFromJson(
     Map<String, dynamic> json) {
   return _MedicationKnowledgeMonograph.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeMonographTearOff {
-  const _$MedicationKnowledgeMonographTearOff();
-
-  _MedicationKnowledgeMonograph call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Reference? source}) {
-    return _MedicationKnowledgeMonograph(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      source: source,
-    );
-  }
-
-  MedicationKnowledgeMonograph fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeMonograph.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeMonograph = _$MedicationKnowledgeMonographTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeMonograph {
@@ -13810,12 +13541,12 @@ class _$MedicationKnowledgeMonographCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeMonographCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeMonographCopyWith<$Res>
     implements $MedicationKnowledgeMonographCopyWith<$Res> {
-  factory _$MedicationKnowledgeMonographCopyWith(
-          _MedicationKnowledgeMonograph value,
-          $Res Function(_MedicationKnowledgeMonograph) then) =
-      __$MedicationKnowledgeMonographCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeMonographCopyWith(
+          _$_MedicationKnowledgeMonograph value,
+          $Res Function(_$_MedicationKnowledgeMonograph) then) =
+      __$$_MedicationKnowledgeMonographCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -13831,17 +13562,17 @@ abstract class _$MedicationKnowledgeMonographCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeMonographCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeMonographCopyWithImpl<$Res>
     extends _$MedicationKnowledgeMonographCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeMonographCopyWith<$Res> {
-  __$MedicationKnowledgeMonographCopyWithImpl(
-      _MedicationKnowledgeMonograph _value,
-      $Res Function(_MedicationKnowledgeMonograph) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeMonograph));
+    implements _$$_MedicationKnowledgeMonographCopyWith<$Res> {
+  __$$_MedicationKnowledgeMonographCopyWithImpl(
+      _$_MedicationKnowledgeMonograph _value,
+      $Res Function(_$_MedicationKnowledgeMonograph) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeMonograph));
 
   @override
-  _MedicationKnowledgeMonograph get _value =>
-      super._value as _MedicationKnowledgeMonograph;
+  _$_MedicationKnowledgeMonograph get _value =>
+      super._value as _$_MedicationKnowledgeMonograph;
 
   @override
   $Res call({
@@ -13851,17 +13582,17 @@ class __$MedicationKnowledgeMonographCopyWithImpl<$Res>
     Object? type = freezed,
     Object? source = freezed,
   }) {
-    return _then(_MedicationKnowledgeMonograph(
+    return _then(_$_MedicationKnowledgeMonograph(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -13881,22 +13612,38 @@ class __$MedicationKnowledgeMonographCopyWithImpl<$Res>
 class _$_MedicationKnowledgeMonograph extends _MedicationKnowledgeMonograph {
   _$_MedicationKnowledgeMonograph(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.source})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationKnowledgeMonograph.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeMonographFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -13911,45 +13658,48 @@ class _$_MedicationKnowledgeMonograph extends _MedicationKnowledgeMonograph {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeMonograph &&
+            other is _$_MedicationKnowledgeMonograph &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.source, source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(source));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeMonographCopyWith<_MedicationKnowledgeMonograph>
-      get copyWith => __$MedicationKnowledgeMonographCopyWithImpl<
-          _MedicationKnowledgeMonograph>(this, _$identity);
+  _$$_MedicationKnowledgeMonographCopyWith<_$_MedicationKnowledgeMonograph>
+      get copyWith => __$$_MedicationKnowledgeMonographCopyWithImpl<
+          _$_MedicationKnowledgeMonograph>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeMonographToJson(this);
+    return _$$_MedicationKnowledgeMonographToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeMonograph
     extends MedicationKnowledgeMonograph {
   factory _MedicationKnowledgeMonograph(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Reference? source}) = _$_MedicationKnowledgeMonograph;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      final Reference? source}) = _$_MedicationKnowledgeMonograph;
   _MedicationKnowledgeMonograph._() : super._();
 
   factory _MedicationKnowledgeMonograph.fromJson(Map<String, dynamic> json) =
@@ -13968,416 +13718,7 @@ abstract class _MedicationKnowledgeMonograph
   Reference? get source;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeMonographCopyWith<_MedicationKnowledgeMonograph>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-MedicationKnowledgeIngredient _$MedicationKnowledgeIngredientFromJson(
-    Map<String, dynamic> json) {
-  return _MedicationKnowledgeIngredient.fromJson(json);
-}
-
-/// @nodoc
-class _$MedicationKnowledgeIngredientTearOff {
-  const _$MedicationKnowledgeIngredientTearOff();
-
-  _MedicationKnowledgeIngredient call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
-      CodeableConcept? isActive,
-      Ratio? strengthRatio,
-      CodeableConcept? strengthCodeableConcept,
-      Quantity? strengthQuantity}) {
-    return _MedicationKnowledgeIngredient(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      item: item,
-      isActive: isActive,
-      strengthRatio: strengthRatio,
-      strengthCodeableConcept: strengthCodeableConcept,
-      strengthQuantity: strengthQuantity,
-    );
-  }
-
-  MedicationKnowledgeIngredient fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeIngredient.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeIngredient = _$MedicationKnowledgeIngredientTearOff();
-
-/// @nodoc
-mixin _$MedicationKnowledgeIngredient {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableReference? get item => throw _privateConstructorUsedError;
-  CodeableConcept? get isActive => throw _privateConstructorUsedError;
-  Ratio? get strengthRatio => throw _privateConstructorUsedError;
-  CodeableConcept? get strengthCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Quantity? get strengthQuantity => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MedicationKnowledgeIngredientCopyWith<MedicationKnowledgeIngredient>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MedicationKnowledgeIngredientCopyWith<$Res> {
-  factory $MedicationKnowledgeIngredientCopyWith(
-          MedicationKnowledgeIngredient value,
-          $Res Function(MedicationKnowledgeIngredient) then) =
-      _$MedicationKnowledgeIngredientCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
-      CodeableConcept? isActive,
-      Ratio? strengthRatio,
-      CodeableConcept? strengthCodeableConcept,
-      Quantity? strengthQuantity});
-
-  $CodeableReferenceCopyWith<$Res>? get item;
-  $CodeableConceptCopyWith<$Res>? get isActive;
-  $RatioCopyWith<$Res>? get strengthRatio;
-  $CodeableConceptCopyWith<$Res>? get strengthCodeableConcept;
-  $QuantityCopyWith<$Res>? get strengthQuantity;
-}
-
-/// @nodoc
-class _$MedicationKnowledgeIngredientCopyWithImpl<$Res>
-    implements $MedicationKnowledgeIngredientCopyWith<$Res> {
-  _$MedicationKnowledgeIngredientCopyWithImpl(this._value, this._then);
-
-  final MedicationKnowledgeIngredient _value;
-  // ignore: unused_field
-  final $Res Function(MedicationKnowledgeIngredient) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? item = freezed,
-    Object? isActive = freezed,
-    Object? strengthRatio = freezed,
-    Object? strengthCodeableConcept = freezed,
-    Object? strengthQuantity = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      item: item == freezed
-          ? _value.item
-          : item // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
-      isActive: isActive == freezed
-          ? _value.isActive
-          : isActive // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      strengthRatio: strengthRatio == freezed
-          ? _value.strengthRatio
-          : strengthRatio // ignore: cast_nullable_to_non_nullable
-              as Ratio?,
-      strengthCodeableConcept: strengthCodeableConcept == freezed
-          ? _value.strengthCodeableConcept
-          : strengthCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      strengthQuantity: strengthQuantity == freezed
-          ? _value.strengthQuantity
-          : strengthQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-    ));
-  }
-
-  @override
-  $CodeableReferenceCopyWith<$Res>? get item {
-    if (_value.item == null) {
-      return null;
-    }
-
-    return $CodeableReferenceCopyWith<$Res>(_value.item!, (value) {
-      return _then(_value.copyWith(item: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get isActive {
-    if (_value.isActive == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.isActive!, (value) {
-      return _then(_value.copyWith(isActive: value));
-    });
-  }
-
-  @override
-  $RatioCopyWith<$Res>? get strengthRatio {
-    if (_value.strengthRatio == null) {
-      return null;
-    }
-
-    return $RatioCopyWith<$Res>(_value.strengthRatio!, (value) {
-      return _then(_value.copyWith(strengthRatio: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get strengthCodeableConcept {
-    if (_value.strengthCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.strengthCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(strengthCodeableConcept: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res>? get strengthQuantity {
-    if (_value.strengthQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.strengthQuantity!, (value) {
-      return _then(_value.copyWith(strengthQuantity: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$MedicationKnowledgeIngredientCopyWith<$Res>
-    implements $MedicationKnowledgeIngredientCopyWith<$Res> {
-  factory _$MedicationKnowledgeIngredientCopyWith(
-          _MedicationKnowledgeIngredient value,
-          $Res Function(_MedicationKnowledgeIngredient) then) =
-      __$MedicationKnowledgeIngredientCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
-      CodeableConcept? isActive,
-      Ratio? strengthRatio,
-      CodeableConcept? strengthCodeableConcept,
-      Quantity? strengthQuantity});
-
-  @override
-  $CodeableReferenceCopyWith<$Res>? get item;
-  @override
-  $CodeableConceptCopyWith<$Res>? get isActive;
-  @override
-  $RatioCopyWith<$Res>? get strengthRatio;
-  @override
-  $CodeableConceptCopyWith<$Res>? get strengthCodeableConcept;
-  @override
-  $QuantityCopyWith<$Res>? get strengthQuantity;
-}
-
-/// @nodoc
-class __$MedicationKnowledgeIngredientCopyWithImpl<$Res>
-    extends _$MedicationKnowledgeIngredientCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeIngredientCopyWith<$Res> {
-  __$MedicationKnowledgeIngredientCopyWithImpl(
-      _MedicationKnowledgeIngredient _value,
-      $Res Function(_MedicationKnowledgeIngredient) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeIngredient));
-
-  @override
-  _MedicationKnowledgeIngredient get _value =>
-      super._value as _MedicationKnowledgeIngredient;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? item = freezed,
-    Object? isActive = freezed,
-    Object? strengthRatio = freezed,
-    Object? strengthCodeableConcept = freezed,
-    Object? strengthQuantity = freezed,
-  }) {
-    return _then(_MedicationKnowledgeIngredient(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      item: item == freezed
-          ? _value.item
-          : item // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
-      isActive: isActive == freezed
-          ? _value.isActive
-          : isActive // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      strengthRatio: strengthRatio == freezed
-          ? _value.strengthRatio
-          : strengthRatio // ignore: cast_nullable_to_non_nullable
-              as Ratio?,
-      strengthCodeableConcept: strengthCodeableConcept == freezed
-          ? _value.strengthCodeableConcept
-          : strengthCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      strengthQuantity: strengthQuantity == freezed
-          ? _value.strengthQuantity
-          : strengthQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
-  _$_MedicationKnowledgeIngredient(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.item,
-      this.isActive,
-      this.strengthRatio,
-      this.strengthCodeableConcept,
-      this.strengthQuantity})
-      : super._();
-
-  factory _$_MedicationKnowledgeIngredient.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicationKnowledgeIngredientFromJson(json);
-
-  @override
-  final String? id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
-  @override
-  final List<FhirExtension>? modifierExtension;
-  @override
-  final CodeableReference? item;
-  @override
-  final CodeableConcept? isActive;
-  @override
-  final Ratio? strengthRatio;
-  @override
-  final CodeableConcept? strengthCodeableConcept;
-  @override
-  final Quantity? strengthQuantity;
-
-  @override
-  String toString() {
-    return 'MedicationKnowledgeIngredient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, isActive: $isActive, strengthRatio: $strengthRatio, strengthCodeableConcept: $strengthCodeableConcept, strengthQuantity: $strengthQuantity)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeIngredient &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
-            const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.item, item) &&
-            const DeepCollectionEquality().equals(other.isActive, isActive) &&
-            const DeepCollectionEquality()
-                .equals(other.strengthRatio, strengthRatio) &&
-            const DeepCollectionEquality().equals(
-                other.strengthCodeableConcept, strengthCodeableConcept) &&
-            const DeepCollectionEquality()
-                .equals(other.strengthQuantity, strengthQuantity));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(item),
-      const DeepCollectionEquality().hash(isActive),
-      const DeepCollectionEquality().hash(strengthRatio),
-      const DeepCollectionEquality().hash(strengthCodeableConcept),
-      const DeepCollectionEquality().hash(strengthQuantity));
-
-  @JsonKey(ignore: true)
-  @override
-  _$MedicationKnowledgeIngredientCopyWith<_MedicationKnowledgeIngredient>
-      get copyWith => __$MedicationKnowledgeIngredientCopyWithImpl<
-          _MedicationKnowledgeIngredient>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeIngredientToJson(this);
-  }
-}
-
-abstract class _MedicationKnowledgeIngredient
-    extends MedicationKnowledgeIngredient {
-  factory _MedicationKnowledgeIngredient(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? item,
-      CodeableConcept? isActive,
-      Ratio? strengthRatio,
-      CodeableConcept? strengthCodeableConcept,
-      Quantity? strengthQuantity}) = _$_MedicationKnowledgeIngredient;
-  _MedicationKnowledgeIngredient._() : super._();
-
-  factory _MedicationKnowledgeIngredient.fromJson(Map<String, dynamic> json) =
-      _$_MedicationKnowledgeIngredient.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  CodeableReference? get item;
-  @override
-  CodeableConcept? get isActive;
-  @override
-  Ratio? get strengthRatio;
-  @override
-  CodeableConcept? get strengthCodeableConcept;
-  @override
-  Quantity? get strengthQuantity;
-  @override
-  @JsonKey(ignore: true)
-  _$MedicationKnowledgeIngredientCopyWith<_MedicationKnowledgeIngredient>
+  _$$_MedicationKnowledgeMonographCopyWith<_$_MedicationKnowledgeMonograph>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -14385,41 +13726,6 @@ MedicationKnowledgeCost _$MedicationKnowledgeCostFromJson(
     Map<String, dynamic> json) {
   return _MedicationKnowledgeCost.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeCostTearOff {
-  const _$MedicationKnowledgeCostTearOff();
-
-  _MedicationKnowledgeCost call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Period>? effectiveDate,
-      required CodeableConcept type,
-      String? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      Money? costMoney,
-      CodeableConcept? costCodeableConcept}) {
-    return _MedicationKnowledgeCost(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      effectiveDate: effectiveDate,
-      type: type,
-      source: source,
-      sourceElement: sourceElement,
-      costMoney: costMoney,
-      costCodeableConcept: costCodeableConcept,
-    );
-  }
-
-  MedicationKnowledgeCost fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeCost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeCost = _$MedicationKnowledgeCostTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeCost {
@@ -14568,11 +13874,11 @@ class _$MedicationKnowledgeCostCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeCostCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeCostCopyWith<$Res>
     implements $MedicationKnowledgeCostCopyWith<$Res> {
-  factory _$MedicationKnowledgeCostCopyWith(_MedicationKnowledgeCost value,
-          $Res Function(_MedicationKnowledgeCost) then) =
-      __$MedicationKnowledgeCostCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeCostCopyWith(_$_MedicationKnowledgeCost value,
+          $Res Function(_$_MedicationKnowledgeCost) then) =
+      __$$_MedicationKnowledgeCostCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -14596,16 +13902,16 @@ abstract class _$MedicationKnowledgeCostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeCostCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeCostCopyWithImpl<$Res>
     extends _$MedicationKnowledgeCostCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeCostCopyWith<$Res> {
-  __$MedicationKnowledgeCostCopyWithImpl(_MedicationKnowledgeCost _value,
-      $Res Function(_MedicationKnowledgeCost) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeCost));
+    implements _$$_MedicationKnowledgeCostCopyWith<$Res> {
+  __$$_MedicationKnowledgeCostCopyWithImpl(_$_MedicationKnowledgeCost _value,
+      $Res Function(_$_MedicationKnowledgeCost) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeCost));
 
   @override
-  _MedicationKnowledgeCost get _value =>
-      super._value as _MedicationKnowledgeCost;
+  _$_MedicationKnowledgeCost get _value =>
+      super._value as _$_MedicationKnowledgeCost;
 
   @override
   $Res call({
@@ -14619,21 +13925,21 @@ class __$MedicationKnowledgeCostCopyWithImpl<$Res>
     Object? costMoney = freezed,
     Object? costCodeableConcept = freezed,
   }) {
-    return _then(_MedicationKnowledgeCost(
+    return _then(_$_MedicationKnowledgeCost(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       effectiveDate: effectiveDate == freezed
-          ? _value.effectiveDate
+          ? _value._effectiveDate
           : effectiveDate // ignore: cast_nullable_to_non_nullable
               as List<Period>?,
       type: type == freezed
@@ -14665,28 +13971,52 @@ class __$MedicationKnowledgeCostCopyWithImpl<$Res>
 class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
   _$_MedicationKnowledgeCost(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.effectiveDate,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Period>? effectiveDate,
       required this.type,
       this.source,
       @JsonKey(name: '_source') this.sourceElement,
       this.costMoney,
       this.costCodeableConcept})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _effectiveDate = effectiveDate,
+        super._();
 
   factory _$_MedicationKnowledgeCost.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeCostFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Period>? _effectiveDate;
   @override
-  final List<Period>? effectiveDate;
+  List<Period>? get effectiveDate {
+    final value = _effectiveDate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -14708,14 +14038,14 @@ class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeCost &&
+            other is _$_MedicationKnowledgeCost &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.effectiveDate, effectiveDate) &&
+                .equals(other._effectiveDate, _effectiveDate) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.source, source) &&
             const DeepCollectionEquality()
@@ -14725,13 +14055,14 @@ class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
                 .equals(other.costCodeableConcept, costCodeableConcept));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(effectiveDate),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_effectiveDate),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(source),
       const DeepCollectionEquality().hash(sourceElement),
@@ -14740,27 +14071,30 @@ class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeCostCopyWith<_MedicationKnowledgeCost> get copyWith =>
-      __$MedicationKnowledgeCostCopyWithImpl<_MedicationKnowledgeCost>(
-          this, _$identity);
+  _$$_MedicationKnowledgeCostCopyWith<_$_MedicationKnowledgeCost>
+      get copyWith =>
+          __$$_MedicationKnowledgeCostCopyWithImpl<_$_MedicationKnowledgeCost>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeCostToJson(this);
+    return _$$_MedicationKnowledgeCostToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeCost extends MedicationKnowledgeCost {
   factory _MedicationKnowledgeCost(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Period>? effectiveDate,
-      required CodeableConcept type,
-      String? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      Money? costMoney,
-      CodeableConcept? costCodeableConcept}) = _$_MedicationKnowledgeCost;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Period>? effectiveDate,
+      required final CodeableConcept type,
+      final String? source,
+      @JsonKey(name: '_source') final Element? sourceElement,
+      final Money? costMoney,
+      final CodeableConcept? costCodeableConcept}) = _$_MedicationKnowledgeCost;
   _MedicationKnowledgeCost._() : super._();
 
   factory _MedicationKnowledgeCost.fromJson(Map<String, dynamic> json) =
@@ -14788,44 +14122,14 @@ abstract class _MedicationKnowledgeCost extends MedicationKnowledgeCost {
   CodeableConcept? get costCodeableConcept;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeCostCopyWith<_MedicationKnowledgeCost> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_MedicationKnowledgeCostCopyWith<_$_MedicationKnowledgeCost>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicationKnowledgeMonitoringProgram
     _$MedicationKnowledgeMonitoringProgramFromJson(Map<String, dynamic> json) {
   return _MedicationKnowledgeMonitoringProgram.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeMonitoringProgramTearOff {
-  const _$MedicationKnowledgeMonitoringProgramTearOff();
-
-  _MedicationKnowledgeMonitoringProgram call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement}) {
-    return _MedicationKnowledgeMonitoringProgram(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      name: name,
-      nameElement: nameElement,
-    );
-  }
-
-  MedicationKnowledgeMonitoringProgram fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeMonitoringProgram.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeMonitoringProgram =
-    _$MedicationKnowledgeMonitoringProgramTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeMonitoringProgram {
@@ -14934,12 +14238,12 @@ class _$MedicationKnowledgeMonitoringProgramCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeMonitoringProgramCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeMonitoringProgramCopyWith<$Res>
     implements $MedicationKnowledgeMonitoringProgramCopyWith<$Res> {
-  factory _$MedicationKnowledgeMonitoringProgramCopyWith(
-          _MedicationKnowledgeMonitoringProgram value,
-          $Res Function(_MedicationKnowledgeMonitoringProgram) then) =
-      __$MedicationKnowledgeMonitoringProgramCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeMonitoringProgramCopyWith(
+          _$_MedicationKnowledgeMonitoringProgram value,
+          $Res Function(_$_MedicationKnowledgeMonitoringProgram) then) =
+      __$$_MedicationKnowledgeMonitoringProgramCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -14956,17 +14260,18 @@ abstract class _$MedicationKnowledgeMonitoringProgramCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeMonitoringProgramCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeMonitoringProgramCopyWithImpl<$Res>
     extends _$MedicationKnowledgeMonitoringProgramCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeMonitoringProgramCopyWith<$Res> {
-  __$MedicationKnowledgeMonitoringProgramCopyWithImpl(
-      _MedicationKnowledgeMonitoringProgram _value,
-      $Res Function(_MedicationKnowledgeMonitoringProgram) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeMonitoringProgram));
+    implements _$$_MedicationKnowledgeMonitoringProgramCopyWith<$Res> {
+  __$$_MedicationKnowledgeMonitoringProgramCopyWithImpl(
+      _$_MedicationKnowledgeMonitoringProgram _value,
+      $Res Function(_$_MedicationKnowledgeMonitoringProgram) _then)
+      : super(
+            _value, (v) => _then(v as _$_MedicationKnowledgeMonitoringProgram));
 
   @override
-  _MedicationKnowledgeMonitoringProgram get _value =>
-      super._value as _MedicationKnowledgeMonitoringProgram;
+  _$_MedicationKnowledgeMonitoringProgram get _value =>
+      super._value as _$_MedicationKnowledgeMonitoringProgram;
 
   @override
   $Res call({
@@ -14977,17 +14282,17 @@ class __$MedicationKnowledgeMonitoringProgramCopyWithImpl<$Res>
     Object? name = freezed,
     Object? nameElement = freezed,
   }) {
-    return _then(_MedicationKnowledgeMonitoringProgram(
+    return _then(_$_MedicationKnowledgeMonitoringProgram(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -15012,12 +14317,14 @@ class _$_MedicationKnowledgeMonitoringProgram
     extends _MedicationKnowledgeMonitoringProgram {
   _$_MedicationKnowledgeMonitoringProgram(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.name,
       @JsonKey(name: '_name') this.nameElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationKnowledgeMonitoringProgram.fromJson(
           Map<String, dynamic> json) =>
@@ -15025,11 +14332,25 @@ class _$_MedicationKnowledgeMonitoringProgram
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -15047,50 +14368,53 @@ class _$_MedicationKnowledgeMonitoringProgram
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeMonitoringProgram &&
+            other is _$_MedicationKnowledgeMonitoringProgram &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(nameElement));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeMonitoringProgramCopyWith<
-          _MedicationKnowledgeMonitoringProgram>
-      get copyWith => __$MedicationKnowledgeMonitoringProgramCopyWithImpl<
-          _MedicationKnowledgeMonitoringProgram>(this, _$identity);
+  _$$_MedicationKnowledgeMonitoringProgramCopyWith<
+          _$_MedicationKnowledgeMonitoringProgram>
+      get copyWith => __$$_MedicationKnowledgeMonitoringProgramCopyWithImpl<
+          _$_MedicationKnowledgeMonitoringProgram>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeMonitoringProgramToJson(this);
+    return _$$_MedicationKnowledgeMonitoringProgramToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeMonitoringProgram
     extends MedicationKnowledgeMonitoringProgram {
   factory _MedicationKnowledgeMonitoringProgram(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
-          String? name,
-          @JsonKey(name: '_name') Element? nameElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement}) =
       _$_MedicationKnowledgeMonitoringProgram;
   _MedicationKnowledgeMonitoringProgram._() : super._();
 
@@ -15114,8 +14438,8 @@ abstract class _MedicationKnowledgeMonitoringProgram
   Element? get nameElement;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeMonitoringProgramCopyWith<
-          _MedicationKnowledgeMonitoringProgram>
+  _$$_MedicationKnowledgeMonitoringProgramCopyWith<
+          _$_MedicationKnowledgeMonitoringProgram>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -15124,34 +14448,6 @@ MedicationKnowledgeIndicationGuideline
         Map<String, dynamic> json) {
   return _MedicationKnowledgeIndicationGuideline.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeIndicationGuidelineTearOff {
-  const _$MedicationKnowledgeIndicationGuidelineTearOff();
-
-  _MedicationKnowledgeIndicationGuideline call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableReference>? indication,
-      List<MedicationKnowledgeDosingGuideline>? dosingGuideline}) {
-    return _MedicationKnowledgeIndicationGuideline(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      indication: indication,
-      dosingGuideline: dosingGuideline,
-    );
-  }
-
-  MedicationKnowledgeIndicationGuideline fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeIndicationGuideline.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeIndicationGuideline =
-    _$MedicationKnowledgeIndicationGuidelineTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeIndicationGuideline {
@@ -15228,12 +14524,12 @@ class _$MedicationKnowledgeIndicationGuidelineCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeIndicationGuidelineCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeIndicationGuidelineCopyWith<$Res>
     implements $MedicationKnowledgeIndicationGuidelineCopyWith<$Res> {
-  factory _$MedicationKnowledgeIndicationGuidelineCopyWith(
-          _MedicationKnowledgeIndicationGuideline value,
-          $Res Function(_MedicationKnowledgeIndicationGuideline) then) =
-      __$MedicationKnowledgeIndicationGuidelineCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeIndicationGuidelineCopyWith(
+          _$_MedicationKnowledgeIndicationGuideline value,
+          $Res Function(_$_MedicationKnowledgeIndicationGuideline) then) =
+      __$$_MedicationKnowledgeIndicationGuidelineCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -15244,18 +14540,18 @@ abstract class _$MedicationKnowledgeIndicationGuidelineCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeIndicationGuidelineCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeIndicationGuidelineCopyWithImpl<$Res>
     extends _$MedicationKnowledgeIndicationGuidelineCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeIndicationGuidelineCopyWith<$Res> {
-  __$MedicationKnowledgeIndicationGuidelineCopyWithImpl(
-      _MedicationKnowledgeIndicationGuideline _value,
-      $Res Function(_MedicationKnowledgeIndicationGuideline) _then)
-      : super(
-            _value, (v) => _then(v as _MedicationKnowledgeIndicationGuideline));
+    implements _$$_MedicationKnowledgeIndicationGuidelineCopyWith<$Res> {
+  __$$_MedicationKnowledgeIndicationGuidelineCopyWithImpl(
+      _$_MedicationKnowledgeIndicationGuideline _value,
+      $Res Function(_$_MedicationKnowledgeIndicationGuideline) _then)
+      : super(_value,
+            (v) => _then(v as _$_MedicationKnowledgeIndicationGuideline));
 
   @override
-  _MedicationKnowledgeIndicationGuideline get _value =>
-      super._value as _MedicationKnowledgeIndicationGuideline;
+  _$_MedicationKnowledgeIndicationGuideline get _value =>
+      super._value as _$_MedicationKnowledgeIndicationGuideline;
 
   @override
   $Res call({
@@ -15265,25 +14561,25 @@ class __$MedicationKnowledgeIndicationGuidelineCopyWithImpl<$Res>
     Object? indication = freezed,
     Object? dosingGuideline = freezed,
   }) {
-    return _then(_MedicationKnowledgeIndicationGuideline(
+    return _then(_$_MedicationKnowledgeIndicationGuideline(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       indication: indication == freezed
-          ? _value.indication
+          ? _value._indication
           : indication // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
       dosingGuideline: dosingGuideline == freezed
-          ? _value.dosingGuideline
+          ? _value._dosingGuideline
           : dosingGuideline // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeDosingGuideline>?,
     ));
@@ -15296,11 +14592,15 @@ class _$_MedicationKnowledgeIndicationGuideline
     extends _MedicationKnowledgeIndicationGuideline {
   _$_MedicationKnowledgeIndicationGuideline(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.indication,
-      this.dosingGuideline})
-      : super._();
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableReference>? indication,
+      final List<MedicationKnowledgeDosingGuideline>? dosingGuideline})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _indication = indication,
+        _dosingGuideline = dosingGuideline,
+        super._();
 
   factory _$_MedicationKnowledgeIndicationGuideline.fromJson(
           Map<String, dynamic> json) =>
@@ -15308,15 +14608,42 @@ class _$_MedicationKnowledgeIndicationGuideline
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableReference>? _indication;
   @override
-  final List<CodeableReference>? indication;
+  List<CodeableReference>? get indication {
+    final value = _indication;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeDosingGuideline>? _dosingGuideline;
   @override
-  final List<MedicationKnowledgeDosingGuideline>? dosingGuideline;
+  List<MedicationKnowledgeDosingGuideline>? get dosingGuideline {
+    final value = _dosingGuideline;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -15327,48 +14654,51 @@ class _$_MedicationKnowledgeIndicationGuideline
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeIndicationGuideline &&
+            other is _$_MedicationKnowledgeIndicationGuideline &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.indication, indication) &&
+                .equals(other._indication, _indication) &&
             const DeepCollectionEquality()
-                .equals(other.dosingGuideline, dosingGuideline));
+                .equals(other._dosingGuideline, _dosingGuideline));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(indication),
-      const DeepCollectionEquality().hash(dosingGuideline));
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_indication),
+      const DeepCollectionEquality().hash(_dosingGuideline));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeIndicationGuidelineCopyWith<
-          _MedicationKnowledgeIndicationGuideline>
-      get copyWith => __$MedicationKnowledgeIndicationGuidelineCopyWithImpl<
-          _MedicationKnowledgeIndicationGuideline>(this, _$identity);
+  _$$_MedicationKnowledgeIndicationGuidelineCopyWith<
+          _$_MedicationKnowledgeIndicationGuideline>
+      get copyWith => __$$_MedicationKnowledgeIndicationGuidelineCopyWithImpl<
+          _$_MedicationKnowledgeIndicationGuideline>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeIndicationGuidelineToJson(this);
+    return _$$_MedicationKnowledgeIndicationGuidelineToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeIndicationGuideline
     extends MedicationKnowledgeIndicationGuideline {
   factory _MedicationKnowledgeIndicationGuideline(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<CodeableReference>? indication,
-          List<MedicationKnowledgeDosingGuideline>? dosingGuideline}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<CodeableReference>? indication,
+          final List<MedicationKnowledgeDosingGuideline>? dosingGuideline}) =
       _$_MedicationKnowledgeIndicationGuideline;
   _MedicationKnowledgeIndicationGuideline._() : super._();
 
@@ -15389,8 +14719,8 @@ abstract class _MedicationKnowledgeIndicationGuideline
   List<MedicationKnowledgeDosingGuideline>? get dosingGuideline;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeIndicationGuidelineCopyWith<
-          _MedicationKnowledgeIndicationGuideline>
+  _$$_MedicationKnowledgeIndicationGuidelineCopyWith<
+          _$_MedicationKnowledgeIndicationGuideline>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -15398,38 +14728,6 @@ MedicationKnowledgeDosingGuideline _$MedicationKnowledgeDosingGuidelineFromJson(
     Map<String, dynamic> json) {
   return _MedicationKnowledgeDosingGuideline.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeDosingGuidelineTearOff {
-  const _$MedicationKnowledgeDosingGuidelineTearOff();
-
-  _MedicationKnowledgeDosingGuideline call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? treatmentIntent,
-      List<MedicationKnowledgeDosage>? dosage,
-      CodeableConcept? administrationTreatment,
-      List<MedicationKnowledgePatientCharacteristic>? patientCharacteristic}) {
-    return _MedicationKnowledgeDosingGuideline(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      treatmentIntent: treatmentIntent,
-      dosage: dosage,
-      administrationTreatment: administrationTreatment,
-      patientCharacteristic: patientCharacteristic,
-    );
-  }
-
-  MedicationKnowledgeDosingGuideline fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeDosingGuideline.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeDosingGuideline =
-    _$MedicationKnowledgeDosingGuidelineTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeDosingGuideline {
@@ -15548,12 +14846,12 @@ class _$MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeDosingGuidelineCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeDosingGuidelineCopyWith<$Res>
     implements $MedicationKnowledgeDosingGuidelineCopyWith<$Res> {
-  factory _$MedicationKnowledgeDosingGuidelineCopyWith(
-          _MedicationKnowledgeDosingGuideline value,
-          $Res Function(_MedicationKnowledgeDosingGuideline) then) =
-      __$MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeDosingGuidelineCopyWith(
+          _$_MedicationKnowledgeDosingGuideline value,
+          $Res Function(_$_MedicationKnowledgeDosingGuideline) then) =
+      __$$_MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -15571,17 +14869,17 @@ abstract class _$MedicationKnowledgeDosingGuidelineCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>
     extends _$MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeDosingGuidelineCopyWith<$Res> {
-  __$MedicationKnowledgeDosingGuidelineCopyWithImpl(
-      _MedicationKnowledgeDosingGuideline _value,
-      $Res Function(_MedicationKnowledgeDosingGuideline) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeDosingGuideline));
+    implements _$$_MedicationKnowledgeDosingGuidelineCopyWith<$Res> {
+  __$$_MedicationKnowledgeDosingGuidelineCopyWithImpl(
+      _$_MedicationKnowledgeDosingGuideline _value,
+      $Res Function(_$_MedicationKnowledgeDosingGuideline) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeDosingGuideline));
 
   @override
-  _MedicationKnowledgeDosingGuideline get _value =>
-      super._value as _MedicationKnowledgeDosingGuideline;
+  _$_MedicationKnowledgeDosingGuideline get _value =>
+      super._value as _$_MedicationKnowledgeDosingGuideline;
 
   @override
   $Res call({
@@ -15593,17 +14891,17 @@ class __$MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>
     Object? administrationTreatment = freezed,
     Object? patientCharacteristic = freezed,
   }) {
-    return _then(_MedicationKnowledgeDosingGuideline(
+    return _then(_$_MedicationKnowledgeDosingGuideline(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       treatmentIntent: treatmentIntent == freezed
@@ -15611,7 +14909,7 @@ class __$MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>
           : treatmentIntent // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       dosage: dosage == freezed
-          ? _value.dosage
+          ? _value._dosage
           : dosage // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeDosage>?,
       administrationTreatment: administrationTreatment == freezed
@@ -15619,7 +14917,7 @@ class __$MedicationKnowledgeDosingGuidelineCopyWithImpl<$Res>
           : administrationTreatment // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       patientCharacteristic: patientCharacteristic == freezed
-          ? _value.patientCharacteristic
+          ? _value._patientCharacteristic
           : patientCharacteristic // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgePatientCharacteristic>?,
     ));
@@ -15632,13 +14930,18 @@ class _$_MedicationKnowledgeDosingGuideline
     extends _MedicationKnowledgeDosingGuideline {
   _$_MedicationKnowledgeDosingGuideline(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.treatmentIntent,
-      this.dosage,
+      final List<MedicationKnowledgeDosage>? dosage,
       this.administrationTreatment,
-      this.patientCharacteristic})
-      : super._();
+      final List<MedicationKnowledgePatientCharacteristic>?
+          patientCharacteristic})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _dosage = dosage,
+        _patientCharacteristic = patientCharacteristic,
+        super._();
 
   factory _$_MedicationKnowledgeDosingGuideline.fromJson(
           Map<String, dynamic> json) =>
@@ -15646,19 +14949,46 @@ class _$_MedicationKnowledgeDosingGuideline
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? treatmentIntent;
+  final List<MedicationKnowledgeDosage>? _dosage;
   @override
-  final List<MedicationKnowledgeDosage>? dosage;
+  List<MedicationKnowledgeDosage>? get dosage {
+    final value = _dosage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? administrationTreatment;
+  final List<MedicationKnowledgePatientCharacteristic>? _patientCharacteristic;
   @override
-  final List<MedicationKnowledgePatientCharacteristic>? patientCharacteristic;
+  List<MedicationKnowledgePatientCharacteristic>? get patientCharacteristic {
+    final value = _patientCharacteristic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -15669,55 +14999,58 @@ class _$_MedicationKnowledgeDosingGuideline
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeDosingGuideline &&
+            other is _$_MedicationKnowledgeDosingGuideline &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.treatmentIntent, treatmentIntent) &&
-            const DeepCollectionEquality().equals(other.dosage, dosage) &&
+            const DeepCollectionEquality().equals(other._dosage, _dosage) &&
             const DeepCollectionEquality().equals(
                 other.administrationTreatment, administrationTreatment) &&
             const DeepCollectionEquality()
-                .equals(other.patientCharacteristic, patientCharacteristic));
+                .equals(other._patientCharacteristic, _patientCharacteristic));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(treatmentIntent),
-      const DeepCollectionEquality().hash(dosage),
+      const DeepCollectionEquality().hash(_dosage),
       const DeepCollectionEquality().hash(administrationTreatment),
-      const DeepCollectionEquality().hash(patientCharacteristic));
+      const DeepCollectionEquality().hash(_patientCharacteristic));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeDosingGuidelineCopyWith<
-          _MedicationKnowledgeDosingGuideline>
-      get copyWith => __$MedicationKnowledgeDosingGuidelineCopyWithImpl<
-          _MedicationKnowledgeDosingGuideline>(this, _$identity);
+  _$$_MedicationKnowledgeDosingGuidelineCopyWith<
+          _$_MedicationKnowledgeDosingGuideline>
+      get copyWith => __$$_MedicationKnowledgeDosingGuidelineCopyWithImpl<
+          _$_MedicationKnowledgeDosingGuideline>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeDosingGuidelineToJson(this);
+    return _$$_MedicationKnowledgeDosingGuidelineToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeDosingGuideline
     extends MedicationKnowledgeDosingGuideline {
   factory _MedicationKnowledgeDosingGuideline(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? treatmentIntent,
-      List<MedicationKnowledgeDosage>? dosage,
-      CodeableConcept? administrationTreatment,
-      List<MedicationKnowledgePatientCharacteristic>?
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? treatmentIntent,
+      final List<MedicationKnowledgeDosage>? dosage,
+      final CodeableConcept? administrationTreatment,
+      final List<MedicationKnowledgePatientCharacteristic>?
           patientCharacteristic}) = _$_MedicationKnowledgeDosingGuideline;
   _MedicationKnowledgeDosingGuideline._() : super._();
 
@@ -15742,8 +15075,8 @@ abstract class _MedicationKnowledgeDosingGuideline
   List<MedicationKnowledgePatientCharacteristic>? get patientCharacteristic;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeDosingGuidelineCopyWith<
-          _MedicationKnowledgeDosingGuideline>
+  _$$_MedicationKnowledgeDosingGuidelineCopyWith<
+          _$_MedicationKnowledgeDosingGuideline>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -15751,33 +15084,6 @@ MedicationKnowledgeDosage _$MedicationKnowledgeDosageFromJson(
     Map<String, dynamic> json) {
   return _MedicationKnowledgeDosage.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeDosageTearOff {
-  const _$MedicationKnowledgeDosageTearOff();
-
-  _MedicationKnowledgeDosage call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      required List<Dosage> dosage}) {
-    return _MedicationKnowledgeDosage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      dosage: dosage,
-    );
-  }
-
-  MedicationKnowledgeDosage fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeDosage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeDosage = _$MedicationKnowledgeDosageTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeDosage {
@@ -15860,11 +15166,12 @@ class _$MedicationKnowledgeDosageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeDosageCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeDosageCopyWith<$Res>
     implements $MedicationKnowledgeDosageCopyWith<$Res> {
-  factory _$MedicationKnowledgeDosageCopyWith(_MedicationKnowledgeDosage value,
-          $Res Function(_MedicationKnowledgeDosage) then) =
-      __$MedicationKnowledgeDosageCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeDosageCopyWith(
+          _$_MedicationKnowledgeDosage value,
+          $Res Function(_$_MedicationKnowledgeDosage) then) =
+      __$$_MedicationKnowledgeDosageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -15878,16 +15185,17 @@ abstract class _$MedicationKnowledgeDosageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeDosageCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeDosageCopyWithImpl<$Res>
     extends _$MedicationKnowledgeDosageCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeDosageCopyWith<$Res> {
-  __$MedicationKnowledgeDosageCopyWithImpl(_MedicationKnowledgeDosage _value,
-      $Res Function(_MedicationKnowledgeDosage) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeDosage));
+    implements _$$_MedicationKnowledgeDosageCopyWith<$Res> {
+  __$$_MedicationKnowledgeDosageCopyWithImpl(
+      _$_MedicationKnowledgeDosage _value,
+      $Res Function(_$_MedicationKnowledgeDosage) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeDosage));
 
   @override
-  _MedicationKnowledgeDosage get _value =>
-      super._value as _MedicationKnowledgeDosage;
+  _$_MedicationKnowledgeDosage get _value =>
+      super._value as _$_MedicationKnowledgeDosage;
 
   @override
   $Res call({
@@ -15897,17 +15205,17 @@ class __$MedicationKnowledgeDosageCopyWithImpl<$Res>
     Object? type = freezed,
     Object? dosage = freezed,
   }) {
-    return _then(_MedicationKnowledgeDosage(
+    return _then(_$_MedicationKnowledgeDosage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -15915,7 +15223,7 @@ class __$MedicationKnowledgeDosageCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       dosage: dosage == freezed
-          ? _value.dosage
+          ? _value._dosage
           : dosage // ignore: cast_nullable_to_non_nullable
               as List<Dosage>,
     ));
@@ -15927,26 +15235,47 @@ class __$MedicationKnowledgeDosageCopyWithImpl<$Res>
 class _$_MedicationKnowledgeDosage extends _MedicationKnowledgeDosage {
   _$_MedicationKnowledgeDosage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
-      required this.dosage})
-      : super._();
+      required final List<Dosage> dosage})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _dosage = dosage,
+        super._();
 
   factory _$_MedicationKnowledgeDosage.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeDosageFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
+  final List<Dosage> _dosage;
   @override
-  final List<Dosage> dosage;
+  List<Dosage> get dosage {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_dosage);
+  }
 
   @override
   String toString() {
@@ -15957,45 +15286,47 @@ class _$_MedicationKnowledgeDosage extends _MedicationKnowledgeDosage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeDosage &&
+            other is _$_MedicationKnowledgeDosage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.dosage, dosage));
+            const DeepCollectionEquality().equals(other._dosage, _dosage));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(dosage));
+      const DeepCollectionEquality().hash(_dosage));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeDosageCopyWith<_MedicationKnowledgeDosage>
-      get copyWith =>
-          __$MedicationKnowledgeDosageCopyWithImpl<_MedicationKnowledgeDosage>(
-              this, _$identity);
+  _$$_MedicationKnowledgeDosageCopyWith<_$_MedicationKnowledgeDosage>
+      get copyWith => __$$_MedicationKnowledgeDosageCopyWithImpl<
+          _$_MedicationKnowledgeDosage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeDosageToJson(this);
+    return _$$_MedicationKnowledgeDosageToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeDosage extends MedicationKnowledgeDosage {
   factory _MedicationKnowledgeDosage(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      required List<Dosage> dosage}) = _$_MedicationKnowledgeDosage;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      required final List<Dosage> dosage}) = _$_MedicationKnowledgeDosage;
   _MedicationKnowledgeDosage._() : super._();
 
   factory _MedicationKnowledgeDosage.fromJson(Map<String, dynamic> json) =
@@ -16014,7 +15345,7 @@ abstract class _MedicationKnowledgeDosage extends MedicationKnowledgeDosage {
   List<Dosage> get dosage;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeDosageCopyWith<_MedicationKnowledgeDosage>
+  _$$_MedicationKnowledgeDosageCopyWith<_$_MedicationKnowledgeDosage>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -16023,38 +15354,6 @@ MedicationKnowledgePatientCharacteristic
         Map<String, dynamic> json) {
   return _MedicationKnowledgePatientCharacteristic.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgePatientCharacteristicTearOff {
-  const _$MedicationKnowledgePatientCharacteristicTearOff();
-
-  _MedicationKnowledgePatientCharacteristic call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Range? valueRange}) {
-    return _MedicationKnowledgePatientCharacteristic(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueCodeableConcept: valueCodeableConcept,
-      valueQuantity: valueQuantity,
-      valueRange: valueRange,
-    );
-  }
-
-  MedicationKnowledgePatientCharacteristic fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgePatientCharacteristic.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgePatientCharacteristic =
-    _$MedicationKnowledgePatientCharacteristicTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgePatientCharacteristic {
@@ -16192,12 +15491,12 @@ class _$MedicationKnowledgePatientCharacteristicCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgePatientCharacteristicCopyWith<$Res>
+abstract class _$$_MedicationKnowledgePatientCharacteristicCopyWith<$Res>
     implements $MedicationKnowledgePatientCharacteristicCopyWith<$Res> {
-  factory _$MedicationKnowledgePatientCharacteristicCopyWith(
-          _MedicationKnowledgePatientCharacteristic value,
-          $Res Function(_MedicationKnowledgePatientCharacteristic) then) =
-      __$MedicationKnowledgePatientCharacteristicCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgePatientCharacteristicCopyWith(
+          _$_MedicationKnowledgePatientCharacteristic value,
+          $Res Function(_$_MedicationKnowledgePatientCharacteristic) then) =
+      __$$_MedicationKnowledgePatientCharacteristicCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -16219,18 +15518,18 @@ abstract class _$MedicationKnowledgePatientCharacteristicCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgePatientCharacteristicCopyWithImpl<$Res>
+class __$$_MedicationKnowledgePatientCharacteristicCopyWithImpl<$Res>
     extends _$MedicationKnowledgePatientCharacteristicCopyWithImpl<$Res>
-    implements _$MedicationKnowledgePatientCharacteristicCopyWith<$Res> {
-  __$MedicationKnowledgePatientCharacteristicCopyWithImpl(
-      _MedicationKnowledgePatientCharacteristic _value,
-      $Res Function(_MedicationKnowledgePatientCharacteristic) _then)
+    implements _$$_MedicationKnowledgePatientCharacteristicCopyWith<$Res> {
+  __$$_MedicationKnowledgePatientCharacteristicCopyWithImpl(
+      _$_MedicationKnowledgePatientCharacteristic _value,
+      $Res Function(_$_MedicationKnowledgePatientCharacteristic) _then)
       : super(_value,
-            (v) => _then(v as _MedicationKnowledgePatientCharacteristic));
+            (v) => _then(v as _$_MedicationKnowledgePatientCharacteristic));
 
   @override
-  _MedicationKnowledgePatientCharacteristic get _value =>
-      super._value as _MedicationKnowledgePatientCharacteristic;
+  _$_MedicationKnowledgePatientCharacteristic get _value =>
+      super._value as _$_MedicationKnowledgePatientCharacteristic;
 
   @override
   $Res call({
@@ -16242,17 +15541,17 @@ class __$MedicationKnowledgePatientCharacteristicCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
   }) {
-    return _then(_MedicationKnowledgePatientCharacteristic(
+    return _then(_$_MedicationKnowledgePatientCharacteristic(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -16281,13 +15580,15 @@ class _$_MedicationKnowledgePatientCharacteristic
     extends _MedicationKnowledgePatientCharacteristic {
   _$_MedicationKnowledgePatientCharacteristic(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueCodeableConcept,
       this.valueQuantity,
       this.valueRange})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationKnowledgePatientCharacteristic.fromJson(
           Map<String, dynamic> json) =>
@@ -16295,11 +15596,25 @@ class _$_MedicationKnowledgePatientCharacteristic
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -16318,12 +15633,12 @@ class _$_MedicationKnowledgePatientCharacteristic
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgePatientCharacteristic &&
+            other is _$_MedicationKnowledgePatientCharacteristic &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
@@ -16333,12 +15648,13 @@ class _$_MedicationKnowledgePatientCharacteristic
                 .equals(other.valueRange, valueRange));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueCodeableConcept),
       const DeepCollectionEquality().hash(valueQuantity),
@@ -16346,27 +15662,29 @@ class _$_MedicationKnowledgePatientCharacteristic
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgePatientCharacteristicCopyWith<
-          _MedicationKnowledgePatientCharacteristic>
-      get copyWith => __$MedicationKnowledgePatientCharacteristicCopyWithImpl<
-          _MedicationKnowledgePatientCharacteristic>(this, _$identity);
+  _$$_MedicationKnowledgePatientCharacteristicCopyWith<
+          _$_MedicationKnowledgePatientCharacteristic>
+      get copyWith => __$$_MedicationKnowledgePatientCharacteristicCopyWithImpl<
+          _$_MedicationKnowledgePatientCharacteristic>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgePatientCharacteristicToJson(this);
+    return _$$_MedicationKnowledgePatientCharacteristicToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgePatientCharacteristic
     extends MedicationKnowledgePatientCharacteristic {
   factory _MedicationKnowledgePatientCharacteristic(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Range? valueRange}) = _$_MedicationKnowledgePatientCharacteristic;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      final CodeableConcept? valueCodeableConcept,
+      final Quantity? valueQuantity,
+      final Range? valueRange}) = _$_MedicationKnowledgePatientCharacteristic;
   _MedicationKnowledgePatientCharacteristic._() : super._();
 
   factory _MedicationKnowledgePatientCharacteristic.fromJson(
@@ -16390,8 +15708,8 @@ abstract class _MedicationKnowledgePatientCharacteristic
   Range? get valueRange;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgePatientCharacteristicCopyWith<
-          _MedicationKnowledgePatientCharacteristic>
+  _$$_MedicationKnowledgePatientCharacteristicCopyWith<
+          _$_MedicationKnowledgePatientCharacteristic>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -16402,35 +15720,6 @@ MedicationKnowledgeMedicineClassification
 }
 
 /// @nodoc
-class _$MedicationKnowledgeMedicineClassificationTearOff {
-  const _$MedicationKnowledgeMedicineClassificationTearOff();
-
-  _MedicationKnowledgeMedicineClassification call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      List<CodeableConcept>? classification}) {
-    return _MedicationKnowledgeMedicineClassification(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      classification: classification,
-    );
-  }
-
-  MedicationKnowledgeMedicineClassification fromJson(
-      Map<String, Object?> json) {
-    return MedicationKnowledgeMedicineClassification.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeMedicineClassification =
-    _$MedicationKnowledgeMedicineClassificationTearOff();
-
-/// @nodoc
 mixin _$MedicationKnowledgeMedicineClassification {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -16438,6 +15727,12 @@ mixin _$MedicationKnowledgeMedicineClassification {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
+  Markdown? get sourceString => throw _privateConstructorUsedError;
+  @JsonKey(name: '_sourceString')
+  Element? get sourceStringElement => throw _privateConstructorUsedError;
+  FhirUri? get sourceUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_sourceUri')
+  Element? get sourceUriElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get classification =>
       throw _privateConstructorUsedError;
 
@@ -16459,9 +15754,15 @@ abstract class $MedicationKnowledgeMedicineClassificationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
+      Markdown? sourceString,
+      @JsonKey(name: '_sourceString') Element? sourceStringElement,
+      FhirUri? sourceUri,
+      @JsonKey(name: '_sourceUri') Element? sourceUriElement,
       List<CodeableConcept>? classification});
 
   $CodeableConceptCopyWith<$Res> get type;
+  $ElementCopyWith<$Res>? get sourceStringElement;
+  $ElementCopyWith<$Res>? get sourceUriElement;
 }
 
 /// @nodoc
@@ -16480,6 +15781,10 @@ class _$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
+    Object? sourceString = freezed,
+    Object? sourceStringElement = freezed,
+    Object? sourceUri = freezed,
+    Object? sourceUriElement = freezed,
     Object? classification = freezed,
   }) {
     return _then(_value.copyWith(
@@ -16499,6 +15804,22 @@ class _$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
+      sourceString: sourceString == freezed
+          ? _value.sourceString
+          : sourceString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      sourceStringElement: sourceStringElement == freezed
+          ? _value.sourceStringElement
+          : sourceStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceUri: sourceUri == freezed
+          ? _value.sourceUri
+          : sourceUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      sourceUriElement: sourceUriElement == freezed
+          ? _value.sourceUriElement
+          : sourceUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       classification: classification == freezed
           ? _value.classification
           : classification // ignore: cast_nullable_to_non_nullable
@@ -16512,40 +15833,70 @@ class _$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
       return _then(_value.copyWith(type: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res>? get sourceStringElement {
+    if (_value.sourceStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.sourceStringElement!, (value) {
+      return _then(_value.copyWith(sourceStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get sourceUriElement {
+    if (_value.sourceUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.sourceUriElement!, (value) {
+      return _then(_value.copyWith(sourceUriElement: value));
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeMedicineClassificationCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeMedicineClassificationCopyWith<$Res>
     implements $MedicationKnowledgeMedicineClassificationCopyWith<$Res> {
-  factory _$MedicationKnowledgeMedicineClassificationCopyWith(
-          _MedicationKnowledgeMedicineClassification value,
-          $Res Function(_MedicationKnowledgeMedicineClassification) then) =
-      __$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeMedicineClassificationCopyWith(
+          _$_MedicationKnowledgeMedicineClassification value,
+          $Res Function(_$_MedicationKnowledgeMedicineClassification) then) =
+      __$$_MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
+      Markdown? sourceString,
+      @JsonKey(name: '_sourceString') Element? sourceStringElement,
+      FhirUri? sourceUri,
+      @JsonKey(name: '_sourceUri') Element? sourceUriElement,
       List<CodeableConcept>? classification});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res>? get sourceStringElement;
+  @override
+  $ElementCopyWith<$Res>? get sourceUriElement;
 }
 
 /// @nodoc
-class __$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
     extends _$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeMedicineClassificationCopyWith<$Res> {
-  __$MedicationKnowledgeMedicineClassificationCopyWithImpl(
-      _MedicationKnowledgeMedicineClassification _value,
-      $Res Function(_MedicationKnowledgeMedicineClassification) _then)
+    implements _$$_MedicationKnowledgeMedicineClassificationCopyWith<$Res> {
+  __$$_MedicationKnowledgeMedicineClassificationCopyWithImpl(
+      _$_MedicationKnowledgeMedicineClassification _value,
+      $Res Function(_$_MedicationKnowledgeMedicineClassification) _then)
       : super(_value,
-            (v) => _then(v as _MedicationKnowledgeMedicineClassification));
+            (v) => _then(v as _$_MedicationKnowledgeMedicineClassification));
 
   @override
-  _MedicationKnowledgeMedicineClassification get _value =>
-      super._value as _MedicationKnowledgeMedicineClassification;
+  _$_MedicationKnowledgeMedicineClassification get _value =>
+      super._value as _$_MedicationKnowledgeMedicineClassification;
 
   @override
   $Res call({
@@ -16553,27 +15904,47 @@ class __$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
+    Object? sourceString = freezed,
+    Object? sourceStringElement = freezed,
+    Object? sourceUri = freezed,
+    Object? sourceUriElement = freezed,
     Object? classification = freezed,
   }) {
-    return _then(_MedicationKnowledgeMedicineClassification(
+    return _then(_$_MedicationKnowledgeMedicineClassification(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
+      sourceString: sourceString == freezed
+          ? _value.sourceString
+          : sourceString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      sourceStringElement: sourceStringElement == freezed
+          ? _value.sourceStringElement
+          : sourceStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceUri: sourceUri == freezed
+          ? _value.sourceUri
+          : sourceUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      sourceUriElement: sourceUriElement == freezed
+          ? _value.sourceUriElement
+          : sourceUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       classification: classification == freezed
-          ? _value.classification
+          ? _value._classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -16586,11 +15957,18 @@ class _$_MedicationKnowledgeMedicineClassification
     extends _MedicationKnowledgeMedicineClassification {
   _$_MedicationKnowledgeMedicineClassification(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
-      this.classification})
-      : super._();
+      this.sourceString,
+      @JsonKey(name: '_sourceString') this.sourceStringElement,
+      this.sourceUri,
+      @JsonKey(name: '_sourceUri') this.sourceUriElement,
+      final List<CodeableConcept>? classification})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _classification = classification,
+        super._();
 
   factory _$_MedicationKnowledgeMedicineClassification.fromJson(
           Map<String, dynamic> json) =>
@@ -16598,66 +15976,115 @@ class _$_MedicationKnowledgeMedicineClassification
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
-  final List<CodeableConcept>? classification;
+  final Markdown? sourceString;
+  @override
+  @JsonKey(name: '_sourceString')
+  final Element? sourceStringElement;
+  @override
+  final FhirUri? sourceUri;
+  @override
+  @JsonKey(name: '_sourceUri')
+  final Element? sourceUriElement;
+  final List<CodeableConcept>? _classification;
+  @override
+  List<CodeableConcept>? get classification {
+    final value = _classification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'MedicationKnowledgeMedicineClassification(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, classification: $classification)';
+    return 'MedicationKnowledgeMedicineClassification(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, sourceString: $sourceString, sourceStringElement: $sourceStringElement, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, classification: $classification)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeMedicineClassification &&
+            other is _$_MedicationKnowledgeMedicineClassification &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.classification, classification));
+                .equals(other.sourceString, sourceString) &&
+            const DeepCollectionEquality()
+                .equals(other.sourceStringElement, sourceStringElement) &&
+            const DeepCollectionEquality().equals(other.sourceUri, sourceUri) &&
+            const DeepCollectionEquality()
+                .equals(other.sourceUriElement, sourceUriElement) &&
+            const DeepCollectionEquality()
+                .equals(other._classification, _classification));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(classification));
+      const DeepCollectionEquality().hash(sourceString),
+      const DeepCollectionEquality().hash(sourceStringElement),
+      const DeepCollectionEquality().hash(sourceUri),
+      const DeepCollectionEquality().hash(sourceUriElement),
+      const DeepCollectionEquality().hash(_classification));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeMedicineClassificationCopyWith<
-          _MedicationKnowledgeMedicineClassification>
-      get copyWith => __$MedicationKnowledgeMedicineClassificationCopyWithImpl<
-          _MedicationKnowledgeMedicineClassification>(this, _$identity);
+  _$$_MedicationKnowledgeMedicineClassificationCopyWith<
+          _$_MedicationKnowledgeMedicineClassification>
+      get copyWith =>
+          __$$_MedicationKnowledgeMedicineClassificationCopyWithImpl<
+              _$_MedicationKnowledgeMedicineClassification>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeMedicineClassificationToJson(this);
+    return _$$_MedicationKnowledgeMedicineClassificationToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeMedicineClassification
     extends MedicationKnowledgeMedicineClassification {
   factory _MedicationKnowledgeMedicineClassification(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept type,
-          List<CodeableConcept>? classification}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final Markdown? sourceString,
+          @JsonKey(name: '_sourceString') final Element? sourceStringElement,
+          final FhirUri? sourceUri,
+          @JsonKey(name: '_sourceUri') final Element? sourceUriElement,
+          final List<CodeableConcept>? classification}) =
       _$_MedicationKnowledgeMedicineClassification;
   _MedicationKnowledgeMedicineClassification._() : super._();
 
@@ -16675,11 +16102,21 @@ abstract class _MedicationKnowledgeMedicineClassification
   @override
   CodeableConcept get type;
   @override
+  Markdown? get sourceString;
+  @override
+  @JsonKey(name: '_sourceString')
+  Element? get sourceStringElement;
+  @override
+  FhirUri? get sourceUri;
+  @override
+  @JsonKey(name: '_sourceUri')
+  Element? get sourceUriElement;
+  @override
   List<CodeableConcept>? get classification;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeMedicineClassificationCopyWith<
-          _MedicationKnowledgeMedicineClassification>
+  _$$_MedicationKnowledgeMedicineClassificationCopyWith<
+          _$_MedicationKnowledgeMedicineClassification>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -16689,57 +16126,14 @@ MedicationKnowledgePackaging _$MedicationKnowledgePackagingFromJson(
 }
 
 /// @nodoc
-class _$MedicationKnowledgePackagingTearOff {
-  const _$MedicationKnowledgePackagingTearOff();
-
-  _MedicationKnowledgePackaging call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      MedicationKnowledgeCost? cost,
-      CodeableConcept? type,
-      Quantity? quantity,
-      Reference? device,
-      CodeableConcept? material,
-      List<MedicationKnowledgePackaging>? packaging}) {
-    return _MedicationKnowledgePackaging(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      cost: cost,
-      type: type,
-      quantity: quantity,
-      device: device,
-      material: material,
-      packaging: packaging,
-    );
-  }
-
-  MedicationKnowledgePackaging fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgePackaging.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgePackaging = _$MedicationKnowledgePackagingTearOff();
-
-/// @nodoc
 mixin _$MedicationKnowledgePackaging {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Identifier? get identifier => throw _privateConstructorUsedError;
-  MedicationKnowledgeCost? get cost => throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  Quantity? get quantity => throw _privateConstructorUsedError;
-  Reference? get device => throw _privateConstructorUsedError;
-  CodeableConcept? get material => throw _privateConstructorUsedError;
-  List<MedicationKnowledgePackaging>? get packaging =>
-      throw _privateConstructorUsedError;
+  List<MedicationKnowledgeCost>? get cost => throw _privateConstructorUsedError;
+  Reference? get packagedProduct => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -16757,20 +16151,10 @@ abstract class $MedicationKnowledgePackagingCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      MedicationKnowledgeCost? cost,
-      CodeableConcept? type,
-      Quantity? quantity,
-      Reference? device,
-      CodeableConcept? material,
-      List<MedicationKnowledgePackaging>? packaging});
+      List<MedicationKnowledgeCost>? cost,
+      Reference? packagedProduct});
 
-  $IdentifierCopyWith<$Res>? get identifier;
-  $MedicationKnowledgeCostCopyWith<$Res>? get cost;
-  $CodeableConceptCopyWith<$Res>? get type;
-  $QuantityCopyWith<$Res>? get quantity;
-  $ReferenceCopyWith<$Res>? get device;
-  $CodeableConceptCopyWith<$Res>? get material;
+  $ReferenceCopyWith<$Res>? get packagedProduct;
 }
 
 /// @nodoc
@@ -16787,13 +16171,8 @@ class _$MedicationKnowledgePackagingCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? identifier = freezed,
     Object? cost = freezed,
-    Object? type = freezed,
-    Object? quantity = freezed,
-    Object? device = freezed,
-    Object? material = freezed,
-    Object? packaging = freezed,
+    Object? packagedProduct = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -16808,205 +16187,90 @@ class _$MedicationKnowledgePackagingCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
-          ? _value.identifier
-          : identifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
       cost: cost == freezed
           ? _value.cost
           : cost // ignore: cast_nullable_to_non_nullable
-              as MedicationKnowledgeCost?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      quantity: quantity == freezed
-          ? _value.quantity
-          : quantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      device: device == freezed
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeCost>?,
+      packagedProduct: packagedProduct == freezed
+          ? _value.packagedProduct
+          : packagedProduct // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      material: material == freezed
-          ? _value.material
-          : material // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      packaging: packaging == freezed
-          ? _value.packaging
-          : packaging // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgePackaging>?,
     ));
   }
 
   @override
-  $IdentifierCopyWith<$Res>? get identifier {
-    if (_value.identifier == null) {
+  $ReferenceCopyWith<$Res>? get packagedProduct {
+    if (_value.packagedProduct == null) {
       return null;
     }
 
-    return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $MedicationKnowledgeCostCopyWith<$Res>? get cost {
-    if (_value.cost == null) {
-      return null;
-    }
-
-    return $MedicationKnowledgeCostCopyWith<$Res>(_value.cost!, (value) {
-      return _then(_value.copyWith(cost: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res>? get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
-      return _then(_value.copyWith(quantity: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get device {
-    if (_value.device == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.device!, (value) {
-      return _then(_value.copyWith(device: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get material {
-    if (_value.material == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.material!, (value) {
-      return _then(_value.copyWith(material: value));
+    return $ReferenceCopyWith<$Res>(_value.packagedProduct!, (value) {
+      return _then(_value.copyWith(packagedProduct: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgePackagingCopyWith<$Res>
+abstract class _$$_MedicationKnowledgePackagingCopyWith<$Res>
     implements $MedicationKnowledgePackagingCopyWith<$Res> {
-  factory _$MedicationKnowledgePackagingCopyWith(
-          _MedicationKnowledgePackaging value,
-          $Res Function(_MedicationKnowledgePackaging) then) =
-      __$MedicationKnowledgePackagingCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgePackagingCopyWith(
+          _$_MedicationKnowledgePackaging value,
+          $Res Function(_$_MedicationKnowledgePackaging) then) =
+      __$$_MedicationKnowledgePackagingCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      MedicationKnowledgeCost? cost,
-      CodeableConcept? type,
-      Quantity? quantity,
-      Reference? device,
-      CodeableConcept? material,
-      List<MedicationKnowledgePackaging>? packaging});
+      List<MedicationKnowledgeCost>? cost,
+      Reference? packagedProduct});
 
   @override
-  $IdentifierCopyWith<$Res>? get identifier;
-  @override
-  $MedicationKnowledgeCostCopyWith<$Res>? get cost;
-  @override
-  $CodeableConceptCopyWith<$Res>? get type;
-  @override
-  $QuantityCopyWith<$Res>? get quantity;
-  @override
-  $ReferenceCopyWith<$Res>? get device;
-  @override
-  $CodeableConceptCopyWith<$Res>? get material;
+  $ReferenceCopyWith<$Res>? get packagedProduct;
 }
 
 /// @nodoc
-class __$MedicationKnowledgePackagingCopyWithImpl<$Res>
+class __$$_MedicationKnowledgePackagingCopyWithImpl<$Res>
     extends _$MedicationKnowledgePackagingCopyWithImpl<$Res>
-    implements _$MedicationKnowledgePackagingCopyWith<$Res> {
-  __$MedicationKnowledgePackagingCopyWithImpl(
-      _MedicationKnowledgePackaging _value,
-      $Res Function(_MedicationKnowledgePackaging) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgePackaging));
+    implements _$$_MedicationKnowledgePackagingCopyWith<$Res> {
+  __$$_MedicationKnowledgePackagingCopyWithImpl(
+      _$_MedicationKnowledgePackaging _value,
+      $Res Function(_$_MedicationKnowledgePackaging) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgePackaging));
 
   @override
-  _MedicationKnowledgePackaging get _value =>
-      super._value as _MedicationKnowledgePackaging;
+  _$_MedicationKnowledgePackaging get _value =>
+      super._value as _$_MedicationKnowledgePackaging;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? identifier = freezed,
     Object? cost = freezed,
-    Object? type = freezed,
-    Object? quantity = freezed,
-    Object? device = freezed,
-    Object? material = freezed,
-    Object? packaging = freezed,
+    Object? packagedProduct = freezed,
   }) {
-    return _then(_MedicationKnowledgePackaging(
+    return _then(_$_MedicationKnowledgePackaging(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
-          ? _value.identifier
-          : identifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
       cost: cost == freezed
-          ? _value.cost
+          ? _value._cost
           : cost // ignore: cast_nullable_to_non_nullable
-              as MedicationKnowledgeCost?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      quantity: quantity == freezed
-          ? _value.quantity
-          : quantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      device: device == freezed
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeCost>?,
+      packagedProduct: packagedProduct == freezed
+          ? _value.packagedProduct
+          : packagedProduct // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      material: material == freezed
-          ? _value.material
-          : material // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      packaging: packaging == freezed
-          ? _value.packaging
-          : packaging // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgePackaging>?,
     ));
   }
 }
@@ -17016,107 +16280,103 @@ class __$MedicationKnowledgePackagingCopyWithImpl<$Res>
 class _$_MedicationKnowledgePackaging extends _MedicationKnowledgePackaging {
   _$_MedicationKnowledgePackaging(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.cost,
-      this.type,
-      this.quantity,
-      this.device,
-      this.material,
-      this.packaging})
-      : super._();
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<MedicationKnowledgeCost>? cost,
+      this.packagedProduct})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _cost = cost,
+        super._();
 
   factory _$_MedicationKnowledgePackaging.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgePackagingFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeCost>? _cost;
   @override
-  final Identifier? identifier;
+  List<MedicationKnowledgeCost>? get cost {
+    final value = _cost;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final MedicationKnowledgeCost? cost;
-  @override
-  final CodeableConcept? type;
-  @override
-  final Quantity? quantity;
-  @override
-  final Reference? device;
-  @override
-  final CodeableConcept? material;
-  @override
-  final List<MedicationKnowledgePackaging>? packaging;
+  final Reference? packagedProduct;
 
   @override
   String toString() {
-    return 'MedicationKnowledgePackaging(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, cost: $cost, type: $type, quantity: $quantity, device: $device, material: $material, packaging: $packaging)';
+    return 'MedicationKnowledgePackaging(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, cost: $cost, packagedProduct: $packagedProduct)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgePackaging &&
+            other is _$_MedicationKnowledgePackaging &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._cost, _cost) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.cost, cost) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.quantity, quantity) &&
-            const DeepCollectionEquality().equals(other.device, device) &&
-            const DeepCollectionEquality().equals(other.material, material) &&
-            const DeepCollectionEquality().equals(other.packaging, packaging));
+                .equals(other.packagedProduct, packagedProduct));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(identifier),
-      const DeepCollectionEquality().hash(cost),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(quantity),
-      const DeepCollectionEquality().hash(device),
-      const DeepCollectionEquality().hash(material),
-      const DeepCollectionEquality().hash(packaging));
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_cost),
+      const DeepCollectionEquality().hash(packagedProduct));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgePackagingCopyWith<_MedicationKnowledgePackaging>
-      get copyWith => __$MedicationKnowledgePackagingCopyWithImpl<
-          _MedicationKnowledgePackaging>(this, _$identity);
+  _$$_MedicationKnowledgePackagingCopyWith<_$_MedicationKnowledgePackaging>
+      get copyWith => __$$_MedicationKnowledgePackagingCopyWithImpl<
+          _$_MedicationKnowledgePackaging>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgePackagingToJson(this);
+    return _$$_MedicationKnowledgePackagingToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgePackaging
     extends MedicationKnowledgePackaging {
   factory _MedicationKnowledgePackaging(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Identifier? identifier,
-          MedicationKnowledgeCost? cost,
-          CodeableConcept? type,
-          Quantity? quantity,
-          Reference? device,
-          CodeableConcept? material,
-          List<MedicationKnowledgePackaging>? packaging}) =
-      _$_MedicationKnowledgePackaging;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<MedicationKnowledgeCost>? cost,
+      final Reference? packagedProduct}) = _$_MedicationKnowledgePackaging;
   _MedicationKnowledgePackaging._() : super._();
 
   factory _MedicationKnowledgePackaging.fromJson(Map<String, dynamic> json) =
@@ -17130,531 +16390,12 @@ abstract class _MedicationKnowledgePackaging
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Identifier? get identifier;
+  List<MedicationKnowledgeCost>? get cost;
   @override
-  MedicationKnowledgeCost? get cost;
-  @override
-  CodeableConcept? get type;
-  @override
-  Quantity? get quantity;
-  @override
-  Reference? get device;
-  @override
-  CodeableConcept? get material;
-  @override
-  List<MedicationKnowledgePackaging>? get packaging;
+  Reference? get packagedProduct;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgePackagingCopyWith<_MedicationKnowledgePackaging>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-MedicationKnowledgeDrugCharacteristic
-    _$MedicationKnowledgeDrugCharacteristicFromJson(Map<String, dynamic> json) {
-  return _MedicationKnowledgeDrugCharacteristic.fromJson(json);
-}
-
-/// @nodoc
-class _$MedicationKnowledgeDrugCharacteristicTearOff {
-  const _$MedicationKnowledgeDrugCharacteristicTearOff();
-
-  _MedicationKnowledgeDrugCharacteristic call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? valueCodeableConcept,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Attachment? valueAttachment}) {
-    return _MedicationKnowledgeDrugCharacteristic(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueCodeableConcept: valueCodeableConcept,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueQuantity: valueQuantity,
-      valueBase64Binary: valueBase64Binary,
-      valueBase64BinaryElement: valueBase64BinaryElement,
-      valueAttachment: valueAttachment,
-    );
-  }
-
-  MedicationKnowledgeDrugCharacteristic fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeDrugCharacteristic.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeDrugCharacteristic =
-    _$MedicationKnowledgeDrugCharacteristicTearOff();
-
-/// @nodoc
-mixin _$MedicationKnowledgeDrugCharacteristic {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
-  String? get valueString => throw _privateConstructorUsedError;
-  @JsonKey(name: '_valueString')
-  Element? get valueStringElement => throw _privateConstructorUsedError;
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
-  @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
-  Attachment? get valueAttachment => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MedicationKnowledgeDrugCharacteristicCopyWith<
-          MedicationKnowledgeDrugCharacteristic>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
-  factory $MedicationKnowledgeDrugCharacteristicCopyWith(
-          MedicationKnowledgeDrugCharacteristic value,
-          $Res Function(MedicationKnowledgeDrugCharacteristic) then) =
-      _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? valueCodeableConcept,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Attachment? valueAttachment});
-
-  $CodeableConceptCopyWith<$Res>? get type;
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  $ElementCopyWith<$Res>? get valueStringElement;
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
-  $AttachmentCopyWith<$Res>? get valueAttachment;
-}
-
-/// @nodoc
-class _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
-    implements $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
-  _$MedicationKnowledgeDrugCharacteristicCopyWithImpl(this._value, this._then);
-
-  final MedicationKnowledgeDrugCharacteristic _value;
-  // ignore: unused_field
-  final $Res Function(MedicationKnowledgeDrugCharacteristic) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueString = freezed,
-    Object? valueStringElement = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueBase64Binary = freezed,
-    Object? valueBase64BinaryElement = freezed,
-    Object? valueAttachment = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueCodeableConcept: valueCodeableConcept == freezed
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueString: valueString == freezed
-          ? _value.valueString
-          : valueString // ignore: cast_nullable_to_non_nullable
-              as String?,
-      valueStringElement: valueStringElement == freezed
-          ? _value.valueStringElement
-          : valueStringElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueQuantity: valueQuantity == freezed
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueBase64Binary: valueBase64Binary == freezed
-          ? _value.valueBase64Binary
-          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
-      valueBase64BinaryElement: valueBase64BinaryElement == freezed
-          ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueAttachment: valueAttachment == freezed
-          ? _value.valueAttachment
-          : valueAttachment // ignore: cast_nullable_to_non_nullable
-              as Attachment?,
-    ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
-    if (_value.valueCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(valueCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get valueStringElement {
-    if (_value.valueStringElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
-      return _then(_value.copyWith(valueStringElement: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res>? get valueQuantity {
-    if (_value.valueQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
-      return _then(_value.copyWith(valueQuantity: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get valueBase64BinaryElement {
-    if (_value.valueBase64BinaryElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement!, (value) {
-      return _then(_value.copyWith(valueBase64BinaryElement: value));
-    });
-  }
-
-  @override
-  $AttachmentCopyWith<$Res>? get valueAttachment {
-    if (_value.valueAttachment == null) {
-      return null;
-    }
-
-    return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
-      return _then(_value.copyWith(valueAttachment: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$MedicationKnowledgeDrugCharacteristicCopyWith<$Res>
-    implements $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
-  factory _$MedicationKnowledgeDrugCharacteristicCopyWith(
-          _MedicationKnowledgeDrugCharacteristic value,
-          $Res Function(_MedicationKnowledgeDrugCharacteristic) then) =
-      __$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? valueCodeableConcept,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Attachment? valueAttachment});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type;
-  @override
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  @override
-  $ElementCopyWith<$Res>? get valueStringElement;
-  @override
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  @override
-  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
-  @override
-  $AttachmentCopyWith<$Res>? get valueAttachment;
-}
-
-/// @nodoc
-class __$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
-    extends _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
-  __$MedicationKnowledgeDrugCharacteristicCopyWithImpl(
-      _MedicationKnowledgeDrugCharacteristic _value,
-      $Res Function(_MedicationKnowledgeDrugCharacteristic) _then)
-      : super(
-            _value, (v) => _then(v as _MedicationKnowledgeDrugCharacteristic));
-
-  @override
-  _MedicationKnowledgeDrugCharacteristic get _value =>
-      super._value as _MedicationKnowledgeDrugCharacteristic;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueString = freezed,
-    Object? valueStringElement = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueBase64Binary = freezed,
-    Object? valueBase64BinaryElement = freezed,
-    Object? valueAttachment = freezed,
-  }) {
-    return _then(_MedicationKnowledgeDrugCharacteristic(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueCodeableConcept: valueCodeableConcept == freezed
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueString: valueString == freezed
-          ? _value.valueString
-          : valueString // ignore: cast_nullable_to_non_nullable
-              as String?,
-      valueStringElement: valueStringElement == freezed
-          ? _value.valueStringElement
-          : valueStringElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueQuantity: valueQuantity == freezed
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueBase64Binary: valueBase64Binary == freezed
-          ? _value.valueBase64Binary
-          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
-      valueBase64BinaryElement: valueBase64BinaryElement == freezed
-          ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueAttachment: valueAttachment == freezed
-          ? _value.valueAttachment
-          : valueAttachment // ignore: cast_nullable_to_non_nullable
-              as Attachment?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_MedicationKnowledgeDrugCharacteristic
-    extends _MedicationKnowledgeDrugCharacteristic {
-  _$_MedicationKnowledgeDrugCharacteristic(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.type,
-      this.valueCodeableConcept,
-      this.valueString,
-      @JsonKey(name: '_valueString') this.valueStringElement,
-      this.valueQuantity,
-      this.valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
-      this.valueAttachment})
-      : super._();
-
-  factory _$_MedicationKnowledgeDrugCharacteristic.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicationKnowledgeDrugCharacteristicFromJson(json);
-
-  @override
-  final String? id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
-  @override
-  final List<FhirExtension>? modifierExtension;
-  @override
-  final CodeableConcept? type;
-  @override
-  final CodeableConcept? valueCodeableConcept;
-  @override
-  final String? valueString;
-  @override
-  @JsonKey(name: '_valueString')
-  final Element? valueStringElement;
-  @override
-  final Quantity? valueQuantity;
-  @override
-  final Base64Binary? valueBase64Binary;
-  @override
-  @JsonKey(name: '_valueBase64Binary')
-  final Element? valueBase64BinaryElement;
-  @override
-  final Attachment? valueAttachment;
-
-  @override
-  String toString() {
-    return 'MedicationKnowledgeDrugCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueAttachment: $valueAttachment)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeDrugCharacteristic &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
-            const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.valueCodeableConcept, valueCodeableConcept) &&
-            const DeepCollectionEquality()
-                .equals(other.valueString, valueString) &&
-            const DeepCollectionEquality()
-                .equals(other.valueStringElement, valueStringElement) &&
-            const DeepCollectionEquality()
-                .equals(other.valueQuantity, valueQuantity) &&
-            const DeepCollectionEquality()
-                .equals(other.valueBase64Binary, valueBase64Binary) &&
-            const DeepCollectionEquality().equals(
-                other.valueBase64BinaryElement, valueBase64BinaryElement) &&
-            const DeepCollectionEquality()
-                .equals(other.valueAttachment, valueAttachment));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(valueCodeableConcept),
-      const DeepCollectionEquality().hash(valueString),
-      const DeepCollectionEquality().hash(valueStringElement),
-      const DeepCollectionEquality().hash(valueQuantity),
-      const DeepCollectionEquality().hash(valueBase64Binary),
-      const DeepCollectionEquality().hash(valueBase64BinaryElement),
-      const DeepCollectionEquality().hash(valueAttachment));
-
-  @JsonKey(ignore: true)
-  @override
-  _$MedicationKnowledgeDrugCharacteristicCopyWith<
-          _MedicationKnowledgeDrugCharacteristic>
-      get copyWith => __$MedicationKnowledgeDrugCharacteristicCopyWithImpl<
-          _MedicationKnowledgeDrugCharacteristic>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeDrugCharacteristicToJson(this);
-  }
-}
-
-abstract class _MedicationKnowledgeDrugCharacteristic
-    extends MedicationKnowledgeDrugCharacteristic {
-  factory _MedicationKnowledgeDrugCharacteristic(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? valueCodeableConcept,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Attachment? valueAttachment}) = _$_MedicationKnowledgeDrugCharacteristic;
-  _MedicationKnowledgeDrugCharacteristic._() : super._();
-
-  factory _MedicationKnowledgeDrugCharacteristic.fromJson(
-          Map<String, dynamic> json) =
-      _$_MedicationKnowledgeDrugCharacteristic.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  CodeableConcept? get type;
-  @override
-  CodeableConcept? get valueCodeableConcept;
-  @override
-  String? get valueString;
-  @override
-  @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
-  @override
-  Quantity? get valueQuantity;
-  @override
-  Base64Binary? get valueBase64Binary;
-  @override
-  @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement;
-  @override
-  Attachment? get valueAttachment;
-  @override
-  @JsonKey(ignore: true)
-  _$MedicationKnowledgeDrugCharacteristicCopyWith<
-          _MedicationKnowledgeDrugCharacteristic>
+  _$$_MedicationKnowledgePackagingCopyWith<_$_MedicationKnowledgePackaging>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -17662,37 +16403,6 @@ MedicationKnowledgeRegulatory _$MedicationKnowledgeRegulatoryFromJson(
     Map<String, dynamic> json) {
   return _MedicationKnowledgeRegulatory.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeRegulatoryTearOff {
-  const _$MedicationKnowledgeRegulatoryTearOff();
-
-  _MedicationKnowledgeRegulatory call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Reference regulatoryAuthority,
-      List<MedicationKnowledgeSubstitution>? substitution,
-      List<CodeableConcept>? schedule,
-      MedicationKnowledgeMaxDispense? maxDispense}) {
-    return _MedicationKnowledgeRegulatory(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      regulatoryAuthority: regulatoryAuthority,
-      substitution: substitution,
-      schedule: schedule,
-      maxDispense: maxDispense,
-    );
-  }
-
-  MedicationKnowledgeRegulatory fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeRegulatory.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeRegulatory = _$MedicationKnowledgeRegulatoryTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeRegulatory {
@@ -17805,12 +16515,12 @@ class _$MedicationKnowledgeRegulatoryCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeRegulatoryCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeRegulatoryCopyWith<$Res>
     implements $MedicationKnowledgeRegulatoryCopyWith<$Res> {
-  factory _$MedicationKnowledgeRegulatoryCopyWith(
-          _MedicationKnowledgeRegulatory value,
-          $Res Function(_MedicationKnowledgeRegulatory) then) =
-      __$MedicationKnowledgeRegulatoryCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeRegulatoryCopyWith(
+          _$_MedicationKnowledgeRegulatory value,
+          $Res Function(_$_MedicationKnowledgeRegulatory) then) =
+      __$$_MedicationKnowledgeRegulatoryCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -17828,17 +16538,17 @@ abstract class _$MedicationKnowledgeRegulatoryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeRegulatoryCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeRegulatoryCopyWithImpl<$Res>
     extends _$MedicationKnowledgeRegulatoryCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeRegulatoryCopyWith<$Res> {
-  __$MedicationKnowledgeRegulatoryCopyWithImpl(
-      _MedicationKnowledgeRegulatory _value,
-      $Res Function(_MedicationKnowledgeRegulatory) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeRegulatory));
+    implements _$$_MedicationKnowledgeRegulatoryCopyWith<$Res> {
+  __$$_MedicationKnowledgeRegulatoryCopyWithImpl(
+      _$_MedicationKnowledgeRegulatory _value,
+      $Res Function(_$_MedicationKnowledgeRegulatory) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeRegulatory));
 
   @override
-  _MedicationKnowledgeRegulatory get _value =>
-      super._value as _MedicationKnowledgeRegulatory;
+  _$_MedicationKnowledgeRegulatory get _value =>
+      super._value as _$_MedicationKnowledgeRegulatory;
 
   @override
   $Res call({
@@ -17850,17 +16560,17 @@ class __$MedicationKnowledgeRegulatoryCopyWithImpl<$Res>
     Object? schedule = freezed,
     Object? maxDispense = freezed,
   }) {
-    return _then(_MedicationKnowledgeRegulatory(
+    return _then(_$_MedicationKnowledgeRegulatory(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       regulatoryAuthority: regulatoryAuthority == freezed
@@ -17868,11 +16578,11 @@ class __$MedicationKnowledgeRegulatoryCopyWithImpl<$Res>
           : regulatoryAuthority // ignore: cast_nullable_to_non_nullable
               as Reference,
       substitution: substitution == freezed
-          ? _value.substitution
+          ? _value._substitution
           : substitution // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeSubstitution>?,
       schedule: schedule == freezed
-          ? _value.schedule
+          ? _value._schedule
           : schedule // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       maxDispense: maxDispense == freezed
@@ -17888,13 +16598,17 @@ class __$MedicationKnowledgeRegulatoryCopyWithImpl<$Res>
 class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
   _$_MedicationKnowledgeRegulatory(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.regulatoryAuthority,
-      this.substitution,
-      this.schedule,
+      final List<MedicationKnowledgeSubstitution>? substitution,
+      final List<CodeableConcept>? schedule,
       this.maxDispense})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _substitution = substitution,
+        _schedule = schedule,
+        super._();
 
   factory _$_MedicationKnowledgeRegulatory.fromJson(
           Map<String, dynamic> json) =>
@@ -17902,17 +16616,45 @@ class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference regulatoryAuthority;
+  final List<MedicationKnowledgeSubstitution>? _substitution;
   @override
-  final List<MedicationKnowledgeSubstitution>? substitution;
+  List<MedicationKnowledgeSubstitution>? get substitution {
+    final value = _substitution;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _schedule;
   @override
-  final List<CodeableConcept>? schedule;
+  List<CodeableConcept>? get schedule {
+    final value = _schedule;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final MedicationKnowledgeMaxDispense? maxDispense;
 
@@ -17925,54 +16667,57 @@ class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeRegulatory &&
+            other is _$_MedicationKnowledgeRegulatory &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.regulatoryAuthority, regulatoryAuthority) &&
             const DeepCollectionEquality()
-                .equals(other.substitution, substitution) &&
-            const DeepCollectionEquality().equals(other.schedule, schedule) &&
+                .equals(other._substitution, _substitution) &&
+            const DeepCollectionEquality().equals(other._schedule, _schedule) &&
             const DeepCollectionEquality()
                 .equals(other.maxDispense, maxDispense));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(regulatoryAuthority),
-      const DeepCollectionEquality().hash(substitution),
-      const DeepCollectionEquality().hash(schedule),
+      const DeepCollectionEquality().hash(_substitution),
+      const DeepCollectionEquality().hash(_schedule),
       const DeepCollectionEquality().hash(maxDispense));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeRegulatoryCopyWith<_MedicationKnowledgeRegulatory>
-      get copyWith => __$MedicationKnowledgeRegulatoryCopyWithImpl<
-          _MedicationKnowledgeRegulatory>(this, _$identity);
+  _$$_MedicationKnowledgeRegulatoryCopyWith<_$_MedicationKnowledgeRegulatory>
+      get copyWith => __$$_MedicationKnowledgeRegulatoryCopyWithImpl<
+          _$_MedicationKnowledgeRegulatory>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeRegulatoryToJson(this);
+    return _$$_MedicationKnowledgeRegulatoryToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeRegulatory
     extends MedicationKnowledgeRegulatory {
   factory _MedicationKnowledgeRegulatory(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required Reference regulatoryAuthority,
-          List<MedicationKnowledgeSubstitution>? substitution,
-          List<CodeableConcept>? schedule,
-          MedicationKnowledgeMaxDispense? maxDispense}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final Reference regulatoryAuthority,
+          final List<MedicationKnowledgeSubstitution>? substitution,
+          final List<CodeableConcept>? schedule,
+          final MedicationKnowledgeMaxDispense? maxDispense}) =
       _$_MedicationKnowledgeRegulatory;
   _MedicationKnowledgeRegulatory._() : super._();
 
@@ -17996,7 +16741,7 @@ abstract class _MedicationKnowledgeRegulatory
   MedicationKnowledgeMaxDispense? get maxDispense;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeRegulatoryCopyWith<_MedicationKnowledgeRegulatory>
+  _$$_MedicationKnowledgeRegulatoryCopyWith<_$_MedicationKnowledgeRegulatory>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -18004,36 +16749,6 @@ MedicationKnowledgeSubstitution _$MedicationKnowledgeSubstitutionFromJson(
     Map<String, dynamic> json) {
   return _MedicationKnowledgeSubstitution.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeSubstitutionTearOff {
-  const _$MedicationKnowledgeSubstitutionTearOff();
-
-  _MedicationKnowledgeSubstitution call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      Boolean? allowed,
-      @JsonKey(name: '_allowed') Element? allowedElement}) {
-    return _MedicationKnowledgeSubstitution(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      allowed: allowed,
-      allowedElement: allowedElement,
-    );
-  }
-
-  MedicationKnowledgeSubstitution fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeSubstitution.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeSubstitution =
-    _$MedicationKnowledgeSubstitutionTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeSubstitution {
@@ -18137,12 +16852,12 @@ class _$MedicationKnowledgeSubstitutionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeSubstitutionCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeSubstitutionCopyWith<$Res>
     implements $MedicationKnowledgeSubstitutionCopyWith<$Res> {
-  factory _$MedicationKnowledgeSubstitutionCopyWith(
-          _MedicationKnowledgeSubstitution value,
-          $Res Function(_MedicationKnowledgeSubstitution) then) =
-      __$MedicationKnowledgeSubstitutionCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeSubstitutionCopyWith(
+          _$_MedicationKnowledgeSubstitution value,
+          $Res Function(_$_MedicationKnowledgeSubstitution) then) =
+      __$$_MedicationKnowledgeSubstitutionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -18159,17 +16874,17 @@ abstract class _$MedicationKnowledgeSubstitutionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeSubstitutionCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeSubstitutionCopyWithImpl<$Res>
     extends _$MedicationKnowledgeSubstitutionCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeSubstitutionCopyWith<$Res> {
-  __$MedicationKnowledgeSubstitutionCopyWithImpl(
-      _MedicationKnowledgeSubstitution _value,
-      $Res Function(_MedicationKnowledgeSubstitution) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeSubstitution));
+    implements _$$_MedicationKnowledgeSubstitutionCopyWith<$Res> {
+  __$$_MedicationKnowledgeSubstitutionCopyWithImpl(
+      _$_MedicationKnowledgeSubstitution _value,
+      $Res Function(_$_MedicationKnowledgeSubstitution) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeSubstitution));
 
   @override
-  _MedicationKnowledgeSubstitution get _value =>
-      super._value as _MedicationKnowledgeSubstitution;
+  _$_MedicationKnowledgeSubstitution get _value =>
+      super._value as _$_MedicationKnowledgeSubstitution;
 
   @override
   $Res call({
@@ -18180,17 +16895,17 @@ class __$MedicationKnowledgeSubstitutionCopyWithImpl<$Res>
     Object? allowed = freezed,
     Object? allowedElement = freezed,
   }) {
-    return _then(_MedicationKnowledgeSubstitution(
+    return _then(_$_MedicationKnowledgeSubstitution(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -18215,12 +16930,14 @@ class _$_MedicationKnowledgeSubstitution
     extends _MedicationKnowledgeSubstitution {
   _$_MedicationKnowledgeSubstitution(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.allowed,
       @JsonKey(name: '_allowed') this.allowedElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationKnowledgeSubstitution.fromJson(
           Map<String, dynamic> json) =>
@@ -18228,11 +16945,25 @@ class _$_MedicationKnowledgeSubstitution
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -18250,49 +16981,53 @@ class _$_MedicationKnowledgeSubstitution
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeSubstitution &&
+            other is _$_MedicationKnowledgeSubstitution &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.allowed, allowed) &&
             const DeepCollectionEquality()
                 .equals(other.allowedElement, allowedElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(allowed),
       const DeepCollectionEquality().hash(allowedElement));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeSubstitutionCopyWith<_MedicationKnowledgeSubstitution>
-      get copyWith => __$MedicationKnowledgeSubstitutionCopyWithImpl<
-          _MedicationKnowledgeSubstitution>(this, _$identity);
+  _$$_MedicationKnowledgeSubstitutionCopyWith<
+          _$_MedicationKnowledgeSubstitution>
+      get copyWith => __$$_MedicationKnowledgeSubstitutionCopyWithImpl<
+          _$_MedicationKnowledgeSubstitution>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeSubstitutionToJson(this);
+    return _$$_MedicationKnowledgeSubstitutionToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeSubstitution
     extends MedicationKnowledgeSubstitution {
   factory _MedicationKnowledgeSubstitution(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept type,
-          Boolean? allowed,
-          @JsonKey(name: '_allowed') Element? allowedElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final Boolean? allowed,
+          @JsonKey(name: '_allowed') final Element? allowedElement}) =
       _$_MedicationKnowledgeSubstitution;
   _MedicationKnowledgeSubstitution._() : super._();
 
@@ -18315,7 +17050,8 @@ abstract class _MedicationKnowledgeSubstitution
   Element? get allowedElement;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeSubstitutionCopyWith<_MedicationKnowledgeSubstitution>
+  _$$_MedicationKnowledgeSubstitutionCopyWith<
+          _$_MedicationKnowledgeSubstitution>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -18323,34 +17059,6 @@ MedicationKnowledgeMaxDispense _$MedicationKnowledgeMaxDispenseFromJson(
     Map<String, dynamic> json) {
   return _MedicationKnowledgeMaxDispense.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationKnowledgeMaxDispenseTearOff {
-  const _$MedicationKnowledgeMaxDispenseTearOff();
-
-  _MedicationKnowledgeMaxDispense call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Quantity quantity,
-      FhirDuration? period}) {
-    return _MedicationKnowledgeMaxDispense(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      quantity: quantity,
-      period: period,
-    );
-  }
-
-  MedicationKnowledgeMaxDispense fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeMaxDispense.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationKnowledgeMaxDispense =
-    _$MedicationKnowledgeMaxDispenseTearOff();
 
 /// @nodoc
 mixin _$MedicationKnowledgeMaxDispense {
@@ -18446,12 +17154,12 @@ class _$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeMaxDispenseCopyWith<$Res>
+abstract class _$$_MedicationKnowledgeMaxDispenseCopyWith<$Res>
     implements $MedicationKnowledgeMaxDispenseCopyWith<$Res> {
-  factory _$MedicationKnowledgeMaxDispenseCopyWith(
-          _MedicationKnowledgeMaxDispense value,
-          $Res Function(_MedicationKnowledgeMaxDispense) then) =
-      __$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>;
+  factory _$$_MedicationKnowledgeMaxDispenseCopyWith(
+          _$_MedicationKnowledgeMaxDispense value,
+          $Res Function(_$_MedicationKnowledgeMaxDispense) then) =
+      __$$_MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -18467,17 +17175,17 @@ abstract class _$MedicationKnowledgeMaxDispenseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
+class __$$_MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
     extends _$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeMaxDispenseCopyWith<$Res> {
-  __$MedicationKnowledgeMaxDispenseCopyWithImpl(
-      _MedicationKnowledgeMaxDispense _value,
-      $Res Function(_MedicationKnowledgeMaxDispense) _then)
-      : super(_value, (v) => _then(v as _MedicationKnowledgeMaxDispense));
+    implements _$$_MedicationKnowledgeMaxDispenseCopyWith<$Res> {
+  __$$_MedicationKnowledgeMaxDispenseCopyWithImpl(
+      _$_MedicationKnowledgeMaxDispense _value,
+      $Res Function(_$_MedicationKnowledgeMaxDispense) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeMaxDispense));
 
   @override
-  _MedicationKnowledgeMaxDispense get _value =>
-      super._value as _MedicationKnowledgeMaxDispense;
+  _$_MedicationKnowledgeMaxDispense get _value =>
+      super._value as _$_MedicationKnowledgeMaxDispense;
 
   @override
   $Res call({
@@ -18487,17 +17195,17 @@ class __$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
     Object? quantity = freezed,
     Object? period = freezed,
   }) {
-    return _then(_MedicationKnowledgeMaxDispense(
+    return _then(_$_MedicationKnowledgeMaxDispense(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       quantity: quantity == freezed
@@ -18518,11 +17226,13 @@ class _$_MedicationKnowledgeMaxDispense
     extends _MedicationKnowledgeMaxDispense {
   _$_MedicationKnowledgeMaxDispense(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.quantity,
       this.period})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationKnowledgeMaxDispense.fromJson(
           Map<String, dynamic> json) =>
@@ -18530,11 +17240,25 @@ class _$_MedicationKnowledgeMaxDispense
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Quantity quantity;
   @override
@@ -18549,45 +17273,48 @@ class _$_MedicationKnowledgeMaxDispense
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeMaxDispense &&
+            other is _$_MedicationKnowledgeMaxDispense &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality().equals(other.period, period));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(quantity),
       const DeepCollectionEquality().hash(period));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeMaxDispenseCopyWith<_MedicationKnowledgeMaxDispense>
-      get copyWith => __$MedicationKnowledgeMaxDispenseCopyWithImpl<
-          _MedicationKnowledgeMaxDispense>(this, _$identity);
+  _$$_MedicationKnowledgeMaxDispenseCopyWith<_$_MedicationKnowledgeMaxDispense>
+      get copyWith => __$$_MedicationKnowledgeMaxDispenseCopyWithImpl<
+          _$_MedicationKnowledgeMaxDispense>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeMaxDispenseToJson(this);
+    return _$$_MedicationKnowledgeMaxDispenseToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationKnowledgeMaxDispense
     extends MedicationKnowledgeMaxDispense {
   factory _MedicationKnowledgeMaxDispense(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Quantity quantity,
-      FhirDuration? period}) = _$_MedicationKnowledgeMaxDispense;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Quantity quantity,
+      final FhirDuration? period}) = _$_MedicationKnowledgeMaxDispense;
   _MedicationKnowledgeMaxDispense._() : super._();
 
   factory _MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json) =
@@ -18606,92 +17333,467 @@ abstract class _MedicationKnowledgeMaxDispense
   FhirDuration? get period;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeMaxDispenseCopyWith<_MedicationKnowledgeMaxDispense>
+  _$$_MedicationKnowledgeMaxDispenseCopyWith<_$_MedicationKnowledgeMaxDispense>
       get copyWith => throw _privateConstructorUsedError;
 }
 
-MedicationKnowledgeKineticCharacteristic
-    _$MedicationKnowledgeKineticCharacteristicFromJson(
-        Map<String, dynamic> json) {
-  return _MedicationKnowledgeKineticCharacteristic.fromJson(json);
+MedicationKnowledgeIngredient _$MedicationKnowledgeIngredientFromJson(
+    Map<String, dynamic> json) {
+  return _MedicationKnowledgeIngredient.fromJson(json);
 }
 
 /// @nodoc
-class _$MedicationKnowledgeKineticCharacteristicTearOff {
-  const _$MedicationKnowledgeKineticCharacteristicTearOff();
+mixin _$MedicationKnowledgeIngredient {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableReference get item => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Ratio? get strengthRatio => throw _privateConstructorUsedError;
+  CodeableConcept? get strengthCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Quantity? get strengthQuantity => throw _privateConstructorUsedError;
 
-  _MedicationKnowledgeKineticCharacteristic call(
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationKnowledgeIngredientCopyWith<MedicationKnowledgeIngredient>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationKnowledgeIngredientCopyWith<$Res> {
+  factory $MedicationKnowledgeIngredientCopyWith(
+          MedicationKnowledgeIngredient value,
+          $Res Function(MedicationKnowledgeIngredient) then) =
+      _$MedicationKnowledgeIngredientCopyWithImpl<$Res>;
+  $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      CodeableReference item,
       CodeableConcept? type,
-      Quantity? valueQuantity,
-      FhirDuration? valueDuration}) {
-    return _MedicationKnowledgeKineticCharacteristic(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueQuantity: valueQuantity,
-      valueDuration: valueDuration,
-    );
+      Ratio? strengthRatio,
+      CodeableConcept? strengthCodeableConcept,
+      Quantity? strengthQuantity});
+
+  $CodeableReferenceCopyWith<$Res> get item;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $RatioCopyWith<$Res>? get strengthRatio;
+  $CodeableConceptCopyWith<$Res>? get strengthCodeableConcept;
+  $QuantityCopyWith<$Res>? get strengthQuantity;
+}
+
+/// @nodoc
+class _$MedicationKnowledgeIngredientCopyWithImpl<$Res>
+    implements $MedicationKnowledgeIngredientCopyWith<$Res> {
+  _$MedicationKnowledgeIngredientCopyWithImpl(this._value, this._then);
+
+  final MedicationKnowledgeIngredient _value;
+  // ignore: unused_field
+  final $Res Function(MedicationKnowledgeIngredient) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? item = freezed,
+    Object? type = freezed,
+    Object? strengthRatio = freezed,
+    Object? strengthCodeableConcept = freezed,
+    Object? strengthQuantity = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      strengthRatio: strengthRatio == freezed
+          ? _value.strengthRatio
+          : strengthRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      strengthCodeableConcept: strengthCodeableConcept == freezed
+          ? _value.strengthCodeableConcept
+          : strengthCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      strengthQuantity: strengthQuantity == freezed
+          ? _value.strengthQuantity
+          : strengthQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+    ));
   }
 
-  MedicationKnowledgeKineticCharacteristic fromJson(Map<String, Object?> json) {
-    return MedicationKnowledgeKineticCharacteristic.fromJson(json);
+  @override
+  $CodeableReferenceCopyWith<$Res> get item {
+    return $CodeableReferenceCopyWith<$Res>(_value.item, (value) {
+      return _then(_value.copyWith(item: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res>? get strengthRatio {
+    if (_value.strengthRatio == null) {
+      return null;
+    }
+
+    return $RatioCopyWith<$Res>(_value.strengthRatio!, (value) {
+      return _then(_value.copyWith(strengthRatio: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get strengthCodeableConcept {
+    if (_value.strengthCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.strengthCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(strengthCodeableConcept: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get strengthQuantity {
+    if (_value.strengthQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.strengthQuantity!, (value) {
+      return _then(_value.copyWith(strengthQuantity: value));
+    });
   }
 }
 
 /// @nodoc
-const $MedicationKnowledgeKineticCharacteristic =
-    _$MedicationKnowledgeKineticCharacteristicTearOff();
+abstract class _$$_MedicationKnowledgeIngredientCopyWith<$Res>
+    implements $MedicationKnowledgeIngredientCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeIngredientCopyWith(
+          _$_MedicationKnowledgeIngredient value,
+          $Res Function(_$_MedicationKnowledgeIngredient) then) =
+      __$$_MedicationKnowledgeIngredientCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableReference item,
+      CodeableConcept? type,
+      Ratio? strengthRatio,
+      CodeableConcept? strengthCodeableConcept,
+      Quantity? strengthQuantity});
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get item;
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $RatioCopyWith<$Res>? get strengthRatio;
+  @override
+  $CodeableConceptCopyWith<$Res>? get strengthCodeableConcept;
+  @override
+  $QuantityCopyWith<$Res>? get strengthQuantity;
+}
 
 /// @nodoc
-mixin _$MedicationKnowledgeKineticCharacteristic {
+class __$$_MedicationKnowledgeIngredientCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeIngredientCopyWithImpl<$Res>
+    implements _$$_MedicationKnowledgeIngredientCopyWith<$Res> {
+  __$$_MedicationKnowledgeIngredientCopyWithImpl(
+      _$_MedicationKnowledgeIngredient _value,
+      $Res Function(_$_MedicationKnowledgeIngredient) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeIngredient));
+
+  @override
+  _$_MedicationKnowledgeIngredient get _value =>
+      super._value as _$_MedicationKnowledgeIngredient;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? item = freezed,
+    Object? type = freezed,
+    Object? strengthRatio = freezed,
+    Object? strengthCodeableConcept = freezed,
+    Object? strengthQuantity = freezed,
+  }) {
+    return _then(_$_MedicationKnowledgeIngredient(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      strengthRatio: strengthRatio == freezed
+          ? _value.strengthRatio
+          : strengthRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      strengthCodeableConcept: strengthCodeableConcept == freezed
+          ? _value.strengthCodeableConcept
+          : strengthCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      strengthQuantity: strengthQuantity == freezed
+          ? _value.strengthQuantity
+          : strengthQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
+  _$_MedicationKnowledgeIngredient(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.item,
+      this.type,
+      this.strengthRatio,
+      this.strengthCodeableConcept,
+      this.strengthQuantity})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_MedicationKnowledgeIngredient.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_MedicationKnowledgeIngredientFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableReference item;
+  @override
+  final CodeableConcept? type;
+  @override
+  final Ratio? strengthRatio;
+  @override
+  final CodeableConcept? strengthCodeableConcept;
+  @override
+  final Quantity? strengthQuantity;
+
+  @override
+  String toString() {
+    return 'MedicationKnowledgeIngredient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, type: $type, strengthRatio: $strengthRatio, strengthCodeableConcept: $strengthCodeableConcept, strengthQuantity: $strengthQuantity)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationKnowledgeIngredient &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.strengthRatio, strengthRatio) &&
+            const DeepCollectionEquality().equals(
+                other.strengthCodeableConcept, strengthCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.strengthQuantity, strengthQuantity));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(item),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(strengthRatio),
+      const DeepCollectionEquality().hash(strengthCodeableConcept),
+      const DeepCollectionEquality().hash(strengthQuantity));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_MedicationKnowledgeIngredientCopyWith<_$_MedicationKnowledgeIngredient>
+      get copyWith => __$$_MedicationKnowledgeIngredientCopyWithImpl<
+          _$_MedicationKnowledgeIngredient>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationKnowledgeIngredientToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationKnowledgeIngredient
+    extends MedicationKnowledgeIngredient {
+  factory _MedicationKnowledgeIngredient(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableReference item,
+      final CodeableConcept? type,
+      final Ratio? strengthRatio,
+      final CodeableConcept? strengthCodeableConcept,
+      final Quantity? strengthQuantity}) = _$_MedicationKnowledgeIngredient;
+  _MedicationKnowledgeIngredient._() : super._();
+
+  factory _MedicationKnowledgeIngredient.fromJson(Map<String, dynamic> json) =
+      _$_MedicationKnowledgeIngredient.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  CodeableReference get item;
+  @override
+  CodeableConcept? get type;
+  @override
+  Ratio? get strengthRatio;
+  @override
+  CodeableConcept? get strengthCodeableConcept;
+  @override
+  Quantity? get strengthQuantity;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationKnowledgeIngredientCopyWith<_$_MedicationKnowledgeIngredient>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+MedicationKnowledgeDrugCharacteristic
+    _$MedicationKnowledgeDrugCharacteristicFromJson(Map<String, dynamic> json) {
+  return _MedicationKnowledgeDrugCharacteristic.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationKnowledgeDrugCharacteristic {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Markdown? get valueString => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBase64Binary')
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicationKnowledgeKineticCharacteristicCopyWith<
-          MedicationKnowledgeKineticCharacteristic>
+  $MedicationKnowledgeDrugCharacteristicCopyWith<
+          MedicationKnowledgeDrugCharacteristic>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MedicationKnowledgeKineticCharacteristicCopyWith<$Res> {
-  factory $MedicationKnowledgeKineticCharacteristicCopyWith(
-          MedicationKnowledgeKineticCharacteristic value,
-          $Res Function(MedicationKnowledgeKineticCharacteristic) then) =
-      _$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>;
+abstract class $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
+  factory $MedicationKnowledgeDrugCharacteristicCopyWith(
+          MedicationKnowledgeDrugCharacteristic value,
+          $Res Function(MedicationKnowledgeDrugCharacteristic) then) =
+      _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>;
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
+      CodeableConcept? valueCodeableConcept,
+      Markdown? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      FhirDuration? valueDuration});
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Attachment? valueAttachment});
 
   $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $ElementCopyWith<$Res>? get valueStringElement;
   $QuantityCopyWith<$Res>? get valueQuantity;
-  $FhirDurationCopyWith<$Res>? get valueDuration;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
 }
 
 /// @nodoc
-class _$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
-    implements $MedicationKnowledgeKineticCharacteristicCopyWith<$Res> {
-  _$MedicationKnowledgeKineticCharacteristicCopyWithImpl(
-      this._value, this._then);
+class _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
+    implements $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
+  _$MedicationKnowledgeDrugCharacteristicCopyWithImpl(this._value, this._then);
 
-  final MedicationKnowledgeKineticCharacteristic _value;
+  final MedicationKnowledgeDrugCharacteristic _value;
   // ignore: unused_field
-  final $Res Function(MedicationKnowledgeKineticCharacteristic) _then;
+  final $Res Function(MedicationKnowledgeDrugCharacteristic) _then;
 
   @override
   $Res call({
@@ -18699,8 +17801,13 @@ class _$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
     Object? valueQuantity = freezed,
-    Object? valueDuration = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueAttachment = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -18719,14 +17826,34 @@ class _$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueDuration: valueDuration == freezed
-          ? _value.valueDuration
-          : valueDuration // ignore: cast_nullable_to_non_nullable
-              as FhirDuration?,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
     ));
   }
 
@@ -18737,6 +17864,1218 @@ class _$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement {
+    if (_value.valueBase64BinaryElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement!, (value) {
+      return _then(_value.copyWith(valueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res>? get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationKnowledgeDrugCharacteristicCopyWith<$Res>
+    implements $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeDrugCharacteristicCopyWith(
+          _$_MedicationKnowledgeDrugCharacteristic value,
+          $Res Function(_$_MedicationKnowledgeDrugCharacteristic) then) =
+      __$$_MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      CodeableConcept? valueCodeableConcept,
+      Markdown? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Quantity? valueQuantity,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Attachment? valueAttachment});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  @override
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+}
+
+/// @nodoc
+class __$$_MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
+    implements _$$_MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
+  __$$_MedicationKnowledgeDrugCharacteristicCopyWithImpl(
+      _$_MedicationKnowledgeDrugCharacteristic _value,
+      $Res Function(_$_MedicationKnowledgeDrugCharacteristic) _then)
+      : super(_value,
+            (v) => _then(v as _$_MedicationKnowledgeDrugCharacteristic));
+
+  @override
+  _$_MedicationKnowledgeDrugCharacteristic get _value =>
+      super._value as _$_MedicationKnowledgeDrugCharacteristic;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueAttachment = freezed,
+  }) {
+    return _then(_$_MedicationKnowledgeDrugCharacteristic(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationKnowledgeDrugCharacteristic
+    extends _MedicationKnowledgeDrugCharacteristic {
+  _$_MedicationKnowledgeDrugCharacteristic(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      this.valueCodeableConcept,
+      this.valueString,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueQuantity,
+      this.valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      this.valueAttachment})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_MedicationKnowledgeDrugCharacteristic.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_MedicationKnowledgeDrugCharacteristicFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? type;
+  @override
+  final CodeableConcept? valueCodeableConcept;
+  @override
+  final Markdown? valueString;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element? valueStringElement;
+  @override
+  final Quantity? valueQuantity;
+  @override
+  final Base64Binary? valueBase64Binary;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  final Element? valueBase64BinaryElement;
+  @override
+  final Attachment? valueAttachment;
+
+  @override
+  String toString() {
+    return 'MedicationKnowledgeDrugCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueAttachment: $valueAttachment)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationKnowledgeDrugCharacteristic &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.valueString, valueString) &&
+            const DeepCollectionEquality()
+                .equals(other.valueStringElement, valueStringElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueQuantity, valueQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBase64Binary, valueBase64Binary) &&
+            const DeepCollectionEquality().equals(
+                other.valueBase64BinaryElement, valueBase64BinaryElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAttachment, valueAttachment));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(valueCodeableConcept),
+      const DeepCollectionEquality().hash(valueString),
+      const DeepCollectionEquality().hash(valueStringElement),
+      const DeepCollectionEquality().hash(valueQuantity),
+      const DeepCollectionEquality().hash(valueBase64Binary),
+      const DeepCollectionEquality().hash(valueBase64BinaryElement),
+      const DeepCollectionEquality().hash(valueAttachment));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_MedicationKnowledgeDrugCharacteristicCopyWith<
+          _$_MedicationKnowledgeDrugCharacteristic>
+      get copyWith => __$$_MedicationKnowledgeDrugCharacteristicCopyWithImpl<
+          _$_MedicationKnowledgeDrugCharacteristic>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationKnowledgeDrugCharacteristicToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationKnowledgeDrugCharacteristic
+    extends MedicationKnowledgeDrugCharacteristic {
+  factory _MedicationKnowledgeDrugCharacteristic(
+          {final String? id,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? valueCodeableConcept,
+          final Markdown? valueString,
+          @JsonKey(name: '_valueString')
+              final Element? valueStringElement,
+          final Quantity? valueQuantity,
+          final Base64Binary? valueBase64Binary,
+          @JsonKey(name: '_valueBase64Binary')
+              final Element? valueBase64BinaryElement,
+          final Attachment? valueAttachment}) =
+      _$_MedicationKnowledgeDrugCharacteristic;
+  _MedicationKnowledgeDrugCharacteristic._() : super._();
+
+  factory _MedicationKnowledgeDrugCharacteristic.fromJson(
+          Map<String, dynamic> json) =
+      _$_MedicationKnowledgeDrugCharacteristic.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  CodeableConcept? get type;
+  @override
+  CodeableConcept? get valueCodeableConcept;
+  @override
+  Markdown? get valueString;
+  @override
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement;
+  @override
+  Quantity? get valueQuantity;
+  @override
+  Base64Binary? get valueBase64Binary;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  Element? get valueBase64BinaryElement;
+  @override
+  Attachment? get valueAttachment;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationKnowledgeDrugCharacteristicCopyWith<
+          _$_MedicationKnowledgeDrugCharacteristic>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+MedicationKnowledgeStorageGuideline
+    _$MedicationKnowledgeStorageGuidelineFromJson(Map<String, dynamic> json) {
+  return _MedicationKnowledgeStorageGuideline.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationKnowledgeStorageGuideline {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get reference => throw _privateConstructorUsedError;
+  @JsonKey(name: '_reference')
+  Element? get referenceElement => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  FhirDuration? get stabilityDuration => throw _privateConstructorUsedError;
+  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationKnowledgeStorageGuidelineCopyWith<
+          MedicationKnowledgeStorageGuideline>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  factory $MedicationKnowledgeStorageGuidelineCopyWith(
+          MedicationKnowledgeStorageGuideline value,
+          $Res Function(MedicationKnowledgeStorageGuideline) then) =
+      _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? reference,
+      @JsonKey(name: '_reference') Element? referenceElement,
+      List<Annotation>? note,
+      FhirDuration? stabilityDuration,
+      List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
+
+  $ElementCopyWith<$Res>? get referenceElement;
+  $FhirDurationCopyWith<$Res>? get stabilityDuration;
+}
+
+/// @nodoc
+class _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
+    implements $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  _$MedicationKnowledgeStorageGuidelineCopyWithImpl(this._value, this._then);
+
+  final MedicationKnowledgeStorageGuideline _value;
+  // ignore: unused_field
+  final $Res Function(MedicationKnowledgeStorageGuideline) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? reference = freezed,
+    Object? referenceElement = freezed,
+    Object? note = freezed,
+    Object? stabilityDuration = freezed,
+    Object? environmentalSetting = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      stabilityDuration: stabilityDuration == freezed
+          ? _value.stabilityDuration
+          : stabilityDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      environmentalSetting: environmentalSetting == freezed
+          ? _value.environmentalSetting
+          : environmentalSetting // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeEnvironmentalSetting>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get referenceElement {
+    if (_value.referenceElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.referenceElement!, (value) {
+      return _then(_value.copyWith(referenceElement: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get stabilityDuration {
+    if (_value.stabilityDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.stabilityDuration!, (value) {
+      return _then(_value.copyWith(stabilityDuration: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationKnowledgeStorageGuidelineCopyWith<$Res>
+    implements $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeStorageGuidelineCopyWith(
+          _$_MedicationKnowledgeStorageGuideline value,
+          $Res Function(_$_MedicationKnowledgeStorageGuideline) then) =
+      __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? reference,
+      @JsonKey(name: '_reference') Element? referenceElement,
+      List<Annotation>? note,
+      FhirDuration? stabilityDuration,
+      List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
+
+  @override
+  $ElementCopyWith<$Res>? get referenceElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get stabilityDuration;
+}
+
+/// @nodoc
+class __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
+    implements _$$_MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl(
+      _$_MedicationKnowledgeStorageGuideline _value,
+      $Res Function(_$_MedicationKnowledgeStorageGuideline) _then)
+      : super(
+            _value, (v) => _then(v as _$_MedicationKnowledgeStorageGuideline));
+
+  @override
+  _$_MedicationKnowledgeStorageGuideline get _value =>
+      super._value as _$_MedicationKnowledgeStorageGuideline;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? reference = freezed,
+    Object? referenceElement = freezed,
+    Object? note = freezed,
+    Object? stabilityDuration = freezed,
+    Object? environmentalSetting = freezed,
+  }) {
+    return _then(_$_MedicationKnowledgeStorageGuideline(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      note: note == freezed
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      stabilityDuration: stabilityDuration == freezed
+          ? _value.stabilityDuration
+          : stabilityDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      environmentalSetting: environmentalSetting == freezed
+          ? _value._environmentalSetting
+          : environmentalSetting // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeEnvironmentalSetting>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationKnowledgeStorageGuideline
+    extends _MedicationKnowledgeStorageGuideline {
+  _$_MedicationKnowledgeStorageGuideline(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.reference,
+      @JsonKey(name: '_reference') this.referenceElement,
+      final List<Annotation>? note,
+      this.stabilityDuration,
+      final List<MedicationKnowledgeEnvironmentalSetting>?
+          environmentalSetting})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _note = note,
+        _environmentalSetting = environmentalSetting,
+        super._();
+
+  factory _$_MedicationKnowledgeStorageGuideline.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_MedicationKnowledgeStorageGuidelineFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? reference;
+  @override
+  @JsonKey(name: '_reference')
+  final Element? referenceElement;
+  final List<Annotation>? _note;
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirDuration? stabilityDuration;
+  final List<MedicationKnowledgeEnvironmentalSetting>? _environmentalSetting;
+  @override
+  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting {
+    final value = _environmentalSetting;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MedicationKnowledgeStorageGuideline(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, referenceElement: $referenceElement, note: $note, stabilityDuration: $stabilityDuration, environmentalSetting: $environmentalSetting)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationKnowledgeStorageGuideline &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.reference, reference) &&
+            const DeepCollectionEquality()
+                .equals(other.referenceElement, referenceElement) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality()
+                .equals(other.stabilityDuration, stabilityDuration) &&
+            const DeepCollectionEquality()
+                .equals(other._environmentalSetting, _environmentalSetting));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(reference),
+      const DeepCollectionEquality().hash(referenceElement),
+      const DeepCollectionEquality().hash(_note),
+      const DeepCollectionEquality().hash(stabilityDuration),
+      const DeepCollectionEquality().hash(_environmentalSetting));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_MedicationKnowledgeStorageGuidelineCopyWith<
+          _$_MedicationKnowledgeStorageGuideline>
+      get copyWith => __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<
+          _$_MedicationKnowledgeStorageGuideline>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationKnowledgeStorageGuidelineToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationKnowledgeStorageGuideline
+    extends MedicationKnowledgeStorageGuideline {
+  factory _MedicationKnowledgeStorageGuideline(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? reference,
+      @JsonKey(name: '_reference') final Element? referenceElement,
+      final List<Annotation>? note,
+      final FhirDuration? stabilityDuration,
+      final List<MedicationKnowledgeEnvironmentalSetting>?
+          environmentalSetting}) = _$_MedicationKnowledgeStorageGuideline;
+  _MedicationKnowledgeStorageGuideline._() : super._();
+
+  factory _MedicationKnowledgeStorageGuideline.fromJson(
+          Map<String, dynamic> json) =
+      _$_MedicationKnowledgeStorageGuideline.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  FhirUri? get reference;
+  @override
+  @JsonKey(name: '_reference')
+  Element? get referenceElement;
+  @override
+  List<Annotation>? get note;
+  @override
+  FhirDuration? get stabilityDuration;
+  @override
+  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationKnowledgeStorageGuidelineCopyWith<
+          _$_MedicationKnowledgeStorageGuideline>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+MedicationKnowledgeDefinitional _$MedicationKnowledgeDefinitionalFromJson(
+    Map<String, dynamic> json) {
+  return _MedicationKnowledgeDefinitional.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationKnowledgeDefinitional {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get definition => throw _privateConstructorUsedError;
+  CodeableConcept? get doseForm => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get intendedRoute =>
+      throw _privateConstructorUsedError;
+  List<MedicationKnowledgeIngredient>? get ingredient =>
+      throw _privateConstructorUsedError;
+  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationKnowledgeDefinitionalCopyWith<MedicationKnowledgeDefinitional>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  factory $MedicationKnowledgeDefinitionalCopyWith(
+          MedicationKnowledgeDefinitional value,
+          $Res Function(MedicationKnowledgeDefinitional) then) =
+      _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? definition,
+      CodeableConcept? doseForm,
+      List<CodeableConcept>? intendedRoute,
+      List<MedicationKnowledgeIngredient>? ingredient,
+      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic});
+
+  $CodeableConceptCopyWith<$Res>? get doseForm;
+}
+
+/// @nodoc
+class _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res>
+    implements $MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  _$MedicationKnowledgeDefinitionalCopyWithImpl(this._value, this._then);
+
+  final MedicationKnowledgeDefinitional _value;
+  // ignore: unused_field
+  final $Res Function(MedicationKnowledgeDefinitional) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? definition = freezed,
+    Object? doseForm = freezed,
+    Object? intendedRoute = freezed,
+    Object? ingredient = freezed,
+    Object? drugCharacteristic = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      doseForm: doseForm == freezed
+          ? _value.doseForm
+          : doseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intendedRoute: intendedRoute == freezed
+          ? _value.intendedRoute
+          : intendedRoute // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      ingredient: ingredient == freezed
+          ? _value.ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeIngredient>?,
+      drugCharacteristic: drugCharacteristic == freezed
+          ? _value.drugCharacteristic
+          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeDrugCharacteristic>?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get doseForm {
+    if (_value.doseForm == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.doseForm!, (value) {
+      return _then(_value.copyWith(doseForm: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationKnowledgeDefinitionalCopyWith<$Res>
+    implements $MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeDefinitionalCopyWith(
+          _$_MedicationKnowledgeDefinitional value,
+          $Res Function(_$_MedicationKnowledgeDefinitional) then) =
+      __$$_MedicationKnowledgeDefinitionalCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? definition,
+      CodeableConcept? doseForm,
+      List<CodeableConcept>? intendedRoute,
+      List<MedicationKnowledgeIngredient>? ingredient,
+      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get doseForm;
+}
+
+/// @nodoc
+class __$$_MedicationKnowledgeDefinitionalCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res>
+    implements _$$_MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  __$$_MedicationKnowledgeDefinitionalCopyWithImpl(
+      _$_MedicationKnowledgeDefinitional _value,
+      $Res Function(_$_MedicationKnowledgeDefinitional) _then)
+      : super(_value, (v) => _then(v as _$_MedicationKnowledgeDefinitional));
+
+  @override
+  _$_MedicationKnowledgeDefinitional get _value =>
+      super._value as _$_MedicationKnowledgeDefinitional;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? definition = freezed,
+    Object? doseForm = freezed,
+    Object? intendedRoute = freezed,
+    Object? ingredient = freezed,
+    Object? drugCharacteristic = freezed,
+  }) {
+    return _then(_$_MedicationKnowledgeDefinitional(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      definition: definition == freezed
+          ? _value._definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      doseForm: doseForm == freezed
+          ? _value.doseForm
+          : doseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intendedRoute: intendedRoute == freezed
+          ? _value._intendedRoute
+          : intendedRoute // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      ingredient: ingredient == freezed
+          ? _value._ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeIngredient>?,
+      drugCharacteristic: drugCharacteristic == freezed
+          ? _value._drugCharacteristic
+          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeDrugCharacteristic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationKnowledgeDefinitional
+    extends _MedicationKnowledgeDefinitional {
+  _$_MedicationKnowledgeDefinitional(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Reference>? definition,
+      this.doseForm,
+      final List<CodeableConcept>? intendedRoute,
+      final List<MedicationKnowledgeIngredient>? ingredient,
+      final List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _definition = definition,
+        _intendedRoute = intendedRoute,
+        _ingredient = ingredient,
+        _drugCharacteristic = drugCharacteristic,
+        super._();
+
+  factory _$_MedicationKnowledgeDefinitional.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_MedicationKnowledgeDefinitionalFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _definition;
+  @override
+  List<Reference>? get definition {
+    final value = _definition;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? doseForm;
+  final List<CodeableConcept>? _intendedRoute;
+  @override
+  List<CodeableConcept>? get intendedRoute {
+    final value = _intendedRoute;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeIngredient>? _ingredient;
+  @override
+  List<MedicationKnowledgeIngredient>? get ingredient {
+    final value = _ingredient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicationKnowledgeDrugCharacteristic>? _drugCharacteristic;
+  @override
+  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic {
+    final value = _drugCharacteristic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MedicationKnowledgeDefinitional(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, definition: $definition, doseForm: $doseForm, intendedRoute: $intendedRoute, ingredient: $ingredient, drugCharacteristic: $drugCharacteristic)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationKnowledgeDefinitional &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._definition, _definition) &&
+            const DeepCollectionEquality().equals(other.doseForm, doseForm) &&
+            const DeepCollectionEquality()
+                .equals(other._intendedRoute, _intendedRoute) &&
+            const DeepCollectionEquality()
+                .equals(other._ingredient, _ingredient) &&
+            const DeepCollectionEquality()
+                .equals(other._drugCharacteristic, _drugCharacteristic));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_definition),
+      const DeepCollectionEquality().hash(doseForm),
+      const DeepCollectionEquality().hash(_intendedRoute),
+      const DeepCollectionEquality().hash(_ingredient),
+      const DeepCollectionEquality().hash(_drugCharacteristic));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_MedicationKnowledgeDefinitionalCopyWith<
+          _$_MedicationKnowledgeDefinitional>
+      get copyWith => __$$_MedicationKnowledgeDefinitionalCopyWithImpl<
+          _$_MedicationKnowledgeDefinitional>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationKnowledgeDefinitionalToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationKnowledgeDefinitional
+    extends MedicationKnowledgeDefinitional {
+  factory _MedicationKnowledgeDefinitional(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Reference>? definition,
+      final CodeableConcept? doseForm,
+      final List<CodeableConcept>? intendedRoute,
+      final List<MedicationKnowledgeIngredient>? ingredient,
+      final List<MedicationKnowledgeDrugCharacteristic>?
+          drugCharacteristic}) = _$_MedicationKnowledgeDefinitional;
+  _MedicationKnowledgeDefinitional._() : super._();
+
+  factory _MedicationKnowledgeDefinitional.fromJson(Map<String, dynamic> json) =
+      _$_MedicationKnowledgeDefinitional.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  List<Reference>? get definition;
+  @override
+  CodeableConcept? get doseForm;
+  @override
+  List<CodeableConcept>? get intendedRoute;
+  @override
+  List<MedicationKnowledgeIngredient>? get ingredient;
+  @override
+  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationKnowledgeDefinitionalCopyWith<
+          _$_MedicationKnowledgeDefinitional>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+MedicationKnowledgeEnvironmentalSetting
+    _$MedicationKnowledgeEnvironmentalSettingFromJson(
+        Map<String, dynamic> json) {
+  return _MedicationKnowledgeEnvironmentalSetting.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationKnowledgeEnvironmentalSetting {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationKnowledgeEnvironmentalSettingCopyWith<
+          MedicationKnowledgeEnvironmentalSetting>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  factory $MedicationKnowledgeEnvironmentalSettingCopyWith(
+          MedicationKnowledgeEnvironmentalSetting value,
+          $Res Function(MedicationKnowledgeEnvironmentalSetting) then) =
+      _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      CodeableConcept? valueCodeableConcept});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+}
+
+/// @nodoc
+class _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>
+    implements $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl(
+      this._value, this._then);
+
+  final MedicationKnowledgeEnvironmentalSetting _value;
+  // ignore: unused_field
+  final $Res Function(MedicationKnowledgeEnvironmentalSetting) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueCodeableConcept = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -18753,54 +19092,69 @@ class _$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $FhirDurationCopyWith<$Res>? get valueDuration {
-    if (_value.valueDuration == null) {
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
       return null;
     }
 
-    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
-      return _then(_value.copyWith(valueDuration: value));
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$MedicationKnowledgeKineticCharacteristicCopyWith<$Res>
-    implements $MedicationKnowledgeKineticCharacteristicCopyWith<$Res> {
-  factory _$MedicationKnowledgeKineticCharacteristicCopyWith(
-          _MedicationKnowledgeKineticCharacteristic value,
-          $Res Function(_MedicationKnowledgeKineticCharacteristic) then) =
-      __$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>;
+abstract class _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<$Res>
+    implements $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeEnvironmentalSettingCopyWith(
+          _$_MedicationKnowledgeEnvironmentalSetting value,
+          $Res Function(_$_MedicationKnowledgeEnvironmentalSetting) then) =
+      __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       Quantity? valueQuantity,
-      FhirDuration? valueDuration});
+      Range? valueRange,
+      CodeableConcept? valueCodeableConcept});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $QuantityCopyWith<$Res>? get valueQuantity;
   @override
-  $FhirDurationCopyWith<$Res>? get valueDuration;
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
 }
 
 /// @nodoc
-class __$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
-    extends _$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
-    implements _$MedicationKnowledgeKineticCharacteristicCopyWith<$Res> {
-  __$MedicationKnowledgeKineticCharacteristicCopyWithImpl(
-      _MedicationKnowledgeKineticCharacteristic _value,
-      $Res Function(_MedicationKnowledgeKineticCharacteristic) _then)
+class __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>
+    implements _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl(
+      _$_MedicationKnowledgeEnvironmentalSetting _value,
+      $Res Function(_$_MedicationKnowledgeEnvironmentalSetting) _then)
       : super(_value,
-            (v) => _then(v as _MedicationKnowledgeKineticCharacteristic));
+            (v) => _then(v as _$_MedicationKnowledgeEnvironmentalSetting));
 
   @override
-  _MedicationKnowledgeKineticCharacteristic get _value =>
-      super._value as _MedicationKnowledgeKineticCharacteristic;
+  _$_MedicationKnowledgeEnvironmentalSetting get _value =>
+      super._value as _$_MedicationKnowledgeEnvironmentalSetting;
 
   @override
   $Res call({
@@ -18809,128 +19163,159 @@ class __$MedicationKnowledgeKineticCharacteristicCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? type = freezed,
     Object? valueQuantity = freezed,
-    Object? valueDuration = freezed,
+    Object? valueRange = freezed,
+    Object? valueCodeableConcept = freezed,
   }) {
-    return _then(_MedicationKnowledgeKineticCharacteristic(
+    return _then(_$_MedicationKnowledgeEnvironmentalSetting(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+              as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueDuration: valueDuration == freezed
-          ? _value.valueDuration
-          : valueDuration // ignore: cast_nullable_to_non_nullable
-              as FhirDuration?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_MedicationKnowledgeKineticCharacteristic
-    extends _MedicationKnowledgeKineticCharacteristic {
-  _$_MedicationKnowledgeKineticCharacteristic(
+class _$_MedicationKnowledgeEnvironmentalSetting
+    extends _MedicationKnowledgeEnvironmentalSetting {
+  _$_MedicationKnowledgeEnvironmentalSetting(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.type,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
       this.valueQuantity,
-      this.valueDuration})
-      : super._();
+      this.valueRange,
+      this.valueCodeableConcept})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
-  factory _$_MedicationKnowledgeKineticCharacteristic.fromJson(
+  factory _$_MedicationKnowledgeEnvironmentalSetting.fromJson(
           Map<String, dynamic> json) =>
-      _$$_MedicationKnowledgeKineticCharacteristicFromJson(json);
+      _$$_MedicationKnowledgeEnvironmentalSettingFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final Quantity? valueQuantity;
   @override
-  final FhirDuration? valueDuration;
+  final Range? valueRange;
+  @override
+  final CodeableConcept? valueCodeableConcept;
 
   @override
   String toString() {
-    return 'MedicationKnowledgeKineticCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueQuantity: $valueQuantity, valueDuration: $valueDuration)';
+    return 'MedicationKnowledgeEnvironmentalSetting(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueQuantity: $valueQuantity, valueRange: $valueRange, valueCodeableConcept: $valueCodeableConcept)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationKnowledgeKineticCharacteristic &&
+            other is _$_MedicationKnowledgeEnvironmentalSetting &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueQuantity, valueQuantity) &&
             const DeepCollectionEquality()
-                .equals(other.valueDuration, valueDuration));
+                .equals(other.valueRange, valueRange) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueQuantity),
-      const DeepCollectionEquality().hash(valueDuration));
+      const DeepCollectionEquality().hash(valueRange),
+      const DeepCollectionEquality().hash(valueCodeableConcept));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationKnowledgeKineticCharacteristicCopyWith<
-          _MedicationKnowledgeKineticCharacteristic>
-      get copyWith => __$MedicationKnowledgeKineticCharacteristicCopyWithImpl<
-          _MedicationKnowledgeKineticCharacteristic>(this, _$identity);
+  _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<
+          _$_MedicationKnowledgeEnvironmentalSetting>
+      get copyWith => __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<
+          _$_MedicationKnowledgeEnvironmentalSetting>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeKineticCharacteristicToJson(this);
+    return _$$_MedicationKnowledgeEnvironmentalSettingToJson(
+      this,
+    );
   }
 }
 
-abstract class _MedicationKnowledgeKineticCharacteristic
-    extends MedicationKnowledgeKineticCharacteristic {
-  factory _MedicationKnowledgeKineticCharacteristic(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
-          Quantity? valueQuantity,
-          FhirDuration? valueDuration}) =
-      _$_MedicationKnowledgeKineticCharacteristic;
-  _MedicationKnowledgeKineticCharacteristic._() : super._();
+abstract class _MedicationKnowledgeEnvironmentalSetting
+    extends MedicationKnowledgeEnvironmentalSetting {
+  factory _MedicationKnowledgeEnvironmentalSetting(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final Quantity? valueQuantity,
+          final Range? valueRange,
+          final CodeableConcept? valueCodeableConcept}) =
+      _$_MedicationKnowledgeEnvironmentalSetting;
+  _MedicationKnowledgeEnvironmentalSetting._() : super._();
 
-  factory _MedicationKnowledgeKineticCharacteristic.fromJson(
+  factory _MedicationKnowledgeEnvironmentalSetting.fromJson(
           Map<String, dynamic> json) =
-      _$_MedicationKnowledgeKineticCharacteristic.fromJson;
+      _$_MedicationKnowledgeEnvironmentalSetting.fromJson;
 
   @override
   String? get id;
@@ -18940,15 +19325,17 @@ abstract class _MedicationKnowledgeKineticCharacteristic
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   Quantity? get valueQuantity;
   @override
-  FhirDuration? get valueDuration;
+  Range? get valueRange;
+  @override
+  CodeableConcept? get valueCodeableConcept;
   @override
   @JsonKey(ignore: true)
-  _$MedicationKnowledgeKineticCharacteristicCopyWith<
-          _MedicationKnowledgeKineticCharacteristic>
+  _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<
+          _$_MedicationKnowledgeEnvironmentalSetting>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -18957,141 +19344,7 @@ MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MedicationRequestTearOff {
-  const _$MedicationRequestTearOff();
-
-  _MedicationRequest call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-          R5ResourceType resourceType = R5ResourceType.MedicationRequest,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? statusReason,
-      Code? intent,
-      @JsonKey(name: '_intent')
-          Element? intentElement,
-      List<CodeableConcept>? category,
-      Code? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
-      Boolean? doNotPerform,
-      @JsonKey(name: '_doNotPerform')
-          Element? doNotPerformElement,
-      Boolean? reported,
-      @JsonKey(name: '_reported')
-          Element? reportedElement,
-      Reference? informationSource,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      List<Reference>? supportingInformation,
-      FhirDateTime? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      Reference? requester,
-      Reference? performer,
-      CodeableConcept? performerType,
-      Reference? recorder,
-      List<CodeableReference>? reason,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
-      CodeableConcept? courseOfTherapyType,
-      List<Reference>? insurance,
-      List<Annotation>? note,
-      String? renderedDosageInstruction,
-      @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosageInstruction,
-      MedicationRequestDispenseRequest? dispenseRequest,
-      MedicationRequestSubstitution? substitution,
-      Reference? priorPrescription,
-      List<Reference>? detectedIssue,
-      List<Reference>? eventHistory}) {
-    return _MedicationRequest(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      statusReason: statusReason,
-      intent: intent,
-      intentElement: intentElement,
-      category: category,
-      priority: priority,
-      priorityElement: priorityElement,
-      doNotPerform: doNotPerform,
-      doNotPerformElement: doNotPerformElement,
-      reported: reported,
-      reportedElement: reportedElement,
-      informationSource: informationSource,
-      medication: medication,
-      subject: subject,
-      encounter: encounter,
-      supportingInformation: supportingInformation,
-      authoredOn: authoredOn,
-      authoredOnElement: authoredOnElement,
-      requester: requester,
-      performer: performer,
-      performerType: performerType,
-      recorder: recorder,
-      reason: reason,
-      instantiatesCanonical: instantiatesCanonical,
-      instantiatesUri: instantiatesUri,
-      instantiatesUriElement: instantiatesUriElement,
-      basedOn: basedOn,
-      groupIdentifier: groupIdentifier,
-      courseOfTherapyType: courseOfTherapyType,
-      insurance: insurance,
-      note: note,
-      renderedDosageInstruction: renderedDosageInstruction,
-      renderedDosageInstructionElement: renderedDosageInstructionElement,
-      dosageInstruction: dosageInstruction,
-      dispenseRequest: dispenseRequest,
-      substitution: substitution,
-      priorPrescription: priorPrescription,
-      detectedIssue: detectedIssue,
-      eventHistory: eventHistory,
-    );
-  }
-
-  MedicationRequest fromJson(Map<String, Object?> json) {
-    return MedicationRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationRequest = _$MedicationRequestTearOff();
-
-/// @nodoc
 mixin _$MedicationRequest {
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -19108,10 +19361,22 @@ mixin _$MedicationRequest {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Canonical>? get instantiatesCanonical =>
+      throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_instantiatesUri')
+  List<Element>? get instantiatesUriElement =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  Reference? get priorPrescription => throw _privateConstructorUsedError;
+  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  FhirDateTime? get statusChanged => throw _privateConstructorUsedError;
+  @JsonKey(name: '_statusChanged')
+  Element? get statusChangedElement => throw _privateConstructorUsedError;
   Code? get intent => throw _privateConstructorUsedError;
   @JsonKey(name: '_intent')
   Element? get intentElement => throw _privateConstructorUsedError;
@@ -19122,12 +19387,9 @@ mixin _$MedicationRequest {
   Boolean? get doNotPerform => throw _privateConstructorUsedError;
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement => throw _privateConstructorUsedError;
-  Boolean? get reported => throw _privateConstructorUsedError;
-  @JsonKey(name: '_reported')
-  Element? get reportedElement => throw _privateConstructorUsedError;
-  Reference? get informationSource => throw _privateConstructorUsedError;
-  CodeableReference? get medication => throw _privateConstructorUsedError;
+  CodeableReference get medication => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
+  List<Reference>? get informationSource => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
@@ -19135,33 +19397,22 @@ mixin _$MedicationRequest {
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
   Reference? get requester => throw _privateConstructorUsedError;
-  Reference? get performer => throw _privateConstructorUsedError;
+  Boolean? get reported => throw _privateConstructorUsedError;
+  @JsonKey(name: '_reported')
+  Element? get reportedElement => throw _privateConstructorUsedError;
   CodeableConcept? get performerType => throw _privateConstructorUsedError;
+  Reference? get performer => throw _privateConstructorUsedError;
   Reference? get recorder => throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
-  List<Canonical>? get instantiatesCanonical =>
-      throw _privateConstructorUsedError;
-  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement =>
-      throw _privateConstructorUsedError;
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
-  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
   CodeableConcept? get courseOfTherapyType =>
       throw _privateConstructorUsedError;
   List<Reference>? get insurance => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  String? get renderedDosageInstruction => throw _privateConstructorUsedError;
-  @JsonKey(name: '_renderedDosageInstruction')
-  Element? get renderedDosageInstructionElement =>
-      throw _privateConstructorUsedError;
-  List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
+  MedicationRequestDose? get dose => throw _privateConstructorUsedError;
   MedicationRequestDispenseRequest? get dispenseRequest =>
       throw _privateConstructorUsedError;
   MedicationRequestSubstitution? get substitution =>
       throw _privateConstructorUsedError;
-  Reference? get priorPrescription => throw _privateConstructorUsedError;
-  List<Reference>? get detectedIssue => throw _privateConstructorUsedError;
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -19176,96 +19427,83 @@ abstract class $MedicationRequestCopyWith<$Res> {
           MedicationRequest value, $Res Function(MedicationRequest) then) =
       _$MedicationRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
+      List<Canonical>? instantiatesCanonical,
+      List<FhirUri>? instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Reference? priorPrescription,
+      Identifier? groupIdentifier,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? statusReason,
+      FhirDateTime? statusChanged,
+      @JsonKey(name: '_statusChanged') Element? statusChangedElement,
       Code? intent,
-      @JsonKey(name: '_intent')
-          Element? intentElement,
+      @JsonKey(name: '_intent') Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       Boolean? doNotPerform,
-      @JsonKey(name: '_doNotPerform')
-          Element? doNotPerformElement,
-      Boolean? reported,
-      @JsonKey(name: '_reported')
-          Element? reportedElement,
-      Reference? informationSource,
-      CodeableReference? medication,
+      @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
+      CodeableReference medication,
       Reference subject,
+      List<Reference>? informationSource,
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
-      Reference? performer,
+      Boolean? reported,
+      @JsonKey(name: '_reported') Element? reportedElement,
       CodeableConcept? performerType,
+      Reference? performer,
       Reference? recorder,
       List<CodeableReference>? reason,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
       CodeableConcept? courseOfTherapyType,
       List<Reference>? insurance,
       List<Annotation>? note,
-      String? renderedDosageInstruction,
-      @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosageInstruction,
+      MedicationRequestDose? dose,
       MedicationRequestDispenseRequest? dispenseRequest,
       MedicationRequestSubstitution? substitution,
-      Reference? priorPrescription,
-      List<Reference>? detectedIssue,
       List<Reference>? eventHistory});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
+  $ReferenceCopyWith<$Res>? get priorPrescription;
+  $IdentifierCopyWith<$Res>? get groupIdentifier;
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get statusReason;
+  $ElementCopyWith<$Res>? get statusChangedElement;
   $ElementCopyWith<$Res>? get intentElement;
   $ElementCopyWith<$Res>? get priorityElement;
   $ElementCopyWith<$Res>? get doNotPerformElement;
-  $ElementCopyWith<$Res>? get reportedElement;
-  $ReferenceCopyWith<$Res>? get informationSource;
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $CodeableReferenceCopyWith<$Res> get medication;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
   $ElementCopyWith<$Res>? get authoredOnElement;
   $ReferenceCopyWith<$Res>? get requester;
-  $ReferenceCopyWith<$Res>? get performer;
+  $ElementCopyWith<$Res>? get reportedElement;
   $CodeableConceptCopyWith<$Res>? get performerType;
+  $ReferenceCopyWith<$Res>? get performer;
   $ReferenceCopyWith<$Res>? get recorder;
-  $IdentifierCopyWith<$Res>? get groupIdentifier;
   $CodeableConceptCopyWith<$Res>? get courseOfTherapyType;
-  $ElementCopyWith<$Res>? get renderedDosageInstructionElement;
+  $MedicationRequestDoseCopyWith<$Res>? get dose;
   $MedicationRequestDispenseRequestCopyWith<$Res>? get dispenseRequest;
   $MedicationRequestSubstitutionCopyWith<$Res>? get substitution;
-  $ReferenceCopyWith<$Res>? get priorPrescription;
 }
 
 /// @nodoc
@@ -19291,9 +19529,17 @@ class _$MedicationRequestCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
+    Object? instantiatesCanonical = freezed,
+    Object? instantiatesUri = freezed,
+    Object? instantiatesUriElement = freezed,
+    Object? basedOn = freezed,
+    Object? priorPrescription = freezed,
+    Object? groupIdentifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? statusReason = freezed,
+    Object? statusChanged = freezed,
+    Object? statusChangedElement = freezed,
     Object? intent = freezed,
     Object? intentElement = freezed,
     Object? category = freezed,
@@ -19301,35 +19547,26 @@ class _$MedicationRequestCopyWithImpl<$Res>
     Object? priorityElement = freezed,
     Object? doNotPerform = freezed,
     Object? doNotPerformElement = freezed,
-    Object? reported = freezed,
-    Object? reportedElement = freezed,
-    Object? informationSource = freezed,
     Object? medication = freezed,
     Object? subject = freezed,
+    Object? informationSource = freezed,
     Object? encounter = freezed,
     Object? supportingInformation = freezed,
     Object? authoredOn = freezed,
     Object? authoredOnElement = freezed,
     Object? requester = freezed,
-    Object? performer = freezed,
+    Object? reported = freezed,
+    Object? reportedElement = freezed,
     Object? performerType = freezed,
+    Object? performer = freezed,
     Object? recorder = freezed,
     Object? reason = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
-    Object? basedOn = freezed,
-    Object? groupIdentifier = freezed,
     Object? courseOfTherapyType = freezed,
     Object? insurance = freezed,
     Object? note = freezed,
-    Object? renderedDosageInstruction = freezed,
-    Object? renderedDosageInstructionElement = freezed,
-    Object? dosageInstruction = freezed,
+    Object? dose = freezed,
     Object? dispenseRequest = freezed,
     Object? substitution = freezed,
-    Object? priorPrescription = freezed,
-    Object? detectedIssue = freezed,
     Object? eventHistory = freezed,
   }) {
     return _then(_value.copyWith(
@@ -19381,6 +19618,30 @@ class _$MedicationRequestCopyWithImpl<$Res>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
+      instantiatesCanonical: instantiatesCanonical == freezed
+          ? _value.instantiatesCanonical
+          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      instantiatesUri: instantiatesUri == freezed
+          ? _value.instantiatesUri
+          : instantiatesUri // ignore: cast_nullable_to_non_nullable
+              as List<FhirUri>?,
+      instantiatesUriElement: instantiatesUriElement == freezed
+          ? _value.instantiatesUriElement
+          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      basedOn: basedOn == freezed
+          ? _value.basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      priorPrescription: priorPrescription == freezed
+          ? _value.priorPrescription
+          : priorPrescription // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      groupIdentifier: groupIdentifier == freezed
+          ? _value.groupIdentifier
+          : groupIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -19393,6 +19654,14 @@ class _$MedicationRequestCopyWithImpl<$Res>
           ? _value.statusReason
           : statusReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      statusChanged: statusChanged == freezed
+          ? _value.statusChanged
+          : statusChanged // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      statusChangedElement: statusChangedElement == freezed
+          ? _value.statusChangedElement
+          : statusChangedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       intent: intent == freezed
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
@@ -19421,26 +19690,18 @@ class _$MedicationRequestCopyWithImpl<$Res>
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      reported: reported == freezed
-          ? _value.reported
-          : reported // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
-      reportedElement: reportedElement == freezed
-          ? _value.reportedElement
-          : reportedElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      informationSource: informationSource == freezed
-          ? _value.informationSource
-          : informationSource // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
+      informationSource: informationSource == freezed
+          ? _value.informationSource
+          : informationSource // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       encounter: encounter == freezed
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
@@ -19461,14 +19722,22 @@ class _$MedicationRequestCopyWithImpl<$Res>
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      performer: performer == freezed
-          ? _value.performer
-          : performer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      reported: reported == freezed
+          ? _value.reported
+          : reported // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      reportedElement: reportedElement == freezed
+          ? _value.reportedElement
+          : reportedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       performerType: performerType == freezed
           ? _value.performerType
           : performerType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      performer: performer == freezed
+          ? _value.performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       recorder: recorder == freezed
           ? _value.recorder
           : recorder // ignore: cast_nullable_to_non_nullable
@@ -19477,26 +19746,6 @@ class _$MedicationRequestCopyWithImpl<$Res>
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
-      instantiatesCanonical: instantiatesCanonical == freezed
-          ? _value.instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: instantiatesUri == freezed
-          ? _value.instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: instantiatesUriElement == freezed
-          ? _value.instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
-      basedOn: basedOn == freezed
-          ? _value.basedOn
-          : basedOn // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      groupIdentifier: groupIdentifier == freezed
-          ? _value.groupIdentifier
-          : groupIdentifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
       courseOfTherapyType: courseOfTherapyType == freezed
           ? _value.courseOfTherapyType
           : courseOfTherapyType // ignore: cast_nullable_to_non_nullable
@@ -19509,19 +19758,10 @@ class _$MedicationRequestCopyWithImpl<$Res>
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      renderedDosageInstruction: renderedDosageInstruction == freezed
-          ? _value.renderedDosageInstruction
-          : renderedDosageInstruction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renderedDosageInstructionElement: renderedDosageInstructionElement ==
-              freezed
-          ? _value.renderedDosageInstructionElement
-          : renderedDosageInstructionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      dosageInstruction: dosageInstruction == freezed
-          ? _value.dosageInstruction
-          : dosageInstruction // ignore: cast_nullable_to_non_nullable
-              as List<Dosage>?,
+      dose: dose == freezed
+          ? _value.dose
+          : dose // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestDose?,
       dispenseRequest: dispenseRequest == freezed
           ? _value.dispenseRequest
           : dispenseRequest // ignore: cast_nullable_to_non_nullable
@@ -19530,14 +19770,6 @@ class _$MedicationRequestCopyWithImpl<$Res>
           ? _value.substitution
           : substitution // ignore: cast_nullable_to_non_nullable
               as MedicationRequestSubstitution?,
-      priorPrescription: priorPrescription == freezed
-          ? _value.priorPrescription
-          : priorPrescription // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      detectedIssue: detectedIssue == freezed
-          ? _value.detectedIssue
-          : detectedIssue // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       eventHistory: eventHistory == freezed
           ? _value.eventHistory
           : eventHistory // ignore: cast_nullable_to_non_nullable
@@ -19590,6 +19822,28 @@ class _$MedicationRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ReferenceCopyWith<$Res>? get priorPrescription {
+    if (_value.priorPrescription == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.priorPrescription!, (value) {
+      return _then(_value.copyWith(priorPrescription: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get groupIdentifier {
+    if (_value.groupIdentifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier!, (value) {
+      return _then(_value.copyWith(groupIdentifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -19608,6 +19862,17 @@ class _$MedicationRequestCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.statusReason!, (value) {
       return _then(_value.copyWith(statusReason: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get statusChangedElement {
+    if (_value.statusChangedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusChangedElement!, (value) {
+      return _then(_value.copyWith(statusChangedElement: value));
     });
   }
 
@@ -19645,34 +19910,8 @@ class _$MedicationRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res>? get reportedElement {
-    if (_value.reportedElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.reportedElement!, (value) {
-      return _then(_value.copyWith(reportedElement: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get informationSource {
-    if (_value.informationSource == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.informationSource!, (value) {
-      return _then(_value.copyWith(informationSource: value));
-    });
-  }
-
-  @override
-  $CodeableReferenceCopyWith<$Res>? get medication {
-    if (_value.medication == null) {
-      return null;
-    }
-
-    return $CodeableReferenceCopyWith<$Res>(_value.medication!, (value) {
+  $CodeableReferenceCopyWith<$Res> get medication {
+    return $CodeableReferenceCopyWith<$Res>(_value.medication, (value) {
       return _then(_value.copyWith(medication: value));
     });
   }
@@ -19718,13 +19957,13 @@ class _$MedicationRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get performer {
-    if (_value.performer == null) {
+  $ElementCopyWith<$Res>? get reportedElement {
+    if (_value.reportedElement == null) {
       return null;
     }
 
-    return $ReferenceCopyWith<$Res>(_value.performer!, (value) {
-      return _then(_value.copyWith(performer: value));
+    return $ElementCopyWith<$Res>(_value.reportedElement!, (value) {
+      return _then(_value.copyWith(reportedElement: value));
     });
   }
 
@@ -19740,6 +19979,17 @@ class _$MedicationRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ReferenceCopyWith<$Res>? get performer {
+    if (_value.performer == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.performer!, (value) {
+      return _then(_value.copyWith(performer: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res>? get recorder {
     if (_value.recorder == null) {
       return null;
@@ -19747,17 +19997,6 @@ class _$MedicationRequestCopyWithImpl<$Res>
 
     return $ReferenceCopyWith<$Res>(_value.recorder!, (value) {
       return _then(_value.copyWith(recorder: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res>? get groupIdentifier {
-    if (_value.groupIdentifier == null) {
-      return null;
-    }
-
-    return $IdentifierCopyWith<$Res>(_value.groupIdentifier!, (value) {
-      return _then(_value.copyWith(groupIdentifier: value));
     });
   }
 
@@ -19773,14 +20012,13 @@ class _$MedicationRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res>? get renderedDosageInstructionElement {
-    if (_value.renderedDosageInstructionElement == null) {
+  $MedicationRequestDoseCopyWith<$Res>? get dose {
+    if (_value.dose == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.renderedDosageInstructionElement!,
-        (value) {
-      return _then(_value.copyWith(renderedDosageInstructionElement: value));
+    return $MedicationRequestDoseCopyWith<$Res>(_value.dose!, (value) {
+      return _then(_value.copyWith(dose: value));
     });
   }
 
@@ -19807,90 +20045,66 @@ class _$MedicationRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(substitution: value));
     });
   }
-
-  @override
-  $ReferenceCopyWith<$Res>? get priorPrescription {
-    if (_value.priorPrescription == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.priorPrescription!, (value) {
-      return _then(_value.copyWith(priorPrescription: value));
-    });
-  }
 }
 
 /// @nodoc
-abstract class _$MedicationRequestCopyWith<$Res>
+abstract class _$$_MedicationRequestCopyWith<$Res>
     implements $MedicationRequestCopyWith<$Res> {
-  factory _$MedicationRequestCopyWith(
-          _MedicationRequest value, $Res Function(_MedicationRequest) then) =
-      __$MedicationRequestCopyWithImpl<$Res>;
+  factory _$$_MedicationRequestCopyWith(_$_MedicationRequest value,
+          $Res Function(_$_MedicationRequest) then) =
+      __$$_MedicationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
+      List<Canonical>? instantiatesCanonical,
+      List<FhirUri>? instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Reference? priorPrescription,
+      Identifier? groupIdentifier,
       Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? statusReason,
+      FhirDateTime? statusChanged,
+      @JsonKey(name: '_statusChanged') Element? statusChangedElement,
       Code? intent,
-      @JsonKey(name: '_intent')
-          Element? intentElement,
+      @JsonKey(name: '_intent') Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       Boolean? doNotPerform,
-      @JsonKey(name: '_doNotPerform')
-          Element? doNotPerformElement,
-      Boolean? reported,
-      @JsonKey(name: '_reported')
-          Element? reportedElement,
-      Reference? informationSource,
-      CodeableReference? medication,
+      @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
+      CodeableReference medication,
       Reference subject,
+      List<Reference>? informationSource,
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
-      Reference? performer,
+      Boolean? reported,
+      @JsonKey(name: '_reported') Element? reportedElement,
       CodeableConcept? performerType,
+      Reference? performer,
       Reference? recorder,
       List<CodeableReference>? reason,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
       CodeableConcept? courseOfTherapyType,
       List<Reference>? insurance,
       List<Annotation>? note,
-      String? renderedDosageInstruction,
-      @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosageInstruction,
+      MedicationRequestDose? dose,
       MedicationRequestDispenseRequest? dispenseRequest,
       MedicationRequestSubstitution? substitution,
-      Reference? priorPrescription,
-      List<Reference>? detectedIssue,
       List<Reference>? eventHistory});
 
   @override
@@ -19902,9 +20116,15 @@ abstract class _$MedicationRequestCopyWith<$Res>
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
+  $ReferenceCopyWith<$Res>? get priorPrescription;
+  @override
+  $IdentifierCopyWith<$Res>? get groupIdentifier;
+  @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
   $CodeableConceptCopyWith<$Res>? get statusReason;
+  @override
+  $ElementCopyWith<$Res>? get statusChangedElement;
   @override
   $ElementCopyWith<$Res>? get intentElement;
   @override
@@ -19912,11 +20132,7 @@ abstract class _$MedicationRequestCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get doNotPerformElement;
   @override
-  $ElementCopyWith<$Res>? get reportedElement;
-  @override
-  $ReferenceCopyWith<$Res>? get informationSource;
-  @override
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $CodeableReferenceCopyWith<$Res> get medication;
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
@@ -19926,35 +20142,33 @@ abstract class _$MedicationRequestCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get requester;
   @override
-  $ReferenceCopyWith<$Res>? get performer;
+  $ElementCopyWith<$Res>? get reportedElement;
   @override
   $CodeableConceptCopyWith<$Res>? get performerType;
   @override
-  $ReferenceCopyWith<$Res>? get recorder;
+  $ReferenceCopyWith<$Res>? get performer;
   @override
-  $IdentifierCopyWith<$Res>? get groupIdentifier;
+  $ReferenceCopyWith<$Res>? get recorder;
   @override
   $CodeableConceptCopyWith<$Res>? get courseOfTherapyType;
   @override
-  $ElementCopyWith<$Res>? get renderedDosageInstructionElement;
+  $MedicationRequestDoseCopyWith<$Res>? get dose;
   @override
   $MedicationRequestDispenseRequestCopyWith<$Res>? get dispenseRequest;
   @override
   $MedicationRequestSubstitutionCopyWith<$Res>? get substitution;
-  @override
-  $ReferenceCopyWith<$Res>? get priorPrescription;
 }
 
 /// @nodoc
-class __$MedicationRequestCopyWithImpl<$Res>
+class __$$_MedicationRequestCopyWithImpl<$Res>
     extends _$MedicationRequestCopyWithImpl<$Res>
-    implements _$MedicationRequestCopyWith<$Res> {
-  __$MedicationRequestCopyWithImpl(
-      _MedicationRequest _value, $Res Function(_MedicationRequest) _then)
-      : super(_value, (v) => _then(v as _MedicationRequest));
+    implements _$$_MedicationRequestCopyWith<$Res> {
+  __$$_MedicationRequestCopyWithImpl(
+      _$_MedicationRequest _value, $Res Function(_$_MedicationRequest) _then)
+      : super(_value, (v) => _then(v as _$_MedicationRequest));
 
   @override
-  _MedicationRequest get _value => super._value as _MedicationRequest;
+  _$_MedicationRequest get _value => super._value as _$_MedicationRequest;
 
   @override
   $Res call({
@@ -19970,9 +20184,17 @@ class __$MedicationRequestCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
+    Object? instantiatesCanonical = freezed,
+    Object? instantiatesUri = freezed,
+    Object? instantiatesUriElement = freezed,
+    Object? basedOn = freezed,
+    Object? priorPrescription = freezed,
+    Object? groupIdentifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? statusReason = freezed,
+    Object? statusChanged = freezed,
+    Object? statusChangedElement = freezed,
     Object? intent = freezed,
     Object? intentElement = freezed,
     Object? category = freezed,
@@ -19980,38 +20202,29 @@ class __$MedicationRequestCopyWithImpl<$Res>
     Object? priorityElement = freezed,
     Object? doNotPerform = freezed,
     Object? doNotPerformElement = freezed,
-    Object? reported = freezed,
-    Object? reportedElement = freezed,
-    Object? informationSource = freezed,
     Object? medication = freezed,
     Object? subject = freezed,
+    Object? informationSource = freezed,
     Object? encounter = freezed,
     Object? supportingInformation = freezed,
     Object? authoredOn = freezed,
     Object? authoredOnElement = freezed,
     Object? requester = freezed,
-    Object? performer = freezed,
+    Object? reported = freezed,
+    Object? reportedElement = freezed,
     Object? performerType = freezed,
+    Object? performer = freezed,
     Object? recorder = freezed,
     Object? reason = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
-    Object? basedOn = freezed,
-    Object? groupIdentifier = freezed,
     Object? courseOfTherapyType = freezed,
     Object? insurance = freezed,
     Object? note = freezed,
-    Object? renderedDosageInstruction = freezed,
-    Object? renderedDosageInstructionElement = freezed,
-    Object? dosageInstruction = freezed,
+    Object? dose = freezed,
     Object? dispenseRequest = freezed,
     Object? substitution = freezed,
-    Object? priorPrescription = freezed,
-    Object? detectedIssue = freezed,
     Object? eventHistory = freezed,
   }) {
-    return _then(_MedicationRequest(
+    return _then(_$_MedicationRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -20045,21 +20258,45 @@ class __$MedicationRequestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
+      instantiatesCanonical: instantiatesCanonical == freezed
+          ? _value._instantiatesCanonical
+          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      instantiatesUri: instantiatesUri == freezed
+          ? _value._instantiatesUri
+          : instantiatesUri // ignore: cast_nullable_to_non_nullable
+              as List<FhirUri>?,
+      instantiatesUriElement: instantiatesUriElement == freezed
+          ? _value._instantiatesUriElement
+          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      basedOn: basedOn == freezed
+          ? _value._basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      priorPrescription: priorPrescription == freezed
+          ? _value.priorPrescription
+          : priorPrescription // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      groupIdentifier: groupIdentifier == freezed
+          ? _value.groupIdentifier
+          : groupIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -20072,6 +20309,14 @@ class __$MedicationRequestCopyWithImpl<$Res>
           ? _value.statusReason
           : statusReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      statusChanged: statusChanged == freezed
+          ? _value.statusChanged
+          : statusChanged // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      statusChangedElement: statusChangedElement == freezed
+          ? _value.statusChangedElement
+          : statusChangedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       intent: intent == freezed
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
@@ -20081,7 +20326,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
           : intentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       priority: priority == freezed
@@ -20100,32 +20345,24 @@ class __$MedicationRequestCopyWithImpl<$Res>
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      reported: reported == freezed
-          ? _value.reported
-          : reported // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
-      reportedElement: reportedElement == freezed
-          ? _value.reportedElement
-          : reportedElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      informationSource: informationSource == freezed
-          ? _value.informationSource
-          : informationSource // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
+      informationSource: informationSource == freezed
+          ? _value._informationSource
+          : informationSource // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       encounter: encounter == freezed
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as Reference?,
       supportingInformation: supportingInformation == freezed
-          ? _value.supportingInformation
+          ? _value._supportingInformation
           : supportingInformation // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       authoredOn: authoredOn == freezed
@@ -20140,67 +20377,46 @@ class __$MedicationRequestCopyWithImpl<$Res>
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      performer: performer == freezed
-          ? _value.performer
-          : performer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      reported: reported == freezed
+          ? _value.reported
+          : reported // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      reportedElement: reportedElement == freezed
+          ? _value.reportedElement
+          : reportedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       performerType: performerType == freezed
           ? _value.performerType
           : performerType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      performer: performer == freezed
+          ? _value.performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       recorder: recorder == freezed
           ? _value.recorder
           : recorder // ignore: cast_nullable_to_non_nullable
               as Reference?,
       reason: reason == freezed
-          ? _value.reason
+          ? _value._reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
-      instantiatesCanonical: instantiatesCanonical == freezed
-          ? _value.instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: instantiatesUri == freezed
-          ? _value.instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: instantiatesUriElement == freezed
-          ? _value.instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
-      basedOn: basedOn == freezed
-          ? _value.basedOn
-          : basedOn // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      groupIdentifier: groupIdentifier == freezed
-          ? _value.groupIdentifier
-          : groupIdentifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
       courseOfTherapyType: courseOfTherapyType == freezed
           ? _value.courseOfTherapyType
           : courseOfTherapyType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       insurance: insurance == freezed
-          ? _value.insurance
+          ? _value._insurance
           : insurance // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      renderedDosageInstruction: renderedDosageInstruction == freezed
-          ? _value.renderedDosageInstruction
-          : renderedDosageInstruction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renderedDosageInstructionElement: renderedDosageInstructionElement ==
-              freezed
-          ? _value.renderedDosageInstructionElement
-          : renderedDosageInstructionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      dosageInstruction: dosageInstruction == freezed
-          ? _value.dosageInstruction
-          : dosageInstruction // ignore: cast_nullable_to_non_nullable
-              as List<Dosage>?,
+      dose: dose == freezed
+          ? _value.dose
+          : dose // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestDose?,
       dispenseRequest: dispenseRequest == freezed
           ? _value.dispenseRequest
           : dispenseRequest // ignore: cast_nullable_to_non_nullable
@@ -20209,16 +20425,8 @@ class __$MedicationRequestCopyWithImpl<$Res>
           ? _value.substitution
           : substitution // ignore: cast_nullable_to_non_nullable
               as MedicationRequestSubstitution?,
-      priorPrescription: priorPrescription == freezed
-          ? _value.priorPrescription
-          : priorPrescription // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      detectedIssue: detectedIssue == freezed
-          ? _value.detectedIssue
-          : detectedIssue // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       eventHistory: eventHistory == freezed
-          ? _value.eventHistory
+          ? _value._eventHistory
           : eventHistory // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -20229,8 +20437,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationRequest extends _MedicationRequest {
   _$_MedicationRequest(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-          this.resourceType = R5ResourceType.MedicationRequest,
+      {this.resourceType = R5ResourceType.MedicationRequest,
       this.id,
       this.meta,
       this.implicitRules,
@@ -20240,66 +20447,80 @@ class _$_MedicationRequest extends _MedicationRequest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Canonical>? instantiatesCanonical,
+      final List<FhirUri>? instantiatesUri,
+      @JsonKey(name: '_instantiatesUri')
+          final List<Element>? instantiatesUriElement,
+      final List<Reference>? basedOn,
+      this.priorPrescription,
+      this.groupIdentifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.statusReason,
+      this.statusChanged,
+      @JsonKey(name: '_statusChanged')
+          this.statusChangedElement,
       this.intent,
       @JsonKey(name: '_intent')
           this.intentElement,
-      this.category,
+      final List<CodeableConcept>? category,
       this.priority,
       @JsonKey(name: '_priority')
           this.priorityElement,
       this.doNotPerform,
       @JsonKey(name: '_doNotPerform')
           this.doNotPerformElement,
-      this.reported,
-      @JsonKey(name: '_reported')
-          this.reportedElement,
-      this.informationSource,
-      this.medication,
+      required this.medication,
       required this.subject,
+      final List<Reference>? informationSource,
       this.encounter,
-      this.supportingInformation,
+      final List<Reference>? supportingInformation,
       this.authoredOn,
       @JsonKey(name: '_authoredOn')
           this.authoredOnElement,
       this.requester,
-      this.performer,
+      this.reported,
+      @JsonKey(name: '_reported')
+          this.reportedElement,
       this.performerType,
+      this.performer,
       this.recorder,
-      this.reason,
-      this.instantiatesCanonical,
-      this.instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          this.instantiatesUriElement,
-      this.basedOn,
-      this.groupIdentifier,
+      final List<CodeableReference>? reason,
       this.courseOfTherapyType,
-      this.insurance,
-      this.note,
-      this.renderedDosageInstruction,
-      @JsonKey(name: '_renderedDosageInstruction')
-          this.renderedDosageInstructionElement,
-      this.dosageInstruction,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      this.dose,
       this.dispenseRequest,
       this.substitution,
-      this.priorPrescription,
-      this.detectedIssue,
-      this.eventHistory})
-      : super._();
+      final List<Reference>? eventHistory})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _instantiatesCanonical = instantiatesCanonical,
+        _instantiatesUri = instantiatesUri,
+        _instantiatesUriElement = instantiatesUriElement,
+        _basedOn = basedOn,
+        _category = category,
+        _informationSource = informationSource,
+        _supportingInformation = supportingInformation,
+        _reason = reason,
+        _insurance = insurance,
+        _note = note,
+        _eventHistory = eventHistory,
+        super._();
 
   factory _$_MedicationRequest.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationRequestFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -20317,15 +20538,84 @@ class _$_MedicationRequest extends _MedicationRequest {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Canonical>? _instantiatesCanonical;
+  @override
+  List<Canonical>? get instantiatesCanonical {
+    final value = _instantiatesCanonical;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirUri>? _instantiatesUri;
+  @override
+  List<FhirUri>? get instantiatesUri {
+    final value = _instantiatesUri;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _instantiatesUriElement;
+  @override
+  @JsonKey(name: '_instantiatesUri')
+  List<Element>? get instantiatesUriElement {
+    final value = _instantiatesUriElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
+  @override
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? priorPrescription;
+  @override
+  final Identifier? groupIdentifier;
   @override
   final Code? status;
   @override
@@ -20334,12 +20624,24 @@ class _$_MedicationRequest extends _MedicationRequest {
   @override
   final CodeableConcept? statusReason;
   @override
+  final FhirDateTime? statusChanged;
+  @override
+  @JsonKey(name: '_statusChanged')
+  final Element? statusChangedElement;
+  @override
   final Code? intent;
   @override
   @JsonKey(name: '_intent')
   final Element? intentElement;
+  final List<CodeableConcept>? _category;
   @override
-  final List<CodeableConcept>? category;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? priority;
   @override
@@ -20351,20 +20653,29 @@ class _$_MedicationRequest extends _MedicationRequest {
   @JsonKey(name: '_doNotPerform')
   final Element? doNotPerformElement;
   @override
-  final Boolean? reported;
-  @override
-  @JsonKey(name: '_reported')
-  final Element? reportedElement;
-  @override
-  final Reference? informationSource;
-  @override
-  final CodeableReference? medication;
+  final CodeableReference medication;
   @override
   final Reference subject;
+  final List<Reference>? _informationSource;
+  @override
+  List<Reference>? get informationSource {
+    final value = _informationSource;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? encounter;
+  final List<Reference>? _supportingInformation;
   @override
-  final List<Reference>? supportingInformation;
+  List<Reference>? get supportingInformation {
+    final value = _supportingInformation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? authoredOn;
   @override
@@ -20373,58 +20684,70 @@ class _$_MedicationRequest extends _MedicationRequest {
   @override
   final Reference? requester;
   @override
-  final Reference? performer;
+  final Boolean? reported;
+  @override
+  @JsonKey(name: '_reported')
+  final Element? reportedElement;
   @override
   final CodeableConcept? performerType;
   @override
+  final Reference? performer;
+  @override
   final Reference? recorder;
+  final List<CodeableReference>? _reason;
   @override
-  final List<CodeableReference>? reason;
-  @override
-  final List<Canonical>? instantiatesCanonical;
-  @override
-  final List<FhirUri>? instantiatesUri;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
-  @override
-  final List<Reference>? basedOn;
-  @override
-  final Identifier? groupIdentifier;
+  List<CodeableReference>? get reason {
+    final value = _reason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? courseOfTherapyType;
+  final List<Reference>? _insurance;
   @override
-  final List<Reference>? insurance;
+  List<Reference>? get insurance {
+    final value = _insurance;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final String? renderedDosageInstruction;
-  @override
-  @JsonKey(name: '_renderedDosageInstruction')
-  final Element? renderedDosageInstructionElement;
-  @override
-  final List<Dosage>? dosageInstruction;
+  final MedicationRequestDose? dose;
   @override
   final MedicationRequestDispenseRequest? dispenseRequest;
   @override
   final MedicationRequestSubstitution? substitution;
+  final List<Reference>? _eventHistory;
   @override
-  final Reference? priorPrescription;
-  @override
-  final List<Reference>? detectedIssue;
-  @override
-  final List<Reference>? eventHistory;
+  List<Reference>? get eventHistory {
+    final value = _eventHistory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'MedicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, intent: $intent, intentElement: $intentElement, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, reported: $reported, reportedElement: $reportedElement, informationSource: $informationSource, medication: $medication, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, performer: $performer, performerType: $performerType, recorder: $recorder, reason: $reason, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, groupIdentifier: $groupIdentifier, courseOfTherapyType: $courseOfTherapyType, insurance: $insurance, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosageInstruction: $dosageInstruction, dispenseRequest: $dispenseRequest, substitution: $substitution, priorPrescription: $priorPrescription, detectedIssue: $detectedIssue, eventHistory: $eventHistory)';
+    return 'MedicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, priorPrescription: $priorPrescription, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, statusChanged: $statusChanged, statusChangedElement: $statusChangedElement, intent: $intent, intentElement: $intentElement, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, medication: $medication, subject: $subject, informationSource: $informationSource, encounter: $encounter, supportingInformation: $supportingInformation, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, reported: $reported, reportedElement: $reportedElement, performerType: $performerType, performer: $performer, recorder: $recorder, reason: $reason, courseOfTherapyType: $courseOfTherapyType, insurance: $insurance, note: $note, dose: $dose, dispenseRequest: $dispenseRequest, substitution: $substitution, eventHistory: $eventHistory)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationRequest &&
+            other is _$_MedicationRequest &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -20437,22 +20760,38 @@ class _$_MedicationRequest extends _MedicationRequest {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality()
+                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
+            const DeepCollectionEquality()
+                .equals(other._instantiatesUri, _instantiatesUri) &&
+            const DeepCollectionEquality().equals(
+                other._instantiatesUriElement, _instantiatesUriElement) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality()
+                .equals(other.priorPrescription, priorPrescription) &&
+            const DeepCollectionEquality()
+                .equals(other.groupIdentifier, groupIdentifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality()
                 .equals(other.statusReason, statusReason) &&
+            const DeepCollectionEquality()
+                .equals(other.statusChanged, statusChanged) &&
+            const DeepCollectionEquality()
+                .equals(other.statusChangedElement, statusChangedElement) &&
             const DeepCollectionEquality().equals(other.intent, intent) &&
             const DeepCollectionEquality()
                 .equals(other.intentElement, intentElement) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality().equals(other.priority, priority) &&
             const DeepCollectionEquality()
                 .equals(other.priorityElement, priorityElement) &&
@@ -20460,59 +20799,42 @@ class _$_MedicationRequest extends _MedicationRequest {
                 .equals(other.doNotPerform, doNotPerform) &&
             const DeepCollectionEquality()
                 .equals(other.doNotPerformElement, doNotPerformElement) &&
-            const DeepCollectionEquality().equals(other.reported, reported) &&
-            const DeepCollectionEquality()
-                .equals(other.reportedElement, reportedElement) &&
-            const DeepCollectionEquality()
-                .equals(other.informationSource, informationSource) &&
             const DeepCollectionEquality()
                 .equals(other.medication, medication) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
+            const DeepCollectionEquality()
+                .equals(other._informationSource, _informationSource) &&
             const DeepCollectionEquality().equals(other.encounter, encounter) &&
             const DeepCollectionEquality()
-                .equals(other.supportingInformation, supportingInformation) &&
+                .equals(other._supportingInformation, _supportingInformation) &&
             const DeepCollectionEquality()
                 .equals(other.authoredOn, authoredOn) &&
             const DeepCollectionEquality()
                 .equals(other.authoredOnElement, authoredOnElement) &&
             const DeepCollectionEquality().equals(other.requester, requester) &&
-            const DeepCollectionEquality().equals(other.performer, performer) &&
+            const DeepCollectionEquality().equals(other.reported, reported) &&
+            const DeepCollectionEquality()
+                .equals(other.reportedElement, reportedElement) &&
             const DeepCollectionEquality()
                 .equals(other.performerType, performerType) &&
+            const DeepCollectionEquality().equals(other.performer, performer) &&
             const DeepCollectionEquality().equals(other.recorder, recorder) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality()
-                .equals(other.instantiatesCanonical, instantiatesCanonical) &&
-            const DeepCollectionEquality()
-                .equals(other.instantiatesUri, instantiatesUri) &&
-            const DeepCollectionEquality()
-                .equals(other.instantiatesUriElement, instantiatesUriElement) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
-            const DeepCollectionEquality()
-                .equals(other.groupIdentifier, groupIdentifier) &&
+            const DeepCollectionEquality().equals(other._reason, _reason) &&
             const DeepCollectionEquality()
                 .equals(other.courseOfTherapyType, courseOfTherapyType) &&
-            const DeepCollectionEquality().equals(other.insurance, insurance) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
-            const DeepCollectionEquality().equals(
-                other.renderedDosageInstruction, renderedDosageInstruction) &&
-            const DeepCollectionEquality().equals(
-                other.renderedDosageInstructionElement,
-                renderedDosageInstructionElement) &&
             const DeepCollectionEquality()
-                .equals(other.dosageInstruction, dosageInstruction) &&
+                .equals(other._insurance, _insurance) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.dose, dose) &&
             const DeepCollectionEquality()
                 .equals(other.dispenseRequest, dispenseRequest) &&
             const DeepCollectionEquality()
                 .equals(other.substitution, substitution) &&
             const DeepCollectionEquality()
-                .equals(other.priorPrescription, priorPrescription) &&
-            const DeepCollectionEquality()
-                .equals(other.detectedIssue, detectedIssue) &&
-            const DeepCollectionEquality()
-                .equals(other.eventHistory, eventHistory));
+                .equals(other._eventHistory, _eventHistory));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -20524,136 +20846,135 @@ class _$_MedicationRequest extends _MedicationRequest {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_instantiatesCanonical),
+        const DeepCollectionEquality().hash(_instantiatesUri),
+        const DeepCollectionEquality().hash(_instantiatesUriElement),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(priorPrescription),
+        const DeepCollectionEquality().hash(groupIdentifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(statusReason),
+        const DeepCollectionEquality().hash(statusChanged),
+        const DeepCollectionEquality().hash(statusChangedElement),
         const DeepCollectionEquality().hash(intent),
         const DeepCollectionEquality().hash(intentElement),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(priority),
         const DeepCollectionEquality().hash(priorityElement),
         const DeepCollectionEquality().hash(doNotPerform),
         const DeepCollectionEquality().hash(doNotPerformElement),
-        const DeepCollectionEquality().hash(reported),
-        const DeepCollectionEquality().hash(reportedElement),
-        const DeepCollectionEquality().hash(informationSource),
         const DeepCollectionEquality().hash(medication),
         const DeepCollectionEquality().hash(subject),
+        const DeepCollectionEquality().hash(_informationSource),
         const DeepCollectionEquality().hash(encounter),
-        const DeepCollectionEquality().hash(supportingInformation),
+        const DeepCollectionEquality().hash(_supportingInformation),
         const DeepCollectionEquality().hash(authoredOn),
         const DeepCollectionEquality().hash(authoredOnElement),
         const DeepCollectionEquality().hash(requester),
-        const DeepCollectionEquality().hash(performer),
+        const DeepCollectionEquality().hash(reported),
+        const DeepCollectionEquality().hash(reportedElement),
         const DeepCollectionEquality().hash(performerType),
+        const DeepCollectionEquality().hash(performer),
         const DeepCollectionEquality().hash(recorder),
-        const DeepCollectionEquality().hash(reason),
-        const DeepCollectionEquality().hash(instantiatesCanonical),
-        const DeepCollectionEquality().hash(instantiatesUri),
-        const DeepCollectionEquality().hash(instantiatesUriElement),
-        const DeepCollectionEquality().hash(basedOn),
-        const DeepCollectionEquality().hash(groupIdentifier),
+        const DeepCollectionEquality().hash(_reason),
         const DeepCollectionEquality().hash(courseOfTherapyType),
-        const DeepCollectionEquality().hash(insurance),
-        const DeepCollectionEquality().hash(note),
-        const DeepCollectionEquality().hash(renderedDosageInstruction),
-        const DeepCollectionEquality().hash(renderedDosageInstructionElement),
-        const DeepCollectionEquality().hash(dosageInstruction),
+        const DeepCollectionEquality().hash(_insurance),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(dose),
         const DeepCollectionEquality().hash(dispenseRequest),
         const DeepCollectionEquality().hash(substitution),
-        const DeepCollectionEquality().hash(priorPrescription),
-        const DeepCollectionEquality().hash(detectedIssue),
-        const DeepCollectionEquality().hash(eventHistory)
+        const DeepCollectionEquality().hash(_eventHistory)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationRequestCopyWith<_MedicationRequest> get copyWith =>
-      __$MedicationRequestCopyWithImpl<_MedicationRequest>(this, _$identity);
+  _$$_MedicationRequestCopyWith<_$_MedicationRequest> get copyWith =>
+      __$$_MedicationRequestCopyWithImpl<_$_MedicationRequest>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestToJson(this);
+    return _$$_MedicationRequestToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationRequest extends MedicationRequest {
   factory _MedicationRequest(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? statusReason,
-      Code? intent,
-      @JsonKey(name: '_intent')
-          Element? intentElement,
-      List<CodeableConcept>? category,
-      Code? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
-      Boolean? doNotPerform,
-      @JsonKey(name: '_doNotPerform')
-          Element? doNotPerformElement,
-      Boolean? reported,
-      @JsonKey(name: '_reported')
-          Element? reportedElement,
-      Reference? informationSource,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      List<Reference>? supportingInformation,
-      FhirDateTime? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      Reference? requester,
-      Reference? performer,
-      CodeableConcept? performerType,
-      Reference? recorder,
-      List<CodeableReference>? reason,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Canonical>? instantiatesCanonical,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
-      CodeableConcept? courseOfTherapyType,
-      List<Reference>? insurance,
-      List<Annotation>? note,
-      String? renderedDosageInstruction,
-      @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosageInstruction,
-      MedicationRequestDispenseRequest? dispenseRequest,
-      MedicationRequestSubstitution? substitution,
-      Reference? priorPrescription,
-      List<Reference>? detectedIssue,
-      List<Reference>? eventHistory}) = _$_MedicationRequest;
+          final List<Element>? instantiatesUriElement,
+      final List<Reference>? basedOn,
+      final Reference? priorPrescription,
+      final Identifier? groupIdentifier,
+      final Code? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      final CodeableConcept? statusReason,
+      final FhirDateTime? statusChanged,
+      @JsonKey(name: '_statusChanged')
+          final Element? statusChangedElement,
+      final Code? intent,
+      @JsonKey(name: '_intent')
+          final Element? intentElement,
+      final List<CodeableConcept>? category,
+      final Code? priority,
+      @JsonKey(name: '_priority')
+          final Element? priorityElement,
+      final Boolean? doNotPerform,
+      @JsonKey(name: '_doNotPerform')
+          final Element? doNotPerformElement,
+      required final CodeableReference medication,
+      required final Reference subject,
+      final List<Reference>? informationSource,
+      final Reference? encounter,
+      final List<Reference>? supportingInformation,
+      final FhirDateTime? authoredOn,
+      @JsonKey(name: '_authoredOn')
+          final Element? authoredOnElement,
+      final Reference? requester,
+      final Boolean? reported,
+      @JsonKey(name: '_reported')
+          final Element? reportedElement,
+      final CodeableConcept? performerType,
+      final Reference? performer,
+      final Reference? recorder,
+      final List<CodeableReference>? reason,
+      final CodeableConcept? courseOfTherapyType,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      final MedicationRequestDose? dose,
+      final MedicationRequestDispenseRequest? dispenseRequest,
+      final MedicationRequestSubstitution? substitution,
+      final List<Reference>? eventHistory}) = _$_MedicationRequest;
   _MedicationRequest._() : super._();
 
   factory _MedicationRequest.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequest.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -20681,12 +21002,30 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   List<Identifier>? get identifier;
   @override
+  List<Canonical>? get instantiatesCanonical;
+  @override
+  List<FhirUri>? get instantiatesUri;
+  @override
+  @JsonKey(name: '_instantiatesUri')
+  List<Element>? get instantiatesUriElement;
+  @override
+  List<Reference>? get basedOn;
+  @override
+  Reference? get priorPrescription;
+  @override
+  Identifier? get groupIdentifier;
+  @override
   Code? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
   CodeableConcept? get statusReason;
+  @override
+  FhirDateTime? get statusChanged;
+  @override
+  @JsonKey(name: '_statusChanged')
+  Element? get statusChangedElement;
   @override
   Code? get intent;
   @override
@@ -20705,16 +21044,11 @@ abstract class _MedicationRequest extends MedicationRequest {
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement;
   @override
-  Boolean? get reported;
-  @override
-  @JsonKey(name: '_reported')
-  Element? get reportedElement;
-  @override
-  Reference? get informationSource;
-  @override
-  CodeableReference? get medication;
+  CodeableReference get medication;
   @override
   Reference get subject;
+  @override
+  List<Reference>? get informationSource;
   @override
   Reference? get encounter;
   @override
@@ -20727,24 +21061,18 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   Reference? get requester;
   @override
-  Reference? get performer;
+  Boolean? get reported;
+  @override
+  @JsonKey(name: '_reported')
+  Element? get reportedElement;
   @override
   CodeableConcept? get performerType;
+  @override
+  Reference? get performer;
   @override
   Reference? get recorder;
   @override
   List<CodeableReference>? get reason;
-  @override
-  List<Canonical>? get instantiatesCanonical;
-  @override
-  List<FhirUri>? get instantiatesUri;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
-  @override
-  List<Reference>? get basedOn;
-  @override
-  Identifier? get groupIdentifier;
   @override
   CodeableConcept? get courseOfTherapyType;
   @override
@@ -20752,25 +21080,365 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   List<Annotation>? get note;
   @override
-  String? get renderedDosageInstruction;
-  @override
-  @JsonKey(name: '_renderedDosageInstruction')
-  Element? get renderedDosageInstructionElement;
-  @override
-  List<Dosage>? get dosageInstruction;
+  MedicationRequestDose? get dose;
   @override
   MedicationRequestDispenseRequest? get dispenseRequest;
   @override
   MedicationRequestSubstitution? get substitution;
   @override
-  Reference? get priorPrescription;
-  @override
-  List<Reference>? get detectedIssue;
-  @override
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
-  _$MedicationRequestCopyWith<_MedicationRequest> get copyWith =>
+  _$$_MedicationRequestCopyWith<_$_MedicationRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+MedicationRequestDose _$MedicationRequestDoseFromJson(
+    Map<String, dynamic> json) {
+  return _MedicationRequestDose.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationRequestDose {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get renderedDosageInstruction => throw _privateConstructorUsedError;
+  @JsonKey(name: '_renderedDosageInstruction')
+  Element? get renderedDosageInstructionElement =>
+      throw _privateConstructorUsedError;
+  Period? get effectiveDosePeriod => throw _privateConstructorUsedError;
+  List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationRequestDoseCopyWith<MedicationRequestDose> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationRequestDoseCopyWith<$Res> {
+  factory $MedicationRequestDoseCopyWith(MedicationRequestDose value,
+          $Res Function(MedicationRequestDose) then) =
+      _$MedicationRequestDoseCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? renderedDosageInstruction,
+      @JsonKey(name: '_renderedDosageInstruction')
+          Element? renderedDosageInstructionElement,
+      Period? effectiveDosePeriod,
+      List<Dosage>? dosageInstruction});
+
+  $ElementCopyWith<$Res>? get renderedDosageInstructionElement;
+  $PeriodCopyWith<$Res>? get effectiveDosePeriod;
+}
+
+/// @nodoc
+class _$MedicationRequestDoseCopyWithImpl<$Res>
+    implements $MedicationRequestDoseCopyWith<$Res> {
+  _$MedicationRequestDoseCopyWithImpl(this._value, this._then);
+
+  final MedicationRequestDose _value;
+  // ignore: unused_field
+  final $Res Function(MedicationRequestDose) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? renderedDosageInstruction = freezed,
+    Object? renderedDosageInstructionElement = freezed,
+    Object? effectiveDosePeriod = freezed,
+    Object? dosageInstruction = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      renderedDosageInstruction: renderedDosageInstruction == freezed
+          ? _value.renderedDosageInstruction
+          : renderedDosageInstruction // ignore: cast_nullable_to_non_nullable
+              as String?,
+      renderedDosageInstructionElement: renderedDosageInstructionElement ==
+              freezed
+          ? _value.renderedDosageInstructionElement
+          : renderedDosageInstructionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectiveDosePeriod: effectiveDosePeriod == freezed
+          ? _value.effectiveDosePeriod
+          : effectiveDosePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      dosageInstruction: dosageInstruction == freezed
+          ? _value.dosageInstruction
+          : dosageInstruction // ignore: cast_nullable_to_non_nullable
+              as List<Dosage>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get renderedDosageInstructionElement {
+    if (_value.renderedDosageInstructionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.renderedDosageInstructionElement!,
+        (value) {
+      return _then(_value.copyWith(renderedDosageInstructionElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get effectiveDosePeriod {
+    if (_value.effectiveDosePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.effectiveDosePeriod!, (value) {
+      return _then(_value.copyWith(effectiveDosePeriod: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationRequestDoseCopyWith<$Res>
+    implements $MedicationRequestDoseCopyWith<$Res> {
+  factory _$$_MedicationRequestDoseCopyWith(_$_MedicationRequestDose value,
+          $Res Function(_$_MedicationRequestDose) then) =
+      __$$_MedicationRequestDoseCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? renderedDosageInstruction,
+      @JsonKey(name: '_renderedDosageInstruction')
+          Element? renderedDosageInstructionElement,
+      Period? effectiveDosePeriod,
+      List<Dosage>? dosageInstruction});
+
+  @override
+  $ElementCopyWith<$Res>? get renderedDosageInstructionElement;
+  @override
+  $PeriodCopyWith<$Res>? get effectiveDosePeriod;
+}
+
+/// @nodoc
+class __$$_MedicationRequestDoseCopyWithImpl<$Res>
+    extends _$MedicationRequestDoseCopyWithImpl<$Res>
+    implements _$$_MedicationRequestDoseCopyWith<$Res> {
+  __$$_MedicationRequestDoseCopyWithImpl(_$_MedicationRequestDose _value,
+      $Res Function(_$_MedicationRequestDose) _then)
+      : super(_value, (v) => _then(v as _$_MedicationRequestDose));
+
+  @override
+  _$_MedicationRequestDose get _value =>
+      super._value as _$_MedicationRequestDose;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? renderedDosageInstruction = freezed,
+    Object? renderedDosageInstructionElement = freezed,
+    Object? effectiveDosePeriod = freezed,
+    Object? dosageInstruction = freezed,
+  }) {
+    return _then(_$_MedicationRequestDose(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      renderedDosageInstruction: renderedDosageInstruction == freezed
+          ? _value.renderedDosageInstruction
+          : renderedDosageInstruction // ignore: cast_nullable_to_non_nullable
+              as String?,
+      renderedDosageInstructionElement: renderedDosageInstructionElement ==
+              freezed
+          ? _value.renderedDosageInstructionElement
+          : renderedDosageInstructionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectiveDosePeriod: effectiveDosePeriod == freezed
+          ? _value.effectiveDosePeriod
+          : effectiveDosePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      dosageInstruction: dosageInstruction == freezed
+          ? _value._dosageInstruction
+          : dosageInstruction // ignore: cast_nullable_to_non_nullable
+              as List<Dosage>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationRequestDose extends _MedicationRequestDose {
+  _$_MedicationRequestDose(
+      {this.id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.renderedDosageInstruction,
+      @JsonKey(name: '_renderedDosageInstruction')
+          this.renderedDosageInstructionElement,
+      this.effectiveDosePeriod,
+      final List<Dosage>? dosageInstruction})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _dosageInstruction = dosageInstruction,
+        super._();
+
+  factory _$_MedicationRequestDose.fromJson(Map<String, dynamic> json) =>
+      _$$_MedicationRequestDoseFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? renderedDosageInstruction;
+  @override
+  @JsonKey(name: '_renderedDosageInstruction')
+  final Element? renderedDosageInstructionElement;
+  @override
+  final Period? effectiveDosePeriod;
+  final List<Dosage>? _dosageInstruction;
+  @override
+  List<Dosage>? get dosageInstruction {
+    final value = _dosageInstruction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MedicationRequestDose(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, effectiveDosePeriod: $effectiveDosePeriod, dosageInstruction: $dosageInstruction)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationRequestDose &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(
+                other.renderedDosageInstruction, renderedDosageInstruction) &&
+            const DeepCollectionEquality().equals(
+                other.renderedDosageInstructionElement,
+                renderedDosageInstructionElement) &&
+            const DeepCollectionEquality()
+                .equals(other.effectiveDosePeriod, effectiveDosePeriod) &&
+            const DeepCollectionEquality()
+                .equals(other._dosageInstruction, _dosageInstruction));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(renderedDosageInstruction),
+      const DeepCollectionEquality().hash(renderedDosageInstructionElement),
+      const DeepCollectionEquality().hash(effectiveDosePeriod),
+      const DeepCollectionEquality().hash(_dosageInstruction));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_MedicationRequestDoseCopyWith<_$_MedicationRequestDose> get copyWith =>
+      __$$_MedicationRequestDoseCopyWithImpl<_$_MedicationRequestDose>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationRequestDoseToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationRequestDose extends MedicationRequestDose {
+  factory _MedicationRequestDose(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? renderedDosageInstruction,
+      @JsonKey(name: '_renderedDosageInstruction')
+          final Element? renderedDosageInstructionElement,
+      final Period? effectiveDosePeriod,
+      final List<Dosage>? dosageInstruction}) = _$_MedicationRequestDose;
+  _MedicationRequestDose._() : super._();
+
+  factory _MedicationRequestDose.fromJson(Map<String, dynamic> json) =
+      _$_MedicationRequestDose.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  String? get renderedDosageInstruction;
+  @override
+  @JsonKey(name: '_renderedDosageInstruction')
+  Element? get renderedDosageInstructionElement;
+  @override
+  Period? get effectiveDosePeriod;
+  @override
+  List<Dosage>? get dosageInstruction;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationRequestDoseCopyWith<_$_MedicationRequestDose> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -20778,52 +21446,6 @@ MedicationRequestDispenseRequest _$MedicationRequestDispenseRequestFromJson(
     Map<String, dynamic> json) {
   return _MedicationRequestDispenseRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationRequestDispenseRequestTearOff {
-  const _$MedicationRequestDispenseRequestTearOff();
-
-  _MedicationRequestDispenseRequest call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      MedicationRequestInitialFill? initialFill,
-      FhirDuration? dispenseInterval,
-      Period? validityPeriod,
-      UnsignedInt? numberOfRepeatsAllowed,
-      @JsonKey(name: '_numberOfRepeatsAllowed')
-          Element? numberOfRepeatsAllowedElement,
-      Quantity? quantity,
-      FhirDuration? expectedSupplyDuration,
-      Reference? dispenser,
-      List<Annotation>? dispenserInstruction,
-      CodeableConcept? doseAdministrationAid}) {
-    return _MedicationRequestDispenseRequest(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      initialFill: initialFill,
-      dispenseInterval: dispenseInterval,
-      validityPeriod: validityPeriod,
-      numberOfRepeatsAllowed: numberOfRepeatsAllowed,
-      numberOfRepeatsAllowedElement: numberOfRepeatsAllowedElement,
-      quantity: quantity,
-      expectedSupplyDuration: expectedSupplyDuration,
-      dispenser: dispenser,
-      dispenserInstruction: dispenserInstruction,
-      doseAdministrationAid: doseAdministrationAid,
-    );
-  }
-
-  MedicationRequestDispenseRequest fromJson(Map<String, Object?> json) {
-    return MedicationRequestDispenseRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationRequestDispenseRequest =
-    _$MedicationRequestDispenseRequestTearOff();
 
 /// @nodoc
 mixin _$MedicationRequestDispenseRequest {
@@ -21062,12 +21684,12 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationRequestDispenseRequestCopyWith<$Res>
+abstract class _$$_MedicationRequestDispenseRequestCopyWith<$Res>
     implements $MedicationRequestDispenseRequestCopyWith<$Res> {
-  factory _$MedicationRequestDispenseRequestCopyWith(
-          _MedicationRequestDispenseRequest value,
-          $Res Function(_MedicationRequestDispenseRequest) then) =
-      __$MedicationRequestDispenseRequestCopyWithImpl<$Res>;
+  factory _$$_MedicationRequestDispenseRequestCopyWith(
+          _$_MedicationRequestDispenseRequest value,
+          $Res Function(_$_MedicationRequestDispenseRequest) then) =
+      __$$_MedicationRequestDispenseRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -21105,17 +21727,17 @@ abstract class _$MedicationRequestDispenseRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
+class __$$_MedicationRequestDispenseRequestCopyWithImpl<$Res>
     extends _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
-    implements _$MedicationRequestDispenseRequestCopyWith<$Res> {
-  __$MedicationRequestDispenseRequestCopyWithImpl(
-      _MedicationRequestDispenseRequest _value,
-      $Res Function(_MedicationRequestDispenseRequest) _then)
-      : super(_value, (v) => _then(v as _MedicationRequestDispenseRequest));
+    implements _$$_MedicationRequestDispenseRequestCopyWith<$Res> {
+  __$$_MedicationRequestDispenseRequestCopyWithImpl(
+      _$_MedicationRequestDispenseRequest _value,
+      $Res Function(_$_MedicationRequestDispenseRequest) _then)
+      : super(_value, (v) => _then(v as _$_MedicationRequestDispenseRequest));
 
   @override
-  _MedicationRequestDispenseRequest get _value =>
-      super._value as _MedicationRequestDispenseRequest;
+  _$_MedicationRequestDispenseRequest get _value =>
+      super._value as _$_MedicationRequestDispenseRequest;
 
   @override
   $Res call({
@@ -21133,17 +21755,17 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
     Object? dispenserInstruction = freezed,
     Object? doseAdministrationAid = freezed,
   }) {
-    return _then(_MedicationRequestDispenseRequest(
+    return _then(_$_MedicationRequestDispenseRequest(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       initialFill: initialFill == freezed
@@ -21179,7 +21801,7 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
           : dispenser // ignore: cast_nullable_to_non_nullable
               as Reference?,
       dispenserInstruction: dispenserInstruction == freezed
-          ? _value.dispenserInstruction
+          ? _value._dispenserInstruction
           : dispenserInstruction // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       doseAdministrationAid: doseAdministrationAid == freezed
@@ -21197,8 +21819,8 @@ class _$_MedicationRequestDispenseRequest
   _$_MedicationRequestDispenseRequest(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.initialFill,
       this.dispenseInterval,
       this.validityPeriod,
@@ -21208,9 +21830,12 @@ class _$_MedicationRequestDispenseRequest
       this.quantity,
       this.expectedSupplyDuration,
       this.dispenser,
-      this.dispenserInstruction,
+      final List<Annotation>? dispenserInstruction,
       this.doseAdministrationAid})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _dispenserInstruction = dispenserInstruction,
+        super._();
 
   factory _$_MedicationRequestDispenseRequest.fromJson(
           Map<String, dynamic> json) =>
@@ -21218,11 +21843,25 @@ class _$_MedicationRequestDispenseRequest
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final MedicationRequestInitialFill? initialFill;
   @override
@@ -21240,8 +21879,15 @@ class _$_MedicationRequestDispenseRequest
   final FhirDuration? expectedSupplyDuration;
   @override
   final Reference? dispenser;
+  final List<Annotation>? _dispenserInstruction;
   @override
-  final List<Annotation>? dispenserInstruction;
+  List<Annotation>? get dispenserInstruction {
+    final value = _dispenserInstruction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? doseAdministrationAid;
 
@@ -21254,12 +21900,12 @@ class _$_MedicationRequestDispenseRequest
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationRequestDispenseRequest &&
+            other is _$_MedicationRequestDispenseRequest &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.initialFill, initialFill) &&
             const DeepCollectionEquality()
@@ -21276,17 +21922,18 @@ class _$_MedicationRequestDispenseRequest
                 .equals(other.expectedSupplyDuration, expectedSupplyDuration) &&
             const DeepCollectionEquality().equals(other.dispenser, dispenser) &&
             const DeepCollectionEquality()
-                .equals(other.dispenserInstruction, dispenserInstruction) &&
+                .equals(other._dispenserInstruction, _dispenserInstruction) &&
             const DeepCollectionEquality()
                 .equals(other.doseAdministrationAid, doseAdministrationAid));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(initialFill),
       const DeepCollectionEquality().hash(dispenseInterval),
       const DeepCollectionEquality().hash(validityPeriod),
@@ -21295,39 +21942,42 @@ class _$_MedicationRequestDispenseRequest
       const DeepCollectionEquality().hash(quantity),
       const DeepCollectionEquality().hash(expectedSupplyDuration),
       const DeepCollectionEquality().hash(dispenser),
-      const DeepCollectionEquality().hash(dispenserInstruction),
+      const DeepCollectionEquality().hash(_dispenserInstruction),
       const DeepCollectionEquality().hash(doseAdministrationAid));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationRequestDispenseRequestCopyWith<_MedicationRequestDispenseRequest>
-      get copyWith => __$MedicationRequestDispenseRequestCopyWithImpl<
-          _MedicationRequestDispenseRequest>(this, _$identity);
+  _$$_MedicationRequestDispenseRequestCopyWith<
+          _$_MedicationRequestDispenseRequest>
+      get copyWith => __$$_MedicationRequestDispenseRequestCopyWithImpl<
+          _$_MedicationRequestDispenseRequest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestDispenseRequestToJson(this);
+    return _$$_MedicationRequestDispenseRequestToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationRequestDispenseRequest
     extends MedicationRequestDispenseRequest {
   factory _MedicationRequestDispenseRequest(
-          {String? id,
+          {final String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          MedicationRequestInitialFill? initialFill,
-          FhirDuration? dispenseInterval,
-          Period? validityPeriod,
-          UnsignedInt? numberOfRepeatsAllowed,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final MedicationRequestInitialFill? initialFill,
+          final FhirDuration? dispenseInterval,
+          final Period? validityPeriod,
+          final UnsignedInt? numberOfRepeatsAllowed,
           @JsonKey(name: '_numberOfRepeatsAllowed')
-              Element? numberOfRepeatsAllowedElement,
-          Quantity? quantity,
-          FhirDuration? expectedSupplyDuration,
-          Reference? dispenser,
-          List<Annotation>? dispenserInstruction,
-          CodeableConcept? doseAdministrationAid}) =
+              final Element? numberOfRepeatsAllowedElement,
+          final Quantity? quantity,
+          final FhirDuration? expectedSupplyDuration,
+          final Reference? dispenser,
+          final List<Annotation>? dispenserInstruction,
+          final CodeableConcept? doseAdministrationAid}) =
       _$_MedicationRequestDispenseRequest;
   _MedicationRequestDispenseRequest._() : super._();
 
@@ -21364,7 +22014,8 @@ abstract class _MedicationRequestDispenseRequest
   CodeableConcept? get doseAdministrationAid;
   @override
   @JsonKey(ignore: true)
-  _$MedicationRequestDispenseRequestCopyWith<_MedicationRequestDispenseRequest>
+  _$$_MedicationRequestDispenseRequestCopyWith<
+          _$_MedicationRequestDispenseRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -21372,33 +22023,6 @@ MedicationRequestInitialFill _$MedicationRequestInitialFillFromJson(
     Map<String, dynamic> json) {
   return _MedicationRequestInitialFill.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationRequestInitialFillTearOff {
-  const _$MedicationRequestInitialFillTearOff();
-
-  _MedicationRequestInitialFill call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Quantity? quantity,
-      FhirDuration? duration}) {
-    return _MedicationRequestInitialFill(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      quantity: quantity,
-      duration: duration,
-    );
-  }
-
-  MedicationRequestInitialFill fromJson(Map<String, Object?> json) {
-    return MedicationRequestInitialFill.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationRequestInitialFill = _$MedicationRequestInitialFillTearOff();
 
 /// @nodoc
 mixin _$MedicationRequestInitialFill {
@@ -21498,12 +22122,12 @@ class _$MedicationRequestInitialFillCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationRequestInitialFillCopyWith<$Res>
+abstract class _$$_MedicationRequestInitialFillCopyWith<$Res>
     implements $MedicationRequestInitialFillCopyWith<$Res> {
-  factory _$MedicationRequestInitialFillCopyWith(
-          _MedicationRequestInitialFill value,
-          $Res Function(_MedicationRequestInitialFill) then) =
-      __$MedicationRequestInitialFillCopyWithImpl<$Res>;
+  factory _$$_MedicationRequestInitialFillCopyWith(
+          _$_MedicationRequestInitialFill value,
+          $Res Function(_$_MedicationRequestInitialFill) then) =
+      __$$_MedicationRequestInitialFillCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -21519,17 +22143,17 @@ abstract class _$MedicationRequestInitialFillCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationRequestInitialFillCopyWithImpl<$Res>
+class __$$_MedicationRequestInitialFillCopyWithImpl<$Res>
     extends _$MedicationRequestInitialFillCopyWithImpl<$Res>
-    implements _$MedicationRequestInitialFillCopyWith<$Res> {
-  __$MedicationRequestInitialFillCopyWithImpl(
-      _MedicationRequestInitialFill _value,
-      $Res Function(_MedicationRequestInitialFill) _then)
-      : super(_value, (v) => _then(v as _MedicationRequestInitialFill));
+    implements _$$_MedicationRequestInitialFillCopyWith<$Res> {
+  __$$_MedicationRequestInitialFillCopyWithImpl(
+      _$_MedicationRequestInitialFill _value,
+      $Res Function(_$_MedicationRequestInitialFill) _then)
+      : super(_value, (v) => _then(v as _$_MedicationRequestInitialFill));
 
   @override
-  _MedicationRequestInitialFill get _value =>
-      super._value as _MedicationRequestInitialFill;
+  _$_MedicationRequestInitialFill get _value =>
+      super._value as _$_MedicationRequestInitialFill;
 
   @override
   $Res call({
@@ -21539,17 +22163,17 @@ class __$MedicationRequestInitialFillCopyWithImpl<$Res>
     Object? quantity = freezed,
     Object? duration = freezed,
   }) {
-    return _then(_MedicationRequestInitialFill(
+    return _then(_$_MedicationRequestInitialFill(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       quantity: quantity == freezed
@@ -21569,22 +22193,38 @@ class __$MedicationRequestInitialFillCopyWithImpl<$Res>
 class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
   _$_MedicationRequestInitialFill(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.quantity,
       this.duration})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationRequestInitialFillFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Quantity? quantity;
   @override
@@ -21599,45 +22239,48 @@ class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationRequestInitialFill &&
+            other is _$_MedicationRequestInitialFill &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality().equals(other.duration, duration));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(quantity),
       const DeepCollectionEquality().hash(duration));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationRequestInitialFillCopyWith<_MedicationRequestInitialFill>
-      get copyWith => __$MedicationRequestInitialFillCopyWithImpl<
-          _MedicationRequestInitialFill>(this, _$identity);
+  _$$_MedicationRequestInitialFillCopyWith<_$_MedicationRequestInitialFill>
+      get copyWith => __$$_MedicationRequestInitialFillCopyWithImpl<
+          _$_MedicationRequestInitialFill>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestInitialFillToJson(this);
+    return _$$_MedicationRequestInitialFillToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationRequestInitialFill
     extends MedicationRequestInitialFill {
   factory _MedicationRequestInitialFill(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Quantity? quantity,
-      FhirDuration? duration}) = _$_MedicationRequestInitialFill;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Quantity? quantity,
+      final FhirDuration? duration}) = _$_MedicationRequestInitialFill;
   _MedicationRequestInitialFill._() : super._();
 
   factory _MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =
@@ -21656,7 +22299,7 @@ abstract class _MedicationRequestInitialFill
   FhirDuration? get duration;
   @override
   @JsonKey(ignore: true)
-  _$MedicationRequestInitialFillCopyWith<_MedicationRequestInitialFill>
+  _$$_MedicationRequestInitialFillCopyWith<_$_MedicationRequestInitialFill>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -21664,37 +22307,6 @@ MedicationRequestSubstitution _$MedicationRequestSubstitutionFromJson(
     Map<String, dynamic> json) {
   return _MedicationRequestSubstitution.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicationRequestSubstitutionTearOff {
-  const _$MedicationRequestSubstitutionTearOff();
-
-  _MedicationRequestSubstitution call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? allowedBoolean,
-      @JsonKey(name: '_allowedBoolean') Element? allowedBooleanElement,
-      CodeableConcept? allowedCodeableConcept,
-      CodeableConcept? reason}) {
-    return _MedicationRequestSubstitution(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      allowedBoolean: allowedBoolean,
-      allowedBooleanElement: allowedBooleanElement,
-      allowedCodeableConcept: allowedCodeableConcept,
-      reason: reason,
-    );
-  }
-
-  MedicationRequestSubstitution fromJson(Map<String, Object?> json) {
-    return MedicationRequestSubstitution.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationRequestSubstitution = _$MedicationRequestSubstitutionTearOff();
 
 /// @nodoc
 mixin _$MedicationRequestSubstitution {
@@ -21823,12 +22435,12 @@ class _$MedicationRequestSubstitutionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicationRequestSubstitutionCopyWith<$Res>
+abstract class _$$_MedicationRequestSubstitutionCopyWith<$Res>
     implements $MedicationRequestSubstitutionCopyWith<$Res> {
-  factory _$MedicationRequestSubstitutionCopyWith(
-          _MedicationRequestSubstitution value,
-          $Res Function(_MedicationRequestSubstitution) then) =
-      __$MedicationRequestSubstitutionCopyWithImpl<$Res>;
+  factory _$$_MedicationRequestSubstitutionCopyWith(
+          _$_MedicationRequestSubstitution value,
+          $Res Function(_$_MedicationRequestSubstitution) then) =
+      __$$_MedicationRequestSubstitutionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -21848,17 +22460,17 @@ abstract class _$MedicationRequestSubstitutionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicationRequestSubstitutionCopyWithImpl<$Res>
+class __$$_MedicationRequestSubstitutionCopyWithImpl<$Res>
     extends _$MedicationRequestSubstitutionCopyWithImpl<$Res>
-    implements _$MedicationRequestSubstitutionCopyWith<$Res> {
-  __$MedicationRequestSubstitutionCopyWithImpl(
-      _MedicationRequestSubstitution _value,
-      $Res Function(_MedicationRequestSubstitution) _then)
-      : super(_value, (v) => _then(v as _MedicationRequestSubstitution));
+    implements _$$_MedicationRequestSubstitutionCopyWith<$Res> {
+  __$$_MedicationRequestSubstitutionCopyWithImpl(
+      _$_MedicationRequestSubstitution _value,
+      $Res Function(_$_MedicationRequestSubstitution) _then)
+      : super(_value, (v) => _then(v as _$_MedicationRequestSubstitution));
 
   @override
-  _MedicationRequestSubstitution get _value =>
-      super._value as _MedicationRequestSubstitution;
+  _$_MedicationRequestSubstitution get _value =>
+      super._value as _$_MedicationRequestSubstitution;
 
   @override
   $Res call({
@@ -21870,17 +22482,17 @@ class __$MedicationRequestSubstitutionCopyWithImpl<$Res>
     Object? allowedCodeableConcept = freezed,
     Object? reason = freezed,
   }) {
-    return _then(_MedicationRequestSubstitution(
+    return _then(_$_MedicationRequestSubstitution(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       allowedBoolean: allowedBoolean == freezed
@@ -21908,13 +22520,15 @@ class __$MedicationRequestSubstitutionCopyWithImpl<$Res>
 class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
   _$_MedicationRequestSubstitution(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.allowedBoolean,
       @JsonKey(name: '_allowedBoolean') this.allowedBooleanElement,
       this.allowedCodeableConcept,
       this.reason})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicationRequestSubstitution.fromJson(
           Map<String, dynamic> json) =>
@@ -21922,11 +22536,25 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? allowedBoolean;
   @override
@@ -21946,12 +22574,12 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationRequestSubstitution &&
+            other is _$_MedicationRequestSubstitution &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.allowedBoolean, allowedBoolean) &&
             const DeepCollectionEquality()
@@ -21961,12 +22589,13 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
             const DeepCollectionEquality().equals(other.reason, reason));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(allowedBoolean),
       const DeepCollectionEquality().hash(allowedBooleanElement),
       const DeepCollectionEquality().hash(allowedCodeableConcept),
@@ -21974,26 +22603,28 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationRequestSubstitutionCopyWith<_MedicationRequestSubstitution>
-      get copyWith => __$MedicationRequestSubstitutionCopyWithImpl<
-          _MedicationRequestSubstitution>(this, _$identity);
+  _$$_MedicationRequestSubstitutionCopyWith<_$_MedicationRequestSubstitution>
+      get copyWith => __$$_MedicationRequestSubstitutionCopyWithImpl<
+          _$_MedicationRequestSubstitution>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationRequestSubstitutionToJson(this);
+    return _$$_MedicationRequestSubstitutionToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationRequestSubstitution
     extends MedicationRequestSubstitution {
   factory _MedicationRequestSubstitution(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? allowedBoolean,
-      @JsonKey(name: '_allowedBoolean') Element? allowedBooleanElement,
-      CodeableConcept? allowedCodeableConcept,
-      CodeableConcept? reason}) = _$_MedicationRequestSubstitution;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Boolean? allowedBoolean,
+      @JsonKey(name: '_allowedBoolean') final Element? allowedBooleanElement,
+      final CodeableConcept? allowedCodeableConcept,
+      final CodeableConcept? reason}) = _$_MedicationRequestSubstitution;
   _MedicationRequestSubstitution._() : super._();
 
   factory _MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =
@@ -22017,7 +22648,7 @@ abstract class _MedicationRequestSubstitution
   CodeableConcept? get reason;
   @override
   @JsonKey(ignore: true)
-  _$MedicationRequestSubstitutionCopyWith<_MedicationRequestSubstitution>
+  _$$_MedicationRequestSubstitutionCopyWith<_$_MedicationRequestSubstitution>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -22026,101 +22657,7 @@ MedicationUsage _$MedicationUsageFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MedicationUsageTearOff {
-  const _$MedicationUsageTearOff();
-
-  _MedicationUsage call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
-          R5ResourceType resourceType = R5ResourceType.MedicationUsage,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? statusReason,
-      List<CodeableConcept>? category,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      FhirDateTime? dateAsserted,
-      @JsonKey(name: '_dateAsserted')
-          Element? dateAssertedElement,
-      Reference? informationSource,
-      List<Reference>? derivedFrom,
-      List<CodeableReference>? reason,
-      List<Annotation>? note,
-      String? renderedDosageInstruction,
-      @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosage,
-      CodeableConcept? adherence}) {
-    return _MedicationUsage(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      statusReason: statusReason,
-      category: category,
-      medication: medication,
-      subject: subject,
-      encounter: encounter,
-      effectiveDateTime: effectiveDateTime,
-      effectiveDateTimeElement: effectiveDateTimeElement,
-      effectivePeriod: effectivePeriod,
-      dateAsserted: dateAsserted,
-      dateAssertedElement: dateAssertedElement,
-      informationSource: informationSource,
-      derivedFrom: derivedFrom,
-      reason: reason,
-      note: note,
-      renderedDosageInstruction: renderedDosageInstruction,
-      renderedDosageInstructionElement: renderedDosageInstructionElement,
-      dosage: dosage,
-      adherence: adherence,
-    );
-  }
-
-  MedicationUsage fromJson(Map<String, Object?> json) {
-    return MedicationUsage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicationUsage = _$MedicationUsageTearOff();
-
-/// @nodoc
 mixin _$MedicationUsage {
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -22137,14 +22674,11 @@ mixin _$MedicationUsage {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
-  List<Reference>? get partOf => throw _privateConstructorUsedError;
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get statusReason => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
-  CodeableReference? get medication => throw _privateConstructorUsedError;
+  CodeableReference get medication => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
   FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
@@ -22154,7 +22688,7 @@ mixin _$MedicationUsage {
   FhirDateTime? get dateAsserted => throw _privateConstructorUsedError;
   @JsonKey(name: '_dateAsserted')
   Element? get dateAssertedElement => throw _privateConstructorUsedError;
-  Reference? get informationSource => throw _privateConstructorUsedError;
+  List<Reference>? get informationSource => throw _privateConstructorUsedError;
   List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
@@ -22163,7 +22697,7 @@ mixin _$MedicationUsage {
   Element? get renderedDosageInstructionElement =>
       throw _privateConstructorUsedError;
   List<Dosage>? get dosage => throw _privateConstructorUsedError;
-  CodeableConcept? get adherence => throw _privateConstructorUsedError;
+  MedicationUsageAdherence? get adherence => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -22177,8 +22711,7 @@ abstract class $MedicationUsageCopyWith<$Res> {
           MedicationUsage value, $Res Function(MedicationUsage) then) =
       _$MedicationUsageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -22193,14 +22726,11 @@ abstract class $MedicationUsageCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
       List<CodeableConcept>? category,
-      CodeableReference? medication,
+      CodeableReference medication,
       Reference subject,
       Reference? encounter,
       FhirDateTime? effectiveDateTime,
@@ -22210,7 +22740,7 @@ abstract class $MedicationUsageCopyWith<$Res> {
       FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted')
           Element? dateAssertedElement,
-      Reference? informationSource,
+      List<Reference>? informationSource,
       List<Reference>? derivedFrom,
       List<CodeableReference>? reason,
       List<Annotation>? note,
@@ -22218,22 +22748,21 @@ abstract class $MedicationUsageCopyWith<$Res> {
       @JsonKey(name: '_renderedDosageInstruction')
           Element? renderedDosageInstructionElement,
       List<Dosage>? dosage,
-      CodeableConcept? adherence});
+      MedicationUsageAdherence? adherence});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $CodeableReferenceCopyWith<$Res> get medication;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
   $ElementCopyWith<$Res>? get effectiveDateTimeElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
   $ElementCopyWith<$Res>? get dateAssertedElement;
-  $ReferenceCopyWith<$Res>? get informationSource;
   $ElementCopyWith<$Res>? get renderedDosageInstructionElement;
-  $CodeableConceptCopyWith<$Res>? get adherence;
+  $MedicationUsageAdherenceCopyWith<$Res>? get adherence;
 }
 
 /// @nodoc
@@ -22259,11 +22788,8 @@ class _$MedicationUsageCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? basedOn = freezed,
-    Object? partOf = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? statusReason = freezed,
     Object? category = freezed,
     Object? medication = freezed,
     Object? subject = freezed,
@@ -22331,14 +22857,6 @@ class _$MedicationUsageCopyWithImpl<$Res>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      basedOn: basedOn == freezed
-          ? _value.basedOn
-          : basedOn // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      partOf: partOf == freezed
-          ? _value.partOf
-          : partOf // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -22347,10 +22865,6 @@ class _$MedicationUsageCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      statusReason: statusReason == freezed
-          ? _value.statusReason
-          : statusReason // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -22358,7 +22872,7 @@ class _$MedicationUsageCopyWithImpl<$Res>
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -22390,7 +22904,7 @@ class _$MedicationUsageCopyWithImpl<$Res>
       informationSource: informationSource == freezed
           ? _value.informationSource
           : informationSource // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+              as List<Reference>?,
       derivedFrom: derivedFrom == freezed
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
@@ -22419,7 +22933,7 @@ class _$MedicationUsageCopyWithImpl<$Res>
       adherence: adherence == freezed
           ? _value.adherence
           : adherence // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+              as MedicationUsageAdherence?,
     ));
   }
 
@@ -22479,12 +22993,8 @@ class _$MedicationUsageCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res>? get medication {
-    if (_value.medication == null) {
-      return null;
-    }
-
-    return $CodeableReferenceCopyWith<$Res>(_value.medication!, (value) {
+  $CodeableReferenceCopyWith<$Res> get medication {
+    return $CodeableReferenceCopyWith<$Res>(_value.medication, (value) {
       return _then(_value.copyWith(medication: value));
     });
   }
@@ -22541,17 +23051,6 @@ class _$MedicationUsageCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get informationSource {
-    if (_value.informationSource == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.informationSource!, (value) {
-      return _then(_value.copyWith(informationSource: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res>? get renderedDosageInstructionElement {
     if (_value.renderedDosageInstructionElement == null) {
       return null;
@@ -22564,27 +23063,26 @@ class _$MedicationUsageCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get adherence {
+  $MedicationUsageAdherenceCopyWith<$Res>? get adherence {
     if (_value.adherence == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.adherence!, (value) {
+    return $MedicationUsageAdherenceCopyWith<$Res>(_value.adherence!, (value) {
       return _then(_value.copyWith(adherence: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$MedicationUsageCopyWith<$Res>
+abstract class _$$_MedicationUsageCopyWith<$Res>
     implements $MedicationUsageCopyWith<$Res> {
-  factory _$MedicationUsageCopyWith(
-          _MedicationUsage value, $Res Function(_MedicationUsage) then) =
-      __$MedicationUsageCopyWithImpl<$Res>;
+  factory _$$_MedicationUsageCopyWith(
+          _$_MedicationUsage value, $Res Function(_$_MedicationUsage) then) =
+      __$$_MedicationUsageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -22599,14 +23097,11 @@ abstract class _$MedicationUsageCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
       List<CodeableConcept>? category,
-      CodeableReference? medication,
+      CodeableReference medication,
       Reference subject,
       Reference? encounter,
       FhirDateTime? effectiveDateTime,
@@ -22616,7 +23111,7 @@ abstract class _$MedicationUsageCopyWith<$Res>
       FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted')
           Element? dateAssertedElement,
-      Reference? informationSource,
+      List<Reference>? informationSource,
       List<Reference>? derivedFrom,
       List<CodeableReference>? reason,
       List<Annotation>? note,
@@ -22624,7 +23119,7 @@ abstract class _$MedicationUsageCopyWith<$Res>
       @JsonKey(name: '_renderedDosageInstruction')
           Element? renderedDosageInstructionElement,
       List<Dosage>? dosage,
-      CodeableConcept? adherence});
+      MedicationUsageAdherence? adherence});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -22637,7 +23132,7 @@ abstract class _$MedicationUsageCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableReferenceCopyWith<$Res>? get medication;
+  $CodeableReferenceCopyWith<$Res> get medication;
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
@@ -22649,23 +23144,21 @@ abstract class _$MedicationUsageCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get dateAssertedElement;
   @override
-  $ReferenceCopyWith<$Res>? get informationSource;
-  @override
   $ElementCopyWith<$Res>? get renderedDosageInstructionElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get adherence;
+  $MedicationUsageAdherenceCopyWith<$Res>? get adherence;
 }
 
 /// @nodoc
-class __$MedicationUsageCopyWithImpl<$Res>
+class __$$_MedicationUsageCopyWithImpl<$Res>
     extends _$MedicationUsageCopyWithImpl<$Res>
-    implements _$MedicationUsageCopyWith<$Res> {
-  __$MedicationUsageCopyWithImpl(
-      _MedicationUsage _value, $Res Function(_MedicationUsage) _then)
-      : super(_value, (v) => _then(v as _MedicationUsage));
+    implements _$$_MedicationUsageCopyWith<$Res> {
+  __$$_MedicationUsageCopyWithImpl(
+      _$_MedicationUsage _value, $Res Function(_$_MedicationUsage) _then)
+      : super(_value, (v) => _then(v as _$_MedicationUsage));
 
   @override
-  _MedicationUsage get _value => super._value as _MedicationUsage;
+  _$_MedicationUsage get _value => super._value as _$_MedicationUsage;
 
   @override
   $Res call({
@@ -22681,11 +23174,8 @@ class __$MedicationUsageCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? basedOn = freezed,
-    Object? partOf = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? statusReason = freezed,
     Object? category = freezed,
     Object? medication = freezed,
     Object? subject = freezed,
@@ -22704,7 +23194,7 @@ class __$MedicationUsageCopyWithImpl<$Res>
     Object? dosage = freezed,
     Object? adherence = freezed,
   }) {
-    return _then(_MedicationUsage(
+    return _then(_$_MedicationUsage(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -22738,29 +23228,21 @@ class __$MedicationUsageCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      basedOn: basedOn == freezed
-          ? _value.basedOn
-          : basedOn // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      partOf: partOf == freezed
-          ? _value.partOf
-          : partOf // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -22769,18 +23251,14 @@ class __$MedicationUsageCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      statusReason: statusReason == freezed
-          ? _value.statusReason
-          : statusReason // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       medication: medication == freezed
           ? _value.medication
           : medication // ignore: cast_nullable_to_non_nullable
-              as CodeableReference?,
+              as CodeableReference,
       subject: subject == freezed
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -22810,19 +23288,19 @@ class __$MedicationUsageCopyWithImpl<$Res>
           : dateAssertedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       informationSource: informationSource == freezed
-          ? _value.informationSource
+          ? _value._informationSource
           : informationSource // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+              as List<Reference>?,
       derivedFrom: derivedFrom == freezed
-          ? _value.derivedFrom
+          ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       reason: reason == freezed
-          ? _value.reason
+          ? _value._reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       renderedDosageInstruction: renderedDosageInstruction == freezed
@@ -22835,13 +23313,13 @@ class __$MedicationUsageCopyWithImpl<$Res>
           : renderedDosageInstructionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       dosage: dosage == freezed
-          ? _value.dosage
+          ? _value._dosage
           : dosage // ignore: cast_nullable_to_non_nullable
               as List<Dosage>?,
       adherence: adherence == freezed
           ? _value.adherence
           : adherence // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+              as MedicationUsageAdherence?,
     ));
   }
 }
@@ -22850,8 +23328,7 @@ class __$MedicationUsageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationUsage extends _MedicationUsage {
   _$_MedicationUsage(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
-          this.resourceType = R5ResourceType.MedicationUsage,
+      {this.resourceType = R5ResourceType.MedicationUsage,
       this.id,
       this.meta,
       this.implicitRules,
@@ -22861,19 +23338,16 @@ class _$_MedicationUsage extends _MedicationUsage {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.basedOn,
-      this.partOf,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.statusReason,
-      this.category,
-      this.medication,
+      final List<CodeableConcept>? category,
+      required this.medication,
       required this.subject,
       this.encounter,
       this.effectiveDateTime,
@@ -22883,22 +23357,32 @@ class _$_MedicationUsage extends _MedicationUsage {
       this.dateAsserted,
       @JsonKey(name: '_dateAsserted')
           this.dateAssertedElement,
-      this.informationSource,
-      this.derivedFrom,
-      this.reason,
-      this.note,
+      final List<Reference>? informationSource,
+      final List<Reference>? derivedFrom,
+      final List<CodeableReference>? reason,
+      final List<Annotation>? note,
       this.renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
           this.renderedDosageInstructionElement,
-      this.dosage,
+      final List<Dosage>? dosage,
       this.adherence})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _category = category,
+        _informationSource = informationSource,
+        _derivedFrom = derivedFrom,
+        _reason = reason,
+        _note = note,
+        _dosage = dosage,
+        super._();
 
   factory _$_MedicationUsage.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationUsageFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -22916,30 +23400,59 @@ class _$_MedicationUsage extends _MedicationUsage {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
-  @override
-  final List<Reference>? basedOn;
-  @override
-  final List<Reference>? partOf;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+  final List<CodeableConcept>? _category;
   @override
-  final List<CodeableConcept>? statusReason;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final List<CodeableConcept>? category;
-  @override
-  final CodeableReference? medication;
+  final CodeableReference medication;
   @override
   final Reference subject;
   @override
@@ -22956,34 +23469,69 @@ class _$_MedicationUsage extends _MedicationUsage {
   @override
   @JsonKey(name: '_dateAsserted')
   final Element? dateAssertedElement;
+  final List<Reference>? _informationSource;
   @override
-  final Reference? informationSource;
+  List<Reference>? get informationSource {
+    final value = _informationSource;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _derivedFrom;
   @override
-  final List<Reference>? derivedFrom;
+  List<Reference>? get derivedFrom {
+    final value = _derivedFrom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableReference>? _reason;
   @override
-  final List<CodeableReference>? reason;
+  List<CodeableReference>? get reason {
+    final value = _reason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? renderedDosageInstruction;
   @override
   @JsonKey(name: '_renderedDosageInstruction')
   final Element? renderedDosageInstructionElement;
+  final List<Dosage>? _dosage;
   @override
-  final List<Dosage>? dosage;
+  List<Dosage>? get dosage {
+    final value = _dosage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final CodeableConcept? adherence;
+  final MedicationUsageAdherence? adherence;
 
   @override
   String toString() {
-    return 'MedicationUsage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medication: $medication, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, informationSource: $informationSource, derivedFrom: $derivedFrom, reason: $reason, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosage: $dosage, adherence: $adherence)';
+    return 'MedicationUsage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, medication: $medication, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, informationSource: $informationSource, derivedFrom: $derivedFrom, reason: $reason, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosage: $dosage, adherence: $adherence)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicationUsage &&
+            other is _$_MedicationUsage &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -22996,21 +23544,18 @@ class _$_MedicationUsage extends _MedicationUsage {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
-            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality()
-                .equals(other.statusReason, statusReason) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality()
                 .equals(other.medication, medication) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
@@ -23026,20 +23571,21 @@ class _$_MedicationUsage extends _MedicationUsage {
             const DeepCollectionEquality()
                 .equals(other.dateAssertedElement, dateAssertedElement) &&
             const DeepCollectionEquality()
-                .equals(other.informationSource, informationSource) &&
+                .equals(other._informationSource, _informationSource) &&
             const DeepCollectionEquality()
-                .equals(other.derivedFrom, derivedFrom) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+                .equals(other._derivedFrom, _derivedFrom) &&
+            const DeepCollectionEquality().equals(other._reason, _reason) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality().equals(
                 other.renderedDosageInstruction, renderedDosageInstruction) &&
             const DeepCollectionEquality().equals(
                 other.renderedDosageInstructionElement,
                 renderedDosageInstructionElement) &&
-            const DeepCollectionEquality().equals(other.dosage, dosage) &&
+            const DeepCollectionEquality().equals(other._dosage, _dosage) &&
             const DeepCollectionEquality().equals(other.adherence, adherence));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -23051,16 +23597,13 @@ class _$_MedicationUsage extends _MedicationUsage {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(basedOn),
-        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(statusReason),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(medication),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(encounter),
@@ -23069,78 +23612,75 @@ class _$_MedicationUsage extends _MedicationUsage {
         const DeepCollectionEquality().hash(effectivePeriod),
         const DeepCollectionEquality().hash(dateAsserted),
         const DeepCollectionEquality().hash(dateAssertedElement),
-        const DeepCollectionEquality().hash(informationSource),
-        const DeepCollectionEquality().hash(derivedFrom),
-        const DeepCollectionEquality().hash(reason),
-        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(_informationSource),
+        const DeepCollectionEquality().hash(_derivedFrom),
+        const DeepCollectionEquality().hash(_reason),
+        const DeepCollectionEquality().hash(_note),
         const DeepCollectionEquality().hash(renderedDosageInstruction),
         const DeepCollectionEquality().hash(renderedDosageInstructionElement),
-        const DeepCollectionEquality().hash(dosage),
+        const DeepCollectionEquality().hash(_dosage),
         const DeepCollectionEquality().hash(adherence)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MedicationUsageCopyWith<_MedicationUsage> get copyWith =>
-      __$MedicationUsageCopyWithImpl<_MedicationUsage>(this, _$identity);
+  _$$_MedicationUsageCopyWith<_$_MedicationUsage> get copyWith =>
+      __$$_MedicationUsageCopyWithImpl<_$_MedicationUsage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MedicationUsageToJson(this);
+    return _$$_MedicationUsageToJson(
+      this,
+    );
   }
 }
 
 abstract class _MedicationUsage extends MedicationUsage {
   factory _MedicationUsage(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? statusReason,
-      List<CodeableConcept>? category,
-      CodeableReference? medication,
-      required Reference subject,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
+          final Element? statusElement,
+      final List<CodeableConcept>? category,
+      required final CodeableReference medication,
+      required final Reference subject,
+      final Reference? encounter,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      FhirDateTime? dateAsserted,
+          final Element? effectiveDateTimeElement,
+      final Period? effectivePeriod,
+      final FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted')
-          Element? dateAssertedElement,
-      Reference? informationSource,
-      List<Reference>? derivedFrom,
-      List<CodeableReference>? reason,
-      List<Annotation>? note,
-      String? renderedDosageInstruction,
+          final Element? dateAssertedElement,
+      final List<Reference>? informationSource,
+      final List<Reference>? derivedFrom,
+      final List<CodeableReference>? reason,
+      final List<Annotation>? note,
+      final String? renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
-          Element? renderedDosageInstructionElement,
-      List<Dosage>? dosage,
-      CodeableConcept? adherence}) = _$_MedicationUsage;
+          final Element? renderedDosageInstructionElement,
+      final List<Dosage>? dosage,
+      final MedicationUsageAdherence? adherence}) = _$_MedicationUsage;
   _MedicationUsage._() : super._();
 
   factory _MedicationUsage.fromJson(Map<String, dynamic> json) =
       _$_MedicationUsage.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -23168,20 +23708,14 @@ abstract class _MedicationUsage extends MedicationUsage {
   @override
   List<Identifier>? get identifier;
   @override
-  List<Reference>? get basedOn;
-  @override
-  List<Reference>? get partOf;
-  @override
   Code? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  List<CodeableConcept>? get statusReason;
-  @override
   List<CodeableConcept>? get category;
   @override
-  CodeableReference? get medication;
+  CodeableReference get medication;
   @override
   Reference get subject;
   @override
@@ -23199,7 +23733,7 @@ abstract class _MedicationUsage extends MedicationUsage {
   @JsonKey(name: '_dateAsserted')
   Element? get dateAssertedElement;
   @override
-  Reference? get informationSource;
+  List<Reference>? get informationSource;
   @override
   List<Reference>? get derivedFrom;
   @override
@@ -23214,9 +23748,286 @@ abstract class _MedicationUsage extends MedicationUsage {
   @override
   List<Dosage>? get dosage;
   @override
-  CodeableConcept? get adherence;
+  MedicationUsageAdherence? get adherence;
   @override
   @JsonKey(ignore: true)
-  _$MedicationUsageCopyWith<_MedicationUsage> get copyWith =>
+  _$$_MedicationUsageCopyWith<_$_MedicationUsage> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+MedicationUsageAdherence _$MedicationUsageAdherenceFromJson(
+    Map<String, dynamic> json) {
+  return _MedicationUsageAdherence.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationUsageAdherence {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  CodeableConcept? get reason => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationUsageAdherenceCopyWith<MedicationUsageAdherence> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationUsageAdherenceCopyWith<$Res> {
+  factory $MedicationUsageAdherenceCopyWith(MedicationUsageAdherence value,
+          $Res Function(MedicationUsageAdherence) then) =
+      _$MedicationUsageAdherenceCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept code,
+      CodeableConcept? reason});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res>? get reason;
+}
+
+/// @nodoc
+class _$MedicationUsageAdherenceCopyWithImpl<$Res>
+    implements $MedicationUsageAdherenceCopyWith<$Res> {
+  _$MedicationUsageAdherenceCopyWithImpl(this._value, this._then);
+
+  final MedicationUsageAdherence _value;
+  // ignore: unused_field
+  final $Res Function(MedicationUsageAdherence) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? reason = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.reason!, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationUsageAdherenceCopyWith<$Res>
+    implements $MedicationUsageAdherenceCopyWith<$Res> {
+  factory _$$_MedicationUsageAdherenceCopyWith(
+          _$_MedicationUsageAdherence value,
+          $Res Function(_$_MedicationUsageAdherence) then) =
+      __$$_MedicationUsageAdherenceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept code,
+      CodeableConcept? reason});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $CodeableConceptCopyWith<$Res>? get reason;
+}
+
+/// @nodoc
+class __$$_MedicationUsageAdherenceCopyWithImpl<$Res>
+    extends _$MedicationUsageAdherenceCopyWithImpl<$Res>
+    implements _$$_MedicationUsageAdherenceCopyWith<$Res> {
+  __$$_MedicationUsageAdherenceCopyWithImpl(_$_MedicationUsageAdherence _value,
+      $Res Function(_$_MedicationUsageAdherence) _then)
+      : super(_value, (v) => _then(v as _$_MedicationUsageAdherence));
+
+  @override
+  _$_MedicationUsageAdherence get _value =>
+      super._value as _$_MedicationUsageAdherence;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? reason = freezed,
+  }) {
+    return _then(_$_MedicationUsageAdherence(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationUsageAdherence extends _MedicationUsageAdherence {
+  _$_MedicationUsageAdherence(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.code,
+      this.reason})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_MedicationUsageAdherence.fromJson(Map<String, dynamic> json) =>
+      _$$_MedicationUsageAdherenceFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept code;
+  @override
+  final CodeableConcept? reason;
+
+  @override
+  String toString() {
+    return 'MedicationUsageAdherence(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, reason: $reason)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationUsageAdherence &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.reason, reason));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(reason));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_MedicationUsageAdherenceCopyWith<_$_MedicationUsageAdherence>
+      get copyWith => __$$_MedicationUsageAdherenceCopyWithImpl<
+          _$_MedicationUsageAdherence>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationUsageAdherenceToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationUsageAdherence extends MedicationUsageAdherence {
+  factory _MedicationUsageAdherence(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept code,
+      final CodeableConcept? reason}) = _$_MedicationUsageAdherence;
+  _MedicationUsageAdherence._() : super._();
+
+  factory _MedicationUsageAdherence.fromJson(Map<String, dynamic> json) =
+      _$_MedicationUsageAdherence.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  CodeableConcept get code;
+  @override
+  CodeableConcept? get reason;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationUsageAdherenceCopyWith<_$_MedicationUsageAdherence>
+      get copyWith => throw _privateConstructorUsedError;
 }

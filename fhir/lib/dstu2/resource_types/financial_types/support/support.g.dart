@@ -87,7 +87,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
 
 Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -291,7 +291,7 @@ _$_EligibilityRequest _$$_EligibilityRequestFromJson(
 Map<String, dynamic> _$$_EligibilityRequestToJson(
     _$_EligibilityRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -402,7 +402,7 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
 Map<String, dynamic> _$$_EligibilityResponseToJson(
     _$_EligibilityResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -514,7 +514,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_EnrollmentRequestToJson(
     _$_EnrollmentRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -628,7 +628,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
 Map<String, dynamic> _$$_EnrollmentResponseToJson(
     _$_EnrollmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

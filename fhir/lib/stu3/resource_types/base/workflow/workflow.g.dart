@@ -117,7 +117,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -433,7 +433,7 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
 Map<String, dynamic> _$$_AppointmentResponseToJson(
     _$_AppointmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -568,7 +568,7 @@ _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ProcessRequestToJson(_$_ProcessRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -733,7 +733,7 @@ _$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ProcessResponseToJson(_$_ProcessResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -896,7 +896,7 @@ _$_RequestGroup _$$_RequestGroupFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_RequestGroupToJson(_$_RequestGroup instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1227,7 +1227,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
 
 Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1341,7 +1341,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
 
 Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1526,7 +1526,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
 
 Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

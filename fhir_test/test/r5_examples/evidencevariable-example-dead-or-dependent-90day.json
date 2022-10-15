@@ -8,46 +8,66 @@
   "title": "Dead or functionally dependent at 90 days",
   "status": "draft",
   "actual": false,
-  "characteristicCombination": "union",
   "characteristic": [
     {
-      "description": "functionally dependent at 90 days",
-      "definitionCodeableConcept": {
-        "coding": [
+      "description": "Dead or functionally dependent at 90 days",
+      "defByCombination": {
+        "code": "any-of",
+        "characteristic": [
           {
-            "system": "http://snomed.info/sct",
-            "code": "718705001",
-            "display": "Functionally dependent (finding)"
+            "description": "functionally dependent at 90 days",
+            "definitionCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "718705001",
+                  "display": "Functionally dependent (finding)"
+                }
+              ]
+            },
+            "timeFromEvent": [
+              {
+                "eventCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/evidence-variable-event",
+                      "code": "study-start",
+                      "display": "Study Start"
+                    }
+                  ]
+                },
+                "quantity": {
+                  "value": 90,
+                  "unit": "day",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                }
+              }
+            ]
+          },
+          {
+            "description": "dead at 90 days",
+            "definitionCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "419099009",
+                  "display": "Dead (finding)"
+                }
+              ]
+            },
+            "timeFromEvent": [
+              {
+                "quantity": {
+                  "value": 90,
+                  "unit": "day",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                }
+              }
+            ]
           }
         ]
-      },
-      "timeFromStart": {
-        "quantity": {
-          "value": 90,
-          "unit": "day",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
-    },
-    {
-      "description": "dead at 90 days",
-      "definitionCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://snomed.info/sct",
-            "code": "419099009",
-            "display": "Dead (finding)"
-          }
-        ]
-      },
-      "timeFromStart": {
-        "quantity": {
-          "value": 90,
-          "unit": "day",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
       }
     }
   ],

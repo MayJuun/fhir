@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "reason-medication-not-given-codes",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -36,6 +36,7 @@
   "name": "SNOMEDCTReasonMedicationNotGivenCodes",
   "title": "SNOMED CT Reason Medication Not Given Codes",
   "status": "draft",
+  "experimental": true,
   "publisher": "FHIR Project team",
   "contact": [
     {

@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'workflow2.enums.dart';
 part 'workflow2.freezed.dart';
@@ -48,10 +45,6 @@ class ProcessRequest with Resource, _$ProcessRequest {
     List<String>? exclude,
     Period? period,
   }) = _ProcessRequest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ProcessRequest.fromYaml(dynamic yaml) => yaml is String
@@ -151,10 +144,6 @@ class ProcessResponse with Resource, _$ProcessResponse {
     List<ProcessResponseNotes>? notes,
     List<Coding>? error,
   }) = _ProcessResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ProcessResponse.fromYaml(dynamic yaml) => yaml is String
@@ -258,10 +247,6 @@ class SupplyRequest with Resource, _$SupplyRequest {
     SupplyRequestWhen? when,
   }) = _SupplyRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequest.fromJson(
@@ -363,10 +348,6 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     Reference? destination,
     List<Reference>? receiver,
   }) = _SupplyDelivery;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String

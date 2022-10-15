@@ -1,6 +1,3 @@
-export 'enums/enums.dart';
 export 'fhir_client/export.dart';
-export 'stu3/request/fhir_request.dart';
-export 'stu3/scopes/clinical_scope.dart';
-export 'stu3/scopes/scopes.dart';
-export 'stu3/smart_client/smart_client.dart';
+export 'scopes/stu3/clinical_scope.dart';
+export 'scopes/stu3/scopes.dart';

@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "goal-status",
   "meta": {
-    "lastUpdated": "2021-04-15T13:25:09.461+11:00",
+    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
@@ -56,6 +56,7 @@
   "description": "Codes that reflect the current state of a goal and whether the goal is still being targeted.",
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/goal-status",
+  "hierarchyMeaning": "is-a",
   "content": "complete",
   "concept": [
     {

@@ -93,7 +93,7 @@ _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
 
 Map<String, dynamic> _$$_CarePlanToJson(_$_CarePlan instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -118,7 +118,7 @@ Map<String, dynamic> _$$_CarePlanToJson(_$_CarePlan instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('subject', instance.subject?.toJson());
-  val['status'] = _$CarePlanStatusEnumMap[instance.status];
+  val['status'] = _$CarePlanStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('period', instance.period?.toJson());
@@ -594,7 +594,7 @@ _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
 
 Map<String, dynamic> _$$_GoalToJson(_$_Goal instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -626,7 +626,7 @@ Map<String, dynamic> _$$_GoalToJson(_$_Goal instance) {
   writeNotNull('targetQuantity', instance.targetQuantity?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['description'] = instance.description;
-  val['status'] = _$GoalStatusEnumMap[instance.status];
+  val['status'] = _$GoalStatusEnumMap[instance.status]!;
   writeNotNull('statusDate', instance.statusDate?.toJson());
   writeNotNull('_statusDate', instance.statusDateElement?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
@@ -765,7 +765,7 @@ _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ReferralRequestToJson(_$_ReferralRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -785,7 +785,7 @@ Map<String, dynamic> _$$_ReferralRequestToJson(_$_ReferralRequest instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['status'] = _$ReferralRequestStatusEnumMap[instance.status];
+  val['status'] = _$ReferralRequestStatusEnumMap[instance.status]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('date', instance.date?.toJson());
@@ -902,7 +902,7 @@ _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ProcedureRequestToJson(_$_ProcedureRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1046,7 +1046,7 @@ _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_NutritionOrderToJson(_$_NutritionOrder instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1594,7 +1594,7 @@ _$_VisionPrescription _$$_VisionPrescriptionFromJson(
 Map<String, dynamic> _$$_VisionPrescriptionToJson(
     _$_VisionPrescription instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

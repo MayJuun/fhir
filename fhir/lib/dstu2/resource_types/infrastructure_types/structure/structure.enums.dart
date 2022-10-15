@@ -10,6 +10,7 @@ enum MediaType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum BundleType {
   @JsonValue('document')
   document,
@@ -32,6 +33,7 @@ enum BundleType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SearchMode {
   @JsonValue('match')
   match,
@@ -42,6 +44,7 @@ enum SearchMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RequestMethod {
   @JsonValue('GET')
   get_,

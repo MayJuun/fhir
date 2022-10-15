@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'public_health_and_research.enums.dart';
 part 'public_health_and_research.freezed.dart';
@@ -56,10 +53,6 @@ class ResearchStudy with Resource, _$ResearchStudy {
     List<Annotation>? note,
     List<ResearchStudyArm>? arm,
   }) = _ResearchStudy;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
@@ -160,10 +153,6 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @JsonKey(name: '_actualArm') Element? actualArmElement,
     Reference? consent,
   }) = _ResearchSubject;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String

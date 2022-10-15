@@ -14,6 +14,7 @@ enum MedicationDispenseStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum MedicationStatementStatus {
   @JsonValue('active')
   active,
@@ -26,6 +27,7 @@ enum MedicationStatementStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ImmunizationStatus {
   @JsonValue('in-progress')
   in_progress,
@@ -40,6 +42,7 @@ enum ImmunizationStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum MedicationAdministrationStatus {
   @JsonValue('in-progress')
   in_progress,
@@ -54,6 +57,7 @@ enum MedicationAdministrationStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum MedicationOrderStatus {
   @JsonValue('active')
   active,

@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'information_tracking.enums.dart';
 part 'information_tracking.freezed.dart';
@@ -48,10 +45,6 @@ class Questionnaire with Resource, _$Questionnaire {
     @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
     required QuestionnaireGroup group,
   }) = _Questionnaire;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
@@ -214,10 +207,6 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     Reference? encounter,
     QuestionnaireResponseGroup? group,
   }) = _QuestionnaireResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
@@ -416,10 +405,6 @@ class Provenance with Resource, _$Provenance {
     List<Signature>? signature,
   }) = _Provenance;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
       ? Provenance.fromJson(
@@ -605,10 +590,6 @@ class AuditEvent with Resource, _$AuditEvent {
     required AuditEventSource source,
     List<AuditEventObject>? object,
   }) = _AuditEvent;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String

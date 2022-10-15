@@ -26,6 +26,7 @@
       }
     }
   ],
+  "active": true,
   "name": [
     {
       "use": "official",
@@ -68,7 +69,6 @@
   "managingOrganization": {
     "reference": "Organization/1"
   },
-  "active": true,
   "meta": {
     "tag": [
       {

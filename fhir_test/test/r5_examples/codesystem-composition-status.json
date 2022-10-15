@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "composition-status",
   "meta": {
-    "lastUpdated": "2021-04-15T13:25:09.461+11:00",
+    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
@@ -77,6 +77,11 @@
       "code": "entered-in-error",
       "display": "Entered in Error",
       "definition": "The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid."
+    },
+    {
+      "code": "deprecated",
+      "display": "Deprecated",
+      "definition": "This composition has been withdrawn or superseded and should no longer be used."
     }
   ]
 }

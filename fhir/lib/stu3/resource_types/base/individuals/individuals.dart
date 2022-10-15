@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'individuals.enums.dart';
 part 'individuals.freezed.dart';
@@ -47,10 +44,6 @@ class Group with Resource, _$Group {
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
   }) = _Group;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Group.fromYaml(dynamic yaml) => yaml is String
@@ -211,10 +204,6 @@ class Patient with Resource, _$Patient {
     Reference? managingOrganization,
     List<PatientLink>? link,
   }) = _Patient;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Patient.fromYaml(dynamic yaml) => yaml is String
@@ -441,10 +430,6 @@ class Person with Resource, _$Person {
     List<PersonLink>? link,
   }) = _Person;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Person.fromYaml(dynamic yaml) => yaml is String
       ? Person.fromJson(
@@ -543,10 +528,6 @@ class Practitioner with Resource, _$Practitioner {
     List<PractitionerQualification>? qualification,
     List<CodeableConcept>? communication,
   }) = _Practitioner;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
@@ -652,10 +633,6 @@ class PractitionerRole with Resource, _$PractitionerRole {
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _PractitionerRole;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PractitionerRole.fromYaml(dynamic yaml) => yaml is String
@@ -802,10 +779,6 @@ class RelatedPerson with Resource, _$RelatedPerson {
     List<Attachment>? photo,
     Period? period,
   }) = _RelatedPerson;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String

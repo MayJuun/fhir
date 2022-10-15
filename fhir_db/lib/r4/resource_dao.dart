@@ -86,12 +86,12 @@ class ResourceDao {
 
   /// function used to save a new resource in the db
   Future<Resource> _insert(String? password, Resource resource) async {
-    final _newResource = resource.updateVersion().newIdIfNoId();
+    final newResource = resource.updateVersion().newIdIfNoId();
     await _resourceStore
-        .record(_newResource.id.toString())
-        .put(await _db(password), _newResource.toJson());
+        .record(newResource.id.toString())
+        .put(await _db(password), newResource.toJson());
 
-    return _newResource;
+    return newResource;
   }
 
   /// functions used to update a resource who has already been saved into the
@@ -110,11 +110,11 @@ class ResourceDao {
           .record(historyId)
           .put(await _db(password), oldResource.toJson());
 
-      Resource _newResource;
+      Resource newResource;
 
       switch (databaseMode) {
         case mode.DatabaseMode.PERSISTENCE_DB:
-          _newResource = oldResource.meta == null
+          newResource = oldResource.meta == null
               ? resource.updateVersion().newIdIfNoId()
               : oldResource.meta == null
                   ? resource.updateVersion().newIdIfNoId()
@@ -123,14 +123,14 @@ class ResourceDao {
                       .newIdIfNoId();
           break;
         case mode.DatabaseMode.CACHE_DB:
-          _newResource = resource;
+          newResource = resource;
           break;
       }
 
       await _resourceStore
           .record(id)
-          .put(await _db(password), _newResource.toJson(), merge: true);
-      return _newResource;
+          .put(await _db(password), newResource.toJson(), merge: true);
+      return newResource;
     }
   }
 
@@ -153,7 +153,7 @@ class ResourceDao {
     String? password, {
     Resource? resource,
     R4ResourceType? resourceType,
-    Id? id,
+    String? id,
     String? field,
     String? value,
   }) async {
@@ -164,7 +164,7 @@ class ResourceDao {
       if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', '$id'));
+        finder = Finder(filter: Filter.equals('id', id));
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }
@@ -229,7 +229,7 @@ class ResourceDao {
     String? password,
     Resource? resource,
     R4ResourceType? resourceType,
-    Id? id,
+    String? id,
     String? field,
     String? value,
   ) async {
@@ -240,7 +240,7 @@ class ResourceDao {
       if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', '$id'));
+        finder = Finder(filter: Filter.equals('id', id));
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }

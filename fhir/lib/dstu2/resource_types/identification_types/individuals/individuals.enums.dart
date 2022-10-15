@@ -10,6 +10,7 @@ enum PractitionerGender {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RelatedPersonGender {
   @JsonValue('male')
   male,
@@ -20,6 +21,7 @@ enum RelatedPersonGender {
   @JsonValue('unknown')
   unknown,
 }
+
 enum PatientGender {
   @JsonValue('male')
   male,
@@ -30,6 +32,7 @@ enum PatientGender {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ContactGender {
   @JsonValue('male')
   male,
@@ -40,6 +43,7 @@ enum ContactGender {
   @JsonValue('unknown')
   unknown,
 }
+
 enum LinkType {
   @JsonValue('replace')
   replace,

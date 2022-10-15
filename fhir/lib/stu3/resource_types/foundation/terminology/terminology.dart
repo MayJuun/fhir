@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'terminology.enums.dart';
 part 'terminology.freezed.dart';
@@ -76,10 +73,6 @@ class CodeSystem with Resource, _$CodeSystem {
     List<CodeSystemProperty>? property,
     List<CodeSystemConcept>? concept,
   }) = _CodeSystem;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory CodeSystem.fromYaml(dynamic yaml) => yaml is String
@@ -389,10 +382,6 @@ class ConceptMap with Resource, _$ConceptMap {
     Reference? targetReference,
     List<ConceptMapGroup>? group,
   }) = _ConceptMap;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
@@ -706,10 +695,6 @@ class ExpansionProfile with Resource, _$ExpansionProfile {
     Boolean? limitedExpansion,
     @JsonKey(name: '_limitedExpansion') Element? limitedExpansionElement,
   }) = _ExpansionProfile;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ExpansionProfile.fromYaml(dynamic yaml) => yaml is String
@@ -1060,10 +1045,6 @@ class NamingSystem with Resource, _$NamingSystem {
     Reference? replacedBy,
   }) = _NamingSystem;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystem.fromJson(
@@ -1188,10 +1169,6 @@ class ValueSet with Resource, _$ValueSet {
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
   }) = _ValueSet;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String

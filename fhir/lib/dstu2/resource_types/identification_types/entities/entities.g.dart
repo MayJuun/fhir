@@ -86,7 +86,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
 
 Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -339,7 +339,7 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
 
 Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -525,7 +525,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
 
 Map<String, dynamic> _$$_PersonToJson(_$_Person instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -713,7 +713,7 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
 
 Map<String, dynamic> _$$_ContractToJson(_$_Contract instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

@@ -2,14 +2,11 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../dstu2.dart';
-
-// import 'package:flutter/foundation.dart';
 
 part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';

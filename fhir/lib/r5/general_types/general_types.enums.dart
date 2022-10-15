@@ -11,8 +11,6 @@ enum IdentifierUse {
   secondary,
   @JsonValue('old')
   old,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum QuantityComparator {
@@ -26,8 +24,6 @@ enum QuantityComparator {
   gt,
   @JsonValue('ad')
   ad,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DurationComparator {
@@ -41,8 +37,6 @@ enum DurationComparator {
   gt,
   @JsonValue('ad')
   ad,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DistanceComparator {
@@ -56,8 +50,6 @@ enum DistanceComparator {
   gt,
   @JsonValue('ad')
   ad,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum CountComparator {
@@ -71,8 +63,6 @@ enum CountComparator {
   gt,
   @JsonValue('ad')
   ad,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AgeComparator {
@@ -86,8 +76,6 @@ enum AgeComparator {
   gt,
   @JsonValue('ad')
   ad,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum HumanNameUse {
@@ -105,8 +93,6 @@ enum HumanNameUse {
   old,
   @JsonValue('maiden')
   maiden,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AddressUse {
@@ -120,8 +106,6 @@ enum AddressUse {
   old,
   @JsonValue('billing')
   billing,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AddressType {
@@ -131,8 +115,6 @@ enum AddressType {
   physical,
   @JsonValue('both')
   both,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum ContactPointSystem {
@@ -150,8 +132,6 @@ enum ContactPointSystem {
   sms,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum ContactPointUse {
@@ -165,8 +145,6 @@ enum ContactPointUse {
   old,
   @JsonValue('mobile')
   mobile,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum TimingRepeatDurationUnit {
@@ -184,8 +162,6 @@ enum TimingRepeatDurationUnit {
   mo,
   @JsonValue('a')
   a,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum TimingRepeatPeriodUnit {
@@ -203,8 +179,6 @@ enum TimingRepeatPeriodUnit {
   mo,
   @JsonValue('a')
   a,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum TimingRepeatWhen {
@@ -262,6 +236,4 @@ enum TimingRepeatWhen {
   pcd,
   @JsonValue('PCV')
   pcv,
-  @JsonValue('unknown')
-  unknown,
 }

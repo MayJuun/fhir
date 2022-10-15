@@ -55,22 +55,22 @@
   ],
   "start": "2013-12-09T09:00:00Z",
   "end": "2013-12-09T11:00:00Z",
-  "comment": "Clarify the results of the MRI to ensure context of test was correct",
-  "participant": [
+  "note": [
     {
-      "actor": {
-        "reference": "Patient/example",
-        "display": "Peter James Chalmers"
-      },
-      "required": "information-only",
-      "status": "accepted"
-    },
+      "text": "Clarify the results of the MRI to ensure context of test was correct"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Peter James Chalmers"
+  },
+  "participant": [
     {
       "actor": {
         "reference": "Practitioner/example",
         "display": "Dr Adam Careful"
       },
-      "required": "required",
+      "required": true,
       "status": "accepted"
     },
     {
@@ -78,14 +78,7 @@
         "reference": "Practitioner/f202",
         "display": "Luigi Maas"
       },
-      "required": "required",
-      "status": "accepted"
-    },
-    {
-      "actor": {
-        "display": "Phone Call"
-      },
-      "required": "information-only",
+      "required": true,
       "status": "accepted"
     }
   ],

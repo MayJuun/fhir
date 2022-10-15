@@ -15,7 +15,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.read(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
       );
       final OperationOutcome? response = await request
           .request(headers: {'test': 'headers'}) as OperationOutcome?;
@@ -29,7 +29,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.read(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
         pretty: true,
       );
       final OperationOutcome? response = await request
@@ -44,7 +44,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.read(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
         pretty: true,
         summary: Summary.true_,
       );
@@ -60,7 +60,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.read(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
         summary: Summary.count,
       );
       final OperationOutcome? response = await request
@@ -75,7 +75,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.read(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('1227442'),
+        id: '1227442',
         pretty: true,
         elements: ['name'],
       );
@@ -92,7 +92,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.read(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('1227442'),
+        id: '1227442',
         pretty: true,
         elements: ['name', 'gender'],
       );
@@ -110,7 +110,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.vRead(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
         vid: Id('6789'),
       );
       final OperationOutcome? response = await request
@@ -125,7 +125,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.vRead(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
         vid: Id('6789'),
         pretty: true,
       );
@@ -141,7 +141,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.vRead(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
         vid: Id('6789'),
         pretty: true,
         summary: Summary.true_,
@@ -158,7 +158,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.vRead(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
         vid: Id('6789'),
         summary: Summary.count,
       );
@@ -175,12 +175,12 @@ Future<void> requestsTest() async {
     test('transaction/batch', () async {
       final Bundle bundle = Bundle(
           resourceType: R4ResourceType.Bundle,
-          type: BundleType.transaction,
-          id: Id('12345'),
+          type: Code('transaction'),
+          id: '12345',
           entry: [
             BundleEntry(
                 request: BundleRequest(
-              method: BundleRequestMethod.delete,
+              method: Code('delete'),
             ))
           ]);
       final request = FhirRequest.transaction(
@@ -198,8 +198,8 @@ Future<void> requestsTest() async {
     test('batch with error in bundle', () async {
       final Bundle bundle = Bundle(
           resourceType: R4ResourceType.Bundle,
-          type: BundleType.batch,
-          id: Id('12345'),
+          type: Code('batch'),
+          id: '12345',
           entry: [BundleEntry(request: BundleRequest())]);
       final request = FhirRequest.batch(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -223,7 +223,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.history(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Observation,
-        id: Id('12345'),
+        id: '12345',
       );
       final OperationOutcome? response = await request
           .request(headers: {'test': 'headers'}) as OperationOutcome?;
@@ -267,7 +267,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.history(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Observation,
-        id: Id('12345'),
+        id: '12345',
         parameters: parameters,
       );
 
@@ -300,7 +300,7 @@ Future<void> requestsTest() async {
 
   group('FhirRequest - UPDATE:', () {
     test('update patient by id', () async {
-      final patient = Patient(id: Id('12345'));
+      final patient = Patient(id: '12345');
       final request = FhirRequest.update(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,
@@ -316,7 +316,7 @@ Future<void> requestsTest() async {
 
   group('FhirRequest - PATCH:', () {
     test('patch patient by id', () async {
-      final patient = Patient(id: Id('12345'));
+      final patient = Patient(id: '12345');
       final request = FhirRequest.patch(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,
@@ -335,7 +335,7 @@ Future<void> requestsTest() async {
       final request = FhirRequest.delete(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('12345'),
+        id: '12345',
       );
       final OperationOutcome? response = await request
           .request(headers: {'test': 'headers'}) as OperationOutcome?;
@@ -348,7 +348,7 @@ Future<void> requestsTest() async {
 
   group('FhirRequest - CREATE:', () {
     test('create patient', () async {
-      final patient = Patient(id: Id('12345'));
+      final patient = Patient(id: '12345');
       final request = FhirRequest.create(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,

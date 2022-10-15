@@ -3,7 +3,7 @@
   "id": "example001",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003ecategory\u003c/b\u003e: \u003cspan\u003eInpatient\u003c/span\u003e\u003c/p\u003e\u003ch3\u003eMedications\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeffective\u003c/b\u003e: 2015-01-23\u003c/p\u003e\u003cp\u003e\u003cb\u003edateAsserted\u003c/b\u003e: 2015-02-22\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationSource\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ederivedFrom\u003c/b\u003e: \u003ca\u003eGenerated Summary: id: 12345 (OFFICIAL); status: active; intent: order; authoredOn: 2015-03-01\u003c/a\u003e\u003c/p\u003e\u003ch3\u003eReasons\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Patient indicates they miss the occasional dose\u003c/p\u003e\u003ch3\u003eDosages\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;example001\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: recorded\u003c/p\u003e\u003cp\u003e\u003cb\u003ecategory\u003c/b\u003e: Inpatient \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (medication-statement-category#inpatient)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca href\u003d\"patient-pat1.html\"\u003ePatient/pat1: Donald Duck\u003c/a\u003e \u0026quot;Donald DUCK\u0026quot;\u003c/p\u003e\u003cp\u003e\u003cb\u003eeffective\u003c/b\u003e: 2015-01-23\u003c/p\u003e\u003cp\u003e\u003cb\u003edateAsserted\u003c/b\u003e: 2015-02-22\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationSource\u003c/b\u003e: \u003ca href\u003d\"patient-pat1.html\"\u003ePatient/pat1: Donald Duck\u003c/a\u003e \u0026quot;Donald DUCK\u0026quot;\u003c/p\u003e\u003cp\u003e\u003cb\u003ederivedFrom\u003c/b\u003e: \u003ca href\u003d\"medicationrequest-medrx002.html\"\u003eMedicationRequest/medrx002\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Patient indicates they miss the occasional dose\u003c/p\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -92,7 +92,7 @@
       "value": "12345689"
     }
   ],
-  "status": "completed",
+  "status": "recorded",
   "category": [
     {
       "coding": [
@@ -115,10 +115,12 @@
   },
   "effectiveDateTime": "2015-01-23",
   "dateAsserted": "2015-02-22",
-  "informationSource": {
-    "reference": "Patient/pat1",
-    "display": "Donald Duck"
-  },
+  "informationSource": [
+    {
+      "reference": "Patient/pat1",
+      "display": "Donald Duck"
+    }
+  ],
   "derivedFrom": [
     {
       "reference": "MedicationRequest/medrx002"
@@ -158,15 +160,17 @@
           "periodUnit": "d"
         }
       },
-      "asNeededCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://snomed.info/sct",
-            "code": "32914008",
-            "display": "Restless Legs"
-          }
-        ]
-      },
+      "asNeededFor": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "32914008",
+              "display": "Restless Legs"
+            }
+          ]
+        }
+      ],
       "route": {
         "coding": [
           {
