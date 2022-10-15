@@ -1,5 +1,7 @@
+// ignore_for_file: avoid_function_literals_in_foreach_calls, avoid_dynamic_calls
+
 // Package imports:
-import 'package:collection/src/iterable_extensions.dart';
+import 'package:collection/collection.dart';
 
 // Project imports:
 import '../../petit_fhir_path.dart';
@@ -9,6 +11,7 @@ class SumParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
@@ -28,12 +31,14 @@ class SumParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}SumParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.sum()';
 }
 
@@ -42,6 +47,7 @@ class MinParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
@@ -61,12 +67,14 @@ class MinParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}MinParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.min()';
 }
 
@@ -75,6 +83,7 @@ class MaxParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
@@ -94,12 +103,14 @@ class MaxParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}MaxParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.max()';
 }
 
@@ -108,6 +119,7 @@ class AvgParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
@@ -127,12 +139,14 @@ class AvgParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}AvgParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.avg()';
 }
 
@@ -141,13 +155,14 @@ class AnswersParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final descendants = DescendantsParser().execute(results, passed);
     final answerMaps = descendants.where((element) =>
         (element is Map<String, dynamic>) && element.containsKey('answer'));
     final answers = <dynamic>[];
     answerMaps.forEach((element) {
-      answers.addAll((element as Map<String, dynamic>)['answer']);
+      answers.addAll((element as Map<String, dynamic>)['answer'] as Iterable);
     });
     return answers;
   }
@@ -159,12 +174,14 @@ class AnswersParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}AnswersParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.answers()';
 }
 
@@ -173,6 +190,7 @@ class OrdinalParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final newResults = [];
 
@@ -186,7 +204,7 @@ class OrdinalParser extends FhirPathParser {
           /// First we check the element for extensions
           if (val.keys.contains('extension')) {
             /// get those extensions
-            var extension = val['extension'];
+            final extension = val['extension'];
 
             /// generally we expect the extension to be a list
             if (extension is List) {
@@ -250,11 +268,13 @@ class OrdinalParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}OrdinalParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.ordinal()';
 }

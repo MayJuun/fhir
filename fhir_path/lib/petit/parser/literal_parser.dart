@@ -19,6 +19,7 @@ class WhiteSpaceParser extends ValueParser<String> {
   /// expression one object at a time
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => results;
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -28,6 +29,7 @@ class WhiteSpaceParser extends ValueParser<String> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead.
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}WhiteSpaceParser: "$value"';
 
@@ -35,6 +37,7 @@ class WhiteSpaceParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => value;
 }
 
@@ -45,6 +48,7 @@ class BooleanParser extends ValueParser<bool> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -54,12 +58,14 @@ class BooleanParser extends ValueParser<bool> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}BooleanParser: "$value"';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '$value';
 }
 
@@ -72,6 +78,7 @@ class EnvVariableParser extends ValueParser<String> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final variableName = value.replaceAll('`', '');
 
@@ -126,6 +133,7 @@ class EnvVariableParser extends ValueParser<String> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}EnvVariableParser: "$value"';
 
@@ -133,6 +141,7 @@ class EnvVariableParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '$value';
 }
 
@@ -149,6 +158,7 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   @override
@@ -163,12 +173,14 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}QuantityParser: "$value"';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '$value';
 }
 
@@ -180,6 +192,7 @@ class IntegerParser extends ValueParser<int> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   @override
@@ -194,12 +207,14 @@ class IntegerParser extends ValueParser<int> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}IntegerParser: "$value"';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '$value';
 }
 
@@ -219,6 +234,7 @@ class DecimalParser extends ValueParser<double> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   @override
@@ -233,12 +249,14 @@ class DecimalParser extends ValueParser<double> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}DecimalParser: "$value"';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '$value';
 }
 
@@ -253,6 +271,7 @@ class IdentifierParser extends ValueParser<String> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final identifierName = value;
 
@@ -340,6 +359,7 @@ class IdentifierParser extends ValueParser<String> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}IdentifierParser: "$value"';
 
@@ -347,6 +367,7 @@ class IdentifierParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '$value';
 }
 
@@ -367,6 +388,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final identifierName = value;
 
@@ -454,6 +476,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}DelimitedIdentifierParser: "$value"';
 
@@ -461,6 +484,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '`$value`';
 }
 
@@ -476,6 +500,7 @@ class StringParser extends ValueParser<String> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -485,12 +510,14 @@ class StringParser extends ValueParser<String> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => "${'  ' * indent}StringParser: '$value'";
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => "'$value'";
 }
 
@@ -539,6 +566,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (value.isEmpty) {
       return [];
@@ -566,12 +594,14 @@ class DateTimeParser extends BaseDateTimeParser<List> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}DateTimeParser: "$value"';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '@${toString()}';
 }
 
@@ -585,6 +615,7 @@ class DateParser extends BaseDateTimeParser<Date> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   String toString() => value.toString();
@@ -596,12 +627,14 @@ class DateParser extends BaseDateTimeParser<Date> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}DateParser: "$value"';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '@$value';
 }
 
@@ -621,6 +654,7 @@ class TimeParser extends BaseDateTimeParser<Time> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   String toString() => value.toString();
@@ -632,11 +666,13 @@ class TimeParser extends BaseDateTimeParser<Time> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}TimeParser: "$value"';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '@T$value';
 }
