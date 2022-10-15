@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls, avoid_bool_literals_in_conditional_expressions
+
 // Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
@@ -155,7 +157,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
   //  if (param1 is! String || param2 is! String) {
   //    if(param)}
 
-  bool stringGt(String param1, dynamic param2) {
+  bool stringGt(String param1, String param2) {
     final runes1 = param1.runes.toList();
     final runes2 = param2.runes.toList();
     if (runes1.length < runes2.length) {
@@ -175,19 +177,19 @@ List executeComparisons(List results, ParserList before, ParserList after,
     try {
       switch (comparator) {
         case Comparator.gt:
-          return param1 > param2;
+          return param1 > param2 as bool;
         case Comparator.gte:
-          return param1 >= param2;
+          return param1 >= param2 as bool;
         case Comparator.lt:
-          return param1 < param2;
+          return param1 < param2 as bool;
         case Comparator.lte:
-          return param1 <= param2;
+          return param1 <= param2 as bool;
       }
     } catch (e) {
       if (e is UnequalPrecision) {
         return null;
       } else {
-        throw e;
+        rethrow;
       }
     }
   }
@@ -204,25 +206,6 @@ List executeComparisons(List results, ParserList before, ParserList after,
           'The comparator $comparator was not passed two valid types.\n'
           'Param1: $param1 - ${param1.runtimeType} - Valid? ${param1.isValid}\n'
           'Param1: $param2 - ${param2.runtimeType} - Valid? ${param2.isValid}\n');
-
-  bool? compareNumbers(num param1, dynamic param2) => param2 is num
-      ? makeComparison(comparator, param1, param2)
-      : param2 is FhirNumber && param2.isValid
-          ? makeComparison(comparator, param1, param2.valueNumber)
-          : throw cannotCompareException(param1, param2);
-
-  bool? compareDateTimes(FhirDateTimeBase param1, dynamic param2) =>
-      param2 is FhirDateTimeBase
-          ? param1.isValid && param2.isValid
-              ? makeComparison(comparator, param1, param2)
-              : throw invalidException(param1, param2)
-          : throw cannotCompareException(param1, param2);
-
-  bool? compareTimes(Time param1, dynamic param2) => param2 is Time
-      ? param1.isValid && param2.isValid
-          ? makeComparison(comparator, param1, param2)
-          : throw invalidException(param1, param2)
-      : throw cannotCompareException(param1, param2);
 
   bool? compare(Comparator comparator, dynamic lhs, dynamic rhs) {
     switch (lhs.runtimeType) {
@@ -252,7 +235,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
                     : throw cannotCompareException(lhs, rhs);
       case Date:
         return rhs is FhirDateTimeBase
-            ? lhs.isValid && rhs.isValid
+            ? (lhs as Date).isValid && rhs.isValid
                 ? makeComparison(comparator, lhs, rhs)
                 : throw invalidException(lhs, rhs)
             : rhs is String && FhirDateTime(rhs).isValid
@@ -270,7 +253,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
                     : throw cannotCompareException(lhs, rhs);
       case FhirDateTime:
         return rhs is FhirDateTimeBase
-            ? lhs.isValid && rhs.isValid
+            ? (lhs as FhirDateTime).isValid && rhs.isValid
                 ? makeComparison(comparator, lhs, rhs)
                 : throw invalidException(lhs, rhs)
             : rhs is String && FhirDateTime(rhs).isValid
@@ -278,7 +261,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
                 : throw cannotCompareException(lhs, rhs);
       case Time:
         return rhs is Time
-            ? lhs.isValid && rhs.isValid
+            ? (lhs as Time).isValid && rhs.isValid
                 ? makeComparison(comparator, lhs, rhs)
                 : throw invalidException(lhs, rhs)
             : rhs is String && Time(rhs).isValid
@@ -295,7 +278,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
       /// Default should be when lhs is a String
       default:
         {
-          if (rhs is String) {
+          if (lhs is String && rhs is String) {
             return (comparator == Comparator.gt || comparator == Comparator.lt)
                 ? lhs == rhs
                     ? false

@@ -277,14 +277,18 @@ class RoundParser extends ValueParser<ParserList> {
         ? []
         : results.length > 1
             ? throw _wrongLength('.round()', results)
-            : results.first is num
-                ? [
-                    executedValue.isEmpty
-                        ? (results.first as num).round()
-                        : double.parse((results.first as num)
-                            .toStringAsFixed(executedValue.first))
-                  ]
-                : throw _wrongTypes('.round()', results, executedValue);
+            : executedValue.isEmpty ||
+                    executedValue.length != 1 ||
+                    executedValue.first is! num
+                ? throw _wrongTypes('.round()', results, executedValue)
+                : results.first is! num
+                    ? throw _wrongTypes('.round()', results, executedValue)
+                    : [
+                        executedValue.isEmpty
+                            ? (results.first as num).round()
+                            : double.parse((results.first as num)
+                                .toStringAsFixed(executedValue.first as int))
+                      ];
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

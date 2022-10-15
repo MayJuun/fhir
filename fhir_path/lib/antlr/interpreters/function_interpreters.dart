@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_bool_literals_in_conditional_expressions, missing_whitespace_between_adjacent_strings, flutter_style_todos, prefer_if_elements_to_conditional_expressions,
+
 part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitFunction(
@@ -57,7 +59,7 @@ List? _$visitFunction(
         break;
       case 'distinct':
         {
-          var resultsList = <dynamic>[];
+          final resultsList = <dynamic>[];
           for (var results in visitor.context) {
             if (notFoundInList(resultsList, results)) {
               resultsList.add(results);
@@ -192,9 +194,18 @@ List? _$visitFunction(
                       : visitor.context.first is bool
                           ? <dynamic>[visitor.context.first == true ? 1 : 0]
                           : visitor.context.first is num
-                              ? <dynamic>[visitor.context.first.toInt()]
-                              : int.tryParse(visitor.context.first) != null
-                                  ? <dynamic>[int.parse(visitor.context.first)]
+                              ? <dynamic>[
+                                  (visitor.context.first as num).toInt()
+                                ]
+                              : visitor.context.first is String
+                                  ? int.tryParse(visitor.context.first
+                                              as String) !=
+                                          null
+                                      ? <dynamic>[
+                                          int.parse(
+                                              visitor.context.first as String)
+                                        ]
+                                      : <dynamic>[]
                                   : <dynamic>[];
         }
         break;
@@ -211,8 +222,12 @@ List? _$visitFunction(
                           ? <dynamic>[true]
                           : visitor.context.first is num
                               ? <dynamic>[true]
-                              : int.tryParse(visitor.context.first) != null
-                                  ? <dynamic>[true]
+                              : visitor.context.first is String
+                                  ? int.tryParse(visitor.context.first
+                                              as String) !=
+                                          null
+                                      ? <dynamic>[true]
+                                      : <dynamic>[false]
                                   : <dynamic>[false];
         }
         break;
@@ -271,11 +286,18 @@ List? _$visitFunction(
                       : visitor.context.first is bool
                           ? <dynamic>[visitor.context.first == true ? 1 : 0]
                           : visitor.context.first is num
-                              ? <dynamic>[visitor.context.first.toDouble()]
-                              : double.tryParse(visitor.context.first) != null
-                                  ? <dynamic>[
-                                      double.parse(visitor.context.first)
-                                    ]
+                              ? <dynamic>[
+                                  (visitor.context.first as num).toDouble()
+                                ]
+                              : visitor.context.first is String
+                                  ? double.tryParse(visitor.context.first
+                                              as String) !=
+                                          null
+                                      ? <dynamic>[
+                                          double.parse(
+                                              visitor.context.first as String)
+                                        ]
+                                      : <dynamic>[]
                                   : <dynamic>[];
         }
         break;
@@ -292,8 +314,12 @@ List? _$visitFunction(
                           ? <dynamic>[true]
                           : visitor.context.first is num
                               ? <dynamic>[true]
-                              : double.tryParse(visitor.context.first) != null
-                                  ? <dynamic>[true]
+                              : visitor.context.first is String
+                                  ? double.tryParse(visitor.context.first
+                                              as String) !=
+                                          null
+                                      ? <dynamic>[true]
+                                      : <dynamic>[false]
                                   : <dynamic>[false];
         }
         break;
@@ -358,11 +384,14 @@ List? _$visitFunction(
                   : visitor.context.first is FhirPathQuantity
                       ? [visitor.context.first]
                       : visitor.context.first is num
-                          ? [FhirPathQuantity(visitor.context.first, '1')]
+                          ? [
+                              FhirPathQuantity(
+                                  visitor.context.first as num, '1')
+                            ]
                           : visitor.context.first is String
                               ? [
                                   FhirPathQuantity.fromString(
-                                      visitor.context.first)
+                                      visitor.context.first as String)
                                 ]
                               : <dynamic>[];
         }
@@ -387,8 +416,8 @@ List? _$visitFunction(
 
             /// If it's a string & convertible to a Quantity using the Regex
             else if (visitor.context.first is String &&
-                FhirPathQuantity.fhirPathQuantityRegex
-                    .hasMatch(visitor.context.first.replaceAll(r"\'", "'"))) {
+                FhirPathQuantity.fhirPathQuantityRegex.hasMatch(
+                    (visitor.context.first as String).replaceAll(r"\'", "'"))) {
               visitor.context = [true];
             }
 
@@ -424,10 +453,8 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _requiresList('.length()', visitor.context)
                   : visitor.context.first is String
-                      ? <dynamic>[visitor.context.first.length]
-                      : visitor.context.first is String
-                          ? <dynamic>[visitor.context.first.value.length]
-                          : throw _requiresString('.length()', visitor.context);
+                      ? <dynamic>[(visitor.context.first as String).length]
+                      : throw _requiresString('.length()', visitor.context);
         }
         break;
       case 'toChars':
@@ -437,10 +464,8 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _requiresList('.toChars()', visitor.context)
                   : visitor.context.first is String
-                      ? visitor.context.first.split('')
-                      : visitor.context.first is String
-                          ? visitor.context.first.value.split('')
-                          : throw _requiresString('.toChar()', visitor.context);
+                      ? (visitor.context.first as String).split('')
+                      : throw _requiresString('.toChar()', visitor.context);
         }
         break;
       case 'abs':
@@ -450,7 +475,7 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _wrongLength('.abs()', visitor.context)
                   : visitor.context.first is num
-                      ? visitor.context.first.abs().isNaN
+                      ? (visitor.context.first as num).abs().isNaN
                           ? <dynamic>[]
                           : <dynamic>[(visitor.context.first as num).abs()]
                       : visitor.context.first is FhirPathQuantity
@@ -474,7 +499,7 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _wrongLength('.ceiling()', visitor.context)
                   : visitor.context.first is num
-                      ? <dynamic>[visitor.context.first.ceil()]
+                      ? <dynamic>[(visitor.context.first as num).ceil()]
                       : throw _wrongTypes(
                           '.ceiling()', visitor.context, 'none');
         }
@@ -486,7 +511,7 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _wrongLength('.exp()', visitor.context)
                   : visitor.context.first is num
-                      ? <dynamic>[exp(visitor.context.first)]
+                      ? <dynamic>[exp(visitor.context.first as num)]
                       : throw _wrongTypes('.exp()', visitor.context, 'none');
         }
         break;
@@ -497,7 +522,7 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _wrongLength('.floor()', visitor.context)
                   : visitor.context.first is num
-                      ? <dynamic>[visitor.context.first.floor()]
+                      ? <dynamic>[(visitor.context.first as num).floor()]
                       : throw _wrongTypes('.floor()', visitor.context, 'none');
         }
         break;
@@ -508,7 +533,7 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _wrongLength('.ln()', visitor.context)
                   : visitor.context.first is num
-                      ? <dynamic>[log(visitor.context.first)]
+                      ? <dynamic>[log(visitor.context.first as num)]
                       : throw _wrongTypes('.ln()', visitor.context, 'none');
         }
         break;
@@ -529,8 +554,9 @@ List? _$visitFunction(
             final exponent = args.first is num
                 ? args.first
                 : throw _wrongTypes('.power()', visitor.context, args);
-            visitor.context =
-                pow(base, exponent).isNaN ? [] : [pow(base, exponent)];
+            visitor.context = pow(base as num, exponent as num).isNaN
+                ? []
+                : [pow(base, exponent)];
           }
         }
         break;
@@ -541,9 +567,9 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _wrongLength('.sqrt()', visitor.context)
                   : visitor.context.first is num
-                      ? (sqrt(visitor.context.first).isNaN
+                      ? (sqrt(visitor.context.first as num).isNaN
                           ? <dynamic>[]
-                          : <dynamic>[sqrt(visitor.context.first)])
+                          : <dynamic>[sqrt(visitor.context.first as num)])
                       : throw _wrongTypes('.sqrt()', visitor.context, 'none');
         }
         break;
@@ -554,7 +580,7 @@ List? _$visitFunction(
               : visitor.context.length > 1
                   ? throw _wrongLength('.truncate()', visitor.context)
                   : visitor.context.first is num
-                      ? <dynamic>[(visitor.context.first).toInt()]
+                      ? <dynamic>[(visitor.context.first as num).toInt()]
                       : throw _wrongTypes(
                           '.truncate()', visitor.context, 'none');
         }
@@ -562,9 +588,9 @@ List? _$visitFunction(
       case 'children':
         {
           final finalResults = <dynamic>[];
-          for (var r in visitor.context) {
-            if (r is Map) {
-              r.forEach((key, value) {
+          for (var context in visitor.context) {
+            if (context is Map) {
+              context.forEach((key, value) {
                 if (value is List) {
                   finalResults.addAll(value);
                 } else {
@@ -585,7 +611,8 @@ List? _$visitFunction(
               return result != null &&
                   result.isNotEmpty &&
                   result.length == 1 &&
-                  (ctx.getChild(2)!.text == r'$this' || result.first);
+                  (ctx.getChild(2)!.text == r'$this' ||
+                      (result.first is bool && result.first as bool));
             });
           }
           visitor.context = [visitor.context.isNotEmpty];
@@ -601,7 +628,8 @@ List? _$visitFunction(
               return result != null &&
                   result.isNotEmpty &&
                   result.length == 1 &&
-                  (ctx.getChild(2)!.text == r'$this' || result.first);
+                  (ctx.getChild(2)!.text == r'$this' ||
+                      (result.first is bool && result.first as bool));
             });
             visitor.context = <dynamic>[oldCount == visitor.context.length];
           } else {
@@ -652,10 +680,15 @@ List? _$visitFunction(
             throw _wrongTypes('log()', visitor.context, args);
           } else {
             final num input = visitor.context.first is num
-                ? visitor.context.first
-                : num.parse(visitor.context.first);
-            final num value =
-                args.first is num ? args.first : num.parse(args.first);
+                ? visitor.context.first as num
+                : visitor.context.first is String
+                    ? num.parse(visitor.context.first as String)
+                    : throw _wrongTypes('log()', visitor.context, args);
+            final num value = args.first is num
+                ? args.first as num
+                : args.first is String
+                    ? num.parse(args.first as String)
+                    : throw _wrongTypes('log()', visitor.context, args);
             visitor.context = <dynamic>[log(input) / log(value)];
           }
         }
@@ -676,10 +709,13 @@ List? _$visitFunction(
                       ? throw _requiresList('round()', args ?? [])
                       : visitor.context.first is! num
                           ? throw _wrongTypes('.round()', visitor.context, args)
-                          : <dynamic>[
-                              double.parse(visitor.context.first
-                                  .toStringAsFixed(args.first))
-                            ];
+                          : args.first is! int
+                              ? throw _wrongTypes(
+                                  '.round()', visitor.context, args)
+                              : <dynamic>[
+                                  double.parse((visitor.context.first as num)
+                                      .toStringAsFixed(args.first as int))
+                                ];
         }
         break;
       case 'where':
@@ -690,7 +726,8 @@ List? _$visitFunction(
             return result != null &&
                 result.isNotEmpty &&
                 result.length == 1 &&
-                (ctx.getChild(2)!.text == r'$this' || result.first);
+                (ctx.getChild(2)!.text == r'$this' ||
+                    (result.first is bool && result.first as bool));
           });
         }
         break;
@@ -787,12 +824,12 @@ List? _$visitFunction(
             }
           }
 
-          var _type = ctx.getChild(2)?.text;
+          final _type = ctx.getChild(2)?.text;
           final success = checkOfType(_type);
           if (!success) {
             final result = visitor.copyWith().visit(ctx.getChild(2)!);
             if (result != null && result.isNotEmpty && result.first is String) {
-              checkOfType(result.first);
+              checkOfType(result.first as String);
             }
           }
         }
@@ -803,13 +840,14 @@ List? _$visitFunction(
           if (args == null ||
               args.isEmpty ||
               args.length != 1 ||
-              args.first is! num) {
+              args.first is! num ||
+              args.first is! int) {
             throw _wrongTypes('skip', visitor.context, args);
-          } else if (args.first > 0 && visitor.context.isNotEmpty) {
-            if (visitor.context.length <= args.first) {
+          } else if ((args.first as num) > 0 && visitor.context.isNotEmpty) {
+            if (visitor.context.length <= (args.first as num)) {
               visitor.context = <dynamic>[];
             } else {
-              visitor.context = visitor.context.sublist(args.first);
+              visitor.context = visitor.context.sublist(args.first as int);
             }
           }
         }
@@ -820,11 +858,11 @@ List? _$visitFunction(
           if (args == null ||
               args.isEmpty ||
               args.length != 1 ||
-              args.first is! num) {
+              args.first is! num && args.first is! int) {
             throw _wrongTypes('take', visitor.context, args);
-          } else if (args.first > 0 && visitor.context.isNotEmpty) {
-            if (visitor.context.length >= args.first) {
-              visitor.context = visitor.context.sublist(0, args.first);
+          } else if (args.first as num > 0 && visitor.context.isNotEmpty) {
+            if (visitor.context.length >= (args.first as num)) {
+              visitor.context = visitor.context.sublist(0, args.first as int);
             }
           } else {
             visitor.context = [];
@@ -855,7 +893,7 @@ List? _$visitFunction(
         {
           final args = [
             ...visitor.context,
-            ...(visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? [])
+            ...visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? []
           ];
           visitor.context = <dynamic>[];
           for (var value in args) {
@@ -888,7 +926,7 @@ List? _$visitFunction(
                           : [
                               visitor.context.first
                                   .toString()
-                                  .indexOf(args.first)
+                                  .indexOf(args.first as String)
                             ];
         }
         break;
@@ -904,14 +942,16 @@ List? _$visitFunction(
                   : visitor.context.first is! String
                       ? throw _requiresString('.substring()', visitor.context)
                       : args.first is int &&
-                              (args.first >= visitor.context.first.length ||
-                                  args.first < 0)
+                              (args.first as int >=
+                                      (visitor.context.first as String)
+                                          .length ||
+                                  (args.first as int) < 0)
                           ? []
                           : args.length == 1 && args.first is int
                               ? [
                                   visitor.context.first
                                       .toString()
-                                      .substring(args.first)
+                                      .substring(args.first as int)
                                 ]
                               : args.length == 2 &&
                                       args.first is int &&
@@ -920,13 +960,15 @@ List? _$visitFunction(
                                       visitor.context.first
                                           .toString()
                                           .substring(
-                                            args.first,
-                                            (args.first + args.last) >
+                                            args.first as int,
+                                            ((args.first as int) +
+                                                        (args.last as int)) >
                                                     visitor.context.first
                                                         .toString()
                                                         .length
                                                 ? null
-                                                : args.first + args.last,
+                                                : (args.first as int) +
+                                                    (args.last as int),
                                           )
                                     ]
                                   : throw FhirPathEvaluationException(
@@ -954,7 +996,7 @@ List? _$visitFunction(
                               : [
                                   visitor.context.first
                                       .toString()
-                                      .startsWith(args.first)
+                                      .startsWith(args.first as String)
                                 ];
         }
         break;
@@ -975,7 +1017,7 @@ List? _$visitFunction(
                               : [
                                   visitor.context.first
                                       .toString()
-                                      .endsWith(args.first)
+                                      .endsWith(args.first as String)
                                 ];
         }
         break;
@@ -991,7 +1033,9 @@ List? _$visitFunction(
                       : args.first == ''
                           ? [true]
                           : visitor.context
-                              .map((e) => e is String && e.contains(args.first))
+                              .map((e) =>
+                                  e is String &&
+                                  e.contains(args.first as String))
                               .toList();
         }
         break;
@@ -1007,9 +1051,8 @@ List? _$visitFunction(
                           args.last is! String
                       ? throw _requiresString('.replace()', visitor.context)
                       : [
-                          visitor.context.first
-                              .toString()
-                              .replaceAll(args.first, args.last)
+                          visitor.context.first.toString().replaceAll(
+                              args.first as String, args.last as String)
                         ];
         }
         break;
@@ -1023,7 +1066,7 @@ List? _$visitFunction(
                   : args.first is! String
                       ? throw _requiresString('.matches()', visitor.context)
                       : [
-                          RegExp(args.first)
+                          RegExp(args.first as String)
                               .hasMatch(visitor.context.first.toString())
                         ];
         }
@@ -1045,9 +1088,8 @@ List? _$visitFunction(
                           collection: visitor.context,
                           arguments: args)
                       : [
-                          visitor.context.first
-                              .toString()
-                              .replaceAll(RegExp('${args.first}'), args.last)
+                          visitor.context.first.toString().replaceAll(
+                              RegExp('${args.first}'), args.last as String)
                         ];
         }
         break;
@@ -1100,9 +1142,10 @@ List? _$visitFunction(
               /// TODO: for now we're assuming that non-empty, non-bool is true
               /// I'm not sure if this is a correct assumption or not
               final bool conditionBool = condition.first is bool
-                  ? condition.first
+                  ? condition.first as bool
                   : condition.first is Boolean
-                      ? condition.first.value
+                      ? (condition.first as Boolean).isValid &&
+                          (condition.first as Boolean).value!
                       : true;
 
               /// If criterion is true, the function returns the value of the
@@ -1243,26 +1286,9 @@ List? _$visitFunction(
               );
             }
             if (visitor.context.isNotEmpty) {
-              visitor.context = [!visitor.context.first];
+              visitor.context = [!(visitor.context.first as bool)];
             }
           }
-        }
-        break;
-      case 'children':
-        {
-          final results = [];
-          for (var context in visitor.context) {
-            if (context is Map) {
-              context.forEach((key, value) {
-                if (value is List) {
-                  results.addAll(value);
-                } else {
-                  results.add(value);
-                }
-              });
-            }
-          }
-          visitor.context = results;
         }
         break;
       case 'descendants':

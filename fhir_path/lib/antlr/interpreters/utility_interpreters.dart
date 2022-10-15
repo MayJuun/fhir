@@ -25,8 +25,8 @@ List? _$visitTotalInvocation(
   TotalInvocationContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  visitor.context = visitor.environment[r'%$total'];
-  return visitor.environment[r'%$total'];
+  visitor.context = visitor.environment[r'%$total'] as List;
+  return visitor.environment[r'%$total'] as List;
 }
 
 List? _$visitParamList(
@@ -53,7 +53,7 @@ List? _$visitIndexerExpression(
   IndexerExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  if (ctx.expressions().length != 2 && ctx.children != 4) {
+  if (ctx.expressions().length != 2 && ctx.children?.length != 4) {
     throw FhirPathException('IndexerExpression passed incorrect context');
   }
   final List? results = visitor.copyWith().visit(ctx.getChild(0)!);
@@ -64,10 +64,11 @@ List? _$visitIndexerExpression(
           value == null ||
           value.isEmpty ||
           value.length != 1 ||
-          value.first < 0 ||
-          value.first > results.length - 1
+          (value.first is int &&
+              ((value.first < 0 as bool) ||
+                  ((value.first > results.length - 1) as bool)))
       ? []
-      : [results[value.first]];
+      : [results[value.first as int]];
   return visitor.context;
 }
 

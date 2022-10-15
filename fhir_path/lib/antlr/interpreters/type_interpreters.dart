@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls
+
 part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitTypeExpression(
@@ -65,7 +67,7 @@ List? _$visitTypeExpression(
                         : stu3.ResourceUtils.resourceTypeFromStringMap.keys
                             .contains(rhs.first)) &&
             lhs.first is Map &&
-            lhs.first['resourceType'] == rhs.first
+            (lhs.first as Map)['resourceType'] == rhs.first
         ? [true]
         : rhs.first == 'String'
             ? [lhs.first is String]
@@ -109,7 +111,7 @@ List? _$visitTypeExpression(
                       : stu3.ResourceUtils.resourceTypeFromStringMap.keys
                           .contains(rhs.first)) &&
           lhs.first is Map &&
-          lhs.first['resourceType'] == rhs.first) ||
+          (lhs.first as Map)['resourceType'] == rhs.first) ||
       (rhs.first.toLowerCase() == 'string' && (lhs.first is String)) ||
       (rhs.first.toLowerCase() == 'boolean' &&
           (lhs.first is bool || lhs.first is Boolean)) ||
@@ -124,8 +126,8 @@ List? _$visitTypeExpression(
       (rhs.first == 'quantity' && lhs.first is FhirPathQuantity)) {
     visitor.context = lhs;
   } else if (FhirDatatypes.contains(rhs.first)) {
-    /// TODO: this seems cumbersome
-    final polymorphicString = 'value' + rhs.first;
+    // TODO(Dokotela): this seems cumbersome
+    final polymorphicString = 'value${rhs.first}';
     final newContext = visitor.newContext(polymorphicString);
     visitor.context = visitor.copyWith().visit(newContext) ?? [];
   } else {
@@ -139,7 +141,7 @@ List? _$visitInvocationExpression(
   InvocationExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  /// TODO: this seems rough
+  // TODO(Dokotela): this seems rough
   if (ctx.childCount == 3 &&
       ctx.getChild(2) is FunctionInvocationContext &&
       (ctx.getChild(2)!.text?.startsWith('extension') ?? false)) {
@@ -148,7 +150,7 @@ List? _$visitInvocationExpression(
     visitor.identifierOnly = false;
     final identifierExtension = '_${identifier?.first}';
     final newString =
-        '${ctx.getChild(0)!.text!.replaceAll(identifier!.first, identifierExtension)}'
+        '${ctx.getChild(0)!.text!.replaceAll('${identifier!.first}', identifierExtension)}'
         '${ctx.getChild(1)!.text}${ctx.getChild(2)!.text}';
     return visitor.visitChildren(visitor.newContext(newString));
   } else {

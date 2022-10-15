@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 // Package imports:
 import 'package:collection/collection.dart';
 
@@ -144,11 +146,12 @@ class SkipParser extends FunctionParser {
                 'The value for .skip() was not a number: ${executedValue.first}',
                 operation: '.skip()',
                 arguments: executedValue.first)
-            : executedValue.first <= 0
+            : (executedValue.first as int) <= 0
                 ? results
-                : results.isEmpty || executedValue.first >= results.length
+                : results.isEmpty ||
+                        (executedValue.first as int) >= results.length
                     ? []
-                    : results.sublist(executedValue.first);
+                    : results.sublist(executedValue.first as int);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -191,11 +194,11 @@ class TakeParser extends FunctionParser {
                 'The value for .take() was not a number: $value',
                 operation: '.take()',
                 arguments: value)
-            : executedValue.first <= 0 || results.isEmpty
+            : (executedValue.first as int) <= 0 || results.isEmpty
                 ? []
-                : executedValue.first >= results.length
+                : (executedValue.first as int) >= results.length
                     ? results
-                    : results.sublist(0, executedValue.first);
+                    : results.sublist(0, executedValue.first as int);
     return newResults;
   }
 
@@ -235,7 +238,7 @@ class IntersectParser extends ValueParser<ParserList> {
     final outBag = [];
     for (final item in inBag) {
       if (outBag.indexWhere((otherItem) =>
-              DeepCollectionEquality().equals(item, otherItem)) ==
+              const DeepCollectionEquality().equals(item, otherItem)) ==
           -1) {
         outBag.add(item);
       }
@@ -244,7 +247,7 @@ class IntersectParser extends ValueParser<ParserList> {
     // Intersect
     outBag.removeWhere((e) =>
         other.indexWhere(
-            (element) => DeepCollectionEquality().equals(e, element)) ==
+            (element) => const DeepCollectionEquality().equals(e, element)) ==
         -1);
 
     return outBag;
@@ -282,7 +285,7 @@ class ExcludeParser extends ValueParser<ParserList> {
     final executedValue = value.execute(results.toList(), passed);
     results.removeWhere((e) =>
         executedValue.indexWhere(
-            (element) => DeepCollectionEquality().equals(e, element)) !=
+            (element) => const DeepCollectionEquality().equals(e, element)) !=
         -1);
     return results;
   }

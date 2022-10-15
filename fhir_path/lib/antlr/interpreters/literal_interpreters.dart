@@ -36,7 +36,7 @@ List? _$visitStringLiteral(
   StringLiteralContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  var newString = ctx.text.substring(1, ctx.text.length - 1);
+  final newString = ctx.text.substring(1, ctx.text.length - 1);
   if (newString != '' &&
       newString[0] == r'\' &&
       !escapeSequences.contains(newString)) {
@@ -44,7 +44,7 @@ List? _$visitStringLiteral(
   } else {
     visitor.context = <dynamic>[newString];
   }
-  final Pattern unicodePattern = new RegExp(r'\\u([0-9A-Fa-f]{4})');
+  final Pattern unicodePattern = RegExp(r'\\u([0-9A-Fa-f]{4})');
   final String newStr = visitor.context.first.replaceAllMapped(unicodePattern,
       (Match unicodeMatch) {
     if (unicodeMatch.group(1) == null) {
@@ -54,7 +54,7 @@ List? _$visitStringLiteral(
       final unicode = String.fromCharCode(hexCode);
       return unicode;
     }
-  });
+  }) as String;
   visitor.context = [newStr];
   return visitor.context;
 }

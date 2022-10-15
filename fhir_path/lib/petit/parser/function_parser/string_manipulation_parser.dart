@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 // Project imports:
 import '../../petit_fhir_path.dart';
 
@@ -19,7 +21,11 @@ class IndexOfParser extends ValueParser<ParserList> {
                 ? throw _requiresString('.indexOf()', results)
                 : results.first.toString() == ''
                     ? []
-                    : [results.first.toString().indexOf(executedValue.first)];
+                    : [
+                        results.first
+                            .toString()
+                            .indexOf(executedValue.first as String)
+                      ];
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -60,27 +66,28 @@ class SubstringParser extends ValueParser<ParserList> {
                 ? throw _requiresString('.substring()', results)
                 : executedValue.isNotEmpty &&
                         executedValue.first is int &&
-                        (executedValue.first >= results.first.length ||
-                            executedValue.first < 0)
+                        (((executedValue.first as int) >=
+                                (results.first as String).length) ||
+                            (executedValue.first as int) < 0)
                     ? []
                     : executedValue.length == 1 && executedValue.first is int
                         ? [
                             results.first
                                 .toString()
-                                .substring(executedValue.first)
+                                .substring(executedValue.first as int)
                           ]
                         : executedValue.length == 2 &&
                                 executedValue.first is int &&
                                 executedValue.last is int
                             ? [
                                 results.first.toString().substring(
-                                      executedValue.first,
-                                      (executedValue.first +
-                                                  executedValue.last) >
+                                      executedValue.first as int,
+                                      ((executedValue.first as int) +
+                                                  (executedValue.last as int)) >
                                               results.first.toString().length
                                           ? results.first.toString().length
-                                          : (executedValue.first +
-                                              executedValue.last),
+                                          : ((executedValue.first as int) +
+                                              (executedValue.last as int)),
                                     )
                               ]
                             : throw FhirPathEvaluationException(
@@ -130,7 +137,9 @@ class StartsWithParser extends ValueParser<ParserList> {
                 : results.first.toString() == ''
                     ? [true]
                     : [
-                        results.first.toString().startsWith(executedValue.first)
+                        results.first
+                            .toString()
+                            .startsWith(executedValue.first as String)
                       ];
   }
 
@@ -172,7 +181,11 @@ class EndsWithParser extends ValueParser<ParserList> {
                 ? throw _requiresString('.endsWith()', results)
                 : results.first.toString() == ''
                     ? [true]
-                    : [results.first.toString().endsWith(executedValue.first)];
+                    : [
+                        results.first
+                            .toString()
+                            .endsWith(executedValue.first as String)
+                      ];
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -209,7 +222,8 @@ class ContainsFunctionParser extends ValueParser<ParserList> {
     return results.isEmpty
         ? []
         : results
-            .map((e) => e is String && e.contains(executedValue.first))
+            .map((e) =>
+                e is String && e.contains(executedValue.first.toString()))
             .toList();
   }
 
@@ -310,9 +324,9 @@ class ReplaceParser extends ValueParser<ParserList> {
             : executedValue.first is! String || executedValue.last is! String
                 ? throw _requiresString('.replace()', results)
                 : [
-                    results.first
-                        .toString()
-                        .replaceAll(executedValue.first, executedValue.last)
+                    results.first.toString().replaceAll(
+                        executedValue.first as String,
+                        executedValue.last as String)
                   ];
   }
 
@@ -353,7 +367,7 @@ class FpMatchesParser extends ValueParser<ParserList> {
             : executedValue.first is! String
                 ? throw _requiresString('.matches()', results)
                 : [
-                    RegExp(executedValue.first)
+                    RegExp(executedValue.first as String)
                         .hasMatch(results.first.toString())
                   ];
   }
@@ -397,7 +411,8 @@ class ReplaceMatchesParser extends ValueParser<ParserList> {
                     value.last is StringParser
                 ? [
                     results.first.toString().replaceAll(
-                        RegExp('${executedValue.first}'), executedValue.last)
+                        RegExp('${executedValue.first}'),
+                        '${executedValue.last}')
                   ]
                 : throw FhirPathEvaluationException(
                     'The function .replace() was not provided the '
@@ -439,10 +454,8 @@ class LengthParser extends FhirPathParser {
       : results.length > 1
           ? throw _requiresList('.length()', results)
           : results.first is String
-              ? [results.first.length]
-              : results.first is String
-                  ? [results.first.value.length]
-                  : throw _requiresString('.length()', results);
+              ? [(results.first as String).length]
+              : throw _requiresString('.length()', results);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -473,10 +486,8 @@ class ToCharsParser extends FhirPathParser {
       : results.length > 1
           ? throw _requiresList('.toChars()', results)
           : results.first is String
-              ? results.first.split('')
-              : results.first is String
-                  ? results.first.value.split('')
-                  : throw _requiresString('.toChar()', results);
+              ? (results.first as String).split('')
+              : throw _requiresString('.toChar()', results);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in

@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls, avoid_bool_literals_in_conditional_expressions
+
 // Package imports:
 import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
@@ -142,7 +144,7 @@ class EnvVariableParser extends ValueParser<String> {
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
   @override
-  String prettyPrint([int indent = 2]) => '$value';
+  String prettyPrint([int indent = 2]) => value;
 }
 
 /// The Quantity type represents quantities with a specified unit, where
@@ -312,7 +314,7 @@ class IdentifierParser extends ValueParser<String> {
                   polymorphicPrefixes.contains(identifierName) &&
                   startsWithAPolymorphicPrefix(k.toString())) {
                 rValue = v;
-                jsonIdentifierName = k;
+                jsonIdentifierName = k.toString();
               }
             });
           }
@@ -324,19 +326,19 @@ class IdentifierParser extends ValueParser<String> {
           }
 
           if (rValue is List) {
-            finalResults.addAll(rValue);
+            finalResults.addAll(rValue as Iterable);
           } else if (rValue != null) {
             finalResults.add(rValue);
           } else if (r['resourceType'] == identifierName) {
             finalResults.add(r);
           }
         } else {
-          if (identifierName == "extension") {
+          if (identifierName == 'extension') {
             // Special processing for extensions on primitives
             if (passedExtensions != null) {
               final extensionOnPrimitive = passedExtensions[i];
               if (extensionOnPrimitive != null) {
-                finalResults.addAll(extensionOnPrimitive);
+                finalResults.addAll(extensionOnPrimitive as Iterable);
               }
             } else {
               // This primitive does not have an extension
@@ -368,7 +370,7 @@ class IdentifierParser extends ValueParser<String> {
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
   @override
-  String prettyPrint([int indent = 2]) => '$value';
+  String prettyPrint([int indent = 2]) => value;
 }
 
 /// Identifiers are used as labels to allow expressions to reference elements
@@ -429,7 +431,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
                   polymorphicPrefixes.contains(identifierName) &&
                   startsWithAPolymorphicPrefix(k.toString())) {
                 rValue = v;
-                jsonIdentifierName = k;
+                jsonIdentifierName = k.toString();
               }
             });
           }
@@ -441,19 +443,19 @@ class DelimitedIdentifierParser extends ValueParser<String> {
           }
 
           if (rValue is List) {
-            finalResults.addAll(rValue);
+            finalResults.addAll(rValue as Iterable);
           } else if (rValue != null) {
             finalResults.add(rValue);
           } else if (r['resourceType'] == identifierName) {
             finalResults.add(r);
           }
         } else {
-          if (identifierName == "extension") {
+          if (identifierName == 'extension') {
             // Special processing for extensions on primitives
             if (passedExtensions != null) {
               final extensionOnPrimitive = passedExtensions[i];
               if (extensionOnPrimitive != null) {
-                finalResults.addAll(extensionOnPrimitive);
+                finalResults.addAll(extensionOnPrimitive as Iterable);
               }
             } else {
               // This primitive does not have an extension
@@ -574,11 +576,12 @@ class DateTimeParser extends BaseDateTimeParser<List> {
       return [FhirDateTime(value.first.toString())];
     } else {
       return [
-        FhirDateTime(value.first.toString() + 'T' + value.last.toString())
+        FhirDateTime('${value.first.toString()}T${value.last.toString()}')
       ];
     }
   }
 
+  @override
   String toString() {
     if (value.length == 1) {
       return value.first.toString();
@@ -618,6 +621,7 @@ class DateParser extends BaseDateTimeParser<Date> {
   @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
+  @override
   String toString() => value.toString();
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -657,6 +661,7 @@ class TimeParser extends BaseDateTimeParser<Time> {
   @override
   List execute(List results, Map<String, dynamic> passed) => [value];
 
+  @override
   String toString() => value.toString();
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

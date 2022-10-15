@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, noop_primitive_operations, unnecessary_this
+
 // Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
@@ -75,7 +77,7 @@ class EqualsParser extends OperatorParser {
               return <dynamic>[rhs[i] == lhs[i]];
             }
           }
-          if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
+          if (lhs[i] != rhs[i] || rhs[i] != lhs[i]) {
             return <dynamic>[false];
           }
         }
@@ -152,9 +154,10 @@ class EquivalentParser extends OperatorParser {
             } else if (lhsElement is FhirPathQuantity ||
                 rhsElement is FhirPathQuantity) {
               if (lhsElement is FhirPathQuantity) {
-                return lhsElement.equivalent(rhsElement);
+                return lhsElement.equivalent(rhsElement as Object);
               } else {
-                return (rhsElement as FhirPathQuantity).equivalent(lhsElement);
+                return (rhsElement as FhirPathQuantity)
+                    .equivalent(lhsElement as Object);
               }
             } else if (lhsElement is num || rhsElement is num) {
               final sigDigsLhs = num.tryParse(lhsElement.toString())

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls, prefer_if_elements_to_conditional_expressions
+
 part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitPolarityExpression(
@@ -39,7 +41,7 @@ List? _$visitPolarityExpression(
           (amount.first as FhirNumber).isValid) {
         visitor.context = [
           negative
-              ? -((amount.first as FhirNumber).valueNumber!)
+              ? -(amount.first as FhirNumber).valueNumber!
               : (amount.first as FhirNumber).valueNumber!
         ];
       } else if (amount.first is FhirPathQuantity) {
@@ -52,12 +54,13 @@ List? _$visitPolarityExpression(
           )
         ];
       } else if (amount.first is String) {
-        final number = num.tryParse(amount.first);
+        final number = num.tryParse(amount.first as String);
         if (number != null) {
           visitor.context = [negative ? -number : number];
         } else {
           try {
-            final quantity = FhirPathQuantity.fromString(amount.first);
+            final quantity =
+                FhirPathQuantity.fromString(amount.first as String);
             visitor.context = [
               FhirPathQuantity(
                 negative ? -quantity.amount : quantity.amount,
@@ -136,14 +139,18 @@ List? _$visitAdditiveExpression(
       switch (lhs.first.runtimeType) {
         case int:
           if (rhs.first is num) {
-            visitor.context = <dynamic>[lhs.first + rhs.first];
+            visitor.context = <dynamic>[
+              (lhs.first as int) + (rhs.first as num)
+            ];
           } else {
             throw _wrongTypes('+', [lhs, rhs], visitor.context);
           }
           break;
         case double:
           if (rhs.first is num) {
-            visitor.context = <dynamic>[lhs.first + rhs.first];
+            visitor.context = <dynamic>[
+              (lhs.first as double) + (rhs.first as num)
+            ];
           } else {
             throw _wrongTypes('+', [lhs, rhs], visitor.context);
           }
@@ -186,7 +193,9 @@ List? _$visitAdditiveExpression(
           break;
         case String:
           if (rhs.first is String) {
-            visitor.context = <dynamic>[lhs.first + rhs.first];
+            visitor.context = <dynamic>[
+              (lhs.first as String) + (rhs.first as String)
+            ];
           } else if (rhs.first is FhirPathQuantity) {
             if (FhirDateTime(lhs.first).isValid) {
               visitor.context = <dynamic>[
@@ -210,14 +219,18 @@ List? _$visitAdditiveExpression(
       switch (lhs.first.runtimeType) {
         case int:
           if (rhs.first is num) {
-            visitor.context = <dynamic>[lhs.first - rhs.first];
+            visitor.context = <dynamic>[
+              (lhs.first as int) - (rhs.first as num)
+            ];
           } else {
             throw _wrongTypes('-', [lhs, rhs], visitor.context);
           }
           break;
         case double:
           if (rhs.first is num) {
-            visitor.context = <dynamic>[lhs.first - rhs.first];
+            visitor.context = <dynamic>[
+              (lhs.first as double) - (rhs.first as num)
+            ];
           } else {
             throw _wrongTypes('-', [lhs, rhs], visitor.context);
           }
@@ -260,7 +273,7 @@ List? _$visitAdditiveExpression(
           break;
         case String:
           if (rhs.first is String) {
-            visitor.context = <dynamic>[lhs.first - rhs.first];
+            throw _wrongTypes('-', [lhs, rhs], visitor.context);
           } else if (rhs.first is FhirPathQuantity) {
             if (FhirDateTime(lhs.first).isValid) {
               visitor.context = <dynamic>[
@@ -327,8 +340,9 @@ List? _$visitMultiplicativeExpression(
       }
     } else if (operator == '/') {
       if (lhs.first is num && rhs.first is num) {
-        visitor.context =
-            (rhs.first != 0) ? <dynamic>[lhs.first / rhs.first] : <dynamic>[];
+        visitor.context = (rhs.first != 0)
+            ? <dynamic>[(lhs.first as num) / (rhs.first as num)]
+            : <dynamic>[];
       } else if (lhs.first is FhirPathQuantity &&
           rhs.first is FhirPathQuantity) {
         visitor.context = ((rhs.first as FhirPathQuantity).amount != 0)
@@ -349,7 +363,7 @@ List? _$visitMultiplicativeExpression(
     } else if (operator == 'div') {
       if (lhs.first is num && rhs.first is num) {
         visitor.context = (rhs.first != 0)
-            ? <dynamic>[((lhs.first / rhs.first) as num).truncate()]
+            ? <dynamic>[((lhs.first as num) / (rhs.first as num)).truncate()]
             : <dynamic>[];
       } else {
         throw FhirPathEvaluationException(
@@ -363,7 +377,7 @@ List? _$visitMultiplicativeExpression(
     } else if (operator == 'mod') {
       if (lhs.first is num && rhs.first is num) {
         visitor.context = (rhs.first != 0)
-            ? <dynamic>[((lhs.first % rhs.first) as num)]
+            ? <dynamic>[((lhs.first as num) % (rhs.first as num))]
             : <dynamic>[];
       } else {
         throw FhirPathEvaluationException(
