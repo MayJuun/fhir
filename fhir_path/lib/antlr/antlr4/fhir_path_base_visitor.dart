@@ -5,8 +5,8 @@
 import 'package:antlr4/antlr4.dart';
 
 // Project imports:
-import 'fhirPathParser.dart';
-import 'fhirPathVisitor.dart';
+import 'fhir_path_parser.dart';
+import 'fhir_path_visitor.dart';
 
 /// This class provides an empty implementation of [FhirPathVisitor],
 /// which can be extended to create a visitor which only needs to handle

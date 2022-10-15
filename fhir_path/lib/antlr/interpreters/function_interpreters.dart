@@ -1,4 +1,4 @@
-part of '../fhirPathDartVisitor.dart';
+part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitFunction(
   FunctionContext ctx,

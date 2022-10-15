@@ -5,7 +5,7 @@
 import 'package:antlr4/antlr4.dart';
 
 // Project imports:
-import 'fhirPathParser.dart';
+import 'fhir_path_parser.dart';
 
 /// This abstract class defines a complete generic visitor for a parse tree
 /// produced by [FhirPathParser].

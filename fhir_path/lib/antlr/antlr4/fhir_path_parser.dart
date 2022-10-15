@@ -1,12 +1,13 @@
+// ignore_for_file: argument_type_not_assignable, invalid_assignment, return_of_invalid_type, unused_import, unused_local_variable, prefer_single_quotes, prefer_function_declarations_over_variables, use_raw_strings, prefer_final_locals, always_put_control_body_on_new_line, unnecessary_new, unnecessary_parenthesis, avoid_dynamic_calls, avoid_renaming_method_parameters, unnecessary_overrides
+
 // Generated from FhirPath.g4 by ANTLR 4.11.1
-// ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes
 
 // Package imports:
 import 'package:antlr4/antlr4.dart';
 
 // Project imports:
-import 'fhirPathBaseVisitor.dart';
-import 'fhirPathVisitor.dart';
+import 'fhir_path_base_visitor.dart';
+import 'fhir_path_visitor.dart';
 
 const int RULE_expression = 0,
     RULE_term = 1,

@@ -1,11 +1,11 @@
-part of '../fhirPathDartVisitor.dart';
+part of '../fhir_path_dart_visitor.dart';
 
-_$visitTypeExpression(
+List? _$visitTypeExpression(
   TypeExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
   if (ctx.childCount != 3) {
-    throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhsText = ctx.getChild(2)!.text;
