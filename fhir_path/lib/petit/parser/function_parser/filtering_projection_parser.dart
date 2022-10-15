@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_function_literals_in_foreach_calls
+
 // Package imports:
 import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
@@ -15,6 +17,7 @@ class FpWhereParser extends FunctionParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final returnList =
         IterationContext.withIterationContext((iterationContext) {
@@ -43,6 +46,7 @@ class FpWhereParser extends FunctionParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}FpWhereParser\n${value.verbosePrint(indent + 1)}';
 
@@ -50,6 +54,7 @@ class FpWhereParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.where(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -61,6 +66,7 @@ class SelectParser extends ValueParser<ParserList> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     return IterationContext.withIterationContext((iterationContext) {
       final outputCollection = [];
@@ -80,6 +86,7 @@ class SelectParser extends ValueParser<ParserList> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}SelectParser\n${value.verbosePrint(indent + 1)}';
 
@@ -87,6 +94,7 @@ class SelectParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.select(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n)';
 }
@@ -97,8 +105,9 @@ class RepeatParser extends ValueParser<ParserList> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
-    var finalResults = [];
+    final finalResults = [];
     results.forEach((r) {
       value.execute([r], passed).forEach((e) {
         if (notFoundInList(finalResults, e)) {
@@ -128,6 +137,7 @@ class RepeatParser extends ValueParser<ParserList> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}RepeatParser\n${value.verbosePrint(indent + 1)}';
 
@@ -135,6 +145,7 @@ class RepeatParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.repeat(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -146,6 +157,7 @@ class OfTypeParser extends ValueParser<ParserList> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.length == 1 && value.first is IdentifierParser
         ? [value.first]
@@ -211,6 +223,7 @@ class OfTypeParser extends ValueParser<ParserList> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}OfTypeParser\n${value.verbosePrint(indent + 1)}';
 
@@ -218,6 +231,7 @@ class OfTypeParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.ofType(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -232,6 +246,7 @@ class ExtensionParser extends ValueParser<ParserList> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [];
@@ -264,6 +279,7 @@ class ExtensionParser extends ValueParser<ParserList> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}ExtensionParser\n${value.verbosePrint(indent + 1)}';
 
@@ -271,6 +287,7 @@ class ExtensionParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.extension(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';

@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields, annotate_overrides
+
 // Project imports:
 import '../../petit_fhir_path.dart';
 
@@ -8,6 +10,7 @@ class AndStringParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
@@ -35,6 +38,7 @@ class AndStringParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}AndStringParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -43,6 +47,7 @@ class AndStringParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => 'and'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -55,6 +60,7 @@ class XorParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
@@ -86,6 +92,7 @@ class XorParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}XorParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -94,6 +101,7 @@ class XorParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => 'xor'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -106,6 +114,7 @@ class OrStringParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
@@ -133,6 +142,7 @@ class OrStringParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}OrStringParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -141,6 +151,7 @@ class OrStringParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => 'or'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -153,6 +164,7 @@ class ImpliesParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
@@ -188,6 +200,7 @@ class ImpliesParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}ImpliesParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -196,6 +209,7 @@ class ImpliesParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => 'implies('
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}\n'

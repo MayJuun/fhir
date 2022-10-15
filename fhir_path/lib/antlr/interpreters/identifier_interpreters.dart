@@ -1,11 +1,13 @@
-part of '../fhirPathDartVisitor.dart';
+// ignore_for_file: avoid_dynamic_calls
+
+part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitIdentifier(
   IdentifierContext ctx,
   FhirPathDartVisitor visitor,
 ) {
   String identifierName;
-  if (ctx.text.startsWith("`") && ctx.text.endsWith("`")) {
+  if (ctx.text.startsWith('`') && ctx.text.endsWith('`')) {
     identifierName = ctx.text.substring(1, ctx.text.length - 1);
   } else {
     identifierName = ctx.text;
@@ -57,7 +59,7 @@ List? _$visitIdentifier(
                   polymorphicPrefixes.contains(identifierName) &&
                   startsWithAPolymorphicPrefix(k.toString())) {
                 rValue = v;
-                jsonIdentifierName = k;
+                jsonIdentifierName = k as String;
               }
             });
           }
@@ -69,19 +71,19 @@ List? _$visitIdentifier(
           }
 
           if (rValue is List) {
-            finalResults.addAll(rValue);
+            finalResults.addAll(rValue as List);
           } else if (rValue != null) {
             finalResults.add(rValue);
           } else if (r['resourceType'] == identifierName) {
             finalResults.add(r);
           }
         } else {
-          if (identifierName == "extension") {
+          if (identifierName == 'extension') {
             // Special processing for extensions on primitives
             if (passedExtensions != null) {
               final extensionOnPrimitive = passedExtensions[i];
               if (extensionOnPrimitive != null) {
-                finalResults.addAll(extensionOnPrimitive);
+                finalResults.addAll(extensionOnPrimitive as Iterable);
               }
             } else {
               // This primitive does not have an extension

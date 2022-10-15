@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_this, avoid_dynamic_calls
+
 /// Something went wrong while parsing or executing a FHIRPath expression.
 class FhirPathException implements Exception {
   /// A human-readable message

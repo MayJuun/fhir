@@ -1,5 +1,5 @@
 bool startsWithAPolymorphicPrefix(String value) {
-  for (var prefix in polymorphicPrefixes) {
+  for (final prefix in polymorphicPrefixes) {
     if (value.startsWith(prefix)) {
       return true;
     }

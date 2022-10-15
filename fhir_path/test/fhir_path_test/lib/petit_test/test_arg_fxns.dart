@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_const_constructors, prefer_single_quotes, unnecessary_string_escapes, leading_newlines_in_multiline_strings
+
 // Dart imports:
 import 'dart:convert';
 
@@ -94,7 +96,7 @@ void testArgFxns() {
               }),
           [true]);
     });
-    test('\$this', () {
+    test(r'$this', () {
       expect(
           walkFhirPath(
               context: resource.toJson(),
@@ -438,8 +440,7 @@ void testArgFxns() {
       expect(
           walkFhirPath(
               context: bundle.toJson(),
-              pathExpression:
-                  walkPath("Bundle.entry.resource.ofType(Patient)")),
+              pathExpression: "Bundle.entry.resource.ofType(Patient)"),
           [
             {"resourceType": "Patient", "id": "1"},
             {"resourceType": "Patient", "id": "3"},
@@ -449,8 +450,7 @@ void testArgFxns() {
       expect(
           walkFhirPath(
               context: bundle.toJson(),
-              pathExpression:
-                  walkPath("Bundle.entry.resource.ofType(Practitioner)")),
+              pathExpression: "Bundle.entry.resource.ofType(Practitioner)"),
           [
             {"resourceType": "Practitioner", "id": "2"},
             {"resourceType": "Practitioner", "id": "4"},
@@ -597,7 +597,7 @@ void testArgFxns() {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("%a.union(%b)"),
+              pathExpression: "%a.union(%b)",
               environment: {
                 '%a': [1, 1, 2, 3],
                 '%b': [2, 3]
@@ -606,7 +606,7 @@ void testArgFxns() {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("%a.union()"),
+              pathExpression: "%a.union()",
               environment: {
                 '%a': [1, 1, 2, 3],
               }),
@@ -617,7 +617,7 @@ void testArgFxns() {
           deepEquals(
               walkFhirPath(
                   context: resource.toJson(),
-                  pathExpression: walkPath("%a.combine(%b)"),
+                  pathExpression: "%a.combine(%b)",
                   environment: {
                     '%a': [1, 1, 2, 3],
                     '%b': [2, 3]
@@ -627,7 +627,7 @@ void testArgFxns() {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("%a.combine()"),
+              pathExpression: "%a.combine()",
               environment: {
                 '%a': [1, 1, 2, 3],
               }),
@@ -637,142 +637,139 @@ void testArgFxns() {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.indexOf('bc') // 1")),
+              pathExpression: "'abcdefg'.indexOf('bc') // 1"),
           [1]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.indexOf('x') // -1")),
+              pathExpression: "'abcdefg'.indexOf('x') // -1"),
           [-1]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.indexOf('abcdefg') // 0")),
+              pathExpression: "'abcdefg'.indexOf('abcdefg') // 0"),
           [0]);
     });
     test('Substring Function', () {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.substring(3) // 'defg'")),
+              pathExpression: "'abcdefg'.substring(3) // 'defg'"),
           ['defg']);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.substring(1, 2) // 'bc'")),
+              pathExpression: "'abcdefg'.substring(1, 2) // 'bc'"),
           ['bc']);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.substring(6, 2) // 'g'")),
+              pathExpression: "'abcdefg'.substring(6, 2) // 'g'"),
           ['g']);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.substring(7, 1) // { }")),
+              pathExpression: "'abcdefg'.substring(7, 1) // { }"),
           []);
     });
     test('startsWith', () {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.startsWith('abc') // true")),
+              pathExpression: "'abcdefg'.startsWith('abc') // true"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.startsWith('xyz') // false")),
+              pathExpression: "'abcdefg'.startsWith('xyz') // false"),
           [false]);
     });
     test('endsWith', () {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.endsWith('efg') // true")),
+              pathExpression: "'abcdefg'.endsWith('efg') // true"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abcdefg'.endsWith('abc') // false")),
+              pathExpression: "'abcdefg'.endsWith('abc') // false"),
           [false]);
     });
     test('contains', () {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abc'.contains('b') // true")),
+              pathExpression: "'abc'.contains('b') // true"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abc'.contains('bc') // true")),
+              pathExpression: "'abc'.contains('bc') // true"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abc'.contains('d') // false")),
+              pathExpression: "'abc'.contains('d') // false"),
           [false]);
     });
     test('replace', () {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression:
-                  walkPath("'abcdefg'.replace('cde', '123') // 'ab123fg'")),
+              pathExpression: "'abcdefg'.replace('cde', '123') // 'ab123fg'"),
           ['ab123fg']);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression:
-                  walkPath("'abcdefg'.replace('cde', '') // 'abfg'")),
+              pathExpression: "'abcdefg'.replace('cde', '') // 'abfg'"),
           ['abfg']);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'abc'.replace('', 'x') // 'xaxbxcx'")),
+              pathExpression: "'abc'.replace('', 'x') // 'xaxbxcx'"),
           ['xaxbxcx']);
     });
     test('matches', () {
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'hello'.matches('hello')")),
+              pathExpression: "'hello'.matches('hello')"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("35.matches('[2-9]|[12]\d|3[0-6]')")),
+              pathExpression: "35.matches('[2-9]|[12]\d|3[0-6]')"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("38.matches('[2-9]|[12]\d|3[0-6]')")),
+              pathExpression: "38.matches('[2-9]|[12]\d|3[0-6]')"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'35'.matches('[2-9]|[12]\d|3[0-6]')")),
+              pathExpression: "'35'.matches('[2-9]|[12]\d|3[0-6]')"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'38'.matches('[2-9]|[12]\d|3[0-6]')")),
+              pathExpression: "'38'.matches('[2-9]|[12]\d|3[0-6]')"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'google'.matches('g(oog)+le')")),
+              pathExpression: "'google'.matches('g(oog)+le')"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression:
-                  walkPath("'googoogoogoogle'.matches('g(oog)+le')")),
+              pathExpression: "'googoogoogoogle'.matches('g(oog)+le')"),
           [true]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("'goooooogle'.matches('g(oog)+le')")),
+              pathExpression: "'goooooogle'.matches('g(oog)+le')"),
           [false]);
     });
 
@@ -780,46 +777,43 @@ void testArgFxns() {
     test('log', () {
       expect(
           walkFhirPath(
-              context: resource.toJson(),
-              pathExpression: walkPath("16.log(2) // 4.0")),
+              context: resource.toJson(), pathExpression: "16.log(2) // 4.0"),
           [4.0]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("100.0.log(10.0) // 2.0")),
+              pathExpression: "100.0.log(10.0) // 2.0"),
           [2.0]);
     });
     test('power', () {
       expect(
           walkFhirPath(
-              context: resource.toJson(),
-              pathExpression: walkPath("2.power(3) // 8")),
+              context: resource.toJson(), pathExpression: "2.power(3) // 8"),
           [8]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("2.5.power(2) // 6.25")),
+              pathExpression: "2.5.power(2) // 6.25"),
           [6.25]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("(-1).power(0.5) // empty ({ })")),
+              pathExpression: "(-1).power(0.5) // empty ({ })"),
           []);
     });
     test('round', () {
       expect(
           walkFhirPath(
-              context: resource.toJson(),
-              pathExpression: walkPath("1.round() // 1")),
+              context: resource.toJson(), pathExpression: "1.round() // 1"),
           [1]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
-              pathExpression: walkPath("3.14159.round(3) // 3.142")),
+              pathExpression: "3.14159.round(3) // 3.142"),
           [3.142]);
     });
 
-    /// TODO: complex-extension
+    // TODO(Dokotela): complex-extension
     // test('complex-extension', () {
     //   expect(
     //       walkFhirPath(
@@ -835,7 +829,7 @@ void testArgFxns() {
       expect(
           walkFhirPath(context: null, pathExpression: 'iif(false, 1, 0)'), [0]);
       expect(walkFhirPath(context: null, pathExpression: 'iif({}, 1, 0)'), [0]);
-      // TODO: is this correct functionality? non-empty, non-bool is true.
+      // TODO(Dokotela): is this correct functionality? non-empty, non-bool is true.
       expect(walkFhirPath(context: null, pathExpression: 'iif(5, 1, 0)'), [1]);
       expect(walkFhirPath(context: null, pathExpression: 'iif(true, 1)'), [1]);
       expect(walkFhirPath(context: null, pathExpression: 'iif(false, 1)'), []);
@@ -1171,7 +1165,7 @@ final bundle = Bundle(
 );
 
 Map<String, dynamic>? patientExample() {
-  return jsonDecode(patientJsonString);
+  return jsonDecode(patientJsonString) as Map<String, dynamic>?;
 }
 
 const patientJsonString = r'''{

@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_single_quotes
+
 // Package imports:
 import 'package:antlr4/antlr4.dart';
 import 'package:fhir/r4.dart';
@@ -244,7 +246,7 @@ void testBasicTypes() {
               context: resource.toJson(), pathExpression: r"'\u005' // 'u005'"),
           ['u005']);
 
-      /// TODO: escape sequence
+      // TODO(Dokotela): escape sequence
       // expect(
       //     walkFhirPath(
       //         context: resource.toJson(), pathExpression: r"'\' // ''"),

@@ -122,7 +122,7 @@ ParserList parseFhirPath(String pathExpression) {
         cause: error,
       );
     } else {
-      throw error;
+      rethrow;
     }
   }
 }
@@ -173,7 +173,7 @@ List<dynamic> executeFhirPath({
     }
   } catch (error) {
     if (error is FhirPathException) {
-      throw error;
+      rethrow;
     } else {
       throw FhirPathException(
         'Unable to execute FHIRPath expression',
@@ -247,17 +247,18 @@ extension FhirPathResourceExtension on Map<String, dynamic> {
   static const resourceKey = '%resource';
   static const rootResourceKey = '%rootResource';
 
-  Map<String, dynamic>? get context => this[contextKey];
-  void set context(Map<String, dynamic>? context) => this[contextKey] = context;
+  Map<String, dynamic>? get context =>
+      this[contextKey] as Map<String, dynamic>?;
+  set context(Map<String, dynamic>? context) => this[contextKey] = context;
   bool get hasNoContext => context == null;
 
-  void set resource(Map<String, dynamic>? resource) {
+  set resource(Map<String, dynamic>? resource) {
     if (resource != null) {
       this[resourceKey] = resource;
     }
   }
 
-  void set rootResource(Map<String, dynamic>? rootResource) {
+  set rootResource(Map<String, dynamic>? rootResource) {
     if (rootResource != null) {
       this[resourceKey] = rootResource;
     }

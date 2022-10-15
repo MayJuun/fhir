@@ -1,11 +1,13 @@
-part of '../fhirPathDartVisitor.dart';
+// ignore_for_file: noop_primitive_operations, avoid_dynamic_calls, avoid_bool_literals_in_conditional_expressions
+
+part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitEqualityExpression(
   EqualityExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
   if (ctx.childCount != 3) {
-    throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
@@ -46,10 +48,10 @@ List? _$visitEqualityExpression(
               } else if (lhsElement is FhirPathQuantity ||
                   rhsElement is FhirPathQuantity) {
                 if (lhsElement is FhirPathQuantity) {
-                  return lhsElement.equivalent(rhsElement);
+                  return lhsElement.equivalent(rhsElement as Object);
                 } else {
                   return (rhsElement as FhirPathQuantity)
-                      .equivalent(lhsElement);
+                      .equivalent(lhsElement as Object);
                 }
               } else if (lhsElement is num || rhsElement is num) {
                 final sigDigsLhs = num.tryParse(lhsElement.toString())
@@ -142,7 +144,7 @@ List? _$visitEqualityExpression(
                 visitor.context = <dynamic>[rhs[i] == lhs[i]];
               }
             }
-            if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
+            if (lhs[i] != rhs[i] || rhs[i] != lhs[i]) {
               visitor.context = <dynamic>[false];
             }
           }
@@ -166,7 +168,7 @@ List? _$visitEqualityExpression(
       {
         compare(false);
         if (visitor.context.isNotEmpty) {
-          visitor.context = <dynamic>[!visitor.context.first];
+          visitor.context = <dynamic>[!(visitor.context.first as bool)];
         }
       }
       break;
@@ -174,7 +176,7 @@ List? _$visitEqualityExpression(
       {
         compare(true);
         if (visitor.context.isNotEmpty) {
-          visitor.context = <dynamic>[!visitor.context.first];
+          visitor.context = <dynamic>[!(visitor.context.first as bool)];
         }
       }
       break;
@@ -195,7 +197,7 @@ const _allowedTypes = [
   FhirPathQuantity,
 ];
 
-enum _Comparator { gt, gte, lt, lte }
+enum Comparator { gt, gte, lt, lte }
 
 List? _$visitInequalityExpression(
   InequalityExpressionContext ctx,
@@ -203,7 +205,7 @@ List? _$visitInequalityExpression(
 ) {
   /// must be 3 children or nodes
   if (ctx.childCount != 3) {
-    throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
   }
 
   /// calculate the two arguments and the comparator
@@ -235,19 +237,19 @@ List? _$visitInequalityExpression(
         operation: operator,
         arguments: [lhs, rhs]);
   } else {
-    _Comparator comparator;
+    Comparator comparator;
     switch (operator) {
       case '>':
-        comparator = _Comparator.gt;
+        comparator = Comparator.gt;
         break;
       case '<':
-        comparator = _Comparator.lt;
+        comparator = Comparator.lt;
         break;
       case '>=':
-        comparator = _Comparator.gte;
+        comparator = Comparator.gte;
         break;
       case '<=':
-        comparator = _Comparator.lte;
+        comparator = Comparator.lte;
         break;
       default:
         throw FhirPathEvaluationException(
@@ -272,7 +274,7 @@ List? _$visitInequalityExpression(
 // today() = Date("2022-04-15")
 // this will throw an error, despite the fact that they should be comparable
 // could consider testing it, e.g.
-bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
+bool? compare(Comparator comparator, dynamic lhs, dynamic rhs) {
   switch (lhs.runtimeType) {
     case num:
       return rhs is num
@@ -300,7 +302,7 @@ bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
                   : throw cannotCompareException(comparator, lhs, rhs);
     case Date:
       return rhs is FhirDateTimeBase
-          ? lhs.isValid && rhs.isValid
+          ? (lhs as Date).isValid && rhs.isValid
               ? makeComparison(comparator, lhs, rhs)
               : throw invalidException(comparator, lhs, rhs)
           : rhs is String && FhirDateTime(rhs).isValid
@@ -317,7 +319,7 @@ bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
                   : throw cannotCompareException(comparator, lhs, rhs);
     case FhirDateTime:
       return rhs is FhirDateTimeBase
-          ? lhs.isValid && rhs.isValid
+          ? (lhs as FhirDateTime).isValid && rhs.isValid
               ? makeComparison(comparator, lhs, rhs)
               : throw invalidException(comparator, lhs, rhs)
           : rhs is String && FhirDateTime(rhs).isValid
@@ -325,7 +327,7 @@ bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
               : throw cannotCompareException(comparator, lhs, rhs);
     case Time:
       return rhs is Time
-          ? lhs.isValid && rhs.isValid
+          ? (lhs as Time).isValid && rhs.isValid
               ? makeComparison(comparator, lhs, rhs)
               : throw invalidException(comparator, lhs, rhs)
           : rhs is String && Time(rhs).isValid
@@ -342,16 +344,16 @@ bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
     /// Default should be when lhs is a String
     default:
       {
-        if (rhs is String) {
-          return (comparator == _Comparator.gt || comparator == _Comparator.lt)
+        if (lhs is String && rhs is String) {
+          return (comparator == Comparator.gt || comparator == Comparator.lt)
               ? lhs == rhs
                   ? false
-                  : comparator == _Comparator.gt
+                  : comparator == Comparator.gt
                       ? stringGt(lhs, rhs)
                       : !stringGt(lhs, rhs)
               : lhs == rhs
                   ? true
-                  : comparator == _Comparator.gte
+                  : comparator == Comparator.gte
                       ? stringGt(lhs, rhs)
                       : !stringGt(lhs, rhs);
         } else if (rhs is Time && Time(lhs).isValid) {
@@ -369,28 +371,28 @@ bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
   }
 }
 
-bool? makeComparison(_Comparator comparator, dynamic param1, dynamic param2) {
+bool? makeComparison(Comparator comparator, dynamic param1, dynamic param2) {
   try {
     switch (comparator) {
-      case _Comparator.gt:
-        return param1 > param2;
-      case _Comparator.gte:
-        return param1 >= param2;
-      case _Comparator.lt:
-        return param1 < param2;
-      case _Comparator.lte:
-        return param1 <= param2;
+      case Comparator.gt:
+        return param1 > param2 as bool;
+      case Comparator.gte:
+        return param1 >= param2 as bool;
+      case Comparator.lt:
+        return param1 < param2 as bool;
+      case Comparator.lte:
+        return param1 <= param2 as bool;
     }
   } catch (e) {
     if (e is UnequalPrecision) {
       return null;
     } else {
-      throw e;
+      rethrow;
     }
   }
 }
 
-bool stringGt(String lhs, dynamic rhs) {
+bool stringGt(String lhs, String rhs) {
   final runes1 = lhs.runes.toList();
   final runes2 = rhs.runes.toList();
   if (runes1.length < runes2.length) {
@@ -407,14 +409,14 @@ bool stringGt(String lhs, dynamic rhs) {
 }
 
 Exception cannotCompareException(
-        _Comparator comparator, dynamic lhs, dynamic rhs) =>
+        Comparator comparator, dynamic lhs, dynamic rhs) =>
     FhirPathEvaluationException(
         'The comparator $comparator was not passed types that can be '
         'compared.\n'
         'lhs: $lhs - ${lhs.runtimeType}\n'
         'lhs: $rhs - ${rhs.runtimeType}\n');
 
-Exception invalidException(_Comparator comparator, dynamic lhs, dynamic rhs) =>
+Exception invalidException(Comparator comparator, dynamic lhs, dynamic rhs) =>
     FhirPathEvaluationException(
         'The comparator $comparator was not passed two valid types.\n'
         'lhs: $lhs - ${lhs.runtimeType} - Valid? ${lhs.isValid}\n'

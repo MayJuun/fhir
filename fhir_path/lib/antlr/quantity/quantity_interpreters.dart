@@ -1,4 +1,6 @@
-part of '../fhirPathDartVisitor.dart';
+// ignore_for_file: prefer_if_elements_to_conditional_expressions
+
+part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitQuantityLiteral(
   QuantityLiteralContext ctx,

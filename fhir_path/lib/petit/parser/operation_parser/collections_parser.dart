@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_function_literals_in_foreach_calls
+
 // Project imports:
 import '../../petit_fhir_path.dart';
 
@@ -8,6 +10,7 @@ class UnionOperatorParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
@@ -26,6 +29,7 @@ class UnionOperatorParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}UnionOperatorParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -34,6 +38,7 @@ class UnionOperatorParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => 'unionOperator('
       '\n${before.prettyPrint(indent + 1)}'
       '\n${after.prettyPrint(indent + 1)}\n'
@@ -48,6 +53,7 @@ class ContainsOperatorParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final leftOperand = before.execute(results.toList(), passed);
     final rightOperand = after.execute(results.toList(), passed);
@@ -83,6 +89,7 @@ class ContainsOperatorParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}ContainsOperatorParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -91,6 +98,7 @@ class ContainsOperatorParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => 'containsOperator('
       '\n${before.prettyPrint(indent + 1)}'
       '\n${after.prettyPrint(indent + 1)}\n'
@@ -105,6 +113,7 @@ class InParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
@@ -135,6 +144,7 @@ class InParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}InParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -143,6 +153,7 @@ class InParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => 'in('
       '\n${before.prettyPrint(indent + 1)}'
       '\n${after.prettyPrint(indent + 1)}\n'
@@ -156,6 +167,7 @@ class CommaParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final beforeResults = results.toList();
     final afterResults = results.toList();
@@ -190,6 +202,7 @@ class CommaParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}CommaParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -198,6 +211,7 @@ class CommaParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => ','
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';

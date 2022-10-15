@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls
+
 // Dart imports:
 import 'dart:convert';
 
@@ -61,9 +63,10 @@ final Parser<StringParser> stringLexer =
     (char("'") & (escLexer | char("'").neg()).star() & char("'")).map((value) {
   final middleValue = value[1]
       .map((e) => e is Token
-          ? e.value.contains('u')
-              ? utf8.decode([int.parse(e.value.split('u').last, radix: 16)])
-              : e.value.replaceAll('\\\\', '\\')
+          ? e.value.contains('u') as bool
+              ? utf8.decode(
+                  [int.parse(e.value.split('u').last as String, radix: 16)])
+              : e.value.replaceAll(r'\\', r'\')
           : e == r'\'
               ? ''
               : e)
@@ -83,9 +86,10 @@ final Parser<DelimitedIdentifierParser> delimitedIdentifierLexer =
     (char('`') & (escLexer | char('`').neg()).star() & char('`')).map((value) {
   final middleValue = value[1]
       .map((e) => e is Token
-          ? e.value.contains('u')
-              ? utf8.decode([int.parse(e.value.split('u').last, radix: 16)])
-              : e.value.replaceAll('\\\\', '\\')
+          ? e.value.contains('u') as bool
+              ? utf8.decode(
+                  [int.parse(e.value.split('u').last as String, radix: 16)])
+              : e.value.replaceAll(r'\\', r'\')
           : e == r'\'
               ? ''
               : e)

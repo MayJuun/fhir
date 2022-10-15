@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 // Project imports:
 import '../../petit_fhir_path.dart';
 
@@ -11,8 +13,9 @@ class UnionFunctionParser extends FunctionParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
-    var executedValue = value.execute(results.toList(), passed);
+    final executedValue = value.execute(results.toList(), passed);
     final finalResults = [];
     finalResults
       ..addAll(results.where((r) => notFoundInList(finalResults, r)))
@@ -27,6 +30,7 @@ class UnionFunctionParser extends FunctionParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}UnionParser\n${value.verbosePrint(indent + 1)}';
 
@@ -34,6 +38,7 @@ class UnionFunctionParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => value.isEmpty
       ? '.union()'
       : '.union(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
@@ -50,11 +55,12 @@ class CombineParser extends FunctionParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (value.isEmpty) {
       return results;
     } else {
-      var executedValue = value.execute(results.toList(), passed);
+      final executedValue = value.execute(results.toList(), passed);
       executedValue.addAll(results);
       return executedValue;
     }
@@ -67,6 +73,7 @@ class CombineParser extends FunctionParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}CombineParser\n${value.verbosePrint(indent + 1)}';
 
@@ -74,6 +81,7 @@ class CombineParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => value.isEmpty
       ? '.combine()'
       : '.combine(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'

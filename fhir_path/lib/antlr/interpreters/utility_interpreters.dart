@@ -1,4 +1,4 @@
-part of '../fhirPathDartVisitor.dart';
+part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitParenthesizedTerm(
   ParenthesizedTermContext ctx,
@@ -25,8 +25,8 @@ List? _$visitTotalInvocation(
   TotalInvocationContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  visitor.context = visitor.environment[r'%$total'];
-  return visitor.environment[r'%$total'];
+  visitor.context = visitor.environment[r'%$total'] as List;
+  return visitor.environment[r'%$total'] as List;
 }
 
 List? _$visitParamList(
@@ -53,7 +53,7 @@ List? _$visitIndexerExpression(
   IndexerExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  if (ctx.expressions().length != 2 && ctx.children != 4) {
+  if (ctx.expressions().length != 2 && ctx.children?.length != 4) {
     throw FhirPathException('IndexerExpression passed incorrect context');
   }
   final List? results = visitor.copyWith().visit(ctx.getChild(0)!);
@@ -64,10 +64,11 @@ List? _$visitIndexerExpression(
           value == null ||
           value.isEmpty ||
           value.length != 1 ||
-          value.first < 0 ||
-          value.first > results.length - 1
+          (value.first is int &&
+              ((value.first as int < 0) ||
+                  (value.first as int > results.length - 1)))
       ? []
-      : [results[value.first]];
+      : [results[value.first as int]];
   return visitor.context;
 }
 
@@ -249,11 +250,11 @@ List? _$visitUnionExpression(
   FhirPathDartVisitor visitor,
 ) {
   final args = [
-    ...(visitor.copyWith().visit(ctx.getChild(0)!)?.toList() ?? []),
-    ...(visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? [])
+    ...visitor.copyWith().visit(ctx.getChild(0)!)?.toList() ?? [],
+    ...visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? []
   ];
   visitor.context = <dynamic>[];
-  for (var value in args) {
+  for (final value in args) {
     if (notFoundInList(visitor.context, value)) {
       visitor.context.add(value);
     }
@@ -271,7 +272,7 @@ List? _$visitMembershipExpression(
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)!.text;
-  var objectList = operator == 'in' ? lhs : rhs;
+  final objectList = operator == 'in' ? lhs : rhs;
   if (objectList?.isEmpty ?? true) {
     visitor.context = [];
   } else {

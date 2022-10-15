@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls
+
 // Package imports:
 import 'package:collection/collection.dart';
 import 'package:petitparser/petitparser.dart';
@@ -25,12 +27,12 @@ Parser<FhirPathParser> lexer() {
   /// Calls the operatorValues function to check if any arguments need
   /// to be passed to the current Parser
   lexerFunctions.set((functionLexer & tokenizer.star() & char(')'))
-      .map((val) => val[0]..value = operatorValues(val[1])));
+      .map((val) => val[0]..value = operatorValues(val[1] as List)));
 
   /// Calls the operatorValues function to check if any arguments need
   /// to be passed to the current ParenthesesParser
   lexerParentheses.set((char('(') & tokenizer.star() & char(')'))
-      .map((value) => ParenthesesParser(operatorValues(value[1]))));
+      .map((value) => ParenthesesParser(operatorValues(value[1] as List))));
 
   /// Complete the lexing and again, passes to operatorValues
   return tokenizer.plus().end().map((value) => operatorValues(value));
@@ -81,6 +83,6 @@ ParserList operatorValues(List fullList) {
         operatorValues(fullList.sublist(0, splitIndex));
     fullList[splitIndex].after =
         operatorValues(fullList.sublist(splitIndex + 1, fullList.length));
-    return ParserList([fullList[splitIndex]]);
+    return ParserList(<FhirPathParser>[fullList[splitIndex] as FhirPathParser]);
   }
 }

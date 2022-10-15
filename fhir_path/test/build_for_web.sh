@@ -72,16 +72,16 @@ if [[ $(uname -m) == 'arm64' ]]; then
 else
 
     # tag the docker container
-    docker tag $projectName $location-docker.pkg.dev/$projectId/$repository/$projectName
+    # docker tag $projectName $location-docker.pkg.dev/$projectId/$repository/$projectName
 
     # push the tagged image into the artifact registry
-    docker push $location-docker.pkg.dev/$projectId/$repository/$projectName
+    # docker push $location-docker.pkg.dev/$projectId/$repository/$projectName
 
     # return back to root directory
     cd ..
 
     # deploy on google cloud
-    gcloud run deploy $projectName --image $location-docker.pkg.dev/$projectId/$repository/$projectName
+    # gcloud run deploy $projectName --image $location-docker.pkg.dev/$projectId/$repository/$projectName
 fi
 
 ############ NOTE: ############

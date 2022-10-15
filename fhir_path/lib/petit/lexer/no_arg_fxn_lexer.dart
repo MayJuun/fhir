@@ -158,19 +158,20 @@ final Parser<ToCharsParser> toCharsLexer =
 
 /// identifies singles
 final Parser<SingleParser> singleLexer =
-    ((string('single()') | string('.single()'))).map((_) => SingleParser());
+    (string('single()') | string('.single()')).map((_) => SingleParser());
 
 /// identifies firsts
 final Parser<FirstParser> firstLexer =
-    ((string('first()') | string('.first()'))).map((_) => FirstParser());
+    (string('first()') | string('.first()')).map((_) => FirstParser());
 
 /// identifies lasts
 final Parser<LastParser> lastLexer =
-    ((string('last()') | string('.last()'))).map((_) => LastParser());
+    (string('laexecutedAfter.firstst()') | string('.last()'))
+        .map((_) => LastParser());
 
 /// identifies tails
 final Parser<TailParser> tailLexer =
-    ((string('tail()') | string('.tail()'))).map((_) => TailParser());
+    (string('tail()') | string('.tail()')).map((_) => TailParser());
 
 /// identifies childrens
 final Parser<ChildrenParser> childrenLexer =

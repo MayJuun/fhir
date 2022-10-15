@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls, avoid_bool_literals_in_conditional_expressions
+
 // Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
@@ -11,6 +13,7 @@ class GreaterParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.gt);
 
@@ -21,6 +24,7 @@ class GreaterParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}GreaterParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -29,6 +33,7 @@ class GreaterParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '>'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -41,6 +46,7 @@ class LessParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lt);
 
@@ -51,6 +57,7 @@ class LessParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}LessParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -59,6 +66,7 @@ class LessParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '<'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -71,6 +79,7 @@ class GreaterEqualParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     return executeComparisons(results, before, after, passed, Comparator.gte);
   }
@@ -82,6 +91,7 @@ class GreaterEqualParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}GreaterEqualParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -90,6 +100,7 @@ class GreaterEqualParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '>='
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -102,6 +113,7 @@ class LessEqualParser extends OperatorParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lte);
 
@@ -112,6 +124,7 @@ class LessEqualParser extends OperatorParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}LessEqualParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
@@ -120,6 +133,7 @@ class LessEqualParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '<='
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -128,6 +142,7 @@ class LessEqualParser extends OperatorParser {
 enum Comparator { gt, gte, lt, lte }
 
 /// Todo: review if appropriately comparing different types
+@override
 List executeComparisons(List results, ParserList before, ParserList after,
     Map<String, dynamic> passed, Comparator comparator,
     {bool where = false}) {
@@ -142,7 +157,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
   //  if (param1 is! String || param2 is! String) {
   //    if(param)}
 
-  bool stringGt(String param1, dynamic param2) {
+  bool stringGt(String param1, String param2) {
     final runes1 = param1.runes.toList();
     final runes2 = param2.runes.toList();
     if (runes1.length < runes2.length) {
@@ -162,19 +177,19 @@ List executeComparisons(List results, ParserList before, ParserList after,
     try {
       switch (comparator) {
         case Comparator.gt:
-          return param1 > param2;
+          return param1 > param2 as bool;
         case Comparator.gte:
-          return param1 >= param2;
+          return param1 >= param2 as bool;
         case Comparator.lt:
-          return param1 < param2;
+          return param1 < param2 as bool;
         case Comparator.lte:
-          return param1 <= param2;
+          return param1 <= param2 as bool;
       }
     } catch (e) {
       if (e is UnequalPrecision) {
         return null;
       } else {
-        throw e;
+        rethrow;
       }
     }
   }
@@ -191,25 +206,6 @@ List executeComparisons(List results, ParserList before, ParserList after,
           'The comparator $comparator was not passed two valid types.\n'
           'Param1: $param1 - ${param1.runtimeType} - Valid? ${param1.isValid}\n'
           'Param1: $param2 - ${param2.runtimeType} - Valid? ${param2.isValid}\n');
-
-  bool? compareNumbers(num param1, dynamic param2) => param2 is num
-      ? makeComparison(comparator, param1, param2)
-      : param2 is FhirNumber && param2.isValid
-          ? makeComparison(comparator, param1, param2.valueNumber)
-          : throw cannotCompareException(param1, param2);
-
-  bool? compareDateTimes(FhirDateTimeBase param1, dynamic param2) =>
-      param2 is FhirDateTimeBase
-          ? param1.isValid && param2.isValid
-              ? makeComparison(comparator, param1, param2)
-              : throw invalidException(param1, param2)
-          : throw cannotCompareException(param1, param2);
-
-  bool? compareTimes(Time param1, dynamic param2) => param2 is Time
-      ? param1.isValid && param2.isValid
-          ? makeComparison(comparator, param1, param2)
-          : throw invalidException(param1, param2)
-      : throw cannotCompareException(param1, param2);
 
   bool? compare(Comparator comparator, dynamic lhs, dynamic rhs) {
     switch (lhs.runtimeType) {
@@ -239,7 +235,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
                     : throw cannotCompareException(lhs, rhs);
       case Date:
         return rhs is FhirDateTimeBase
-            ? lhs.isValid && rhs.isValid
+            ? (lhs as Date).isValid && rhs.isValid
                 ? makeComparison(comparator, lhs, rhs)
                 : throw invalidException(lhs, rhs)
             : rhs is String && FhirDateTime(rhs).isValid
@@ -257,7 +253,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
                     : throw cannotCompareException(lhs, rhs);
       case FhirDateTime:
         return rhs is FhirDateTimeBase
-            ? lhs.isValid && rhs.isValid
+            ? (lhs as FhirDateTime).isValid && rhs.isValid
                 ? makeComparison(comparator, lhs, rhs)
                 : throw invalidException(lhs, rhs)
             : rhs is String && FhirDateTime(rhs).isValid
@@ -265,7 +261,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
                 : throw cannotCompareException(lhs, rhs);
       case Time:
         return rhs is Time
-            ? lhs.isValid && rhs.isValid
+            ? (lhs as Time).isValid && rhs.isValid
                 ? makeComparison(comparator, lhs, rhs)
                 : throw invalidException(lhs, rhs)
             : rhs is String && Time(rhs).isValid
@@ -282,7 +278,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
       /// Default should be when lhs is a String
       default:
         {
-          if (rhs is String) {
+          if (lhs is String && rhs is String) {
             return (comparator == Comparator.gt || comparator == Comparator.lt)
                 ? lhs == rhs
                     ? false

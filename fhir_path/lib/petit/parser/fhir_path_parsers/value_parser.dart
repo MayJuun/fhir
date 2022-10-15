@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 // Project imports:
 import 'fhir_path_parser.dart';
 
@@ -8,7 +10,9 @@ abstract class BaseDateTimeParser<T> extends ValueParser<T> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [value];
+  @override
   String toString() => value.toString();
   int get length => (value as List).length;
   bool isComparable(Object o) => o is BaseDateTimeParser;
@@ -21,6 +25,7 @@ class ParenthesesParser extends ValueParser<ParserList> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) =>
       value.execute(results, passed);
 
@@ -31,6 +36,7 @@ class ParenthesesParser extends ValueParser<ParserList> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}(\n'
       '${value.verbosePrint(indent + 1)}\n'
       '${"  " * indent})';
@@ -39,6 +45,7 @@ class ParenthesesParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '(\n'
       '${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';

@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls
+
 // Package imports:
 import 'package:collection/collection.dart';
 
@@ -10,6 +12,7 @@ class EmptyParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [true] : [false];
 
@@ -20,12 +23,14 @@ class EmptyParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}EmptyParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.empty()';
 }
 
@@ -35,6 +40,7 @@ class HasValueParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     // Returns true if the input collection contains a single value which is a FHIR primitive,...
     if (results.length != 1) {
@@ -69,6 +75,7 @@ class HasValueParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}HasValueParser\n${value.verbosePrint(indent + 1)}';
 
@@ -76,6 +83,7 @@ class HasValueParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.hasValue(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -94,6 +102,7 @@ class ExistsParser extends FunctionParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final returnList =
         IterationContext.withIterationContext((iterationContext) {
@@ -121,6 +130,7 @@ class ExistsParser extends FunctionParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}ExistsParser\n${value.verbosePrint(indent + 1)}';
 
@@ -128,6 +138,7 @@ class ExistsParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.exists(${value.isEmpty ? "" : "\n${"  " * indent}${value.prettyPrint(indent + 1)}\n"}'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -139,6 +150,7 @@ class AllParser extends ValueParser<ParserList> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
@@ -167,6 +179,7 @@ class AllParser extends ValueParser<ParserList> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}AllParser\n${value.verbosePrint(indent + 1)}';
 
@@ -174,6 +187,7 @@ class AllParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) {
     if (value.isEmpty) {
       return '.all()';
@@ -190,6 +204,7 @@ class AllTrueParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
@@ -205,12 +220,14 @@ class AllTrueParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}AllTrueParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.allTrue()';
 }
 
@@ -221,6 +238,7 @@ class AnyTrueParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [false];
@@ -236,12 +254,14 @@ class AnyTrueParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}AnyTrueParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.anyTrue()';
 }
 
@@ -252,6 +272,7 @@ class AllFalseParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
@@ -267,12 +288,14 @@ class AllFalseParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}AllFalseParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.allFalse()';
 }
 
@@ -283,6 +306,7 @@ class AnyFalseParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [false];
@@ -298,12 +322,14 @@ class AnyFalseParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}AnyFalseParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.anyFalse()';
 }
 
@@ -313,12 +339,13 @@ class SubsetOfParser extends ValueParser<ParserList> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
     } else {
       final executedValue = value.execute(results.toList(), passed);
-      for (var r in results) {
+      for (final r in results) {
         if (notFoundInList(executedValue, r)) {
           return [false];
         }
@@ -334,6 +361,7 @@ class SubsetOfParser extends ValueParser<ParserList> {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}SubsetOfParser\n${value.verbosePrint(indent + 1)}';
 
@@ -341,6 +369,7 @@ class SubsetOfParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.subsetOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -352,12 +381,13 @@ class SupersetOfParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [false];
     } else {
       final executedValue = value.execute(results.toList(), passed);
-      for (var v in executedValue) {
+      for (final v in executedValue) {
         if (notFoundInList(results, v)) {
           return [false];
         }
@@ -373,6 +403,7 @@ class SupersetOfParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) =>
       '${"  " * indent}SupersetOfParser\n${value.verbosePrint(indent + 1)}';
 
@@ -380,6 +411,7 @@ class SupersetOfParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) =>
       '.supersetOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -390,6 +422,7 @@ class CountParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) => [results.length];
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -399,12 +432,14 @@ class CountParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}CountParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.count()';
 }
 
@@ -413,9 +448,10 @@ class DistinctParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final resultsList = [];
-    for (var r in results) {
+    for (final r in results) {
       if (notFoundInList(resultsList, r)) {
         resultsList.add(r);
       }
@@ -430,12 +466,14 @@ class DistinctParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}DistinctParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.distinct()';
 }
 
@@ -444,9 +482,10 @@ class IsDistinctParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     final resultsList = [];
-    for (var r in results) {
+    for (final r in results) {
       if (notFoundInList(resultsList, r)) {
         resultsList.add(r);
       }
@@ -461,11 +500,13 @@ class IsDistinctParser extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) => '${"  " * indent}IsDistinctParser';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) => '.isDistinct()';
 }

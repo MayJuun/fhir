@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_function_literals_in_foreach_calls
+
 /// FhirPathParser: base parser
 abstract class FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
@@ -27,7 +29,9 @@ abstract class ValueParser<T> extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed);
+  @override
   String toString();
 }
 
@@ -39,9 +43,15 @@ abstract class OperatorParser extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed);
+
+  @override
   String toString();
-  bool operator ==(Object o);
+
+  @override
+  bool operator ==(Object other);
+
   @override
   int get hashCode => toString().hashCode;
 }
@@ -53,6 +63,7 @@ class ParserList extends FhirPathParser {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
+  @override
   List execute(List results, Map<String, dynamic> passed) {
     void addToList(List toAdd) => results
       ..clear()
@@ -80,9 +91,10 @@ class ParserList extends FhirPathParser {
   /// classes that were created for ease of evaluation but are not included
   /// at all as objects in the official spec. I'm generally going to recommend
   /// that you use [prettyPrint] instead
+  @override
   String verbosePrint(int indent) {
     var returnString = '${"  " * indent}PL(${value.length})';
-    for (var item in value) {
+    for (final item in value) {
       returnString += '\n${item.verbosePrint(indent + 1)}';
     }
     return returnString;
@@ -92,9 +104,10 @@ class ParserList extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
+  @override
   String prettyPrint([int indent = 2]) {
     var returnString = '';
-    for (var item in value) {
+    for (final item in value) {
       returnString += item.prettyPrint(indent + 1);
     }
     return returnString;
