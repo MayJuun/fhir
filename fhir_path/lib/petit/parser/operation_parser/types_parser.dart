@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls
+
 // Package imports:
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
@@ -172,7 +174,7 @@ class AsParser extends OperatorParser {
     }
 
     if (FhirDatatypes.contains(identifierValue)) {
-      final polymorphicString = 'value' + identifierValue;
+      final polymorphicString = 'value$identifierValue';
       final polymorphicIdentifier = IdentifierParser(polymorphicString);
       final polymorphicParserList = ParserList([polymorphicIdentifier]);
       return polymorphicParserList.execute(results.toList(), passed);

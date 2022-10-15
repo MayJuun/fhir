@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 // Package imports:
 import 'package:collection/collection.dart';
 
@@ -99,7 +101,7 @@ class IterationContext {
           r'No context for $this, $total, or $index is available.');
     }
 
-    return topRepeatContext;
+    return topRepeatContext as IterationContext;
   }
 }
 
@@ -194,16 +196,16 @@ class AggregateParser extends ValueParser<ParserList> {
       late FhirPathParser expression;
       late dynamic initialValue;
       if (value.value.first is CommaParser) {
-        initialValue = ((value.value.first as CommaParser)
+        initialValue = (value.value.first as CommaParser)
             .after
-            .execute(results.toList(), passed));
+            .execute(results.toList(), passed);
         expression = (value.value.first as CommaParser).before;
       } else {
         initialValue = [];
         expression = value;
       }
 
-      iterationContext.totalValue = initialValue;
+      iterationContext.totalValue = initialValue as List;
       results.forEachIndexed((i, r) {
         iterationContext.indexValue = i;
         iterationContext.thisValue = r;

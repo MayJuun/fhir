@@ -9,7 +9,7 @@ class ChildrenParser extends FhirPathParser {
   @override
   List execute(List results, Map<String, dynamic> passed) {
     final finalResults = [];
-    for (var r in results) {
+    for (final r in results) {
       if (r is Map) {
         r.forEach((key, value) {
           if (value is List) {

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls
+
 part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitNullLiteral(

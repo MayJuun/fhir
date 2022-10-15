@@ -1,10 +1,12 @@
+// ignore_for_file: unnecessary_parenthesis, depend_on_referenced_packages, prefer_single_quotes, avoid_dynamic_calls
+
 // Package imports:
 import 'package:test/test.dart';
 
 // Project imports:
 import 'package:fhir_path/petit/petit_fhir_path.dart';
 
-FhirPathParser parseResult(dynamic arg) => lexer().parse(arg).value;
+FhirPathParser parseResult(String arg) => lexer().parse(arg).value;
 
 void testBasicTypes() {
   group('Basic Types', () {

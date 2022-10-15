@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_classes_with_only_static_members
+
 // Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
@@ -25,7 +27,7 @@ class SingletonEvaluation {
     if (input.length > 1) {
       throw FhirPathEvaluationException(
           'The $name is required to be '
-          'either an empty value, or a single value. Instead it evaluated to: ${input}.',
+          'either an empty value, or a single value. Instead it evaluated to: $input.',
           operation: operation,
           collection: collection);
     }
@@ -34,8 +36,8 @@ class SingletonEvaluation {
     if (item is Map) {
       if (item['value'] != null && item['code'] != null) {
         return [
-          FhirPathQuantity(
-              Decimal(item['value']).value ?? double.nan, item['code'])
+          FhirPathQuantity(Decimal(item['value']).value ?? double.nan,
+              item['code'] as String)
         ];
       }
     }
@@ -59,13 +61,13 @@ class SingletonEvaluation {
     if (input.length > 1) {
       throw FhirPathEvaluationException(
           'The $name is required to be '
-          'either an empty value, or a single value. Instead it evaluated to: ${input}.',
+          'either an empty value, or a single value. Instead it evaluated to: $input.',
           operation: operation,
           collection: collection);
     }
 
     if (input.first is bool) {
-      return input.first;
+      return input.first as bool;
     }
 
     if (input.first == 0 ||

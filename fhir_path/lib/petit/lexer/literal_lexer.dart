@@ -66,7 +66,7 @@ final Parser<StringParser> stringLexer =
           ? e.value.contains('u') as bool
               ? utf8.decode(
                   [int.parse(e.value.split('u').last as String, radix: 16)])
-              : e.value.replaceAll('\\\\', '\\')
+              : e.value.replaceAll(r'\\', r'\')
           : e == r'\'
               ? ''
               : e)
@@ -89,7 +89,7 @@ final Parser<DelimitedIdentifierParser> delimitedIdentifierLexer =
           ? e.value.contains('u') as bool
               ? utf8.decode(
                   [int.parse(e.value.split('u').last as String, radix: 16)])
-              : e.value.replaceAll('\\\\', '\\')
+              : e.value.replaceAll(r'\\', r'\')
           : e == r'\'
               ? ''
               : e)

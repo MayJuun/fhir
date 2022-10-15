@@ -1,5 +1,5 @@
 // Generated from FhirPath.g4 by ANTLR 4.11.1
-// ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes
+// ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes, prefer_function_declarations_over_variables, use_raw_strings
 
 // Package imports:
 import 'package:antlr4/antlr4.dart';

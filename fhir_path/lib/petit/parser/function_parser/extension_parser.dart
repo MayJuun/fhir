@@ -198,7 +198,7 @@ class OrdinalParser extends FhirPathParser {
       final tempResults = [];
 
       /// check each result
-      for (var val in list) {
+      for (final val in list) {
         /// if it's a Map (if it's not, then we can't use it with Ordinal)
         if (val is Map) {
           /// First we check the element for extensions
@@ -209,7 +209,7 @@ class OrdinalParser extends FhirPathParser {
             /// generally we expect the extension to be a list
             if (extension is List) {
               /// for each extension in the list
-              for (var ext in extension) {
+              for (final ext in extension) {
                 /// if it is defined as an ordinalValue
                 if (ext['url'] ==
                     'http://hl7.org/fhir/StructureDefinition/ordinalValue') {
@@ -242,7 +242,7 @@ class OrdinalParser extends FhirPathParser {
 
     newResults.addAll(checkForOrdinalValues(results));
 
-    for (var result in results) {
+    for (final result in results) {
       if (result is! Map) {
         break;
       }

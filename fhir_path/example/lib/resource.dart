@@ -1,3 +1,5 @@
+// ignore_for_file: leading_newlines_in_multiline_strings, use_raw_strings
+
 const patientSampleResource = '''{
   "resourceType": "Patient",
   "name": [

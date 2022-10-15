@@ -60,7 +60,7 @@ List? _$visitFunction(
       case 'distinct':
         {
           final resultsList = <dynamic>[];
-          for (var results in visitor.context) {
+          for (final results in visitor.context) {
             if (notFoundInList(resultsList, results)) {
               resultsList.add(results);
             }
@@ -71,7 +71,7 @@ List? _$visitFunction(
       case 'isDistinct':
         {
           final resultsList = <dynamic>[];
-          for (var results in visitor.context) {
+          for (final results in visitor.context) {
             if (notFoundInList(resultsList, results)) {
               resultsList.add(results);
             }
@@ -588,7 +588,7 @@ List? _$visitFunction(
       case 'children':
         {
           final finalResults = <dynamic>[];
-          for (var context in visitor.context) {
+          for (final context in visitor.context) {
             if (context is Map) {
               context.forEach((key, value) {
                 if (value is List) {
@@ -874,7 +874,7 @@ List? _$visitFunction(
           final args = visitor.copyWith().visit(ctx.getChild(2)!);
           final initialContext = visitor.context.toSet();
           visitor.context = <dynamic>[];
-          for (var value in initialContext) {
+          for (final value in initialContext) {
             if (notFoundInList(visitor.context, value) &&
                 foundInList(args ?? [], value)) {
               visitor.context.add(value);
@@ -896,7 +896,7 @@ List? _$visitFunction(
             ...visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? []
           ];
           visitor.context = <dynamic>[];
-          for (var value in args) {
+          for (final value in args) {
             if (notFoundInList(visitor.context, value)) {
               visitor.context.add(value);
             }
@@ -1198,7 +1198,7 @@ List? _$visitFunction(
               ? visitor.copyWith().visit(aggregator.getChild(2)!)
               : [];
 
-          for (var context in visitor.context) {
+          for (final context in visitor.context) {
             final newEnvironment = visitor.environment;
             newEnvironment[r'%$total'] = total;
             total = visitor.copyWith(

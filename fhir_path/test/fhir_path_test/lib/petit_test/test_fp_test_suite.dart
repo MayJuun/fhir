@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_single_quotes, unnecessary_statements, leading_newlines_in_multiline_strings
+
 // Dart imports:
 import 'dart:convert';
 
@@ -190,7 +192,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: we can work with this, do we need to throw an exception?
+    // TODO(Dokotela): we can work with this, do we need to throw an exception?
     // testBoolean(observation(), "Observation.value.as(Quantity).unit", true);
     // test("testPolymorphismAsA", () {
     //   expect(
@@ -209,7 +211,7 @@ void testFhirPathTestSuite() {
         ["lbs"]);
   });
 
-  /// TODO: unsure the best way to define a Period as it is a complicated object
+  // TODO(Dokotela): unsure the best way to define a Period as it is a complicated object
   // testWrong(observation(), "(Observation.value as Period).unit");
   // <test name="testPolymorphismAsB" inputfile="observation-example.xml" mode="strict">
   // <expression invalid="semantic">(Observation.value as Period).unit</expression>
@@ -351,7 +353,7 @@ void testFhirPathTestSuite() {
           () => walkFhirPath(
               context: patientExample(),
               pathExpression: r"-1.convertsToInteger()"),
-          throwsA(TypeMatcher<FhirPathException>()));
+          throwsA(const TypeMatcher<FhirPathException>()));
     });
 
     test("testLiteralIntegerMax", () {
@@ -432,7 +434,7 @@ void testFhirPathTestSuite() {
           () => walkFhirPath(
               context: patientExample(),
               pathExpression: r"-0.1.convertsToDecimal()"),
-          throwsA(TypeMatcher<FhirPathException>()));
+          throwsA(const TypeMatcher<FhirPathException>()));
     });
 
     test("testLiteralDecimalMax", () {
@@ -451,7 +453,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: All usages of A.is(XXX) rewritten to 'A is XXX'
+    // TODO(Dokotela): All usages of A.is(XXX) rewritten to 'A is XXX'
 
     test("testLiteralDateYear", () {
       expect(
@@ -575,7 +577,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: testLiteralTimeUtc throws errors, doesn't return false, depends on parsing
+    // TODO(Dokotela): testLiteralTimeUtc throws errors, doesn't return false, depends on parsing
     //   Current: "@T14:34:28Z" => TimeParser (@T14:34:28) + IdentifierParser (Z)
     //<test name="testLiteralTimeUTC" inputfile="patient-example.xml" invalid="true"><expression>@T14:34:28Z is Time</expression>});
     // test("testLiteralTimeUtc", () {
@@ -586,7 +588,7 @@ void testFhirPathTestSuite() {
     //       [false]);
     // });
 
-    // TODO: testLiteralTimeTimezoneOffset
+    // TODO(Dokotela): testLiteralTimeTimezoneOffset
     // <test name="testLiteralTimeTimezoneOffset" inputfile="patient-example.xml" invalid="true"><expression>@T14:34:28+10:00 is Time</expression>});
     // test("testLiteralTimeTimezoneOffset", () {
     //   expect(
@@ -733,7 +735,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: requires date to look in extension
+    // TODO(Dokotela): requires date to look in extension
     // test("testDateNotEqual", () {
     //   expect(
     //       walkFhirPath(
@@ -742,7 +744,7 @@ void testFhirPathTestSuite() {
     //       []);
     // });
 
-    // TODO: testDateNotEqualTimezoneOffsetBefore
+    // TODO(Dokotela): testDateNotEqualTimezoneOffsetBefore
     // test("testDateNotEqualTimezoneOffsetBefore", () {
     //   expect(
     //       walkFhirPath(
@@ -752,7 +754,7 @@ void testFhirPathTestSuite() {
     //       [true]);
     // });
 
-    // TODO: testDateNotEqualTimezoneOffsetAfter
+    // TODO(Dokotela): testDateNotEqualTimezoneOffsetAfter
     // test("testDateNotEqualTimezoneOffsetAfter", () {
     //   expect(
     //       walkFhirPath(
@@ -762,7 +764,7 @@ void testFhirPathTestSuite() {
     //       [true]);
     // });
 
-    // TODO: testDateNotEqualUTC
+    // TODO(Dokotela): testDateNotEqualUTC
     // test("testDateNotEqualUTC", () {
     //   expect(
     //       walkFhirPath(
@@ -795,7 +797,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // todo: now() is a DateTime including timezone offset, so this should be
+    // TODO(Dokotela): now() is a DateTime including timezone offset, so this should be
     // null, unless it pulls in the birthDate extension
     test("testDateTimeGreaterThanDate", () {
       print('testing the error here');
@@ -933,7 +935,7 @@ void testFhirPathTestSuite() {
           () => walkFhirPath(
               context: patientExample(),
               pathExpression: r"(1|2).not() = false"),
-          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+          throwsA(const TypeMatcher<FhirPathEvaluationException>()));
     });
   });
 
@@ -1083,7 +1085,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // todo: integrate: models https://hl7.org/fhirpath/#models
+    // TODO(Dokotela): integrate: models https://hl7.org/fhirpath/#models
     // test("testIntegerLiteralIsSystemInteger", () {
     //   expect(
     //       walkFhirPath(
@@ -1380,7 +1382,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: testDecimalLiteralIsNotQuantity
+    // TODO(Dokotela): testDecimalLiteralIsNotQuantity
     // test("testDecimalLiteralIsNotQuantity", () {
     //   expect(
     //       walkFhirPath(
@@ -1397,7 +1399,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: testStringIntegerLiteralIsNotQuantity
+    // TODO(Dokotela): testStringIntegerLiteralIsNotQuantity
     // test("testStringIntegerLiteralIsNotQuantity", () {
     //   expect(
     //       walkFhirPath(
@@ -1422,7 +1424,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: testStringQuantityWeekConvertsToQuantityFalse
+    // TODO(Dokotela): testStringQuantityWeekConvertsToQuantityFalse
     // test("testStringQuantityWeekConvertsToQuantityFalse", () {
     //   expect(
     //       walkFhirPath(
@@ -1447,7 +1449,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: testStringDecimalLiteralIsNotSystemQuantity
+    // TODO(Dokotela): testStringDecimalLiteralIsNotSystemQuantity
     // test("testStringDecimalLiteralIsNotSystemQuantity", () {
     //   expect(
     //       walkFhirPath(
@@ -1464,7 +1466,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: testBooleanLiteralIsNotSystemQuantity
+    // TODO(Dokotela): testBooleanLiteralIsNotSystemQuantity
     // test("testBooleanLiteralIsNotSystemQuantity", () {
     //   expect(
     //       walkFhirPath(
@@ -1473,7 +1475,7 @@ void testFhirPathTestSuite() {
     //       [true]);
     // });
 
-    // TODO: testIntegerLiteralToQuantity
+    // TODO(Dokotela): testIntegerLiteralToQuantity
     // test("testIntegerLiteralToQuantity", () {
     //   expect(
     //       walkFhirPath(
@@ -1482,7 +1484,7 @@ void testFhirPathTestSuite() {
     //       [true]);
     // });
 
-    // TODO: testDecimalLiteralToQuantity
+    // TODO(Dokotela): testDecimalLiteralToQuantity
     // test("testDecimalLiteralToQuantity", () {
     //   expect(
     //       walkFhirPath(
@@ -1500,7 +1502,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: testStringQuantityDayLiteralToQuantity
+    // TODO(Dokotela): testStringQuantityDayLiteralToQuantity
     // test("testStringQuantityDayLiteralToQuantity", () {
     //   expect(
     //       walkFhirPath(
@@ -1740,7 +1742,7 @@ void testFhirPathTestSuite() {
           ["1 'wk'"]);
     });
 
-    // TODO: testQuantityLiteralWeekToString
+    // TODO(Dokotela): testQuantityLiteralWeekToString
     // test("testQuantityLiteralWeekToString", () {
     //   expect(
     //       walkFhirPath(
@@ -1908,7 +1910,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    /// TODO: testQuantity9 - multiply units
+    // TODO(Dokotela): testQuantity9 - multiply units
     // test("testQuantity9", () {
     //   expect(
     //       walkFhirPath(
@@ -1917,7 +1919,7 @@ void testFhirPathTestSuite() {
     //       [true]);
     // });
 
-    // TODO: testQuantity10 - divide different units
+    // TODO(Dokotela): testQuantity10 - divide different units
     // test("testQuantity10", () {
     //   expect(
     //       walkFhirPath(
@@ -1926,7 +1928,7 @@ void testFhirPathTestSuite() {
     //       [true]);
     // });
 
-    // TODO: testQuantity11 - divide same units
+    // TODO(Dokotela): testQuantity11 - divide same units
     // test("testQuantity11", () {
     //   expect(
     //       walkFhirPath(
@@ -1942,7 +1944,7 @@ void testFhirPathTestSuite() {
           () => walkFhirPath(
               context: patientExample(),
               pathExpression: r"iif(1 | 2 | 3, true, false)"),
-          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+          throwsA(const TypeMatcher<FhirPathEvaluationException>()));
     });
 
     test("testCollectionBoolean2", () {
@@ -2925,7 +2927,7 @@ void testFhirPathTestSuite() {
   });
 
   group('testNow', () {
-    // TODO: again, matching now() (DateTime) against birthDate (which is only
+    // TODO(Dokotela): again, matching now() (DateTime) against birthDate (which is only
     // a Date, unless there is an extension)
     // test("testNow1", () {
     //   expect(
@@ -3165,7 +3167,7 @@ void testFhirPathTestSuite() {
     //       [false]);
     // });
 
-    // TODO: testEquality28 - comparing Quantity object with FhirPathQuantity
+    // TODO(Dokotela): testEquality28 - comparing Quantity object with FhirPathQuantity
     // test("testEquality28", () {
     //   expect(
     //       walkFhirPath(
@@ -3288,7 +3290,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: FIXED: decide if we should continue to include a default timezone
+    // TODO(Dokotela): FIXED: decide if we should continue to include a default timezone
     // test("testNEquality17", () {
     //   expect(
     //       walkFhirPath(
@@ -3424,7 +3426,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: correct equivalence parser to compare numbers using significant digits
+    // TODO(Dokotela): correct equivalence parser to compare numbers using significant digits
     //   expect(
     //       walkFhirPath(
     //           context: patientExample(), pathExpression: r"1.2 / 1.8 ~ 0.67"),
@@ -3507,7 +3509,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: Compare Quantity objects and FhirPathQuantity
+    // TODO(Dokotela): Compare Quantity objects and FhirPathQuantity
     // test("testEquivalent22", () {
     //   expect(
     //       walkFhirPath(
@@ -3593,7 +3595,7 @@ void testFhirPathTestSuite() {
           [false]);
     });
 
-    // TODO: Equivalent need some work on significant digits
+    // TODO(Dokotela): Equivalent need some work on significant digits
     // test("testNotEquivalent13", () {
     //   expect(
     //       walkFhirPath(
@@ -3643,7 +3645,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: clarify, is this one supposed to be true, because the two
+    // TODO(Dokotela): clarify, is this one supposed to be true, because the two
     // aren't the same objects?
     // test("testNotEquivalent19", () {
     //   expect(
@@ -3672,7 +3674,7 @@ void testFhirPathTestSuite() {
     //       [false]);
     // });
 
-    // TODO: Compare Quantity objects to FhirPathQuantity
+    // TODO(Dokotela): Compare Quantity objects to FhirPathQuantity
     // test("testNotEquivalent22", () {
     //   expect(
     //       walkFhirPath(
@@ -3824,7 +3826,7 @@ void testFhirPathTestSuite() {
           [false]);
     });
 
-    // TODO: Compare Quantity objects with FhirPathQuantity
+    // TODO(Dokotela): Compare Quantity objects with FhirPathQuantity
     // test("testLessThan22", () {
     //   expect(
     //       walkFhirPath(
@@ -4024,7 +4026,7 @@ void testFhirPathTestSuite() {
           [false]);
     });
 
-    // TODO: compare Quantity objects with FhirPathQuantity
+    // TODO(Dokotela): compare Quantity objects with FhirPathQuantity
     // test("testLessOrEqual22", () {
     //   expect(
     //       walkFhirPath(
@@ -4225,7 +4227,7 @@ void testFhirPathTestSuite() {
           [true]);
     });
 
-    // TODO: compare Quantity objects with FhirPathQuantity
+    // TODO(Dokotela): compare Quantity objects with FhirPathQuantity
     // test("testGreatorOrEqual22", () {
     //   expect(
     //       walkFhirPath(
@@ -5015,7 +5017,7 @@ void testFhirPathTestSuite() {
           () => walkFhirPath(
               context: patientExample(),
               pathExpression: r"(1 | 2 | 3) & 'b' = '1,2,3b'"),
-          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+          throwsA(const TypeMatcher<FhirPathEvaluationException>()));
     });
   });
 
@@ -5051,7 +5053,7 @@ void testFhirPathTestSuite() {
       expect(
           () => walkFhirPath(
               context: patientExample(), pathExpression: r"'a'-'b' = 'ab'"),
-          throwsA(TypeMatcher<FhirPathException>()));
+          throwsA(const TypeMatcher<FhirPathException>()));
     });
   });
 
@@ -5426,7 +5428,7 @@ void testFhirPathTestSuite() {
           () => walkFhirPath(
               context: patientExample(),
               pathExpression: r"-1.convertsToInteger()"),
-          throwsA(TypeMatcher<FhirPathInvalidExpressionException>()));
+          throwsA(const TypeMatcher<FhirPathInvalidExpressionException>()));
     });
 
     test("testPrecedence2", () {
@@ -5447,7 +5449,7 @@ void testFhirPathTestSuite() {
       () => expect(
           walkFhirPath(
               context: patientExample(), pathExpression: r"1 > 2 is Boolean"),
-          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+          throwsA(const TypeMatcher<FhirPathEvaluationException>()));
     });
 
     // FIXED: Incorrect test case. 'is' has higher precedence than |
@@ -5538,7 +5540,7 @@ void testFhirPathTestSuite() {
     });
   });
 
-  // TODO: testType
+  // TODO(Dokotela): testType
   // group('testType', () {
   //   test("testType1", () {
   //     expect(
@@ -5738,7 +5740,7 @@ void testFhirPathTestSuite() {
   //   });
   // });
 
-  // TODO: conformsTo
+  // TODO(Dokotela): conformsTo
   // group('testConformsTo', () {
   //   test("testConformsTo", () {
   //     expect(
@@ -5767,15 +5769,15 @@ void testFhirPathTestSuite() {
 }
 
 Map<String, dynamic>? patientExample() {
-  return jsonDecode(patientJsonString);
+  return jsonDecode(patientJsonString) as Map<String, dynamic>?;
 }
 
 Map<String, dynamic>? observationExample() {
-  return jsonDecode(observationJsonString);
+  return jsonDecode(observationJsonString) as Map<String, dynamic>?;
 }
 
 Map<String, dynamic>? questionnaireExample() {
-  return jsonDecode(questionnaireJsonString);
+  return jsonDecode(questionnaireJsonString) as Map<String, dynamic>?;
 }
 
 const patientJsonString = r'''{

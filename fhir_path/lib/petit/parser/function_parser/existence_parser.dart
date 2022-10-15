@@ -345,7 +345,7 @@ class SubsetOfParser extends ValueParser<ParserList> {
       return [true];
     } else {
       final executedValue = value.execute(results.toList(), passed);
-      for (var r in results) {
+      for (final r in results) {
         if (notFoundInList(executedValue, r)) {
           return [false];
         }
@@ -387,7 +387,7 @@ class SupersetOfParser extends FhirPathParser {
       return [false];
     } else {
       final executedValue = value.execute(results.toList(), passed);
-      for (var v in executedValue) {
+      for (final v in executedValue) {
         if (notFoundInList(results, v)) {
           return [false];
         }
@@ -451,7 +451,7 @@ class DistinctParser extends FhirPathParser {
   @override
   List execute(List results, Map<String, dynamic> passed) {
     final resultsList = [];
-    for (var r in results) {
+    for (final r in results) {
       if (notFoundInList(resultsList, r)) {
         resultsList.add(r);
       }
@@ -485,7 +485,7 @@ class IsDistinctParser extends FhirPathParser {
   @override
   List execute(List results, Map<String, dynamic> passed) {
     final resultsList = [];
-    for (var r in results) {
+    for (final r in results) {
       if (notFoundInList(resultsList, r)) {
         resultsList.add(r);
       }

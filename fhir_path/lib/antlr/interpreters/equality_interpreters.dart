@@ -1,3 +1,5 @@
+// ignore_for_file: noop_primitive_operations, avoid_dynamic_calls, avoid_bool_literals_in_conditional_expressions
+
 part of '../fhir_path_dart_visitor.dart';
 
 List? _$visitEqualityExpression(
@@ -203,7 +205,7 @@ List? _$visitInequalityExpression(
 ) {
   /// must be 3 children or nodes
   if (ctx.childCount != 3) {
-    throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
   }
 
   /// calculate the two arguments and the comparator

@@ -1,11 +1,12 @@
 import 'dart:convert';
 
-import 'package:example/resource.dart';
 import 'package:fhir_path/petit/petit_fhir_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/link.dart';
 import 'package:yaml_writer/yaml_writer.dart';
+
+import 'resource.dart';
 
 void main() => runApp(const MyApp());
 
@@ -51,7 +52,7 @@ class MyHomePageState extends State<MyHomePage> {
         final pathResult =
             walkFhirPath(context: inputJson, pathExpression: path.text);
         if (jsonCode == outputFormat) {
-          JsonEncoder encoder = const JsonEncoder.withIndent('  ');
+          const JsonEncoder encoder = JsonEncoder.withIndent('  ');
           displayString = encoder.convert(jsonDecode(jsonEncode(pathResult)));
         } else {
           displayString = YAMLWriter().write(pathResult);

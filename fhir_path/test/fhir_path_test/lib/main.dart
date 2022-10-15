@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           child: Scaffold(
             body: Center(
                 child: Column(
-              children: [
+              children: const [
                 RunTests('Antlr Tests', antlrFhirPathTest),
                 SizedBox(height: 8),
                 RunTests('Petit Tests', petitFhirPathTest),
@@ -52,7 +52,7 @@ class _RunTestsState extends State<RunTests> {
           child: Center(
             child: Text(
               buttonText,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           )),
       onPressed: () {

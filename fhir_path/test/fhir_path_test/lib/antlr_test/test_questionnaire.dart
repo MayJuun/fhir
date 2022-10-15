@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_single_quotes, avoid_escaping_inner_quotes
+
 // Package imports:
 import 'package:fhir/r4.dart';
 import 'package:test/test.dart';
@@ -5,7 +7,7 @@ import 'package:test/test.dart';
 // Project imports:
 import 'package:fhir_path/antlr/antlr_fhir_path.dart';
 
-dynamic walkPath(dynamic arg) =>
+dynamic walkPath(String arg) =>
     walkFhirPath(context: resource.toJson(), pathExpression: arg).toString();
 
 void testQuestionnaire() {
@@ -110,7 +112,7 @@ void testQuestionnaire() {
           [false]);
     });
 
-    /// TODO: EnableWhen using a defined polymorphic type
+    // TODO(Dokotela): EnableWhen using a defined polymorphic type
     // test('EnableWhen using a defined polymorphic type', () {
     //   expect(
     //       walkFhirPath(

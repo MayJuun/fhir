@@ -1,3 +1,5 @@
+// ignore_for_file: noop_primitive_operations, avoid_equals_and_hash_code_on_mutable_classes, library_private_types_in_public_api, avoid_bool_literals_in_conditional_expressions
+
 // Package imports:
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart' as primitives;
@@ -66,6 +68,7 @@ class FhirPathQuantity {
   bool get isTimeValued => timeValuedQuantitiesUnits.containsValue(unit);
   bool get isDefiniteDuration =>
       definiteQuantityDurationUnits.containsKey(unit);
+  @override
   String toString() => isTimeValued ? '$amount $unit' : "$amount '$unit'";
 
   FhirPathQuantity abs() {
@@ -83,8 +86,8 @@ class FhirPathQuantity {
       final toUnit = stringUnitToProperty[o.unit];
       if (fromUnit == null || toUnit == null) {
         if (fromUnit == null && toUnit == null) {
-          if ((unit == 1 || num.tryParse(unit.toString()) == 1) &&
-              (o.unit == 1 || num.tryParse(o.unit.toString()) == 1)) {
+          if ((num.tryParse(unit.toString()) == 1) &&
+              (num.tryParse(o.unit.toString()) == 1)) {
             if (equivalent) {
               final sigDigsLhs = amount.toStringAsExponential().split('e');
               final sigDigsRhs = o.amount.toStringAsExponential().split('e');
@@ -147,7 +150,12 @@ class FhirPathQuantity {
     }
   }
 
-  bool operator ==(Object o) => _eq(o, false);
+  @override
+  bool operator ==(Object other) => _eq(other, false);
+
+  @override
+  int get hashCode => '$amount $unit'.hashCode;
+
   bool equivalent(Object o) => _eq(o, true);
 
   bool compare(_Comparator comparator, Object o) {
@@ -162,21 +170,24 @@ class FhirPathQuantity {
           (fromUnit is! Ratio && toUnit is Ratio)) {
         return false;
       } else if (fromUnit is Ratio) {
-        final convertedAmount =
-            amount.convertRatioFromTo(fromUnit, toUnit as Ratio);
-        if (convertedAmount != null) {
-          switch (comparator) {
-            case _Comparator.gt:
-              return convertedAmount > o.amount;
-            case _Comparator.gte:
-              return convertedAmount >= o.amount;
-            case _Comparator.lt:
-              return convertedAmount < o.amount;
-            case _Comparator.lte:
-              return convertedAmount <= o.amount;
-          }
-        } else {
+        if (toUnit is! Ratio) {
           return false;
+        } else {
+          final convertedAmount = amount.convertRatioFromTo(fromUnit, toUnit);
+          if (convertedAmount != null) {
+            switch (comparator) {
+              case _Comparator.gt:
+                return convertedAmount > o.amount;
+              case _Comparator.gte:
+                return convertedAmount >= o.amount;
+              case _Comparator.lt:
+                return convertedAmount < o.amount;
+              case _Comparator.lte:
+                return convertedAmount <= o.amount;
+            }
+          } else {
+            return false;
+          }
         }
       } else {
         final convertedAmount = amount.convertFromTo(fromUnit, toUnit);
@@ -258,7 +269,7 @@ class FhirPathQuantity {
       final value = amount * o.amount;
       return FhirPathQuantity(value, unit);
     } else {
-      /// TODO: Should work on being able to multiply these values
+      // TODO(Dokotela): Should work on being able to multiply these values
       throw primitives.InvalidTypes<FhirPathQuantity>(
           'A * operator was attemped with an object that was not a FhirPathQuantity: '
           'instead this was passed $o which is a type ${o.runtimeType}');
@@ -274,7 +285,7 @@ class FhirPathQuantity {
       final value = amount / o.amount;
       return FhirPathQuantity(value, unit);
     } else {
-      /// TODO: Should work on being able to divide these values
+      // TODO(Dokotela): Should work on being able to divide these values
       throw primitives.InvalidTypes<FhirPathQuantity>(
           'A / operator was attemped with an object that was not a FhirPathQuantity: '
           'instead this was passed $o which is a type ${o.runtimeType}');

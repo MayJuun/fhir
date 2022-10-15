@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_single_quotes
+
 // Package imports:
 import 'package:fhir/r4.dart';
 import 'package:test/test.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_single_quotes, unnecessary_string_escapes, leading_newlines_in_multiline_strings
+
 // Dart imports:
 import 'dart:convert';
 
@@ -807,7 +809,7 @@ void testArgFxns() {
           [3.142]);
     });
 
-    /// TODO: complex-extension
+    // TODO(Dokotela): complex-extension
     // test('complex-extension', () {
     //   expect(
     //       walkFhirPath(
@@ -823,12 +825,12 @@ void testArgFxns() {
       expect(
           walkFhirPath(context: null, pathExpression: 'iif(false, 1, 0)'), [0]);
       expect(walkFhirPath(context: null, pathExpression: 'iif({}, 1, 0)'), [0]);
-      // TODO: is this correct functionality? non-empty, non-bool is true.
+      // TODO(Dokotela): is this correct functionality? non-empty, non-bool is true.
       expect(walkFhirPath(context: null, pathExpression: 'iif(5, 1, 0)'), [1]);
       expect(walkFhirPath(context: null, pathExpression: 'iif(true, 1)'), [1]);
       expect(walkFhirPath(context: null, pathExpression: 'iif(false, 1)'), []);
       expect(() => walkFhirPath(context: null, pathExpression: 'iif(false)'),
-          throwsA(TypeMatcher<FhirPathInvalidExpressionException>()));
+          throwsA(const TypeMatcher<FhirPathInvalidExpressionException>()));
     });
     test('iif-short-circuit', () {
       // non-existent identifier should never be evaluated
@@ -842,7 +844,7 @@ void testArgFxns() {
           () => walkFhirPath(
               context: resource.toJson(),
               pathExpression: 'iif(false, 1, %resource.blurb)'),
-          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+          throwsA(const TypeMatcher<FhirPathEvaluationException>()));
     });
     test('iif-with-variables', () {
       expect(

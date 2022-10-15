@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_single_quotes
+
 // Package imports:
 import 'package:fhir/r4.dart';
 import 'package:test/test.dart';
@@ -597,7 +599,7 @@ void testNoArgFxns() {
               pathExpression: "'2021-01-01T12:12'.convertsToDateTime()"),
           [true]);
     });
-    // TODO: in web these get returned as integers not decimals if they have
+    // TODO(Dokotela): in web these get returned as integers not decimals if they have
     // nothing after the decimal point
     test('toDecimal', () {
       // expect(
@@ -789,7 +791,7 @@ void testNoArgFxns() {
               pathExpression: "'4 days'.convertsToQuantity()"),
           [true]);
 
-      // TODO: still need to work on recognizing Quantity
+      // TODO(Dokotela): still need to work on recognizing Quantity
       // expect(
       //     walkFhirPath(
       //         context: resource.toJson(),
@@ -1050,7 +1052,7 @@ void testNoArgFxns() {
       expect(
         () => walkFhirPath(
             context: resource.toJson(), pathExpression: "today() + 5.5 'mg'"),
-        throwsA(TypeMatcher<FhirPathEvaluationException>()),
+        throwsA(const TypeMatcher<FhirPathEvaluationException>()),
       );
 
       expect(
@@ -1240,7 +1242,8 @@ void testNoArgFxns() {
           walkFhirPath(context: resource.toJson(), pathExpression: "now()");
       final endNow = DateTime.now();
       expect(
-          startNow.isBefore(resultNow.first) && endNow.isAfter(resultNow.first),
+          startNow.isBefore(resultNow.first as DateTime) &&
+              endNow.isAfter(resultNow.first as DateTime),
           true);
 
       final startTimeOfDay = Time(
@@ -1252,7 +1255,8 @@ void testNoArgFxns() {
           DateTime.now().toIso8601String().split('T').last.substring(0, 11));
 
       expect(
-          startTimeOfDay <= resultTimeOfDay && endTimeOfDay >= resultTimeOfDay,
+          startTimeOfDay <= (resultTimeOfDay as Time) &&
+              endTimeOfDay >= resultTimeOfDay,
           true);
 
       expect(

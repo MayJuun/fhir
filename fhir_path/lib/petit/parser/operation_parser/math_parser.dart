@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls
+
 // Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
@@ -21,7 +23,7 @@ class UnaryNegateParser extends OperatorParser {
     }
     if (executedAfter.length != 1) {
       throw FhirPathInvalidExpressionException(
-          'Unary negate needs to be applied on a single item. Found instead: ${executedAfter}');
+          'Unary negate needs to be applied on a single item. Found instead: $executedAfter');
     }
     if (executedAfter.first is num) {
       return [-(executedAfter.first as num)];
