@@ -5,7 +5,7 @@ List? _$visitEqualityExpression(
   FhirPathDartVisitor visitor,
 ) {
   if (ctx.childCount != 3) {
-    throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
+    throw _wrongArgLength(ctx.text, ctx.children ?? []);
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
@@ -142,7 +142,7 @@ List? _$visitEqualityExpression(
                 visitor.context = <dynamic>[rhs[i] == lhs[i]];
               }
             }
-            if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
+            if (lhs[i] != rhs[i] || rhs[i] != lhs[i]) {
               visitor.context = <dynamic>[false];
             }
           }
