@@ -32,16 +32,16 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../../../fhir"
-      relative: true
-    source: path
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.9.1"
   fhir_at_rest:
     dependency: "direct main"
     description:
-      path: "../../../fhir_at_rest"
-      relative: true
-    source: path
+      name: fhir_at_rest
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.9.1"
   fhir_auth:
     dependency: "direct main"

@@ -1,5 +1,11 @@
 # fhir_auth
 
+## [0.9.0-3]
+
+* Still not sure if I can create resources in Epic and then know how to find them
+* Cerner patient launch works internally and externally
+* NOTE: for some reason the Cerner launch does not accept the launch token for an internal launch being attached to the Authorization url - if you need this included, you'll have to adjust how the url is created
+
 ## [0.9.0-2]
 
 * Successfully does external and internal web launches to Epic for patients and for users, although for Epic you do need to ensure that you include the proper launch parameters if you're doing a patient context

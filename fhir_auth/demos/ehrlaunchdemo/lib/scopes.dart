@@ -16,7 +16,21 @@ final scopes = Scopes(
   ehrLaunch: true,
 );
 
-final cernerScopes = Scopes(
+final cernerPatientScopes = Scopes(
+  clinicalScopes: [
+    ClinicalScope(
+      role: Role.patient,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.read,
+    ),
+  ],
+  openid: true,
+  offlineAccess: true,
+  patientLaunch: true,
+  fhirUser: true,
+);
+
+final cernerUserScopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
       role: Role.user,

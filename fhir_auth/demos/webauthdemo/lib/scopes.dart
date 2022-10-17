@@ -14,6 +14,54 @@ final scopes = Scopes(
   offlineAccess: true,
 );
 
+final cernerPatientScopes = Scopes(
+  clinicalScopes: [
+    ClinicalScope(
+      role: Role.patient,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.read,
+    ),
+    ClinicalScope(
+      role: Role.patient,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.write,
+    ),
+  ],
+  openid: true,
+  offlineAccess: true,
+  fhirUser: true,
+  patientLaunch: true,
+);
+
+final cernerUserScopes = Scopes(
+  clinicalScopes: [
+    ClinicalScope(
+      role: Role.user,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.read,
+    ),
+    ClinicalScope(
+      role: Role.user,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.write,
+    ),
+    ClinicalScope(
+      role: Role.patient,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.read,
+    ),
+    ClinicalScope(
+      role: Role.patient,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.write,
+    ),
+  ],
+  openid: true,
+  offlineAccess: true,
+  // patientLaunch: true,
+  fhirUser: true,
+);
+
 final epicUserScopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
