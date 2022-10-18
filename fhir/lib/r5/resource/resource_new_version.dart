@@ -8,10 +8,17 @@ Meta _updateMetaVersion(Meta? oldMeta) {
       : oldMeta.versionId == null
           ? 1
           : int.parse(oldMeta.versionId.toString()) + 1;
-  return Meta(
-    lastUpdated: Instant(DateTime.now().toUtc()),
-    versionId: Id(version.toString()),
-  );
+  if (oldMeta == null) {
+    return Meta(
+      lastUpdated: Instant(DateTime.now().toUtc()),
+      versionId: Id(version.toString()),
+    );
+  } else {
+    return oldMeta.copyWith(
+      lastUpdated: Instant(DateTime.now().toUtc()),
+      versionId: Id(version.toString()),
+    );
+  }
 }
 
 /// Updates the [meta] field of this Resource, updates the meta.lastUpdated
