@@ -75,7 +75,7 @@ class IifParser extends FunctionParser {
   }
 
   @override
-  String toString() => 'IifParser: ${value.toString()}';
+  String toString() => 'IifParser: $value';
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in

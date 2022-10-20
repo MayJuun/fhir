@@ -575,9 +575,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
     } else if (value.length == 1) {
       return [FhirDateTime(value.first.toString())];
     } else {
-      return [
-        FhirDateTime('${value.first.toString()}T${value.last.toString()}')
-      ];
+      return [FhirDateTime('${value.first}T${value.last}')];
     }
   }
 
@@ -586,7 +584,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
     if (value.length == 1) {
       return value.first.toString();
     } else {
-      return '${value.first.toString()}T${value.last.toString()}';
+      return '${value.first}T${value.last}';
     }
   }
 
