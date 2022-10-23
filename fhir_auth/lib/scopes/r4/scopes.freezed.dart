@@ -64,7 +64,8 @@ mixin _$Scopes {
 /// @nodoc
 abstract class $ScopesCopyWith<$Res> {
   factory $ScopesCopyWith(Scopes value, $Res Function(Scopes) then) =
-      _$ScopesCopyWithImpl<$Res>;
+      _$ScopesCopyWithImpl<$Res, Scopes>;
+  @useResult
   $Res call(
       {List<ClinicalScope>? clinicalScopes,
       bool? openid,
@@ -82,13 +83,16 @@ abstract class $ScopesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ScopesCopyWithImpl<$Res> implements $ScopesCopyWith<$Res> {
+class _$ScopesCopyWithImpl<$Res, $Val extends Scopes>
+    implements $ScopesCopyWith<$Res> {
   _$ScopesCopyWithImpl(this._value, this._then);
 
-  final Scopes _value;
   // ignore: unused_field
-  final $Res Function(Scopes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? clinicalScopes = freezed,
@@ -106,59 +110,59 @@ class _$ScopesCopyWithImpl<$Res> implements $ScopesCopyWith<$Res> {
     Object? additional = freezed,
   }) {
     return _then(_value.copyWith(
-      clinicalScopes: clinicalScopes == freezed
+      clinicalScopes: freezed == clinicalScopes
           ? _value.clinicalScopes
           : clinicalScopes // ignore: cast_nullable_to_non_nullable
               as List<ClinicalScope>?,
-      openid: openid == freezed
+      openid: freezed == openid
           ? _value.openid
           : openid // ignore: cast_nullable_to_non_nullable
               as bool?,
-      fhirUser: fhirUser == freezed
+      fhirUser: freezed == fhirUser
           ? _value.fhirUser
           : fhirUser // ignore: cast_nullable_to_non_nullable
               as bool?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as bool?,
-      offlineAccess: offlineAccess == freezed
+      offlineAccess: freezed == offlineAccess
           ? _value.offlineAccess
           : offlineAccess // ignore: cast_nullable_to_non_nullable
               as bool?,
-      onlineAccess: onlineAccess == freezed
+      onlineAccess: freezed == onlineAccess
           ? _value.onlineAccess
           : onlineAccess // ignore: cast_nullable_to_non_nullable
               as bool?,
-      ehrLaunch: ehrLaunch == freezed
+      ehrLaunch: freezed == ehrLaunch
           ? _value.ehrLaunch
           : ehrLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      patientLaunch: patientLaunch == freezed
+      patientLaunch: freezed == patientLaunch
           ? _value.patientLaunch
           : patientLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      encounterLaunch: encounterLaunch == freezed
+      encounterLaunch: freezed == encounterLaunch
           ? _value.encounterLaunch
           : encounterLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      needPatientBanner: needPatientBanner == freezed
+      needPatientBanner: freezed == needPatientBanner
           ? _value.needPatientBanner
           : needPatientBanner // ignore: cast_nullable_to_non_nullable
               as bool?,
-      smartOrchestrateLaunch: smartOrchestrateLaunch == freezed
+      smartOrchestrateLaunch: freezed == smartOrchestrateLaunch
           ? _value.smartOrchestrateLaunch
           : smartOrchestrateLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      intent: intent == freezed
+      intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
               as String?,
-      additional: additional == freezed
+      additional: freezed == additional
           ? _value.additional
           : additional // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -167,6 +171,7 @@ abstract class _$$_ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
   factory _$$_ScopesCopyWith(_$_Scopes value, $Res Function(_$_Scopes) then) =
       __$$_ScopesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<ClinicalScope>? clinicalScopes,
       bool? openid,
@@ -184,14 +189,13 @@ abstract class _$$_ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
+class __$$_ScopesCopyWithImpl<$Res>
+    extends _$ScopesCopyWithImpl<$Res, _$_Scopes>
     implements _$$_ScopesCopyWith<$Res> {
   __$$_ScopesCopyWithImpl(_$_Scopes _value, $Res Function(_$_Scopes) _then)
-      : super(_value, (v) => _then(v as _$_Scopes));
+      : super(_value, _then);
 
-  @override
-  _$_Scopes get _value => super._value as _$_Scopes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? clinicalScopes = freezed,
@@ -209,55 +213,55 @@ class __$$_ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
     Object? additional = freezed,
   }) {
     return _then(_$_Scopes(
-      clinicalScopes: clinicalScopes == freezed
+      clinicalScopes: freezed == clinicalScopes
           ? _value._clinicalScopes
           : clinicalScopes // ignore: cast_nullable_to_non_nullable
               as List<ClinicalScope>?,
-      openid: openid == freezed
+      openid: freezed == openid
           ? _value.openid
           : openid // ignore: cast_nullable_to_non_nullable
               as bool?,
-      fhirUser: fhirUser == freezed
+      fhirUser: freezed == fhirUser
           ? _value.fhirUser
           : fhirUser // ignore: cast_nullable_to_non_nullable
               as bool?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as bool?,
-      offlineAccess: offlineAccess == freezed
+      offlineAccess: freezed == offlineAccess
           ? _value.offlineAccess
           : offlineAccess // ignore: cast_nullable_to_non_nullable
               as bool?,
-      onlineAccess: onlineAccess == freezed
+      onlineAccess: freezed == onlineAccess
           ? _value.onlineAccess
           : onlineAccess // ignore: cast_nullable_to_non_nullable
               as bool?,
-      ehrLaunch: ehrLaunch == freezed
+      ehrLaunch: freezed == ehrLaunch
           ? _value.ehrLaunch
           : ehrLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      patientLaunch: patientLaunch == freezed
+      patientLaunch: freezed == patientLaunch
           ? _value.patientLaunch
           : patientLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      encounterLaunch: encounterLaunch == freezed
+      encounterLaunch: freezed == encounterLaunch
           ? _value.encounterLaunch
           : encounterLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      needPatientBanner: needPatientBanner == freezed
+      needPatientBanner: freezed == needPatientBanner
           ? _value.needPatientBanner
           : needPatientBanner // ignore: cast_nullable_to_non_nullable
               as bool?,
-      smartOrchestrateLaunch: smartOrchestrateLaunch == freezed
+      smartOrchestrateLaunch: freezed == smartOrchestrateLaunch
           ? _value.smartOrchestrateLaunch
           : smartOrchestrateLaunch // ignore: cast_nullable_to_non_nullable
               as bool?,
-      intent: intent == freezed
+      intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
               as String?,
-      additional: additional == freezed
+      additional: freezed == additional
           ? _value._additional
           : additional // ignore: cast_nullable_to_non_nullable
               as List<String>?,
@@ -366,23 +370,25 @@ class _$_Scopes extends _Scopes {
             other is _$_Scopes &&
             const DeepCollectionEquality()
                 .equals(other._clinicalScopes, _clinicalScopes) &&
-            const DeepCollectionEquality().equals(other.openid, openid) &&
-            const DeepCollectionEquality().equals(other.fhirUser, fhirUser) &&
-            const DeepCollectionEquality().equals(other.profile, profile) &&
-            const DeepCollectionEquality()
-                .equals(other.offlineAccess, offlineAccess) &&
-            const DeepCollectionEquality()
-                .equals(other.onlineAccess, onlineAccess) &&
-            const DeepCollectionEquality().equals(other.ehrLaunch, ehrLaunch) &&
-            const DeepCollectionEquality()
-                .equals(other.patientLaunch, patientLaunch) &&
-            const DeepCollectionEquality()
-                .equals(other.encounterLaunch, encounterLaunch) &&
-            const DeepCollectionEquality()
-                .equals(other.needPatientBanner, needPatientBanner) &&
-            const DeepCollectionEquality()
-                .equals(other.smartOrchestrateLaunch, smartOrchestrateLaunch) &&
-            const DeepCollectionEquality().equals(other.intent, intent) &&
+            (identical(other.openid, openid) || other.openid == openid) &&
+            (identical(other.fhirUser, fhirUser) ||
+                other.fhirUser == fhirUser) &&
+            (identical(other.profile, profile) || other.profile == profile) &&
+            (identical(other.offlineAccess, offlineAccess) ||
+                other.offlineAccess == offlineAccess) &&
+            (identical(other.onlineAccess, onlineAccess) ||
+                other.onlineAccess == onlineAccess) &&
+            (identical(other.ehrLaunch, ehrLaunch) ||
+                other.ehrLaunch == ehrLaunch) &&
+            (identical(other.patientLaunch, patientLaunch) ||
+                other.patientLaunch == patientLaunch) &&
+            (identical(other.encounterLaunch, encounterLaunch) ||
+                other.encounterLaunch == encounterLaunch) &&
+            (identical(other.needPatientBanner, needPatientBanner) ||
+                other.needPatientBanner == needPatientBanner) &&
+            (identical(other.smartOrchestrateLaunch, smartOrchestrateLaunch) ||
+                other.smartOrchestrateLaunch == smartOrchestrateLaunch) &&
+            (identical(other.intent, intent) || other.intent == intent) &&
             const DeepCollectionEquality()
                 .equals(other._additional, _additional));
   }
@@ -391,21 +397,22 @@ class _$_Scopes extends _Scopes {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_clinicalScopes),
-      const DeepCollectionEquality().hash(openid),
-      const DeepCollectionEquality().hash(fhirUser),
-      const DeepCollectionEquality().hash(profile),
-      const DeepCollectionEquality().hash(offlineAccess),
-      const DeepCollectionEquality().hash(onlineAccess),
-      const DeepCollectionEquality().hash(ehrLaunch),
-      const DeepCollectionEquality().hash(patientLaunch),
-      const DeepCollectionEquality().hash(encounterLaunch),
-      const DeepCollectionEquality().hash(needPatientBanner),
-      const DeepCollectionEquality().hash(smartOrchestrateLaunch),
-      const DeepCollectionEquality().hash(intent),
+      openid,
+      fhirUser,
+      profile,
+      offlineAccess,
+      onlineAccess,
+      ehrLaunch,
+      patientLaunch,
+      encounterLaunch,
+      needPatientBanner,
+      smartOrchestrateLaunch,
+      intent,
       const DeepCollectionEquality().hash(_additional));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ScopesCopyWith<_$_Scopes> get copyWith =>
       __$$_ScopesCopyWithImpl<_$_Scopes>(this, _$identity);
 }

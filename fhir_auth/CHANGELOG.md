@@ -1,8 +1,8 @@
 # fhir_auth
 
-## [0.9.0-3]
+## [0.9.0]
 
-* Still not sure if I can create resources in Epic and then know how to find them
+* Cannot create resources and then find them in Epic. Can create them but due to a CORS issue canot get the location, and identifiers are stripped away upon creation. Ayone who figures this out, please let me know.
 * Cerner patient launch works internally and externally
 * NOTE: for some reason the Cerner launch does not accept the launch token for an internal launch being attached to the Authorization url - if you need this included, you'll have to adjust how the url is created
 
