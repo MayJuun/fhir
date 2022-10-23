@@ -235,7 +235,7 @@ mixin _$FhirRequest {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -247,7 +247,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -260,7 +260,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -271,7 +271,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -282,7 +282,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -294,7 +294,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -305,7 +305,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -318,7 +318,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -328,7 +328,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -339,7 +339,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -350,7 +350,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -361,7 +361,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -377,7 +377,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -392,7 +392,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -406,7 +406,7 @@ mixin _$FhirRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -637,21 +637,21 @@ mixin _$FhirRequest {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -684,7 +684,8 @@ mixin _$FhirRequest {
 abstract class $FhirRequestCopyWith<$Res> {
   factory $FhirRequestCopyWith(
           FhirRequest value, $Res Function(FhirRequest) then) =
-      _$FhirRequestCopyWithImpl<$Res>;
+      _$FhirRequestCopyWithImpl<$Res, FhirRequest>;
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -697,58 +698,61 @@ abstract class $FhirRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
+class _$FhirRequestCopyWithImpl<$Res, $Val extends FhirRequest>
+    implements $FhirRequestCopyWith<$Res> {
   _$FhirRequestCopyWithImpl(this._value, this._then);
 
-  final FhirRequest _value;
   // ignore: unused_field
-  final $Res Function(FhirRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value.elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -759,6 +763,7 @@ abstract class _$$FhirReadRequestCopyWith<$Res>
           _$FhirReadRequest value, $Res Function(_$FhirReadRequest) then) =
       __$$FhirReadRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
@@ -774,66 +779,64 @@ abstract class _$$FhirReadRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirReadRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirReadRequest>
     implements _$$FhirReadRequestCopyWith<$Res> {
   __$$FhirReadRequestCopyWithImpl(
       _$FhirReadRequest _value, $Res Function(_$FhirReadRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirReadRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirReadRequest get _value => super._value as _$FhirReadRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirReadRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -929,35 +932,37 @@ class _$FhirReadRequest extends FhirReadRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirReadRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirReadRequestCopyWith<_$FhirReadRequest> get copyWith =>
       __$$FhirReadRequestCopyWithImpl<_$FhirReadRequest>(this, _$identity);
 
@@ -1159,7 +1164,7 @@ class _$FhirReadRequest extends FhirReadRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -1171,7 +1176,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -1184,7 +1189,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1195,7 +1200,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1206,7 +1211,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -1218,7 +1223,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1229,7 +1234,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -1242,7 +1247,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1252,7 +1257,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1263,7 +1268,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1274,7 +1279,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1285,7 +1290,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -1301,7 +1306,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -1316,7 +1321,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1330,7 +1335,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -1575,21 +1580,21 @@ class _$FhirReadRequest extends FhirReadRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return read?.call(this);
   }
@@ -1689,6 +1694,7 @@ abstract class _$$FhirVReadRequestCopyWith<$Res>
           _$FhirVReadRequest value, $Res Function(_$FhirVReadRequest) then) =
       __$$FhirVReadRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
@@ -1705,71 +1711,69 @@ abstract class _$$FhirVReadRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirVReadRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirVReadRequest>
     implements _$$FhirVReadRequestCopyWith<$Res> {
   __$$FhirVReadRequestCopyWithImpl(
       _$FhirVReadRequest _value, $Res Function(_$FhirVReadRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirVReadRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirVReadRequest get _value => super._value as _$FhirVReadRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? vid = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? vid = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirVReadRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      vid: vid == freezed
+      vid: null == vid
           ? _value.vid
           : vid // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -1868,37 +1872,39 @@ class _$FhirVReadRequest extends FhirVReadRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirVReadRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.vid, vid) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.vid, vid) || other.vid == vid) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(vid),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      type,
+      id,
+      vid,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirVReadRequestCopyWith<_$FhirVReadRequest> get copyWith =>
       __$$FhirVReadRequestCopyWithImpl<_$FhirVReadRequest>(this, _$identity);
 
@@ -2100,7 +2106,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -2112,7 +2118,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -2125,7 +2131,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2136,7 +2142,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2147,7 +2153,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -2159,7 +2165,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2170,7 +2176,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -2183,7 +2189,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2193,7 +2199,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2204,7 +2210,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2215,7 +2221,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2226,7 +2232,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -2242,7 +2248,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -2257,7 +2263,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2271,7 +2277,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -2516,21 +2522,21 @@ class _$FhirVReadRequest extends FhirVReadRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return vRead?.call(this);
   }
@@ -2632,6 +2638,7 @@ abstract class _$$FhirUpdateRequestCopyWith<$Res>
           _$FhirUpdateRequest value, $Res Function(_$FhirUpdateRequest) then) =
       __$$FhirUpdateRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Resource resource,
@@ -2646,61 +2653,59 @@ abstract class _$$FhirUpdateRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirUpdateRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirUpdateRequest>
     implements _$$FhirUpdateRequestCopyWith<$Res> {
   __$$FhirUpdateRequestCopyWithImpl(
       _$FhirUpdateRequest _value, $Res Function(_$FhirUpdateRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirUpdateRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirUpdateRequest get _value => super._value as _$FhirUpdateRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? resource = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? resource = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirUpdateRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      resource: resource == freezed
+      resource: null == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Resource,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -2789,33 +2794,36 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirUpdateRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.resource, resource) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.resource, resource) ||
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(resource),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirUpdateRequestCopyWith<_$FhirUpdateRequest> get copyWith =>
       __$$FhirUpdateRequestCopyWithImpl<_$FhirUpdateRequest>(this, _$identity);
 
@@ -3017,7 +3025,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -3029,7 +3037,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -3042,7 +3050,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3053,7 +3061,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3064,7 +3072,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -3076,7 +3084,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3087,7 +3095,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -3100,7 +3108,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3110,7 +3118,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3121,7 +3129,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3132,7 +3140,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3143,7 +3151,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -3159,7 +3167,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -3174,7 +3182,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3188,7 +3196,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -3433,21 +3441,21 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return update?.call(this);
   }
@@ -3541,6 +3549,7 @@ abstract class _$$FhirPatchRequestCopyWith<$Res>
           _$FhirPatchRequest value, $Res Function(_$FhirPatchRequest) then) =
       __$$FhirPatchRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Resource resource,
@@ -3555,61 +3564,59 @@ abstract class _$$FhirPatchRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirPatchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirPatchRequest>
     implements _$$FhirPatchRequestCopyWith<$Res> {
   __$$FhirPatchRequestCopyWithImpl(
       _$FhirPatchRequest _value, $Res Function(_$FhirPatchRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirPatchRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirPatchRequest get _value => super._value as _$FhirPatchRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? resource = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? resource = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirPatchRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      resource: resource == freezed
+      resource: null == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Resource,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -3698,33 +3705,36 @@ class _$FhirPatchRequest extends FhirPatchRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirPatchRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.resource, resource) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.resource, resource) ||
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(resource),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirPatchRequestCopyWith<_$FhirPatchRequest> get copyWith =>
       __$$FhirPatchRequestCopyWithImpl<_$FhirPatchRequest>(this, _$identity);
 
@@ -3926,7 +3936,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -3938,7 +3948,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -3951,7 +3961,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3962,7 +3972,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3973,7 +3983,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -3985,7 +3995,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3996,7 +4006,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -4009,7 +4019,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4019,7 +4029,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4030,7 +4040,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4041,7 +4051,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4052,7 +4062,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -4068,7 +4078,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -4083,7 +4093,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4097,7 +4107,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -4342,21 +4352,21 @@ class _$FhirPatchRequest extends FhirPatchRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return patch?.call(this);
   }
@@ -4450,6 +4460,7 @@ abstract class _$$FhirDeleteRequestCopyWith<$Res>
           _$FhirDeleteRequest value, $Res Function(_$FhirDeleteRequest) then) =
       __$$FhirDeleteRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
@@ -4465,66 +4476,64 @@ abstract class _$$FhirDeleteRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirDeleteRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirDeleteRequest>
     implements _$$FhirDeleteRequestCopyWith<$Res> {
   __$$FhirDeleteRequestCopyWithImpl(
       _$FhirDeleteRequest _value, $Res Function(_$FhirDeleteRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirDeleteRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirDeleteRequest get _value => super._value as _$FhirDeleteRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirDeleteRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -4620,35 +4629,37 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirDeleteRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirDeleteRequestCopyWith<_$FhirDeleteRequest> get copyWith =>
       __$$FhirDeleteRequestCopyWithImpl<_$FhirDeleteRequest>(this, _$identity);
 
@@ -4850,7 +4861,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -4862,7 +4873,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -4875,7 +4886,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4886,7 +4897,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4897,7 +4908,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -4909,7 +4920,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4920,7 +4931,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -4933,7 +4944,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4943,7 +4954,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4954,7 +4965,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4965,7 +4976,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4976,7 +4987,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -4992,7 +5003,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -5007,7 +5018,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5021,7 +5032,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -5266,21 +5277,21 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return delete?.call(this);
   }
@@ -5380,6 +5391,7 @@ abstract class _$$FhirCreateRequestCopyWith<$Res>
           _$FhirCreateRequest value, $Res Function(_$FhirCreateRequest) then) =
       __$$FhirCreateRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Resource resource,
@@ -5394,61 +5406,59 @@ abstract class _$$FhirCreateRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirCreateRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirCreateRequest>
     implements _$$FhirCreateRequestCopyWith<$Res> {
   __$$FhirCreateRequestCopyWithImpl(
       _$FhirCreateRequest _value, $Res Function(_$FhirCreateRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirCreateRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirCreateRequest get _value => super._value as _$FhirCreateRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? resource = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? resource = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirCreateRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      resource: resource == freezed
+      resource: null == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Resource,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -5537,33 +5547,36 @@ class _$FhirCreateRequest extends FhirCreateRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirCreateRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.resource, resource) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.resource, resource) ||
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(resource),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirCreateRequestCopyWith<_$FhirCreateRequest> get copyWith =>
       __$$FhirCreateRequestCopyWithImpl<_$FhirCreateRequest>(this, _$identity);
 
@@ -5765,7 +5778,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -5777,7 +5790,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -5790,7 +5803,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5801,7 +5814,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5812,7 +5825,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -5824,7 +5837,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5835,7 +5848,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -5848,7 +5861,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5858,7 +5871,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5869,7 +5882,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5880,7 +5893,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5891,7 +5904,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -5907,7 +5920,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -5922,7 +5935,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5936,7 +5949,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -6181,21 +6194,21 @@ class _$FhirCreateRequest extends FhirCreateRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return create?.call(this);
   }
@@ -6289,6 +6302,7 @@ abstract class _$$FhirSearchRequestCopyWith<$Res>
           _$FhirSearchRequest value, $Res Function(_$FhirSearchRequest) then) =
       __$$FhirSearchRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
@@ -6305,71 +6319,69 @@ abstract class _$$FhirSearchRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirSearchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirSearchRequest>
     implements _$$FhirSearchRequestCopyWith<$Res> {
   __$$FhirSearchRequestCopyWithImpl(
       _$FhirSearchRequest _value, $Res Function(_$FhirSearchRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirSearchRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirSearchRequest get _value => super._value as _$FhirSearchRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? usePost = freezed,
-    Object? restfulRequest = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? usePost = null,
+    Object? restfulRequest = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirSearchRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      usePost: usePost == freezed
+      usePost: null == usePost
           ? _value.usePost
           : usePost // ignore: cast_nullable_to_non_nullable
               as bool,
-      restfulRequest: restfulRequest == freezed
+      restfulRequest: null == restfulRequest
           ? _value.restfulRequest
           : restfulRequest // ignore: cast_nullable_to_non_nullable
               as RestfulRequest,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -6471,38 +6483,40 @@ class _$FhirSearchRequest extends FhirSearchRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirSearchRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.usePost, usePost) &&
-            const DeepCollectionEquality()
-                .equals(other.restfulRequest, restfulRequest) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
+            (identical(other.restfulRequest, restfulRequest) ||
+                other.restfulRequest == restfulRequest) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      type,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(usePost),
-      const DeepCollectionEquality().hash(restfulRequest),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      usePost,
+      restfulRequest,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirSearchRequestCopyWith<_$FhirSearchRequest> get copyWith =>
       __$$FhirSearchRequestCopyWithImpl<_$FhirSearchRequest>(this, _$identity);
 
@@ -6704,7 +6718,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -6716,7 +6730,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -6729,7 +6743,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -6740,7 +6754,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -6751,7 +6765,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -6763,7 +6777,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -6774,7 +6788,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -6787,7 +6801,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6797,7 +6811,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6808,7 +6822,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6819,7 +6833,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6830,7 +6844,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -6846,7 +6860,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -6861,7 +6875,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6875,7 +6889,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -7120,21 +7134,21 @@ class _$FhirSearchRequest extends FhirSearchRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return search?.call(this);
   }
@@ -7237,6 +7251,7 @@ abstract class _$$FhirSearchAllRequestCopyWith<$Res>
           $Res Function(_$FhirSearchAllRequest) then) =
       __$$FhirSearchAllRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -7250,56 +7265,54 @@ abstract class _$$FhirSearchAllRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirSearchAllRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirSearchAllRequest>
     implements _$$FhirSearchAllRequestCopyWith<$Res> {
   __$$FhirSearchAllRequestCopyWithImpl(_$FhirSearchAllRequest _value,
       $Res Function(_$FhirSearchAllRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirSearchAllRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirSearchAllRequest get _value => super._value as _$FhirSearchAllRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirSearchAllRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -7385,31 +7398,33 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirSearchAllRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirSearchAllRequestCopyWith<_$FhirSearchAllRequest> get copyWith =>
       __$$FhirSearchAllRequestCopyWithImpl<_$FhirSearchAllRequest>(
           this, _$identity);
@@ -7612,7 +7627,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -7624,7 +7639,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -7637,7 +7652,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7648,7 +7663,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7659,7 +7674,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -7671,7 +7686,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7682,7 +7697,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -7695,7 +7710,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7705,7 +7720,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7716,7 +7731,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7727,7 +7742,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7738,7 +7753,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -7754,7 +7769,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -7769,7 +7784,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7783,7 +7798,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -8028,21 +8043,21 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return searchAll?.call(this);
   }
@@ -8134,6 +8149,7 @@ abstract class _$$FhirCapabilitiesRequestCopyWith<$Res>
           $Res Function(_$FhirCapabilitiesRequest) then) =
       __$$FhirCapabilitiesRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -8148,62 +8164,59 @@ abstract class _$$FhirCapabilitiesRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirCapabilitiesRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirCapabilitiesRequest>
     implements _$$FhirCapabilitiesRequestCopyWith<$Res> {
   __$$FhirCapabilitiesRequestCopyWithImpl(_$FhirCapabilitiesRequest _value,
       $Res Function(_$FhirCapabilitiesRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirCapabilitiesRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirCapabilitiesRequest get _value =>
-      super._value as _$FhirCapabilitiesRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? mode = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? mode = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirCapabilitiesRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Mode,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -8295,33 +8308,35 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirCapabilitiesRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.mode, mode) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(mode),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      mode,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirCapabilitiesRequestCopyWith<_$FhirCapabilitiesRequest> get copyWith =>
       __$$FhirCapabilitiesRequestCopyWithImpl<_$FhirCapabilitiesRequest>(
           this, _$identity);
@@ -8524,7 +8539,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -8536,7 +8551,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -8549,7 +8564,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8560,7 +8575,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8571,7 +8586,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -8583,7 +8598,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8594,7 +8609,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -8607,7 +8622,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8617,7 +8632,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8628,7 +8643,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8639,7 +8654,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8650,7 +8665,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -8666,7 +8681,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -8681,7 +8696,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8695,7 +8710,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -8940,21 +8955,21 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return capabilities?.call(this);
   }
@@ -9050,6 +9065,7 @@ abstract class _$$FhirTransactionRequestCopyWith<$Res>
           $Res Function(_$FhirTransactionRequest) then) =
       __$$FhirTransactionRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -9066,62 +9082,59 @@ abstract class _$$FhirTransactionRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirTransactionRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirTransactionRequest>
     implements _$$FhirTransactionRequestCopyWith<$Res> {
   __$$FhirTransactionRequestCopyWithImpl(_$FhirTransactionRequest _value,
       $Res Function(_$FhirTransactionRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirTransactionRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirTransactionRequest get _value =>
-      super._value as _$FhirTransactionRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? bundle = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? bundle = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirTransactionRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      bundle: bundle == freezed
+      bundle: null == bundle
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -9129,6 +9142,7 @@ class __$$FhirTransactionRequestCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $BundleCopyWith<$Res> get bundle {
     return $BundleCopyWith<$Res>(_value.bundle, (value) {
       return _then(_value.copyWith(bundle: value));
@@ -9219,33 +9233,35 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirTransactionRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.bundle, bundle) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(bundle),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      bundle,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirTransactionRequestCopyWith<_$FhirTransactionRequest> get copyWith =>
       __$$FhirTransactionRequestCopyWithImpl<_$FhirTransactionRequest>(
           this, _$identity);
@@ -9448,7 +9464,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -9460,7 +9476,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -9473,7 +9489,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -9484,7 +9500,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -9495,7 +9511,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -9507,7 +9523,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -9518,7 +9534,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -9531,7 +9547,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9541,7 +9557,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9552,7 +9568,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9563,7 +9579,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9574,7 +9590,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -9590,7 +9606,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -9605,7 +9621,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9619,7 +9635,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -9864,21 +9880,21 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return transaction?.call(this);
   }
@@ -9974,6 +9990,7 @@ abstract class _$$FhirBatchRequestCopyWith<$Res>
           _$FhirBatchRequest value, $Res Function(_$FhirBatchRequest) then) =
       __$$FhirBatchRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -9990,61 +10007,59 @@ abstract class _$$FhirBatchRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirBatchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirBatchRequest>
     implements _$$FhirBatchRequestCopyWith<$Res> {
   __$$FhirBatchRequestCopyWithImpl(
       _$FhirBatchRequest _value, $Res Function(_$FhirBatchRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirBatchRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirBatchRequest get _value => super._value as _$FhirBatchRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? bundle = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? bundle = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirBatchRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      bundle: bundle == freezed
+      bundle: null == bundle
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -10052,6 +10067,7 @@ class __$$FhirBatchRequestCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $BundleCopyWith<$Res> get bundle {
     return $BundleCopyWith<$Res>(_value.bundle, (value) {
       return _then(_value.copyWith(bundle: value));
@@ -10142,33 +10158,35 @@ class _$FhirBatchRequest extends FhirBatchRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirBatchRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.bundle, bundle) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(bundle),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      bundle,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirBatchRequestCopyWith<_$FhirBatchRequest> get copyWith =>
       __$$FhirBatchRequestCopyWithImpl<_$FhirBatchRequest>(this, _$identity);
 
@@ -10370,7 +10388,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -10382,7 +10400,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -10395,7 +10413,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -10406,7 +10424,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -10417,7 +10435,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -10429,7 +10447,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -10440,7 +10458,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -10453,7 +10471,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -10463,7 +10481,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -10474,7 +10492,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -10485,7 +10503,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -10496,7 +10514,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -10512,7 +10530,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -10527,7 +10545,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -10541,7 +10559,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -10786,21 +10804,21 @@ class _$FhirBatchRequest extends FhirBatchRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return batch?.call(this);
   }
@@ -10896,6 +10914,7 @@ abstract class _$$FhirHistoryRequestCopyWith<$Res>
           $Res Function(_$FhirHistoryRequest) then) =
       __$$FhirHistoryRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
@@ -10915,25 +10934,23 @@ abstract class _$$FhirHistoryRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirHistoryRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirHistoryRequest>
     implements _$$FhirHistoryRequestCopyWith<$Res> {
   __$$FhirHistoryRequestCopyWithImpl(
       _$FhirHistoryRequest _value, $Res Function(_$FhirHistoryRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirHistoryRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirHistoryRequest get _value => super._value as _$FhirHistoryRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? count = freezed,
     Object? since = freezed,
     Object? at = freezed,
@@ -10942,59 +10959,59 @@ class __$$FhirHistoryRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_$FhirHistoryRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      count: count == freezed
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int?,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      at: at == freezed
+      at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -11115,43 +11132,46 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirHistoryRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.count, count) &&
-            const DeepCollectionEquality().equals(other.since, since) &&
-            const DeepCollectionEquality().equals(other.at, at) &&
-            const DeepCollectionEquality().equals(other.reference, reference) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
+            (identical(other.reference, reference) ||
+                other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(count),
-      const DeepCollectionEquality().hash(since),
-      const DeepCollectionEquality().hash(at),
-      const DeepCollectionEquality().hash(reference),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      count,
+      since,
+      at,
+      reference,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirHistoryRequestCopyWith<_$FhirHistoryRequest> get copyWith =>
       __$$FhirHistoryRequestCopyWithImpl<_$FhirHistoryRequest>(
           this, _$identity);
@@ -11354,7 +11374,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -11366,7 +11386,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -11379,7 +11399,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -11390,7 +11410,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -11401,7 +11421,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -11413,7 +11433,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -11424,7 +11444,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -11437,7 +11457,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -11447,7 +11467,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -11458,7 +11478,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -11469,7 +11489,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -11480,7 +11500,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -11496,7 +11516,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -11511,7 +11531,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -11525,7 +11545,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -11770,21 +11790,21 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return history?.call(this);
   }
@@ -11905,6 +11925,7 @@ abstract class _$$FhirHistoryTypeRequestCopyWith<$Res>
           $Res Function(_$FhirHistoryTypeRequest) then) =
       __$$FhirHistoryTypeRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
@@ -11923,25 +11944,22 @@ abstract class _$$FhirHistoryTypeRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirHistoryTypeRequest>
     implements _$$FhirHistoryTypeRequestCopyWith<$Res> {
   __$$FhirHistoryTypeRequestCopyWithImpl(_$FhirHistoryTypeRequest _value,
       $Res Function(_$FhirHistoryTypeRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirHistoryTypeRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirHistoryTypeRequest get _value =>
-      super._value as _$FhirHistoryTypeRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? count = freezed,
     Object? since = freezed,
     Object? at = freezed,
@@ -11950,55 +11968,55 @@ class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_$FhirHistoryTypeRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      count: count == freezed
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int?,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      at: at == freezed
+      at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -12114,41 +12132,44 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirHistoryTypeRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.count, count) &&
-            const DeepCollectionEquality().equals(other.since, since) &&
-            const DeepCollectionEquality().equals(other.at, at) &&
-            const DeepCollectionEquality().equals(other.reference, reference) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
+            (identical(other.reference, reference) ||
+                other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      type,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(count),
-      const DeepCollectionEquality().hash(since),
-      const DeepCollectionEquality().hash(at),
-      const DeepCollectionEquality().hash(reference),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      count,
+      since,
+      at,
+      reference,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirHistoryTypeRequestCopyWith<_$FhirHistoryTypeRequest> get copyWith =>
       __$$FhirHistoryTypeRequestCopyWithImpl<_$FhirHistoryTypeRequest>(
           this, _$identity);
@@ -12351,7 +12372,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -12363,7 +12384,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -12376,7 +12397,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -12387,7 +12408,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -12398,7 +12419,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -12410,7 +12431,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -12421,7 +12442,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -12434,7 +12455,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -12444,7 +12465,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -12455,7 +12476,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -12466,7 +12487,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -12477,7 +12498,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -12493,7 +12514,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -12508,7 +12529,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -12522,7 +12543,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -12767,21 +12788,21 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return historyType?.call(this);
   }
@@ -12898,6 +12919,7 @@ abstract class _$$FhirHistoryAllRequestCopyWith<$Res>
           $Res Function(_$FhirHistoryAllRequest) then) =
       __$$FhirHistoryAllRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -12915,23 +12937,21 @@ abstract class _$$FhirHistoryAllRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirHistoryAllRequest>
     implements _$$FhirHistoryAllRequestCopyWith<$Res> {
   __$$FhirHistoryAllRequestCopyWithImpl(_$FhirHistoryAllRequest _value,
       $Res Function(_$FhirHistoryAllRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirHistoryAllRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirHistoryAllRequest get _value => super._value as _$FhirHistoryAllRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? count = freezed,
     Object? since = freezed,
     Object? at = freezed,
@@ -12940,51 +12960,51 @@ class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_$FhirHistoryAllRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      count: count == freezed
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int?,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      at: at == freezed
+      at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -13095,39 +13115,42 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirHistoryAllRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
-            const DeepCollectionEquality().equals(other.count, count) &&
-            const DeepCollectionEquality().equals(other.since, since) &&
-            const DeepCollectionEquality().equals(other.at, at) &&
-            const DeepCollectionEquality().equals(other.reference, reference) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
+            (identical(other.reference, reference) ||
+                other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
-      const DeepCollectionEquality().hash(count),
-      const DeepCollectionEquality().hash(since),
-      const DeepCollectionEquality().hash(at),
-      const DeepCollectionEquality().hash(reference),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      count,
+      since,
+      at,
+      reference,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirHistoryAllRequestCopyWith<_$FhirHistoryAllRequest> get copyWith =>
       __$$FhirHistoryAllRequestCopyWithImpl<_$FhirHistoryAllRequest>(
           this, _$identity);
@@ -13330,7 +13353,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -13342,7 +13365,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -13355,7 +13378,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -13366,7 +13389,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -13377,7 +13400,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -13389,7 +13412,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -13400,7 +13423,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -13413,7 +13436,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -13423,7 +13446,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -13434,7 +13457,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -13445,7 +13468,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -13456,7 +13479,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -13472,7 +13495,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -13487,7 +13510,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -13501,7 +13524,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -13746,21 +13769,21 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return historyAll?.call(this);
   }
@@ -13873,6 +13896,7 @@ abstract class _$$FhirOperationRequestCopyWith<$Res>
           $Res Function(_$FhirOperationRequest) then) =
       __$$FhirOperationRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Dstu2ResourceType? type,
@@ -13892,86 +13916,84 @@ abstract class _$$FhirOperationRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$FhirOperationRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirOperationRequest>
     implements _$$FhirOperationRequestCopyWith<$Res> {
   __$$FhirOperationRequestCopyWithImpl(_$FhirOperationRequest _value,
       $Res Function(_$FhirOperationRequest) _then)
-      : super(_value, (v) => _then(v as _$FhirOperationRequest));
+      : super(_value, _then);
 
-  @override
-  _$FhirOperationRequest get _value => super._value as _$FhirOperationRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
+    Object? base = null,
     Object? type = freezed,
     Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? fhirParameter = freezed,
-    Object? operation = freezed,
-    Object? usePost = freezed,
-    Object? useFormData = freezed,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? fhirParameter = null,
+    Object? operation = null,
+    Object? usePost = null,
+    Object? useFormData = null,
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_$FhirOperationRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType?,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirParameter: fhirParameter == freezed
+      fhirParameter: null == fhirParameter
           ? _value._fhirParameter
           : fhirParameter // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      operation: operation == freezed
+      operation: null == operation
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
               as String,
-      usePost: usePost == freezed
+      usePost: null == usePost
           ? _value.usePost
           : usePost // ignore: cast_nullable_to_non_nullable
               as bool,
-      useFormData: useFormData == freezed
+      useFormData: null == useFormData
           ? _value.useFormData
           : useFormData // ignore: cast_nullable_to_non_nullable
               as bool,
-      mimeType: mimeType == freezed
+      mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -14091,45 +14113,48 @@ class _$FhirOperationRequest extends FhirOperationRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirOperationRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.pretty, pretty) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality().equals(other.format, format) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality()
                 .equals(other._fhirParameter, _fhirParameter) &&
-            const DeepCollectionEquality().equals(other.operation, operation) &&
-            const DeepCollectionEquality().equals(other.usePost, usePost) &&
-            const DeepCollectionEquality()
-                .equals(other.useFormData, useFormData) &&
-            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.operation, operation) ||
+                other.operation == operation) &&
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
+            (identical(other.useFormData, useFormData) ||
+                other.useFormData == useFormData) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(pretty),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(format),
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(_fhirParameter),
-      const DeepCollectionEquality().hash(operation),
-      const DeepCollectionEquality().hash(usePost),
-      const DeepCollectionEquality().hash(useFormData),
-      const DeepCollectionEquality().hash(mimeType),
-      const DeepCollectionEquality().hash(client));
+      operation,
+      usePost,
+      useFormData,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FhirOperationRequestCopyWith<_$FhirOperationRequest> get copyWith =>
       __$$FhirOperationRequestCopyWithImpl<_$FhirOperationRequest>(
           this, _$identity);
@@ -14345,7 +14370,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -14357,7 +14382,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         read,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -14370,7 +14395,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         vRead,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -14381,7 +14406,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         update,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -14392,7 +14417,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         patch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -14404,7 +14429,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         delete,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -14415,7 +14440,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         create,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -14428,7 +14453,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -14438,7 +14463,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         searchAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -14449,7 +14474,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         capabilities,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -14460,7 +14485,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         transaction,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -14471,7 +14496,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         batch,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             Id id,
@@ -14487,7 +14512,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         history,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType type,
             bool pretty,
@@ -14502,7 +14527,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         historyType,
-    TResult Function(
+    TResult? Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -14516,7 +14541,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             MimeType? mimeType,
             Client? client)?
         historyAll,
-    TResult Function(
+    TResult? Function(
             Uri base,
             Dstu2ResourceType? type,
             Id? id,
@@ -14787,21 +14812,21 @@ class _$FhirOperationRequest extends FhirOperationRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FhirReadRequest value)? read,
-    TResult Function(FhirVReadRequest value)? vRead,
-    TResult Function(FhirUpdateRequest value)? update,
-    TResult Function(FhirPatchRequest value)? patch,
-    TResult Function(FhirDeleteRequest value)? delete,
-    TResult Function(FhirCreateRequest value)? create,
-    TResult Function(FhirSearchRequest value)? search,
-    TResult Function(FhirSearchAllRequest value)? searchAll,
-    TResult Function(FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(FhirTransactionRequest value)? transaction,
-    TResult Function(FhirBatchRequest value)? batch,
-    TResult Function(FhirHistoryRequest value)? history,
-    TResult Function(FhirHistoryTypeRequest value)? historyType,
-    TResult Function(FhirHistoryAllRequest value)? historyAll,
-    TResult Function(FhirOperationRequest value)? operation,
+    TResult? Function(FhirReadRequest value)? read,
+    TResult? Function(FhirVReadRequest value)? vRead,
+    TResult? Function(FhirUpdateRequest value)? update,
+    TResult? Function(FhirPatchRequest value)? patch,
+    TResult? Function(FhirDeleteRequest value)? delete,
+    TResult? Function(FhirCreateRequest value)? create,
+    TResult? Function(FhirSearchRequest value)? search,
+    TResult? Function(FhirSearchAllRequest value)? searchAll,
+    TResult? Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(FhirTransactionRequest value)? transaction,
+    TResult? Function(FhirBatchRequest value)? batch,
+    TResult? Function(FhirHistoryRequest value)? history,
+    TResult? Function(FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(FhirOperationRequest value)? operation,
   }) {
     return operation?.call(this);
   }
