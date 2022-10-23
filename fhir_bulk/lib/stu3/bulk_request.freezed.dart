@@ -35,13 +35,13 @@ mixin _$BulkRequest {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, Id id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         system,
   }) =>
@@ -69,9 +69,9 @@ mixin _$BulkRequest {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BulkPatientRequest value)? patient,
-    TResult Function(_BulkGroupRequest value)? group,
-    TResult Function(_BulkSystemRequest value)? system,
+    TResult? Function(_BulkPatientRequest value)? patient,
+    TResult? Function(_BulkGroupRequest value)? group,
+    TResult? Function(_BulkSystemRequest value)? system,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -92,7 +92,8 @@ mixin _$BulkRequest {
 abstract class $BulkRequestCopyWith<$Res> {
   factory $BulkRequestCopyWith(
           BulkRequest value, $Res Function(BulkRequest) then) =
-      _$BulkRequestCopyWithImpl<$Res>;
+      _$BulkRequestCopyWithImpl<$Res, BulkRequest>;
+  @useResult
   $Res call(
       {Uri base,
       FhirDateTime? since,
@@ -101,38 +102,41 @@ abstract class $BulkRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BulkRequestCopyWithImpl<$Res> implements $BulkRequestCopyWith<$Res> {
+class _$BulkRequestCopyWithImpl<$Res, $Val extends BulkRequest>
+    implements $BulkRequestCopyWith<$Res> {
   _$BulkRequestCopyWithImpl(this._value, this._then);
 
-  final BulkRequest _value;
   // ignore: unused_field
-  final $Res Function(BulkRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
+    Object? base = null,
     Object? since = freezed,
     Object? types = freezed,
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      types: types == freezed
+      types: freezed == types
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
               as List<WhichResource>?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -143,6 +147,7 @@ abstract class _$$_BulkPatientRequestCopyWith<$Res>
           $Res Function(_$_BulkPatientRequest) then) =
       __$$_BulkPatientRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       FhirDateTime? since,
@@ -152,36 +157,34 @@ abstract class _$$_BulkPatientRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$_BulkPatientRequestCopyWithImpl<$Res>
-    extends _$BulkRequestCopyWithImpl<$Res>
+    extends _$BulkRequestCopyWithImpl<$Res, _$_BulkPatientRequest>
     implements _$$_BulkPatientRequestCopyWith<$Res> {
   __$$_BulkPatientRequestCopyWithImpl(
       _$_BulkPatientRequest _value, $Res Function(_$_BulkPatientRequest) _then)
-      : super(_value, (v) => _then(v as _$_BulkPatientRequest));
+      : super(_value, _then);
 
-  @override
-  _$_BulkPatientRequest get _value => super._value as _$_BulkPatientRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
+    Object? base = null,
     Object? since = freezed,
     Object? types = freezed,
     Object? client = freezed,
   }) {
     return _then(_$_BulkPatientRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      types: types == freezed
+      types: freezed == types
           ? _value._types
           : types // ignore: cast_nullable_to_non_nullable
               as List<WhichResource>?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -226,22 +229,19 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BulkPatientRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.since, since) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.since, since) || other.since == since) &&
             const DeepCollectionEquality().equals(other._types, _types) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(since),
-      const DeepCollectionEquality().hash(_types),
-      const DeepCollectionEquality().hash(client));
+  int get hashCode => Object.hash(runtimeType, base, since,
+      const DeepCollectionEquality().hash(_types), client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BulkPatientRequestCopyWith<_$_BulkPatientRequest> get copyWith =>
       __$$_BulkPatientRequestCopyWithImpl<_$_BulkPatientRequest>(
           this, _$identity);
@@ -265,13 +265,13 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, Id id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         system,
   }) {
@@ -311,9 +311,9 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BulkPatientRequest value)? patient,
-    TResult Function(_BulkGroupRequest value)? group,
-    TResult Function(_BulkSystemRequest value)? system,
+    TResult? Function(_BulkPatientRequest value)? patient,
+    TResult? Function(_BulkGroupRequest value)? group,
+    TResult? Function(_BulkSystemRequest value)? system,
   }) {
     return patient?.call(this);
   }
@@ -362,6 +362,7 @@ abstract class _$$_BulkGroupRequestCopyWith<$Res>
           _$_BulkGroupRequest value, $Res Function(_$_BulkGroupRequest) then) =
       __$$_BulkGroupRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Id id,
@@ -372,41 +373,39 @@ abstract class _$$_BulkGroupRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$_BulkGroupRequestCopyWithImpl<$Res>
-    extends _$BulkRequestCopyWithImpl<$Res>
+    extends _$BulkRequestCopyWithImpl<$Res, _$_BulkGroupRequest>
     implements _$$_BulkGroupRequestCopyWith<$Res> {
   __$$_BulkGroupRequestCopyWithImpl(
       _$_BulkGroupRequest _value, $Res Function(_$_BulkGroupRequest) _then)
-      : super(_value, (v) => _then(v as _$_BulkGroupRequest));
+      : super(_value, _then);
 
-  @override
-  _$_BulkGroupRequest get _value => super._value as _$_BulkGroupRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? id = freezed,
+    Object? base = null,
+    Object? id = null,
     Object? since = freezed,
     Object? types = freezed,
     Object? client = freezed,
   }) {
     return _then(_$_BulkGroupRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      types: types == freezed
+      types: freezed == types
           ? _value._types
           : types // ignore: cast_nullable_to_non_nullable
               as List<WhichResource>?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -454,24 +453,20 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BulkGroupRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.since, since) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.since, since) || other.since == since) &&
             const DeepCollectionEquality().equals(other._types, _types) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(since),
-      const DeepCollectionEquality().hash(_types),
-      const DeepCollectionEquality().hash(client));
+  int get hashCode => Object.hash(runtimeType, base, id, since,
+      const DeepCollectionEquality().hash(_types), client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BulkGroupRequestCopyWith<_$_BulkGroupRequest> get copyWith =>
       __$$_BulkGroupRequestCopyWithImpl<_$_BulkGroupRequest>(this, _$identity);
 
@@ -494,13 +489,13 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, Id id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         system,
   }) {
@@ -540,9 +535,9 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BulkPatientRequest value)? patient,
-    TResult Function(_BulkGroupRequest value)? group,
-    TResult Function(_BulkSystemRequest value)? system,
+    TResult? Function(_BulkPatientRequest value)? patient,
+    TResult? Function(_BulkGroupRequest value)? group,
+    TResult? Function(_BulkSystemRequest value)? system,
   }) {
     return group?.call(this);
   }
@@ -593,6 +588,7 @@ abstract class _$$_BulkSystemRequestCopyWith<$Res>
           $Res Function(_$_BulkSystemRequest) then) =
       __$$_BulkSystemRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       FhirDateTime? since,
@@ -602,36 +598,34 @@ abstract class _$$_BulkSystemRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$_BulkSystemRequestCopyWithImpl<$Res>
-    extends _$BulkRequestCopyWithImpl<$Res>
+    extends _$BulkRequestCopyWithImpl<$Res, _$_BulkSystemRequest>
     implements _$$_BulkSystemRequestCopyWith<$Res> {
   __$$_BulkSystemRequestCopyWithImpl(
       _$_BulkSystemRequest _value, $Res Function(_$_BulkSystemRequest) _then)
-      : super(_value, (v) => _then(v as _$_BulkSystemRequest));
+      : super(_value, _then);
 
-  @override
-  _$_BulkSystemRequest get _value => super._value as _$_BulkSystemRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
+    Object? base = null,
     Object? since = freezed,
     Object? types = freezed,
     Object? client = freezed,
   }) {
     return _then(_$_BulkSystemRequest(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      types: types == freezed
+      types: freezed == types
           ? _value._types
           : types // ignore: cast_nullable_to_non_nullable
               as List<WhichResource>?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -676,22 +670,19 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BulkSystemRequest &&
-            const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.since, since) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.since, since) || other.since == since) &&
             const DeepCollectionEquality().equals(other._types, _types) &&
-            const DeepCollectionEquality().equals(other.client, client));
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(base),
-      const DeepCollectionEquality().hash(since),
-      const DeepCollectionEquality().hash(_types),
-      const DeepCollectionEquality().hash(client));
+  int get hashCode => Object.hash(runtimeType, base, since,
+      const DeepCollectionEquality().hash(_types), client);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BulkSystemRequestCopyWith<_$_BulkSystemRequest> get copyWith =>
       __$$_BulkSystemRequestCopyWithImpl<_$_BulkSystemRequest>(
           this, _$identity);
@@ -715,13 +706,13 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, Id id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+    TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         system,
   }) {
@@ -761,9 +752,9 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BulkPatientRequest value)? patient,
-    TResult Function(_BulkGroupRequest value)? group,
-    TResult Function(_BulkSystemRequest value)? system,
+    TResult? Function(_BulkPatientRequest value)? patient,
+    TResult? Function(_BulkGroupRequest value)? group,
+    TResult? Function(_BulkSystemRequest value)? system,
   }) {
     return system?.call(this);
   }
