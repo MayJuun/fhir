@@ -1,6 +1,6 @@
 name: fhir_uscore
 description: FHIR library for the use of profiles. Will need auth, bulk, and restful requests from those libraries.
-version: 0.9.1
+version: 0.9.2
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_uscore
 
@@ -8,20 +8,20 @@ environment:
   sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.9.1
+  fhir: ^0.9.2
   # fhir:
   #   path: ../fhir
-  fhir_at_rest: ^0.9.1
+  fhir_at_rest: ^0.9.2
   # fhir_at_rest:
   #   path: ../fhir_at_rest
-  freezed_annotation: ^2.1.0
+  freezed_annotation: ^2.2.0
   http: ^0.13.5
   json_annotation: ^4.7.0
 
 dev_dependencies:
   import_sorter: ^4.6.0
-  build_runner: ^2.3.0
-  freezed: ^2.1.1
-  json_serializable: ^6.5.1
+  build_runner: ^2.3.2
+  freezed: ^2.2.0
+  json_serializable: ^6.5.3
   lint: ^1.10.0
   test: ^1.21.6

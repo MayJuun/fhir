@@ -1,5 +1,9 @@
 # fhir_uscore
 
+## [0.9.2]
+
+* Updated dependencies
+
 ## [0.9.1]
 
 * updated dependencies
