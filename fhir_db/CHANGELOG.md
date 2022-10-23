@@ -1,5 +1,9 @@
 # fhir_db
 
+## [0.9.2]
+
+* updated dependencies
+
 ## [0.9.1]
 
 * updated dependencies
