@@ -65,7 +65,8 @@ mixin _$ExplanationOfBenefit {
 abstract class $ExplanationOfBenefitCopyWith<$Res> {
   factory $ExplanationOfBenefitCopyWith(ExplanationOfBenefit value,
           $Res Function(ExplanationOfBenefit) then) =
-      _$ExplanationOfBenefitCopyWithImpl<$Res>;
+      _$ExplanationOfBenefitCopyWithImpl<$Res, ExplanationOfBenefit>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType resourceType,
@@ -116,17 +117,20 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ExplanationOfBenefitCopyWithImpl<$Res>
+class _$ExplanationOfBenefitCopyWithImpl<$Res,
+        $Val extends ExplanationOfBenefit>
     implements $ExplanationOfBenefitCopyWith<$Res> {
   _$ExplanationOfBenefitCopyWithImpl(this._value, this._then);
 
-  final ExplanationOfBenefit _value;
   // ignore: unused_field
-  final $Res Function(ExplanationOfBenefit) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -152,245 +156,258 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
     Object? requestOrganization = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      outcome: outcome == freezed
+      outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
               as ExplanationOfBenefitOutcome?,
-      outcomeElement: outcomeElement == freezed
+      outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      disposition: disposition == freezed
+      disposition: freezed == disposition
           ? _value.disposition
           : disposition // ignore: cast_nullable_to_non_nullable
               as String?,
-      dispositionElement: dispositionElement == freezed
+      dispositionElement: freezed == dispositionElement
           ? _value.dispositionElement
           : dispositionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      ruleset: ruleset == freezed
+      ruleset: freezed == ruleset
           ? _value.ruleset
           : ruleset // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      originalRuleset: originalRuleset == freezed
+      originalRuleset: freezed == originalRuleset
           ? _value.originalRuleset
           : originalRuleset // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      organization: organization == freezed
+      organization: freezed == organization
           ? _value.organization
           : organization // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requestProvider: requestProvider == freezed
+      requestProvider: freezed == requestProvider
           ? _value.requestProvider
           : requestProvider // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requestOrganization: requestOrganization == freezed
+      requestOrganization: freezed == requestOrganization
           ? _value.requestOrganization
           : requestOrganization // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.request!, (value) {
-      return _then(_value.copyWith(request: value));
+      return _then(_value.copyWith(request: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get outcomeElement {
     if (_value.outcomeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.outcomeElement!, (value) {
-      return _then(_value.copyWith(outcomeElement: value));
+      return _then(_value.copyWith(outcomeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dispositionElement {
     if (_value.dispositionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.dispositionElement!, (value) {
-      return _then(_value.copyWith(dispositionElement: value));
+      return _then(_value.copyWith(dispositionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get ruleset {
     if (_value.ruleset == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.ruleset!, (value) {
-      return _then(_value.copyWith(ruleset: value));
+      return _then(_value.copyWith(ruleset: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get originalRuleset {
     if (_value.originalRuleset == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.originalRuleset!, (value) {
-      return _then(_value.copyWith(originalRuleset: value));
+      return _then(_value.copyWith(originalRuleset: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
-      return _then(_value.copyWith(createdElement: value));
+      return _then(_value.copyWith(createdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get organization {
     if (_value.organization == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.organization!, (value) {
-      return _then(_value.copyWith(organization: value));
+      return _then(_value.copyWith(organization: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestProvider {
     if (_value.requestProvider == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.requestProvider!, (value) {
-      return _then(_value.copyWith(requestProvider: value));
+      return _then(_value.copyWith(requestProvider: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestOrganization {
     if (_value.requestOrganization == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.requestOrganization!, (value) {
-      return _then(_value.copyWith(requestOrganization: value));
+      return _then(_value.copyWith(requestOrganization: value) as $Val);
     });
   }
 }
@@ -402,6 +419,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
           $Res Function(_$_ExplanationOfBenefit) then) =
       __$$_ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType resourceType,
@@ -466,18 +484,16 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
 
 /// @nodoc
 class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
-    extends _$ExplanationOfBenefitCopyWithImpl<$Res>
+    extends _$ExplanationOfBenefitCopyWithImpl<$Res, _$_ExplanationOfBenefit>
     implements _$$_ExplanationOfBenefitCopyWith<$Res> {
   __$$_ExplanationOfBenefitCopyWithImpl(_$_ExplanationOfBenefit _value,
       $Res Function(_$_ExplanationOfBenefit) _then)
-      : super(_value, (v) => _then(v as _$_ExplanationOfBenefit));
+      : super(_value, _then);
 
-  @override
-  _$_ExplanationOfBenefit get _value => super._value as _$_ExplanationOfBenefit;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -503,99 +519,99 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
     Object? requestOrganization = freezed,
   }) {
     return _then(_$_ExplanationOfBenefit(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      outcome: outcome == freezed
+      outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
               as ExplanationOfBenefitOutcome?,
-      outcomeElement: outcomeElement == freezed
+      outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      disposition: disposition == freezed
+      disposition: freezed == disposition
           ? _value.disposition
           : disposition // ignore: cast_nullable_to_non_nullable
               as String?,
-      dispositionElement: dispositionElement == freezed
+      dispositionElement: freezed == dispositionElement
           ? _value.dispositionElement
           : dispositionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      ruleset: ruleset == freezed
+      ruleset: freezed == ruleset
           ? _value.ruleset
           : ruleset // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      originalRuleset: originalRuleset == freezed
+      originalRuleset: freezed == originalRuleset
           ? _value.originalRuleset
           : originalRuleset // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      organization: organization == freezed
+      organization: freezed == organization
           ? _value.organization
           : organization // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requestProvider: requestProvider == freezed
+      requestProvider: freezed == requestProvider
           ? _value.requestProvider
           : requestProvider // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requestOrganization: requestOrganization == freezed
+      requestOrganization: freezed == requestOrganization
           ? _value.requestOrganization
           : requestOrganization // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -743,18 +759,19 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ExplanationOfBenefit &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
@@ -763,60 +780,61 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other.request, request) &&
-            const DeepCollectionEquality().equals(other.outcome, outcome) &&
-            const DeepCollectionEquality()
-                .equals(other.outcomeElement, outcomeElement) &&
-            const DeepCollectionEquality()
-                .equals(other.disposition, disposition) &&
-            const DeepCollectionEquality()
-                .equals(other.dispositionElement, dispositionElement) &&
-            const DeepCollectionEquality().equals(other.ruleset, ruleset) &&
-            const DeepCollectionEquality()
-                .equals(other.originalRuleset, originalRuleset) &&
-            const DeepCollectionEquality().equals(other.created, created) &&
-            const DeepCollectionEquality()
-                .equals(other.createdElement, createdElement) &&
-            const DeepCollectionEquality()
-                .equals(other.organization, organization) &&
-            const DeepCollectionEquality()
-                .equals(other.requestProvider, requestProvider) &&
-            const DeepCollectionEquality()
-                .equals(other.requestOrganization, requestOrganization));
+            (identical(other.request, request) || other.request == request) &&
+            (identical(other.outcome, outcome) || other.outcome == outcome) &&
+            (identical(other.outcomeElement, outcomeElement) ||
+                other.outcomeElement == outcomeElement) &&
+            (identical(other.disposition, disposition) ||
+                other.disposition == disposition) &&
+            (identical(other.dispositionElement, dispositionElement) ||
+                other.dispositionElement == dispositionElement) &&
+            (identical(other.ruleset, ruleset) || other.ruleset == ruleset) &&
+            (identical(other.originalRuleset, originalRuleset) ||
+                other.originalRuleset == originalRuleset) &&
+            (identical(other.created, created) || other.created == created) &&
+            (identical(other.createdElement, createdElement) ||
+                other.createdElement == createdElement) &&
+            (identical(other.organization, organization) ||
+                other.organization == organization) &&
+            (identical(other.requestProvider, requestProvider) ||
+                other.requestProvider == requestProvider) &&
+            (identical(other.requestOrganization, requestOrganization) ||
+                other.requestOrganization == requestOrganization));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(request),
-        const DeepCollectionEquality().hash(outcome),
-        const DeepCollectionEquality().hash(outcomeElement),
-        const DeepCollectionEquality().hash(disposition),
-        const DeepCollectionEquality().hash(dispositionElement),
-        const DeepCollectionEquality().hash(ruleset),
-        const DeepCollectionEquality().hash(originalRuleset),
-        const DeepCollectionEquality().hash(created),
-        const DeepCollectionEquality().hash(createdElement),
-        const DeepCollectionEquality().hash(organization),
-        const DeepCollectionEquality().hash(requestProvider),
-        const DeepCollectionEquality().hash(requestOrganization)
+        request,
+        outcome,
+        outcomeElement,
+        disposition,
+        dispositionElement,
+        ruleset,
+        originalRuleset,
+        created,
+        createdElement,
+        organization,
+        requestProvider,
+        requestOrganization
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ExplanationOfBenefitCopyWith<_$_ExplanationOfBenefit> get copyWith =>
       __$$_ExplanationOfBenefitCopyWithImpl<_$_ExplanationOfBenefit>(
           this, _$identity);

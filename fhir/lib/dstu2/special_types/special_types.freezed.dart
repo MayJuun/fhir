@@ -43,7 +43,8 @@ mixin _$Meta {
 /// @nodoc
 abstract class $MetaCopyWith<$Res> {
   factory $MetaCopyWith(Meta value, $Res Function(Meta) then) =
-      _$MetaCopyWithImpl<$Res>;
+      _$MetaCopyWithImpl<$Res, Meta>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -61,13 +62,16 @@ abstract class $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
+class _$MetaCopyWithImpl<$Res, $Val extends Meta>
+    implements $MetaCopyWith<$Res> {
   _$MetaCopyWithImpl(this._value, this._then);
 
-  final Meta _value;
   // ignore: unused_field
-  final $Res Function(Meta) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -82,68 +86,70 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
     Object? tag = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      versionId: versionId == freezed
+      versionId: freezed == versionId
           ? _value.versionId
           : versionId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      versionIdElement: versionIdElement == freezed
+      versionIdElement: freezed == versionIdElement
           ? _value.versionIdElement
           : versionIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      lastUpdated: lastUpdated == freezed
+      lastUpdated: freezed == lastUpdated
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      lastUpdatedElement: lastUpdatedElement == freezed
+      lastUpdatedElement: freezed == lastUpdatedElement
           ? _value.lastUpdatedElement
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
-      security: security == freezed
+      security: freezed == security
           ? _value.security
           : security // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      tag: tag == freezed
+      tag: freezed == tag
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get versionIdElement {
     if (_value.versionIdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.versionIdElement!, (value) {
-      return _then(_value.copyWith(versionIdElement: value));
+      return _then(_value.copyWith(versionIdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get lastUpdatedElement {
     if (_value.lastUpdatedElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.lastUpdatedElement!, (value) {
-      return _then(_value.copyWith(lastUpdatedElement: value));
+      return _then(_value.copyWith(lastUpdatedElement: value) as $Val);
     });
   }
 }
@@ -153,6 +159,7 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   factory _$$_MetaCopyWith(_$_Meta value, $Res Function(_$_Meta) then) =
       __$$_MetaCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -172,14 +179,12 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
+class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
     implements _$$_MetaCopyWith<$Res> {
   __$$_MetaCopyWithImpl(_$_Meta _value, $Res Function(_$_Meta) _then)
-      : super(_value, (v) => _then(v as _$_Meta));
+      : super(_value, _then);
 
-  @override
-  _$_Meta get _value => super._value as _$_Meta;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -194,43 +199,43 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
     Object? tag = freezed,
   }) {
     return _then(_$_Meta(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      versionId: versionId == freezed
+      versionId: freezed == versionId
           ? _value.versionId
           : versionId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      versionIdElement: versionIdElement == freezed
+      versionIdElement: freezed == versionIdElement
           ? _value.versionIdElement
           : versionIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      lastUpdated: lastUpdated == freezed
+      lastUpdated: freezed == lastUpdated
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      lastUpdatedElement: lastUpdatedElement == freezed
+      lastUpdatedElement: freezed == lastUpdatedElement
           ? _value.lastUpdatedElement
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
-      security: security == freezed
+      security: freezed == security
           ? _value._security
           : security // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      tag: tag == freezed
+      tag: freezed == tag
           ? _value._tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
@@ -330,18 +335,19 @@ class _$_Meta extends _Meta {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Meta &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._fhirComments, _fhirComments) &&
-            const DeepCollectionEquality().equals(other.versionId, versionId) &&
-            const DeepCollectionEquality()
-                .equals(other.versionIdElement, versionIdElement) &&
-            const DeepCollectionEquality()
-                .equals(other.lastUpdated, lastUpdated) &&
-            const DeepCollectionEquality()
-                .equals(other.lastUpdatedElement, lastUpdatedElement) &&
+            (identical(other.versionId, versionId) ||
+                other.versionId == versionId) &&
+            (identical(other.versionIdElement, versionIdElement) ||
+                other.versionIdElement == versionIdElement) &&
+            (identical(other.lastUpdated, lastUpdated) ||
+                other.lastUpdated == lastUpdated) &&
+            (identical(other.lastUpdatedElement, lastUpdatedElement) ||
+                other.lastUpdatedElement == lastUpdatedElement) &&
             const DeepCollectionEquality().equals(other._profile, _profile) &&
             const DeepCollectionEquality().equals(other._security, _security) &&
             const DeepCollectionEquality().equals(other._tag, _tag));
@@ -351,19 +357,20 @@ class _$_Meta extends _Meta {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
-      const DeepCollectionEquality().hash(versionId),
-      const DeepCollectionEquality().hash(versionIdElement),
-      const DeepCollectionEquality().hash(lastUpdated),
-      const DeepCollectionEquality().hash(lastUpdatedElement),
+      versionId,
+      versionIdElement,
+      lastUpdated,
+      lastUpdatedElement,
       const DeepCollectionEquality().hash(_profile),
       const DeepCollectionEquality().hash(_security),
       const DeepCollectionEquality().hash(_tag));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MetaCopyWith<_$_Meta> get copyWith =>
       __$$_MetaCopyWithImpl<_$_Meta>(this, _$identity);
 
@@ -447,7 +454,8 @@ mixin _$Reference {
 /// @nodoc
 abstract class $ReferenceCopyWith<$Res> {
   factory $ReferenceCopyWith(Reference value, $Res Function(Reference) then) =
-      _$ReferenceCopyWithImpl<$Res>;
+      _$ReferenceCopyWithImpl<$Res, Reference>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -462,13 +470,16 @@ abstract class $ReferenceCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
+class _$ReferenceCopyWithImpl<$Res, $Val extends Reference>
+    implements $ReferenceCopyWith<$Res> {
   _$ReferenceCopyWithImpl(this._value, this._then);
 
-  final Reference _value;
   // ignore: unused_field
-  final $Res Function(Reference) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -480,56 +491,58 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
     Object? displayElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      referenceElement: referenceElement == freezed
+      referenceElement: freezed == referenceElement
           ? _value.referenceElement
           : referenceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      display: display == freezed
+      display: freezed == display
           ? _value.display
           : display // ignore: cast_nullable_to_non_nullable
               as String?,
-      displayElement: displayElement == freezed
+      displayElement: freezed == displayElement
           ? _value.displayElement
           : displayElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get referenceElement {
     if (_value.referenceElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.referenceElement!, (value) {
-      return _then(_value.copyWith(referenceElement: value));
+      return _then(_value.copyWith(referenceElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get displayElement {
     if (_value.displayElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.displayElement!, (value) {
-      return _then(_value.copyWith(displayElement: value));
+      return _then(_value.copyWith(displayElement: value) as $Val);
     });
   }
 }
@@ -540,6 +553,7 @@ abstract class _$$_ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
           _$_Reference value, $Res Function(_$_Reference) then) =
       __$$_ReferenceCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -556,15 +570,14 @@ abstract class _$$_ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
+class __$$_ReferenceCopyWithImpl<$Res>
+    extends _$ReferenceCopyWithImpl<$Res, _$_Reference>
     implements _$$_ReferenceCopyWith<$Res> {
   __$$_ReferenceCopyWithImpl(
       _$_Reference _value, $Res Function(_$_Reference) _then)
-      : super(_value, (v) => _then(v as _$_Reference));
+      : super(_value, _then);
 
-  @override
-  _$_Reference get _value => super._value as _$_Reference;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -576,31 +589,31 @@ class __$$_ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
     Object? displayElement = freezed,
   }) {
     return _then(_$_Reference(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      referenceElement: referenceElement == freezed
+      referenceElement: freezed == referenceElement
           ? _value.referenceElement
           : referenceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      display: display == freezed
+      display: freezed == display
           ? _value.display
           : display // ignore: cast_nullable_to_non_nullable
               as String?,
-      displayElement: displayElement == freezed
+      displayElement: freezed == displayElement
           ? _value.displayElement
           : displayElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -669,33 +682,35 @@ class _$_Reference extends _Reference {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Reference &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._fhirComments, _fhirComments) &&
-            const DeepCollectionEquality().equals(other.reference, reference) &&
-            const DeepCollectionEquality()
-                .equals(other.referenceElement, referenceElement) &&
-            const DeepCollectionEquality().equals(other.display, display) &&
-            const DeepCollectionEquality()
-                .equals(other.displayElement, displayElement));
+            (identical(other.reference, reference) ||
+                other.reference == reference) &&
+            (identical(other.referenceElement, referenceElement) ||
+                other.referenceElement == referenceElement) &&
+            (identical(other.display, display) || other.display == display) &&
+            (identical(other.displayElement, displayElement) ||
+                other.displayElement == displayElement));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
-      const DeepCollectionEquality().hash(reference),
-      const DeepCollectionEquality().hash(referenceElement),
-      const DeepCollectionEquality().hash(display),
-      const DeepCollectionEquality().hash(displayElement));
+      reference,
+      referenceElement,
+      display,
+      displayElement);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ReferenceCopyWith<_$_Reference> get copyWith =>
       __$$_ReferenceCopyWithImpl<_$_Reference>(this, _$identity);
 
@@ -1227,7 +1242,8 @@ mixin _$ElementDefinition {
 abstract class $ElementDefinitionCopyWith<$Res> {
   factory $ElementDefinitionCopyWith(
           ElementDefinition value, $Res Function(ElementDefinition) then) =
-      _$ElementDefinitionCopyWithImpl<$Res>;
+      _$ElementDefinitionCopyWithImpl<$Res, ElementDefinition>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -1893,19 +1909,21 @@ abstract class $ElementDefinitionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ElementDefinitionCopyWithImpl<$Res>
+class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     implements $ElementDefinitionCopyWith<$Res> {
   _$ElementDefinitionCopyWithImpl(this._value, this._then);
 
-  final ElementDefinition _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinition) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? path = freezed,
+    Object? path = null,
     Object? representation = freezed,
     Object? representationElement = freezed,
     Object? name = freezed,
@@ -2239,1501 +2257,1516 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? mapping = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      path: path == freezed
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String,
-      representation: representation == freezed
+      representation: freezed == representation
           ? _value.representation
           : representation // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      representationElement: representationElement == freezed
+      representationElement: freezed == representationElement
           ? _value.representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      label: label == freezed
+      label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as String?,
-      labelElement: labelElement == freezed
+      labelElement: freezed == labelElement
           ? _value.labelElement
           : labelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      slicing: slicing == freezed
+      slicing: freezed == slicing
           ? _value.slicing
           : slicing // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionSlicing?,
-      short: short == freezed
+      short: freezed == short
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      shortElement: shortElement == freezed
+      shortElement: freezed == shortElement
           ? _value.shortElement
           : shortElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      definitionElement: definitionElement == freezed
+      definitionElement: freezed == definitionElement
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      comments: comments == freezed
+      comments: freezed == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      commentElement: commentElement == freezed
+      commentElement: freezed == commentElement
           ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      requirementsElement: requirementsElement == freezed
+      requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      alias: alias == freezed
+      alias: freezed == alias
           ? _value.alias
           : alias // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      aliasElement: aliasElement == freezed
+      aliasElement: freezed == aliasElement
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      min: min == freezed
+      min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      minElement: minElement == freezed
+      minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      max: max == freezed
+      max: freezed == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxElement: maxElement == freezed
+      maxElement: freezed == maxElement
           ? _value.maxElement
           : maxElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      base: base == freezed
+      base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBase?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionType>?,
-      nameReference: nameReference == freezed
+      nameReference: freezed == nameReference
           ? _value.nameReference
           : nameReference // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultValueBoolean: defaultValueBoolean == freezed
+      defaultValueBoolean: freezed == defaultValueBoolean
           ? _value.defaultValueBoolean
           : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      defaultValueBooleanElement: defaultValueBooleanElement == freezed
+      defaultValueBooleanElement: freezed == defaultValueBooleanElement
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueInteger: defaultValueInteger == freezed
+      defaultValueInteger: freezed == defaultValueInteger
           ? _value.defaultValueInteger
           : defaultValueInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      defaultValueIntegerElement: defaultValueIntegerElement == freezed
+      defaultValueIntegerElement: freezed == defaultValueIntegerElement
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueDecimal: defaultValueDecimal == freezed
+      defaultValueDecimal: freezed == defaultValueDecimal
           ? _value.defaultValueDecimal
           : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      defaultValueDecimalElement: defaultValueDecimalElement == freezed
+      defaultValueDecimalElement: freezed == defaultValueDecimalElement
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueBase64Binary: defaultValueBase64Binary == freezed
+      defaultValueBase64Binary: freezed == defaultValueBase64Binary
           ? _value.defaultValueBase64Binary
           : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      defaultValueBase64BinaryElement: defaultValueBase64BinaryElement ==
-              freezed
+      defaultValueBase64BinaryElement: freezed ==
+              defaultValueBase64BinaryElement
           ? _value.defaultValueBase64BinaryElement
           : defaultValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueInstant: defaultValueInstant == freezed
+      defaultValueInstant: freezed == defaultValueInstant
           ? _value.defaultValueInstant
           : defaultValueInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      defaultValueInstantElement: defaultValueInstantElement == freezed
+      defaultValueInstantElement: freezed == defaultValueInstantElement
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueString: defaultValueString == freezed
+      defaultValueString: freezed == defaultValueString
           ? _value.defaultValueString
           : defaultValueString // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultValueStringElement: defaultValueStringElement == freezed
+      defaultValueStringElement: freezed == defaultValueStringElement
           ? _value.defaultValueStringElement
           : defaultValueStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueUri: defaultValueUri == freezed
+      defaultValueUri: freezed == defaultValueUri
           ? _value.defaultValueUri
           : defaultValueUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      defaultValueUriElement: defaultValueUriElement == freezed
+      defaultValueUriElement: freezed == defaultValueUriElement
           ? _value.defaultValueUriElement
           : defaultValueUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueDate: defaultValueDate == freezed
+      defaultValueDate: freezed == defaultValueDate
           ? _value.defaultValueDate
           : defaultValueDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      defaultValueDateElement: defaultValueDateElement == freezed
+      defaultValueDateElement: freezed == defaultValueDateElement
           ? _value.defaultValueDateElement
           : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueDateTime: defaultValueDateTime == freezed
+      defaultValueDateTime: freezed == defaultValueDateTime
           ? _value.defaultValueDateTime
           : defaultValueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
+      defaultValueDateTimeElement: freezed == defaultValueDateTimeElement
           ? _value.defaultValueDateTimeElement
           : defaultValueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueTime: defaultValueTime == freezed
+      defaultValueTime: freezed == defaultValueTime
           ? _value.defaultValueTime
           : defaultValueTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      defaultValueTimeElement: defaultValueTimeElement == freezed
+      defaultValueTimeElement: freezed == defaultValueTimeElement
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueCode: defaultValueCode == freezed
+      defaultValueCode: freezed == defaultValueCode
           ? _value.defaultValueCode
           : defaultValueCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      defaultValueCodeElement: defaultValueCodeElement == freezed
+      defaultValueCodeElement: freezed == defaultValueCodeElement
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueOid: defaultValueOid == freezed
+      defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      defaultValueOidElement: defaultValueOidElement == freezed
+      defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueId: defaultValueId == freezed
+      defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      defaultValueIdElement: defaultValueIdElement == freezed
+      defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueUnsignedInt: defaultValueUnsignedInt == freezed
+      defaultValueUnsignedInt: freezed == defaultValueUnsignedInt
           ? _value.defaultValueUnsignedInt
           : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
+      defaultValueUnsignedIntElement: freezed == defaultValueUnsignedIntElement
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValuePositiveInt: defaultValuePositiveInt == freezed
+      defaultValuePositiveInt: freezed == defaultValuePositiveInt
           ? _value.defaultValuePositiveInt
           : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
+      defaultValuePositiveIntElement: freezed == defaultValuePositiveIntElement
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueMarkdown: defaultValueMarkdown == freezed
+      defaultValueMarkdown: freezed == defaultValueMarkdown
           ? _value.defaultValueMarkdown
           : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      defaultValueMarkDownElement: defaultValueMarkDownElement == freezed
+      defaultValueMarkDownElement: freezed == defaultValueMarkDownElement
           ? _value.defaultValueMarkDownElement
           : defaultValueMarkDownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueAnnotation: defaultValueAnnotation == freezed
+      defaultValueAnnotation: freezed == defaultValueAnnotation
           ? _value.defaultValueAnnotation
           : defaultValueAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      defaultValueAttachment: defaultValueAttachment == freezed
+      defaultValueAttachment: freezed == defaultValueAttachment
           ? _value.defaultValueAttachment
           : defaultValueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      defaultValueIdentifier: defaultValueIdentifier == freezed
+      defaultValueIdentifier: freezed == defaultValueIdentifier
           ? _value.defaultValueIdentifier
           : defaultValueIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      defaultValueCodeableConcept: defaultValueCodeableConcept == freezed
+      defaultValueCodeableConcept: freezed == defaultValueCodeableConcept
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      defaultValueCoding: defaultValueCoding == freezed
+      defaultValueCoding: freezed == defaultValueCoding
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      defaultValueQuantity: defaultValueQuantity == freezed
+      defaultValueQuantity: freezed == defaultValueQuantity
           ? _value.defaultValueQuantity
           : defaultValueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      defaultValueRange: defaultValueRange == freezed
+      defaultValueRange: freezed == defaultValueRange
           ? _value.defaultValueRange
           : defaultValueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      defaultValuePeriod: defaultValuePeriod == freezed
+      defaultValuePeriod: freezed == defaultValuePeriod
           ? _value.defaultValuePeriod
           : defaultValuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      defaultValueRatio: defaultValueRatio == freezed
+      defaultValueRatio: freezed == defaultValueRatio
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      defaultValueSampledData: defaultValueSampledData == freezed
+      defaultValueSampledData: freezed == defaultValueSampledData
           ? _value.defaultValueSampledData
           : defaultValueSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      defaultValueSignature: defaultValueSignature == freezed
+      defaultValueSignature: freezed == defaultValueSignature
           ? _value.defaultValueSignature
           : defaultValueSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      defaultValueHumanName: defaultValueHumanName == freezed
+      defaultValueHumanName: freezed == defaultValueHumanName
           ? _value.defaultValueHumanName
           : defaultValueHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      defaultValueAddress: defaultValueAddress == freezed
+      defaultValueAddress: freezed == defaultValueAddress
           ? _value.defaultValueAddress
           : defaultValueAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      defaultValueContactPoint: defaultValueContactPoint == freezed
+      defaultValueContactPoint: freezed == defaultValueContactPoint
           ? _value.defaultValueContactPoint
           : defaultValueContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      defaultValueTiming: defaultValueTiming == freezed
+      defaultValueTiming: freezed == defaultValueTiming
           ? _value.defaultValueTiming
           : defaultValueTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      defaultValueReference: defaultValueReference == freezed
+      defaultValueReference: freezed == defaultValueReference
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      defaultValueMeta: defaultValueMeta == freezed
+      defaultValueMeta: freezed == defaultValueMeta
           ? _value.defaultValueMeta
           : defaultValueMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      meaningWhenMissing: meaningWhenMissing == freezed
+      meaningWhenMissing: freezed == meaningWhenMissing
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      meaningWhenMissingElement: meaningWhenMissingElement == freezed
+      meaningWhenMissingElement: freezed == meaningWhenMissingElement
           ? _value.meaningWhenMissingElement
           : meaningWhenMissingElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedBoolean: fixedBoolean == freezed
+      fixedBoolean: freezed == fixedBoolean
           ? _value.fixedBoolean
           : fixedBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      fixedBooleanElement: fixedBooleanElement == freezed
+      fixedBooleanElement: freezed == fixedBooleanElement
           ? _value.fixedBooleanElement
           : fixedBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedInteger: fixedInteger == freezed
+      fixedInteger: freezed == fixedInteger
           ? _value.fixedInteger
           : fixedInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      fixedIntegerElement: fixedIntegerElement == freezed
+      fixedIntegerElement: freezed == fixedIntegerElement
           ? _value.fixedIntegerElement
           : fixedIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedDecimal: fixedDecimal == freezed
+      fixedDecimal: freezed == fixedDecimal
           ? _value.fixedDecimal
           : fixedDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      fixedDecimalElement: fixedDecimalElement == freezed
+      fixedDecimalElement: freezed == fixedDecimalElement
           ? _value.fixedDecimalElement
           : fixedDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedBase64Binary: fixedBase64Binary == freezed
+      fixedBase64Binary: freezed == fixedBase64Binary
           ? _value.fixedBase64Binary
           : fixedBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      fixedBase64BinaryElement: fixedBase64BinaryElement == freezed
+      fixedBase64BinaryElement: freezed == fixedBase64BinaryElement
           ? _value.fixedBase64BinaryElement
           : fixedBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedInstant: fixedInstant == freezed
+      fixedInstant: freezed == fixedInstant
           ? _value.fixedInstant
           : fixedInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      fixedInstantElement: fixedInstantElement == freezed
+      fixedInstantElement: freezed == fixedInstantElement
           ? _value.fixedInstantElement
           : fixedInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedString: fixedString == freezed
+      fixedString: freezed == fixedString
           ? _value.fixedString
           : fixedString // ignore: cast_nullable_to_non_nullable
               as String?,
-      fixedStringElement: fixedStringElement == freezed
+      fixedStringElement: freezed == fixedStringElement
           ? _value.fixedStringElement
           : fixedStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedUri: fixedUri == freezed
+      fixedUri: freezed == fixedUri
           ? _value.fixedUri
           : fixedUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      fixedUriElement: fixedUriElement == freezed
+      fixedUriElement: freezed == fixedUriElement
           ? _value.fixedUriElement
           : fixedUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedDate: fixedDate == freezed
+      fixedDate: freezed == fixedDate
           ? _value.fixedDate
           : fixedDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      fixedDateElement: fixedDateElement == freezed
+      fixedDateElement: freezed == fixedDateElement
           ? _value.fixedDateElement
           : fixedDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedDateTime: fixedDateTime == freezed
+      fixedDateTime: freezed == fixedDateTime
           ? _value.fixedDateTime
           : fixedDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      fixedDateTimeElement: fixedDateTimeElement == freezed
+      fixedDateTimeElement: freezed == fixedDateTimeElement
           ? _value.fixedDateTimeElement
           : fixedDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedCode: fixedCode == freezed
+      fixedCode: freezed == fixedCode
           ? _value.fixedCode
           : fixedCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      fixedCodeElement: fixedCodeElement == freezed
+      fixedCodeElement: freezed == fixedCodeElement
           ? _value.fixedCodeElement
           : fixedCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedOid: fixedOid == freezed
+      fixedOid: freezed == fixedOid
           ? _value.fixedOid
           : fixedOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      fixedOidElement: fixedOidElement == freezed
+      fixedOidElement: freezed == fixedOidElement
           ? _value.fixedOidElement
           : fixedOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedId: fixedId == freezed
+      fixedId: freezed == fixedId
           ? _value.fixedId
           : fixedId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      fixedIdElement: fixedIdElement == freezed
+      fixedIdElement: freezed == fixedIdElement
           ? _value.fixedIdElement
           : fixedIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedUnsignedInt: fixedUnsignedInt == freezed
+      fixedUnsignedInt: freezed == fixedUnsignedInt
           ? _value.fixedUnsignedInt
           : fixedUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      fixedUnsignedIntElement: fixedUnsignedIntElement == freezed
+      fixedUnsignedIntElement: freezed == fixedUnsignedIntElement
           ? _value.fixedUnsignedIntElement
           : fixedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedPositiveInt: fixedPositiveInt == freezed
+      fixedPositiveInt: freezed == fixedPositiveInt
           ? _value.fixedPositiveInt
           : fixedPositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      fixedPositiveIntElement: fixedPositiveIntElement == freezed
+      fixedPositiveIntElement: freezed == fixedPositiveIntElement
           ? _value.fixedPositiveIntElement
           : fixedPositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedMarkdown: fixedMarkdown == freezed
+      fixedMarkdown: freezed == fixedMarkdown
           ? _value.fixedMarkdown
           : fixedMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      fixedMarkdownElement: fixedMarkdownElement == freezed
+      fixedMarkdownElement: freezed == fixedMarkdownElement
           ? _value.fixedMarkdownElement
           : fixedMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedAnnotation: fixedAnnotation == freezed
+      fixedAnnotation: freezed == fixedAnnotation
           ? _value.fixedAnnotation
           : fixedAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      fixedAttachment: fixedAttachment == freezed
+      fixedAttachment: freezed == fixedAttachment
           ? _value.fixedAttachment
           : fixedAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      fixedIdentifier: fixedIdentifier == freezed
+      fixedIdentifier: freezed == fixedIdentifier
           ? _value.fixedIdentifier
           : fixedIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      fixedCodeableConcept: fixedCodeableConcept == freezed
+      fixedCodeableConcept: freezed == fixedCodeableConcept
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      fixedCoding: fixedCoding == freezed
+      fixedCoding: freezed == fixedCoding
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      fixedQuantity: fixedQuantity == freezed
+      fixedQuantity: freezed == fixedQuantity
           ? _value.fixedQuantity
           : fixedQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      fixedRange: fixedRange == freezed
+      fixedRange: freezed == fixedRange
           ? _value.fixedRange
           : fixedRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      fixedPeriod: fixedPeriod == freezed
+      fixedPeriod: freezed == fixedPeriod
           ? _value.fixedPeriod
           : fixedPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      fixedRatio: fixedRatio == freezed
+      fixedRatio: freezed == fixedRatio
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      fixedSampledData: fixedSampledData == freezed
+      fixedSampledData: freezed == fixedSampledData
           ? _value.fixedSampledData
           : fixedSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      fixedSignature: fixedSignature == freezed
+      fixedSignature: freezed == fixedSignature
           ? _value.fixedSignature
           : fixedSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      fixedHumanName: fixedHumanName == freezed
+      fixedHumanName: freezed == fixedHumanName
           ? _value.fixedHumanName
           : fixedHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      fixedAddress: fixedAddress == freezed
+      fixedAddress: freezed == fixedAddress
           ? _value.fixedAddress
           : fixedAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      fixedContactPoint: fixedContactPoint == freezed
+      fixedContactPoint: freezed == fixedContactPoint
           ? _value.fixedContactPoint
           : fixedContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      fixedTiming: fixedTiming == freezed
+      fixedTiming: freezed == fixedTiming
           ? _value.fixedTiming
           : fixedTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      fixedReference: fixedReference == freezed
+      fixedReference: freezed == fixedReference
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      fixedMeta: fixedMeta == freezed
+      fixedMeta: freezed == fixedMeta
           ? _value.fixedMeta
           : fixedMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      patternBoolean: patternBoolean == freezed
+      patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      patternBooleanElement: patternBooleanElement == freezed
+      patternBooleanElement: freezed == patternBooleanElement
           ? _value.patternBooleanElement
           : patternBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternInteger: patternInteger == freezed
+      patternInteger: freezed == patternInteger
           ? _value.patternInteger
           : patternInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      patternIntegerElement: patternIntegerElement == freezed
+      patternIntegerElement: freezed == patternIntegerElement
           ? _value.patternIntegerElement
           : patternIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternDecimal: patternDecimal == freezed
+      patternDecimal: freezed == patternDecimal
           ? _value.patternDecimal
           : patternDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      patternDecimalElement: patternDecimalElement == freezed
+      patternDecimalElement: freezed == patternDecimalElement
           ? _value.patternDecimalElement
           : patternDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternBase64Binary: patternBase64Binary == freezed
+      patternBase64Binary: freezed == patternBase64Binary
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      patternBase64BinaryElement: patternBase64BinaryElement == freezed
+      patternBase64BinaryElement: freezed == patternBase64BinaryElement
           ? _value.patternBase64BinaryElement
           : patternBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternInstant: patternInstant == freezed
+      patternInstant: freezed == patternInstant
           ? _value.patternInstant
           : patternInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      patternInstantElement: patternInstantElement == freezed
+      patternInstantElement: freezed == patternInstantElement
           ? _value.patternInstantElement
           : patternInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternString: patternString == freezed
+      patternString: freezed == patternString
           ? _value.patternString
           : patternString // ignore: cast_nullable_to_non_nullable
               as String?,
-      patternStringElement: patternStringElement == freezed
+      patternStringElement: freezed == patternStringElement
           ? _value.patternStringElement
           : patternStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternUri: patternUri == freezed
+      patternUri: freezed == patternUri
           ? _value.patternUri
           : patternUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      patternUriElement: patternUriElement == freezed
+      patternUriElement: freezed == patternUriElement
           ? _value.patternUriElement
           : patternUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternDate: patternDate == freezed
+      patternDate: freezed == patternDate
           ? _value.patternDate
           : patternDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      patternDateElement: patternDateElement == freezed
+      patternDateElement: freezed == patternDateElement
           ? _value.patternDateElement
           : patternDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternDateTime: patternDateTime == freezed
+      patternDateTime: freezed == patternDateTime
           ? _value.patternDateTime
           : patternDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      patternDateTimeElement: patternDateTimeElement == freezed
+      patternDateTimeElement: freezed == patternDateTimeElement
           ? _value.patternDateTimeElement
           : patternDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternTime: patternTime == freezed
+      patternTime: freezed == patternTime
           ? _value.patternTime
           : patternTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      patternTimeElement: patternTimeElement == freezed
+      patternTimeElement: freezed == patternTimeElement
           ? _value.patternTimeElement
           : patternTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternCode: patternCode == freezed
+      patternCode: freezed == patternCode
           ? _value.patternCode
           : patternCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      patternCodeElement: patternCodeElement == freezed
+      patternCodeElement: freezed == patternCodeElement
           ? _value.patternCodeElement
           : patternCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternOid: patternOid == freezed
+      patternOid: freezed == patternOid
           ? _value.patternOid
           : patternOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      patternOidElement: patternOidElement == freezed
+      patternOidElement: freezed == patternOidElement
           ? _value.patternOidElement
           : patternOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternId: patternId == freezed
+      patternId: freezed == patternId
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      patternIdElement: patternIdElement == freezed
+      patternIdElement: freezed == patternIdElement
           ? _value.patternIdElement
           : patternIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternUnsignedInt: patternUnsignedInt == freezed
+      patternUnsignedInt: freezed == patternUnsignedInt
           ? _value.patternUnsignedInt
           : patternUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      patternUnsignedIntElement: patternUnsignedIntElement == freezed
+      patternUnsignedIntElement: freezed == patternUnsignedIntElement
           ? _value.patternUnsignedIntElement
           : patternUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternPositiveInt: patternPositiveInt == freezed
+      patternPositiveInt: freezed == patternPositiveInt
           ? _value.patternPositiveInt
           : patternPositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      patternPositiveIntElement: patternPositiveIntElement == freezed
+      patternPositiveIntElement: freezed == patternPositiveIntElement
           ? _value.patternPositiveIntElement
           : patternPositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternMarkdown: patternMarkdown == freezed
+      patternMarkdown: freezed == patternMarkdown
           ? _value.patternMarkdown
           : patternMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      patternMarkdownElement: patternMarkdownElement == freezed
+      patternMarkdownElement: freezed == patternMarkdownElement
           ? _value.patternMarkdownElement
           : patternMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternAnnotation: patternAnnotation == freezed
+      patternAnnotation: freezed == patternAnnotation
           ? _value.patternAnnotation
           : patternAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      patternAttachment: patternAttachment == freezed
+      patternAttachment: freezed == patternAttachment
           ? _value.patternAttachment
           : patternAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      patternIdentifier: patternIdentifier == freezed
+      patternIdentifier: freezed == patternIdentifier
           ? _value.patternIdentifier
           : patternIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      patternCodeableConcept: patternCodeableConcept == freezed
+      patternCodeableConcept: freezed == patternCodeableConcept
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      patternCoding: patternCoding == freezed
+      patternCoding: freezed == patternCoding
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      patternQuantity: patternQuantity == freezed
+      patternQuantity: freezed == patternQuantity
           ? _value.patternQuantity
           : patternQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      patternRange: patternRange == freezed
+      patternRange: freezed == patternRange
           ? _value.patternRange
           : patternRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      patternPeriod: patternPeriod == freezed
+      patternPeriod: freezed == patternPeriod
           ? _value.patternPeriod
           : patternPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      patternRatio: patternRatio == freezed
+      patternRatio: freezed == patternRatio
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      patternSampledData: patternSampledData == freezed
+      patternSampledData: freezed == patternSampledData
           ? _value.patternSampledData
           : patternSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      patternSignature: patternSignature == freezed
+      patternSignature: freezed == patternSignature
           ? _value.patternSignature
           : patternSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      patternHumanName: patternHumanName == freezed
+      patternHumanName: freezed == patternHumanName
           ? _value.patternHumanName
           : patternHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      patternAddress: patternAddress == freezed
+      patternAddress: freezed == patternAddress
           ? _value.patternAddress
           : patternAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      patternContactPoint: patternContactPoint == freezed
+      patternContactPoint: freezed == patternContactPoint
           ? _value.patternContactPoint
           : patternContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      patternTiming: patternTiming == freezed
+      patternTiming: freezed == patternTiming
           ? _value.patternTiming
           : patternTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      patternReference: patternReference == freezed
+      patternReference: freezed == patternReference
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      patternMeta: patternMeta == freezed
+      patternMeta: freezed == patternMeta
           ? _value.patternMeta
           : patternMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      exampleBoolean: exampleBoolean == freezed
+      exampleBoolean: freezed == exampleBoolean
           ? _value.exampleBoolean
           : exampleBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      exampleBooleanElement: exampleBooleanElement == freezed
+      exampleBooleanElement: freezed == exampleBooleanElement
           ? _value.exampleBooleanElement
           : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleInteger: exampleInteger == freezed
+      exampleInteger: freezed == exampleInteger
           ? _value.exampleInteger
           : exampleInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      exampleIntegerElement: exampleIntegerElement == freezed
+      exampleIntegerElement: freezed == exampleIntegerElement
           ? _value.exampleIntegerElement
           : exampleIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleDecimal: exampleDecimal == freezed
+      exampleDecimal: freezed == exampleDecimal
           ? _value.exampleDecimal
           : exampleDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      exampleDecimalElement: exampleDecimalElement == freezed
+      exampleDecimalElement: freezed == exampleDecimalElement
           ? _value.exampleDecimalElement
           : exampleDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleBase64Binary: exampleBase64Binary == freezed
+      exampleBase64Binary: freezed == exampleBase64Binary
           ? _value.exampleBase64Binary
           : exampleBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      exampleBase64BinaryElement: exampleBase64BinaryElement == freezed
+      exampleBase64BinaryElement: freezed == exampleBase64BinaryElement
           ? _value.exampleBase64BinaryElement
           : exampleBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleInstant: exampleInstant == freezed
+      exampleInstant: freezed == exampleInstant
           ? _value.exampleInstant
           : exampleInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      exampleInstantElement: exampleInstantElement == freezed
+      exampleInstantElement: freezed == exampleInstantElement
           ? _value.exampleInstantElement
           : exampleInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleString: exampleString == freezed
+      exampleString: freezed == exampleString
           ? _value.exampleString
           : exampleString // ignore: cast_nullable_to_non_nullable
               as String?,
-      exampleStringElement: exampleStringElement == freezed
+      exampleStringElement: freezed == exampleStringElement
           ? _value.exampleStringElement
           : exampleStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleUri: exampleUri == freezed
+      exampleUri: freezed == exampleUri
           ? _value.exampleUri
           : exampleUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      exampleUriElement: exampleUriElement == freezed
+      exampleUriElement: freezed == exampleUriElement
           ? _value.exampleUriElement
           : exampleUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleDate: exampleDate == freezed
+      exampleDate: freezed == exampleDate
           ? _value.exampleDate
           : exampleDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      exampleDateElement: exampleDateElement == freezed
+      exampleDateElement: freezed == exampleDateElement
           ? _value.exampleDateElement
           : exampleDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleDateTime: exampleDateTime == freezed
+      exampleDateTime: freezed == exampleDateTime
           ? _value.exampleDateTime
           : exampleDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      exampleDateTimeElement: exampleDateTimeElement == freezed
+      exampleDateTimeElement: freezed == exampleDateTimeElement
           ? _value.exampleDateTimeElement
           : exampleDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleTime: exampleTime == freezed
+      exampleTime: freezed == exampleTime
           ? _value.exampleTime
           : exampleTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      exampleTimeElement: exampleTimeElement == freezed
+      exampleTimeElement: freezed == exampleTimeElement
           ? _value.exampleTimeElement
           : exampleTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleCode: exampleCode == freezed
+      exampleCode: freezed == exampleCode
           ? _value.exampleCode
           : exampleCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      exampleCodeElement: exampleCodeElement == freezed
+      exampleCodeElement: freezed == exampleCodeElement
           ? _value.exampleCodeElement
           : exampleCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleOid: exampleOid == freezed
+      exampleOid: freezed == exampleOid
           ? _value.exampleOid
           : exampleOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      exampleOidElement: exampleOidElement == freezed
+      exampleOidElement: freezed == exampleOidElement
           ? _value.exampleOidElement
           : exampleOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleId: exampleId == freezed
+      exampleId: freezed == exampleId
           ? _value.exampleId
           : exampleId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      exampleIdElement: exampleIdElement == freezed
+      exampleIdElement: freezed == exampleIdElement
           ? _value.exampleIdElement
           : exampleIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleUnsignedInt: exampleUnsignedInt == freezed
+      exampleUnsignedInt: freezed == exampleUnsignedInt
           ? _value.exampleUnsignedInt
           : exampleUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      exampleUnsignedIntElement: exampleUnsignedIntElement == freezed
+      exampleUnsignedIntElement: freezed == exampleUnsignedIntElement
           ? _value.exampleUnsignedIntElement
           : exampleUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      examplePositiveInt: examplePositiveInt == freezed
+      examplePositiveInt: freezed == examplePositiveInt
           ? _value.examplePositiveInt
           : examplePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      examplePositiveIntElement: examplePositiveIntElement == freezed
+      examplePositiveIntElement: freezed == examplePositiveIntElement
           ? _value.examplePositiveIntElement
           : examplePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleMarkdown: exampleMarkdown == freezed
+      exampleMarkdown: freezed == exampleMarkdown
           ? _value.exampleMarkdown
           : exampleMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      exampleMarkdownElement: exampleMarkdownElement == freezed
+      exampleMarkdownElement: freezed == exampleMarkdownElement
           ? _value.exampleMarkdownElement
           : exampleMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleAnnotation: exampleAnnotation == freezed
+      exampleAnnotation: freezed == exampleAnnotation
           ? _value.exampleAnnotation
           : exampleAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      exampleAttachment: exampleAttachment == freezed
+      exampleAttachment: freezed == exampleAttachment
           ? _value.exampleAttachment
           : exampleAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      exampleIdentifier: exampleIdentifier == freezed
+      exampleIdentifier: freezed == exampleIdentifier
           ? _value.exampleIdentifier
           : exampleIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      exampleCodeableConcept: exampleCodeableConcept == freezed
+      exampleCodeableConcept: freezed == exampleCodeableConcept
           ? _value.exampleCodeableConcept
           : exampleCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      exampleCoding: exampleCoding == freezed
+      exampleCoding: freezed == exampleCoding
           ? _value.exampleCoding
           : exampleCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      exampleQuantity: exampleQuantity == freezed
+      exampleQuantity: freezed == exampleQuantity
           ? _value.exampleQuantity
           : exampleQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      exampleRange: exampleRange == freezed
+      exampleRange: freezed == exampleRange
           ? _value.exampleRange
           : exampleRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      examplePeriod: examplePeriod == freezed
+      examplePeriod: freezed == examplePeriod
           ? _value.examplePeriod
           : examplePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      exampleRatio: exampleRatio == freezed
+      exampleRatio: freezed == exampleRatio
           ? _value.exampleRatio
           : exampleRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      exampleSampleData: exampleSampleData == freezed
+      exampleSampleData: freezed == exampleSampleData
           ? _value.exampleSampleData
           : exampleSampleData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      exampleSignature: exampleSignature == freezed
+      exampleSignature: freezed == exampleSignature
           ? _value.exampleSignature
           : exampleSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      exampleHumanName: exampleHumanName == freezed
+      exampleHumanName: freezed == exampleHumanName
           ? _value.exampleHumanName
           : exampleHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      exampleAddress: exampleAddress == freezed
+      exampleAddress: freezed == exampleAddress
           ? _value.exampleAddress
           : exampleAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      exampleContactPoint: exampleContactPoint == freezed
+      exampleContactPoint: freezed == exampleContactPoint
           ? _value.exampleContactPoint
           : exampleContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      exampleTiming: exampleTiming == freezed
+      exampleTiming: freezed == exampleTiming
           ? _value.exampleTiming
           : exampleTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      exampleReference: exampleReference == freezed
+      exampleReference: freezed == exampleReference
           ? _value.exampleReference
           : exampleReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      exampleMeta: exampleMeta == freezed
+      exampleMeta: freezed == exampleMeta
           ? _value.exampleMeta
           : exampleMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      minValueBoolean: minValueBoolean == freezed
+      minValueBoolean: freezed == minValueBoolean
           ? _value.minValueBoolean
           : minValueBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      minValueBooleanElement: minValueBooleanElement == freezed
+      minValueBooleanElement: freezed == minValueBooleanElement
           ? _value.minValueBooleanElement
           : minValueBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueInteger: minValueInteger == freezed
+      minValueInteger: freezed == minValueInteger
           ? _value.minValueInteger
           : minValueInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      minValueIntegerElement: minValueIntegerElement == freezed
+      minValueIntegerElement: freezed == minValueIntegerElement
           ? _value.minValueIntegerElement
           : minValueIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueDecimal: minValueDecimal == freezed
+      minValueDecimal: freezed == minValueDecimal
           ? _value.minValueDecimal
           : minValueDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      minValueDecimalElement: minValueDecimalElement == freezed
+      minValueDecimalElement: freezed == minValueDecimalElement
           ? _value.minValueDecimalElement
           : minValueDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueBase64Binary: minValueBase64Binary == freezed
+      minValueBase64Binary: freezed == minValueBase64Binary
           ? _value.minValueBase64Binary
           : minValueBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      minValueBase64BinaryElement: minValueBase64BinaryElement == freezed
+      minValueBase64BinaryElement: freezed == minValueBase64BinaryElement
           ? _value.minValueBase64BinaryElement
           : minValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueInstant: minValueInstant == freezed
+      minValueInstant: freezed == minValueInstant
           ? _value.minValueInstant
           : minValueInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      minValueInstantElement: minValueInstantElement == freezed
+      minValueInstantElement: freezed == minValueInstantElement
           ? _value.minValueInstantElement
           : minValueInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueString: minValueString == freezed
+      minValueString: freezed == minValueString
           ? _value.minValueString
           : minValueString // ignore: cast_nullable_to_non_nullable
               as String?,
-      minValueStringElement: minValueStringElement == freezed
+      minValueStringElement: freezed == minValueStringElement
           ? _value.minValueStringElement
           : minValueStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueUri: minValueUri == freezed
+      minValueUri: freezed == minValueUri
           ? _value.minValueUri
           : minValueUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      minValueUriElement: minValueUriElement == freezed
+      minValueUriElement: freezed == minValueUriElement
           ? _value.minValueUriElement
           : minValueUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueDate: minValueDate == freezed
+      minValueDate: freezed == minValueDate
           ? _value.minValueDate
           : minValueDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      minValueDateElement: minValueDateElement == freezed
+      minValueDateElement: freezed == minValueDateElement
           ? _value.minValueDateElement
           : minValueDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueDateTime: minValueDateTime == freezed
+      minValueDateTime: freezed == minValueDateTime
           ? _value.minValueDateTime
           : minValueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      minValueDateTimeElement: minValueDateTimeElement == freezed
+      minValueDateTimeElement: freezed == minValueDateTimeElement
           ? _value.minValueDateTimeElement
           : minValueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueTime: minValueTime == freezed
+      minValueTime: freezed == minValueTime
           ? _value.minValueTime
           : minValueTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      minValueTimeElement: minValueTimeElement == freezed
+      minValueTimeElement: freezed == minValueTimeElement
           ? _value.minValueTimeElement
           : minValueTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueCode: minValueCode == freezed
+      minValueCode: freezed == minValueCode
           ? _value.minValueCode
           : minValueCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      minValueCodeElement: minValueCodeElement == freezed
+      minValueCodeElement: freezed == minValueCodeElement
           ? _value.minValueCodeElement
           : minValueCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueOid: minValueOid == freezed
+      minValueOid: freezed == minValueOid
           ? _value.minValueOid
           : minValueOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      minValueOidElement: minValueOidElement == freezed
+      minValueOidElement: freezed == minValueOidElement
           ? _value.minValueOidElement
           : minValueOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueId: minValueId == freezed
+      minValueId: freezed == minValueId
           ? _value.minValueId
           : minValueId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      minValueIdElement: minValueIdElement == freezed
+      minValueIdElement: freezed == minValueIdElement
           ? _value.minValueIdElement
           : minValueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueUnsignedInt: minValueUnsignedInt == freezed
+      minValueUnsignedInt: freezed == minValueUnsignedInt
           ? _value.minValueUnsignedInt
           : minValueUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      minValueUnsignedIntElement: minValueUnsignedIntElement == freezed
+      minValueUnsignedIntElement: freezed == minValueUnsignedIntElement
           ? _value.minValueUnsignedIntElement
           : minValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValuePositiveInt: minValuePositiveInt == freezed
+      minValuePositiveInt: freezed == minValuePositiveInt
           ? _value.minValuePositiveInt
           : minValuePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      minValuePositiveIntElement: minValuePositiveIntElement == freezed
+      minValuePositiveIntElement: freezed == minValuePositiveIntElement
           ? _value.minValuePositiveIntElement
           : minValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueMarkdown: minValueMarkdown == freezed
+      minValueMarkdown: freezed == minValueMarkdown
           ? _value.minValueMarkdown
           : minValueMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      minValueMarkdownElement: minValueMarkdownElement == freezed
+      minValueMarkdownElement: freezed == minValueMarkdownElement
           ? _value.minValueMarkdownElement
           : minValueMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueAnnotation: minValueAnnotation == freezed
+      minValueAnnotation: freezed == minValueAnnotation
           ? _value.minValueAnnotation
           : minValueAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      minValueAttachment: minValueAttachment == freezed
+      minValueAttachment: freezed == minValueAttachment
           ? _value.minValueAttachment
           : minValueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      minValueIdentifier: minValueIdentifier == freezed
+      minValueIdentifier: freezed == minValueIdentifier
           ? _value.minValueIdentifier
           : minValueIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      minValueCodeableConcept: minValueCodeableConcept == freezed
+      minValueCodeableConcept: freezed == minValueCodeableConcept
           ? _value.minValueCodeableConcept
           : minValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      minValueCoding: minValueCoding == freezed
+      minValueCoding: freezed == minValueCoding
           ? _value.minValueCoding
           : minValueCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      minValueQuantity: minValueQuantity == freezed
+      minValueQuantity: freezed == minValueQuantity
           ? _value.minValueQuantity
           : minValueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      minValueRange: minValueRange == freezed
+      minValueRange: freezed == minValueRange
           ? _value.minValueRange
           : minValueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      minValuePeriod: minValuePeriod == freezed
+      minValuePeriod: freezed == minValuePeriod
           ? _value.minValuePeriod
           : minValuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      minValueRatio: minValueRatio == freezed
+      minValueRatio: freezed == minValueRatio
           ? _value.minValueRatio
           : minValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      minValueSampledData: minValueSampledData == freezed
+      minValueSampledData: freezed == minValueSampledData
           ? _value.minValueSampledData
           : minValueSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      minValueSignature: minValueSignature == freezed
+      minValueSignature: freezed == minValueSignature
           ? _value.minValueSignature
           : minValueSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      minValueHumanName: minValueHumanName == freezed
+      minValueHumanName: freezed == minValueHumanName
           ? _value.minValueHumanName
           : minValueHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      minValueAddress: minValueAddress == freezed
+      minValueAddress: freezed == minValueAddress
           ? _value.minValueAddress
           : minValueAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      minValueContactPoint: minValueContactPoint == freezed
+      minValueContactPoint: freezed == minValueContactPoint
           ? _value.minValueContactPoint
           : minValueContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      minValueTiming: minValueTiming == freezed
+      minValueTiming: freezed == minValueTiming
           ? _value.minValueTiming
           : minValueTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      minValueReference: minValueReference == freezed
+      minValueReference: freezed == minValueReference
           ? _value.minValueReference
           : minValueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      minValueMeta: minValueMeta == freezed
+      minValueMeta: freezed == minValueMeta
           ? _value.minValueMeta
           : minValueMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      maxValueBoolean: maxValueBoolean == freezed
+      maxValueBoolean: freezed == maxValueBoolean
           ? _value.maxValueBoolean
           : maxValueBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      maxValueBooleanElement: maxValueBooleanElement == freezed
+      maxValueBooleanElement: freezed == maxValueBooleanElement
           ? _value.maxValueBooleanElement
           : maxValueBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueInteger: maxValueInteger == freezed
+      maxValueInteger: freezed == maxValueInteger
           ? _value.maxValueInteger
           : maxValueInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      maxValueIntegerElement: maxValueIntegerElement == freezed
+      maxValueIntegerElement: freezed == maxValueIntegerElement
           ? _value.maxValueIntegerElement
           : maxValueIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueDecimal: maxValueDecimal == freezed
+      maxValueDecimal: freezed == maxValueDecimal
           ? _value.maxValueDecimal
           : maxValueDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      maxValueDecimalElement: maxValueDecimalElement == freezed
+      maxValueDecimalElement: freezed == maxValueDecimalElement
           ? _value.maxValueDecimalElement
           : maxValueDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueBase64Binary: maxValueBase64Binary == freezed
+      maxValueBase64Binary: freezed == maxValueBase64Binary
           ? _value.maxValueBase64Binary
           : maxValueBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      maxValueBase64BinaryElement: maxValueBase64BinaryElement == freezed
+      maxValueBase64BinaryElement: freezed == maxValueBase64BinaryElement
           ? _value.maxValueBase64BinaryElement
           : maxValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueInstant: maxValueInstant == freezed
+      maxValueInstant: freezed == maxValueInstant
           ? _value.maxValueInstant
           : maxValueInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      maxValueInstantElement: maxValueInstantElement == freezed
+      maxValueInstantElement: freezed == maxValueInstantElement
           ? _value.maxValueInstantElement
           : maxValueInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueString: maxValueString == freezed
+      maxValueString: freezed == maxValueString
           ? _value.maxValueString
           : maxValueString // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxValueStringElement: maxValueStringElement == freezed
+      maxValueStringElement: freezed == maxValueStringElement
           ? _value.maxValueStringElement
           : maxValueStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueUri: maxValueUri == freezed
+      maxValueUri: freezed == maxValueUri
           ? _value.maxValueUri
           : maxValueUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      maxValueUriElement: maxValueUriElement == freezed
+      maxValueUriElement: freezed == maxValueUriElement
           ? _value.maxValueUriElement
           : maxValueUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueDate: maxValueDate == freezed
+      maxValueDate: freezed == maxValueDate
           ? _value.maxValueDate
           : maxValueDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      maxValueDateElement: maxValueDateElement == freezed
+      maxValueDateElement: freezed == maxValueDateElement
           ? _value.maxValueDateElement
           : maxValueDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueDateTime: maxValueDateTime == freezed
+      maxValueDateTime: freezed == maxValueDateTime
           ? _value.maxValueDateTime
           : maxValueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      maxValueDateTimeElement: maxValueDateTimeElement == freezed
+      maxValueDateTimeElement: freezed == maxValueDateTimeElement
           ? _value.maxValueDateTimeElement
           : maxValueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueTime: maxValueTime == freezed
+      maxValueTime: freezed == maxValueTime
           ? _value.maxValueTime
           : maxValueTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      maxValueTimeElement: maxValueTimeElement == freezed
+      maxValueTimeElement: freezed == maxValueTimeElement
           ? _value.maxValueTimeElement
           : maxValueTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueCode: maxValueCode == freezed
+      maxValueCode: freezed == maxValueCode
           ? _value.maxValueCode
           : maxValueCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      maxValueCodeElement: maxValueCodeElement == freezed
+      maxValueCodeElement: freezed == maxValueCodeElement
           ? _value.maxValueCodeElement
           : maxValueCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueOid: maxValueOid == freezed
+      maxValueOid: freezed == maxValueOid
           ? _value.maxValueOid
           : maxValueOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      maxValueOidElement: maxValueOidElement == freezed
+      maxValueOidElement: freezed == maxValueOidElement
           ? _value.maxValueOidElement
           : maxValueOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueId: maxValueId == freezed
+      maxValueId: freezed == maxValueId
           ? _value.maxValueId
           : maxValueId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      maxValueIdElement: maxValueIdElement == freezed
+      maxValueIdElement: freezed == maxValueIdElement
           ? _value.maxValueIdElement
           : maxValueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueUnsignedInt: maxValueUnsignedInt == freezed
+      maxValueUnsignedInt: freezed == maxValueUnsignedInt
           ? _value.maxValueUnsignedInt
           : maxValueUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      maxValueUnsignedIntElement: maxValueUnsignedIntElement == freezed
+      maxValueUnsignedIntElement: freezed == maxValueUnsignedIntElement
           ? _value.maxValueUnsignedIntElement
           : maxValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValuePositiveInt: maxValuePositiveInt == freezed
+      maxValuePositiveInt: freezed == maxValuePositiveInt
           ? _value.maxValuePositiveInt
           : maxValuePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      maxValuePositiveIntElement: maxValuePositiveIntElement == freezed
+      maxValuePositiveIntElement: freezed == maxValuePositiveIntElement
           ? _value.maxValuePositiveIntElement
           : maxValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueMarkdown: maxValueMarkdown == freezed
+      maxValueMarkdown: freezed == maxValueMarkdown
           ? _value.maxValueMarkdown
           : maxValueMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      maxValueMarkdownElement: maxValueMarkdownElement == freezed
+      maxValueMarkdownElement: freezed == maxValueMarkdownElement
           ? _value.maxValueMarkdownElement
           : maxValueMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueAnnotation: maxValueAnnotation == freezed
+      maxValueAnnotation: freezed == maxValueAnnotation
           ? _value.maxValueAnnotation
           : maxValueAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      maxValueAttachment: maxValueAttachment == freezed
+      maxValueAttachment: freezed == maxValueAttachment
           ? _value.maxValueAttachment
           : maxValueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      maxValueIdentifier: maxValueIdentifier == freezed
+      maxValueIdentifier: freezed == maxValueIdentifier
           ? _value.maxValueIdentifier
           : maxValueIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      maxValueCodeableConcept: maxValueCodeableConcept == freezed
+      maxValueCodeableConcept: freezed == maxValueCodeableConcept
           ? _value.maxValueCodeableConcept
           : maxValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      maxValueCoding: maxValueCoding == freezed
+      maxValueCoding: freezed == maxValueCoding
           ? _value.maxValueCoding
           : maxValueCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      maxValueQuantity: maxValueQuantity == freezed
+      maxValueQuantity: freezed == maxValueQuantity
           ? _value.maxValueQuantity
           : maxValueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      maxValueRange: maxValueRange == freezed
+      maxValueRange: freezed == maxValueRange
           ? _value.maxValueRange
           : maxValueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      maxValuePeriod: maxValuePeriod == freezed
+      maxValuePeriod: freezed == maxValuePeriod
           ? _value.maxValuePeriod
           : maxValuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      maxValueRatio: maxValueRatio == freezed
+      maxValueRatio: freezed == maxValueRatio
           ? _value.maxValueRatio
           : maxValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      maxValueSampledData: maxValueSampledData == freezed
+      maxValueSampledData: freezed == maxValueSampledData
           ? _value.maxValueSampledData
           : maxValueSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      maxValueSignature: maxValueSignature == freezed
+      maxValueSignature: freezed == maxValueSignature
           ? _value.maxValueSignature
           : maxValueSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      maxValueHumanName: maxValueHumanName == freezed
+      maxValueHumanName: freezed == maxValueHumanName
           ? _value.maxValueHumanName
           : maxValueHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      maxValueAddress: maxValueAddress == freezed
+      maxValueAddress: freezed == maxValueAddress
           ? _value.maxValueAddress
           : maxValueAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      maxValueContactPoint: maxValueContactPoint == freezed
+      maxValueContactPoint: freezed == maxValueContactPoint
           ? _value.maxValueContactPoint
           : maxValueContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      maxValueTiming: maxValueTiming == freezed
+      maxValueTiming: freezed == maxValueTiming
           ? _value.maxValueTiming
           : maxValueTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      maxValueReference: maxValueReference == freezed
+      maxValueReference: freezed == maxValueReference
           ? _value.maxValueReference
           : maxValueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      maxValueMeta: maxValueMeta == freezed
+      maxValueMeta: freezed == maxValueMeta
           ? _value.maxValueMeta
           : maxValueMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      maxLength: maxLength == freezed
+      maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      maxLengthElement: maxLengthElement == freezed
+      maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      condition: condition == freezed
+      condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
-      conditionElement: conditionElement == freezed
+      conditionElement: freezed == conditionElement
           ? _value.conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      constraint: constraint == freezed
+      constraint: freezed == constraint
           ? _value.constraint
           : constraint // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionConstraint>?,
-      mustSupport: mustSupport == freezed
+      mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      mustSupportElement: mustSupportElement == freezed
+      mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      isModifier: isModifier == freezed
+      isModifier: freezed == isModifier
           ? _value.isModifier
           : isModifier // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      isModifierElement: isModifierElement == freezed
+      isModifierElement: freezed == isModifierElement
           ? _value.isModifierElement
           : isModifierElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      isSummary: isSummary == freezed
+      isSummary: freezed == isSummary
           ? _value.isSummary
           : isSummary // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      isSummaryElement: isSummaryElement == freezed
+      isSummaryElement: freezed == isSummaryElement
           ? _value.isSummaryElement
           : isSummaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      binding: binding == freezed
+      binding: freezed == binding
           ? _value.binding
           : binding // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBinding?,
-      mapping: mapping == freezed
+      mapping: freezed == mapping
           ? _value.mapping
           : mapping // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionMapping>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get representationElement {
     if (_value.representationElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.representationElement!, (value) {
-      return _then(_value.copyWith(representationElement: value));
+      return _then(_value.copyWith(representationElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get labelElement {
     if (_value.labelElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.labelElement!, (value) {
-      return _then(_value.copyWith(labelElement: value));
+      return _then(_value.copyWith(labelElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementDefinitionSlicingCopyWith<$Res>? get slicing {
     if (_value.slicing == null) {
       return null;
     }
 
     return $ElementDefinitionSlicingCopyWith<$Res>(_value.slicing!, (value) {
-      return _then(_value.copyWith(slicing: value));
+      return _then(_value.copyWith(slicing: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get shortElement {
     if (_value.shortElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.shortElement!, (value) {
-      return _then(_value.copyWith(shortElement: value));
+      return _then(_value.copyWith(shortElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get definitionElement {
     if (_value.definitionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.definitionElement!, (value) {
-      return _then(_value.copyWith(definitionElement: value));
+      return _then(_value.copyWith(definitionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
-      return _then(_value.copyWith(commentElement: value));
+      return _then(_value.copyWith(commentElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get requirementsElement {
     if (_value.requirementsElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.requirementsElement!, (value) {
-      return _then(_value.copyWith(requirementsElement: value));
+      return _then(_value.copyWith(requirementsElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get aliasElement {
     if (_value.aliasElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.aliasElement!, (value) {
-      return _then(_value.copyWith(aliasElement: value));
+      return _then(_value.copyWith(aliasElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minElement {
     if (_value.minElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minElement!, (value) {
-      return _then(_value.copyWith(minElement: value));
+      return _then(_value.copyWith(minElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxElement {
     if (_value.maxElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxElement!, (value) {
-      return _then(_value.copyWith(maxElement: value));
+      return _then(_value.copyWith(maxElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementDefinitionBaseCopyWith<$Res>? get base {
     if (_value.base == null) {
       return null;
     }
 
     return $ElementDefinitionBaseCopyWith<$Res>(_value.base!, (value) {
-      return _then(_value.copyWith(base: value));
+      return _then(_value.copyWith(base: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueBooleanElement {
     if (_value.defaultValueBooleanElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueBooleanElement!, (value) {
-      return _then(_value.copyWith(defaultValueBooleanElement: value));
+      return _then(_value.copyWith(defaultValueBooleanElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueIntegerElement {
     if (_value.defaultValueIntegerElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueIntegerElement!, (value) {
-      return _then(_value.copyWith(defaultValueIntegerElement: value));
+      return _then(_value.copyWith(defaultValueIntegerElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueDecimalElement {
     if (_value.defaultValueDecimalElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueDecimalElement!, (value) {
-      return _then(_value.copyWith(defaultValueDecimalElement: value));
+      return _then(_value.copyWith(defaultValueDecimalElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueBase64BinaryElement {
     if (_value.defaultValueBase64BinaryElement == null) {
       return null;
@@ -3741,110 +3774,121 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.defaultValueBase64BinaryElement!,
         (value) {
-      return _then(_value.copyWith(defaultValueBase64BinaryElement: value));
+      return _then(
+          _value.copyWith(defaultValueBase64BinaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueInstantElement {
     if (_value.defaultValueInstantElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueInstantElement!, (value) {
-      return _then(_value.copyWith(defaultValueInstantElement: value));
+      return _then(_value.copyWith(defaultValueInstantElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueStringElement {
     if (_value.defaultValueStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueStringElement!, (value) {
-      return _then(_value.copyWith(defaultValueStringElement: value));
+      return _then(_value.copyWith(defaultValueStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueUriElement {
     if (_value.defaultValueUriElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueUriElement!, (value) {
-      return _then(_value.copyWith(defaultValueUriElement: value));
+      return _then(_value.copyWith(defaultValueUriElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueDateElement {
     if (_value.defaultValueDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueDateElement!, (value) {
-      return _then(_value.copyWith(defaultValueDateElement: value));
+      return _then(_value.copyWith(defaultValueDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueDateTimeElement {
     if (_value.defaultValueDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueDateTimeElement!, (value) {
-      return _then(_value.copyWith(defaultValueDateTimeElement: value));
+      return _then(_value.copyWith(defaultValueDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueTimeElement {
     if (_value.defaultValueTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueTimeElement!, (value) {
-      return _then(_value.copyWith(defaultValueTimeElement: value));
+      return _then(_value.copyWith(defaultValueTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueCodeElement {
     if (_value.defaultValueCodeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueCodeElement!, (value) {
-      return _then(_value.copyWith(defaultValueCodeElement: value));
+      return _then(_value.copyWith(defaultValueCodeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueOidElement {
     if (_value.defaultValueOidElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueOidElement!, (value) {
-      return _then(_value.copyWith(defaultValueOidElement: value));
+      return _then(_value.copyWith(defaultValueOidElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueIdElement {
     if (_value.defaultValueIdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueIdElement!, (value) {
-      return _then(_value.copyWith(defaultValueIdElement: value));
+      return _then(_value.copyWith(defaultValueIdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueUnsignedIntElement {
     if (_value.defaultValueUnsignedIntElement == null) {
       return null;
@@ -3852,11 +3896,13 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.defaultValueUnsignedIntElement!,
         (value) {
-      return _then(_value.copyWith(defaultValueUnsignedIntElement: value));
+      return _then(
+          _value.copyWith(defaultValueUnsignedIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValuePositiveIntElement {
     if (_value.defaultValuePositiveIntElement == null) {
       return null;
@@ -3864,55 +3910,61 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.defaultValuePositiveIntElement!,
         (value) {
-      return _then(_value.copyWith(defaultValuePositiveIntElement: value));
+      return _then(
+          _value.copyWith(defaultValuePositiveIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueMarkDownElement {
     if (_value.defaultValueMarkDownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.defaultValueMarkDownElement!, (value) {
-      return _then(_value.copyWith(defaultValueMarkDownElement: value));
+      return _then(_value.copyWith(defaultValueMarkDownElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get defaultValueAnnotation {
     if (_value.defaultValueAnnotation == null) {
       return null;
     }
 
     return $AnnotationCopyWith<$Res>(_value.defaultValueAnnotation!, (value) {
-      return _then(_value.copyWith(defaultValueAnnotation: value));
+      return _then(_value.copyWith(defaultValueAnnotation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get defaultValueAttachment {
     if (_value.defaultValueAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.defaultValueAttachment!, (value) {
-      return _then(_value.copyWith(defaultValueAttachment: value));
+      return _then(_value.copyWith(defaultValueAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get defaultValueIdentifier {
     if (_value.defaultValueIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.defaultValueIdentifier!, (value) {
-      return _then(_value.copyWith(defaultValueIdentifier: value));
+      return _then(_value.copyWith(defaultValueIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept {
     if (_value.defaultValueCodeableConcept == null) {
       return null;
@@ -3920,110 +3972,120 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.defaultValueCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(defaultValueCodeableConcept: value));
+      return _then(_value.copyWith(defaultValueCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get defaultValueCoding {
     if (_value.defaultValueCoding == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.defaultValueCoding!, (value) {
-      return _then(_value.copyWith(defaultValueCoding: value));
+      return _then(_value.copyWith(defaultValueCoding: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get defaultValueQuantity {
     if (_value.defaultValueQuantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.defaultValueQuantity!, (value) {
-      return _then(_value.copyWith(defaultValueQuantity: value));
+      return _then(_value.copyWith(defaultValueQuantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get defaultValueRange {
     if (_value.defaultValueRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.defaultValueRange!, (value) {
-      return _then(_value.copyWith(defaultValueRange: value));
+      return _then(_value.copyWith(defaultValueRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get defaultValuePeriod {
     if (_value.defaultValuePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.defaultValuePeriod!, (value) {
-      return _then(_value.copyWith(defaultValuePeriod: value));
+      return _then(_value.copyWith(defaultValuePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get defaultValueRatio {
     if (_value.defaultValueRatio == null) {
       return null;
     }
 
     return $RatioCopyWith<$Res>(_value.defaultValueRatio!, (value) {
-      return _then(_value.copyWith(defaultValueRatio: value));
+      return _then(_value.copyWith(defaultValueRatio: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get defaultValueSampledData {
     if (_value.defaultValueSampledData == null) {
       return null;
     }
 
     return $SampledDataCopyWith<$Res>(_value.defaultValueSampledData!, (value) {
-      return _then(_value.copyWith(defaultValueSampledData: value));
+      return _then(_value.copyWith(defaultValueSampledData: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get defaultValueSignature {
     if (_value.defaultValueSignature == null) {
       return null;
     }
 
     return $SignatureCopyWith<$Res>(_value.defaultValueSignature!, (value) {
-      return _then(_value.copyWith(defaultValueSignature: value));
+      return _then(_value.copyWith(defaultValueSignature: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get defaultValueHumanName {
     if (_value.defaultValueHumanName == null) {
       return null;
     }
 
     return $HumanNameCopyWith<$Res>(_value.defaultValueHumanName!, (value) {
-      return _then(_value.copyWith(defaultValueHumanName: value));
+      return _then(_value.copyWith(defaultValueHumanName: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get defaultValueAddress {
     if (_value.defaultValueAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.defaultValueAddress!, (value) {
-      return _then(_value.copyWith(defaultValueAddress: value));
+      return _then(_value.copyWith(defaultValueAddress: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint {
     if (_value.defaultValueContactPoint == null) {
       return null;
@@ -4031,253 +4093,276 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $ContactPointCopyWith<$Res>(_value.defaultValueContactPoint!,
         (value) {
-      return _then(_value.copyWith(defaultValueContactPoint: value));
+      return _then(_value.copyWith(defaultValueContactPoint: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get defaultValueTiming {
     if (_value.defaultValueTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.defaultValueTiming!, (value) {
-      return _then(_value.copyWith(defaultValueTiming: value));
+      return _then(_value.copyWith(defaultValueTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get defaultValueReference {
     if (_value.defaultValueReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.defaultValueReference!, (value) {
-      return _then(_value.copyWith(defaultValueReference: value));
+      return _then(_value.copyWith(defaultValueReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get defaultValueMeta {
     if (_value.defaultValueMeta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
-      return _then(_value.copyWith(defaultValueMeta: value));
+      return _then(_value.copyWith(defaultValueMeta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get meaningWhenMissingElement {
     if (_value.meaningWhenMissingElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.meaningWhenMissingElement!, (value) {
-      return _then(_value.copyWith(meaningWhenMissingElement: value));
+      return _then(_value.copyWith(meaningWhenMissingElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedBooleanElement {
     if (_value.fixedBooleanElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedBooleanElement!, (value) {
-      return _then(_value.copyWith(fixedBooleanElement: value));
+      return _then(_value.copyWith(fixedBooleanElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedIntegerElement {
     if (_value.fixedIntegerElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedIntegerElement!, (value) {
-      return _then(_value.copyWith(fixedIntegerElement: value));
+      return _then(_value.copyWith(fixedIntegerElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedDecimalElement {
     if (_value.fixedDecimalElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedDecimalElement!, (value) {
-      return _then(_value.copyWith(fixedDecimalElement: value));
+      return _then(_value.copyWith(fixedDecimalElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedBase64BinaryElement {
     if (_value.fixedBase64BinaryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedBase64BinaryElement!, (value) {
-      return _then(_value.copyWith(fixedBase64BinaryElement: value));
+      return _then(_value.copyWith(fixedBase64BinaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedInstantElement {
     if (_value.fixedInstantElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedInstantElement!, (value) {
-      return _then(_value.copyWith(fixedInstantElement: value));
+      return _then(_value.copyWith(fixedInstantElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedStringElement {
     if (_value.fixedStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedStringElement!, (value) {
-      return _then(_value.copyWith(fixedStringElement: value));
+      return _then(_value.copyWith(fixedStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedUriElement {
     if (_value.fixedUriElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedUriElement!, (value) {
-      return _then(_value.copyWith(fixedUriElement: value));
+      return _then(_value.copyWith(fixedUriElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedDateElement {
     if (_value.fixedDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedDateElement!, (value) {
-      return _then(_value.copyWith(fixedDateElement: value));
+      return _then(_value.copyWith(fixedDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedDateTimeElement {
     if (_value.fixedDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedDateTimeElement!, (value) {
-      return _then(_value.copyWith(fixedDateTimeElement: value));
+      return _then(_value.copyWith(fixedDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedCodeElement {
     if (_value.fixedCodeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedCodeElement!, (value) {
-      return _then(_value.copyWith(fixedCodeElement: value));
+      return _then(_value.copyWith(fixedCodeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedOidElement {
     if (_value.fixedOidElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedOidElement!, (value) {
-      return _then(_value.copyWith(fixedOidElement: value));
+      return _then(_value.copyWith(fixedOidElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedIdElement {
     if (_value.fixedIdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedIdElement!, (value) {
-      return _then(_value.copyWith(fixedIdElement: value));
+      return _then(_value.copyWith(fixedIdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedUnsignedIntElement {
     if (_value.fixedUnsignedIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedUnsignedIntElement!, (value) {
-      return _then(_value.copyWith(fixedUnsignedIntElement: value));
+      return _then(_value.copyWith(fixedUnsignedIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedPositiveIntElement {
     if (_value.fixedPositiveIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedPositiveIntElement!, (value) {
-      return _then(_value.copyWith(fixedPositiveIntElement: value));
+      return _then(_value.copyWith(fixedPositiveIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedMarkdownElement {
     if (_value.fixedMarkdownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fixedMarkdownElement!, (value) {
-      return _then(_value.copyWith(fixedMarkdownElement: value));
+      return _then(_value.copyWith(fixedMarkdownElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get fixedAnnotation {
     if (_value.fixedAnnotation == null) {
       return null;
     }
 
     return $AnnotationCopyWith<$Res>(_value.fixedAnnotation!, (value) {
-      return _then(_value.copyWith(fixedAnnotation: value));
+      return _then(_value.copyWith(fixedAnnotation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get fixedAttachment {
     if (_value.fixedAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.fixedAttachment!, (value) {
-      return _then(_value.copyWith(fixedAttachment: value));
+      return _then(_value.copyWith(fixedAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get fixedIdentifier {
     if (_value.fixedIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.fixedIdentifier!, (value) {
-      return _then(_value.copyWith(fixedIdentifier: value));
+      return _then(_value.copyWith(fixedIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept {
     if (_value.fixedCodeableConcept == null) {
       return null;
@@ -4285,363 +4370,396 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.fixedCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(fixedCodeableConcept: value));
+      return _then(_value.copyWith(fixedCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get fixedCoding {
     if (_value.fixedCoding == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.fixedCoding!, (value) {
-      return _then(_value.copyWith(fixedCoding: value));
+      return _then(_value.copyWith(fixedCoding: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get fixedQuantity {
     if (_value.fixedQuantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.fixedQuantity!, (value) {
-      return _then(_value.copyWith(fixedQuantity: value));
+      return _then(_value.copyWith(fixedQuantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get fixedRange {
     if (_value.fixedRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.fixedRange!, (value) {
-      return _then(_value.copyWith(fixedRange: value));
+      return _then(_value.copyWith(fixedRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get fixedPeriod {
     if (_value.fixedPeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.fixedPeriod!, (value) {
-      return _then(_value.copyWith(fixedPeriod: value));
+      return _then(_value.copyWith(fixedPeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get fixedRatio {
     if (_value.fixedRatio == null) {
       return null;
     }
 
     return $RatioCopyWith<$Res>(_value.fixedRatio!, (value) {
-      return _then(_value.copyWith(fixedRatio: value));
+      return _then(_value.copyWith(fixedRatio: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get fixedSampledData {
     if (_value.fixedSampledData == null) {
       return null;
     }
 
     return $SampledDataCopyWith<$Res>(_value.fixedSampledData!, (value) {
-      return _then(_value.copyWith(fixedSampledData: value));
+      return _then(_value.copyWith(fixedSampledData: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get fixedSignature {
     if (_value.fixedSignature == null) {
       return null;
     }
 
     return $SignatureCopyWith<$Res>(_value.fixedSignature!, (value) {
-      return _then(_value.copyWith(fixedSignature: value));
+      return _then(_value.copyWith(fixedSignature: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get fixedHumanName {
     if (_value.fixedHumanName == null) {
       return null;
     }
 
     return $HumanNameCopyWith<$Res>(_value.fixedHumanName!, (value) {
-      return _then(_value.copyWith(fixedHumanName: value));
+      return _then(_value.copyWith(fixedHumanName: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get fixedAddress {
     if (_value.fixedAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.fixedAddress!, (value) {
-      return _then(_value.copyWith(fixedAddress: value));
+      return _then(_value.copyWith(fixedAddress: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get fixedContactPoint {
     if (_value.fixedContactPoint == null) {
       return null;
     }
 
     return $ContactPointCopyWith<$Res>(_value.fixedContactPoint!, (value) {
-      return _then(_value.copyWith(fixedContactPoint: value));
+      return _then(_value.copyWith(fixedContactPoint: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get fixedTiming {
     if (_value.fixedTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.fixedTiming!, (value) {
-      return _then(_value.copyWith(fixedTiming: value));
+      return _then(_value.copyWith(fixedTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get fixedReference {
     if (_value.fixedReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.fixedReference!, (value) {
-      return _then(_value.copyWith(fixedReference: value));
+      return _then(_value.copyWith(fixedReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get fixedMeta {
     if (_value.fixedMeta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.fixedMeta!, (value) {
-      return _then(_value.copyWith(fixedMeta: value));
+      return _then(_value.copyWith(fixedMeta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternBooleanElement {
     if (_value.patternBooleanElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternBooleanElement!, (value) {
-      return _then(_value.copyWith(patternBooleanElement: value));
+      return _then(_value.copyWith(patternBooleanElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternIntegerElement {
     if (_value.patternIntegerElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternIntegerElement!, (value) {
-      return _then(_value.copyWith(patternIntegerElement: value));
+      return _then(_value.copyWith(patternIntegerElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternDecimalElement {
     if (_value.patternDecimalElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternDecimalElement!, (value) {
-      return _then(_value.copyWith(patternDecimalElement: value));
+      return _then(_value.copyWith(patternDecimalElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternBase64BinaryElement {
     if (_value.patternBase64BinaryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternBase64BinaryElement!, (value) {
-      return _then(_value.copyWith(patternBase64BinaryElement: value));
+      return _then(_value.copyWith(patternBase64BinaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternInstantElement {
     if (_value.patternInstantElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternInstantElement!, (value) {
-      return _then(_value.copyWith(patternInstantElement: value));
+      return _then(_value.copyWith(patternInstantElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternStringElement {
     if (_value.patternStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternStringElement!, (value) {
-      return _then(_value.copyWith(patternStringElement: value));
+      return _then(_value.copyWith(patternStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternUriElement {
     if (_value.patternUriElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternUriElement!, (value) {
-      return _then(_value.copyWith(patternUriElement: value));
+      return _then(_value.copyWith(patternUriElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternDateElement {
     if (_value.patternDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternDateElement!, (value) {
-      return _then(_value.copyWith(patternDateElement: value));
+      return _then(_value.copyWith(patternDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternDateTimeElement {
     if (_value.patternDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternDateTimeElement!, (value) {
-      return _then(_value.copyWith(patternDateTimeElement: value));
+      return _then(_value.copyWith(patternDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternTimeElement {
     if (_value.patternTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternTimeElement!, (value) {
-      return _then(_value.copyWith(patternTimeElement: value));
+      return _then(_value.copyWith(patternTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternCodeElement {
     if (_value.patternCodeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternCodeElement!, (value) {
-      return _then(_value.copyWith(patternCodeElement: value));
+      return _then(_value.copyWith(patternCodeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternOidElement {
     if (_value.patternOidElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternOidElement!, (value) {
-      return _then(_value.copyWith(patternOidElement: value));
+      return _then(_value.copyWith(patternOidElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternIdElement {
     if (_value.patternIdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternIdElement!, (value) {
-      return _then(_value.copyWith(patternIdElement: value));
+      return _then(_value.copyWith(patternIdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternUnsignedIntElement {
     if (_value.patternUnsignedIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternUnsignedIntElement!, (value) {
-      return _then(_value.copyWith(patternUnsignedIntElement: value));
+      return _then(_value.copyWith(patternUnsignedIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternPositiveIntElement {
     if (_value.patternPositiveIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternPositiveIntElement!, (value) {
-      return _then(_value.copyWith(patternPositiveIntElement: value));
+      return _then(_value.copyWith(patternPositiveIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternMarkdownElement {
     if (_value.patternMarkdownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.patternMarkdownElement!, (value) {
-      return _then(_value.copyWith(patternMarkdownElement: value));
+      return _then(_value.copyWith(patternMarkdownElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get patternAnnotation {
     if (_value.patternAnnotation == null) {
       return null;
     }
 
     return $AnnotationCopyWith<$Res>(_value.patternAnnotation!, (value) {
-      return _then(_value.copyWith(patternAnnotation: value));
+      return _then(_value.copyWith(patternAnnotation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get patternAttachment {
     if (_value.patternAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.patternAttachment!, (value) {
-      return _then(_value.copyWith(patternAttachment: value));
+      return _then(_value.copyWith(patternAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get patternIdentifier {
     if (_value.patternIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.patternIdentifier!, (value) {
-      return _then(_value.copyWith(patternIdentifier: value));
+      return _then(_value.copyWith(patternIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept {
     if (_value.patternCodeableConcept == null) {
       return null;
@@ -4649,363 +4767,396 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.patternCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(patternCodeableConcept: value));
+      return _then(_value.copyWith(patternCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get patternCoding {
     if (_value.patternCoding == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.patternCoding!, (value) {
-      return _then(_value.copyWith(patternCoding: value));
+      return _then(_value.copyWith(patternCoding: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get patternQuantity {
     if (_value.patternQuantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.patternQuantity!, (value) {
-      return _then(_value.copyWith(patternQuantity: value));
+      return _then(_value.copyWith(patternQuantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get patternRange {
     if (_value.patternRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.patternRange!, (value) {
-      return _then(_value.copyWith(patternRange: value));
+      return _then(_value.copyWith(patternRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get patternPeriod {
     if (_value.patternPeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.patternPeriod!, (value) {
-      return _then(_value.copyWith(patternPeriod: value));
+      return _then(_value.copyWith(patternPeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get patternRatio {
     if (_value.patternRatio == null) {
       return null;
     }
 
     return $RatioCopyWith<$Res>(_value.patternRatio!, (value) {
-      return _then(_value.copyWith(patternRatio: value));
+      return _then(_value.copyWith(patternRatio: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get patternSampledData {
     if (_value.patternSampledData == null) {
       return null;
     }
 
     return $SampledDataCopyWith<$Res>(_value.patternSampledData!, (value) {
-      return _then(_value.copyWith(patternSampledData: value));
+      return _then(_value.copyWith(patternSampledData: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get patternSignature {
     if (_value.patternSignature == null) {
       return null;
     }
 
     return $SignatureCopyWith<$Res>(_value.patternSignature!, (value) {
-      return _then(_value.copyWith(patternSignature: value));
+      return _then(_value.copyWith(patternSignature: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get patternHumanName {
     if (_value.patternHumanName == null) {
       return null;
     }
 
     return $HumanNameCopyWith<$Res>(_value.patternHumanName!, (value) {
-      return _then(_value.copyWith(patternHumanName: value));
+      return _then(_value.copyWith(patternHumanName: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get patternAddress {
     if (_value.patternAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.patternAddress!, (value) {
-      return _then(_value.copyWith(patternAddress: value));
+      return _then(_value.copyWith(patternAddress: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get patternContactPoint {
     if (_value.patternContactPoint == null) {
       return null;
     }
 
     return $ContactPointCopyWith<$Res>(_value.patternContactPoint!, (value) {
-      return _then(_value.copyWith(patternContactPoint: value));
+      return _then(_value.copyWith(patternContactPoint: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get patternTiming {
     if (_value.patternTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.patternTiming!, (value) {
-      return _then(_value.copyWith(patternTiming: value));
+      return _then(_value.copyWith(patternTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patternReference {
     if (_value.patternReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.patternReference!, (value) {
-      return _then(_value.copyWith(patternReference: value));
+      return _then(_value.copyWith(patternReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get patternMeta {
     if (_value.patternMeta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.patternMeta!, (value) {
-      return _then(_value.copyWith(patternMeta: value));
+      return _then(_value.copyWith(patternMeta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleBooleanElement {
     if (_value.exampleBooleanElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleBooleanElement!, (value) {
-      return _then(_value.copyWith(exampleBooleanElement: value));
+      return _then(_value.copyWith(exampleBooleanElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleIntegerElement {
     if (_value.exampleIntegerElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleIntegerElement!, (value) {
-      return _then(_value.copyWith(exampleIntegerElement: value));
+      return _then(_value.copyWith(exampleIntegerElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleDecimalElement {
     if (_value.exampleDecimalElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleDecimalElement!, (value) {
-      return _then(_value.copyWith(exampleDecimalElement: value));
+      return _then(_value.copyWith(exampleDecimalElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleBase64BinaryElement {
     if (_value.exampleBase64BinaryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleBase64BinaryElement!, (value) {
-      return _then(_value.copyWith(exampleBase64BinaryElement: value));
+      return _then(_value.copyWith(exampleBase64BinaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleInstantElement {
     if (_value.exampleInstantElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleInstantElement!, (value) {
-      return _then(_value.copyWith(exampleInstantElement: value));
+      return _then(_value.copyWith(exampleInstantElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleStringElement {
     if (_value.exampleStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleStringElement!, (value) {
-      return _then(_value.copyWith(exampleStringElement: value));
+      return _then(_value.copyWith(exampleStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleUriElement {
     if (_value.exampleUriElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleUriElement!, (value) {
-      return _then(_value.copyWith(exampleUriElement: value));
+      return _then(_value.copyWith(exampleUriElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleDateElement {
     if (_value.exampleDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleDateElement!, (value) {
-      return _then(_value.copyWith(exampleDateElement: value));
+      return _then(_value.copyWith(exampleDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleDateTimeElement {
     if (_value.exampleDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleDateTimeElement!, (value) {
-      return _then(_value.copyWith(exampleDateTimeElement: value));
+      return _then(_value.copyWith(exampleDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleTimeElement {
     if (_value.exampleTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleTimeElement!, (value) {
-      return _then(_value.copyWith(exampleTimeElement: value));
+      return _then(_value.copyWith(exampleTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleCodeElement {
     if (_value.exampleCodeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleCodeElement!, (value) {
-      return _then(_value.copyWith(exampleCodeElement: value));
+      return _then(_value.copyWith(exampleCodeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleOidElement {
     if (_value.exampleOidElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleOidElement!, (value) {
-      return _then(_value.copyWith(exampleOidElement: value));
+      return _then(_value.copyWith(exampleOidElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleIdElement {
     if (_value.exampleIdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleIdElement!, (value) {
-      return _then(_value.copyWith(exampleIdElement: value));
+      return _then(_value.copyWith(exampleIdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleUnsignedIntElement {
     if (_value.exampleUnsignedIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleUnsignedIntElement!, (value) {
-      return _then(_value.copyWith(exampleUnsignedIntElement: value));
+      return _then(_value.copyWith(exampleUnsignedIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get examplePositiveIntElement {
     if (_value.examplePositiveIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.examplePositiveIntElement!, (value) {
-      return _then(_value.copyWith(examplePositiveIntElement: value));
+      return _then(_value.copyWith(examplePositiveIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleMarkdownElement {
     if (_value.exampleMarkdownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.exampleMarkdownElement!, (value) {
-      return _then(_value.copyWith(exampleMarkdownElement: value));
+      return _then(_value.copyWith(exampleMarkdownElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get exampleAnnotation {
     if (_value.exampleAnnotation == null) {
       return null;
     }
 
     return $AnnotationCopyWith<$Res>(_value.exampleAnnotation!, (value) {
-      return _then(_value.copyWith(exampleAnnotation: value));
+      return _then(_value.copyWith(exampleAnnotation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get exampleAttachment {
     if (_value.exampleAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.exampleAttachment!, (value) {
-      return _then(_value.copyWith(exampleAttachment: value));
+      return _then(_value.copyWith(exampleAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get exampleIdentifier {
     if (_value.exampleIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.exampleIdentifier!, (value) {
-      return _then(_value.copyWith(exampleIdentifier: value));
+      return _then(_value.copyWith(exampleIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get exampleCodeableConcept {
     if (_value.exampleCodeableConcept == null) {
       return null;
@@ -5013,363 +5164,396 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.exampleCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(exampleCodeableConcept: value));
+      return _then(_value.copyWith(exampleCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get exampleCoding {
     if (_value.exampleCoding == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.exampleCoding!, (value) {
-      return _then(_value.copyWith(exampleCoding: value));
+      return _then(_value.copyWith(exampleCoding: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get exampleQuantity {
     if (_value.exampleQuantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.exampleQuantity!, (value) {
-      return _then(_value.copyWith(exampleQuantity: value));
+      return _then(_value.copyWith(exampleQuantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get exampleRange {
     if (_value.exampleRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.exampleRange!, (value) {
-      return _then(_value.copyWith(exampleRange: value));
+      return _then(_value.copyWith(exampleRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get examplePeriod {
     if (_value.examplePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.examplePeriod!, (value) {
-      return _then(_value.copyWith(examplePeriod: value));
+      return _then(_value.copyWith(examplePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get exampleRatio {
     if (_value.exampleRatio == null) {
       return null;
     }
 
     return $RatioCopyWith<$Res>(_value.exampleRatio!, (value) {
-      return _then(_value.copyWith(exampleRatio: value));
+      return _then(_value.copyWith(exampleRatio: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get exampleSampleData {
     if (_value.exampleSampleData == null) {
       return null;
     }
 
     return $SampledDataCopyWith<$Res>(_value.exampleSampleData!, (value) {
-      return _then(_value.copyWith(exampleSampleData: value));
+      return _then(_value.copyWith(exampleSampleData: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get exampleSignature {
     if (_value.exampleSignature == null) {
       return null;
     }
 
     return $SignatureCopyWith<$Res>(_value.exampleSignature!, (value) {
-      return _then(_value.copyWith(exampleSignature: value));
+      return _then(_value.copyWith(exampleSignature: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get exampleHumanName {
     if (_value.exampleHumanName == null) {
       return null;
     }
 
     return $HumanNameCopyWith<$Res>(_value.exampleHumanName!, (value) {
-      return _then(_value.copyWith(exampleHumanName: value));
+      return _then(_value.copyWith(exampleHumanName: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get exampleAddress {
     if (_value.exampleAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.exampleAddress!, (value) {
-      return _then(_value.copyWith(exampleAddress: value));
+      return _then(_value.copyWith(exampleAddress: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get exampleContactPoint {
     if (_value.exampleContactPoint == null) {
       return null;
     }
 
     return $ContactPointCopyWith<$Res>(_value.exampleContactPoint!, (value) {
-      return _then(_value.copyWith(exampleContactPoint: value));
+      return _then(_value.copyWith(exampleContactPoint: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get exampleTiming {
     if (_value.exampleTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.exampleTiming!, (value) {
-      return _then(_value.copyWith(exampleTiming: value));
+      return _then(_value.copyWith(exampleTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get exampleReference {
     if (_value.exampleReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.exampleReference!, (value) {
-      return _then(_value.copyWith(exampleReference: value));
+      return _then(_value.copyWith(exampleReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get exampleMeta {
     if (_value.exampleMeta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.exampleMeta!, (value) {
-      return _then(_value.copyWith(exampleMeta: value));
+      return _then(_value.copyWith(exampleMeta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueBooleanElement {
     if (_value.minValueBooleanElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueBooleanElement!, (value) {
-      return _then(_value.copyWith(minValueBooleanElement: value));
+      return _then(_value.copyWith(minValueBooleanElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueIntegerElement {
     if (_value.minValueIntegerElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueIntegerElement!, (value) {
-      return _then(_value.copyWith(minValueIntegerElement: value));
+      return _then(_value.copyWith(minValueIntegerElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueDecimalElement {
     if (_value.minValueDecimalElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueDecimalElement!, (value) {
-      return _then(_value.copyWith(minValueDecimalElement: value));
+      return _then(_value.copyWith(minValueDecimalElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueBase64BinaryElement {
     if (_value.minValueBase64BinaryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueBase64BinaryElement!, (value) {
-      return _then(_value.copyWith(minValueBase64BinaryElement: value));
+      return _then(_value.copyWith(minValueBase64BinaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueInstantElement {
     if (_value.minValueInstantElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueInstantElement!, (value) {
-      return _then(_value.copyWith(minValueInstantElement: value));
+      return _then(_value.copyWith(minValueInstantElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueStringElement {
     if (_value.minValueStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueStringElement!, (value) {
-      return _then(_value.copyWith(minValueStringElement: value));
+      return _then(_value.copyWith(minValueStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueUriElement {
     if (_value.minValueUriElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueUriElement!, (value) {
-      return _then(_value.copyWith(minValueUriElement: value));
+      return _then(_value.copyWith(minValueUriElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueDateElement {
     if (_value.minValueDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueDateElement!, (value) {
-      return _then(_value.copyWith(minValueDateElement: value));
+      return _then(_value.copyWith(minValueDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueDateTimeElement {
     if (_value.minValueDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueDateTimeElement!, (value) {
-      return _then(_value.copyWith(minValueDateTimeElement: value));
+      return _then(_value.copyWith(minValueDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueTimeElement {
     if (_value.minValueTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueTimeElement!, (value) {
-      return _then(_value.copyWith(minValueTimeElement: value));
+      return _then(_value.copyWith(minValueTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueCodeElement {
     if (_value.minValueCodeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueCodeElement!, (value) {
-      return _then(_value.copyWith(minValueCodeElement: value));
+      return _then(_value.copyWith(minValueCodeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueOidElement {
     if (_value.minValueOidElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueOidElement!, (value) {
-      return _then(_value.copyWith(minValueOidElement: value));
+      return _then(_value.copyWith(minValueOidElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueIdElement {
     if (_value.minValueIdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueIdElement!, (value) {
-      return _then(_value.copyWith(minValueIdElement: value));
+      return _then(_value.copyWith(minValueIdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueUnsignedIntElement {
     if (_value.minValueUnsignedIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueUnsignedIntElement!, (value) {
-      return _then(_value.copyWith(minValueUnsignedIntElement: value));
+      return _then(_value.copyWith(minValueUnsignedIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValuePositiveIntElement {
     if (_value.minValuePositiveIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValuePositiveIntElement!, (value) {
-      return _then(_value.copyWith(minValuePositiveIntElement: value));
+      return _then(_value.copyWith(minValuePositiveIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueMarkdownElement {
     if (_value.minValueMarkdownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minValueMarkdownElement!, (value) {
-      return _then(_value.copyWith(minValueMarkdownElement: value));
+      return _then(_value.copyWith(minValueMarkdownElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get minValueAnnotation {
     if (_value.minValueAnnotation == null) {
       return null;
     }
 
     return $AnnotationCopyWith<$Res>(_value.minValueAnnotation!, (value) {
-      return _then(_value.copyWith(minValueAnnotation: value));
+      return _then(_value.copyWith(minValueAnnotation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get minValueAttachment {
     if (_value.minValueAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.minValueAttachment!, (value) {
-      return _then(_value.copyWith(minValueAttachment: value));
+      return _then(_value.copyWith(minValueAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get minValueIdentifier {
     if (_value.minValueIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.minValueIdentifier!, (value) {
-      return _then(_value.copyWith(minValueIdentifier: value));
+      return _then(_value.copyWith(minValueIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get minValueCodeableConcept {
     if (_value.minValueCodeableConcept == null) {
       return null;
@@ -5377,363 +5561,396 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.minValueCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(minValueCodeableConcept: value));
+      return _then(_value.copyWith(minValueCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get minValueCoding {
     if (_value.minValueCoding == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.minValueCoding!, (value) {
-      return _then(_value.copyWith(minValueCoding: value));
+      return _then(_value.copyWith(minValueCoding: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get minValueQuantity {
     if (_value.minValueQuantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.minValueQuantity!, (value) {
-      return _then(_value.copyWith(minValueQuantity: value));
+      return _then(_value.copyWith(minValueQuantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get minValueRange {
     if (_value.minValueRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.minValueRange!, (value) {
-      return _then(_value.copyWith(minValueRange: value));
+      return _then(_value.copyWith(minValueRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get minValuePeriod {
     if (_value.minValuePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.minValuePeriod!, (value) {
-      return _then(_value.copyWith(minValuePeriod: value));
+      return _then(_value.copyWith(minValuePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get minValueRatio {
     if (_value.minValueRatio == null) {
       return null;
     }
 
     return $RatioCopyWith<$Res>(_value.minValueRatio!, (value) {
-      return _then(_value.copyWith(minValueRatio: value));
+      return _then(_value.copyWith(minValueRatio: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get minValueSampledData {
     if (_value.minValueSampledData == null) {
       return null;
     }
 
     return $SampledDataCopyWith<$Res>(_value.minValueSampledData!, (value) {
-      return _then(_value.copyWith(minValueSampledData: value));
+      return _then(_value.copyWith(minValueSampledData: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get minValueSignature {
     if (_value.minValueSignature == null) {
       return null;
     }
 
     return $SignatureCopyWith<$Res>(_value.minValueSignature!, (value) {
-      return _then(_value.copyWith(minValueSignature: value));
+      return _then(_value.copyWith(minValueSignature: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get minValueHumanName {
     if (_value.minValueHumanName == null) {
       return null;
     }
 
     return $HumanNameCopyWith<$Res>(_value.minValueHumanName!, (value) {
-      return _then(_value.copyWith(minValueHumanName: value));
+      return _then(_value.copyWith(minValueHumanName: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get minValueAddress {
     if (_value.minValueAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.minValueAddress!, (value) {
-      return _then(_value.copyWith(minValueAddress: value));
+      return _then(_value.copyWith(minValueAddress: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get minValueContactPoint {
     if (_value.minValueContactPoint == null) {
       return null;
     }
 
     return $ContactPointCopyWith<$Res>(_value.minValueContactPoint!, (value) {
-      return _then(_value.copyWith(minValueContactPoint: value));
+      return _then(_value.copyWith(minValueContactPoint: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get minValueTiming {
     if (_value.minValueTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.minValueTiming!, (value) {
-      return _then(_value.copyWith(minValueTiming: value));
+      return _then(_value.copyWith(minValueTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get minValueReference {
     if (_value.minValueReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.minValueReference!, (value) {
-      return _then(_value.copyWith(minValueReference: value));
+      return _then(_value.copyWith(minValueReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get minValueMeta {
     if (_value.minValueMeta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.minValueMeta!, (value) {
-      return _then(_value.copyWith(minValueMeta: value));
+      return _then(_value.copyWith(minValueMeta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueBooleanElement {
     if (_value.maxValueBooleanElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueBooleanElement!, (value) {
-      return _then(_value.copyWith(maxValueBooleanElement: value));
+      return _then(_value.copyWith(maxValueBooleanElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueIntegerElement {
     if (_value.maxValueIntegerElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueIntegerElement!, (value) {
-      return _then(_value.copyWith(maxValueIntegerElement: value));
+      return _then(_value.copyWith(maxValueIntegerElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueDecimalElement {
     if (_value.maxValueDecimalElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueDecimalElement!, (value) {
-      return _then(_value.copyWith(maxValueDecimalElement: value));
+      return _then(_value.copyWith(maxValueDecimalElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueBase64BinaryElement {
     if (_value.maxValueBase64BinaryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueBase64BinaryElement!, (value) {
-      return _then(_value.copyWith(maxValueBase64BinaryElement: value));
+      return _then(_value.copyWith(maxValueBase64BinaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueInstantElement {
     if (_value.maxValueInstantElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueInstantElement!, (value) {
-      return _then(_value.copyWith(maxValueInstantElement: value));
+      return _then(_value.copyWith(maxValueInstantElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueStringElement {
     if (_value.maxValueStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueStringElement!, (value) {
-      return _then(_value.copyWith(maxValueStringElement: value));
+      return _then(_value.copyWith(maxValueStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueUriElement {
     if (_value.maxValueUriElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueUriElement!, (value) {
-      return _then(_value.copyWith(maxValueUriElement: value));
+      return _then(_value.copyWith(maxValueUriElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueDateElement {
     if (_value.maxValueDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueDateElement!, (value) {
-      return _then(_value.copyWith(maxValueDateElement: value));
+      return _then(_value.copyWith(maxValueDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueDateTimeElement {
     if (_value.maxValueDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueDateTimeElement!, (value) {
-      return _then(_value.copyWith(maxValueDateTimeElement: value));
+      return _then(_value.copyWith(maxValueDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueTimeElement {
     if (_value.maxValueTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueTimeElement!, (value) {
-      return _then(_value.copyWith(maxValueTimeElement: value));
+      return _then(_value.copyWith(maxValueTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueCodeElement {
     if (_value.maxValueCodeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueCodeElement!, (value) {
-      return _then(_value.copyWith(maxValueCodeElement: value));
+      return _then(_value.copyWith(maxValueCodeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueOidElement {
     if (_value.maxValueOidElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueOidElement!, (value) {
-      return _then(_value.copyWith(maxValueOidElement: value));
+      return _then(_value.copyWith(maxValueOidElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueIdElement {
     if (_value.maxValueIdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueIdElement!, (value) {
-      return _then(_value.copyWith(maxValueIdElement: value));
+      return _then(_value.copyWith(maxValueIdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueUnsignedIntElement {
     if (_value.maxValueUnsignedIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueUnsignedIntElement!, (value) {
-      return _then(_value.copyWith(maxValueUnsignedIntElement: value));
+      return _then(_value.copyWith(maxValueUnsignedIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValuePositiveIntElement {
     if (_value.maxValuePositiveIntElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValuePositiveIntElement!, (value) {
-      return _then(_value.copyWith(maxValuePositiveIntElement: value));
+      return _then(_value.copyWith(maxValuePositiveIntElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueMarkdownElement {
     if (_value.maxValueMarkdownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxValueMarkdownElement!, (value) {
-      return _then(_value.copyWith(maxValueMarkdownElement: value));
+      return _then(_value.copyWith(maxValueMarkdownElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get maxValueAnnotation {
     if (_value.maxValueAnnotation == null) {
       return null;
     }
 
     return $AnnotationCopyWith<$Res>(_value.maxValueAnnotation!, (value) {
-      return _then(_value.copyWith(maxValueAnnotation: value));
+      return _then(_value.copyWith(maxValueAnnotation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get maxValueAttachment {
     if (_value.maxValueAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.maxValueAttachment!, (value) {
-      return _then(_value.copyWith(maxValueAttachment: value));
+      return _then(_value.copyWith(maxValueAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get maxValueIdentifier {
     if (_value.maxValueIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.maxValueIdentifier!, (value) {
-      return _then(_value.copyWith(maxValueIdentifier: value));
+      return _then(_value.copyWith(maxValueIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get maxValueCodeableConcept {
     if (_value.maxValueCodeableConcept == null) {
       return null;
@@ -5741,216 +5958,235 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.maxValueCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(maxValueCodeableConcept: value));
+      return _then(_value.copyWith(maxValueCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get maxValueCoding {
     if (_value.maxValueCoding == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.maxValueCoding!, (value) {
-      return _then(_value.copyWith(maxValueCoding: value));
+      return _then(_value.copyWith(maxValueCoding: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get maxValueQuantity {
     if (_value.maxValueQuantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.maxValueQuantity!, (value) {
-      return _then(_value.copyWith(maxValueQuantity: value));
+      return _then(_value.copyWith(maxValueQuantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get maxValueRange {
     if (_value.maxValueRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.maxValueRange!, (value) {
-      return _then(_value.copyWith(maxValueRange: value));
+      return _then(_value.copyWith(maxValueRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get maxValuePeriod {
     if (_value.maxValuePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.maxValuePeriod!, (value) {
-      return _then(_value.copyWith(maxValuePeriod: value));
+      return _then(_value.copyWith(maxValuePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get maxValueRatio {
     if (_value.maxValueRatio == null) {
       return null;
     }
 
     return $RatioCopyWith<$Res>(_value.maxValueRatio!, (value) {
-      return _then(_value.copyWith(maxValueRatio: value));
+      return _then(_value.copyWith(maxValueRatio: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get maxValueSampledData {
     if (_value.maxValueSampledData == null) {
       return null;
     }
 
     return $SampledDataCopyWith<$Res>(_value.maxValueSampledData!, (value) {
-      return _then(_value.copyWith(maxValueSampledData: value));
+      return _then(_value.copyWith(maxValueSampledData: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get maxValueSignature {
     if (_value.maxValueSignature == null) {
       return null;
     }
 
     return $SignatureCopyWith<$Res>(_value.maxValueSignature!, (value) {
-      return _then(_value.copyWith(maxValueSignature: value));
+      return _then(_value.copyWith(maxValueSignature: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get maxValueHumanName {
     if (_value.maxValueHumanName == null) {
       return null;
     }
 
     return $HumanNameCopyWith<$Res>(_value.maxValueHumanName!, (value) {
-      return _then(_value.copyWith(maxValueHumanName: value));
+      return _then(_value.copyWith(maxValueHumanName: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get maxValueAddress {
     if (_value.maxValueAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.maxValueAddress!, (value) {
-      return _then(_value.copyWith(maxValueAddress: value));
+      return _then(_value.copyWith(maxValueAddress: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get maxValueContactPoint {
     if (_value.maxValueContactPoint == null) {
       return null;
     }
 
     return $ContactPointCopyWith<$Res>(_value.maxValueContactPoint!, (value) {
-      return _then(_value.copyWith(maxValueContactPoint: value));
+      return _then(_value.copyWith(maxValueContactPoint: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get maxValueTiming {
     if (_value.maxValueTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.maxValueTiming!, (value) {
-      return _then(_value.copyWith(maxValueTiming: value));
+      return _then(_value.copyWith(maxValueTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get maxValueReference {
     if (_value.maxValueReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.maxValueReference!, (value) {
-      return _then(_value.copyWith(maxValueReference: value));
+      return _then(_value.copyWith(maxValueReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get maxValueMeta {
     if (_value.maxValueMeta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.maxValueMeta!, (value) {
-      return _then(_value.copyWith(maxValueMeta: value));
+      return _then(_value.copyWith(maxValueMeta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxLengthElement {
     if (_value.maxLengthElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxLengthElement!, (value) {
-      return _then(_value.copyWith(maxLengthElement: value));
+      return _then(_value.copyWith(maxLengthElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get conditionElement {
     if (_value.conditionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.conditionElement!, (value) {
-      return _then(_value.copyWith(conditionElement: value));
+      return _then(_value.copyWith(conditionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get mustSupportElement {
     if (_value.mustSupportElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.mustSupportElement!, (value) {
-      return _then(_value.copyWith(mustSupportElement: value));
+      return _then(_value.copyWith(mustSupportElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get isModifierElement {
     if (_value.isModifierElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.isModifierElement!, (value) {
-      return _then(_value.copyWith(isModifierElement: value));
+      return _then(_value.copyWith(isModifierElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get isSummaryElement {
     if (_value.isSummaryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.isSummaryElement!, (value) {
-      return _then(_value.copyWith(isSummaryElement: value));
+      return _then(_value.copyWith(isSummaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementDefinitionBindingCopyWith<$Res>? get binding {
     if (_value.binding == null) {
       return null;
     }
 
     return $ElementDefinitionBindingCopyWith<$Res>(_value.binding!, (value) {
-      return _then(_value.copyWith(binding: value));
+      return _then(_value.copyWith(binding: value) as $Val);
     });
   }
 }
@@ -5962,6 +6198,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
           $Res Function(_$_ElementDefinition) then) =
       __$$_ElementDefinitionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -6843,20 +7080,18 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
 
 /// @nodoc
 class __$$_ElementDefinitionCopyWithImpl<$Res>
-    extends _$ElementDefinitionCopyWithImpl<$Res>
+    extends _$ElementDefinitionCopyWithImpl<$Res, _$_ElementDefinition>
     implements _$$_ElementDefinitionCopyWith<$Res> {
   __$$_ElementDefinitionCopyWithImpl(
       _$_ElementDefinition _value, $Res Function(_$_ElementDefinition) _then)
-      : super(_value, (v) => _then(v as _$_ElementDefinition));
+      : super(_value, _then);
 
-  @override
-  _$_ElementDefinition get _value => super._value as _$_ElementDefinition;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? path = freezed,
+    Object? path = null,
     Object? representation = freezed,
     Object? representationElement = freezed,
     Object? name = freezed,
@@ -7190,1340 +7425,1340 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? mapping = freezed,
   }) {
     return _then(_$_ElementDefinition(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      path: path == freezed
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String,
-      representation: representation == freezed
+      representation: freezed == representation
           ? _value._representation
           : representation // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      representationElement: representationElement == freezed
+      representationElement: freezed == representationElement
           ? _value.representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      label: label == freezed
+      label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as String?,
-      labelElement: labelElement == freezed
+      labelElement: freezed == labelElement
           ? _value.labelElement
           : labelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      code: code == freezed
+      code: freezed == code
           ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      slicing: slicing == freezed
+      slicing: freezed == slicing
           ? _value.slicing
           : slicing // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionSlicing?,
-      short: short == freezed
+      short: freezed == short
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      shortElement: shortElement == freezed
+      shortElement: freezed == shortElement
           ? _value.shortElement
           : shortElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      definitionElement: definitionElement == freezed
+      definitionElement: freezed == definitionElement
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      comments: comments == freezed
+      comments: freezed == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      commentElement: commentElement == freezed
+      commentElement: freezed == commentElement
           ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      requirementsElement: requirementsElement == freezed
+      requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      alias: alias == freezed
+      alias: freezed == alias
           ? _value._alias
           : alias // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      aliasElement: aliasElement == freezed
+      aliasElement: freezed == aliasElement
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      min: min == freezed
+      min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      minElement: minElement == freezed
+      minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      max: max == freezed
+      max: freezed == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxElement: maxElement == freezed
+      maxElement: freezed == maxElement
           ? _value.maxElement
           : maxElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      base: base == freezed
+      base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBase?,
-      type: type == freezed
+      type: freezed == type
           ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionType>?,
-      nameReference: nameReference == freezed
+      nameReference: freezed == nameReference
           ? _value.nameReference
           : nameReference // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultValueBoolean: defaultValueBoolean == freezed
+      defaultValueBoolean: freezed == defaultValueBoolean
           ? _value.defaultValueBoolean
           : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      defaultValueBooleanElement: defaultValueBooleanElement == freezed
+      defaultValueBooleanElement: freezed == defaultValueBooleanElement
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueInteger: defaultValueInteger == freezed
+      defaultValueInteger: freezed == defaultValueInteger
           ? _value.defaultValueInteger
           : defaultValueInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      defaultValueIntegerElement: defaultValueIntegerElement == freezed
+      defaultValueIntegerElement: freezed == defaultValueIntegerElement
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueDecimal: defaultValueDecimal == freezed
+      defaultValueDecimal: freezed == defaultValueDecimal
           ? _value.defaultValueDecimal
           : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      defaultValueDecimalElement: defaultValueDecimalElement == freezed
+      defaultValueDecimalElement: freezed == defaultValueDecimalElement
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueBase64Binary: defaultValueBase64Binary == freezed
+      defaultValueBase64Binary: freezed == defaultValueBase64Binary
           ? _value.defaultValueBase64Binary
           : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      defaultValueBase64BinaryElement: defaultValueBase64BinaryElement ==
-              freezed
+      defaultValueBase64BinaryElement: freezed ==
+              defaultValueBase64BinaryElement
           ? _value.defaultValueBase64BinaryElement
           : defaultValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueInstant: defaultValueInstant == freezed
+      defaultValueInstant: freezed == defaultValueInstant
           ? _value.defaultValueInstant
           : defaultValueInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      defaultValueInstantElement: defaultValueInstantElement == freezed
+      defaultValueInstantElement: freezed == defaultValueInstantElement
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueString: defaultValueString == freezed
+      defaultValueString: freezed == defaultValueString
           ? _value.defaultValueString
           : defaultValueString // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultValueStringElement: defaultValueStringElement == freezed
+      defaultValueStringElement: freezed == defaultValueStringElement
           ? _value.defaultValueStringElement
           : defaultValueStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueUri: defaultValueUri == freezed
+      defaultValueUri: freezed == defaultValueUri
           ? _value.defaultValueUri
           : defaultValueUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      defaultValueUriElement: defaultValueUriElement == freezed
+      defaultValueUriElement: freezed == defaultValueUriElement
           ? _value.defaultValueUriElement
           : defaultValueUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueDate: defaultValueDate == freezed
+      defaultValueDate: freezed == defaultValueDate
           ? _value.defaultValueDate
           : defaultValueDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      defaultValueDateElement: defaultValueDateElement == freezed
+      defaultValueDateElement: freezed == defaultValueDateElement
           ? _value.defaultValueDateElement
           : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueDateTime: defaultValueDateTime == freezed
+      defaultValueDateTime: freezed == defaultValueDateTime
           ? _value.defaultValueDateTime
           : defaultValueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
+      defaultValueDateTimeElement: freezed == defaultValueDateTimeElement
           ? _value.defaultValueDateTimeElement
           : defaultValueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueTime: defaultValueTime == freezed
+      defaultValueTime: freezed == defaultValueTime
           ? _value.defaultValueTime
           : defaultValueTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      defaultValueTimeElement: defaultValueTimeElement == freezed
+      defaultValueTimeElement: freezed == defaultValueTimeElement
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueCode: defaultValueCode == freezed
+      defaultValueCode: freezed == defaultValueCode
           ? _value.defaultValueCode
           : defaultValueCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      defaultValueCodeElement: defaultValueCodeElement == freezed
+      defaultValueCodeElement: freezed == defaultValueCodeElement
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueOid: defaultValueOid == freezed
+      defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      defaultValueOidElement: defaultValueOidElement == freezed
+      defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueId: defaultValueId == freezed
+      defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      defaultValueIdElement: defaultValueIdElement == freezed
+      defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueUnsignedInt: defaultValueUnsignedInt == freezed
+      defaultValueUnsignedInt: freezed == defaultValueUnsignedInt
           ? _value.defaultValueUnsignedInt
           : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
+      defaultValueUnsignedIntElement: freezed == defaultValueUnsignedIntElement
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValuePositiveInt: defaultValuePositiveInt == freezed
+      defaultValuePositiveInt: freezed == defaultValuePositiveInt
           ? _value.defaultValuePositiveInt
           : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
+      defaultValuePositiveIntElement: freezed == defaultValuePositiveIntElement
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueMarkdown: defaultValueMarkdown == freezed
+      defaultValueMarkdown: freezed == defaultValueMarkdown
           ? _value.defaultValueMarkdown
           : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      defaultValueMarkDownElement: defaultValueMarkDownElement == freezed
+      defaultValueMarkDownElement: freezed == defaultValueMarkDownElement
           ? _value.defaultValueMarkDownElement
           : defaultValueMarkDownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defaultValueAnnotation: defaultValueAnnotation == freezed
+      defaultValueAnnotation: freezed == defaultValueAnnotation
           ? _value.defaultValueAnnotation
           : defaultValueAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      defaultValueAttachment: defaultValueAttachment == freezed
+      defaultValueAttachment: freezed == defaultValueAttachment
           ? _value.defaultValueAttachment
           : defaultValueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      defaultValueIdentifier: defaultValueIdentifier == freezed
+      defaultValueIdentifier: freezed == defaultValueIdentifier
           ? _value.defaultValueIdentifier
           : defaultValueIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      defaultValueCodeableConcept: defaultValueCodeableConcept == freezed
+      defaultValueCodeableConcept: freezed == defaultValueCodeableConcept
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      defaultValueCoding: defaultValueCoding == freezed
+      defaultValueCoding: freezed == defaultValueCoding
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      defaultValueQuantity: defaultValueQuantity == freezed
+      defaultValueQuantity: freezed == defaultValueQuantity
           ? _value.defaultValueQuantity
           : defaultValueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      defaultValueRange: defaultValueRange == freezed
+      defaultValueRange: freezed == defaultValueRange
           ? _value.defaultValueRange
           : defaultValueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      defaultValuePeriod: defaultValuePeriod == freezed
+      defaultValuePeriod: freezed == defaultValuePeriod
           ? _value.defaultValuePeriod
           : defaultValuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      defaultValueRatio: defaultValueRatio == freezed
+      defaultValueRatio: freezed == defaultValueRatio
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      defaultValueSampledData: defaultValueSampledData == freezed
+      defaultValueSampledData: freezed == defaultValueSampledData
           ? _value.defaultValueSampledData
           : defaultValueSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      defaultValueSignature: defaultValueSignature == freezed
+      defaultValueSignature: freezed == defaultValueSignature
           ? _value.defaultValueSignature
           : defaultValueSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      defaultValueHumanName: defaultValueHumanName == freezed
+      defaultValueHumanName: freezed == defaultValueHumanName
           ? _value.defaultValueHumanName
           : defaultValueHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      defaultValueAddress: defaultValueAddress == freezed
+      defaultValueAddress: freezed == defaultValueAddress
           ? _value.defaultValueAddress
           : defaultValueAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      defaultValueContactPoint: defaultValueContactPoint == freezed
+      defaultValueContactPoint: freezed == defaultValueContactPoint
           ? _value.defaultValueContactPoint
           : defaultValueContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      defaultValueTiming: defaultValueTiming == freezed
+      defaultValueTiming: freezed == defaultValueTiming
           ? _value.defaultValueTiming
           : defaultValueTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      defaultValueReference: defaultValueReference == freezed
+      defaultValueReference: freezed == defaultValueReference
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      defaultValueMeta: defaultValueMeta == freezed
+      defaultValueMeta: freezed == defaultValueMeta
           ? _value.defaultValueMeta
           : defaultValueMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      meaningWhenMissing: meaningWhenMissing == freezed
+      meaningWhenMissing: freezed == meaningWhenMissing
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      meaningWhenMissingElement: meaningWhenMissingElement == freezed
+      meaningWhenMissingElement: freezed == meaningWhenMissingElement
           ? _value.meaningWhenMissingElement
           : meaningWhenMissingElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedBoolean: fixedBoolean == freezed
+      fixedBoolean: freezed == fixedBoolean
           ? _value.fixedBoolean
           : fixedBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      fixedBooleanElement: fixedBooleanElement == freezed
+      fixedBooleanElement: freezed == fixedBooleanElement
           ? _value.fixedBooleanElement
           : fixedBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedInteger: fixedInteger == freezed
+      fixedInteger: freezed == fixedInteger
           ? _value.fixedInteger
           : fixedInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      fixedIntegerElement: fixedIntegerElement == freezed
+      fixedIntegerElement: freezed == fixedIntegerElement
           ? _value.fixedIntegerElement
           : fixedIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedDecimal: fixedDecimal == freezed
+      fixedDecimal: freezed == fixedDecimal
           ? _value.fixedDecimal
           : fixedDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      fixedDecimalElement: fixedDecimalElement == freezed
+      fixedDecimalElement: freezed == fixedDecimalElement
           ? _value.fixedDecimalElement
           : fixedDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedBase64Binary: fixedBase64Binary == freezed
+      fixedBase64Binary: freezed == fixedBase64Binary
           ? _value.fixedBase64Binary
           : fixedBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      fixedBase64BinaryElement: fixedBase64BinaryElement == freezed
+      fixedBase64BinaryElement: freezed == fixedBase64BinaryElement
           ? _value.fixedBase64BinaryElement
           : fixedBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedInstant: fixedInstant == freezed
+      fixedInstant: freezed == fixedInstant
           ? _value.fixedInstant
           : fixedInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      fixedInstantElement: fixedInstantElement == freezed
+      fixedInstantElement: freezed == fixedInstantElement
           ? _value.fixedInstantElement
           : fixedInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedString: fixedString == freezed
+      fixedString: freezed == fixedString
           ? _value.fixedString
           : fixedString // ignore: cast_nullable_to_non_nullable
               as String?,
-      fixedStringElement: fixedStringElement == freezed
+      fixedStringElement: freezed == fixedStringElement
           ? _value.fixedStringElement
           : fixedStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedUri: fixedUri == freezed
+      fixedUri: freezed == fixedUri
           ? _value.fixedUri
           : fixedUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      fixedUriElement: fixedUriElement == freezed
+      fixedUriElement: freezed == fixedUriElement
           ? _value.fixedUriElement
           : fixedUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedDate: fixedDate == freezed
+      fixedDate: freezed == fixedDate
           ? _value.fixedDate
           : fixedDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      fixedDateElement: fixedDateElement == freezed
+      fixedDateElement: freezed == fixedDateElement
           ? _value.fixedDateElement
           : fixedDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedDateTime: fixedDateTime == freezed
+      fixedDateTime: freezed == fixedDateTime
           ? _value.fixedDateTime
           : fixedDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      fixedDateTimeElement: fixedDateTimeElement == freezed
+      fixedDateTimeElement: freezed == fixedDateTimeElement
           ? _value.fixedDateTimeElement
           : fixedDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedCode: fixedCode == freezed
+      fixedCode: freezed == fixedCode
           ? _value.fixedCode
           : fixedCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      fixedCodeElement: fixedCodeElement == freezed
+      fixedCodeElement: freezed == fixedCodeElement
           ? _value.fixedCodeElement
           : fixedCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedOid: fixedOid == freezed
+      fixedOid: freezed == fixedOid
           ? _value.fixedOid
           : fixedOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      fixedOidElement: fixedOidElement == freezed
+      fixedOidElement: freezed == fixedOidElement
           ? _value.fixedOidElement
           : fixedOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedId: fixedId == freezed
+      fixedId: freezed == fixedId
           ? _value.fixedId
           : fixedId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      fixedIdElement: fixedIdElement == freezed
+      fixedIdElement: freezed == fixedIdElement
           ? _value.fixedIdElement
           : fixedIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedUnsignedInt: fixedUnsignedInt == freezed
+      fixedUnsignedInt: freezed == fixedUnsignedInt
           ? _value.fixedUnsignedInt
           : fixedUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      fixedUnsignedIntElement: fixedUnsignedIntElement == freezed
+      fixedUnsignedIntElement: freezed == fixedUnsignedIntElement
           ? _value.fixedUnsignedIntElement
           : fixedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedPositiveInt: fixedPositiveInt == freezed
+      fixedPositiveInt: freezed == fixedPositiveInt
           ? _value.fixedPositiveInt
           : fixedPositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      fixedPositiveIntElement: fixedPositiveIntElement == freezed
+      fixedPositiveIntElement: freezed == fixedPositiveIntElement
           ? _value.fixedPositiveIntElement
           : fixedPositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedMarkdown: fixedMarkdown == freezed
+      fixedMarkdown: freezed == fixedMarkdown
           ? _value.fixedMarkdown
           : fixedMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      fixedMarkdownElement: fixedMarkdownElement == freezed
+      fixedMarkdownElement: freezed == fixedMarkdownElement
           ? _value.fixedMarkdownElement
           : fixedMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fixedAnnotation: fixedAnnotation == freezed
+      fixedAnnotation: freezed == fixedAnnotation
           ? _value.fixedAnnotation
           : fixedAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      fixedAttachment: fixedAttachment == freezed
+      fixedAttachment: freezed == fixedAttachment
           ? _value.fixedAttachment
           : fixedAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      fixedIdentifier: fixedIdentifier == freezed
+      fixedIdentifier: freezed == fixedIdentifier
           ? _value.fixedIdentifier
           : fixedIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      fixedCodeableConcept: fixedCodeableConcept == freezed
+      fixedCodeableConcept: freezed == fixedCodeableConcept
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      fixedCoding: fixedCoding == freezed
+      fixedCoding: freezed == fixedCoding
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      fixedQuantity: fixedQuantity == freezed
+      fixedQuantity: freezed == fixedQuantity
           ? _value.fixedQuantity
           : fixedQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      fixedRange: fixedRange == freezed
+      fixedRange: freezed == fixedRange
           ? _value.fixedRange
           : fixedRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      fixedPeriod: fixedPeriod == freezed
+      fixedPeriod: freezed == fixedPeriod
           ? _value.fixedPeriod
           : fixedPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      fixedRatio: fixedRatio == freezed
+      fixedRatio: freezed == fixedRatio
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      fixedSampledData: fixedSampledData == freezed
+      fixedSampledData: freezed == fixedSampledData
           ? _value.fixedSampledData
           : fixedSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      fixedSignature: fixedSignature == freezed
+      fixedSignature: freezed == fixedSignature
           ? _value.fixedSignature
           : fixedSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      fixedHumanName: fixedHumanName == freezed
+      fixedHumanName: freezed == fixedHumanName
           ? _value.fixedHumanName
           : fixedHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      fixedAddress: fixedAddress == freezed
+      fixedAddress: freezed == fixedAddress
           ? _value.fixedAddress
           : fixedAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      fixedContactPoint: fixedContactPoint == freezed
+      fixedContactPoint: freezed == fixedContactPoint
           ? _value.fixedContactPoint
           : fixedContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      fixedTiming: fixedTiming == freezed
+      fixedTiming: freezed == fixedTiming
           ? _value.fixedTiming
           : fixedTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      fixedReference: fixedReference == freezed
+      fixedReference: freezed == fixedReference
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      fixedMeta: fixedMeta == freezed
+      fixedMeta: freezed == fixedMeta
           ? _value.fixedMeta
           : fixedMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      patternBoolean: patternBoolean == freezed
+      patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      patternBooleanElement: patternBooleanElement == freezed
+      patternBooleanElement: freezed == patternBooleanElement
           ? _value.patternBooleanElement
           : patternBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternInteger: patternInteger == freezed
+      patternInteger: freezed == patternInteger
           ? _value.patternInteger
           : patternInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      patternIntegerElement: patternIntegerElement == freezed
+      patternIntegerElement: freezed == patternIntegerElement
           ? _value.patternIntegerElement
           : patternIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternDecimal: patternDecimal == freezed
+      patternDecimal: freezed == patternDecimal
           ? _value.patternDecimal
           : patternDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      patternDecimalElement: patternDecimalElement == freezed
+      patternDecimalElement: freezed == patternDecimalElement
           ? _value.patternDecimalElement
           : patternDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternBase64Binary: patternBase64Binary == freezed
+      patternBase64Binary: freezed == patternBase64Binary
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      patternBase64BinaryElement: patternBase64BinaryElement == freezed
+      patternBase64BinaryElement: freezed == patternBase64BinaryElement
           ? _value.patternBase64BinaryElement
           : patternBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternInstant: patternInstant == freezed
+      patternInstant: freezed == patternInstant
           ? _value.patternInstant
           : patternInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      patternInstantElement: patternInstantElement == freezed
+      patternInstantElement: freezed == patternInstantElement
           ? _value.patternInstantElement
           : patternInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternString: patternString == freezed
+      patternString: freezed == patternString
           ? _value.patternString
           : patternString // ignore: cast_nullable_to_non_nullable
               as String?,
-      patternStringElement: patternStringElement == freezed
+      patternStringElement: freezed == patternStringElement
           ? _value.patternStringElement
           : patternStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternUri: patternUri == freezed
+      patternUri: freezed == patternUri
           ? _value.patternUri
           : patternUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      patternUriElement: patternUriElement == freezed
+      patternUriElement: freezed == patternUriElement
           ? _value.patternUriElement
           : patternUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternDate: patternDate == freezed
+      patternDate: freezed == patternDate
           ? _value.patternDate
           : patternDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      patternDateElement: patternDateElement == freezed
+      patternDateElement: freezed == patternDateElement
           ? _value.patternDateElement
           : patternDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternDateTime: patternDateTime == freezed
+      patternDateTime: freezed == patternDateTime
           ? _value.patternDateTime
           : patternDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      patternDateTimeElement: patternDateTimeElement == freezed
+      patternDateTimeElement: freezed == patternDateTimeElement
           ? _value.patternDateTimeElement
           : patternDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternTime: patternTime == freezed
+      patternTime: freezed == patternTime
           ? _value.patternTime
           : patternTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      patternTimeElement: patternTimeElement == freezed
+      patternTimeElement: freezed == patternTimeElement
           ? _value.patternTimeElement
           : patternTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternCode: patternCode == freezed
+      patternCode: freezed == patternCode
           ? _value.patternCode
           : patternCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      patternCodeElement: patternCodeElement == freezed
+      patternCodeElement: freezed == patternCodeElement
           ? _value.patternCodeElement
           : patternCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternOid: patternOid == freezed
+      patternOid: freezed == patternOid
           ? _value.patternOid
           : patternOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      patternOidElement: patternOidElement == freezed
+      patternOidElement: freezed == patternOidElement
           ? _value.patternOidElement
           : patternOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternId: patternId == freezed
+      patternId: freezed == patternId
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      patternIdElement: patternIdElement == freezed
+      patternIdElement: freezed == patternIdElement
           ? _value.patternIdElement
           : patternIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternUnsignedInt: patternUnsignedInt == freezed
+      patternUnsignedInt: freezed == patternUnsignedInt
           ? _value.patternUnsignedInt
           : patternUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      patternUnsignedIntElement: patternUnsignedIntElement == freezed
+      patternUnsignedIntElement: freezed == patternUnsignedIntElement
           ? _value.patternUnsignedIntElement
           : patternUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternPositiveInt: patternPositiveInt == freezed
+      patternPositiveInt: freezed == patternPositiveInt
           ? _value.patternPositiveInt
           : patternPositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      patternPositiveIntElement: patternPositiveIntElement == freezed
+      patternPositiveIntElement: freezed == patternPositiveIntElement
           ? _value.patternPositiveIntElement
           : patternPositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternMarkdown: patternMarkdown == freezed
+      patternMarkdown: freezed == patternMarkdown
           ? _value.patternMarkdown
           : patternMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      patternMarkdownElement: patternMarkdownElement == freezed
+      patternMarkdownElement: freezed == patternMarkdownElement
           ? _value.patternMarkdownElement
           : patternMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patternAnnotation: patternAnnotation == freezed
+      patternAnnotation: freezed == patternAnnotation
           ? _value.patternAnnotation
           : patternAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      patternAttachment: patternAttachment == freezed
+      patternAttachment: freezed == patternAttachment
           ? _value.patternAttachment
           : patternAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      patternIdentifier: patternIdentifier == freezed
+      patternIdentifier: freezed == patternIdentifier
           ? _value.patternIdentifier
           : patternIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      patternCodeableConcept: patternCodeableConcept == freezed
+      patternCodeableConcept: freezed == patternCodeableConcept
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      patternCoding: patternCoding == freezed
+      patternCoding: freezed == patternCoding
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      patternQuantity: patternQuantity == freezed
+      patternQuantity: freezed == patternQuantity
           ? _value.patternQuantity
           : patternQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      patternRange: patternRange == freezed
+      patternRange: freezed == patternRange
           ? _value.patternRange
           : patternRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      patternPeriod: patternPeriod == freezed
+      patternPeriod: freezed == patternPeriod
           ? _value.patternPeriod
           : patternPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      patternRatio: patternRatio == freezed
+      patternRatio: freezed == patternRatio
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      patternSampledData: patternSampledData == freezed
+      patternSampledData: freezed == patternSampledData
           ? _value.patternSampledData
           : patternSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      patternSignature: patternSignature == freezed
+      patternSignature: freezed == patternSignature
           ? _value.patternSignature
           : patternSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      patternHumanName: patternHumanName == freezed
+      patternHumanName: freezed == patternHumanName
           ? _value.patternHumanName
           : patternHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      patternAddress: patternAddress == freezed
+      patternAddress: freezed == patternAddress
           ? _value.patternAddress
           : patternAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      patternContactPoint: patternContactPoint == freezed
+      patternContactPoint: freezed == patternContactPoint
           ? _value.patternContactPoint
           : patternContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      patternTiming: patternTiming == freezed
+      patternTiming: freezed == patternTiming
           ? _value.patternTiming
           : patternTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      patternReference: patternReference == freezed
+      patternReference: freezed == patternReference
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      patternMeta: patternMeta == freezed
+      patternMeta: freezed == patternMeta
           ? _value.patternMeta
           : patternMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      exampleBoolean: exampleBoolean == freezed
+      exampleBoolean: freezed == exampleBoolean
           ? _value.exampleBoolean
           : exampleBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      exampleBooleanElement: exampleBooleanElement == freezed
+      exampleBooleanElement: freezed == exampleBooleanElement
           ? _value.exampleBooleanElement
           : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleInteger: exampleInteger == freezed
+      exampleInteger: freezed == exampleInteger
           ? _value.exampleInteger
           : exampleInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      exampleIntegerElement: exampleIntegerElement == freezed
+      exampleIntegerElement: freezed == exampleIntegerElement
           ? _value.exampleIntegerElement
           : exampleIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleDecimal: exampleDecimal == freezed
+      exampleDecimal: freezed == exampleDecimal
           ? _value.exampleDecimal
           : exampleDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      exampleDecimalElement: exampleDecimalElement == freezed
+      exampleDecimalElement: freezed == exampleDecimalElement
           ? _value.exampleDecimalElement
           : exampleDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleBase64Binary: exampleBase64Binary == freezed
+      exampleBase64Binary: freezed == exampleBase64Binary
           ? _value.exampleBase64Binary
           : exampleBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      exampleBase64BinaryElement: exampleBase64BinaryElement == freezed
+      exampleBase64BinaryElement: freezed == exampleBase64BinaryElement
           ? _value.exampleBase64BinaryElement
           : exampleBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleInstant: exampleInstant == freezed
+      exampleInstant: freezed == exampleInstant
           ? _value.exampleInstant
           : exampleInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      exampleInstantElement: exampleInstantElement == freezed
+      exampleInstantElement: freezed == exampleInstantElement
           ? _value.exampleInstantElement
           : exampleInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleString: exampleString == freezed
+      exampleString: freezed == exampleString
           ? _value.exampleString
           : exampleString // ignore: cast_nullable_to_non_nullable
               as String?,
-      exampleStringElement: exampleStringElement == freezed
+      exampleStringElement: freezed == exampleStringElement
           ? _value.exampleStringElement
           : exampleStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleUri: exampleUri == freezed
+      exampleUri: freezed == exampleUri
           ? _value.exampleUri
           : exampleUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      exampleUriElement: exampleUriElement == freezed
+      exampleUriElement: freezed == exampleUriElement
           ? _value.exampleUriElement
           : exampleUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleDate: exampleDate == freezed
+      exampleDate: freezed == exampleDate
           ? _value.exampleDate
           : exampleDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      exampleDateElement: exampleDateElement == freezed
+      exampleDateElement: freezed == exampleDateElement
           ? _value.exampleDateElement
           : exampleDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleDateTime: exampleDateTime == freezed
+      exampleDateTime: freezed == exampleDateTime
           ? _value.exampleDateTime
           : exampleDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      exampleDateTimeElement: exampleDateTimeElement == freezed
+      exampleDateTimeElement: freezed == exampleDateTimeElement
           ? _value.exampleDateTimeElement
           : exampleDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleTime: exampleTime == freezed
+      exampleTime: freezed == exampleTime
           ? _value.exampleTime
           : exampleTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      exampleTimeElement: exampleTimeElement == freezed
+      exampleTimeElement: freezed == exampleTimeElement
           ? _value.exampleTimeElement
           : exampleTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleCode: exampleCode == freezed
+      exampleCode: freezed == exampleCode
           ? _value.exampleCode
           : exampleCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      exampleCodeElement: exampleCodeElement == freezed
+      exampleCodeElement: freezed == exampleCodeElement
           ? _value.exampleCodeElement
           : exampleCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleOid: exampleOid == freezed
+      exampleOid: freezed == exampleOid
           ? _value.exampleOid
           : exampleOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      exampleOidElement: exampleOidElement == freezed
+      exampleOidElement: freezed == exampleOidElement
           ? _value.exampleOidElement
           : exampleOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleId: exampleId == freezed
+      exampleId: freezed == exampleId
           ? _value.exampleId
           : exampleId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      exampleIdElement: exampleIdElement == freezed
+      exampleIdElement: freezed == exampleIdElement
           ? _value.exampleIdElement
           : exampleIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleUnsignedInt: exampleUnsignedInt == freezed
+      exampleUnsignedInt: freezed == exampleUnsignedInt
           ? _value.exampleUnsignedInt
           : exampleUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      exampleUnsignedIntElement: exampleUnsignedIntElement == freezed
+      exampleUnsignedIntElement: freezed == exampleUnsignedIntElement
           ? _value.exampleUnsignedIntElement
           : exampleUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      examplePositiveInt: examplePositiveInt == freezed
+      examplePositiveInt: freezed == examplePositiveInt
           ? _value.examplePositiveInt
           : examplePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      examplePositiveIntElement: examplePositiveIntElement == freezed
+      examplePositiveIntElement: freezed == examplePositiveIntElement
           ? _value.examplePositiveIntElement
           : examplePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleMarkdown: exampleMarkdown == freezed
+      exampleMarkdown: freezed == exampleMarkdown
           ? _value.exampleMarkdown
           : exampleMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      exampleMarkdownElement: exampleMarkdownElement == freezed
+      exampleMarkdownElement: freezed == exampleMarkdownElement
           ? _value.exampleMarkdownElement
           : exampleMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      exampleAnnotation: exampleAnnotation == freezed
+      exampleAnnotation: freezed == exampleAnnotation
           ? _value.exampleAnnotation
           : exampleAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      exampleAttachment: exampleAttachment == freezed
+      exampleAttachment: freezed == exampleAttachment
           ? _value.exampleAttachment
           : exampleAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      exampleIdentifier: exampleIdentifier == freezed
+      exampleIdentifier: freezed == exampleIdentifier
           ? _value.exampleIdentifier
           : exampleIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      exampleCodeableConcept: exampleCodeableConcept == freezed
+      exampleCodeableConcept: freezed == exampleCodeableConcept
           ? _value.exampleCodeableConcept
           : exampleCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      exampleCoding: exampleCoding == freezed
+      exampleCoding: freezed == exampleCoding
           ? _value.exampleCoding
           : exampleCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      exampleQuantity: exampleQuantity == freezed
+      exampleQuantity: freezed == exampleQuantity
           ? _value.exampleQuantity
           : exampleQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      exampleRange: exampleRange == freezed
+      exampleRange: freezed == exampleRange
           ? _value.exampleRange
           : exampleRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      examplePeriod: examplePeriod == freezed
+      examplePeriod: freezed == examplePeriod
           ? _value.examplePeriod
           : examplePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      exampleRatio: exampleRatio == freezed
+      exampleRatio: freezed == exampleRatio
           ? _value.exampleRatio
           : exampleRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      exampleSampleData: exampleSampleData == freezed
+      exampleSampleData: freezed == exampleSampleData
           ? _value.exampleSampleData
           : exampleSampleData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      exampleSignature: exampleSignature == freezed
+      exampleSignature: freezed == exampleSignature
           ? _value.exampleSignature
           : exampleSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      exampleHumanName: exampleHumanName == freezed
+      exampleHumanName: freezed == exampleHumanName
           ? _value.exampleHumanName
           : exampleHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      exampleAddress: exampleAddress == freezed
+      exampleAddress: freezed == exampleAddress
           ? _value.exampleAddress
           : exampleAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      exampleContactPoint: exampleContactPoint == freezed
+      exampleContactPoint: freezed == exampleContactPoint
           ? _value.exampleContactPoint
           : exampleContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      exampleTiming: exampleTiming == freezed
+      exampleTiming: freezed == exampleTiming
           ? _value.exampleTiming
           : exampleTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      exampleReference: exampleReference == freezed
+      exampleReference: freezed == exampleReference
           ? _value.exampleReference
           : exampleReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      exampleMeta: exampleMeta == freezed
+      exampleMeta: freezed == exampleMeta
           ? _value.exampleMeta
           : exampleMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      minValueBoolean: minValueBoolean == freezed
+      minValueBoolean: freezed == minValueBoolean
           ? _value.minValueBoolean
           : minValueBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      minValueBooleanElement: minValueBooleanElement == freezed
+      minValueBooleanElement: freezed == minValueBooleanElement
           ? _value.minValueBooleanElement
           : minValueBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueInteger: minValueInteger == freezed
+      minValueInteger: freezed == minValueInteger
           ? _value.minValueInteger
           : minValueInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      minValueIntegerElement: minValueIntegerElement == freezed
+      minValueIntegerElement: freezed == minValueIntegerElement
           ? _value.minValueIntegerElement
           : minValueIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueDecimal: minValueDecimal == freezed
+      minValueDecimal: freezed == minValueDecimal
           ? _value.minValueDecimal
           : minValueDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      minValueDecimalElement: minValueDecimalElement == freezed
+      minValueDecimalElement: freezed == minValueDecimalElement
           ? _value.minValueDecimalElement
           : minValueDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueBase64Binary: minValueBase64Binary == freezed
+      minValueBase64Binary: freezed == minValueBase64Binary
           ? _value.minValueBase64Binary
           : minValueBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      minValueBase64BinaryElement: minValueBase64BinaryElement == freezed
+      minValueBase64BinaryElement: freezed == minValueBase64BinaryElement
           ? _value.minValueBase64BinaryElement
           : minValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueInstant: minValueInstant == freezed
+      minValueInstant: freezed == minValueInstant
           ? _value.minValueInstant
           : minValueInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      minValueInstantElement: minValueInstantElement == freezed
+      minValueInstantElement: freezed == minValueInstantElement
           ? _value.minValueInstantElement
           : minValueInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueString: minValueString == freezed
+      minValueString: freezed == minValueString
           ? _value.minValueString
           : minValueString // ignore: cast_nullable_to_non_nullable
               as String?,
-      minValueStringElement: minValueStringElement == freezed
+      minValueStringElement: freezed == minValueStringElement
           ? _value.minValueStringElement
           : minValueStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueUri: minValueUri == freezed
+      minValueUri: freezed == minValueUri
           ? _value.minValueUri
           : minValueUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      minValueUriElement: minValueUriElement == freezed
+      minValueUriElement: freezed == minValueUriElement
           ? _value.minValueUriElement
           : minValueUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueDate: minValueDate == freezed
+      minValueDate: freezed == minValueDate
           ? _value.minValueDate
           : minValueDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      minValueDateElement: minValueDateElement == freezed
+      minValueDateElement: freezed == minValueDateElement
           ? _value.minValueDateElement
           : minValueDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueDateTime: minValueDateTime == freezed
+      minValueDateTime: freezed == minValueDateTime
           ? _value.minValueDateTime
           : minValueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      minValueDateTimeElement: minValueDateTimeElement == freezed
+      minValueDateTimeElement: freezed == minValueDateTimeElement
           ? _value.minValueDateTimeElement
           : minValueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueTime: minValueTime == freezed
+      minValueTime: freezed == minValueTime
           ? _value.minValueTime
           : minValueTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      minValueTimeElement: minValueTimeElement == freezed
+      minValueTimeElement: freezed == minValueTimeElement
           ? _value.minValueTimeElement
           : minValueTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueCode: minValueCode == freezed
+      minValueCode: freezed == minValueCode
           ? _value.minValueCode
           : minValueCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      minValueCodeElement: minValueCodeElement == freezed
+      minValueCodeElement: freezed == minValueCodeElement
           ? _value.minValueCodeElement
           : minValueCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueOid: minValueOid == freezed
+      minValueOid: freezed == minValueOid
           ? _value.minValueOid
           : minValueOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      minValueOidElement: minValueOidElement == freezed
+      minValueOidElement: freezed == minValueOidElement
           ? _value.minValueOidElement
           : minValueOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueId: minValueId == freezed
+      minValueId: freezed == minValueId
           ? _value.minValueId
           : minValueId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      minValueIdElement: minValueIdElement == freezed
+      minValueIdElement: freezed == minValueIdElement
           ? _value.minValueIdElement
           : minValueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueUnsignedInt: minValueUnsignedInt == freezed
+      minValueUnsignedInt: freezed == minValueUnsignedInt
           ? _value.minValueUnsignedInt
           : minValueUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      minValueUnsignedIntElement: minValueUnsignedIntElement == freezed
+      minValueUnsignedIntElement: freezed == minValueUnsignedIntElement
           ? _value.minValueUnsignedIntElement
           : minValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValuePositiveInt: minValuePositiveInt == freezed
+      minValuePositiveInt: freezed == minValuePositiveInt
           ? _value.minValuePositiveInt
           : minValuePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      minValuePositiveIntElement: minValuePositiveIntElement == freezed
+      minValuePositiveIntElement: freezed == minValuePositiveIntElement
           ? _value.minValuePositiveIntElement
           : minValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueMarkdown: minValueMarkdown == freezed
+      minValueMarkdown: freezed == minValueMarkdown
           ? _value.minValueMarkdown
           : minValueMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      minValueMarkdownElement: minValueMarkdownElement == freezed
+      minValueMarkdownElement: freezed == minValueMarkdownElement
           ? _value.minValueMarkdownElement
           : minValueMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      minValueAnnotation: minValueAnnotation == freezed
+      minValueAnnotation: freezed == minValueAnnotation
           ? _value.minValueAnnotation
           : minValueAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      minValueAttachment: minValueAttachment == freezed
+      minValueAttachment: freezed == minValueAttachment
           ? _value.minValueAttachment
           : minValueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      minValueIdentifier: minValueIdentifier == freezed
+      minValueIdentifier: freezed == minValueIdentifier
           ? _value.minValueIdentifier
           : minValueIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      minValueCodeableConcept: minValueCodeableConcept == freezed
+      minValueCodeableConcept: freezed == minValueCodeableConcept
           ? _value.minValueCodeableConcept
           : minValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      minValueCoding: minValueCoding == freezed
+      minValueCoding: freezed == minValueCoding
           ? _value.minValueCoding
           : minValueCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      minValueQuantity: minValueQuantity == freezed
+      minValueQuantity: freezed == minValueQuantity
           ? _value.minValueQuantity
           : minValueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      minValueRange: minValueRange == freezed
+      minValueRange: freezed == minValueRange
           ? _value.minValueRange
           : minValueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      minValuePeriod: minValuePeriod == freezed
+      minValuePeriod: freezed == minValuePeriod
           ? _value.minValuePeriod
           : minValuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      minValueRatio: minValueRatio == freezed
+      minValueRatio: freezed == minValueRatio
           ? _value.minValueRatio
           : minValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      minValueSampledData: minValueSampledData == freezed
+      minValueSampledData: freezed == minValueSampledData
           ? _value.minValueSampledData
           : minValueSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      minValueSignature: minValueSignature == freezed
+      minValueSignature: freezed == minValueSignature
           ? _value.minValueSignature
           : minValueSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      minValueHumanName: minValueHumanName == freezed
+      minValueHumanName: freezed == minValueHumanName
           ? _value.minValueHumanName
           : minValueHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      minValueAddress: minValueAddress == freezed
+      minValueAddress: freezed == minValueAddress
           ? _value.minValueAddress
           : minValueAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      minValueContactPoint: minValueContactPoint == freezed
+      minValueContactPoint: freezed == minValueContactPoint
           ? _value.minValueContactPoint
           : minValueContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      minValueTiming: minValueTiming == freezed
+      minValueTiming: freezed == minValueTiming
           ? _value.minValueTiming
           : minValueTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      minValueReference: minValueReference == freezed
+      minValueReference: freezed == minValueReference
           ? _value.minValueReference
           : minValueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      minValueMeta: minValueMeta == freezed
+      minValueMeta: freezed == minValueMeta
           ? _value.minValueMeta
           : minValueMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      maxValueBoolean: maxValueBoolean == freezed
+      maxValueBoolean: freezed == maxValueBoolean
           ? _value.maxValueBoolean
           : maxValueBoolean // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      maxValueBooleanElement: maxValueBooleanElement == freezed
+      maxValueBooleanElement: freezed == maxValueBooleanElement
           ? _value.maxValueBooleanElement
           : maxValueBooleanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueInteger: maxValueInteger == freezed
+      maxValueInteger: freezed == maxValueInteger
           ? _value.maxValueInteger
           : maxValueInteger // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      maxValueIntegerElement: maxValueIntegerElement == freezed
+      maxValueIntegerElement: freezed == maxValueIntegerElement
           ? _value.maxValueIntegerElement
           : maxValueIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueDecimal: maxValueDecimal == freezed
+      maxValueDecimal: freezed == maxValueDecimal
           ? _value.maxValueDecimal
           : maxValueDecimal // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      maxValueDecimalElement: maxValueDecimalElement == freezed
+      maxValueDecimalElement: freezed == maxValueDecimalElement
           ? _value.maxValueDecimalElement
           : maxValueDecimalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueBase64Binary: maxValueBase64Binary == freezed
+      maxValueBase64Binary: freezed == maxValueBase64Binary
           ? _value.maxValueBase64Binary
           : maxValueBase64Binary // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      maxValueBase64BinaryElement: maxValueBase64BinaryElement == freezed
+      maxValueBase64BinaryElement: freezed == maxValueBase64BinaryElement
           ? _value.maxValueBase64BinaryElement
           : maxValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueInstant: maxValueInstant == freezed
+      maxValueInstant: freezed == maxValueInstant
           ? _value.maxValueInstant
           : maxValueInstant // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      maxValueInstantElement: maxValueInstantElement == freezed
+      maxValueInstantElement: freezed == maxValueInstantElement
           ? _value.maxValueInstantElement
           : maxValueInstantElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueString: maxValueString == freezed
+      maxValueString: freezed == maxValueString
           ? _value.maxValueString
           : maxValueString // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxValueStringElement: maxValueStringElement == freezed
+      maxValueStringElement: freezed == maxValueStringElement
           ? _value.maxValueStringElement
           : maxValueStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueUri: maxValueUri == freezed
+      maxValueUri: freezed == maxValueUri
           ? _value.maxValueUri
           : maxValueUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      maxValueUriElement: maxValueUriElement == freezed
+      maxValueUriElement: freezed == maxValueUriElement
           ? _value.maxValueUriElement
           : maxValueUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueDate: maxValueDate == freezed
+      maxValueDate: freezed == maxValueDate
           ? _value.maxValueDate
           : maxValueDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      maxValueDateElement: maxValueDateElement == freezed
+      maxValueDateElement: freezed == maxValueDateElement
           ? _value.maxValueDateElement
           : maxValueDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueDateTime: maxValueDateTime == freezed
+      maxValueDateTime: freezed == maxValueDateTime
           ? _value.maxValueDateTime
           : maxValueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      maxValueDateTimeElement: maxValueDateTimeElement == freezed
+      maxValueDateTimeElement: freezed == maxValueDateTimeElement
           ? _value.maxValueDateTimeElement
           : maxValueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueTime: maxValueTime == freezed
+      maxValueTime: freezed == maxValueTime
           ? _value.maxValueTime
           : maxValueTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      maxValueTimeElement: maxValueTimeElement == freezed
+      maxValueTimeElement: freezed == maxValueTimeElement
           ? _value.maxValueTimeElement
           : maxValueTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueCode: maxValueCode == freezed
+      maxValueCode: freezed == maxValueCode
           ? _value.maxValueCode
           : maxValueCode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      maxValueCodeElement: maxValueCodeElement == freezed
+      maxValueCodeElement: freezed == maxValueCodeElement
           ? _value.maxValueCodeElement
           : maxValueCodeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueOid: maxValueOid == freezed
+      maxValueOid: freezed == maxValueOid
           ? _value.maxValueOid
           : maxValueOid // ignore: cast_nullable_to_non_nullable
               as Oid?,
-      maxValueOidElement: maxValueOidElement == freezed
+      maxValueOidElement: freezed == maxValueOidElement
           ? _value.maxValueOidElement
           : maxValueOidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueId: maxValueId == freezed
+      maxValueId: freezed == maxValueId
           ? _value.maxValueId
           : maxValueId // ignore: cast_nullable_to_non_nullable
               as Id?,
-      maxValueIdElement: maxValueIdElement == freezed
+      maxValueIdElement: freezed == maxValueIdElement
           ? _value.maxValueIdElement
           : maxValueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueUnsignedInt: maxValueUnsignedInt == freezed
+      maxValueUnsignedInt: freezed == maxValueUnsignedInt
           ? _value.maxValueUnsignedInt
           : maxValueUnsignedInt // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      maxValueUnsignedIntElement: maxValueUnsignedIntElement == freezed
+      maxValueUnsignedIntElement: freezed == maxValueUnsignedIntElement
           ? _value.maxValueUnsignedIntElement
           : maxValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValuePositiveInt: maxValuePositiveInt == freezed
+      maxValuePositiveInt: freezed == maxValuePositiveInt
           ? _value.maxValuePositiveInt
           : maxValuePositiveInt // ignore: cast_nullable_to_non_nullable
               as PositiveInt?,
-      maxValuePositiveIntElement: maxValuePositiveIntElement == freezed
+      maxValuePositiveIntElement: freezed == maxValuePositiveIntElement
           ? _value.maxValuePositiveIntElement
           : maxValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueMarkdown: maxValueMarkdown == freezed
+      maxValueMarkdown: freezed == maxValueMarkdown
           ? _value.maxValueMarkdown
           : maxValueMarkdown // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      maxValueMarkdownElement: maxValueMarkdownElement == freezed
+      maxValueMarkdownElement: freezed == maxValueMarkdownElement
           ? _value.maxValueMarkdownElement
           : maxValueMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      maxValueAnnotation: maxValueAnnotation == freezed
+      maxValueAnnotation: freezed == maxValueAnnotation
           ? _value.maxValueAnnotation
           : maxValueAnnotation // ignore: cast_nullable_to_non_nullable
               as Annotation?,
-      maxValueAttachment: maxValueAttachment == freezed
+      maxValueAttachment: freezed == maxValueAttachment
           ? _value.maxValueAttachment
           : maxValueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      maxValueIdentifier: maxValueIdentifier == freezed
+      maxValueIdentifier: freezed == maxValueIdentifier
           ? _value.maxValueIdentifier
           : maxValueIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      maxValueCodeableConcept: maxValueCodeableConcept == freezed
+      maxValueCodeableConcept: freezed == maxValueCodeableConcept
           ? _value.maxValueCodeableConcept
           : maxValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      maxValueCoding: maxValueCoding == freezed
+      maxValueCoding: freezed == maxValueCoding
           ? _value.maxValueCoding
           : maxValueCoding // ignore: cast_nullable_to_non_nullable
               as Coding?,
-      maxValueQuantity: maxValueQuantity == freezed
+      maxValueQuantity: freezed == maxValueQuantity
           ? _value.maxValueQuantity
           : maxValueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      maxValueRange: maxValueRange == freezed
+      maxValueRange: freezed == maxValueRange
           ? _value.maxValueRange
           : maxValueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      maxValuePeriod: maxValuePeriod == freezed
+      maxValuePeriod: freezed == maxValuePeriod
           ? _value.maxValuePeriod
           : maxValuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      maxValueRatio: maxValueRatio == freezed
+      maxValueRatio: freezed == maxValueRatio
           ? _value.maxValueRatio
           : maxValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
-      maxValueSampledData: maxValueSampledData == freezed
+      maxValueSampledData: freezed == maxValueSampledData
           ? _value.maxValueSampledData
           : maxValueSampledData // ignore: cast_nullable_to_non_nullable
               as SampledData?,
-      maxValueSignature: maxValueSignature == freezed
+      maxValueSignature: freezed == maxValueSignature
           ? _value.maxValueSignature
           : maxValueSignature // ignore: cast_nullable_to_non_nullable
               as Signature?,
-      maxValueHumanName: maxValueHumanName == freezed
+      maxValueHumanName: freezed == maxValueHumanName
           ? _value.maxValueHumanName
           : maxValueHumanName // ignore: cast_nullable_to_non_nullable
               as HumanName?,
-      maxValueAddress: maxValueAddress == freezed
+      maxValueAddress: freezed == maxValueAddress
           ? _value.maxValueAddress
           : maxValueAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      maxValueContactPoint: maxValueContactPoint == freezed
+      maxValueContactPoint: freezed == maxValueContactPoint
           ? _value.maxValueContactPoint
           : maxValueContactPoint // ignore: cast_nullable_to_non_nullable
               as ContactPoint?,
-      maxValueTiming: maxValueTiming == freezed
+      maxValueTiming: freezed == maxValueTiming
           ? _value.maxValueTiming
           : maxValueTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      maxValueReference: maxValueReference == freezed
+      maxValueReference: freezed == maxValueReference
           ? _value.maxValueReference
           : maxValueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      maxValueMeta: maxValueMeta == freezed
+      maxValueMeta: freezed == maxValueMeta
           ? _value.maxValueMeta
           : maxValueMeta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      maxLength: maxLength == freezed
+      maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
               as Integer?,
-      maxLengthElement: maxLengthElement == freezed
+      maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      condition: condition == freezed
+      condition: freezed == condition
           ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
-      conditionElement: conditionElement == freezed
+      conditionElement: freezed == conditionElement
           ? _value.conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      constraint: constraint == freezed
+      constraint: freezed == constraint
           ? _value._constraint
           : constraint // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionConstraint>?,
-      mustSupport: mustSupport == freezed
+      mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      mustSupportElement: mustSupportElement == freezed
+      mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      isModifier: isModifier == freezed
+      isModifier: freezed == isModifier
           ? _value.isModifier
           : isModifier // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      isModifierElement: isModifierElement == freezed
+      isModifierElement: freezed == isModifierElement
           ? _value.isModifierElement
           : isModifierElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      isSummary: isSummary == freezed
+      isSummary: freezed == isSummary
           ? _value.isSummary
           : isSummary // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      isSummaryElement: isSummaryElement == freezed
+      isSummaryElement: freezed == isSummaryElement
           ? _value.isSummaryElement
           : isSummaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      binding: binding == freezed
+      binding: freezed == binding
           ? _value.binding
           : binding // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBinding?,
-      mapping: mapping == freezed
+      mapping: freezed == mapping
           ? _value._mapping
           : mapping // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionMapping>?,
@@ -9838,379 +10073,376 @@ class _$_ElementDefinition extends _ElementDefinition {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinition &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality().equals(other.path, path) &&
+            (identical(other.path, path) || other.path == path) &&
             const DeepCollectionEquality()
                 .equals(other._representation, _representation) &&
-            const DeepCollectionEquality()
-                .equals(other.representationElement, representationElement) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.label, label) &&
-            const DeepCollectionEquality()
-                .equals(other.labelElement, labelElement) &&
+            (identical(other.representationElement, representationElement) ||
+                other.representationElement == representationElement) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.labelElement, labelElement) ||
+                other.labelElement == labelElement) &&
             const DeepCollectionEquality().equals(other._code, _code) &&
-            const DeepCollectionEquality().equals(other.slicing, slicing) &&
-            const DeepCollectionEquality().equals(other.short, short) &&
-            const DeepCollectionEquality()
-                .equals(other.shortElement, shortElement) &&
-            const DeepCollectionEquality()
-                .equals(other.definition, definition) &&
-            const DeepCollectionEquality()
-                .equals(other.definitionElement, definitionElement) &&
-            const DeepCollectionEquality().equals(other.comments, comments) &&
-            const DeepCollectionEquality()
-                .equals(other.commentElement, commentElement) &&
-            const DeepCollectionEquality()
-                .equals(other.requirements, requirements) &&
-            const DeepCollectionEquality()
-                .equals(other.requirementsElement, requirementsElement) &&
+            (identical(other.slicing, slicing) || other.slicing == slicing) &&
+            (identical(other.short, short) || other.short == short) &&
+            (identical(other.shortElement, shortElement) ||
+                other.shortElement == shortElement) &&
+            (identical(other.definition, definition) ||
+                other.definition == definition) &&
+            (identical(other.definitionElement, definitionElement) ||
+                other.definitionElement == definitionElement) &&
+            (identical(other.comments, comments) ||
+                other.comments == comments) &&
+            (identical(other.commentElement, commentElement) ||
+                other.commentElement == commentElement) &&
+            (identical(other.requirements, requirements) ||
+                other.requirements == requirements) &&
+            (identical(other.requirementsElement, requirementsElement) ||
+                other.requirementsElement == requirementsElement) &&
             const DeepCollectionEquality().equals(other._alias, _alias) &&
-            const DeepCollectionEquality()
-                .equals(other.aliasElement, aliasElement) &&
-            const DeepCollectionEquality().equals(other.min, min) &&
-            const DeepCollectionEquality()
-                .equals(other.minElement, minElement) &&
-            const DeepCollectionEquality().equals(other.max, max) &&
-            const DeepCollectionEquality()
-                .equals(other.maxElement, maxElement) &&
-            const DeepCollectionEquality().equals(other.base, base) &&
+            (identical(other.aliasElement, aliasElement) ||
+                other.aliasElement == aliasElement) &&
+            (identical(other.min, min) || other.min == min) &&
+            (identical(other.minElement, minElement) ||
+                other.minElement == minElement) &&
+            (identical(other.max, max) || other.max == max) &&
+            (identical(other.maxElement, maxElement) ||
+                other.maxElement == maxElement) &&
+            (identical(other.base, base) || other.base == base) &&
             const DeepCollectionEquality().equals(other._type, _type) &&
-            const DeepCollectionEquality()
-                .equals(other.nameReference, nameReference) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueBoolean, defaultValueBoolean) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueBooleanElement, defaultValueBooleanElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueInteger, defaultValueInteger) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueIntegerElement, defaultValueIntegerElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueDecimal, defaultValueDecimal) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueDecimalElement, defaultValueDecimalElement) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueBase64Binary, defaultValueBase64Binary) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueBase64BinaryElement,
-                defaultValueBase64BinaryElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueInstant, defaultValueInstant) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueInstantElement, defaultValueInstantElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueString, defaultValueString) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueStringElement, defaultValueStringElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueUri, defaultValueUri) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueUriElement, defaultValueUriElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueDate, defaultValueDate) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueDateElement, defaultValueDateElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueDateTime, defaultValueDateTime) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueDateTimeElement,
-                defaultValueDateTimeElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueTime, defaultValueTime) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueTimeElement, defaultValueTimeElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueCode, defaultValueCode) &&
-            const DeepCollectionEquality().equals(
-                other.defaultValueCodeElement, defaultValueCodeElement) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueOid, defaultValueOid) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultValueOidElement, defaultValueOidElement) &&
-            const DeepCollectionEquality().equals(other.defaultValueId, defaultValueId) &&
-            const DeepCollectionEquality().equals(other.defaultValueIdElement, defaultValueIdElement) &&
-            const DeepCollectionEquality().equals(other.defaultValueUnsignedInt, defaultValueUnsignedInt) &&
-            const DeepCollectionEquality().equals(other.defaultValueUnsignedIntElement, defaultValueUnsignedIntElement) &&
-            const DeepCollectionEquality().equals(other.defaultValuePositiveInt, defaultValuePositiveInt) &&
-            const DeepCollectionEquality().equals(other.defaultValuePositiveIntElement, defaultValuePositiveIntElement) &&
-            const DeepCollectionEquality().equals(other.defaultValueMarkdown, defaultValueMarkdown) &&
-            const DeepCollectionEquality().equals(other.defaultValueMarkDownElement, defaultValueMarkDownElement) &&
-            const DeepCollectionEquality().equals(other.defaultValueAnnotation, defaultValueAnnotation) &&
-            const DeepCollectionEquality().equals(other.defaultValueAttachment, defaultValueAttachment) &&
-            const DeepCollectionEquality().equals(other.defaultValueIdentifier, defaultValueIdentifier) &&
-            const DeepCollectionEquality().equals(other.defaultValueCodeableConcept, defaultValueCodeableConcept) &&
-            const DeepCollectionEquality().equals(other.defaultValueCoding, defaultValueCoding) &&
-            const DeepCollectionEquality().equals(other.defaultValueQuantity, defaultValueQuantity) &&
-            const DeepCollectionEquality().equals(other.defaultValueRange, defaultValueRange) &&
-            const DeepCollectionEquality().equals(other.defaultValuePeriod, defaultValuePeriod) &&
-            const DeepCollectionEquality().equals(other.defaultValueRatio, defaultValueRatio) &&
-            const DeepCollectionEquality().equals(other.defaultValueSampledData, defaultValueSampledData) &&
-            const DeepCollectionEquality().equals(other.defaultValueSignature, defaultValueSignature) &&
-            const DeepCollectionEquality().equals(other.defaultValueHumanName, defaultValueHumanName) &&
-            const DeepCollectionEquality().equals(other.defaultValueAddress, defaultValueAddress) &&
-            const DeepCollectionEquality().equals(other.defaultValueContactPoint, defaultValueContactPoint) &&
-            const DeepCollectionEquality().equals(other.defaultValueTiming, defaultValueTiming) &&
-            const DeepCollectionEquality().equals(other.defaultValueReference, defaultValueReference) &&
-            const DeepCollectionEquality().equals(other.defaultValueMeta, defaultValueMeta) &&
-            const DeepCollectionEquality().equals(other.meaningWhenMissing, meaningWhenMissing) &&
-            const DeepCollectionEquality().equals(other.meaningWhenMissingElement, meaningWhenMissingElement) &&
-            const DeepCollectionEquality().equals(other.fixedBoolean, fixedBoolean) &&
-            const DeepCollectionEquality().equals(other.fixedBooleanElement, fixedBooleanElement) &&
-            const DeepCollectionEquality().equals(other.fixedInteger, fixedInteger) &&
-            const DeepCollectionEquality().equals(other.fixedIntegerElement, fixedIntegerElement) &&
-            const DeepCollectionEquality().equals(other.fixedDecimal, fixedDecimal) &&
-            const DeepCollectionEquality().equals(other.fixedDecimalElement, fixedDecimalElement) &&
-            const DeepCollectionEquality().equals(other.fixedBase64Binary, fixedBase64Binary) &&
-            const DeepCollectionEquality().equals(other.fixedBase64BinaryElement, fixedBase64BinaryElement) &&
-            const DeepCollectionEquality().equals(other.fixedInstant, fixedInstant) &&
-            const DeepCollectionEquality().equals(other.fixedInstantElement, fixedInstantElement) &&
-            const DeepCollectionEquality().equals(other.fixedString, fixedString) &&
-            const DeepCollectionEquality().equals(other.fixedStringElement, fixedStringElement) &&
-            const DeepCollectionEquality().equals(other.fixedUri, fixedUri) &&
-            const DeepCollectionEquality().equals(other.fixedUriElement, fixedUriElement) &&
-            const DeepCollectionEquality().equals(other.fixedDate, fixedDate) &&
-            const DeepCollectionEquality().equals(other.fixedDateElement, fixedDateElement) &&
-            const DeepCollectionEquality().equals(other.fixedDateTime, fixedDateTime) &&
-            const DeepCollectionEquality().equals(other.fixedDateTimeElement, fixedDateTimeElement) &&
-            const DeepCollectionEquality().equals(other.fixedCode, fixedCode) &&
-            const DeepCollectionEquality().equals(other.fixedCodeElement, fixedCodeElement) &&
-            const DeepCollectionEquality().equals(other.fixedOid, fixedOid) &&
-            const DeepCollectionEquality().equals(other.fixedOidElement, fixedOidElement) &&
-            const DeepCollectionEquality().equals(other.fixedId, fixedId) &&
-            const DeepCollectionEquality().equals(other.fixedIdElement, fixedIdElement) &&
-            const DeepCollectionEquality().equals(other.fixedUnsignedInt, fixedUnsignedInt) &&
-            const DeepCollectionEquality().equals(other.fixedUnsignedIntElement, fixedUnsignedIntElement) &&
-            const DeepCollectionEquality().equals(other.fixedPositiveInt, fixedPositiveInt) &&
-            const DeepCollectionEquality().equals(other.fixedPositiveIntElement, fixedPositiveIntElement) &&
-            const DeepCollectionEquality().equals(other.fixedMarkdown, fixedMarkdown) &&
-            const DeepCollectionEquality().equals(other.fixedMarkdownElement, fixedMarkdownElement) &&
-            const DeepCollectionEquality().equals(other.fixedAnnotation, fixedAnnotation) &&
-            const DeepCollectionEquality().equals(other.fixedAttachment, fixedAttachment) &&
-            const DeepCollectionEquality().equals(other.fixedIdentifier, fixedIdentifier) &&
-            const DeepCollectionEquality().equals(other.fixedCodeableConcept, fixedCodeableConcept) &&
-            const DeepCollectionEquality().equals(other.fixedCoding, fixedCoding) &&
-            const DeepCollectionEquality().equals(other.fixedQuantity, fixedQuantity) &&
-            const DeepCollectionEquality().equals(other.fixedRange, fixedRange) &&
-            const DeepCollectionEquality().equals(other.fixedPeriod, fixedPeriod) &&
-            const DeepCollectionEquality().equals(other.fixedRatio, fixedRatio) &&
-            const DeepCollectionEquality().equals(other.fixedSampledData, fixedSampledData) &&
-            const DeepCollectionEquality().equals(other.fixedSignature, fixedSignature) &&
-            const DeepCollectionEquality().equals(other.fixedHumanName, fixedHumanName) &&
-            const DeepCollectionEquality().equals(other.fixedAddress, fixedAddress) &&
-            const DeepCollectionEquality().equals(other.fixedContactPoint, fixedContactPoint) &&
-            const DeepCollectionEquality().equals(other.fixedTiming, fixedTiming) &&
-            const DeepCollectionEquality().equals(other.fixedReference, fixedReference) &&
-            const DeepCollectionEquality().equals(other.fixedMeta, fixedMeta) &&
-            const DeepCollectionEquality().equals(other.patternBoolean, patternBoolean) &&
-            const DeepCollectionEquality().equals(other.patternBooleanElement, patternBooleanElement) &&
-            const DeepCollectionEquality().equals(other.patternInteger, patternInteger) &&
-            const DeepCollectionEquality().equals(other.patternIntegerElement, patternIntegerElement) &&
-            const DeepCollectionEquality().equals(other.patternDecimal, patternDecimal) &&
-            const DeepCollectionEquality().equals(other.patternDecimalElement, patternDecimalElement) &&
-            const DeepCollectionEquality().equals(other.patternBase64Binary, patternBase64Binary) &&
-            const DeepCollectionEquality().equals(other.patternBase64BinaryElement, patternBase64BinaryElement) &&
-            const DeepCollectionEquality().equals(other.patternInstant, patternInstant) &&
-            const DeepCollectionEquality().equals(other.patternInstantElement, patternInstantElement) &&
-            const DeepCollectionEquality().equals(other.patternString, patternString) &&
-            const DeepCollectionEquality().equals(other.patternStringElement, patternStringElement) &&
-            const DeepCollectionEquality().equals(other.patternUri, patternUri) &&
-            const DeepCollectionEquality().equals(other.patternUriElement, patternUriElement) &&
-            const DeepCollectionEquality().equals(other.patternDate, patternDate) &&
-            const DeepCollectionEquality().equals(other.patternDateElement, patternDateElement) &&
-            const DeepCollectionEquality().equals(other.patternDateTime, patternDateTime) &&
-            const DeepCollectionEquality().equals(other.patternDateTimeElement, patternDateTimeElement) &&
-            const DeepCollectionEquality().equals(other.patternTime, patternTime) &&
-            const DeepCollectionEquality().equals(other.patternTimeElement, patternTimeElement) &&
-            const DeepCollectionEquality().equals(other.patternCode, patternCode) &&
-            const DeepCollectionEquality().equals(other.patternCodeElement, patternCodeElement) &&
-            const DeepCollectionEquality().equals(other.patternOid, patternOid) &&
-            const DeepCollectionEquality().equals(other.patternOidElement, patternOidElement) &&
-            const DeepCollectionEquality().equals(other.patternId, patternId) &&
-            const DeepCollectionEquality().equals(other.patternIdElement, patternIdElement) &&
-            const DeepCollectionEquality().equals(other.patternUnsignedInt, patternUnsignedInt) &&
-            const DeepCollectionEquality().equals(other.patternUnsignedIntElement, patternUnsignedIntElement) &&
-            const DeepCollectionEquality().equals(other.patternPositiveInt, patternPositiveInt) &&
-            const DeepCollectionEquality().equals(other.patternPositiveIntElement, patternPositiveIntElement) &&
-            const DeepCollectionEquality().equals(other.patternMarkdown, patternMarkdown) &&
-            const DeepCollectionEquality().equals(other.patternMarkdownElement, patternMarkdownElement) &&
-            const DeepCollectionEquality().equals(other.patternAnnotation, patternAnnotation) &&
-            const DeepCollectionEquality().equals(other.patternAttachment, patternAttachment) &&
-            const DeepCollectionEquality().equals(other.patternIdentifier, patternIdentifier) &&
-            const DeepCollectionEquality().equals(other.patternCodeableConcept, patternCodeableConcept) &&
-            const DeepCollectionEquality().equals(other.patternCoding, patternCoding) &&
-            const DeepCollectionEquality().equals(other.patternQuantity, patternQuantity) &&
-            const DeepCollectionEquality().equals(other.patternRange, patternRange) &&
-            const DeepCollectionEquality().equals(other.patternPeriod, patternPeriod) &&
-            const DeepCollectionEquality().equals(other.patternRatio, patternRatio) &&
-            const DeepCollectionEquality().equals(other.patternSampledData, patternSampledData) &&
-            const DeepCollectionEquality().equals(other.patternSignature, patternSignature) &&
-            const DeepCollectionEquality().equals(other.patternHumanName, patternHumanName) &&
-            const DeepCollectionEquality().equals(other.patternAddress, patternAddress) &&
-            const DeepCollectionEquality().equals(other.patternContactPoint, patternContactPoint) &&
-            const DeepCollectionEquality().equals(other.patternTiming, patternTiming) &&
-            const DeepCollectionEquality().equals(other.patternReference, patternReference) &&
-            const DeepCollectionEquality().equals(other.patternMeta, patternMeta) &&
-            const DeepCollectionEquality().equals(other.exampleBoolean, exampleBoolean) &&
-            const DeepCollectionEquality().equals(other.exampleBooleanElement, exampleBooleanElement) &&
-            const DeepCollectionEquality().equals(other.exampleInteger, exampleInteger) &&
-            const DeepCollectionEquality().equals(other.exampleIntegerElement, exampleIntegerElement) &&
-            const DeepCollectionEquality().equals(other.exampleDecimal, exampleDecimal) &&
-            const DeepCollectionEquality().equals(other.exampleDecimalElement, exampleDecimalElement) &&
-            const DeepCollectionEquality().equals(other.exampleBase64Binary, exampleBase64Binary) &&
-            const DeepCollectionEquality().equals(other.exampleBase64BinaryElement, exampleBase64BinaryElement) &&
-            const DeepCollectionEquality().equals(other.exampleInstant, exampleInstant) &&
-            const DeepCollectionEquality().equals(other.exampleInstantElement, exampleInstantElement) &&
-            const DeepCollectionEquality().equals(other.exampleString, exampleString) &&
-            const DeepCollectionEquality().equals(other.exampleStringElement, exampleStringElement) &&
-            const DeepCollectionEquality().equals(other.exampleUri, exampleUri) &&
-            const DeepCollectionEquality().equals(other.exampleUriElement, exampleUriElement) &&
-            const DeepCollectionEquality().equals(other.exampleDate, exampleDate) &&
-            const DeepCollectionEquality().equals(other.exampleDateElement, exampleDateElement) &&
-            const DeepCollectionEquality().equals(other.exampleDateTime, exampleDateTime) &&
-            const DeepCollectionEquality().equals(other.exampleDateTimeElement, exampleDateTimeElement) &&
-            const DeepCollectionEquality().equals(other.exampleTime, exampleTime) &&
-            const DeepCollectionEquality().equals(other.exampleTimeElement, exampleTimeElement) &&
-            const DeepCollectionEquality().equals(other.exampleCode, exampleCode) &&
-            const DeepCollectionEquality().equals(other.exampleCodeElement, exampleCodeElement) &&
-            const DeepCollectionEquality().equals(other.exampleOid, exampleOid) &&
-            const DeepCollectionEquality().equals(other.exampleOidElement, exampleOidElement) &&
-            const DeepCollectionEquality().equals(other.exampleId, exampleId) &&
-            const DeepCollectionEquality().equals(other.exampleIdElement, exampleIdElement) &&
-            const DeepCollectionEquality().equals(other.exampleUnsignedInt, exampleUnsignedInt) &&
-            const DeepCollectionEquality().equals(other.exampleUnsignedIntElement, exampleUnsignedIntElement) &&
-            const DeepCollectionEquality().equals(other.examplePositiveInt, examplePositiveInt) &&
-            const DeepCollectionEquality().equals(other.examplePositiveIntElement, examplePositiveIntElement) &&
-            const DeepCollectionEquality().equals(other.exampleMarkdown, exampleMarkdown) &&
-            const DeepCollectionEquality().equals(other.exampleMarkdownElement, exampleMarkdownElement) &&
-            const DeepCollectionEquality().equals(other.exampleAnnotation, exampleAnnotation) &&
-            const DeepCollectionEquality().equals(other.exampleAttachment, exampleAttachment) &&
-            const DeepCollectionEquality().equals(other.exampleIdentifier, exampleIdentifier) &&
-            const DeepCollectionEquality().equals(other.exampleCodeableConcept, exampleCodeableConcept) &&
-            const DeepCollectionEquality().equals(other.exampleCoding, exampleCoding) &&
-            const DeepCollectionEquality().equals(other.exampleQuantity, exampleQuantity) &&
-            const DeepCollectionEquality().equals(other.exampleRange, exampleRange) &&
-            const DeepCollectionEquality().equals(other.examplePeriod, examplePeriod) &&
-            const DeepCollectionEquality().equals(other.exampleRatio, exampleRatio) &&
-            const DeepCollectionEquality().equals(other.exampleSampleData, exampleSampleData) &&
-            const DeepCollectionEquality().equals(other.exampleSignature, exampleSignature) &&
-            const DeepCollectionEquality().equals(other.exampleHumanName, exampleHumanName) &&
-            const DeepCollectionEquality().equals(other.exampleAddress, exampleAddress) &&
-            const DeepCollectionEquality().equals(other.exampleContactPoint, exampleContactPoint) &&
-            const DeepCollectionEquality().equals(other.exampleTiming, exampleTiming) &&
-            const DeepCollectionEquality().equals(other.exampleReference, exampleReference) &&
-            const DeepCollectionEquality().equals(other.exampleMeta, exampleMeta) &&
-            const DeepCollectionEquality().equals(other.minValueBoolean, minValueBoolean) &&
-            const DeepCollectionEquality().equals(other.minValueBooleanElement, minValueBooleanElement) &&
-            const DeepCollectionEquality().equals(other.minValueInteger, minValueInteger) &&
-            const DeepCollectionEquality().equals(other.minValueIntegerElement, minValueIntegerElement) &&
-            const DeepCollectionEquality().equals(other.minValueDecimal, minValueDecimal) &&
-            const DeepCollectionEquality().equals(other.minValueDecimalElement, minValueDecimalElement) &&
-            const DeepCollectionEquality().equals(other.minValueBase64Binary, minValueBase64Binary) &&
-            const DeepCollectionEquality().equals(other.minValueBase64BinaryElement, minValueBase64BinaryElement) &&
-            const DeepCollectionEquality().equals(other.minValueInstant, minValueInstant) &&
-            const DeepCollectionEquality().equals(other.minValueInstantElement, minValueInstantElement) &&
-            const DeepCollectionEquality().equals(other.minValueString, minValueString) &&
-            const DeepCollectionEquality().equals(other.minValueStringElement, minValueStringElement) &&
-            const DeepCollectionEquality().equals(other.minValueUri, minValueUri) &&
-            const DeepCollectionEquality().equals(other.minValueUriElement, minValueUriElement) &&
-            const DeepCollectionEquality().equals(other.minValueDate, minValueDate) &&
-            const DeepCollectionEquality().equals(other.minValueDateElement, minValueDateElement) &&
-            const DeepCollectionEquality().equals(other.minValueDateTime, minValueDateTime) &&
-            const DeepCollectionEquality().equals(other.minValueDateTimeElement, minValueDateTimeElement) &&
-            const DeepCollectionEquality().equals(other.minValueTime, minValueTime) &&
-            const DeepCollectionEquality().equals(other.minValueTimeElement, minValueTimeElement) &&
-            const DeepCollectionEquality().equals(other.minValueCode, minValueCode) &&
-            const DeepCollectionEquality().equals(other.minValueCodeElement, minValueCodeElement) &&
-            const DeepCollectionEquality().equals(other.minValueOid, minValueOid) &&
-            const DeepCollectionEquality().equals(other.minValueOidElement, minValueOidElement) &&
-            const DeepCollectionEquality().equals(other.minValueId, minValueId) &&
-            const DeepCollectionEquality().equals(other.minValueIdElement, minValueIdElement) &&
-            const DeepCollectionEquality().equals(other.minValueUnsignedInt, minValueUnsignedInt) &&
-            const DeepCollectionEquality().equals(other.minValueUnsignedIntElement, minValueUnsignedIntElement) &&
-            const DeepCollectionEquality().equals(other.minValuePositiveInt, minValuePositiveInt) &&
-            const DeepCollectionEquality().equals(other.minValuePositiveIntElement, minValuePositiveIntElement) &&
-            const DeepCollectionEquality().equals(other.minValueMarkdown, minValueMarkdown) &&
-            const DeepCollectionEquality().equals(other.minValueMarkdownElement, minValueMarkdownElement) &&
-            const DeepCollectionEquality().equals(other.minValueAnnotation, minValueAnnotation) &&
-            const DeepCollectionEquality().equals(other.minValueAttachment, minValueAttachment) &&
-            const DeepCollectionEquality().equals(other.minValueIdentifier, minValueIdentifier) &&
-            const DeepCollectionEquality().equals(other.minValueCodeableConcept, minValueCodeableConcept) &&
-            const DeepCollectionEquality().equals(other.minValueCoding, minValueCoding) &&
-            const DeepCollectionEquality().equals(other.minValueQuantity, minValueQuantity) &&
-            const DeepCollectionEquality().equals(other.minValueRange, minValueRange) &&
-            const DeepCollectionEquality().equals(other.minValuePeriod, minValuePeriod) &&
-            const DeepCollectionEquality().equals(other.minValueRatio, minValueRatio) &&
-            const DeepCollectionEquality().equals(other.minValueSampledData, minValueSampledData) &&
-            const DeepCollectionEquality().equals(other.minValueSignature, minValueSignature) &&
-            const DeepCollectionEquality().equals(other.minValueHumanName, minValueHumanName) &&
-            const DeepCollectionEquality().equals(other.minValueAddress, minValueAddress) &&
-            const DeepCollectionEquality().equals(other.minValueContactPoint, minValueContactPoint) &&
-            const DeepCollectionEquality().equals(other.minValueTiming, minValueTiming) &&
-            const DeepCollectionEquality().equals(other.minValueReference, minValueReference) &&
-            const DeepCollectionEquality().equals(other.minValueMeta, minValueMeta) &&
-            const DeepCollectionEquality().equals(other.maxValueBoolean, maxValueBoolean) &&
-            const DeepCollectionEquality().equals(other.maxValueBooleanElement, maxValueBooleanElement) &&
-            const DeepCollectionEquality().equals(other.maxValueInteger, maxValueInteger) &&
-            const DeepCollectionEquality().equals(other.maxValueIntegerElement, maxValueIntegerElement) &&
-            const DeepCollectionEquality().equals(other.maxValueDecimal, maxValueDecimal) &&
-            const DeepCollectionEquality().equals(other.maxValueDecimalElement, maxValueDecimalElement) &&
-            const DeepCollectionEquality().equals(other.maxValueBase64Binary, maxValueBase64Binary) &&
-            const DeepCollectionEquality().equals(other.maxValueBase64BinaryElement, maxValueBase64BinaryElement) &&
-            const DeepCollectionEquality().equals(other.maxValueInstant, maxValueInstant) &&
-            const DeepCollectionEquality().equals(other.maxValueInstantElement, maxValueInstantElement) &&
-            const DeepCollectionEquality().equals(other.maxValueString, maxValueString) &&
-            const DeepCollectionEquality().equals(other.maxValueStringElement, maxValueStringElement) &&
-            const DeepCollectionEquality().equals(other.maxValueUri, maxValueUri) &&
-            const DeepCollectionEquality().equals(other.maxValueUriElement, maxValueUriElement) &&
-            const DeepCollectionEquality().equals(other.maxValueDate, maxValueDate) &&
-            const DeepCollectionEquality().equals(other.maxValueDateElement, maxValueDateElement) &&
-            const DeepCollectionEquality().equals(other.maxValueDateTime, maxValueDateTime) &&
-            const DeepCollectionEquality().equals(other.maxValueDateTimeElement, maxValueDateTimeElement) &&
-            const DeepCollectionEquality().equals(other.maxValueTime, maxValueTime) &&
-            const DeepCollectionEquality().equals(other.maxValueTimeElement, maxValueTimeElement) &&
-            const DeepCollectionEquality().equals(other.maxValueCode, maxValueCode) &&
-            const DeepCollectionEquality().equals(other.maxValueCodeElement, maxValueCodeElement) &&
-            const DeepCollectionEquality().equals(other.maxValueOid, maxValueOid) &&
-            const DeepCollectionEquality().equals(other.maxValueOidElement, maxValueOidElement) &&
-            const DeepCollectionEquality().equals(other.maxValueId, maxValueId) &&
-            const DeepCollectionEquality().equals(other.maxValueIdElement, maxValueIdElement) &&
-            const DeepCollectionEquality().equals(other.maxValueUnsignedInt, maxValueUnsignedInt) &&
-            const DeepCollectionEquality().equals(other.maxValueUnsignedIntElement, maxValueUnsignedIntElement) &&
-            const DeepCollectionEquality().equals(other.maxValuePositiveInt, maxValuePositiveInt) &&
-            const DeepCollectionEquality().equals(other.maxValuePositiveIntElement, maxValuePositiveIntElement) &&
-            const DeepCollectionEquality().equals(other.maxValueMarkdown, maxValueMarkdown) &&
-            const DeepCollectionEquality().equals(other.maxValueMarkdownElement, maxValueMarkdownElement) &&
-            const DeepCollectionEquality().equals(other.maxValueAnnotation, maxValueAnnotation) &&
-            const DeepCollectionEquality().equals(other.maxValueAttachment, maxValueAttachment) &&
-            const DeepCollectionEquality().equals(other.maxValueIdentifier, maxValueIdentifier) &&
-            const DeepCollectionEquality().equals(other.maxValueCodeableConcept, maxValueCodeableConcept) &&
-            const DeepCollectionEquality().equals(other.maxValueCoding, maxValueCoding) &&
-            const DeepCollectionEquality().equals(other.maxValueQuantity, maxValueQuantity) &&
-            const DeepCollectionEquality().equals(other.maxValueRange, maxValueRange) &&
-            const DeepCollectionEquality().equals(other.maxValuePeriod, maxValuePeriod) &&
-            const DeepCollectionEquality().equals(other.maxValueRatio, maxValueRatio) &&
-            const DeepCollectionEquality().equals(other.maxValueSampledData, maxValueSampledData) &&
-            const DeepCollectionEquality().equals(other.maxValueSignature, maxValueSignature) &&
-            const DeepCollectionEquality().equals(other.maxValueHumanName, maxValueHumanName) &&
-            const DeepCollectionEquality().equals(other.maxValueAddress, maxValueAddress) &&
-            const DeepCollectionEquality().equals(other.maxValueContactPoint, maxValueContactPoint) &&
-            const DeepCollectionEquality().equals(other.maxValueTiming, maxValueTiming) &&
-            const DeepCollectionEquality().equals(other.maxValueReference, maxValueReference) &&
-            const DeepCollectionEquality().equals(other.maxValueMeta, maxValueMeta) &&
-            const DeepCollectionEquality().equals(other.maxLength, maxLength) &&
-            const DeepCollectionEquality().equals(other.maxLengthElement, maxLengthElement) &&
+            (identical(other.nameReference, nameReference) ||
+                other.nameReference == nameReference) &&
+            (identical(other.defaultValueBoolean, defaultValueBoolean) ||
+                other.defaultValueBoolean == defaultValueBoolean) &&
+            (identical(other.defaultValueBooleanElement, defaultValueBooleanElement) ||
+                other.defaultValueBooleanElement ==
+                    defaultValueBooleanElement) &&
+            (identical(other.defaultValueInteger, defaultValueInteger) ||
+                other.defaultValueInteger == defaultValueInteger) &&
+            (identical(other.defaultValueIntegerElement, defaultValueIntegerElement) ||
+                other.defaultValueIntegerElement ==
+                    defaultValueIntegerElement) &&
+            (identical(other.defaultValueDecimal, defaultValueDecimal) ||
+                other.defaultValueDecimal == defaultValueDecimal) &&
+            (identical(other.defaultValueDecimalElement, defaultValueDecimalElement) ||
+                other.defaultValueDecimalElement ==
+                    defaultValueDecimalElement) &&
+            (identical(other.defaultValueBase64Binary, defaultValueBase64Binary) ||
+                other.defaultValueBase64Binary == defaultValueBase64Binary) &&
+            (identical(other.defaultValueBase64BinaryElement, defaultValueBase64BinaryElement) ||
+                other.defaultValueBase64BinaryElement ==
+                    defaultValueBase64BinaryElement) &&
+            (identical(other.defaultValueInstant, defaultValueInstant) ||
+                other.defaultValueInstant == defaultValueInstant) &&
+            (identical(other.defaultValueInstantElement, defaultValueInstantElement) ||
+                other.defaultValueInstantElement ==
+                    defaultValueInstantElement) &&
+            (identical(other.defaultValueString, defaultValueString) ||
+                other.defaultValueString == defaultValueString) &&
+            (identical(other.defaultValueStringElement, defaultValueStringElement) ||
+                other.defaultValueStringElement == defaultValueStringElement) &&
+            (identical(other.defaultValueUri, defaultValueUri) ||
+                other.defaultValueUri == defaultValueUri) &&
+            (identical(other.defaultValueUriElement, defaultValueUriElement) ||
+                other.defaultValueUriElement == defaultValueUriElement) &&
+            (identical(other.defaultValueDate, defaultValueDate) ||
+                other.defaultValueDate == defaultValueDate) &&
+            (identical(other.defaultValueDateElement, defaultValueDateElement) ||
+                other.defaultValueDateElement == defaultValueDateElement) &&
+            (identical(other.defaultValueDateTime, defaultValueDateTime) ||
+                other.defaultValueDateTime == defaultValueDateTime) &&
+            (identical(other.defaultValueDateTimeElement, defaultValueDateTimeElement) || other.defaultValueDateTimeElement == defaultValueDateTimeElement) &&
+            (identical(other.defaultValueTime, defaultValueTime) || other.defaultValueTime == defaultValueTime) &&
+            (identical(other.defaultValueTimeElement, defaultValueTimeElement) || other.defaultValueTimeElement == defaultValueTimeElement) &&
+            (identical(other.defaultValueCode, defaultValueCode) || other.defaultValueCode == defaultValueCode) &&
+            (identical(other.defaultValueCodeElement, defaultValueCodeElement) || other.defaultValueCodeElement == defaultValueCodeElement) &&
+            (identical(other.defaultValueOid, defaultValueOid) || other.defaultValueOid == defaultValueOid) &&
+            (identical(other.defaultValueOidElement, defaultValueOidElement) || other.defaultValueOidElement == defaultValueOidElement) &&
+            (identical(other.defaultValueId, defaultValueId) || other.defaultValueId == defaultValueId) &&
+            (identical(other.defaultValueIdElement, defaultValueIdElement) || other.defaultValueIdElement == defaultValueIdElement) &&
+            (identical(other.defaultValueUnsignedInt, defaultValueUnsignedInt) || other.defaultValueUnsignedInt == defaultValueUnsignedInt) &&
+            (identical(other.defaultValueUnsignedIntElement, defaultValueUnsignedIntElement) || other.defaultValueUnsignedIntElement == defaultValueUnsignedIntElement) &&
+            (identical(other.defaultValuePositiveInt, defaultValuePositiveInt) || other.defaultValuePositiveInt == defaultValuePositiveInt) &&
+            (identical(other.defaultValuePositiveIntElement, defaultValuePositiveIntElement) || other.defaultValuePositiveIntElement == defaultValuePositiveIntElement) &&
+            (identical(other.defaultValueMarkdown, defaultValueMarkdown) || other.defaultValueMarkdown == defaultValueMarkdown) &&
+            (identical(other.defaultValueMarkDownElement, defaultValueMarkDownElement) || other.defaultValueMarkDownElement == defaultValueMarkDownElement) &&
+            (identical(other.defaultValueAnnotation, defaultValueAnnotation) || other.defaultValueAnnotation == defaultValueAnnotation) &&
+            (identical(other.defaultValueAttachment, defaultValueAttachment) || other.defaultValueAttachment == defaultValueAttachment) &&
+            (identical(other.defaultValueIdentifier, defaultValueIdentifier) || other.defaultValueIdentifier == defaultValueIdentifier) &&
+            (identical(other.defaultValueCodeableConcept, defaultValueCodeableConcept) || other.defaultValueCodeableConcept == defaultValueCodeableConcept) &&
+            (identical(other.defaultValueCoding, defaultValueCoding) || other.defaultValueCoding == defaultValueCoding) &&
+            (identical(other.defaultValueQuantity, defaultValueQuantity) || other.defaultValueQuantity == defaultValueQuantity) &&
+            (identical(other.defaultValueRange, defaultValueRange) || other.defaultValueRange == defaultValueRange) &&
+            (identical(other.defaultValuePeriod, defaultValuePeriod) || other.defaultValuePeriod == defaultValuePeriod) &&
+            (identical(other.defaultValueRatio, defaultValueRatio) || other.defaultValueRatio == defaultValueRatio) &&
+            (identical(other.defaultValueSampledData, defaultValueSampledData) || other.defaultValueSampledData == defaultValueSampledData) &&
+            (identical(other.defaultValueSignature, defaultValueSignature) || other.defaultValueSignature == defaultValueSignature) &&
+            (identical(other.defaultValueHumanName, defaultValueHumanName) || other.defaultValueHumanName == defaultValueHumanName) &&
+            (identical(other.defaultValueAddress, defaultValueAddress) || other.defaultValueAddress == defaultValueAddress) &&
+            (identical(other.defaultValueContactPoint, defaultValueContactPoint) || other.defaultValueContactPoint == defaultValueContactPoint) &&
+            (identical(other.defaultValueTiming, defaultValueTiming) || other.defaultValueTiming == defaultValueTiming) &&
+            (identical(other.defaultValueReference, defaultValueReference) || other.defaultValueReference == defaultValueReference) &&
+            (identical(other.defaultValueMeta, defaultValueMeta) || other.defaultValueMeta == defaultValueMeta) &&
+            (identical(other.meaningWhenMissing, meaningWhenMissing) || other.meaningWhenMissing == meaningWhenMissing) &&
+            (identical(other.meaningWhenMissingElement, meaningWhenMissingElement) || other.meaningWhenMissingElement == meaningWhenMissingElement) &&
+            (identical(other.fixedBoolean, fixedBoolean) || other.fixedBoolean == fixedBoolean) &&
+            (identical(other.fixedBooleanElement, fixedBooleanElement) || other.fixedBooleanElement == fixedBooleanElement) &&
+            (identical(other.fixedInteger, fixedInteger) || other.fixedInteger == fixedInteger) &&
+            (identical(other.fixedIntegerElement, fixedIntegerElement) || other.fixedIntegerElement == fixedIntegerElement) &&
+            (identical(other.fixedDecimal, fixedDecimal) || other.fixedDecimal == fixedDecimal) &&
+            (identical(other.fixedDecimalElement, fixedDecimalElement) || other.fixedDecimalElement == fixedDecimalElement) &&
+            (identical(other.fixedBase64Binary, fixedBase64Binary) || other.fixedBase64Binary == fixedBase64Binary) &&
+            (identical(other.fixedBase64BinaryElement, fixedBase64BinaryElement) || other.fixedBase64BinaryElement == fixedBase64BinaryElement) &&
+            (identical(other.fixedInstant, fixedInstant) || other.fixedInstant == fixedInstant) &&
+            (identical(other.fixedInstantElement, fixedInstantElement) || other.fixedInstantElement == fixedInstantElement) &&
+            (identical(other.fixedString, fixedString) || other.fixedString == fixedString) &&
+            (identical(other.fixedStringElement, fixedStringElement) || other.fixedStringElement == fixedStringElement) &&
+            (identical(other.fixedUri, fixedUri) || other.fixedUri == fixedUri) &&
+            (identical(other.fixedUriElement, fixedUriElement) || other.fixedUriElement == fixedUriElement) &&
+            (identical(other.fixedDate, fixedDate) || other.fixedDate == fixedDate) &&
+            (identical(other.fixedDateElement, fixedDateElement) || other.fixedDateElement == fixedDateElement) &&
+            (identical(other.fixedDateTime, fixedDateTime) || other.fixedDateTime == fixedDateTime) &&
+            (identical(other.fixedDateTimeElement, fixedDateTimeElement) || other.fixedDateTimeElement == fixedDateTimeElement) &&
+            (identical(other.fixedCode, fixedCode) || other.fixedCode == fixedCode) &&
+            (identical(other.fixedCodeElement, fixedCodeElement) || other.fixedCodeElement == fixedCodeElement) &&
+            (identical(other.fixedOid, fixedOid) || other.fixedOid == fixedOid) &&
+            (identical(other.fixedOidElement, fixedOidElement) || other.fixedOidElement == fixedOidElement) &&
+            (identical(other.fixedId, fixedId) || other.fixedId == fixedId) &&
+            (identical(other.fixedIdElement, fixedIdElement) || other.fixedIdElement == fixedIdElement) &&
+            (identical(other.fixedUnsignedInt, fixedUnsignedInt) || other.fixedUnsignedInt == fixedUnsignedInt) &&
+            (identical(other.fixedUnsignedIntElement, fixedUnsignedIntElement) || other.fixedUnsignedIntElement == fixedUnsignedIntElement) &&
+            (identical(other.fixedPositiveInt, fixedPositiveInt) || other.fixedPositiveInt == fixedPositiveInt) &&
+            (identical(other.fixedPositiveIntElement, fixedPositiveIntElement) || other.fixedPositiveIntElement == fixedPositiveIntElement) &&
+            (identical(other.fixedMarkdown, fixedMarkdown) || other.fixedMarkdown == fixedMarkdown) &&
+            (identical(other.fixedMarkdownElement, fixedMarkdownElement) || other.fixedMarkdownElement == fixedMarkdownElement) &&
+            (identical(other.fixedAnnotation, fixedAnnotation) || other.fixedAnnotation == fixedAnnotation) &&
+            (identical(other.fixedAttachment, fixedAttachment) || other.fixedAttachment == fixedAttachment) &&
+            (identical(other.fixedIdentifier, fixedIdentifier) || other.fixedIdentifier == fixedIdentifier) &&
+            (identical(other.fixedCodeableConcept, fixedCodeableConcept) || other.fixedCodeableConcept == fixedCodeableConcept) &&
+            (identical(other.fixedCoding, fixedCoding) || other.fixedCoding == fixedCoding) &&
+            (identical(other.fixedQuantity, fixedQuantity) || other.fixedQuantity == fixedQuantity) &&
+            (identical(other.fixedRange, fixedRange) || other.fixedRange == fixedRange) &&
+            (identical(other.fixedPeriod, fixedPeriod) || other.fixedPeriod == fixedPeriod) &&
+            (identical(other.fixedRatio, fixedRatio) || other.fixedRatio == fixedRatio) &&
+            (identical(other.fixedSampledData, fixedSampledData) || other.fixedSampledData == fixedSampledData) &&
+            (identical(other.fixedSignature, fixedSignature) || other.fixedSignature == fixedSignature) &&
+            (identical(other.fixedHumanName, fixedHumanName) || other.fixedHumanName == fixedHumanName) &&
+            (identical(other.fixedAddress, fixedAddress) || other.fixedAddress == fixedAddress) &&
+            (identical(other.fixedContactPoint, fixedContactPoint) || other.fixedContactPoint == fixedContactPoint) &&
+            (identical(other.fixedTiming, fixedTiming) || other.fixedTiming == fixedTiming) &&
+            (identical(other.fixedReference, fixedReference) || other.fixedReference == fixedReference) &&
+            (identical(other.fixedMeta, fixedMeta) || other.fixedMeta == fixedMeta) &&
+            (identical(other.patternBoolean, patternBoolean) || other.patternBoolean == patternBoolean) &&
+            (identical(other.patternBooleanElement, patternBooleanElement) || other.patternBooleanElement == patternBooleanElement) &&
+            (identical(other.patternInteger, patternInteger) || other.patternInteger == patternInteger) &&
+            (identical(other.patternIntegerElement, patternIntegerElement) || other.patternIntegerElement == patternIntegerElement) &&
+            (identical(other.patternDecimal, patternDecimal) || other.patternDecimal == patternDecimal) &&
+            (identical(other.patternDecimalElement, patternDecimalElement) || other.patternDecimalElement == patternDecimalElement) &&
+            (identical(other.patternBase64Binary, patternBase64Binary) || other.patternBase64Binary == patternBase64Binary) &&
+            (identical(other.patternBase64BinaryElement, patternBase64BinaryElement) || other.patternBase64BinaryElement == patternBase64BinaryElement) &&
+            (identical(other.patternInstant, patternInstant) || other.patternInstant == patternInstant) &&
+            (identical(other.patternInstantElement, patternInstantElement) || other.patternInstantElement == patternInstantElement) &&
+            (identical(other.patternString, patternString) || other.patternString == patternString) &&
+            (identical(other.patternStringElement, patternStringElement) || other.patternStringElement == patternStringElement) &&
+            (identical(other.patternUri, patternUri) || other.patternUri == patternUri) &&
+            (identical(other.patternUriElement, patternUriElement) || other.patternUriElement == patternUriElement) &&
+            (identical(other.patternDate, patternDate) || other.patternDate == patternDate) &&
+            (identical(other.patternDateElement, patternDateElement) || other.patternDateElement == patternDateElement) &&
+            (identical(other.patternDateTime, patternDateTime) || other.patternDateTime == patternDateTime) &&
+            (identical(other.patternDateTimeElement, patternDateTimeElement) || other.patternDateTimeElement == patternDateTimeElement) &&
+            (identical(other.patternTime, patternTime) || other.patternTime == patternTime) &&
+            (identical(other.patternTimeElement, patternTimeElement) || other.patternTimeElement == patternTimeElement) &&
+            (identical(other.patternCode, patternCode) || other.patternCode == patternCode) &&
+            (identical(other.patternCodeElement, patternCodeElement) || other.patternCodeElement == patternCodeElement) &&
+            (identical(other.patternOid, patternOid) || other.patternOid == patternOid) &&
+            (identical(other.patternOidElement, patternOidElement) || other.patternOidElement == patternOidElement) &&
+            (identical(other.patternId, patternId) || other.patternId == patternId) &&
+            (identical(other.patternIdElement, patternIdElement) || other.patternIdElement == patternIdElement) &&
+            (identical(other.patternUnsignedInt, patternUnsignedInt) || other.patternUnsignedInt == patternUnsignedInt) &&
+            (identical(other.patternUnsignedIntElement, patternUnsignedIntElement) || other.patternUnsignedIntElement == patternUnsignedIntElement) &&
+            (identical(other.patternPositiveInt, patternPositiveInt) || other.patternPositiveInt == patternPositiveInt) &&
+            (identical(other.patternPositiveIntElement, patternPositiveIntElement) || other.patternPositiveIntElement == patternPositiveIntElement) &&
+            (identical(other.patternMarkdown, patternMarkdown) || other.patternMarkdown == patternMarkdown) &&
+            (identical(other.patternMarkdownElement, patternMarkdownElement) || other.patternMarkdownElement == patternMarkdownElement) &&
+            (identical(other.patternAnnotation, patternAnnotation) || other.patternAnnotation == patternAnnotation) &&
+            (identical(other.patternAttachment, patternAttachment) || other.patternAttachment == patternAttachment) &&
+            (identical(other.patternIdentifier, patternIdentifier) || other.patternIdentifier == patternIdentifier) &&
+            (identical(other.patternCodeableConcept, patternCodeableConcept) || other.patternCodeableConcept == patternCodeableConcept) &&
+            (identical(other.patternCoding, patternCoding) || other.patternCoding == patternCoding) &&
+            (identical(other.patternQuantity, patternQuantity) || other.patternQuantity == patternQuantity) &&
+            (identical(other.patternRange, patternRange) || other.patternRange == patternRange) &&
+            (identical(other.patternPeriod, patternPeriod) || other.patternPeriod == patternPeriod) &&
+            (identical(other.patternRatio, patternRatio) || other.patternRatio == patternRatio) &&
+            (identical(other.patternSampledData, patternSampledData) || other.patternSampledData == patternSampledData) &&
+            (identical(other.patternSignature, patternSignature) || other.patternSignature == patternSignature) &&
+            (identical(other.patternHumanName, patternHumanName) || other.patternHumanName == patternHumanName) &&
+            (identical(other.patternAddress, patternAddress) || other.patternAddress == patternAddress) &&
+            (identical(other.patternContactPoint, patternContactPoint) || other.patternContactPoint == patternContactPoint) &&
+            (identical(other.patternTiming, patternTiming) || other.patternTiming == patternTiming) &&
+            (identical(other.patternReference, patternReference) || other.patternReference == patternReference) &&
+            (identical(other.patternMeta, patternMeta) || other.patternMeta == patternMeta) &&
+            (identical(other.exampleBoolean, exampleBoolean) || other.exampleBoolean == exampleBoolean) &&
+            (identical(other.exampleBooleanElement, exampleBooleanElement) || other.exampleBooleanElement == exampleBooleanElement) &&
+            (identical(other.exampleInteger, exampleInteger) || other.exampleInteger == exampleInteger) &&
+            (identical(other.exampleIntegerElement, exampleIntegerElement) || other.exampleIntegerElement == exampleIntegerElement) &&
+            (identical(other.exampleDecimal, exampleDecimal) || other.exampleDecimal == exampleDecimal) &&
+            (identical(other.exampleDecimalElement, exampleDecimalElement) || other.exampleDecimalElement == exampleDecimalElement) &&
+            (identical(other.exampleBase64Binary, exampleBase64Binary) || other.exampleBase64Binary == exampleBase64Binary) &&
+            (identical(other.exampleBase64BinaryElement, exampleBase64BinaryElement) || other.exampleBase64BinaryElement == exampleBase64BinaryElement) &&
+            (identical(other.exampleInstant, exampleInstant) || other.exampleInstant == exampleInstant) &&
+            (identical(other.exampleInstantElement, exampleInstantElement) || other.exampleInstantElement == exampleInstantElement) &&
+            (identical(other.exampleString, exampleString) || other.exampleString == exampleString) &&
+            (identical(other.exampleStringElement, exampleStringElement) || other.exampleStringElement == exampleStringElement) &&
+            (identical(other.exampleUri, exampleUri) || other.exampleUri == exampleUri) &&
+            (identical(other.exampleUriElement, exampleUriElement) || other.exampleUriElement == exampleUriElement) &&
+            (identical(other.exampleDate, exampleDate) || other.exampleDate == exampleDate) &&
+            (identical(other.exampleDateElement, exampleDateElement) || other.exampleDateElement == exampleDateElement) &&
+            (identical(other.exampleDateTime, exampleDateTime) || other.exampleDateTime == exampleDateTime) &&
+            (identical(other.exampleDateTimeElement, exampleDateTimeElement) || other.exampleDateTimeElement == exampleDateTimeElement) &&
+            (identical(other.exampleTime, exampleTime) || other.exampleTime == exampleTime) &&
+            (identical(other.exampleTimeElement, exampleTimeElement) || other.exampleTimeElement == exampleTimeElement) &&
+            (identical(other.exampleCode, exampleCode) || other.exampleCode == exampleCode) &&
+            (identical(other.exampleCodeElement, exampleCodeElement) || other.exampleCodeElement == exampleCodeElement) &&
+            (identical(other.exampleOid, exampleOid) || other.exampleOid == exampleOid) &&
+            (identical(other.exampleOidElement, exampleOidElement) || other.exampleOidElement == exampleOidElement) &&
+            (identical(other.exampleId, exampleId) || other.exampleId == exampleId) &&
+            (identical(other.exampleIdElement, exampleIdElement) || other.exampleIdElement == exampleIdElement) &&
+            (identical(other.exampleUnsignedInt, exampleUnsignedInt) || other.exampleUnsignedInt == exampleUnsignedInt) &&
+            (identical(other.exampleUnsignedIntElement, exampleUnsignedIntElement) || other.exampleUnsignedIntElement == exampleUnsignedIntElement) &&
+            (identical(other.examplePositiveInt, examplePositiveInt) || other.examplePositiveInt == examplePositiveInt) &&
+            (identical(other.examplePositiveIntElement, examplePositiveIntElement) || other.examplePositiveIntElement == examplePositiveIntElement) &&
+            (identical(other.exampleMarkdown, exampleMarkdown) || other.exampleMarkdown == exampleMarkdown) &&
+            (identical(other.exampleMarkdownElement, exampleMarkdownElement) || other.exampleMarkdownElement == exampleMarkdownElement) &&
+            (identical(other.exampleAnnotation, exampleAnnotation) || other.exampleAnnotation == exampleAnnotation) &&
+            (identical(other.exampleAttachment, exampleAttachment) || other.exampleAttachment == exampleAttachment) &&
+            (identical(other.exampleIdentifier, exampleIdentifier) || other.exampleIdentifier == exampleIdentifier) &&
+            (identical(other.exampleCodeableConcept, exampleCodeableConcept) || other.exampleCodeableConcept == exampleCodeableConcept) &&
+            (identical(other.exampleCoding, exampleCoding) || other.exampleCoding == exampleCoding) &&
+            (identical(other.exampleQuantity, exampleQuantity) || other.exampleQuantity == exampleQuantity) &&
+            (identical(other.exampleRange, exampleRange) || other.exampleRange == exampleRange) &&
+            (identical(other.examplePeriod, examplePeriod) || other.examplePeriod == examplePeriod) &&
+            (identical(other.exampleRatio, exampleRatio) || other.exampleRatio == exampleRatio) &&
+            (identical(other.exampleSampleData, exampleSampleData) || other.exampleSampleData == exampleSampleData) &&
+            (identical(other.exampleSignature, exampleSignature) || other.exampleSignature == exampleSignature) &&
+            (identical(other.exampleHumanName, exampleHumanName) || other.exampleHumanName == exampleHumanName) &&
+            (identical(other.exampleAddress, exampleAddress) || other.exampleAddress == exampleAddress) &&
+            (identical(other.exampleContactPoint, exampleContactPoint) || other.exampleContactPoint == exampleContactPoint) &&
+            (identical(other.exampleTiming, exampleTiming) || other.exampleTiming == exampleTiming) &&
+            (identical(other.exampleReference, exampleReference) || other.exampleReference == exampleReference) &&
+            (identical(other.exampleMeta, exampleMeta) || other.exampleMeta == exampleMeta) &&
+            (identical(other.minValueBoolean, minValueBoolean) || other.minValueBoolean == minValueBoolean) &&
+            (identical(other.minValueBooleanElement, minValueBooleanElement) || other.minValueBooleanElement == minValueBooleanElement) &&
+            (identical(other.minValueInteger, minValueInteger) || other.minValueInteger == minValueInteger) &&
+            (identical(other.minValueIntegerElement, minValueIntegerElement) || other.minValueIntegerElement == minValueIntegerElement) &&
+            (identical(other.minValueDecimal, minValueDecimal) || other.minValueDecimal == minValueDecimal) &&
+            (identical(other.minValueDecimalElement, minValueDecimalElement) || other.minValueDecimalElement == minValueDecimalElement) &&
+            (identical(other.minValueBase64Binary, minValueBase64Binary) || other.minValueBase64Binary == minValueBase64Binary) &&
+            (identical(other.minValueBase64BinaryElement, minValueBase64BinaryElement) || other.minValueBase64BinaryElement == minValueBase64BinaryElement) &&
+            (identical(other.minValueInstant, minValueInstant) || other.minValueInstant == minValueInstant) &&
+            (identical(other.minValueInstantElement, minValueInstantElement) || other.minValueInstantElement == minValueInstantElement) &&
+            (identical(other.minValueString, minValueString) || other.minValueString == minValueString) &&
+            (identical(other.minValueStringElement, minValueStringElement) || other.minValueStringElement == minValueStringElement) &&
+            (identical(other.minValueUri, minValueUri) || other.minValueUri == minValueUri) &&
+            (identical(other.minValueUriElement, minValueUriElement) || other.minValueUriElement == minValueUriElement) &&
+            (identical(other.minValueDate, minValueDate) || other.minValueDate == minValueDate) &&
+            (identical(other.minValueDateElement, minValueDateElement) || other.minValueDateElement == minValueDateElement) &&
+            (identical(other.minValueDateTime, minValueDateTime) || other.minValueDateTime == minValueDateTime) &&
+            (identical(other.minValueDateTimeElement, minValueDateTimeElement) || other.minValueDateTimeElement == minValueDateTimeElement) &&
+            (identical(other.minValueTime, minValueTime) || other.minValueTime == minValueTime) &&
+            (identical(other.minValueTimeElement, minValueTimeElement) || other.minValueTimeElement == minValueTimeElement) &&
+            (identical(other.minValueCode, minValueCode) || other.minValueCode == minValueCode) &&
+            (identical(other.minValueCodeElement, minValueCodeElement) || other.minValueCodeElement == minValueCodeElement) &&
+            (identical(other.minValueOid, minValueOid) || other.minValueOid == minValueOid) &&
+            (identical(other.minValueOidElement, minValueOidElement) || other.minValueOidElement == minValueOidElement) &&
+            (identical(other.minValueId, minValueId) || other.minValueId == minValueId) &&
+            (identical(other.minValueIdElement, minValueIdElement) || other.minValueIdElement == minValueIdElement) &&
+            (identical(other.minValueUnsignedInt, minValueUnsignedInt) || other.minValueUnsignedInt == minValueUnsignedInt) &&
+            (identical(other.minValueUnsignedIntElement, minValueUnsignedIntElement) || other.minValueUnsignedIntElement == minValueUnsignedIntElement) &&
+            (identical(other.minValuePositiveInt, minValuePositiveInt) || other.minValuePositiveInt == minValuePositiveInt) &&
+            (identical(other.minValuePositiveIntElement, minValuePositiveIntElement) || other.minValuePositiveIntElement == minValuePositiveIntElement) &&
+            (identical(other.minValueMarkdown, minValueMarkdown) || other.minValueMarkdown == minValueMarkdown) &&
+            (identical(other.minValueMarkdownElement, minValueMarkdownElement) || other.minValueMarkdownElement == minValueMarkdownElement) &&
+            (identical(other.minValueAnnotation, minValueAnnotation) || other.minValueAnnotation == minValueAnnotation) &&
+            (identical(other.minValueAttachment, minValueAttachment) || other.minValueAttachment == minValueAttachment) &&
+            (identical(other.minValueIdentifier, minValueIdentifier) || other.minValueIdentifier == minValueIdentifier) &&
+            (identical(other.minValueCodeableConcept, minValueCodeableConcept) || other.minValueCodeableConcept == minValueCodeableConcept) &&
+            (identical(other.minValueCoding, minValueCoding) || other.minValueCoding == minValueCoding) &&
+            (identical(other.minValueQuantity, minValueQuantity) || other.minValueQuantity == minValueQuantity) &&
+            (identical(other.minValueRange, minValueRange) || other.minValueRange == minValueRange) &&
+            (identical(other.minValuePeriod, minValuePeriod) || other.minValuePeriod == minValuePeriod) &&
+            (identical(other.minValueRatio, minValueRatio) || other.minValueRatio == minValueRatio) &&
+            (identical(other.minValueSampledData, minValueSampledData) || other.minValueSampledData == minValueSampledData) &&
+            (identical(other.minValueSignature, minValueSignature) || other.minValueSignature == minValueSignature) &&
+            (identical(other.minValueHumanName, minValueHumanName) || other.minValueHumanName == minValueHumanName) &&
+            (identical(other.minValueAddress, minValueAddress) || other.minValueAddress == minValueAddress) &&
+            (identical(other.minValueContactPoint, minValueContactPoint) || other.minValueContactPoint == minValueContactPoint) &&
+            (identical(other.minValueTiming, minValueTiming) || other.minValueTiming == minValueTiming) &&
+            (identical(other.minValueReference, minValueReference) || other.minValueReference == minValueReference) &&
+            (identical(other.minValueMeta, minValueMeta) || other.minValueMeta == minValueMeta) &&
+            (identical(other.maxValueBoolean, maxValueBoolean) || other.maxValueBoolean == maxValueBoolean) &&
+            (identical(other.maxValueBooleanElement, maxValueBooleanElement) || other.maxValueBooleanElement == maxValueBooleanElement) &&
+            (identical(other.maxValueInteger, maxValueInteger) || other.maxValueInteger == maxValueInteger) &&
+            (identical(other.maxValueIntegerElement, maxValueIntegerElement) || other.maxValueIntegerElement == maxValueIntegerElement) &&
+            (identical(other.maxValueDecimal, maxValueDecimal) || other.maxValueDecimal == maxValueDecimal) &&
+            (identical(other.maxValueDecimalElement, maxValueDecimalElement) || other.maxValueDecimalElement == maxValueDecimalElement) &&
+            (identical(other.maxValueBase64Binary, maxValueBase64Binary) || other.maxValueBase64Binary == maxValueBase64Binary) &&
+            (identical(other.maxValueBase64BinaryElement, maxValueBase64BinaryElement) || other.maxValueBase64BinaryElement == maxValueBase64BinaryElement) &&
+            (identical(other.maxValueInstant, maxValueInstant) || other.maxValueInstant == maxValueInstant) &&
+            (identical(other.maxValueInstantElement, maxValueInstantElement) || other.maxValueInstantElement == maxValueInstantElement) &&
+            (identical(other.maxValueString, maxValueString) || other.maxValueString == maxValueString) &&
+            (identical(other.maxValueStringElement, maxValueStringElement) || other.maxValueStringElement == maxValueStringElement) &&
+            (identical(other.maxValueUri, maxValueUri) || other.maxValueUri == maxValueUri) &&
+            (identical(other.maxValueUriElement, maxValueUriElement) || other.maxValueUriElement == maxValueUriElement) &&
+            (identical(other.maxValueDate, maxValueDate) || other.maxValueDate == maxValueDate) &&
+            (identical(other.maxValueDateElement, maxValueDateElement) || other.maxValueDateElement == maxValueDateElement) &&
+            (identical(other.maxValueDateTime, maxValueDateTime) || other.maxValueDateTime == maxValueDateTime) &&
+            (identical(other.maxValueDateTimeElement, maxValueDateTimeElement) || other.maxValueDateTimeElement == maxValueDateTimeElement) &&
+            (identical(other.maxValueTime, maxValueTime) || other.maxValueTime == maxValueTime) &&
+            (identical(other.maxValueTimeElement, maxValueTimeElement) || other.maxValueTimeElement == maxValueTimeElement) &&
+            (identical(other.maxValueCode, maxValueCode) || other.maxValueCode == maxValueCode) &&
+            (identical(other.maxValueCodeElement, maxValueCodeElement) || other.maxValueCodeElement == maxValueCodeElement) &&
+            (identical(other.maxValueOid, maxValueOid) || other.maxValueOid == maxValueOid) &&
+            (identical(other.maxValueOidElement, maxValueOidElement) || other.maxValueOidElement == maxValueOidElement) &&
+            (identical(other.maxValueId, maxValueId) || other.maxValueId == maxValueId) &&
+            (identical(other.maxValueIdElement, maxValueIdElement) || other.maxValueIdElement == maxValueIdElement) &&
+            (identical(other.maxValueUnsignedInt, maxValueUnsignedInt) || other.maxValueUnsignedInt == maxValueUnsignedInt) &&
+            (identical(other.maxValueUnsignedIntElement, maxValueUnsignedIntElement) || other.maxValueUnsignedIntElement == maxValueUnsignedIntElement) &&
+            (identical(other.maxValuePositiveInt, maxValuePositiveInt) || other.maxValuePositiveInt == maxValuePositiveInt) &&
+            (identical(other.maxValuePositiveIntElement, maxValuePositiveIntElement) || other.maxValuePositiveIntElement == maxValuePositiveIntElement) &&
+            (identical(other.maxValueMarkdown, maxValueMarkdown) || other.maxValueMarkdown == maxValueMarkdown) &&
+            (identical(other.maxValueMarkdownElement, maxValueMarkdownElement) || other.maxValueMarkdownElement == maxValueMarkdownElement) &&
+            (identical(other.maxValueAnnotation, maxValueAnnotation) || other.maxValueAnnotation == maxValueAnnotation) &&
+            (identical(other.maxValueAttachment, maxValueAttachment) || other.maxValueAttachment == maxValueAttachment) &&
+            (identical(other.maxValueIdentifier, maxValueIdentifier) || other.maxValueIdentifier == maxValueIdentifier) &&
+            (identical(other.maxValueCodeableConcept, maxValueCodeableConcept) || other.maxValueCodeableConcept == maxValueCodeableConcept) &&
+            (identical(other.maxValueCoding, maxValueCoding) || other.maxValueCoding == maxValueCoding) &&
+            (identical(other.maxValueQuantity, maxValueQuantity) || other.maxValueQuantity == maxValueQuantity) &&
+            (identical(other.maxValueRange, maxValueRange) || other.maxValueRange == maxValueRange) &&
+            (identical(other.maxValuePeriod, maxValuePeriod) || other.maxValuePeriod == maxValuePeriod) &&
+            (identical(other.maxValueRatio, maxValueRatio) || other.maxValueRatio == maxValueRatio) &&
+            (identical(other.maxValueSampledData, maxValueSampledData) || other.maxValueSampledData == maxValueSampledData) &&
+            (identical(other.maxValueSignature, maxValueSignature) || other.maxValueSignature == maxValueSignature) &&
+            (identical(other.maxValueHumanName, maxValueHumanName) || other.maxValueHumanName == maxValueHumanName) &&
+            (identical(other.maxValueAddress, maxValueAddress) || other.maxValueAddress == maxValueAddress) &&
+            (identical(other.maxValueContactPoint, maxValueContactPoint) || other.maxValueContactPoint == maxValueContactPoint) &&
+            (identical(other.maxValueTiming, maxValueTiming) || other.maxValueTiming == maxValueTiming) &&
+            (identical(other.maxValueReference, maxValueReference) || other.maxValueReference == maxValueReference) &&
+            (identical(other.maxValueMeta, maxValueMeta) || other.maxValueMeta == maxValueMeta) &&
+            (identical(other.maxLength, maxLength) || other.maxLength == maxLength) &&
+            (identical(other.maxLengthElement, maxLengthElement) || other.maxLengthElement == maxLengthElement) &&
             const DeepCollectionEquality().equals(other._condition, _condition) &&
-            const DeepCollectionEquality().equals(other.conditionElement, conditionElement) &&
+            (identical(other.conditionElement, conditionElement) || other.conditionElement == conditionElement) &&
             const DeepCollectionEquality().equals(other._constraint, _constraint) &&
-            const DeepCollectionEquality().equals(other.mustSupport, mustSupport) &&
-            const DeepCollectionEquality().equals(other.mustSupportElement, mustSupportElement) &&
-            const DeepCollectionEquality().equals(other.isModifier, isModifier) &&
-            const DeepCollectionEquality().equals(other.isModifierElement, isModifierElement) &&
-            const DeepCollectionEquality().equals(other.isSummary, isSummary) &&
-            const DeepCollectionEquality().equals(other.isSummaryElement, isSummaryElement) &&
-            const DeepCollectionEquality().equals(other.binding, binding) &&
+            (identical(other.mustSupport, mustSupport) || other.mustSupport == mustSupport) &&
+            (identical(other.mustSupportElement, mustSupportElement) || other.mustSupportElement == mustSupportElement) &&
+            (identical(other.isModifier, isModifier) || other.isModifier == isModifier) &&
+            (identical(other.isModifierElement, isModifierElement) || other.isModifierElement == isModifierElement) &&
+            (identical(other.isSummary, isSummary) || other.isSummary == isSummary) &&
+            (identical(other.isSummaryElement, isSummaryElement) || other.isSummaryElement == isSummaryElement) &&
+            (identical(other.binding, binding) || other.binding == binding) &&
             const DeepCollectionEquality().equals(other._mapping, _mapping));
   }
 
@@ -10218,344 +10450,345 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(id),
+        id,
         const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(path),
+        path,
         const DeepCollectionEquality().hash(_representation),
-        const DeepCollectionEquality().hash(representationElement),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(label),
-        const DeepCollectionEquality().hash(labelElement),
+        representationElement,
+        name,
+        label,
+        labelElement,
         const DeepCollectionEquality().hash(_code),
-        const DeepCollectionEquality().hash(slicing),
-        const DeepCollectionEquality().hash(short),
-        const DeepCollectionEquality().hash(shortElement),
-        const DeepCollectionEquality().hash(definition),
-        const DeepCollectionEquality().hash(definitionElement),
-        const DeepCollectionEquality().hash(comments),
-        const DeepCollectionEquality().hash(commentElement),
-        const DeepCollectionEquality().hash(requirements),
-        const DeepCollectionEquality().hash(requirementsElement),
+        slicing,
+        short,
+        shortElement,
+        definition,
+        definitionElement,
+        comments,
+        commentElement,
+        requirements,
+        requirementsElement,
         const DeepCollectionEquality().hash(_alias),
-        const DeepCollectionEquality().hash(aliasElement),
-        const DeepCollectionEquality().hash(min),
-        const DeepCollectionEquality().hash(minElement),
-        const DeepCollectionEquality().hash(max),
-        const DeepCollectionEquality().hash(maxElement),
-        const DeepCollectionEquality().hash(base),
+        aliasElement,
+        min,
+        minElement,
+        max,
+        maxElement,
+        base,
         const DeepCollectionEquality().hash(_type),
-        const DeepCollectionEquality().hash(nameReference),
-        const DeepCollectionEquality().hash(defaultValueBoolean),
-        const DeepCollectionEquality().hash(defaultValueBooleanElement),
-        const DeepCollectionEquality().hash(defaultValueInteger),
-        const DeepCollectionEquality().hash(defaultValueIntegerElement),
-        const DeepCollectionEquality().hash(defaultValueDecimal),
-        const DeepCollectionEquality().hash(defaultValueDecimalElement),
-        const DeepCollectionEquality().hash(defaultValueBase64Binary),
-        const DeepCollectionEquality().hash(defaultValueBase64BinaryElement),
-        const DeepCollectionEquality().hash(defaultValueInstant),
-        const DeepCollectionEquality().hash(defaultValueInstantElement),
-        const DeepCollectionEquality().hash(defaultValueString),
-        const DeepCollectionEquality().hash(defaultValueStringElement),
-        const DeepCollectionEquality().hash(defaultValueUri),
-        const DeepCollectionEquality().hash(defaultValueUriElement),
-        const DeepCollectionEquality().hash(defaultValueDate),
-        const DeepCollectionEquality().hash(defaultValueDateElement),
-        const DeepCollectionEquality().hash(defaultValueDateTime),
-        const DeepCollectionEquality().hash(defaultValueDateTimeElement),
-        const DeepCollectionEquality().hash(defaultValueTime),
-        const DeepCollectionEquality().hash(defaultValueTimeElement),
-        const DeepCollectionEquality().hash(defaultValueCode),
-        const DeepCollectionEquality().hash(defaultValueCodeElement),
-        const DeepCollectionEquality().hash(defaultValueOid),
-        const DeepCollectionEquality().hash(defaultValueOidElement),
-        const DeepCollectionEquality().hash(defaultValueId),
-        const DeepCollectionEquality().hash(defaultValueIdElement),
-        const DeepCollectionEquality().hash(defaultValueUnsignedInt),
-        const DeepCollectionEquality().hash(defaultValueUnsignedIntElement),
-        const DeepCollectionEquality().hash(defaultValuePositiveInt),
-        const DeepCollectionEquality().hash(defaultValuePositiveIntElement),
-        const DeepCollectionEquality().hash(defaultValueMarkdown),
-        const DeepCollectionEquality().hash(defaultValueMarkDownElement),
-        const DeepCollectionEquality().hash(defaultValueAnnotation),
-        const DeepCollectionEquality().hash(defaultValueAttachment),
-        const DeepCollectionEquality().hash(defaultValueIdentifier),
-        const DeepCollectionEquality().hash(defaultValueCodeableConcept),
-        const DeepCollectionEquality().hash(defaultValueCoding),
-        const DeepCollectionEquality().hash(defaultValueQuantity),
-        const DeepCollectionEquality().hash(defaultValueRange),
-        const DeepCollectionEquality().hash(defaultValuePeriod),
-        const DeepCollectionEquality().hash(defaultValueRatio),
-        const DeepCollectionEquality().hash(defaultValueSampledData),
-        const DeepCollectionEquality().hash(defaultValueSignature),
-        const DeepCollectionEquality().hash(defaultValueHumanName),
-        const DeepCollectionEquality().hash(defaultValueAddress),
-        const DeepCollectionEquality().hash(defaultValueContactPoint),
-        const DeepCollectionEquality().hash(defaultValueTiming),
-        const DeepCollectionEquality().hash(defaultValueReference),
-        const DeepCollectionEquality().hash(defaultValueMeta),
-        const DeepCollectionEquality().hash(meaningWhenMissing),
-        const DeepCollectionEquality().hash(meaningWhenMissingElement),
-        const DeepCollectionEquality().hash(fixedBoolean),
-        const DeepCollectionEquality().hash(fixedBooleanElement),
-        const DeepCollectionEquality().hash(fixedInteger),
-        const DeepCollectionEquality().hash(fixedIntegerElement),
-        const DeepCollectionEquality().hash(fixedDecimal),
-        const DeepCollectionEquality().hash(fixedDecimalElement),
-        const DeepCollectionEquality().hash(fixedBase64Binary),
-        const DeepCollectionEquality().hash(fixedBase64BinaryElement),
-        const DeepCollectionEquality().hash(fixedInstant),
-        const DeepCollectionEquality().hash(fixedInstantElement),
-        const DeepCollectionEquality().hash(fixedString),
-        const DeepCollectionEquality().hash(fixedStringElement),
-        const DeepCollectionEquality().hash(fixedUri),
-        const DeepCollectionEquality().hash(fixedUriElement),
-        const DeepCollectionEquality().hash(fixedDate),
-        const DeepCollectionEquality().hash(fixedDateElement),
-        const DeepCollectionEquality().hash(fixedDateTime),
-        const DeepCollectionEquality().hash(fixedDateTimeElement),
-        const DeepCollectionEquality().hash(fixedCode),
-        const DeepCollectionEquality().hash(fixedCodeElement),
-        const DeepCollectionEquality().hash(fixedOid),
-        const DeepCollectionEquality().hash(fixedOidElement),
-        const DeepCollectionEquality().hash(fixedId),
-        const DeepCollectionEquality().hash(fixedIdElement),
-        const DeepCollectionEquality().hash(fixedUnsignedInt),
-        const DeepCollectionEquality().hash(fixedUnsignedIntElement),
-        const DeepCollectionEquality().hash(fixedPositiveInt),
-        const DeepCollectionEquality().hash(fixedPositiveIntElement),
-        const DeepCollectionEquality().hash(fixedMarkdown),
-        const DeepCollectionEquality().hash(fixedMarkdownElement),
-        const DeepCollectionEquality().hash(fixedAnnotation),
-        const DeepCollectionEquality().hash(fixedAttachment),
-        const DeepCollectionEquality().hash(fixedIdentifier),
-        const DeepCollectionEquality().hash(fixedCodeableConcept),
-        const DeepCollectionEquality().hash(fixedCoding),
-        const DeepCollectionEquality().hash(fixedQuantity),
-        const DeepCollectionEquality().hash(fixedRange),
-        const DeepCollectionEquality().hash(fixedPeriod),
-        const DeepCollectionEquality().hash(fixedRatio),
-        const DeepCollectionEquality().hash(fixedSampledData),
-        const DeepCollectionEquality().hash(fixedSignature),
-        const DeepCollectionEquality().hash(fixedHumanName),
-        const DeepCollectionEquality().hash(fixedAddress),
-        const DeepCollectionEquality().hash(fixedContactPoint),
-        const DeepCollectionEquality().hash(fixedTiming),
-        const DeepCollectionEquality().hash(fixedReference),
-        const DeepCollectionEquality().hash(fixedMeta),
-        const DeepCollectionEquality().hash(patternBoolean),
-        const DeepCollectionEquality().hash(patternBooleanElement),
-        const DeepCollectionEquality().hash(patternInteger),
-        const DeepCollectionEquality().hash(patternIntegerElement),
-        const DeepCollectionEquality().hash(patternDecimal),
-        const DeepCollectionEquality().hash(patternDecimalElement),
-        const DeepCollectionEquality().hash(patternBase64Binary),
-        const DeepCollectionEquality().hash(patternBase64BinaryElement),
-        const DeepCollectionEquality().hash(patternInstant),
-        const DeepCollectionEquality().hash(patternInstantElement),
-        const DeepCollectionEquality().hash(patternString),
-        const DeepCollectionEquality().hash(patternStringElement),
-        const DeepCollectionEquality().hash(patternUri),
-        const DeepCollectionEquality().hash(patternUriElement),
-        const DeepCollectionEquality().hash(patternDate),
-        const DeepCollectionEquality().hash(patternDateElement),
-        const DeepCollectionEquality().hash(patternDateTime),
-        const DeepCollectionEquality().hash(patternDateTimeElement),
-        const DeepCollectionEquality().hash(patternTime),
-        const DeepCollectionEquality().hash(patternTimeElement),
-        const DeepCollectionEquality().hash(patternCode),
-        const DeepCollectionEquality().hash(patternCodeElement),
-        const DeepCollectionEquality().hash(patternOid),
-        const DeepCollectionEquality().hash(patternOidElement),
-        const DeepCollectionEquality().hash(patternId),
-        const DeepCollectionEquality().hash(patternIdElement),
-        const DeepCollectionEquality().hash(patternUnsignedInt),
-        const DeepCollectionEquality().hash(patternUnsignedIntElement),
-        const DeepCollectionEquality().hash(patternPositiveInt),
-        const DeepCollectionEquality().hash(patternPositiveIntElement),
-        const DeepCollectionEquality().hash(patternMarkdown),
-        const DeepCollectionEquality().hash(patternMarkdownElement),
-        const DeepCollectionEquality().hash(patternAnnotation),
-        const DeepCollectionEquality().hash(patternAttachment),
-        const DeepCollectionEquality().hash(patternIdentifier),
-        const DeepCollectionEquality().hash(patternCodeableConcept),
-        const DeepCollectionEquality().hash(patternCoding),
-        const DeepCollectionEquality().hash(patternQuantity),
-        const DeepCollectionEquality().hash(patternRange),
-        const DeepCollectionEquality().hash(patternPeriod),
-        const DeepCollectionEquality().hash(patternRatio),
-        const DeepCollectionEquality().hash(patternSampledData),
-        const DeepCollectionEquality().hash(patternSignature),
-        const DeepCollectionEquality().hash(patternHumanName),
-        const DeepCollectionEquality().hash(patternAddress),
-        const DeepCollectionEquality().hash(patternContactPoint),
-        const DeepCollectionEquality().hash(patternTiming),
-        const DeepCollectionEquality().hash(patternReference),
-        const DeepCollectionEquality().hash(patternMeta),
-        const DeepCollectionEquality().hash(exampleBoolean),
-        const DeepCollectionEquality().hash(exampleBooleanElement),
-        const DeepCollectionEquality().hash(exampleInteger),
-        const DeepCollectionEquality().hash(exampleIntegerElement),
-        const DeepCollectionEquality().hash(exampleDecimal),
-        const DeepCollectionEquality().hash(exampleDecimalElement),
-        const DeepCollectionEquality().hash(exampleBase64Binary),
-        const DeepCollectionEquality().hash(exampleBase64BinaryElement),
-        const DeepCollectionEquality().hash(exampleInstant),
-        const DeepCollectionEquality().hash(exampleInstantElement),
-        const DeepCollectionEquality().hash(exampleString),
-        const DeepCollectionEquality().hash(exampleStringElement),
-        const DeepCollectionEquality().hash(exampleUri),
-        const DeepCollectionEquality().hash(exampleUriElement),
-        const DeepCollectionEquality().hash(exampleDate),
-        const DeepCollectionEquality().hash(exampleDateElement),
-        const DeepCollectionEquality().hash(exampleDateTime),
-        const DeepCollectionEquality().hash(exampleDateTimeElement),
-        const DeepCollectionEquality().hash(exampleTime),
-        const DeepCollectionEquality().hash(exampleTimeElement),
-        const DeepCollectionEquality().hash(exampleCode),
-        const DeepCollectionEquality().hash(exampleCodeElement),
-        const DeepCollectionEquality().hash(exampleOid),
-        const DeepCollectionEquality().hash(exampleOidElement),
-        const DeepCollectionEquality().hash(exampleId),
-        const DeepCollectionEquality().hash(exampleIdElement),
-        const DeepCollectionEquality().hash(exampleUnsignedInt),
-        const DeepCollectionEquality().hash(exampleUnsignedIntElement),
-        const DeepCollectionEquality().hash(examplePositiveInt),
-        const DeepCollectionEquality().hash(examplePositiveIntElement),
-        const DeepCollectionEquality().hash(exampleMarkdown),
-        const DeepCollectionEquality().hash(exampleMarkdownElement),
-        const DeepCollectionEquality().hash(exampleAnnotation),
-        const DeepCollectionEquality().hash(exampleAttachment),
-        const DeepCollectionEquality().hash(exampleIdentifier),
-        const DeepCollectionEquality().hash(exampleCodeableConcept),
-        const DeepCollectionEquality().hash(exampleCoding),
-        const DeepCollectionEquality().hash(exampleQuantity),
-        const DeepCollectionEquality().hash(exampleRange),
-        const DeepCollectionEquality().hash(examplePeriod),
-        const DeepCollectionEquality().hash(exampleRatio),
-        const DeepCollectionEquality().hash(exampleSampleData),
-        const DeepCollectionEquality().hash(exampleSignature),
-        const DeepCollectionEquality().hash(exampleHumanName),
-        const DeepCollectionEquality().hash(exampleAddress),
-        const DeepCollectionEquality().hash(exampleContactPoint),
-        const DeepCollectionEquality().hash(exampleTiming),
-        const DeepCollectionEquality().hash(exampleReference),
-        const DeepCollectionEquality().hash(exampleMeta),
-        const DeepCollectionEquality().hash(minValueBoolean),
-        const DeepCollectionEquality().hash(minValueBooleanElement),
-        const DeepCollectionEquality().hash(minValueInteger),
-        const DeepCollectionEquality().hash(minValueIntegerElement),
-        const DeepCollectionEquality().hash(minValueDecimal),
-        const DeepCollectionEquality().hash(minValueDecimalElement),
-        const DeepCollectionEquality().hash(minValueBase64Binary),
-        const DeepCollectionEquality().hash(minValueBase64BinaryElement),
-        const DeepCollectionEquality().hash(minValueInstant),
-        const DeepCollectionEquality().hash(minValueInstantElement),
-        const DeepCollectionEquality().hash(minValueString),
-        const DeepCollectionEquality().hash(minValueStringElement),
-        const DeepCollectionEquality().hash(minValueUri),
-        const DeepCollectionEquality().hash(minValueUriElement),
-        const DeepCollectionEquality().hash(minValueDate),
-        const DeepCollectionEquality().hash(minValueDateElement),
-        const DeepCollectionEquality().hash(minValueDateTime),
-        const DeepCollectionEquality().hash(minValueDateTimeElement),
-        const DeepCollectionEquality().hash(minValueTime),
-        const DeepCollectionEquality().hash(minValueTimeElement),
-        const DeepCollectionEquality().hash(minValueCode),
-        const DeepCollectionEquality().hash(minValueCodeElement),
-        const DeepCollectionEquality().hash(minValueOid),
-        const DeepCollectionEquality().hash(minValueOidElement),
-        const DeepCollectionEquality().hash(minValueId),
-        const DeepCollectionEquality().hash(minValueIdElement),
-        const DeepCollectionEquality().hash(minValueUnsignedInt),
-        const DeepCollectionEquality().hash(minValueUnsignedIntElement),
-        const DeepCollectionEquality().hash(minValuePositiveInt),
-        const DeepCollectionEquality().hash(minValuePositiveIntElement),
-        const DeepCollectionEquality().hash(minValueMarkdown),
-        const DeepCollectionEquality().hash(minValueMarkdownElement),
-        const DeepCollectionEquality().hash(minValueAnnotation),
-        const DeepCollectionEquality().hash(minValueAttachment),
-        const DeepCollectionEquality().hash(minValueIdentifier),
-        const DeepCollectionEquality().hash(minValueCodeableConcept),
-        const DeepCollectionEquality().hash(minValueCoding),
-        const DeepCollectionEquality().hash(minValueQuantity),
-        const DeepCollectionEquality().hash(minValueRange),
-        const DeepCollectionEquality().hash(minValuePeriod),
-        const DeepCollectionEquality().hash(minValueRatio),
-        const DeepCollectionEquality().hash(minValueSampledData),
-        const DeepCollectionEquality().hash(minValueSignature),
-        const DeepCollectionEquality().hash(minValueHumanName),
-        const DeepCollectionEquality().hash(minValueAddress),
-        const DeepCollectionEquality().hash(minValueContactPoint),
-        const DeepCollectionEquality().hash(minValueTiming),
-        const DeepCollectionEquality().hash(minValueReference),
-        const DeepCollectionEquality().hash(minValueMeta),
-        const DeepCollectionEquality().hash(maxValueBoolean),
-        const DeepCollectionEquality().hash(maxValueBooleanElement),
-        const DeepCollectionEquality().hash(maxValueInteger),
-        const DeepCollectionEquality().hash(maxValueIntegerElement),
-        const DeepCollectionEquality().hash(maxValueDecimal),
-        const DeepCollectionEquality().hash(maxValueDecimalElement),
-        const DeepCollectionEquality().hash(maxValueBase64Binary),
-        const DeepCollectionEquality().hash(maxValueBase64BinaryElement),
-        const DeepCollectionEquality().hash(maxValueInstant),
-        const DeepCollectionEquality().hash(maxValueInstantElement),
-        const DeepCollectionEquality().hash(maxValueString),
-        const DeepCollectionEquality().hash(maxValueStringElement),
-        const DeepCollectionEquality().hash(maxValueUri),
-        const DeepCollectionEquality().hash(maxValueUriElement),
-        const DeepCollectionEquality().hash(maxValueDate),
-        const DeepCollectionEquality().hash(maxValueDateElement),
-        const DeepCollectionEquality().hash(maxValueDateTime),
-        const DeepCollectionEquality().hash(maxValueDateTimeElement),
-        const DeepCollectionEquality().hash(maxValueTime),
-        const DeepCollectionEquality().hash(maxValueTimeElement),
-        const DeepCollectionEquality().hash(maxValueCode),
-        const DeepCollectionEquality().hash(maxValueCodeElement),
-        const DeepCollectionEquality().hash(maxValueOid),
-        const DeepCollectionEquality().hash(maxValueOidElement),
-        const DeepCollectionEquality().hash(maxValueId),
-        const DeepCollectionEquality().hash(maxValueIdElement),
-        const DeepCollectionEquality().hash(maxValueUnsignedInt),
-        const DeepCollectionEquality().hash(maxValueUnsignedIntElement),
-        const DeepCollectionEquality().hash(maxValuePositiveInt),
-        const DeepCollectionEquality().hash(maxValuePositiveIntElement),
-        const DeepCollectionEquality().hash(maxValueMarkdown),
-        const DeepCollectionEquality().hash(maxValueMarkdownElement),
-        const DeepCollectionEquality().hash(maxValueAnnotation),
-        const DeepCollectionEquality().hash(maxValueAttachment),
-        const DeepCollectionEquality().hash(maxValueIdentifier),
-        const DeepCollectionEquality().hash(maxValueCodeableConcept),
-        const DeepCollectionEquality().hash(maxValueCoding),
-        const DeepCollectionEquality().hash(maxValueQuantity),
-        const DeepCollectionEquality().hash(maxValueRange),
-        const DeepCollectionEquality().hash(maxValuePeriod),
-        const DeepCollectionEquality().hash(maxValueRatio),
-        const DeepCollectionEquality().hash(maxValueSampledData),
-        const DeepCollectionEquality().hash(maxValueSignature),
-        const DeepCollectionEquality().hash(maxValueHumanName),
-        const DeepCollectionEquality().hash(maxValueAddress),
-        const DeepCollectionEquality().hash(maxValueContactPoint),
-        const DeepCollectionEquality().hash(maxValueTiming),
-        const DeepCollectionEquality().hash(maxValueReference),
-        const DeepCollectionEquality().hash(maxValueMeta),
-        const DeepCollectionEquality().hash(maxLength),
-        const DeepCollectionEquality().hash(maxLengthElement),
+        nameReference,
+        defaultValueBoolean,
+        defaultValueBooleanElement,
+        defaultValueInteger,
+        defaultValueIntegerElement,
+        defaultValueDecimal,
+        defaultValueDecimalElement,
+        defaultValueBase64Binary,
+        defaultValueBase64BinaryElement,
+        defaultValueInstant,
+        defaultValueInstantElement,
+        defaultValueString,
+        defaultValueStringElement,
+        defaultValueUri,
+        defaultValueUriElement,
+        defaultValueDate,
+        defaultValueDateElement,
+        defaultValueDateTime,
+        defaultValueDateTimeElement,
+        defaultValueTime,
+        defaultValueTimeElement,
+        defaultValueCode,
+        defaultValueCodeElement,
+        defaultValueOid,
+        defaultValueOidElement,
+        defaultValueId,
+        defaultValueIdElement,
+        defaultValueUnsignedInt,
+        defaultValueUnsignedIntElement,
+        defaultValuePositiveInt,
+        defaultValuePositiveIntElement,
+        defaultValueMarkdown,
+        defaultValueMarkDownElement,
+        defaultValueAnnotation,
+        defaultValueAttachment,
+        defaultValueIdentifier,
+        defaultValueCodeableConcept,
+        defaultValueCoding,
+        defaultValueQuantity,
+        defaultValueRange,
+        defaultValuePeriod,
+        defaultValueRatio,
+        defaultValueSampledData,
+        defaultValueSignature,
+        defaultValueHumanName,
+        defaultValueAddress,
+        defaultValueContactPoint,
+        defaultValueTiming,
+        defaultValueReference,
+        defaultValueMeta,
+        meaningWhenMissing,
+        meaningWhenMissingElement,
+        fixedBoolean,
+        fixedBooleanElement,
+        fixedInteger,
+        fixedIntegerElement,
+        fixedDecimal,
+        fixedDecimalElement,
+        fixedBase64Binary,
+        fixedBase64BinaryElement,
+        fixedInstant,
+        fixedInstantElement,
+        fixedString,
+        fixedStringElement,
+        fixedUri,
+        fixedUriElement,
+        fixedDate,
+        fixedDateElement,
+        fixedDateTime,
+        fixedDateTimeElement,
+        fixedCode,
+        fixedCodeElement,
+        fixedOid,
+        fixedOidElement,
+        fixedId,
+        fixedIdElement,
+        fixedUnsignedInt,
+        fixedUnsignedIntElement,
+        fixedPositiveInt,
+        fixedPositiveIntElement,
+        fixedMarkdown,
+        fixedMarkdownElement,
+        fixedAnnotation,
+        fixedAttachment,
+        fixedIdentifier,
+        fixedCodeableConcept,
+        fixedCoding,
+        fixedQuantity,
+        fixedRange,
+        fixedPeriod,
+        fixedRatio,
+        fixedSampledData,
+        fixedSignature,
+        fixedHumanName,
+        fixedAddress,
+        fixedContactPoint,
+        fixedTiming,
+        fixedReference,
+        fixedMeta,
+        patternBoolean,
+        patternBooleanElement,
+        patternInteger,
+        patternIntegerElement,
+        patternDecimal,
+        patternDecimalElement,
+        patternBase64Binary,
+        patternBase64BinaryElement,
+        patternInstant,
+        patternInstantElement,
+        patternString,
+        patternStringElement,
+        patternUri,
+        patternUriElement,
+        patternDate,
+        patternDateElement,
+        patternDateTime,
+        patternDateTimeElement,
+        patternTime,
+        patternTimeElement,
+        patternCode,
+        patternCodeElement,
+        patternOid,
+        patternOidElement,
+        patternId,
+        patternIdElement,
+        patternUnsignedInt,
+        patternUnsignedIntElement,
+        patternPositiveInt,
+        patternPositiveIntElement,
+        patternMarkdown,
+        patternMarkdownElement,
+        patternAnnotation,
+        patternAttachment,
+        patternIdentifier,
+        patternCodeableConcept,
+        patternCoding,
+        patternQuantity,
+        patternRange,
+        patternPeriod,
+        patternRatio,
+        patternSampledData,
+        patternSignature,
+        patternHumanName,
+        patternAddress,
+        patternContactPoint,
+        patternTiming,
+        patternReference,
+        patternMeta,
+        exampleBoolean,
+        exampleBooleanElement,
+        exampleInteger,
+        exampleIntegerElement,
+        exampleDecimal,
+        exampleDecimalElement,
+        exampleBase64Binary,
+        exampleBase64BinaryElement,
+        exampleInstant,
+        exampleInstantElement,
+        exampleString,
+        exampleStringElement,
+        exampleUri,
+        exampleUriElement,
+        exampleDate,
+        exampleDateElement,
+        exampleDateTime,
+        exampleDateTimeElement,
+        exampleTime,
+        exampleTimeElement,
+        exampleCode,
+        exampleCodeElement,
+        exampleOid,
+        exampleOidElement,
+        exampleId,
+        exampleIdElement,
+        exampleUnsignedInt,
+        exampleUnsignedIntElement,
+        examplePositiveInt,
+        examplePositiveIntElement,
+        exampleMarkdown,
+        exampleMarkdownElement,
+        exampleAnnotation,
+        exampleAttachment,
+        exampleIdentifier,
+        exampleCodeableConcept,
+        exampleCoding,
+        exampleQuantity,
+        exampleRange,
+        examplePeriod,
+        exampleRatio,
+        exampleSampleData,
+        exampleSignature,
+        exampleHumanName,
+        exampleAddress,
+        exampleContactPoint,
+        exampleTiming,
+        exampleReference,
+        exampleMeta,
+        minValueBoolean,
+        minValueBooleanElement,
+        minValueInteger,
+        minValueIntegerElement,
+        minValueDecimal,
+        minValueDecimalElement,
+        minValueBase64Binary,
+        minValueBase64BinaryElement,
+        minValueInstant,
+        minValueInstantElement,
+        minValueString,
+        minValueStringElement,
+        minValueUri,
+        minValueUriElement,
+        minValueDate,
+        minValueDateElement,
+        minValueDateTime,
+        minValueDateTimeElement,
+        minValueTime,
+        minValueTimeElement,
+        minValueCode,
+        minValueCodeElement,
+        minValueOid,
+        minValueOidElement,
+        minValueId,
+        minValueIdElement,
+        minValueUnsignedInt,
+        minValueUnsignedIntElement,
+        minValuePositiveInt,
+        minValuePositiveIntElement,
+        minValueMarkdown,
+        minValueMarkdownElement,
+        minValueAnnotation,
+        minValueAttachment,
+        minValueIdentifier,
+        minValueCodeableConcept,
+        minValueCoding,
+        minValueQuantity,
+        minValueRange,
+        minValuePeriod,
+        minValueRatio,
+        minValueSampledData,
+        minValueSignature,
+        minValueHumanName,
+        minValueAddress,
+        minValueContactPoint,
+        minValueTiming,
+        minValueReference,
+        minValueMeta,
+        maxValueBoolean,
+        maxValueBooleanElement,
+        maxValueInteger,
+        maxValueIntegerElement,
+        maxValueDecimal,
+        maxValueDecimalElement,
+        maxValueBase64Binary,
+        maxValueBase64BinaryElement,
+        maxValueInstant,
+        maxValueInstantElement,
+        maxValueString,
+        maxValueStringElement,
+        maxValueUri,
+        maxValueUriElement,
+        maxValueDate,
+        maxValueDateElement,
+        maxValueDateTime,
+        maxValueDateTimeElement,
+        maxValueTime,
+        maxValueTimeElement,
+        maxValueCode,
+        maxValueCodeElement,
+        maxValueOid,
+        maxValueOidElement,
+        maxValueId,
+        maxValueIdElement,
+        maxValueUnsignedInt,
+        maxValueUnsignedIntElement,
+        maxValuePositiveInt,
+        maxValuePositiveIntElement,
+        maxValueMarkdown,
+        maxValueMarkdownElement,
+        maxValueAnnotation,
+        maxValueAttachment,
+        maxValueIdentifier,
+        maxValueCodeableConcept,
+        maxValueCoding,
+        maxValueQuantity,
+        maxValueRange,
+        maxValuePeriod,
+        maxValueRatio,
+        maxValueSampledData,
+        maxValueSignature,
+        maxValueHumanName,
+        maxValueAddress,
+        maxValueContactPoint,
+        maxValueTiming,
+        maxValueReference,
+        maxValueMeta,
+        maxLength,
+        maxLengthElement,
         const DeepCollectionEquality().hash(_condition),
-        const DeepCollectionEquality().hash(conditionElement),
+        conditionElement,
         const DeepCollectionEquality().hash(_constraint),
-        const DeepCollectionEquality().hash(mustSupport),
-        const DeepCollectionEquality().hash(mustSupportElement),
-        const DeepCollectionEquality().hash(isModifier),
-        const DeepCollectionEquality().hash(isModifierElement),
-        const DeepCollectionEquality().hash(isSummary),
-        const DeepCollectionEquality().hash(isSummaryElement),
-        const DeepCollectionEquality().hash(binding),
+        mustSupport,
+        mustSupportElement,
+        isModifier,
+        isModifierElement,
+        isSummary,
+        isSummaryElement,
+        binding,
         const DeepCollectionEquality().hash(_mapping)
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementDefinitionCopyWith<_$_ElementDefinition> get copyWith =>
       __$$_ElementDefinitionCopyWithImpl<_$_ElementDefinition>(
           this, _$identity);
@@ -11831,7 +12064,8 @@ mixin _$Narrative {
 /// @nodoc
 abstract class $NarrativeCopyWith<$Res> {
   factory $NarrativeCopyWith(Narrative value, $Res Function(Narrative) then) =
-      _$NarrativeCopyWithImpl<$Res>;
+      _$NarrativeCopyWithImpl<$Res, Narrative>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -11848,58 +12082,62 @@ abstract class $NarrativeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
+class _$NarrativeCopyWithImpl<$Res, $Val extends Narrative>
+    implements $NarrativeCopyWith<$Res> {
   _$NarrativeCopyWithImpl(this._value, this._then);
 
-  final Narrative _value;
   // ignore: unused_field
-  final $Res Function(Narrative) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
-    Object? status = freezed,
+    Object? status = null,
     Object? statusElement = freezed,
-    Object? div = freezed,
+    Object? div = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as NarrativeStatus,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      div: div == freezed
+      div: null == div
           ? _value.div
           : div // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 }
@@ -11910,6 +12148,7 @@ abstract class _$$_NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
           _$_Narrative value, $Res Function(_$_Narrative) then) =
       __$$_NarrativeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -11927,46 +12166,45 @@ abstract class _$$_NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
+class __$$_NarrativeCopyWithImpl<$Res>
+    extends _$NarrativeCopyWithImpl<$Res, _$_Narrative>
     implements _$$_NarrativeCopyWith<$Res> {
   __$$_NarrativeCopyWithImpl(
       _$_Narrative _value, $Res Function(_$_Narrative) _then)
-      : super(_value, (v) => _then(v as _$_Narrative));
+      : super(_value, _then);
 
-  @override
-  _$_Narrative get _value => super._value as _$_Narrative;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
-    Object? status = freezed,
+    Object? status = null,
     Object? statusElement = freezed,
-    Object? div = freezed,
+    Object? div = null,
   }) {
     return _then(_$_Narrative(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as NarrativeStatus,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      div: div == freezed
+      div: null == div
           ? _value.div
           : div // ignore: cast_nullable_to_non_nullable
               as String,
@@ -12032,30 +12270,31 @@ class _$_Narrative extends _Narrative {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Narrative &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._fhirComments, _fhirComments) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.div, div));
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.div, div) || other.div == div));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
-      const DeepCollectionEquality().hash(status),
-      const DeepCollectionEquality().hash(statusElement),
-      const DeepCollectionEquality().hash(div));
+      status,
+      statusElement,
+      div);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_NarrativeCopyWith<_$_Narrative> get copyWith =>
       __$$_NarrativeCopyWithImpl<_$_Narrative>(this, _$identity);
 
@@ -12138,7 +12377,8 @@ mixin _$ElementDefinitionSlicing {
 abstract class $ElementDefinitionSlicingCopyWith<$Res> {
   factory $ElementDefinitionSlicingCopyWith(ElementDefinitionSlicing value,
           $Res Function(ElementDefinitionSlicing) then) =
-      _$ElementDefinitionSlicingCopyWithImpl<$Res>;
+      _$ElementDefinitionSlicingCopyWithImpl<$Res, ElementDefinitionSlicing>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12156,14 +12396,17 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ElementDefinitionSlicingCopyWithImpl<$Res>
+class _$ElementDefinitionSlicingCopyWithImpl<$Res,
+        $Val extends ElementDefinitionSlicing>
     implements $ElementDefinitionSlicingCopyWith<$Res> {
   _$ElementDefinitionSlicingCopyWithImpl(this._value, this._then);
 
-  final ElementDefinitionSlicing _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinitionSlicing) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -12173,79 +12416,82 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? ordered = freezed,
     Object? orderedElement = freezed,
-    Object? rules = freezed,
+    Object? rules = null,
     Object? rulesElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      discriminator: discriminator == freezed
+      discriminator: freezed == discriminator
           ? _value.discriminator
           : discriminator // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      ordered: ordered == freezed
+      ordered: freezed == ordered
           ? _value.ordered
           : ordered // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      orderedElement: orderedElement == freezed
+      orderedElement: freezed == orderedElement
           ? _value.orderedElement
           : orderedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      rules: rules == freezed
+      rules: null == rules
           ? _value.rules
           : rules // ignore: cast_nullable_to_non_nullable
               as SlicingRules,
-      rulesElement: rulesElement == freezed
+      rulesElement: freezed == rulesElement
           ? _value.rulesElement
           : rulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get orderedElement {
     if (_value.orderedElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.orderedElement!, (value) {
-      return _then(_value.copyWith(orderedElement: value));
+      return _then(_value.copyWith(orderedElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get rulesElement {
     if (_value.rulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.rulesElement!, (value) {
-      return _then(_value.copyWith(rulesElement: value));
+      return _then(_value.copyWith(rulesElement: value) as $Val);
     });
   }
 }
@@ -12258,6 +12504,7 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
           $Res Function(_$_ElementDefinitionSlicing) then) =
       __$$_ElementDefinitionSlicingCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12279,16 +12526,14 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
 
 /// @nodoc
 class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
-    extends _$ElementDefinitionSlicingCopyWithImpl<$Res>
+    extends _$ElementDefinitionSlicingCopyWithImpl<$Res,
+        _$_ElementDefinitionSlicing>
     implements _$$_ElementDefinitionSlicingCopyWith<$Res> {
   __$$_ElementDefinitionSlicingCopyWithImpl(_$_ElementDefinitionSlicing _value,
       $Res Function(_$_ElementDefinitionSlicing) _then)
-      : super(_value, (v) => _then(v as _$_ElementDefinitionSlicing));
+      : super(_value, _then);
 
-  @override
-  _$_ElementDefinitionSlicing get _value =>
-      super._value as _$_ElementDefinitionSlicing;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -12298,43 +12543,43 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? ordered = freezed,
     Object? orderedElement = freezed,
-    Object? rules = freezed,
+    Object? rules = null,
     Object? rulesElement = freezed,
   }) {
     return _then(_$_ElementDefinitionSlicing(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      discriminator: discriminator == freezed
+      discriminator: freezed == discriminator
           ? _value._discriminator
           : discriminator // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      ordered: ordered == freezed
+      ordered: freezed == ordered
           ? _value.ordered
           : ordered // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      orderedElement: orderedElement == freezed
+      orderedElement: freezed == orderedElement
           ? _value.orderedElement
           : orderedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      rules: rules == freezed
+      rules: null == rules
           ? _value.rules
           : rules // ignore: cast_nullable_to_non_nullable
               as SlicingRules,
-      rulesElement: rulesElement == freezed
+      rulesElement: freezed == rulesElement
           ? _value.rulesElement
           : rulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -12410,39 +12655,40 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionSlicing &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._discriminator, _discriminator) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.ordered, ordered) &&
-            const DeepCollectionEquality()
-                .equals(other.orderedElement, orderedElement) &&
-            const DeepCollectionEquality().equals(other.rules, rules) &&
-            const DeepCollectionEquality()
-                .equals(other.rulesElement, rulesElement));
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
+            (identical(other.ordered, ordered) || other.ordered == ordered) &&
+            (identical(other.orderedElement, orderedElement) ||
+                other.orderedElement == orderedElement) &&
+            (identical(other.rules, rules) || other.rules == rules) &&
+            (identical(other.rulesElement, rulesElement) ||
+                other.rulesElement == rulesElement));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_discriminator),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(ordered),
-      const DeepCollectionEquality().hash(orderedElement),
-      const DeepCollectionEquality().hash(rules),
-      const DeepCollectionEquality().hash(rulesElement));
+      description,
+      descriptionElement,
+      ordered,
+      orderedElement,
+      rules,
+      rulesElement);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementDefinitionSlicingCopyWith<_$_ElementDefinitionSlicing>
       get copyWith => __$$_ElementDefinitionSlicingCopyWithImpl<
           _$_ElementDefinitionSlicing>(this, _$identity);
@@ -12535,7 +12781,8 @@ mixin _$ElementDefinitionBase {
 abstract class $ElementDefinitionBaseCopyWith<$Res> {
   factory $ElementDefinitionBaseCopyWith(ElementDefinitionBase value,
           $Res Function(ElementDefinitionBase) then) =
-      _$ElementDefinitionBaseCopyWithImpl<$Res>;
+      _$ElementDefinitionBaseCopyWithImpl<$Res, ElementDefinitionBase>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12552,91 +12799,97 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ElementDefinitionBaseCopyWithImpl<$Res>
+class _$ElementDefinitionBaseCopyWithImpl<$Res,
+        $Val extends ElementDefinitionBase>
     implements $ElementDefinitionBaseCopyWith<$Res> {
   _$ElementDefinitionBaseCopyWithImpl(this._value, this._then);
 
-  final ElementDefinitionBase _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinitionBase) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? path = freezed,
+    Object? path = null,
     Object? pathElement = freezed,
-    Object? min = freezed,
+    Object? min = null,
     Object? minElement = freezed,
-    Object? max = freezed,
+    Object? max = null,
     Object? maxElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      path: path == freezed
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String,
-      pathElement: pathElement == freezed
+      pathElement: freezed == pathElement
           ? _value.pathElement
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      min: min == freezed
+      min: null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Integer,
-      minElement: minElement == freezed
+      minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String,
-      maxElement: maxElement == freezed
+      maxElement: freezed == maxElement
           ? _value.maxElement
           : maxElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
     if (_value.pathElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.pathElement!, (value) {
-      return _then(_value.copyWith(pathElement: value));
+      return _then(_value.copyWith(pathElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minElement {
     if (_value.minElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minElement!, (value) {
-      return _then(_value.copyWith(minElement: value));
+      return _then(_value.copyWith(minElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxElement {
     if (_value.maxElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxElement!, (value) {
-      return _then(_value.copyWith(maxElement: value));
+      return _then(_value.copyWith(maxElement: value) as $Val);
     });
   }
 }
@@ -12648,6 +12901,7 @@ abstract class _$$_ElementDefinitionBaseCopyWith<$Res>
           $Res Function(_$_ElementDefinitionBase) then) =
       __$$_ElementDefinitionBaseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12668,57 +12922,54 @@ abstract class _$$_ElementDefinitionBaseCopyWith<$Res>
 
 /// @nodoc
 class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
-    extends _$ElementDefinitionBaseCopyWithImpl<$Res>
+    extends _$ElementDefinitionBaseCopyWithImpl<$Res, _$_ElementDefinitionBase>
     implements _$$_ElementDefinitionBaseCopyWith<$Res> {
   __$$_ElementDefinitionBaseCopyWithImpl(_$_ElementDefinitionBase _value,
       $Res Function(_$_ElementDefinitionBase) _then)
-      : super(_value, (v) => _then(v as _$_ElementDefinitionBase));
+      : super(_value, _then);
 
-  @override
-  _$_ElementDefinitionBase get _value =>
-      super._value as _$_ElementDefinitionBase;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? path = freezed,
+    Object? path = null,
     Object? pathElement = freezed,
-    Object? min = freezed,
+    Object? min = null,
     Object? minElement = freezed,
-    Object? max = freezed,
+    Object? max = null,
     Object? maxElement = freezed,
   }) {
     return _then(_$_ElementDefinitionBase(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      path: path == freezed
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String,
-      pathElement: pathElement == freezed
+      pathElement: freezed == pathElement
           ? _value.pathElement
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      min: min == freezed
+      min: null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Integer,
-      minElement: minElement == freezed
+      minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String,
-      maxElement: maxElement == freezed
+      maxElement: freezed == maxElement
           ? _value.maxElement
           : maxElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -12782,35 +13033,36 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionBase &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality().equals(other.path, path) &&
-            const DeepCollectionEquality()
-                .equals(other.pathElement, pathElement) &&
-            const DeepCollectionEquality().equals(other.min, min) &&
-            const DeepCollectionEquality()
-                .equals(other.minElement, minElement) &&
-            const DeepCollectionEquality().equals(other.max, max) &&
-            const DeepCollectionEquality()
-                .equals(other.maxElement, maxElement));
+            (identical(other.path, path) || other.path == path) &&
+            (identical(other.pathElement, pathElement) ||
+                other.pathElement == pathElement) &&
+            (identical(other.min, min) || other.min == min) &&
+            (identical(other.minElement, minElement) ||
+                other.minElement == minElement) &&
+            (identical(other.max, max) || other.max == max) &&
+            (identical(other.maxElement, maxElement) ||
+                other.maxElement == maxElement));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(path),
-      const DeepCollectionEquality().hash(pathElement),
-      const DeepCollectionEquality().hash(min),
-      const DeepCollectionEquality().hash(minElement),
-      const DeepCollectionEquality().hash(max),
-      const DeepCollectionEquality().hash(maxElement));
+      path,
+      pathElement,
+      min,
+      minElement,
+      max,
+      maxElement);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementDefinitionBaseCopyWith<_$_ElementDefinitionBase> get copyWith =>
       __$$_ElementDefinitionBaseCopyWithImpl<_$_ElementDefinitionBase>(
           this, _$identity);
@@ -12895,7 +13147,8 @@ mixin _$ElementDefinitionType {
 abstract class $ElementDefinitionTypeCopyWith<$Res> {
   factory $ElementDefinitionTypeCopyWith(ElementDefinitionType value,
           $Res Function(ElementDefinitionType) then) =
-      _$ElementDefinitionTypeCopyWithImpl<$Res>;
+      _$ElementDefinitionTypeCopyWithImpl<$Res, ElementDefinitionType>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12911,14 +13164,17 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ElementDefinitionTypeCopyWithImpl<$Res>
+class _$ElementDefinitionTypeCopyWithImpl<$Res,
+        $Val extends ElementDefinitionType>
     implements $ElementDefinitionTypeCopyWith<$Res> {
   _$ElementDefinitionTypeCopyWithImpl(this._value, this._then);
 
-  final ElementDefinitionType _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinitionType) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -12931,60 +13187,62 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     Object? fhirElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code?,
-      codeExtension: codeExtension == freezed
+      codeExtension: freezed == codeExtension
           ? _value.codeExtension
           : codeExtension // ignore: cast_nullable_to_non_nullable
               as TypeCodeExtension?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
-      aggregation: aggregation == freezed
+      aggregation: freezed == aggregation
           ? _value.aggregation
           : aggregation // ignore: cast_nullable_to_non_nullable
               as List<TypeAggregation>?,
-      aggregationElement: aggregationElement == freezed
+      aggregationElement: freezed == aggregationElement
           ? _value.aggregationElement
           : aggregationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fhirElement: fhirElement == freezed
+      fhirElement: freezed == fhirElement
           ? _value.fhirElement
           : fhirElement // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TypeCodeExtensionCopyWith<$Res>? get codeExtension {
     if (_value.codeExtension == null) {
       return null;
     }
 
     return $TypeCodeExtensionCopyWith<$Res>(_value.codeExtension!, (value) {
-      return _then(_value.copyWith(codeExtension: value));
+      return _then(_value.copyWith(codeExtension: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get aggregationElement {
     if (_value.aggregationElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.aggregationElement!, (value) {
-      return _then(_value.copyWith(aggregationElement: value));
+      return _then(_value.copyWith(aggregationElement: value) as $Val);
     });
   }
 }
@@ -12996,6 +13254,7 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
           $Res Function(_$_ElementDefinitionType) then) =
       __$$_ElementDefinitionTypeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -13014,16 +13273,13 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
 
 /// @nodoc
 class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
-    extends _$ElementDefinitionTypeCopyWithImpl<$Res>
+    extends _$ElementDefinitionTypeCopyWithImpl<$Res, _$_ElementDefinitionType>
     implements _$$_ElementDefinitionTypeCopyWith<$Res> {
   __$$_ElementDefinitionTypeCopyWithImpl(_$_ElementDefinitionType _value,
       $Res Function(_$_ElementDefinitionType) _then)
-      : super(_value, (v) => _then(v as _$_ElementDefinitionType));
+      : super(_value, _then);
 
-  @override
-  _$_ElementDefinitionType get _value =>
-      super._value as _$_ElementDefinitionType;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -13036,35 +13292,35 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
     Object? fhirElement = freezed,
   }) {
     return _then(_$_ElementDefinitionType(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code?,
-      codeExtension: codeExtension == freezed
+      codeExtension: freezed == codeExtension
           ? _value.codeExtension
           : codeExtension // ignore: cast_nullable_to_non_nullable
               as TypeCodeExtension?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
-      aggregation: aggregation == freezed
+      aggregation: freezed == aggregation
           ? _value._aggregation
           : aggregation // ignore: cast_nullable_to_non_nullable
               as List<TypeAggregation>?,
-      aggregationElement: aggregationElement == freezed
+      aggregationElement: freezed == aggregationElement
           ? _value.aggregationElement
           : aggregationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      fhirElement: fhirElement == freezed
+      fhirElement: freezed == fhirElement
           ? _value._fhirElement
           : fhirElement // ignore: cast_nullable_to_non_nullable
               as List<String>?,
@@ -13151,17 +13407,17 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionType &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality()
-                .equals(other.codeExtension, codeExtension) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.codeExtension, codeExtension) ||
+                other.codeExtension == codeExtension) &&
             const DeepCollectionEquality().equals(other._profile, _profile) &&
             const DeepCollectionEquality()
                 .equals(other._aggregation, _aggregation) &&
-            const DeepCollectionEquality()
-                .equals(other.aggregationElement, aggregationElement) &&
+            (identical(other.aggregationElement, aggregationElement) ||
+                other.aggregationElement == aggregationElement) &&
             const DeepCollectionEquality()
                 .equals(other._fhirElement, _fhirElement));
   }
@@ -13170,17 +13426,18 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(codeExtension),
+      code,
+      codeExtension,
       const DeepCollectionEquality().hash(_profile),
       const DeepCollectionEquality().hash(_aggregation),
-      const DeepCollectionEquality().hash(aggregationElement),
+      aggregationElement,
       const DeepCollectionEquality().hash(_fhirElement));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementDefinitionTypeCopyWith<_$_ElementDefinitionType> get copyWith =>
       __$$_ElementDefinitionTypeCopyWithImpl<_$_ElementDefinitionType>(
           this, _$identity);
@@ -13254,29 +13511,32 @@ mixin _$TypeCodeExtension {
 abstract class $TypeCodeExtensionCopyWith<$Res> {
   factory $TypeCodeExtensionCopyWith(
           TypeCodeExtension value, $Res Function(TypeCodeExtension) then) =
-      _$TypeCodeExtensionCopyWithImpl<$Res>;
+      _$TypeCodeExtensionCopyWithImpl<$Res, TypeCodeExtension>;
+  @useResult
   $Res call({@JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
-class _$TypeCodeExtensionCopyWithImpl<$Res>
+class _$TypeCodeExtensionCopyWithImpl<$Res, $Val extends TypeCodeExtension>
     implements $TypeCodeExtensionCopyWith<$Res> {
   _$TypeCodeExtensionCopyWithImpl(this._value, this._then);
 
-  final TypeCodeExtension _value;
   // ignore: unused_field
-  final $Res Function(TypeCodeExtension) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? extension_ = freezed,
   }) {
     return _then(_value.copyWith(
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -13287,26 +13547,25 @@ abstract class _$$_TypeCodeExtensionCopyWith<$Res>
           $Res Function(_$_TypeCodeExtension) then) =
       __$$_TypeCodeExtensionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({@JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
 class __$$_TypeCodeExtensionCopyWithImpl<$Res>
-    extends _$TypeCodeExtensionCopyWithImpl<$Res>
+    extends _$TypeCodeExtensionCopyWithImpl<$Res, _$_TypeCodeExtension>
     implements _$$_TypeCodeExtensionCopyWith<$Res> {
   __$$_TypeCodeExtensionCopyWithImpl(
       _$_TypeCodeExtension _value, $Res Function(_$_TypeCodeExtension) _then)
-      : super(_value, (v) => _then(v as _$_TypeCodeExtension));
+      : super(_value, _then);
 
-  @override
-  _$_TypeCodeExtension get _value => super._value as _$_TypeCodeExtension;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? extension_ = freezed,
   }) {
     return _then(_$_TypeCodeExtension(
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
@@ -13356,6 +13615,7 @@ class _$_TypeCodeExtension extends _TypeCodeExtension {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TypeCodeExtensionCopyWith<_$_TypeCodeExtension> get copyWith =>
       __$$_TypeCodeExtensionCopyWithImpl<_$_TypeCodeExtension>(
           this, _$identity);
@@ -13424,7 +13684,9 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
   factory $ElementDefinitionConstraintCopyWith(
           ElementDefinitionConstraint value,
           $Res Function(ElementDefinitionConstraint) then) =
-      _$ElementDefinitionConstraintCopyWithImpl<$Res>;
+      _$ElementDefinitionConstraintCopyWithImpl<$Res,
+          ElementDefinitionConstraint>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -13454,133 +13716,141 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ElementDefinitionConstraintCopyWithImpl<$Res>
+class _$ElementDefinitionConstraintCopyWithImpl<$Res,
+        $Val extends ElementDefinitionConstraint>
     implements $ElementDefinitionConstraintCopyWith<$Res> {
   _$ElementDefinitionConstraintCopyWithImpl(this._value, this._then);
 
-  final ElementDefinitionConstraint _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinitionConstraint) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? key = freezed,
+    Object? key = null,
     Object? keyElement = freezed,
     Object? requirements = freezed,
     Object? requirementsElement = freezed,
-    Object? severity = freezed,
+    Object? severity = null,
     Object? severityElement = freezed,
-    Object? human = freezed,
+    Object? human = null,
     Object? humanElement = freezed,
-    Object? xpath = freezed,
+    Object? xpath = null,
     Object? xpathElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      key: key == freezed
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as Id,
-      keyElement: keyElement == freezed
+      keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirementsElement: requirementsElement == freezed
+      requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      severity: severity == freezed
+      severity: null == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
               as ConstraintSeverity,
-      severityElement: severityElement == freezed
+      severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      human: human == freezed
+      human: null == human
           ? _value.human
           : human // ignore: cast_nullable_to_non_nullable
               as String,
-      humanElement: humanElement == freezed
+      humanElement: freezed == humanElement
           ? _value.humanElement
           : humanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      xpath: xpath == freezed
+      xpath: null == xpath
           ? _value.xpath
           : xpath // ignore: cast_nullable_to_non_nullable
               as String,
-      xpathElement: xpathElement == freezed
+      xpathElement: freezed == xpathElement
           ? _value.xpathElement
           : xpathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get keyElement {
     if (_value.keyElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.keyElement!, (value) {
-      return _then(_value.copyWith(keyElement: value));
+      return _then(_value.copyWith(keyElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get requirementsElement {
     if (_value.requirementsElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.requirementsElement!, (value) {
-      return _then(_value.copyWith(requirementsElement: value));
+      return _then(_value.copyWith(requirementsElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get severityElement {
     if (_value.severityElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.severityElement!, (value) {
-      return _then(_value.copyWith(severityElement: value));
+      return _then(_value.copyWith(severityElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get humanElement {
     if (_value.humanElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.humanElement!, (value) {
-      return _then(_value.copyWith(humanElement: value));
+      return _then(_value.copyWith(humanElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get xpathElement {
     if (_value.xpathElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.xpathElement!, (value) {
-      return _then(_value.copyWith(xpathElement: value));
+      return _then(_value.copyWith(xpathElement: value) as $Val);
     });
   }
 }
@@ -13593,6 +13863,7 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
           $Res Function(_$_ElementDefinitionConstraint) then) =
       __$$_ElementDefinitionConstraintCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -13628,78 +13899,76 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
 
 /// @nodoc
 class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
-    extends _$ElementDefinitionConstraintCopyWithImpl<$Res>
+    extends _$ElementDefinitionConstraintCopyWithImpl<$Res,
+        _$_ElementDefinitionConstraint>
     implements _$$_ElementDefinitionConstraintCopyWith<$Res> {
   __$$_ElementDefinitionConstraintCopyWithImpl(
       _$_ElementDefinitionConstraint _value,
       $Res Function(_$_ElementDefinitionConstraint) _then)
-      : super(_value, (v) => _then(v as _$_ElementDefinitionConstraint));
+      : super(_value, _then);
 
-  @override
-  _$_ElementDefinitionConstraint get _value =>
-      super._value as _$_ElementDefinitionConstraint;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? key = freezed,
+    Object? key = null,
     Object? keyElement = freezed,
     Object? requirements = freezed,
     Object? requirementsElement = freezed,
-    Object? severity = freezed,
+    Object? severity = null,
     Object? severityElement = freezed,
-    Object? human = freezed,
+    Object? human = null,
     Object? humanElement = freezed,
-    Object? xpath = freezed,
+    Object? xpath = null,
     Object? xpathElement = freezed,
   }) {
     return _then(_$_ElementDefinitionConstraint(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      key: key == freezed
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as Id,
-      keyElement: keyElement == freezed
+      keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirementsElement: requirementsElement == freezed
+      requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      severity: severity == freezed
+      severity: null == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
               as ConstraintSeverity,
-      severityElement: severityElement == freezed
+      severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      human: human == freezed
+      human: null == human
           ? _value.human
           : human // ignore: cast_nullable_to_non_nullable
               as String,
-      humanElement: humanElement == freezed
+      humanElement: freezed == humanElement
           ? _value.humanElement
           : humanElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      xpath: xpath == freezed
+      xpath: null == xpath
           ? _value.xpath
           : xpath // ignore: cast_nullable_to_non_nullable
               as String,
-      xpathElement: xpathElement == freezed
+      xpathElement: freezed == xpathElement
           ? _value.xpathElement
           : xpathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -13785,46 +14054,48 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionConstraint &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality().equals(other.key, key) &&
-            const DeepCollectionEquality()
-                .equals(other.keyElement, keyElement) &&
-            const DeepCollectionEquality()
-                .equals(other.requirements, requirements) &&
-            const DeepCollectionEquality()
-                .equals(other.requirementsElement, requirementsElement) &&
-            const DeepCollectionEquality().equals(other.severity, severity) &&
-            const DeepCollectionEquality()
-                .equals(other.severityElement, severityElement) &&
-            const DeepCollectionEquality().equals(other.human, human) &&
-            const DeepCollectionEquality()
-                .equals(other.humanElement, humanElement) &&
-            const DeepCollectionEquality().equals(other.xpath, xpath) &&
-            const DeepCollectionEquality()
-                .equals(other.xpathElement, xpathElement));
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.keyElement, keyElement) ||
+                other.keyElement == keyElement) &&
+            (identical(other.requirements, requirements) ||
+                other.requirements == requirements) &&
+            (identical(other.requirementsElement, requirementsElement) ||
+                other.requirementsElement == requirementsElement) &&
+            (identical(other.severity, severity) ||
+                other.severity == severity) &&
+            (identical(other.severityElement, severityElement) ||
+                other.severityElement == severityElement) &&
+            (identical(other.human, human) || other.human == human) &&
+            (identical(other.humanElement, humanElement) ||
+                other.humanElement == humanElement) &&
+            (identical(other.xpath, xpath) || other.xpath == xpath) &&
+            (identical(other.xpathElement, xpathElement) ||
+                other.xpathElement == xpathElement));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(key),
-      const DeepCollectionEquality().hash(keyElement),
-      const DeepCollectionEquality().hash(requirements),
-      const DeepCollectionEquality().hash(requirementsElement),
-      const DeepCollectionEquality().hash(severity),
-      const DeepCollectionEquality().hash(severityElement),
-      const DeepCollectionEquality().hash(human),
-      const DeepCollectionEquality().hash(humanElement),
-      const DeepCollectionEquality().hash(xpath),
-      const DeepCollectionEquality().hash(xpathElement));
+      key,
+      keyElement,
+      requirements,
+      requirementsElement,
+      severity,
+      severityElement,
+      human,
+      humanElement,
+      xpath,
+      xpathElement);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
       get copyWith => __$$_ElementDefinitionConstraintCopyWithImpl<
           _$_ElementDefinitionConstraint>(this, _$identity);
@@ -13934,7 +14205,8 @@ mixin _$ElementDefinitionBinding {
 abstract class $ElementDefinitionBindingCopyWith<$Res> {
   factory $ElementDefinitionBindingCopyWith(ElementDefinitionBinding value,
           $Res Function(ElementDefinitionBinding) then) =
-      _$ElementDefinitionBindingCopyWithImpl<$Res>;
+      _$ElementDefinitionBindingCopyWithImpl<$Res, ElementDefinitionBinding>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -13955,19 +14227,22 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ElementDefinitionBindingCopyWithImpl<$Res>
+class _$ElementDefinitionBindingCopyWithImpl<$Res,
+        $Val extends ElementDefinitionBinding>
     implements $ElementDefinitionBindingCopyWith<$Res> {
   _$ElementDefinitionBindingCopyWithImpl(this._value, this._then);
 
-  final ElementDefinitionBinding _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinitionBinding) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? strength = freezed,
+    Object? strength = null,
     Object? strengthElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
@@ -13975,71 +14250,74 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
     Object? valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      strength: strength == freezed
+      strength: null == strength
           ? _value.strength
           : strength // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBindingStrength,
-      strengthElement: strengthElement == freezed
+      strengthElement: freezed == strengthElement
           ? _value.strengthElement
           : strengthElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueSetUri: valueSetUri == freezed
+      valueSetUri: freezed == valueSetUri
           ? _value.valueSetUri
           : valueSetUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      valueSetReference: valueSetReference == freezed
+      valueSetReference: freezed == valueSetReference
           ? _value.valueSetReference
           : valueSetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get strengthElement {
     if (_value.strengthElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.strengthElement!, (value) {
-      return _then(_value.copyWith(strengthElement: value));
+      return _then(_value.copyWith(strengthElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get valueSetReference {
     if (_value.valueSetReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.valueSetReference!, (value) {
-      return _then(_value.copyWith(valueSetReference: value));
+      return _then(_value.copyWith(valueSetReference: value) as $Val);
     });
   }
 }
@@ -14052,6 +14330,7 @@ abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
           $Res Function(_$_ElementDefinitionBinding) then) =
       __$$_ElementDefinitionBindingCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -14076,21 +14355,19 @@ abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
 
 /// @nodoc
 class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
-    extends _$ElementDefinitionBindingCopyWithImpl<$Res>
+    extends _$ElementDefinitionBindingCopyWithImpl<$Res,
+        _$_ElementDefinitionBinding>
     implements _$$_ElementDefinitionBindingCopyWith<$Res> {
   __$$_ElementDefinitionBindingCopyWithImpl(_$_ElementDefinitionBinding _value,
       $Res Function(_$_ElementDefinitionBinding) _then)
-      : super(_value, (v) => _then(v as _$_ElementDefinitionBinding));
+      : super(_value, _then);
 
-  @override
-  _$_ElementDefinitionBinding get _value =>
-      super._value as _$_ElementDefinitionBinding;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? strength = freezed,
+    Object? strength = null,
     Object? strengthElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
@@ -14098,35 +14375,35 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
     Object? valueSetReference = freezed,
   }) {
     return _then(_$_ElementDefinitionBinding(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      strength: strength == freezed
+      strength: null == strength
           ? _value.strength
           : strength // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBindingStrength,
-      strengthElement: strengthElement == freezed
+      strengthElement: freezed == strengthElement
           ? _value.strengthElement
           : strengthElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueSetUri: valueSetUri == freezed
+      valueSetUri: freezed == valueSetUri
           ? _value.valueSetUri
           : valueSetUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      valueSetReference: valueSetReference == freezed
+      valueSetReference: freezed == valueSetReference
           ? _value.valueSetReference
           : valueSetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -14196,37 +14473,39 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionBinding &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality().equals(other.strength, strength) &&
-            const DeepCollectionEquality()
-                .equals(other.strengthElement, strengthElement) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality()
-                .equals(other.valueSetUri, valueSetUri) &&
-            const DeepCollectionEquality()
-                .equals(other.valueSetReference, valueSetReference));
+            (identical(other.strength, strength) ||
+                other.strength == strength) &&
+            (identical(other.strengthElement, strengthElement) ||
+                other.strengthElement == strengthElement) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
+            (identical(other.valueSetUri, valueSetUri) ||
+                other.valueSetUri == valueSetUri) &&
+            (identical(other.valueSetReference, valueSetReference) ||
+                other.valueSetReference == valueSetReference));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(strength),
-      const DeepCollectionEquality().hash(strengthElement),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(valueSetUri),
-      const DeepCollectionEquality().hash(valueSetReference));
+      strength,
+      strengthElement,
+      description,
+      descriptionElement,
+      valueSetUri,
+      valueSetReference);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
       get copyWith => __$$_ElementDefinitionBindingCopyWithImpl<
           _$_ElementDefinitionBinding>(this, _$identity);
@@ -14318,7 +14597,8 @@ mixin _$ElementDefinitionMapping {
 abstract class $ElementDefinitionMappingCopyWith<$Res> {
   factory $ElementDefinitionMappingCopyWith(ElementDefinitionMapping value,
           $Res Function(ElementDefinitionMapping) then) =
-      _$ElementDefinitionMappingCopyWithImpl<$Res>;
+      _$ElementDefinitionMappingCopyWithImpl<$Res, ElementDefinitionMapping>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -14336,96 +14616,102 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ElementDefinitionMappingCopyWithImpl<$Res>
+class _$ElementDefinitionMappingCopyWithImpl<$Res,
+        $Val extends ElementDefinitionMapping>
     implements $ElementDefinitionMappingCopyWith<$Res> {
   _$ElementDefinitionMappingCopyWithImpl(this._value, this._then);
 
-  final ElementDefinitionMapping _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinitionMapping) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
-    Object? identity = freezed,
+    Object? identity = null,
     Object? identityElement = freezed,
     Object? language = freezed,
     Object? languageElement = freezed,
-    Object? map = freezed,
+    Object? map = null,
     Object? mapElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      identity: identity == freezed
+      identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
               as Id,
-      identityElement: identityElement == freezed
+      identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      map: map == freezed
+      map: null == map
           ? _value.map
           : map // ignore: cast_nullable_to_non_nullable
               as String,
-      mapElement: mapElement == freezed
+      mapElement: freezed == mapElement
           ? _value.mapElement
           : mapElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get identityElement {
     if (_value.identityElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.identityElement!, (value) {
-      return _then(_value.copyWith(identityElement: value));
+      return _then(_value.copyWith(identityElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get mapElement {
     if (_value.mapElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.mapElement!, (value) {
-      return _then(_value.copyWith(mapElement: value));
+      return _then(_value.copyWith(mapElement: value) as $Val);
     });
   }
 }
@@ -14438,6 +14724,7 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
           $Res Function(_$_ElementDefinitionMapping) then) =
       __$$_ElementDefinitionMappingCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -14459,62 +14746,60 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
 
 /// @nodoc
 class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
-    extends _$ElementDefinitionMappingCopyWithImpl<$Res>
+    extends _$ElementDefinitionMappingCopyWithImpl<$Res,
+        _$_ElementDefinitionMapping>
     implements _$$_ElementDefinitionMappingCopyWith<$Res> {
   __$$_ElementDefinitionMappingCopyWithImpl(_$_ElementDefinitionMapping _value,
       $Res Function(_$_ElementDefinitionMapping) _then)
-      : super(_value, (v) => _then(v as _$_ElementDefinitionMapping));
+      : super(_value, _then);
 
-  @override
-  _$_ElementDefinitionMapping get _value =>
-      super._value as _$_ElementDefinitionMapping;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
-    Object? identity = freezed,
+    Object? identity = null,
     Object? identityElement = freezed,
     Object? language = freezed,
     Object? languageElement = freezed,
-    Object? map = freezed,
+    Object? map = null,
     Object? mapElement = freezed,
   }) {
     return _then(_$_ElementDefinitionMapping(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      identity: identity == freezed
+      identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
               as Id,
-      identityElement: identityElement == freezed
+      identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      map: map == freezed
+      map: null == map
           ? _value.map
           : map // ignore: cast_nullable_to_non_nullable
               as String,
-      mapElement: mapElement == freezed
+      mapElement: freezed == mapElement
           ? _value.mapElement
           : mapElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -14590,38 +14875,41 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionMapping &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._fhirComments, _fhirComments) &&
-            const DeepCollectionEquality().equals(other.identity, identity) &&
-            const DeepCollectionEquality()
-                .equals(other.identityElement, identityElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.map, map) &&
-            const DeepCollectionEquality()
-                .equals(other.mapElement, mapElement));
+            (identical(other.identity, identity) ||
+                other.identity == identity) &&
+            (identical(other.identityElement, identityElement) ||
+                other.identityElement == identityElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.map, map) || other.map == map) &&
+            (identical(other.mapElement, mapElement) ||
+                other.mapElement == mapElement));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
-      const DeepCollectionEquality().hash(identity),
-      const DeepCollectionEquality().hash(identityElement),
-      const DeepCollectionEquality().hash(language),
-      const DeepCollectionEquality().hash(languageElement),
-      const DeepCollectionEquality().hash(map),
-      const DeepCollectionEquality().hash(mapElement));
+      identity,
+      identityElement,
+      language,
+      languageElement,
+      map,
+      mapElement);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementDefinitionMappingCopyWith<_$_ElementDefinitionMapping>
       get copyWith => __$$_ElementDefinitionMappingCopyWithImpl<
           _$_ElementDefinitionMapping>(this, _$identity);

@@ -42,7 +42,8 @@ mixin _$Population {
 abstract class $PopulationCopyWith<$Res> {
   factory $PopulationCopyWith(
           Population value, $Res Function(Population) then) =
-      _$PopulationCopyWithImpl<$Res>;
+      _$PopulationCopyWithImpl<$Res, Population>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -61,13 +62,16 @@ abstract class $PopulationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
+class _$PopulationCopyWithImpl<$Res, $Val extends Population>
+    implements $PopulationCopyWith<$Res> {
   _$PopulationCopyWithImpl(this._value, this._then);
 
-  final Population _value;
   // ignore: unused_field
-  final $Res Function(Population) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -80,86 +84,91 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
     Object? physiologicalCondition = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      ageRange: ageRange == freezed
+      ageRange: freezed == ageRange
           ? _value.ageRange
           : ageRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      ageCodeableConcept: ageCodeableConcept == freezed
+      ageCodeableConcept: freezed == ageCodeableConcept
           ? _value.ageCodeableConcept
           : ageCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      gender: gender == freezed
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      race: race == freezed
+      race: freezed == race
           ? _value.race
           : race // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      physiologicalCondition: physiologicalCondition == freezed
+      physiologicalCondition: freezed == physiologicalCondition
           ? _value.physiologicalCondition
           : physiologicalCondition // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get ageRange {
     if (_value.ageRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.ageRange!, (value) {
-      return _then(_value.copyWith(ageRange: value));
+      return _then(_value.copyWith(ageRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get ageCodeableConcept {
     if (_value.ageCodeableConcept == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.ageCodeableConcept!, (value) {
-      return _then(_value.copyWith(ageCodeableConcept: value));
+      return _then(_value.copyWith(ageCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get gender {
     if (_value.gender == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.gender!, (value) {
-      return _then(_value.copyWith(gender: value));
+      return _then(_value.copyWith(gender: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get race {
     if (_value.race == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.race!, (value) {
-      return _then(_value.copyWith(race: value));
+      return _then(_value.copyWith(race: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get physiologicalCondition {
     if (_value.physiologicalCondition == null) {
       return null;
@@ -167,7 +176,7 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
 
     return $CodeableConceptCopyWith<$Res>(_value.physiologicalCondition!,
         (value) {
-      return _then(_value.copyWith(physiologicalCondition: value));
+      return _then(_value.copyWith(physiologicalCondition: value) as $Val);
     });
   }
 }
@@ -179,6 +188,7 @@ abstract class _$$_PopulationCopyWith<$Res>
           _$_Population value, $Res Function(_$_Population) then) =
       __$$_PopulationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -202,15 +212,14 @@ abstract class _$$_PopulationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
+class __$$_PopulationCopyWithImpl<$Res>
+    extends _$PopulationCopyWithImpl<$Res, _$_Population>
     implements _$$_PopulationCopyWith<$Res> {
   __$$_PopulationCopyWithImpl(
       _$_Population _value, $Res Function(_$_Population) _then)
-      : super(_value, (v) => _then(v as _$_Population));
+      : super(_value, _then);
 
-  @override
-  _$_Population get _value => super._value as _$_Population;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -223,35 +232,35 @@ class __$$_PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
     Object? physiologicalCondition = freezed,
   }) {
     return _then(_$_Population(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      ageRange: ageRange == freezed
+      ageRange: freezed == ageRange
           ? _value.ageRange
           : ageRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-      ageCodeableConcept: ageCodeableConcept == freezed
+      ageCodeableConcept: freezed == ageCodeableConcept
           ? _value.ageCodeableConcept
           : ageCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      gender: gender == freezed
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      race: race == freezed
+      race: freezed == race
           ? _value.race
           : race // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      physiologicalCondition: physiologicalCondition == freezed
+      physiologicalCondition: freezed == physiologicalCondition
           ? _value.physiologicalCondition
           : physiologicalCondition // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
@@ -320,35 +329,37 @@ class _$_Population extends _Population {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Population &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.ageRange, ageRange) &&
-            const DeepCollectionEquality()
-                .equals(other.ageCodeableConcept, ageCodeableConcept) &&
-            const DeepCollectionEquality().equals(other.gender, gender) &&
-            const DeepCollectionEquality().equals(other.race, race) &&
-            const DeepCollectionEquality()
-                .equals(other.physiologicalCondition, physiologicalCondition));
+            (identical(other.ageRange, ageRange) ||
+                other.ageRange == ageRange) &&
+            (identical(other.ageCodeableConcept, ageCodeableConcept) ||
+                other.ageCodeableConcept == ageCodeableConcept) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.race, race) || other.race == race) &&
+            (identical(other.physiologicalCondition, physiologicalCondition) ||
+                other.physiologicalCondition == physiologicalCondition));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(ageRange),
-      const DeepCollectionEquality().hash(ageCodeableConcept),
-      const DeepCollectionEquality().hash(gender),
-      const DeepCollectionEquality().hash(race),
-      const DeepCollectionEquality().hash(physiologicalCondition));
+      ageRange,
+      ageCodeableConcept,
+      gender,
+      race,
+      physiologicalCondition);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PopulationCopyWith<_$_Population> get copyWith =>
       __$$_PopulationCopyWithImpl<_$_Population>(this, _$identity);
 
@@ -427,7 +438,8 @@ mixin _$ProductShelfLife {
 abstract class $ProductShelfLifeCopyWith<$Res> {
   factory $ProductShelfLifeCopyWith(
           ProductShelfLife value, $Res Function(ProductShelfLife) then) =
-      _$ProductShelfLifeCopyWithImpl<$Res>;
+      _$ProductShelfLifeCopyWithImpl<$Res, ProductShelfLife>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -444,14 +456,16 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ProductShelfLifeCopyWithImpl<$Res>
+class _$ProductShelfLifeCopyWithImpl<$Res, $Val extends ProductShelfLife>
     implements $ProductShelfLifeCopyWith<$Res> {
   _$ProductShelfLifeCopyWithImpl(this._value, this._then);
 
-  final ProductShelfLife _value;
   // ignore: unused_field
-  final $Res Function(ProductShelfLife) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -464,71 +478,74 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
     Object? specialPrecautionsForStorage = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      periodDuration: periodDuration == freezed
+      periodDuration: freezed == periodDuration
           ? _value.periodDuration
           : periodDuration // ignore: cast_nullable_to_non_nullable
               as FhirDuration?,
-      periodString: periodString == freezed
+      periodString: freezed == periodString
           ? _value.periodString
           : periodString // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      periodStringElement: periodStringElement == freezed
+      periodStringElement: freezed == periodStringElement
           ? _value.periodStringElement
           : periodStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
+      specialPrecautionsForStorage: freezed == specialPrecautionsForStorage
           ? _value.specialPrecautionsForStorage
           : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FhirDurationCopyWith<$Res>? get periodDuration {
     if (_value.periodDuration == null) {
       return null;
     }
 
     return $FhirDurationCopyWith<$Res>(_value.periodDuration!, (value) {
-      return _then(_value.copyWith(periodDuration: value));
+      return _then(_value.copyWith(periodDuration: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get periodStringElement {
     if (_value.periodStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.periodStringElement!, (value) {
-      return _then(_value.copyWith(periodStringElement: value));
+      return _then(_value.copyWith(periodStringElement: value) as $Val);
     });
   }
 }
@@ -540,6 +557,7 @@ abstract class _$$_ProductShelfLifeCopyWith<$Res>
           _$_ProductShelfLife value, $Res Function(_$_ProductShelfLife) then) =
       __$$_ProductShelfLifeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -560,15 +578,13 @@ abstract class _$$_ProductShelfLifeCopyWith<$Res>
 
 /// @nodoc
 class __$$_ProductShelfLifeCopyWithImpl<$Res>
-    extends _$ProductShelfLifeCopyWithImpl<$Res>
+    extends _$ProductShelfLifeCopyWithImpl<$Res, _$_ProductShelfLife>
     implements _$$_ProductShelfLifeCopyWith<$Res> {
   __$$_ProductShelfLifeCopyWithImpl(
       _$_ProductShelfLife _value, $Res Function(_$_ProductShelfLife) _then)
-      : super(_value, (v) => _then(v as _$_ProductShelfLife));
+      : super(_value, _then);
 
-  @override
-  _$_ProductShelfLife get _value => super._value as _$_ProductShelfLife;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -581,35 +597,35 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
     Object? specialPrecautionsForStorage = freezed,
   }) {
     return _then(_$_ProductShelfLife(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      periodDuration: periodDuration == freezed
+      periodDuration: freezed == periodDuration
           ? _value.periodDuration
           : periodDuration // ignore: cast_nullable_to_non_nullable
               as FhirDuration?,
-      periodString: periodString == freezed
+      periodString: freezed == periodString
           ? _value.periodString
           : periodString // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      periodStringElement: periodStringElement == freezed
+      periodStringElement: freezed == periodStringElement
           ? _value.periodStringElement
           : periodStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
+      specialPrecautionsForStorage: freezed == specialPrecautionsForStorage
           ? _value._specialPrecautionsForStorage
           : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
@@ -686,18 +702,18 @@ class _$_ProductShelfLife extends _ProductShelfLife {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ProductShelfLife &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.periodDuration, periodDuration) &&
-            const DeepCollectionEquality()
-                .equals(other.periodString, periodString) &&
-            const DeepCollectionEquality()
-                .equals(other.periodStringElement, periodStringElement) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.periodDuration, periodDuration) ||
+                other.periodDuration == periodDuration) &&
+            (identical(other.periodString, periodString) ||
+                other.periodString == periodString) &&
+            (identical(other.periodStringElement, periodStringElement) ||
+                other.periodStringElement == periodStringElement) &&
             const DeepCollectionEquality().equals(
                 other._specialPrecautionsForStorage,
                 _specialPrecautionsForStorage));
@@ -707,17 +723,18 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(periodDuration),
-      const DeepCollectionEquality().hash(periodString),
-      const DeepCollectionEquality().hash(periodStringElement),
+      type,
+      periodDuration,
+      periodString,
+      periodStringElement,
       const DeepCollectionEquality().hash(_specialPrecautionsForStorage));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ProductShelfLifeCopyWith<_$_ProductShelfLife> get copyWith =>
       __$$_ProductShelfLifeCopyWithImpl<_$_ProductShelfLife>(this, _$identity);
 
@@ -798,7 +815,8 @@ mixin _$MarketingStatus {
 abstract class $MarketingStatusCopyWith<$Res> {
   factory $MarketingStatusCopyWith(
           MarketingStatus value, $Res Function(MarketingStatus) then) =
-      _$MarketingStatusCopyWithImpl<$Res>;
+      _$MarketingStatusCopyWithImpl<$Res, MarketingStatus>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -818,14 +836,16 @@ abstract class $MarketingStatusCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MarketingStatusCopyWithImpl<$Res>
+class _$MarketingStatusCopyWithImpl<$Res, $Val extends MarketingStatus>
     implements $MarketingStatusCopyWith<$Res> {
   _$MarketingStatusCopyWithImpl(this._value, this._then);
 
-  final MarketingStatus _value;
   // ignore: unused_field
-  final $Res Function(MarketingStatus) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -833,99 +853,104 @@ class _$MarketingStatusCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? country = freezed,
     Object? jurisdiction = freezed,
-    Object? status = freezed,
+    Object? status = null,
     Object? dateRange = freezed,
     Object? restoreDate = freezed,
     Object? restoreDateElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      country: country == freezed
+      country: freezed == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      jurisdiction: jurisdiction == freezed
+      jurisdiction: freezed == jurisdiction
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      dateRange: dateRange == freezed
+      dateRange: freezed == dateRange
           ? _value.dateRange
           : dateRange // ignore: cast_nullable_to_non_nullable
               as Period?,
-      restoreDate: restoreDate == freezed
+      restoreDate: freezed == restoreDate
           ? _value.restoreDate
           : restoreDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      restoreDateElement: restoreDateElement == freezed
+      restoreDateElement: freezed == restoreDateElement
           ? _value.restoreDateElement
           : restoreDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get country {
     if (_value.country == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.country!, (value) {
-      return _then(_value.copyWith(country: value));
+      return _then(_value.copyWith(country: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get jurisdiction {
     if (_value.jurisdiction == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.jurisdiction!, (value) {
-      return _then(_value.copyWith(jurisdiction: value));
+      return _then(_value.copyWith(jurisdiction: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get status {
     return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
-      return _then(_value.copyWith(status: value));
+      return _then(_value.copyWith(status: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get dateRange {
     if (_value.dateRange == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.dateRange!, (value) {
-      return _then(_value.copyWith(dateRange: value));
+      return _then(_value.copyWith(dateRange: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get restoreDateElement {
     if (_value.restoreDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.restoreDateElement!, (value) {
-      return _then(_value.copyWith(restoreDateElement: value));
+      return _then(_value.copyWith(restoreDateElement: value) as $Val);
     });
   }
 }
@@ -937,6 +962,7 @@ abstract class _$$_MarketingStatusCopyWith<$Res>
           _$_MarketingStatus value, $Res Function(_$_MarketingStatus) then) =
       __$$_MarketingStatusCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -962,15 +988,13 @@ abstract class _$$_MarketingStatusCopyWith<$Res>
 
 /// @nodoc
 class __$$_MarketingStatusCopyWithImpl<$Res>
-    extends _$MarketingStatusCopyWithImpl<$Res>
+    extends _$MarketingStatusCopyWithImpl<$Res, _$_MarketingStatus>
     implements _$$_MarketingStatusCopyWith<$Res> {
   __$$_MarketingStatusCopyWithImpl(
       _$_MarketingStatus _value, $Res Function(_$_MarketingStatus) _then)
-      : super(_value, (v) => _then(v as _$_MarketingStatus));
+      : super(_value, _then);
 
-  @override
-  _$_MarketingStatus get _value => super._value as _$_MarketingStatus;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -978,45 +1002,45 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? country = freezed,
     Object? jurisdiction = freezed,
-    Object? status = freezed,
+    Object? status = null,
     Object? dateRange = freezed,
     Object? restoreDate = freezed,
     Object? restoreDateElement = freezed,
   }) {
     return _then(_$_MarketingStatus(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      country: country == freezed
+      country: freezed == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      jurisdiction: jurisdiction == freezed
+      jurisdiction: freezed == jurisdiction
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      dateRange: dateRange == freezed
+      dateRange: freezed == dateRange
           ? _value.dateRange
           : dateRange // ignore: cast_nullable_to_non_nullable
               as Period?,
-      restoreDate: restoreDate == freezed
+      restoreDate: freezed == restoreDate
           ? _value.restoreDate
           : restoreDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      restoreDateElement: restoreDateElement == freezed
+      restoreDateElement: freezed == restoreDateElement
           ? _value.restoreDateElement
           : restoreDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -1089,38 +1113,40 @@ class _$_MarketingStatus extends _MarketingStatus {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MarketingStatus &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.country, country) &&
-            const DeepCollectionEquality()
-                .equals(other.jurisdiction, jurisdiction) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality().equals(other.dateRange, dateRange) &&
-            const DeepCollectionEquality()
-                .equals(other.restoreDate, restoreDate) &&
-            const DeepCollectionEquality()
-                .equals(other.restoreDateElement, restoreDateElement));
+            (identical(other.country, country) || other.country == country) &&
+            (identical(other.jurisdiction, jurisdiction) ||
+                other.jurisdiction == jurisdiction) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.dateRange, dateRange) ||
+                other.dateRange == dateRange) &&
+            (identical(other.restoreDate, restoreDate) ||
+                other.restoreDate == restoreDate) &&
+            (identical(other.restoreDateElement, restoreDateElement) ||
+                other.restoreDateElement == restoreDateElement));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(country),
-      const DeepCollectionEquality().hash(jurisdiction),
-      const DeepCollectionEquality().hash(status),
-      const DeepCollectionEquality().hash(dateRange),
-      const DeepCollectionEquality().hash(restoreDate),
-      const DeepCollectionEquality().hash(restoreDateElement));
+      country,
+      jurisdiction,
+      status,
+      dateRange,
+      restoreDate,
+      restoreDateElement);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MarketingStatusCopyWith<_$_MarketingStatus> get copyWith =>
       __$$_MarketingStatusCopyWithImpl<_$_MarketingStatus>(this, _$identity);
 

@@ -36,7 +36,8 @@ mixin _$BackboneType {
 abstract class $BackboneTypeCopyWith<$Res> {
   factory $BackboneTypeCopyWith(
           BackboneType value, $Res Function(BackboneType) then) =
-      _$BackboneTypeCopyWithImpl<$Res>;
+      _$BackboneTypeCopyWithImpl<$Res, BackboneType>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -44,13 +45,16 @@ abstract class $BackboneTypeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BackboneTypeCopyWithImpl<$Res> implements $BackboneTypeCopyWith<$Res> {
+class _$BackboneTypeCopyWithImpl<$Res, $Val extends BackboneType>
+    implements $BackboneTypeCopyWith<$Res> {
   _$BackboneTypeCopyWithImpl(this._value, this._then);
 
-  final BackboneType _value;
   // ignore: unused_field
-  final $Res Function(BackboneType) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -58,19 +62,19 @@ class _$BackboneTypeCopyWithImpl<$Res> implements $BackboneTypeCopyWith<$Res> {
     Object? modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -81,6 +85,7 @@ abstract class _$$_BackboneTypeCopyWith<$Res>
           _$_BackboneType value, $Res Function(_$_BackboneType) then) =
       __$$_BackboneTypeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -89,15 +94,13 @@ abstract class _$$_BackboneTypeCopyWith<$Res>
 
 /// @nodoc
 class __$$_BackboneTypeCopyWithImpl<$Res>
-    extends _$BackboneTypeCopyWithImpl<$Res>
+    extends _$BackboneTypeCopyWithImpl<$Res, _$_BackboneType>
     implements _$$_BackboneTypeCopyWith<$Res> {
   __$$_BackboneTypeCopyWithImpl(
       _$_BackboneType _value, $Res Function(_$_BackboneType) _then)
-      : super(_value, (v) => _then(v as _$_BackboneType));
+      : super(_value, _then);
 
-  @override
-  _$_BackboneType get _value => super._value as _$_BackboneType;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -105,15 +108,15 @@ class __$$_BackboneTypeCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
   }) {
     return _then(_$_BackboneType(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
@@ -166,7 +169,7 @@ class _$_BackboneType extends _BackboneType {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BackboneType &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -177,12 +180,13 @@ class _$_BackboneType extends _BackboneType {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BackboneTypeCopyWith<_$_BackboneType> get copyWith =>
       __$$_BackboneTypeCopyWithImpl<_$_BackboneType>(this, _$identity);
 

@@ -150,7 +150,8 @@ mixin _$PaymentNotice {
 abstract class $PaymentNoticeCopyWith<$Res> {
   factory $PaymentNoticeCopyWith(
           PaymentNotice value, $Res Function(PaymentNotice) then) =
-      _$PaymentNoticeCopyWithImpl<$Res>;
+      _$PaymentNoticeCopyWithImpl<$Res, PaymentNotice>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType,
@@ -204,17 +205,19 @@ abstract class $PaymentNoticeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PaymentNoticeCopyWithImpl<$Res>
+class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     implements $PaymentNoticeCopyWith<$Res> {
   _$PaymentNoticeCopyWithImpl(this._value, this._then);
 
-  final PaymentNotice _value;
   // ignore: unused_field
-  final $Res Function(PaymentNotice) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -233,272 +236,287 @@ class _$PaymentNoticeCopyWithImpl<$Res>
     Object? created = freezed,
     Object? createdElement = freezed,
     Object? provider = freezed,
-    Object? payment = freezed,
+    Object? payment = null,
     Object? paymentDate = freezed,
     Object? paymentDateElement = freezed,
     Object? payee = freezed,
-    Object? recipient = freezed,
-    Object? amount = freezed,
+    Object? recipient = null,
+    Object? amount = null,
     Object? paymentStatus = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      response: response == freezed
+      response: freezed == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      provider: provider == freezed
+      provider: freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      payment: payment == freezed
+      payment: null == payment
           ? _value.payment
           : payment // ignore: cast_nullable_to_non_nullable
               as Reference,
-      paymentDate: paymentDate == freezed
+      paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      paymentDateElement: paymentDateElement == freezed
+      paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      payee: payee == freezed
+      payee: freezed == payee
           ? _value.payee
           : payee // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      recipient: recipient == freezed
+      recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as Reference,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as Money,
-      paymentStatus: paymentStatus == freezed
+      paymentStatus: freezed == paymentStatus
           ? _value.paymentStatus
           : paymentStatus // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.request!, (value) {
-      return _then(_value.copyWith(request: value));
+      return _then(_value.copyWith(request: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get response {
     if (_value.response == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.response!, (value) {
-      return _then(_value.copyWith(response: value));
+      return _then(_value.copyWith(response: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
-      return _then(_value.copyWith(createdElement: value));
+      return _then(_value.copyWith(createdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get provider {
     if (_value.provider == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
-      return _then(_value.copyWith(provider: value));
+      return _then(_value.copyWith(provider: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get payment {
     return $ReferenceCopyWith<$Res>(_value.payment, (value) {
-      return _then(_value.copyWith(payment: value));
+      return _then(_value.copyWith(payment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get paymentDateElement {
     if (_value.paymentDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.paymentDateElement!, (value) {
-      return _then(_value.copyWith(paymentDateElement: value));
+      return _then(_value.copyWith(paymentDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get payee {
     if (_value.payee == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.payee!, (value) {
-      return _then(_value.copyWith(payee: value));
+      return _then(_value.copyWith(payee: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get recipient {
     return $ReferenceCopyWith<$Res>(_value.recipient, (value) {
-      return _then(_value.copyWith(recipient: value));
+      return _then(_value.copyWith(recipient: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res> get amount {
     return $MoneyCopyWith<$Res>(_value.amount, (value) {
-      return _then(_value.copyWith(amount: value));
+      return _then(_value.copyWith(amount: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get paymentStatus {
     if (_value.paymentStatus == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.paymentStatus!, (value) {
-      return _then(_value.copyWith(paymentStatus: value));
+      return _then(_value.copyWith(paymentStatus: value) as $Val);
     });
   }
 }
@@ -510,6 +528,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
           _$_PaymentNotice value, $Res Function(_$_PaymentNotice) then) =
       __$$_PaymentNoticeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType,
@@ -579,18 +598,16 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
 
 /// @nodoc
 class __$$_PaymentNoticeCopyWithImpl<$Res>
-    extends _$PaymentNoticeCopyWithImpl<$Res>
+    extends _$PaymentNoticeCopyWithImpl<$Res, _$_PaymentNotice>
     implements _$$_PaymentNoticeCopyWith<$Res> {
   __$$_PaymentNoticeCopyWithImpl(
       _$_PaymentNotice _value, $Res Function(_$_PaymentNotice) _then)
-      : super(_value, (v) => _then(v as _$_PaymentNotice));
+      : super(_value, _then);
 
-  @override
-  _$_PaymentNotice get _value => super._value as _$_PaymentNotice;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -609,116 +626,116 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
     Object? created = freezed,
     Object? createdElement = freezed,
     Object? provider = freezed,
-    Object? payment = freezed,
+    Object? payment = null,
     Object? paymentDate = freezed,
     Object? paymentDateElement = freezed,
     Object? payee = freezed,
-    Object? recipient = freezed,
-    Object? amount = freezed,
+    Object? recipient = null,
+    Object? amount = null,
     Object? paymentStatus = freezed,
   }) {
     return _then(_$_PaymentNotice(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      response: response == freezed
+      response: freezed == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      provider: provider == freezed
+      provider: freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      payment: payment == freezed
+      payment: null == payment
           ? _value.payment
           : payment // ignore: cast_nullable_to_non_nullable
               as Reference,
-      paymentDate: paymentDate == freezed
+      paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      paymentDateElement: paymentDateElement == freezed
+      paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      payee: payee == freezed
+      payee: freezed == payee
           ? _value.payee
           : payee // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      recipient: recipient == freezed
+      recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as Reference,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as Money,
-      paymentStatus: paymentStatus == freezed
+      paymentStatus: freezed == paymentStatus
           ? _value.paymentStatus
           : paymentStatus // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
@@ -979,18 +996,19 @@ class _$_PaymentNotice extends _PaymentNotice {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PaymentNotice &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
@@ -999,61 +1017,65 @@ class _$_PaymentNotice extends _PaymentNotice {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.request, request) &&
-            const DeepCollectionEquality().equals(other.response, response) &&
-            const DeepCollectionEquality().equals(other.created, created) &&
-            const DeepCollectionEquality()
-                .equals(other.createdElement, createdElement) &&
-            const DeepCollectionEquality().equals(other.provider, provider) &&
-            const DeepCollectionEquality().equals(other.payment, payment) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentDate, paymentDate) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentDateElement, paymentDateElement) &&
-            const DeepCollectionEquality().equals(other.payee, payee) &&
-            const DeepCollectionEquality().equals(other.recipient, recipient) &&
-            const DeepCollectionEquality().equals(other.amount, amount) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentStatus, paymentStatus));
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.request, request) || other.request == request) &&
+            (identical(other.response, response) ||
+                other.response == response) &&
+            (identical(other.created, created) || other.created == created) &&
+            (identical(other.createdElement, createdElement) ||
+                other.createdElement == createdElement) &&
+            (identical(other.provider, provider) ||
+                other.provider == provider) &&
+            (identical(other.payment, payment) || other.payment == payment) &&
+            (identical(other.paymentDate, paymentDate) ||
+                other.paymentDate == paymentDate) &&
+            (identical(other.paymentDateElement, paymentDateElement) ||
+                other.paymentDateElement == paymentDateElement) &&
+            (identical(other.payee, payee) || other.payee == payee) &&
+            (identical(other.recipient, recipient) ||
+                other.recipient == recipient) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.paymentStatus, paymentStatus) ||
+                other.paymentStatus == paymentStatus));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(request),
-        const DeepCollectionEquality().hash(response),
-        const DeepCollectionEquality().hash(created),
-        const DeepCollectionEquality().hash(createdElement),
-        const DeepCollectionEquality().hash(provider),
-        const DeepCollectionEquality().hash(payment),
-        const DeepCollectionEquality().hash(paymentDate),
-        const DeepCollectionEquality().hash(paymentDateElement),
-        const DeepCollectionEquality().hash(payee),
-        const DeepCollectionEquality().hash(recipient),
-        const DeepCollectionEquality().hash(amount),
-        const DeepCollectionEquality().hash(paymentStatus)
+        status,
+        statusElement,
+        request,
+        response,
+        created,
+        createdElement,
+        provider,
+        payment,
+        paymentDate,
+        paymentDateElement,
+        payee,
+        recipient,
+        amount,
+        paymentStatus
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PaymentNoticeCopyWith<_$_PaymentNotice> get copyWith =>
       __$$_PaymentNoticeCopyWithImpl<_$_PaymentNotice>(this, _$identity);
 
@@ -1415,7 +1437,8 @@ mixin _$PaymentReconciliation {
 abstract class $PaymentReconciliationCopyWith<$Res> {
   factory $PaymentReconciliationCopyWith(PaymentReconciliation value,
           $Res Function(PaymentReconciliation) then) =
-      _$PaymentReconciliationCopyWithImpl<$Res>;
+      _$PaymentReconciliationCopyWithImpl<$Res, PaymentReconciliation>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           R4ResourceType resourceType,
@@ -1477,17 +1500,20 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PaymentReconciliationCopyWithImpl<$Res>
+class _$PaymentReconciliationCopyWithImpl<$Res,
+        $Val extends PaymentReconciliation>
     implements $PaymentReconciliationCopyWith<$Res> {
   _$PaymentReconciliationCopyWithImpl(this._value, this._then);
 
-  final PaymentReconciliation _value;
   // ignore: unused_field
-  final $Res Function(PaymentReconciliation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1513,309 +1539,325 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
     Object? dispositionElement = freezed,
     Object? paymentDate = freezed,
     Object? paymentDateElement = freezed,
-    Object? paymentAmount = freezed,
+    Object? paymentAmount = null,
     Object? paymentIdentifier = freezed,
     Object? detail = freezed,
     Object? formCode = freezed,
     Object? processNote = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      paymentIssuer: paymentIssuer == freezed
+      paymentIssuer: freezed == paymentIssuer
           ? _value.paymentIssuer
           : paymentIssuer // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requestor: requestor == freezed
+      requestor: freezed == requestor
           ? _value.requestor
           : requestor // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      outcome: outcome == freezed
+      outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
               as Code?,
-      outcomeElement: outcomeElement == freezed
+      outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      disposition: disposition == freezed
+      disposition: freezed == disposition
           ? _value.disposition
           : disposition // ignore: cast_nullable_to_non_nullable
               as String?,
-      dispositionElement: dispositionElement == freezed
+      dispositionElement: freezed == dispositionElement
           ? _value.dispositionElement
           : dispositionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      paymentDate: paymentDate == freezed
+      paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      paymentDateElement: paymentDateElement == freezed
+      paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      paymentAmount: paymentAmount == freezed
+      paymentAmount: null == paymentAmount
           ? _value.paymentAmount
           : paymentAmount // ignore: cast_nullable_to_non_nullable
               as Money,
-      paymentIdentifier: paymentIdentifier == freezed
+      paymentIdentifier: freezed == paymentIdentifier
           ? _value.paymentIdentifier
           : paymentIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      detail: detail == freezed
+      detail: freezed == detail
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationDetail>?,
-      formCode: formCode == freezed
+      formCode: freezed == formCode
           ? _value.formCode
           : formCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      processNote: processNote == freezed
+      processNote: freezed == processNote
           ? _value.processNote
           : processNote // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationProcessNote>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.period!, (value) {
-      return _then(_value.copyWith(period: value));
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
-      return _then(_value.copyWith(createdElement: value));
+      return _then(_value.copyWith(createdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get paymentIssuer {
     if (_value.paymentIssuer == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.paymentIssuer!, (value) {
-      return _then(_value.copyWith(paymentIssuer: value));
+      return _then(_value.copyWith(paymentIssuer: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.request!, (value) {
-      return _then(_value.copyWith(request: value));
+      return _then(_value.copyWith(request: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestor {
     if (_value.requestor == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.requestor!, (value) {
-      return _then(_value.copyWith(requestor: value));
+      return _then(_value.copyWith(requestor: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get outcomeElement {
     if (_value.outcomeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.outcomeElement!, (value) {
-      return _then(_value.copyWith(outcomeElement: value));
+      return _then(_value.copyWith(outcomeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dispositionElement {
     if (_value.dispositionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.dispositionElement!, (value) {
-      return _then(_value.copyWith(dispositionElement: value));
+      return _then(_value.copyWith(dispositionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get paymentDateElement {
     if (_value.paymentDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.paymentDateElement!, (value) {
-      return _then(_value.copyWith(paymentDateElement: value));
+      return _then(_value.copyWith(paymentDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res> get paymentAmount {
     return $MoneyCopyWith<$Res>(_value.paymentAmount, (value) {
-      return _then(_value.copyWith(paymentAmount: value));
+      return _then(_value.copyWith(paymentAmount: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get paymentIdentifier {
     if (_value.paymentIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.paymentIdentifier!, (value) {
-      return _then(_value.copyWith(paymentIdentifier: value));
+      return _then(_value.copyWith(paymentIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get formCode {
     if (_value.formCode == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.formCode!, (value) {
-      return _then(_value.copyWith(formCode: value));
+      return _then(_value.copyWith(formCode: value) as $Val);
     });
   }
 }
@@ -1827,6 +1869,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
           $Res Function(_$_PaymentReconciliation) then) =
       __$$_PaymentReconciliationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           R4ResourceType resourceType,
@@ -1905,19 +1948,16 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
 
 /// @nodoc
 class __$$_PaymentReconciliationCopyWithImpl<$Res>
-    extends _$PaymentReconciliationCopyWithImpl<$Res>
+    extends _$PaymentReconciliationCopyWithImpl<$Res, _$_PaymentReconciliation>
     implements _$$_PaymentReconciliationCopyWith<$Res> {
   __$$_PaymentReconciliationCopyWithImpl(_$_PaymentReconciliation _value,
       $Res Function(_$_PaymentReconciliation) _then)
-      : super(_value, (v) => _then(v as _$_PaymentReconciliation));
+      : super(_value, _then);
 
-  @override
-  _$_PaymentReconciliation get _value =>
-      super._value as _$_PaymentReconciliation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1943,134 +1983,134 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
     Object? dispositionElement = freezed,
     Object? paymentDate = freezed,
     Object? paymentDateElement = freezed,
-    Object? paymentAmount = freezed,
+    Object? paymentAmount = null,
     Object? paymentIdentifier = freezed,
     Object? detail = freezed,
     Object? formCode = freezed,
     Object? processNote = freezed,
   }) {
     return _then(_$_PaymentReconciliation(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      paymentIssuer: paymentIssuer == freezed
+      paymentIssuer: freezed == paymentIssuer
           ? _value.paymentIssuer
           : paymentIssuer // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requestor: requestor == freezed
+      requestor: freezed == requestor
           ? _value.requestor
           : requestor // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      outcome: outcome == freezed
+      outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
               as Code?,
-      outcomeElement: outcomeElement == freezed
+      outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      disposition: disposition == freezed
+      disposition: freezed == disposition
           ? _value.disposition
           : disposition // ignore: cast_nullable_to_non_nullable
               as String?,
-      dispositionElement: dispositionElement == freezed
+      dispositionElement: freezed == dispositionElement
           ? _value.dispositionElement
           : dispositionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      paymentDate: paymentDate == freezed
+      paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      paymentDateElement: paymentDateElement == freezed
+      paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      paymentAmount: paymentAmount == freezed
+      paymentAmount: null == paymentAmount
           ? _value.paymentAmount
           : paymentAmount // ignore: cast_nullable_to_non_nullable
               as Money,
-      paymentIdentifier: paymentIdentifier == freezed
+      paymentIdentifier: freezed == paymentIdentifier
           ? _value.paymentIdentifier
           : paymentIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      detail: detail == freezed
+      detail: freezed == detail
           ? _value._detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationDetail>?,
-      formCode: formCode == freezed
+      formCode: freezed == formCode
           ? _value.formCode
           : formCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      processNote: processNote == freezed
+      processNote: freezed == processNote
           ? _value._processNote
           : processNote // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationProcessNote>?,
@@ -2384,18 +2424,19 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PaymentReconciliation &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
@@ -2404,34 +2445,36 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.period, period) &&
-            const DeepCollectionEquality().equals(other.created, created) &&
-            const DeepCollectionEquality()
-                .equals(other.createdElement, createdElement) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentIssuer, paymentIssuer) &&
-            const DeepCollectionEquality().equals(other.request, request) &&
-            const DeepCollectionEquality().equals(other.requestor, requestor) &&
-            const DeepCollectionEquality().equals(other.outcome, outcome) &&
-            const DeepCollectionEquality()
-                .equals(other.outcomeElement, outcomeElement) &&
-            const DeepCollectionEquality()
-                .equals(other.disposition, disposition) &&
-            const DeepCollectionEquality()
-                .equals(other.dispositionElement, dispositionElement) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentDate, paymentDate) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentDateElement, paymentDateElement) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentAmount, paymentAmount) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentIdentifier, paymentIdentifier) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.period, period) || other.period == period) &&
+            (identical(other.created, created) || other.created == created) &&
+            (identical(other.createdElement, createdElement) ||
+                other.createdElement == createdElement) &&
+            (identical(other.paymentIssuer, paymentIssuer) ||
+                other.paymentIssuer == paymentIssuer) &&
+            (identical(other.request, request) || other.request == request) &&
+            (identical(other.requestor, requestor) ||
+                other.requestor == requestor) &&
+            (identical(other.outcome, outcome) || other.outcome == outcome) &&
+            (identical(other.outcomeElement, outcomeElement) ||
+                other.outcomeElement == outcomeElement) &&
+            (identical(other.disposition, disposition) ||
+                other.disposition == disposition) &&
+            (identical(other.dispositionElement, dispositionElement) ||
+                other.dispositionElement == dispositionElement) &&
+            (identical(other.paymentDate, paymentDate) ||
+                other.paymentDate == paymentDate) &&
+            (identical(other.paymentDateElement, paymentDateElement) ||
+                other.paymentDateElement == paymentDateElement) &&
+            (identical(other.paymentAmount, paymentAmount) ||
+                other.paymentAmount == paymentAmount) &&
+            (identical(other.paymentIdentifier, paymentIdentifier) ||
+                other.paymentIdentifier == paymentIdentifier) &&
             const DeepCollectionEquality().equals(other._detail, _detail) &&
-            const DeepCollectionEquality().equals(other.formCode, formCode) &&
+            (identical(other.formCode, formCode) ||
+                other.formCode == formCode) &&
             const DeepCollectionEquality()
                 .equals(other._processNote, _processNote));
   }
@@ -2440,41 +2483,42 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(period),
-        const DeepCollectionEquality().hash(created),
-        const DeepCollectionEquality().hash(createdElement),
-        const DeepCollectionEquality().hash(paymentIssuer),
-        const DeepCollectionEquality().hash(request),
-        const DeepCollectionEquality().hash(requestor),
-        const DeepCollectionEquality().hash(outcome),
-        const DeepCollectionEquality().hash(outcomeElement),
-        const DeepCollectionEquality().hash(disposition),
-        const DeepCollectionEquality().hash(dispositionElement),
-        const DeepCollectionEquality().hash(paymentDate),
-        const DeepCollectionEquality().hash(paymentDateElement),
-        const DeepCollectionEquality().hash(paymentAmount),
-        const DeepCollectionEquality().hash(paymentIdentifier),
+        status,
+        statusElement,
+        period,
+        created,
+        createdElement,
+        paymentIssuer,
+        request,
+        requestor,
+        outcome,
+        outcomeElement,
+        disposition,
+        dispositionElement,
+        paymentDate,
+        paymentDateElement,
+        paymentAmount,
+        paymentIdentifier,
         const DeepCollectionEquality().hash(_detail),
-        const DeepCollectionEquality().hash(formCode),
+        formCode,
         const DeepCollectionEquality().hash(_processNote)
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PaymentReconciliationCopyWith<_$_PaymentReconciliation> get copyWith =>
       __$$_PaymentReconciliationCopyWithImpl<_$_PaymentReconciliation>(
           this, _$identity);
@@ -2799,7 +2843,9 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
   factory $PaymentReconciliationDetailCopyWith(
           PaymentReconciliationDetail value,
           $Res Function(PaymentReconciliationDetail) then) =
-      _$PaymentReconciliationDetailCopyWithImpl<$Res>;
+      _$PaymentReconciliationDetailCopyWithImpl<$Res,
+          PaymentReconciliationDetail>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2829,14 +2875,17 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PaymentReconciliationDetailCopyWithImpl<$Res>
+class _$PaymentReconciliationDetailCopyWithImpl<$Res,
+        $Val extends PaymentReconciliationDetail>
     implements $PaymentReconciliationDetailCopyWith<$Res> {
   _$PaymentReconciliationDetailCopyWithImpl(this._value, this._then);
 
-  final PaymentReconciliationDetail _value;
   // ignore: unused_field
-  final $Res Function(PaymentReconciliationDetail) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2844,7 +2893,7 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
     Object? predecessor = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? request = freezed,
     Object? submitter = freezed,
     Object? response = freezed,
@@ -2855,168 +2904,178 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      predecessor: predecessor == freezed
+      predecessor: freezed == predecessor
           ? _value.predecessor
           : predecessor // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      submitter: submitter == freezed
+      submitter: freezed == submitter
           ? _value.submitter
           : submitter // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      response: response == freezed
+      response: freezed == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as Date?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      responsible: responsible == freezed
+      responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      payee: payee == freezed
+      payee: freezed == payee
           ? _value.payee
           : payee // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      amount: amount == freezed
+      amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as Money?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
     if (_value.identifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
+      return _then(_value.copyWith(identifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get predecessor {
     if (_value.predecessor == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.predecessor!, (value) {
-      return _then(_value.copyWith(predecessor: value));
+      return _then(_value.copyWith(predecessor: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get type {
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.request!, (value) {
-      return _then(_value.copyWith(request: value));
+      return _then(_value.copyWith(request: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get submitter {
     if (_value.submitter == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.submitter!, (value) {
-      return _then(_value.copyWith(submitter: value));
+      return _then(_value.copyWith(submitter: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get response {
     if (_value.response == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.response!, (value) {
-      return _then(_value.copyWith(response: value));
+      return _then(_value.copyWith(response: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
-      return _then(_value.copyWith(dateElement: value));
+      return _then(_value.copyWith(dateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get responsible {
     if (_value.responsible == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.responsible!, (value) {
-      return _then(_value.copyWith(responsible: value));
+      return _then(_value.copyWith(responsible: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get payee {
     if (_value.payee == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.payee!, (value) {
-      return _then(_value.copyWith(payee: value));
+      return _then(_value.copyWith(payee: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res>? get amount {
     if (_value.amount == null) {
       return null;
     }
 
     return $MoneyCopyWith<$Res>(_value.amount!, (value) {
-      return _then(_value.copyWith(amount: value));
+      return _then(_value.copyWith(amount: value) as $Val);
     });
   }
 }
@@ -3029,6 +3088,7 @@ abstract class _$$_PaymentReconciliationDetailCopyWith<$Res>
           $Res Function(_$_PaymentReconciliationDetail) then) =
       __$$_PaymentReconciliationDetailCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3069,17 +3129,15 @@ abstract class _$$_PaymentReconciliationDetailCopyWith<$Res>
 
 /// @nodoc
 class __$$_PaymentReconciliationDetailCopyWithImpl<$Res>
-    extends _$PaymentReconciliationDetailCopyWithImpl<$Res>
+    extends _$PaymentReconciliationDetailCopyWithImpl<$Res,
+        _$_PaymentReconciliationDetail>
     implements _$$_PaymentReconciliationDetailCopyWith<$Res> {
   __$$_PaymentReconciliationDetailCopyWithImpl(
       _$_PaymentReconciliationDetail _value,
       $Res Function(_$_PaymentReconciliationDetail) _then)
-      : super(_value, (v) => _then(v as _$_PaymentReconciliationDetail));
+      : super(_value, _then);
 
-  @override
-  _$_PaymentReconciliationDetail get _value =>
-      super._value as _$_PaymentReconciliationDetail;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3087,7 +3145,7 @@ class __$$_PaymentReconciliationDetailCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
     Object? predecessor = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? request = freezed,
     Object? submitter = freezed,
     Object? response = freezed,
@@ -3098,59 +3156,59 @@ class __$$_PaymentReconciliationDetailCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_$_PaymentReconciliationDetail(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      predecessor: predecessor == freezed
+      predecessor: freezed == predecessor
           ? _value.predecessor
           : predecessor // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      request: request == freezed
+      request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      submitter: submitter == freezed
+      submitter: freezed == submitter
           ? _value.submitter
           : submitter // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      response: response == freezed
+      response: freezed == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as Date?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      responsible: responsible == freezed
+      responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      payee: payee == freezed
+      payee: freezed == payee
           ? _value.payee
           : payee // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      amount: amount == freezed
+      amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as Money?,
@@ -3309,49 +3367,52 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PaymentReconciliationDetail &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality()
-                .equals(other.predecessor, predecessor) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.request, request) &&
-            const DeepCollectionEquality().equals(other.submitter, submitter) &&
-            const DeepCollectionEquality().equals(other.response, response) &&
-            const DeepCollectionEquality().equals(other.date, date) &&
-            const DeepCollectionEquality()
-                .equals(other.dateElement, dateElement) &&
-            const DeepCollectionEquality()
-                .equals(other.responsible, responsible) &&
-            const DeepCollectionEquality().equals(other.payee, payee) &&
-            const DeepCollectionEquality().equals(other.amount, amount));
+            (identical(other.identifier, identifier) ||
+                other.identifier == identifier) &&
+            (identical(other.predecessor, predecessor) ||
+                other.predecessor == predecessor) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.request, request) || other.request == request) &&
+            (identical(other.submitter, submitter) ||
+                other.submitter == submitter) &&
+            (identical(other.response, response) ||
+                other.response == response) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.dateElement, dateElement) ||
+                other.dateElement == dateElement) &&
+            (identical(other.responsible, responsible) ||
+                other.responsible == responsible) &&
+            (identical(other.payee, payee) || other.payee == payee) &&
+            (identical(other.amount, amount) || other.amount == amount));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(identifier),
-      const DeepCollectionEquality().hash(predecessor),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(request),
-      const DeepCollectionEquality().hash(submitter),
-      const DeepCollectionEquality().hash(response),
-      const DeepCollectionEquality().hash(date),
-      const DeepCollectionEquality().hash(dateElement),
-      const DeepCollectionEquality().hash(responsible),
-      const DeepCollectionEquality().hash(payee),
-      const DeepCollectionEquality().hash(amount));
+      identifier,
+      predecessor,
+      type,
+      request,
+      submitter,
+      response,
+      date,
+      dateElement,
+      responsible,
+      payee,
+      amount);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PaymentReconciliationDetailCopyWith<_$_PaymentReconciliationDetail>
       get copyWith => __$$_PaymentReconciliationDetailCopyWithImpl<
           _$_PaymentReconciliationDetail>(this, _$identity);
@@ -3536,7 +3597,9 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
   factory $PaymentReconciliationProcessNoteCopyWith(
           PaymentReconciliationProcessNote value,
           $Res Function(PaymentReconciliationProcessNote) then) =
-      _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>;
+      _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
+          PaymentReconciliationProcessNote>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3551,14 +3614,17 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
+class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
+        $Val extends PaymentReconciliationProcessNote>
     implements $PaymentReconciliationProcessNoteCopyWith<$Res> {
   _$PaymentReconciliationProcessNoteCopyWithImpl(this._value, this._then);
 
-  final PaymentReconciliationProcessNote _value;
   // ignore: unused_field
-  final $Res Function(PaymentReconciliationProcessNote) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3570,56 +3636,58 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
     Object? textElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      textElement: textElement == freezed
+      textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get textElement {
     if (_value.textElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.textElement!, (value) {
-      return _then(_value.copyWith(textElement: value));
+      return _then(_value.copyWith(textElement: value) as $Val);
     });
   }
 }
@@ -3632,6 +3700,7 @@ abstract class _$$_PaymentReconciliationProcessNoteCopyWith<$Res>
           $Res Function(_$_PaymentReconciliationProcessNote) then) =
       __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3649,17 +3718,15 @@ abstract class _$$_PaymentReconciliationProcessNoteCopyWith<$Res>
 
 /// @nodoc
 class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
-    extends _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
+    extends _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
+        _$_PaymentReconciliationProcessNote>
     implements _$$_PaymentReconciliationProcessNoteCopyWith<$Res> {
   __$$_PaymentReconciliationProcessNoteCopyWithImpl(
       _$_PaymentReconciliationProcessNote _value,
       $Res Function(_$_PaymentReconciliationProcessNote) _then)
-      : super(_value, (v) => _then(v as _$_PaymentReconciliationProcessNote));
+      : super(_value, _then);
 
-  @override
-  _$_PaymentReconciliationProcessNote get _value =>
-      super._value as _$_PaymentReconciliationProcessNote;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3671,31 +3738,31 @@ class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
     Object? textElement = freezed,
   }) {
     return _then(_$_PaymentReconciliationProcessNote(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      textElement: textElement == freezed
+      textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -3815,33 +3882,34 @@ class _$_PaymentReconciliationProcessNote
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PaymentReconciliationProcessNote &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.typeElement, typeElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality()
-                .equals(other.textElement, textElement));
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.typeElement, typeElement) ||
+                other.typeElement == typeElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.textElement, textElement) ||
+                other.textElement == textElement));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(typeElement),
-      const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(textElement));
+      type,
+      typeElement,
+      text,
+      textElement);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PaymentReconciliationProcessNoteCopyWith<
           _$_PaymentReconciliationProcessNote>
       get copyWith => __$$_PaymentReconciliationProcessNoteCopyWithImpl<

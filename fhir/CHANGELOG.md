@@ -1,5 +1,9 @@
 # fhir
 
+## [0.9.2]
+
+* Updated dependencies
+
 ## [0.9.1]
 
 * Tried to add a lot more comments to individual fields (partly for pub.dev points and partly for ease of use)
