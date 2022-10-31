@@ -112,14 +112,14 @@ packages:
       name: fhir
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.1"
+    version: "0.9.2"
   fhir_db:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.9.1"
+    version: "0.9.2"
   file:
     dependency: transitive
     description:
@@ -138,7 +138,7 @@ packages:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.2.0"
   frontend_server_client:
     dependency: transitive
     description:
