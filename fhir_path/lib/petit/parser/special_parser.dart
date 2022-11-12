@@ -1,7 +1,6 @@
 // ignore_for_file: annotate_overrides, overridden_fields
 
 // Package imports:
-import 'package:collection/collection.dart';
 
 // Project imports:
 import '../petit_fhir_path.dart';
@@ -14,8 +13,12 @@ class BracketsIndexParser extends ValueParser<int> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      results.isEmpty || value > results.length - 1 ? [] : [results[value]];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(
+          results: results.isEmpty || value > results.length - 1
+              ? []
+              : [results[value]]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -51,8 +54,9 @@ class IndexParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      [IterationContext.current(passed).indexValue];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [IterationContext.current(passed).indexValue]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -120,8 +124,9 @@ class ThisParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      [IterationContext.current(passed).thisValue];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [IterationContext.current(passed).thisValue]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -147,8 +152,9 @@ class TotalParser extends ValueParser<String> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      IterationContext.current(passed).totalValue;
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: IterationContext.current(passed).totalValue);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -188,7 +194,8 @@ class AggregateParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final finalTotal =
         IterationContext.withIterationContext((iterationContext) {
       List<dynamic> currentTotal = [];
@@ -198,7 +205,7 @@ class AggregateParser extends ValueParser<ParserList> {
       if (value.value.first is CommaParser) {
         initialValue = (value.value.first as CommaParser)
             .after
-            .execute(results.toList(), passed);
+            .execute(results.copyWith(), passed);
         expression = (value.value.first as CommaParser).before;
       } else {
         initialValue = [];
@@ -209,14 +216,15 @@ class AggregateParser extends ValueParser<ParserList> {
       results.forEachIndexed((i, r) {
         iterationContext.indexValue = i;
         iterationContext.thisValue = r;
-        iterationContext.totalValue = expression.execute([r], passed);
+        iterationContext.totalValue =
+            expression.execute(results.copyWith(results: [r]), passed).results;
         currentTotal = iterationContext.totalValue;
       });
 
       return currentTotal;
     }, passed);
 
-    return finalTotal;
+    return results.copyWith(results: finalTotal);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -252,7 +260,9 @@ class EmptySetParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.empty();
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -278,7 +288,9 @@ class DotParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => results;
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results;
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in

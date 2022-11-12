@@ -1,7 +1,6 @@
 // ignore_for_file: annotate_overrides, overridden_fields, avoid_function_literals_in_foreach_calls
 
 // Package imports:
-import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
@@ -18,14 +17,16 @@ class FpWhereParser extends FunctionParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final returnList =
         IterationContext.withIterationContext((iterationContext) {
       final iterationResult = [];
       results.forEachIndexed((i, element) {
         iterationContext.indexValue = i;
         iterationContext.thisValue = element;
-        final newResult = value.execute([element], passed);
+        final newResult =
+            value.execute(results.copyWith(results: [element]), passed);
         if (newResult.isNotEmpty) {
           if (!(newResult.length == 1 && newResult.first == false)) {
             iterationResult.add(element);
@@ -36,7 +37,7 @@ class FpWhereParser extends FunctionParser {
       return iterationResult;
     }, passed);
 
-    return returnList;
+    return results.copyWith(results: returnList);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -67,16 +68,19 @@ class SelectParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    return IterationContext.withIterationContext((iterationContext) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    return results.copyWith(
+        results: IterationContext.withIterationContext((iterationContext) {
       final outputCollection = [];
       results.forEachIndexed((i, e) {
         iterationContext.thisValue = e;
         iterationContext.indexValue = i;
-        outputCollection.addAll(value.execute([e], passed));
+        outputCollection.addAll(
+            value.execute(results.copyWith(results: [e]), passed).results);
       });
       return outputCollection;
-    }, passed);
+    }, passed));
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -106,10 +110,11 @@ class RepeatParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final finalResults = [];
     results.forEach((r) {
-      value.execute([r], passed).forEach((e) {
+      value.execute(results.copyWith(results: [r]), passed).forEach((e) {
         if (notFoundInList(finalResults, e)) {
           finalResults.add(e);
         }
@@ -117,17 +122,17 @@ class RepeatParser extends ValueParser<ParserList> {
     });
     var len = -1;
     while (len != finalResults.length) {
-      results = finalResults.toList();
+      results = results.copyWith(results: finalResults);
       len = finalResults.length;
       results.forEach((r) {
-        value.execute([r], passed).forEach((e) {
+        value.execute(results.copyWith(results: [r]), passed).forEach((e) {
           if (notFoundInList(finalResults, e)) {
             finalResults.add(e);
           }
         });
       });
     }
-    return finalResults;
+    return results.copyWith(results: finalResults);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -158,10 +163,11 @@ class OfTypeParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final executedValue = value.length == 1 && value.first is IdentifierParser
-        ? [value.first]
-        : value.execute(results.toList(), passed);
+        ? results.copyWith(results: [value.first])
+        : value.execute(results.copyWith(), passed);
     if (executedValue.length != 1) {
       throw FhirPathEvaluationException(
         'The "ofType" function requires an argument that '
@@ -213,7 +219,7 @@ class OfTypeParser extends ValueParser<ParserList> {
         finalResults.add(e);
       }
     });
-    return finalResults;
+    return results.copyWith(results: finalResults);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -247,14 +253,15 @@ class ExtensionParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [];
+      return results.empty();
     }
 
-    final extensionUrl = value.execute(results.toList(), passed).firstOrNull;
+    final extensionUrl = value.execute(results.copyWith(), passed).firstOrNull;
     if (extensionUrl == null) {
-      return [];
+      return results.empty();
     }
 
     // .extension(exturl) is short-hand for .extension.where(url='exturl')
@@ -269,7 +276,7 @@ class ExtensionParser extends ValueParser<ParserList> {
     final extensionParsers =
         ParserList([IdentifierParser('extension'), whereParser]);
 
-    return extensionParsers.execute(results.toList(), passed);
+    return extensionParsers.execute(results.copyWith(), passed);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

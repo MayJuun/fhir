@@ -14,7 +14,8 @@ class AsFunctionParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     throw FhirPathDeprecatedExpressionException(
         'The FHIRPath expression that was supplied includes "as(type : type specifier)" '
         ' which has been deprecated. Please instead use the "as type specifer". '
@@ -53,7 +54,8 @@ class IsFunctionParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     throw FhirPathDeprecatedExpressionException(
         'The FHIRPath expression that was supplied includes "is(type : type specifier)" '
         ' which has been deprecated. Please instead use the "is type specifer". '

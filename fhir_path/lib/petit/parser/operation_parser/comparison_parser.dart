@@ -14,8 +14,11 @@ class GreaterParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      executeComparisons(results, before, after, passed, Comparator.gt);
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(
+          results: executeComparisons(
+              results, before, after, passed, Comparator.gt));
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -47,8 +50,11 @@ class LessParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      executeComparisons(results, before, after, passed, Comparator.lt);
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(
+          results: executeComparisons(
+              results, before, after, passed, Comparator.lt));
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -80,8 +86,11 @@ class GreaterEqualParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    return executeComparisons(results, before, after, passed, Comparator.gte);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    return results.copyWith(
+        results:
+            executeComparisons(results, before, after, passed, Comparator.gte));
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -114,8 +123,11 @@ class LessEqualParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      executeComparisons(results, before, after, passed, Comparator.lte);
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(
+          results: executeComparisons(
+              results, before, after, passed, Comparator.lte));
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -143,8 +155,8 @@ enum Comparator { gt, gte, lt, lte }
 
 /// Todo: review if appropriately comparing different types
 @override
-List executeComparisons(List results, ParserList before, ParserList after,
-    Map<String, dynamic> passed, Comparator comparator,
+List executeComparisons(FhirPathResults results, ParserList before,
+    ParserList after, Map<String, dynamic> passed, Comparator comparator,
     {bool where = false}) {
   // todo: Currently, this is going to assume that if a String is being compared
   // with a Date, DateTime, or Time, and the String is a valid format of a Time
@@ -306,12 +318,12 @@ List executeComparisons(List results, ParserList before, ParserList after,
   }
 
   final lhs = SingletonEvaluation.toSingleton(
-      before.execute(results.toList(), passed),
+      before.execute(results.copyWith(), passed),
       name: 'left-hand side',
       operation: comparator.toString(),
       collection: results);
   final rhs = SingletonEvaluation.toSingleton(
-      after.execute(results.toList(), passed),
+      after.execute(results.copyWith(), passed),
       name: 'right-hand side',
       operation: comparator.toString(),
       collection: results);
@@ -344,7 +356,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
     } else if (where) {
       results.retainWhere((element) =>
           compare(comparator, element[lhs.first], rhs.first) ?? false);
-      return results;
+      return results.results;
     } else {
       final newResult = compare(comparator, lhs.first, rhs.first);
       return newResult == null ? [] : [newResult];

@@ -14,14 +14,15 @@ class EqualsParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final lhs = before.execute(results.toList(), passed);
-    final rhs = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final lhs = before.execute(results.copyWith(), passed);
+    final rhs = after.execute(results.copyWith(), passed);
 
     if (lhs.isEmpty || rhs.isEmpty) {
-      return [];
+      return results.empty();
     } else if (lhs.length != rhs.length) {
-      return [false];
+      return results.falseValue();
     } else {
       /// for each entry in lhs and rhs (we checked above to ensure they
       /// were the same length)
@@ -54,17 +55,17 @@ class EqualsParser extends OperatorParser {
                 rhsTimePrecision = rhsTimePrecision > 2 ? 2 : rhsTimePrecision;
                 if (lhsDatePrecision != rhsDatePrecision ||
                     lhsTimePrecision != rhsTimePrecision) {
-                  return <dynamic>[];
+                  return results.empty();
                 } else {
-                  return <dynamic>[false];
+                  return results.falseValue();
                 }
               }
             } catch (e) {
-              return <dynamic>[];
+              return results.empty();
             }
           } else {
             /// If not it means only one is, so this is false
-            return <dynamic>[false];
+            return results.falseValue();
           }
         }
 
@@ -72,17 +73,17 @@ class EqualsParser extends OperatorParser {
         else {
           if (lhs[i] is FhirPathQuantity || rhs[i] is FhirPathQuantity) {
             if (lhs[i] is FhirPathQuantity) {
-              return <dynamic>[lhs[i] == rhs[i]];
+              return results.copyWith(results: [lhs[i] == rhs[i]]);
             } else {
-              return <dynamic>[rhs[i] == lhs[i]];
+              return results.copyWith(results: [rhs[i] == lhs[i]]);
             }
           }
           if (lhs[i] != rhs[i] || rhs[i] != lhs[i]) {
-            return <dynamic>[false];
+            return results.falseValue();
           }
         }
       }
-      return [true];
+      return results.trueValue();
     }
   }
 
@@ -122,17 +123,18 @@ class EquivalentParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
     if (executedBefore.isEmpty) {
       if (executedAfter.isEmpty) {
-        return [true];
+        return results.trueValue();
       } else {
-        return [false];
+        return results.falseValue();
       }
     } else if (executedBefore.length != executedAfter.length) {
-      return [false];
+      return results.falseValue();
     } else {
       executedBefore.removeWhere((lhsElement) =>
           executedAfter.indexWhere((rhsElement) {
@@ -189,7 +191,7 @@ class EquivalentParser extends OperatorParser {
             }
           }) !=
           -1);
-      return [executedBefore.isEmpty];
+      return results.copyWith(results: [executedBefore.isEmpty]);
     }
   }
 
@@ -224,7 +226,8 @@ class NotEqualsParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final equalsParser = EqualsParser();
     equalsParser.before = this.before;
     equalsParser.after = this.after;
@@ -260,7 +263,8 @@ class NotEquivalentParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final equivalentParser = EquivalentParser();
     equivalentParser.before = this.before;
     equivalentParser.after = this.after;

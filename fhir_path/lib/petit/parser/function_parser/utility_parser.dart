@@ -12,10 +12,11 @@ class FpNotParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final input = SingletonEvaluation.toBool(results,
         name: 'input for .not()', operation: 'not()', collection: results);
-    return input != null ? [!input] : [];
+    return results.copyWith(results: input != null ? [!input] : []);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -42,8 +43,9 @@ class NowParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      [FhirDateTime(DateTime.now())];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [FhirDateTime(DateTime.now())]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -69,8 +71,11 @@ class TimeOfDayParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      [Time(DateTime.now().toIso8601String().split('T').last.substring(0, 12))];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [
+        Time(DateTime.now().toIso8601String().split('T').last.substring(0, 12))
+      ]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -96,8 +101,10 @@ class TodayParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      [Date(DateTime.now().toIso8601String().split('T').first)];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(
+          results: [Date(DateTime.now().toIso8601String().split('T').first)]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -124,7 +131,9 @@ class TraceParser extends ValueParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => results;
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results;
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in

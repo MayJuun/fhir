@@ -169,7 +169,9 @@ List<dynamic> executeFhirPath({
     if (parsedFhirPath.isEmpty) {
       return [];
     } else {
-      return parsedFhirPath.execute([context], passedEnvironment);
+      return parsedFhirPath
+          .execute(FhirPathResults([context], ''), passedEnvironment)
+          .results;
     }
   } catch (error) {
     if (error is FhirPathException) {

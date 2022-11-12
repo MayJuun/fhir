@@ -1,10 +1,14 @@
 // ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_function_literals_in_foreach_calls
 
+import '../../../fhir_path.dart';
+
 /// FhirPathParser: base parser
 abstract class FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
-  List execute(List results, Map<String, dynamic> passed) => [];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: []);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -30,7 +34,7 @@ abstract class ValueParser<T> extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed);
+  FhirPathResults execute(FhirPathResults results, Map<String, dynamic> passed);
   @override
   String toString();
 }
@@ -44,7 +48,7 @@ abstract class OperatorParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed);
+  FhirPathResults execute(FhirPathResults results, Map<String, dynamic> passed);
 
   @override
   String toString();
@@ -64,7 +68,8 @@ class ParserList extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     void addToList(List toAdd) => results
       ..clear()
       ..addAll(toAdd);

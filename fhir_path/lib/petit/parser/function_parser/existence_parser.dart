@@ -1,8 +1,5 @@
 // ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls
 
-// Package imports:
-import 'package:collection/collection.dart';
-
 // Project imports:
 import '../../petit_fhir_path.dart';
 
@@ -13,8 +10,9 @@ class EmptyParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
-      results.isEmpty ? [true] : [false];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: results.isEmpty ? [true] : [false]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -41,16 +39,17 @@ class HasValueParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     // Returns true if the input collection contains a single value which is a FHIR primitive,...
     if (results.length != 1) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
 
     final element = results.first;
 
     if (element == null) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
 
     // ...and it has a primitive value
@@ -58,13 +57,13 @@ class HasValueParser extends FhirPathParser {
 
     if (element is Map<String, dynamic>) {
       // element is a Map, most likely an answer. Introspect further...
-      return [
+      return results.copyWith(results: [
         element.entries.any((mapEntry) =>
             mapEntry.key.startsWith('value') && mapEntry.value != null)
-      ];
+      ]);
     } else {
       // element is a Dart primitive
-      return [true];
+      return results.copyWith(results: [true]);
     }
   }
 
@@ -103,14 +102,16 @@ class ExistsParser extends FunctionParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final returnList =
         IterationContext.withIterationContext((iterationContext) {
       final iterationResult = [];
       results.forEachIndexed((i, element) {
         iterationContext.indexValue = i;
         iterationContext.thisValue = element;
-        final newResult = value.execute([element], passed);
+        final newResult =
+            value.execute(results.copyWith(results: [element]), passed);
         if (newResult.isNotEmpty) {
           if (!(newResult.length == 1 && newResult.first == false)) {
             iterationResult.add(element);
@@ -120,7 +121,7 @@ class ExistsParser extends FunctionParser {
       return iterationResult;
     }, passed);
 
-    return [returnList.isNotEmpty];
+    return results.copyWith(results: [returnList.isNotEmpty]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -151,16 +152,19 @@ class AllParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [true];
+      return results.copyWith(results: [true]);
     }
-    return IterationContext.withIterationContext((iterationContext) {
+    return results.copyWith(
+        results: IterationContext.withIterationContext((iterationContext) {
       bool allResult = true;
       results.forEachIndexed((i, r) {
         iterationContext.thisValue = r;
         iterationContext.indexValue = i;
-        final executedValue = value.execute([r], passed);
+        final executedValue =
+            value.execute(results.copyWith(results: [r]), passed);
         if (SingletonEvaluation.toBool(executedValue,
                 name: 'expression in all()', operation: 'all') !=
             true) {
@@ -169,7 +173,7 @@ class AllParser extends ValueParser<ParserList> {
         }
       });
       return [allResult];
-    }, passed);
+    }, passed));
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -205,12 +209,13 @@ class AllTrueParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [true];
+      return results.copyWith(results: [true]);
     }
     results.removeWhere((element) => element == true);
-    return [results.isEmpty];
+    return results.copyWith(results: [results.isEmpty]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -239,12 +244,13 @@ class AnyTrueParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
     results.retainWhere((element) => element == true);
-    return [results.isNotEmpty];
+    return results.copyWith(results: [results.isNotEmpty]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -273,12 +279,13 @@ class AllFalseParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [true];
+      return results.copyWith(results: [true]);
     }
     results.removeWhere((element) => element == false);
-    return [results.isEmpty];
+    return results.copyWith(results: [results.isEmpty]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -307,12 +314,13 @@ class AnyFalseParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
     results.retainWhere((element) => element == false);
-    return [results.isNotEmpty];
+    return results.copyWith(results: [results.isNotEmpty]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -340,17 +348,18 @@ class SubsetOfParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [true];
+      return results.copyWith(results: [true]);
     } else {
-      final executedValue = value.execute(results.toList(), passed);
-      for (final r in results) {
-        if (notFoundInList(executedValue, r)) {
-          return [false];
+      final executedValue = value.execute(results.copyWith(), passed);
+      for (final r in results.results) {
+        if (notFoundInList(executedValue.results, r)) {
+          return results.copyWith(results: [false]);
         }
       }
-      return [true];
+      return results.copyWith(results: [true]);
     }
   }
 
@@ -377,22 +386,24 @@ class SubsetOfParser extends ValueParser<ParserList> {
 
 class SupersetOfParser extends FhirPathParser {
   SupersetOfParser();
-  dynamic value;
+  FhirPathParser? value;
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
-      return [false];
+      return results.copyWith(results: [false]);
     } else {
-      final executedValue = value.execute(results.toList(), passed);
-      for (final v in executedValue) {
-        if (notFoundInList(results, v)) {
-          return [false];
+      final FhirPathResults? executedValue =
+          value?.execute(results.copyWith(), passed);
+      for (final v in executedValue?.results ?? []) {
+        if (notFoundInList(results.results, v)) {
+          return results.copyWith(results: [false]);
         }
       }
-      return [true];
+      return results.copyWith(results: [true]);
     }
   }
 
@@ -405,7 +416,7 @@ class SupersetOfParser extends FhirPathParser {
   /// that you use [prettyPrint] instead
   @override
   String verbosePrint(int indent) =>
-      '${"  " * indent}SupersetOfParser\n${value.verbosePrint(indent + 1)}';
+      '${"  " * indent}SupersetOfParser\n${value?.verbosePrint(indent + 1)}';
 
   /// Uses a rough approximation of reverse polish notation to render the
   /// parsed value of a FHIRPath in a more human readable way than
@@ -413,7 +424,7 @@ class SupersetOfParser extends FhirPathParser {
   /// and nested according to this package
   @override
   String prettyPrint([int indent = 2]) =>
-      '.supersetOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '.supersetOf(\n${"  " * indent}${value?.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
@@ -423,7 +434,9 @@ class CountParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [results.length];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [results.length]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -449,14 +462,15 @@ class DistinctParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final resultsList = [];
-    for (final r in results) {
+    for (final r in results.results) {
       if (notFoundInList(resultsList, r)) {
         resultsList.add(r);
       }
     }
-    return resultsList;
+    return results.copyWith(results: resultsList);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -483,14 +497,15 @@ class IsDistinctParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final resultsList = [];
-    for (final r in results) {
+    for (final r in results.results) {
       if (notFoundInList(resultsList, r)) {
         resultsList.add(r);
       }
     }
-    return [resultsList.length == results.length];
+    return results.copyWith(results: [resultsList.length == results.length]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

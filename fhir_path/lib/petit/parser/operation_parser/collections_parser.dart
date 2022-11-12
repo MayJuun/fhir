@@ -11,11 +11,12 @@ class UnionOperatorParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
     executedBefore.forEach((e) {
-      if (notFoundInList(executedAfter, e)) {
+      if (notFoundInList(executedAfter.results, e)) {
         executedAfter.add(e);
       }
     });
@@ -54,16 +55,17 @@ class ContainsOperatorParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final leftOperand = before.execute(results.toList(), passed);
-    final rightOperand = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final leftOperand = before.execute(results.copyWith(), passed);
+    final rightOperand = after.execute(results.copyWith(), passed);
 
     if (leftOperand.isEmpty) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
 
     if (rightOperand.isEmpty) {
-      return [];
+      return results.empty();
     }
 
     if (rightOperand.length > 1) {
@@ -75,11 +77,11 @@ class ContainsOperatorParser extends OperatorParser {
 
     final rightItem = rightOperand.first.toString();
 
-    return [
+    return results.copyWith(results: [
       leftOperand.firstWhere((leftItem) => leftItem.toString() == rightItem,
               orElse: () => null) !=
           null
-    ];
+    ]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -114,12 +116,13 @@ class InParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     if (executedBefore.isEmpty) {
-      return (executedAfter.isEmpty) ? [] : [false];
+      return results.copyWith(results: (executedAfter.isEmpty) ? [] : [false]);
     }
 
     if (executedBefore.length > 1) {
@@ -130,11 +133,11 @@ class InParser extends OperatorParser {
     }
 
     final leftItem = executedBefore.first.toString();
-    return [
+    return results.copyWith(results: [
       executedAfter.firstWhere((rightItem) => rightItem.toString() == leftItem,
               orElse: () => null) !=
           null
-    ];
+    ]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -168,9 +171,10 @@ class CommaParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final beforeResults = results.toList();
-    final afterResults = results.toList();
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final beforeResults = results.copyWith();
+    final afterResults = results.copyWith();
     final beforeList = before.execute(beforeResults, passed);
     final afterList = after.execute(afterResults, passed);
 
@@ -178,16 +182,16 @@ class CommaParser extends OperatorParser {
     if (beforeList.isEmpty) {
       outcome.add([]);
     } else {
-      outcome.addAll(beforeList);
+      outcome.addAll(beforeList.results);
     }
 
     if (afterList.isEmpty) {
       outcome.add([]);
     } else {
-      outcome.addAll(afterList);
+      outcome.addAll(afterList.results);
     }
 
-    return outcome;
+    return results.copyWith(results: outcome);
   }
 
   @override

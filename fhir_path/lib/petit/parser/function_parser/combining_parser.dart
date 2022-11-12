@@ -14,13 +14,14 @@ class UnionFunctionParser extends FunctionParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedValue = value.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedValue = value.execute(results.copyWith(), passed);
     final finalResults = [];
     finalResults
       ..addAll(results.where((r) => notFoundInList(finalResults, r)))
       ..addAll(executedValue.where((v) => notFoundInList(finalResults, v)));
-    return finalResults;
+    return results.copyWith(results: finalResults);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -56,12 +57,13 @@ class CombineParser extends FunctionParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (value.isEmpty) {
       return results;
     } else {
-      final executedValue = value.execute(results.toList(), passed);
-      executedValue.addAll(results);
+      final executedValue = value.execute(results.copyWith(), passed);
+      executedValue.addAll(results.results);
       return executedValue;
     }
   }

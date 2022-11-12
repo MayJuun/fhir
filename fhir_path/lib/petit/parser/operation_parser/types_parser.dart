@@ -18,11 +18,12 @@ class IsParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
     final executedAfter = after.length == 1 && after.first is IdentifierParser
-        ? [(after.first as IdentifierParser).value]
-        : after.execute(results.toList(), passed);
+        ? results.copyWith(results: [(after.first as IdentifierParser).value])
+        : after.execute(results.copyWith(), passed);
 
     return executedBefore.isEmpty ||
             executedBefore.length != 1 ||
@@ -47,24 +48,24 @@ class IsParser extends OperatorParser {
                                 .contains(executedAfter.first)) &&
                 executedBefore.first is Map &&
                 executedBefore.first['resourceType'] == executedAfter.first
-            ? [true]
+            ? results.trueValue()
             : executedAfter.first == 'String'
-                ? [executedBefore.first is String]
+                ? results.copyWith(results: [executedBefore.first is String])
                 : executedAfter.first == 'Boolean'
-                    ? [
+                    ? results.copyWith(results: [
                         executedBefore.first is bool ||
                             executedBefore.first is Boolean
-                      ]
+                      ])
                     : executedAfter.first == 'Integer'
-                        ? [
+                        ? results.copyWith(results: [
                             (executedBefore.first is int ||
                                     executedBefore.first is Integer) &&
 
                                 /// This is because of transpilation to javascript
                                 !executedBefore.first.toString().contains('.')
-                          ]
+                          ])
                         : executedAfter.first == 'Decimal'
-                            ? [
+                            ? results.copyWith(results: [
                                 (executedBefore.first is double ||
                                         executedBefore.first is Decimal) &&
 
@@ -72,19 +73,21 @@ class IsParser extends OperatorParser {
                                     executedBefore.first
                                         .toString()
                                         .contains('.')
-                              ]
+                              ])
                             : executedAfter.first == 'Date'
-                                ? [executedBefore.first is Date]
+                                ? results.copyWith(
+                                    results: [executedBefore.first is Date])
                                 : executedAfter.first == 'DateTime'
-                                    ? [
+                                    ? results.copyWith(results: [
                                         executedBefore.first is DateTime ||
                                             executedBefore.first is FhirDateTime
-                                      ]
+                                      ])
                                     : executedAfter.first == 'Time'
-                                        ? [executedBefore.first is Time]
+                                        ? results.copyWith(
+                                            results: [executedBefore.first is Time])
                                         : executedAfter.first == 'Quantity'
-                                            ? [isQuantity(executedBefore.first)]
-                                            : [false];
+                                            ? results.copyWith(results: [isQuantity(executedBefore.first)])
+                                            : results.falseValue();
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -118,8 +121,9 @@ class AsParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
     if (executedBefore.length != 1) {
       throw FhirPathEvaluationException(
           'The "as" operation requires a left operand with 1 item, '
@@ -177,9 +181,9 @@ class AsParser extends OperatorParser {
       final polymorphicString = 'value$identifierValue';
       final polymorphicIdentifier = IdentifierParser(polymorphicString);
       final polymorphicParserList = ParserList([polymorphicIdentifier]);
-      return polymorphicParserList.execute(results.toList(), passed);
+      return polymorphicParserList.execute(results.copyWith(), passed);
     }
-    return [];
+    return results.empty();
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

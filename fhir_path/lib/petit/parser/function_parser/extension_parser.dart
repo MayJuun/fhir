@@ -12,7 +12,9 @@ class SumParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [
         results
             .map((e) => e is num
                 ? e
@@ -22,7 +24,7 @@ class SumParser extends FhirPathParser {
                     arguments: e,
                     collection: results))
             .sum
-      ];
+      ]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -48,7 +50,9 @@ class MinParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [
         results
             .map((e) => e is num
                 ? e
@@ -58,7 +62,7 @@ class MinParser extends FhirPathParser {
                     arguments: e,
                     collection: results))
             .min
-      ];
+      ]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -84,7 +88,9 @@ class MaxParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [
         results
             .map((e) => e is num
                 ? e
@@ -94,7 +100,7 @@ class MaxParser extends FhirPathParser {
                     arguments: e,
                     collection: results))
             .max
-      ];
+      ]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -120,7 +126,9 @@ class AvgParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [
         results
             .map((e) => e is num
                 ? e
@@ -130,7 +138,7 @@ class AvgParser extends FhirPathParser {
                     arguments: e,
                     collection: results))
             .average
-      ];
+      ]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -156,7 +164,8 @@ class AnswersParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final descendants = DescendantsParser().execute(results, passed);
     final answerMaps = descendants.where((element) =>
         (element is Map<String, dynamic>) && element.containsKey('answer'));
@@ -164,7 +173,7 @@ class AnswersParser extends FhirPathParser {
     answerMaps.forEach((element) {
       answers.addAll((element as Map<String, dynamic>)['answer'] as Iterable);
     });
-    return answers;
+    return results.copyWith(results: answers);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -191,7 +200,8 @@ class OrdinalParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final newResults = [];
 
     List checkForOrdinalValues(List list) {
@@ -240,9 +250,9 @@ class OrdinalParser extends FhirPathParser {
       return tempResults;
     }
 
-    newResults.addAll(checkForOrdinalValues(results));
+    newResults.addAll(checkForOrdinalValues(results.results));
 
-    for (final result in results) {
+    for (final result in results.results) {
       if (result is! Map) {
         break;
       }
@@ -258,7 +268,7 @@ class OrdinalParser extends FhirPathParser {
       });
     }
 
-    return newResults;
+    return results.copyWith(results: newResults);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

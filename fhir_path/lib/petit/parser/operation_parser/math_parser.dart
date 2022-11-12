@@ -15,24 +15,25 @@ class UnaryNegateParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     if (executedAfter.isEmpty) {
-      return [];
+      return results.empty();
     }
     if (executedAfter.length != 1) {
       throw FhirPathInvalidExpressionException(
           'Unary negate needs to be applied on a single item. Found instead: $executedAfter');
     }
     if (executedAfter.first is num) {
-      return [-(executedAfter.first as num)];
+      return results.copyWith(results: [-(executedAfter.first as num)]);
     }
     if (executedAfter.first is FhirPathQuantity) {
-      return [
+      return results.copyWith(results: [
         FhirPathQuantity(-(executedAfter.first as FhirPathQuantity).amount,
             (executedAfter.first as FhirPathQuantity).unit)
-      ];
+      ]);
     } else {
       throw FhirPathInvalidExpressionException(
           'Unary negate needs to be followed by an integer, a decimal, or a quantity. Found instead: ${executedAfter.first}');
@@ -69,8 +70,9 @@ class UnaryPlusParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     return executedAfter;
   }
@@ -104,11 +106,12 @@ class StarParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
-      return [];
+      return results.empty();
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
       throw FhirPathEvaluationException(
           'Math Operators require each operand to result in a '
@@ -118,13 +121,15 @@ class StarParser extends OperatorParser {
           operation: '*',
           collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
-      return [(executedBefore.first as num) * (executedAfter.first as num)];
+      return results.copyWith(results: [
+        (executedBefore.first as num) * (executedAfter.first as num)
+      ]);
     } else if (executedBefore.first is FhirPathQuantity &&
         executedAfter.first is FhirPathQuantity) {
-      return [
+      return results.copyWith(results: [
         (executedBefore.first as FhirPathQuantity) *
             (executedAfter.first as FhirPathQuantity)
-      ];
+      ]);
     } else {
       throw FhirPathEvaluationException(
           'The "*" operator only accepts Integers, Decimals and '
@@ -170,11 +175,12 @@ class DivSignParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
-      return [];
+      return results.empty();
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
       throw FhirPathEvaluationException(
           'Math Operators require each operand to result in a '
@@ -185,16 +191,17 @@ class DivSignParser extends OperatorParser {
           collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return (executedAfter.first != 0)
-          ? [executedBefore.first / executedAfter.first]
-          : [];
+          ? results
+              .copyWith(results: [executedBefore.first / executedAfter.first])
+          : results.empty();
     } else if (executedBefore.first is FhirPathQuantity &&
         executedAfter.first is FhirPathQuantity) {
       return ((executedAfter.first as FhirPathQuantity).amount != 0)
-          ? [
+          ? results.copyWith(results: [
               (executedBefore.first as FhirPathQuantity) /
                   (executedAfter.first as FhirPathQuantity)
-            ]
-          : [];
+            ])
+          : results.empty();
     } else {
       throw FhirPathEvaluationException(
           'The "/" operator only accepts Integers, Decimals and '
@@ -236,11 +243,12 @@ class DivStringParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
-      return [];
+      return results.empty();
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
       throw FhirPathEvaluationException(
           'Math Operators require each operand to result in a '
@@ -251,8 +259,9 @@ class DivStringParser extends OperatorParser {
           collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return (executedAfter.first != 0)
-          ? [executedBefore.first ~/ executedAfter.first]
-          : [];
+          ? results
+              .copyWith(results: [executedBefore.first ~/ executedAfter.first])
+          : results.empty();
     } else {
       throw FhirPathEvaluationException(
           'The "div" operator only accepts Integers, and Decimals, '
@@ -294,11 +303,12 @@ class ModParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
-      return [];
+      return results.empty();
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
       throw FhirPathEvaluationException(
           'Math Operators require each operand to result in a '
@@ -308,15 +318,16 @@ class ModParser extends OperatorParser {
           operation: 'mod',
           collection: results);
     } else if (executedAfter.first is num && executedAfter.first == 0) {
-      return [];
+      return results.empty();
     } else if (executedBefore.first is num && executedAfter.first is num) {
-      return [executedBefore.first % executedAfter.first];
+      return results
+          .copyWith(results: [executedBefore.first % executedAfter.first]);
     } else if (executedBefore.first is FhirPathQuantity &&
         executedAfter.first is FhirPathQuantity) {
-      return [
+      return results.copyWith(results: [
         (executedBefore.first as FhirPathQuantity) %
             (executedAfter.first as FhirPathQuantity)
-      ];
+      ]);
     } else {
       throw FhirPathEvaluationException(
           'The "mod" operator only accepts Integers, Decimals and '
@@ -358,11 +369,15 @@ class PlusParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    print(executedBefore);
+    final executedAfter = after.execute(results.copyWith(), passed);
+    print(executedBefore);
+    print(executedAfter);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
-      return [];
+      return results.empty();
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
       throw FhirPathEvaluationException(
           'Math Operators require each operand to result in a '
@@ -371,12 +386,15 @@ class PlusParser extends OperatorParser {
           'Operand 2: $executedAfter',
           operation: '+',
           collection: results);
-    } else
+    } else {
+      print(executedBefore);
+      print(executedAfter);
       switch (executedBefore.first.runtimeType) {
         case int:
           {
             if (executedAfter.first is num) {
-              return [executedBefore.first + executedAfter.first];
+              return results.copyWith(
+                  results: [executedBefore.first + executedAfter.first]);
             }
 
             break;
@@ -384,7 +402,8 @@ class PlusParser extends OperatorParser {
         case double:
           {
             if (executedAfter.first is num) {
-              return [executedBefore.first + executedAfter.first];
+              return results.copyWith(
+                  results: [executedBefore.first + executedAfter.first]);
             }
 
             break;
@@ -392,10 +411,10 @@ class PlusParser extends OperatorParser {
         case FhirPathQuantity:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedBefore.first as FhirPathQuantity) +
                     (executedAfter.first as FhirPathQuantity)
-              ];
+              ]);
             }
 
             break;
@@ -403,11 +422,11 @@ class PlusParser extends OperatorParser {
         case FhirDateTime:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedAfter.first as FhirPathQuantity)
                     .add(executedBefore.first)
                     .toString()
-              ];
+              ]);
             }
 
             break;
@@ -415,22 +434,22 @@ class PlusParser extends OperatorParser {
         case Date:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedAfter.first as FhirPathQuantity)
                     .add(executedBefore.first)
                     .toString()
-              ];
+              ]);
             }
             break;
           }
         case Time:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedAfter.first as FhirPathQuantity)
                     .add(executedBefore.first)
                     .toString()
-              ];
+              ]);
             }
 
             break;
@@ -438,20 +457,21 @@ class PlusParser extends OperatorParser {
         case String:
           {
             if (executedAfter.first is String) {
-              return [executedBefore.first + executedAfter.first];
+              return results.copyWith(
+                  results: [executedBefore.first + executedAfter.first]);
             } else if (executedAfter.first is FhirPathQuantity) {
               if (FhirDateTime(executedBefore.first).isValid) {
-                return [
+                return results.copyWith(results: [
                   (executedAfter.first as FhirPathQuantity)
                       .add(FhirDateTime(executedBefore.first))
                       .toString()
-                ];
+                ]);
               } else if (Time(executedBefore.first).isValid) {
-                return [
+                return results.copyWith(results: [
                   (executedAfter.first as FhirPathQuantity)
                       .add(Time(executedBefore.first))
                       .toString()
-                ];
+                ]);
               }
             }
 
@@ -460,14 +480,15 @@ class PlusParser extends OperatorParser {
         default:
           break;
       }
-    throw FhirPathEvaluationException(
-        'The "+" operator only accepts (FHIR) Integers, '
-        'Decimals, Quantities, String or (Dart) int, double, num, '
-        'or Strings, but was passed the following:\n'
-        'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-        'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
-        operation: '+',
-        collection: results);
+      throw FhirPathEvaluationException(
+          'The "+" operator only accepts (FHIR) Integers, '
+          'Decimals, Quantities, String or (Dart) int, double, num, '
+          'or Strings, but was passed the following:\n'
+          'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
+          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+          operation: '+',
+          collection: results);
+    }
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -500,11 +521,12 @@ class MinusParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
-      return [];
+      return results.empty();
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
       throw FhirPathEvaluationException(
           'Math Operators require each operand to result in a '
@@ -518,61 +540,61 @@ class MinusParser extends OperatorParser {
         case int:
           {
             if (executedAfter.first is num) {
-              return [
+              return results.copyWith(results: [
                 (executedBefore.first as int) - (executedAfter.first as num)
-              ];
+              ]);
             }
             break;
           }
         case double:
           {
             if (executedAfter.first is num) {
-              return [
+              return results.copyWith(results: [
                 (executedBefore.first as double) - (executedAfter.first as num)
-              ];
+              ]);
             }
             break;
           }
         case FhirPathQuantity:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedBefore.first as FhirPathQuantity) -
                     (executedAfter.first as FhirPathQuantity)
-              ];
+              ]);
             }
             break;
           }
         case FhirDateTime:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedAfter.first as FhirPathQuantity)
                     .subtract(executedBefore.first)
                     .toString()
-              ];
+              ]);
             }
             break;
           }
         case Date:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedAfter.first as FhirPathQuantity)
                     .subtract(executedBefore.first)
                     .toString()
-              ];
+              ]);
             }
             break;
           }
         case Time:
           {
             if (executedAfter.first is FhirPathQuantity) {
-              return [
+              return results.copyWith(results: [
                 (executedAfter.first as FhirPathQuantity)
                     .subtract(executedBefore.first)
                     .toString()
-              ];
+              ]);
             }
             break;
           }
@@ -580,17 +602,17 @@ class MinusParser extends OperatorParser {
           {
             if (executedAfter.first is FhirPathQuantity) {
               if (FhirDateTime(executedBefore.first).isValid) {
-                return [
+                return results.copyWith(results: [
                   (executedAfter.first as FhirPathQuantity)
                       .subtract(FhirDateTime(executedBefore.first))
                       .toString()
-                ];
+                ]);
               } else if (Time(executedBefore.first).isValid) {
-                return [
+                return results.copyWith(results: [
                   (executedAfter.first as FhirPathQuantity)
                       .subtract(Time(executedBefore.first))
                       .toString()
-                ];
+                ]);
               }
             }
             break;
@@ -645,9 +667,10 @@ class StringConcatenationParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     if (executedBefore.length > 1 || executedAfter.length > 1) {
       throw FhirPathEvaluationException(
@@ -660,20 +683,20 @@ class StringConcatenationParser extends OperatorParser {
     }
 
     if (executedBefore.isEmpty && executedAfter.isEmpty) {
-      return [''];
+      return results.copyWith(results: ['']);
     } else if (executedBefore.isNotEmpty &&
         executedBefore.first is String &&
         executedAfter.isEmpty) {
-      return [(executedBefore.first as String)];
+      return results.copyWith(results: [(executedBefore.first as String)]);
     } else if (executedBefore.isEmpty &&
         executedAfter.isNotEmpty &&
         executedAfter.first is String) {
-      return [(executedAfter.first as String)];
+      return results.copyWith(results: [(executedAfter.first as String)]);
     } else if (executedBefore.first is String &&
         executedAfter.first is String) {
-      return [
+      return results.copyWith(results: [
         (executedBefore.first as String) + (executedAfter.first as String)
-      ];
+      ]);
     } else {
       throw FhirPathEvaluationException(
           'The "&" operator only accepts Strings, but was passed '

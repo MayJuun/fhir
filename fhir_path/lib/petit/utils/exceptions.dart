@@ -1,5 +1,7 @@
 // ignore_for_file: unnecessary_this, avoid_dynamic_calls
 
+import '../../fhir_path.dart';
+
 /// Something went wrong while parsing or executing a FHIRPath expression.
 class FhirPathException implements Exception {
   /// A human-readable message
@@ -159,14 +161,14 @@ class FhirPathEvaluationException extends FhirPathException {
     Object? cause,
     String? operation,
     dynamic arguments,
-    List<dynamic>? collection,
+    FhirPathResults? collection,
     Map? variables,
   }) : super(
           message,
           pathExpression: pathExpression,
           operation: operation,
           arguments: arguments,
-          collection: collection,
+          collection: collection?.results,
           cause: cause,
           environment: variables,
         );

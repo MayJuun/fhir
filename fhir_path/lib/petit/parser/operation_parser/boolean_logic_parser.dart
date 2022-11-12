@@ -11,9 +11,10 @@ class AndStringParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     final beforeBool = SingletonEvaluation.toBool(executedBefore,
         name: "parameter before 'and'", operation: 'and', collection: results);
@@ -21,14 +22,14 @@ class AndStringParser extends OperatorParser {
         name: "parameter after 'and'", operation: 'and', collection: results);
 
     if (beforeBool == true && afterBool == true) {
-      return [true];
+      return results.copyWith(results: [true]);
     }
 
     if (beforeBool == false || afterBool == false) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
 
-    return [];
+    return results.empty();
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -61,9 +62,10 @@ class XorParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     final beforeBool = SingletonEvaluation.toBool(executedBefore,
         name: "parameter before 'xor'", operation: 'xor', collection: results);
@@ -71,18 +73,18 @@ class XorParser extends OperatorParser {
         name: "parameter after 'xor'", operation: 'xor', collection: results);
 
     if (beforeBool == null || afterBool == null) {
-      return [];
+      return results.empty();
     }
 
     if (beforeBool == false && afterBool == false) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
 
     if (beforeBool == true && afterBool == true) {
-      return [false];
+      return results.copyWith(results: [false]);
     }
 
-    return [true];
+    return results.copyWith(results: [true]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -115,9 +117,10 @@ class OrStringParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     final beforeBool = SingletonEvaluation.toBool(executedBefore,
         name: "parameter before 'or'", operation: 'or', collection: results);
@@ -125,14 +128,14 @@ class OrStringParser extends OperatorParser {
         name: "parameter after 'or'", operation: 'or', collection: results);
 
     if (beforeBool == true || afterBool == true) {
-      return [true];
+      return results.copyWith(results: [true]);
     }
 
     if (beforeBool == null || afterBool == null) {
-      return [];
+      return results.empty();
     }
 
-    return [false];
+    return results.copyWith(results: [false]);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -165,9 +168,10 @@ class ImpliesParser extends OperatorParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final executedBefore = before.execute(results.toList(), passed);
-    final executedAfter = after.execute(results.toList(), passed);
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.copyWith(), passed);
+    final executedAfter = after.execute(results.copyWith(), passed);
 
     final beforeBool = SingletonEvaluation.toBool(executedBefore,
         name: "parameter before 'implies'",
@@ -179,18 +183,18 @@ class ImpliesParser extends OperatorParser {
         collection: results);
 
     if (beforeBool == true) {
-      return afterBool != null ? [afterBool] : [];
+      return results.copyWith(results: afterBool != null ? [afterBool] : []);
     }
 
     if (beforeBool == false) {
-      return [true];
+      return results.copyWith(results: [true]);
     }
 
     if (afterBool == true) {
-      return [true];
+      return results.copyWith(results: [true]);
     }
 
-    return [];
+    return results.empty();
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

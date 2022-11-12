@@ -1,6 +1,7 @@
 // ignore_for_file: annotate_overrides, overridden_fields
 
 // Project imports:
+import '../../../fhir_path.dart';
 import 'fhir_path_parser.dart';
 
 /// BaseDateTimeParser: either a DateParser or DateTimeParser
@@ -11,7 +12,9 @@ abstract class BaseDateTimeParser<T> extends ValueParser<T> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
   @override
   String toString() => value.toString();
   int get length => (value as List).length;
@@ -26,7 +29,8 @@ class ParenthesesParser extends ValueParser<ParserList> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) =>
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
       value.execute(results, passed);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

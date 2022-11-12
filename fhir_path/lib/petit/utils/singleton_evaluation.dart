@@ -14,14 +14,14 @@ class SingletonEvaluation {
   /// Creates FhirPathQuantity from map inputs.
   ///
   /// Anything else is merely returned unmodified.
-  static List<dynamic> toSingleton(
-    List<dynamic> input, {
+  static FhirPathResults toSingleton(
+    FhirPathResults input, {
     String? name,
     String? operation,
-    List<dynamic>? collection,
+    FhirPathResults? collection,
   }) {
     if (input.isEmpty) {
-      return [];
+      return input.empty();
     }
 
     if (input.length > 1) {
@@ -35,10 +35,10 @@ class SingletonEvaluation {
     final item = input.first;
     if (item is Map) {
       if (item['value'] != null && item['code'] != null) {
-        return [
+        return input.copyWith(results: [
           FhirPathQuantity(Decimal(item['value']).value ?? double.nan,
               item['code'] as String)
-        ];
+        ]);
       }
     }
 
@@ -49,10 +49,10 @@ class SingletonEvaluation {
   ///
   /// Returns [null] for empty input.
   static bool? toBool(
-    List<dynamic> input, {
+    FhirPathResults input, {
     String? name,
     String? operation,
-    List<dynamic>? collection,
+    FhirPathResults? collection,
   }) {
     if (input.isEmpty) {
       return null;

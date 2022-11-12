@@ -1,7 +1,6 @@
 // ignore_for_file: annotate_overrides, overridden_fields, avoid_dynamic_calls, avoid_bool_literals_in_conditional_expressions
 
 // Package imports:
-import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
@@ -22,7 +21,9 @@ class WhiteSpaceParser extends ValueParser<String> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => results;
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results;
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -51,7 +52,9 @@ class BooleanParser extends ValueParser<bool> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -81,29 +84,32 @@ class EnvVariableParser extends ValueParser<String> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final variableName = value.replaceAll('`', '');
 
     if (variableName == '%sct') {
-      return ['http://snomed.info/sct'];
+      return results.copyWith(results: ['http://snomed.info/sct']);
     }
 
     if (variableName == '%loinc') {
-      return ['http://loinc.org'];
+      return results.copyWith(results: ['http://loinc.org']);
     }
 
     if (variableName == '%ucum') {
-      return ['http://unitsofmeasure.org'];
+      return results.copyWith(results: ['http://unitsofmeasure.org']);
     }
 
     if (variableName.startsWith('%vs-')) {
       final valueSet = variableName.substring(4);
-      return ['http://hl7.org/fhir/ValueSet/$valueSet'];
+      return results
+          .copyWith(results: ['http://hl7.org/fhir/ValueSet/$valueSet']);
     }
 
     if (variableName.startsWith('%ext-')) {
       final extension = variableName.substring(5);
-      return ['http://hl7.org/fhir/StructureDefinition/$extension'];
+      return results.copyWith(
+          results: ['http://hl7.org/fhir/StructureDefinition/$extension']);
     }
 
     final passedValue = passed[variableName];
@@ -114,12 +120,13 @@ class EnvVariableParser extends ValueParser<String> {
     }
 
     if (passedValue is! Function()) {
-      return passedValue is List ? passedValue : [passedValue];
+      return results.copyWith(
+          results: passedValue is List ? passedValue : [passedValue]);
     } else {
       try {
         final result = passedValue();
 
-        return result is List ? result : [result];
+        return results.copyWith(results: result is List ? result : [result]);
       } catch (ex) {
         throw FhirPathEvaluationException(
             'Variable $value could not be lazily evaluated.',
@@ -161,7 +168,9 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
 
   @override
   String toString() {
@@ -195,7 +204,9 @@ class IntegerParser extends ValueParser<int> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
 
   @override
   String toString() {
@@ -237,7 +248,9 @@ class DecimalParser extends ValueParser<double> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
 
   @override
   String toString() {
@@ -274,7 +287,8 @@ class IdentifierParser extends ValueParser<String> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final identifierName = value;
 
     final finalResults = [];
@@ -351,7 +365,7 @@ class IdentifierParser extends ValueParser<String> {
 
     passed[ExtensionParser.extensionKey] = finalPrimitiveExtensions;
 
-    return finalResults;
+    return results.copyWith(results: finalResults);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -391,7 +405,8 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     final identifierName = value;
 
     final finalResults = [];
@@ -468,7 +483,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
 
     passed[ExtensionParser.extensionKey] = finalPrimitiveExtensions;
 
-    return finalResults;
+    return results.copyWith(results: finalResults);
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
@@ -503,7 +518,9 @@ class StringParser extends ValueParser<String> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -569,13 +586,15 @@ class DateTimeParser extends BaseDateTimeParser<List> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     if (value.isEmpty) {
-      return [];
+      return results.copyWith(results: []);
     } else if (value.length == 1) {
-      return [FhirDateTime(value.first.toString())];
+      return results.copyWith(results: [FhirDateTime(value.first.toString())]);
     } else {
-      return [FhirDateTime('${value.first}T${value.last}')];
+      return results
+          .copyWith(results: [FhirDateTime('${value.first}T${value.last}')]);
     }
   }
 
@@ -617,7 +636,9 @@ class DateParser extends BaseDateTimeParser<Date> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
 
   @override
   String toString() => value.toString();
@@ -657,7 +678,9 @@ class TimeParser extends BaseDateTimeParser<Time> {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  FhirPathResults execute(
+          FhirPathResults results, Map<String, dynamic> passed) =>
+      results.copyWith(results: [value]);
 
   @override
   String toString() => value.toString();

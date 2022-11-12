@@ -7,9 +7,10 @@ class ChildrenParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
-    final finalResults = [];
-    for (final r in results) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
+    final finalResults = results.empty();
+    for (final r in results.results) {
       if (r is Map) {
         r.forEach((key, value) {
           if (value is List) {
@@ -47,7 +48,8 @@ class DescendantsParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   @override
-  List execute(List results, Map<String, dynamic> passed) {
+  FhirPathResults execute(
+      FhirPathResults results, Map<String, dynamic> passed) {
     // According to spec, `descendants()` is shorthand for `repeat(children())`
     final repeatParser = RepeatParser();
     repeatParser.value = ParserList([ChildrenParser()]);
