@@ -1,5 +1,9 @@
 # fhir_auth
 
+## [0.9.1]
+
+* Updated GcpFhirClient to have access to email & displayName
+
 ## [0.9.0]
 
 * Cannot create resources and then find them in Epic. Can create them but due to a CORS issue canot get the location, and identifiers are stripped away upon creation. Ayone who figures this out, please let me know.
