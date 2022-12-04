@@ -1,5 +1,9 @@
 # fhir_auth
 
+## [0.9.2]
+
+* Updated dependencies
+
 ## [0.9.1]
 
 * Updated GcpFhirClient to have access to email & displayName
