@@ -105,14 +105,14 @@ packages:
       name: fhir
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.2"
+    version: "0.9.3"
   fhir_db:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.9.2"
+    version: "0.9.3"
   file:
     dependency: transitive
     description:
@@ -416,7 +416,7 @@ packages:
       name: sqflite
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0+3"
+    version: "2.2.2"
   sqflite_common:
     dependency: transitive
     description:

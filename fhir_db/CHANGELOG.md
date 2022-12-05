@@ -1,5 +1,10 @@
 # fhir_db
 
+## [0.9.3]
+
+* updated dependencies
+* Accepted PR from [Aliaksei](https://github.com/AliakseiT) to ensure that when the db is updated to a different password (and the file is copied over temporarily), we await it, or else it fails sometimes
+
 ## [0.9.2]
 
 * updated dependencies
