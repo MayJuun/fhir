@@ -1,5 +1,10 @@
 # fhir_auth
 
+## [0.9.3]
+
+* Just updated, doing it again
+* Updated dependencies
+
 ## [0.9.2]
 
 * Updated dependencies
