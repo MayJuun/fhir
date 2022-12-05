@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'fhir_request.dart';
 
@@ -898,6 +898,7 @@ class _$FhirReadRequest extends FhirReadRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -909,6 +910,7 @@ class _$FhirReadRequest extends FhirReadRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -1840,6 +1842,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -1851,6 +1854,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -2764,6 +2768,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -2775,6 +2780,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -3675,6 +3681,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -3686,6 +3693,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -4599,6 +4607,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -4610,6 +4619,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -5517,6 +5527,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -5528,6 +5539,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -6444,6 +6456,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -6455,6 +6468,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -7368,6 +7382,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -7379,6 +7394,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -8273,6 +8289,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -8284,6 +8301,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -9196,6 +9214,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -9207,6 +9226,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -10121,6 +10141,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -10132,6 +10153,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -11078,6 +11100,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -11089,6 +11112,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -12078,6 +12102,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -12089,6 +12114,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -13061,6 +13087,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -13072,6 +13099,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -14057,6 +14085,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -14068,6 +14097,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -14079,6 +14109,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
   @override
   @JsonKey()
   Map<String, dynamic> get fhirParameter {
+    if (_fhirParameter is EqualUnmodifiableMapView) return _fhirParameter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_fhirParameter);
   }
