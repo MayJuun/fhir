@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'support.dart';
 
@@ -833,6 +833,7 @@ class _$_Coverage extends _Coverage {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -843,6 +844,7 @@ class _$_Coverage extends _Coverage {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -852,6 +854,8 @@ class _$_Coverage extends _Coverage {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -861,6 +865,7 @@ class _$_Coverage extends _Coverage {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -892,6 +897,7 @@ class _$_Coverage extends _Coverage {
   final List<Reference> _payor;
   @override
   List<Reference> get payor {
+    if (_payor is EqualUnmodifiableListView) return _payor;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_payor);
   }
@@ -902,6 +908,7 @@ class _$_Coverage extends _Coverage {
   List<CoverageClass>? get class_ {
     final value = _class_;
     if (value == null) return null;
+    if (_class_ is EqualUnmodifiableListView) return _class_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -921,6 +928,8 @@ class _$_Coverage extends _Coverage {
   List<CoverageCostToBeneficiary>? get costToBeneficiary {
     final value = _costToBeneficiary;
     if (value == null) return null;
+    if (_costToBeneficiary is EqualUnmodifiableListView)
+      return _costToBeneficiary;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -935,6 +944,7 @@ class _$_Coverage extends _Coverage {
   List<Reference>? get contract {
     final value = _contract;
     if (value == null) return null;
+    if (_contract is EqualUnmodifiableListView) return _contract;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1426,6 +1436,7 @@ class _$_CoverageClass extends _CoverageClass {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1435,6 +1446,8 @@ class _$_CoverageClass extends _CoverageClass {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1784,6 +1797,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1793,6 +1807,8 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1808,6 +1824,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   List<CoverageException>? get exception {
     final value = _exception;
     if (value == null) return null;
+    if (_exception is EqualUnmodifiableListView) return _exception;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2086,6 +2103,7 @@ class _$_CoverageException extends _CoverageException {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2095,6 +2113,8 @@ class _$_CoverageException extends _CoverageException {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2929,6 +2949,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2939,6 +2960,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2948,6 +2970,8 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2957,6 +2981,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2973,6 +2998,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<Code>? get purpose {
     final value = _purpose;
     if (value == null) return null;
+    if (_purpose is EqualUnmodifiableListView) return _purpose;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2983,6 +3009,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<Element>? get purposeElement {
     final value = _purposeElement;
     if (value == null) return null;
+    if (_purposeElement is EqualUnmodifiableListView) return _purposeElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3014,6 +3041,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<CoverageEligibilityRequestSupportingInfo>? get supportingInfo {
     final value = _supportingInfo;
     if (value == null) return null;
+    if (_supportingInfo is EqualUnmodifiableListView) return _supportingInfo;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3023,6 +3051,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<CoverageEligibilityRequestInsurance>? get insurance {
     final value = _insurance;
     if (value == null) return null;
+    if (_insurance is EqualUnmodifiableListView) return _insurance;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3032,6 +3061,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   List<CoverageEligibilityRequestItem>? get item {
     final value = _item;
     if (value == null) return null;
+    if (_item is EqualUnmodifiableListView) return _item;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3519,6 +3549,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3528,6 +3559,8 @@ class _$_CoverageEligibilityRequestSupportingInfo
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3908,6 +3941,7 @@ class _$_CoverageEligibilityRequestInsurance
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3917,6 +3951,8 @@ class _$_CoverageEligibilityRequestInsurance
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4440,6 +4476,7 @@ class _$_CoverageEligibilityRequestItem
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4449,6 +4486,8 @@ class _$_CoverageEligibilityRequestItem
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4458,6 +4497,8 @@ class _$_CoverageEligibilityRequestItem
   List<PositiveInt>? get supportingInfoSequence {
     final value = _supportingInfoSequence;
     if (value == null) return null;
+    if (_supportingInfoSequence is EqualUnmodifiableListView)
+      return _supportingInfoSequence;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4468,6 +4509,8 @@ class _$_CoverageEligibilityRequestItem
   List<Element>? get supportingInfoSequenceElement {
     final value = _supportingInfoSequenceElement;
     if (value == null) return null;
+    if (_supportingInfoSequenceElement is EqualUnmodifiableListView)
+      return _supportingInfoSequenceElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4481,6 +4524,7 @@ class _$_CoverageEligibilityRequestItem
   List<CodeableConcept>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4498,6 +4542,7 @@ class _$_CoverageEligibilityRequestItem
   List<CoverageEligibilityRequestDiagnosis>? get diagnosis {
     final value = _diagnosis;
     if (value == null) return null;
+    if (_diagnosis is EqualUnmodifiableListView) return _diagnosis;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4507,6 +4552,7 @@ class _$_CoverageEligibilityRequestItem
   List<Reference>? get detail {
     final value = _detail;
     if (value == null) return null;
+    if (_detail is EqualUnmodifiableListView) return _detail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4847,6 +4893,7 @@ class _$_CoverageEligibilityRequestDiagnosis
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4856,6 +4903,8 @@ class _$_CoverageEligibilityRequestDiagnosis
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5782,6 +5831,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5792,6 +5842,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5801,6 +5852,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5810,6 +5863,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5824,6 +5878,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<Code>? get purpose {
     final value = _purpose;
     if (value == null) return null;
+    if (_purpose is EqualUnmodifiableListView) return _purpose;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5834,6 +5889,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<Element>? get purposeElement {
     final value = _purposeElement;
     if (value == null) return null;
+    if (_purposeElement is EqualUnmodifiableListView) return _purposeElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5873,6 +5929,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<CoverageEligibilityResponseInsurance>? get insurance {
     final value = _insurance;
     if (value == null) return null;
+    if (_insurance is EqualUnmodifiableListView) return _insurance;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5889,6 +5946,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   List<CoverageEligibilityResponseError>? get error {
     final value = _error;
     if (value == null) return null;
+    if (_error is EqualUnmodifiableListView) return _error;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6401,6 +6459,7 @@ class _$_CoverageEligibilityResponseInsurance
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6410,6 +6469,8 @@ class _$_CoverageEligibilityResponseInsurance
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6428,6 +6489,7 @@ class _$_CoverageEligibilityResponseInsurance
   List<CoverageEligibilityResponseItem>? get item {
     final value = _item;
     if (value == null) return null;
+    if (_item is EqualUnmodifiableListView) return _item;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7134,6 +7196,7 @@ class _$_CoverageEligibilityResponseItem
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7143,6 +7206,8 @@ class _$_CoverageEligibilityResponseItem
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7156,6 +7221,7 @@ class _$_CoverageEligibilityResponseItem
   List<CodeableConcept>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7188,6 +7254,7 @@ class _$_CoverageEligibilityResponseItem
   List<CoverageEligibilityResponseBenefit>? get benefit {
     final value = _benefit;
     if (value == null) return null;
+    if (_benefit is EqualUnmodifiableListView) return _benefit;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7202,6 +7269,8 @@ class _$_CoverageEligibilityResponseItem
   List<CodeableConcept>? get authorizationSupporting {
     final value = _authorizationSupporting;
     if (value == null) return null;
+    if (_authorizationSupporting is EqualUnmodifiableListView)
+      return _authorizationSupporting;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7805,6 +7874,7 @@ class _$_CoverageEligibilityResponseBenefit
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7814,6 +7884,8 @@ class _$_CoverageEligibilityResponseBenefit
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8155,6 +8227,7 @@ class _$_CoverageEligibilityResponseError
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8164,6 +8237,8 @@ class _$_CoverageEligibilityResponseError
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8787,6 +8862,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8797,6 +8873,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8806,6 +8883,8 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8815,6 +8894,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9606,6 +9686,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9616,6 +9697,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9625,6 +9707,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9634,6 +9718,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'billing.dart';
 
@@ -1144,6 +1144,7 @@ class _$_Claim extends _Claim {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1154,6 +1155,7 @@ class _$_Claim extends _Claim {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1163,6 +1165,8 @@ class _$_Claim extends _Claim {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1172,6 +1176,7 @@ class _$_Claim extends _Claim {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1188,6 +1193,7 @@ class _$_Claim extends _Claim {
   List<CodeableConcept>? get subType {
     final value = _subType;
     if (value == null) return null;
+    if (_subType is EqualUnmodifiableListView) return _subType;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1223,6 +1229,7 @@ class _$_Claim extends _Claim {
   List<ClaimRelated>? get related {
     final value = _related;
     if (value == null) return null;
+    if (_related is EqualUnmodifiableListView) return _related;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1242,6 +1249,7 @@ class _$_Claim extends _Claim {
   List<ClaimCareTeam>? get careTeam {
     final value = _careTeam;
     if (value == null) return null;
+    if (_careTeam is EqualUnmodifiableListView) return _careTeam;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1251,6 +1259,7 @@ class _$_Claim extends _Claim {
   List<ClaimInformation>? get information {
     final value = _information;
     if (value == null) return null;
+    if (_information is EqualUnmodifiableListView) return _information;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1260,6 +1269,7 @@ class _$_Claim extends _Claim {
   List<ClaimDiagnosis>? get diagnosis {
     final value = _diagnosis;
     if (value == null) return null;
+    if (_diagnosis is EqualUnmodifiableListView) return _diagnosis;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1269,6 +1279,7 @@ class _$_Claim extends _Claim {
   List<ClaimProcedure>? get procedure {
     final value = _procedure;
     if (value == null) return null;
+    if (_procedure is EqualUnmodifiableListView) return _procedure;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1278,6 +1289,7 @@ class _$_Claim extends _Claim {
   List<ClaimInsurance>? get insurance {
     final value = _insurance;
     if (value == null) return null;
+    if (_insurance is EqualUnmodifiableListView) return _insurance;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1293,6 +1305,7 @@ class _$_Claim extends _Claim {
   List<ClaimItem>? get item {
     final value = _item;
     if (value == null) return null;
+    if (_item is EqualUnmodifiableListView) return _item;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3166,6 +3179,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   List<CodeableConcept>? get type {
     final value = _type;
     if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3900,6 +3914,7 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   List<String>? get preAuthRef {
     final value = _preAuthRef;
     if (value == null) return null;
+    if (_preAuthRef is EqualUnmodifiableListView) return _preAuthRef;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3910,6 +3925,8 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   List<Element?>? get preAuthRefElement {
     final value = _preAuthRefElement;
     if (value == null) return null;
+    if (_preAuthRefElement is EqualUnmodifiableListView)
+      return _preAuthRefElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5101,6 +5118,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<Id>? get careTeamLinkId {
     final value = _careTeamLinkId;
     if (value == null) return null;
+    if (_careTeamLinkId is EqualUnmodifiableListView) return _careTeamLinkId;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5111,6 +5129,8 @@ class _$_ClaimItem extends _ClaimItem {
   List<Element?>? get careTeamLinkIdElement {
     final value = _careTeamLinkIdElement;
     if (value == null) return null;
+    if (_careTeamLinkIdElement is EqualUnmodifiableListView)
+      return _careTeamLinkIdElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5120,6 +5140,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<Id>? get diagnosisLinkId {
     final value = _diagnosisLinkId;
     if (value == null) return null;
+    if (_diagnosisLinkId is EqualUnmodifiableListView) return _diagnosisLinkId;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5130,6 +5151,8 @@ class _$_ClaimItem extends _ClaimItem {
   List<Element?>? get diagnosisLinkIdElement {
     final value = _diagnosisLinkIdElement;
     if (value == null) return null;
+    if (_diagnosisLinkIdElement is EqualUnmodifiableListView)
+      return _diagnosisLinkIdElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5139,6 +5162,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<Id>? get procedureLinkId {
     final value = _procedureLinkId;
     if (value == null) return null;
+    if (_procedureLinkId is EqualUnmodifiableListView) return _procedureLinkId;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5149,6 +5173,8 @@ class _$_ClaimItem extends _ClaimItem {
   List<Element?>? get procedureLinkIdElement {
     final value = _procedureLinkIdElement;
     if (value == null) return null;
+    if (_procedureLinkIdElement is EqualUnmodifiableListView)
+      return _procedureLinkIdElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5158,6 +5184,8 @@ class _$_ClaimItem extends _ClaimItem {
   List<Id>? get informationLinkId {
     final value = _informationLinkId;
     if (value == null) return null;
+    if (_informationLinkId is EqualUnmodifiableListView)
+      return _informationLinkId;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5168,6 +5196,8 @@ class _$_ClaimItem extends _ClaimItem {
   List<Element>? get informationLinkIdElement {
     final value = _informationLinkIdElement;
     if (value == null) return null;
+    if (_informationLinkIdElement is EqualUnmodifiableListView)
+      return _informationLinkIdElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5183,6 +5213,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<CodeableConcept>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5192,6 +5223,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<CodeableConcept>? get programCode {
     final value = _programCode;
     if (value == null) return null;
+    if (_programCode is EqualUnmodifiableListView) return _programCode;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5225,6 +5257,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<Reference>? get udi {
     final value = _udi;
     if (value == null) return null;
+    if (_udi is EqualUnmodifiableListView) return _udi;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5236,6 +5269,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<CodeableConcept>? get subSite {
     final value = _subSite;
     if (value == null) return null;
+    if (_subSite is EqualUnmodifiableListView) return _subSite;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5245,6 +5279,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<Reference>? get encounter {
     final value = _encounter;
     if (value == null) return null;
+    if (_encounter is EqualUnmodifiableListView) return _encounter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5254,6 +5289,7 @@ class _$_ClaimItem extends _ClaimItem {
   List<ClaimDetail>? get detail {
     final value = _detail;
     if (value == null) return null;
+    if (_detail is EqualUnmodifiableListView) return _detail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5914,6 +5950,7 @@ class _$_ClaimDetail extends _ClaimDetail {
   List<CodeableConcept>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5923,6 +5960,7 @@ class _$_ClaimDetail extends _ClaimDetail {
   List<CodeableConcept>? get programCode {
     final value = _programCode;
     if (value == null) return null;
+    if (_programCode is EqualUnmodifiableListView) return _programCode;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5943,6 +5981,7 @@ class _$_ClaimDetail extends _ClaimDetail {
   List<Reference>? get udi {
     final value = _udi;
     if (value == null) return null;
+    if (_udi is EqualUnmodifiableListView) return _udi;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5952,6 +5991,7 @@ class _$_ClaimDetail extends _ClaimDetail {
   List<ClaimSubDetail>? get subDetail {
     final value = _subDetail;
     if (value == null) return null;
+    if (_subDetail is EqualUnmodifiableListView) return _subDetail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6483,6 +6523,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   List<CodeableConcept>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6492,6 +6533,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   List<CodeableConcept>? get programCode {
     final value = _programCode;
     if (value == null) return null;
+    if (_programCode is EqualUnmodifiableListView) return _programCode;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6512,6 +6554,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   List<Reference>? get udi {
     final value = _udi;
     if (value == null) return null;
+    if (_udi is EqualUnmodifiableListView) return _udi;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7598,6 +7641,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7608,6 +7652,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7617,6 +7662,8 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7626,6 +7673,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7664,6 +7712,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<ClaimResponseItem>? get item {
     final value = _item;
     if (value == null) return null;
+    if (_item is EqualUnmodifiableListView) return _item;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7673,6 +7722,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<ClaimResponseAddItem>? get addItem {
     final value = _addItem;
     if (value == null) return null;
+    if (_addItem is EqualUnmodifiableListView) return _addItem;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7682,6 +7732,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<ClaimResponseError>? get error {
     final value = _error;
     if (value == null) return null;
+    if (_error is EqualUnmodifiableListView) return _error;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7703,6 +7754,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<ClaimResponseProcessNote>? get processNote {
     final value = _processNote;
     if (value == null) return null;
+    if (_processNote is EqualUnmodifiableListView) return _processNote;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7712,6 +7764,8 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<Reference>? get communicationRequest {
     final value = _communicationRequest;
     if (value == null) return null;
+    if (_communicationRequest is EqualUnmodifiableListView)
+      return _communicationRequest;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7721,6 +7775,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   List<ClaimResponseInsurance>? get insurance {
     final value = _insurance;
     if (value == null) return null;
+    if (_insurance is EqualUnmodifiableListView) return _insurance;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8188,6 +8243,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   List<Decimal>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
+    if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8198,6 +8254,8 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   List<Element?>? get noteNumberElement {
     final value = _noteNumberElement;
     if (value == null) return null;
+    if (_noteNumberElement is EqualUnmodifiableListView)
+      return _noteNumberElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8207,6 +8265,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   List<ClaimResponseAdjudication>? get adjudication {
     final value = _adjudication;
     if (value == null) return null;
+    if (_adjudication is EqualUnmodifiableListView) return _adjudication;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8216,6 +8275,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   List<ClaimResponseDetail>? get detail {
     final value = _detail;
     if (value == null) return null;
+    if (_detail is EqualUnmodifiableListView) return _detail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8792,6 +8852,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   List<Decimal>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
+    if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8802,6 +8863,8 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   List<Element?>? get noteNumberElement {
     final value = _noteNumberElement;
     if (value == null) return null;
+    if (_noteNumberElement is EqualUnmodifiableListView)
+      return _noteNumberElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8811,6 +8874,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   List<ClaimResponseAdjudication>? get adjudication {
     final value = _adjudication;
     if (value == null) return null;
+    if (_adjudication is EqualUnmodifiableListView) return _adjudication;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8820,6 +8884,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   List<ClaimResponseSubDetail>? get subDetail {
     final value = _subDetail;
     if (value == null) return null;
+    if (_subDetail is EqualUnmodifiableListView) return _subDetail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9091,6 +9156,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   List<Decimal>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
+    if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9101,6 +9167,8 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   List<Element?>? get noteNumberElement {
     final value = _noteNumberElement;
     if (value == null) return null;
+    if (_noteNumberElement is EqualUnmodifiableListView)
+      return _noteNumberElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9110,6 +9178,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   List<ClaimResponseAdjudication>? get adjudication {
     final value = _adjudication;
     if (value == null) return null;
+    if (_adjudication is EqualUnmodifiableListView) return _adjudication;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9505,6 +9574,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   List<Id>? get sequenceLinkId {
     final value = _sequenceLinkId;
     if (value == null) return null;
+    if (_sequenceLinkId is EqualUnmodifiableListView) return _sequenceLinkId;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9515,6 +9585,8 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   List<Element?>? get sequenceLinkIdElement {
     final value = _sequenceLinkIdElement;
     if (value == null) return null;
+    if (_sequenceLinkIdElement is EqualUnmodifiableListView)
+      return _sequenceLinkIdElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9530,6 +9602,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   List<CodeableConcept>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9541,6 +9614,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   List<Decimal>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
+    if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9551,6 +9625,8 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   List<Element?>? get noteNumberElement {
     final value = _noteNumberElement;
     if (value == null) return null;
+    if (_noteNumberElement is EqualUnmodifiableListView)
+      return _noteNumberElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9560,6 +9636,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   List<ClaimResponseAdjudication>? get adjudication {
     final value = _adjudication;
     if (value == null) return null;
+    if (_adjudication is EqualUnmodifiableListView) return _adjudication;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9569,6 +9646,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   List<ClaimResponseDetail1>? get detail {
     final value = _detail;
     if (value == null) return null;
+    if (_detail is EqualUnmodifiableListView) return _detail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9953,6 +10031,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   List<CodeableConcept>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9964,6 +10043,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   List<Decimal>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
+    if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9974,6 +10054,8 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   List<Element?>? get noteNumberElement {
     final value = _noteNumberElement;
     if (value == null) return null;
+    if (_noteNumberElement is EqualUnmodifiableListView)
+      return _noteNumberElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9983,6 +10065,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   List<ClaimResponseAdjudication>? get adjudication {
     final value = _adjudication;
     if (value == null) return null;
+    if (_adjudication is EqualUnmodifiableListView) return _adjudication;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11456,6 +11539,7 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   List<String>? get preAuthRef {
     final value = _preAuthRef;
     if (value == null) return null;
+    if (_preAuthRef is EqualUnmodifiableListView) return _preAuthRef;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11466,6 +11550,8 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   List<Element?>? get preAuthRefElement {
     final value = _preAuthRefElement;
     if (value == null) return null;
+    if (_preAuthRefElement is EqualUnmodifiableListView)
+      return _preAuthRefElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

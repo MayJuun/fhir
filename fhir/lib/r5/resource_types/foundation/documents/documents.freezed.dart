@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'documents.dart';
 
@@ -908,6 +908,7 @@ class _$_Composition extends _Composition {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -918,6 +919,7 @@ class _$_Composition extends _Composition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -927,6 +929,8 @@ class _$_Composition extends _Composition {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -955,6 +959,7 @@ class _$_Composition extends _Composition {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -973,6 +978,7 @@ class _$_Composition extends _Composition {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -980,6 +986,7 @@ class _$_Composition extends _Composition {
   final List<Reference> _author;
   @override
   List<Reference> get author {
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_author);
   }
@@ -999,6 +1006,7 @@ class _$_Composition extends _Composition {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1013,6 +1021,7 @@ class _$_Composition extends _Composition {
   List<CompositionAttester>? get attester {
     final value = _attester;
     if (value == null) return null;
+    if (_attester is EqualUnmodifiableListView) return _attester;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1024,6 +1033,7 @@ class _$_Composition extends _Composition {
   List<RelatedArtifact>? get relatesTo {
     final value = _relatesTo;
     if (value == null) return null;
+    if (_relatesTo is EqualUnmodifiableListView) return _relatesTo;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1033,6 +1043,7 @@ class _$_Composition extends _Composition {
   List<CompositionEvent>? get event {
     final value = _event;
     if (value == null) return null;
+    if (_event is EqualUnmodifiableListView) return _event;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1042,6 +1053,7 @@ class _$_Composition extends _Composition {
   List<CompositionSection>? get section {
     final value = _section;
     if (value == null) return null;
+    if (_section is EqualUnmodifiableListView) return _section;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1544,6 +1556,7 @@ class _$_CompositionAttester extends _CompositionAttester {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1553,6 +1566,8 @@ class _$_CompositionAttester extends _CompositionAttester {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1845,6 +1860,7 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1854,6 +1870,8 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1863,6 +1881,7 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<CodeableConcept>? get code {
     final value = _code;
     if (value == null) return null;
+    if (_code is EqualUnmodifiableListView) return _code;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1874,6 +1893,7 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<Reference>? get detail {
     final value = _detail;
     if (value == null) return null;
+    if (_detail is EqualUnmodifiableListView) return _detail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2367,6 +2387,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2376,6 +2397,8 @@ class _$_CompositionSection extends _CompositionSection {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2392,6 +2415,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<Reference>? get author {
     final value = _author;
     if (value == null) return null;
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2412,6 +2436,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<Reference>? get entry {
     final value = _entry;
     if (value == null) return null;
+    if (_entry is EqualUnmodifiableListView) return _entry;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2423,6 +2448,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<CompositionSection>? get section {
     final value = _section;
     if (value == null) return null;
+    if (_section is EqualUnmodifiableListView) return _section;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3220,6 +3246,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3230,6 +3257,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3239,6 +3267,8 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3250,6 +3280,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3273,6 +3304,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Reference>? get author {
     final value = _author;
     if (value == null) return null;
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3282,6 +3314,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Reference>? get recipient {
     final value = _recipient;
     if (value == null) return null;
+    if (_recipient is EqualUnmodifiableListView) return _recipient;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3299,6 +3332,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   final List<Reference> _content;
   @override
   List<Reference> get content {
+    if (_content is EqualUnmodifiableListView) return _content;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_content);
   }
@@ -3308,6 +3342,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<DocumentManifestRelated>? get related {
     final value = _related;
     if (value == null) return null;
+    if (_related is EqualUnmodifiableListView) return _related;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3710,6 +3745,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3719,6 +3755,8 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4676,6 +4714,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4686,6 +4725,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4695,6 +4735,8 @@ class _$_DocumentReference extends _DocumentReference {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4704,6 +4746,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4713,6 +4756,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4734,6 +4778,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4745,6 +4790,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Reference>? get context {
     final value = _context;
     if (value == null) return null;
+    if (_context is EqualUnmodifiableListView) return _context;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4754,6 +4800,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<CodeableReference>? get event {
     final value = _event;
     if (value == null) return null;
+    if (_event is EqualUnmodifiableListView) return _event;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4774,6 +4821,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Reference>? get author {
     final value = _author;
     if (value == null) return null;
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4783,6 +4831,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<DocumentReferenceAttester>? get attester {
     final value = _attester;
     if (value == null) return null;
+    if (_attester is EqualUnmodifiableListView) return _attester;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4794,6 +4843,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<DocumentReferenceRelatesTo>? get relatesTo {
     final value = _relatesTo;
     if (value == null) return null;
+    if (_relatesTo is EqualUnmodifiableListView) return _relatesTo;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4808,6 +4858,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<CodeableConcept>? get securityLabel {
     final value = _securityLabel;
     if (value == null) return null;
+    if (_securityLabel is EqualUnmodifiableListView) return _securityLabel;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4815,6 +4866,7 @@ class _$_DocumentReference extends _DocumentReference {
   final List<DocumentReferenceContent> _content;
   @override
   List<DocumentReferenceContent> get content {
+    if (_content is EqualUnmodifiableListView) return _content;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_content);
   }
@@ -4826,6 +4878,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Reference>? get related {
     final value = _related;
     if (value == null) return null;
+    if (_related is EqualUnmodifiableListView) return _related;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5345,6 +5398,7 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5354,6 +5408,8 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5653,6 +5709,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5662,6 +5719,8 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5952,6 +6011,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5961,6 +6021,8 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5972,6 +6034,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   List<DocumentReferenceProfile>? get profile {
     final value = _profile;
     if (value == null) return null;
+    if (_profile is EqualUnmodifiableListView) return _profile;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6314,6 +6377,7 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6323,6 +6387,8 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

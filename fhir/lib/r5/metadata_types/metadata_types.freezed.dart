@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'metadata_types.dart';
 
@@ -191,6 +191,7 @@ class _$_ContactDetail extends _ContactDetail {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -205,6 +206,7 @@ class _$_ContactDetail extends _ContactDetail {
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
+    if (_telecom is EqualUnmodifiableListView) return _telecom;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -562,6 +564,7 @@ class _$_ExtendedContactDetail extends _ExtendedContactDetail {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -575,6 +578,7 @@ class _$_ExtendedContactDetail extends _ExtendedContactDetail {
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
+    if (_telecom is EqualUnmodifiableListView) return _telecom;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -895,6 +899,7 @@ class _$_Contributor extends _Contributor {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -914,6 +919,7 @@ class _$_Contributor extends _Contributor {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1362,6 +1368,7 @@ class _$_DataRequirement extends _DataRequirement {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1376,6 +1383,7 @@ class _$_DataRequirement extends _DataRequirement {
   List<Canonical>? get profile {
     final value = _profile;
     if (value == null) return null;
+    if (_profile is EqualUnmodifiableListView) return _profile;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1389,6 +1397,7 @@ class _$_DataRequirement extends _DataRequirement {
   List<String>? get mustSupport {
     final value = _mustSupport;
     if (value == null) return null;
+    if (_mustSupport is EqualUnmodifiableListView) return _mustSupport;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1399,6 +1408,8 @@ class _$_DataRequirement extends _DataRequirement {
   List<Element>? get mustSupportElement {
     final value = _mustSupportElement;
     if (value == null) return null;
+    if (_mustSupportElement is EqualUnmodifiableListView)
+      return _mustSupportElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1408,6 +1419,7 @@ class _$_DataRequirement extends _DataRequirement {
   List<DataRequirementCodeFilter>? get codeFilter {
     final value = _codeFilter;
     if (value == null) return null;
+    if (_codeFilter is EqualUnmodifiableListView) return _codeFilter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1417,6 +1429,7 @@ class _$_DataRequirement extends _DataRequirement {
   List<DataRequirementDateFilter>? get dateFilter {
     final value = _dateFilter;
     if (value == null) return null;
+    if (_dateFilter is EqualUnmodifiableListView) return _dateFilter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1431,6 +1444,7 @@ class _$_DataRequirement extends _DataRequirement {
   List<DataRequirementSort>? get sort {
     final value = _sort;
     if (value == null) return null;
+    if (_sort is EqualUnmodifiableListView) return _sort;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1818,6 +1832,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1827,6 +1842,8 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1848,6 +1865,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   List<Coding>? get code {
     final value = _code;
     if (value == null) return null;
+    if (_code is EqualUnmodifiableListView) return _code;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2280,6 +2298,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2289,6 +2308,8 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2649,6 +2670,7 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2658,6 +2680,8 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3158,6 +3182,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3711,6 +3736,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3725,6 +3751,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   List<CodeableConcept>? get classifier {
     final value = _classifier;
     if (value == null) return null;
+    if (_classifier is EqualUnmodifiableListView) return _classifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4276,6 +4303,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4309,6 +4337,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   List<DataRequirement>? get data {
     final value = _data;
     if (value == null) return null;
+    if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4707,6 +4736,7 @@ class _$_UsageContext extends _UsageContext {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5145,6 +5175,7 @@ class _$_Expression extends _Expression {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

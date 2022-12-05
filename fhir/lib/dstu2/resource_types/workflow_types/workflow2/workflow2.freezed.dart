@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'workflow2.dart';
 
@@ -632,6 +632,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -642,6 +643,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -651,6 +653,8 @@ class _$_ProcessRequest extends _ProcessRequest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -663,6 +667,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -692,6 +697,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   List<ProcessRequestItem>? get item {
     final value = _item;
     if (value == null) return null;
+    if (_item is EqualUnmodifiableListView) return _item;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -701,6 +707,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   List<String>? get include {
     final value = _include;
     if (value == null) return null;
+    if (_include is EqualUnmodifiableListView) return _include;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -710,6 +717,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   List<String>? get exclude {
     final value = _exclude;
     if (value == null) return null;
+    if (_exclude is EqualUnmodifiableListView) return _exclude;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1051,6 +1059,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1060,6 +1069,8 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1707,6 +1718,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1717,6 +1729,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1726,6 +1739,8 @@ class _$_ProcessResponse extends _ProcessResponse {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1735,6 +1750,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1764,6 +1780,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   List<ProcessResponseNotes>? get notes {
     final value = _notes;
     if (value == null) return null;
+    if (_notes is EqualUnmodifiableListView) return _notes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1773,6 +1790,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   List<Coding>? get error {
     final value = _error;
     if (value == null) return null;
+    if (_error is EqualUnmodifiableListView) return _error;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2126,6 +2144,7 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2135,6 +2154,8 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2869,6 +2890,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2879,6 +2901,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2888,6 +2911,8 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2915,6 +2940,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<Reference>? get supplier {
     final value = _supplier;
     if (value == null) return null;
+    if (_supplier is EqualUnmodifiableListView) return _supplier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3303,6 +3329,7 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3312,6 +3339,8 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4045,6 +4074,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4055,6 +4085,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4064,6 +4095,8 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4097,6 +4130,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<Reference>? get receiver {
     final value = _receiver;
     if (value == null) return null;
+    if (_receiver is EqualUnmodifiableListView) return _receiver;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

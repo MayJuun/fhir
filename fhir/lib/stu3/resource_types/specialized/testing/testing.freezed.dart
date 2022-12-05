@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'testing.dart';
 
@@ -777,6 +777,7 @@ class _$_TestReport extends _TestReport {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -787,6 +788,7 @@ class _$_TestReport extends _TestReport {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -796,6 +798,8 @@ class _$_TestReport extends _TestReport {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -839,6 +843,7 @@ class _$_TestReport extends _TestReport {
   List<TestReportParticipant>? get participant {
     final value = _participant;
     if (value == null) return null;
+    if (_participant is EqualUnmodifiableListView) return _participant;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -850,6 +855,7 @@ class _$_TestReport extends _TestReport {
   List<TestReportTest>? get test {
     final value = _test;
     if (value == null) return null;
+    if (_test is EqualUnmodifiableListView) return _test;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1484,6 +1490,7 @@ class _$_TestReportSetup extends _TestReportSetup {
   final List<TestReportAction> _action;
   @override
   List<TestReportAction> get action {
+    if (_action is EqualUnmodifiableListView) return _action;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_action);
   }
@@ -2536,6 +2543,7 @@ class _$_TestReportTest extends _TestReportTest {
   final List<TestReportAction1> _action;
   @override
   List<TestReportAction1> get action {
+    if (_action is EqualUnmodifiableListView) return _action;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_action);
   }
@@ -2900,6 +2908,7 @@ class _$_TestReportTeardown extends _TestReportTeardown {
   final List<TestReportAction2> _action;
   @override
   List<TestReportAction2> get action {
+    if (_action is EqualUnmodifiableListView) return _action;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_action);
   }
@@ -4243,6 +4252,7 @@ class _$_TestScript extends _TestScript {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4253,6 +4263,7 @@ class _$_TestScript extends _TestScript {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4262,6 +4273,8 @@ class _$_TestScript extends _TestScript {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4313,6 +4326,7 @@ class _$_TestScript extends _TestScript {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4327,6 +4341,7 @@ class _$_TestScript extends _TestScript {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4336,6 +4351,7 @@ class _$_TestScript extends _TestScript {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4355,6 +4371,7 @@ class _$_TestScript extends _TestScript {
   List<TestScriptOrigin>? get origin {
     final value = _origin;
     if (value == null) return null;
+    if (_origin is EqualUnmodifiableListView) return _origin;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4364,6 +4381,7 @@ class _$_TestScript extends _TestScript {
   List<TestScriptDestination>? get destination {
     final value = _destination;
     if (value == null) return null;
+    if (_destination is EqualUnmodifiableListView) return _destination;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4375,6 +4393,7 @@ class _$_TestScript extends _TestScript {
   List<TestScriptFixture>? get fixture {
     final value = _fixture;
     if (value == null) return null;
+    if (_fixture is EqualUnmodifiableListView) return _fixture;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4384,6 +4403,7 @@ class _$_TestScript extends _TestScript {
   List<Reference>? get profile {
     final value = _profile;
     if (value == null) return null;
+    if (_profile is EqualUnmodifiableListView) return _profile;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4393,6 +4413,7 @@ class _$_TestScript extends _TestScript {
   List<TestScriptVariable>? get variable {
     final value = _variable;
     if (value == null) return null;
+    if (_variable is EqualUnmodifiableListView) return _variable;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4402,6 +4423,7 @@ class _$_TestScript extends _TestScript {
   List<TestScriptRule>? get rule {
     final value = _rule;
     if (value == null) return null;
+    if (_rule is EqualUnmodifiableListView) return _rule;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4411,6 +4433,7 @@ class _$_TestScript extends _TestScript {
   List<TestScriptRuleset>? get ruleset {
     final value = _ruleset;
     if (value == null) return null;
+    if (_ruleset is EqualUnmodifiableListView) return _ruleset;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4422,6 +4445,7 @@ class _$_TestScript extends _TestScript {
   List<TestScriptTest>? get test {
     final value = _test;
     if (value == null) return null;
+    if (_test is EqualUnmodifiableListView) return _test;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5316,6 +5340,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   List<TestScriptLink>? get link {
     final value = _link;
     if (value == null) return null;
+    if (_link is EqualUnmodifiableListView) return _link;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5323,6 +5348,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   final List<TestScriptCapability> _capability;
   @override
   List<TestScriptCapability> get capability {
+    if (_capability is EqualUnmodifiableListView) return _capability;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_capability);
   }
@@ -5995,6 +6021,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   List<Decimal>? get origin {
     final value = _origin;
     if (value == null) return null;
+    if (_origin is EqualUnmodifiableListView) return _origin;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6005,6 +6032,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   List<Element?>? get originElement {
     final value = _originElement;
     if (value == null) return null;
+    if (_originElement is EqualUnmodifiableListView) return _originElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6019,6 +6047,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   List<String>? get link {
     final value = _link;
     if (value == null) return null;
+    if (_link is EqualUnmodifiableListView) return _link;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6029,6 +6058,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   List<Element?>? get linkElement {
     final value = _linkElement;
     if (value == null) return null;
+    if (_linkElement is EqualUnmodifiableListView) return _linkElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7188,6 +7218,7 @@ class _$_TestScriptRule extends _TestScriptRule {
   List<TestScriptParam>? get param {
     final value = _param;
     if (value == null) return null;
+    if (_param is EqualUnmodifiableListView) return _param;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7609,6 +7640,7 @@ class _$_TestScriptRuleset extends _TestScriptRuleset {
   final List<TestScriptRule1> _rule;
   @override
   List<TestScriptRule1> get rule {
+    if (_rule is EqualUnmodifiableListView) return _rule;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_rule);
   }
@@ -7816,6 +7848,7 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
   List<TestScriptParam1>? get param {
     final value = _param;
     if (value == null) return null;
+    if (_param is EqualUnmodifiableListView) return _param;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8215,6 +8248,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
   final List<TestScriptAction> _action;
   @override
   List<TestScriptAction> get action {
+    if (_action is EqualUnmodifiableListView) return _action;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_action);
   }
@@ -9258,6 +9292,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   List<TestScriptRequestHeader>? get requestHeader {
     final value = _requestHeader;
     if (value == null) return null;
+    if (_requestHeader is EqualUnmodifiableListView) return _requestHeader;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11581,6 +11616,7 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
   List<TestScriptParam2>? get param {
     final value = _param;
     if (value == null) return null;
+    if (_param is EqualUnmodifiableListView) return _param;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12036,6 +12072,7 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
   List<TestScriptRule3>? get rule {
     final value = _rule;
     if (value == null) return null;
+    if (_rule is EqualUnmodifiableListView) return _rule;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12249,6 +12286,7 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
   List<TestScriptParam3>? get param {
     final value = _param;
     if (value == null) return null;
+    if (_param is EqualUnmodifiableListView) return _param;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12751,6 +12789,7 @@ class _$_TestScriptTest extends _TestScriptTest {
   final List<TestScriptAction1> _action;
   @override
   List<TestScriptAction1> get action {
+    if (_action is EqualUnmodifiableListView) return _action;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_action);
   }
@@ -13115,6 +13154,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
   final List<TestScriptAction2> _action;
   @override
   List<TestScriptAction2> get action {
+    if (_action is EqualUnmodifiableListView) return _action;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_action);
   }

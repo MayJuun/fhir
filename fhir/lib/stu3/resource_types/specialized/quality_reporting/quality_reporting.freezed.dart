@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'quality_reporting.dart';
 
@@ -1686,6 +1686,7 @@ class _$_Measure extends _Measure {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1696,6 +1697,7 @@ class _$_Measure extends _Measure {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1705,6 +1707,8 @@ class _$_Measure extends _Measure {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1719,6 +1723,7 @@ class _$_Measure extends _Measure {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1790,6 +1795,7 @@ class _$_Measure extends _Measure {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1799,6 +1805,7 @@ class _$_Measure extends _Measure {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1808,6 +1815,7 @@ class _$_Measure extends _Measure {
   List<CodeableConcept>? get topic {
     final value = _topic;
     if (value == null) return null;
+    if (_topic is EqualUnmodifiableListView) return _topic;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1817,6 +1825,7 @@ class _$_Measure extends _Measure {
   List<Contributor>? get contributor {
     final value = _contributor;
     if (value == null) return null;
+    if (_contributor is EqualUnmodifiableListView) return _contributor;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1826,6 +1835,7 @@ class _$_Measure extends _Measure {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1840,6 +1850,7 @@ class _$_Measure extends _Measure {
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
+    if (_relatedArtifact is EqualUnmodifiableListView) return _relatedArtifact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1850,6 +1861,7 @@ class _$_Measure extends _Measure {
   List<Reference>? get library_ {
     final value = _library_;
     if (value == null) return null;
+    if (_library_ is EqualUnmodifiableListView) return _library_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1868,6 +1880,7 @@ class _$_Measure extends _Measure {
   List<CodeableConcept>? get type {
     final value = _type;
     if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1902,6 +1915,7 @@ class _$_Measure extends _Measure {
   List<String>? get definition {
     final value = _definition;
     if (value == null) return null;
+    if (_definition is EqualUnmodifiableListView) return _definition;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1912,6 +1926,8 @@ class _$_Measure extends _Measure {
   List<Element?>? get definitionElement {
     final value = _definitionElement;
     if (value == null) return null;
+    if (_definitionElement is EqualUnmodifiableListView)
+      return _definitionElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1932,6 +1948,7 @@ class _$_Measure extends _Measure {
   List<MeasureGroup>? get group {
     final value = _group;
     if (value == null) return null;
+    if (_group is EqualUnmodifiableListView) return _group;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1941,6 +1958,8 @@ class _$_Measure extends _Measure {
   List<MeasureSupplementalData>? get supplementalData {
     final value = _supplementalData;
     if (value == null) return null;
+    if (_supplementalData is EqualUnmodifiableListView)
+      return _supplementalData;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2685,6 +2704,7 @@ class _$_MeasureGroup extends _MeasureGroup {
   List<MeasurePopulation>? get population {
     final value = _population;
     if (value == null) return null;
+    if (_population is EqualUnmodifiableListView) return _population;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2694,6 +2714,7 @@ class _$_MeasureGroup extends _MeasureGroup {
   List<MeasureStratifier>? get stratifier {
     final value = _stratifier;
     if (value == null) return null;
+    if (_stratifier is EqualUnmodifiableListView) return _stratifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3666,6 +3687,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   List<CodeableConcept>? get usage {
     final value = _usage;
     if (value == null) return null;
+    if (_usage is EqualUnmodifiableListView) return _usage;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4424,6 +4446,7 @@ class _$_MeasureReport extends _MeasureReport {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4434,6 +4457,7 @@ class _$_MeasureReport extends _MeasureReport {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4443,6 +4467,8 @@ class _$_MeasureReport extends _MeasureReport {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4477,6 +4503,7 @@ class _$_MeasureReport extends _MeasureReport {
   List<MeasureReportGroup>? get group {
     final value = _group;
     if (value == null) return null;
+    if (_group is EqualUnmodifiableListView) return _group;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4865,6 +4892,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   List<MeasureReportPopulation>? get population {
     final value = _population;
     if (value == null) return null;
+    if (_population is EqualUnmodifiableListView) return _population;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4879,6 +4907,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   List<MeasureReportStratifier>? get stratifier {
     final value = _stratifier;
     if (value == null) return null;
+    if (_stratifier is EqualUnmodifiableListView) return _stratifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5384,6 +5413,7 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   List<MeasureReportStratum>? get stratum {
     final value = _stratum;
     if (value == null) return null;
+    if (_stratum is EqualUnmodifiableListView) return _stratum;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5638,6 +5668,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   List<MeasureReportPopulation1>? get population {
     final value = _population;
     if (value == null) return null;
+    if (_population is EqualUnmodifiableListView) return _population;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

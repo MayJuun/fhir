@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'entities2.dart';
 
@@ -685,6 +685,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -695,6 +696,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -704,6 +706,8 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -717,6 +721,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<Reference>? get parent {
     final value = _parent;
     if (value == null) return null;
+    if (_parent is EqualUnmodifiableListView) return _parent;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -726,6 +731,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<Reference>? get request {
     final value = _request;
     if (value == null) return null;
+    if (_request is EqualUnmodifiableListView) return _request;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -735,6 +741,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -746,6 +753,8 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<Reference>? get processingFacility {
     final value = _processingFacility;
     if (value == null) return null;
+    if (_processingFacility is EqualUnmodifiableListView)
+      return _processingFacility;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -771,6 +780,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   List<BiologicallyDerivedProductProperty>? get property {
     final value = _property;
     if (value == null) return null;
+    if (_property is EqualUnmodifiableListView) return _property;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1253,6 +1263,7 @@ class _$_BiologicallyDerivedProductCollection
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1262,6 +1273,8 @@ class _$_BiologicallyDerivedProductCollection
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1855,6 +1868,7 @@ class _$_BiologicallyDerivedProductProperty
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1864,6 +1878,8 @@ class _$_BiologicallyDerivedProductProperty
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3208,6 +3224,7 @@ class _$_Device extends _Device {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3218,6 +3235,7 @@ class _$_Device extends _Device {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3227,6 +3245,8 @@ class _$_Device extends _Device {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3236,6 +3256,7 @@ class _$_Device extends _Device {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3252,6 +3273,7 @@ class _$_Device extends _Device {
   List<DeviceUdiCarrier>? get udiCarrier {
     final value = _udiCarrier;
     if (value == null) return null;
+    if (_udiCarrier is EqualUnmodifiableListView) return _udiCarrier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3266,6 +3288,7 @@ class _$_Device extends _Device {
   List<CodeableConcept>? get statusReason {
     final value = _statusReason;
     if (value == null) return null;
+    if (_statusReason is EqualUnmodifiableListView) return _statusReason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3302,6 +3325,7 @@ class _$_Device extends _Device {
   List<DeviceDeviceName>? get deviceName {
     final value = _deviceName;
     if (value == null) return null;
+    if (_deviceName is EqualUnmodifiableListView) return _deviceName;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3321,6 +3345,7 @@ class _$_Device extends _Device {
   List<CodeableConcept>? get type {
     final value = _type;
     if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3330,6 +3355,7 @@ class _$_Device extends _Device {
   List<DeviceVersion>? get version {
     final value = _version;
     if (value == null) return null;
+    if (_version is EqualUnmodifiableListView) return _version;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3339,6 +3365,7 @@ class _$_Device extends _Device {
   List<DeviceSpecialization>? get specialization {
     final value = _specialization;
     if (value == null) return null;
+    if (_specialization is EqualUnmodifiableListView) return _specialization;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3348,6 +3375,7 @@ class _$_Device extends _Device {
   List<DeviceProperty>? get property {
     final value = _property;
     if (value == null) return null;
+    if (_property is EqualUnmodifiableListView) return _property;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3359,6 +3387,8 @@ class _$_Device extends _Device {
   List<DeviceOperationalState>? get operationalState {
     final value = _operationalState;
     if (value == null) return null;
+    if (_operationalState is EqualUnmodifiableListView)
+      return _operationalState;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3368,6 +3398,8 @@ class _$_Device extends _Device {
   List<DeviceAssociationState>? get associationState {
     final value = _associationState;
     if (value == null) return null;
+    if (_associationState is EqualUnmodifiableListView)
+      return _associationState;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3379,6 +3411,7 @@ class _$_Device extends _Device {
   List<ContactPoint>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3395,6 +3428,7 @@ class _$_Device extends _Device {
   List<Reference>? get endpoint {
     final value = _endpoint;
     if (value == null) return null;
+    if (_endpoint is EqualUnmodifiableListView) return _endpoint;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3404,6 +3438,7 @@ class _$_Device extends _Device {
   List<DeviceLink>? get link {
     final value = _link;
     if (value == null) return null;
+    if (_link is EqualUnmodifiableListView) return _link;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3413,6 +3448,7 @@ class _$_Device extends _Device {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3422,6 +3458,7 @@ class _$_Device extends _Device {
   List<CodeableConcept>? get safety {
     final value = _safety;
     if (value == null) return null;
+    if (_safety is EqualUnmodifiableListView) return _safety;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4032,6 +4069,7 @@ class _$_DeviceOperationalState extends _DeviceOperationalState {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4041,6 +4079,8 @@ class _$_DeviceOperationalState extends _DeviceOperationalState {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4052,6 +4092,7 @@ class _$_DeviceOperationalState extends _DeviceOperationalState {
   List<CodeableConcept>? get statusReason {
     final value = _statusReason;
     if (value == null) return null;
+    if (_statusReason is EqualUnmodifiableListView) return _statusReason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4061,6 +4102,7 @@ class _$_DeviceOperationalState extends _DeviceOperationalState {
   List<Reference>? get items {
     final value = _items;
     if (value == null) return null;
+    if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4370,6 +4412,7 @@ class _$_DeviceAssociationState extends _DeviceAssociationState {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4379,6 +4422,8 @@ class _$_DeviceAssociationState extends _DeviceAssociationState {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4390,6 +4435,7 @@ class _$_DeviceAssociationState extends _DeviceAssociationState {
   List<CodeableConcept>? get statusReason {
     final value = _statusReason;
     if (value == null) return null;
+    if (_statusReason is EqualUnmodifiableListView) return _statusReason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4875,6 +4921,7 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4884,6 +4931,8 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5288,6 +5337,7 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5297,6 +5347,8 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5679,6 +5731,7 @@ class _$_DeviceVersion extends _DeviceVersion {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5688,6 +5741,8 @@ class _$_DeviceVersion extends _DeviceVersion {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6038,6 +6093,7 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6047,6 +6103,8 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6557,6 +6615,7 @@ class _$_DeviceProperty extends _DeviceProperty {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6566,6 +6625,8 @@ class _$_DeviceProperty extends _DeviceProperty {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7355,6 +7416,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7365,6 +7427,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7374,6 +7437,8 @@ class _$_DeviceMetric extends _DeviceMetric {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7383,6 +7448,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7417,6 +7483,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   List<DeviceMetricCalibration>? get calibration {
     final value = _calibration;
     if (value == null) return null;
+    if (_calibration is EqualUnmodifiableListView) return _calibration;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7884,6 +7951,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7893,6 +7961,8 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8198,6 +8268,7 @@ class _$_DeviceLink extends _DeviceLink {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8207,6 +8278,8 @@ class _$_DeviceLink extends _DeviceLink {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8813,6 +8886,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8823,6 +8897,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8832,6 +8907,8 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8848,6 +8925,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8857,6 +8935,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<Reference>? get manufacturer {
     final value = _manufacturer;
     if (value == null) return null;
+    if (_manufacturer is EqualUnmodifiableListView) return _manufacturer;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8866,6 +8945,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<NutritionProductNutrient>? get nutrient {
     final value = _nutrient;
     if (value == null) return null;
+    if (_nutrient is EqualUnmodifiableListView) return _nutrient;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8875,6 +8955,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<NutritionProductIngredient>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
+    if (_ingredient is EqualUnmodifiableListView) return _ingredient;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8884,6 +8965,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<CodeableReference>? get knownAllergen {
     final value = _knownAllergen;
     if (value == null) return null;
+    if (_knownAllergen is EqualUnmodifiableListView) return _knownAllergen;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8893,6 +8975,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<NutritionProductCharacteristic>? get characteristic {
     final value = _characteristic;
     if (value == null) return null;
+    if (_characteristic is EqualUnmodifiableListView) return _characteristic;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8902,6 +8985,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<NutritionProductInstance>? get instance {
     final value = _instance;
     if (value == null) return null;
+    if (_instance is EqualUnmodifiableListView) return _instance;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8911,6 +8995,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9269,6 +9354,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9278,6 +9364,8 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9289,6 +9377,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
   List<Ratio>? get amount {
     final value = _amount;
     if (value == null) return null;
+    if (_amount is EqualUnmodifiableListView) return _amount;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9546,6 +9635,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9555,6 +9645,8 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9566,6 +9658,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
   List<Ratio>? get amount {
     final value = _amount;
     if (value == null) return null;
+    if (_amount is EqualUnmodifiableListView) return _amount;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10032,6 +10125,7 @@ class _$_NutritionProductCharacteristic
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10041,6 +10135,8 @@ class _$_NutritionProductCharacteristic
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10588,6 +10684,7 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10597,6 +10694,8 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10608,6 +10707,7 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11364,6 +11464,7 @@ class _$_Substance extends _Substance {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11374,6 +11475,7 @@ class _$_Substance extends _Substance {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11383,6 +11485,8 @@ class _$_Substance extends _Substance {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11392,6 +11496,7 @@ class _$_Substance extends _Substance {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11411,6 +11516,7 @@ class _$_Substance extends _Substance {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11434,6 +11540,7 @@ class _$_Substance extends _Substance {
   List<SubstanceIngredient>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
+    if (_ingredient is EqualUnmodifiableListView) return _ingredient;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11850,6 +11957,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11859,6 +11967,8 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

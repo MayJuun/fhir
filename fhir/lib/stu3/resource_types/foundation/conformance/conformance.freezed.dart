@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'conformance.dart';
 
@@ -1317,6 +1317,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1327,6 +1328,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1336,6 +1338,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1385,6 +1389,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1399,6 +1404,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1408,6 +1414,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1432,6 +1439,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Instant>? get instantiates {
     final value = _instantiates;
     if (value == null) return null;
+    if (_instantiates is EqualUnmodifiableListView) return _instantiates;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1442,6 +1450,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Element?>? get instantiatesElement {
     final value = _instantiatesElement;
     if (value == null) return null;
+    if (_instantiatesElement is EqualUnmodifiableListView)
+      return _instantiatesElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1465,6 +1475,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<String>? get format {
     final value = _format;
     if (value == null) return null;
+    if (_format is EqualUnmodifiableListView) return _format;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1475,6 +1486,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Element?>? get formatElement {
     final value = _formatElement;
     if (value == null) return null;
+    if (_formatElement is EqualUnmodifiableListView) return _formatElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1484,6 +1496,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<String>? get patchFormat {
     final value = _patchFormat;
     if (value == null) return null;
+    if (_patchFormat is EqualUnmodifiableListView) return _patchFormat;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1494,6 +1507,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Element?>? get patchFormatElement {
     final value = _patchFormatElement;
     if (value == null) return null;
+    if (_patchFormatElement is EqualUnmodifiableListView)
+      return _patchFormatElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1503,6 +1518,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Id>? get implementationGuide {
     final value = _implementationGuide;
     if (value == null) return null;
+    if (_implementationGuide is EqualUnmodifiableListView)
+      return _implementationGuide;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1513,6 +1530,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Element>? get implementationGuideElement {
     final value = _implementationGuideElement;
     if (value == null) return null;
+    if (_implementationGuideElement is EqualUnmodifiableListView)
+      return _implementationGuideElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1522,6 +1541,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<Reference>? get profile {
     final value = _profile;
     if (value == null) return null;
+    if (_profile is EqualUnmodifiableListView) return _profile;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1531,6 +1551,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<CapabilityStatementRest>? get rest {
     final value = _rest;
     if (value == null) return null;
+    if (_rest is EqualUnmodifiableListView) return _rest;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1540,6 +1561,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<CapabilityStatementMessaging>? get messaging {
     final value = _messaging;
     if (value == null) return null;
+    if (_messaging is EqualUnmodifiableListView) return _messaging;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1549,6 +1571,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   List<CapabilityStatementDocument>? get document {
     final value = _document;
     if (value == null) return null;
+    if (_document is EqualUnmodifiableListView) return _document;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2851,6 +2874,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   List<CapabilityStatementResource>? get resource {
     final value = _resource;
     if (value == null) return null;
+    if (_resource is EqualUnmodifiableListView) return _resource;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2860,6 +2884,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   List<CapabilityStatementInteraction1>? get interaction {
     final value = _interaction;
     if (value == null) return null;
+    if (_interaction is EqualUnmodifiableListView) return _interaction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2869,6 +2894,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   List<CapabilityStatementSearchParam>? get searchParam {
     final value = _searchParam;
     if (value == null) return null;
+    if (_searchParam is EqualUnmodifiableListView) return _searchParam;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2878,6 +2904,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   List<CapabilityStatementOperation>? get operation {
     final value = _operation;
     if (value == null) return null;
+    if (_operation is EqualUnmodifiableListView) return _operation;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2887,6 +2914,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   List<String>? get compartment {
     final value = _compartment;
     if (value == null) return null;
+    if (_compartment is EqualUnmodifiableListView) return _compartment;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2897,6 +2925,8 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   List<Element?>? get compartmentElement {
     final value = _compartmentElement;
     if (value == null) return null;
+    if (_compartmentElement is EqualUnmodifiableListView)
+      return _compartmentElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3246,6 +3276,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3260,6 +3291,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   List<CodeableConcept>? get service {
     final value = _service;
     if (value == null) return null;
+    if (_service is EqualUnmodifiableListView) return _service;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3274,6 +3306,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   List<CapabilityStatementCertificate>? get certificate {
     final value = _certificate;
     if (value == null) return null;
+    if (_certificate is EqualUnmodifiableListView) return _certificate;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4318,6 +4351,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   final List<CapabilityStatementInteraction> _interaction;
   @override
   List<CapabilityStatementInteraction> get interaction {
+    if (_interaction is EqualUnmodifiableListView) return _interaction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_interaction);
   }
@@ -4362,6 +4396,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   List<CapabilityStatementResourceReferencePolicy>? get referencePolicy {
     final value = _referencePolicy;
     if (value == null) return null;
+    if (_referencePolicy is EqualUnmodifiableListView) return _referencePolicy;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4372,6 +4407,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   List<Element?>? get referencePolicyElement {
     final value = _referencePolicyElement;
     if (value == null) return null;
+    if (_referencePolicyElement is EqualUnmodifiableListView)
+      return _referencePolicyElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4381,6 +4418,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   List<String>? get searchInclude {
     final value = _searchInclude;
     if (value == null) return null;
+    if (_searchInclude is EqualUnmodifiableListView) return _searchInclude;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4391,6 +4429,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   List<Element?>? get searchIncludeElement {
     final value = _searchIncludeElement;
     if (value == null) return null;
+    if (_searchIncludeElement is EqualUnmodifiableListView)
+      return _searchIncludeElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4400,6 +4440,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   List<String>? get searchRevInclude {
     final value = _searchRevInclude;
     if (value == null) return null;
+    if (_searchRevInclude is EqualUnmodifiableListView)
+      return _searchRevInclude;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4410,6 +4452,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   List<Element?>? get searchRevIncludeElement {
     final value = _searchRevIncludeElement;
     if (value == null) return null;
+    if (_searchRevIncludeElement is EqualUnmodifiableListView)
+      return _searchRevIncludeElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4419,6 +4463,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   List<CapabilityStatementSearchParam>? get searchParam {
     final value = _searchParam;
     if (value == null) return null;
+    if (_searchParam is EqualUnmodifiableListView) return _searchParam;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6018,6 +6063,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   List<CapabilityStatementEndpoint>? get endpoint {
     final value = _endpoint;
     if (value == null) return null;
+    if (_endpoint is EqualUnmodifiableListView) return _endpoint;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6037,6 +6083,8 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   List<CapabilityStatementSupportedMessage>? get supportedMessage {
     final value = _supportedMessage;
     if (value == null) return null;
+    if (_supportedMessage is EqualUnmodifiableListView)
+      return _supportedMessage;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6046,6 +6094,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   List<CapabilityStatementEvent>? get event {
     final value = _event;
     if (value == null) return null;
+    if (_event is EqualUnmodifiableListView) return _event;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8278,6 +8327,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8288,6 +8338,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8297,6 +8348,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8341,6 +8394,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8360,6 +8414,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8369,6 +8424,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8388,6 +8444,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   List<CompartmentDefinitionResource>? get resource {
     final value = _resource;
     if (value == null) return null;
+    if (_resource is EqualUnmodifiableListView) return _resource;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8895,6 +8952,7 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
   List<String>? get param {
     final value = _param;
     if (value == null) return null;
+    if (_param is EqualUnmodifiableListView) return _param;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8905,6 +8963,7 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
   List<Element?>? get paramElement {
     final value = _paramElement;
     if (value == null) return null;
+    if (_paramElement is EqualUnmodifiableListView) return _paramElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9900,6 +9959,7 @@ class _$_DataElement extends _DataElement {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9910,6 +9970,7 @@ class _$_DataElement extends _DataElement {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9919,6 +9980,8 @@ class _$_DataElement extends _DataElement {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9933,6 +9996,7 @@ class _$_DataElement extends _DataElement {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9977,6 +10041,7 @@ class _$_DataElement extends _DataElement {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9986,6 +10051,7 @@ class _$_DataElement extends _DataElement {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9995,6 +10061,7 @@ class _$_DataElement extends _DataElement {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10014,6 +10081,7 @@ class _$_DataElement extends _DataElement {
   List<DataElementMapping>? get mapping {
     final value = _mapping;
     if (value == null) return null;
+    if (_mapping is EqualUnmodifiableListView) return _mapping;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10021,6 +10089,7 @@ class _$_DataElement extends _DataElement {
   final List<ElementDefinition> _element;
   @override
   List<ElementDefinition> get element {
+    if (_element is EqualUnmodifiableListView) return _element;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_element);
   }
@@ -11587,6 +11656,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11597,6 +11667,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11606,6 +11677,8 @@ class _$_GraphDefinition extends _GraphDefinition {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11650,6 +11723,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11664,6 +11738,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11673,6 +11748,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11697,6 +11773,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   List<GraphDefinitionLink>? get link {
     final value = _link;
     if (value == null) return null;
+    if (_link is EqualUnmodifiableListView) return _link;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12328,6 +12405,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
   final List<GraphDefinitionTarget> _target;
   @override
   List<GraphDefinitionTarget> get target {
+    if (_target is EqualUnmodifiableListView) return _target;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_target);
   }
@@ -12661,6 +12739,7 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
   List<GraphDefinitionCompartment>? get compartment {
     final value = _compartment;
     if (value == null) return null;
+    if (_compartment is EqualUnmodifiableListView) return _compartment;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12670,6 +12749,7 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
   List<GraphDefinitionLink>? get link {
     final value = _link;
     if (value == null) return null;
+    if (_link is EqualUnmodifiableListView) return _link;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14098,6 +14178,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14108,6 +14189,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14117,6 +14199,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14161,6 +14245,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14175,6 +14260,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14184,6 +14270,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14203,6 +14290,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<ImplementationGuideDependency>? get dependency {
     final value = _dependency;
     if (value == null) return null;
+    if (_dependency is EqualUnmodifiableListView) return _dependency;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14212,6 +14300,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<ImplementationGuidePackage>? get package {
     final value = _package;
     if (value == null) return null;
+    if (_package is EqualUnmodifiableListView) return _package;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14221,6 +14310,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<ImplementationGuideGlobal>? get global {
     final value = _global;
     if (value == null) return null;
+    if (_global is EqualUnmodifiableListView) return _global;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14230,6 +14320,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<String>? get binary {
     final value = _binary;
     if (value == null) return null;
+    if (_binary is EqualUnmodifiableListView) return _binary;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14240,6 +14331,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   List<Element?>? get binaryElement {
     final value = _binaryElement;
     if (value == null) return null;
+    if (_binaryElement is EqualUnmodifiableListView) return _binaryElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -15008,6 +15100,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   final List<ImplementationGuideResource> _resource;
   @override
   List<ImplementationGuideResource> get resource {
+    if (_resource is EqualUnmodifiableListView) return _resource;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_resource);
   }
@@ -16174,6 +16267,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   List<String>? get type {
     final value = _type;
     if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -16184,6 +16278,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   List<Element?>? get typeElement {
     final value = _typeElement;
     if (value == null) return null;
+    if (_typeElement is EqualUnmodifiableListView) return _typeElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -16193,6 +16288,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   List<String>? get package {
     final value = _package;
     if (value == null) return null;
+    if (_package is EqualUnmodifiableListView) return _package;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -16203,6 +16299,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   List<Element?>? get packageElement {
     final value = _packageElement;
     if (value == null) return null;
+    if (_packageElement is EqualUnmodifiableListView) return _packageElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -16217,6 +16314,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   List<ImplementationGuidePage>? get page {
     final value = _page;
     if (value == null) return null;
+    if (_page is EqualUnmodifiableListView) return _page;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17482,6 +17580,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17492,6 +17591,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17501,6 +17601,8 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17552,6 +17654,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17566,6 +17669,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17575,6 +17679,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17596,6 +17701,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<Reference>? get parent {
     final value = _parent;
     if (value == null) return null;
+    if (_parent is EqualUnmodifiableListView) return _parent;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17605,6 +17711,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<Reference>? get replaces {
     final value = _replaces;
     if (value == null) return null;
+    if (_replaces is EqualUnmodifiableListView) return _replaces;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17621,6 +17728,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<MessageDefinitionFocus>? get focus {
     final value = _focus;
     if (value == null) return null;
+    if (_focus is EqualUnmodifiableListView) return _focus;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -17635,6 +17743,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   List<MessageDefinitionAllowedResponse>? get allowedResponse {
     final value = _allowedResponse;
     if (value == null) return null;
+    if (_allowedResponse is EqualUnmodifiableListView) return _allowedResponse;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19789,6 +19898,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19799,6 +19909,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19808,6 +19919,8 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19857,6 +19970,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19871,6 +19985,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19880,6 +19995,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19911,6 +20027,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<String>? get resource {
     final value = _resource;
     if (value == null) return null;
+    if (_resource is EqualUnmodifiableListView) return _resource;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19921,6 +20038,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<Element?>? get resourceElement {
     final value = _resourceElement;
     if (value == null) return null;
+    if (_resourceElement is EqualUnmodifiableListView) return _resourceElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19945,6 +20063,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<OperationDefinitionParameter>? get parameter {
     final value = _parameter;
     if (value == null) return null;
+    if (_parameter is EqualUnmodifiableListView) return _parameter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -19954,6 +20073,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   List<OperationDefinitionOverload>? get overload {
     final value = _overload;
     if (value == null) return null;
+    if (_overload is EqualUnmodifiableListView) return _overload;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -20852,6 +20972,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   List<OperationDefinitionParameter>? get part_ {
     final value = _part_;
     if (value == null) return null;
+    if (_part_ is EqualUnmodifiableListView) return _part_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -21239,6 +21360,7 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -21510,6 +21632,7 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
   List<String>? get parameterName {
     final value = _parameterName;
     if (value == null) return null;
+    if (_parameterName is EqualUnmodifiableListView) return _parameterName;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -21520,6 +21643,8 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
   List<Element?>? get parameterNameElement {
     final value = _parameterNameElement;
     if (value == null) return null;
+    if (_parameterNameElement is EqualUnmodifiableListView)
+      return _parameterNameElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22880,6 +23005,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22890,6 +23016,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22899,6 +23026,8 @@ class _$_SearchParameter extends _SearchParameter {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22943,6 +23072,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22952,6 +23082,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22961,6 +23092,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22980,6 +23112,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<String>? get base {
     final value = _base;
     if (value == null) return null;
+    if (_base is EqualUnmodifiableListView) return _base;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -22990,6 +23123,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<Element?>? get baseElement {
     final value = _baseElement;
     if (value == null) return null;
+    if (_baseElement is EqualUnmodifiableListView) return _baseElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23029,6 +23163,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<String>? get target {
     final value = _target;
     if (value == null) return null;
+    if (_target is EqualUnmodifiableListView) return _target;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23039,6 +23174,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<Element?>? get targetElement {
     final value = _targetElement;
     if (value == null) return null;
+    if (_targetElement is EqualUnmodifiableListView) return _targetElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23048,6 +23184,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<SearchParameterComparator>? get comparator {
     final value = _comparator;
     if (value == null) return null;
+    if (_comparator is EqualUnmodifiableListView) return _comparator;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23058,6 +23195,8 @@ class _$_SearchParameter extends _SearchParameter {
   List<Element?>? get comparatorElement {
     final value = _comparatorElement;
     if (value == null) return null;
+    if (_comparatorElement is EqualUnmodifiableListView)
+      return _comparatorElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23067,6 +23206,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<SearchParameterModifier>? get modifier {
     final value = _modifier;
     if (value == null) return null;
+    if (_modifier is EqualUnmodifiableListView) return _modifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23077,6 +23217,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<Element?>? get modifierElement {
     final value = _modifierElement;
     if (value == null) return null;
+    if (_modifierElement is EqualUnmodifiableListView) return _modifierElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23086,6 +23227,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<String>? get chain {
     final value = _chain;
     if (value == null) return null;
+    if (_chain is EqualUnmodifiableListView) return _chain;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23096,6 +23238,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<Element?>? get chainElement {
     final value = _chainElement;
     if (value == null) return null;
+    if (_chainElement is EqualUnmodifiableListView) return _chainElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -23105,6 +23248,7 @@ class _$_SearchParameter extends _SearchParameter {
   List<SearchParameterComponent>? get component {
     final value = _component;
     if (value == null) return null;
+    if (_component is EqualUnmodifiableListView) return _component;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25150,6 +25294,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25160,6 +25305,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25169,6 +25315,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25183,6 +25331,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25227,6 +25376,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25241,6 +25391,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25250,6 +25401,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25269,6 +25421,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<Coding>? get keyword {
     final value = _keyword;
     if (value == null) return null;
+    if (_keyword is EqualUnmodifiableListView) return _keyword;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25283,6 +25436,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<StructureDefinitionMapping>? get mapping {
     final value = _mapping;
     if (value == null) return null;
+    if (_mapping is EqualUnmodifiableListView) return _mapping;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25308,6 +25462,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<String>? get context {
     final value = _context;
     if (value == null) return null;
+    if (_context is EqualUnmodifiableListView) return _context;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25318,6 +25473,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<Element?>? get contextElement {
     final value = _contextElement;
     if (value == null) return null;
+    if (_contextElement is EqualUnmodifiableListView) return _contextElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25327,6 +25483,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<String>? get contextInvariant {
     final value = _contextInvariant;
     if (value == null) return null;
+    if (_contextInvariant is EqualUnmodifiableListView)
+      return _contextInvariant;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -25337,6 +25495,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   List<Element?>? get contextInvariantElement {
     final value = _contextInvariantElement;
     if (value == null) return null;
+    if (_contextInvariantElement is EqualUnmodifiableListView)
+      return _contextInvariantElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -26266,6 +26426,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   final List<ElementDefinition> _element;
   @override
   List<ElementDefinition> get element {
+    if (_element is EqualUnmodifiableListView) return _element;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_element);
   }
@@ -26424,6 +26585,7 @@ class _$_StructureDefinitionDifferential
   final List<ElementDefinition> _element;
   @override
   List<ElementDefinition> get element {
+    if (_element is EqualUnmodifiableListView) return _element;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_element);
   }
@@ -27465,6 +27627,7 @@ class _$_StructureMap extends _StructureMap {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27475,6 +27638,7 @@ class _$_StructureMap extends _StructureMap {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27484,6 +27648,8 @@ class _$_StructureMap extends _StructureMap {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27498,6 +27664,7 @@ class _$_StructureMap extends _StructureMap {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27542,6 +27709,7 @@ class _$_StructureMap extends _StructureMap {
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27556,6 +27724,7 @@ class _$_StructureMap extends _StructureMap {
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27565,6 +27734,7 @@ class _$_StructureMap extends _StructureMap {
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27584,6 +27754,7 @@ class _$_StructureMap extends _StructureMap {
   List<StructureMapStructure>? get structure {
     final value = _structure;
     if (value == null) return null;
+    if (_structure is EqualUnmodifiableListView) return _structure;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27594,6 +27765,7 @@ class _$_StructureMap extends _StructureMap {
   List<String>? get import_ {
     final value = _import_;
     if (value == null) return null;
+    if (_import_ is EqualUnmodifiableListView) return _import_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27604,6 +27776,7 @@ class _$_StructureMap extends _StructureMap {
   List<Element?>? get importElement {
     final value = _importElement;
     if (value == null) return null;
+    if (_importElement is EqualUnmodifiableListView) return _importElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -27611,6 +27784,7 @@ class _$_StructureMap extends _StructureMap {
   final List<StructureMapGroup> _group;
   @override
   List<StructureMapGroup> get group {
+    if (_group is EqualUnmodifiableListView) return _group;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_group);
   }
@@ -28607,6 +28781,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
   final List<StructureMapInput> _input;
   @override
   List<StructureMapInput> get input {
+    if (_input is EqualUnmodifiableListView) return _input;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_input);
   }
@@ -28614,6 +28789,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
   final List<StructureMapRule> _rule;
   @override
   List<StructureMapRule> get rule {
+    if (_rule is EqualUnmodifiableListView) return _rule;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_rule);
   }
@@ -29329,6 +29505,7 @@ class _$_StructureMapRule extends _StructureMapRule {
   final List<StructureMapSource> _source;
   @override
   List<StructureMapSource> get source {
+    if (_source is EqualUnmodifiableListView) return _source;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_source);
   }
@@ -29338,6 +29515,7 @@ class _$_StructureMapRule extends _StructureMapRule {
   List<StructureMapTarget>? get target {
     final value = _target;
     if (value == null) return null;
+    if (_target is EqualUnmodifiableListView) return _target;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -29347,6 +29525,7 @@ class _$_StructureMapRule extends _StructureMapRule {
   List<StructureMapRule>? get rule {
     final value = _rule;
     if (value == null) return null;
+    if (_rule is EqualUnmodifiableListView) return _rule;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -29356,6 +29535,7 @@ class _$_StructureMapRule extends _StructureMapRule {
   List<StructureMapDependent>? get dependent {
     final value = _dependent;
     if (value == null) return null;
+    if (_dependent is EqualUnmodifiableListView) return _dependent;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -33036,6 +33216,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
   List<StructureMapTargetListMode>? get listMode {
     final value = _listMode;
     if (value == null) return null;
+    if (_listMode is EqualUnmodifiableListView) return _listMode;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -33046,6 +33227,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
   List<Element?>? get listModeElement {
     final value = _listModeElement;
     if (value == null) return null;
+    if (_listModeElement is EqualUnmodifiableListView) return _listModeElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -33065,6 +33247,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
   List<StructureMapParameter>? get parameter {
     final value = _parameter;
     if (value == null) return null;
+    if (_parameter is EqualUnmodifiableListView) return _parameter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -33813,6 +33996,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
   List<String>? get variable {
     final value = _variable;
     if (value == null) return null;
+    if (_variable is EqualUnmodifiableListView) return _variable;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -33823,6 +34007,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
   List<Element?>? get variableElement {
     final value = _variableElement;
     if (value == null) return null;
+    if (_variableElement is EqualUnmodifiableListView) return _variableElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'special_types.dart';
 
@@ -274,6 +274,7 @@ class _$_Meta extends _Meta {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -284,6 +285,7 @@ class _$_Meta extends _Meta {
   List<String>? get fhirComments {
     final value = _fhirComments;
     if (value == null) return null;
+    if (_fhirComments is EqualUnmodifiableListView) return _fhirComments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -303,6 +305,7 @@ class _$_Meta extends _Meta {
   List<FhirUri>? get profile {
     final value = _profile;
     if (value == null) return null;
+    if (_profile is EqualUnmodifiableListView) return _profile;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -312,6 +315,7 @@ class _$_Meta extends _Meta {
   List<Coding>? get security {
     final value = _security;
     if (value == null) return null;
+    if (_security is EqualUnmodifiableListView) return _security;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -321,6 +325,7 @@ class _$_Meta extends _Meta {
   List<Coding>? get tag {
     final value = _tag;
     if (value == null) return null;
+    if (_tag is EqualUnmodifiableListView) return _tag;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -647,6 +652,7 @@ class _$_Reference extends _Reference {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -657,6 +663,7 @@ class _$_Reference extends _Reference {
   List<String>? get fhirComments {
     final value = _fhirComments;
     if (value == null) return null;
+    if (_fhirComments is EqualUnmodifiableListView) return _fhirComments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9236,6 +9243,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9247,6 +9255,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<Code>? get representation {
     final value = _representation;
     if (value == null) return null;
+    if (_representation is EqualUnmodifiableListView) return _representation;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9266,6 +9275,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<Coding>? get code {
     final value = _code;
     if (value == null) return null;
+    if (_code is EqualUnmodifiableListView) return _code;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9297,6 +9307,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<String>? get alias {
     final value = _alias;
     if (value == null) return null;
+    if (_alias is EqualUnmodifiableListView) return _alias;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9321,6 +9332,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<ElementDefinitionType>? get type {
     final value = _type;
     if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10021,6 +10033,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<Id>? get condition {
     final value = _condition;
     if (value == null) return null;
+    if (_condition is EqualUnmodifiableListView) return _condition;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10033,6 +10046,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<ElementDefinitionConstraint>? get constraint {
     final value = _constraint;
     if (value == null) return null;
+    if (_constraint is EqualUnmodifiableListView) return _constraint;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10059,6 +10073,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   List<ElementDefinitionMapping>? get mapping {
     final value = _mapping;
     if (value == null) return null;
+    if (_mapping is EqualUnmodifiableListView) return _mapping;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12237,6 +12252,7 @@ class _$_Narrative extends _Narrative {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12247,6 +12263,7 @@ class _$_Narrative extends _Narrative {
   List<String>? get fhirComments {
     final value = _fhirComments;
     if (value == null) return null;
+    if (_fhirComments is EqualUnmodifiableListView) return _fhirComments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12615,6 +12632,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12624,6 +12642,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   List<String>? get discriminator {
     final value = _discriminator;
     if (value == null) return null;
+    if (_discriminator is EqualUnmodifiableListView) return _discriminator;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13003,6 +13022,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13357,6 +13377,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13371,6 +13392,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   List<FhirUri>? get profile {
     final value = _profile;
     if (value == null) return null;
+    if (_profile is EqualUnmodifiableListView) return _profile;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13380,6 +13402,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   List<TypeAggregation>? get aggregation {
     final value = _aggregation;
     if (value == null) return null;
+    if (_aggregation is EqualUnmodifiableListView) return _aggregation;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13393,6 +13416,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   List<String>? get fhirElement {
     final value = _fhirElement;
     if (value == null) return null;
+    if (_fhirElement is EqualUnmodifiableListView) return _fhirElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13590,6 +13614,7 @@ class _$_TypeCodeExtension extends _TypeCodeExtension {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14013,6 +14038,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14441,6 +14467,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14835,6 +14862,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -14845,6 +14873,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   List<String>? get fhirComments {
     final value = _fhirComments;
     if (value == null) return null;
+    if (_fhirComments is EqualUnmodifiableListView) return _fhirComments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

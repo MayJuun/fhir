@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'request_and_response.dart';
 
@@ -881,6 +881,7 @@ class _$_Communication extends _Communication {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -891,6 +892,7 @@ class _$_Communication extends _Communication {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -900,6 +902,8 @@ class _$_Communication extends _Communication {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -909,6 +913,7 @@ class _$_Communication extends _Communication {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -918,6 +923,8 @@ class _$_Communication extends _Communication {
   List<Canonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
+    if (_instantiatesCanonical is EqualUnmodifiableListView)
+      return _instantiatesCanonical;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -927,6 +934,7 @@ class _$_Communication extends _Communication {
   List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
+    if (_instantiatesUri is EqualUnmodifiableListView) return _instantiatesUri;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -937,6 +945,8 @@ class _$_Communication extends _Communication {
   List<Element>? get instantiatesUriElement {
     final value = _instantiatesUriElement;
     if (value == null) return null;
+    if (_instantiatesUriElement is EqualUnmodifiableListView)
+      return _instantiatesUriElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -946,6 +956,7 @@ class _$_Communication extends _Communication {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -955,6 +966,7 @@ class _$_Communication extends _Communication {
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
+    if (_partOf is EqualUnmodifiableListView) return _partOf;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -964,6 +976,7 @@ class _$_Communication extends _Communication {
   List<Reference>? get inResponseTo {
     final value = _inResponseTo;
     if (value == null) return null;
+    if (_inResponseTo is EqualUnmodifiableListView) return _inResponseTo;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -980,6 +993,7 @@ class _$_Communication extends _Communication {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -994,6 +1008,7 @@ class _$_Communication extends _Communication {
   List<CodeableConcept>? get medium {
     final value = _medium;
     if (value == null) return null;
+    if (_medium is EqualUnmodifiableListView) return _medium;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1007,6 +1022,7 @@ class _$_Communication extends _Communication {
   List<Reference>? get about {
     final value = _about;
     if (value == null) return null;
+    if (_about is EqualUnmodifiableListView) return _about;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1028,6 +1044,7 @@ class _$_Communication extends _Communication {
   List<Reference>? get recipient {
     final value = _recipient;
     if (value == null) return null;
+    if (_recipient is EqualUnmodifiableListView) return _recipient;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1039,6 +1056,7 @@ class _$_Communication extends _Communication {
   List<CodeableReference>? get reason {
     final value = _reason;
     if (value == null) return null;
+    if (_reason is EqualUnmodifiableListView) return _reason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1048,6 +1066,7 @@ class _$_Communication extends _Communication {
   List<CommunicationPayload>? get payload {
     final value = _payload;
     if (value == null) return null;
+    if (_payload is EqualUnmodifiableListView) return _payload;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1057,6 +1076,7 @@ class _$_Communication extends _Communication {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1558,6 +1578,7 @@ class _$_CommunicationPayload extends _CommunicationPayload {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1567,6 +1588,8 @@ class _$_CommunicationPayload extends _CommunicationPayload {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2590,6 +2613,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2600,6 +2624,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2609,6 +2634,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2618,6 +2645,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2627,6 +2655,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2636,6 +2665,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Reference>? get replaces {
     final value = _replaces;
     if (value == null) return null;
+    if (_replaces is EqualUnmodifiableListView) return _replaces;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2659,6 +2689,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2678,6 +2709,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<CodeableConcept>? get medium {
     final value = _medium;
     if (value == null) return null;
+    if (_medium is EqualUnmodifiableListView) return _medium;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2689,6 +2721,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Reference>? get about {
     final value = _about;
     if (value == null) return null;
+    if (_about is EqualUnmodifiableListView) return _about;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2700,6 +2733,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<CommunicationRequestPayload>? get payload {
     final value = _payload;
     if (value == null) return null;
+    if (_payload is EqualUnmodifiableListView) return _payload;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2723,6 +2757,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Reference>? get recipient {
     final value = _recipient;
     if (value == null) return null;
+    if (_recipient is EqualUnmodifiableListView) return _recipient;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2732,6 +2767,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Reference>? get informationProvider {
     final value = _informationProvider;
     if (value == null) return null;
+    if (_informationProvider is EqualUnmodifiableListView)
+      return _informationProvider;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2741,6 +2778,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<CodeableReference>? get reason {
     final value = _reason;
     if (value == null) return null;
+    if (_reason is EqualUnmodifiableListView) return _reason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2750,6 +2788,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3275,6 +3314,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3284,6 +3324,8 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4459,6 +4501,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4469,6 +4512,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4478,6 +4522,8 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4487,6 +4533,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4496,6 +4543,8 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Canonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
+    if (_instantiatesCanonical is EqualUnmodifiableListView)
+      return _instantiatesCanonical;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4505,6 +4554,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
+    if (_instantiatesUri is EqualUnmodifiableListView) return _instantiatesUri;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4515,6 +4565,8 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Element>? get instantiatesUriElement {
     final value = _instantiatesUriElement;
     if (value == null) return null;
+    if (_instantiatesUriElement is EqualUnmodifiableListView)
+      return _instantiatesUriElement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4524,6 +4576,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4533,6 +4586,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Reference>? get priorRequest {
     final value = _priorRequest;
     if (value == null) return null;
+    if (_priorRequest is EqualUnmodifiableListView) return _priorRequest;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4571,6 +4625,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<DeviceRequestParameter>? get parameter {
     final value = _parameter;
     if (value == null) return null;
+    if (_parameter is EqualUnmodifiableListView) return _parameter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4604,6 +4659,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<CodeableReference>? get reason {
     final value = _reason;
     if (value == null) return null;
+    if (_reason is EqualUnmodifiableListView) return _reason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4613,6 +4669,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Reference>? get insurance {
     final value = _insurance;
     if (value == null) return null;
+    if (_insurance is EqualUnmodifiableListView) return _insurance;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4622,6 +4679,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Reference>? get supportingInfo {
     final value = _supportingInfo;
     if (value == null) return null;
+    if (_supportingInfo is EqualUnmodifiableListView) return _supportingInfo;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4631,6 +4689,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4640,6 +4699,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   List<Reference>? get relevantHistory {
     final value = _relevantHistory;
     if (value == null) return null;
+    if (_relevantHistory is EqualUnmodifiableListView) return _relevantHistory;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5277,6 +5337,7 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5286,6 +5347,8 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6251,6 +6314,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6261,6 +6325,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6270,6 +6335,8 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6279,6 +6346,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6288,6 +6356,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6297,6 +6366,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
+    if (_partOf is EqualUnmodifiableListView) return _partOf;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6313,6 +6383,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6328,6 +6399,8 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
     if (value == null) return null;
+    if (_supportingInformation is EqualUnmodifiableListView)
+      return _supportingInformation;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6337,6 +6410,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<DeviceDispensePerformer>? get performer {
     final value = _performer;
     if (value == null) return null;
+    if (_performer is EqualUnmodifiableListView) return _performer;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6364,6 +6438,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6378,6 +6453,7 @@ class _$_DeviceDispense extends _DeviceDispense {
   List<Reference>? get eventHistory {
     final value = _eventHistory;
     if (value == null) return null;
+    if (_eventHistory is EqualUnmodifiableListView) return _eventHistory;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6832,6 +6908,7 @@ class _$_DeviceDispensePerformer extends _DeviceDispensePerformer {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6841,6 +6918,8 @@ class _$_DeviceDispensePerformer extends _DeviceDispensePerformer {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7711,6 +7790,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7721,6 +7801,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7730,6 +7811,8 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7739,6 +7822,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7748,6 +7832,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7762,6 +7847,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7773,6 +7859,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<Reference>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
+    if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7800,6 +7887,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<CodeableConcept>? get usageReason {
     final value = _usageReason;
     if (value == null) return null;
+    if (_usageReason is EqualUnmodifiableListView) return _usageReason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7813,6 +7901,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<CodeableReference>? get reason {
     final value = _reason;
     if (value == null) return null;
+    if (_reason is EqualUnmodifiableListView) return _reason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7824,6 +7913,7 @@ class _$_DeviceUsage extends _DeviceUsage {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8842,6 +8932,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8852,6 +8943,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8861,6 +8953,8 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8872,6 +8966,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8909,6 +9004,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<CodeableReference>? get reason {
     final value = _reason;
     if (value == null) return null;
+    if (_reason is EqualUnmodifiableListView) return _reason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8918,6 +9014,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8927,6 +9024,8 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<Reference>? get evaluationMessage {
     final value = _evaluationMessage;
     if (value == null) return null;
+    if (_evaluationMessage is EqualUnmodifiableListView)
+      return _evaluationMessage;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8940,6 +9039,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   List<DataRequirement>? get dataRequirement {
     final value = _dataRequirement;
     if (value == null) return null;
+    if (_dataRequirement is EqualUnmodifiableListView) return _dataRequirement;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9816,6 +9916,7 @@ class _$_InventoryReport extends _InventoryReport {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9826,6 +9927,7 @@ class _$_InventoryReport extends _InventoryReport {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9835,6 +9937,8 @@ class _$_InventoryReport extends _InventoryReport {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9844,6 +9948,7 @@ class _$_InventoryReport extends _InventoryReport {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9876,6 +9981,8 @@ class _$_InventoryReport extends _InventoryReport {
   List<InventoryReportInventoryListing>? get inventoryListing {
     final value = _inventoryListing;
     if (value == null) return null;
+    if (_inventoryListing is EqualUnmodifiableListView)
+      return _inventoryListing;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10340,6 +10447,7 @@ class _$_InventoryReportInventoryListing
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10349,6 +10457,8 @@ class _$_InventoryReportInventoryListing
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10367,6 +10477,7 @@ class _$_InventoryReportInventoryListing
   List<InventoryReportItems>? get items {
     final value = _items;
     if (value == null) return null;
+    if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10861,6 +10972,7 @@ class _$_InventoryReportItems extends _InventoryReportItems {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -10870,6 +10982,8 @@ class _$_InventoryReportItems extends _InventoryReportItems {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11714,6 +11828,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11724,6 +11839,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11733,6 +11849,8 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11742,6 +11860,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11751,6 +11870,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11760,6 +11880,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
+    if (_partOf is EqualUnmodifiableListView) return _partOf;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -11793,6 +11914,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   List<Reference>? get receiver {
     final value = _receiver;
     if (value == null) return null;
+    if (_receiver is EqualUnmodifiableListView) return _receiver;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12228,6 +12350,7 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -12237,6 +12360,8 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13130,6 +13255,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13140,6 +13266,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13149,6 +13276,8 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13158,6 +13287,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13172,6 +13302,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
+    if (_basedOn is EqualUnmodifiableListView) return _basedOn;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13192,6 +13323,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<SupplyRequestParameter>? get parameter {
     final value = _parameter;
     if (value == null) return null;
+    if (_parameter is EqualUnmodifiableListView) return _parameter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13217,6 +13349,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<Reference>? get supplier {
     final value = _supplier;
     if (value == null) return null;
+    if (_supplier is EqualUnmodifiableListView) return _supplier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13226,6 +13359,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   List<CodeableReference>? get reason {
     final value = _reason;
     if (value == null) return null;
+    if (_reason is EqualUnmodifiableListView) return _reason;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13778,6 +13912,7 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -13787,6 +13922,8 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
