@@ -1,5 +1,9 @@
 # fhir_bulk
 
+## [0.9.3]
+
+* Updated dependencies
+
 ## [0.9.2]
 
 * Updated dependencies
