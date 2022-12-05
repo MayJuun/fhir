@@ -1,5 +1,10 @@
 # fhir
 
+## [0.9.3]
+
+* Updated dependencies
+* PR accepted from [vsaase](https://github.com/vsaase) to keep meta field when updating version
+
 ## [0.9.2]
 
 * Updated dependencies
