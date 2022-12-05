@@ -3,6 +3,7 @@
 ## [0.9.3]
 
 * Updated dependencies
+* Cleaned up tests & [example](https://fhir-path-demo-mctbmzb4uq-uk.a.run.app)
 
 ## [0.9.2]
 

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fhir_path/petit/petit_fhir_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/link.dart';
 import 'package:yaml_writer/yaml_writer.dart';
 
@@ -135,8 +136,7 @@ class MyHomePageState extends State<MyHomePage> {
                       expands: true,
                       maxLines: null,
                       textAlignVertical: TextAlignVertical.top,
-                      style: const TextStyle(
-                          fontFamily: 'SourceCodePro', fontSize: 12),
+                      style: GoogleFonts.sourceCodePro().copyWith(fontSize: 12),
                       controller: resource,
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
@@ -202,8 +202,8 @@ class MyHomePageState extends State<MyHomePage> {
                         child: Text(
                           displayString,
                           textAlign: TextAlign.start,
-                          style: const TextStyle(
-                              fontFamily: 'SourceCodePro', fontSize: 12),
+                          style: GoogleFonts.sourceCodePro()
+                              .copyWith(fontSize: 12),
                         ),
                       ),
                     ),
