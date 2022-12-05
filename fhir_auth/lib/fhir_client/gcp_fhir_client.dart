@@ -29,6 +29,9 @@ class GcpFhirClient extends SecureFhirClient {
 
   final GoogleSignIn _googleSignIn;
 
+  String? get userEmail => _googleSignIn.currentUser?.email;
+  String? get displayName => _googleSignIn.currentUser?.displayName;
+
   /// Method to login the client
   @override
   Future<void> login() async {

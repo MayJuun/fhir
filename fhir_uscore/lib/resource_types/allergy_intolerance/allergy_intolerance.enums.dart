@@ -2,6 +2,7 @@
 import 'package:fhir/r4.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+/// [AllergyIntoleranceClinicalStatus] - enum containing the most used types
 enum AllergyIntoleranceClinicalStatus {
   @JsonValue('Active')
   active,
@@ -11,12 +12,14 @@ enum AllergyIntoleranceClinicalStatus {
   resolved,
 }
 
+/// [codeAllergyIntoleranceClinicalStatus] - enum to String map
 final codeFromAllergyIntoleranceClinicalStatus = {
   AllergyIntoleranceClinicalStatus.active: 'active',
   AllergyIntoleranceClinicalStatus.inactive: 'inactive',
   AllergyIntoleranceClinicalStatus.resolved: 'resolved',
 };
 
+/// [codeableConceptFromAllergyIntoleranceClinicalStatus] - enum to CodeableConcept map
 final codeableConceptFromAllergyIntoleranceClinicalStatus = {
   AllergyIntoleranceClinicalStatus.active: CodeableConcept(coding: [
     Coding(
@@ -38,6 +41,7 @@ final codeableConceptFromAllergyIntoleranceClinicalStatus = {
   ]),
 };
 
+/// [AllergyIntoleranceVerificationStatus] - enum of the most used types
 enum AllergyIntoleranceVerificationStatus {
   @JsonValue('Unconfirmed')
   unconfirmed,
@@ -49,6 +53,7 @@ enum AllergyIntoleranceVerificationStatus {
   entered_in_error,
 }
 
+/// [codeableConceptAllergyIntoleranceVerificationStatus] - enum to CodeableConcept map
 final codeableConceptFromAllergyIntoleranceVerificationStatus = {
   AllergyIntoleranceVerificationStatus.unconfirmed: CodeableConcept(coding: [
     Coding(
@@ -77,6 +82,7 @@ final codeableConceptFromAllergyIntoleranceVerificationStatus = {
   ]),
 };
 
+/// [AllergyIntoleranceIdentity] - enum of the most used types
 enum AllergyIntoleranceIdentity {
   @JsonValue('formoterol / Mometasone')
   formoterol_mometasone,
@@ -1630,6 +1636,7 @@ enum AllergyIntoleranceIdentity {
   gluten_substance,
 }
 
+/// [codeableConceptAllergyIntoleranceIdentity] - enum to CodeableConcept map
 final codeableConceptFromAllergyIntoleranceIdentity = {
   AllergyIntoleranceIdentity.formoterol_mometasone: CodeableConcept(
     coding: [

@@ -62,7 +62,7 @@ class Integer64 {
           (o is! Integer64 && o is! BigInt) ||
           (o is Integer64 && o.valueNumber == null)
       ? throw InvalidTypes<Integer64>('One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is ${o.toString()}')
+          'This number is: ${toString()}, compared number is $o')
       : o is Integer64
           ? valueNumber! > o.valueNumber!
           : valueNumber! > (o as BigInt);
@@ -73,7 +73,7 @@ class Integer64 {
           (o is! Integer64 && o is! BigInt) ||
           (o is Integer64 && o.valueNumber == null)
       ? throw InvalidTypes<Integer64>('One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is ${o.toString()}')
+          'This number is: ${toString()}, compared number is $o')
       : o is Integer64
           ? valueNumber! < o.valueNumber!
           : valueNumber! < (o as BigInt);

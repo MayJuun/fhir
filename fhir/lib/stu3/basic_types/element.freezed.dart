@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'element.dart';
 
@@ -32,35 +32,39 @@ mixin _$Element {
 /// @nodoc
 abstract class $ElementCopyWith<$Res> {
   factory $ElementCopyWith(Element value, $Res Function(Element) then) =
-      _$ElementCopyWithImpl<$Res>;
+      _$ElementCopyWithImpl<$Res, Element>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
-class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
+class _$ElementCopyWithImpl<$Res, $Val extends Element>
+    implements $ElementCopyWith<$Res> {
   _$ElementCopyWithImpl(this._value, this._then);
 
-  final Element _value;
   // ignore: unused_field
-  final $Res Function(Element) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -70,31 +74,31 @@ abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
           _$_Element value, $Res Function(_$_Element) then) =
       __$$_ElementCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
-class __$$_ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
+class __$$_ElementCopyWithImpl<$Res>
+    extends _$ElementCopyWithImpl<$Res, _$_Element>
     implements _$$_ElementCopyWith<$Res> {
   __$$_ElementCopyWithImpl(_$_Element _value, $Res Function(_$_Element) _then)
-      : super(_value, (v) => _then(v as _$_Element));
+      : super(_value, _then);
 
-  @override
-  _$_Element get _value => super._value as _$_Element;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
   }) {
     return _then(_$_Element(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
@@ -122,6 +126,7 @@ class _$_Element extends _Element {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -136,7 +141,7 @@ class _$_Element extends _Element {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Element &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_));
   }
@@ -144,12 +149,11 @@ class _$_Element extends _Element {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_));
+      runtimeType, id, const DeepCollectionEquality().hash(_extension_));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ElementCopyWith<_$_Element> get copyWith =>
       __$$_ElementCopyWithImpl<_$_Element>(this, _$identity);
 

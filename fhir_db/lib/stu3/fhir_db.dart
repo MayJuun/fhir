@@ -114,7 +114,7 @@ class FhirDb {
 
     /// Create a copy of the old db - in case something messes up while we're
     /// changing to the new password
-    File(join(appDocDir.path, 'fhir.db'))
+    await File(join(appDocDir.path, 'fhir.db'))
         .copy(join(appDocDir.path, 'old_fhir.db'));
 
     /// Get the path to the original Db

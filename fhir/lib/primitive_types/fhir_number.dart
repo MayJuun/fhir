@@ -33,7 +33,7 @@ abstract class FhirNumber {
           (o is FhirNumber && o.valueNumber == null)
       ? throw InvalidTypes<FhirNumber>(
           'One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is ${o.toString()}')
+          'This number is: ${toString()}, compared number is $o')
       : o is FhirNumber
           ? valueNumber! > o.valueNumber!
           : valueNumber! > (o as num);
@@ -45,7 +45,7 @@ abstract class FhirNumber {
           (o is FhirNumber && o.valueNumber == null)
       ? throw InvalidTypes<FhirNumber>(
           'One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is ${o.toString()}')
+          'This number is: ${toString()}, compared number is $o')
       : o is FhirNumber
           ? valueNumber! < o.valueNumber!
           : valueNumber! < (o as num);

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'documents.dart';
 
@@ -166,7 +166,8 @@ mixin _$CatalogEntry {
 abstract class $CatalogEntryCopyWith<$Res> {
   factory $CatalogEntryCopyWith(
           CatalogEntry value, $Res Function(CatalogEntry) then) =
-      _$CatalogEntryCopyWithImpl<$Res>;
+      _$CatalogEntryCopyWithImpl<$Res, CatalogEntry>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
           R4ResourceType resourceType,
@@ -219,16 +220,19 @@ abstract class $CatalogEntryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
+class _$CatalogEntryCopyWithImpl<$Res, $Val extends CatalogEntry>
+    implements $CatalogEntryCopyWith<$Res> {
   _$CatalogEntryCopyWithImpl(this._value, this._then);
 
-  final CatalogEntry _value;
   // ignore: unused_field
-  final $Res Function(CatalogEntry) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -243,7 +247,7 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
     Object? type = freezed,
     Object? orderable = freezed,
     Object? orderableElement = freezed,
-    Object? referencedItem = freezed,
+    Object? referencedItem = null,
     Object? additionalIdentifier = freezed,
     Object? classification = freezed,
     Object? status = freezed,
@@ -258,235 +262,246 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
     Object? relatedEntry = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      orderable: orderable == freezed
+      orderable: freezed == orderable
           ? _value.orderable
           : orderable // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      orderableElement: orderableElement == freezed
+      orderableElement: freezed == orderableElement
           ? _value.orderableElement
           : orderableElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      referencedItem: referencedItem == freezed
+      referencedItem: null == referencedItem
           ? _value.referencedItem
           : referencedItem // ignore: cast_nullable_to_non_nullable
               as Reference,
-      additionalIdentifier: additionalIdentifier == freezed
+      additionalIdentifier: freezed == additionalIdentifier
           ? _value.additionalIdentifier
           : additionalIdentifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      classification: classification == freezed
+      classification: freezed == classification
           ? _value.classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      validityPeriod: validityPeriod == freezed
+      validityPeriod: freezed == validityPeriod
           ? _value.validityPeriod
           : validityPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      validTo: validTo == freezed
+      validTo: freezed == validTo
           ? _value.validTo
           : validTo // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      validToElement: validToElement == freezed
+      validToElement: freezed == validToElement
           ? _value.validToElement
           : validToElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      lastUpdated: lastUpdated == freezed
+      lastUpdated: freezed == lastUpdated
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      lastUpdatedElement: lastUpdatedElement == freezed
+      lastUpdatedElement: freezed == lastUpdatedElement
           ? _value.lastUpdatedElement
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      additionalCharacteristic: additionalCharacteristic == freezed
+      additionalCharacteristic: freezed == additionalCharacteristic
           ? _value.additionalCharacteristic
           : additionalCharacteristic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      additionalClassification: additionalClassification == freezed
+      additionalClassification: freezed == additionalClassification
           ? _value.additionalClassification
           : additionalClassification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      relatedEntry: relatedEntry == freezed
+      relatedEntry: freezed == relatedEntry
           ? _value.relatedEntry
           : relatedEntry // ignore: cast_nullable_to_non_nullable
               as List<CatalogEntryRelatedEntry>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get orderableElement {
     if (_value.orderableElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.orderableElement!, (value) {
-      return _then(_value.copyWith(orderableElement: value));
+      return _then(_value.copyWith(orderableElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get referencedItem {
     return $ReferenceCopyWith<$Res>(_value.referencedItem, (value) {
-      return _then(_value.copyWith(referencedItem: value));
+      return _then(_value.copyWith(referencedItem: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get validityPeriod {
     if (_value.validityPeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.validityPeriod!, (value) {
-      return _then(_value.copyWith(validityPeriod: value));
+      return _then(_value.copyWith(validityPeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get validToElement {
     if (_value.validToElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.validToElement!, (value) {
-      return _then(_value.copyWith(validToElement: value));
+      return _then(_value.copyWith(validToElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get lastUpdatedElement {
     if (_value.lastUpdatedElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.lastUpdatedElement!, (value) {
-      return _then(_value.copyWith(lastUpdatedElement: value));
+      return _then(_value.copyWith(lastUpdatedElement: value) as $Val);
     });
   }
 }
@@ -498,6 +513,7 @@ abstract class _$$_CatalogEntryCopyWith<$Res>
           _$_CatalogEntry value, $Res Function(_$_CatalogEntry) then) =
       __$$_CatalogEntryCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
           R4ResourceType resourceType,
@@ -562,18 +578,16 @@ abstract class _$$_CatalogEntryCopyWith<$Res>
 
 /// @nodoc
 class __$$_CatalogEntryCopyWithImpl<$Res>
-    extends _$CatalogEntryCopyWithImpl<$Res>
+    extends _$CatalogEntryCopyWithImpl<$Res, _$_CatalogEntry>
     implements _$$_CatalogEntryCopyWith<$Res> {
   __$$_CatalogEntryCopyWithImpl(
       _$_CatalogEntry _value, $Res Function(_$_CatalogEntry) _then)
-      : super(_value, (v) => _then(v as _$_CatalogEntry));
+      : super(_value, _then);
 
-  @override
-  _$_CatalogEntry get _value => super._value as _$_CatalogEntry;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -588,7 +602,7 @@ class __$$_CatalogEntryCopyWithImpl<$Res>
     Object? type = freezed,
     Object? orderable = freezed,
     Object? orderableElement = freezed,
-    Object? referencedItem = freezed,
+    Object? referencedItem = null,
     Object? additionalIdentifier = freezed,
     Object? classification = freezed,
     Object? status = freezed,
@@ -603,115 +617,115 @@ class __$$_CatalogEntryCopyWithImpl<$Res>
     Object? relatedEntry = freezed,
   }) {
     return _then(_$_CatalogEntry(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      orderable: orderable == freezed
+      orderable: freezed == orderable
           ? _value.orderable
           : orderable // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      orderableElement: orderableElement == freezed
+      orderableElement: freezed == orderableElement
           ? _value.orderableElement
           : orderableElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      referencedItem: referencedItem == freezed
+      referencedItem: null == referencedItem
           ? _value.referencedItem
           : referencedItem // ignore: cast_nullable_to_non_nullable
               as Reference,
-      additionalIdentifier: additionalIdentifier == freezed
+      additionalIdentifier: freezed == additionalIdentifier
           ? _value._additionalIdentifier
           : additionalIdentifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      classification: classification == freezed
+      classification: freezed == classification
           ? _value._classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      validityPeriod: validityPeriod == freezed
+      validityPeriod: freezed == validityPeriod
           ? _value.validityPeriod
           : validityPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      validTo: validTo == freezed
+      validTo: freezed == validTo
           ? _value.validTo
           : validTo // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      validToElement: validToElement == freezed
+      validToElement: freezed == validToElement
           ? _value.validToElement
           : validToElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      lastUpdated: lastUpdated == freezed
+      lastUpdated: freezed == lastUpdated
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      lastUpdatedElement: lastUpdatedElement == freezed
+      lastUpdatedElement: freezed == lastUpdatedElement
           ? _value.lastUpdatedElement
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      additionalCharacteristic: additionalCharacteristic == freezed
+      additionalCharacteristic: freezed == additionalCharacteristic
           ? _value._additionalCharacteristic
           : additionalCharacteristic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      additionalClassification: additionalClassification == freezed
+      additionalClassification: freezed == additionalClassification
           ? _value._additionalClassification
           : additionalClassification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      relatedEntry: relatedEntry == freezed
+      relatedEntry: freezed == relatedEntry
           ? _value._relatedEntry
           : relatedEntry // ignore: cast_nullable_to_non_nullable
               as List<CatalogEntryRelatedEntry>?,
@@ -832,6 +846,7 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -855,6 +870,7 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -891,6 +907,8 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -905,6 +923,7 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -936,6 +955,8 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<Identifier>? get additionalIdentifier {
     final value = _additionalIdentifier;
     if (value == null) return null;
+    if (_additionalIdentifier is EqualUnmodifiableListView)
+      return _additionalIdentifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -948,6 +969,7 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<CodeableConcept>? get classification {
     final value = _classification;
     if (value == null) return null;
+    if (_classification is EqualUnmodifiableListView) return _classification;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -997,6 +1019,8 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<CodeableConcept>? get additionalCharacteristic {
     final value = _additionalCharacteristic;
     if (value == null) return null;
+    if (_additionalCharacteristic is EqualUnmodifiableListView)
+      return _additionalCharacteristic;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1009,6 +1033,8 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<CodeableConcept>? get additionalClassification {
     final value = _additionalClassification;
     if (value == null) return null;
+    if (_additionalClassification is EqualUnmodifiableListView)
+      return _additionalClassification;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1023,6 +1049,7 @@ class _$_CatalogEntry extends _CatalogEntry {
   List<CatalogEntryRelatedEntry>? get relatedEntry {
     final value = _relatedEntry;
     if (value == null) return null;
+    if (_relatedEntry is EqualUnmodifiableListView) return _relatedEntry;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1037,18 +1064,19 @@ class _$_CatalogEntry extends _CatalogEntry {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CatalogEntry &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
@@ -1057,28 +1085,29 @@ class _$_CatalogEntry extends _CatalogEntry {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.orderable, orderable) &&
-            const DeepCollectionEquality()
-                .equals(other.orderableElement, orderableElement) &&
-            const DeepCollectionEquality()
-                .equals(other.referencedItem, referencedItem) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.orderable, orderable) ||
+                other.orderable == orderable) &&
+            (identical(other.orderableElement, orderableElement) ||
+                other.orderableElement == orderableElement) &&
+            (identical(other.referencedItem, referencedItem) ||
+                other.referencedItem == referencedItem) &&
             const DeepCollectionEquality()
                 .equals(other._additionalIdentifier, _additionalIdentifier) &&
             const DeepCollectionEquality()
                 .equals(other._classification, _classification) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality()
-                .equals(other.validityPeriod, validityPeriod) &&
-            const DeepCollectionEquality().equals(other.validTo, validTo) &&
-            const DeepCollectionEquality()
-                .equals(other.validToElement, validToElement) &&
-            const DeepCollectionEquality()
-                .equals(other.lastUpdated, lastUpdated) &&
-            const DeepCollectionEquality()
-                .equals(other.lastUpdatedElement, lastUpdatedElement) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.validityPeriod, validityPeriod) ||
+                other.validityPeriod == validityPeriod) &&
+            (identical(other.validTo, validTo) || other.validTo == validTo) &&
+            (identical(other.validToElement, validToElement) ||
+                other.validToElement == validToElement) &&
+            (identical(other.lastUpdated, lastUpdated) ||
+                other.lastUpdated == lastUpdated) &&
+            (identical(other.lastUpdatedElement, lastUpdatedElement) ||
+                other.lastUpdatedElement == lastUpdatedElement) &&
             const DeepCollectionEquality().equals(
                 other._additionalCharacteristic, _additionalCharacteristic) &&
             const DeepCollectionEquality().equals(
@@ -1091,31 +1120,31 @@ class _$_CatalogEntry extends _CatalogEntry {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(type),
-        const DeepCollectionEquality().hash(orderable),
-        const DeepCollectionEquality().hash(orderableElement),
-        const DeepCollectionEquality().hash(referencedItem),
+        type,
+        orderable,
+        orderableElement,
+        referencedItem,
         const DeepCollectionEquality().hash(_additionalIdentifier),
         const DeepCollectionEquality().hash(_classification),
-        const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(validityPeriod),
-        const DeepCollectionEquality().hash(validTo),
-        const DeepCollectionEquality().hash(validToElement),
-        const DeepCollectionEquality().hash(lastUpdated),
-        const DeepCollectionEquality().hash(lastUpdatedElement),
+        status,
+        statusElement,
+        validityPeriod,
+        validTo,
+        validToElement,
+        lastUpdated,
+        lastUpdatedElement,
         const DeepCollectionEquality().hash(_additionalCharacteristic),
         const DeepCollectionEquality().hash(_additionalClassification),
         const DeepCollectionEquality().hash(_relatedEntry)
@@ -1123,6 +1152,7 @@ class _$_CatalogEntry extends _CatalogEntry {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CatalogEntryCopyWith<_$_CatalogEntry> get copyWith =>
       __$$_CatalogEntryCopyWithImpl<_$_CatalogEntry>(this, _$identity);
 
@@ -1397,7 +1427,8 @@ mixin _$CatalogEntryRelatedEntry {
 abstract class $CatalogEntryRelatedEntryCopyWith<$Res> {
   factory $CatalogEntryRelatedEntryCopyWith(CatalogEntryRelatedEntry value,
           $Res Function(CatalogEntryRelatedEntry) then) =
-      _$CatalogEntryRelatedEntryCopyWithImpl<$Res>;
+      _$CatalogEntryRelatedEntryCopyWithImpl<$Res, CatalogEntryRelatedEntry>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1411,14 +1442,17 @@ abstract class $CatalogEntryRelatedEntryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CatalogEntryRelatedEntryCopyWithImpl<$Res>
+class _$CatalogEntryRelatedEntryCopyWithImpl<$Res,
+        $Val extends CatalogEntryRelatedEntry>
     implements $CatalogEntryRelatedEntryCopyWith<$Res> {
   _$CatalogEntryRelatedEntryCopyWithImpl(this._value, this._then);
 
-  final CatalogEntryRelatedEntry _value;
   // ignore: unused_field
-  final $Res Function(CatalogEntryRelatedEntry) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -1426,51 +1460,53 @@ class _$CatalogEntryRelatedEntryCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? relationtype = freezed,
     Object? relationtypeElement = freezed,
-    Object? item = freezed,
+    Object? item = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      relationtype: relationtype == freezed
+      relationtype: freezed == relationtype
           ? _value.relationtype
           : relationtype // ignore: cast_nullable_to_non_nullable
               as Code?,
-      relationtypeElement: relationtypeElement == freezed
+      relationtypeElement: freezed == relationtypeElement
           ? _value.relationtypeElement
           : relationtypeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      item: item == freezed
+      item: null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as Reference,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get relationtypeElement {
     if (_value.relationtypeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.relationtypeElement!, (value) {
-      return _then(_value.copyWith(relationtypeElement: value));
+      return _then(_value.copyWith(relationtypeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get item {
     return $ReferenceCopyWith<$Res>(_value.item, (value) {
-      return _then(_value.copyWith(item: value));
+      return _then(_value.copyWith(item: value) as $Val);
     });
   }
 }
@@ -1483,6 +1519,7 @@ abstract class _$$_CatalogEntryRelatedEntryCopyWith<$Res>
           $Res Function(_$_CatalogEntryRelatedEntry) then) =
       __$$_CatalogEntryRelatedEntryCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1499,16 +1536,14 @@ abstract class _$$_CatalogEntryRelatedEntryCopyWith<$Res>
 
 /// @nodoc
 class __$$_CatalogEntryRelatedEntryCopyWithImpl<$Res>
-    extends _$CatalogEntryRelatedEntryCopyWithImpl<$Res>
+    extends _$CatalogEntryRelatedEntryCopyWithImpl<$Res,
+        _$_CatalogEntryRelatedEntry>
     implements _$$_CatalogEntryRelatedEntryCopyWith<$Res> {
   __$$_CatalogEntryRelatedEntryCopyWithImpl(_$_CatalogEntryRelatedEntry _value,
       $Res Function(_$_CatalogEntryRelatedEntry) _then)
-      : super(_value, (v) => _then(v as _$_CatalogEntryRelatedEntry));
+      : super(_value, _then);
 
-  @override
-  _$_CatalogEntryRelatedEntry get _value =>
-      super._value as _$_CatalogEntryRelatedEntry;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -1516,30 +1551,30 @@ class __$$_CatalogEntryRelatedEntryCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? relationtype = freezed,
     Object? relationtypeElement = freezed,
-    Object? item = freezed,
+    Object? item = null,
   }) {
     return _then(_$_CatalogEntryRelatedEntry(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      relationtype: relationtype == freezed
+      relationtype: freezed == relationtype
           ? _value.relationtype
           : relationtype // ignore: cast_nullable_to_non_nullable
               as Code?,
-      relationtypeElement: relationtypeElement == freezed
+      relationtypeElement: freezed == relationtypeElement
           ? _value.relationtypeElement
           : relationtypeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      item: item == freezed
+      item: null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as Reference,
@@ -1588,6 +1623,7 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1624,6 +1660,8 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1652,31 +1690,32 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CatalogEntryRelatedEntry &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.relationtype, relationtype) &&
-            const DeepCollectionEquality()
-                .equals(other.relationtypeElement, relationtypeElement) &&
-            const DeepCollectionEquality().equals(other.item, item));
+            (identical(other.relationtype, relationtype) ||
+                other.relationtype == relationtype) &&
+            (identical(other.relationtypeElement, relationtypeElement) ||
+                other.relationtypeElement == relationtypeElement) &&
+            (identical(other.item, item) || other.item == item));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(relationtype),
-      const DeepCollectionEquality().hash(relationtypeElement),
-      const DeepCollectionEquality().hash(item));
+      relationtype,
+      relationtypeElement,
+      item);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CatalogEntryRelatedEntryCopyWith<_$_CatalogEntryRelatedEntry>
       get copyWith => __$$_CatalogEntryRelatedEntryCopyWithImpl<
           _$_CatalogEntryRelatedEntry>(this, _$identity);
@@ -1917,7 +1956,8 @@ mixin _$Composition {
 abstract class $CompositionCopyWith<$Res> {
   factory $CompositionCopyWith(
           Composition value, $Res Function(Composition) then) =
-      _$CompositionCopyWithImpl<$Res>;
+      _$CompositionCopyWithImpl<$Res, Composition>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
           R4ResourceType resourceType,
@@ -1974,16 +2014,19 @@ abstract class $CompositionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
+class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
+    implements $CompositionCopyWith<$Res> {
   _$CompositionCopyWithImpl(this._value, this._then);
 
-  final Composition _value;
   // ignore: unused_field
-  final $Res Function(Composition) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1997,13 +2040,13 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
     Object? identifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? category = freezed,
     Object? subject = freezed,
     Object? encounter = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
-    Object? author = freezed,
+    Object? author = null,
     Object? title = freezed,
     Object? titleElement = freezed,
     Object? confidentiality = freezed,
@@ -2015,265 +2058,278 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
     Object? section = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      encounter: encounter == freezed
+      encounter: freezed == encounter
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: author == freezed
+      author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      titleElement: titleElement == freezed
+      titleElement: freezed == titleElement
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      confidentiality: confidentiality == freezed
+      confidentiality: freezed == confidentiality
           ? _value.confidentiality
           : confidentiality // ignore: cast_nullable_to_non_nullable
               as Code?,
-      confidentialityElement: confidentialityElement == freezed
+      confidentialityElement: freezed == confidentialityElement
           ? _value.confidentialityElement
           : confidentialityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      attester: attester == freezed
+      attester: freezed == attester
           ? _value.attester
           : attester // ignore: cast_nullable_to_non_nullable
               as List<CompositionAttester>?,
-      custodian: custodian == freezed
+      custodian: freezed == custodian
           ? _value.custodian
           : custodian // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      relatesTo: relatesTo == freezed
+      relatesTo: freezed == relatesTo
           ? _value.relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
               as List<CompositionRelatesTo>?,
-      event: event == freezed
+      event: freezed == event
           ? _value.event
           : event // ignore: cast_nullable_to_non_nullable
               as List<CompositionEvent>?,
-      section: section == freezed
+      section: freezed == section
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
               as List<CompositionSection>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
     if (_value.identifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
+      return _then(_value.copyWith(identifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get type {
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
     if (_value.subject == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get encounter {
     if (_value.encounter == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.encounter!, (value) {
-      return _then(_value.copyWith(encounter: value));
+      return _then(_value.copyWith(encounter: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
-      return _then(_value.copyWith(dateElement: value));
+      return _then(_value.copyWith(dateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get titleElement {
     if (_value.titleElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
-      return _then(_value.copyWith(titleElement: value));
+      return _then(_value.copyWith(titleElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get confidentialityElement {
     if (_value.confidentialityElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.confidentialityElement!, (value) {
-      return _then(_value.copyWith(confidentialityElement: value));
+      return _then(_value.copyWith(confidentialityElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get custodian {
     if (_value.custodian == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.custodian!, (value) {
-      return _then(_value.copyWith(custodian: value));
+      return _then(_value.copyWith(custodian: value) as $Val);
     });
   }
 }
@@ -2285,6 +2341,7 @@ abstract class _$$_CompositionCopyWith<$Res>
           _$_Composition value, $Res Function(_$_Composition) then) =
       __$$_CompositionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
           R4ResourceType resourceType,
@@ -2354,18 +2411,17 @@ abstract class _$$_CompositionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
+class __$$_CompositionCopyWithImpl<$Res>
+    extends _$CompositionCopyWithImpl<$Res, _$_Composition>
     implements _$$_CompositionCopyWith<$Res> {
   __$$_CompositionCopyWithImpl(
       _$_Composition _value, $Res Function(_$_Composition) _then)
-      : super(_value, (v) => _then(v as _$_Composition));
+      : super(_value, _then);
 
-  @override
-  _$_Composition get _value => super._value as _$_Composition;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2379,13 +2435,13 @@ class __$$_CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? category = freezed,
     Object? subject = freezed,
     Object? encounter = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
-    Object? author = freezed,
+    Object? author = null,
     Object? title = freezed,
     Object? titleElement = freezed,
     Object? confidentiality = freezed,
@@ -2397,123 +2453,123 @@ class __$$_CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
     Object? section = freezed,
   }) {
     return _then(_$_Composition(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      category: category == freezed
+      category: freezed == category
           ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      encounter: encounter == freezed
+      encounter: freezed == encounter
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: author == freezed
+      author: null == author
           ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      titleElement: titleElement == freezed
+      titleElement: freezed == titleElement
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      confidentiality: confidentiality == freezed
+      confidentiality: freezed == confidentiality
           ? _value.confidentiality
           : confidentiality // ignore: cast_nullable_to_non_nullable
               as Code?,
-      confidentialityElement: confidentialityElement == freezed
+      confidentialityElement: freezed == confidentialityElement
           ? _value.confidentialityElement
           : confidentialityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      attester: attester == freezed
+      attester: freezed == attester
           ? _value._attester
           : attester // ignore: cast_nullable_to_non_nullable
               as List<CompositionAttester>?,
-      custodian: custodian == freezed
+      custodian: freezed == custodian
           ? _value.custodian
           : custodian // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      relatesTo: relatesTo == freezed
+      relatesTo: freezed == relatesTo
           ? _value._relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
               as List<CompositionRelatesTo>?,
-      event: event == freezed
+      event: freezed == event
           ? _value._event
           : event // ignore: cast_nullable_to_non_nullable
               as List<CompositionEvent>?,
-      section: section == freezed
+      section: freezed == section
           ? _value._section
           : section // ignore: cast_nullable_to_non_nullable
               as List<CompositionSection>?,
@@ -2636,6 +2692,7 @@ class _$_Composition extends _Composition {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2659,6 +2716,7 @@ class _$_Composition extends _Composition {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2695,6 +2753,8 @@ class _$_Composition extends _Composition {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2732,6 +2792,7 @@ class _$_Composition extends _Composition {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2766,6 +2827,7 @@ class _$_Composition extends _Composition {
   ///  composition, not necessarily who typed it in.
   @override
   List<Reference> get author {
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_author);
   }
@@ -2799,6 +2861,7 @@ class _$_Composition extends _Composition {
   List<CompositionAttester>? get attester {
     final value = _attester;
     if (value == null) return null;
+    if (_attester is EqualUnmodifiableListView) return _attester;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2819,6 +2882,7 @@ class _$_Composition extends _Composition {
   List<CompositionRelatesTo>? get relatesTo {
     final value = _relatesTo;
     if (value == null) return null;
+    if (_relatesTo is EqualUnmodifiableListView) return _relatesTo;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2833,6 +2897,7 @@ class _$_Composition extends _Composition {
   List<CompositionEvent>? get event {
     final value = _event;
     if (value == null) return null;
+    if (_event is EqualUnmodifiableListView) return _event;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2845,6 +2910,7 @@ class _$_Composition extends _Composition {
   List<CompositionSection>? get section {
     final value = _section;
     if (value == null) return null;
+    if (_section is EqualUnmodifiableListView) return _section;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2859,46 +2925,49 @@ class _$_Composition extends _Composition {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Composition &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            (identical(other.identifier, identifier) ||
+                other.identifier == identifier) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._category, _category) &&
-            const DeepCollectionEquality().equals(other.subject, subject) &&
-            const DeepCollectionEquality().equals(other.encounter, encounter) &&
-            const DeepCollectionEquality().equals(other.date, date) &&
-            const DeepCollectionEquality()
-                .equals(other.dateElement, dateElement) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            (identical(other.encounter, encounter) ||
+                other.encounter == encounter) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.dateElement, dateElement) ||
+                other.dateElement == dateElement) &&
             const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.titleElement, titleElement) &&
-            const DeepCollectionEquality()
-                .equals(other.confidentiality, confidentiality) &&
-            const DeepCollectionEquality()
-                .equals(other.confidentialityElement, confidentialityElement) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.titleElement, titleElement) ||
+                other.titleElement == titleElement) &&
+            (identical(other.confidentiality, confidentiality) ||
+                other.confidentiality == confidentiality) &&
+            (identical(other.confidentialityElement, confidentialityElement) ||
+                other.confidentialityElement == confidentialityElement) &&
             const DeepCollectionEquality().equals(other._attester, _attester) &&
-            const DeepCollectionEquality().equals(other.custodian, custodian) &&
+            (identical(other.custodian, custodian) ||
+                other.custodian == custodian) &&
             const DeepCollectionEquality()
                 .equals(other._relatesTo, _relatesTo) &&
             const DeepCollectionEquality().equals(other._event, _event) &&
@@ -2909,33 +2978,33 @@ class _$_Composition extends _Composition {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(type),
+        identifier,
+        status,
+        statusElement,
+        type,
         const DeepCollectionEquality().hash(_category),
-        const DeepCollectionEquality().hash(subject),
-        const DeepCollectionEquality().hash(encounter),
-        const DeepCollectionEquality().hash(date),
-        const DeepCollectionEquality().hash(dateElement),
+        subject,
+        encounter,
+        date,
+        dateElement,
         const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(title),
-        const DeepCollectionEquality().hash(titleElement),
-        const DeepCollectionEquality().hash(confidentiality),
-        const DeepCollectionEquality().hash(confidentialityElement),
+        title,
+        titleElement,
+        confidentiality,
+        confidentialityElement,
         const DeepCollectionEquality().hash(_attester),
-        const DeepCollectionEquality().hash(custodian),
+        custodian,
         const DeepCollectionEquality().hash(_relatesTo),
         const DeepCollectionEquality().hash(_event),
         const DeepCollectionEquality().hash(_section)
@@ -2943,6 +3012,7 @@ class _$_Composition extends _Composition {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CompositionCopyWith<_$_Composition> get copyWith =>
       __$$_CompositionCopyWithImpl<_$_Composition>(this, _$identity);
 
@@ -3242,7 +3312,8 @@ mixin _$CompositionAttester {
 abstract class $CompositionAttesterCopyWith<$Res> {
   factory $CompositionAttesterCopyWith(
           CompositionAttester value, $Res Function(CompositionAttester) then) =
-      _$CompositionAttesterCopyWithImpl<$Res>;
+      _$CompositionAttesterCopyWithImpl<$Res, CompositionAttester>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3259,14 +3330,16 @@ abstract class $CompositionAttesterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CompositionAttesterCopyWithImpl<$Res>
+class _$CompositionAttesterCopyWithImpl<$Res, $Val extends CompositionAttester>
     implements $CompositionAttesterCopyWith<$Res> {
   _$CompositionAttesterCopyWithImpl(this._value, this._then);
 
-  final CompositionAttester _value;
   // ignore: unused_field
-  final $Res Function(CompositionAttester) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3279,71 +3352,74 @@ class _$CompositionAttesterCopyWithImpl<$Res>
     Object? party = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      mode: mode == freezed
+      mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      time: time == freezed
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      timeElement: timeElement == freezed
+      timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      party: party == freezed
+      party: freezed == party
           ? _value.party
           : party // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get modeElement {
     if (_value.modeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.modeElement!, (value) {
-      return _then(_value.copyWith(modeElement: value));
+      return _then(_value.copyWith(modeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get timeElement {
     if (_value.timeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.timeElement!, (value) {
-      return _then(_value.copyWith(timeElement: value));
+      return _then(_value.copyWith(timeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get party {
     if (_value.party == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.party!, (value) {
-      return _then(_value.copyWith(party: value));
+      return _then(_value.copyWith(party: value) as $Val);
     });
   }
 }
@@ -3355,6 +3431,7 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
           $Res Function(_$_CompositionAttester) then) =
       __$$_CompositionAttesterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3375,15 +3452,13 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
 
 /// @nodoc
 class __$$_CompositionAttesterCopyWithImpl<$Res>
-    extends _$CompositionAttesterCopyWithImpl<$Res>
+    extends _$CompositionAttesterCopyWithImpl<$Res, _$_CompositionAttester>
     implements _$$_CompositionAttesterCopyWith<$Res> {
   __$$_CompositionAttesterCopyWithImpl(_$_CompositionAttester _value,
       $Res Function(_$_CompositionAttester) _then)
-      : super(_value, (v) => _then(v as _$_CompositionAttester));
+      : super(_value, _then);
 
-  @override
-  _$_CompositionAttester get _value => super._value as _$_CompositionAttester;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3396,35 +3471,35 @@ class __$$_CompositionAttesterCopyWithImpl<$Res>
     Object? party = freezed,
   }) {
     return _then(_$_CompositionAttester(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      mode: mode == freezed
+      mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      time: time == freezed
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      timeElement: timeElement == freezed
+      timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      party: party == freezed
+      party: freezed == party
           ? _value.party
           : party // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -3475,6 +3550,7 @@ class _$_CompositionAttester extends _CompositionAttester {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3511,6 +3587,8 @@ class _$_CompositionAttester extends _CompositionAttester {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3547,35 +3625,36 @@ class _$_CompositionAttester extends _CompositionAttester {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CompositionAttester &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.mode, mode) &&
-            const DeepCollectionEquality()
-                .equals(other.modeElement, modeElement) &&
-            const DeepCollectionEquality().equals(other.time, time) &&
-            const DeepCollectionEquality()
-                .equals(other.timeElement, timeElement) &&
-            const DeepCollectionEquality().equals(other.party, party));
+            (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.modeElement, modeElement) ||
+                other.modeElement == modeElement) &&
+            (identical(other.time, time) || other.time == time) &&
+            (identical(other.timeElement, timeElement) ||
+                other.timeElement == timeElement) &&
+            (identical(other.party, party) || other.party == party));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(mode),
-      const DeepCollectionEquality().hash(modeElement),
-      const DeepCollectionEquality().hash(time),
-      const DeepCollectionEquality().hash(timeElement),
-      const DeepCollectionEquality().hash(party));
+      mode,
+      modeElement,
+      time,
+      timeElement,
+      party);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CompositionAttesterCopyWith<_$_CompositionAttester> get copyWith =>
       __$$_CompositionAttesterCopyWithImpl<_$_CompositionAttester>(
           this, _$identity);
@@ -3721,7 +3800,8 @@ mixin _$CompositionRelatesTo {
 abstract class $CompositionRelatesToCopyWith<$Res> {
   factory $CompositionRelatesToCopyWith(CompositionRelatesTo value,
           $Res Function(CompositionRelatesTo) then) =
-      _$CompositionRelatesToCopyWithImpl<$Res>;
+      _$CompositionRelatesToCopyWithImpl<$Res, CompositionRelatesTo>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3737,14 +3817,17 @@ abstract class $CompositionRelatesToCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CompositionRelatesToCopyWithImpl<$Res>
+class _$CompositionRelatesToCopyWithImpl<$Res,
+        $Val extends CompositionRelatesTo>
     implements $CompositionRelatesToCopyWith<$Res> {
   _$CompositionRelatesToCopyWithImpl(this._value, this._then);
 
-  final CompositionRelatesTo _value;
   // ignore: unused_field
-  final $Res Function(CompositionRelatesTo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3756,67 +3839,70 @@ class _$CompositionRelatesToCopyWithImpl<$Res>
     Object? targetReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code?,
-      codeElement: codeElement == freezed
+      codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      targetIdentifier: targetIdentifier == freezed
+      targetIdentifier: freezed == targetIdentifier
           ? _value.targetIdentifier
           : targetIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      targetReference: targetReference == freezed
+      targetReference: freezed == targetReference
           ? _value.targetReference
           : targetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get codeElement {
     if (_value.codeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
-      return _then(_value.copyWith(codeElement: value));
+      return _then(_value.copyWith(codeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get targetIdentifier {
     if (_value.targetIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.targetIdentifier!, (value) {
-      return _then(_value.copyWith(targetIdentifier: value));
+      return _then(_value.copyWith(targetIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get targetReference {
     if (_value.targetReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.targetReference!, (value) {
-      return _then(_value.copyWith(targetReference: value));
+      return _then(_value.copyWith(targetReference: value) as $Val);
     });
   }
 }
@@ -3828,6 +3914,7 @@ abstract class _$$_CompositionRelatesToCopyWith<$Res>
           $Res Function(_$_CompositionRelatesTo) then) =
       __$$_CompositionRelatesToCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3847,15 +3934,13 @@ abstract class _$$_CompositionRelatesToCopyWith<$Res>
 
 /// @nodoc
 class __$$_CompositionRelatesToCopyWithImpl<$Res>
-    extends _$CompositionRelatesToCopyWithImpl<$Res>
+    extends _$CompositionRelatesToCopyWithImpl<$Res, _$_CompositionRelatesTo>
     implements _$$_CompositionRelatesToCopyWith<$Res> {
   __$$_CompositionRelatesToCopyWithImpl(_$_CompositionRelatesTo _value,
       $Res Function(_$_CompositionRelatesTo) _then)
-      : super(_value, (v) => _then(v as _$_CompositionRelatesTo));
+      : super(_value, _then);
 
-  @override
-  _$_CompositionRelatesTo get _value => super._value as _$_CompositionRelatesTo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3867,31 +3952,31 @@ class __$$_CompositionRelatesToCopyWithImpl<$Res>
     Object? targetReference = freezed,
   }) {
     return _then(_$_CompositionRelatesTo(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code?,
-      codeElement: codeElement == freezed
+      codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      targetIdentifier: targetIdentifier == freezed
+      targetIdentifier: freezed == targetIdentifier
           ? _value.targetIdentifier
           : targetIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      targetReference: targetReference == freezed
+      targetReference: freezed == targetReference
           ? _value.targetReference
           : targetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -3941,6 +4026,7 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3977,6 +4063,8 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4009,34 +4097,35 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CompositionRelatesTo &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality()
-                .equals(other.codeElement, codeElement) &&
-            const DeepCollectionEquality()
-                .equals(other.targetIdentifier, targetIdentifier) &&
-            const DeepCollectionEquality()
-                .equals(other.targetReference, targetReference));
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.codeElement, codeElement) ||
+                other.codeElement == codeElement) &&
+            (identical(other.targetIdentifier, targetIdentifier) ||
+                other.targetIdentifier == targetIdentifier) &&
+            (identical(other.targetReference, targetReference) ||
+                other.targetReference == targetReference));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(codeElement),
-      const DeepCollectionEquality().hash(targetIdentifier),
-      const DeepCollectionEquality().hash(targetReference));
+      code,
+      codeElement,
+      targetIdentifier,
+      targetReference);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CompositionRelatesToCopyWith<_$_CompositionRelatesTo> get copyWith =>
       __$$_CompositionRelatesToCopyWithImpl<_$_CompositionRelatesTo>(
           this, _$identity);
@@ -4180,7 +4269,8 @@ mixin _$CompositionEvent {
 abstract class $CompositionEventCopyWith<$Res> {
   factory $CompositionEventCopyWith(
           CompositionEvent value, $Res Function(CompositionEvent) then) =
-      _$CompositionEventCopyWithImpl<$Res>;
+      _$CompositionEventCopyWithImpl<$Res, CompositionEvent>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4193,14 +4283,16 @@ abstract class $CompositionEventCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CompositionEventCopyWithImpl<$Res>
+class _$CompositionEventCopyWithImpl<$Res, $Val extends CompositionEvent>
     implements $CompositionEventCopyWith<$Res> {
   _$CompositionEventCopyWithImpl(this._value, this._then);
 
-  final CompositionEvent _value;
   // ignore: unused_field
-  final $Res Function(CompositionEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4211,41 +4303,42 @@ class _$CompositionEventCopyWithImpl<$Res>
     Object? detail = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      detail: detail == freezed
+      detail: freezed == detail
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.period!, (value) {
-      return _then(_value.copyWith(period: value));
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 }
@@ -4257,6 +4350,7 @@ abstract class _$$_CompositionEventCopyWith<$Res>
           _$_CompositionEvent value, $Res Function(_$_CompositionEvent) then) =
       __$$_CompositionEventCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4271,15 +4365,13 @@ abstract class _$$_CompositionEventCopyWith<$Res>
 
 /// @nodoc
 class __$$_CompositionEventCopyWithImpl<$Res>
-    extends _$CompositionEventCopyWithImpl<$Res>
+    extends _$CompositionEventCopyWithImpl<$Res, _$_CompositionEvent>
     implements _$$_CompositionEventCopyWith<$Res> {
   __$$_CompositionEventCopyWithImpl(
       _$_CompositionEvent _value, $Res Function(_$_CompositionEvent) _then)
-      : super(_value, (v) => _then(v as _$_CompositionEvent));
+      : super(_value, _then);
 
-  @override
-  _$_CompositionEvent get _value => super._value as _$_CompositionEvent;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4290,27 +4382,27 @@ class __$$_CompositionEventCopyWithImpl<$Res>
     Object? detail = freezed,
   }) {
     return _then(_$_CompositionEvent(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      detail: detail == freezed
+      detail: freezed == detail
           ? _value._detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
@@ -4361,6 +4453,7 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4397,6 +4490,8 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4417,6 +4512,7 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<CodeableConcept>? get code {
     final value = _code;
     if (value == null) return null;
+    if (_code is EqualUnmodifiableListView) return _code;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4439,6 +4535,7 @@ class _$_CompositionEvent extends _CompositionEvent {
   List<Reference>? get detail {
     final value = _detail;
     if (value == null) return null;
+    if (_detail is EqualUnmodifiableListView) return _detail;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4453,13 +4550,13 @@ class _$_CompositionEvent extends _CompositionEvent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CompositionEvent &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other._code, _code) &&
-            const DeepCollectionEquality().equals(other.period, period) &&
+            (identical(other.period, period) || other.period == period) &&
             const DeepCollectionEquality().equals(other._detail, _detail));
   }
 
@@ -4467,15 +4564,16 @@ class _$_CompositionEvent extends _CompositionEvent {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_code),
-      const DeepCollectionEquality().hash(period),
+      period,
       const DeepCollectionEquality().hash(_detail));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CompositionEventCopyWith<_$_CompositionEvent> get copyWith =>
       __$$_CompositionEventCopyWithImpl<_$_CompositionEvent>(this, _$identity);
 
@@ -4662,7 +4760,8 @@ mixin _$CompositionSection {
 abstract class $CompositionSectionCopyWith<$Res> {
   factory $CompositionSectionCopyWith(
           CompositionSection value, $Res Function(CompositionSection) then) =
-      _$CompositionSectionCopyWithImpl<$Res>;
+      _$CompositionSectionCopyWithImpl<$Res, CompositionSection>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4690,14 +4789,16 @@ abstract class $CompositionSectionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CompositionSectionCopyWithImpl<$Res>
+class _$CompositionSectionCopyWithImpl<$Res, $Val extends CompositionSection>
     implements $CompositionSectionCopyWith<$Res> {
   _$CompositionSectionCopyWithImpl(this._value, this._then);
 
-  final CompositionSection _value;
   // ignore: unused_field
-  final $Res Function(CompositionSection) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4717,143 +4818,150 @@ class _$CompositionSectionCopyWithImpl<$Res>
     Object? section = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      titleElement: titleElement == freezed
+      titleElement: freezed == titleElement
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      author: author == freezed
+      author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      focus: focus == freezed
+      focus: freezed == focus
           ? _value.focus
           : focus // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      mode: mode == freezed
+      mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      orderedBy: orderedBy == freezed
+      orderedBy: freezed == orderedBy
           ? _value.orderedBy
           : orderedBy // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      entry: entry == freezed
+      entry: freezed == entry
           ? _value.entry
           : entry // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      emptyReason: emptyReason == freezed
+      emptyReason: freezed == emptyReason
           ? _value.emptyReason
           : emptyReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      section: section == freezed
+      section: freezed == section
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
               as List<CompositionSection>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get titleElement {
     if (_value.titleElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
-      return _then(_value.copyWith(titleElement: value));
+      return _then(_value.copyWith(titleElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get code {
     if (_value.code == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
-      return _then(_value.copyWith(code: value));
+      return _then(_value.copyWith(code: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get focus {
     if (_value.focus == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.focus!, (value) {
-      return _then(_value.copyWith(focus: value));
+      return _then(_value.copyWith(focus: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get modeElement {
     if (_value.modeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.modeElement!, (value) {
-      return _then(_value.copyWith(modeElement: value));
+      return _then(_value.copyWith(modeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get orderedBy {
     if (_value.orderedBy == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.orderedBy!, (value) {
-      return _then(_value.copyWith(orderedBy: value));
+      return _then(_value.copyWith(orderedBy: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get emptyReason {
     if (_value.emptyReason == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.emptyReason!, (value) {
-      return _then(_value.copyWith(emptyReason: value));
+      return _then(_value.copyWith(emptyReason: value) as $Val);
     });
   }
 }
@@ -4865,6 +4973,7 @@ abstract class _$$_CompositionSectionCopyWith<$Res>
           $Res Function(_$_CompositionSection) then) =
       __$$_CompositionSectionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4900,15 +5009,13 @@ abstract class _$$_CompositionSectionCopyWith<$Res>
 
 /// @nodoc
 class __$$_CompositionSectionCopyWithImpl<$Res>
-    extends _$CompositionSectionCopyWithImpl<$Res>
+    extends _$CompositionSectionCopyWithImpl<$Res, _$_CompositionSection>
     implements _$$_CompositionSectionCopyWith<$Res> {
   __$$_CompositionSectionCopyWithImpl(
       _$_CompositionSection _value, $Res Function(_$_CompositionSection) _then)
-      : super(_value, (v) => _then(v as _$_CompositionSection));
+      : super(_value, _then);
 
-  @override
-  _$_CompositionSection get _value => super._value as _$_CompositionSection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4928,63 +5035,63 @@ class __$$_CompositionSectionCopyWithImpl<$Res>
     Object? section = freezed,
   }) {
     return _then(_$_CompositionSection(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      titleElement: titleElement == freezed
+      titleElement: freezed == titleElement
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      author: author == freezed
+      author: freezed == author
           ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      focus: focus == freezed
+      focus: freezed == focus
           ? _value.focus
           : focus // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      mode: mode == freezed
+      mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Code?,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      orderedBy: orderedBy == freezed
+      orderedBy: freezed == orderedBy
           ? _value.orderedBy
           : orderedBy // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      entry: entry == freezed
+      entry: freezed == entry
           ? _value._entry
           : entry // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      emptyReason: emptyReason == freezed
+      emptyReason: freezed == emptyReason
           ? _value.emptyReason
           : emptyReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      section: section == freezed
+      section: freezed == section
           ? _value._section
           : section // ignore: cast_nullable_to_non_nullable
               as List<CompositionSection>?,
@@ -5045,6 +5152,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5081,6 +5189,8 @@ class _$_CompositionSection extends _CompositionSection {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5111,6 +5221,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<Reference>? get author {
     final value = _author;
     if (value == null) return null;
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5162,6 +5273,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<Reference>? get entry {
     final value = _entry;
     if (value == null) return null;
+    if (_entry is EqualUnmodifiableListView) return _entry;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5179,6 +5291,7 @@ class _$_CompositionSection extends _CompositionSection {
   List<CompositionSection>? get section {
     final value = _section;
     if (value == null) return null;
+    if (_section is EqualUnmodifiableListView) return _section;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5193,25 +5306,26 @@ class _$_CompositionSection extends _CompositionSection {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CompositionSection &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.titleElement, titleElement) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.titleElement, titleElement) ||
+                other.titleElement == titleElement) &&
+            (identical(other.code, code) || other.code == code) &&
             const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other.focus, focus) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.mode, mode) &&
-            const DeepCollectionEquality()
-                .equals(other.modeElement, modeElement) &&
-            const DeepCollectionEquality().equals(other.orderedBy, orderedBy) &&
+            (identical(other.focus, focus) || other.focus == focus) &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.modeElement, modeElement) ||
+                other.modeElement == modeElement) &&
+            (identical(other.orderedBy, orderedBy) ||
+                other.orderedBy == orderedBy) &&
             const DeepCollectionEquality().equals(other._entry, _entry) &&
-            const DeepCollectionEquality()
-                .equals(other.emptyReason, emptyReason) &&
+            (identical(other.emptyReason, emptyReason) ||
+                other.emptyReason == emptyReason) &&
             const DeepCollectionEquality().equals(other._section, _section));
   }
 
@@ -5219,24 +5333,25 @@ class _$_CompositionSection extends _CompositionSection {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(titleElement),
-      const DeepCollectionEquality().hash(code),
+      title,
+      titleElement,
+      code,
       const DeepCollectionEquality().hash(_author),
-      const DeepCollectionEquality().hash(focus),
-      const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(mode),
-      const DeepCollectionEquality().hash(modeElement),
-      const DeepCollectionEquality().hash(orderedBy),
+      focus,
+      text,
+      mode,
+      modeElement,
+      orderedBy,
       const DeepCollectionEquality().hash(_entry),
-      const DeepCollectionEquality().hash(emptyReason),
+      emptyReason,
       const DeepCollectionEquality().hash(_section));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CompositionSectionCopyWith<_$_CompositionSection> get copyWith =>
       __$$_CompositionSectionCopyWithImpl<_$_CompositionSection>(
           this, _$identity);
@@ -5533,7 +5648,8 @@ mixin _$DocumentManifest {
 abstract class $DocumentManifestCopyWith<$Res> {
   factory $DocumentManifestCopyWith(
           DocumentManifest value, $Res Function(DocumentManifest) then) =
-      _$DocumentManifestCopyWithImpl<$Res>;
+      _$DocumentManifestCopyWithImpl<$Res, DocumentManifest>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
           R4ResourceType resourceType,
@@ -5585,17 +5701,19 @@ abstract class $DocumentManifestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DocumentManifestCopyWithImpl<$Res>
+class _$DocumentManifestCopyWithImpl<$Res, $Val extends DocumentManifest>
     implements $DocumentManifestCopyWith<$Res> {
   _$DocumentManifestCopyWithImpl(this._value, this._then);
 
-  final DocumentManifest _value;
   // ignore: unused_field
-  final $Res Function(DocumentManifest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5620,239 +5738,250 @@ class _$DocumentManifestCopyWithImpl<$Res>
     Object? sourceElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
-    Object? content = freezed,
+    Object? content = null,
     Object? related = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      masterIdentifier: masterIdentifier == freezed
+      masterIdentifier: freezed == masterIdentifier
           ? _value.masterIdentifier
           : masterIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: author == freezed
+      author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      recipient: recipient == freezed
+      recipient: freezed == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      sourceElement: sourceElement == freezed
+      sourceElement: freezed == sourceElement
           ? _value.sourceElement
           : sourceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
-      related: related == freezed
+      related: freezed == related
           ? _value.related
           : related // ignore: cast_nullable_to_non_nullable
               as List<DocumentManifestRelated>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get masterIdentifier {
     if (_value.masterIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.masterIdentifier!, (value) {
-      return _then(_value.copyWith(masterIdentifier: value));
+      return _then(_value.copyWith(masterIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
     if (_value.subject == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
-      return _then(_value.copyWith(createdElement: value));
+      return _then(_value.copyWith(createdElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get sourceElement {
     if (_value.sourceElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.sourceElement!, (value) {
-      return _then(_value.copyWith(sourceElement: value));
+      return _then(_value.copyWith(sourceElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 }
@@ -5864,6 +5993,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
           _$_DocumentManifest value, $Res Function(_$_DocumentManifest) then) =
       __$$_DocumentManifestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
           R4ResourceType resourceType,
@@ -5927,18 +6057,16 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
 
 /// @nodoc
 class __$$_DocumentManifestCopyWithImpl<$Res>
-    extends _$DocumentManifestCopyWithImpl<$Res>
+    extends _$DocumentManifestCopyWithImpl<$Res, _$_DocumentManifest>
     implements _$$_DocumentManifestCopyWith<$Res> {
   __$$_DocumentManifestCopyWithImpl(
       _$_DocumentManifest _value, $Res Function(_$_DocumentManifest) _then)
-      : super(_value, (v) => _then(v as _$_DocumentManifest));
+      : super(_value, _then);
 
-  @override
-  _$_DocumentManifest get _value => super._value as _$_DocumentManifest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5963,115 +6091,115 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
     Object? sourceElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
-    Object? content = freezed,
+    Object? content = null,
     Object? related = freezed,
   }) {
     return _then(_$_DocumentManifest(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      masterIdentifier: masterIdentifier == freezed
+      masterIdentifier: freezed == masterIdentifier
           ? _value.masterIdentifier
           : masterIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      created: created == freezed
+      created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      createdElement: createdElement == freezed
+      createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: author == freezed
+      author: freezed == author
           ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      recipient: recipient == freezed
+      recipient: freezed == recipient
           ? _value._recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      sourceElement: sourceElement == freezed
+      sourceElement: freezed == sourceElement
           ? _value.sourceElement
           : sourceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      content: content == freezed
+      content: null == content
           ? _value._content
           : content // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
-      related: related == freezed
+      related: freezed == related
           ? _value._related
           : related // ignore: cast_nullable_to_non_nullable
               as List<DocumentManifestRelated>?,
@@ -6190,6 +6318,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6213,6 +6342,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6249,6 +6379,8 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6268,6 +6400,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6316,6 +6449,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Reference>? get author {
     final value = _author;
     if (value == null) return null;
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6330,6 +6464,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<Reference>? get recipient {
     final value = _recipient;
     if (value == null) return null;
+    if (_recipient is EqualUnmodifiableListView) return _recipient;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6362,6 +6497,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   ///  manifest.
   @override
   List<Reference> get content {
+    if (_content is EqualUnmodifiableListView) return _content;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_content);
   }
@@ -6376,6 +6512,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   List<DocumentManifestRelated>? get related {
     final value = _related;
     if (value == null) return null;
+    if (_related is EqualUnmodifiableListView) return _related;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6390,46 +6527,47 @@ class _$_DocumentManifest extends _DocumentManifest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DocumentManifest &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.masterIdentifier, masterIdentifier) &&
+            (identical(other.masterIdentifier, masterIdentifier) ||
+                other.masterIdentifier == masterIdentifier) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.subject, subject) &&
-            const DeepCollectionEquality().equals(other.created, created) &&
-            const DeepCollectionEquality()
-                .equals(other.createdElement, createdElement) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            (identical(other.created, created) || other.created == created) &&
+            (identical(other.createdElement, createdElement) ||
+                other.createdElement == createdElement) &&
             const DeepCollectionEquality().equals(other._author, _author) &&
             const DeepCollectionEquality()
                 .equals(other._recipient, _recipient) &&
-            const DeepCollectionEquality().equals(other.source, source) &&
-            const DeepCollectionEquality()
-                .equals(other.sourceElement, sourceElement) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.sourceElement, sourceElement) ||
+                other.sourceElement == sourceElement) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
             const DeepCollectionEquality().equals(other._content, _content) &&
             const DeepCollectionEquality().equals(other._related, _related));
   }
@@ -6438,37 +6576,38 @@ class _$_DocumentManifest extends _DocumentManifest {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(masterIdentifier),
+        masterIdentifier,
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(type),
-        const DeepCollectionEquality().hash(subject),
-        const DeepCollectionEquality().hash(created),
-        const DeepCollectionEquality().hash(createdElement),
+        status,
+        statusElement,
+        type,
+        subject,
+        created,
+        createdElement,
         const DeepCollectionEquality().hash(_author),
         const DeepCollectionEquality().hash(_recipient),
-        const DeepCollectionEquality().hash(source),
-        const DeepCollectionEquality().hash(sourceElement),
-        const DeepCollectionEquality().hash(description),
-        const DeepCollectionEquality().hash(descriptionElement),
+        source,
+        sourceElement,
+        description,
+        descriptionElement,
         const DeepCollectionEquality().hash(_content),
         const DeepCollectionEquality().hash(_related)
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DocumentManifestCopyWith<_$_DocumentManifest> get copyWith =>
       __$$_DocumentManifestCopyWithImpl<_$_DocumentManifest>(this, _$identity);
 
@@ -6743,7 +6882,8 @@ mixin _$DocumentManifestRelated {
 abstract class $DocumentManifestRelatedCopyWith<$Res> {
   factory $DocumentManifestRelatedCopyWith(DocumentManifestRelated value,
           $Res Function(DocumentManifestRelated) then) =
-      _$DocumentManifestRelatedCopyWithImpl<$Res>;
+      _$DocumentManifestRelatedCopyWithImpl<$Res, DocumentManifestRelated>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6756,14 +6896,17 @@ abstract class $DocumentManifestRelatedCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DocumentManifestRelatedCopyWithImpl<$Res>
+class _$DocumentManifestRelatedCopyWithImpl<$Res,
+        $Val extends DocumentManifestRelated>
     implements $DocumentManifestRelatedCopyWith<$Res> {
   _$DocumentManifestRelatedCopyWithImpl(this._value, this._then);
 
-  final DocumentManifestRelated _value;
   // ignore: unused_field
-  final $Res Function(DocumentManifestRelated) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -6773,48 +6916,50 @@ class _$DocumentManifestRelatedCopyWithImpl<$Res>
     Object? ref = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      ref: ref == freezed
+      ref: freezed == ref
           ? _value.ref
           : ref // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
     if (_value.identifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
+      return _then(_value.copyWith(identifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get ref {
     if (_value.ref == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.ref!, (value) {
-      return _then(_value.copyWith(ref: value));
+      return _then(_value.copyWith(ref: value) as $Val);
     });
   }
 }
@@ -6826,6 +6971,7 @@ abstract class _$$_DocumentManifestRelatedCopyWith<$Res>
           $Res Function(_$_DocumentManifestRelated) then) =
       __$$_DocumentManifestRelatedCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6841,16 +6987,14 @@ abstract class _$$_DocumentManifestRelatedCopyWith<$Res>
 
 /// @nodoc
 class __$$_DocumentManifestRelatedCopyWithImpl<$Res>
-    extends _$DocumentManifestRelatedCopyWithImpl<$Res>
+    extends _$DocumentManifestRelatedCopyWithImpl<$Res,
+        _$_DocumentManifestRelated>
     implements _$$_DocumentManifestRelatedCopyWith<$Res> {
   __$$_DocumentManifestRelatedCopyWithImpl(_$_DocumentManifestRelated _value,
       $Res Function(_$_DocumentManifestRelated) _then)
-      : super(_value, (v) => _then(v as _$_DocumentManifestRelated));
+      : super(_value, _then);
 
-  @override
-  _$_DocumentManifestRelated get _value =>
-      super._value as _$_DocumentManifestRelated;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -6860,23 +7004,23 @@ class __$$_DocumentManifestRelatedCopyWithImpl<$Res>
     Object? ref = freezed,
   }) {
     return _then(_$_DocumentManifestRelated(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      ref: ref == freezed
+      ref: freezed == ref
           ? _value.ref
           : ref // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -6924,6 +7068,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6960,6 +7105,8 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6984,28 +7131,29 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DocumentManifestRelated &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.ref, ref));
+            (identical(other.identifier, identifier) ||
+                other.identifier == identifier) &&
+            (identical(other.ref, ref) || other.ref == ref));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(identifier),
-      const DeepCollectionEquality().hash(ref));
+      identifier,
+      ref);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DocumentManifestRelatedCopyWith<_$_DocumentManifestRelated>
       get copyWith =>
           __$$_DocumentManifestRelatedCopyWithImpl<_$_DocumentManifestRelated>(
@@ -7250,7 +7398,8 @@ mixin _$DocumentReference {
 abstract class $DocumentReferenceCopyWith<$Res> {
   factory $DocumentReferenceCopyWith(
           DocumentReference value, $Res Function(DocumentReference) then) =
-      _$DocumentReferenceCopyWithImpl<$Res>;
+      _$DocumentReferenceCopyWithImpl<$Res, DocumentReference>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
           R4ResourceType resourceType,
@@ -7309,17 +7458,19 @@ abstract class $DocumentReferenceCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DocumentReferenceCopyWithImpl<$Res>
+class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
     implements $DocumentReferenceCopyWith<$Res> {
   _$DocumentReferenceCopyWithImpl(this._value, this._then);
 
-  final DocumentReference _value;
   // ignore: unused_field
-  final $Res Function(DocumentReference) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7348,288 +7499,302 @@ class _$DocumentReferenceCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? securityLabel = freezed,
-    Object? content = freezed,
+    Object? content = null,
     Object? context = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      masterIdentifier: masterIdentifier == freezed
+      masterIdentifier: freezed == masterIdentifier
           ? _value.masterIdentifier
           : masterIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      docStatus: docStatus == freezed
+      docStatus: freezed == docStatus
           ? _value.docStatus
           : docStatus // ignore: cast_nullable_to_non_nullable
               as Code?,
-      docStatusElement: docStatusElement == freezed
+      docStatusElement: freezed == docStatusElement
           ? _value.docStatusElement
           : docStatusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: author == freezed
+      author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      authenticator: authenticator == freezed
+      authenticator: freezed == authenticator
           ? _value.authenticator
           : authenticator // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      custodian: custodian == freezed
+      custodian: freezed == custodian
           ? _value.custodian
           : custodian // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      relatesTo: relatesTo == freezed
+      relatesTo: freezed == relatesTo
           ? _value.relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
               as List<DocumentReferenceRelatesTo>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      securityLabel: securityLabel == freezed
+      securityLabel: freezed == securityLabel
           ? _value.securityLabel
           : securityLabel // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as List<DocumentReferenceContent>,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as DocumentReferenceContext?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get masterIdentifier {
     if (_value.masterIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.masterIdentifier!, (value) {
-      return _then(_value.copyWith(masterIdentifier: value));
+      return _then(_value.copyWith(masterIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get docStatusElement {
     if (_value.docStatusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.docStatusElement!, (value) {
-      return _then(_value.copyWith(docStatusElement: value));
+      return _then(_value.copyWith(docStatusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
     if (_value.subject == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
-      return _then(_value.copyWith(dateElement: value));
+      return _then(_value.copyWith(dateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get authenticator {
     if (_value.authenticator == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.authenticator!, (value) {
-      return _then(_value.copyWith(authenticator: value));
+      return _then(_value.copyWith(authenticator: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get custodian {
     if (_value.custodian == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.custodian!, (value) {
-      return _then(_value.copyWith(custodian: value));
+      return _then(_value.copyWith(custodian: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DocumentReferenceContextCopyWith<$Res>? get context {
     if (_value.context == null) {
       return null;
     }
 
     return $DocumentReferenceContextCopyWith<$Res>(_value.context!, (value) {
-      return _then(_value.copyWith(context: value));
+      return _then(_value.copyWith(context: value) as $Val);
     });
   }
 }
@@ -7641,6 +7806,7 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
           $Res Function(_$_DocumentReference) then) =
       __$$_DocumentReferenceCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
           R4ResourceType resourceType,
@@ -7714,18 +7880,16 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
 
 /// @nodoc
 class __$$_DocumentReferenceCopyWithImpl<$Res>
-    extends _$DocumentReferenceCopyWithImpl<$Res>
+    extends _$DocumentReferenceCopyWithImpl<$Res, _$_DocumentReference>
     implements _$$_DocumentReferenceCopyWith<$Res> {
   __$$_DocumentReferenceCopyWithImpl(
       _$_DocumentReference _value, $Res Function(_$_DocumentReference) _then)
-      : super(_value, (v) => _then(v as _$_DocumentReference));
+      : super(_value, _then);
 
-  @override
-  _$_DocumentReference get _value => super._value as _$_DocumentReference;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7754,131 +7918,131 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? securityLabel = freezed,
-    Object? content = freezed,
+    Object? content = null,
     Object? context = freezed,
   }) {
     return _then(_$_DocumentReference(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      masterIdentifier: masterIdentifier == freezed
+      masterIdentifier: freezed == masterIdentifier
           ? _value.masterIdentifier
           : masterIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Code?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      docStatus: docStatus == freezed
+      docStatus: freezed == docStatus
           ? _value.docStatus
           : docStatus // ignore: cast_nullable_to_non_nullable
               as Code?,
-      docStatusElement: docStatusElement == freezed
+      docStatusElement: freezed == docStatusElement
           ? _value.docStatusElement
           : docStatusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      category: category == freezed
+      category: freezed == category
           ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: author == freezed
+      author: freezed == author
           ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      authenticator: authenticator == freezed
+      authenticator: freezed == authenticator
           ? _value.authenticator
           : authenticator // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      custodian: custodian == freezed
+      custodian: freezed == custodian
           ? _value.custodian
           : custodian // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      relatesTo: relatesTo == freezed
+      relatesTo: freezed == relatesTo
           ? _value._relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
               as List<DocumentReferenceRelatesTo>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      securityLabel: securityLabel == freezed
+      securityLabel: freezed == securityLabel
           ? _value._securityLabel
           : securityLabel // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      content: content == freezed
+      content: null == content
           ? _value._content
           : content // ignore: cast_nullable_to_non_nullable
               as List<DocumentReferenceContent>,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as DocumentReferenceContext?,
@@ -8002,6 +8166,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8025,6 +8190,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8061,6 +8227,8 @@ class _$_DocumentReference extends _DocumentReference {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8082,6 +8250,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8122,6 +8291,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8152,6 +8322,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<Reference>? get author {
     final value = _author;
     if (value == null) return null;
+    if (_author is EqualUnmodifiableListView) return _author;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8176,6 +8347,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<DocumentReferenceRelatesTo>? get relatesTo {
     final value = _relatesTo;
     if (value == null) return null;
+    if (_relatesTo is EqualUnmodifiableListView) return _relatesTo;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8207,6 +8379,7 @@ class _$_DocumentReference extends _DocumentReference {
   List<CodeableConcept>? get securityLabel {
     final value = _securityLabel;
     if (value == null) return null;
+    if (_securityLabel is EqualUnmodifiableListView) return _securityLabel;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8219,6 +8392,7 @@ class _$_DocumentReference extends _DocumentReference {
   ///  content element repetitions, each with a different format.
   @override
   List<DocumentReferenceContent> get content {
+    if (_content is EqualUnmodifiableListView) return _content;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_content);
   }
@@ -8237,95 +8411,99 @@ class _$_DocumentReference extends _DocumentReference {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DocumentReference &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.masterIdentifier, masterIdentifier) &&
+            (identical(other.masterIdentifier, masterIdentifier) ||
+                other.masterIdentifier == masterIdentifier) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.docStatus, docStatus) &&
-            const DeepCollectionEquality()
-                .equals(other.docStatusElement, docStatusElement) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.docStatus, docStatus) ||
+                other.docStatus == docStatus) &&
+            (identical(other.docStatusElement, docStatusElement) ||
+                other.docStatusElement == docStatusElement) &&
+            (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._category, _category) &&
-            const DeepCollectionEquality().equals(other.subject, subject) &&
-            const DeepCollectionEquality().equals(other.date, date) &&
-            const DeepCollectionEquality()
-                .equals(other.dateElement, dateElement) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.dateElement, dateElement) ||
+                other.dateElement == dateElement) &&
             const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality()
-                .equals(other.authenticator, authenticator) &&
-            const DeepCollectionEquality().equals(other.custodian, custodian) &&
+            (identical(other.authenticator, authenticator) ||
+                other.authenticator == authenticator) &&
+            (identical(other.custodian, custodian) ||
+                other.custodian == custodian) &&
             const DeepCollectionEquality()
                 .equals(other._relatesTo, _relatesTo) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
             const DeepCollectionEquality()
                 .equals(other._securityLabel, _securityLabel) &&
             const DeepCollectionEquality().equals(other._content, _content) &&
-            const DeepCollectionEquality().equals(other.context, context));
+            (identical(other.context, context) || other.context == context));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(masterIdentifier),
+        masterIdentifier,
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(docStatus),
-        const DeepCollectionEquality().hash(docStatusElement),
-        const DeepCollectionEquality().hash(type),
+        status,
+        statusElement,
+        docStatus,
+        docStatusElement,
+        type,
         const DeepCollectionEquality().hash(_category),
-        const DeepCollectionEquality().hash(subject),
-        const DeepCollectionEquality().hash(date),
-        const DeepCollectionEquality().hash(dateElement),
+        subject,
+        date,
+        dateElement,
         const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(authenticator),
-        const DeepCollectionEquality().hash(custodian),
+        authenticator,
+        custodian,
         const DeepCollectionEquality().hash(_relatesTo),
-        const DeepCollectionEquality().hash(description),
-        const DeepCollectionEquality().hash(descriptionElement),
+        description,
+        descriptionElement,
         const DeepCollectionEquality().hash(_securityLabel),
         const DeepCollectionEquality().hash(_content),
-        const DeepCollectionEquality().hash(context)
+        context
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DocumentReferenceCopyWith<_$_DocumentReference> get copyWith =>
       __$$_DocumentReferenceCopyWithImpl<_$_DocumentReference>(
           this, _$identity);
@@ -8629,7 +8807,9 @@ mixin _$DocumentReferenceRelatesTo {
 abstract class $DocumentReferenceRelatesToCopyWith<$Res> {
   factory $DocumentReferenceRelatesToCopyWith(DocumentReferenceRelatesTo value,
           $Res Function(DocumentReferenceRelatesTo) then) =
-      _$DocumentReferenceRelatesToCopyWithImpl<$Res>;
+      _$DocumentReferenceRelatesToCopyWithImpl<$Res,
+          DocumentReferenceRelatesTo>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8643,14 +8823,17 @@ abstract class $DocumentReferenceRelatesToCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DocumentReferenceRelatesToCopyWithImpl<$Res>
+class _$DocumentReferenceRelatesToCopyWithImpl<$Res,
+        $Val extends DocumentReferenceRelatesTo>
     implements $DocumentReferenceRelatesToCopyWith<$Res> {
   _$DocumentReferenceRelatesToCopyWithImpl(this._value, this._then);
 
-  final DocumentReferenceRelatesTo _value;
   // ignore: unused_field
-  final $Res Function(DocumentReferenceRelatesTo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -8658,51 +8841,53 @@ class _$DocumentReferenceRelatesToCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? code = freezed,
     Object? codeElement = freezed,
-    Object? target = freezed,
+    Object? target = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code?,
-      codeElement: codeElement == freezed
+      codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      target: target == freezed
+      target: null == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
               as Reference,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get codeElement {
     if (_value.codeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
-      return _then(_value.copyWith(codeElement: value));
+      return _then(_value.copyWith(codeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get target {
     return $ReferenceCopyWith<$Res>(_value.target, (value) {
-      return _then(_value.copyWith(target: value));
+      return _then(_value.copyWith(target: value) as $Val);
     });
   }
 }
@@ -8715,6 +8900,7 @@ abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
           $Res Function(_$_DocumentReferenceRelatesTo) then) =
       __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8731,17 +8917,15 @@ abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
 
 /// @nodoc
 class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
-    extends _$DocumentReferenceRelatesToCopyWithImpl<$Res>
+    extends _$DocumentReferenceRelatesToCopyWithImpl<$Res,
+        _$_DocumentReferenceRelatesTo>
     implements _$$_DocumentReferenceRelatesToCopyWith<$Res> {
   __$$_DocumentReferenceRelatesToCopyWithImpl(
       _$_DocumentReferenceRelatesTo _value,
       $Res Function(_$_DocumentReferenceRelatesTo) _then)
-      : super(_value, (v) => _then(v as _$_DocumentReferenceRelatesTo));
+      : super(_value, _then);
 
-  @override
-  _$_DocumentReferenceRelatesTo get _value =>
-      super._value as _$_DocumentReferenceRelatesTo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -8749,30 +8933,30 @@ class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? code = freezed,
     Object? codeElement = freezed,
-    Object? target = freezed,
+    Object? target = null,
   }) {
     return _then(_$_DocumentReferenceRelatesTo(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code?,
-      codeElement: codeElement == freezed
+      codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      target: target == freezed
+      target: null == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
               as Reference,
@@ -8821,6 +9005,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8857,6 +9042,8 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -8885,30 +9072,31 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DocumentReferenceRelatesTo &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality()
-                .equals(other.codeElement, codeElement) &&
-            const DeepCollectionEquality().equals(other.target, target));
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.codeElement, codeElement) ||
+                other.codeElement == codeElement) &&
+            (identical(other.target, target) || other.target == target));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(codeElement),
-      const DeepCollectionEquality().hash(target));
+      code,
+      codeElement,
+      target);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DocumentReferenceRelatesToCopyWith<_$_DocumentReferenceRelatesTo>
       get copyWith => __$$_DocumentReferenceRelatesToCopyWithImpl<
           _$_DocumentReferenceRelatesTo>(this, _$identity);
@@ -9040,7 +9228,8 @@ mixin _$DocumentReferenceContent {
 abstract class $DocumentReferenceContentCopyWith<$Res> {
   factory $DocumentReferenceContentCopyWith(DocumentReferenceContent value,
           $Res Function(DocumentReferenceContent) then) =
-      _$DocumentReferenceContentCopyWithImpl<$Res>;
+      _$DocumentReferenceContentCopyWithImpl<$Res, DocumentReferenceContent>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -9053,61 +9242,66 @@ abstract class $DocumentReferenceContentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DocumentReferenceContentCopyWithImpl<$Res>
+class _$DocumentReferenceContentCopyWithImpl<$Res,
+        $Val extends DocumentReferenceContent>
     implements $DocumentReferenceContentCopyWith<$Res> {
   _$DocumentReferenceContentCopyWithImpl(this._value, this._then);
 
-  final DocumentReferenceContent _value;
   // ignore: unused_field
-  final $Res Function(DocumentReferenceContent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? attachment = freezed,
+    Object? attachment = null,
     Object? format = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      attachment: attachment == freezed
+      attachment: null == attachment
           ? _value.attachment
           : attachment // ignore: cast_nullable_to_non_nullable
               as Attachment,
-      format: format == freezed
+      format: freezed == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as Coding?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res> get attachment {
     return $AttachmentCopyWith<$Res>(_value.attachment, (value) {
-      return _then(_value.copyWith(attachment: value));
+      return _then(_value.copyWith(attachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get format {
     if (_value.format == null) {
       return null;
     }
 
     return $CodingCopyWith<$Res>(_value.format!, (value) {
-      return _then(_value.copyWith(format: value));
+      return _then(_value.copyWith(format: value) as $Val);
     });
   }
 }
@@ -9120,6 +9314,7 @@ abstract class _$$_DocumentReferenceContentCopyWith<$Res>
           $Res Function(_$_DocumentReferenceContent) then) =
       __$$_DocumentReferenceContentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -9135,42 +9330,40 @@ abstract class _$$_DocumentReferenceContentCopyWith<$Res>
 
 /// @nodoc
 class __$$_DocumentReferenceContentCopyWithImpl<$Res>
-    extends _$DocumentReferenceContentCopyWithImpl<$Res>
+    extends _$DocumentReferenceContentCopyWithImpl<$Res,
+        _$_DocumentReferenceContent>
     implements _$$_DocumentReferenceContentCopyWith<$Res> {
   __$$_DocumentReferenceContentCopyWithImpl(_$_DocumentReferenceContent _value,
       $Res Function(_$_DocumentReferenceContent) _then)
-      : super(_value, (v) => _then(v as _$_DocumentReferenceContent));
+      : super(_value, _then);
 
-  @override
-  _$_DocumentReferenceContent get _value =>
-      super._value as _$_DocumentReferenceContent;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? attachment = freezed,
+    Object? attachment = null,
     Object? format = freezed,
   }) {
     return _then(_$_DocumentReferenceContent(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      attachment: attachment == freezed
+      attachment: null == attachment
           ? _value.attachment
           : attachment // ignore: cast_nullable_to_non_nullable
               as Attachment,
-      format: format == freezed
+      format: freezed == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as Coding?,
@@ -9218,6 +9411,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9254,6 +9448,8 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9279,28 +9475,29 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DocumentReferenceContent &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.attachment, attachment) &&
-            const DeepCollectionEquality().equals(other.format, format));
+            (identical(other.attachment, attachment) ||
+                other.attachment == attachment) &&
+            (identical(other.format, format) || other.format == format));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(attachment),
-      const DeepCollectionEquality().hash(format));
+      attachment,
+      format);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DocumentReferenceContentCopyWith<_$_DocumentReferenceContent>
       get copyWith => __$$_DocumentReferenceContentCopyWithImpl<
           _$_DocumentReferenceContent>(this, _$identity);
@@ -9450,7 +9647,8 @@ mixin _$DocumentReferenceContext {
 abstract class $DocumentReferenceContextCopyWith<$Res> {
   factory $DocumentReferenceContextCopyWith(DocumentReferenceContext value,
           $Res Function(DocumentReferenceContext) then) =
-      _$DocumentReferenceContextCopyWithImpl<$Res>;
+      _$DocumentReferenceContextCopyWithImpl<$Res, DocumentReferenceContext>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -9470,14 +9668,17 @@ abstract class $DocumentReferenceContextCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DocumentReferenceContextCopyWithImpl<$Res>
+class _$DocumentReferenceContextCopyWithImpl<$Res,
+        $Val extends DocumentReferenceContext>
     implements $DocumentReferenceContextCopyWith<$Res> {
   _$DocumentReferenceContextCopyWithImpl(this._value, this._then);
 
-  final DocumentReferenceContext _value;
   // ignore: unused_field
-  final $Res Function(DocumentReferenceContext) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -9492,90 +9693,94 @@ class _$DocumentReferenceContextCopyWithImpl<$Res>
     Object? related = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      encounter: encounter == freezed
+      encounter: freezed == encounter
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      event: event == freezed
+      event: freezed == event
           ? _value.event
           : event // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      facilityType: facilityType == freezed
+      facilityType: freezed == facilityType
           ? _value.facilityType
           : facilityType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      practiceSetting: practiceSetting == freezed
+      practiceSetting: freezed == practiceSetting
           ? _value.practiceSetting
           : practiceSetting // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      sourcePatientInfo: sourcePatientInfo == freezed
+      sourcePatientInfo: freezed == sourcePatientInfo
           ? _value.sourcePatientInfo
           : sourcePatientInfo // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      related: related == freezed
+      related: freezed == related
           ? _value.related
           : related // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.period!, (value) {
-      return _then(_value.copyWith(period: value));
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get facilityType {
     if (_value.facilityType == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.facilityType!, (value) {
-      return _then(_value.copyWith(facilityType: value));
+      return _then(_value.copyWith(facilityType: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get practiceSetting {
     if (_value.practiceSetting == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.practiceSetting!, (value) {
-      return _then(_value.copyWith(practiceSetting: value));
+      return _then(_value.copyWith(practiceSetting: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get sourcePatientInfo {
     if (_value.sourcePatientInfo == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.sourcePatientInfo!, (value) {
-      return _then(_value.copyWith(sourcePatientInfo: value));
+      return _then(_value.copyWith(sourcePatientInfo: value) as $Val);
     });
   }
 }
@@ -9588,6 +9793,7 @@ abstract class _$$_DocumentReferenceContextCopyWith<$Res>
           $Res Function(_$_DocumentReferenceContext) then) =
       __$$_DocumentReferenceContextCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -9612,16 +9818,14 @@ abstract class _$$_DocumentReferenceContextCopyWith<$Res>
 
 /// @nodoc
 class __$$_DocumentReferenceContextCopyWithImpl<$Res>
-    extends _$DocumentReferenceContextCopyWithImpl<$Res>
+    extends _$DocumentReferenceContextCopyWithImpl<$Res,
+        _$_DocumentReferenceContext>
     implements _$$_DocumentReferenceContextCopyWith<$Res> {
   __$$_DocumentReferenceContextCopyWithImpl(_$_DocumentReferenceContext _value,
       $Res Function(_$_DocumentReferenceContext) _then)
-      : super(_value, (v) => _then(v as _$_DocumentReferenceContext));
+      : super(_value, _then);
 
-  @override
-  _$_DocumentReferenceContext get _value =>
-      super._value as _$_DocumentReferenceContext;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -9636,43 +9840,43 @@ class __$$_DocumentReferenceContextCopyWithImpl<$Res>
     Object? related = freezed,
   }) {
     return _then(_$_DocumentReferenceContext(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      encounter: encounter == freezed
+      encounter: freezed == encounter
           ? _value._encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      event: event == freezed
+      event: freezed == event
           ? _value._event
           : event // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      facilityType: facilityType == freezed
+      facilityType: freezed == facilityType
           ? _value.facilityType
           : facilityType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      practiceSetting: practiceSetting == freezed
+      practiceSetting: freezed == practiceSetting
           ? _value.practiceSetting
           : practiceSetting // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      sourcePatientInfo: sourcePatientInfo == freezed
+      sourcePatientInfo: freezed == sourcePatientInfo
           ? _value.sourcePatientInfo
           : sourcePatientInfo // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      related: related == freezed
+      related: freezed == related
           ? _value._related
           : related // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
@@ -9728,6 +9932,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9764,6 +9969,8 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9778,6 +9985,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   List<Reference>? get encounter {
     final value = _encounter;
     if (value == null) return null;
+    if (_encounter is EqualUnmodifiableListView) return _encounter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9798,6 +10006,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   List<CodeableConcept>? get event {
     final value = _event;
     if (value == null) return null;
+    if (_event is EqualUnmodifiableListView) return _event;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9832,6 +10041,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   List<Reference>? get related {
     final value = _related;
     if (value == null) return null;
+    if (_related is EqualUnmodifiableListView) return _related;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9846,7 +10056,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DocumentReferenceContext &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -9854,13 +10064,13 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
             const DeepCollectionEquality()
                 .equals(other._encounter, _encounter) &&
             const DeepCollectionEquality().equals(other._event, _event) &&
-            const DeepCollectionEquality().equals(other.period, period) &&
-            const DeepCollectionEquality()
-                .equals(other.facilityType, facilityType) &&
-            const DeepCollectionEquality()
-                .equals(other.practiceSetting, practiceSetting) &&
-            const DeepCollectionEquality()
-                .equals(other.sourcePatientInfo, sourcePatientInfo) &&
+            (identical(other.period, period) || other.period == period) &&
+            (identical(other.facilityType, facilityType) ||
+                other.facilityType == facilityType) &&
+            (identical(other.practiceSetting, practiceSetting) ||
+                other.practiceSetting == practiceSetting) &&
+            (identical(other.sourcePatientInfo, sourcePatientInfo) ||
+                other.sourcePatientInfo == sourcePatientInfo) &&
             const DeepCollectionEquality().equals(other._related, _related));
   }
 
@@ -9868,19 +10078,20 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_encounter),
       const DeepCollectionEquality().hash(_event),
-      const DeepCollectionEquality().hash(period),
-      const DeepCollectionEquality().hash(facilityType),
-      const DeepCollectionEquality().hash(practiceSetting),
-      const DeepCollectionEquality().hash(sourcePatientInfo),
+      period,
+      facilityType,
+      practiceSetting,
+      sourcePatientInfo,
       const DeepCollectionEquality().hash(_related));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DocumentReferenceContextCopyWith<_$_DocumentReferenceContext>
       get copyWith => __$$_DocumentReferenceContextCopyWithImpl<
           _$_DocumentReferenceContext>(this, _$identity);

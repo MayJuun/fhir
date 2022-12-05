@@ -1,5 +1,13 @@
 # fhir_at_rest
 
+## [0.9.3]
+
+* Updated ependencies
+
+## [0.9.2]
+
+* Updated ependencies
+
 ## [0.9.1]
 
 * Updated dependencies

@@ -25,7 +25,7 @@ class Boolean {
     } else {
       throw CannotBeConstructed<Boolean>(
           'Boolean cannot be constructed from $inValue of type '
-          "'${inValue.runtimeType.toString()}'.");
+          "'${inValue.runtimeType}'.");
     }
   }
 

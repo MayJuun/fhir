@@ -1,5 +1,24 @@
 # fhir_auth
 
+## [0.9.3]
+
+* Just updated, doing it again
+* Updated dependencies
+
+## [0.9.2]
+
+* Updated dependencies
+
+## [0.9.1]
+
+* Updated GcpFhirClient to have access to email & displayName
+
+## [0.9.0]
+
+* Cannot create resources and then find them in Epic. Can create them but due to a CORS issue canot get the location, and identifiers are stripped away upon creation. Ayone who figures this out, please let me know.
+* Cerner patient launch works internally and externally
+* NOTE: for some reason the Cerner launch does not accept the launch token for an internal launch being attached to the Authorization url - if you need this included, you'll have to adjust how the url is created
+
 ## [0.9.0-2]
 
 * Successfully does external and internal web launches to Epic for patients and for users, although for Epic you do need to ensure that you include the proper launch parameters if you're doing a patient context

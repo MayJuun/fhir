@@ -193,7 +193,7 @@ class SmartFhirClient extends SecureFhirClient {
       /// Add the aud in
       params['aud'] = '$fhirUri';
 
-      if (launch != null) {
+      if (launch != null && !fhirUri.toString().contains('cerner')) {
         params['launch'] = launch!;
       }
 

@@ -26,15 +26,22 @@ class DemoPage extends StatelessWidget {
       SmartFhirClient? client;
       if (queryParameters['iss']?.contains('epic') ?? false) {
         client = EpicFhirClient.fromLaunchParameters(
-            base: Uri.base,
-            queryParameters: queryParameters,
-            scopes: epicUserScopes.scopesList());
+          base: Uri.base,
+          queryParameters: queryParameters,
+          scopes: epicUserScopes.scopesList(),
+        );
       } else if (queryParameters['iss']?.contains('cerner') ?? false) {
-        client = SmartFhirClient.fromLaunchParameters(Uri.base, queryParameters,
-            scopes: cernerScopes.scopesList());
+        client = SmartFhirClient.fromLaunchParameters(
+          Uri.base,
+          queryParameters,
+          scopes: cernerPatientScopes.scopesList(),
+        );
       } else {
-        client = SmartFhirClient.fromLaunchParameters(Uri.base, queryParameters,
-            scopes: scopes.scopesList());
+        client = SmartFhirClient.fromLaunchParameters(
+          Uri.base,
+          queryParameters,
+          scopes: scopes.scopesList(),
+        );
       }
       final result = request(client);
 
