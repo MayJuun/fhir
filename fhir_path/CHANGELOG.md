@@ -1,9 +1,13 @@
 # fhir_path
 
-## [0.9.3]
+## [0.9.4]
 
 * Updated dependencies
 * Cleaned up tests & [example](https://fhir-path-demo-mctbmzb4uq-uk.a.run.app)
+
+## [0.9.3]
+
+* Updated dependencies
 
 ## [0.9.2]
 
