@@ -1,6 +1,8 @@
 // Package imports:
 import 'package:units_converter/units_converter.dart';
 
+import 'ratios.dart';
+
 const stringUnitToProperty = {
   ///
   /// LENGTH
@@ -197,50 +199,50 @@ const stringUnitToProperty = {
   ///
   /// Substance Ratio or Substance Fraction Units
   ///
-  // 'pmol/umol': Ratio.picoMolesPerMicroMole,
-  // 'nmol/mmol': Ratio.nanoMolesPerMilliMole,
-  // 'nmol/mol': Ratio.nanoMolesPerMole,
-  // 'umol/mol': Ratio.microMolesPerMole,
-  // 'mmol/mol': Ratio.milliMolesPerMole,
+  'pmol/umol': Ratio.picoMolesPerMicroMole,
+  'nmol/mmol': Ratio.nanoMolesPerMilliMole,
+  'nmol/mol': Ratio.nanoMolesPerMole,
+  'umol/mol': Ratio.microMolesPerMole,
+  'mmol/mol': Ratio.milliMolesPerMole,
 
   ///
   /// Substance Content Units
   ///
-  // 'fmol/mg': Ratio.femtoMolesPerMilliGram,
-  // 'nmol/mg': Ratio.nanoMolesPerMilliGram,
-  // 'umol/mg': Ratio.microMolesPerMilliGram,
-  // 'mol/kg': Ratio.molesPerKiloGram,
-  // 'fmol/g': Ratio.femtoMolesPerGram,
-  // 'nmol/g': Ratio.nanoMolesPerGram,
-  // 'umol/g': Ratio.microMolesPerGram,
-  // 'mmol/g': Ratio.milliMolesPerGram,
-  // 'mmol/kg': Ratio.milliMolesPerKiloGram,
+  'fmol/mg': Ratio.femtoMolesPerMilliGram,
+  'nmol/mg': Ratio.nanoMolesPerMilliGram,
+  'umol/mg': Ratio.microMolesPerMilliGram,
+  'mol/kg': Ratio.molesPerKiloGram,
+  'fmol/g': Ratio.femtoMolesPerGram,
+  'nmol/g': Ratio.nanoMolesPerGram,
+  'umol/g': Ratio.microMolesPerGram,
+  'mmol/g': Ratio.milliMolesPerGram,
+  'mmol/kg': Ratio.milliMolesPerKiloGram,
 
   ///
   /// Mass Ratio Or Mass Fraction Or Mass Content Units
   ///
-//   'ug/ng': Ratio.microGramsPerNanoGram,
-//   'ng/mg': Ratio.nanoGramsPerMilliGram,
-//   'ug/mg': Ratio.microGramsPerMilliGram,
-//   'mg/mg': Ratio.milliGramsPerMilliGram,
-//   'ng/g': Ratio.nanoGramsPerGram,
-//   'ug/g': Ratio.microGramsPerGram,
-//   'mg/g': Ratio.milliGramsPerGram,
-//   'g/g': Ratio.gramsPerGram,
-//   'ng/kg': Ratio.nanoGramsPerKiloGram,
-//   'ug/kg': Ratio.microGramsPerKiloGram,
-//   'mg/kg': Ratio.milliGramsPerKiloGram,
-//   'g/kg': Ratio.gramsPerKiloGram,
+  'ug/ng': Ratio.microGramsPerNanoGram,
+  'ng/mg': Ratio.nanoGramsPerMilliGram,
+  'ug/mg': Ratio.microGramsPerMilliGram,
+  'mg/mg': Ratio.milliGramsPerMilliGram,
+  'ng/g': Ratio.nanoGramsPerGram,
+  'ug/g': Ratio.microGramsPerGram,
+  'mg/g': Ratio.milliGramsPerGram,
+  'g/g': Ratio.gramsPerGram,
+  'ng/kg': Ratio.nanoGramsPerKiloGram,
+  'ug/kg': Ratio.microGramsPerKiloGram,
+  'mg/kg': Ratio.milliGramsPerKiloGram,
+  'g/kg': Ratio.gramsPerKiloGram,
 
   ///
   /// Volume Fraction Units
   ///
-//   'mL/dL': Ratio.milliLitersPerDeciLiter,
+  'mL/dL': Ratio.milliLitersPerDeciLiter,
 
   ///
   /// Lineic Mass Units
   ///
-//   'pg/mm': Ratio.picoGramsPerMilliMeter,
+  // 'pg/mm': Ratio.picoGramsPerMilliMeter,
 
   ///
   /// Areic Mass Units
@@ -270,39 +272,39 @@ const stringUnitToProperty = {
   ///
   /// Mass Concentration Units
   ///
-//   'pg/mL': Ratio.picoGramsPerMilliLiter,
-//   'ng/mL': Ratio.nanoGramsPerMilliLiter,
-//   'ug/mL': Ratio.microGramsPerMilliLiter,
-//   'mg/mL': Ratio.milliGramsPerMilliliter,
-//   'g/mL': Ratio.gramsPerMilliLiter,
-//   'ug/dL': Ratio.microGramsPerDeciLiter,
-//   'mg/dL': Ratio.milliGramsPerDeciLiter,
-//   'g/dL': Ratio.gramsPerDeciLiter,
-//   'ng/L': Ratio.nanoGramsPerLiter,
-//   'pg/L': Ratio.picoGramsPerLiter,
-//   'ug/L': Ratio.microGramsPerLiter,
-//   'mg/L': Ratio.milliGramsPerLiter,
-//   'g/L': Ratio.gramsPerLiter,
-//   'kg/L': Ratio.kiloGramsPerLiter,
-//   'mg/m3': Ratio.milliGramsPerCubicMeter,
-//   'kg/m3': Ratio.kiloGramsPerCubicMeter,
+  'pg/mL': Ratio.picoGramsPerMilliLiter,
+  'ng/mL': Ratio.nanoGramsPerMilliLiter,
+  'ug/mL': Ratio.microGramsPerMilliLiter,
+  'mg/mL': Ratio.milliGramsPerMilliliter,
+  'g/mL': Ratio.gramsPerMilliLiter,
+  'ug/dL': Ratio.microGramsPerDeciLiter,
+  'mg/dL': Ratio.milliGramsPerDeciLiter,
+  'g/dL': Ratio.gramsPerDeciLiter,
+  'ng/L': Ratio.nanoGramsPerLiter,
+  'pg/L': Ratio.picoGramsPerLiter,
+  'ug/L': Ratio.microGramsPerLiter,
+  'mg/L': Ratio.milliGramsPerLiter,
+  'g/L': Ratio.gramsPerLiter,
+  'kg/L': Ratio.kiloGramsPerLiter,
+  'mg/m3': Ratio.milliGramsPerCubicMeter,
+  'kg/m3': Ratio.kiloGramsPerCubicMeter,
 
   ///
   /// Substance Concentration Units
   ///
-//   'fmol/mL': Ratio.femtoMolesPerMilliLiter,
-//   'pmol/mL': Ratio.picoMolesPerMilliLiter,
-//   'nmol/mL': Ratio.nanoMolesPerMilliLiter,
-//   'umol/mL': Ratio.microMolesPerMilliLiter,
-//   'mol/mL': Ratio.molesPerMilliLiter,
-//   'pmol/dL': Ratio.picoMolesPerDeciLiter,
-//   'nmol/dL': Ratio.nanoMolesPerDeciLiter,
-//   'umol/dL': Ratio.microMolesPerDeciLiter,
-//   'mmol/dL': Ratio.milliMolesPerDeciLiter,
-//   'mmol/L': Ratio.milliMolesPerLiter,
-//   'pmol/L': Ratio.picoMolesPerLiter,
-//   'nmol/L': Ratio.nanoMolesPerLiter,
-//   'umol/L': Ratio.microMolesPerLiter,
-//   'mol/L': Ratio.molesPerLiter,
-//   'mol/m3': Ratio.molesPerCubicMeter,
+  'fmol/mL': Ratio.femtoMolesPerMilliLiter,
+  'pmol/mL': Ratio.picoMolesPerMilliLiter,
+  'nmol/mL': Ratio.nanoMolesPerMilliLiter,
+  'umol/mL': Ratio.microMolesPerMilliLiter,
+  'mol/mL': Ratio.molesPerMilliLiter,
+  'pmol/dL': Ratio.picoMolesPerDeciLiter,
+  'nmol/dL': Ratio.nanoMolesPerDeciLiter,
+  'umol/dL': Ratio.microMolesPerDeciLiter,
+  'mmol/dL': Ratio.milliMolesPerDeciLiter,
+  'mmol/L': Ratio.milliMolesPerLiter,
+  'pmol/L': Ratio.picoMolesPerLiter,
+  'nmol/L': Ratio.nanoMolesPerLiter,
+  'umol/L': Ratio.microMolesPerLiter,
+  'mol/L': Ratio.molesPerLiter,
+  'mol/m3': Ratio.molesPerCubicMeter,
 };
