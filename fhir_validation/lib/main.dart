@@ -2,7 +2,7 @@ import 'package:fhir/r4.dart';
 
 import 'structure_definitions/structureDefinitions.dart';
 import 'utils/utils.dart';
-import 'validate.dart';
+import 'validation/validate.dart';
 
 Future main() async {
   print(jsonPrettyPrint(await validateFhirMaps(
