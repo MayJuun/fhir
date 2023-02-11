@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+	<id value="f003"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "f003" </p></div><p><b>identifier</b>: id: v6751 (OFFICIAL)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>type</b>: Patient-initiated encounter <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#270427003)</span></p><p><b>priority</b>: Non-urgent ear, nose and throat admission <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#103391001)</span></p><p><b>subject</b>: <a href="patient-f001.html">Patient/f001: P. van de Heuvel</a> "Pieter VAN DE HEUVEL"</p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a href="practitioner-f001.html">Practitioner/f001: E.M. van den Broek</a> "Eric VAN DEN BROEK"</td></tr></table><p><b>reasonCode</b>: Retropharyngeal abscess <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#18099001)</span></p><h3>Hospitalizations</h3><table class="grid"><tr><td>-</td><td><b>PreAdmissionIdentifier</b></td><td><b>AdmitSource</b></td><td><b>DischargeDisposition</b></td></tr><tr><td>*</td><td>id: 93042 (OFFICIAL)</td><td>Referral by physician <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#305956004)</span></td><td>Discharge to home <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#306689006)</span></td></tr></table><p><b>serviceProvider</b>: <a href="organization-f001.html">Organization/f001</a> "Burgers University Medical Center"</p></div></text><identifier>
+		<use value="official"/>
+		<system value="http://www.bmc.nl/zorgportal/identifiers/encounters"/>
+		<value value="v6751"/>
+	</identifier>
+	<status value="finished"/>
+	<class>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+		<code value="AMB"/>
+		<!--   outpatient   -->
+		<display value="ambulatory"/>
+	</class>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="270427003"/>
+			<display value="Patient-initiated encounter"/>
+		</coding>
+	</type>
+	<priority>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="103391001"/>
+			<display value="Non-urgent ear, nose and throat admission"/>
+		</coding>
+	</priority>
+	<subject>
+		<reference value="Patient/f001"/>
+		<display value="P. van de Heuvel"/>
+	</subject>
+	<participant>
+		<individual>
+			<reference value="Practitioner/f001"/>
+			<display value="E.M. van den Broek"/>
+		</individual>
+	</participant>
+	<length>
+		<value value="90"/>
+		<unit value="min"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="min"/>
+	</length>
+	<reasonCode>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="18099001"/>
+			<display value="Retropharyngeal abscess"/>
+		</coding>
+	</reasonCode>
+	<hospitalization>
+		<preAdmissionIdentifier>
+			<use value="official"/>
+			<system value="http://www.bmc.nl/zorgportal/identifiers/pre-admissions"/>
+			<value value="93042"/>
+		</preAdmissionIdentifier>
+		<!--       <preAdmissionTest>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="168719007"/>
+                <display value="Neck soft tissue X-ray"/>
+            </coding>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="396550006"/>
+                <display value="Blood test"/>
+            </coding>
+        </preAdmissionTest>   -->
+		<admitSource>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="305956004"/>
+				<display value="Referral by physician"/>
+			</coding>
+		</admitSource>
+		<dischargeDisposition>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="306689006"/>
+				<display value="Discharge to home"/>
+			</coding>
+		</dischargeDisposition>
+	</hospitalization>
+	<serviceProvider>
+		<reference value="Organization/f001"/>
+	</serviceProvider>
+</Encounter>

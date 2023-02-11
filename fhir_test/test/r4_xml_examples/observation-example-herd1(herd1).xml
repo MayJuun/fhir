@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+	<id value="herd1"/>
+	<!--    the mandatory status    -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "herd1" </p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-observation-category.html">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Mycoplasma hyopneumoniae - MHP <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#80219-9 "Mycoplasma hyopneumoniae Ab sample/Positive control in Serum by Immunoassay"; clinical-codes#Mycoplasma "Mycoplasma")</span></p><p><b>subject</b>: <a href="group-herd1.html">Group/herd1</a> "Breeding herd"</p><p><b>encounter</b>: <span>: part of a health assurance program</span></p><p><b>effective</b>: 2017-11-20</p><p><b>value</b>: 0.2 % (sample/positive control)<span style="background: LightGoldenRodYellow"> (Details: UCUM code % = '%')</span></p><p><b>interpretation</b>: Negative <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#NEG)</span></p><p><b>specimen</b>: <a href="specimen-pooled-serum.html">Specimen/pooled-serum: 30 serum</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td>-</td><td><b>Text</b></td></tr><tr><td>*</td><td>&gt;0.4 Positive; 0.3 to 0.4 Suspect &lt; 0.3 Negative</td></tr></table></div></text><status value="final"/>
+	<!--   category code is A code that classifies the general type of observation being made. This is used for searching, sorting and display purposes.  -->
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="laboratory"/>
+			<display value="Laboratory"/>
+		</coding>
+		<text value="Laboratory"/>
+	</category>
+	<!--   
+    Observations are often coded in multiple code systems.
+      - LOINC provides codes of varying granularity (though not usefully more specific in this particular case) and more generic LOINCs  can be mapped to more specific codes as shown here
+      - snomed provides a clinically relevant code that is usually less granular than LOINC
+      - the source system provides its own code, which may be less or more granular than LOINC
+     -->
+	<code>
+		<!--    LOINC - always recommended to have a LOINC code    -->
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="80219-9"/>
+			<!--  more generic methodless LOINC  -->
+			<display value="Mycoplasma hyopneumoniae Ab sample/Positive control in Serum by Immunoassay"/>
+		</coding>
+		<!--    Also, a local code specific to the source system    -->
+		<coding>
+			<system value="http://acme.org/devices/clinical-codes"/>
+			<code value="Mycoplasma"/>
+			<display value="Mycoplasma"/>
+		</coding>
+		<text value="Mycoplasma hyopneumoniae - MHP"/>
+	</code>
+	<!--     subject is a herd of 2500 breding sows   -->
+	<subject>
+		<reference value="Group/herd1"/>
+	</subject>
+	<encounter>
+		<display value="part of a health assurance program"/>
+	</encounter>
+	<effectiveDateTime value="2017-11-20"/>
+	<!--    In FHIR, units may be represented twice. Once in the
+    agreed human representation, and once in a coded form.
+    Both is best, since it's not always possible to infer
+    one from the other in code.
+
+    When a computable unit is provided, UCUM (http://unitsofmeasure.org)
+    is always preferred, but it doesn't provide notional units (such as
+    "tablet"), etc. For these, something else is required (e.g. SNOMED CT)
+      -->
+	<valueQuantity>
+		<value value="0.2"/>
+		<unit value="% (sample/positive control)"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="%"/>
+	</valueQuantity>
+	<interpretation>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+			<code value="NEG"/>
+			<display value="Negative"/>
+		</coding>
+		<text value="Negative"/>
+	</interpretation>
+	<!--   Specimen is a pooled serology sample of 30 animals.  -->
+	<specimen>
+		<reference value="Specimen/pooled-serum"/>
+		<display value="30 serum"/>
+	</specimen>
+	<referenceRange>
+		<text value="&gt;0.4 Positive; 0.3 to 0.4 Suspect &lt; 0.3 Negative"/>
+	</referenceRange>
+</Observation>

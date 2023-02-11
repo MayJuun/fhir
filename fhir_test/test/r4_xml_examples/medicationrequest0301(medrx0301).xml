@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationRequest xmlns="http://hl7.org/fhir">
+    <id value="medrx0301"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "medrx0301" </p></div><p><b>identifier</b>: id: 12345689 (OFFICIAL)</p><p><b>status</b>: completed</p><p><b>statusReason</b>: Try another treatment first <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-medicationrequest-status-reason.html">MedicationRequest Status Reason Codes</a>#altchoice)</span></p><p><b>intent</b>: order</p><p><b>category</b>: Inpatient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-medicationrequest-admin-location.html">Medication request  administration  location  codes</a>#inpatient)</span></p><p><b>medication</b>: <a name="med0310"> </a></p><blockquote><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "med0310" </p></div><p><b>code</b>: Oral Form Oxycodone (product) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#430127000)</span></p></blockquote><p><b>subject</b>: <a href="patient-pat1.html">Patient/pat1: Donald Duck</a> "Duck DONALD"</p><p><b>encounter</b>: <a href="encounter-f201.html">Encounter/f201: encounter who leads to this prescription</a></p><p><b>supportingInformation</b>: <a href="procedure-biopsy.html">Procedure/biopsy</a></p><p><b>authoredOn</b>: 2015-01-15</p><p><b>requester</b>: <a href="practitioner-f007.html">Practitioner/f007: Patrick Pump</a> "Simone HEPS"</p><p><b>performer</b>: <a href="practitioner-f204.html">Practitioner/f204: Carla Espinosa</a> "Carla Espinosa"</p><p><b>performerType</b>: Public Health Nurse <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#26369006)</span></p><p><b>reasonCode</b>: Rib Pain (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#297217002)</span></p><p><b>insurance</b>: <a href="coverage-9876b1.html">Coverage/9876B1</a></p><p><b>note</b>: Patient told to take with food</p><blockquote><p><b>dispenseRequest</b></p><p><b>validityPeriod</b>: 2015-01-15 --&gt; 2016-01-15</p><p><b>numberOfRepeatsAllowed</b>: 0</p><p><b>quantity</b>: 30 TAB<span style="background: LightGoldenRodYellow"> (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB = 'Tablet')</span></p><p><b>performer</b>: <a href="organization-2.16.840.1.113883.19.5.html">Organization/2.16.840.1.113883.19.5</a> "Good Health Clinic"</p></blockquote><h3>Substitutions</h3><table class="grid"><tr><td>-</td><td><b>Allowed[x]</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>true</td><td>formulary policy <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActReason.html">ActReason</a>#FP)</span></td></tr></table><p><b>detectedIssue</b>: <a href="detectedissue-allergy.html">DetectedIssue/allergy</a></p><p><b>eventHistory</b>: <a name="signature"> </a></p><blockquote><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "signature" </p></div><p><b>target</b>: <a href="servicerequest-physiotherapy.html">ServiceRequest/physiotherapy</a></p><p><b>recorded</b>: 02/02/2017 4:23:07 AM</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>author (originator) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ParticipationType.html">ParticipationType</a>#AUT)</span></td><td><a href="practitioner-example.html">Practitioner/example: Dr Adam Careful</a> "Adam CAREFUL"</td></tr></table></blockquote></div></text><contained>
+      <Medication>
+          <id value="med0310"/>
+          <code>
+              <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="430127000"/>
+                  <display value="Oral Form Oxycodone (product)"/>
+              </coding>
+          </code>
+      </Medication>
+  </contained>
+    <contained>
+        <Provenance>
+            <id value="signature"/>
+            <target>
+                <reference value="ServiceRequest/physiotherapy"/>
+            </target>
+            <recorded value="2017-02-01T17:23:07Z"/>
+            <agent>
+                <role>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                        <code value="AUT"/>
+                    </coding>
+                </role>
+                <who>
+                    <reference value="Practitioner/example"/>
+                    <display value="Dr Adam Careful"/>
+                </who>
+            </agent>
+            <signature>
+                <type>
+                    <system value="urn:iso-astm:E1762-95:2013"/>
+                    <code value="1.2.840.10065.1.12.1.1"/>
+                    <display value="Author's Signature"/>
+                </type>
+                <when value="2017-02-01T17:23:07Z"/>
+				<who>
+                    <reference value="Practitioner/example"/>
+                    <display value="Dr Adam Careful"/>
+				</who>
+                <targetFormat value="application/fhir+xml"/>
+				<sigFormat value="application/signature+xml"/>
+                <data value="dGhpcyBibG9iIGlzIHNuaXBwZWQ="/>
+            </signature>
+        </Provenance>
+    </contained>
+    <identifier>
+        <use value="official"/>
+        <system value="http://www.bmc.nl/portal/prescriptions"/>
+        <value value="12345689"/>
+    </identifier>
+    <status value="completed"/>
+    <statusReason>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"/>
+            <code value="altchoice"/>
+            <display value="Try another treatment first"/>
+        </coding>
+    </statusReason>
+    <intent value="order"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location"/>
+            <code value="inpatient"/>
+            <display value="Inpatient"/>
+        </coding>
+    </category>
+    <medicationReference> <!--   Linked to a RESOURCE Medication   -->
+           <reference value="#med0310"/>
+    </medicationReference> 
+    <subject> <!--   Linked to the resource patient who needs the medication   -->
+        <reference value="Patient/pat1"/>
+        <display value="Donald Duck"/>           
+    </subject>
+    <encounter> <!--   Linked to a resource Encounter between patient and practitioner  -->
+        <reference value="Encounter/f201"/>
+        <display value="encounter who leads to this prescription"/>
+    </encounter>
+    <supportingInformation>
+        <reference value="Procedure/biopsy"/>
+    </supportingInformation>
+    <authoredOn value="2015-01-15"/>
+    <requester>
+        <reference value="Practitioner/f007"/>
+        <display value="Patrick Pump"/>
+    </requester>
+    <performer>
+        <reference value="Practitioner/f204"/>
+        <display value="Carla Espinosa"/>
+    </performer>
+    <performerType>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="26369006"/>
+            <display value="Public Health Nurse"/>
+        </coding>
+    </performerType>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="297217002"/>
+            <display value="Rib Pain (finding)"/>
+        </coding>
+    </reasonCode>
+    <insurance>
+        <reference value="Coverage/9876B1"/>
+    </insurance>
+    <note>
+        <text value="Patient told to take with food"/>
+    </note>
+    <dosageInstruction>
+        <sequence value="1"/>
+        <text value="one to two tablets every 4-6 hours as needed for rib pain"/>
+        <additionalInstruction>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="418914006"/>
+                <display value="Warning. May cause drowsiness. If affected do not drive or operate machinery. Avoid alcoholic drink (qualifier value)"/>
+            </coding>
+        </additionalInstruction>
+        <patientInstruction value="Take one to two tablets every four to six hours as needed for rib pain"/>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <period value="4"/>
+                <periodMax value="6"/>
+                <periodUnit value="h"/>
+            </repeat>
+        </timing>
+        <asNeededCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="297217002"/>
+                <display value="Rib Pain (finding)"/>
+            </coding>
+        </asNeededCodeableConcept>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral Route"/>
+            </coding>
+        </route>
+        <method>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="421521009"/>
+                <display value="Swallow - dosing instruction imperative (qualifier value)"/>
+            </coding>
+        </method>
+        <doseAndRate>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+                    <code value="ordered"/>
+                    <display value="Ordered"/>
+                </coding>
+            </type>
+            <doseRange>
+                <low>
+                    <value value="1"/>
+                    <unit value="TAB"/>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                    <code value="TAB"/> 
+                </low>
+                <high>
+                    <value value="2"/>
+                    <unit value="TAB"/>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                    <code value="TAB"/> 
+                </high>
+            </doseRange>
+        </doseAndRate>
+        
+    </dosageInstruction>
+    <dispenseRequest>
+        <validityPeriod>
+            <start value="2015-01-15"/>
+            <end value="2016-01-15"/>
+        </validityPeriod>
+        <numberOfRepeatsAllowed value="0"/>
+        <quantity>
+            <value value="30"/>
+            <unit value="TAB"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+            <code value="TAB"/> 
+        </quantity>
+        <expectedSupplyDuration>
+            <value value="10"/>
+            <unit value="days"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/> 
+        </expectedSupplyDuration>
+        <performer>
+            <reference value="Organization/2.16.840.1.113883.19.5"/>
+        </performer>
+    </dispenseRequest>   
+    <substitution>
+        <allowedBoolean value="true"/>
+        <reason>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+                <code value="FP"/>
+                <display value="formulary policy"/>             
+            </coding>
+        </reason>
+    </substitution>
+    <detectedIssue>
+        <reference value="DetectedIssue/allergy"/>
+    </detectedIssue>
+    <eventHistory>
+        <reference value="#signature"/>
+        <display value="Author's Signature"/>
+    </eventHistory>
+</MedicationRequest>

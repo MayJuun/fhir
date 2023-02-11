@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="ft4"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "ft4" </p></div><p><b>status</b>: active</p><p><b>intent</b>: reflex-order</p><p><b>code</b>: Free T4 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#3024-7 "Thyroxine (T4) free [Mass/​volume] in Serum or Plasma")</span></p><p><b>subject</b>: <a href="patient-pat2.html">Patient/pat2</a> "Duck DONALD"</p><p><b>occurrence</b>: 2015-08-27T09:33:27+07:00</p><p><b>requester</b>: <a href="practitioner-example.html">Practitioner/example</a> "Adam CAREFUL"</p></div></text><status value="active"/>
+	<intent value="reflex-order"/>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="3024-7"/>
+			<display value="Thyroxine (T4) free [Mass/​volume] in Serum or Plasma"/>
+		</coding>
+		<text value="Free T4"/>
+	</code>
+	<subject>
+		<reference value="Patient/pat2"/>
+	</subject>
+	<occurrenceDateTime value="2015-08-27T09:33:27+07:00"/>
+	<requester>
+			<reference value="Practitioner/example"/>
+	</requester>
+</ServiceRequest>

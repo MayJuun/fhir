@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="education"/>
+	<!--   insert contents here   -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "education" </p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>category</b>: Education <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#311401005 "Patient education (procedure)")</span></p><p><b>code</b>: Health education - breast examination <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#48023004 "Breast self-examination technique education (procedure)")</span></p><p><b>subject</b>: <span>: Jane Doe</span></p><p><b>occurrence</b>: 2014-08-16</p><p><b>authoredOn</b>: 2016-08-16</p><p><b>requester</b>: <span>: Angela Care, MD</span></p><p><b>performer</b>: <span>: Pamela Educator, RN</span></p><p><b>reasonCode</b>: early detection of breast mass <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p></div></text><status value="completed"/>
+	<intent value="order"/>
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="311401005"/>
+			<display value="Patient education (procedure)"/>
+		</coding>
+		<text value="Education"/>
+	</category>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="48023004"/>
+			<display value="Breast self-examination technique education (procedure)"/>
+		</coding>
+		<text value="Health education - breast examination"/>
+	</code>
+	<subject>
+		<display value="Jane Doe"/>
+	</subject>
+	<occurrenceDateTime value="2014-08-16"/>
+	<authoredOn value="2016-08-16"/>
+	<requester>
+			<display value="Angela Care, MD"/>
+	</requester>
+	<performer>
+		<display value="Pamela Educator, RN"/>
+	</performer>
+	<reasonCode>
+		<text value="early detection of breast mass"/>
+	</reasonCode>
+</ServiceRequest>

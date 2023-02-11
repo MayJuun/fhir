@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationRequest xmlns="http://hl7.org/fhir">
+    <id value="medrx0329"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "medrx0329" </p></div><p><b>identifier</b>: id: 12345689 (OFFICIAL)</p><p><b>status</b>: on-hold</p><p><b>intent</b>: order</p><p><b>medication</b>: <a name="med0319"> </a></p><blockquote><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "med0319" </p></div><p><b>form</b>: Ointment <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385101003)</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: Salicyclic Acid (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#387253001)</span></p><p><b>strength</b>: 5 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: Salicyclic Acid (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#396458002)</span></p><p><b>strength</b>: 1 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: White Petrolatum (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#126066007)</span></p><p><b>strength</b>: 94 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></p></blockquote></blockquote><p><b>subject</b>: <a href="patient-pat1.html">Patient/pat1: Donald Duck</a> "Duck DONALD"</p><p><b>authoredOn</b>: 2015-01-15</p><p><b>requester</b>: <a href="practitioner-f007.html">Practitioner/f007: Patrick Pump</a> "Simone HEPS"</p><blockquote><p><b>dispenseRequest</b></p><p><b>validityPeriod</b>: 2015-01-15 --&gt; 2016-01-15</p><p><b>numberOfRepeatsAllowed</b>: 3</p><p><b>quantity</b>: 30 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></p></blockquote></div></text><contained>
+        <Medication>
+            <id value="med0319"/>
+                <form>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="385101003"/>
+                        <display value="Ointment"/>
+                    </coding>
+                    <text value="Ointment"/>
+                </form>
+                <ingredient>
+                    <itemCodeableConcept>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="387253001"/>
+                            <display value="Salicyclic Acid (substance)"/>
+                        </coding>
+                    </itemCodeableConcept>
+                    <strength>
+                        <numerator>
+                            <value value="5"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="g"/>
+                        </numerator>
+                        <denominator>
+                            <value value="100"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="g"/>
+                        </denominator>
+                    </strength>
+                </ingredient>
+                <ingredient>
+                    <itemCodeableConcept>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="396458002"/>
+                            <display value="Salicyclic Acid (substance)"/>
+                        </coding>
+                    </itemCodeableConcept>
+                    <strength>
+                        <numerator>
+                            <value value="1"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="g"/>
+                        </numerator>
+                        <denominator>
+                            <value value="100"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="g"/>
+                        </denominator>
+                    </strength>
+                </ingredient>
+                <ingredient>
+                    <itemCodeableConcept>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="126066007"/>
+                            <display value="White Petrolatum (substance)"/>
+                        </coding>
+                    </itemCodeableConcept>
+                    <strength>
+                        <numerator>
+                            <value value="94"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="g"/>
+                        </numerator>
+                        <denominator>
+                            <value value="100"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="g"/>
+                        </denominator>
+                    </strength>
+                </ingredient>
+            
+        </Medication>
+    </contained>
+    <identifier>
+        <use value="official"/>
+        <system value="http://www.bmc.nl/portal/prescriptions"/>
+        <value value="12345689"/>
+    </identifier>
+    <status value="on-hold"/>
+    <intent value="order"/>
+   <medicationReference>
+       <reference value="#med0319"/>
+   </medicationReference>
+    <subject>
+        <!--   Linked to the resource patient who needs the medication   -->
+        <reference value="Patient/pat1"/>
+        <display value="Donald Duck"/>
+    </subject>
+    <authoredOn value="2015-01-15"/>
+    <requester>
+        <reference value="Practitioner/f007"/>
+        <display value="Patrick Pump"/>
+    </requester>
+    <dosageInstruction>
+        <sequence value="1"/>
+        <text value="Apply twice daily to affected area on left arm"/>
+        <additionalInstruction>
+            <text value="Apply sparingly"/>
+        </additionalInstruction>
+        <timing>
+            <repeat>
+                <frequency value="2"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <site>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="72098002"/>
+                <display value="Entire left upper arm (body structure)"/>
+            </coding>
+        </site>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="359540000"/>
+                <display value="Topical (qualifier value)"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+                    <code value="ordered"/>
+                    <display value="Ordered"/>
+                </coding>
+            </type>
+            <doseQuantity>
+                <value value="1"/>
+                <unit value="ea"/>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                <code value="OINT"/>
+            </doseQuantity>
+        </doseAndRate>
+        
+    </dosageInstruction>
+    <dispenseRequest>
+        <validityPeriod>
+            <start value="2015-01-15"/>
+            <end value="2016-01-15"/>
+        </validityPeriod>
+        <numberOfRepeatsAllowed value="3"/>
+        <quantity>
+            <value value="30"/>
+            <unit value="g"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="g"/> 
+        </quantity>
+        <expectedSupplyDuration>
+            <value value="10"/>
+            <unit value="days"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/> 
+        </expectedSupplyDuration>
+    </dispenseRequest>   
+</MedicationRequest>

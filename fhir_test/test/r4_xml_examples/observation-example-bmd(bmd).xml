@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir"><!--        BMD measurements of left femur encoded as an observation for example purposes.        --><id value="bmd"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "bmd" </p></div><p><b>status</b>: final</p><p><b>code</b>: BMD - Left Femur <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#24701-5 "Femur DXA Bone density")</span></p><p><b>subject</b>: <a href="patient-pat2.html">Patient/pat2</a> "Duck DONALD"</p><p><b>performer</b>: <a href="organization-1832473e-2fe0-452d-abe9-3cdb9879522f.html">Organization/1832473e-2fe0-452d-abe9-3cdb9879522f: Acme Imaging Diagnostics</a> "Clinical Lab"</p><p><b>value</b>: 0.887 g/cm²<span style="background: LightGoldenRodYellow"> (Details: UCUM code g/cm-2 = 'g/cm-2')</span></p><p><b>bodySite</b>: Left Femur <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#71341001:272741003=7771000)</span></p></div></text><status value="final"/>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="24701-5"/>
+			<display value="Femur DXA Bone density"/>
+		</coding>
+		<text value="BMD - Left Femur"/>
+	</code>
+	<subject>
+		<reference value="Patient/pat2"/>
+	</subject><!--        well, actually. this isn't the patient, but it'll do for now        --><performer>
+		<reference value="Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"/>
+		<display value="Acme Imaging Diagnostics"/>
+	</performer>
+	<valueQuantity>
+		<value value="0.887"/>
+		<unit value="g/cm²"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="g/cm-2"/>
+	</valueQuantity>
+	<bodySite>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="71341001:272741003=7771000"/><!--  example of a post coordinated term  --></coding><text value="Left Femur"/>
+	</bodySite>
+</Observation>

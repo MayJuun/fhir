@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><Specimen xmlns="http://hl7.org/fhir">
+	<id value="isolate"/>
+		<!--  text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">[Put rendering here]</div>
+  </text>  -->
+
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "isolate" </p></div><p><b>accessionIdentifier</b>: id: X352356-ISO1</p><p><b>status</b>: available</p><p><b>type</b>: Bacterial isolate specimen <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#429951000124103)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>receivedTime</b>: 2015-08-18T07:03:00Z</p><p><b>parent</b>: <a name="stool"> </a></p><blockquote><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "stool" </p></div><p><b>accessionIdentifier</b>: id: X352356</p><p><b>status</b>: unavailable</p><p><b>type</b>: Stool specimen <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#119339001)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>receivedTime</b>: 2015-08-16T07:03:00Z</p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td>*</td><td><span>: Patient</span></td><td>2011-08-16T06:15:00Z</td><td>Line, Venous <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v2-0488.html">specimenCollectionMethod</a>#LNV)</span></td></tr></table></blockquote><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td>*</td><td><a href="practitioner-f202.html">Practitioner/f202</a> "Luigi Maas"</td><td>2015-08-16T07:03:00Z</td><td>Plates, Blood Agar <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v2-0488.html">specimenCollectionMethod</a>#BAP)</span></td></tr></table><p><b>note</b>: Patient dropped off specimen</p></div></text><contained>
+		<Specimen>
+			<id value="stool"/>
+			<accessionIdentifier>
+				<!--   accession identifier - e.g. assigned by the labaratory when it is received.
+     This is common, unlike specimen identifier   -->
+				<system value="http://lab.acme.org/specimens/2015"/>
+				<value value="X352356"/>
+			</accessionIdentifier>
+			<status value="unavailable"/>
+			<type>
+				<!--  
+   Type is a loosely defined field because there is such a lot of variation in how it is used.
+   The principal variation is how much information that could be represented elsewhere is also
+   represented here. For instance, here's some possible types:
+     lithium heparin plasma   (+ .container.additive) (e.g. SNOMED CT 446272009)
+     transfusion bag of blood (+ container.type)
+     Peritoneal lavage        (+ collection.bodySite)
+   If the type includes other fields, it would be normal not to populate the other fields
+
+   Note that this practice is so widespread that it's pointless to try and stop it 
+  -->
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="119339001"/>
+					<display value="Stool specimen"/>
+				</coding>
+			</type>
+			<subject>
+				<reference value="Patient/example"/>
+			</subject>
+			<receivedTime value="2015-08-16T07:03:00Z"/>
+			<collection>
+				<collector>
+					<!--     in practice, collecter is almost always recorded     -->
+					<display value="Patient"/>
+				</collector>
+				<!--     the time of collection is usually required. Usually a point in time, but can be a period 
+      (collectedPeriod) if it's a timed collection (e.g. a 24 hour urine)     -->
+				<collectedDateTime value="2011-08-16T06:15:00Z"/>
+				<!--     method is usually implied by type     -->
+				<method>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v2-0488"/>
+						<code value="LNV"/>
+					</coding>
+				</method>
+			</collection>
+		</Specimen>
+	</contained>
+	<accessionIdentifier>
+		<system value="http://lab.acme.org/specimens/2011"/>
+		<value value="X352356-ISO1"/>
+	</accessionIdentifier>
+	<status value="available"/>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="429951000124103"/>
+			<display value="Bacterial isolate specimen"/>
+		</coding>
+	</type>
+	<subject>
+		<reference value="Patient/example"/>
+	</subject>
+	<receivedTime value="2015-08-18T07:03:00Z"/>
+	<parent>
+		<reference value="#stool"/>
+	</parent>
+	<collection>
+		<collector>
+			<!--     in practice, collecter is almost always recorded     -->
+			<reference value="Practitioner/f202"/>
+		</collector>
+		<!--     the time of collection is usually required. Usually a point in time, but can be a period 
+      (collectedPeriod) if it's a timed collection (e.g. a 24 hour urine)     -->
+		<collectedDateTime value="2015-08-16T07:03:00Z"/>
+		<!--     method is usually implied by type     -->
+		<method>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0488"/>
+				<code value="BAP"/>
+			</coding>
+		</method>
+	</collection>
+	<note>
+		<text value="Patient dropped off specimen"/>
+	</note>
+</Specimen>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+  <id value="med0305"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "med0305" </p></div><p><b>code</b>: Timoptic 5mg/ml solution <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ndc.html">National drug codes</a>#24208-813-10)</span></p><p><b>manufacturer</b>: <a name="org5"> </a></p><blockquote><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "org5" </p></div><p><b>name</b>: Aton Pharma Inc</p></blockquote><p><b>form</b>: Opthalmic Solution (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#75359005)</span></p><h3>Ingredients</h3><table class="grid"><tr><td>-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td>*</td><td>Timolol Maleate (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#75359005)</span></td><td>5 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span>/1 mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span></td></tr></table><h3>Batches</h3><table class="grid"><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>9494788</td><td>2017-05-22</td></tr></table></div></text><contained>
+    <Organization>
+      <id value="org5"/>
+      <name value="Aton Pharma Inc"/>
+    </Organization>
+  </contained>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/ndc"/>
+      <code value="24208-813-10"/>
+      <display value="Timoptic 5mg/ml solution"/>
+    </coding>
+  </code>
+  <manufacturer>
+    <reference value="#org5"/>
+  </manufacturer>
+    <form>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="75359005"/>
+        <display value="Opthalmic Solution (qualifier value)"/>
+      </coding>
+    </form>
+    <ingredient>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="75359005"/>
+          <display value="Timolol Maleate (substance)"/>
+        </coding>
+      </itemCodeableConcept>
+      <strength>
+        <numerator>
+          <value value="5"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mL"/>
+        </denominator>
+      </strength>
+    </ingredient>
+  <batch>
+    <lotNumber value="9494788"/>
+    <expirationDate value="2017-05-22"/>
+  </batch>
+  
+  
+</Medication>

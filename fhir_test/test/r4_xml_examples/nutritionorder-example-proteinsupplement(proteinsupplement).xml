@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><NutritionOrder xmlns="http://hl7.org/fhir"><!--   id = proteinsupplement  file name = nutritionorder-example-proteinsupplement.xml  Name= Protein Supplement  Description = Nutrition Order Protein Supplement Canonical Example
+edited by Eric Haas Health eData Inc
+  --><!--   EH: This example has no food exclusions or preferences   --><!--   EH: use supplement element   --><id value="proteinsupplement"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "proteinsupplement" </p></div><p><b>identifier</b>: id: 123</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>patient</b>: <a href="patient-example.html">Patient/example: Peter Chalmers</a> "Peter CHALMERS"</p><p><b>encounter</b>: <a href="encounter-example.html">Encounter/example: Inpatient</a></p><p><b>dateTime</b>: 2014-09-17</p><p><b>orderer</b>: <a href="practitioner-example.html">Practitioner/example: Dr Adam Careful</a> "Adam CAREFUL"</p><h3>Supplements</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>ProductName</b></td><td><b>Schedule</b></td><td><b>Quantity</b></td><td><b>Instruction</b></td></tr><tr><td>*</td><td>High Protein Powder <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#442991000124104 "Adult high protein formula"; supplement-type-codes#1000)</span></td><td>Beneprotein</td><td>Starting 2015-02-10, Do , at meals</td><td>1 scoop<span style="background: LightGoldenRodYellow"> (Details: UCUM code {scoop} = '{scoop}')</span></td><td>Beneprotein 1 scoop TID with meal.starting on  2015-02-10</td></tr></table></div></text><identifier>
+		<system value="http://goodhealthhospital.org/nutrition-requests"/>
+		<value value="123"/>
+	</identifier>
+	<status value="active"/><intent value="order"/>
+	<patient>
+		<reference value="Patient/example"/>
+		<display value="Peter Chalmers"/>
+	</patient>
+	<encounter>
+		<reference value="Encounter/example"/>
+		<display value="Inpatient"/>
+	</encounter>
+	<dateTime value="2014-09-17"/>
+	<orderer>
+		<reference value="Practitioner/example"/>
+		<display value="Dr Adam Careful"/>
+	</orderer>
+	<supplement>
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="442991000124104"/>
+				<display value="Adult high protein formula"/>
+			</coding>
+			<coding>
+				<system value="http://goodhealthhospital.org/supplement-type-codes"/>
+				<code value="1000"/>
+				<display value="High Protein Powder"/>
+			</coding>
+			<text value="High Protein Powder"/>
+		</type>
+		<productName value="Beneprotein"/>
+		<schedule>
+			<repeat>
+        <boundsPeriod>
+          <start value="2015-02-10"/>
+        </boundsPeriod>
+				<when value="C"/>
+			</repeat>
+		</schedule>
+		<quantity>
+			<value value="1"/>
+			<unit value="scoop"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="{scoop}"/>
+		</quantity>
+		<!--   EH:  use the .instructions element to list diet  supplement order  -->
+		<instruction value="Beneprotein 1 scoop TID with meal.starting on  2015-02-10"/>
+	</supplement>
+</NutritionOrder>
