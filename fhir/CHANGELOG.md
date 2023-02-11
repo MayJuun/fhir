@@ -1,5 +1,10 @@
 # fhir
 
+## [0.9.4]
+
+* Been working on validation, and some validation (like StructureDefinitions) only come in XML, so I've finally broken down and
+included an XML parser as part of this package
+
 ## [0.9.3]
 
 * Updated dependencies

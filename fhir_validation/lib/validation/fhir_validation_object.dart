@@ -6,18 +6,21 @@ class FhirValidationObject {
     this.fullMatch = '',
     this.partialMatch = '',
     this.type = '',
+    this.binding,
   });
 
   String noIndex;
   String? fullMatch;
   String? partialMatch;
   String? type;
+  ElementDefinitionBinding? binding;
 
   Map<String, dynamic> toJson() => {
         'noIndex': noIndex,
         'fullMatch': fullMatch,
         'partialMatch': partialMatch,
-        'type': type
+        'type': type,
+        'binding': binding?.toJson(),
       };
 }
 
@@ -27,7 +30,8 @@ Map<String, FhirValidationObject> addToFhirPathMatches({
   required String noIndex,
   String? fullMatch,
   String? partialMatch,
-  List<ElementDefinitionType>? type,
+  required List<ElementDefinitionType>? type,
+  required ElementDefinitionBinding? binding,
 }) {
   if (fhirPathMatches.containsKey(key)) {
     fhirPathMatches[key]!.noIndex = noIndex;
@@ -39,10 +43,16 @@ Map<String, FhirValidationObject> addToFhirPathMatches({
     fhirPathMatches[key] = FhirValidationObject(
         noIndex: noIndex, fullMatch: fullMatch, partialMatch: partialMatch);
   }
-  if (fullMatch != null && type != null && type.isNotEmpty) {
-    if (type.length == 1) {
-      fhirPathMatches[key]!.type = primitiveTypes[type.first.code.toString()] ??
-          type.first.code.toString();
+  if (fullMatch != null) {
+    if (type != null && type.isNotEmpty) {
+      if (type.length == 1) {
+        fhirPathMatches[key]!.type =
+            primitiveTypes[type.first.code.toString()] ??
+                type.first.code.toString();
+      }
+    }
+    if (binding != null) {
+      fhirPathMatches[key]!.binding = binding;
     }
   }
   return fhirPathMatches;

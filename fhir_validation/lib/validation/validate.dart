@@ -2,6 +2,7 @@ import 'package:fhir/r4.dart';
 
 import '../structure_definition_maps.dart';
 import '../utils/utils.dart';
+import '../value_set_maps.dart';
 
 part 'check_cardinality_of_json.dart';
 part 'fhir_validation_object.dart';
@@ -110,7 +111,7 @@ Map<String, List<String>?> evaluateFromPaths(
           noIndex: noIndexesPath,
           fullMatch: elementPath,
           type: element.type,
-          // resourceType: key.endsWith('resourceType') ? fhirPaths[key] : null,
+          binding: element.binding,
         );
         return true;
       }
@@ -172,8 +173,7 @@ Map<String, List<String>?> evaluateFromPaths(
               type: element.type,
               noIndex: noIndexesPath,
               fullMatch: pathsList.join('.'),
-              // resourceType:
-              //     key.endsWith('resourceType') ? fhirPaths[key] : null,
+              binding: element.binding,
             );
             return true;
           } else if (noIndexesPath.startsWith(tempPath)) {
@@ -187,11 +187,10 @@ Map<String, List<String>?> evaluateFromPaths(
               fhirPathMatches = addToFhirPathMatches(
                 fhirPathMatches: fhirPathMatches,
                 key: key,
-                // type: element.type,
+                type: element.type,
                 noIndex: noIndexesPath,
                 partialMatch: elementPath,
-                // resourceType:
-                //     key.endsWith('resourceType') ? fhirPaths[key] : null,
+                binding: element.binding,
               );
             }
           }
@@ -226,8 +225,7 @@ Map<String, List<String>?> evaluateFromPaths(
               type: element.type,
               noIndex: noIndexesPath,
               partialMatch: elementPath,
-              // resourceType:
-              //     key.endsWith('resourceType') ? fhirPaths[key] : null,
+              binding: element.binding,
             );
           }
         }
@@ -258,8 +256,7 @@ Map<String, List<String>?> evaluateFromPaths(
                 type: element.type,
                 noIndex: noIndexesPath,
                 partialMatch: tempPaths,
-                // resourceType:
-                //     key.endsWith('resourceType') ? fhirPaths[key] : null,
+                binding: element.binding,
               );
             }
           }
@@ -287,13 +284,22 @@ Map<String, List<String>?> evaluateFromPaths(
           returnMap = addToMap(returnMap, startPath, key,
               "This value should be a type '${value.type}' but it is invalid");
         }
+        if (value.binding?.valueSet != null) {
+          if (value.binding?.strength != null &&
+              value.binding!.strength !=
+                  ElementDefinitionBindingStrength.example) {
+            final valueSetCanonical =
+                value.binding!.valueSet.toString().split('|').first;
+            final valueSetMap = valueSetMaps[valueSetCanonical];
+            if (valueSetMap == null) {}
+            if (valueSetMap != null) {
+              final valueSet = ValueSet.fromJson(valueSetMap);
+            }
+          }
+        }
       }
     }
   });
-
-  // print(jsonPrettyPrint(fhirPathMatches));
-
-  // print(jsonPrettyPrint(fhirPathMatches));
 
   final partialMatchMap = <String, dynamic>{};
 
@@ -324,8 +330,6 @@ Map<String, List<String>?> evaluateFromPaths(
       }
     }
   }
-
-  // print(jsonPrettyPrint(partialMatchMap));
 
   /// remove all indexes for the moment
   for (var key in partialMatchMap.keys) {
@@ -415,12 +419,6 @@ Map<String, List<String>?> evaluateFromPaths(
   /// While there shouldn't be any null values, we remove just in case
   structureDefinitionPaths.removeWhere((element) => element == null);
 
-  // print(jsonPrettyPrint(fhirPaths));
-  // print(structureDefinitionPaths);
-
-  // print(structureDefinitionPaths);
-  // print(jsonPrettyPrint(fhirPaths));
-
   /// Then we go back though all of the definitions, again
   for (var element
       in structureDefinition.snapshot?.element ?? <ElementDefinition>[]) {
@@ -466,8 +464,6 @@ Map<String, List<String>?> evaluateFromPaths(
       }
     }
   }
-  // print(jsonPrettyPrint(partialMatchMap));
-  // print(jsonPrettyPrint(fhirPathMatches));
 
   return returnMap;
 }
