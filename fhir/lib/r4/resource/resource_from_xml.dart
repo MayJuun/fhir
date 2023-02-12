@@ -17,7 +17,6 @@ Resource _resourceFromXml(String xmlString) {
         map[map.keys.first] as Map<String, dynamic>,
         fhirObjectMap,
       );
-      // print(jsonEncode(newMap));
       return Resource.fromJson(newMap);
     }
   } else {
@@ -64,7 +63,7 @@ Map<String, dynamic> reformatXmlJsonMap(
     var oldValue = map[key];
     var oldType = fhirField?.type;
 
-    if (oldType != 'Narrative' && key != 'text') {
+    if (!(oldType == 'Narrative' && key == 'text')) {
       if (oldType == null) {
         if (key == 'resourceType' || key == '@resourceType') {
           newMap['resourceType'] = oldValue;
@@ -80,10 +79,12 @@ Map<String, dynamic> reformatXmlJsonMap(
                 oldValue.values.first as Map<String, dynamic>,
                 fhirFieldMap[oldValue.keys.first]!);
           }
-          print(key);
-          print(fhirField?.type);
-          print(oldType);
-          print(map);
+          // print(key);
+          // print(fhirField?.type);
+          // print(oldType);
+          // print(oldValue);
+          // print(map);
+          // print(fhirObjectMap);
           throw Exception('No type was found for the field $key');
         }
       } else {
@@ -108,7 +109,6 @@ Map<String, dynamic> reformatXmlJsonMap(
             }
           }
         } else if (oldValue is List) {
-          // print('LIST : $key');
           newMap[replacedKey] = [];
           for (final entry in oldValue) {
             if (entry is Map) {
@@ -136,7 +136,6 @@ Map<String, dynamic> reformatXmlJsonMap(
             }
           }
         } else {
-          // print('OTHER : $key');
           if (fhirField == null) {
             if (key == 'resourceType' || key == '@resourceType') {
               newMap['resourceType'] = oldValue;
@@ -208,7 +207,7 @@ dynamic primitiveValue(
     value = oldValue is num
         ? oldValue
         : oldValue is String
-            ? double.tryParse(oldValue)
+            ? int.tryParse(oldValue) ?? double.tryParse(oldValue)
             : null;
   } else if (fhirFieldType == 'Integer' ||
       fhirFieldType == 'UnsignedInt' ||
@@ -224,6 +223,14 @@ dynamic primitiveValue(
         : oldValue is String
             ? BigInt.tryParse(oldValue)
             : null;
+  } else if (fhirFieldType == 'Boolean') {
+    value = oldValue == 'true' || oldValue == true;
+  } else if (fhirFieldType == 'String' ||
+      //   fhirFieldType == 'Code' ||
+      fhirFieldType == 'Markdown') {
+    value = oldValue.toString().contains(r'[ \r\n\t\S]+')
+        ? oldValue.toString()
+        : oldValue.toString().replaceAll(r'\\n', '\n').replaceAll(r'\r', '\r');
   } else {
     value = oldValue;
   }

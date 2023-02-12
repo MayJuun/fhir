@@ -61,7 +61,7 @@ final fhirFieldMap = {
   'Narrative': {
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
-    'status,': const FhirField(false, 'String'),
+    'status': const FhirField(false, 'String'),
     '_status': const FhirField(false, 'Element'),
     'div': const FhirField(false, 'String'),
   },
@@ -4625,6 +4625,7 @@ final fhirFieldMap = {
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'resourceId': const FhirField(false, 'String'),
     '_resourceId': const FhirField(false, 'Element'),
+    'resourceType': const FhirField(false, 'Code'),
     'name': const FhirField(false, 'String'),
     '_name': const FhirField(false, 'Element'),
     'description': const FhirField(false, 'Markdown'),
@@ -9104,7 +9105,8 @@ final fhirFieldMap = {
     'ingredient': const FhirField(true, 'CodeableConcept'),
     'device': const FhirField(false, 'Reference'),
     'property': const FhirField(true, 'AdministrableProductDefinitionProperty'),
-    'routeOfAdministration': const FhirField(true, 'AdministrableProductDefinitionRouteOfAdministration'),
+    'routeOfAdministration': const FhirField(
+        true, 'AdministrableProductDefinitionRouteOfAdministration'),
   },
   'AdministrableProductDefinitionProperty': {
     'id': const FhirField(false, 'String'),
@@ -12022,7 +12024,7 @@ final fhirFieldMap = {
     'extension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Decimal'),
     '_value': const FhirField(false, 'Element'),
-    'comparator,': const FhirField(false, 'String'),
+    'comparator': const FhirField(false, 'String'),
     '_comparator': const FhirField(false, 'Element'),
     'unit': const FhirField(false, 'String'),
     '_unit': const FhirField(false, 'Element'),
@@ -12112,7 +12114,7 @@ final fhirFieldMap = {
     'extension': const FhirField(true, 'FhirExtension'),
     'use': const FhirField(false, 'String'),
     '_use': const FhirField(false, 'Element'),
-    'type,': const FhirField(false, 'String'),
+    'type': const FhirField(false, 'String'),
     '_type': const FhirField(false, 'Element'),
     'text': const FhirField(false, 'String'),
     '_text': const FhirField(false, 'Element'),
@@ -12198,7 +12200,7 @@ final fhirFieldMap = {
   'Contributor': {
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
-    'type,': const FhirField(false, 'String'),
+    'type': const FhirField(false, 'String'),
     '_type': const FhirField(false, 'Element'),
     'name': const FhirField(false, 'String'),
     '_name': const FhirField(false, 'Element'),
