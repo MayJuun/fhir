@@ -2,9 +2,10 @@
 
 ## [0.9.4]
 
-* Part of FHIR Mapping is Validation, and part of Validation is requesting Resources. While they do come in JSON, you have to be able to find the URL, and often the one that's easily available only sends XML. So to make it easier, I've included a FHIR XML-> JSON converter for R4. it uses the normal Dart XML->JSON converter, but then there's some addition formatting. Some things to note, it removes all Narratives because converting that markdown is not going to work and is rarely important to actually working with the Resource. Also, it occasionally doesn't seem to interpret escaped characters properly (again, it's rare, and it's things like "\n" becomes "\\\\n"). Still prints properly, but isn't technically the same.
+* Part of FHIR Mapping is Validation, and part of Validation is requesting Resources. While they do come in JSON, you have to be able to find the URL, and often the one that's easily available only sends XML. So to make it easier, I've included a FHIR XML-> JSON converter for R4. it uses the normal Dart XML->JSON converter, but then there's some addition formatting. Some things to note, it removes all Narratives because converting that markdown is not going to work and is rarely important to actually working with the Resource. Also, it occasionally doesn't seem to interpret escaped characters properly (again, it's rare, and it's things like "\n" becomes "\\\\n"). Still prints properly, but isn't technically the same. - Probably should still be considered as a beta version
 * Updated dependencies
-* Updated Dart Version
+* Updated Dart Version 2.19.0
+* Because I can't help myself, I also updated R5 to the latest Snapshot from December 2022
 
 ## [0.9.3]
 
