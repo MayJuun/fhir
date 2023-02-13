@@ -87,10 +87,6 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
       return (resource as CapabilityStatement)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
 
-    case R5ResourceType.CapabilityStatement2:
-      return (resource as CapabilityStatement2)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-
     case R5ResourceType.CarePlan:
       return (resource as CarePlan)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
@@ -149,10 +145,6 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
 
     case R5ResourceType.ConceptMap:
       return (resource as ConceptMap)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-
-    case R5ResourceType.ConceptMap2:
-      return (resource as ConceptMap2)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
 
     case R5ResourceType.Condition:

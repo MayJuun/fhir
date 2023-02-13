@@ -47,9 +47,6 @@ Resource _newId(Resource resource) {
     case R5ResourceType.CapabilityStatement:
       return (resource as CapabilityStatement).copyWith(id: newId());
 
-    case R5ResourceType.CapabilityStatement2:
-      return (resource as CapabilityStatement2).copyWith(id: newId());
-
     case R5ResourceType.CarePlan:
       return (resource as CarePlan).copyWith(id: newId());
 
@@ -94,9 +91,6 @@ Resource _newId(Resource resource) {
 
     case R5ResourceType.ConceptMap:
       return (resource as ConceptMap).copyWith(id: newId());
-
-    case R5ResourceType.ConceptMap2:
-      return (resource as ConceptMap2).copyWith(id: newId());
 
     case R5ResourceType.Condition:
       return (resource as Condition).copyWith(id: newId());

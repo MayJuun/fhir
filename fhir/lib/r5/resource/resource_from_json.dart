@@ -50,9 +50,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     case 'CapabilityStatement':
       return CapabilityStatement.fromJson(json);
 
-    case 'CapabilityStatement2':
-      return CapabilityStatement2.fromJson(json);
-
     case 'CarePlan':
       return CarePlan.fromJson(json);
 
@@ -97,9 +94,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
 
     case 'ConceptMap':
       return ConceptMap.fromJson(json);
-
-    case 'ConceptMap2':
-      return ConceptMap2.fromJson(json);
 
     case 'Condition':
       return Condition.fromJson(json);
