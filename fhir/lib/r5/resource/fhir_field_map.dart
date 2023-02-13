@@ -5968,10 +5968,10 @@ final fhirFieldMap = {
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'CodeableConcept'),
     'value': const FhirField(false, 'Quantity'),
-    'variable': const FhirField(true, 'EvidenceVariable'),
+    'variable': const FhirField(true, 'Evidencevariable'),
     'attributeEstimate': const FhirField(true, 'EvidenceAttributeEstimate'),
   },
-  'EvidenceVariable': {
+  'Evidencevariable': {
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),

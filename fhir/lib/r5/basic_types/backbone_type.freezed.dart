@@ -20,15 +20,18 @@ BackboneType _$BackboneTypeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BackboneType {
-  /// [id] Unique id for the element within a resource (for internal references).
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references).
   /// This may be any string value that does not contain spaces.;
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   /// definition of the extension.;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
@@ -37,7 +40,8 @@ mixin _$BackboneType {
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
-  /// elements provide negation or qualification. To make the use of extensions
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of
@@ -160,24 +164,29 @@ class _$_BackboneType extends _BackboneType {
   factory _$_BackboneType.fromJson(Map<String, dynamic> json) =>
       _$$_BackboneTypeFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal references).
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references).
   /// This may be any string value that does not contain spaces.;
   @override
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   /// definition of the extension.;
   final List<FhirExtension>? _extension_;
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   /// definition of the extension.;
   @override
   @JsonKey(name: 'extension')
@@ -193,7 +202,8 @@ class _$_BackboneType extends _BackboneType {
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
-  /// elements provide negation or qualification. To make the use of extensions
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of
@@ -207,7 +217,8 @@ class _$_BackboneType extends _BackboneType {
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
-  /// elements provide negation or qualification. To make the use of extensions
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of
@@ -276,16 +287,19 @@ abstract class _BackboneType extends BackboneType {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal references).
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references).
   /// This may be any string value that does not contain spaces.;
   String? get id;
   @override
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   /// definition of the extension.;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -295,7 +309,8 @@ abstract class _BackboneType extends BackboneType {
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
-  /// elements provide negation or qualification. To make the use of extensions
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of

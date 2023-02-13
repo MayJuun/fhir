@@ -2215,7 +2215,7 @@ _$_EvidenceModelCharacteristic _$$_EvidenceModelCharacteristicFromJson(
           ? null
           : Quantity.fromJson(json['value'] as Map<String, dynamic>),
       variable: (json['variable'] as List<dynamic>?)
-          ?.map((e) => EvidenceVariable.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Evidencevariable.fromJson(e as Map<String, dynamic>))
           .toList(),
       attributeEstimate: (json['attributeEstimate'] as List<dynamic>?)
           ?.map((e) =>

@@ -4615,7 +4615,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
     Quantity? value,
 
     /// [variable] A variable adjusted for in the adjusted analysis.
-    List<EvidenceVariable>? variable,
+    List<Evidencevariable>? variable,
 
     /// [attributeEstimate] An attribute of the statistic used as a model characteristic.
     List<EvidenceAttributeEstimate>? attributeEstimate,

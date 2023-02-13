@@ -25,15 +25,18 @@ mixin _$FhirExtension {
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [url] Source of the definition for the extension code - a logical name or
+  /// [url] Source of the definition for the extension code - a logical name
+  ///  or
   ///  a URL.
   FhirUri? get url => throw _privateConstructorUsedError;
 
@@ -41,7 +44,8 @@ mixin _$FhirExtension {
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
 
-  /// [valueBase64Binary] Value of extension - must be one of a constrained set
+  /// [valueBase64Binary] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
@@ -57,7 +61,8 @@ mixin _$FhirExtension {
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
-  /// [valueCanonical] Value of extension - must be one of a constrained set of
+  /// [valueCanonical] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Canonical? get valueCanonical => throw _privateConstructorUsedError;
 
@@ -222,11 +227,13 @@ mixin _$FhirExtension {
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Coding? get valueCoding => throw _privateConstructorUsedError;
 
-  /// [valueContactPoint] Value of extension - must be one of a constrained set
+  /// [valueContactPoint] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
 
-  /// [valueCount] Value of extension - must be one of a constrained set of the
+  /// [valueCount] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Count? get valueCount => throw _privateConstructorUsedError;
 
@@ -238,7 +245,8 @@ mixin _$FhirExtension {
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   FhirDuration? get valueDuration => throw _privateConstructorUsedError;
 
-  /// [valueHumanName] Value of extension - must be one of a constrained set of
+  /// [valueHumanName] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
 
@@ -246,7 +254,8 @@ mixin _$FhirExtension {
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   Identifier? get valueIdentifier => throw _privateConstructorUsedError;
 
-  /// [valueMoney] Value of extension - must be one of a constrained set of the
+  /// [valueMoney] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Money? get valueMoney => throw _privateConstructorUsedError;
 
@@ -258,15 +267,18 @@ mixin _$FhirExtension {
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
-  /// [valueRange] Value of extension - must be one of a constrained set of the
+  /// [valueRange] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Range? get valueRange => throw _privateConstructorUsedError;
 
-  /// [valueRatio] Value of extension - must be one of a constrained set of the
+  /// [valueRatio] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Ratio? get valueRatio => throw _privateConstructorUsedError;
 
-  /// [valueReference] Value of extension - must be one of a constrained set of
+  /// [valueReference] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Reference? get valueReference => throw _privateConstructorUsedError;
 
@@ -274,7 +286,8 @@ mixin _$FhirExtension {
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
 
-  /// [valueSignature] Value of extension - must be one of a constrained set of
+  /// [valueSignature] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Signature? get valueSignature => throw _privateConstructorUsedError;
 
@@ -302,7 +315,8 @@ mixin _$FhirExtension {
   Expression? get valueExpression => throw _privateConstructorUsedError;
 
   /// [valueParameterDefinition] Value of extension - must be one of a
-  /// constrained set of the data types (see [Extensibility](extensibility.html)
+  /// constrained set of the data types (see
+  ///  [Extensibility](extensibility.html)
   ///  for a list).
   ParameterDefinition? get valueParameterDefinition =>
       throw _privateConstructorUsedError;
@@ -314,12 +328,14 @@ mixin _$FhirExtension {
       throw _privateConstructorUsedError;
 
   /// [valueTriggerDefinition] Value of extension - must be one of a
-  /// constrained set of the data types (see [Extensibility](extensibility.html)
+  /// constrained set of the data types (see
+  ///  [Extensibility](extensibility.html)
   ///  for a list).
   TriggerDefinition? get valueTriggerDefinition =>
       throw _privateConstructorUsedError;
 
-  /// [valueUsageContext] Value of extension - must be one of a constrained set
+  /// [valueUsageContext] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
 
@@ -2171,18 +2187,22 @@ class _$_FhirExtension extends _FhirExtension {
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   ///  definition of the extension.
   final List<FhirExtension>? _extension_;
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
@@ -2194,7 +2214,8 @@ class _$_FhirExtension extends _FhirExtension {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [url] Source of the definition for the extension code - a logical name or
+  /// [url] Source of the definition for the extension code - a logical name
+  ///  or
   ///  a URL.
   @override
   final FhirUri? url;
@@ -2204,7 +2225,8 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_url')
   final Element? urlElement;
 
-  /// [valueBase64Binary] Value of extension - must be one of a constrained set
+  /// [valueBase64Binary] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Base64Binary? valueBase64Binary;
@@ -2224,7 +2246,8 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
 
-  /// [valueCanonical] Value of extension - must be one of a constrained set of
+  /// [valueCanonical] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Canonical? valueCanonical;
@@ -2430,12 +2453,14 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   final Coding? valueCoding;
 
-  /// [valueContactPoint] Value of extension - must be one of a constrained set
+  /// [valueContactPoint] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final ContactPoint? valueContactPoint;
 
-  /// [valueCount] Value of extension - must be one of a constrained set of the
+  /// [valueCount] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Count? valueCount;
@@ -2450,7 +2475,8 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   final FhirDuration? valueDuration;
 
-  /// [valueHumanName] Value of extension - must be one of a constrained set of
+  /// [valueHumanName] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final HumanName? valueHumanName;
@@ -2460,7 +2486,8 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   final Identifier? valueIdentifier;
 
-  /// [valueMoney] Value of extension - must be one of a constrained set of the
+  /// [valueMoney] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Money? valueMoney;
@@ -2475,17 +2502,20 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   final Quantity? valueQuantity;
 
-  /// [valueRange] Value of extension - must be one of a constrained set of the
+  /// [valueRange] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Range? valueRange;
 
-  /// [valueRatio] Value of extension - must be one of a constrained set of the
+  /// [valueRatio] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Ratio? valueRatio;
 
-  /// [valueReference] Value of extension - must be one of a constrained set of
+  /// [valueReference] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Reference? valueReference;
@@ -2495,7 +2525,8 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   final SampledData? valueSampledData;
 
-  /// [valueSignature] Value of extension - must be one of a constrained set of
+  /// [valueSignature] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Signature? valueSignature;
@@ -2528,7 +2559,8 @@ class _$_FhirExtension extends _FhirExtension {
   final Expression? valueExpression;
 
   /// [valueParameterDefinition] Value of extension - must be one of a
-  /// constrained set of the data types (see [Extensibility](extensibility.html)
+  /// constrained set of the data types (see
+  ///  [Extensibility](extensibility.html)
   ///  for a list).
   @override
   final ParameterDefinition? valueParameterDefinition;
@@ -2540,12 +2572,14 @@ class _$_FhirExtension extends _FhirExtension {
   final RelatedArtifact? valueRelatedArtifact;
 
   /// [valueTriggerDefinition] Value of extension - must be one of a
-  /// constrained set of the data types (see [Extensibility](extensibility.html)
+  /// constrained set of the data types (see
+  ///  [Extensibility](extensibility.html)
   ///  for a list).
   @override
   final TriggerDefinition? valueTriggerDefinition;
 
-  /// [valueUsageContext] Value of extension - must be one of a constrained set
+  /// [valueUsageContext] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final UsageContext? valueUsageContext;
@@ -2886,16 +2920,19 @@ abstract class _FhirExtension extends FhirExtension {
   @override
 
   /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [url] Source of the definition for the extension code - a logical name or
+  /// [url] Source of the definition for the extension code - a logical name
+  ///  or
   ///  a URL.
   FhirUri? get url;
   @override
@@ -2905,7 +2942,8 @@ abstract class _FhirExtension extends FhirExtension {
   Element? get urlElement;
   @override
 
-  /// [valueBase64Binary] Value of extension - must be one of a constrained set
+  /// [valueBase64Binary] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   Base64Binary? get valueBase64Binary;
   @override
@@ -2925,7 +2963,8 @@ abstract class _FhirExtension extends FhirExtension {
   Element? get valueBooleanElement;
   @override
 
-  /// [valueCanonical] Value of extension - must be one of a constrained set of
+  /// [valueCanonical] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Canonical? get valueCanonical;
   @override
@@ -3131,12 +3170,14 @@ abstract class _FhirExtension extends FhirExtension {
   Coding? get valueCoding;
   @override
 
-  /// [valueContactPoint] Value of extension - must be one of a constrained set
+  /// [valueContactPoint] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ContactPoint? get valueContactPoint;
   @override
 
-  /// [valueCount] Value of extension - must be one of a constrained set of the
+  /// [valueCount] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Count? get valueCount;
   @override
@@ -3151,7 +3192,8 @@ abstract class _FhirExtension extends FhirExtension {
   FhirDuration? get valueDuration;
   @override
 
-  /// [valueHumanName] Value of extension - must be one of a constrained set of
+  /// [valueHumanName] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   HumanName? get valueHumanName;
   @override
@@ -3161,7 +3203,8 @@ abstract class _FhirExtension extends FhirExtension {
   Identifier? get valueIdentifier;
   @override
 
-  /// [valueMoney] Value of extension - must be one of a constrained set of the
+  /// [valueMoney] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Money? get valueMoney;
   @override
@@ -3176,17 +3219,20 @@ abstract class _FhirExtension extends FhirExtension {
   Quantity? get valueQuantity;
   @override
 
-  /// [valueRange] Value of extension - must be one of a constrained set of the
+  /// [valueRange] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Range? get valueRange;
   @override
 
-  /// [valueRatio] Value of extension - must be one of a constrained set of the
+  /// [valueRatio] Value of extension - must be one of a constrained set of
+  ///  the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   Ratio? get valueRatio;
   @override
 
-  /// [valueReference] Value of extension - must be one of a constrained set of
+  /// [valueReference] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Reference? get valueReference;
   @override
@@ -3196,7 +3242,8 @@ abstract class _FhirExtension extends FhirExtension {
   SampledData? get valueSampledData;
   @override
 
-  /// [valueSignature] Value of extension - must be one of a constrained set of
+  /// [valueSignature] Value of extension - must be one of a constrained set
+  ///  of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   Signature? get valueSignature;
   @override
@@ -3229,7 +3276,8 @@ abstract class _FhirExtension extends FhirExtension {
   @override
 
   /// [valueParameterDefinition] Value of extension - must be one of a
-  /// constrained set of the data types (see [Extensibility](extensibility.html)
+  /// constrained set of the data types (see
+  ///  [Extensibility](extensibility.html)
   ///  for a list).
   ParameterDefinition? get valueParameterDefinition;
   @override
@@ -3241,12 +3289,14 @@ abstract class _FhirExtension extends FhirExtension {
   @override
 
   /// [valueTriggerDefinition] Value of extension - must be one of a
-  /// constrained set of the data types (see [Extensibility](extensibility.html)
+  /// constrained set of the data types (see
+  ///  [Extensibility](extensibility.html)
   ///  for a list).
   TriggerDefinition? get valueTriggerDefinition;
   @override
 
-  /// [valueUsageContext] Value of extension - must be one of a constrained set
+  /// [valueUsageContext] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   UsageContext? get valueUsageContext;
   @override
