@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-DeviceRequest1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,26 +9,26 @@
       "status": "active",
       "description": "Type options for DeviceRequest.parameter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:ee493229-2694-4ebd-9524-8bfbfb8f4cf5",
-        "timestamp": "2022-05-06T17:10:50+00:00",
+        "identifier": "urn:uuid:3fa16643-34d0-4dab-971a-41fb4ccc3dee",
+        "timestamp": "2022-12-14T07:16:25+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           }
@@ -42,21 +42,21 @@
       "status": "active",
       "description": "Type options for DeviceRequest.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:2b8b6535-74fb-40af-bf42-8f29ba5a1c78",
-        "timestamp": "2022-05-06T17:10:50+00:00",
+        "identifier": "urn:uuid:7b32aede-2f4f-48d5-af69-dbf5a52812c8",
+        "timestamp": "2022-12-14T07:16:25+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Period",
             "display": "Period"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Timing",
             "display": "Timing"
           }
@@ -64,14 +64,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-DeviceRequest1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -132,7 +134,7 @@
                 }
               ],
               "linkId": "DeviceRequest.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -324,7 +326,7 @@
                 }
               ],
               "linkId": "DeviceRequest.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -554,8 +556,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Resource"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Resource, Resource"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -577,7 +579,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "DeviceRequest.priorRequest",
+          "linkId": "DeviceRequest.replaces",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -597,22 +599,22 @@
                   }
                 }
               ],
-              "linkId": "DeviceRequest.priorRequest-flyover",
+              "linkId": "DeviceRequest.replaces-flyover",
               "text": "The request takes the place of the referenced completed or terminated request(s).",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "DeviceRequest"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "DeviceRequest, DeviceRequest"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "DeviceRequest.priorRequest.value",
+              "linkId": "DeviceRequest.replaces.value",
               "text": "What request replaces",
               "type": "reference",
               "required": false,
@@ -1338,8 +1340,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group, Location, Device"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Group, Location, Device, Device"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1392,8 +1394,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Encounter, Encounter"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1520,15 +1522,15 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Patient"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Practitioner"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "RelatedPerson"
                         }
                       ],
@@ -1626,8 +1628,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Device, Practitioner, PractitionerRole, Organization"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Device, Practitioner, PractitionerRole, Organization, Organization"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1733,8 +1735,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Practitioner, PractitionerRole, Organization, CareTeam, HealthcareService, Patient, Device, RelatedPerson"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Practitioner, PractitionerRole, Organization, CareTeam, HealthcareService, Patient, Device, RelatedPerson, RelatedPerson"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1780,6 +1782,103 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "boolean"
+            }
+          ],
+          "linkId": "DeviceRequest.asNeeded",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "DeviceRequest.asNeeded-flyover",
+              "text": "This status is to indicate whether the request is a PRN or may be given as needed.",
+              "type": "display"
+            },
+            {
+              "linkId": "DeviceRequest.asNeeded.value",
+              "text": "PRN status of request",
+              "type": "boolean",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "DeviceRequest.asNeededFor",
+          "text": "Device usage reason",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "DeviceRequest.asNeededFor-flyover",
+              "text": "The reason for using the device.",
+              "type": "display"
+            },
+            {
+              "linkId": "DeviceRequest.asNeededFor.coding",
+              "text": "code:",
+              "type": "coding",
+              "required": false,
+              "repeats": false,
+              "answerConstraint": "optionsOnly"
+            },
+            {
+              "linkId": "DeviceRequest.asNeededFor.text",
+              "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "Reference"
             }
@@ -1811,8 +1910,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Coverage, ClaimResponse"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Coverage, ClaimResponse, ClaimResponse"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1861,8 +1960,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Resource"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Resource, Resource"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1945,8 +2044,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Provenance"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Provenance, Provenance"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1963,14 +2062,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

@@ -6,6 +6,12 @@
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003e\n        \u0026quot;Alteplase Dosing for Stroke\u0026quot; defines a dosing instruction referenced from an EvidenceVariable resource.\n      \u003c/p\u003e\n\t\u003c/div\u003e"
   },
   "url": "http://example.org/fhir/ActivityDefinition/example-alteplase-dosing",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.19.3"
+    }
+  ],
   "name": "Alteplase Dosing for Stroke",
   "status": "draft",
   "kind": "MedicationRequest",

@@ -1,0 +1,73 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "inheritance-control-code",
+  "meta": {
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/inheritance-control-code\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eAdditive\u003ca name\u003d\"inheritance-control-code-Additive\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAdditive\u003c/td\u003e\u003ctd\u003eIf listed in the differential would \u0027add to\u0027 what\u0027s in the base snapshot and propagate what\u0027s in the base as well\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eFixed\u003ca name\u003d\"inheritance-control-code-Fixed\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFixed\u003c/td\u003e\u003ctd\u003eif listed in the differential, would \u0027override\u0027 what\u0027s in the snapshot (but must be a subset or same as base snapshot).  Propagate what\u0027s in the base only if extension doesn\u0027t appear in the differential (and must check differential against base)\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eOverrides\u003ca name\u003d\"inheritance-control-code-Overrides\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOverrides\u003c/td\u003e\u003ctd\u003eif listed in the differential, would \u0027override\u0027 what\u0027s in the snapshot (but can be different than base snapshot).  Propagate what\u0027s in the base only if the extension doesn\u0027t appear in the differential (no need to check differential against base)\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003efrozen\u003ca name\u003d\"inheritance-control-code-frozen\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFrozen\u003c/td\u003e\u003ctd\u003eCan only be listed in differential if identical to base and is propagated if not in the differential.  Propagate what\u0027s in the base always.  Ignore what\u0027s in the differential - though you can yell if it\u0027s different\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eno-copy\u003ca name\u003d\"inheritance-control-code-no-copy\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDoes not propagate\u003c/td\u003e\u003ctd\u003eDoes not propagate from base and value in base has no direct impact on what value can be in differential of derived element (though there could be methodology rules - e.g. FMM)\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    }
+  ],
+  "url": "http://hl7.org/fhir/inheritance-control-code",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.1899"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "InheritanceControlCodes",
+  "title": "Inheritance Control Codes",
+  "status": "active",
+  "experimental": true,
+  "description": "Inheritance Control Codes",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Additive",
+      "display": "Additive",
+      "definition": "If listed in the differential would \u0027add to\u0027 what\u0027s in the base snapshot and propagate what\u0027s in the base as well"
+    },
+    {
+      "code": "Fixed",
+      "display": "Fixed",
+      "definition": "if listed in the differential, would \u0027override\u0027 what\u0027s in the snapshot (but must be a subset or same as base snapshot).  Propagate what\u0027s in the base only if extension doesn\u0027t appear in the differential (and must check differential against base)"
+    },
+    {
+      "code": "Overrides",
+      "display": "Overrides",
+      "definition": "if listed in the differential, would \u0027override\u0027 what\u0027s in the snapshot (but can be different than base snapshot).  Propagate what\u0027s in the base only if the extension doesn\u0027t appear in the differential (no need to check differential against base)"
+    },
+    {
+      "code": "frozen",
+      "display": "Frozen",
+      "definition": "Can only be listed in differential if identical to base and is propagated if not in the differential.  Propagate what\u0027s in the base always.  Ignore what\u0027s in the differential - though you can yell if it\u0027s different"
+    },
+    {
+      "code": "no-copy",
+      "display": "Does not propagate",
+      "definition": "Does not propagate from base and value in base has no direct impact on what value can be in differential of derived element (though there could be methodology rules - e.g. FMM)"
+    }
+  ]
+}

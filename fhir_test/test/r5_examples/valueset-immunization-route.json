@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "immunization-route",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "extensions",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude these codes as defined in \u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RouteOfAdministration.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration\u003c/code\u003e\u003c/a\u003e\u003ctable class\u003d\"none\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-IDINJ\"\u003eIDINJ\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, intradermal\u003c/td\u003e\u003ctd\u003eInjection, intradermal\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-IM\"\u003eIM\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, intramuscular\u003c/td\u003e\u003ctd\u003eInjection, intramuscular\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-IVINJ\"\u003eIVINJ\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, intravenous\u003c/td\u003e\u003ctd\u003eInjection, intravenous\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-PO\"\u003ePO\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSwallow, oral\u003c/td\u003e\u003ctd\u003eSwallow, oral\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-SQ\"\u003eSQ\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, subcutaneous\u003c/td\u003e\u003ctd\u003eInjection, subcutaneous\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-TRNSDERM\"\u003eTRNSDERM\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTransdermal\u003c/td\u003e\u003ctd\u003eTransdermal\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude these codes as defined in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration\u003c/code\u003e\u003c/a\u003e\u003ctable class\u003d\"none\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-IDINJ\"\u003eIDINJ\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, intradermal\u003c/td\u003e\u003ctd\u003eInjection, intradermal\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-IM\"\u003eIM\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, intramuscular\u003c/td\u003e\u003ctd\u003eInjection, intramuscular\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-IVINJ\"\u003eIVINJ\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, intravenous\u003c/td\u003e\u003ctd\u003eInjection, intravenous\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-PO\"\u003ePO\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSwallow, oral\u003c/td\u003e\u003ctd\u003eSwallow, oral\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-SQ\"\u003eSQ\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInjection, subcutaneous\u003c/td\u003e\u003ctd\u003eInjection, subcutaneous\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-TRNSDERM\"\u003eTRNSDERM\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTransdermal\u003c/td\u003e\u003ctd\u003eTransdermal\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -30,9 +30,19 @@
     {
       "system": "urn:ietf:rfc:3986",
       "value": "urn:oid:2.16.840.1.113883.4.642.3.289"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.284"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.2.162"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "ImmunizationRouteCodes",
   "title": "Immunization Route Codes",
   "status": "draft",
@@ -49,6 +59,17 @@
     }
   ],
   "description": "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the administrative routes used during vaccination. This value set is provided as a suggestive example.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

@@ -9,13 +9,24 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/observation-secondaryFinding",
-  "version": "4.6.0",
-  "name": "secondaryFinding",
-  "title": "Secondary Finding",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1474"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "Obs SecondaryFinding",
+  "title": "Observation Secondary Finding",
   "status": "draft",
+  "experimental": false,
   "date": "2015-03-02",
   "publisher": "Health Level Seven, Inc. - OO WG",
   "contact": [
@@ -29,7 +40,7 @@
     }
   ],
   "description": "Secondary findings are genetic test results that provide information about variants in a gene unrelated to the primary purpose for the testing, most often discovered when [Whole Exome Sequencing (WES)](https://en.wikipedia.org/wiki/Exome_sequencing) or [Whole Genome Sequencing (WGS)](https://en.wikipedia.org/wiki/Whole_genome_sequencing) is performed. This extension should be used to denote when a genetic finding is being shared as a secondary finding, and ideally refer to a corresponding guideline or policy statement.\n\nFor more detail, please see:\nhttps://ghr.nlm.nih.gov/primer/testing/secondaryfindings.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "rim",
@@ -68,7 +79,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -76,7 +86,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -102,7 +111,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -150,7 +159,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -158,7 +166,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -225,7 +232,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],

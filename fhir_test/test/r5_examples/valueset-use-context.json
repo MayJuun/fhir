@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "use-context",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eImport all the codes that are contained in http://hl7.org/fhir/ValueSet/usps-state\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in http://hl7.org/fhir/ValueSet/practitioner-specialty\u003c/li\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  394733009 (Medical specialties)\u003c/li\u003e\u003cli\u003eInclude all codes defined in \u003ccode\u003eurn:iso:std:iso:3166\u003c/code\u003e\u003c/li\u003e\u003cli\u003eInclude codes from \u003ccode\u003ehttp://unstats.un.org/unsd/methods/m49/m49.htm\u003c/code\u003e where class  \u003d  region\u003c/li\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  387961004 (Kingdom Animalia)\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"valueset-administrative-gender.html\"\u003ehttp://hl7.org/fhir/ValueSet/administrative-gender\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"valueset-condition-code.html\"\u003ehttp://hl7.org/fhir/ValueSet/condition-code\u003c/a\u003e\u003c/li\u003e\u003cli\u003eInclude all codes defined in \u003ccode\u003ehttp://nucc.org/provider-taxonomy\u003c/code\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/3.1.0/ValueSet-v3-ActEncounterCode.html\"\u003ehttp://terminology.hl7.org/ValueSet/v3-ActEncounterCode\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/3.1.0/ValueSet-v3-ActTaskCode.html\"\u003ehttp://terminology.hl7.org/ValueSet/v3-ActTaskCode\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/ValueSet-v2-0265.html\"\u003ehttp://terminology.hl7.org/ValueSet/v2-0265\u003c/a\u003e\u003c/li\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  394733009 (Medical specialties)\u003c/li\u003e\u003cli\u003eInclude all codes defined in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-ISO3166Part1.html\"\u003e\u003ccode\u003eurn:iso:std:iso:3166\u003c/code\u003e\u003c/a\u003e\u003c/li\u003e\u003cli\u003eInclude codes from \u003ccode\u003ehttp://unstats.un.org/unsd/methods/m49/m49.htm\u003c/code\u003e where class  \u003d  region\u003c/li\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  387961004 (Kingdom Animalia)\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"valueset-administrative-gender.html\"\u003ehttp://hl7.org/fhir/ValueSet/administrative-gender\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"valueset-condition-code.html\"\u003ehttp://hl7.org/fhir/ValueSet/condition-code\u003c/a\u003e\u003c/li\u003e\u003cli\u003eInclude all codes defined in \u003ccode\u003ehttp://nucc.org/provider-taxonomy\u003c/code\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/ValueSet-v3-ActEncounterCode.html\"\u003ehttp://terminology.hl7.org/ValueSet/v3-ActEncounterCode\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/ValueSet-v3-ActTaskCode.html\"\u003ehttp://terminology.hl7.org/ValueSet/v3-ActTaskCode\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"valueset-usage-context-agreement-scope.html\"\u003ehttp://hl7.org/fhir/ValueSet/usage-context-agreement-scope\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -32,12 +32,12 @@
       "value": "urn:oid:2.16.840.1.113883.4.642.3.28"
     }
   ],
-  "version": "4.6.0",
-  "name": "Context of Use ValueSet",
-  "title": "ConformanceUseContext",
+  "version": "5.0.0-snapshot3",
+  "name": "ContextOfUseValueSet",
+  "title": "Context of Use ValueSet",
   "status": "draft",
   "experimental": true,
-  "date": "2022-05-06T17:02:42+00:00",
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -50,17 +50,23 @@
     }
   ],
   "description": "This value set defines a base set of codes that can be used to indicate that the content in a resource was developed with a focus and intent of supporting use within particular contexts.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "copyright": "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org. This value set includes content from NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association. For commercial use, including sales or licensing, a license must be obtained",
   "compose": {
     "include": [
       {
         "valueSet": [
-          "http://hl7.org/fhir/ValueSet/usps-state"
-        ]
-      },
-      {
-        "valueSet": [
-          "http://hl7.org/fhir/ValueSet/practitioner-specialty"
+          "http://terminology.hl7.org/ValueSet/v2-0265"
         ]
       },
       {
@@ -117,6 +123,11 @@
       {
         "valueSet": [
           "http://terminology.hl7.org/ValueSet/v3-ActTaskCode"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/usage-context-agreement-scope"
         ]
       }
     ]

@@ -12,11 +12,12 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/Shareable",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "Shareable",
   "title": "shareable",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International fhir",
   "contact": [
     {
@@ -29,8 +30,19 @@
     }
   ],
   "description": "Logical Model: A pattern to be followed by resources that represent a shareable knowledge artifact such as a ValueSet, Profile, Library, Decision Support Rule, or Quality Measure.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "purpose": "The intent of this pattern is to ensure that artifacts have enough metadata to make sharing them through a public repository reliable.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "rim",
@@ -46,6 +58,7 @@
   "kind": "logical",
   "abstract": false,
   "type": "Shareable",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "snapshot": {
     "element": [
       {
@@ -67,7 +80,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -84,7 +96,7 @@
         "id": "Shareable.url",
         "path": "Shareable.url",
         "short": "Canonical identifier for this {{title}}, represented as a URI (globally unique)",
-        "definition": "An absolute URI that is used to identify this {{title}} when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this {{title}} is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the {{title}} is stored on different servers.",
+        "definition": "An absolute URI that is used to identify this {{title}} when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this {{title}} is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the {{title}} is stored on different servers.",
         "comment": "Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
         "requirements": "Allows the {{title}} to be referenced by a single globally unique identifier.",
         "min": 1,
@@ -105,7 +117,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -127,7 +138,7 @@
         "path": "Shareable.version",
         "short": "Business version of the {{title}}",
         "definition": "The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.",
-        "comment": "There may be different {{title}} instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the {{title}} with the format [url]|[version].",
+        "comment": "There may be different {{title}} instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the {{title}} with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
         "min": 1,
         "max": "1",
         "base": {
@@ -146,7 +157,67 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Shareable.name",
+        "path": "Shareable.name",
+        "short": "Name for this {{title}} (computer friendly)",
+        "definition": "A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
+        "comment": "The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.",
+        "requirements": "Support human navigation and code generation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Shareable.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Shareable.title",
+        "path": "Shareable.title",
+        "short": "Name for this {{title}} (human-friendly)",
+        "definition": "A short, descriptive, user-friendly title for the {{title}}.",
+        "comment": "This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Shareable.title",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -177,7 +248,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -197,7 +267,7 @@
           ],
           "strength": "required",
           "description": "The lifecycle status of an artifact.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|5.0.0-snapshot3"
         }
       },
       {
@@ -225,7 +295,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -242,11 +311,11 @@
         "alias": [
           "steward"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Shareable.publisher",
-          "min": 1,
+          "min": 0,
           "max": "1"
         },
         "type": [
@@ -260,7 +329,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -272,7 +340,7 @@
         "path": "Shareable.description",
         "short": "Natural language description of the {{title}}",
         "definition": "A free text natural language description of the {{title}} from a consumer\u0027s perspective.",
-        "comment": "This description can be used to capture details such as why the {{title}} was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the {{title}} as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the {{title}} is presumed to be the predominant language in the place the {{title}} was created).",
+        "comment": "This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the {{title}} as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the {{title}} is presumed to be the predominant language in the place the {{title}} was created).",
         "min": 1,
         "max": "1",
         "base": {
@@ -291,54 +359,11 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
         "isSummary": false
-      },
-      {
-        "id": "Shareable.knowledgeCapability",
-        "path": "Shareable.knowledgeCapability",
-        "short": "shareable | publishable | computable | executable",
-        "definition": "Defines a knowledge capability afforded by an artifact.",
-        "comment": "Knowledge capabilities allow for artifacts to state general capabilities aligned with the content management and consumption lifecycle, with Shareable representing the core capabilities for sharing knowledge artifacts, Publishable representing distribution and publishing concerns, Computable representing authoring and design-time concerns, and Executable representing implementation and run-time concerns.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Shareable.knowledgeCapability",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "KnowledgeCapability"
-            }
-          ],
-          "strength": "required",
-          "description": "A knowledge capability provided by a knowledge artifact",
-          "valueSet": "http://hl7.org/fhir/ValueSet/knowledge-capability|4.6.0"
-        }
       },
       {
         "id": "Shareable.knowledgeRepresentationLevel",
@@ -364,7 +389,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -379,7 +403,7 @@
           ],
           "strength": "required",
           "description": "A level of knowledge representation provided by this artifact",
-          "valueSet": "http://hl7.org/fhir/ValueSet/knowledge-representation-level|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/knowledge-representation-level|5.0.0-snapshot3"
         }
       }
     ]

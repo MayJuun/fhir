@@ -11,7 +11,7 @@
   "characteristic": [
     {
       "description": "Dead or functionally dependent at 90 days",
-      "defByCombination": {
+      "definitionByCombination": {
         "code": "any-of",
         "characteristic": [
           {

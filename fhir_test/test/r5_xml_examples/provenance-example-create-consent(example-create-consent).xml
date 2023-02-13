@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+	<id value="example-create-consent"/>
+
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="example-create-consent"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance "example-create-consent" </p></div><p><b>target</b>: <a href="consent-example.html">Consent/consent-example-basic/_history/1</a></p><p><b>recorded</b>: 10 Sept 2021, 5:08:21 pm</p><p><b>activity</b>: create <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-DataOperation.html">DataOperation</a>#CREATE)</span></p><p><b>patient</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>Assembler <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#assembler)</span></td><td><span>: LEAP Consent Management Service</span></td></tr></table><h3>Entities</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td>*</td><td>source</td><td><a href="broken-link.html">http://example.org/fhir/QuestionnaireResponse/some-questionnaire-response</a></td></tr></table></div></text><target>
+		<reference value="Consent/consent-example-basic/_history/1"/>
+	</target>
+	<recorded value="2021-09-10T07:08:21.722+00:00"/>
+	<activity>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation"/>
+			<code value="CREATE"/>
+			<display value="create"/>
+		</coding>
+	</activity>
+	<patient>
+		<reference value="Patient/example"/>
+	</patient>
+	<agent>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+				<code value="assembler"/>
+				<display value="Assembler"/>
+			</coding>
+		</type>
+		<who>
+			<display value="LEAP Consent Management Service"/>
+		</who>
+	</agent>
+	<entity>
+		<role value="source"/>
+		<what>
+			<reference value="http://example.org/fhir/QuestionnaireResponse/some-questionnaire-response"/>
+		</what>
+	</entity>
+</Provenance>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+  <id value="xds"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe </b> male, DoB: 1956-05-27 ( Medical record number: 89765a87b (use: USUAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail:</td><td colspan="3">100 Main St Metropolis Il 44130 USA </td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Managing Organization: <a href="organization-example-insurer.html">Organization/2</a> "XYZ Insurance"</li></ul></td></tr></table></div></text><identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+      </coding>
+    </type>
+    <system value="urn:oid:1.2.3.4.5"/>
+    <value value="89765a87b"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1956-05-27"/>
+  <address>
+    <line value="100 Main St"/>
+    <city value="Metropolis"/>
+    <state value="Il"/>
+    <postalCode value="44130"/>
+    <country value="USA"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/2"/>
+  </managingOrganization>
+</Patient>

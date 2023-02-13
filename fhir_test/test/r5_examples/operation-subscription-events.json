@@ -3,7 +3,7 @@
   "id": "Subscription-events",
   "text": {
     "status": "extensions",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eevents\u003c/h2\u003e\u003cp\u003eOPERATION: events\u003c/p\u003e\u003cp\u003eThe official URL for this operation definition is: \u003c/p\u003e\u003cpre\u003ehttp://hl7.org/fhir/OperationDefinition/Subscription-events\u003c/pre\u003e\u003cdiv\u003e\u003cp\u003eThis operation is used to search for and return notifications that have been previously triggered by a topic-based Subscription.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eURL: [base]/Subscription/[id]/$events\u003c/p\u003e\u003cp\u003eParameters\u003c/p\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eName\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCardinality\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eBinding\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDocumentation\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eeventsSinceNumber\u003c/td\u003e\u003ctd\u003e0..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#integer64\"\u003einteger64\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe starting event number, inclusive of this event (lower bound).\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eeventsUntilNumber\u003c/td\u003e\u003ctd\u003e0..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#integer64\"\u003einteger64\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe ending event number, inclusive of this event (upper bound).\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003econtent\u003c/td\u003e\u003ctd\u003e0..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#code\"\u003ecode\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eRequested content style of returned data. Codes from backport-content-value-set (e.g., empty, id-only, full-resource). This is a hint to the server what a client would prefer, and MAY be ignored.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003ereturn\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"bundle.html\"\u003eBundle\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe operation returns a valid notification bundle, with the first entry being a SubscriptionStatus resource. The bundle type is \u0026quot;subscription-notification\u0026quot;.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cdiv/\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eURL: [base]/Subscription/[id]/$events\u003c/p\u003e\u003cp\u003eParameters\u003c/p\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eName\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCardinality\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eBinding\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDocumentation\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eeventsSinceNumber\u003c/td\u003e\u003ctd\u003e0..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#integer64\"\u003einteger64\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe starting event number, inclusive of this event (lower bound).\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eeventsUntilNumber\u003c/td\u003e\u003ctd\u003e0..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#integer64\"\u003einteger64\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe ending event number, inclusive of this event (upper bound).\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003econtent\u003c/td\u003e\u003ctd\u003e0..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#code\"\u003ecode\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eRequested content style of returned data. Codes from backport-content-value-set (e.g., empty, id-only, full-resource). This is a hint to the server what a client would prefer, and MAY be ignored.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003ereturn\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"bundle.html\"\u003eBundle\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe operation returns a valid notification bundle, with the first entry being a SubscriptionStatus resource. The bundle type is \u0026quot;subscription-notification\u0026quot;.\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -16,12 +16,13 @@
     }
   ],
   "url": "http://hl7.org/fhir/OperationDefinition/Subscription-events",
-  "version": "4.6.0",
-  "name": "events",
+  "version": "5.0.0-snapshot3",
+  "name": "Events",
   "title": "Search and retrieve prior events for a Subscription",
   "status": "draft",
   "kind": "operation",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -38,6 +39,17 @@
     }
   ],
   "description": "This operation is used to search for and return notifications that have been previously triggered by a topic-based Subscription.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "affectsState": false,
   "code": "events",
   "resource": [

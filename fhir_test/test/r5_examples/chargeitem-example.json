@@ -26,7 +26,7 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/example"
   },
   "occurrencePeriod": {
@@ -78,12 +78,17 @@
   "quantity": {
     "value": 1
   },
-  "factorOverride": 0.8,
-  "priceOverride": {
-    "value": 40,
-    "currency": "EUR"
+  "totalPriceComponent": {
+    "type": "base",
+    "factor": 0.8,
+    "amount": {
+      "value": 40,
+      "currency": "EUR"
+    }
   },
-  "overrideReason": "Patient is Cardiologist\u0027s golf buddy, so he gets a 20% discount!",
+  "overrideReason": {
+    "text": "Patient is Cardiologist\u0027s golf buddy, so he gets a 20% discount!"
+  },
   "enterer": {
     "reference": "Practitioner/example"
   },
@@ -101,7 +106,9 @@
   ],
   "service": [
     {
-      "reference": "Procedure/example"
+      "reference": {
+        "reference": "Procedure/example"
+      }
     }
   ],
   "account": [

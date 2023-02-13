@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><Device xmlns="http://hl7.org/fhir">
+	<id value="example-udi3"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Device</b><a name="example-udi3"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Device "example-udi3" </p></div><p><b>identifier</b>: Serial Number: XYZ456789012345678</p><h3>UdiCarriers</h3><table class="grid"><tr><td>-</td><td><b>DeviceIdentifier</b></td><td><b>Issuer</b></td><td><b>Jurisdiction</b></td><td><b>CarrierHRF</b></td><td><b>EntryType</b></td></tr><tr><td>*</td><td>007444534255003288</td><td><a href="http://hl7.org/fhir/NamingSystem/hibcc">http://hl7.org/fhir/NamingSystem/hibcc</a></td><td><a href="http://hl7.org/fhir/NamingSystem/fda-udi">http://hl7.org/fhir/NamingSystem/fda-udi</a></td><td>+H123PARTNO1234567890120/$$420020216LOT123456789012345/SXYZ456789012345678/16D20130202C</td><td>manual</td></tr></table><p><b>status</b>: inactive</p><p><b>manufacturer</b>: GlobalMed, Inc</p><p><b>manufactureDate</b>: 2013-02-02</p><p><b>expirationDate</b>: 2020-02-02</p><p><b>lotNumber</b>: LOT123456789012345</p><h3>DeviceNames</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>Ultra Implantable</td><td>user-friendly-name</td></tr></table><h3>Associations</h3><table class="grid"><tr><td>-</td><td><b>Status</b></td><td><b>HumanSubject</b></td></tr><tr><td>*</td><td>attached <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (device-association-status#attached)</span></td><td><a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</td></tr></table></div></text><identifier>
+		    <!--  The serial number which is a component of the production identifier (PI), a conditional, variable portion of a UDI. The identifier.type code should be set to “SNO”(Serial Number) and the system left empty.   -->
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<code value="SNO"/>
+			</coding>
+		</type>
+		<value value="XYZ456789012345678"/>
+		    <!--    this is the serial number   -->
+	</identifier>
+	<udiCarrier>
+	    <deviceIdentifier value="007444534255003288"/>
+		<issuer value="http://hl7.org/fhir/NamingSystem/hibcc"/>
+		<jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
+		<carrierHRF value="+H123PARTNO1234567890120/$$420020216LOT123456789012345/SXYZ456789012345678/16D20130202C"/>
+		<entryType value="manual"/>
+	</udiCarrier>
+	<status value="inactive"/>
+	<manufacturer value="GlobalMed, Inc"/>
+	<manufactureDate value="2013-02-02"/>
+	<expirationDate value="2020-02-02"/>
+	<lotNumber value="LOT123456789012345"/>
+	<deviceName>
+      <name value="Ultra Implantable"/>
+      <type value="user-friendly-name"/>
+    </deviceName>
+	<association>
+	  <status> 
+	     <coding>
+		   <system value="http://terminology.hl7.org/CodeSystem/device-association-status"/>
+           <code value="attached"/>
+		 </coding>
+	  </status>
+      <humanSubject>
+		<reference value="Patient/example"/>
+	  </humanSubject>
+	</association>
+</Device>

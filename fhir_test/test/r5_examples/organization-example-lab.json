@@ -12,16 +12,20 @@
     }
   ],
   "name": "Clinical Lab",
-  "telecom": [
+  "contact": [
     {
-      "system": "phone",
-      "value": "+1 555 234 1234",
-      "use": "work"
-    },
-    {
-      "system": "email",
-      "value": "contact@labs.acme.org",
-      "use": "work"
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+1 555 234 1234",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "contact@labs.acme.org",
+          "use": "work"
+        }
+      ]
     }
   ],
   "meta": {

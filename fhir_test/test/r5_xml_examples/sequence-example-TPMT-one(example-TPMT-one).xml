@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><MolecularSequence xmlns="http://hl7.org/fhir">
+    <id value="example-TPMT-one"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MolecularSequence</b><a name="example-TPMT-one"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MolecularSequence "example-TPMT-one" </p></div><p><b>type</b>: dna</p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><blockquote><p><b>relative</b></p><p><b>coordinateSystem</b>: 1-based character counting <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA30102-0)</span></p><h3>StartingSequences</h3><table class="grid"><tr><td>-</td><td><b>Sequence[x]</b></td><td><b>WindowStart</b></td><td><b>WindowEnd</b></td><td><b>Strand</b></td></tr><tr><td>*</td><td>NT_007592.15 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (nuccore#NT_007592.15)</span></td><td>18130918</td><td>18143955</td><td>watson</td></tr></table><h3>Edits</h3><table class="grid"><tr><td>-</td><td><b>Start</b></td><td><b>End</b></td><td><b>ReplacementSequence</b></td><td><b>ReplacedSequence</b></td></tr><tr><td>*</td><td>18139214</td><td>18139214</td><td>A</td><td>G</td></tr></table></blockquote></div></text><type value="dna"/>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <relative>
+      <coordinateSystem>
+          <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA30102-0"/>
+              <display value="1-based character counting"/>
+          </coding>
+      </coordinateSystem>
+      <startingSequence>
+          <sequenceCodeableConcept>
+            <coding>
+              <system value="http://www.ncbi.nlm.nih.gov/nuccore"/>
+              <code value="NT_007592.15"/>
+            </coding>
+          </sequenceCodeableConcept>
+          <windowStart value="18130918"/>
+          <windowEnd value="18143955"/>
+          <strand value="watson"/>
+      </startingSequence>
+      <edit>
+          <start value="18139214"/>
+          <end value="18139214"/>
+          <replacementSequence value="A"/>
+          <replacedSequence value="G"/>
+      </edit>
+    </relative>
+</MolecularSequence>

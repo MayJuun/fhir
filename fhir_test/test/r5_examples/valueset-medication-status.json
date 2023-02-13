@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "medication-status",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -30,11 +30,18 @@
     {
       "system": "urn:ietf:rfc:3986",
       "value": "urn:oid:2.16.840.1.113883.4.642.3.376"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.363"
     }
   ],
-  "version": "4.6.0",
-  "name": "Medication Status Codes",
+  "version": "5.0.0-snapshot3",
+  "name": "MedicationStatusCodes",
+  "title": "Medication Status Codes",
   "status": "draft",
+  "experimental": false,
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -47,6 +54,17 @@
     }
   ],
   "description": "Medication Status Codes",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

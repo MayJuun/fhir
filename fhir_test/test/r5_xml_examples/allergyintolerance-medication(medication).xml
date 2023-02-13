@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="medication"/>
+  
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: AllergyIntolerance</b><a name="medication"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource AllergyIntolerance "medication" </p></div><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Unconfirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-allergyintolerance-verification.html">AllergyIntolerance Verification Status</a>#unconfirmed)</span></p><p><b>category</b>: medication</p><p><b>criticality</b>: high</p><p><b>code</b>: <span title="  subtance, coded from RxNorm  ">Penicillin G <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#7980)</span></span></p><p><b>patient</b>: <span title="  the patient that actually has the risk of adverse reaction  "><a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</span></p><p><b>recordedDate</b>: <span title="  the date that this entry was recorded  ">2010-03-01</span></p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Author <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#author)</span></td><td><a href="practitioner-example.html">Practitioner/example</a> "Adam CAREFUL"</td></tr></table><blockquote><p><b>reaction</b></p><h3>Manifestations</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Hives <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#247472004)</span></td></tr></table></blockquote></div></text><clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <code value="unconfirmed"/>
+      <display value="Unconfirmed"/>
+    </coding>
+  </verificationStatus>
+
+  <category value="medication"/>
+     
+  <criticality value="high"/> 
+
+      <!--   subtance, coded from RxNorm   -->
+  <code>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="7980"/>
+      <display value="Penicillin G"/>
+    </coding>
+  </code>
+ 
+      <!--   the patient that actually has the risk of adverse reaction   -->
+  <patient>
+    <reference value="Patient/example"/>
+  </patient>
+
+      <!--   the date that this entry was recorded   -->  
+  <recordedDate value="2010-03-01"/>
+  
+      <!--   who made the record / last updated it   -->
+  <participant> 
+    <function> 
+      <coding> 
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/> 
+        <code value="author"/> 
+        <display value="Author"/> 
+      </coding> 
+    </function> 
+    <actor> 
+      <reference value="Practitioner/example"/> 
+    </actor> 
+  </participant> 
+  
+  <reaction> 
+    <manifestation>
+		<concept>
+		  <coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="247472004"/>
+			<display value="Hives"/>
+		  </coding>
+		</concept>
+    </manifestation>
+  </reaction>
+</AllergyIntolerance>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationUsage xmlns="http://hl7.org/fhir">
+  <id value="example005"/>
+
+
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationUsage</b><a name="example005"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationUsage "example005" </p></div><p><b>status</b>: entered-in-error</p><h3>Medications</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Amoxicillin (product) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#27658006)</span></td></tr></table><p><b>subject</b>: <a href="patient-example-a.html">Patient/pat1: Donald Duck</a> "Donald DUCK"</p><p><b>encounter</b>: <a href="encounter-example-f203-20130311.html">Encounter/f203</a></p><p><b>effective</b>: 2014-01-23</p><p><b>dateAsserted</b>: 2015-02-22</p><p><b>informationSource</b>: <a href="patient-example-a.html">Patient/pat1: Donald Duck</a> "Donald DUCK"</p><p><b>note</b>: Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin</p></div></text><status value="entered-in-error"/>
+  <medication>
+    <concept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="27658006"/>
+      <display value="Amoxicillin (product)"/>
+    </coding>
+    </concept>
+  </medication>
+  <subject>
+    <reference value="Patient/pat1"/>
+    <display value="Donald Duck"/> 
+  </subject>
+  <encounter>
+    <reference value="Encounter/f203"/>
+  </encounter>
+  <effectiveDateTime value="2014-01-23"/>
+  <dateAsserted value="2015-02-22"/>
+  <informationSource>
+    <reference value="Patient/pat1"/>
+    <display value="Donald Duck"/> 
+  </informationSource>
+
+
+  <note>
+    <text value="Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin"/>
+  </note>
+</MedicationUsage>

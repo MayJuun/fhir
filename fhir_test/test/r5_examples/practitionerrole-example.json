@@ -55,47 +55,57 @@
       "reference": "HealthcareService/example"
     }
   ],
-  "telecom": [
+  "contact": [
     {
-      "system": "phone",
-      "value": "(03) 5555 6473",
-      "use": "work"
-    },
-    {
-      "system": "email",
-      "value": "adam.southern@example.org",
-      "use": "work"
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "(03) 5555 6473",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "adam.southern@example.org",
+          "use": "work"
+        }
+      ]
     }
   ],
-  "availableTime": [
+  "availability": [
     {
-      "daysOfWeek": [
-        "mon",
-        "tue",
-        "wed"
+      "availableTime": [
+        {
+          "daysOfWeek": [
+            "mon",
+            "tue",
+            "wed"
+          ],
+          "availableStartTime": "09:00:00",
+          "availableEndTime": "16:30:00"
+        },
+        {
+          "daysOfWeek": [
+            "thu",
+            "fri"
+          ],
+          "availableStartTime": "09:00:00",
+          "availableEndTime": "12:00:00"
+        }
       ],
-      "availableStartTime": "09:00:00",
-      "availableEndTime": "16:30:00"
-    },
-    {
-      "daysOfWeek": [
-        "thu",
-        "fri"
-      ],
-      "availableStartTime": "09:00:00",
-      "availableEndTime": "12:00:00"
+      "notAvailableTime": [
+        {
+          "description": "Adam will be on extended leave during May 2017",
+          "during": {
+            "start": "2017-05-01",
+            "end": "2017-05-20"
+          }
+        },
+        {
+          "description": "Adam is generally unavailable on public holidays and during the Christmas/New Year break"
+        }
+      ]
     }
   ],
-  "notAvailable": [
-    {
-      "description": "Adam will be on extended leave during May 2017",
-      "during": {
-        "start": "2017-05-01",
-        "end": "2017-05-20"
-      }
-    }
-  ],
-  "availabilityExceptions": "Adam is generally unavailable on public holidays and during the Christmas/New Year break",
   "endpoint": [
     {
       "reference": "Endpoint/example"

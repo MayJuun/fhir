@@ -9,12 +9,17 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "partner-name",
   "status": "draft",
+  "experimental": false,
   "date": "2015-11-22",
   "publisher": "Health Level Seven, Inc. - FHIR Core WG",
   "contact": [
@@ -28,7 +33,7 @@
     }
   ],
   "description": "The portion of the family name that is derived from the person\u0027s partner\u0027s surname, as distinguished from any portion that is derived from the surname of the person\u0027s own name.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "v2",
@@ -73,7 +78,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -81,7 +85,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -117,7 +120,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -165,7 +168,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -173,7 +175,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -240,7 +241,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],

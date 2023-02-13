@@ -93,10 +93,14 @@
             "reference": "HealthcareService/example"
           }
         ],
-        "telecom": [
+        "contact": [
           {
-            "system": "email",
-            "value": "dr.adam.careful@example.org"
+            "telecom": [
+              {
+                "system": "email",
+                "value": "dr.adam.careful@example.org"
+              }
+            ]
           }
         ],
         "endpoint": [
@@ -154,23 +158,35 @@
             "text": "On call physcologist"
           }
         ],
-        "telecom": [
+        "contact": [
           {
-            "system": "phone",
-            "value": "555 123456",
-            "use": "mobile"
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "555 123456",
+                "use": "mobile"
+              }
+            ]
           }
         ],
-        "availableTime": [
+        "availability": [
           {
-            "daysOfWeek": [
-              "sat",
-              "sun"
+            "availableTime": [
+              {
+                "daysOfWeek": [
+                  "sat",
+                  "sun"
+                ],
+                "allDay": true
+              }
             ],
-            "allDay": true
+            "notAvailableTime": [
+              {
+                "description": "Public Holidays"
+              }
+            ]
           }
-        ],
-        "availabilityExceptions": "Public Holidays"
+        ]
       }
     },
     {

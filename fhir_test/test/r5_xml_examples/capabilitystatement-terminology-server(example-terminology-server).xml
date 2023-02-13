@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="example-terminology-server"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ACMETerminologyService—CapabilityStatement</h2>
+      <div>
+        <p>Example capability statement for a Terminology Server. A server can support more fucntionality than defined here, but this is the minimum amount</p>
+
+      </div>
+      <table>
+        <tr>
+          <td>Mode</td>
+          <td>SERVER</td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>Transaction</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>System History</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>System Search</td>
+          <td/>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>
+            <b>Resource Type</b>
+          </th>
+          <th>
+            <b>Profile</b>
+          </th>
+          <th>
+            <b title="GET a resource (read interaction)">Read</b>
+          </th>
+          <th>
+            <b title="GET all set of resources of the type (search interaction)">Search</b>
+          </th>
+          <th>
+            <b title="PUT a new resource version (update interaction)">Update</b>
+          </th>
+          <th>
+            <b title="POST a new resource (create interaction)">Create</b>
+          </th>
+        </tr>
+        <tr>
+          <td>CodeSystem</td>
+          <td>
+            <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">http://hl7.org/fhir/StructureDefinition/CodeSystem</a>
+          </td>
+          <td>y</td>
+          <td>y</td>
+          <td/>
+          <td/>
+        </tr>
+        <tr>
+          <td>ValueSet</td>
+          <td>
+            <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">http://hl7.org/fhir/StructureDefinition/ValueSet</a>
+          </td>
+          <td>y</td>
+          <td>y</td>
+          <td/>
+          <td/>
+        </tr>
+        <tr>
+          <td>ConceptMap</td>
+          <td>
+            <a href="http://hl7.org/fhir/StructureDefinition/ConceptMap">http://hl7.org/fhir/StructureDefinition/ConceptMap</a>
+          </td>
+          <td>y</td>
+          <td>y</td>
+          <td/>
+          <td/>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="ACMETerminologyService—CapabilityStatement"/>
+  <title value="ACME Terminology Service — Capability Statement"/>
+  <status value="draft"/>
+  <date value="2022-09-01"/>
+  <description value="Example capability statement for a Terminology Server. A server can support more fucntionality than defined here, but this is the minimum amount"/>
+  <kind value="instance"/>
+  <implementation>
+    <description value="The ACME FHIR Terminology Server"/>
+  </implementation>
+  <fhirVersion value="5.0.0-snapshot3"/>
+  <format value="json"/>
+  <format value="xml"/>
+  <rest>
+    <mode value="server"/>
+    <resource>
+      <type value="CodeSystem"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/CodeSystem"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="url"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CodeSystem-url"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <name value="version"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CodeSystem-version"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CodeSystem-name"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="title"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CodeSystem-title"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CodeSystem-status"/>
+        <type value="token"/>
+      </searchParam>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="expand"/>
+        <definition value="http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"/>
+      </operation>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="expand"/>
+        <definition value="http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code"/>
+      </operation>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="expand"/>
+        <definition value="http://hl7.org/fhir/OperationDefinition/CodeSystem-subsumes"/>
+      </operation>
+    </resource>
+    <resource>
+      <type value="ValueSet"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/ValueSet"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="url"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ValueSet-url"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <name value="version"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ValueSet-version"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ValueSet-name"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="title"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ValueSet-title"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ValueSet-status"/>
+        <type value="token"/>
+      </searchParam>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="expand"/>
+        <definition value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/>
+      </operation>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="expand"/>
+        <definition value="http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code"/>
+      </operation>
+    </resource>
+    <resource>
+      <type value="ConceptMap"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/ConceptMap"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="url"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ConceptMap-url"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <name value="version"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ConceptMap-version"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ConceptMap-name"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="title"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ConceptMap-title"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ConceptMap-status"/>
+        <type value="token"/>
+      </searchParam>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="expand"/>
+        <definition value="http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"/>
+      </operation>
+    </resource>
+  </rest>
+</CapabilityStatement>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="sc-adverse-event-status"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>AdverseEventStatusCanonicalMap (http://hl7.org/fhir/ConceptMap/sc-adverse-event-status)</h2>
+      <p>Mapping from 
+        <a href="valueset-adverse-event-status.html">http://hl7.org/fhir/ValueSet/adverse-event-status</a> to 
+        <a href="valueset-resource-status.html">http://hl7.org/fhir/ValueSet/resource-status</a>
+      </p>
+      <p>DRAFT. Published on ?ngen-10? by HL7 International - Patient Care WG (
+        <a href="http://www.hl7.org/Special/committees/patientcare/">http://www.hl7.org/Special/com...</a>). 
+      </p>
+      <div>
+        <p>Canonical Mapping for &quot;Codes identifying the lifecycle stage of an adverse event.&quot;</p>
+
+      </div>
+      <br/>
+      <p>
+        <b>Group 1</b>Mapping from 
+        <a href="codesystem-event-status.html">EventStatus</a> to 
+        <a href="codesystem-resource-status.html">Canonical Status Codes for FHIR Resources</a>
+      </p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Source Code</b>
+          </td>
+          <td>
+            <b>Relationship</b>
+          </td>
+          <td>
+            <b>Target Code</b>
+          </td>
+        </tr>
+        <tr>
+          <td>entered-in-error</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>error</td>
+        </tr>
+        <tr>
+          <td>in-progress</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>completed</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>complete</td>
+        </tr>
+        <tr>
+          <td>unknown</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>unknown</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ConceptMap/sc-adverse-event-status"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="AdverseEventStatusCanonicalMap"/>
+  <title value="Canonical Mapping for &quot;Adverse Event Status&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International - Patient Care WG"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare/"/>
+    </telecom>
+  </contact>
+  <description value="Canonical Mapping for &quot;Codes identifying the lifecycle stage of an adverse event.&quot;"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <sourceScopeCanonical value="http://hl7.org/fhir/ValueSet/adverse-event-status"/>
+  <targetScopeCanonical value="http://hl7.org/fhir/ValueSet/resource-status"/>
+  <group>
+    <source value="http://hl7.org/fhir/event-status"/>
+    <target value="http://hl7.org/fhir/resource-status"/>
+    <element>
+      <code value="entered-in-error"/>
+      <target>
+        <code value="error"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="in-progress"/>
+      <target>
+        <code value="active"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="completed"/>
+      <target>
+        <code value="complete"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="unknown"/>
+      <target>
+        <code value="unknown"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

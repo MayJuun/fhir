@@ -1,14 +1,16 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Consent1",
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Consent1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Community Based Collaborative Care)",
   "item": [
     {
@@ -74,7 +76,7 @@
                 }
               ],
               "linkId": "Consent.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -266,7 +268,7 @@
                 }
               ],
               "linkId": "Consent.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -518,8 +520,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Practitioner, Group"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Practitioner, Group, Group"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -545,7 +547,7 @@
               "valueString": "datetime"
             }
           ],
-          "linkId": "Consent.dateTime",
+          "linkId": "Consent.date",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -565,13 +567,65 @@
                   }
                 }
               ],
-              "linkId": "Consent.dateTime-flyover",
-              "text": "Date and time the consent instance was agreed to.",
+              "linkId": "Consent.date-flyover",
+              "text": "Date the consent instance was agreed to.",
               "type": "display"
             },
             {
-              "linkId": "Consent.dateTime.value",
-              "text": "When consent was agreed to",
+              "linkId": "Consent.date.value",
+              "text": "Fully executed date of the consent",
+              "type": "dateTime",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Period"
+            }
+          ],
+          "linkId": "Consent.period",
+          "text": "Effective period for this Consent",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Consent.period-flyover",
+              "text": "Effective period for this Consent Resource and all provisions unless specified in that provision.",
+              "type": "display"
+            },
+            {
+              "linkId": "Consent.period.low",
+              "text": "start:",
+              "type": "dateTime",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Consent.period.end",
+              "text": "end:",
               "type": "dateTime",
               "required": false,
               "repeats": false
@@ -612,8 +666,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CareTeam, HealthcareService, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CareTeam, HealthcareService, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole, PractitionerRole"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -662,8 +716,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CareTeam, HealthcareService, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CareTeam, HealthcareService, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole, PractitionerRole"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -712,8 +766,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "HealthcareService, Organization, Patient, Practitioner"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "HealthcareService, Organization, Patient, Practitioner, Practitioner"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -762,8 +816,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "HealthcareService, Organization, Patient, Practitioner"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "HealthcareService, Organization, Patient, Practitioner, Practitioner"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -846,8 +900,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Consent, DocumentReference, Contract, QuestionnaireResponse"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Consent, DocumentReference, Contract, QuestionnaireResponse, QuestionnaireResponse"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1081,8 +1135,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Resource"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Resource, Resource"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1177,8 +1231,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "DocumentReference"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "DocumentReference, DocumentReference"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1458,8 +1512,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Organization, Practitioner, PractitionerRole"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Organization, Practitioner, PractitionerRole, PractitionerRole"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1512,8 +1566,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Patient, RelatedPerson"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Patient, RelatedPerson, RelatedPerson"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1734,7 +1788,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.type-flyover",
-                  "text": "Action  to take - permit or deny - when the rule conditions are met.  Not permitted in root rule, required in all nested rules.",
+                  "text": "Action  to take - permit or deny - when the provision conditions are met.",
                   "type": "display"
                 },
                 {
@@ -1759,7 +1813,7 @@
                 }
               ],
               "linkId": "Consent.provision.period",
-              "text": "Timeframe for this rule",
+              "text": "Timeframe for this provision",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1780,7 +1834,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.period-flyover",
-                  "text": "The timeframe in this rule is valid. This is the bound effective time of the consent and should be in the base provision in the Consent resource.",
+                  "text": "Timeframe for this provision. This is the bound effective time of the consent and should be in the base provision in the Consent resource.",
                   "type": "display"
                 },
                 {
@@ -1801,7 +1855,7 @@
             },
             {
               "linkId": "Consent.provision.actor",
-              "text": "Who|what controlled by this rule (or group, by role)",
+              "text": "Who|what controlled by this provision (or group, by role)",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1822,7 +1876,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.actor-flyover",
-                  "text": "Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. \u0027admitting officers\u0027).",
+                  "text": "Who or what is controlled by this provision. Use group to identify a set of actors by some property they share (e.g. \u0027admitting officers\u0027).",
                   "type": "display"
                 },
                 {
@@ -2016,8 +2070,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Device, Group, CareTeam, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Device, Group, CareTeam, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole, PractitionerRole"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2042,7 +2096,7 @@
                 }
               ],
               "linkId": "Consent.provision.action",
-              "text": "Actions controlled by this rule",
+              "text": "Actions controlled by this provision",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2063,7 +2117,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.action-flyover",
-                  "text": "Actions controlled by this Rule. Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is \u0027read\u0027.",
+                  "text": "Actions controlled by this provision. Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is \u0027read\u0027.",
                   "type": "display"
                 },
                 {
@@ -2152,12 +2206,12 @@
                     }
                   ],
                   "linkId": "Consent.provision.purpose-flyover",
-                  "text": "The context of the activities a user is taking - why the user is accessing the data - that are controlled by this rule. When the purpose of use tag is on the data, access request purpose of use shall not conflict.",
+                  "text": "The context of the activities a user is taking - why the user is accessing the data - that are controlled by this provision. When the purpose of use tag is on the data, access request purpose of use shall not conflict.",
                   "type": "display"
                 },
                 {
                   "linkId": "Consent.provision.purpose.value",
-                  "text": "Context of activities covered by this rule",
+                  "text": "Context of activities covered by this provision",
                   "type": "coding",
                   "required": false,
                   "repeats": false,
@@ -2172,7 +2226,7 @@
                   "valueString": "Coding"
                 }
               ],
-              "linkId": "Consent.provision.class",
+              "linkId": "Consent.provision.documentType",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2192,13 +2246,54 @@
                       }
                     }
                   ],
-                  "linkId": "Consent.provision.class-flyover",
-                  "text": "The class of information covered by this rule. The type can be a FHIR resource type, a profile on a type, or a CDA document, or some other type that indicates what sort of information the consent relates to. Multiple types are or\u0027ed together. The intention of the contentType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.",
+                  "linkId": "Consent.provision.documentType-flyover",
+                  "text": "The documentType(s) covered by this provision. The type can be a CDA document, or some other type that indicates what sort of information the consent relates to. Multiple types are or\u0027ed together. The intention of the documentType element is that the codes refer to document types defined in a standard somewhere.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Consent.provision.class.value",
+                  "linkId": "Consent.provision.documentType.value",
                   "text": "e.g. Resource Type, Profile, CDA, etc.",
+                  "type": "coding",
+                  "required": false,
+                  "repeats": false,
+                  "answerConstraint": "optionsOnly"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "Coding"
+                }
+              ],
+              "linkId": "Consent.provision.resourceType",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "Consent.provision.resourceType-flyover",
+                  "text": "The resourceType(s) covered by this provision. The type can be a FHIR resource type or a profile on a type that indicates what information the consent relates to. Multiple types are or\u0027ed together. The intention of the resourceType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "Consent.provision.resourceType.value",
+                  "text": "e.g. Resource Type, Profile, etc.",
                   "type": "coding",
                   "required": false,
                   "repeats": false,
@@ -2235,7 +2330,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.code-flyover",
-                  "text": "If this code is found in an instance, then the rule applies. Typical use of this is a Document code with class \u003d CDA.",
+                  "text": "If this code is found in an instance, then the provision applies.",
                   "type": "display"
                 },
                 {
@@ -2267,7 +2362,7 @@
                 }
               ],
               "linkId": "Consent.provision.dataPeriod",
-              "text": "Timeframe for data controlled by this rule",
+              "text": "Timeframe for data controlled by this provision",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2288,7 +2383,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.dataPeriod-flyover",
-                  "text": "Clinical or Operational Relevant period of time that bounds the data controlled by this rule. This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.",
+                  "text": "Clinical or Operational Relevant period of time that bounds the data controlled by this provision. This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.",
                   "type": "display"
                 },
                 {
@@ -2309,7 +2404,7 @@
             },
             {
               "linkId": "Consent.provision.data",
-              "text": "Data controlled by this rule",
+              "text": "Data controlled by this provision",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2330,7 +2425,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.data-flyover",
-                  "text": "The resources controlled by this rule if specific resources are referenced.",
+                  "text": "The resources controlled by this provision if specific resources are referenced.",
                   "type": "display"
                 },
                 {
@@ -2524,8 +2619,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Resource"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Resource, Resource"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2583,7 +2678,7 @@
             },
             {
               "linkId": "Consent.provision.provision",
-              "text": "Nested Exception Rules",
+              "text": "Nested Exception Provisions",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2604,7 +2699,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.provision-flyover",
-                  "text": "Rules which provide exceptions to the base rule or subrules.",
+                  "text": "Provisions which provide exceptions to the base provision or subprovisions.",
                   "type": "display"
                 },
                 {
@@ -2739,7 +2834,7 @@
                         }
                       ],
                       "linkId": "Consent.provision.type-flyover",
-                      "text": "Action  to take - permit or deny - when the rule conditions are met.  Not permitted in root rule, required in all nested rules.",
+                      "text": "Action  to take - permit or deny - when the provision conditions are met.",
                       "type": "display"
                     },
                     {
@@ -2764,7 +2859,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.period",
-                  "text": "Timeframe for this rule",
+                  "text": "Timeframe for this provision",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2785,7 +2880,7 @@
                         }
                       ],
                       "linkId": "Consent.provision.period-flyover",
-                      "text": "The timeframe in this rule is valid. This is the bound effective time of the consent and should be in the base provision in the Consent resource.",
+                      "text": "Timeframe for this provision. This is the bound effective time of the consent and should be in the base provision in the Consent resource.",
                       "type": "display"
                     },
                     {
@@ -2805,8 +2900,8 @@
                   ]
                 },
                 {
-                  "linkId": "Consent.provision.actor",
-                  "text": "Who|what controlled by this rule (or group, by role)",
+                  "linkId": "Consent.provision.provision.actor",
+                  "text": "Who|what controlled by this provision (or group, by role)",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2827,7 +2922,7 @@
                         }
                       ],
                       "linkId": "Consent.provision.actor-flyover",
-                      "text": "Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. \u0027admitting officers\u0027).",
+                      "text": "Who or what is controlled by this provision. Use group to identify a set of actors by some property they share (e.g. \u0027admitting officers\u0027).",
                       "type": "display"
                     },
                     {
@@ -3021,8 +3116,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Device, Group, CareTeam, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Device, Group, CareTeam, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole, PractitionerRole"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3047,7 +3142,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.action",
-                  "text": "Actions controlled by this rule",
+                  "text": "Actions controlled by this provision",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -3068,7 +3163,7 @@
                         }
                       ],
                       "linkId": "Consent.provision.action-flyover",
-                      "text": "Actions controlled by this Rule. Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is \u0027read\u0027.",
+                      "text": "Actions controlled by this provision. Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is \u0027read\u0027.",
                       "type": "display"
                     },
                     {
@@ -3157,12 +3252,12 @@
                         }
                       ],
                       "linkId": "Consent.provision.purpose-flyover",
-                      "text": "The context of the activities a user is taking - why the user is accessing the data - that are controlled by this rule. When the purpose of use tag is on the data, access request purpose of use shall not conflict.",
+                      "text": "The context of the activities a user is taking - why the user is accessing the data - that are controlled by this provision. When the purpose of use tag is on the data, access request purpose of use shall not conflict.",
                       "type": "display"
                     },
                     {
                       "linkId": "Consent.provision.purpose.value",
-                      "text": "Context of activities covered by this rule",
+                      "text": "Context of activities covered by this provision",
                       "type": "coding",
                       "required": false,
                       "repeats": false,
@@ -3177,7 +3272,7 @@
                       "valueString": "Coding"
                     }
                   ],
-                  "linkId": "Consent.provision.class",
+                  "linkId": "Consent.provision.documentType",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -3197,13 +3292,54 @@
                           }
                         }
                       ],
-                      "linkId": "Consent.provision.class-flyover",
-                      "text": "The class of information covered by this rule. The type can be a FHIR resource type, a profile on a type, or a CDA document, or some other type that indicates what sort of information the consent relates to. Multiple types are or\u0027ed together. The intention of the contentType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.",
+                      "linkId": "Consent.provision.documentType-flyover",
+                      "text": "The documentType(s) covered by this provision. The type can be a CDA document, or some other type that indicates what sort of information the consent relates to. Multiple types are or\u0027ed together. The intention of the documentType element is that the codes refer to document types defined in a standard somewhere.",
                       "type": "display"
                     },
                     {
-                      "linkId": "Consent.provision.class.value",
+                      "linkId": "Consent.provision.documentType.value",
                       "text": "e.g. Resource Type, Profile, CDA, etc.",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Coding"
+                    }
+                  ],
+                  "linkId": "Consent.provision.resourceType",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "Consent.provision.resourceType-flyover",
+                      "text": "The resourceType(s) covered by this provision. The type can be a FHIR resource type or a profile on a type that indicates what information the consent relates to. Multiple types are or\u0027ed together. The intention of the resourceType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "Consent.provision.resourceType.value",
+                      "text": "e.g. Resource Type, Profile, etc.",
                       "type": "coding",
                       "required": false,
                       "repeats": false,
@@ -3240,7 +3376,7 @@
                         }
                       ],
                       "linkId": "Consent.provision.code-flyover",
-                      "text": "If this code is found in an instance, then the rule applies. Typical use of this is a Document code with class \u003d CDA.",
+                      "text": "If this code is found in an instance, then the provision applies.",
                       "type": "display"
                     },
                     {
@@ -3272,7 +3408,7 @@
                     }
                   ],
                   "linkId": "Consent.provision.dataPeriod",
-                  "text": "Timeframe for data controlled by this rule",
+                  "text": "Timeframe for data controlled by this provision",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -3293,7 +3429,7 @@
                         }
                       ],
                       "linkId": "Consent.provision.dataPeriod-flyover",
-                      "text": "Clinical or Operational Relevant period of time that bounds the data controlled by this rule. This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.",
+                      "text": "Clinical or Operational Relevant period of time that bounds the data controlled by this provision. This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.",
                       "type": "display"
                     },
                     {
@@ -3313,8 +3449,8 @@
                   ]
                 },
                 {
-                  "linkId": "Consent.provision.data",
-                  "text": "Data controlled by this rule",
+                  "linkId": "Consent.provision.provision.data",
+                  "text": "Data controlled by this provision",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -3335,7 +3471,7 @@
                         }
                       ],
                       "linkId": "Consent.provision.data-flyover",
-                      "text": "The resources controlled by this rule if specific resources are referenced.",
+                      "text": "The resources controlled by this provision if specific resources are referenced.",
                       "type": "display"
                     },
                     {
@@ -3529,8 +3665,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Resource"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Resource, Resource"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3554,7 +3690,7 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "Consent.provision.expression",
+                  "linkId": "Consent.provision.provision.expression",
                   "text": "A computable expression of the consent",
                   "type": "group",
                   "required": false,
@@ -3592,14 +3728,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

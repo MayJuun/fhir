@@ -3,8 +3,17 @@
   "id": "current-allergies",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003ePatient Peter Chalmers, DOB \u003d Dec 25, 1974, MRN \u003d 12345 (Acme Healthcare) has the following allergies\u003c/p\u003e\n      \u003cul\u003e\n        \u003cli\u003ecashew nut allergenic extract Injectable Product (\u003cb\u003eHigh\u003c/b\u003e)\u003c/li\u003e\n        \u003cli\u003eAllergenic extract, penicillin (high)\u003c/li\u003e\n      \u003c/ul\u003e\n    \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eList prepared for Dr Adam Careful\u003c/p\u003e\n      \u003cp\u003ePatient Peter Chalmers, DOB \u003d Dec 25, 1974, MRN \u003d 12345 (Acme Healthcare) has the following allergies\u003c/p\u003e\n      \u003cul\u003e\n        \u003cli\u003ecashew nut allergenic extract Injectable Product (\u003cb\u003eHigh\u003c/b\u003e)\u003c/li\u003e\n        \u003cli\u003eAllergenic extract, penicillin (high)\u003c/li\u003e\n      \u003c/ul\u003e\n    \u003c/div\u003e"
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/list-for",
+      "valueReference": {
+        "reference": "Patient/example",
+        "display": "Dr Adam Careful"
+      }
+    }
+  ],
   "status": "current",
   "mode": "working",
   "title": "Current Allergy List",

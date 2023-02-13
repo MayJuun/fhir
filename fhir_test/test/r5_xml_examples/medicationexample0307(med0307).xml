@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+  <id value="med0307"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Medication</b><a name="med0307"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Medication "med0307" </p></div><p><b>code</b>: Novolog 100u/ml <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ndc.html">National drug codes</a>#0169-7501-11)</span></p><p><b>marketingAuthorizationHolder</b>: <a name="mmanu"> </a></p><blockquote><p/><p><a name="mmanu"> </a></p><p><b>name</b>: Medication Manufacturer</p></blockquote><p><b>doseForm</b>: Injection solution (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385219001)</span></p><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Insulin Aspart (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#325072002)</span></td></tr></table><p><b>strength</b>: 100 U<span style="background: LightGoldenRodYellow"> (Details: UCUM code U = 'U')</span>/1 mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span></p></blockquote><h3>Batches</h3><table class="grid"><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>12345</td><td>2019-10-31</td></tr></table></div></text><contained>
+    <Organization>
+      <id value="mmanu"/>
+      <name value="Medication Manufacturer"/>
+    </Organization>
+  </contained>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/ndc"/>
+      <code value="0169-7501-11"/>
+      <display value="Novolog 100u/ml"/>
+    </coding>
+  </code> 
+  <marketingAuthorizationHolder>
+    <reference value="#mmanu"/>
+  </marketingAuthorizationHolder>
+    <doseForm>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="385219001"/>
+        <display value="Injection solution (qualifier value)"/>
+      </coding>
+    </doseForm>
+    <ingredient>
+      <item>
+      <concept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="325072002"/>
+          <display value="Insulin Aspart (substance)"/>
+        </coding>
+      </concept>
+      </item>
+      <strengthRatio>
+        <numerator>
+          <value value="100"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="U"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mL"/>
+        </denominator>
+      </strengthRatio>
+    </ingredient>
+  <batch>
+    <lotNumber value="12345"/>
+    <expirationDate value="2019-10-31"/>
+  </batch>
+  
+  
+</Medication>

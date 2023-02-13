@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><Organization xmlns="http://hl7.org/fhir">
+  <id value="f002"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="f002"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization "f002" </p></div><p><b>active</b>: true</p><p><b>type</b>: Hospital Department <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-organization-type.html">Organization type</a>#dept)</span></p><p><b>name</b>: Burgers UMC Cardiology unit</p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Purpose</b></td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td>*</td><td>Administrative <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-contactentity-type.html">Contact entity type</a>#ADMIN)</span></td><td>mevr. D. de Haan</td><td>ph: 022-655 2321, <a href="mailto:cardio@burgersumc.nl">cardio@burgersumc.nl</a>, fax: 022-655 2322</td><td>South Wing, floor 2 </td></tr></table><p><b>partOf</b>: <a href="organization-example-f001-burgers.html">Organization/f001</a> "Burgers University Medical Center"</p></div></text><active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="dept"/>
+      <display value="Hospital Department"/>
+    </coding>
+  </type>
+  <name value="Burgers UMC Cardiology unit"/>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+        <code value="ADMIN"/>
+      </coding>
+    </purpose>
+    <name>
+      <text value="mevr. D. de Haan"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="022-655 2321"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cardio@burgersumc.nl"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="022-655 2322"/>
+    </telecom>
+    <address>
+      <line value="South Wing, floor 2"/>
+    </address>
+  </contact>
+  <partOf>
+    <reference value="Organization/f001"/>
+  </partOf>
+</Organization>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="nka"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>No Known Allergy</p>
+      <p>recordedDate:2015-08-06</p>
+    </div>   
+  </text>
+
+     
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="716186003"/>
+      <display value="No Known Allergy (situation)"/>
+    </coding>
+    <text value="NKA"/>
+  </code>
+
+  <patient>
+    <reference value="Patient/mom"/>
+  </patient>
+
+    <!--  the date that this entry was recorded  -->  
+  <recordedDate value="2015-08-06T15:37:31-06:00"/>
+  
+    <!--  who made the record / last updated it  -->
+  <participant> 
+    <function> 
+      <coding> 
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/> 
+        <code value="author"/> 
+        <display value="Author"/> 
+      </coding> 
+    </function> 
+    <actor> 
+      <reference value="Practitioner/example"/> 
+    </actor> 
+  </participant> 
+  
+</AllergyIntolerance>

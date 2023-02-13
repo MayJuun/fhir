@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+	<id value="example-import"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="example-import"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance "example-import" </p></div><p><b>target</b>: </p><ul><li><a href="condition-example.html">Condition/example</a></li><li><a href="condition-example2.html">Condition/example2</a></li><li><a href="encounter-example.html">Encounter/example</a></li><li><a href="immunization-example.html">Immunization/example</a></li></ul><p><b>recorded</b>: 27 June 2015, 8:39:24 am</p><p><b>policy</b>: <code>urn:ihe:pcc:qedm:2017:document-provenance-policy</code></p><p><b>activity</b>: wasDerivedFrom <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-w3c-provenance-activity-type.html">W3cProvenanceActivityType</a>#Derivation)</span></p><p><b>patient</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>Assembler <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#assembler)</span></td><td><span>: Device/software</span></td></tr></table><h3>Entities</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td>*</td><td>source</td><td><a href="documentreference-example.html">DocumentReference/example</a></td></tr></table></div></text><target>
+		<reference value="Condition/example"/>
+	</target>
+	<target>
+		<reference value="Condition/example2"/>
+	</target>
+	<target>
+		<reference value="Encounter/example"/>
+	</target>
+	<target>
+		<reference value="Immunization/example"/>
+	</target>
+	<recorded value="2015-06-27T08:39:24+10:00"/>
+    <policy value="urn:ihe:pcc:qedm:2017:document-provenance-policy"/>
+	<activity>
+		<coding>
+        <system value="http://hl7.org/fhir/w3c-provenance-activity-type"/>
+        <code value="Derivation"/>
+		</coding>
+	</activity>
+	<patient>
+		<reference value="Patient/example"/>
+	</patient>
+	<agent id="a1">
+		<type>
+			<coding>
+          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+          <code value="assembler"/>
+			</coding>
+		</type>
+		<who>
+			<display value="Device/software"/>
+		</who>
+	</agent>
+	    <!--   information extract from a DICOM document, could be anything (e.g. CDA)   -->
+	<entity>
+		<role value="source"/>
+		<what>
+			<reference value="DocumentReference/example"/>    
+		</what>
+	</entity>
+</Provenance>

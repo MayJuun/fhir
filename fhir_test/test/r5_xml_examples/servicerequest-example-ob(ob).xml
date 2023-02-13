@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="ob"/>
+	    <!--   insert contents here   -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="ob"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "ob" </p></div><p><b>status</b>: <span title="  insert contents here  ">completed</span></p><p><b>intent</b>: order</p><p><b>category</b>: OB <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#386637004 "Obstetric procedure (procedure)")</span></p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Vaginal delivery <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#22633006 "Vaginal delivery, medical personnel present (procedure)")</span></td></tr></table><p><b>subject</b>: <span>: Jane Doe</span></p><p><b>occurrence</b>: 2012-06-02</p><p><b>requester</b>: <span>: Women’s Hospital</span></p><p><b>performer</b>: <span>: Martha Midwife, RNP</span></p><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>term pregnancy, active labor <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table></div></text><status value="completed"/>
+	<intent value="order"/>
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="386637004"/>
+			<display value="Obstetric procedure (procedure)"/>
+		</coding>
+		<text value="OB"/>
+	</category>
+	<code>
+	  <concept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="22633006"/>
+			<display value="Vaginal delivery, medical personnel present (procedure)"/>
+		</coding>
+		<text value="Vaginal delivery"/>
+	  </concept>
+	</code>
+	<subject>
+		<display value="Jane Doe"/>
+	</subject>
+	<occurrenceDateTime value="2012-06-02"/>
+	<requester>
+			<display value="Women’s Hospital"/>
+	</requester>
+	<performer>
+		<display value="Martha Midwife, RNP"/>
+	</performer>
+	<reason>
+    <concept>
+  		<text value="term pregnancy, active labor"/>
+    </concept>
+	</reason>
+</ServiceRequest>

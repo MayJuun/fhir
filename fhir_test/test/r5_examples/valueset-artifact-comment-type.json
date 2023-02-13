@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "artifact-comment-type",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -21,10 +21,10 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.3.0"
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.1464"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "ArtifactCommentType",
   "title": "Artifact comment type",
   "status": "active",
@@ -46,6 +46,17 @@
     }
   ],
   "description": "The type of artifact comment (documentation, review, guidance)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "immutable": true,
   "compose": {
     "include": [

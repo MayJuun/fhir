@@ -1,14 +1,16 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Encounter1",
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Encounter1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Patient Administration)",
   "item": [
     {
@@ -34,7 +36,7 @@
             }
           ],
           "linkId": "Encounter-flyover",
-          "text": "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+          "text": "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.  Encounter is primarily used to record information about the actual activities that occurred, where Appointment is used to record planned activities.",
           "type": "display"
         },
         {
@@ -69,7 +71,7 @@
                 }
               ],
               "linkId": "Encounter.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -261,7 +263,7 @@
                 }
               ],
               "linkId": "Encounter.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -413,7 +415,7 @@
                 }
               ],
               "linkId": "Encounter.status-flyover",
-              "text": "planned | in-progress | onhold | completed | cancelled | entered-in-error | unknown. Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes).",
+              "text": "planned | in-progress | on-hold | discharged | completed | cancelled | discontinued | entered-in-error | unknown. Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes).",
               "type": "display"
             },
             {
@@ -593,7 +595,7 @@
                     }
                   ],
                   "linkId": "Encounter.statusHistory.status-flyover",
-                  "text": "planned | in-progress | onhold | completed | cancelled | entered-in-error | unknown.",
+                  "text": "planned | in-progress | on-hold | discharged | completed | cancelled | discontinued | entered-in-error | unknown.",
                   "type": "display"
                 },
                 {
@@ -667,21 +669,14 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Coding"
+              "valueString": "CodeableConcept"
             }
           ],
           "linkId": "Encounter.class",
+          "text": "Classification of patient encounter context - e.g. Inpatient, outpatient",
           "type": "group",
-          "required": true,
+          "required": false,
           "repeats": true,
           "item": [
             {
@@ -704,12 +699,19 @@
               "type": "display"
             },
             {
-              "linkId": "Encounter.class.value",
-              "text": "Classification of patient encounter",
+              "linkId": "Encounter.class.coding",
+              "text": "code:",
               "type": "coding",
               "required": false,
               "repeats": false,
               "answerConstraint": "optionsOnly"
+            },
+            {
+              "linkId": "Encounter.class.text",
+              "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
             }
           ]
         },
@@ -949,108 +951,6 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "CodeableConcept"
-            }
-          ],
-          "linkId": "Encounter.type",
-          "text": "Specific type of encounter",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "Encounter.type-flyover",
-              "text": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation). Since there are many ways to further classify encounters, this element is 0..*.",
-              "type": "display"
-            },
-            {
-              "linkId": "Encounter.type.coding",
-              "text": "code:",
-              "type": "coding",
-              "required": false,
-              "repeats": false,
-              "answerConstraint": "optionsOnly"
-            },
-            {
-              "linkId": "Encounter.type.text",
-              "text": "text:",
-              "type": "string",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "CodeableConcept"
-            }
-          ],
-          "linkId": "Encounter.serviceType",
-          "text": "Specific type of service",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "Encounter.serviceType-flyover",
-              "text": "Broad categorization of the service that is to be provided (e.g. cardiology).",
-              "type": "display"
-            },
-            {
-              "linkId": "Encounter.serviceType.coding",
-              "text": "code:",
-              "type": "coding",
-              "required": false,
-              "repeats": false,
-              "answerConstraint": "optionsOnly"
-            },
-            {
-              "linkId": "Encounter.serviceType.text",
-              "text": "text:",
-              "type": "string",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
             },
@@ -1104,6 +1004,83 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "Encounter.type",
+          "text": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, ...)",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Encounter.type-flyover",
+              "text": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation). Since there are many ways to further classify encounters, this element is 0..*.",
+              "type": "display"
+            },
+            {
+              "linkId": "Encounter.type.coding",
+              "text": "code:",
+              "type": "coding",
+              "required": false,
+              "repeats": false,
+              "answerConstraint": "optionsOnly"
+            },
+            {
+              "linkId": "Encounter.type.text",
+              "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "linkId": "Encounter.serviceType",
+          "text": "Specific type of service",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Encounter.serviceType-flyover",
+              "text": "Broad categorization of the service that is to be provided (e.g. cardiology).",
+              "type": "display"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
             },
@@ -1133,14 +1110,14 @@
                 }
               ],
               "linkId": "Encounter.subject-flyover",
-              "text": "The patient or group present at the encounter. While the encounter is always about the patient, the patient might not actually be known in all contexts of use, and there may be a group of patients that could be anonymous (such as in a group therapy for Alcoholics Anonymous - where the recording of the encounter could be used for billing on the number of people/staff and not important to the context of the specific patients) or alternately in veterinary care a herd of sheep receiving treatment (where the animals are not individually tracked).",
+              "text": "The patient or group related to this encounter. In some use-cases the patient MAY not be present, such as a case meeting about a patient between several practitioners or a careteam. While the encounter is always about the patient, the patient might not actually be known in all contexts of use, and there may be a group of patients that could be anonymous (such as in a group therapy for Alcoholics Anonymous - where the recording of the encounter could be used for billing on the number of people/staff and not important to the context of the specific patients) or alternately in veterinary care a herd of sheep receiving treatment (where the animals are not individually tracked).",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Group, Group"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1148,7 +1125,7 @@
                 }
               ],
               "linkId": "Encounter.subject.value",
-              "text": "The patient or group present at the encounter",
+              "text": "The patient or group related to this encounter",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1242,8 +1219,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "EpisodeOfCare"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "EpisodeOfCare, EpisodeOfCare"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1292,8 +1269,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ServiceRequest"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CarePlan, DeviceRequest, MedicationRequest, ServiceRequest, ServiceRequest"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1301,7 +1278,165 @@
                 }
               ],
               "linkId": "Encounter.basedOn.value",
-              "text": "The ServiceRequest that initiated this encounter",
+              "text": "The request that initiated this encounter",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Encounter.careTeam",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Encounter.careTeam-flyover",
+              "text": "The group(s) of individuals, organizations that are allocated to participate in this encounter. The participants backbone will record the actuals of when these individuals participated during the encounter.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CareTeam, CareTeam"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Encounter.careTeam.value",
+              "text": "The group(s) that are allocated to participate in this encounter",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Encounter.partOf",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Encounter.partOf-flyover",
+              "text": "Another Encounter of which this encounter is a part of (administratively or in time). This is also used for associating a child\u0027s encounter back to the mother\u0027s encounter.\r\rRefer to the Notes section in the Patient resource for further details.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Encounter, Encounter"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Encounter.partOf.value",
+              "text": "Another Encounter this encounter is part of",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Encounter.serviceProvider",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Encounter.serviceProvider-flyover",
+              "text": "The organization that is primarily responsible for this Encounter\u0027s services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Organization, Organization"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Encounter.serviceProvider.value",
+              "text": "The organization (facility) responsible for this encounter",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1315,6 +1450,11 @@
           "required": false,
           "repeats": true,
           "item": [
+            {
+              "linkId": "Encounter.participant-display",
+              "text": "Any Patient or Group present in the participation.actor must also be the subject, though the subject may be absent from the participation.actor for cases where the patient (or group) is not present, such as during a case review conference.",
+              "type": "display"
+            },
             {
               "extension": [
                 {
@@ -1567,14 +1707,14 @@
                     }
                   ],
                   "linkId": "Encounter.participant.actor-flyover",
-                  "text": "Persons involved in the encounter, the patient/group is also included here to indicate that the patient was actually participating in the encounter. Not including the patient here covers use cases such as a case meeting between practitioners about a patient - non contact times.",
+                  "text": "Person involved in the encounter, the patient/group is also included here to indicate that the patient was actually participating in the encounter. Not including the patient here covers use cases such as a case meeting between practitioners about a patient - non contact times. For planning purposes, Appointments may include a CareTeam participant to indicate that one specific person from the CareTeam will be assigned, but that assignment might not happen until the Encounter begins. Hence CareTeam is not included in Encounter.participant, as the specific individual should be assigned and represented as a Practitioner or other person resource.\r\rSimilarly, Location can be included in Appointment.participant to assist with planning.  However, the patient location is tracked on the Encounter in the Encounter.location property to allow for additional metadata and history to be recorded.\r\rThe role of the participant can be used to declare what the actor will be doing in the scope of this encounter participation.\r\rIf the individual is not specified during planning, then it is expected that the individual will be filled in at a later stage prior to the encounter commencing.",
                   "type": "display"
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Patient, Group, RelatedPerson, Practitioner, PractitionerRole, Device, HealthcareService"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Patient, Group, RelatedPerson, Practitioner, PractitionerRole, Device, HealthcareService, HealthcareService"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1582,7 +1722,7 @@
                     }
                   ],
                   "linkId": "Encounter.participant.actor.value",
-                  "text": "Persons involved in the encounter (including patient)",
+                  "text": "The individual, device, or service participating in the encounter",
                   "type": "reference",
                   "required": false,
                   "repeats": false
@@ -1625,8 +1765,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Appointment"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Appointment, Appointment"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1638,6 +1778,39 @@
               "type": "reference",
               "required": false,
               "repeats": false
+            }
+          ]
+        },
+        {
+          "linkId": "Encounter.virtualService",
+          "text": "Connection details of a virtual service (e.g. conference call)",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "Encounter.virtualService-display",
+              "text": "There are two types of virtual meetings that often exist:\r\r* a persistent, virtual meeting room that can only be used for a single purpose at a time, \r* and a dynamic virtual meeting room that is generated on demand for a specific purpose.\r\rImplementers may consider using Location.virtualService for persistent meeting rooms.\r\rIf each participant would have a different meeting link, an extension using the VirtualServiceContactDetail  can be applied to the Encounter.participant BackboneElement.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Encounter.virtualService-flyover",
+              "text": "Connection details of a virtual service (e.g. conference call).",
+              "type": "display"
             }
           ]
         },
@@ -1793,7 +1966,7 @@
             }
           ],
           "linkId": "Encounter.length",
-          "text": "Quantity of time the encounter lasted (less time absent)",
+          "text": "Actual quantity of time the encounter lasted (less time absent)",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1814,7 +1987,7 @@
                 }
               ],
               "linkId": "Encounter.length-flyover",
-              "text": "Quantity of time the encounter lasted. This excludes the time during leaves of absence. May differ from the time the Encounter.period lasted because of leave of absence.",
+              "text": "Actual quantity of time the encounter lasted. This excludes the time during leaves of absence.\r\rWhen missing it is the time in between the start and end values. If the precision on these values is low (e.g. to the day only) then this may be considered was an all day (or multi-day) encounter, unless the duration is included, where that amount of time occurred sometime during the interval.\r\rMay differ from the time in `Encounter.period` due to leave of absence(s).",
               "type": "display"
             },
             {
@@ -1862,11 +2035,6 @@
           "required": false,
           "repeats": true,
           "item": [
-            {
-              "linkId": "Encounter.reason-display",
-              "text": "For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 \u003d primary diagnosis).",
-              "type": "display"
-            },
             {
               "extension": [
                 {
@@ -2050,14 +2218,14 @@
                     }
                   ],
                   "linkId": "Encounter.diagnosis.condition-flyover",
-                  "text": "Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure. For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 \u003d primary diagnosis).",
+                  "text": "Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.",
                   "type": "display"
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Condition, Procedure"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Condition, Procedure, Procedure"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2205,8 +2373,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Account"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Account, Account"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2228,15 +2396,15 @@
               "valueInteger": 1
             }
           ],
-          "linkId": "Encounter.hospitalization",
+          "linkId": "Encounter.admission",
           "text": "Details about the admission to a healthcare service",
           "type": "group",
           "required": false,
           "repeats": false,
           "item": [
             {
-              "linkId": "Encounter.hospitalization-display",
-              "text": "An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.\r\rThe duration recorded in the period of this encounter covers the entire scope of this hospitalization record.",
+              "linkId": "Encounter.admission-display",
+              "text": "An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.\r\rThe duration recorded in the period of this encounter covers the entire scope of this admission record.",
               "type": "display"
             },
             {
@@ -2254,7 +2422,7 @@
                   }
                 }
               ],
-              "linkId": "Encounter.hospitalization-flyover",
+              "linkId": "Encounter.admission-flyover",
               "text": "Details about the admission to a healthcare service.",
               "type": "display"
             },
@@ -2269,7 +2437,7 @@
                   "valueString": "string"
                 }
               ],
-              "linkId": "Encounter.hospitalization.id",
+              "linkId": "Encounter.admission.id",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2289,12 +2457,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.id-flyover",
+                  "linkId": "Encounter.admission.id-flyover",
                   "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.id.value",
+                  "linkId": "Encounter.admission.id.value",
                   "text": "Unique id for inter-element referencing",
                   "type": "string",
                   "required": false,
@@ -2303,7 +2471,7 @@
               ]
             },
             {
-              "linkId": "Encounter.hospitalization.extension",
+              "linkId": "Encounter.admission.extension",
               "text": "Additional content defined by implementations",
               "type": "group",
               "required": false,
@@ -2324,14 +2492,14 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.extension-flyover",
+                  "linkId": "Encounter.admission.extension-flyover",
                   "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                   "type": "display"
                 }
               ]
             },
             {
-              "linkId": "Encounter.hospitalization.modifierExtension",
+              "linkId": "Encounter.admission.modifierExtension",
               "text": "Extensions that cannot be ignored even if unrecognized",
               "type": "group",
               "required": false,
@@ -2352,7 +2520,7 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.modifierExtension-flyover",
+                  "linkId": "Encounter.admission.modifierExtension-flyover",
                   "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                   "type": "display"
                 }
@@ -2369,7 +2537,7 @@
                   "valueString": "Identifier"
                 }
               ],
-              "linkId": "Encounter.hospitalization.preAdmissionIdentifier",
+              "linkId": "Encounter.admission.preAdmissionIdentifier",
               "text": "Pre-admission identifier",
               "type": "group",
               "required": false,
@@ -2390,26 +2558,26 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.preAdmissionIdentifier-flyover",
+                  "linkId": "Encounter.admission.preAdmissionIdentifier-flyover",
                   "text": "Pre-admission identifier.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.preAdmissionIdentifier.label",
+                  "linkId": "Encounter.admission.preAdmissionIdentifier.label",
                   "text": "label:",
                   "type": "string",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "Encounter.hospitalization.preAdmissionIdentifier.system",
+                  "linkId": "Encounter.admission.preAdmissionIdentifier.system",
                   "text": "system:",
                   "type": "string",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "Encounter.hospitalization.preAdmissionIdentifier.value",
+                  "linkId": "Encounter.admission.preAdmissionIdentifier.value",
                   "text": "value:",
                   "type": "string",
                   "required": false,
@@ -2428,7 +2596,7 @@
                   "valueString": "Reference"
                 }
               ],
-              "linkId": "Encounter.hospitalization.origin",
+              "linkId": "Encounter.admission.origin",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2448,22 +2616,22 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.origin-flyover",
+                  "linkId": "Encounter.admission.origin-flyover",
                   "text": "The location/organization from which the patient came before admission.",
                   "type": "display"
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Location, Organization"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Location, Organization, Organization"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                       "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.origin.value",
+                  "linkId": "Encounter.admission.origin.value",
                   "text": "The location/organization from which the patient came before admission",
                   "type": "reference",
                   "required": false,
@@ -2482,7 +2650,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Encounter.hospitalization.admitSource",
+              "linkId": "Encounter.admission.admitSource",
               "text": "From where patient was admitted (physician referral, transfer)",
               "type": "group",
               "required": false,
@@ -2503,12 +2671,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.admitSource-flyover",
+                  "linkId": "Encounter.admission.admitSource-flyover",
                   "text": "From where patient was admitted (physician referral, transfer).",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.admitSource.coding",
+                  "linkId": "Encounter.admission.admitSource.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -2516,7 +2684,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.admitSource.text",
+                  "linkId": "Encounter.admission.admitSource.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2535,8 +2703,8 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Encounter.hospitalization.reAdmission",
-              "text": "The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission",
+              "linkId": "Encounter.admission.reAdmission",
+              "text": "The type of re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2556,12 +2724,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.reAdmission-flyover",
-                  "text": "Whether this hospitalization is a readmission and why if known.",
+                  "linkId": "Encounter.admission.reAdmission-flyover",
+                  "text": "Whether this admission is a readmission and why if known.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.reAdmission.coding",
+                  "linkId": "Encounter.admission.reAdmission.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -2569,7 +2737,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.reAdmission.text",
+                  "linkId": "Encounter.admission.reAdmission.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2584,7 +2752,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Encounter.hospitalization.dietPreference",
+              "linkId": "Encounter.admission.dietPreference",
               "text": "Diet preferences reported by the patient",
               "type": "group",
               "required": false,
@@ -2605,12 +2773,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.dietPreference-flyover",
+                  "linkId": "Encounter.admission.dietPreference-flyover",
                   "text": "Diet preferences reported by the patient. For example, a patient may request both a dairy-free and nut-free diet preference (not mutually exclusive).",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.dietPreference.coding",
+                  "linkId": "Encounter.admission.dietPreference.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -2618,7 +2786,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.dietPreference.text",
+                  "linkId": "Encounter.admission.dietPreference.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2633,7 +2801,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Encounter.hospitalization.specialCourtesy",
+              "linkId": "Encounter.admission.specialCourtesy",
               "text": "Special courtesies (VIP, board member)",
               "type": "group",
               "required": false,
@@ -2654,12 +2822,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.specialCourtesy-flyover",
+                  "linkId": "Encounter.admission.specialCourtesy-flyover",
                   "text": "Special courtesies (VIP, board member).",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.specialCourtesy.coding",
+                  "linkId": "Encounter.admission.specialCourtesy.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -2667,7 +2835,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.specialCourtesy.text",
+                  "linkId": "Encounter.admission.specialCourtesy.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2682,7 +2850,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Encounter.hospitalization.specialArrangement",
+              "linkId": "Encounter.admission.specialArrangement",
               "text": "Wheelchair, translator, stretcher, etc.",
               "type": "group",
               "required": false,
@@ -2703,12 +2871,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.specialArrangement-flyover",
-                  "text": "Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.",
+                  "linkId": "Encounter.admission.specialArrangement-flyover",
+                  "text": "Any special requests that have been made for this admission encounter, such as the provision of specific equipment or other things.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.specialArrangement.coding",
+                  "linkId": "Encounter.admission.specialArrangement.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -2716,7 +2884,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.specialArrangement.text",
+                  "linkId": "Encounter.admission.specialArrangement.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2735,7 +2903,7 @@
                   "valueString": "Reference"
                 }
               ],
-              "linkId": "Encounter.hospitalization.destination",
+              "linkId": "Encounter.admission.destination",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2755,22 +2923,22 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.destination-flyover",
+                  "linkId": "Encounter.admission.destination-flyover",
                   "text": "Location/organization to which the patient is discharged.",
                   "type": "display"
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Location, Organization"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Location, Organization, Organization"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                       "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.destination.value",
+                  "linkId": "Encounter.admission.destination.value",
                   "text": "Location/organization to which the patient is discharged",
                   "type": "reference",
                   "required": false,
@@ -2789,7 +2957,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Encounter.hospitalization.dischargeDisposition",
+              "linkId": "Encounter.admission.dischargeDisposition",
               "text": "Category or kind of location after discharge",
               "type": "group",
               "required": false,
@@ -2810,12 +2978,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.hospitalization.dischargeDisposition-flyover",
+                  "linkId": "Encounter.admission.dischargeDisposition-flyover",
                   "text": "Category or kind of location after discharge.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.dischargeDisposition.coding",
+                  "linkId": "Encounter.admission.dischargeDisposition.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -2823,7 +2991,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "Encounter.hospitalization.dischargeDisposition.text",
+                  "linkId": "Encounter.admission.dischargeDisposition.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -3006,8 +3174,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Location"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Location, Location"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3078,8 +3246,8 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Encounter.location.physicalType",
-              "text": "The physical type of the location (usually the level in the location hierachy - bed room ward etc.)",
+              "linkId": "Encounter.location.form",
+              "text": "The physical type of the location (usually the level in the location hierarchy - bed, room, ward, virtual etc.)",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -3099,12 +3267,12 @@
                       }
                     }
                   ],
-                  "linkId": "Encounter.location.physicalType-flyover",
+                  "linkId": "Encounter.location.form-flyover",
                   "text": "This will be used to specify the required levels (bed/ward/room/etc.) desired to be recorded to simplify either messaging or query. This information is de-normalized from the Location resource to support the easier understanding of the encounter resource and processing in messaging or query.\n\nThere may be many levels in the hierachy, and this may only pic specific levels that are required for a specific usage scenario.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Encounter.location.physicalType.coding",
+                  "linkId": "Encounter.location.form.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -3112,7 +3280,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "Encounter.location.physicalType.text",
+                  "linkId": "Encounter.location.form.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -3173,125 +3341,8 @@
               ]
             }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "Encounter.serviceProvider",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "Encounter.serviceProvider-flyover",
-              "text": "The organization that is primarily responsible for this Encounter\u0027s services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Organization"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
-              "linkId": "Encounter.serviceProvider.value",
-              "text": "The organization (facility) responsible for this encounter",
-              "type": "reference",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "Encounter.partOf",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "Encounter.partOf-flyover",
-              "text": "Another Encounter of which this encounter is a part of (administratively or in time). This is also used for associating a child\u0027s encounter back to the mother\u0027s encounter.\r\rRefer to the Notes section in the Patient resource for further details.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Encounter"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
-              "linkId": "Encounter.partOf.value",
-              "text": "Another Encounter this encounter is part of",
-              "type": "reference",
-              "required": false,
-              "repeats": false
-            }
-          ]
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

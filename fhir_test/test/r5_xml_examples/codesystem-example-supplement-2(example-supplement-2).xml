@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?><CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="example-supplement-2"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>This code system 
+        <code>http://hl7.org/fhir/bundle-type-de</code>
+      </p>
+      <table class="codes">
+        <tr>
+          <td style="white-space:nowrap">
+            <b>Code</b>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-document" style="white-space:nowrap">document</a>
+            <a name="example-supplement-2-document"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-message" style="white-space:nowrap">message</a>
+            <a name="example-supplement-2-message"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-transaction" style="white-space:nowrap">transaction</a>
+            <a name="example-supplement-2-transaction"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-transaction-response" style="white-space:nowrap">transaction-response</a>
+            <a name="example-supplement-2-transaction-response"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-batch" style="white-space:nowrap">batch</a>
+            <a name="example-supplement-2-batch"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-batch-response" style="white-space:nowrap">batch-response</a>
+            <a name="example-supplement-2-batch-response"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-history" style="white-space:nowrap">history</a>
+            <a name="example-supplement-2-history"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-searchset" style="white-space:nowrap">searchset</a>
+            <a name="example-supplement-2-searchset"> </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="codesystem-bundle-type.html#bundle-type-collection" style="white-space:nowrap">collection</a>
+            <a name="example-supplement-2-collection"> </a>
+          </td>
+        </tr>
+      </table>
+      <p>
+        <b>Additional Language Displays</b>
+      </p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Deutsch (German, de)</b>
+          </td>
+        </tr>
+        <tr>
+          <td>document</td>
+          <td>Dokument</td>
+        </tr>
+        <tr>
+          <td>message</td>
+          <td>Nachricht</td>
+        </tr>
+        <tr>
+          <td>transaction</td>
+          <td>Transaktion</td>
+        </tr>
+        <tr>
+          <td>transaction-response</td>
+          <td>Transaktionsantwort</td>
+        </tr>
+        <tr>
+          <td>batch</td>
+          <td>Stapel</td>
+        </tr>
+        <tr>
+          <td>batch-response</td>
+          <td>Batch-Antwort</td>
+        </tr>
+        <tr>
+          <td>history</td>
+          <td>Verlaufsliste</td>
+        </tr>
+        <tr>
+          <td>searchset</td>
+          <td>Suchergebnisse</td>
+        </tr>
+        <tr>
+          <td>collection</td>
+          <td>Sammlung</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/bundle-type-de"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.4.1822"/>
+  </identifier>
+  <version value="5.0.0-snapshot3"/>
+  <name value="BundleTypeGerman"/>
+  <title value="Bundle Type German"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2017-12-21T16:40:38+11:00"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <description value="German Translations for Bundle Type"/>
+  <copyright value="Creative Commons 0"/>
+  <content value="supplement"/>
+  <supplements value="http://hl7.org/fhir/bundle-type"/>
+  <concept>
+    <code value="document"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Dokument"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="message"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Nachricht"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="transaction"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Transaktion"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="transaction-response"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Transaktionsantwort"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="batch"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Stapel"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="batch-response"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Batch-Antwort"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="history"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Verlaufsliste"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="searchset"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Suchergebnisse"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="collection"/>
+    <designation>
+      <language value="de"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"/>
+        <code value="preferredForLanguage"/>
+      </use>
+      <value value="Sammlung"/>
+    </designation>
+  </concept>
+</CodeSystem>

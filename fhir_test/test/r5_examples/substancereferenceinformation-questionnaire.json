@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-SubstanceReferenceInformation1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,21 +9,21 @@
       "status": "active",
       "description": "Type options for SubstanceReferenceInformation.target.amount[x]",
       "expansion": {
-        "identifier": "urn:uuid:12bfb23b-8c27-410f-b897-1a7073ab0d11",
-        "timestamp": "2022-05-06T17:12:40+00:00",
+        "identifier": "urn:uuid:754deec1-0acd-4738-b1d5-0cb755b55d00",
+        "timestamp": "2022-12-14T07:17:33+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           }
@@ -31,14 +31,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-SubstanceReferenceInformation1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
@@ -99,7 +101,7 @@
                 }
               ],
               "linkId": "SubstanceReferenceInformation.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -291,7 +293,7 @@
                 }
               ],
               "linkId": "SubstanceReferenceInformation.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -662,8 +664,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "DocumentReference"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "DocumentReference, DocumentReference"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -952,8 +954,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "DocumentReference"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "DocumentReference, DocumentReference"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1598,8 +1600,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "DocumentReference"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "DocumentReference, DocumentReference"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1618,14 +1620,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="sc-devicedispense-status"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>DeviceDispenseStatusCodesCanonicalMap (http://hl7.org/fhir/ConceptMap/sc-devicedispense-status)</h2>
+      <p>Mapping from 
+        <a href="valueset-devicedispense-status.html">http://hl7.org/fhir/ValueSet/devicedispense-status</a> to 
+        <a href="valueset-resource-status.html">http://hl7.org/fhir/ValueSet/resource-status</a>
+      </p>
+      <p>DRAFT. Published on ?ngen-10? by FHIR Project team (
+        <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>). 
+      </p>
+      <div>
+        <p>Canonical Mapping for &quot;DeviceDispense Status Codes&quot;</p>
+
+      </div>
+      <br/>
+      <p>
+        <b>Group 1</b>Mapping from 
+        <a href="codesystem-devicedispense-status.html">DeviceDispense Status Codes</a> to 
+        <a href="codesystem-resource-status.html">Canonical Status Codes for FHIR Resources</a>
+      </p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Source Code</b>
+          </td>
+          <td>
+            <b>Relationship</b>
+          </td>
+          <td>
+            <b>Target Code</b>
+          </td>
+        </tr>
+        <tr>
+          <td>entered-in-error</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>error</td>
+        </tr>
+        <tr>
+          <td>preparation</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>planned</td>
+        </tr>
+        <tr>
+          <td>in-progress</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>on-hold</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>suspended</td>
+        </tr>
+        <tr>
+          <td>stopped</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>failed</td>
+        </tr>
+        <tr>
+          <td>completed</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>complete</td>
+        </tr>
+        <tr>
+          <td>unknown</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>unknown</td>
+        </tr>
+        <tr>
+          <td>cancelled</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>not-done</td>
+        </tr>
+        <tr>
+          <td>declined</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>not-done</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ConceptMap/sc-devicedispense-status"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="DeviceDispenseStatusCodesCanonicalMap"/>
+  <title value="Canonical Mapping for &quot;DeviceDispense Status Codes&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="FHIR Project team"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="Canonical Mapping for &quot;DeviceDispense Status Codes&quot;"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <sourceScopeCanonical value="http://hl7.org/fhir/ValueSet/devicedispense-status"/>
+  <targetScopeCanonical value="http://hl7.org/fhir/ValueSet/resource-status"/>
+  <group>
+    <source value="http://hl7.org/fhir/devicedispense-status"/>
+    <target value="http://hl7.org/fhir/resource-status"/>
+    <element>
+      <code value="entered-in-error"/>
+      <target>
+        <code value="error"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="preparation"/>
+      <target>
+        <code value="planned"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="in-progress"/>
+      <target>
+        <code value="active"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="on-hold"/>
+      <target>
+        <code value="suspended"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="stopped"/>
+      <target>
+        <code value="failed"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="completed"/>
+      <target>
+        <code value="complete"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="unknown"/>
+      <target>
+        <code value="unknown"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="cancelled"/>
+      <target>
+        <code value="not-done"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="declined"/>
+      <target>
+        <code value="not-done"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

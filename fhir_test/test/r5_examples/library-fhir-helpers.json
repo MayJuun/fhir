@@ -11,7 +11,7 @@
       "value": "FHIRHelpers"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0",
   "title": "FHIR Helpers",
   "status": "active",
   "experimental": true,

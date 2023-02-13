@@ -12,7 +12,7 @@
     }
   ],
   "type": "animal",
-  "actual": true,
+  "membership": "enumerated",
   "code": {
     "text": "Horse"
   },

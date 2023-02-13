@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+	<id value="example3"/>
+	    <!--   
+    Use path when the target resource doesn't have an id to point to
+    Note that the path is constrained to simple FHIRPath - see 
+    https://hl7.org/fhir/fhirpath.html#simple
+    
+    This asserts that the follow up note came from a different author than
+    the rest of the Procedure (see Provenance/example)
+    -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="example3"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance "example3" </p></div><p><b>target</b>: <span title="  &#xA;    Use path when the target resource doesn't have an id to point to&#xA;    Note that the path is constrained to simple FHIRPath - see &#xA;    https://hl7.org/fhir/fhirpath.html#simple&#xA;    &#xA;    This asserts that the follow up note came from a different author than&#xA;    the rest of the Procedure (see Provenance/example)&#xA;   "><a href="procedure-example.html">Procedure/example/_history/1</a>(#/Procedure.followUp.text)</span></p><p><b>recorded</b>: 8 Dec 2021, 4:54:24 pm</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>author (originator) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ParticipationType.html">ParticipationType</a>#AUT)</span></td><td><a href="practitioner-example-f007-sh.html">Practitioner/f007</a> "Simone HEPS"</td></tr></table></div></text><target>
+    <extension url="http://hl7.org/fhir/StructureDefinition/targetPath"> 
+      <valueString value="Procedure.followUp.text"/>
+    </extension>
+		<reference value="Procedure/example/_history/1"/>
+	</target>
+	<recorded value="2021-12-08T16:54:24+11:00"/>
+	<agent>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+				<code value="AUT"/>
+			</coding>
+		</type>
+		<who>
+			<reference value="Practitioner/f007"/>
+		</who>
+	</agent>
+</Provenance>

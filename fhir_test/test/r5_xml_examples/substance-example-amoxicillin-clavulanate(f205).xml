@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><Substance xmlns="http://hl7.org/fhir">
+	<id value="f205"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Substance</b><a name="f205"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Substance "f205" </p></div><p><b>instance</b>: false</p><p><b>category</b>: Drug or Medicament <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-substance-category.html">Substance Category Codes</a>#drug)</span></p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Amoxicillin + clavulanate potassium 875mg/125mg tablet (product) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#392259005)</span></td></tr></table><p><b>description</b>: Augmentin 875</p><blockquote><p><b>ingredient</b></p><p><b>quantity</b>: 875 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span>/1000 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span></p><p><b>substance</b>: <a name="ingr1"> </a></p><blockquote><p/><p><a name="ingr1"> </a></p><p><b>instance</b>: false</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Amoxicillin (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#372687004)</span></td></tr></table></blockquote></blockquote><blockquote><p><b>ingredient</b></p><p><b>quantity</b>: 125 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span>/1000 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span></p><p><b>substance</b>: <a name="ingr2"> </a></p><blockquote><p/><p><a name="ingr2"> </a></p><p><b>instance</b>: false</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Clavulanate potassium (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#395938000)</span></td></tr></table></blockquote></blockquote></div></text><contained>
+		<Substance>
+			<id value="ingr1"/>
+			<instance value="false"/>
+			<code>
+				<concept>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="372687004"/>
+						<display value="Amoxicillin (substance)"/>
+					</coding>
+				</concept>
+			</code>
+		</Substance>
+	</contained>
+	<contained>
+		<Substance>
+			<id value="ingr2"/>
+			<instance value="false"/>
+			<code>
+				<concept>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="395938000"/>
+						<display value="Clavulanate potassium (substance)"/>
+					</coding>
+				</concept>
+			</code>
+		</Substance>
+	</contained>
+	<instance value="false"/>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/substance-category"/>
+			<code value="drug"/>
+			<display value="Drug or Medicament"/>
+		</coding>
+	</category>
+	<code>
+		<concept>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="392259005"/>
+				<display value="Amoxicillin + clavulanate potassium 875mg/125mg tablet (product)"/>
+			</coding>
+		</concept>
+	</code>
+	<description value="Augmentin 875"/>
+	<ingredient>
+		<quantity>
+			<numerator>
+				<value value="875"/>
+				<unit value="mg"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="mg"/>
+			</numerator>
+			<denominator>
+				<value value="1000"/>
+				<unit value="mg"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="mg"/>
+			</denominator>
+		</quantity>
+		<substanceReference>
+			<reference value="#ingr1"/>
+		</substanceReference>
+	</ingredient>
+	<ingredient>
+		<quantity>
+			<numerator>
+				<value value="125"/>
+				<unit value="mg"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="mg"/>
+			</numerator>
+			<denominator>
+				<value value="1000"/>
+				<unit value="mg"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="mg"/>
+			</denominator>
+		</quantity>
+		<substanceReference>
+			<reference value="#ingr2"/>
+		</substanceReference>
+	</ingredient>
+</Substance>

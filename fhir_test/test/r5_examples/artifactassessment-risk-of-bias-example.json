@@ -3,7 +3,7 @@
   "id": "risk-of-bias-example",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;risk-of-bias-example\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: FEvIR Object Identifier: 27751\u003c/p\u003e\u003cp\u003e\u003cb\u003edate\u003c/b\u003e: 2021-11-02T14:31:30.239Z\u003c/p\u003e\u003cp\u003e\u003cb\u003ecopyright\u003c/b\u003e: https://creativecommons.org/licenses/by-nc-sa/4.0/\u003c/p\u003e\u003cp\u003e\u003cb\u003elastReviewDate\u003c/b\u003e: 2021-08-11\u003c/p\u003e\u003cp\u003e\u003cb\u003eartifact\u003c/b\u003e: \u003ca href\u003d\"http://fevir.net/resources/Evidence/7637\"\u003ehttp://fevir.net/resources/Evidence/7637\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003econtent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationType\u003c/b\u003e: rating\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Risk of bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-type.html\"\u003eEvidenceCertaintyType[4.6.0]\u003c/a\u003e#RiskOfBias)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: extremely serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[4.6.0]\u003c/a\u003e#extremely-serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: COVID-19 Knowledge Accelerator Evidence 7637 Authors (Brian S. Alper, Harold Lehmann, Ahmad Sofi-Mahmudi, Joanne Dehnbostel, Ilkka Kunnamo)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efreeToShare\u003c/b\u003e: true\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Inclusion of suspected COVID-19 in 1 of 3 trials may introduce selection bias, but the impact appears limited.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Selection Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: no serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[4.6.0]\u003c/a\u003e#no-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: The study design used response-adaptive randomization in which group assignment ratios could be modified during the trial on the basis of response-adaptive interim analyses to favor the assignment of patients to the treatment group showing greater benefit. The confounding by time (imbalanced randomization with time period) is not adequately reported to determine the potential influence on results or adequacy of adjusted analyses.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Confounding Covariate Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[4.6.0]\u003c/a\u003e#serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Ilkka Kunnamo, Alfonso Iorio, Joanne Dehnbostel, Harold Lehmann, Kenneth Wilkins; clarifying explanation reviewed by Janice Tufte\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Awareness of treatment assignment may reduce clinical decision to initiate some types of \u0026quot;organ support\u0026quot; in patients with higher risk of major bleeding.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Performance Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: very serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[4.6.0]\u003c/a\u003e#very-serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Harold Lehmann, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: The influence of awareness of treatment assignment by the treating clinicians on the initaition of organ support (which is the primary outcome) was already addressed as Performance Bias so is not repeated here as a bias in detecting the outcome.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Detection Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: no serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[4.6.0]\u003c/a\u003e#no-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Only 19 of 1190 (1.6%) therapeutic group and 6 of 1054 (0.6) prophylactic group were excluded after randomization.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Attrition Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: no serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[4.6.0]\u003c/a\u003e#no-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: It is unknown if the results are sensitive to the analytic method, and the stopping criteria were based on statistical significance and not magnitude of effect.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Analysis Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: very serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[4.6.0]\u003c/a\u003e#very-serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal, Janice Tufte\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003econtent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationType\u003c/b\u003e: comment\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Results not consistent with critically ill cohort.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Inconsistency \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-type.html\"\u003eEvidenceCertaintyType[4.6.0]\u003c/a\u003e#Inconsistency)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Ilkka Kunnamo\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative: ArtifactAssessment\u003c/b\u003e\u003ca name\u003d\"risk-of-bias-example\"\u003e \u003c/a\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource ArtifactAssessment \u0026quot;risk-of-bias-example\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: FEvIR Object Identifier: 27751\u003c/p\u003e\u003cp\u003e\u003cb\u003edate\u003c/b\u003e: 2021-11-02T14:31:30.239Z\u003c/p\u003e\u003cp\u003e\u003cb\u003ecopyright\u003c/b\u003e: https://creativecommons.org/licenses/by-nc-sa/4.0/\u003c/p\u003e\u003cp\u003e\u003cb\u003elastReviewDate\u003c/b\u003e: 2021-08-11\u003c/p\u003e\u003cp\u003e\u003cb\u003eartifact\u003c/b\u003e: \u003ca href\u003d\"http://fevir.net/resources/Evidence/7637\"\u003ehttp://fevir.net/resources/Evidence/7637\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003econtent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationType\u003c/b\u003e: rating\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Risk of bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-type.html\"\u003eEvidenceCertaintyType[5.0.0]\u003c/a\u003e#RiskOfBias)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: extremely serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[5.0.0]\u003c/a\u003e#extremely-serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: COVID-19 Knowledge Accelerator Evidence 7637 Authors (Brian S. Alper, Harold Lehmann, Ahmad Sofi-Mahmudi, Joanne Dehnbostel, Ilkka Kunnamo)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efreeToShare\u003c/b\u003e: true\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Inclusion of suspected COVID-19 in 1 of 3 trials may introduce selection bias, but the impact appears limited.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Selection Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: no serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[5.0.0]\u003c/a\u003e#no-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: The study design used response-adaptive randomization in which group assignment ratios could be modified during the trial on the basis of response-adaptive interim analyses to favor the assignment of patients to the treatment group showing greater benefit. The confounding by time (imbalanced randomization with time period) is not adequately reported to determine the potential influence on results or adequacy of adjusted analyses.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Confounding Covariate Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[5.0.0]\u003c/a\u003e#serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Ilkka Kunnamo, Alfonso Iorio, Joanne Dehnbostel, Harold Lehmann, Kenneth Wilkins; clarifying explanation reviewed by Janice Tufte\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Awareness of treatment assignment may reduce clinical decision to initiate some types of \u0026quot;organ support\u0026quot; in patients with higher risk of major bleeding.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Performance Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: very serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[5.0.0]\u003c/a\u003e#very-serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Harold Lehmann, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: The influence of awareness of treatment assignment by the treating clinicians on the initaition of organ support (which is the primary outcome) was already addressed as Performance Bias so is not repeated here as a bias in detecting the outcome.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Detection Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: no serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[5.0.0]\u003c/a\u003e#no-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Only 19 of 1190 (1.6%) therapeutic group and 6 of 1054 (0.6) prophylactic group were excluded after randomization.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Attrition Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: no serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[5.0.0]\u003c/a\u003e#no-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: It is unknown if the results are sensitive to the analytic method, and the stopping criteria were based on statistical significance and not magnitude of effect.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Analysis Bias \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e ()\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eclassifier\u003c/b\u003e: very serious concern \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-rating.html\"\u003eEvidenceCertaintyRating[5.0.0]\u003c/a\u003e#very-serious-concern)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Brian S. Alper, Joanne Dehnbostel, Muhammad Afzal, Janice Tufte\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003econtent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationType\u003c/b\u003e: comment\u003c/p\u003e\u003cp\u003e\u003cb\u003esummary\u003c/b\u003e: Results not consistent with critically ill cohort.\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Inconsistency \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-certainty-type.html\"\u003eEvidenceCertaintyType[5.0.0]\u003c/a\u003e#Inconsistency)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthor\u003c/b\u003e: \u003cspan\u003e: Ilkka Kunnamo\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -27,8 +27,8 @@
       "type": {
         "coding": [
           {
-            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
-            "version": "4.6.0",
+            "system": "http://hl7.org/fhir/certainty-type",
+            "version": "5.0.0",
             "code": "RiskOfBias",
             "display": "Risk of bias",
             "userSelected": true
@@ -40,7 +40,7 @@
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-              "version": "4.6.0",
+              "version": "5.0.0",
               "code": "extremely-serious-concern",
               "display": "extremely serious concern",
               "userSelected": true
@@ -63,7 +63,7 @@
               "coding": [
                 {
                   "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                  "version": "4.6.0",
+                  "version": "5.0.0",
                   "code": "no-concern",
                   "display": "no serious concern",
                   "userSelected": true
@@ -90,7 +90,7 @@
               "coding": [
                 {
                   "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                  "version": "4.6.0",
+                  "version": "5.0.0",
                   "code": "serious-concern",
                   "display": "serious concern",
                   "userSelected": true
@@ -143,7 +143,7 @@
                   "coding": [
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                      "version": "4.6.0",
+                      "version": "5.0.0",
                       "code": "serious-concern",
                       "display": "serious concern",
                       "userSelected": true
@@ -178,7 +178,7 @@
               "coding": [
                 {
                   "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                  "version": "4.6.0",
+                  "version": "5.0.0",
                   "code": "very-serious-concern",
                   "display": "very serious concern",
                   "userSelected": true
@@ -203,7 +203,7 @@
                   "coding": [
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                      "version": "4.6.0",
+                      "version": "5.0.0",
                       "code": "very-serious-concern",
                       "display": "very serious concern",
                       "userSelected": true
@@ -285,7 +285,7 @@
               "coding": [
                 {
                   "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                  "version": "4.6.0",
+                  "version": "5.0.0",
                   "code": "no-concern",
                   "display": "no serious concern",
                   "userSelected": true
@@ -312,7 +312,7 @@
               "coding": [
                 {
                   "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                  "version": "4.6.0",
+                  "version": "5.0.0",
                   "code": "no-concern",
                   "display": "no serious concern",
                   "userSelected": true
@@ -339,7 +339,7 @@
               "coding": [
                 {
                   "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                  "version": "4.6.0",
+                  "version": "5.0.0",
                   "code": "very-serious-concern",
                   "display": "very serious concern",
                   "userSelected": true
@@ -364,7 +364,7 @@
                   "coding": [
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                      "version": "4.6.0",
+                      "version": "5.0.0",
                       "code": "very-serious-concern",
                       "display": "very serious concern",
                       "userSelected": true
@@ -397,7 +397,7 @@
                   "coding": [
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
-                      "version": "4.6.0",
+                      "version": "5.0.0",
                       "code": "very-serious-concern",
                       "display": "very serious concern",
                       "userSelected": true
@@ -424,8 +424,8 @@
       "type": {
         "coding": [
           {
-            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
-            "version": "4.6.0",
+            "system": "http://hl7.org/fhir/certainty-type",
+            "version": "5.0.0",
             "code": "Inconsistency",
             "display": "Inconsistency",
             "userSelected": true

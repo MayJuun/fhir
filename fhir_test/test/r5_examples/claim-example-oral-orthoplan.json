@@ -228,20 +228,28 @@
         "value": 105.00,
         "currency": "USD"
       },
-      "bodySite": {
-        "coding": [
-          {
-            "system": "http://fdi.org/fhir/oraltoothcodes",
-            "code": "21"
-          }
-        ]
-      },
-      "subSite": [
+      "bodySite": [
         {
-          "coding": [
+          "site": [
             {
-              "system": "http://fdi.org/fhir/oralsurfacecodes",
-              "code": "L"
+              "concept": {
+                "coding": [
+                  {
+                    "system": "http://fdi.org/fhir/oraltoothcodes",
+                    "code": "21"
+                  }
+                ]
+              }
+            }
+          ],
+          "subSite": [
+            {
+              "coding": [
+                {
+                  "system": "http://fdi.org/fhir/oralsurfacecodes",
+                  "code": "L"
+                }
+              ]
             }
           ]
         }
@@ -269,14 +277,22 @@
         "value": 1100.00,
         "currency": "USD"
       },
-      "bodySite": {
-        "coding": [
-          {
-            "system": "http://fdi.org/fhir/oraltoothcodes",
-            "code": "36"
-          }
-        ]
-      },
+      "bodySite": [
+        {
+          "site": [
+            {
+              "concept": {
+                "coding": [
+                  {
+                    "system": "http://fdi.org/fhir/oraltoothcodes",
+                    "code": "36"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
       "detail": [
         {
           "sequence": 1,

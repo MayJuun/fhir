@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-CarePlan1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,21 +9,21 @@
       "status": "active",
       "description": "Type options for CarePlan.activity.plannedActivityDetail.scheduled[x]",
       "expansion": {
-        "identifier": "urn:uuid:b25f6ca5-74be-45dc-a41f-f563dd2647aa",
-        "timestamp": "2022-05-06T17:10:20+00:00",
+        "identifier": "urn:uuid:0b16d59a-bac4-48f9-850d-f7e826038bb4",
+        "timestamp": "2022-12-14T07:16:04+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Timing",
             "display": "Timing"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Period",
             "display": "Period"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           }
@@ -37,36 +37,36 @@
       "status": "active",
       "description": "Type options for CarePlan.activity.plannedActivityDetail.reported[x]",
       "expansion": {
-        "identifier": "urn:uuid:7286dc38-225b-421d-9a09-c1b3cf6016a0",
-        "timestamp": "2022-05-06T17:10:20+00:00",
+        "identifier": "urn:uuid:b24a1831-1d6a-4748-a817-ab921971c48d",
+        "timestamp": "2022-12-14T07:16:04+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Patient",
             "display": "Patient"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "RelatedPerson",
             "display": "RelatedPerson"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Practitioner",
             "display": "Practitioner"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "PractitionerRole",
             "display": "PractitionerRole"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Organization",
             "display": "Organization"
           }
@@ -80,21 +80,21 @@
       "status": "active",
       "description": "Type options for CarePlan.activity.plannedActivityDetail.product[x]",
       "expansion": {
-        "identifier": "urn:uuid:89969ea9-3870-4899-a66a-89352f875ee8",
-        "timestamp": "2022-05-06T17:10:20+00:00",
+        "identifier": "urn:uuid:fa4c8f07-2307-4d35-8723-3ad4f7e4b4d4",
+        "timestamp": "2022-12-14T07:16:04+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Medication",
             "display": "Medication"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Substance",
             "display": "Substance"
           }
@@ -102,14 +102,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-CarePlan1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
@@ -170,7 +172,7 @@
                 }
               ],
               "linkId": "CarePlan.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -362,7 +364,7 @@
                 }
               ],
               "linkId": "CarePlan.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -586,14 +588,14 @@
                 }
               ],
               "linkId": "CarePlan.basedOn-flyover",
-              "text": "A care plan that is fulfilled in whole or in part by this care plan.",
+              "text": "A higher-level request resource (i.e. a plan, proposal or order) that is fulfilled in whole or in part by this care plan.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CarePlan"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CarePlan, ServiceRequest, RequestOrchestration, NutritionOrder, NutritionOrder"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -601,7 +603,7 @@
                 }
               ],
               "linkId": "CarePlan.basedOn.value",
-              "text": "Fulfills CarePlan",
+              "text": "Fulfills plan, proposal or order",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -642,8 +644,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CarePlan"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CarePlan, CarePlan"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -692,8 +694,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CarePlan"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CarePlan, CarePlan"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -835,7 +837,7 @@
                 }
               ],
               "linkId": "CarePlan.category-flyover",
-              "text": "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc. There may be multiple axes of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.concern.",
+              "text": "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc. There may be multiple axes of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.addresses.",
               "type": "display"
             },
             {
@@ -985,8 +987,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Group, Group"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1039,8 +1041,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Encounter, Encounter"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1162,7 +1164,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "CarePlan.author",
+          "linkId": "CarePlan.custodian",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1182,22 +1184,22 @@
                   }
                 }
               ],
-              "linkId": "CarePlan.author-flyover",
-              "text": "When populated, the author is responsible for the care plan.  The care plan is attributed to the author. The author may also be a contributor.  For example, an organization can be an author, but not listed as a contributor.",
+              "linkId": "CarePlan.custodian-flyover",
+              "text": "When populated, the custodian is responsible for the care plan. The care plan is attributed to the custodian. The custodian might or might not be a contributor.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Practitioner, PractitionerRole, Device, RelatedPerson, Organization, CareTeam"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Practitioner, PractitionerRole, Device, RelatedPerson, Organization, CareTeam, CareTeam"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "CarePlan.author.value",
+              "linkId": "CarePlan.custodian.value",
               "text": "Who is the designated responsible party",
               "type": "reference",
               "required": false,
@@ -1233,14 +1235,14 @@
                 }
               ],
               "linkId": "CarePlan.contributor-flyover",
-              "text": "Identifies the individual(s) or organization who provided the contents of the care plan. Collaborative care plans may have multiple contributors.",
+              "text": "Identifies the individual(s), organization or device who provided the contents of the care plan. Collaborative care plans may have multiple contributors.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Practitioner, PractitionerRole, Device, RelatedPerson, Organization, CareTeam"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Practitioner, PractitionerRole, Device, RelatedPerson, Organization, CareTeam, CareTeam"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1289,8 +1291,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CareTeam"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CareTeam, CareTeam"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1372,8 +1374,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Resource"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Resource, Resource"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1422,8 +1424,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Goal"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Goal, Goal"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1669,8 +1671,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Appointment, CommunicationRequest, DeviceRequest, MedicationRequest, NutritionOrder, Task, ServiceRequest, VisionPrescription, RequestGroup, ImmunizationRecommendation"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Appointment, CommunicationRequest, DeviceRequest, MedicationRequest, NutritionOrder, Task, ServiceRequest, VisionPrescription, RequestOrchestration, ImmunizationRecommendation, SupplyRequest, SupplyRequest"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2062,8 +2064,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Goal"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Goal, Goal"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2292,15 +2294,15 @@
                             {
                               "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                                   "valueCode": "Patient"
                                 },
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                                   "valueCode": "Practitioner"
                                 },
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                                   "valueCode": "RelatedPerson"
                                 }
                               ],
@@ -2471,8 +2473,8 @@
                             {
                               "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                  "valueCode": "Patient, RelatedPerson, Practitioner, PractitionerRole, Organization"
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                  "valueCode": "Patient, RelatedPerson, Practitioner, PractitionerRole, Organization, Organization"
                                 },
                                 {
                                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2524,8 +2526,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Practitioner, PractitionerRole, Organization, RelatedPerson, Patient, CareTeam, HealthcareService, Device"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Practitioner, PractitionerRole, Organization, RelatedPerson, Patient, CareTeam, HealthcareService, Device, Device"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2621,8 +2623,8 @@
                             {
                               "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                  "valueCode": "Medication, Substance"
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                  "valueCode": "Medication, Substance, Substance"
                                 },
                                 {
                                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2872,14 +2874,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

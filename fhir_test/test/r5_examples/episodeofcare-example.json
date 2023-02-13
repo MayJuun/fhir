@@ -55,7 +55,9 @@
   "diagnosis": [
     {
       "condition": {
-        "reference": "Condition/stroke"
+        "reference": {
+          "reference": "Condition/stroke"
+        }
       },
       "role": {
         "coding": [
@@ -87,7 +89,7 @@
     "reference": "Practitioner/14",
     "display": "Amanda Assigned"
   },
-  "team": [
+  "careTeam": [
     {
       "reference": "CareTeam/example",
       "display": "example care team"

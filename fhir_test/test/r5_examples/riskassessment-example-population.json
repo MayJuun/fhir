@@ -10,7 +10,7 @@
       "resourceType": "Group",
       "id": "group1",
       "type": "person",
-      "actual": false
+      "membership": "enumerated"
     }
   ],
   "status": "final",

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><Organization xmlns="http://hl7.org/fhir">
+  <id value="f001"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="f001"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization "f001" </p></div><p><b>identifier</b>: id: 91654 (use: OFFICIAL), id: 17-0112278 (use: USUAL)</p><p><b>type</b>: University Medical Hospital <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#V6; <a href="http://terminology.hl7.org/4.0.0/CodeSystem-organization-type.html">Organization type</a>#prov "Healthcare Provider")</span></p><p><b>name</b>: Burgers University Medical Center</p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Purpose</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td>*</td><td> </td><td>ph: 022-655 2300(WORK)</td><td> </td></tr><tr><td>*</td><td> </td><td> </td><td>Galapagosweg 91 Den Burg 9105 PZ NLD (WORK)</td></tr><tr><td>*</td><td> </td><td> </td><td>PO Box 2311 Den Burg 9100 AA NLD (WORK)</td></tr><tr><td>*</td><td>Press <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-contactentity-type.html">Contact entity type</a>#PRESS)</span></td><td>ph: 022-655 2334</td><td> </td></tr><tr><td>*</td><td>Patient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-contactentity-type.html">Contact entity type</a>#PATINF)</span></td><td>ph: 022-655 2335</td><td> </td></tr></table></div></text><identifier>
+    <use value="official"/>
+    <system value="urn:oid:2.16.528.1"/>
+    <value value="91654"/>
+  </identifier>
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:oid:2.16.840.1.113883.2.4.6.1"/>
+        <!--    Dutch VEKTIS AGB-Z    -->
+    <value value="17-0112278"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+          <!--    RoleCodeNLUZIRoleCodeOrganisaties    -->
+      <code value="V6"/>
+      <display value="University Medical Hospital"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Burgers University Medical Center"/>
+  <contact>
+    <telecom>
+      <system value="phone"/>
+      <value value="022-655 2300"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <address>
+      <use value="work"/>
+      <line value="Galapagosweg 91"/>
+      <city value="Den Burg"/>
+      <postalCode value="9105 PZ"/>
+      <country value="NLD"/>
+    </address>
+  </contact>
+  <contact>
+    <address>
+      <use value="work"/>
+      <line value="PO Box 2311"/>
+      <city value="Den Burg"/>
+      <postalCode value="9100 AA"/>
+      <country value="NLD"/>
+    </address>
+  </contact>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+        <code value="PRESS"/>
+      </coding>
+    </purpose>
+    <telecom>
+      <system value="phone"/>
+      <value value="022-655 2334"/>
+    </telecom>
+  </contact>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+        <code value="PATINF"/>
+      </coding>
+    </purpose>
+    <telecom>
+      <system value="phone"/>
+      <value value="022-655 2335"/>
+    </telecom>
+  </contact>
+</Organization>

@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "medicationrequest-intent",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -32,9 +32,11 @@
       "value": "urn:oid:2.16.840.1.113883.4.642.3.1321"
     }
   ],
-  "version": "4.6.0",
-  "name": "medicationRequest Intent",
+  "version": "5.0.0-snapshot3",
+  "name": "MedicationRequestIntent",
+  "title": "medicationRequest Intent",
   "status": "draft",
+  "experimental": false,
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -47,6 +49,17 @@
     }
   ],
   "description": "MedicationRequest Intent Codes",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

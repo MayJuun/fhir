@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Medication1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,21 +9,21 @@
       "status": "active",
       "description": "Type options for Medication.ingredient.strength[x]",
       "expansion": {
-        "identifier": "urn:uuid:20cd1933-0cd1-461f-a8e5-25bae0cc9edf",
-        "timestamp": "2022-05-06T17:11:35+00:00",
+        "identifier": "urn:uuid:75340d01-6836-43f6-a79d-582a7b5dcf00",
+        "timestamp": "2022-12-14T07:16:53+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           }
@@ -31,14 +31,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Medication1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Pharmacy)",
   "item": [
     {
@@ -99,7 +101,7 @@
                 }
               ],
               "linkId": "Medication.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -291,7 +293,7 @@
                 }
               ],
               "linkId": "Medication.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -537,14 +539,14 @@
                 }
               ],
               "linkId": "Medication.marketingAuthorizationHolder-flyover",
-              "text": "Describes the organization that is responsible for the manufacturing of the item and holds the registration to market the product in a jurisdiction. This might not be the company that physically manufactures the product.  May be known as \"Sponsor\" and is commonly called \"Manufacturer\".",
+              "text": "The company or other legal entity that has authorization, from the appropriate drug regulatory authority,  to market a medicine in one or more jurisdictions.  Typically abbreviated MAH.Note:  The MAH may manufacture the product and may also contract the manufacturing of the product to one or more companies (organizations).",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Organization"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Organization, Organization"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -552,7 +554,7 @@
                 }
               ],
               "linkId": "Medication.marketingAuthorizationHolder.value",
-              "text": "Organization responsible for manufacturing the item",
+              "text": "Organization that has authorization to market medication",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1263,14 +1265,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

@@ -83,8 +83,7 @@
         "unit": "years",
         "system": "http://unitsofmeasure.org",
         "code": "a"
-      },
-      "deceasedBoolean": false
+      }
     },
     {
       "resourceType": "FamilyMemberHistory",
@@ -249,8 +248,7 @@
         "unit": "years",
         "system": "http://unitsofmeasure.org",
         "code": "a"
-      },
-      "deceasedBoolean": false
+      }
     },
     {
       "resourceType": "FamilyMemberHistory",
@@ -462,7 +460,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "a"
       },
-      "deceasedBoolean": false,
       "condition": [
         {
           "code": {
@@ -555,7 +552,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "a"
       },
-      "deceasedBoolean": false,
       "condition": [
         {
           "code": {
@@ -671,8 +667,7 @@
         "unit": "years",
         "system": "http://unitsofmeasure.org",
         "code": "a"
-      },
-      "deceasedBoolean": false
+      }
     },
     {
       "resourceType": "FamilyMemberHistory",
@@ -746,7 +741,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "a"
       },
-      "deceasedBoolean": false,
       "condition": [
         {
           "code": {

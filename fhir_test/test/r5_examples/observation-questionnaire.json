@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Observation1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,16 +9,16 @@
       "status": "active",
       "description": "Type options for Observation.instantiates[x]",
       "expansion": {
-        "identifier": "urn:uuid:d464f6cb-f6c6-4ef9-ac16-849461d4b190",
-        "timestamp": "2022-05-06T17:11:52+00:00",
+        "identifier": "urn:uuid:147a806b-472a-4689-a2e5-2c1c36991dcc",
+        "timestamp": "2022-12-14T07:17:05+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "ObservationDefinition",
             "display": "ObservationDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "ObservationDefinition",
             "display": "ObservationDefinition"
           }
@@ -32,26 +32,26 @@
       "status": "active",
       "description": "Type options for Observation.effective[x]",
       "expansion": {
-        "identifier": "urn:uuid:3c6061ff-380e-44f3-93e4-ea5e28842670",
-        "timestamp": "2022-05-06T17:11:52+00:00",
+        "identifier": "urn:uuid:7d5f938c-8447-42e1-956a-d159841e6843",
+        "timestamp": "2022-12-14T07:17:05+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Period",
             "display": "Period"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Timing",
             "display": "Timing"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "instant",
             "display": "instant"
           }
@@ -65,66 +65,66 @@
       "status": "active",
       "description": "Type options for Observation.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:2993d565-82fe-41e5-a96a-2971f6870572",
-        "timestamp": "2022-05-06T17:11:52+00:00",
+        "identifier": "urn:uuid:8d96f64a-903a-480b-a83d-2c8f8c80e60a",
+        "timestamp": "2022-12-14T07:17:05+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "SampledData",
             "display": "SampledData"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "time",
             "display": "time"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Period",
             "display": "Period"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Attachment",
             "display": "Attachment"
           }
@@ -138,66 +138,66 @@
       "status": "active",
       "description": "Type options for Observation.component.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:52bd38e5-3525-41ff-bc62-ecd599150019",
-        "timestamp": "2022-05-06T17:11:52+00:00",
+        "identifier": "urn:uuid:fd3fa132-9e55-441b-ac3a-f01349557d44",
+        "timestamp": "2022-12-14T07:17:05+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "SampledData",
             "display": "SampledData"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "time",
             "display": "time"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Period",
             "display": "Period"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Attachment",
             "display": "Attachment"
           }
@@ -205,14 +205,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Observation1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "active",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -278,7 +280,7 @@
                 }
               ],
               "linkId": "Observation.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -470,7 +472,7 @@
                 }
               ],
               "linkId": "Observation.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -658,8 +660,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "ObservationDefinition"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "ObservationDefinition, ObservationDefinition"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -711,8 +713,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CarePlan, DeviceRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CarePlan, DeviceRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest, ServiceRequest"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -895,8 +897,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Observation"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Observation, Observation"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1040,8 +1042,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "MedicationAdministration, MedicationDispense, MedicationUsage, Procedure, Immunization, ImagingStudy"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "MedicationAdministration, MedicationDispense, MedicationUsage, Procedure, Immunization, ImagingStudy, GenomicStudy, GenomicStudy"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1249,8 +1251,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group, Device, Location, Organization, Procedure, Practitioner, Medication, Substance, BiologicallyDerivedProduct, NutritionProduct"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Group, Device, Location, Organization, Procedure, Practitioner, Medication, Substance, BiologicallyDerivedProduct, NutritionProduct, NutritionProduct"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1299,8 +1301,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Resource"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Resource, Resource"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1353,8 +1355,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Encounter, Encounter"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1481,15 +1483,15 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Patient"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Practitioner"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "RelatedPerson"
                         }
                       ],
@@ -1601,8 +1603,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Practitioner, PractitionerRole, Organization, CareTeam, Patient, RelatedPerson"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Practitioner, PractitionerRole, Organization, CareTeam, Patient, RelatedPerson, RelatedPerson"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2166,8 +2168,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "BodyStructure"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "BodyStructure, BodyStructure"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2273,8 +2275,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Specimen"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Specimen, Group, Group"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2327,8 +2329,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Device, DeviceMetric"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Device, DeviceMetric, DeviceMetric"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2916,8 +2918,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Observation, QuestionnaireResponse, MolecularSequence"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Observation, QuestionnaireResponse, MolecularSequence, MolecularSequence"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2966,8 +2968,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "DocumentReference, ImagingStudy, ImagingSelection, QuestionnaireResponse, Observation, MolecularSequence"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "DocumentReference, ImagingStudy, ImagingSelection, QuestionnaireResponse, Observation, MolecularSequence, GenomicStudy, GenomicStudy"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -4137,14 +4139,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

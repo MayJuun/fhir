@@ -12,6 +12,7 @@
     }
   ],
   "status": "active",
+  "kind": "insurance",
   "type": {
     "coding": [
       {
@@ -42,11 +43,9 @@
     "start": "2011-05-23",
     "end": "2012-05-23"
   },
-  "payor": [
-    {
-      "reference": "Organization/2"
-    }
-  ],
+  "insurer": {
+    "reference": "Organization/2"
+  },
   "class": [
     {
       "type": {
@@ -57,7 +56,9 @@
           }
         ]
       },
-      "value": "CB135",
+      "value": {
+        "value": "CB135"
+      },
       "name": "Corporate Baker\u0027s Inc. Local #35"
     },
     {
@@ -69,7 +70,9 @@
           }
         ]
       },
-      "value": "123",
+      "value": {
+        "value": "123"
+      },
       "name": "Trainee Part-time Benefits"
     },
     {
@@ -81,7 +84,9 @@
           }
         ]
       },
-      "value": "B37FC",
+      "value": {
+        "value": "B37FC"
+      },
       "name": "Full Coverage: Medical, Dental, Pharmacy, Vision, EHC"
     },
     {
@@ -93,7 +98,9 @@
           }
         ]
       },
-      "value": "P7",
+      "value": {
+        "value": "P7"
+      },
       "name": "Includes afterlife benefits"
     },
     {
@@ -105,7 +112,9 @@
           }
         ]
       },
-      "value": "SILVER",
+      "value": {
+        "value": "SILVER"
+      },
       "name": "Silver: Family Plan spouse only"
     },
     {
@@ -117,7 +126,9 @@
           }
         ]
       },
-      "value": "Tier2",
+      "value": {
+        "value": "Tier2"
+      },
       "name": "Low deductable, max $20 copay"
     },
     {
@@ -129,7 +140,9 @@
           }
         ]
       },
-      "value": "9"
+      "value": {
+        "value": "9"
+      }
     },
     {
       "type": {
@@ -140,7 +153,9 @@
           }
         ]
       },
-      "value": "MDF12345"
+      "value": {
+        "value": "MDF12345"
+      }
     },
     {
       "type": {
@@ -151,7 +166,9 @@
           }
         ]
       },
-      "value": "987654"
+      "value": {
+        "value": "987654"
+      }
     },
     {
       "type": {
@@ -162,7 +179,9 @@
           }
         ]
       },
-      "value": "M35PT"
+      "value": {
+        "value": "M35PT"
+      }
     },
     {
       "type": {
@@ -173,7 +192,9 @@
           }
         ]
       },
-      "value": "234516"
+      "value": {
+        "value": "234516"
+      }
     },
     {
       "type": {
@@ -184,7 +205,9 @@
           }
         ]
       },
-      "value": "9"
+      "value": {
+        "value": "9"
+      }
     }
   ],
   "meta": {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="do-not-turn"/>
+	    <!--   placer identifier  -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="do-not-turn"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "do-not-turn" </p></div><p><b>identifier</b>: <span title="  placer identifier ">id: 20170201-0002</span></p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>priority</b>: stat</p><p><b>doNotPerform</b>: true</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Turning patient in bed (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#359962006)</span></td></tr></table><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>authoredOn</b>: <span title="  TimeStamp when order authorized ">2017-02-01T17:23:07Z</span></p><p><b>requester</b>: <a href="practitioner-example.html">Practitioner/example: Dr Adam Careful</a> "Adam CAREFUL"</p><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><span>: Patient has a spinal fracture</span></td></tr></table></div></text><identifier>
+		<system value="http://goodhealth.org/placer-ids">
+		</system>
+		<value value="20170201-0002"/>
+	</identifier>
+	<status value="active"/>
+	<intent value="order"/>
+	<priority value="stat"/>
+	<doNotPerform value="true"/>
+	<code>
+	  <concept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="359962006"/>
+			<display value="Turning patient in bed (procedure)"/>
+		</coding>
+	  </concept>
+	</code>
+	<subject>
+		<reference value="Patient/example"/>
+	</subject>
+	    <!--   TimeStamp when order authorized  -->
+	<authoredOn value="2017-02-01T17:23:07Z"/>
+	<requester>
+			<reference value="Practitioner/example"/>
+			<display value="Dr Adam Careful"/>
+	</requester>
+	    <!--   demonstrating in this example the reason reference element   -->
+	<reason>
+ 		<reference>
+      <display value="Patient has a spinal fracture"/>
+    </reference>
+	</reason>
+</ServiceRequest>

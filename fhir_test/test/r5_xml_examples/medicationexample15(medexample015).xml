@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+  <id value="medexample015"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Medication</b><a name="medexample015"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Medication "medexample015" </p></div><p><b>code</b>: Capecitabine 500mg oral tablet (Xeloda) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#213293)</span></p><p><b>marketingAuthorizationHolder</b>: <a name="mmanu"> </a></p><blockquote><p/><p><a name="mmanu"> </a></p><p><b>name</b>: Medication Manufacturer</p></blockquote><p><b>doseForm</b>: Tablet dose form (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385055001)</span></p><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a name="sub04"> </a><blockquote><p/><p><a name="sub04"> </a></p><p><b>instance</b>: false</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Capecitabine (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#386906001)</span></td></tr></table></blockquote></td></tr></table><p><b>strength</b>: 500 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span>/1(unit TAB from http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm)<span style="background: LightGoldenRodYellow"> (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><h3>Batches</h3><table class="grid"><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>9494788</td><td>2017-05-22</td></tr></table></div></text><contained>
+    <Organization>
+      <id value="mmanu"/>
+      <name value="Medication Manufacturer"/>
+    </Organization>
+  </contained>
+  <contained>
+    <Substance>
+      <id value="sub04"/>
+      <instance value="false"/>
+      <code>
+        <concept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="386906001"/>
+            <display value="Capecitabine (substance)"/>
+          </coding>
+        </concept>
+      </code>
+    </Substance>
+  </contained>
+  <code>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="213293"/>
+      <display value="Capecitabine 500mg oral tablet (Xeloda)"/>
+    </coding>
+  </code>
+  <marketingAuthorizationHolder>
+    <reference value="#mmanu"/>
+  </marketingAuthorizationHolder>
+    <doseForm>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="385055001"/>
+        <display value="Tablet dose form (qualifier value)"/>
+      </coding>
+    </doseForm>
+    <ingredient>
+      <item>
+      <reference>
+        <reference value="#sub04"/>
+      </reference>
+      </item>
+      <strengthRatio>
+        <numerator>
+          <value value="500"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+          <code value="TAB"/>
+        </denominator>
+      </strengthRatio>
+    </ingredient>
+  <batch>
+    <lotNumber value="9494788"/>
+    <expirationDate value="2017-05-22"/>
+  </batch>
+</Medication>

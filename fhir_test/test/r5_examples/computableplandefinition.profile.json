@@ -20,14 +20,21 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/computableplandefinition",
-  "version": "4.6.0",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1078"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
   "name": "Computable PlanDefinition",
+  "title": "Computable PlanDefinition",
   "status": "draft",
   "experimental": false,
   "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
   "description": "Defines a computable PlanDefinition that specifies a single library and requires all expressions referenced from the PlanDefinition to be definitions in that single library",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "workflow",
@@ -74,8 +81,7 @@
             "key": "cnl-0",
             "severity": "warning",
             "human": "Name should be usable as an identifier for the module by machine processing applications such as code generation",
-            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
-            "xpath": "not(exists(f:name/@value)) or matches(f:name/@value, \u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
+            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){1,254}\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
           }
         ],
@@ -102,7 +108,7 @@
         "path": "PlanDefinition.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
-        "comment": "Typically, the resource has an id except for cases like the create operation, conditional updates.",
+        "comment": "Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
         "min": 0,
         "max": "1",
         "base": {
@@ -148,7 +154,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -180,7 +185,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -213,7 +217,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -270,7 +273,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -288,8 +290,8 @@
         "id": "PlanDefinition.contained",
         "path": "PlanDefinition.contained",
         "short": "Contained, inline Resources",
-        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.",
-        "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.",
+        "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
         "alias": [
           "inline resources",
           "anonymous resources",
@@ -345,7 +347,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -353,7 +354,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -396,7 +396,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -404,14 +403,13 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "mustSupport": false,
         "isModifier": true,
         "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
-        "isSummary": false,
+        "isSummary": true,
         "mapping": [
           {
             "identity": "rim",
@@ -423,7 +421,7 @@
         "id": "PlanDefinition.url",
         "path": "PlanDefinition.url",
         "short": "Canonical identifier for this plan definition, represented as a URI (globally unique)",
-        "definition": "An absolute URI that is used to identify this plan definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this plan definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the plan definition is stored on different servers.",
+        "definition": "An absolute URI that is used to identify this plan definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this plan definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the plan definition is stored on different servers.",
         "comment": "Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
         "requirements": "Allows the plan definition to be referenced by a single globally unique identifier.",
         "min": 0,
@@ -440,11 +438,17 @@
         ],
         "constraint": [
           {
+            "key": "cnl-1",
+            "severity": "warning",
+            "human": "URL should not contain | or # - these characters make processing canonical references problematic",
+            "expression": "url.matches(\u0027([^|#])*\u0027)",
+            "source": "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
+          },
+          {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -491,7 +495,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -522,7 +525,7 @@
         "path": "PlanDefinition.version",
         "short": "Business version of the plan definition",
         "definition": "The identifier that is used to identify this version of the plan definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the plan definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts.",
-        "comment": "There may be different plan definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version].",
+        "comment": "There may be different plan definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
         "min": 0,
         "max": "1",
         "base": {
@@ -541,7 +544,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -591,7 +593,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -600,6 +601,10 @@
         "isSummary": true,
         "mapping": [
           {
+            "identity": "workflow",
+            "map": "Definition.name"
+          },
+          {
             "identity": "rim",
             "map": "N/A (to add?)"
           }
@@ -607,6 +612,16 @@
       },
       {
         "id": "PlanDefinition.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.title",
         "short": "Name for this plan definition (human friendly)",
         "definition": "A short, descriptive, user-friendly title for the plan definition.",
@@ -629,7 +644,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -649,6 +663,16 @@
       },
       {
         "id": "PlanDefinition.subtitle",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.subtitle",
         "short": "Subordinate title of the plan definition",
         "definition": "An explanatory or alternate title for the plan definition giving additional information about its content.",
@@ -670,7 +694,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -707,7 +730,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -756,7 +778,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -777,7 +798,7 @@
           ],
           "strength": "required",
           "description": "The lifecycle status of an artifact.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -813,13 +834,13 @@
             "code": "boolean"
           }
         ],
+        "meaningWhenMissing": "If absent, this resource is treated as though it is not experimental.",
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -861,17 +882,17 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Group"
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/MedicinalProductDefinition",
+              "http://hl7.org/fhir/StructureDefinition/SubstanceDefinition",
+              "http://hl7.org/fhir/StructureDefinition/AdministrableProductDefinition",
+              "http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition",
+              "http://hl7.org/fhir/StructureDefinition/PackagedProductDefinition"
             ]
           },
           {
             "code": "canonical",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicinalProductDefinition",
-              "http://hl7.org/fhir/StructureDefinition/SubstanceDefinition",
-              "http://hl7.org/fhir/StructureDefinition/AdministrableProductDefinition",
-              "http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition",
-              "http://hl7.org/fhir/StructureDefinition/PackagedProductDefinition",
               "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
             ]
           }
@@ -883,7 +904,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -895,11 +915,15 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "SubjectType"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+              "valueBoolean": true
             }
           ],
           "strength": "extensible",
           "description": "The possible types of subjects for a plan definition (E.g. Patient, Practitioner, Organization, Location, etc.).",
-          "valueSet": "http://hl7.org/fhir/ValueSet/subject-type"
+          "valueSet": "http://hl7.org/fhir/ValueSet/participant-resource-types"
         },
         "mapping": [
           {
@@ -916,8 +940,8 @@
         "id": "PlanDefinition.date",
         "path": "PlanDefinition.date",
         "short": "Date last changed",
-        "definition": "The date  (and optionally time) when the plan definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the plan definition changes.",
-        "comment": "Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the plan definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+        "definition": "The date  (and optionally time) when the plan definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the plan definition changes.",
+        "comment": "The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the plan definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
         "alias": [
           "Revision Date"
         ],
@@ -939,7 +963,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -963,9 +986,19 @@
       },
       {
         "id": "PlanDefinition.publisher",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.publisher",
-        "short": "Name of the publisher (organization or individual)",
-        "definition": "The name of the organization or individual that published the plan definition.",
+        "short": "Name of the publisher/steward (organization or individual)",
+        "definition": "The name of the organization or individual responsible for the release and ongoing maintenance of the plan definition.",
         "comment": "Usually an organization but may be an individual. The publisher (or steward) of the plan definition is the organization or individual primarily responsible for the maintenance and upkeep of the plan definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the plan definition. This item SHOULD be populated unless the information is available from context.",
         "requirements": "Helps establish the \"authority/credibility\" of the plan definition.  May also allow for contact.",
         "min": 0,
@@ -986,7 +1019,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1032,7 +1064,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1052,10 +1083,20 @@
       },
       {
         "id": "PlanDefinition.description",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.description",
         "short": "Natural language description of the plan definition",
         "definition": "A free text natural language description of the plan definition from a consumer\u0027s perspective.",
-        "comment": "This description can be used to capture details such as why the plan definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the plan definition as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the plan definition is presumed to be the predominant language in the place the plan definition was created).",
+        "comment": "This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the plan definition as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the plan definition is presumed to be the predominant language in the place the plan definition was created).",
         "min": 0,
         "max": "1",
         "base": {
@@ -1074,7 +1115,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1117,7 +1157,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1159,7 +1198,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1194,6 +1232,16 @@
       },
       {
         "id": "PlanDefinition.purpose",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.purpose",
         "short": "Why this plan definition is defined",
         "definition": "Explanation of why this plan definition is needed and why it has been designed as it has.",
@@ -1216,7 +1264,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1244,6 +1291,16 @@
       },
       {
         "id": "PlanDefinition.usage",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.usage",
         "short": "Describes the clinical usage of the plan",
         "definition": "A detailed description of how the plan definition is used from a clinical perspective.",
@@ -1265,7 +1322,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1307,7 +1363,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1353,7 +1408,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1400,7 +1454,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1447,7 +1500,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1493,7 +1545,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1545,7 +1596,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1582,7 +1632,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1619,7 +1668,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1656,7 +1704,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1695,7 +1742,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1735,7 +1781,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1773,7 +1818,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1807,7 +1851,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -1850,7 +1894,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1858,7 +1901,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1901,7 +1943,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1909,7 +1950,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1946,7 +1986,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1995,7 +2034,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2043,7 +2081,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2091,7 +2128,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2139,7 +2175,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2187,7 +2222,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2224,7 +2258,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2258,7 +2291,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2301,7 +2334,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2309,7 +2341,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2352,7 +2383,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2360,7 +2390,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2397,7 +2426,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2464,7 +2492,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2501,7 +2528,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2538,7 +2564,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2572,7 +2597,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2615,7 +2640,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2623,7 +2647,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2666,7 +2689,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2674,7 +2696,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2690,6 +2711,16 @@
       },
       {
         "id": "PlanDefinition.actor.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.actor.title",
         "short": "User-visible title",
         "definition": "A descriptive label for the actor.",
@@ -2711,7 +2742,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2727,6 +2757,16 @@
       },
       {
         "id": "PlanDefinition.actor.description",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.actor.description",
         "short": "Describes the actor",
         "definition": "A description of how the actor fits into the overall actions of the plan definition.",
@@ -2748,7 +2788,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2785,7 +2824,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2819,7 +2857,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2862,7 +2900,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2870,7 +2907,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2913,7 +2949,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2921,7 +2956,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2958,7 +2992,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2974,8 +3007,47 @@
           ],
           "strength": "required",
           "description": "The type of participant in the activity.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-participant-type|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-participant-type|5.0.0-snapshot3"
         },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".role.classCode"
+          }
+        ]
+      },
+      {
+        "id": "PlanDefinition.actor.option.typeCanonical",
+        "path": "PlanDefinition.actor.option.typeCanonical",
+        "short": "Who or what can participate",
+        "definition": "The type of participant in the action.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PlanDefinition.actor.option.typeCanonical",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -3002,6 +3074,8 @@
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/CareTeam",
               "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/DeviceDefinition",
+              "http://hl7.org/fhir/StructureDefinition/Endpoint",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/StructureDefinition/HealthcareService",
               "http://hl7.org/fhir/StructureDefinition/Location",
@@ -3019,7 +3093,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3056,7 +3129,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3104,7 +3176,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3142,7 +3213,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -3185,7 +3256,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -3193,7 +3263,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -3236,7 +3305,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -3244,7 +3312,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -3262,7 +3329,7 @@
         "id": "PlanDefinition.action.linkId",
         "path": "PlanDefinition.action.linkId",
         "short": "Unique id for the action in the PlanDefinition",
-        "definition": "An identifier that is unique within the PlanDefinition to allow linkage within the realized CarePlan and/or RequestGroup.",
+        "definition": "An identifier that is unique within the PlanDefinition to allow linkage within the realized CarePlan and/or RequestOrchestration.",
         "min": 0,
         "max": "1",
         "base": {
@@ -3281,7 +3348,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3318,7 +3384,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3334,6 +3399,16 @@
       },
       {
         "id": "PlanDefinition.action.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.action.title",
         "short": "User-visible title",
         "definition": "The textual description of the action displayed to a user. For example, when the action is a test to be performed, the title would be the title of the test such as Assay by HPLC.",
@@ -3355,7 +3430,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3375,6 +3449,16 @@
       },
       {
         "id": "PlanDefinition.action.description",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.action.description",
         "short": "Brief description of the action",
         "definition": "A brief description of the action used to provide a summary to display to the user.",
@@ -3396,7 +3480,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3416,6 +3499,16 @@
       },
       {
         "id": "PlanDefinition.action.textEquivalent",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.action.textEquivalent",
         "short": "Static text equivalent of the action, used if the dynamic aspects cannot be interpreted by the receiving system",
         "definition": "A text equivalent of the action to be performed. This provides a human-interpretable description of the action when the definition is consumed by a system that might not be capable of interpreting it dynamically.",
@@ -3437,7 +3530,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3478,7 +3570,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3494,7 +3585,7 @@
           ],
           "strength": "required",
           "description": "Identifies the level of importance to be assigned to actioning the request.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -3526,7 +3617,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3575,7 +3665,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3623,7 +3712,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3660,7 +3748,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3709,7 +3796,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3721,11 +3807,15 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "SubjectType"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+              "valueBoolean": true
             }
           ],
           "strength": "extensible",
           "description": "The possible types of subjects for a plan definition (E.g. Patient, Practitioner, Organization, Location, etc.).",
-          "valueSet": "http://hl7.org/fhir/ValueSet/subject-type"
+          "valueSet": "http://hl7.org/fhir/ValueSet/participant-resource-types"
         },
         "mapping": [
           {
@@ -3761,7 +3851,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3799,7 +3888,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3833,7 +3921,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -3876,7 +3964,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -3884,7 +3971,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -3927,7 +4013,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -3935,7 +4020,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -3973,7 +4057,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3989,7 +4072,7 @@
           ],
           "strength": "required",
           "description": "Defines the kinds of conditions that can appear on actions.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-condition-kind|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-condition-kind|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -4022,7 +4105,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4059,7 +4141,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4067,7 +4148,6 @@
             "severity": "error",
             "human": "Input data elements must have a requirement or a relatedData, but not both",
             "expression": "requirement.exists() xor relatedData.exists()",
-            "xpath": "exists(f:requirement) xor exists (f:relatedData/@value)",
             "source": "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
           }
         ],
@@ -4101,7 +4181,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -4144,7 +4224,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4152,7 +4231,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4195,7 +4273,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4203,7 +4280,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4219,6 +4295,16 @@
       },
       {
         "id": "PlanDefinition.action.input.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.action.input.title",
         "short": "User-visible title",
         "definition": "A human-readable label for the data requirement used to label data flows in BPMN or similar diagrams. Also provides a human readable label when rendering the data requirement that conveys its purpose to human readers.",
@@ -4240,7 +4326,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4277,7 +4362,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4315,7 +4399,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4352,7 +4435,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4360,7 +4442,6 @@
             "severity": "error",
             "human": "Output data element must have a requirement or a relatedData, but not both",
             "expression": "requirement.exists() xor relatedData.exists()",
-            "xpath": "exists(f:requirement) xor exists (f:relatedData/@value)",
             "source": "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
           }
         ],
@@ -4394,7 +4475,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -4437,7 +4518,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4445,7 +4525,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4488,7 +4567,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4496,7 +4574,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4512,6 +4589,16 @@
       },
       {
         "id": "PlanDefinition.action.output.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "PlanDefinition.action.output.title",
         "short": "User-visible title",
         "definition": "A human-readable label for the data requirement used to label data flows in BPMN or similar diagrams. Also provides a human readable label when rendering the data requirement that conveys its purpose to human readers.",
@@ -4533,7 +4620,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4570,7 +4656,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4608,7 +4693,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4646,7 +4730,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4680,7 +4763,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -4723,7 +4806,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4731,7 +4813,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4774,7 +4855,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4782,7 +4862,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4819,7 +4898,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4856,7 +4934,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4872,7 +4949,7 @@
           ],
           "strength": "required",
           "description": "Defines the types of relationships between actions.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-relationship-type|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-relationship-type|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -4907,7 +4984,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4926,7 +5002,7 @@
         "path": "PlanDefinition.action.timing[x]",
         "short": "When the action should take place",
         "definition": "An optional value describing when the action should be performed.",
-        "comment": "The intent of the timing element is to provide timing when the action should be performed. As a definitional resource, this timing is interpreted as part of an apply operation so that the timing of the result actions in a CarePlan or RequestGroup, for example, would be specified by evaluating the timing definition in the context of the apply and setting the resulting timing on the appropriate elements of the target resource. If the timing is an Age, the activity is expected to be performed when the subject is the given Age. When the timing is a Duration, the activity is expected to be performed within the specified duration from the apply. When the timing is a Range, it may be a range of Ages or Durations, providing a range for the expected timing of the resulting activity. When the timing is a Timing, it is establishing a schedule for the timing of the resulting activity.",
+        "comment": "The intent of the timing element is to provide timing when the action should be performed. As a definitional resource, this timing is interpreted as part of an apply operation so that the timing of the result actions in a CarePlan or RequestOrchestration, for example, would be specified by evaluating the timing definition in the context of the apply and setting the resulting timing on the appropriate elements of the target resource. If the timing is an Age, the activity is expected to be performed when the subject is the given Age. When the timing is a Duration, the activity is expected to be performed within the specified duration from the apply. When the timing is a Range, it may be a range of Ages or Durations, providing a range for the expected timing of the resulting activity. When the timing is a Timing, it is establishing a schedule for the timing of the resulting activity.",
         "requirements": "Allows prompting for activities and detection of missed planned activities.",
         "min": 0,
         "max": "1",
@@ -4955,7 +5031,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5000,7 +5075,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5037,7 +5111,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5071,7 +5144,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -5114,7 +5187,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -5122,7 +5194,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -5165,7 +5236,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -5173,7 +5243,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -5210,7 +5279,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5247,7 +5315,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5263,8 +5330,47 @@
           ],
           "strength": "required",
           "description": "The type of participant in the activity.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-participant-type|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-participant-type|5.0.0-snapshot3"
         },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".role.classCode"
+          }
+        ]
+      },
+      {
+        "id": "PlanDefinition.action.participant.typeCanonical",
+        "path": "PlanDefinition.action.participant.typeCanonical",
+        "short": "Who or what can participate",
+        "definition": "The type of participant in the action.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PlanDefinition.action.participant.typeCanonical",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -5291,6 +5397,8 @@
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/CareTeam",
               "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/DeviceDefinition",
+              "http://hl7.org/fhir/StructureDefinition/Endpoint",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/StructureDefinition/HealthcareService",
               "http://hl7.org/fhir/StructureDefinition/Location",
@@ -5308,7 +5416,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5345,7 +5452,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5393,7 +5499,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5440,7 +5545,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5488,7 +5592,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5504,7 +5607,7 @@
           ],
           "strength": "required",
           "description": "Defines organization behavior of a group.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-grouping-behavior|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-grouping-behavior|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -5536,7 +5639,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5552,7 +5654,7 @@
           ],
           "strength": "required",
           "description": "Defines selection behavior of a group.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-selection-behavior|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-selection-behavior|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -5584,7 +5686,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5600,7 +5701,7 @@
           ],
           "strength": "required",
           "description": "Defines expectations around whether an action or action group is required.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-required-behavior|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-required-behavior|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -5632,7 +5733,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5648,7 +5748,7 @@
           ],
           "strength": "required",
           "description": "Defines selection frequency behavior for an action or group.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-precheck-behavior|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-precheck-behavior|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -5680,7 +5780,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5696,7 +5795,7 @@
           ],
           "strength": "required",
           "description": "Defines behavior for an action or a group for how many times that item may be repeated.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/action-cardinality-behavior|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/action-cardinality-behavior|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -5739,7 +5838,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5784,7 +5882,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5822,7 +5919,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -5856,7 +5952,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -5899,7 +5995,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -5907,7 +6002,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -5950,7 +6044,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -5958,7 +6051,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -5996,7 +6088,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -6034,7 +6125,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -6067,7 +6157,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -6082,6 +6171,56 @@
           {
             "identity": "rim",
             "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "PlanDefinition.asNeeded[x]",
+        "path": "PlanDefinition.asNeeded[x]",
+        "short": "Preconditions for service",
+        "definition": "If a CodeableConcept is present, it indicates the pre-condition for performing the service.  For example \"pain\", \"on flare-up\", etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PlanDefinition.asNeeded[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ProcedureAsNeededReason"
+            }
+          ],
+          "strength": "example",
+          "description": "A coded concept identifying the pre-condition that should hold prior to performing a procedure.  For example \"pain\", \"on flare-up\", etc.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/medication-as-needed-reason"
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "boolean: precondition.negationInd (inversed - so negationInd \u003d true means asNeeded\u003dfalse CodeableConcept: precondition.observationEventCriterion[code\u003d\"Assertion\"].value"
           }
         ]
       }

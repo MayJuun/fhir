@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "participation-role-type",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e This value set includes agent participation types. \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/ValueSet-provenance-agent-type.html\"\u003ehttp://terminology.hl7.org/ValueSet/provenance-agent-type\u003c/a\u003e\u003c/li\u003e\u003cli\u003eInclude all codes defined in \u003ca href\u003d\"http://dicom.nema.org/resources/ontology/DCM\"\u003e\u003ccode\u003ehttp://dicom.nema.org/resources/ontology/DCM\u003c/code\u003e\u003c/a\u003e, where the codes are contained in \u003ca href\u003d\"http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_402.html\"\u003ehttp://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_402.html\u003c/a\u003e\u003c/li\u003e\u003cli\u003eInclude all codes defined in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-extra-security-role-type.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/extra-security-role-type\u003c/code\u003e\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -36,7 +36,7 @@
       "value": "urn:oid:2.16.840.1.113883.4.642.3.54"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "ParticipationRoleType",
   "title": "ParticipationRoleType",
   "status": "draft",
@@ -58,6 +58,17 @@
     }
   ],
   "description": "This FHIR value set is comprised of Actor participation Type codes, which can be used to value FHIR agents, actors, and other role elements. The codes are intended to express how the agent participated in some activity. Sometimes refered to the agent functional-role relative to the activity.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "copyright": "This is an example FHIR value set based on ASTM Standard, E1762-95 (2013)    Some codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright © 2011 by the National Electrical Manufacturers Association.",
   "compose": {
     "include": [

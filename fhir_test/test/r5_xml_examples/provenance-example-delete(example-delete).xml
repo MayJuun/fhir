@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+	<id value="example-delete"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="example-delete"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance "example-delete" </p></div><p><b>target</b>: <a href="broken-link.html">http://terminology.hl7.org/CodeSystem/location-physical-type/_history/3</a></p><p><b>recorded</b>: 27 June 2015, 8:39:24 am</p><h3>Authorizations</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>metadata management <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#METAMGT)</span></td></tr></table><p><b>activity</b>: delete <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-DataOperation.html">DataOperation</a>#DELETE)</span></p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>Author <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#author)</span></td><td><span>: Brian Postlethwaite</span></td></tr></table><h3>Entities</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td>*</td><td>source</td><td><a href="broken-link.html">http://terminology.hl7.org/CodeSystem/location-physical-type/_history/3</a></td></tr></table></div></text><target>
+		<reference value="http://terminology.hl7.org/CodeSystem/location-physical-type/_history/3"/>
+	</target>
+
+	<recorded value="2015-06-27T08:39:24+10:00"/>
+    <authorization>
+		<concept>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+				<code value="METAMGT"/>
+			</coding>
+		</concept>
+    </authorization>
+	<activity>
+		<coding>
+           <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation"/>
+            <code value="DELETE"/>
+		</coding>
+	</activity>
+	<agent>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+				<code value="author"/>
+			</coding>
+		</type>
+		<who>
+			<display value="Brian Postlethwaite"/>
+		</who>
+	</agent>
+	<entity>
+		<role value="source"/>
+		<what>
+			<reference value="http://terminology.hl7.org/CodeSystem/location-physical-type/_history/3"/>    
+		</what>
+	</entity>
+</Provenance>

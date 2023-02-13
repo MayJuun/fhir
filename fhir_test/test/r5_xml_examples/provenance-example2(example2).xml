@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+	<id value="example2"/>
+	    <!--   
+    Got the patient's nickname from his partner
+    -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="example2"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance "example2" </p></div><p><b>target</b>: <span title="  &#xA;    Got the patient's nickname from his partner&#xA;   "><a href="patient-example-c.html">Patient/pat3/_history/1</a> "Simon NOTSOWELL"(#n2)</span></p><p><b>recorded</b>: 8 Dec 2021, 4:54:24 pm</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>informant <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ParticipationType.html">ParticipationType</a>#INF)</span></td><td><a href="relatedperson-example-f001-sarah.html">RelatedPerson/f001</a> "Sarah ABELS"</td></tr></table></div></text><target>
+    <extension url="http://hl7.org/fhir/StructureDefinition/targetElement"> 
+      <valueUri value="n2"/>
+    </extension>
+		<reference value="Patient/pat3/_history/1"/>
+	</target>
+	<recorded value="2021-12-08T16:54:24+11:00"/>
+	<agent>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+				<code value="INF"/>
+			</coding>
+		</type>
+		<who>
+			<reference value="RelatedPerson/f001"/>
+		</who>
+	</agent>
+</Provenance>

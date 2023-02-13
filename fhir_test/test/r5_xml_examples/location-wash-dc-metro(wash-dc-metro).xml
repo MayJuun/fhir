@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><Location xmlns="http://hl7.org/fhir">
+
+	<id value="wash-dc-metro"/>
+	<meta>
+        <profile value="http://hl7.org/fhir/uv/vhdir/StructureDefinition/vhdir-location"/>
+    
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+
+    <text><status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Location</b><a name="wash-dc-metro"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Location "wash-dc-metro" </p><p style="margin-bottom: 0px">Profile: <code>http://hl7.org/fhir/uv/vhdir/StructureDefinition/vhdir-location</code></p></div><p><b>Location Boundary (GeoJSON)</b>: </p><p><b>status</b>: active</p><p><b>name</b>: <span title="  this record is active  ">Washington, DC metro area</span></p><p><b>form</b>: Area <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-location-physical-type.html">Location type</a>#area)</span></p></div></text><extension url="http://hl7.org/fhir/StructureDefinition/location-boundary-geojson">
+        <valueAttachment>
+            <contentType value="application/geo+json"/>
+                <!--   https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA/DC/District%20of%20Columbia.geo.json   -->
+            <data value="VGhlbWU6IA0KUmF3UGFyc2VkDQp7InR5cGUiOiJGZWF0dXJlQ29sbGVjdGlvbiIsInByb3BlcnRpZXMiOnsia2luZCI6InN0YXRlIiwic3RhdGUiOiJEQyJ9LCJmZWF0dXJlcyI6Ww0KeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsia2luZCI6ImNvdW50eSIsIm5hbWUiOiJEaXN0cmljdCBvZiBDb2x1bWJpYSIsInN0YXRlIjoiREMifSwiZ2VvbWV0cnkiOnsidHlwZSI6Ik11bHRpUG9seWdvbiIsImNvb3JkaW5hdGVzIjpbW1tbLTc3LjAzNTMsMzguOTkzOV0sWy03Ny4wMDI0LDM4Ljk2NjVdLFstNzYuOTA5MywzOC44OTUzXSxbLTc3LjA0MDcsMzguNzkxMl0sWy03Ny4wNDYyLDM4Ljg0MDVdLFstNzcuMDQwNywzOC44NzM0XSxbLTc3LjExNzQsMzguOTMzNl1dXV19fQ0KXX0="/>
+                <!--   And a higher resolution boundary can be found here   -->
+            <url value="https://github.com/OpenDataDE/State-zip-code-GeoJSON/raw/master/dc_district_of_columbia_zip_codes_geo.min.json"/>
+            <size value="389"/>
+        </valueAttachment>
+    </extension>
+
+    <status value="active"/>     <!--   this record is active   -->
+
+    <name value="Washington, DC metro area"/>
+
+    <form>     <!--   This location is a collection of buildings or other locations such as a site or a campus   -->
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+            <code value="area"/>
+            <display value="Area"/>
+        </coding>
+    </form>
+
+</Location>

@@ -8,7 +8,9 @@
   "status": "completed",
   "intent": "order",
   "code": {
-    "text": "Appendectomy"
+    "concept": {
+      "text": "Appendectomy"
+    }
   },
   "subject": {
     "display": "Paula Patient"

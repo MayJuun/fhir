@@ -3,7 +3,7 @@
   "id": "NamingSystem-preferred-id",
   "text": {
     "status": "extensions",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003epreferred-id\u003c/h2\u003e\u003cp\u003eOPERATION: preferred-id\u003c/p\u003e\u003cp\u003eThe official URL for this operation definition is: \u003c/p\u003e\u003cpre\u003ehttp://hl7.org/fhir/OperationDefinition/NamingSystem-preferred-id\u003c/pre\u003e\u003cdiv\u003e\u003cp\u003eThis operation returns the preferred identifiers for identifiers, and terminologies. The operation takes 2 parameters:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003ea system identifier - either a URI, an OID, or a v2 table 0396 (other) code\u003c/li\u003e\n\u003cli\u003ea code for what kind of identifier is desired (URI, OID, v2 table 0396 identifier)\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eand returns either the requested identifier, or an HTTP errors response with an OperationOutcome because either the provided identifier was not recognized, or the requested identiifer type is not known.\u003c/p\u003e\n\u003cp\u003eThe principle use of this operation is when converting between v2, CDA and FHIR Identifier/CX/II and CodeableConcepts/C(N/W)E/CD but the operation may also find use when converting metadata such as profiles.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eURL: [base]/NamingSystem/$preferred-id\u003c/p\u003e\u003cp\u003eParameters\u003c/p\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eName\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCardinality\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eBinding\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDocumentation\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eid\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#string\"\u003estring\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe server parses the provided identifier to see what type it is (e.g. a URI, an OID as a URI, a plain OID, or a v2 table 0396 code). If the server can\u0027t tell what type of identifier it is, it can try it as multiple types. It is an error if more than one system matches the provided identifier\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003etype\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#code\"\u003ecode\u003c/a\u003e\u003c/td\u003e\u003ctd\u003ehttp://hl7.org/fhir/ValueSet/namingsystem-identifier-type|4.6.0|4.6.0 (Required)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003eresult\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#string\"\u003estring\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eOIDs are return as plain OIDs (not the URI form).\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cdiv\u003e\u003cp\u003eServers handle this request by finding the provided identifier in their known naming systems, and returning the requested identifier type (\u003ca href\u003d\"namingsystem-definitions.html#NamingSystem.uniqueId.type\"\u003eNamingSystem.uniqueId.type\u003c/a\u003e). If there are multiple possible identifiers of the specified type (e.g. multiple OIDs) the server returns an error.\u003c/p\u003e\n\u003cp\u003eIf the server wishes, it can also look through all code systems and value sets it knows about when attempting to find the requested identifier\u003c/p\u003e\n\u003c/div\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eURL: [base]/NamingSystem/$preferred-id\u003c/p\u003e\u003cp\u003eParameters\u003c/p\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eName\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCardinality\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eBinding\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDocumentation\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003eid\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#string\"\u003estring\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eThe server parses the provided identifier to see what type it is (e.g. a URI, an OID as a URI, a plain OID, or a v2 table 0396 code). If the server can\u0027t tell what type of identifier it is, it can try it as multiple types. It is an error if more than one system matches the provided identifier\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003etype\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#code\"\u003ecode\u003c/a\u003e\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"valueset-namingsystem-identifier-type.html\"\u003ehttp://hl7.org/fhir/ValueSet/namingsystem-identifier-type|5.0.0-snapshot3\u003c/a\u003e (Required)\u003c/td\u003e\u003ctd\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIN\u003c/td\u003e\u003ctd\u003edate\u003c/td\u003e\u003ctd\u003e0..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#dateTime\"\u003edateTime\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eIf specified, the operation will indicate what the preferred identifier was on the specified date.  If not specified, the operation will provide the preferred identifier as of \u0027now\u0027\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eOUT\u003c/td\u003e\u003ctd\u003eresult\u003c/td\u003e\u003ctd\u003e1..1\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"datatypes.html#string\"\u003estring\u003c/a\u003e\u003c/td\u003e\u003ctd/\u003e\u003ctd\u003e\u003cdiv\u003e\u003cp\u003eOIDs are return as plain OIDs (not the URI form).\u003c/p\u003e\n\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cdiv\u003e\u003cp\u003eServers handle this request by finding the provided identifier in their known naming systems, and returning the requested identifier type (\u003ca href\u003d\"namingsystem-definitions.html#NamingSystem.uniqueId.type\"\u003eNamingSystem.uniqueId.type\u003c/a\u003e). If there is more than one identifier of the specified type (for the specified date), then the \u0027preferred\u0027 identifier will be returned.  If there is only one identifier, that identifier will be returned even if it is not preferred.  If there are multiple preferred identifiers or multiple identifiers with none marked as preferred, the system MAY return an error or may list all identifiers applicable for that date and period.\u003c/p\u003e\n\u003cp\u003eIf the server wishes, it can also look through all code systems and value sets it knows about when attempting to find the requested identifier.\u003c/p\u003e\n\u003c/div\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -16,12 +16,13 @@
     }
   ],
   "url": "http://hl7.org/fhir/OperationDefinition/NamingSystem-preferred-id",
-  "version": "4.6.0",
-  "name": "preferred-id",
+  "version": "5.0.0-snapshot3",
+  "name": "PreferredId",
   "title": "Fetch Preferred id",
   "status": "draft",
   "kind": "operation",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -38,9 +39,20 @@
     }
   ],
   "description": "This operation returns the preferred identifiers for identifiers, and terminologies. The operation takes 2 parameters:     \n\n* a system identifier - either a URI, an OID, or a v2 table 0396 (other) code  \n* a code for what kind of identifier is desired (URI, OID, v2 table 0396 identifier)    \n\nand returns either the requested identifier, or an HTTP errors response with an OperationOutcome because either the provided identifier was not recognized, or the requested identiifer type is not known.    \n\nThe principle use of this operation is when converting between v2, CDA and FHIR Identifier/CX/II and CodeableConcepts/C(N/W)E/CD but the operation may also find use when converting metadata such as profiles.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "affectsState": false,
   "code": "preferred-id",
-  "comment": "Servers handle this request by finding the provided identifier in their known naming systems, and returning the requested identifier type ([NamingSystem.uniqueId.type](namingsystem-definitions.html#NamingSystem.uniqueId.type)). If there are multiple possible identifiers of the specified type (e.g. multiple OIDs) the server returns an error.    \n\nIf the server wishes, it can also look through all code systems and value sets it knows about when attempting to find the requested identifier",
+  "comment": "Servers handle this request by finding the provided identifier in their known naming systems, and returning the requested identifier type ([NamingSystem.uniqueId.type](namingsystem-definitions.html#NamingSystem.uniqueId.type)). If there is more than one identifier of the specified type (for the specified date), then the \u0027preferred\u0027 identifier will be returned.  If there is only one identifier, that identifier will be returned even if it is not preferred.  If there are multiple preferred identifiers or multiple identifiers with none marked as preferred, the system MAY return an error or may list all identifiers applicable for that date and period.  \n\nIf the server wishes, it can also look through all code systems and value sets it knows about when attempting to find the requested identifier.",
   "resource": [
     "NamingSystem"
   ],
@@ -70,8 +82,16 @@
           }
         ],
         "strength": "required",
-        "valueSet": "http://hl7.org/fhir/ValueSet/namingsystem-identifier-type|4.6.0|4.6.0"
+        "valueSet": "http://hl7.org/fhir/ValueSet/namingsystem-identifier-type|5.0.0-snapshot3"
       }
+    },
+    {
+      "name": "date",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": " If specified, the operation will indicate what the preferred identifier was on the specified date.  If not specified, the operation will provide the preferred identifier as of \u0027now\u0027",
+      "type": "dateTime"
     },
     {
       "name": "result",

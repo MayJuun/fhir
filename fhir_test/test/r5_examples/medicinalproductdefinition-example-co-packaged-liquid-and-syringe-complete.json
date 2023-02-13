@@ -14,8 +14,8 @@
           "reference": "#"
         }
       ],
-      "package": {
-        "package": [
+      "packaging": {
+        "packaging": [
           {
             "type": {
               "coding": [
@@ -24,7 +24,7 @@
                 }
               ]
             },
-            "package": [
+            "packaging": [
               {
                 "type": {
                   "coding": [
@@ -33,7 +33,7 @@
                     }
                   ]
                 },
-                "package": [
+                "packaging": [
                   {
                     "type": {
                       "coding": [

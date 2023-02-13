@@ -11,7 +11,7 @@
       "id": "DenBurg",
       "description": "Greater Denburg area",
       "mode": "instance",
-      "physicalType": {
+      "form": {
         "coding": [
           {
             "code": "area",
@@ -83,16 +83,20 @@
   "name": "Consulting psychologists and/or psychology services",
   "comment": "Providing Specialist psychology services to the greater Den Burg area, many years of experience dealing with PTSD issues",
   "extraDetails": "Several assessments are required for these specialist services, and the waiting times can be greater than 3 months at times. Existing patients are prioritized when requesting appointments on the schedule.",
-  "telecom": [
+  "contact": [
     {
-      "system": "phone",
-      "value": "(555) silent",
-      "use": "work"
-    },
-    {
-      "system": "email",
-      "value": "directaddress@example.com",
-      "use": "work"
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "(555) silent",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "directaddress@example.com",
+          "use": "work"
+        }
+      ]
     }
   ],
   "coverageArea": [
@@ -173,49 +177,52 @@
     }
   ],
   "appointmentRequired": false,
-  "availableTime": [
+  "availability": [
     {
-      "daysOfWeek": [
-        "wed"
+      "availableTime": [
+        {
+          "daysOfWeek": [
+            "wed"
+          ],
+          "allDay": true
+        },
+        {
+          "daysOfWeek": [
+            "mon",
+            "tue",
+            "thu",
+            "fri"
+          ],
+          "availableStartTime": "08:30:00",
+          "availableEndTime": "05:30:00"
+        },
+        {
+          "daysOfWeek": [
+            "sat",
+            "fri"
+          ],
+          "availableStartTime": "09:30:00",
+          "availableEndTime": "04:30:00"
+        }
       ],
-      "allDay": true
-    },
-    {
-      "daysOfWeek": [
-        "mon",
-        "tue",
-        "thu",
-        "fri"
-      ],
-      "availableStartTime": "08:30:00",
-      "availableEndTime": "05:30:00"
-    },
-    {
-      "daysOfWeek": [
-        "sat",
-        "fri"
-      ],
-      "availableStartTime": "09:30:00",
-      "availableEndTime": "04:30:00"
+      "notAvailableTime": [
+        {
+          "description": "Christmas/Boxing Day, Reduced capacity is available during the Christmas period",
+          "during": {
+            "start": "2015-12-25",
+            "end": "2015-12-26"
+          }
+        },
+        {
+          "description": "New Years Day",
+          "during": {
+            "start": "2016-01-01",
+            "end": "2016-01-01"
+          }
+        }
+      ]
     }
   ],
-  "notAvailable": [
-    {
-      "description": "Christmas/Boxing Day",
-      "during": {
-        "start": "2015-12-25",
-        "end": "2015-12-26"
-      }
-    },
-    {
-      "description": "New Years Day",
-      "during": {
-        "start": "2016-01-01",
-        "end": "2016-01-01"
-      }
-    }
-  ],
-  "availabilityExceptions": "Reduced capacity is available during the Christmas period",
   "endpoint": [
     {
       "reference": "Endpoint/example"

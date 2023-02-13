@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "adverse-event-preventive-action",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -29,11 +29,11 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.3.1479"
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.3238"
     }
   ],
-  "version": "4.6.0",
-  "name": "AdverseEvent Preventive Action",
+  "version": "5.0.0-snapshot3",
+  "name": "AdverseEventPreventiveAction",
   "title": "AdverseEvent Preventive Action",
   "status": "draft",
   "experimental": true,
@@ -49,6 +49,17 @@
     }
   ],
   "description": "This value set includes codes that describe the preventive actions that contributed to avoiding the adverse event.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "copyright": "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org",
   "compose": {
     "include": [

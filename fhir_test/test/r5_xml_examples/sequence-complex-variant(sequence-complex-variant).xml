@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><MolecularSequence xmlns="http://hl7.org/fhir">
+    <id value="sequence-complex-variant"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MolecularSequence</b><a name="sequence-complex-variant"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MolecularSequence "sequence-complex-variant" </p></div><p><b>identifier</b>: id: ?ngen-9? (use: OFFICIAL)</p><p><b>type</b>: dna</p><p><b>specimen</b>: <a href="broken-link.html">Specimen/genetics-example1-somatic: Molecular Specimen ID: MLD45-Z4-1234</a></p><p><b>device</b>: <span>: 12 lead EKG Device Metric</span></p><p><b>performer</b>: <a href="organization-example.html">Organization/hl7: HL7</a> "Health Level Seven International"</p><blockquote><p><b>relative</b></p><p><b>coordinateSystem</b>: 0-based interval counting <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA30100-4)</span></p><h3>StartingSequences</h3><table class="grid"><tr><td>-</td><td><b>Sequence[x]</b></td><td><b>WindowStart</b></td><td><b>WindowEnd</b></td><td><b>Strand</b></td></tr><tr><td>*</td><td>NC_000002.12 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (nuccore#NC_000002.12)</span></td><td>128273724</td><td>128273754</td><td>watson</td></tr></table><h3>Edits</h3><table class="grid"><tr><td>-</td><td><b>Start</b></td><td><b>End</b></td><td><b>ReplacementSequence</b></td><td><b>ReplacedSequence</b></td></tr><tr><td>*</td><td>128273724</td><td>128273736</td><td>CTCATTGT</td><td>CTCCATTGCATGCGTT</td></tr></table></blockquote></div></text><identifier>
+      <use value="official"/>
+    </identifier>
+    <type value="dna"/>
+    <specimen>
+      <reference value="Specimen/genetics-example1-somatic"/>
+      <display value="Molecular Specimen ID: MLD45-Z4-1234"/>
+    </specimen>
+    <device>
+      <display value="12 lead EKG Device Metric"/>
+    </device>
+    <performer>
+      <reference value="Organization/hl7"/>
+      <display value="HL7"/>
+    </performer>
+    <relative>
+      <coordinateSystem>
+          <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA30100-4"/>
+              <display value="0-based interval counting"/>
+          </coding>
+      </coordinateSystem>
+      <startingSequence>
+          <sequenceCodeableConcept>
+            <coding>
+              <system value="http://www.ncbi.nlm.nih.gov/nuccore"/>
+              <code value="NC_000002.12"/>
+            </coding>
+          </sequenceCodeableConcept>
+          <windowStart value="128273724"/>
+          <windowEnd value="128273754"/>
+          <strand value="watson"/>
+      </startingSequence>
+      <edit>
+          <start value="128273724"/>
+          <end value="128273736"/>
+          <replacementSequence value="CTCATTGT"/>
+          <replacedSequence value="CTCCATTGCATGCGTT"/>
+      </edit>    
+    </relative>
+</MolecularSequence>

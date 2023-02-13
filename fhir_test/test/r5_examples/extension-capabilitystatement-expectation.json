@@ -9,27 +9,28 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-  "version": "4.6.0",
-  "name": "expectation",
-  "title": "Conformance expectation",
-  "status": "draft",
-  "date": "2014-04-12",
-  "publisher": "Health Level Seven, Inc. - [WG Name] WG",
-  "contact": [
+  "identifier": [
     {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "http://hl7.org/special/committees/fhir.htm"
-        }
-      ]
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1049"
     }
   ],
+  "version": "5.0.0-snapshot3",
+  "name": "CSExpectation",
+  "title": "CapabilityStatement Expectation",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-08-14",
+  "publisher": "HL7",
   "description": "Defines the level of expectation associated with a given system capability.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "v2",
@@ -47,23 +48,27 @@
   "context": [
     {
       "type": "element",
-      "expression": "CapabilityStatement.rest.resource.interaction"
-    },
-    {
-      "type": "element",
-      "expression": "CapabilityStatement.rest.resource.searchParam"
-    },
-    {
-      "type": "element",
-      "expression": "CapabilityStatement.rest.searchParam"
-    },
-    {
-      "type": "element",
-      "expression": "CapabilityStatement.rest.operation"
-    },
-    {
-      "type": "element",
       "expression": "CapabilityStatement.document"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.format"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.implementationGuide"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.imports"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.instantiates"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.patchFormat"
     },
     {
       "type": "element",
@@ -71,7 +76,71 @@
     },
     {
       "type": "element",
+      "expression": "CapabilityStatement.rest.interaction.code"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.interaction.documentation"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.operation"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.extension"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.conditionalCreate"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.conditionalDelete"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.conditionalRead"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.conditionalUpdate"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.conditionalPatch"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.interaction"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.operation"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.profile"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.readHistory"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.referencePolicy"
+    },
+    {
+      "type": "element",
       "expression": "CapabilityStatement.rest.resource.searchInclude"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.searchParam"
     },
     {
       "type": "element",
@@ -79,7 +148,35 @@
     },
     {
       "type": "element",
-      "expression": "CapabilityStatement.rest.resource.operation"
+      "expression": "CapabilityStatement.rest.resource.supportedProfile"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.updateCreate"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.versioning"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.searchParam"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.security"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.security.cors"
+    },
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.security.service"
+    },
+    {
+      "type": "extension",
+      "expression": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
     }
   ],
   "type": "Extension",
@@ -106,7 +203,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -114,7 +210,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -150,7 +245,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -198,7 +293,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -206,7 +300,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -273,7 +366,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],

@@ -7,12 +7,19 @@
     ]
   },
   "text": {
-    "status": "generated",
+    "status": "additional",
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\u003ctable class\u003d\"grid\"\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e14647-2\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol [Moles/volume] in Serum or Plasma\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd colspan\u003d\"3\"\u003e\n\t\t\t\t\t\t\u003cb\u003eAdditional Cholesterol codes\u003c/b\u003e\n\t\t\t\t\t\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e2093-3\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol [Mass/volume] in Serum or Plasma\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e48620-9\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol [Mass/volume] in Serum or Plasma ultracentrifugate\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e9342-7\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol [Percentile]\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd colspan\u003d\"3\"\u003e\n\t\t\t\t\t\t\u003cb\u003eCholesterol Ratios\u003c/b\u003e\n\t\t\t\t\t\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e2096-6\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol/Triglyceride [Mass Ratio] in Serum or Plasma\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e35200-5\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol/Triglyceride [Mass Ratio] in Serum or Plasma\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e48089-7\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol/Apolipoprotein B [Molar ratio] in Serum or Plasma\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003ehttp://loinc.org\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e55838-7\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eCholesterol/Phospholipid [Molar ratio] in Serum or Plasma\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\u003c/table\u003e\n\t\t\u003c/div\u003e"
   },
   "url": "http://hl7.org/fhir/ValueSet/example-expansion",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.3141"
+    }
+  ],
   "version": "20150622",
-  "name": "LOINC Codes for Cholesterol in Serum/Plasma",
+  "name": "LOINCCodesForCholesterolInSerumPlasma",
+  "title": "LOINC Codes for Cholesterol in Serum/Plasma",
   "status": "draft",
   "experimental": true,
   "date": "2015-06-22",
@@ -47,7 +54,7 @@
     "extension": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/valueset-expansionSource",
-        "valueUri": "http://hl7.org/fhir/ValueSet/example-extensional"
+        "valueUri": "http://hl7.org/fhir/ValueSet/example"
       }
     ],
     "identifier": "urn:uuid:42316ff8-2714-4680-9980-f37a6d1a71bc",

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><NutritionOrder xmlns="http://hl7.org/fhir">    <!--   EH: use oral Diet element   --><id value="texturemodified"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: NutritionOrder</b><a name="texturemodified"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource NutritionOrder "texturemodified" </p></div><p><b>identifier</b>: id: 123</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>subject</b>: <a href="patient-example.html">Patient/example: Peter Chalmers</a> "Peter CHALMERS"</p><p><b>dateTime</b>: 2014-09-17</p><p><b>orderer</b>: <a href="practitioner-example.html">Practitioner/example: Dr Adam Careful</a> "Adam CAREFUL"</p><blockquote><p><b>oralDiet</b></p><p><b>type</b>: <span title="  EH:  list type of diet showing standard code and local codes  ">Texture modified diet <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#435801000124108; diet-type-codes#1010)</span></span></p><h3>Schedules</h3><table class="grid"><tr><td>-</td><td><b>Timing</b></td></tr><tr><td>*</td><td>Starting 2015-02-10, 3 per 1 days</td></tr></table><h3>Textures</h3><table class="grid"><tr><td>-</td><td><b>Modifier</b></td><td><b>FoodType</b></td></tr><tr><td>*</td><td>Regular, Chopped Meat <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#228049004 "Chopped food")</span></td><td>Regular, Chopped Meat <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#28647000 "Meat")</span></td></tr></table></blockquote></div></text><identifier>
+		<system value="http://goodhealthhospital.org/nutrition-requests"/>
+		<value value="123"/>
+	</identifier>
+	<status value="active"/><intent value="order"/>
+	<subject>
+		<reference value="Patient/example"/>
+		<display value="Peter Chalmers"/>
+	</subject>
+	<dateTime value="2014-09-17"/>
+	<orderer>
+		<reference value="Practitioner/example"/>
+		<display value="Dr Adam Careful"/>
+	</orderer>
+	<oralDiet>
+		    <!--   EH:  list type of diet showing standard code and local codes   -->
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="435801000124108"/>
+				<display value="Texture modified diet"/>
+			</coding>
+			<coding>
+				<system value="http://goodhealthhospital.org/diet-type-codes"/>
+				<code value="1010"/>
+				<display value="Texture modified diet"/>
+			</coding>
+			<text value="Texture modified diet"/>
+		</type>
+		    <!--   EH example of three times a day starting on 2/10   -->
+		<schedule>
+			<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2015-02-10"/>
+				</boundsPeriod>
+				<frequency value="3"/>
+				<period value="1"/>
+				<periodUnit value="d"/>
+			</repeat>
+		</timing>
+		</schedule>
+		<texture>
+			<modifier>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="228049004"/>
+					<display value="Chopped food"/>
+				</coding>
+				<text value="Regular, Chopped Meat"/>
+			</modifier>
+			<foodType>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="28647000"/>
+					<display value="Meat"/>
+				</coding>
+				<text value="Regular, Chopped Meat"/>
+			</foodType>
+		</texture>
+	</oralDiet>
+</NutritionOrder>

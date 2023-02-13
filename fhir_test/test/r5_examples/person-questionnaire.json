@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Person1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,16 +9,16 @@
       "status": "active",
       "description": "Type options for Person.deceased[x]",
       "expansion": {
-        "identifier": "urn:uuid:a162ef8c-52c0-4e62-bb9f-fd247e821b6b",
-        "timestamp": "2022-05-06T17:12:10+00:00",
+        "identifier": "urn:uuid:98744486-9fb2-4d8f-a429-2716d57ce593",
+        "timestamp": "2022-12-14T07:17:16+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           }
@@ -26,14 +26,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Person1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Patient Administration)",
   "item": [
     {
@@ -99,7 +101,7 @@
                 }
               ],
               "linkId": "Person.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -291,7 +293,7 @@
                 }
               ],
               "linkId": "Person.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -850,7 +852,7 @@
                 }
               ],
               "linkId": "Person.maritalStatus-flyover",
-              "text": "This field contains a person\u0027s most recent marital (civil) status. Many contries maintain a register of births, deaths and marriages, and this would simplify that interaction",
+              "text": "This field contains a person\u0027s most recent marital (civil) status. Many countries maintain a register of births, deaths and marriages, and this would simplify that interaction",
               "type": "display"
             },
             {
@@ -901,60 +903,6 @@
               "linkId": "Person.photo-flyover",
               "text": "An image that can be displayed as a thumbnail of the person to enhance the identification of the individual.",
               "type": "display"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "Person.managingOrganization",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "Person.managingOrganization-flyover",
-              "text": "The organization that is the custodian of the person record.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Organization"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
-              "linkId": "Person.managingOrganization.value",
-              "text": "The organization that is the custodian of the person record",
-              "type": "reference",
-              "required": false,
-              "repeats": false
             }
           ]
         },
@@ -1126,7 +1074,7 @@
                     }
                   ],
                   "linkId": "Person.communication.language-flyover",
-                  "text": "The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. \"en\" for English, or \"en-US\" for American English versus \"en-EN\" for England English. The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.",
+                  "text": "The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. \"en\" for English, or \"en-US\" for American English versus \"en-AU\" for Australian English. The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.",
                   "type": "display"
                 },
                 {
@@ -1189,6 +1137,60 @@
                   "repeats": false
                 }
               ]
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Person.managingOrganization",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Person.managingOrganization-flyover",
+              "text": "The organization that is the custodian of the person record.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Organization, Organization"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Person.managingOrganization.value",
+              "text": "The organization that is the custodian of the person record",
+              "type": "reference",
+              "required": false,
+              "repeats": false
             }
           ]
         },
@@ -1360,8 +1362,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Patient, Practitioner, RelatedPerson, Person"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Patient, Practitioner, RelatedPerson, Person, Person"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1425,14 +1427,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

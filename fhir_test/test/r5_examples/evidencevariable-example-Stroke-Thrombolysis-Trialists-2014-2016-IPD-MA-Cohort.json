@@ -32,7 +32,7 @@
   "characteristic": [
     {
       "description": "Stroke Thrombolysis Trialists’ Collaborators Group collection used for individual patient data meta-analysis",
-      "defByCombination": {
+      "definitionByCombination": {
         "code": "any-of",
         "characteristic": [
           {

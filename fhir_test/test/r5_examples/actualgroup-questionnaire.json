@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-actualgroup1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,26 +9,26 @@
       "status": "active",
       "description": "Type options for Group.characteristic.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:a8ba2cd2-65d2-4101-bb05-a35159a37fa3",
-        "timestamp": "2022-05-06T17:11:14+00:00",
+        "identifier": "urn:uuid:45885573-0787-4ceb-ad90-b518bc1c90ab",
+        "timestamp": "2022-12-14T07:16:41+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           }
@@ -36,14 +36,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-actualgroup1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2020-12-28T05:55:11+00:00",
+  "experimental": false,
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
   "item": [
     {
@@ -119,7 +121,7 @@
                 }
               ],
               "linkId": "Group.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -311,7 +313,7 @@
                 }
               ],
               "linkId": "Group.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -507,7 +509,7 @@
                 }
               ],
               "linkId": "Group.type-flyover",
-              "text": "Identifies the broad classification of the kind of resources the group includes. Group members SHALL be of the appropriate resource type (Patient for person or animal; or Practitioner, Device, Medication or Substance for the other types.).",
+              "text": "Identifies the broad classification of the kind of resources the group includes. Group members SHALL be of the appropriate resource type (Patient for person or animal; or Practitioner, PractitionerRole, Device, CareTeam, HealthcareService, Location, Organization, RelatedPerson, or Specimen for the other types.), or a Group of the resources of the appropriate type.",
               "type": "display"
             },
             {
@@ -532,10 +534,10 @@
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "boolean"
+              "valueString": "code"
             }
           ],
-          "linkId": "Group.actual",
+          "linkId": "Group.membership",
           "type": "group",
           "required": true,
           "repeats": true,
@@ -555,16 +557,17 @@
                   }
                 }
               ],
-              "linkId": "Group.actual-flyover",
-              "text": "If true, indicates that the resource refers to a specific group of real individuals.  If false, the group defines a set of intended individuals.",
+              "linkId": "Group.membership-flyover",
+              "text": "Basis for membership in the Group:\n\n* \u0027definitional\u0027: The Group.characteristics specified are both necessary and sufficient to determine membership. All entities that meet the criteria are considered to be members of the group, whether referenced by the group or not. If members are present, they are individuals that happen to be known as meeting the Group.characteristics. The list cannot be presumed to be complete.\n* \u0027enumerated\u0027: The Group.characteristics are necessary but not sufficient to determine membership. Membership is determined by being listed as one of the Group.member.",
               "type": "display"
             },
             {
-              "linkId": "Group.actual.value",
-              "text": "Descriptive or actual",
-              "type": "boolean",
+              "linkId": "Group.membership.value",
+              "text": "membership",
+              "type": "coding",
               "required": false,
-              "repeats": false
+              "repeats": false,
+              "answerConstraint": "optionsOrType"
             }
           ]
         },
@@ -791,8 +794,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Organization, RelatedPerson, Practitioner, PractitionerRole"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Organization, RelatedPerson, Practitioner, PractitionerRole, PractitionerRole"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -808,12 +811,6 @@
           ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 0
-            }
-          ],
           "linkId": "Group.characteristic",
           "text": "Include / Exclude group members by Trait",
           "type": "group",
@@ -1470,8 +1467,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Patient, Practitioner, PractitionerRole, Device, Group, RelatedPerson, Specimen"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "CareTeam, Device, Group, HealthcareService, Location, Organization, Patient, Practitioner, PractitionerRole, RelatedPerson, Specimen, Specimen"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1586,14 +1583,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

@@ -8,6 +8,10 @@
   "url": "http://motivemi.com/artifacts/Library/suiciderisk-orderset-logic",
   "identifier": [
     {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.17.3"
+    },
+    {
       "use": "official",
       "system": "http://motivemi.com/artifacts",
       "value": "mmi:suiciderisk-orderset-logic"

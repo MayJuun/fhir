@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><ImagingSelection xmlns="http://hl7.org/fhir">
+  <id value="example-multiframe-image-selection"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ImagingSelection</b><a name="example-multiframe-image-selection"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ImagingSelection "example-multiframe-image-selection" </p></div><p><b>identifier</b>: id: urn:oid:1.2.840.113747.20080222.307765875869300980245024554221747.2.1</p><p><b>status</b>: available</p><p><b>subject</b>: <span/></p><p><b>code</b>: Key Frames <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><p><b>studyUid</b>: 1.2.840.113747.20080222.307765875869300489345024554221747</p><p><b>derivedFrom</b>: <span/></p><p><b>seriesUid</b>: 1.2.840.113747.20080222.307765875869300489245024554221747.1</p><p><b>frameOfReferenceUid</b>: 1.2.840.113747.20080222.307765875869350980245024554221747.0</p><h3>Instances</h3><table class="grid"><tr><td>-</td><td><b>Uid</b></td><td><b>SopClass</b></td><td><b>Subset</b></td></tr><tr><td>*</td><td>1.2.840.113747.20080222.307765875869300489355024554221747.1.0</td><td>urn:oid:1.2.840.10008.5.1.4.1.1.2.1 (Details: urn:ietf:rfc:3986 code urn:oid:1.2.840.10008.5.1.4.1.1.2.1 = 'urn:oid:1.2.840.10008.5.1.4.1.1.2.1', stated as 'null')</td><td>1, 2, 3, 4</td></tr></table></div></text><identifier>
+    <system value="urn:dicom:uid"/>
+    <value value="urn:oid:1.2.840.113747.20080222.307765875869300980245024554221747.2.1"/>
+  </identifier>
+ <status value="available"/> 
+ <subject>
+    <type value="Patient"/>
+    <identifier>
+      <system value="https://fhirhospital.org"/>
+      <value value="MNSOIISABIDCHRCY"/>
+    </identifier>
+  </subject>
+  <code>
+    <text value="Key Frames"/>
+  </code>
+  <studyUid value="1.2.840.113747.20080222.307765875869300489345024554221747"/>
+  <derivedFrom>
+    <type value="ImagingStudy"/>
+    <identifier>
+      <system value="urn:dicom:uid"/>
+      <value value="urn:oid:1.2.840.113747.20080222.307765875889350980245024554221747"/>
+    </identifier>
+  </derivedFrom>
+  <seriesUid value="1.2.840.113747.20080222.307765875869300489245024554221747.1"/>
+  <frameOfReferenceUid value="1.2.840.113747.20080222.307765875869350980245024554221747.0"/>
+  <instance>
+    <uid value="1.2.840.113747.20080222.307765875869300489355024554221747.1.0"/>
+    <sopClass>
+      <system value="urn:ietf:rfc:3986"/>
+      <code value="urn:oid:1.2.840.10008.5.1.4.1.1.2.1"/>
+    </sopClass>
+    <subset value="1"/>
+    <subset value="2"/>
+    <subset value="3"/>
+    <subset value="4"/>
+  </instance>
+</ImagingSelection>

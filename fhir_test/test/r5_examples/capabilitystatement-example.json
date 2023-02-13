@@ -67,7 +67,7 @@
     "description": "main EHR at ACME",
     "url": "http://10.2.3.4/fhir"
   },
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0",
   "format": [
     "xml",
     "json"
@@ -75,6 +75,10 @@
   "patchFormat": [
     "application/xml-patch+xml",
     "application/json-patch+json"
+  ],
+  "acceptLanguage": [
+    "en",
+    "es"
   ],
   "implementationGuide": [
     "http://hl7.org/fhir/us/lab"
@@ -89,7 +93,7 @@
           {
             "coding": [
               {
-                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                "system": "http://hl7.org/fhir/restful-security-service",
                 "code": "SMART-on-FHIR"
               }
             ]
@@ -100,9 +104,9 @@
       "resource": [
         {
           "type": "Patient",
-          "profile": "http://registry.fhir.org/r4/StructureDefinition/7896271d-57f6-4231-89dc-dcc91eab2416",
+          "profile": "http://registry.fhir.org/r5/StructureDefinition/7896271d-57f6-4231-89dc-dcc91eab2416",
           "supportedProfile": [
-            "http://registry.fhir.org/r4/StructureDefinition/00ab9e7a-06c7-4f77-9234-4154ca1e3347"
+            "http://registry.fhir.org/r5/StructureDefinition/00ab9e7a-06c7-4f77-9234-4154ca1e3347"
           ],
           "documentation": "This server does not let the clients create identities.",
           "interaction": [
@@ -132,12 +136,13 @@
           "conditionalCreate": true,
           "conditionalRead": "full-support",
           "conditionalUpdate": false,
+          "conditionalPatch": false,
           "conditionalDelete": "not-supported",
           "searchInclude": [
-            "Organization"
+            "Patient:organization"
           ],
           "searchRevInclude": [
-            "Person"
+            "Person:patient"
           ],
           "searchParam": [
             {
@@ -172,7 +177,7 @@
       "endpoint": [
         {
           "protocol": {
-            "system": "http://terminology.hl7.org/CodeSystem/message-transport",
+            "system": "http://hl7.org/fhir/message-transport",
             "code": "mllp"
           },
           "address": "mllp:10.1.1.10:9234"

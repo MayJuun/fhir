@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+  <id value="consent-example-Emergency"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Withhold Authorization for Treatment rule for except for Emergency Treatment</p>
+      <p>Patient "Pieter van de Heuvel" wishes to have no data at the Artis University Medical Center available except for Emergency treatment use. 
+      An overall Deny consent directive, with an exception "Permit" for purposeOfUse "ETREAT" at Artis University Medical Center.</p>
+    </div>
+  </text>
+  <status value="active"/>
+
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="INFA"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/f001"/>
+    <display value="Pieter van de Heuvel"/>
+  </subject>
+  <date value="2018-12-24"/>
+    <!--  The example given is Organization wide  -->
+  <controller>
+    <reference value="Organization/f201"/>
+  </controller>
+    <!--  the text terms of the consent in lawyer speak  -->
+  <sourceAttachment>
+    <title value="The patient [grantor] declines to agree to the provider's [grantee's] consent directive form, which lists permissible collection, access, use, or disclosure activities, purposes of use, handling caveats, revocation policies, and consequences of not assenting."/>
+      <!--  likely use url pointer to common text  -->
+  </sourceAttachment>
+  <regulatoryBasis>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="INFA"/>
+    </coding>
+  </regulatoryBasis>
+  <provision>
+      <!--  this is opt-out - e.g. nothing approved unless otherwise stated.  -->
+    <type value="deny"/>
+    <provision>
+      <!--  deny Artis University Medical Center specifically  -->
+      <type value="deny"/>
+      <actor>
+        <role>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+            <code value="CST"/>
+          </coding>
+        </role>
+        <reference>
+          <reference value="Organization/f201"/>
+        </reference>
+      </actor>
+      <provision>
+        <!--  permit Artis University Medical Center for Emergency Treatment  -->
+        <type value="permit"/>
+        <actor>
+          <role>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+              <code value="CST"/>
+            </coding>
+          </role>
+          <reference>
+            <reference value="Organization/f201"/>
+          </reference>
+        </actor>
+        <purpose>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+          <code value="ETREAT"/>
+        </purpose>
+      </provision>
+    </provision>
+  </provision>
+</Consent>

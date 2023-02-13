@@ -17,6 +17,7 @@
     {
       "coding": [
         {
+          "system": "http://terminology.hl7.org/CodeSystem/service-category",
           "code": "17",
           "display": "General Practice"
         }
@@ -25,18 +26,22 @@
   ],
   "serviceType": [
     {
-      "coding": [
-        {
-          "code": "57",
-          "display": "Immunization"
-        }
-      ]
+      "concept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/service-type",
+            "code": "57",
+            "display": "Immunization"
+          }
+        ]
+      }
     }
   ],
   "specialty": [
     {
       "coding": [
         {
+          "system": "http://snomed.info/sct",
           "code": "408480009",
           "display": "Clinical immunology"
         }

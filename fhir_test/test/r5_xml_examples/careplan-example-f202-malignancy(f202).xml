@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><CarePlan xmlns="http://hl7.org/fhir">
+  <id value="f202"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: CarePlan</b><a name="f202"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource CarePlan "f202" </p></div><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>subject</b>: <a href="patient-example-f201-roel.html">Patient/f201: Roel</a> "Roel"</p><p><b>careTeam</b>: <a name="careteam"> </a></p><blockquote><p/><p><a name="careteam"> </a></p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>Member</b></td></tr><tr><td>*</td><td>Treated with <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#28995006)</span></td><td><a href="practitioner-example-f201-ab.html">Practitioner/f201: Dokter Bronsig</a> "Dokter Bronsig"</td></tr></table></blockquote><h3>Addresses</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="condition-example-f202-malignancy.html">Condition/f202: Roel's head-neck tumor</a></td></tr></table><p><b>goal</b>: <a name="goal"> </a></p><blockquote><p/><p><a name="goal"> </a></p><p><b>lifecycleStatus</b>: active</p><p><b>description</b>: Elimination of the spenoid bone tumor <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><p><b>subject</b>: <a href="patient-example-f201-roel.html">Patient/f201: Roel</a> "Roel"</p></blockquote><blockquote><p><b>activity</b></p><h3>PerformedActivities</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="procedure-example-f201-tpf.html">Procedure/f201: Roel's Chemotherapy</a></td></tr></table><h3>PlannedActivityDetails</h3><table class="grid"><tr><td>-</td><td><b>Kind</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>DoNotPerform</b></td><td><b>Product[x]</b></td></tr><tr><td>*</td><td>ServiceRequest</td><td>Chemotherapy <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#367336001)</span></td><td>in-progress</td><td>false</td><td><a name="tpf"> </a><blockquote><p/><p><a name="tpf"> </a></p><p><b>code</b>: <span title=" TPF consists of Docetaxel, Cisplatin and Fluorouracil ">TPF <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></span></p><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="#doce">#doce</a></td></tr></table></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="#cisp">#cisp</a></td></tr></table></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="#fluo">#fluo</a></td></tr></table></blockquote></blockquote></td></tr></table></blockquote></div></text><contained>
+    <Medication>
+      <id value="doce"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="108806006"/>
+          <display value="Docetaxel"/>
+        </coding>
+      </code>
+    </Medication>
+  </contained>
+  <contained>
+    <Medication>
+      <id value="cisp"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="57066004"/>
+          <display value="Cisplatin"/>
+        </coding>
+      </code>
+    </Medication>
+  </contained>
+  <contained>
+    <Medication>
+      <id value="fluo"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="3127006"/>
+          <display value="Fluorouracil"/>
+        </coding>
+      </code>
+    </Medication>
+  </contained>
+  <contained>
+    <Medication>
+      <id value="tpf"/>
+          <!--  TPF consists of Docetaxel, Cisplatin and Fluorouracil  -->
+      <code>
+        <text value="TPF"/>
+      </code>
+        <ingredient>
+          <item>
+            <reference>
+            <reference value="#doce"/>
+            </reference>
+          </item>
+        </ingredient>
+        <ingredient>
+          <item>
+          <reference>
+            <reference value="#cisp"/>
+          </reference>
+          </item>
+        </ingredient>
+        <ingredient>
+          <item>
+          <reference>
+            <reference value="#fluo"/>
+          </reference>
+          </item>
+        </ingredient>
+      
+    </Medication>
+  </contained>
+  <contained>
+    <CareTeam>
+        <id value="careteam"/>
+	<participant>
+    	    <role>
+      	    	<coding>
+        	    <system value="http://snomed.info/sct"/>
+        	    <code value="28995006"/>
+        	    <display value="Treated with"/>
+      		</coding>
+    	    </role>
+    	    <member>
+      		<reference value="Practitioner/f201"/>
+      		<display value="Dokter Bronsig"/>
+    	    </member>
+  	</participant>
+    </CareTeam>
+  </contained>
+  <contained>
+    <Goal>
+      <id value="goal"/>
+      <lifecycleStatus value="active"/>
+      <description>
+        <text value="Elimination of the spenoid bone tumor"/>
+      </description>
+      <subject>
+        <reference value="Patient/f201"/>
+        <display value="Roel"/>
+      </subject>      
+    </Goal>
+  </contained>
+  <status value="active"/>
+  <intent value="plan"/>
+  <subject>
+        <!--  It entails Roel's careplan  -->
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <careTeam>
+    <reference value="#careteam"/>
+  </careTeam>
+  <addresses>
+    <reference>
+      <reference value="Condition/f202"/>
+      <display value="Roel's head-neck tumor"/>
+    </reference>
+  </addresses>
+  <goal>
+    <reference value="#goal"/>
+  </goal>
+  <activity>
+    <performedActivity>
+      <reference>
+        <reference value="Procedure/f201"/>
+        <display value="Roel's Chemotherapy"/>
+      </reference>
+    </performedActivity>
+    <plannedActivityDetail>
+      <kind value="ServiceRequest"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="367336001"/>
+          <display value="Chemotherapy"/>
+        </coding>
+      </code>
+      <status value="in-progress"/>
+      <doNotPerform value="false"/>
+      <productReference>
+        <reference value="#tpf"/>
+      </productReference>
+    </plannedActivityDetail>
+  </activity>
+</CarePlan>

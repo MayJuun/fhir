@@ -43,6 +43,7 @@
         }
       ],
       "status": "active",
+      "kind": "insurance",
       "type": {
         "coding": [
           {
@@ -69,15 +70,13 @@
         "start": "2015-01-01T00:00:00-07:00",
         "end": "2016-01-01T00:00:00-07:00"
       },
-      "payor": [
-        {
-          "identifier": {
-            "system": "http://www.bindb.com/bin",
-            "value": "123456"
-          },
-          "display": "Humana Inc."
-        }
-      ],
+      "insurer": {
+        "identifier": {
+          "system": "http://www.bindb.com/bin",
+          "value": "123456"
+        },
+        "display": "Humana Inc."
+      },
       "class": [
         {
           "type": {
@@ -88,7 +87,9 @@
               }
             ]
           },
-          "value": "80902206"
+          "value": {
+            "value": "80902206"
+          }
         }
       ]
     }

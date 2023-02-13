@@ -12,11 +12,12 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/Participant",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "Participant",
   "title": "participant",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International fhir",
   "contact": [
     {
@@ -29,7 +30,18 @@
     }
   ],
   "description": "Logical Model: A pattern followed by resources that represent the participant in some activity, process, or responsible for providing information about a resource.",
-  "fhirVersion": "4.6.0",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "rim",
@@ -40,6 +52,7 @@
   "kind": "logical",
   "abstract": false,
   "type": "Participant",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "snapshot": {
     "element": [
       {
@@ -60,7 +73,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -98,7 +110,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -134,7 +145,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -170,7 +180,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],

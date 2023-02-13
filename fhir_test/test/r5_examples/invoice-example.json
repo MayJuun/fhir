@@ -15,7 +15,8 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "date": "2017-01-25T08:00:00+01:00",
+  "creation": "2017-01-25T08:00:00+01:00",
+  "periodDate": "2017-01-25",
   "participant": [
     {
       "role": {

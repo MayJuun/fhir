@@ -1,0 +1,63 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "international-civil-aviation-organization-sex-or-gender",
+  "meta": {
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/international-civil-aviation-organization-sex-or-gender\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eF\u003ca name\u003d\"international-civil-aviation-organization-sex-or-gender-F\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFemale\u003c/td\u003e\u003ctd\u003eA value which corresponds to female (\u0027F\u0027) has been recorded in some context.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eM\u003ca name\u003d\"international-civil-aviation-organization-sex-or-gender-M\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMale\u003c/td\u003e\u003ctd\u003eA value which corresponds to female (\u0027M\u0027) has been recorded in some context. A value which corresponds to \u0027X\u0027 (any non-M or non-F value) has been recorded or the value is unspecified.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u0026lt;\u003ca name\u003d\"international-civil-aviation-organization-sex-or-gender-.60\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eX\u003c/td\u003e\u003ctd\u003eA value which corresponds to \u0027X\u0027 (any non-M or non-F value) has been recorded or the value is unspecified.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "pa"
+    }
+  ],
+  "url": "http://terminology.hl7.org/CodeSystem/international-civil-aviation-organization-sex-or-gender",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.2039"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "ICAOSexOrGender",
+  "title": "International Civil Aviation Organization Sex or Gender",
+  "status": "active",
+  "experimental": true,
+  "description": "The complete set of concepts used for exchange of the \u0027sex\u0027 value as represented in international travel documents as defined by Doc 9303: Machine Readable Travel Documents, Part 7: Machine Readable Visas published by the International Civil Aviation Organization (ICAO). Initially aligned with the Eighth Edition (2021).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "F",
+      "display": "Female",
+      "definition": "A value which corresponds to female (\u0027F\u0027) has been recorded in some context."
+    },
+    {
+      "code": "M",
+      "display": "Male",
+      "definition": "A value which corresponds to female (\u0027M\u0027) has been recorded in some context. A value which corresponds to \u0027X\u0027 (any non-M or non-F value) has been recorded or the value is unspecified."
+    },
+    {
+      "code": "\u003c",
+      "display": "X",
+      "definition": "A value which corresponds to \u0027X\u0027 (any non-M or non-F value) has been recorded or the value is unspecified."
+    }
+  ]
+}

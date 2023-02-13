@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+  <id value="consent-example-grantor"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Consent given to authorized representative</p>
+      <p>This is a case where a Patient is giving a limited (read-only) access to an individual.</p>
+      <p>Patient "Roel" wishes to provide Dr. Simone Heps with read-only access to the data at Blijdorp Medisch Centrum available for patient requested access use.</p>
+    </div>
+  </text>
+  <status value="active"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="INFAO"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <date value="2018-12-24"/>
+  <grantor>
+    <reference value="Patient/pat1"/>
+  </grantor>
+  <grantee>
+    <reference value="Practitioner/f007"/>
+    <display value="Simone Heps"/>
+  </grantee>
+  <controller>
+    <reference value="Organization/f203"/>
+  </controller>
+    <!--  the text terms of the consent in lawyer speak  -->
+  <sourceAttachment>
+    <title value="The terms of the consent in lawyer speak."/>
+      <!--  likely use url pointer to common text  -->
+  </sourceAttachment>
+    <!--  this is opt-out - e.g. nothing approved unless otherwise stated  -->
+  <regulatoryBasis>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="INFAO"/>
+    </coding>
+  </regulatoryBasis>
+  <provision>
+    <type value="deny"/>
+    <provision>
+      <type value="permit"/>
+      <actor>
+        <role>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+            <code value="CST"/>
+          </coding>
+        </role>
+        <reference>
+          <reference value="Organization/f203"/>
+        </reference>
+      </actor>
+      <actor>
+        <role>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+            <code value="PRCP"/>
+          </coding>
+        </role>
+        <reference>
+          <reference value="Practitioner/f007"/>
+          <display value="Simone Heps"/>
+        </reference>
+      </actor>
+      <action>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+          <code value="access"/>
+        </coding>
+      </action>
+    </provision>
+  </provision>
+</Consent>

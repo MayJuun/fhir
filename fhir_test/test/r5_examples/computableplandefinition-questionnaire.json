@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-computableplandefinition1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,46 +9,46 @@
       "status": "active",
       "description": "Type options for PlanDefinition.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:644daede-7eb2-4abb-85e5-5e17571c29d3",
-        "timestamp": "2022-05-06T17:12:14+00:00",
+        "identifier": "urn:uuid:acbb7840-627c-4a1f-883d-4512fdf769ac",
+        "timestamp": "2022-12-14T07:17:18+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Group",
             "display": "Group"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "MedicinalProductDefinition",
             "display": "MedicinalProductDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "SubstanceDefinition",
             "display": "SubstanceDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "AdministrableProductDefinition",
             "display": "AdministrableProductDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "ManufacturedItemDefinition",
             "display": "ManufacturedItemDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "PackagedProductDefinition",
             "display": "PackagedProductDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "EvidenceVariable",
             "display": "EvidenceVariable"
           }
@@ -62,41 +62,41 @@
       "status": "active",
       "description": "Type options for PlanDefinition.goal.target.detail[x]",
       "expansion": {
-        "identifier": "urn:uuid:3d1d4a99-9444-4941-92c0-8edc0ba58be6",
-        "timestamp": "2022-05-06T17:12:14+00:00",
+        "identifier": "urn:uuid:4d7f5ee6-90b7-4ec0-b763-b8525d1b3682",
+        "timestamp": "2022-12-14T07:17:18+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           }
@@ -110,16 +110,16 @@
       "status": "active",
       "description": "Type options for PlanDefinition.action.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:0b655fbb-c7de-4414-8a38-0b58e4f11d2a",
-        "timestamp": "2022-05-06T17:12:14+00:00",
+        "identifier": "urn:uuid:5d713017-e7b4-45b1-9e55-a77c948a1a3a",
+        "timestamp": "2022-12-14T07:17:18+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Group",
             "display": "Group"
           }
@@ -133,16 +133,16 @@
       "status": "active",
       "description": "Type options for PlanDefinition.action.relatedAction.offset[x]",
       "expansion": {
-        "identifier": "urn:uuid:616df53a-ef89-479b-950d-5a2489b678cc",
-        "timestamp": "2022-05-06T17:12:14+00:00",
+        "identifier": "urn:uuid:865492ef-99a7-40f1-895b-2d75213a0cdd",
+        "timestamp": "2022-12-14T07:17:18+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Duration",
             "display": "Duration"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           }
@@ -156,26 +156,26 @@
       "status": "active",
       "description": "Type options for PlanDefinition.action.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:e0e3afda-99f4-4903-ac3b-66f4ec2a0929",
-        "timestamp": "2022-05-06T17:12:14+00:00",
+        "identifier": "urn:uuid:0bab8653-240a-41b3-a822-82d504275e29",
+        "timestamp": "2022-12-14T07:17:18+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Age",
             "display": "Age"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Duration",
             "display": "Duration"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Timing",
             "display": "Timing"
           }
@@ -189,51 +189,76 @@
       "status": "active",
       "description": "Type options for PlanDefinition.action.definition[x]",
       "expansion": {
-        "identifier": "urn:uuid:ac3f51e2-a241-44dd-b2b8-38a4546ffd97",
-        "timestamp": "2022-05-06T17:12:14+00:00",
+        "identifier": "urn:uuid:a0e1f814-e482-4d86-b4ed-abef276ac4fa",
+        "timestamp": "2022-12-14T07:17:18+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "ActivityDefinition",
             "display": "ActivityDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "ObservationDefinition",
             "display": "ObservationDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "PlanDefinition",
             "display": "PlanDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Questionnaire",
             "display": "Questionnaire"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "SpecimenDefinition",
             "display": "SpecimenDefinition"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "uri",
             "display": "uri"
           }
         ]
       }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs8",
+      "name": "Type options for PlanDefinition.asNeeded[x]",
+      "status": "active",
+      "description": "Type options for PlanDefinition.asNeeded[x]",
+      "expansion": {
+        "identifier": "urn:uuid:e936b5cd-33da-42d4-83a4-94a6c095d11d",
+        "timestamp": "2022-12-14T07:17:18+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          }
+        ]
+      }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-computableplandefinition1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2020-12-28T05:55:11+00:00",
+  "experimental": false,
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
   "item": [
     {
@@ -304,7 +329,7 @@
                 }
               ],
               "linkId": "PlanDefinition.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -496,7 +521,7 @@
                 }
               ],
               "linkId": "PlanDefinition.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -589,7 +614,7 @@
                 }
               ],
               "linkId": "PlanDefinition.url-flyover",
-              "text": "An absolute URI that is used to identify this plan definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this plan definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the plan definition is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
+              "text": "An absolute URI that is used to identify this plan definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this plan definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the plan definition is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
               "type": "display"
             },
             {
@@ -688,7 +713,7 @@
                 }
               ],
               "linkId": "PlanDefinition.version-flyover",
-              "text": "The identifier that is used to identify this version of the plan definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the plan definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts. There may be different plan definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version].",
+              "text": "The identifier that is used to identify this version of the plan definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the plan definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts. There may be different plan definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
               "type": "display"
             },
             {
@@ -1059,8 +1084,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Group"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Group, MedicinalProductDefinition, SubstanceDefinition, AdministrableProductDefinition, ManufacturedItemDefinition, PackagedProductDefinition, PackagedProductDefinition"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1128,7 +1153,7 @@
                 }
               ],
               "linkId": "PlanDefinition.date-flyover",
-              "text": "The date  (and optionally time) when the plan definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the plan definition changes. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the plan definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+              "text": "The date  (and optionally time) when the plan definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the plan definition changes. The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the plan definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
               "type": "display"
             },
             {
@@ -1172,12 +1197,12 @@
                 }
               ],
               "linkId": "PlanDefinition.publisher-flyover",
-              "text": "The name of the organization or individual that published the plan definition. Usually an organization but may be an individual. The publisher (or steward) of the plan definition is the organization or individual primarily responsible for the maintenance and upkeep of the plan definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the plan definition. This item SHOULD be populated unless the information is available from context.",
+              "text": "The name of the organization or individual responsible for the release and ongoing maintenance of the plan definition. Usually an organization but may be an individual. The publisher (or steward) of the plan definition is the organization or individual primarily responsible for the maintenance and upkeep of the plan definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the plan definition. This item SHOULD be populated unless the information is available from context.",
               "type": "display"
             },
             {
               "linkId": "PlanDefinition.publisher.value",
-              "text": "Name of the publisher (organization or individual)",
+              "text": "Name of the publisher/steward (organization or individual)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1249,7 +1274,7 @@
                 }
               ],
               "linkId": "PlanDefinition.description-flyover",
-              "text": "A free text natural language description of the plan definition from a consumer\u0027s perspective. This description can be used to capture details such as why the plan definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the plan definition as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the plan definition is presumed to be the predominant language in the place the plan definition was created).",
+              "text": "A free text natural language description of the plan definition from a consumer\u0027s perspective. This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the plan definition as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the plan definition is presumed to be the predominant language in the place the plan definition was created).",
               "type": "display"
             },
             {
@@ -3172,6 +3197,50 @@
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "uri"
+                    }
+                  ],
+                  "linkId": "PlanDefinition.actor.option.typeCanonical",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "PlanDefinition.actor.option.typeCanonical-flyover",
+                      "text": "The type of participant in the action.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "PlanDefinition.actor.option.typeCanonical.value",
+                      "text": "Who or what can participate",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                       "valueString": "Reference"
                     }
                   ],
@@ -3202,8 +3271,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "CareTeam, Device, Group, HealthcareService, Location, Organization, Patient, Practitioner, PractitionerRole, RelatedPerson"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "CareTeam, Device, DeviceDefinition, Endpoint, Group, HealthcareService, Location, Organization, Patient, Practitioner, PractitionerRole, RelatedPerson, RelatedPerson"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3438,7 +3507,7 @@
                     }
                   ],
                   "linkId": "PlanDefinition.action.linkId-flyover",
-                  "text": "An identifier that is unique within the PlanDefinition to allow linkage within the realized CarePlan and/or RequestGroup.",
+                  "text": "An identifier that is unique within the PlanDefinition to allow linkage within the realized CarePlan and/or RequestOrchestration.",
                   "type": "display"
                 },
                 {
@@ -3922,8 +3991,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Group"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Group, Group"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -5093,7 +5162,7 @@
                     }
                   ],
                   "linkId": "PlanDefinition.action.timing[x]-flyover",
-                  "text": "An optional value describing when the action should be performed. The intent of the timing element is to provide timing when the action should be performed. As a definitional resource, this timing is interpreted as part of an apply operation so that the timing of the result actions in a CarePlan or RequestGroup, for example, would be specified by evaluating the timing definition in the context of the apply and setting the resulting timing on the appropriate elements of the target resource. If the timing is an Age, the activity is expected to be performed when the subject is the given Age. When the timing is a Duration, the activity is expected to be performed within the specified duration from the apply. When the timing is a Range, it may be a range of Ages or Durations, providing a range for the expected timing of the resulting activity. When the timing is a Timing, it is establishing a schedule for the timing of the resulting activity.",
+                  "text": "An optional value describing when the action should be performed. The intent of the timing element is to provide timing when the action should be performed. As a definitional resource, this timing is interpreted as part of an apply operation so that the timing of the result actions in a CarePlan or RequestOrchestration, for example, would be specified by evaluating the timing definition in the context of the apply and setting the resulting timing on the appropriate elements of the target resource. If the timing is an Age, the activity is expected to be performed when the subject is the given Age. When the timing is a Duration, the activity is expected to be performed within the specified duration from the apply. When the timing is a Range, it may be a range of Ages or Durations, providing a range for the expected timing of the resulting activity. When the timing is a Timing, it is establishing a schedule for the timing of the resulting activity.",
                   "type": "display"
                 },
                 {
@@ -5261,15 +5330,15 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                               "valueCode": "Patient"
                             },
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                               "valueCode": "Practitioner"
                             },
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                               "valueCode": "RelatedPerson"
                             }
                           ],
@@ -5547,6 +5616,50 @@
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "uri"
+                    }
+                  ],
+                  "linkId": "PlanDefinition.action.participant.typeCanonical",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "PlanDefinition.action.participant.typeCanonical-flyover",
+                      "text": "The type of participant in the action.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "PlanDefinition.action.participant.typeCanonical.value",
+                      "text": "Who or what can participate",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                       "valueString": "Reference"
                     }
                   ],
@@ -5577,8 +5690,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "CareTeam, Device, Group, HealthcareService, Location, Organization, Patient, Practitioner, PractitionerRole, RelatedPerson"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "CareTeam, Device, DeviceDefinition, Endpoint, Group, HealthcareService, Location, Organization, Patient, Practitioner, PractitionerRole, RelatedPerson, RelatedPerson"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -6349,17 +6462,98 @@
               ]
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "PlanDefinition.asNeeded[x]",
+          "text": "Preconditions for service",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "PlanDefinition.asNeeded[x]-flyover",
+              "text": "If a CodeableConcept is present, it indicates the pre-condition for performing the service.  For example \"pain\", \"on flare-up\", etc.",
+              "type": "display"
+            },
+            {
+              "linkId": "PlanDefinition.asNeeded[x]._type",
+              "text": "type",
+              "type": "coding",
+              "required": false,
+              "repeats": false,
+              "answerConstraint": "optionsOnly",
+              "answerValueSet": "#vs8",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "boolean"
+                    }
+                  ],
+                  "linkId": "PlanDefinition.asNeeded[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "PlanDefinition.asNeeded[x]._null.value",
+                      "type": "boolean",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
+                    }
+                  ],
+                  "linkId": "PlanDefinition.asNeeded[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "PlanDefinition.asNeeded[x]._null.coding",
+                      "text": "code:",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    },
+                    {
+                      "linkId": "PlanDefinition.asNeeded[x]._null.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

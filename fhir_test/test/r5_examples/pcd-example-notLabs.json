@@ -61,7 +61,7 @@
           "subType": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/resource-types",
+                "system": "http://hl7.org/fhir/fhir-types",
                 "code": "ServiceRequest"
               }
             ]
@@ -82,7 +82,7 @@
           "subType": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/resource-types",
+                "system": "http://hl7.org/fhir/fhir-types",
                 "code": "DiagnosticReport"
               }
             ]

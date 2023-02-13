@@ -17,12 +17,14 @@
   ],
   "serviceType": [
     {
-      "coding": [
-        {
-          "code": "57",
-          "display": "Immunization"
-        }
-      ]
+      "concept": {
+        "coding": [
+          {
+            "code": "57",
+            "display": "Immunization"
+          }
+        ]
+      }
     }
   ],
   "specialty": [

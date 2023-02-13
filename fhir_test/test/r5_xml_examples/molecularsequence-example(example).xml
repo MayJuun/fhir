@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><MolecularSequence xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MolecularSequence</b><a name="example"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MolecularSequence "example" </p></div><p><b>type</b>: dna</p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><h3>Formatteds</h3><table class="grid"><tr><td>-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td>*</td><td>application/json</td><td><a href="http://grch37.rest.ensembl.org/ga4gh/variants/3:rs1333049?content-type=application/json">http://grch37.rest.ensembl.org/ga4gh/variants/3:rs1333049?content-type=application/json</a></td><td>GA4GH API</td></tr></table></div></text><type value="dna"/>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <formatted>
+        <contentType value="application/json"/>
+        <url value="http://grch37.rest.ensembl.org/ga4gh/variants/3:rs1333049?content-type=application/json"/>
+        <title value="GA4GH API"/>
+    </formatted>
+</MolecularSequence>

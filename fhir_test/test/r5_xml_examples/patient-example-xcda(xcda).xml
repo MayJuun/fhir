@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+  <id value="xcda"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Henry Levin </b> male, DoB: 1932-09-24 ( Medical record number: 12345 (use: USUAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Managing Organization: <a href="organization-example-good-health-care.html">Organization/2.16.840.1.113883.19.5: Good Health Clinic</a> "Good Health Clinic"</li></ul></td></tr></table></div></text><identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.840.1.113883.19.5"/>
+    <value value="12345"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Levin"/>
+    <given value="Henry"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1932-09-24"/>
+  <managingOrganization>
+    <reference value="Organization/2.16.840.1.113883.19.5"/>
+    <display value="Good Health Clinic"/>
+  </managingOrganization>
+</Patient>

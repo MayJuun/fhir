@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?><Library xmlns="http://hl7.org/fhir">
+  <id value="opioidcds-recommendation-05"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Participants</h2>
+      <table class="grid">
+        <tr>
+          <td>Author</td>
+          <td>Kensaku Kawamoto, MD, PhD, MHS</td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td>Bryn Rhodes</td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td>Floyd Eisenberg, MD, MPH</td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td>Robert McClure, MD, MPH</td>
+        </tr>
+      </table>
+      <h2>Related Artifacts</h2>
+      <table class="grid">
+        <tr>
+          <td>Documentation</td>
+          <td>CDC guideline for prescribing opioids for chronic pain</td>
+          <td>
+            <p>
+              <code>
+                <a href="https://guidelines.gov/summaries/summary/50153/cdc-guideline-for-prescribing-opioids-for-chronic-pain---united-states-2016#420">https://guidelines.gov/summaries/summary/50153/cdc-guideline-for-prescribing-opioids-for-chronic-pain---united-states-2016#420</a>
+              </code> (
+              <code/>)
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Depends On</td>
+          <td/>
+          <td>
+            <code>http://example.org/fhir/Library/opioidcds-common</code>
+          </td>
+        </tr>
+        <tr>
+          <td>Documentation</td>
+          <td>MME Conversion Tables</td>
+          <td>
+            <p>
+              <code>
+                <a href="https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf">https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf</a>
+              </code> (
+              <code/>)
+            </p>
+          </td>
+        </tr>
+      </table>
+      <h2>Data Requirements</h2>
+      <table class="grid">
+        <tr>
+          <td colspan="2">
+            <b>Type</b>: 
+            <a href="medicationrequest.html">MedicationRequest</a>
+          </td>
+        </tr>
+        <tr style="background-color: #efefef">
+          <td>Filter</td>
+          <td>Value</td>
+        </tr>
+        <tr>
+          <td>status</td>
+          <td>One of these codes: [not stated] active: active</td>
+        </tr>
+        <tr>
+          <td>category</td>
+          <td>One of these codes: 
+            <a href="http://terminology.hl7.org/4.0.0/CodeSystem-medicationrequest-category.html#medicationrequest-category-outpatient">MedicationRequest Category Codes</a> outpatient: Outpatient
+          </td>
+        </tr>
+      </table>
+      <h2>Contents</h2>
+      <p>
+        <code>application/elm+xml</code>
+      </p>
+      <pre>
+        <code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1"&gt;
+   &lt;identifier id="OpioidCDS_STU4" version="0.1.0"/&gt;
+   &lt;schemaIdentifier id="urn:hl7-org:elm" version="r1"/&gt;
+   &lt;usings&gt;
+      &lt;def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/&gt;
+      &lt;def localIdentifier="FHIR" uri="http://hl7.org/fhir" version="3.2.0"/&gt;
+   &lt;/usings&gt;
+   &lt;includes&gt;
+      &lt;def localIdentifier="MMECommon" path="OpioidCDS_STU4_Common" version="0.1.0"/&gt;
+   &lt;/includes&gt;
+   &lt;parameters&gt;
+      &lt;def name="UserID" accessLevel="Public"&gt;
+         &lt;parameterTypeSpecifier name="t:String" xsi:type="NamedTypeSpecifier"/&gt;
+      &lt;/def&gt;
+      &lt;def name="ContextPrescriptions" accessLevel="Public"&gt;
+         &lt;parameterTypeSpecifier xsi:type="ListTypeSpecifier"&gt;
+            &lt;elementType name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/&gt;
+         &lt;/parameterTypeSpecifier&gt;
+      &lt;/def&gt;
+   &lt;/parameters&gt;
+   &lt;statements&gt;
+      &lt;def name="Patient" context="Patient"&gt;
+         &lt;expression xsi:type="SingletonFrom"&gt;
+            &lt;operand dataType="fhir:Patient" xsi:type="Retrieve"/&gt;
+         &lt;/expression&gt;
+      &lt;/def&gt;
+      &lt;def name="Get Active Prescriptions" context="Patient" accessLevel="Public"&gt;
+         &lt;expression xsi:type="Query"&gt;
+            &lt;source alias="activeRx"&gt;
+               &lt;expression dataType="fhir:MedicationRequest" xsi:type="Retrieve"/&gt;
+            &lt;/source&gt;
+            &lt;where xsi:type="And"&gt;
+               &lt;operand xsi:type="Equal"&gt;
+                  &lt;operand path="value" xsi:type="Property"&gt;
+                     &lt;source path="status" scope="activeRx" xsi:type="Property"/&gt;
+                  &lt;/operand&gt;
+                  &lt;operand valueType="t:String" value="active" xsi:type="Literal"/&gt;
+               &lt;/operand&gt;
+               &lt;operand xsi:type="Equal"&gt;
+                  &lt;operand path="value" xsi:type="Property"&gt;
+                     &lt;source path="code" xsi:type="Property"&gt;
+                        &lt;source xsi:type="Indexer"&gt;
+                           &lt;operand xsi:type="Flatten"&gt;
+                              &lt;operand xsi:type="Query"&gt;
+                                 &lt;source alias="$this"&gt;
+                                    &lt;expression path="category" scope="activeRx" xsi:type="Property"/&gt;
+                                 &lt;/source&gt;
+                                 &lt;where xsi:type="Not"&gt;
+                                    &lt;operand xsi:type="IsNull"&gt;
+                                       &lt;operand path="coding" xsi:type="Property"&gt;
+                                          &lt;source name="$this" xsi:type="AliasRef"/&gt;
+                                       &lt;/operand&gt;
+                                    &lt;/operand&gt;
+                                 &lt;/where&gt;
+                                 &lt;return&gt;
+                                    &lt;expression path="coding" xsi:type="Property"&gt;
+                                       &lt;source name="$this" xsi:type="AliasRef"/&gt;
+                                    &lt;/expression&gt;
+                                 &lt;/return&gt;
+                              &lt;/operand&gt;
+                           &lt;/operand&gt;
+                           &lt;operand valueType="t:Integer" value="0" xsi:type="Literal"/&gt;
+                        &lt;/source&gt;
+                     &lt;/source&gt;
+                  &lt;/operand&gt;
+                  &lt;operand valueType="t:String" value="outpatient" xsi:type="Literal"/&gt;
+               &lt;/operand&gt;
+            &lt;/where&gt;
+         &lt;/expression&gt;
+      &lt;/def&gt;
+      &lt;def name="Total MME" context="Patient" accessLevel="Public"&gt;
+         &lt;expression name="TotalMME" libraryName="MMECommon" xsi:type="FunctionRef"&gt;
+            &lt;operand xsi:type="Union"&gt;
+               &lt;operand name="ContextPrescriptions" xsi:type="ParameterRef"/&gt;
+               &lt;operand name="Get Active Prescriptions" xsi:type="ExpressionRef"/&gt;
+            &lt;/operand&gt;
+         &lt;/expression&gt;
+      &lt;/def&gt;
+      &lt;def name="Is MME 50 Or More?" context="Patient" accessLevel="Public"&gt;
+         &lt;expression xsi:type="GreaterOrEqual"&gt;
+            &lt;operand name="Total MME" xsi:type="ExpressionRef"/&gt;
+            &lt;operand value="50" unit="mg/d" xsi:type="Quantity"/&gt;
+         &lt;/expression&gt;
+      &lt;/def&gt;
+      &lt;def name="Get Indicator" context="Patient" accessLevel="Public"&gt;
+         &lt;expression valueType="t:String" value="warning" xsi:type="Literal"/&gt;
+      &lt;/def&gt;
+      &lt;def name="Get Summary" context="Patient" accessLevel="Public"&gt;
+         &lt;expression xsi:type="Concatenate"&gt;
+            &lt;operand valueType="t:String" value="High risk for opioid overdose - " xsi:type="Literal"/&gt;
+            &lt;operand xsi:type="Case"&gt;
+               &lt;caseItem&gt;
+                  &lt;when xsi:type="GreaterOrEqual"&gt;
+                     &lt;operand path="value" xsi:type="Property"&gt;
+                        &lt;source name="Total MME" xsi:type="ExpressionRef"/&gt;
+                     &lt;/operand&gt;
+                     &lt;operand xsi:type="ToDecimal"&gt;
+                        &lt;operand valueType="t:Integer" value="90" xsi:type="Literal"/&gt;
+                     &lt;/operand&gt;
+                  &lt;/when&gt;
+                  &lt;then valueType="t:String" value="taper now" xsi:type="Literal"/&gt;
+               &lt;/caseItem&gt;
+               &lt;else valueType="t:String" value="consider tapering" xsi:type="Literal"/&gt;
+            &lt;/operand&gt;
+         &lt;/expression&gt;
+      &lt;/def&gt;
+      &lt;def name="Get Detail" context="Patient" accessLevel="Public"&gt;
+         &lt;expression xsi:type="Concatenate"&gt;
+            &lt;operand xsi:type="Concatenate"&gt;
+               &lt;operand valueType="t:String" value="Total morphine milligram equivalent (MME) is " xsi:type="Literal"/&gt;
+               &lt;operand xsi:type="ToString"&gt;
+                  &lt;operand name="Total MME" xsi:type="ExpressionRef"/&gt;
+               &lt;/operand&gt;
+            &lt;/operand&gt;
+            &lt;operand valueType="t:String" value=". Taper to less than 50." xsi:type="Literal"/&gt;
+         &lt;/expression&gt;
+      &lt;/def&gt;
+   &lt;/statements&gt;
+&lt;/library&gt;
+</code>
+      </pre>
+    </div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <value value="OpioidCDS_REC_05"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <title value="Opioid CDS Logic for recommendation #5"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="logic-library"/>
+      <display value="Logic Library"/>
+    </coding>
+  </type>
+  <date value="2018-03-25T13:49:09-06:00"/>
+  <publisher value="Centers for Disease Control and Prevention (CDC)"/>
+  <description value="Opioid Decision Support Logic for use in implementing CDC Opioid Prescribing Guidelines."/>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+      <display value="Clinical Focus"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="182888003"/>
+        <display value="Medication requested (situation)"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+      <display value="Clinical Focus"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="82423001"/>
+        <display value="Chronic pain (finding)"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="This library works in concert with the OMTK logic library to provide decision support for Morphine Milligram Equivalence calculations and dynamic value resolution."/>
+  <usage value="This library is to notify the prescriber/user whether the current prescription exceeds the recommended MME."/>
+  <copyright value="© CDC 2016+."/>
+  <topic>
+    <text value="Opioid Prescribing"/>
+  </topic>
+  <author>
+    <name value="Kensaku Kawamoto, MD, PhD, MHS"/>
+  </author>
+  <author>
+    <name value="Bryn Rhodes"/>
+  </author>
+  <author>
+    <name value="Floyd Eisenberg, MD, MPH"/>
+  </author>
+  <author>
+    <name value="Robert McClure, MD, MPH"/>
+  </author>
+  <relatedArtifact>
+    <type value="documentation"/>
+    <display value="CDC guideline for prescribing opioids for chronic pain"/>
+    <document>
+      <url value="https://guidelines.gov/summaries/summary/50153/cdc-guideline-for-prescribing-opioids-for-chronic-pain---united-states-2016#420"/>
+    </document>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="depends-on"/>
+    <resource value="http://example.org/fhir/Library/opioidcds-common"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="documentation"/>
+    <display value="MME Conversion Tables"/>
+    <document>
+      <url value="https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf"/>
+    </document>
+  </relatedArtifact>
+  <dataRequirement id="medications">
+    <type value="MedicationRequest"/>
+    <codeFilter>
+      <path value="status"/>
+      <code>
+        <code value="active"/>
+      </code>
+    </codeFilter>
+    <codeFilter>
+      <path value="category"/>
+      <code>
+        <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+        <code value="outpatient"/>
+      </code>
+    </codeFilter>
+  </dataRequirement>
+  <content>
+    <contentType value="application/elm+xml"/>
+    <data value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGxpYnJhcnkgeG1sbnM9InVybjpobDctb3JnOmVsbTpyMSIgeG1sbnM6dD0idXJuOmhsNy1vcmc6ZWxtLXR5cGVzOnIxIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxuczp4c2Q9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczpmaGlyPSJodHRwOi8vaGw3Lm9yZy9maGlyIiB4bWxuczpxZG00Mz0idXJuOmhlYWx0aGl0LWdvdjpxZG06djRfMyIgeG1sbnM6cWRtNTM9InVybjpoZWFsdGhpdC1nb3Y6cWRtOnY1XzMiIHhtbG5zOmE9InVybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMSI+CiAgIDxpZGVudGlmaWVyIGlkPSJPcGlvaWRDRFNfU1RVNCIgdmVyc2lvbj0iMC4xLjAiLz4KICAgPHNjaGVtYUlkZW50aWZpZXIgaWQ9InVybjpobDctb3JnOmVsbSIgdmVyc2lvbj0icjEiLz4KICAgPHVzaW5ncz4KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9IlN5c3RlbSIgdXJpPSJ1cm46aGw3LW9yZzplbG0tdHlwZXM6cjEiLz4KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9IkZISVIiIHVyaT0iaHR0cDovL2hsNy5vcmcvZmhpciIgdmVyc2lvbj0iMy4yLjAiLz4KICAgPC91c2luZ3M+CiAgIDxpbmNsdWRlcz4KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9Ik1NRUNvbW1vbiIgcGF0aD0iT3Bpb2lkQ0RTX1NUVTRfQ29tbW9uIiB2ZXJzaW9uPSIwLjEuMCIvPgogICA8L2luY2x1ZGVzPgogICA8cGFyYW1ldGVycz4KICAgICAgPGRlZiBuYW1lPSJVc2VySUQiIGFjY2Vzc0xldmVsPSJQdWJsaWMiPgogICAgICAgICA8cGFyYW1ldGVyVHlwZVNwZWNpZmllciBuYW1lPSJ0OlN0cmluZyIgeHNpOnR5cGU9Ik5hbWVkVHlwZVNwZWNpZmllciIvPgogICAgICA8L2RlZj4KICAgICAgPGRlZiBuYW1lPSJDb250ZXh0UHJlc2NyaXB0aW9ucyIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxwYXJhbWV0ZXJUeXBlU3BlY2lmaWVyIHhzaTp0eXBlPSJMaXN0VHlwZVNwZWNpZmllciI+CiAgICAgICAgICAgIDxlbGVtZW50VHlwZSBuYW1lPSJmaGlyOk1lZGljYXRpb25SZXF1ZXN0IiB4c2k6dHlwZT0iTmFtZWRUeXBlU3BlY2lmaWVyIi8+CiAgICAgICAgIDwvcGFyYW1ldGVyVHlwZVNwZWNpZmllcj4KICAgICAgPC9kZWY+CiAgIDwvcGFyYW1ldGVycz4KICAgPHN0YXRlbWVudHM+CiAgICAgIDxkZWYgbmFtZT0iUGF0aWVudCIgY29udGV4dD0iUGF0aWVudCI+CiAgICAgICAgIDxleHByZXNzaW9uIHhzaTp0eXBlPSJTaW5nbGV0b25Gcm9tIj4KICAgICAgICAgICAgPG9wZXJhbmQgZGF0YVR5cGU9ImZoaXI6UGF0aWVudCIgeHNpOnR5cGU9IlJldHJpZXZlIi8+CiAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iR2V0IEFjdGl2ZSBQcmVzY3JpcHRpb25zIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlF1ZXJ5Ij4KICAgICAgICAgICAgPHNvdXJjZSBhbGlhcz0iYWN0aXZlUngiPgogICAgICAgICAgICAgICA8ZXhwcmVzc2lvbiBkYXRhVHlwZT0iZmhpcjpNZWRpY2F0aW9uUmVxdWVzdCIgeHNpOnR5cGU9IlJldHJpZXZlIi8+CiAgICAgICAgICAgIDwvc291cmNlPgogICAgICAgICAgICA8d2hlcmUgeHNpOnR5cGU9IkFuZCI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFcXVhbCI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHBhdGg9InZhbHVlIiB4c2k6dHlwZT0iUHJvcGVydHkiPgogICAgICAgICAgICAgICAgICAgICA8c291cmNlIHBhdGg9InN0YXR1cyIgc2NvcGU9ImFjdGl2ZVJ4IiB4c2k6dHlwZT0iUHJvcGVydHkiLz4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCB2YWx1ZVR5cGU9InQ6U3RyaW5nIiB2YWx1ZT0iYWN0aXZlIiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFcXVhbCI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHBhdGg9InZhbHVlIiB4c2k6dHlwZT0iUHJvcGVydHkiPgogICAgICAgICAgICAgICAgICAgICA8c291cmNlIHBhdGg9ImNvZGUiIHhzaTp0eXBlPSJQcm9wZXJ0eSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxzb3VyY2UgeHNpOnR5cGU9IkluZGV4ZXIiPgogICAgICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iRmxhdHRlbiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJRdWVyeSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzb3VyY2UgYWxpYXM9IiR0aGlzIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGV4cHJlc3Npb24gcGF0aD0iY2F0ZWdvcnkiIHNjb3BlPSJhY3RpdmVSeCIgeHNpOnR5cGU9IlByb3BlcnR5Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc291cmNlPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8d2hlcmUgeHNpOnR5cGU9Ik5vdCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJJc051bGwiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBwYXRoPSJjb2RpbmciIHhzaTp0eXBlPSJQcm9wZXJ0eSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzb3VyY2UgbmFtZT0iJHRoaXMiIHhzaTp0eXBlPSJBbGlhc1JlZiIvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC93aGVyZT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHJldHVybj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGV4cHJlc3Npb24gcGF0aD0iY29kaW5nIiB4c2k6dHlwZT0iUHJvcGVydHkiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c291cmNlIG5hbWU9IiR0aGlzIiB4c2k6dHlwZT0iQWxpYXNSZWYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3JldHVybj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHZhbHVlVHlwZT0idDpJbnRlZ2VyIiB2YWx1ZT0iMCIgeHNpOnR5cGU9IkxpdGVyYWwiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9zb3VyY2U+CiAgICAgICAgICAgICAgICAgICAgIDwvc291cmNlPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHZhbHVlVHlwZT0idDpTdHJpbmciIHZhbHVlPSJvdXRwYXRpZW50IiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDwvd2hlcmU+CiAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iVG90YWwgTU1FIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24gbmFtZT0iVG90YWxNTUUiIGxpYnJhcnlOYW1lPSJNTUVDb21tb24iIHhzaTp0eXBlPSJGdW5jdGlvblJlZiI+CiAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJVbmlvbiI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IkNvbnRleHRQcmVzY3JpcHRpb25zIiB4c2k6dHlwZT0iUGFyYW1ldGVyUmVmIi8+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IkdldCBBY3RpdmUgUHJlc2NyaXB0aW9ucyIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIG5hbWU9IklzIE1NRSA1MCBPciBNb3JlPyIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIHhzaTp0eXBlPSJHcmVhdGVyT3JFcXVhbCI+CiAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlRvdGFsIE1NRSIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgICAgICAgPG9wZXJhbmQgdmFsdWU9IjUwIiB1bml0PSJtZy9kIiB4c2k6dHlwZT0iUXVhbnRpdHkiLz4KICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICA8L2RlZj4KICAgICAgPGRlZiBuYW1lPSJHZXQgSW5kaWNhdG9yIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24gdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9Indhcm5pbmciIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIG5hbWU9IkdldCBTdW1tYXJ5IiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IkNvbmNhdGVuYXRlIj4KICAgICAgICAgICAgPG9wZXJhbmQgdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9IkhpZ2ggcmlzayBmb3Igb3Bpb2lkIG92ZXJkb3NlIC0gIiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iQ2FzZSI+CiAgICAgICAgICAgICAgIDxjYXNlSXRlbT4KICAgICAgICAgICAgICAgICAgPHdoZW4geHNpOnR5cGU9IkdyZWF0ZXJPckVxdWFsIj4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0idmFsdWUiIHhzaTp0eXBlPSJQcm9wZXJ0eSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxzb3VyY2UgbmFtZT0iVG90YWwgTU1FIiB4c2k6dHlwZT0iRXhwcmVzc2lvblJlZiIvPgogICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJUb0RlY2ltYWwiPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCB2YWx1ZVR5cGU9InQ6SW50ZWdlciIgdmFsdWU9IjkwIiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDwvd2hlbj4KICAgICAgICAgICAgICAgICAgPHRoZW4gdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9InRhcGVyIG5vdyIgeHNpOnR5cGU9IkxpdGVyYWwiLz4KICAgICAgICAgICAgICAgPC9jYXNlSXRlbT4KICAgICAgICAgICAgICAgPGVsc2UgdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9ImNvbnNpZGVyIHRhcGVyaW5nIiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iR2V0IERldGFpbCIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIHhzaTp0eXBlPSJDb25jYXRlbmF0ZSI+CiAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJDb25jYXRlbmF0ZSI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHZhbHVlVHlwZT0idDpTdHJpbmciIHZhbHVlPSJUb3RhbCBtb3JwaGluZSBtaWxsaWdyYW0gZXF1aXZhbGVudCAoTU1FKSBpcyAiIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJUb1N0cmluZyI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlRvdGFsIE1NRSIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDxvcGVyYW5kIHZhbHVlVHlwZT0idDpTdHJpbmciIHZhbHVlPSIuIFRhcGVyIHRvIGxlc3MgdGhhbiA1MC4iIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgPC9kZWY+CiAgIDwvc3RhdGVtZW50cz4KPC9saWJyYXJ5Pgo="/>
+  </content>
+</Library>

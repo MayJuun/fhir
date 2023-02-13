@@ -9,16 +9,28 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/valueset-label",
-  "version": "4.6.0",
-  "name": "label",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1216"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "VSLabel",
+  "title": "ValueSet Label",
   "status": "draft",
+  "experimental": false,
   "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
   "description": "The label to list in front of a code when presenting a list of possible values in a questionnaire-like fashion.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "rim",
@@ -48,6 +60,7 @@
         "path": "Extension",
         "short": "E.g. \"(a)\", \"1.\", etc.",
         "definition": "The label to list in front of a code when presenting a list of possible values in a questionnaire-like fashion.",
+        "comment": "For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/rendering.html#valueset-label).",
         "min": 0,
         "max": "1",
         "base": {
@@ -61,7 +74,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -69,7 +81,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -95,7 +106,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -143,7 +154,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -151,7 +161,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -218,7 +227,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -240,6 +248,7 @@
         "path": "Extension",
         "short": "E.g. \"(a)\", \"1.\", etc.",
         "definition": "The label to list in front of a code when presenting a list of possible values in a questionnaire-like fashion.",
+        "comment": "For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/rendering.html#valueset-label).",
         "min": 0,
         "max": "1",
         "isModifier": false

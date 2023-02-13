@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><Procedure xmlns="http://hl7.org/fhir">
+  <id value="f003"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Procedure</b><a name="f003"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Procedure "f003" </p></div><p><b>status</b>: completed</p><p><b>code</b>: Incision of retropharyngeal abscess <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#172960003)</span></p><p><b>subject</b>: <a href="patient-example-f001-pieter.html">Patient/f001: P. van de Heuvel</a> "Pieter VAN DE HEUVEL"</p><p><b>encounter</b>: <a href="encounter-example-f003-abscess.html">Encounter/f003</a></p><p><b>occurrence</b>: 2013-03-24T09:30:10+01:00 --&gt; 2013-03-24T10:30:10+01:00</p><h3>Performers</h3><table class="grid"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Care role <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#01.000 "Arts")</span></td><td><a href="practitioner-example-f001-evdb.html">Practitioner/f001: E.M.J.M. van den broek</a> "Eric VAN DEN BROEK"</td></tr></table><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>abcess in retropharyngeal area <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table><p><b>bodySite</b>: Retropharyngeal area <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#83030008)</span></p><p><b>outcome</b>: removal of the retropharyngeal abscess <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><p><b>report</b>: <a href="diagnosticreport-example-f001-bloodexam.html">DiagnosticReport/f001: Lab results blood test</a></p><p><b>followUp</b>: described in care plan <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p></div></text><status value="completed"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="172960003"/>
+            <display value="Incision of retropharyngeal abscess"/>
+        </coding>
+    </code>
+	<subject>
+        <reference value="Patient/f001"/>
+        <display value="P. van de Heuvel"/>
+    </subject>
+	<encounter>
+        <reference value="Encounter/f003"/>
+    </encounter>
+	<occurrencePeriod>
+        <start value="2013-03-24T09:30:10+01:00"/>
+        <end value="2013-03-24T10:30:10+01:00"/>
+    </occurrencePeriod>
+	<performer>
+        <function>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.15.111"/>     <!--   "AssignedRoleType" coding system   -->
+                <code value="01.000"/>
+                <display value="Arts"/>
+            </coding>
+            <text value="Care role"/>
+        </function>
+		<actor>
+            <reference value="Practitioner/f001"/>
+            <display value="E.M.J.M. van den broek"/>
+        </actor>
+    </performer>
+    <reason>
+       <concept>
+         <text value="abcess in retropharyngeal area"/>
+       </concept>
+    </reason>
+    <bodySite>
+       
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="83030008"/>
+                <display value="Retropharyngeal area"/>
+            </coding>
+        
+    </bodySite>
+    <outcome>
+      <text value="removal of the retropharyngeal abscess"/>
+    </outcome>
+    <report>
+        <reference value="DiagnosticReport/f001"/>
+        <display value="Lab results blood test"/>
+    </report>
+    <followUp>
+      <text value="described in care plan"/>
+    </followUp>
+</Procedure>

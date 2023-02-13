@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><AuditEvent xmlns="http://hl7.org/fhir"> 
+	<id value="example-breakglass-start"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">Authorized Break-Glass period has been declared to enable immediate emergent treatment condition. This AuditEvent indicates the start of the Break-Glass event. Another would indicate the stop of that Break-Glass period, providd there is a session or state that can detect the end of the break-glass event.</div>
+	</text>
+	<category>
+	   <coding>
+		<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+		<code value="110113"/>
+		<display value="Security Alert"/>
+	   </coding>
+	</category>
+	<code>
+	   <coding>
+		<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+		<code value="110127"/>
+		<display value="Emergency Override Started"/>
+	   </coding>
+	</code>
+	<action value="E"/>
+	  <!--  when was the break-glass started  -->
+	<recorded value="2013-09-22T00:08:00Z"/>
+	<outcome>
+		<code>
+			<system value="http://terminology.hl7.org/CodeSystem/audit-event-outcome"/>
+			<code value="success"/>
+			<display value="Success"/>
+		</code>
+		<detail>
+			<text value="Successful  Start of Break-Glass"/>
+		</detail>
+	</outcome> 
+	<authorization>
+		  <!--  why was the break-glass declared  -->
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+			<code value="ETREAT"/>
+			<display value="Emergency Treatment"/>
+		</coding>
+	</authorization>
+	<agent>
+		  <!--  who declared the break-glass  -->
+		<who>
+				<reference value="Practitioner/f001"/>
+		</who>
+		<requestor value="true"/>
+		  <!--  where was the break-glass emergency declared  -->
+		<location>
+			<reference value="Location/1"/>
+		</location>
+		<networkString value="custodian.net"/>
+
+	</agent>
+	<source>
+		  <!--  what system detected this break-glass  -->
+		<observer>
+			<display value="Watchers Accounting of Disclosures Application"/>
+		</observer>
+		<type>
+	   <coding>
+			<system value="http://terminology.hl7.org/CodeSystem/security-source-type"/>
+			<code value="4"/>
+			<display value="Application Server"/>
+	   </coding>
+		</type>
+	</source>
+	<entity>
+		  <!--  patient whos data is being accessed  -->
+		<what>
+			<reference value="Patient/example"/>
+		</what>
+
+		<role>
+	   <coding>
+			<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+			<code value="1"/>
+			<display value="Patient"/>
+	   </coding>
+		</role>
+	</entity>
+</AuditEvent>

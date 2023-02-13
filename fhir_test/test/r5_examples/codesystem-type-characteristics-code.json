@@ -1,0 +1,91 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "type-characteristics-code",
+  "meta": {
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/type-characteristics-code\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eLvl\u003c/b\u003e\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ehas-target\u003ca name\u003d\"type-characteristics-code-has-target\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHas Target\u003c/td\u003e\u003ctd\u003eThe type is reference to external content else where that can have a type. This is associated with the use of ElementDefinition.type.targetProfile\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ehas-range\u003ca name\u003d\"type-characteristics-code-has-range\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHas Range\u003c/td\u003e\u003ctd\u003eThe type has a value domain that is a range, and can be associated with allowable min/max values on it\u0027s ElementDefinitions\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  is-continuous\u003ca name\u003d\"type-characteristics-code-is-continuous\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIs Continuous\u003c/td\u003e\u003ctd\u003eThe type is a continuous distribution. These types have issues associated with precision and equality, and can have a specified number of max decimal places (via an extension)\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ehas-length\u003ca name\u003d\"type-characteristics-code-has-length\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHas Length\u003c/td\u003e\u003ctd\u003eThe type has variable length and be constrained by it\u0027s length. In principle, any type can be constrained by the number of characters to represent it, but this is not meaningful for numbers or attachments\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ehas-size\u003ca name\u003d\"type-characteristics-code-has-size\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHas Size\u003c/td\u003e\u003ctd\u003eThe type can be constrained by the number of bytes it takes to represent the content. This is usually applied to content that is compressed or interpreted, and there\u0027s no fixed relationship between the number of bytes of content, and the number of characters it represents\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecan-bind\u003ca name\u003d\"type-characteristics-code-can-bind\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCan Bind\u003c/td\u003e\u003ctd\u003eThe type can be bound to a terminology. Note that a classic binding has system|version|code|display, but not all bindable types carry all four of these, and how they are bound varies, so an additional extension is required to enable tools to work with this content\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ehas-units\u003ca name\u003d\"type-characteristics-code-has-units\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHas Units\u003c/td\u003e\u003ctd\u003eThe content has units of measure (UCUM, by implication) and it may be useful to constrain the units by some valueset\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edo-translations\u003ca name\u003d\"type-characteristics-code-do-translations\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDo Translations\u003c/td\u003e\u003ctd\u003eThe content is uncontrolled human readable text that may make sense to translate\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    }
+  ],
+  "url": "http://hl7.org/fhir/type-characteristics-code",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.1901"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "TypeCharacteristicCodes",
+  "title": "Type Characteristic Codes",
+  "status": "active",
+  "experimental": true,
+  "description": "Type Characteristic Codes",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "has-target",
+      "display": "Has Target",
+      "definition": "The type is reference to external content else where that can have a type. This is associated with the use of ElementDefinition.type.targetProfile"
+    },
+    {
+      "code": "has-range",
+      "display": "Has Range",
+      "definition": "The type has a value domain that is a range, and can be associated with allowable min/max values on it\u0027s ElementDefinitions",
+      "concept": [
+        {
+          "code": "is-continuous",
+          "display": "Is Continuous",
+          "definition": "The type is a continuous distribution. These types have issues associated with precision and equality, and can have a specified number of max decimal places (via an extension)"
+        }
+      ]
+    },
+    {
+      "code": "has-length",
+      "display": "Has Length",
+      "definition": "The type has variable length and be constrained by it\u0027s length. In principle, any type can be constrained by the number of characters to represent it, but this is not meaningful for numbers or attachments"
+    },
+    {
+      "code": "has-size",
+      "display": "Has Size",
+      "definition": "The type can be constrained by the number of bytes it takes to represent the content. This is usually applied to content that is compressed or interpreted, and there\u0027s no fixed relationship between the number of bytes of content, and the number of characters it represents"
+    },
+    {
+      "code": "can-bind",
+      "display": "Can Bind",
+      "definition": "The type can be bound to a terminology. Note that a classic binding has system|version|code|display, but not all bindable types carry all four of these, and how they are bound varies, so an additional extension is required to enable tools to work with this content"
+    },
+    {
+      "code": "has-units",
+      "display": "Has Units",
+      "definition": "The content has units of measure (UCUM, by implication) and it may be useful to constrain the units by some valueset"
+    },
+    {
+      "code": "do-translations",
+      "display": "Do Translations",
+      "definition": "The content is uncontrolled human readable text that may make sense to translate"
+    }
+  ]
+}

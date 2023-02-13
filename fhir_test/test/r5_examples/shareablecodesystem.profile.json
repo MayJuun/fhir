@@ -8,7 +8,7 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger": 5
+      "valueInteger": 3
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -20,14 +20,21 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/shareablecodesystem",
-  "version": "4.6.0",
-  "name": "Shareable CodeSystem",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1135"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "ShareableCodeSystem",
+  "title": "Shareable CodeSystem",
   "status": "draft",
   "experimental": false,
   "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
-  "description": "Enforces the minimum information set for the value set metadata required by HL7 and other organizations that share and publish value sets",
-  "fhirVersion": "4.6.0",
+  "description": "Enforces the minimum information set for the code system metadata required by HL7 and other organizations that share and publish code systems",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "rim",
@@ -74,8 +81,7 @@
             "key": "cnl-0",
             "severity": "warning",
             "human": "Name should be usable as an identifier for the module by machine processing applications such as code generation",
-            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
-            "xpath": "not(exists(f:name/@value)) or matches(f:name/@value, \u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
+            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){1,254}\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
           },
           {
@@ -83,18 +89,46 @@
             "severity": "error",
             "human": "Within a code system definition, all the codes SHALL be unique",
             "expression": "concept.exists() implies concept.code.combine(%resource.concept.descendants().concept.code).isDistinct()",
-            "xpath": "count(distinct-values(descendant::f:concept/f:code/@value))\u003dcount(descendant::f:concept)",
             "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+          },
+          {
+            "key": "csd-2",
+            "severity": "warning",
+            "human": "If there is a explicit hierarchy, a hierarchyMeaning should be provided",
+            "expression": "concept.concept.exists() implies hierarchyMeaning.exists()",
+            "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+          },
+          {
+            "key": "csd-3",
+            "severity": "warning",
+            "human": "If there is a implicit hierarchy, a hierarchyMeaning should be provided",
+            "expression": "concept.where(property.code \u003d \u0027parent\u0027 or property.code \u003d \u0027child\u0027).exists() implies hierarchyMeaning.exists()",
+            "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+          },
+          {
+            "key": "csd-4",
+            "severity": "error",
+            "human": "If the code system content \u003d supplement, it must nominate what it\u0027s a supplement for",
+            "expression": "CodeSystem.content \u003d \u0027supplement\u0027 implies CodeSystem.supplements.exists()",
+            "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+          },
+          {
+            "key": "scs-1",
+            "severity": "error",
+            "human": "If a codesystem contains nested concepts, it must specify hierarchyMeaning",
+            "expression": "concept.concept.exists() implies hierarchyMeaning.exists()"
+          },
+          {
+            "key": "scs-2",
+            "severity": "error",
+            "human": "If a codesystem contains example, fragment, or complete content, it must have at least one concept",
+            "expression": "content in ( \u0027example\u0027 | \u0027fragment\u0027 | \u0027complete\u0027 ) implies concept.exists()"
           }
         ],
         "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition"
-          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -110,7 +144,7 @@
         "path": "CodeSystem.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
-        "comment": "Typically, the resource has an id except for cases like the create operation, conditional updates.",
+        "comment": "Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
         "min": 0,
         "max": "1",
         "base": {
@@ -156,7 +190,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -188,7 +221,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -221,7 +253,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -278,7 +309,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -296,8 +326,8 @@
         "id": "CodeSystem.contained",
         "path": "CodeSystem.contained",
         "short": "Contained, inline Resources",
-        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.",
-        "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.",
+        "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
         "alias": [
           "inline resources",
           "anonymous resources",
@@ -328,13 +358,18 @@
       {
         "id": "CodeSystem.extension",
         "path": "CodeSystem.extension",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Extension",
+        "definition": "An Extension",
         "min": 0,
         "max": "*",
         "base": {
@@ -353,7 +388,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -361,19 +395,52 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "mustSupport": false,
         "isModifier": false,
-        "isSummary": false,
-        "mapping": [
+        "isSummary": false
+      },
+      {
+        "id": "CodeSystem.extension:knowledgeRepresentationLevel",
+        "path": "CodeSystem.extension",
+        "sliceName": "knowledgeRepresentationLevel",
+        "short": "narrative | semi-structured | structured | executable",
+        "definition": "Defines a knowledge representation level provided by this knowledge artifact.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
           {
-            "identity": "rim",
-            "map": "N/A"
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel"
+            ]
           }
-        ]
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() !\u003d value.exists()",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
       },
       {
         "id": "CodeSystem.modifierExtension",
@@ -404,7 +471,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -412,14 +478,13 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "mustSupport": false,
         "isModifier": true,
         "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
-        "isSummary": false,
+        "isSummary": true,
         "mapping": [
           {
             "identity": "rim",
@@ -431,7 +496,7 @@
         "id": "CodeSystem.url",
         "path": "CodeSystem.url",
         "short": "Canonical identifier for this code system, represented as a URI (globally unique) (Coding.system)",
-        "definition": "An absolute URI that is used to identify this code system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this code system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the code system is stored on different servers. This is used in [Coding](datatypes.html#Coding).system.",
+        "definition": "An absolute URI that is used to identify this code system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this code system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the code system is stored on different servers. This is used in [Coding](datatypes.html#Coding).system.",
         "comment": "Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
         "requirements": "Allows the code system to be referenced by a single globally unique identifier.",
         "min": 1,
@@ -448,22 +513,24 @@
         ],
         "constraint": [
           {
+            "key": "cnl-1",
+            "severity": "warning",
+            "human": "URL should not contain | or # - these characters make processing canonical references problematic",
+            "expression": "url.matches(\u0027([^|#])*\u0027)",
+            "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+          },
+          {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.url"
-          },
           {
             "identity": "w5",
             "map": "FiveWs.identifier"
@@ -495,7 +562,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -503,10 +569,6 @@
         "isModifier": false,
         "isSummary": true,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.identifier"
-          },
           {
             "identity": "w5",
             "map": "FiveWs.identifier"
@@ -522,7 +584,7 @@
         "path": "CodeSystem.version",
         "short": "Business version of the code system (Coding.version)",
         "definition": "The identifier that is used to identify this version of the code system when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the code system author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. This is used in [Coding](datatypes.html#Coding).version.",
-        "comment": "There may be different code system instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the code system with the format [url]|[version].",
+        "comment": "There may be different code system instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the code system with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
         "min": 1,
         "max": "1",
         "base": {
@@ -541,18 +603,13 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.version"
-          },
           {
             "identity": "w5",
             "map": "FiveWs.version"
@@ -566,7 +623,7 @@
         "definition": "A natural language name identifying the code system. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
         "comment": "The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.",
         "requirements": "Support human navigation and code generation.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "CodeSystem.name",
@@ -587,21 +644,30 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true
       },
       {
         "id": "CodeSystem.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "CodeSystem.title",
         "short": "Name for this code system (human friendly)",
         "definition": "A short, descriptive, user-friendly title for the code system.",
         "comment": "This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "CodeSystem.title",
@@ -619,19 +685,12 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.title"
-          }
-        ]
+        "isSummary": true
       },
       {
         "id": "CodeSystem.status",
@@ -657,13 +716,12 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": true,
-        "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not use a retired {{title}} without due consideration",
+        "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not use a retired CodeSystem without due consideration",
         "isSummary": true,
         "binding": {
           "extension": [
@@ -678,20 +736,12 @@
           ],
           "strength": "required",
           "description": "The lifecycle status of an artifact.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|5.0.0-snapshot3"
         },
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "Definition.status"
-          },
-          {
             "identity": "w5",
             "map": "FiveWs.status"
-          },
-          {
-            "identity": "rim",
-            "map": "N/A"
           }
         ]
       },
@@ -714,24 +764,20 @@
             "code": "boolean"
           }
         ],
+        "meaningWhenMissing": "If absent, this resource is treated as though it is not experimental.",
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.experimental"
-          },
           {
             "identity": "w5",
             "map": "FiveWs.class"
@@ -742,8 +788,8 @@
         "id": "CodeSystem.date",
         "path": "CodeSystem.date",
         "short": "Date last changed",
-        "definition": "The date  (and optionally time) when the code system was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the code system changes.",
-        "comment": "Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the code system. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+        "definition": "The date  (and optionally time) when the code system was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the code system changes.",
+        "comment": "The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the code system. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
         "alias": [
           "Revision Date"
         ],
@@ -765,7 +811,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -774,10 +819,6 @@
         "isSummary": true,
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "Definition.date"
-          },
-          {
             "identity": "w5",
             "map": "FiveWs.recorded"
           }
@@ -785,15 +826,22 @@
       },
       {
         "id": "CodeSystem.publisher",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "CodeSystem.publisher",
-        "short": "Name of the publisher (organization or individual)",
-        "definition": "The name of the organization or individual that published the code system.",
+        "short": "Name of the publisher/steward (organization or individual)",
+        "definition": "The name of the organization or individual responsible for the release and ongoing maintenance of the code system.",
         "comment": "Usually an organization but may be an individual. The publisher (or steward) of the code system is the organization or individual primarily responsible for the maintenance and upkeep of the code system. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the code system. This item SHOULD be populated unless the information is available from context.",
         "requirements": "Helps establish the \"authority/credibility\" of the code system.  May also allow for contact.",
-        "alias": [
-          "steward"
-        ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "CodeSystem.publisher",
@@ -811,18 +859,13 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.publisher"
-          },
           {
             "identity": "w5",
             "map": "FiveWs.witness"
@@ -853,30 +896,32 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "mustSupport": false,
         "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.contact"
-          }
-        ]
+        "isSummary": true
       },
       {
         "id": "CodeSystem.description",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "CodeSystem.description",
         "short": "Natural language description of the code system",
         "definition": "A free text natural language description of the code system from a consumer\u0027s perspective.",
-        "comment": "This description can be used to capture details such as why the code system was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the code system as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the code system is presumed to be the predominant language in the place the code system was created).",
+        "comment": "This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the code system as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the code system is presumed to be the predominant language in the place the code system was created).",
         "alias": [
           "Scope",
-          "Purpose",
-          "scope"
+          "Purpose"
         ],
         "min": 1,
         "max": "1",
@@ -896,18 +941,13 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.description"
-          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -945,19 +985,12 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "mustSupport": false,
         "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.useContext"
-          }
-        ]
+        "isSummary": true
       },
       {
         "id": "CodeSystem.jurisdiction",
@@ -983,7 +1016,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1004,16 +1036,20 @@
           "strength": "extensible",
           "description": "Countries and regions within which this artifact is targeted for use.",
           "valueSet": "http://hl7.org/fhir/ValueSet/jurisdiction"
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.jurisdiction"
-          }
-        ]
+        }
       },
       {
         "id": "CodeSystem.purpose",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "CodeSystem.purpose",
         "short": "Why this code system is defined",
         "definition": "Explanation of why this code system is needed and why it has been designed as it has.",
@@ -1036,7 +1072,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1044,10 +1079,6 @@
         "isModifier": false,
         "isSummary": false,
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Definition.purpose"
-          },
           {
             "identity": "w5",
             "map": "FiveWs.why[x]"
@@ -1060,6 +1091,16 @@
       },
       {
         "id": "CodeSystem.copyright",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
         "path": "CodeSystem.copyright",
         "short": "Use and/or publishing restrictions",
         "definition": "A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.",
@@ -1087,7 +1128,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1096,9 +1136,48 @@
         "isSummary": false,
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "Definition.copyright"
-          },
+            "identity": "objimpl",
+            "map": "no-gen-base"
+          }
+        ]
+      },
+      {
+        "id": "CodeSystem.approvalDate",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.approvalDate",
+        "short": "When the CodeSystem was approved by publisher",
+        "definition": "The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.",
+        "comment": "The \u0027date\u0027 element may be more recent than the approval date because of minor changes or editorial corrections.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeSystem.approvalDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
           {
             "identity": "objimpl",
             "map": "no-gen-base"
@@ -1106,12 +1185,330 @@
         ]
       },
       {
+        "id": "CodeSystem.lastReviewDate",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.lastReviewDate",
+        "short": "When the CodeSystem was last reviewed",
+        "definition": "The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.",
+        "comment": "If specified, this date follows the original approval date.",
+        "requirements": "Gives a sense of how \"current\" the content is.  Resources that have not been reviewed in a long time may have a risk of being less appropriate/relevant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeSystem.lastReviewDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "objimpl",
+            "map": "no-gen-base"
+          }
+        ]
+      },
+      {
+        "id": "CodeSystem.effectivePeriod",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.effectivePeriod",
+        "short": "When the CodeSystem is expected to be used",
+        "definition": "The period during which the CodeSystem content was or is planned to be in active use.",
+        "comment": "The effective period for a CodeSystem  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.",
+        "requirements": "Allows establishing a transition before a resource comes into effect and also allows for a sunsetting  process when new versions of the CodeSystem are or are expected to be used instead.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeSystem.effectivePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "objimpl",
+            "map": "no-gen-base"
+          }
+        ]
+      },
+      {
+        "id": "CodeSystem.topic",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.topic",
+        "short": "E.g. Education, Treatment, Assessment, etc.",
+        "definition": "Descriptions related to the content of the CodeSystem. Topics provide a high-level categorization as well as keywords for the CodeSystem that can be useful for filtering and searching.",
+        "comment": "This element provides topical categorization and keywords for the CodeSystem, as opposed to the more structured context-of-use information provided in the useContext element",
+        "requirements": "Repositories must be able to determine how to categorize the CodeSystem so that it can be found by topical and keyword searches.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeSystem.topic",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "DefinitionTopic"
+            }
+          ],
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/definition-topic"
+        }
+      },
+      {
+        "id": "CodeSystem.author",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.author",
+        "short": "Who authored the CodeSystem",
+        "definition": "An individiual or organization primarily involved in the creation and maintenance of the CodeSystem.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeSystem.author",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "ContactDetail"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "CodeSystem.editor",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.editor",
+        "short": "Who edited the CodeSystem",
+        "definition": "An individual or organization primarily responsible for internal coherence of the CodeSystem.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeSystem.editor",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "ContactDetail"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "CodeSystem.reviewer",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.reviewer",
+        "short": "Who reviewed the CodeSystem",
+        "definition": "An individual or organization primarily responsible for review of some aspect of the CodeSystem.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeSystem.reviewer",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "ContactDetail"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "CodeSystem.endorser",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.endorser",
+        "short": "Who endorsed the CodeSystem",
+        "definition": "An individual or organization responsible for officially endorsing the CodeSystem for use in some setting.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeSystem.endorser",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "ContactDetail"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "CodeSystem.relatedArtifact",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "CodeSystem.relatedArtifact",
+        "short": "Additional documentation, citations, etc.",
+        "definition": "Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.",
+        "comment": "Each related artifact is either an attachment, or a reference to another resource, but not both.",
+        "requirements": "A CodeSystem must be able to provide enough information for consumers of the content (and/or interventions or results produced by the content) to be able to determine and understand the justification for and evidence in support of the content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeSystem.relatedArtifact",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "RelatedArtifact"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
         "id": "CodeSystem.caseSensitive",
         "path": "CodeSystem.caseSensitive",
         "short": "If code comparison is case sensitive",
         "definition": "If code comparison is case sensitive when codes within this system are compared to each other.",
         "comment": "If this value is missing, then it is not specified whether a code system is case sensitive or not. When the rule is not known, Postel\u0027s law should be followed: produce codes with the correct case, and accept codes in any case. This element is primarily provided to support validation software.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "CodeSystem.caseSensitive",
@@ -1129,11 +1526,10 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true
       },
@@ -1164,7 +1560,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1190,17 +1585,19 @@
             "code": "code"
           }
         ],
+        "condition": [
+          "scs-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -1212,7 +1609,7 @@
           ],
           "strength": "required",
           "description": "The meaning of the hierarchy of concepts in a code system.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/codesystem-hierarchy-meaning|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/codesystem-hierarchy-meaning|5.0.0-snapshot3"
         }
       },
       {
@@ -1242,7 +1639,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1274,7 +1670,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1299,17 +1694,19 @@
             "code": "code"
           }
         ],
+        "condition": [
+          "scs-2"
+        ],
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -1321,7 +1718,7 @@
           ],
           "strength": "required",
           "description": "The extent of the content of the code system (the concepts and codes it defines) are represented in a code system resource.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/codesystem-content-mode|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/codesystem-content-mode|5.0.0-snapshot3"
         }
       },
       {
@@ -1357,7 +1754,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1389,7 +1785,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1421,7 +1816,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1449,7 +1843,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -1492,7 +1886,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1500,7 +1893,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1543,7 +1935,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1551,7 +1942,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1594,7 +1984,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1625,7 +2014,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1656,7 +2044,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1672,7 +2059,7 @@
           ],
           "strength": "required",
           "description": "The kind of operation to perform as a part of a property based filter.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/filter-operator|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/filter-operator|5.0.0-snapshot3"
         }
       },
       {
@@ -1698,7 +2085,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1717,6 +2103,7 @@
         "path": "CodeSystem.property",
         "short": "Additional information supplied about each concept",
         "definition": "A property defines an additional slot through which additional information can be provided about a concept.",
+        "comment": "Multiple occurrences of CodeSystem.concept.property may occur for a CodeSystem.property where     CodeSystem.concept.property.code is the same and CodeSystem.concept.property.value differs. For example: multiple designations for a single concept.",
         "min": 0,
         "max": "*",
         "base": {
@@ -1735,7 +2122,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1763,7 +2149,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -1806,7 +2192,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1814,7 +2199,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1857,7 +2241,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1865,7 +2248,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1908,7 +2290,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1939,7 +2320,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1970,7 +2350,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2001,7 +2380,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2017,7 +2395,7 @@
           ],
           "strength": "required",
           "description": "The type of a property value.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/concept-property-type|4.6.0|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/concept-property-type|5.0.0-snapshot3"
         }
       },
       {
@@ -2032,7 +2410,7 @@
         "short": "Concepts in the code system",
         "definition": "Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meanings of the hierarchical relationships are.",
         "comment": "If this is empty, it means that the code system resource does not represent the content of the code system.",
-        "min": 1,
+        "min": 0,
         "max": "*",
         "base": {
           "path": "CodeSystem.concept",
@@ -2044,17 +2422,19 @@
             "code": "BackboneElement"
           }
         ],
+        "condition": [
+          "scs-2"
+        ],
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2078,7 +2458,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2121,7 +2501,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2129,7 +2508,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2172,7 +2550,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2180,7 +2557,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2223,11 +2599,10 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2254,11 +2629,10 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2285,11 +2659,10 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2314,11 +2687,17 @@
         ],
         "constraint": [
           {
+            "key": "csd-5",
+            "severity": "error",
+            "human": "Must have a value for concept.designation.use if concept.designation.additionalUse is present",
+            "expression": "additionalUse.exists() implies use.exists()",
+            "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+          },
+          {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2346,7 +2725,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2389,7 +2768,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2397,7 +2775,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2440,7 +2817,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2448,7 +2824,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2486,7 +2861,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2537,7 +2911,48 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ConceptDesignationUse"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Details of how a designation would be used.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/designation-use"
+        }
+      },
+      {
+        "id": "CodeSystem.concept.designation.additionalUse",
+        "path": "CodeSystem.concept.designation.additionalUse",
+        "short": "Additional ways how this designation would be used",
+        "definition": "Additional codes that detail how this designation would be used, if there is more than one use.",
+        "comment": "This was added rather than increasing the cardinality of .use to 0..* in order to maintain backward compatibility.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeSystem.concept.designation.additionalUse",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2579,7 +2994,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2616,7 +3030,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2644,7 +3057,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "id"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2687,7 +3100,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2695,7 +3107,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2738,7 +3149,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2746,7 +3156,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2789,7 +3198,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2838,7 +3246,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2859,17 +3266,19 @@
           "max": "*"
         },
         "contentReference": "http://hl7.org/fhir/StructureDefinition/CodeSystem#CodeSystem.concept",
+        "condition": [
+          "scs-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       }
@@ -2881,18 +3290,44 @@
         "id": "CodeSystem",
         "path": "CodeSystem",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "constraint": [
+          {
+            "key": "scs-1",
+            "severity": "error",
+            "human": "If a codesystem contains nested concepts, it must specify hierarchyMeaning",
+            "expression": "concept.concept.exists() implies hierarchyMeaning.exists()"
+          },
+          {
+            "key": "scs-2",
+            "severity": "error",
+            "human": "If a codesystem contains example, fragment, or complete content, it must have at least one concept",
+            "expression": "content in ( \u0027example\u0027 | \u0027fragment\u0027 | \u0027complete\u0027 ) implies concept.exists()"
+          }
+        ]
+      },
+      {
+        "id": "CodeSystem.extension:knowledgeRepresentationLevel",
+        "path": "CodeSystem.extension",
+        "sliceName": "knowledgeRepresentationLevel",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.url",
         "path": "CodeSystem.url",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "uri"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.version",
@@ -2903,137 +3338,103 @@
           {
             "code": "string"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.name",
         "path": "CodeSystem.name",
+        "mustSupport": true
+      },
+      {
+        "id": "CodeSystem.title",
+        "path": "CodeSystem.title",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.status",
         "path": "CodeSystem.status",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.experimental",
         "path": "CodeSystem.experimental",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.publisher",
         "path": "CodeSystem.publisher",
-        "alias": [
-          "steward"
-        ],
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.description",
         "path": "CodeSystem.description",
-        "alias": [
-          "scope"
-        ],
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "markdown"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.caseSensitive",
         "path": "CodeSystem.caseSensitive",
-        "min": 0,
+        "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
+        "mustSupport": true
+      },
+      {
+        "id": "CodeSystem.hierarchyMeaning",
+        "path": "CodeSystem.hierarchyMeaning",
+        "condition": [
+          "scs-1"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "CodeSystem.content",
+        "path": "CodeSystem.content",
+        "condition": [
+          "scs-2"
+        ],
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.concept",
         "path": "CodeSystem.concept",
-        "min": 1,
-        "max": "*"
+        "condition": [
+          "scs-2"
+        ],
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.concept.code",
         "path": "CodeSystem.concept.code",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.concept.display",
         "path": "CodeSystem.concept.display",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.concept.definition",
         "path": "CodeSystem.concept.definition",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CodeSystem.concept.concept",
         "path": "CodeSystem.concept.concept",
         "min": 0,
         "max": "*",
-        "contentReference": "http://hl7.org/fhir/StructureDefinition/CodeSystem#CodeSystem.concept"
+        "contentReference": "http://hl7.org/fhir/StructureDefinition/CodeSystem#CodeSystem.concept",
+        "condition": [
+          "scs-1"
+        ],
+        "mustSupport": true
       }
     ]
   }

@@ -11,8 +11,6 @@
       "id": "map",
       "name": "NHIN / V3 Mapping",
       "status": "draft",
-      "sourceCanonical": "http://hl7.org/fhir/ValueSet/nhin-purposeofuse",
-      "targetCanonical": "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
       "group": [
         {
           "source": "http://healthit.gov/nhin/purposeofuse",
@@ -212,8 +210,15 @@
     }
   ],
   "url": "http://hl7.org/fhir/ValueSet/nhin-purposeofuse",
-  "version": "4.6.0",
-  "name": "NHIN PurposeOfUse",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.3142"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "NHINPurposeOfUse",
+  "title": "NHIN PurposeOfUse",
   "status": "active",
   "experimental": false,
   "date": "2010-01-29",

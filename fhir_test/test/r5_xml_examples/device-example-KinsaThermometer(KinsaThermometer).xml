@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><Device xmlns="http://hl7.org/fhir">
+<id value="KinsaThermometer"/> 
+<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Device</b><a name="KinsaThermometer"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Device "KinsaThermometer" </p></div><p><b>identifier</b>: System Identifier: 00-00-52-49-20-45-4C-42, Bluetooth Address: 10-CE-A9-80-14-66</p><h3>UdiCarriers</h3><table class="grid"><tr><td>-</td><td><b>DeviceIdentifier</b></td><td><b>Issuer</b></td><td><b>Jurisdiction</b></td><td><b>CarrierHRF</b></td><td><b>EntryType</b></td></tr><tr><td>*</td><td>18479793050726</td><td><a href="http://hl7.org/fhir/NamingSystem/gs1-di">http://hl7.org/fhir/NamingSystem/gs1-di</a></td><td><a href="http://hl7.org/fhir/NamingSystem/fda-udi">http://hl7.org/fhir/NamingSystem/fda-udi</a></td><td>(01)18479793050726(21)1i9JfKh</td><td>unknown</td></tr></table><p><b>manufacturer</b>: Kinsa</p><p><b>serialNumber</b>: 1i9JfKh</p><h3>DeviceNames</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>KS_1i9JfKh</td><td>user-friendly-name</td></tr></table><p><b>modelNumber</b>: KS_1i9JfKh</p><p><b>type</b>: MDC_MOC_VMS_MDS_SIMP: Personal Health Device <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-mdc.html">ISO 11073-10101 Health informatics - Point-of-care</a>#65573 "MDC_MOC_VMS_MDS_SIMP")</span></p><blockquote><p><b>version</b></p><p><b>type</b>: MDC_ID_PROD_SPEC_FW: Firmware revision <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-mdc.html">ISO 11073-10101 Health informatics - Point-of-care</a>#531976)</span></p><p><b>value</b>: 1.00</p></blockquote><blockquote><p><b>version</b></p><p><b>type</b>: MDC_ID_PROD_SPEC_SW: Software revision <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-mdc.html">ISO 11073-10101 Health informatics - Point-of-care</a>#531975)</span></p><p><b>value</b>: V2.19</p></blockquote><blockquote><p><b>version</b></p><p><b>type</b>: MDC_ID_PROD_SPEC_SW: Hardware revision <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-mdc.html">ISO 11073-10101 Health informatics - Point-of-care</a>#531974)</span></p><p><b>value</b>: 1.00</p></blockquote><h3>Specializations</h3><table class="grid"><tr><td>-</td><td><b>SystemType</b></td><td><b>Version</b></td></tr><tr><td>*</td><td>MDC_DEV_SPEC_PROFILE_TEMP: Thermometer <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-mdc.html">ISO 11073-10101 Health informatics - Point-of-care</a>#528392)</span></td><td>1</td></tr></table><h3>Properties</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>MDC_TIME_SYNC_PROTOCOL: Time synchronization protocol <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-mdc.html">ISO 11073-10101 Health informatics - Point-of-care</a>#68220)</span></td><td>MDC_TIME_SYNC_NONE: No time synchronization <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-mdc.html">ISO 11073-10101 Health informatics - Point-of-care</a>#532224)</span></td></tr></table></div></text><identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ContinuaDeviceIdentifiers"/>
+        <code value="SYSID"/>
+        <display value="System Identifier"/>
+      </coding>
+    </type>
+    <system value="urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"/>
+    <value value="00-00-52-49-20-45-4C-42"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ContinuaDeviceIdentifiers"/>
+        <code value="BTMAC"/>
+        <display value="Bluetooth Address"/>
+      </coding>
+    </type>
+    <system value="http://hl7.org/fhir/sid/eui-48"/>
+    <value value="10-CE-A9-80-14-66"/>
+  </identifier>
+  <udiCarrier>
+    <deviceIdentifier value="18479793050726"/>
+    <issuer value="http://hl7.org/fhir/NamingSystem/gs1-di"/>
+    <jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
+    <carrierHRF value="(01)18479793050726(21)1i9JfKh"/>
+    <entryType value="unknown"/>
+  </udiCarrier>
+  <manufacturer value="Kinsa"/>
+  <serialNumber value="1i9JfKh"/>
+  <deviceName>
+    <name value="KS_1i9JfKh"/>
+    <type value="user-friendly-name"/>
+  </deviceName>
+  <modelNumber value="KS_1i9JfKh"/>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="65573"/>
+      <display value="MDC_MOC_VMS_MDS_SIMP"/>
+    </coding>
+    <text value="MDC_MOC_VMS_MDS_SIMP: Personal Health Device"/>
+  </type>
+  <version>
+    <type>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="531976"/>
+      </coding>
+      <text value="MDC_ID_PROD_SPEC_FW: Firmware revision"/>
+    </type>
+    <value value="1.00"/>
+  </version>
+  <version>
+    <type>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="531975"/>
+      </coding>
+      <text value="MDC_ID_PROD_SPEC_SW: Software revision"/>
+    </type>
+    <value value="V2.19"/>
+  </version>
+  <version>
+    <type>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="531974"/>
+      </coding>
+      <text value="MDC_ID_PROD_SPEC_SW: Hardware revision"/>
+    </type>
+    <value value="1.00"/>
+  </version>
+  <specialization>
+    <systemType>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="528392"/>
+      </coding>
+      <text value="MDC_DEV_SPEC_PROFILE_TEMP: Thermometer"/>
+    </systemType>
+    <version value="1"/>
+  </specialization>
+  <property>
+    <type>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="68220"/>
+      </coding>
+      <text value="MDC_TIME_SYNC_PROTOCOL: Time synchronization protocol"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="532224"/>
+      </coding>
+      <text value="MDC_TIME_SYNC_NONE: No time synchronization"/>
+    </valueCodeableConcept>
+  </property>
+  </Device>

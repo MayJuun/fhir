@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-SupplyDelivery1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,28 +9,33 @@
       "status": "active",
       "description": "Type options for SupplyDelivery.suppliedItem.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:2e99f5a5-c083-4d70-b18b-7dd107f945d8",
-        "timestamp": "2022-05-06T17:12:41+00:00",
+        "identifier": "urn:uuid:c043431d-82c3-494e-ae77-5467f071e2f3",
+        "timestamp": "2022-12-14T07:17:34+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Medication",
             "display": "Medication"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Substance",
             "display": "Substance"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Device",
             "display": "Device"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "BiologicallyDerivedProduct",
+            "display": "BiologicallyDerivedProduct"
           }
         ]
       }
@@ -42,21 +47,21 @@
       "status": "active",
       "description": "Type options for SupplyDelivery.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:0fd23a1f-b10a-414c-840d-c0115d8b0af3",
-        "timestamp": "2022-05-06T17:12:41+00:00",
+        "identifier": "urn:uuid:491bb8ac-9abe-4bf6-bce2-6875fd5bdcea",
+        "timestamp": "2022-12-14T07:17:34+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Period",
             "display": "Period"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Timing",
             "display": "Timing"
           }
@@ -64,14 +69,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-SupplyDelivery1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -132,7 +139,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -324,7 +331,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -414,7 +421,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.identifier-flyover",
-              "text": "Identifier for the supply delivery event that is used to identify it across multiple disparate systems. This identifier is typically assigned by the dispenser, and may be used to reference the delivery when exchanging information about it with other systems.",
+              "text": "Identifier for the supply delivery event that is used to identify it across multiple disparate systems. This identifier is typically assigned by the supplier, and may be used to reference the delivery when exchanging information about it with other systems.",
               "type": "display"
             },
             {
@@ -474,8 +481,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "SupplyRequest"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "SupplyRequest, SupplyRequest"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -524,8 +531,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "SupplyDelivery, Contract"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "SupplyDelivery, Contract, Contract"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -623,8 +630,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Patient"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -651,7 +658,7 @@
             }
           ],
           "linkId": "SupplyDelivery.type",
-          "text": "Category of dispense event",
+          "text": "Category of supply event",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -672,7 +679,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.type-flyover",
-              "text": "Indicates the type of dispensing event that is performed. Examples include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.",
+              "text": "Indicates the type of supply being provided.  Examples include: Medication, Device, Biologically Derived Product.",
               "type": "display"
             },
             {
@@ -693,17 +700,11 @@
           ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            }
-          ],
           "linkId": "SupplyDelivery.suppliedItem",
           "text": "The item that is delivered or supplied",
           "type": "group",
           "required": false,
-          "repeats": false,
+          "repeats": true,
           "item": [
             {
               "extension": [
@@ -836,7 +837,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.suppliedItem.quantity",
-              "text": "Amount dispensed",
+              "text": "Amount supplied",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -857,7 +858,7 @@
                     }
                   ],
                   "linkId": "SupplyDelivery.suppliedItem.quantity-flyover",
-                  "text": "The amount of supply that has been dispensed. Includes unit of measure.",
+                  "text": "The amount of the item that has been supplied.  Unit of measure may be included.",
                   "type": "display"
                 },
                 {
@@ -906,7 +907,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.suppliedItem.item[x]",
-              "text": "Medication, Substance, or Device supplied",
+              "text": "Medication, Substance, Device or Biologically Derived Product supplied",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -927,7 +928,7 @@
                     }
                   ],
                   "linkId": "SupplyDelivery.suppliedItem.item[x]-flyover",
-                  "text": "Identifies the medication, substance or device being dispensed. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.",
+                  "text": "Identifies the medication, substance, device or biologically derived product being supplied. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.",
                   "type": "display"
                 },
                 {
@@ -979,8 +980,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Medication, Substance, Device"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Medication, Substance, Device, BiologicallyDerivedProduct, BiologicallyDerivedProduct"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1112,15 +1113,15 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Patient"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Practitioner"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "RelatedPerson"
                         }
                       ],
@@ -1168,14 +1169,14 @@
                 }
               ],
               "linkId": "SupplyDelivery.supplier-flyover",
-              "text": "The individual responsible for dispensing the medication, supplier or device.",
+              "text": "The individual or organization responsible for supplying the delivery.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Practitioner, PractitionerRole, Organization"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Practitioner, PractitionerRole, Organization, Organization"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1183,7 +1184,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.supplier.value",
-              "text": "Dispenser",
+              "text": "The item supplier",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1222,14 +1223,14 @@
                 }
               ],
               "linkId": "SupplyDelivery.destination-flyover",
-              "text": "Identification of the facility/location where the Supply was shipped to, as part of the dispense event.",
+              "text": "Identification of the facility/location where the delivery was shipped to.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Location"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Location, Location"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1237,7 +1238,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.destination.value",
-              "text": "Where the Supply was sent",
+              "text": "Where the delivery was sent",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1272,14 +1273,14 @@
                 }
               ],
               "linkId": "SupplyDelivery.receiver-flyover",
-              "text": "Identifies the person who picked up the Supply.",
+              "text": "Identifies the individual or organization that received the delivery.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Practitioner, PractitionerRole"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Practitioner, PractitionerRole, Organization, Organization"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1287,7 +1288,7 @@
                 }
               ],
               "linkId": "SupplyDelivery.receiver.value",
-              "text": "Who collected the Supply",
+              "text": "Who received the delivery",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1296,14 +1297,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

@@ -16,10 +16,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/boolean",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "boolean",
   "status": "active",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "HL7 FHIR Standard",
   "contact": [
     {
@@ -31,8 +32,19 @@
       ]
     }
   ],
-  "description": "Base StructureDefinition for boolean Type: Value of \"true\" or \"false\"",
-  "fhirVersion": "4.6.0",
+  "description": "boolean Type: Value of \"true\" or \"false\"",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0-snapshot3",
   "kind": "primitive-type",
   "abstract": false,
   "type": "boolean",
@@ -58,7 +70,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -122,7 +133,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -130,7 +140,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],

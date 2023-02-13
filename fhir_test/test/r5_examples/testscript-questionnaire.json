@@ -1,14 +1,41 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-TestScript1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "name": "Type options for TestScript.versionAlgorithm[x]",
+      "status": "active",
+      "description": "Type options for TestScript.versionAlgorithm[x]",
+      "expansion": {
+        "identifier": "urn:uuid:8947a26e-c375-4ffc-8739-af258cae43ce",
+        "timestamp": "2022-12-14T07:17:36+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "string",
+            "display": "string"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Coding",
+            "display": "Coding"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-TestScript1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "item": [
     {
@@ -69,7 +96,7 @@
                 }
               ],
               "linkId": "TestScript.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -261,7 +288,7 @@
                 }
               ],
               "linkId": "TestScript.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -354,7 +381,7 @@
                 }
               ],
               "linkId": "TestScript.url-flyover",
-              "text": "An absolute URI that is used to identify this test script when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this test script is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the test script is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
+              "text": "An absolute URI that is used to identify this test script when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this test script is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the test script is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
               "type": "display"
             },
             {
@@ -453,7 +480,7 @@
                 }
               ],
               "linkId": "TestScript.version-flyover",
-              "text": "The identifier that is used to identify this version of the test script when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the test script author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. There may be different test script instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the test script with the format [url]|[version].",
+              "text": "The identifier that is used to identify this version of the test script when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the test script author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. There may be different test script instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the test script with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
               "type": "display"
             },
             {
@@ -462,6 +489,88 @@
               "type": "string",
               "required": false,
               "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "TestScript.versionAlgorithm[x]",
+          "text": "How to compare versions",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "TestScript.versionAlgorithm[x]-flyover",
+              "text": "Indicates the mechanism used to compare versions to determine which is more current. If set as a string, this is a FHIRPath expression that has two additional context variables passed in - %version1 and %version2 and will return a negative number if version1 is newer, a positive number if version2 and a 0 if the version ordering can\u0027t be successfully be determined.",
+              "type": "display"
+            },
+            {
+              "linkId": "TestScript.versionAlgorithm[x]._type",
+              "text": "type",
+              "type": "coding",
+              "required": false,
+              "repeats": false,
+              "answerConstraint": "optionsOnly",
+              "answerValueSet": "#vs2",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
+                    }
+                  ],
+                  "linkId": "TestScript.versionAlgorithm[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "TestScript.versionAlgorithm[x]._null.value",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Coding"
+                    }
+                  ],
+                  "linkId": "TestScript.versionAlgorithm[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "TestScript.versionAlgorithm[x]._null.value",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -682,7 +791,7 @@
                 }
               ],
               "linkId": "TestScript.date-flyover",
-              "text": "The date  (and optionally time) when the test script was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the test script changes. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the test script. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+              "text": "The date  (and optionally time) when the test script was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the test script changes. The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the test script. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
               "type": "display"
             },
             {
@@ -726,12 +835,12 @@
                 }
               ],
               "linkId": "TestScript.publisher-flyover",
-              "text": "The name of the organization or individual that published the test script. Usually an organization but may be an individual. The publisher (or steward) of the test script is the organization or individual primarily responsible for the maintenance and upkeep of the test script. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the test script. This item SHOULD be populated unless the information is available from context.",
+              "text": "The name of the organization or individual responsible for the release and ongoing maintenance of the test script. Usually an organization but may be an individual. The publisher (or steward) of the test script is the organization or individual primarily responsible for the maintenance and upkeep of the test script. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the test script. This item SHOULD be populated unless the information is available from context.",
               "type": "display"
             },
             {
               "linkId": "TestScript.publisher.value",
-              "text": "Name of the publisher (organization or individual)",
+              "text": "Name of the publisher/steward (organization or individual)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -803,7 +912,7 @@
                 }
               ],
               "linkId": "TestScript.description-flyover",
-              "text": "A free text natural language description of the test script from a consumer\u0027s perspective. This description can be used to capture details such as why the test script was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the test script as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the test script is presumed to be the predominant language in the place the test script was created).",
+              "text": "A free text natural language description of the test script from a consumer\u0027s perspective. This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the test script as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the test script is presumed to be the predominant language in the place the test script was created).",
               "type": "display"
             },
             {
@@ -973,12 +1082,56 @@
                 }
               ],
               "linkId": "TestScript.copyright-flyover",
-              "text": "A copyright statement relating to the test script and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test script.",
+              "text": "A copyright statement relating to the test script and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test script. ...",
               "type": "display"
             },
             {
               "linkId": "TestScript.copyright.value",
               "text": "Use and/or publishing restrictions",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "TestScript.copyrightLabel",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "TestScript.copyrightLabel-flyover",
+              "text": "A short string (\u003c50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. \u0027All rights reserved\u0027, \u0027Some rights reserved\u0027). The (c) symbol should NOT be included in this string. It will be added by software when rendering the notation. Full details about licensing, restrictions, warrantees, etc. goes in the more general \u0027copyright\u0027 element.",
+              "type": "display"
+            },
+            {
+              "linkId": "TestScript.copyrightLabel.value",
+              "text": "Copyright holder and year(s)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1212,6 +1365,50 @@
                   "answerConstraint": "optionsOnly"
                 }
               ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
+                }
+              ],
+              "linkId": "TestScript.origin.url",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "TestScript.origin.url-flyover",
+                  "text": "The explicit url path of the origin server used in this test script. If provided, the test engine is not expected to prompt for or accept external input of this value.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "TestScript.origin.url.value",
+                  "text": "The url path of the origin server",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
             }
           ]
         },
@@ -1440,6 +1637,50 @@
                   "required": false,
                   "repeats": false,
                   "answerConstraint": "optionsOnly"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
+                }
+              ],
+              "linkId": "TestScript.destination.url",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "TestScript.destination.url-flyover",
+                  "text": "The explicit url path of the destination server used in this test script. If provided, the test engine is not expected to prompt for or accept external input of this value.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "TestScript.destination.url.value",
+                  "text": "The url path of the destination server",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
                 }
               ]
             }
@@ -2786,14 +3027,14 @@
                     }
                   ],
                   "linkId": "TestScript.fixture.resource-flyover",
-                  "text": "Reference to the resource (containing the contents of the resource needed for operations). See http://build.fhir.org/resourcelist.html for complete list of resource types.",
+                  "text": "Reference to the resource (containing the contents of the resource needed for operations). This is allowed to be a Parameters resource. See the [Resource List](resourcelist.html) for complete list of resource types.",
                   "type": "display"
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Resource"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Resource, Resource"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2814,7 +3055,7 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
+              "valueString": "uri"
             }
           ],
           "linkId": "TestScript.profile",
@@ -2838,23 +3079,13 @@
                 }
               ],
               "linkId": "TestScript.profile-flyover",
-              "text": "Reference to the profile to be used for validation. See http://build.fhir.org/resourcelist.html for complete list of resource types.",
+              "text": "Reference to the profile to be used for validation. See the [Resource List](resourcelist.html) for complete list of resource types.",
               "type": "display"
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Resource"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
               "linkId": "TestScript.profile.value",
               "text": "Reference of the validation profile",
-              "type": "reference",
+              "type": "string",
               "required": false,
               "repeats": false
             }
@@ -3782,7 +4013,7 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.operation.type-flyover",
-                          "text": "Server interaction or operation type. See http://build.fhir.org/http.html for list of server interactions.",
+                          "text": "Server interaction or operation type. See the list of [server interactions](http.html).",
                           "type": "display"
                         },
                         {
@@ -3827,7 +4058,7 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.operation.resource-flyover",
-                          "text": "The type of the FHIR resource. See http://build.fhir.org/resourcelist.html. Data type of uri is needed when non-HL7 artifacts are identified. If \"url\" element is specified, then \"targetId\", \"params\", and \"resource\" elements will be ignored as \"url\" element will have everything needed for constructing the request url.  If \"params\" element is specified, then \"targetId\" element is ignored. For FHIR operations that require a resource (e.g. \"read\" and \"vread\" operations), the \"resource\" element must be specified when \"params\" element is specified.  If \"url\" and \"params\" elements are absent, then the request url will be constructed from \"targetId\" fixture if present. For \"read\" operation, the resource and id values will be extracted from \"targetId\" fixture and used to construct the url. For \"vread\" and \"history\" operations, the versionId value will also be used.",
+                          "text": "The type of the FHIR resource. See the [resource list](resourcelist.html). Data type of uri is needed when non-HL7 artifacts are identified. If \"url\" element is specified, then \"targetId\", \"params\", and \"resource\" elements will be ignored as \"url\" element will have everything needed for constructing the request url.  If \"params\" element is specified, then \"targetId\" element is ignored. For FHIR operations that require a resource (e.g. \"read\" and \"vread\" operations), the \"resource\" element must be specified when \"params\" element is specified.  If \"url\" and \"params\" elements are absent, then the request url will be constructed from \"targetId\" fixture if present. For \"read\" operation, the resource and id values will be extracted from \"targetId\" fixture and used to construct the url. For \"vread\" and \"history\" operations, the versionId value will also be used.",
                           "type": "display"
                         },
                         {
@@ -4251,7 +4482,7 @@
                       "item": [
                         {
                           "linkId": "TestScript.setup.action.operation.requestHeader-display",
-                          "text": "This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - \"If-Modified-Since\" and \"If-None-Match\" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - \"If-Match\" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using \"If-None-Exist\".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid \"Content-Type\" header for negative testing. - etc.",
+                          "text": "This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - \"If-Modified-Since\" and \"If-None-Match\" headers.  [\"If-Match\" header](http.html#2.1.0.5.1).  See [Conditional Create using \"If-None-Exist\"](http.html#2.1.0.11).  See [Invalid \"Content-Type\" header](http.html#2.1.0.13.1) for negative testing. - etc.",
                           "type": "display"
                         },
                         {
@@ -5502,7 +5733,7 @@
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "code"
+                          "valueString": "uri"
                         }
                       ],
                       "linkId": "TestScript.setup.action.assert.resource",
@@ -5526,16 +5757,15 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.assert.resource-flyover",
-                          "text": "The type of the resource.  See http://build.fhir.org/resourcelist.html. This will be expected resource type in response body e.g. in read, vread, search, etc.  See http://build.fhir.org/resourcelist.html for complete list of resource types; e.g. \u003cassert \u003e \u003cresourceType value\u003d\"Patient\" \u003c/assert\u003e.",
+                          "text": "The type of the resource.  See the [resource list](resourcelist.html). This will be expected resource type in response body e.g. in read, vread, search, etc.  See the [Resource List](resourcelist.html) for complete list of resource types; e.g. \u003cassert \u003e \u003cresourceType value\u003d\"Patient\" \u003c/assert\u003e.",
                           "type": "display"
                         },
                         {
                           "linkId": "TestScript.setup.action.assert.resource.value",
-                          "text": "resource",
-                          "type": "coding",
+                          "text": "Resource type",
+                          "type": "string",
                           "required": false,
-                          "repeats": false,
-                          "answerConstraint": "optionsOrType"
+                          "repeats": false
                         }
                       ]
                     },
@@ -6377,7 +6607,7 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.operation.type-flyover",
-                          "text": "Server interaction or operation type. See http://build.fhir.org/http.html for list of server interactions.",
+                          "text": "Server interaction or operation type. See the list of [server interactions](http.html).",
                           "type": "display"
                         },
                         {
@@ -6422,7 +6652,7 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.operation.resource-flyover",
-                          "text": "The type of the FHIR resource. See http://build.fhir.org/resourcelist.html. Data type of uri is needed when non-HL7 artifacts are identified. If \"url\" element is specified, then \"targetId\", \"params\", and \"resource\" elements will be ignored as \"url\" element will have everything needed for constructing the request url.  If \"params\" element is specified, then \"targetId\" element is ignored. For FHIR operations that require a resource (e.g. \"read\" and \"vread\" operations), the \"resource\" element must be specified when \"params\" element is specified.  If \"url\" and \"params\" elements are absent, then the request url will be constructed from \"targetId\" fixture if present. For \"read\" operation, the resource and id values will be extracted from \"targetId\" fixture and used to construct the url. For \"vread\" and \"history\" operations, the versionId value will also be used.",
+                          "text": "The type of the FHIR resource. See the [resource list](resourcelist.html). Data type of uri is needed when non-HL7 artifacts are identified. If \"url\" element is specified, then \"targetId\", \"params\", and \"resource\" elements will be ignored as \"url\" element will have everything needed for constructing the request url.  If \"params\" element is specified, then \"targetId\" element is ignored. For FHIR operations that require a resource (e.g. \"read\" and \"vread\" operations), the \"resource\" element must be specified when \"params\" element is specified.  If \"url\" and \"params\" elements are absent, then the request url will be constructed from \"targetId\" fixture if present. For \"read\" operation, the resource and id values will be extracted from \"targetId\" fixture and used to construct the url. For \"vread\" and \"history\" operations, the versionId value will also be used.",
                           "type": "display"
                         },
                         {
@@ -6838,7 +7068,7 @@
                       ]
                     },
                     {
-                      "linkId": "TestScript.setup.action.operation.requestHeader",
+                      "linkId": "TestScript.test.action.operation.requestHeader",
                       "text": "Each operation can have one or more header elements",
                       "type": "group",
                       "required": false,
@@ -6846,7 +7076,7 @@
                       "item": [
                         {
                           "linkId": "TestScript.setup.action.operation.requestHeader-display",
-                          "text": "This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - \"If-Modified-Since\" and \"If-None-Match\" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - \"If-Match\" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using \"If-None-Exist\".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid \"Content-Type\" header for negative testing. - etc.",
+                          "text": "This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - \"If-Modified-Since\" and \"If-None-Match\" headers.  [\"If-Match\" header](http.html#2.1.0.5.1).  See [Conditional Create using \"If-None-Exist\"](http.html#2.1.0.11).  See [Invalid \"Content-Type\" header](http.html#2.1.0.13.1) for negative testing. - etc.",
                           "type": "display"
                         },
                         {
@@ -8097,7 +8327,7 @@
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "code"
+                          "valueString": "uri"
                         }
                       ],
                       "linkId": "TestScript.setup.action.assert.resource",
@@ -8121,16 +8351,15 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.assert.resource-flyover",
-                          "text": "The type of the resource.  See http://build.fhir.org/resourcelist.html. This will be expected resource type in response body e.g. in read, vread, search, etc.  See http://build.fhir.org/resourcelist.html for complete list of resource types; e.g. \u003cassert \u003e \u003cresourceType value\u003d\"Patient\" \u003c/assert\u003e.",
+                          "text": "The type of the resource.  See the [resource list](resourcelist.html). This will be expected resource type in response body e.g. in read, vread, search, etc.  See the [Resource List](resourcelist.html) for complete list of resource types; e.g. \u003cassert \u003e \u003cresourceType value\u003d\"Patient\" \u003c/assert\u003e.",
                           "type": "display"
                         },
                         {
                           "linkId": "TestScript.setup.action.assert.resource.value",
-                          "text": "resource",
-                          "type": "coding",
+                          "text": "Resource type",
+                          "type": "string",
                           "required": false,
-                          "repeats": false,
-                          "answerConstraint": "optionsOrType"
+                          "repeats": false
                         }
                       ]
                     },
@@ -8894,7 +9123,7 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.operation.type-flyover",
-                          "text": "Server interaction or operation type. See http://build.fhir.org/http.html for list of server interactions.",
+                          "text": "Server interaction or operation type. See the list of [server interactions](http.html).",
                           "type": "display"
                         },
                         {
@@ -8939,7 +9168,7 @@
                             }
                           ],
                           "linkId": "TestScript.setup.action.operation.resource-flyover",
-                          "text": "The type of the FHIR resource. See http://build.fhir.org/resourcelist.html. Data type of uri is needed when non-HL7 artifacts are identified. If \"url\" element is specified, then \"targetId\", \"params\", and \"resource\" elements will be ignored as \"url\" element will have everything needed for constructing the request url.  If \"params\" element is specified, then \"targetId\" element is ignored. For FHIR operations that require a resource (e.g. \"read\" and \"vread\" operations), the \"resource\" element must be specified when \"params\" element is specified.  If \"url\" and \"params\" elements are absent, then the request url will be constructed from \"targetId\" fixture if present. For \"read\" operation, the resource and id values will be extracted from \"targetId\" fixture and used to construct the url. For \"vread\" and \"history\" operations, the versionId value will also be used.",
+                          "text": "The type of the FHIR resource. See the [resource list](resourcelist.html). Data type of uri is needed when non-HL7 artifacts are identified. If \"url\" element is specified, then \"targetId\", \"params\", and \"resource\" elements will be ignored as \"url\" element will have everything needed for constructing the request url.  If \"params\" element is specified, then \"targetId\" element is ignored. For FHIR operations that require a resource (e.g. \"read\" and \"vread\" operations), the \"resource\" element must be specified when \"params\" element is specified.  If \"url\" and \"params\" elements are absent, then the request url will be constructed from \"targetId\" fixture if present. For \"read\" operation, the resource and id values will be extracted from \"targetId\" fixture and used to construct the url. For \"vread\" and \"history\" operations, the versionId value will also be used.",
                           "type": "display"
                         },
                         {
@@ -9355,7 +9584,7 @@
                       ]
                     },
                     {
-                      "linkId": "TestScript.setup.action.operation.requestHeader",
+                      "linkId": "TestScript.teardown.action.operation.requestHeader",
                       "text": "Each operation can have one or more header elements",
                       "type": "group",
                       "required": false,
@@ -9363,7 +9592,7 @@
                       "item": [
                         {
                           "linkId": "TestScript.setup.action.operation.requestHeader-display",
-                          "text": "This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - \"If-Modified-Since\" and \"If-None-Match\" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - \"If-Match\" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using \"If-None-Exist\".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid \"Content-Type\" header for negative testing. - etc.",
+                          "text": "This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - \"If-Modified-Since\" and \"If-None-Match\" headers.  [\"If-Match\" header](http.html#2.1.0.5.1).  See [Conditional Create using \"If-None-Exist\"](http.html#2.1.0.11).  See [Invalid \"Content-Type\" header](http.html#2.1.0.13.1) for negative testing. - etc.",
                           "type": "display"
                         },
                         {
@@ -9811,14 +10040,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

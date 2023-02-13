@@ -9,12 +9,17 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "mimeType",
   "status": "draft",
+  "experimental": false,
   "date": "2014-04-27",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "contact": [
@@ -28,7 +33,7 @@
     }
   ],
   "description": "Identifies the kind(s) of attachment allowed to be sent for an element.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "v2",
@@ -63,7 +68,7 @@
         "path": "Extension",
         "short": "Type of attachment",
         "definition": "Identifies the kind(s) of attachment allowed to be sent for an element.",
-        "comment": "This extension only has meaning if the element has a type of Attachment.  For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/behavior.html#mimeType).",
+        "comment": "This extension only has meaning if the element has a type of Attachment.  For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/behavior.html#mimeType).",
         "min": 0,
         "max": "*",
         "base": {
@@ -77,7 +82,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -85,7 +89,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -121,7 +124,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -169,7 +172,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -177,7 +179,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -244,7 +245,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -267,7 +267,7 @@
           ],
           "strength": "required",
           "description": "BCP 13 (RFCs 2045, 2046, 2047, 4288, 4289 and 2049)",
-          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -285,7 +285,7 @@
         "path": "Extension",
         "short": "Type of attachment",
         "definition": "Identifies the kind(s) of attachment allowed to be sent for an element.",
-        "comment": "This extension only has meaning if the element has a type of Attachment.  For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/behavior.html#mimeType).",
+        "comment": "This extension only has meaning if the element has a type of Attachment.  For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/behavior.html#mimeType).",
         "min": 0,
         "max": "*",
         "mapping": [
@@ -335,7 +335,7 @@
           ],
           "strength": "required",
           "description": "BCP 13 (RFCs 2045, 2046, 2047, 4288, 4289 and 2049)",
-          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-snapshot3"
         }
       }
     ]

@@ -3,6 +3,10 @@
   "id": "valueset-keyWord",
   "extension": [
     {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "deprecated"
+    },
+    {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
       "valueCode": "vocab"
     },
@@ -12,13 +16,21 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/valueset-keyWord",
-  "version": "4.6.0",
-  "name": "keyWord",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1219"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "VSKeyword",
+  "title": "ValueSet Keyword",
   "status": "draft",
+  "experimental": false,
   "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
-  "description": "Word or words used in an information retrieval system to indicate the content of the value set.",
-  "fhirVersion": "4.6.0",
+  "description": "Word or words used in an information retrieval system to indicate the content of the value set. (deprecated)",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "rim",
@@ -42,8 +54,9 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Descriptors and key terms for search",
-        "definition": "Word or words used in an information retrieval system to indicate the content of the value set.",
+        "short": "Descriptors and key terms for search (deprecated)",
+        "definition": "Word or words used in an information retrieval system to indicate the content of the value set. (deprecated)",
+        "comment": "This extension is deprecated, use the topic element of the CodeSystem resource instead.",
         "min": 0,
         "max": "*",
         "base": {
@@ -57,7 +70,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -65,7 +77,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -91,7 +102,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -139,7 +150,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -147,7 +157,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -214,7 +223,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -234,8 +242,9 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Descriptors and key terms for search",
-        "definition": "Word or words used in an information retrieval system to indicate the content of the value set.",
+        "short": "Descriptors and key terms for search (deprecated)",
+        "definition": "Word or words used in an information retrieval system to indicate the content of the value set. (deprecated)",
+        "comment": "This extension is deprecated, use the topic element of the CodeSystem resource instead.",
         "min": 0,
         "max": "*",
         "isModifier": false

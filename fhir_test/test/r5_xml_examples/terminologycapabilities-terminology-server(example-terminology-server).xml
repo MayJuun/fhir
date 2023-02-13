@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><TerminologyCapabilities xmlns="http://hl7.org/fhir">
+	<id value="example-terminology-server"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: TerminologyCapabilities</b><a name="example-terminology-server"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource TerminologyCapabilities "example-terminology-server" </p></div><p><b>url</b>: <code>http://hl7.org/fhir/TerminologyCapabilities/terminology-server</code></p><p><b>identifier</b>: id: urn:oid:2.16.840.1.113883.4.642.6.1</p><p><b>name</b>: ACMETerminologyService—TerminologyCapabilities</p><p><b>title</b>: ACME Terminology Service — Terminology Capabilities</p><p><b>status</b>: draft</p><p><b>date</b>: 2022-09-01</p><p><b>kind</b>: instance</p><h3>Implementations</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td></tr><tr><td>*</td><td>The ACME FHIR Terminology Server</td></tr></table><blockquote><p><b>codeSystem</b></p><p><b>uri</b>: <a href="codesystem-gender-identity.html">GenderIdentity</a></p><h3>Versions</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>4.0.1</td></tr></table><p><b>content</b>: complete</p></blockquote><blockquote><p><b>codeSystem</b></p><p><b>uri</b>: <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-snomed-CT.html">SNOMED CT International Edition</a></p><h3>Versions</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>http://snomed.info/sct/32506021000036107/version/20220831</td></tr></table><p><b>content</b>: complete</p></blockquote><blockquote><p><b>codeSystem</b></p><p><b>uri</b>: <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></p><h3>Versions</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>2.73</td></tr></table><p><b>content</b>: complete</p></blockquote></div></text><url value="http://hl7.org/fhir/TerminologyCapabilities/terminology-server"/>
+	<identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.6.1"/>
+  </identifier>
+  <name value="ACMETerminologyService—TerminologyCapabilities"/>
+	<title value="ACME Terminology Service — Terminology Capabilities"/>
+	<status value="draft"/>
+	<date value="2022-09-01"/>
+	<kind value="instance"/>
+	<implementation>
+		<description value="The ACME FHIR Terminology Server"/>
+	</implementation>
+	<codeSystem>
+		<uri value="http://hl7.org/fhir/gender-identity"/>
+		<version>
+			<code value="4.0.1"/>
+		</version>
+		<content value="complete"/>
+	</codeSystem>
+	<codeSystem>
+		<uri value="http://snomed.info/sct"/>
+		<version>
+			<code value="http://snomed.info/sct/32506021000036107/version/20220831"/>
+		</version>
+		<content value="complete"/>
+	</codeSystem>
+    <codeSystem>
+        <uri value="http://loinc.org"/>
+        <version>
+            <code value="2.73"/>
+        </version>
+		<content value="complete"/>
+	</codeSystem>
+</TerminologyCapabilities>

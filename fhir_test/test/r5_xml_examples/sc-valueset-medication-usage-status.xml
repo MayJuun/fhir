@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="sc-medication-usage-status"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>MedicationUsageStatusCodesCanonicalMap (http://hl7.org/fhir/ConceptMap/sc-medication-usage-status)</h2>
+      <p>Mapping from 
+        <a href="valueset-medication-usage-status.html">http://hl7.org/fhir/ValueSet/medication-usage-status</a> to 
+        <a href="valueset-resource-status.html">http://hl7.org/fhir/ValueSet/resource-status</a>
+      </p>
+      <p>DRAFT. Published on ?ngen-10? by FHIR Project team (
+        <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>). 
+      </p>
+      <div>
+        <p>Canonical Mapping for &quot;MedicationUsage Status Codes&quot;</p>
+
+      </div>
+      <br/>
+      <p>
+        <b>Group 1</b>Mapping from 
+        <a href="codesystem-medication-usage-status.html">MedicationUsage Status Codes</a> to 
+        <a href="codesystem-resource-status.html">Canonical Status Codes for FHIR Resources</a>
+      </p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Source Code</b>
+          </td>
+          <td>
+            <b>Relationship</b>
+          </td>
+          <td>
+            <b>Target Code</b>
+          </td>
+        </tr>
+        <tr>
+          <td>entered-in-error</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>error</td>
+        </tr>
+        <tr>
+          <td>draft</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>draft</td>
+        </tr>
+        <tr>
+          <td>recorded</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>complete</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ConceptMap/sc-medication-usage-status"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="MedicationUsageStatusCodesCanonicalMap"/>
+  <title value="Canonical Mapping for &quot;MedicationUsage Status Codes&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="FHIR Project team"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="Canonical Mapping for &quot;MedicationUsage Status Codes&quot;"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <sourceScopeCanonical value="http://hl7.org/fhir/ValueSet/medication-usage-status"/>
+  <targetScopeCanonical value="http://hl7.org/fhir/ValueSet/resource-status"/>
+  <group>
+    <source value="http://hl7.org/fhir/CodeSystem/medication-usage-status"/>
+    <target value="http://hl7.org/fhir/resource-status"/>
+    <element>
+      <code value="entered-in-error"/>
+      <target>
+        <code value="error"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="draft"/>
+      <target>
+        <code value="draft"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="recorded"/>
+      <target>
+        <code value="complete"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

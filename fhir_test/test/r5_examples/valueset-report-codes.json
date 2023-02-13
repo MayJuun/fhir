@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "report-codes",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -22,12 +22,23 @@
     {
       "system": "urn:ietf:rfc:3986",
       "value": "urn:oid:2.16.840.1.113883.4.642.3.233"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.228"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.2.116"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "LOINCDiagnosticReportCodes",
   "title": "LOINC Diagnostic Report Codes",
   "status": "draft",
+  "experimental": false,
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -40,6 +51,17 @@
     }
   ],
   "description": "This value set includes LOINC codes that relate to Diagnostic Observations.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "copyright": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.",
   "compose": {
     "include": [

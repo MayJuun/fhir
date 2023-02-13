@@ -36,9 +36,11 @@
     "reference": "Location/1",
     "display": "Burgers University Medical Center, South Wing, second floor"
   },
-  "complicationDetail": [
+  "complication": [
     {
-      "display": "Perforated intestine condition"
+      "reference": {
+        "display": "Perforated intestine condition"
+      }
     }
   ],
   "used": [

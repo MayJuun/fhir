@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+  <id value="f001"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Pieter van de Heuvel </b> male, DoB: 1944-11-17 ( id: 738472983 (use: USUAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td>false</td></tr><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">Getrouwd</span></td><td style="background-color: #f3f5da" title="Known multipleBirth status of Patient">Multiple Birth:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Id:</td><td colspan="3">id: ?ngen-9? (use: USUAL)</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Details:</td><td colspan="3"><ul><li>ph: 0648352638(MOBILE)</li><li><a href="mailto:p.heuvel@gmail.com">p.heuvel@gmail.com</a></li><li>Van Egmondkade 23 Amsterdam 1024 RJ NLD (HOME)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Languages spoken">Language:</td><td colspan="3"><span title="Codes: {urn:ietf:bcp:47 nl}">Nederlands</span> (preferred)</td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: Emergency Contact">Emergency Contact:</td><td colspan="3"><ul><li>Sarah Abels </li><li>ph: 0690383372(MOBILE)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Managing Organization: <a href="organization-example-f001-burgers.html">Organization/f001: Burgers University Medical Centre</a> "Burgers University Medical Center"</li></ul></td></tr></table></div></text><identifier>
+    <use value="usual"/>
+    <system value="urn:oid:2.16.840.1.113883.2.4.6.3"/>
+      <!--    BSN identification system    -->
+    <value value="738472983"/>
+  </identifier>
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:oid:2.16.840.1.113883.2.4.6.3"/>
+      <!--    BSN identification system    -->
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="usual"/>
+    <family value="van de Heuvel"/>
+    <given value="Pieter"/>
+    <suffix value="MSc"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="0648352638"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="p.heuvel@gmail.com"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1944-11-17"/>
+  <deceasedBoolean value="false"/>
+  <address>
+    <use value="home"/>
+    <line value="Van Egmondkade 23"/>
+    <city value="Amsterdam"/>
+    <postalCode value="1024 RJ"/>
+    <country value="NLD"/>
+      <!--    ISO 3166 Codes (Countries)    -->
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="M"/>
+      <display value="Married"/>
+    </coding>
+    <text value="Getrouwd"/>
+  </maritalStatus>
+  <multipleBirthBoolean value="true"/>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+        <code value="C"/>
+      </coding>
+    </relationship>
+    <name>
+      <use value="usual"/>
+      <family value="Abels"/>
+      <given value="Sarah"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="0690383372"/>
+      <use value="mobile"/>
+    </telecom>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="urn:ietf:bcp:47"/>
+          <!--    IETF language tag    -->
+        <code value="nl"/>
+        <display value="Dutch"/>
+      </coding>
+      <text value="Nederlands"/>
+    </language>
+    <preferred value="true"/>
+  </communication>
+  <managingOrganization>
+    <reference value="Organization/f001"/>
+    <display value="Burgers University Medical Centre"/>
+  </managingOrganization>
+</Patient>

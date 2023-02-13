@@ -3,7 +3,7 @@
   "id": "example",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;example\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eurl\u003c/b\u003e: \u003ccode\u003ehttp://h7.org/fhir/GraphDefinition/example\u003c/code\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: Document Generation Template\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003edate\u003c/b\u003e: 2015-08-04\u003c/p\u003e\u003cp\u003e\u003cb\u003epublisher\u003c/b\u003e: FHIR Project\u003c/p\u003e\u003cp\u003e\u003cb\u003econtact\u003c/b\u003e: \u003ca href\u003d\"http://hl7.org/fhir\"\u003ehttp://hl7.org/fhir\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Specify to include list references when generating a document using the $document operation\u003c/p\u003e\u003cp\u003e\u003cb\u003estart\u003c/b\u003e: Composition\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003elink\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epath\u003c/b\u003e: Composition.section.entry\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Link to List\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: List\u003c/p\u003e\u003ch3\u003eCompartments\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRule\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003erequirement\u003c/td\u003e\u003ctd\u003ePatient\u003c/td\u003e\u003ctd\u003eidentical\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003elink\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epath\u003c/b\u003e: List.entry.item\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Include any list entries\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative: GraphDefinition\u003c/b\u003e\u003ca name\u003d\"example\"\u003e \u003c/a\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource GraphDefinition \u0026quot;example\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eurl\u003c/b\u003e: \u003ccode\u003ehttp://h7.org/fhir/GraphDefinition/example\u003c/code\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: Document Generation Template\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003edate\u003c/b\u003e: 2015-08-04\u003c/p\u003e\u003cp\u003e\u003cb\u003epublisher\u003c/b\u003e: FHIR Project\u003c/p\u003e\u003cp\u003e\u003cb\u003econtact\u003c/b\u003e: \u003ca href\u003d\"http://hl7.org/fhir\"\u003ehttp://hl7.org/fhir\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Specify to include list references when generating a document using the $document operation\u003c/p\u003e\u003cp\u003e\u003cb\u003estart\u003c/b\u003e: \u003cspan title\u003d\"  \n    the $document operation will include everything directly linked to by the composition resource.\n    In our case, we want any resources referred to by lists referenced from the composition to \n    be included as well. \n    \n    We do this by defining a \u0027graph\u0027 of resources - and then we\u0027ll say to the $document server,\n    aggregate this graph as well as other resources. So we define a graph that starts at composition,\n    goes from section to list, and includes all the resources the list includes. \n    \n    While we\u0027re at it, we\u0027re going to say that all these resources must be about the same patient.\n    Note that there are use cases for crossing patient record boundaries in documents, but not *this case*.\n    \n   \u0026amp;#10;  this graph starts with a composition. We don\u0027t care what the specific profile is\n     (though the statement above \u0027this case doesn\u0027t cross patients\u0027 implies that we do care a little)  \"\u003ecomp1\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enode\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enodeId\u003c/b\u003e: comp1\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: The base composition\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Composition\u003c/p\u003e\u003cp\u003e\u003cb\u003eprofile\u003c/b\u003e: \u003ca href\u003d\"clinicaldocument.html\"\u003eClinical Document\u003c/a\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enode\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enodeId\u003c/b\u003e: list1\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: A list resource that a section entry reference points to\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: List\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enode\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enodeId\u003c/b\u003e: resN\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Generic resource that\u0027s the target of a list reference\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: Resource\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003elink\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Link from Composition.section to list\u003c/p\u003e\u003cp\u003e\u003cb\u003esourceId\u003c/b\u003e: comp1\u003c/p\u003e\u003cp\u003e\u003cb\u003epath\u003c/b\u003e: \u003cspan title\u003d\"  any section entry. Todo: this recurses; are we profiling this at all levels?  \"\u003eComposition.section.entry\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etargetId\u003c/b\u003e: \u003cspan title\u003d\"  \n      one target. This graph is not making rules about the content of the section entries - that\n      would be done in a profile. it\u0027s just saying, if you see a reference to a list in a section\n      entry, these are the rules that describe the graph\n     \"\u003elist1\u003c/span\u003e\u003c/p\u003e\u003ch3\u003eCompartments\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRule\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003erequires\u003c/td\u003e\u003ctd\u003eidentical\u003c/td\u003e\u003ctd\u003ePatient\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003elink\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Include any list entries\u003c/p\u003e\u003cp\u003e\u003cb\u003esourceId\u003c/b\u003e: list1\u003c/p\u003e\u003cp\u003e\u003cb\u003epath\u003c/b\u003e: List.entry.item\u003c/p\u003e\u003cp\u003e\u003cb\u003etargetId\u003c/b\u003e: resN\u003c/p\u003e\u003ch3\u003eCompartments\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eUse\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRule\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003erequires\u003c/td\u003e\u003ctd\u003eidentical\u003c/td\u003e\u003ctd\u003ePatient\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003c/div\u003e"
   },
   "url": "http://h7.org/fhir/GraphDefinition/example",
   "name": "Document Generation Template",
@@ -21,39 +21,49 @@
     }
   ],
   "description": "Specify to include list references when generating a document using the $document operation",
-  "start": "Composition",
+  "start": "comp1",
+  "node": [
+    {
+      "nodeId": "comp1",
+      "description": "The base composition",
+      "type": "Composition",
+      "profile": "http://hl7.org/fhir/StructureDefinition/clinicaldocument"
+    },
+    {
+      "nodeId": "list1",
+      "description": "A list resource that a section entry reference points to",
+      "type": "List"
+    },
+    {
+      "nodeId": "resN",
+      "description": "Generic resource that\u0027s the target of a list reference",
+      "type": "Resource"
+    }
+  ],
   "link": [
     {
+      "description": "Link from Composition.section to list",
+      "sourceId": "comp1",
       "path": "Composition.section.entry",
-      "description": "Link to List",
-      "target": [
+      "targetId": "list1",
+      "compartment": [
         {
-          "type": "List",
-          "compartment": [
-            {
-              "use": "requirement",
-              "code": "Patient",
-              "rule": "identical"
-            }
-          ],
-          "link": [
-            {
-              "path": "List.entry.item",
-              "description": "Include any list entries",
-              "target": [
-                {
-                  "type": "Resource",
-                  "compartment": [
-                    {
-                      "use": "requirement",
-                      "code": "Patient",
-                      "rule": "identical"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "use": "requires",
+          "rule": "identical",
+          "code": "Patient"
+        }
+      ]
+    },
+    {
+      "description": "Include any list entries",
+      "sourceId": "list1",
+      "path": "List.entry.item",
+      "targetId": "resN",
+      "compartment": [
+        {
+          "use": "requires",
+          "rule": "identical",
+          "code": "Patient"
         }
       ]
     }

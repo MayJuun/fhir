@@ -2,17 +2,18 @@
   "resourceType": "ValueSet",
   "id": "all-distance-units",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00"
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00"
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003e\n        This value set includes all possible UCUM codes used for distance measures - that it is, all units which have the same canonical unit as \u0026quot;m\u0026quot; (metre)\n      \u003c/p\u003e\n      \u003cp\u003e \n        The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright © 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.\n     \u003c/p\u003e\n    \n    \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://unitsofmeasure.org\"\u003e\u003ccode\u003ehttp://unitsofmeasure.org\u003c/code\u003e\u003c/a\u003e where canonical  \u003d  m\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "url": "http://hl7.org/fhir/ValueSet/all-distance-units",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "AllUCUMExpressionForDistance",
   "title": "All UCUM Expression for Distance",
   "status": "draft",
+  "experimental": false,
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -24,7 +25,7 @@
       ]
     }
   ],
-  "description": "Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes for units of length",
+  "description": "Unified Code for Units of Measure (UCUM). This value set includes all possible UCUM codes used for distance measures - that it is, all units which have the same canonical unit as \u0027m\u0027 (metre)",
   "copyright": "The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright © 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.",
   "compose": {
     "include": [

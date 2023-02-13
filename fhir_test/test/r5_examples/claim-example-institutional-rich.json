@@ -66,6 +66,15 @@
       "value": "HOSP1234"
     }
   },
+  "diagnosisRelatedGroup": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup",
+        "code": "400",
+        "display": "Head trauma - concussion"
+      }
+    ]
+  },
   "careTeam": [
     {
       "sequence": 1,
@@ -81,7 +90,7 @@
           }
         ]
       },
-      "qualification": {
+      "specialty": {
         "coding": [
           {
             "system": "http://example.org/fhir/CodeSystem/provider-qualification",
@@ -142,16 +151,7 @@
             }
           ]
         }
-      ],
-      "packageCode": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup",
-            "code": "400",
-            "display": "Head trauma - concussion"
-          }
-        ]
-      }
+      ]
     }
   ],
   "insurance": [

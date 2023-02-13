@@ -9,16 +9,28 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/valueset-deprecated",
-  "version": "4.6.0",
-  "name": "deprecated",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1187"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "VSDeprecated",
+  "title": "ValueSet Deprecated",
   "status": "draft",
+  "experimental": false,
   "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
-  "description": "if ture, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn.",
-  "fhirVersion": "4.6.0",
+  "description": "if true, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn.",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "rim",
@@ -43,7 +55,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "The concept should not be used",
-        "definition": "if ture, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn.",
+        "definition": "if true, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn.",
         "comment": "Ths status relates to a concept\u0027s inclusion in the value set, and might be different to the underlying status of the concept itself.",
         "min": 0,
         "max": "1",
@@ -58,7 +70,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -66,7 +77,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -92,7 +102,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -140,7 +150,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -148,7 +157,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -215,7 +223,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -236,7 +243,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "The concept should not be used",
-        "definition": "if ture, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn.",
+        "definition": "if true, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn.",
         "comment": "Ths status relates to a concept\u0027s inclusion in the value set, and might be different to the underlying status of the concept itself.",
         "min": 0,
         "max": "1"

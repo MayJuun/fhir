@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><Task xmlns="http://hl7.org/fhir">
+	    <!--  This example show an updated status and output - a generated task to collect a specimen
+example1 action lipid panel -in progress =>. example2 specimen collection subtask -accepted => example4  specimen collection subtask - completed  with output Specimen=>example 5 action lipid panel -in progress specimen collected with output Specimen => example 6 action lipid panel - completed with output Specimen and DiagnosticReport   -->
+	<id value="example4"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b><a name="example4"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task "example4" </p></div><p><b>identifier</b>: id: 20170201-002 (use: OFFICIAL)</p><p><b>groupIdentifier</b>: id: G20170201-001 (use: OFFICIAL)</p><p><b>partOf</b>: <span title=" &#x9;This Task is a child task of the submitted lipid panel requet&#xA; "><a href="task-example1.html">Task/example1: Lipid Panel</a></span></p><p><b>status</b>: completed</p><p><b>intent</b>: <span title=" fictive business status populated for this example ">filler-order</span></p><p><b>priority</b>: routine</p><p><b>code</b>: <span title=" fictive code and description elements populated for this example  ">Fulfill the focal request <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-task-code.html">Task Codes</a>#fulfill)</span></span></p><p><b>focus</b>: <span title=" &#x9;Filler generated order using a fictive  servicerequest to complete the loop "><span>: BloodDraw ServiceRequest</span></span></p><p><b>for</b>: <span title=" &#x9;who the task is for&#xA; "><a href="patient-example.html">Patient/example: Peter James Chalmers</a> "Peter CHALMERS"</span></p><p><b>encounter</b>: <a href="encounter-example.html">Encounter/example: Example In-Patient Encounter</a></p><p><b>executionPeriod</b>: <span title=" &#x9;Lots of dates  ">2016-10-31T08:45:05+10:00 --&gt; 2016-10-31T14:45:05+10:00</span></p><p><b>authoredOn</b>: 2016-10-31T08:45:05+10:00</p><p><b>lastModified</b>: 2016-10-31T09:45:05+10:00</p><p><b>requester</b>: <span title=" requester is filler "><a href="organization-example-lab.html">Organization/1832473e-2fe0-452d-abe9-3cdb9879522f: Clinical Laboratory @ Acme Hospital</a> "Clinical Lab"</span></p><h3>RequestedPerformers</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Performer <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#18850004 "Laboratory hematologist")</span></td></tr></table><p><b>owner</b>: <span title=" assume at draw station "><a href="practitioner-example-f202-lm.html">Practitioner/f202: Luigi Maas</a> "Luigi Maas"</span></p><h3>Restrictions</h3><table class="grid"><tr><td>-</td><td><b>Repetitions</b></td><td><b>Period</b></td></tr><tr><td>*</td><td>1</td><td>?? --&gt; 2016-11-01T09:45:05+10:00</td></tr></table><h3>Outputs</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>collected specimen <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td><td><a href="specimen-example.html">Specimen/101</a></td></tr></table></div></text><identifier>
+		<use value="official"/>
+		<system value="http:/goodhealth.org/identifiers"/>
+		<value value="20170201-002"/>
+	</identifier>
+	<groupIdentifier>
+		<use value="official"/>
+		<system value="http:/goodhealth.org/accession/identifiers"/>
+		<value value="G20170201-001"/>
+	</groupIdentifier>
+	    <!--  	This Task is a child task of the submitted lipid panel requet
+  -->
+	<partOf>
+		<reference value="Task/example1"/>
+		<display value="Lipid Panel"/>
+	</partOf>
+	<status value="completed"/>
+	    <!--  fictive business status populated for this example  -->
+	<intent value="filler-order"/>
+	<priority value="routine"/>
+	    <!--  fictive code and description elements populated for this example   -->
+	<code>
+    <coding>
+      <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+      <code value="fulfill"/>
+    </coding>
+	</code>
+	    <!--  	Filler generated order using a fictive  servicerequest to complete the loop  -->
+	<focus>
+		<display value="BloodDraw ServiceRequest"/>
+	</focus>
+	    <!--  	who the task is for
+  -->
+	<for>
+		<reference value="Patient/example"/>
+		<display value="Peter James Chalmers"/>
+	</for>
+	<encounter>
+		<reference value="Encounter/example"/>
+		<display value="Example In-Patient Encounter"/>
+	</encounter>
+	    <!--  	Lots of dates   -->
+	<executionPeriod>
+		<start value="2016-10-31T08:45:05+10:00"/>
+		<end value="2016-10-31T14:45:05+10:00"/>
+	</executionPeriod>
+	<authoredOn value="2016-10-31T08:45:05+10:00"/>
+	<lastModified value="2016-10-31T09:45:05+10:00"/>
+	    <!--  requester is filler  -->
+	<requester>
+			<reference value="Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"/>
+			<display value="Clinical Laboratory @ Acme Hospital"/>
+	</requester>
+	<requestedPerformer>
+    <concept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="18850004"/>
+        <display value="Laboratory hematologist"/>
+      </coding>
+      <text value="Performer"/>
+    </concept>
+	</requestedPerformer>
+	    <!--  assume at draw station  -->
+	<owner>
+		<reference value="Practitioner/f202"/>
+		<display value="Luigi Maas"/>
+	</owner>
+	<restriction>
+		<repetitions value="1"/>
+		<period>
+			<end value="2016-11-01T09:45:05+10:00"/>
+		</period>
+	</restriction>
+	    <!--  The expected output of this task is a Specimen and will generated once the task is completed   -->
+	<output>
+		<type>
+			<text value="collected specimen"/>
+		</type>
+		<valueReference>
+			<reference value="Specimen/101"/>
+		</valueReference>
+	</output>
+</Task>

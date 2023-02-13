@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><Device xmlns="http://hl7.org/fhir">
+	<id value="example-udi4"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Device</b><a name="example-udi4"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Device "example-udi4" </p></div><h3>UdiCarriers</h3><table class="grid"><tr><td>-</td><td><b>DeviceIdentifier</b></td><td><b>Issuer</b></td><td><b>Jurisdiction</b></td><td><b>CarrierHRF</b></td></tr><tr><td>*</td><td>A4599XQZ990T0474</td><td><a href="http://hl7.org/fhir/NamingSystem/iccbba-blood">http://hl7.org/fhir/NamingSystem/iccbba-blood</a></td><td><a href="http://hl7.org/fhir/NamingSystem/fda-udi">http://hl7.org/fhir/NamingSystem/fda-udi</a></td><td>=)1TE123456A&amp;)RZ12345678</td></tr></table><p><b>status</b>: inactive</p><p><b>manufacturer</b>: GlobalMed, Inc</p><p><b>lotNumber</b>: RZ12345678</p><h3>Associations</h3><table class="grid"><tr><td>-</td><td><b>Status</b></td><td><b>HumanSubject</b></td></tr><tr><td>*</td><td>attached <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (device-association-status#attached)</span></td><td><a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</td></tr></table></div></text><udiCarrier>
+	<deviceIdentifier value="A4599XQZ990T0474"/>
+		<issuer value="http://hl7.org/fhir/NamingSystem/iccbba-blood"/>
+		<jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
+		<carrierHRF value="=)1TE123456A&amp;)RZ12345678"/>
+	</udiCarrier>
+	<status value="inactive"/>
+	<manufacturer value="GlobalMed, Inc"/>
+	<lotNumber value="RZ12345678"/>
+	<association>
+	  <status> 
+	     <coding>
+		   <system value="http://terminology.hl7.org/CodeSystem/device-association-status"/>
+           <code value="attached"/>
+		 </coding>
+	  </status>
+      <humanSubject>
+		<reference value="Patient/example"/>
+	  </humanSubject>
+	</association>
+</Device>
