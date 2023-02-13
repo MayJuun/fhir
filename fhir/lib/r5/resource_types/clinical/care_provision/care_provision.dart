@@ -17,7 +17,6 @@ class CarePlan with Resource, _$CarePlan {
   CarePlan._();
 
   /// [CarePlan] Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
-
   ///
   /// [resourceType] This is a CarePlan resource;
   ///
@@ -40,7 +39,6 @@ class CarePlan with Resource, _$CarePlan {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Business identifiers assigned to this care plan by the performer or other systems which remain constant as the resource is updated and propagates from server to server.;
@@ -177,14 +175,12 @@ class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
 
   /// [CarePlanActivity] Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [performedActivity] Identifies the activity that was performed. For example, an activity could be patient education, exercise, or a medication administration. The reference to an "event" resource, such as Procedure or Encounter or Observation, represents the activity that was performed. The requested activity can be conveyed using CarePlan.activity.plannedActivityDetail OR using the CarePlan.activity.plannedActivityReference (a reference to a “request” resource).;
@@ -241,14 +237,12 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
   CarePlanPlannedActivityDetail._();
 
   /// [CarePlanPlannedActivityDetail] Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [kind] A description of the kind of resource the in-line definition of a care plan activity is representing.  The CarePlan.activity.detail is an in-line definition when a resource is not referenced using CarePlan.activity.reference.  For example, a MedicationRequest, a ServiceRequest, or a CommunicationRequest.;
@@ -377,7 +371,6 @@ class CareTeam with Resource, _$CareTeam {
   CareTeam._();
 
   /// [CareTeam] The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.
-
   ///
   /// [resourceType] This is a CareTeam resource;
   ///
@@ -400,7 +393,6 @@ class CareTeam with Resource, _$CareTeam {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Business identifiers assigned to this care team by the performer or other systems which remain constant as the resource is updated and propagates from server to server.;
@@ -489,14 +481,12 @@ class CareTeamParticipant with _$CareTeamParticipant {
   CareTeamParticipant._();
 
   /// [CareTeamParticipant] The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [role] Indicates specific responsibility of an individual within the care team, such as "Primary care physician", "Trained social worker counselor", "Caregiver", etc.;
@@ -556,7 +546,6 @@ class Goal with Resource, _$Goal {
   Goal._();
 
   /// [Goal] Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
-
   ///
   /// [resourceType] This is a Goal resource;
   ///
@@ -579,7 +568,6 @@ class Goal with Resource, _$Goal {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Business identifiers assigned to this goal by the performer or other systems which remain constant as the resource is updated and propagates from server to server.;
@@ -693,14 +681,12 @@ class GoalTarget with _$GoalTarget {
   GoalTarget._();
 
   /// [GoalTarget] Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [measure] The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.;
@@ -787,7 +773,6 @@ class NutritionIntake with Resource, _$NutritionIntake {
   NutritionIntake._();
 
   /// [NutritionIntake] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
-
   ///
   /// [resourceType] This is a NutritionIntake resource;
   ///
@@ -810,7 +795,6 @@ class NutritionIntake with Resource, _$NutritionIntake {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Identifiers associated with this Nutrition Intake that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.;
@@ -941,14 +925,12 @@ class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
   NutritionIntakeConsumedItem._();
 
   /// [NutritionIntakeConsumedItem] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [type] Indicates what a category of item that was consumed: eg., food, fluid, enteral, etc.;
@@ -1017,14 +999,12 @@ class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
   NutritionIntakeIngredientLabel._();
 
   /// [NutritionIntakeIngredientLabel] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [nutrient] Total nutrient consumed. This could be a macronutrient (protein, fat, carbohydrate), or a vitamin and mineral.;
@@ -1076,14 +1056,12 @@ class NutritionIntakePerformer with _$NutritionIntakePerformer {
   NutritionIntakePerformer._();
 
   /// [NutritionIntakePerformer] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [function] Type of performer.;
@@ -1134,7 +1112,6 @@ class NutritionOrder with Resource, _$NutritionOrder {
   NutritionOrder._();
 
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
-
   ///
   /// [resourceType] This is a NutritionOrder resource;
   ///
@@ -1157,7 +1134,6 @@ class NutritionOrder with Resource, _$NutritionOrder {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Identifiers assigned to this order by the order sender or by the order receiver.;
@@ -1273,14 +1249,12 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
 
   /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [type] The kind of diet or dietary restriction such as fiber restricted diet or diabetic diet.;
@@ -1346,14 +1320,12 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
 
   /// [NutritionOrderNutrient] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [modifier] The nutrient that is being modified such as carbohydrate or sodium.;
@@ -1404,14 +1376,12 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
   NutritionOrderTexture._();
 
   /// [NutritionOrderTexture] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [modifier] Any texture modifications (for solid foods) that should be made, e.g. easy to chew, chopped, ground, and pureed.;
@@ -1462,14 +1432,12 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
 
   /// [NutritionOrderSupplement] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [type] The kind of nutritional supplement product required such as a high protein or pediatric clear liquid supplement.;
@@ -1535,14 +1503,12 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
 
   /// [NutritionOrderEnteralFormula] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [baseFormulaType] The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.;
@@ -1625,14 +1591,12 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
 
   /// [NutritionOrderAdministration] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [schedule] The time period and frequency at which the enteral formula should be delivered to the patient.;
@@ -1683,15 +1647,14 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
   }
 }
 
-/// [RequestGroup] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
+/// [RequestOrchestration] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
-class RequestGroup with Resource, _$RequestGroup {
-  RequestGroup._();
+class RequestOrchestration with Resource, _$RequestOrchestration {
+  RequestOrchestration._();
 
-  /// [RequestGroup] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
-
+  /// [RequestOrchestration] A set of related requests that can be used to capture intended activities that have inter-dependencies such as \"give this medication after that one\".
   ///
-  /// [resourceType] This is a RequestGroup resource;
+  /// [resourceType] This is a RequestOrchestration resource;
   ///
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
@@ -1712,7 +1675,6 @@ class RequestGroup with Resource, _$RequestGroup {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Allows a service to provide a unique, business identifier for the request.;
@@ -1757,13 +1719,14 @@ class RequestGroup with Resource, _$RequestGroup {
   ///
   /// [reason] Describes the reason for the request group in coded or textual form.;
   ///
-  /// [goal] Goals that are intended to be achieved by following the requests in this RequestGroup.;
+  /// [goal] Goals that are intended to be achieved by following the requests in this RequestOrchestration.;
   ///
   /// [note] Provides a mechanism to communicate additional information about the response.;
   ///
   /// [action] The actions, if any, produced by the evaluation of the artifact.;
-  factory RequestGroup({
-    @Default(R5ResourceType.RequestGroup) R5ResourceType resourceType,
+  factory RequestOrchestration({
+    /// [RequestOrchestration] A set of related requests that can be used to capture intended activities that have inter-dependencies such as \"give this medication after that one\".
+    @Default(R5ResourceType.RequestOrchestration) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -1798,30 +1761,30 @@ class RequestGroup with Resource, _$RequestGroup {
     List<CodeableReference>? reason,
     List<Reference>? goal,
     List<Annotation>? note,
-    List<RequestGroupAction>? action,
-  }) = _RequestGroup;
+    List<RequestOrchestrationAction>? action,
+  }) = _RequestOrchestration;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory RequestGroup.fromYaml(dynamic yaml) => yaml is String
-      ? RequestGroup.fromJson(
+  factory RequestOrchestration.fromYaml(dynamic yaml) => yaml is String
+      ? RequestOrchestration.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? RequestGroup.fromJson(
+          ? RequestOrchestration.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'RequestGroup cannot be constructed from input provided,'
+              'RequestOrchestration cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroup.fromJson(Map<String, dynamic> json) =>
-      _$RequestGroupFromJson(json);
+  factory RequestOrchestration.fromJson(Map<String, dynamic> json) =>
+      _$RequestOrchestrationFromJson(json);
 
-  /// Acts like a constructor, returns a [RequestGroup], accepts a
+  /// Acts like a constructor, returns a [RequestOrchestration], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory RequestGroup.fromJsonString(String source) {
+  factory RequestOrchestration.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$RequestGroupFromJson(json);
+      return _$RequestOrchestrationFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -1829,23 +1792,21 @@ class RequestGroup with Resource, _$RequestGroup {
   }
 }
 
-/// [RequestGroupAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
+/// [RequestOrchestrationAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
-class RequestGroupAction with _$RequestGroupAction {
-  RequestGroupAction._();
+class RequestOrchestrationAction with _$RequestOrchestrationAction {
+  RequestOrchestrationAction._();
 
-  /// [RequestGroupAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
-
+  /// [RequestOrchestrationAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [linkId] The linkId of the action from the PlanDefinition that corresponds to this action in the RequestGroup resource.;
+  /// [linkId] The linkId of the action from the PlanDefinition that corresponds to this action in the RequestOrchestration resource.;
   ///
   /// [linkIdElement] (_linkId): Extensions for linkId;
   ///
@@ -1922,7 +1883,7 @@ class RequestGroupAction with _$RequestGroupAction {
   /// [resource] The resource that is the target of the action (e.g. CommunicationRequest).;
   ///
   /// [action] Sub actions.;
-  factory RequestGroupAction({
+  factory RequestOrchestrationAction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1941,8 +1902,8 @@ class RequestGroupAction with _$RequestGroupAction {
     List<CodeableConcept>? code,
     List<RelatedArtifact>? documentation,
     List<Reference>? goal,
-    List<RequestGroupCondition>? condition,
-    List<RequestGroupRelatedAction>? relatedAction,
+    List<RequestOrchestrationCondition>? condition,
+    List<RequestOrchestrationRelatedAction>? relatedAction,
     FhirDateTime? timingDateTime,
     @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
     Age? timingAge,
@@ -1951,7 +1912,7 @@ class RequestGroupAction with _$RequestGroupAction {
     Range? timingRange,
     Timing? timingTiming,
     CodeableReference? location,
-    List<RequestGroupParticipant>? participant,
+    List<RequestOrchestrationParticipant>? participant,
     CodeableConcept? type,
     Code? groupingBehavior,
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
@@ -1964,33 +1925,33 @@ class RequestGroupAction with _$RequestGroupAction {
     Code? cardinalityBehavior,
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
     Reference? resource,
-    List<RequestGroupAction>? action,
-  }) = _RequestGroupAction;
+    List<RequestOrchestrationAction>? action,
+  }) = _RequestOrchestrationAction;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory RequestGroupAction.fromYaml(dynamic yaml) => yaml is String
-      ? RequestGroupAction.fromJson(
+  factory RequestOrchestrationAction.fromYaml(dynamic yaml) => yaml is String
+      ? RequestOrchestrationAction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? RequestGroupAction.fromJson(
+          ? RequestOrchestrationAction.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'RequestGroupAction cannot be constructed from input provided,'
+              'RequestOrchestrationAction cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
-      _$RequestGroupActionFromJson(json);
+  factory RequestOrchestrationAction.fromJson(Map<String, dynamic> json) =>
+      _$RequestOrchestrationActionFromJson(json);
 
-  /// Acts like a constructor, returns a [RequestGroupAction], accepts a
+  /// Acts like a constructor, returns a [RequestOrchestrationAction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory RequestGroupAction.fromJsonString(String source) {
+  factory RequestOrchestrationAction.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$RequestGroupActionFromJson(json);
+      return _$RequestOrchestrationActionFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -1998,20 +1959,18 @@ class RequestGroupAction with _$RequestGroupAction {
   }
 }
 
-/// [RequestGroupCondition] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
+/// [RequestOrchestrationCondition] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
-class RequestGroupCondition with _$RequestGroupCondition {
-  RequestGroupCondition._();
+class RequestOrchestrationCondition with _$RequestOrchestrationCondition {
+  RequestOrchestrationCondition._();
 
-  /// [RequestGroupCondition] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
-
+  /// [RequestOrchestrationCondition] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [kind] The kind of condition.;
@@ -2019,39 +1978,39 @@ class RequestGroupCondition with _$RequestGroupCondition {
   /// [kindElement] (_kind): Extensions for kind;
   ///
   /// [expression] An expression that returns true or false, indicating whether or not the condition is satisfied.;
-  factory RequestGroupCondition({
+  factory RequestOrchestrationCondition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Expression? expression,
-  }) = _RequestGroupCondition;
+  }) = _RequestOrchestrationCondition;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory RequestGroupCondition.fromYaml(dynamic yaml) => yaml is String
-      ? RequestGroupCondition.fromJson(
+  factory RequestOrchestrationCondition.fromYaml(dynamic yaml) => yaml is String
+      ? RequestOrchestrationCondition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? RequestGroupCondition.fromJson(
+          ? RequestOrchestrationCondition.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'RequestGroupCondition cannot be constructed from input provided,'
+              'RequestOrchestrationCondition cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
-      _$RequestGroupConditionFromJson(json);
+  factory RequestOrchestrationCondition.fromJson(Map<String, dynamic> json) =>
+      _$RequestOrchestrationConditionFromJson(json);
 
-  /// Acts like a constructor, returns a [RequestGroupCondition], accepts a
+  /// Acts like a constructor, returns a [RequestOrchestrationCondition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory RequestGroupCondition.fromJsonString(String source) {
+  factory RequestOrchestrationCondition.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$RequestGroupConditionFromJson(json);
+      return _$RequestOrchestrationConditionFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -2059,20 +2018,19 @@ class RequestGroupCondition with _$RequestGroupCondition {
   }
 }
 
-/// [RequestGroupRelatedAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
+/// [RequestOrchestrationRelatedAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
-class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
-  RequestGroupRelatedAction._();
+class RequestOrchestrationRelatedAction
+    with _$RequestOrchestrationRelatedAction {
+  RequestOrchestrationRelatedAction._();
 
-  /// [RequestGroupRelatedAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
-
+  /// [RequestOrchestrationRelatedAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [targetId] The element id of the target related action.;
@@ -2086,7 +2044,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   /// [offsetDuration] A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.;
   ///
   /// [offsetRange] A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.;
-  factory RequestGroupRelatedAction({
+  factory RequestOrchestrationRelatedAction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2096,32 +2054,34 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     @JsonKey(name: '_relationship') Element? relationshipElement,
     FhirDuration? offsetDuration,
     Range? offsetRange,
-  }) = _RequestGroupRelatedAction;
+  }) = _RequestOrchestrationRelatedAction;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory RequestGroupRelatedAction.fromYaml(dynamic yaml) => yaml is String
-      ? RequestGroupRelatedAction.fromJson(
+  factory RequestOrchestrationRelatedAction.fromYaml(dynamic yaml) => yaml
+          is String
+      ? RequestOrchestrationRelatedAction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? RequestGroupRelatedAction.fromJson(
+          ? RequestOrchestrationRelatedAction.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'RequestGroupRelatedAction cannot be constructed from input provided,'
+              'RequestOrchestrationRelatedAction cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
-      _$RequestGroupRelatedActionFromJson(json);
+  factory RequestOrchestrationRelatedAction.fromJson(
+          Map<String, dynamic> json) =>
+      _$RequestOrchestrationRelatedActionFromJson(json);
 
-  /// Acts like a constructor, returns a [RequestGroupRelatedAction], accepts a
+  /// Acts like a constructor, returns a [RequestOrchestrationRelatedAction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory RequestGroupRelatedAction.fromJsonString(String source) {
+  factory RequestOrchestrationRelatedAction.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$RequestGroupRelatedActionFromJson(json);
+      return _$RequestOrchestrationRelatedActionFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -2129,20 +2089,18 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   }
 }
 
-/// [RequestGroupParticipant] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
+/// [RequestOrchestrationParticipant] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
-class RequestGroupParticipant with _$RequestGroupParticipant {
-  RequestGroupParticipant._();
+class RequestOrchestrationParticipant with _$RequestOrchestrationParticipant {
+  RequestOrchestrationParticipant._();
 
-  /// [RequestGroupParticipant] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
-
+  /// [RequestOrchestrationParticipant] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [type] The type of participant in the action.;
@@ -2156,7 +2114,7 @@ class RequestGroupParticipant with _$RequestGroupParticipant {
   /// [function] Indicates how the actor will be involved in the action - author, reviewer, witness, etc.;
   ///
   /// [actor] A reference to the actual participant.;
-  factory RequestGroupParticipant({
+  factory RequestOrchestrationParticipant({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2166,32 +2124,33 @@ class RequestGroupParticipant with _$RequestGroupParticipant {
     CodeableConcept? role,
     CodeableConcept? function,
     Reference? actor,
-  }) = _RequestGroupParticipant;
+  }) = _RequestOrchestrationParticipant;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory RequestGroupParticipant.fromYaml(dynamic yaml) => yaml is String
-      ? RequestGroupParticipant.fromJson(
+  factory RequestOrchestrationParticipant.fromYaml(dynamic yaml) => yaml
+          is String
+      ? RequestOrchestrationParticipant.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? RequestGroupParticipant.fromJson(
+          ? RequestOrchestrationParticipant.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'RequestGroupParticipant cannot be constructed from input provided,'
+              'RequestOrchestrationParticipant cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupParticipant.fromJson(Map<String, dynamic> json) =>
-      _$RequestGroupParticipantFromJson(json);
+  factory RequestOrchestrationParticipant.fromJson(Map<String, dynamic> json) =>
+      _$RequestOrchestrationParticipantFromJson(json);
 
-  /// Acts like a constructor, returns a [RequestGroupParticipant], accepts a
+  /// Acts like a constructor, returns a [RequestOrchestrationParticipant], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory RequestGroupParticipant.fromJsonString(String source) {
+  factory RequestOrchestrationParticipant.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$RequestGroupParticipantFromJson(json);
+      return _$RequestOrchestrationParticipantFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -2205,7 +2164,6 @@ class RiskAssessment with Resource, _$RiskAssessment {
   RiskAssessment._();
 
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
-
   ///
   /// [resourceType] This is a RiskAssessment resource;
   ///
@@ -2228,7 +2186,6 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Business identifier assigned to the risk assessment.;
@@ -2338,14 +2295,12 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
 
   /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [outcome] One of the potential outcomes for the patient (e.g. remission, death,  a particular condition).;
@@ -2423,7 +2378,6 @@ class ServiceRequest with Resource, _$ServiceRequest {
   ServiceRequest._();
 
   /// [ServiceRequest] A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
-
   ///
   /// [resourceType] This is a ServiceRequest resource;
   ///
@@ -2446,7 +2400,6 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.;
@@ -2634,7 +2587,6 @@ class VisionPrescription with Resource, _$VisionPrescription {
   VisionPrescription._();
 
   /// [VisionPrescription] An authorization for the provision of glasses and/or contact lenses to a patient.
-
   ///
   /// [resourceType] This is a VisionPrescription resource;
   ///
@@ -2657,7 +2609,6 @@ class VisionPrescription with Resource, _$VisionPrescription {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [identifier] A unique identifier assigned to this vision prescription.;
@@ -2740,14 +2691,12 @@ class VisionPrescriptionLensSpecification
   VisionPrescriptionLensSpecification._();
 
   /// [VisionPrescriptionLensSpecification] An authorization for the provision of glasses and/or contact lenses to a patient.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [product] Identifies the type of vision correction product which is required for the patient.;
@@ -2866,14 +2815,12 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   VisionPrescriptionPrism._();
 
   /// [VisionPrescriptionPrism] An authorization for the provision of glasses and/or contact lenses to a patient.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [amount] Amount of prism to compensate for eye alignment in fractional units.;
