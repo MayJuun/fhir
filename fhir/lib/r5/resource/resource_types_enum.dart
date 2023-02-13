@@ -5,6 +5,8 @@ enum R5ResourceType {
   Account,
   @JsonValue('ActivityDefinition')
   ActivityDefinition,
+  @JsonValue('ActorDefinition')
+  ActorDefinition,
   @JsonValue('AdministrableProductDefinition')
   AdministrableProductDefinition,
   @JsonValue('AdverseEvent')
@@ -31,8 +33,6 @@ enum R5ResourceType {
   Bundle,
   @JsonValue('CapabilityStatement')
   CapabilityStatement,
-  @JsonValue('CapabilityStatement2')
-  CapabilityStatement2,
   @JsonValue('CarePlan')
   CarePlan,
   @JsonValue('CareTeam')
@@ -63,8 +63,6 @@ enum R5ResourceType {
   Composition,
   @JsonValue('ConceptMap')
   ConceptMap,
-  @JsonValue('ConceptMap2')
-  ConceptMap2,
   @JsonValue('Condition')
   Condition,
   @JsonValue('ConditionDefinition')
@@ -125,6 +123,10 @@ enum R5ResourceType {
   FamilyMemberHistory,
   @JsonValue('Flag')
   Flag,
+  @JsonValue('FormularyItem')
+  FormularyItem,
+  @JsonValue('GenomicStudy')
+  GenomicStudy,
   @JsonValue('Goal')
   Goal,
   @JsonValue('GraphDefinition')
@@ -241,8 +243,10 @@ enum R5ResourceType {
   RegulatedAuthorization,
   @JsonValue('RelatedPerson')
   RelatedPerson,
-  @JsonValue('RequestGroup')
-  RequestGroup,
+  @JsonValue('RequestOrchestration')
+  RequestOrchestration,
+  @JsonValue('Requirements')
+  Requirements,
   @JsonValue('ResearchStudy')
   ResearchStudy,
   @JsonValue('ResearchSubject')

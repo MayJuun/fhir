@@ -73,9 +73,7 @@ _$_ProductShelfLife _$$_ProductShelfLifeFromJson(Map<String, dynamic> json) =>
           ? null
           : FhirDuration.fromJson(
               json['periodDuration'] as Map<String, dynamic>),
-      periodString: json['periodString'] == null
-          ? null
-          : Markdown.fromJson(json['periodString']),
+      periodString: json['periodString'] as String?,
       periodStringElement: json['_periodString'] == null
           ? null
           : Element.fromJson(json['_periodString'] as Map<String, dynamic>),
@@ -101,7 +99,7 @@ Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('periodDuration', instance.periodDuration?.toJson());
-  writeNotNull('periodString', instance.periodString?.toJson());
+  writeNotNull('periodString', instance.periodString);
   writeNotNull('_periodString', instance.periodStringElement?.toJson());
   writeNotNull('specialPrecautionsForStorage',
       instance.specialPrecautionsForStorage?.map((e) => e.toJson()).toList());

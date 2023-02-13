@@ -14,83 +14,875 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+FormularyItem _$FormularyItemFromJson(Map<String, dynamic> json) {
+  return _FormularyItem.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FormularyItem {
+  /// [resourceType] This is a FormularyItem resource
+  @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
+  Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [identifier] Business identifier for this formulary item.
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [code] A code (or set of codes) that specify the product or service that is identified by this formulary item.
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+
+  /// [status] The validity about the information of the formulary item and not of the underlying product or service itself.
+  Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $FormularyItemCopyWith<FormularyItem> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FormularyItemCopyWith<$Res> {
+  factory $FormularyItemCopyWith(
+          FormularyItem value, $Res Function(FormularyItem) then) =
+      _$FormularyItemCopyWithImpl<$Res, FormularyItem>;
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
+          R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? code,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $CodeableConceptCopyWith<$Res>? get code;
+  $ElementCopyWith<$Res>? get statusElement;
+}
+
+/// @nodoc
+class _$FormularyItemCopyWithImpl<$Res, $Val extends FormularyItem>
+    implements $FormularyItemCopyWith<$Res> {
+  _$FormularyItemCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? code = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      code: freezed == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get code {
+    if (_value.code == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+      return _then(_value.copyWith(code: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_FormularyItemCopyWith<$Res>
+    implements $FormularyItemCopyWith<$Res> {
+  factory _$$_FormularyItemCopyWith(
+          _$_FormularyItem value, $Res Function(_$_FormularyItem) then) =
+      __$$_FormularyItemCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
+          R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? code,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $CodeableConceptCopyWith<$Res>? get code;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+}
+
+/// @nodoc
+class __$$_FormularyItemCopyWithImpl<$Res>
+    extends _$FormularyItemCopyWithImpl<$Res, _$_FormularyItem>
+    implements _$$_FormularyItemCopyWith<$Res> {
+  __$$_FormularyItemCopyWithImpl(
+      _$_FormularyItem _value, $Res Function(_$_FormularyItem) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? code = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+  }) {
+    return _then(_$_FormularyItem(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      code: freezed == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_FormularyItem extends _FormularyItem {
+  _$_FormularyItem(
+      {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
+          this.resourceType = R5ResourceType.FormularyItem,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.code,
+      this.status,
+      @JsonKey(name: '_status')
+          this.statusElement})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
+
+  factory _$_FormularyItem.fromJson(Map<String, dynamic> json) =>
+      _$$_FormularyItemFromJson(json);
+
+  /// [resourceType] This is a FormularyItem resource
+  @override
+  @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
+  final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  @override
+  final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  @override
+  final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  @override
+  final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
+  @override
+  final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  @override
+  final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Business identifier for this formulary item.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Business identifier for this formulary item.
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [code] A code (or set of codes) that specify the product or service that is identified by this formulary item.
+  @override
+  final CodeableConcept? code;
+
+  /// [status] The validity about the information of the formulary item and not of the underlying product or service itself.
+  @override
+  final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+
+  @override
+  String toString() {
+    return 'FormularyItem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_FormularyItem &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      resourceType,
+      id,
+      meta,
+      implicitRules,
+      implicitRulesElement,
+      language,
+      languageElement,
+      text,
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_identifier),
+      code,
+      status,
+      statusElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_FormularyItemCopyWith<_$_FormularyItem> get copyWith =>
+      __$$_FormularyItemCopyWithImpl<_$_FormularyItem>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_FormularyItemToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FormularyItem extends FormularyItem {
+  factory _FormularyItem(
+      {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
+          final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? code,
+      final Code? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement}) = _$_FormularyItem;
+  _FormularyItem._() : super._();
+
+  factory _FormularyItem.fromJson(Map<String, dynamic> json) =
+      _$_FormularyItem.fromJson;
+
+  @override
+
+  /// [resourceType] This is a FormularyItem resource
+  @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
+  R5ResourceType get resourceType;
+  @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  Id? get id;
+  @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  Meta? get meta;
+  @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules;
+  @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
+
+  /// [language] The base language in which the resource is written.
+  Code? get language;
+  @override
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text;
+  @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [identifier] Business identifier for this formulary item.
+  List<Identifier>? get identifier;
+  @override
+
+  /// [code] A code (or set of codes) that specify the product or service that is identified by this formulary item.
+  CodeableConcept? get code;
+  @override
+
+  /// [status] The validity about the information of the formulary item and not of the underlying product or service itself.
+  Code? get status;
+  @override
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement;
+  @override
+  @JsonKey(ignore: true)
+  _$$_FormularyItemCopyWith<_$_FormularyItem> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
   return _Immunization.fromJson(json);
 }
 
 /// @nodoc
 mixin _$Immunization {
+  /// [resourceType] This is a Immunization resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A unique identifier assigned to this immunization record.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Canonical>? get instantiatesCanonical =>
-      throw _privateConstructorUsedError;
-  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement =>
-      throw _privateConstructorUsedError;
+
+  /// [basedOn] A plan, order or recommendation fulfilled in whole or in part by this immunization.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [status] Indicates the current status of the immunization event.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [statusReason] Indicates the reason the immunization event was not performed.
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+
+  /// [vaccineCode] Vaccine that was administered or was to be administered.
   CodeableConcept get vaccineCode => throw _privateConstructorUsedError;
-  Reference? get manufacturer => throw _privateConstructorUsedError;
+
+  /// [administeredProduct] An indication of which product was administered to the patient. This is typically a more detailed representation of the concept conveyed by the vaccineCode data element. If a Medication resource is referenced, it may be to a stand-alone resource or a contained resource within the Immunization resource.
+  CodeableReference? get administeredProduct =>
+      throw _privateConstructorUsedError;
+
+  /// [manufacturer] Name of vaccine manufacturer.
+  CodeableReference? get manufacturer => throw _privateConstructorUsedError;
+
+  /// [lotNumber] Lot number of the  vaccine product.
   String? get lotNumber => throw _privateConstructorUsedError;
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement => throw _privateConstructorUsedError;
+
+  /// [expirationDate] Date vaccine batch expires.
   Date? get expirationDate => throw _privateConstructorUsedError;
+
+  /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement => throw _privateConstructorUsedError;
+
+  /// [patient] The patient who either received or did not receive the immunization.
   Reference get patient => throw _privateConstructorUsedError;
+
+  /// [encounter] The visit or admission or other contact between patient and health care provider the immunization was performed as part of.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [supportingInformation] Additional information that is relevant to the immunization (e.g. for a vaccine recipient who is pregnant, the gestational age of the fetus). The reason why a vaccine was given (e.g. occupation, underlying medical condition) should be conveyed in Immunization.reason, not as supporting information. The reason why a vaccine was not given (e.g. contraindication) should be conveyed in Immunization.statusReason, not as supporting information.
+  List<Reference>? get supportingInformation =>
+      throw _privateConstructorUsedError;
+
+  /// [occurrenceDateTime] Date vaccine administered or was to be administered.
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+
+  /// [occurrenceDateTimeElement] ("_occurrenceDateTime") Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
-  Markdown? get occurrenceString => throw _privateConstructorUsedError;
+
+  /// [occurrenceString] Date vaccine administered or was to be administered.
+  String? get occurrenceString => throw _privateConstructorUsedError;
+
+  /// [occurrenceStringElement] ("_occurrenceString") Extensions for occurrenceString
   @JsonKey(name: '_occurrenceString')
   Element? get occurrenceStringElement => throw _privateConstructorUsedError;
-  FhirDateTime? get recorded => throw _privateConstructorUsedError;
-  @JsonKey(name: '_recorded')
-  Element? get recordedElement => throw _privateConstructorUsedError;
+
+  /// [primarySource] Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.
   Boolean? get primarySource => throw _privateConstructorUsedError;
+
+  /// [primarySourceElement] ("_primarySource") Extensions for primarySource
   @JsonKey(name: '_primarySource')
   Element? get primarySourceElement => throw _privateConstructorUsedError;
+
+  /// [informationSource] Typically the source of the data when the report of the immunization event is not based on information from the person who administered the vaccine.
   CodeableReference? get informationSource =>
       throw _privateConstructorUsedError;
+
+  /// [location] The service delivery location where the vaccine administration occurred.
   Reference? get location => throw _privateConstructorUsedError;
+
+  /// [site] Body site where vaccine was administered.
   CodeableConcept? get site => throw _privateConstructorUsedError;
+
+  /// [route] The path by which the vaccine product is taken into the body.
   CodeableConcept? get route => throw _privateConstructorUsedError;
+
+  /// [doseQuantity] The quantity of vaccine product that was administered.
   Quantity? get doseQuantity => throw _privateConstructorUsedError;
+
+  /// [performer] Indicates who performed the immunization event.
   List<ImmunizationPerformer>? get performer =>
       throw _privateConstructorUsedError;
+
+  /// [note] Extra information about the immunization that is not conveyed by the other attributes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [reason] Describes why the immunization occurred in coded or textual form, or Indicates another resource (Condition, Observation or DiagnosticReport) whose existence justifies this immunization.
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+
+  /// [isSubpotent] Indication if a dose is considered to be subpotent. By default, a dose should be considered to be potent.
   Boolean? get isSubpotent => throw _privateConstructorUsedError;
+
+  /// [isSubpotentElement] ("_isSubpotent") Extensions for isSubpotent
   @JsonKey(name: '_isSubpotent')
   Element? get isSubpotentElement => throw _privateConstructorUsedError;
+
+  /// [subpotentReason] Reason why a dose is considered to be subpotent.
   List<CodeableConcept>? get subpotentReason =>
       throw _privateConstructorUsedError;
-  List<ImmunizationEducation>? get education =>
+
+  /// [programEligibility] Indicates a patient's eligibility for a funding program.
+  List<ImmunizationProgramEligibility>? get programEligibility =>
       throw _privateConstructorUsedError;
-  List<CodeableConcept>? get programEligibility =>
-      throw _privateConstructorUsedError;
+
+  /// [fundingSource] Indicates the source of the vaccine actually administered. This may be different than the patient eligibility (e.g. the patient may be eligible for a publically purchased vaccine but due to inventory issues, vaccine purchased with private funds was actually administered).
   CodeableConcept? get fundingSource => throw _privateConstructorUsedError;
+
+  /// [reaction] Categorical data indicating that an adverse event is associated in time to an immunization.
   List<ImmunizationReaction>? get reaction =>
       throw _privateConstructorUsedError;
+
+  /// [protocolApplied] The protocol (set of recommendations) being followed by the provider who administered the dose.
   List<ImmunizationProtocolApplied>? get protocolApplied =>
       throw _privateConstructorUsedError;
 
@@ -107,41 +899,48 @@ abstract class $ImmunizationCopyWith<$Res> {
       _$ImmunizationCopyWithImpl<$Res, Immunization>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept vaccineCode,
-      Reference? manufacturer,
+      CodeableReference? administeredProduct,
+      CodeableReference? manufacturer,
       String? lotNumber,
-      @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+      @JsonKey(name: '_lotNumber')
+          Element? lotNumberElement,
       Date? expirationDate,
-      @JsonKey(name: '_expirationDate') Element? expirationDateElement,
+      @JsonKey(name: '_expirationDate')
+          Element? expirationDateElement,
       Reference patient,
       Reference? encounter,
+      List<Reference>? supportingInformation,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
-      Markdown? occurrenceString,
-      @JsonKey(name: '_occurrenceString') Element? occurrenceStringElement,
-      FhirDateTime? recorded,
-      @JsonKey(name: '_recorded') Element? recordedElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element? occurrenceDateTimeElement,
+      String? occurrenceString,
+      @JsonKey(name: '_occurrenceString')
+          Element? occurrenceStringElement,
       Boolean? primarySource,
-      @JsonKey(name: '_primarySource') Element? primarySourceElement,
+      @JsonKey(name: '_primarySource')
+          Element? primarySourceElement,
       CodeableReference? informationSource,
       Reference? location,
       CodeableConcept? site,
@@ -151,10 +950,10 @@ abstract class $ImmunizationCopyWith<$Res> {
       List<Annotation>? note,
       List<CodeableReference>? reason,
       Boolean? isSubpotent,
-      @JsonKey(name: '_isSubpotent') Element? isSubpotentElement,
+      @JsonKey(name: '_isSubpotent')
+          Element? isSubpotentElement,
       List<CodeableConcept>? subpotentReason,
-      List<ImmunizationEducation>? education,
-      List<CodeableConcept>? programEligibility,
+      List<ImmunizationProgramEligibility>? programEligibility,
       CodeableConcept? fundingSource,
       List<ImmunizationReaction>? reaction,
       List<ImmunizationProtocolApplied>? protocolApplied});
@@ -166,14 +965,14 @@ abstract class $ImmunizationCopyWith<$Res> {
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get statusReason;
   $CodeableConceptCopyWith<$Res> get vaccineCode;
-  $ReferenceCopyWith<$Res>? get manufacturer;
+  $CodeableReferenceCopyWith<$Res>? get administeredProduct;
+  $CodeableReferenceCopyWith<$Res>? get manufacturer;
   $ElementCopyWith<$Res>? get lotNumberElement;
   $ElementCopyWith<$Res>? get expirationDateElement;
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res>? get encounter;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   $ElementCopyWith<$Res>? get occurrenceStringElement;
-  $ElementCopyWith<$Res>? get recordedElement;
   $ElementCopyWith<$Res>? get primarySourceElement;
   $CodeableReferenceCopyWith<$Res>? get informationSource;
   $ReferenceCopyWith<$Res>? get location;
@@ -209,14 +1008,12 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? basedOn = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? statusReason = freezed,
     Object? vaccineCode = null,
+    Object? administeredProduct = freezed,
     Object? manufacturer = freezed,
     Object? lotNumber = freezed,
     Object? lotNumberElement = freezed,
@@ -224,12 +1021,11 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
     Object? expirationDateElement = freezed,
     Object? patient = null,
     Object? encounter = freezed,
+    Object? supportingInformation = freezed,
     Object? occurrenceDateTime = freezed,
     Object? occurrenceDateTimeElement = freezed,
     Object? occurrenceString = freezed,
     Object? occurrenceStringElement = freezed,
-    Object? recorded = freezed,
-    Object? recordedElement = freezed,
     Object? primarySource = freezed,
     Object? primarySourceElement = freezed,
     Object? informationSource = freezed,
@@ -243,7 +1039,6 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
     Object? isSubpotent = freezed,
     Object? isSubpotentElement = freezed,
     Object? subpotentReason = freezed,
-    Object? education = freezed,
     Object? programEligibility = freezed,
     Object? fundingSource = freezed,
     Object? reaction = freezed,
@@ -298,18 +1093,6 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value.instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value.instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value.instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -330,10 +1113,14 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
           ? _value.vaccineCode
           : vaccineCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
+      administeredProduct: freezed == administeredProduct
+          ? _value.administeredProduct
+          : administeredProduct // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       manufacturer: freezed == manufacturer
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+              as CodeableReference?,
       lotNumber: freezed == lotNumber
           ? _value.lotNumber
           : lotNumber // ignore: cast_nullable_to_non_nullable
@@ -358,6 +1145,10 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      supportingInformation: freezed == supportingInformation
+          ? _value.supportingInformation
+          : supportingInformation // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
@@ -369,18 +1160,10 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       occurrenceString: freezed == occurrenceString
           ? _value.occurrenceString
           : occurrenceString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as String?,
       occurrenceStringElement: freezed == occurrenceStringElement
           ? _value.occurrenceStringElement
           : occurrenceStringElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      recorded: freezed == recorded
-          ? _value.recorded
-          : recorded // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      recordedElement: freezed == recordedElement
-          ? _value.recordedElement
-          : recordedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       primarySource: freezed == primarySource
           ? _value.primarySource
@@ -434,14 +1217,10 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
           ? _value.subpotentReason
           : subpotentReason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      education: freezed == education
-          ? _value.education
-          : education // ignore: cast_nullable_to_non_nullable
-              as List<ImmunizationEducation>?,
       programEligibility: freezed == programEligibility
           ? _value.programEligibility
           : programEligibility // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
+              as List<ImmunizationProgramEligibility>?,
       fundingSource: freezed == fundingSource
           ? _value.fundingSource
           : fundingSource // ignore: cast_nullable_to_non_nullable
@@ -539,12 +1318,25 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
 
   @override
   @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get manufacturer {
+  $CodeableReferenceCopyWith<$Res>? get administeredProduct {
+    if (_value.administeredProduct == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.administeredProduct!,
+        (value) {
+      return _then(_value.copyWith(administeredProduct: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableReferenceCopyWith<$Res>? get manufacturer {
     if (_value.manufacturer == null) {
       return null;
     }
 
-    return $ReferenceCopyWith<$Res>(_value.manufacturer!, (value) {
+    return $CodeableReferenceCopyWith<$Res>(_value.manufacturer!, (value) {
       return _then(_value.copyWith(manufacturer: value) as $Val);
     });
   }
@@ -614,18 +1406,6 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
 
     return $ElementCopyWith<$Res>(_value.occurrenceStringElement!, (value) {
       return _then(_value.copyWith(occurrenceStringElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get recordedElement {
-    if (_value.recordedElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.recordedElement!, (value) {
-      return _then(_value.copyWith(recordedElement: value) as $Val);
     });
   }
 
@@ -735,41 +1515,48 @@ abstract class _$$_ImmunizationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept vaccineCode,
-      Reference? manufacturer,
+      CodeableReference? administeredProduct,
+      CodeableReference? manufacturer,
       String? lotNumber,
-      @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+      @JsonKey(name: '_lotNumber')
+          Element? lotNumberElement,
       Date? expirationDate,
-      @JsonKey(name: '_expirationDate') Element? expirationDateElement,
+      @JsonKey(name: '_expirationDate')
+          Element? expirationDateElement,
       Reference patient,
       Reference? encounter,
+      List<Reference>? supportingInformation,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
-      Markdown? occurrenceString,
-      @JsonKey(name: '_occurrenceString') Element? occurrenceStringElement,
-      FhirDateTime? recorded,
-      @JsonKey(name: '_recorded') Element? recordedElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element? occurrenceDateTimeElement,
+      String? occurrenceString,
+      @JsonKey(name: '_occurrenceString')
+          Element? occurrenceStringElement,
       Boolean? primarySource,
-      @JsonKey(name: '_primarySource') Element? primarySourceElement,
+      @JsonKey(name: '_primarySource')
+          Element? primarySourceElement,
       CodeableReference? informationSource,
       Reference? location,
       CodeableConcept? site,
@@ -779,10 +1566,10 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       List<Annotation>? note,
       List<CodeableReference>? reason,
       Boolean? isSubpotent,
-      @JsonKey(name: '_isSubpotent') Element? isSubpotentElement,
+      @JsonKey(name: '_isSubpotent')
+          Element? isSubpotentElement,
       List<CodeableConcept>? subpotentReason,
-      List<ImmunizationEducation>? education,
-      List<CodeableConcept>? programEligibility,
+      List<ImmunizationProgramEligibility>? programEligibility,
       CodeableConcept? fundingSource,
       List<ImmunizationReaction>? reaction,
       List<ImmunizationProtocolApplied>? protocolApplied});
@@ -802,7 +1589,9 @@ abstract class _$$_ImmunizationCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get vaccineCode;
   @override
-  $ReferenceCopyWith<$Res>? get manufacturer;
+  $CodeableReferenceCopyWith<$Res>? get administeredProduct;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get manufacturer;
   @override
   $ElementCopyWith<$Res>? get lotNumberElement;
   @override
@@ -815,8 +1604,6 @@ abstract class _$$_ImmunizationCopyWith<$Res>
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   @override
   $ElementCopyWith<$Res>? get occurrenceStringElement;
-  @override
-  $ElementCopyWith<$Res>? get recordedElement;
   @override
   $ElementCopyWith<$Res>? get primarySourceElement;
   @override
@@ -858,14 +1645,12 @@ class __$$_ImmunizationCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? basedOn = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? statusReason = freezed,
     Object? vaccineCode = null,
+    Object? administeredProduct = freezed,
     Object? manufacturer = freezed,
     Object? lotNumber = freezed,
     Object? lotNumberElement = freezed,
@@ -873,12 +1658,11 @@ class __$$_ImmunizationCopyWithImpl<$Res>
     Object? expirationDateElement = freezed,
     Object? patient = null,
     Object? encounter = freezed,
+    Object? supportingInformation = freezed,
     Object? occurrenceDateTime = freezed,
     Object? occurrenceDateTimeElement = freezed,
     Object? occurrenceString = freezed,
     Object? occurrenceStringElement = freezed,
-    Object? recorded = freezed,
-    Object? recordedElement = freezed,
     Object? primarySource = freezed,
     Object? primarySourceElement = freezed,
     Object? informationSource = freezed,
@@ -892,7 +1676,6 @@ class __$$_ImmunizationCopyWithImpl<$Res>
     Object? isSubpotent = freezed,
     Object? isSubpotentElement = freezed,
     Object? subpotentReason = freezed,
-    Object? education = freezed,
     Object? programEligibility = freezed,
     Object? fundingSource = freezed,
     Object? reaction = freezed,
@@ -947,18 +1730,6 @@ class __$$_ImmunizationCopyWithImpl<$Res>
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value._instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value._instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value._instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       basedOn: freezed == basedOn
           ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -979,10 +1750,14 @@ class __$$_ImmunizationCopyWithImpl<$Res>
           ? _value.vaccineCode
           : vaccineCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
+      administeredProduct: freezed == administeredProduct
+          ? _value.administeredProduct
+          : administeredProduct // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       manufacturer: freezed == manufacturer
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+              as CodeableReference?,
       lotNumber: freezed == lotNumber
           ? _value.lotNumber
           : lotNumber // ignore: cast_nullable_to_non_nullable
@@ -1007,6 +1782,10 @@ class __$$_ImmunizationCopyWithImpl<$Res>
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      supportingInformation: freezed == supportingInformation
+          ? _value._supportingInformation
+          : supportingInformation // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
@@ -1018,18 +1797,10 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       occurrenceString: freezed == occurrenceString
           ? _value.occurrenceString
           : occurrenceString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as String?,
       occurrenceStringElement: freezed == occurrenceStringElement
           ? _value.occurrenceStringElement
           : occurrenceStringElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      recorded: freezed == recorded
-          ? _value.recorded
-          : recorded // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      recordedElement: freezed == recordedElement
-          ? _value.recordedElement
-          : recordedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       primarySource: freezed == primarySource
           ? _value.primarySource
@@ -1083,14 +1854,10 @@ class __$$_ImmunizationCopyWithImpl<$Res>
           ? _value._subpotentReason
           : subpotentReason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      education: freezed == education
-          ? _value._education
-          : education // ignore: cast_nullable_to_non_nullable
-              as List<ImmunizationEducation>?,
       programEligibility: freezed == programEligibility
           ? _value._programEligibility
           : programEligibility // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
+              as List<ImmunizationProgramEligibility>?,
       fundingSource: freezed == fundingSource
           ? _value.fundingSource
           : fundingSource // ignore: cast_nullable_to_non_nullable
@@ -1111,7 +1878,8 @@ class __$$_ImmunizationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Immunization extends _Immunization {
   _$_Immunization(
-      {this.resourceType = R5ResourceType.Immunization,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
+          this.resourceType = R5ResourceType.Immunization,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1126,16 +1894,13 @@ class _$_Immunization extends _Immunization {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.statusReason,
       required this.vaccineCode,
+      this.administeredProduct,
       this.manufacturer,
       this.lotNumber,
       @JsonKey(name: '_lotNumber')
@@ -1145,15 +1910,13 @@ class _$_Immunization extends _Immunization {
           this.expirationDateElement,
       required this.patient,
       this.encounter,
+      final List<Reference>? supportingInformation,
       this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           this.occurrenceDateTimeElement,
       this.occurrenceString,
       @JsonKey(name: '_occurrenceString')
           this.occurrenceStringElement,
-      this.recorded,
-      @JsonKey(name: '_recorded')
-          this.recordedElement,
       this.primarySource,
       @JsonKey(name: '_primarySource')
           this.primarySourceElement,
@@ -1169,8 +1932,7 @@ class _$_Immunization extends _Immunization {
       @JsonKey(name: '_isSubpotent')
           this.isSubpotentElement,
       final List<CodeableConcept>? subpotentReason,
-      final List<ImmunizationEducation>? education,
-      final List<CodeableConcept>? programEligibility,
+      final List<ImmunizationProgramEligibility>? programEligibility,
       this.fundingSource,
       final List<ImmunizationReaction>? reaction,
       final List<ImmunizationProtocolApplied>? protocolApplied})
@@ -1178,15 +1940,12 @@ class _$_Immunization extends _Immunization {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
-        _instantiatesCanonical = instantiatesCanonical,
-        _instantiatesUri = instantiatesUri,
-        _instantiatesUriElement = instantiatesUriElement,
         _basedOn = basedOn,
+        _supportingInformation = supportingInformation,
         _performer = performer,
         _note = note,
         _reason = reason,
         _subpotentReason = subpotentReason,
-        _education = education,
         _programEligibility = programEligibility,
         _reaction = reaction,
         _protocolApplied = protocolApplied,
@@ -1195,26 +1954,45 @@ class _$_Immunization extends _Immunization {
   factory _$_Immunization.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationFromJson(json);
 
+  /// [resourceType] This is a Immunization resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -1224,7 +2002,10 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -1235,7 +2016,10 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -1246,7 +2030,10 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] A unique identifier assigned to this immunization record.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A unique identifier assigned to this immunization record.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -1256,40 +2043,10 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
-  @override
-  List<Canonical>? get instantiatesCanonical {
-    final value = _instantiatesCanonical;
-    if (value == null) return null;
-    if (_instantiatesCanonical is EqualUnmodifiableListView)
-      return _instantiatesCanonical;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirUri>? _instantiatesUri;
-  @override
-  List<FhirUri>? get instantiatesUri {
-    final value = _instantiatesUri;
-    if (value == null) return null;
-    if (_instantiatesUri is EqualUnmodifiableListView) return _instantiatesUri;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _instantiatesUriElement;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement {
-    final value = _instantiatesUriElement;
-    if (value == null) return null;
-    if (_instantiatesUriElement is EqualUnmodifiableListView)
-      return _instantiatesUriElement;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  /// [basedOn] A plan, order or recommendation fulfilled in whole or in part by this immunization.
   final List<Reference>? _basedOn;
+
+  /// [basedOn] A plan, order or recommendation fulfilled in whole or in part by this immunization.
   @override
   List<Reference>? get basedOn {
     final value = _basedOn;
@@ -1299,62 +2056,122 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [status] Indicates the current status of the immunization event.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [statusReason] Indicates the reason the immunization event was not performed.
   @override
   final CodeableConcept? statusReason;
+
+  /// [vaccineCode] Vaccine that was administered or was to be administered.
   @override
   final CodeableConcept vaccineCode;
+
+  /// [administeredProduct] An indication of which product was administered to the patient. This is typically a more detailed representation of the concept conveyed by the vaccineCode data element. If a Medication resource is referenced, it may be to a stand-alone resource or a contained resource within the Immunization resource.
   @override
-  final Reference? manufacturer;
+  final CodeableReference? administeredProduct;
+
+  /// [manufacturer] Name of vaccine manufacturer.
+  @override
+  final CodeableReference? manufacturer;
+
+  /// [lotNumber] Lot number of the  vaccine product.
   @override
   final String? lotNumber;
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   @override
   @JsonKey(name: '_lotNumber')
   final Element? lotNumberElement;
+
+  /// [expirationDate] Date vaccine batch expires.
   @override
   final Date? expirationDate;
+
+  /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @override
   @JsonKey(name: '_expirationDate')
   final Element? expirationDateElement;
+
+  /// [patient] The patient who either received or did not receive the immunization.
   @override
   final Reference patient;
+
+  /// [encounter] The visit or admission or other contact between patient and health care provider the immunization was performed as part of.
   @override
   final Reference? encounter;
+
+  /// [supportingInformation] Additional information that is relevant to the immunization (e.g. for a vaccine recipient who is pregnant, the gestational age of the fetus). The reason why a vaccine was given (e.g. occupation, underlying medical condition) should be conveyed in Immunization.reason, not as supporting information. The reason why a vaccine was not given (e.g. contraindication) should be conveyed in Immunization.statusReason, not as supporting information.
+  final List<Reference>? _supportingInformation;
+
+  /// [supportingInformation] Additional information that is relevant to the immunization (e.g. for a vaccine recipient who is pregnant, the gestational age of the fetus). The reason why a vaccine was given (e.g. occupation, underlying medical condition) should be conveyed in Immunization.reason, not as supporting information. The reason why a vaccine was not given (e.g. contraindication) should be conveyed in Immunization.statusReason, not as supporting information.
+  @override
+  List<Reference>? get supportingInformation {
+    final value = _supportingInformation;
+    if (value == null) return null;
+    if (_supportingInformation is EqualUnmodifiableListView)
+      return _supportingInformation;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [occurrenceDateTime] Date vaccine administered or was to be administered.
   @override
   final FhirDateTime? occurrenceDateTime;
+
+  /// [occurrenceDateTimeElement] ("_occurrenceDateTime") Extensions for occurrenceDateTime
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
+
+  /// [occurrenceString] Date vaccine administered or was to be administered.
   @override
-  final Markdown? occurrenceString;
+  final String? occurrenceString;
+
+  /// [occurrenceStringElement] ("_occurrenceString") Extensions for occurrenceString
   @override
   @JsonKey(name: '_occurrenceString')
   final Element? occurrenceStringElement;
-  @override
-  final FhirDateTime? recorded;
-  @override
-  @JsonKey(name: '_recorded')
-  final Element? recordedElement;
+
+  /// [primarySource] Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.
   @override
   final Boolean? primarySource;
+
+  /// [primarySourceElement] ("_primarySource") Extensions for primarySource
   @override
   @JsonKey(name: '_primarySource')
   final Element? primarySourceElement;
+
+  /// [informationSource] Typically the source of the data when the report of the immunization event is not based on information from the person who administered the vaccine.
   @override
   final CodeableReference? informationSource;
+
+  /// [location] The service delivery location where the vaccine administration occurred.
   @override
   final Reference? location;
+
+  /// [site] Body site where vaccine was administered.
   @override
   final CodeableConcept? site;
+
+  /// [route] The path by which the vaccine product is taken into the body.
   @override
   final CodeableConcept? route;
+
+  /// [doseQuantity] The quantity of vaccine product that was administered.
   @override
   final Quantity? doseQuantity;
+
+  /// [performer] Indicates who performed the immunization event.
   final List<ImmunizationPerformer>? _performer;
+
+  /// [performer] Indicates who performed the immunization event.
   @override
   List<ImmunizationPerformer>? get performer {
     final value = _performer;
@@ -1364,7 +2181,10 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [note] Extra information about the immunization that is not conveyed by the other attributes.
   final List<Annotation>? _note;
+
+  /// [note] Extra information about the immunization that is not conveyed by the other attributes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -1374,7 +2194,10 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [reason] Describes why the immunization occurred in coded or textual form, or Indicates another resource (Condition, Observation or DiagnosticReport) whose existence justifies this immunization.
   final List<CodeableReference>? _reason;
+
+  /// [reason] Describes why the immunization occurred in coded or textual form, or Indicates another resource (Condition, Observation or DiagnosticReport) whose existence justifies this immunization.
   @override
   List<CodeableReference>? get reason {
     final value = _reason;
@@ -1384,12 +2207,19 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [isSubpotent] Indication if a dose is considered to be subpotent. By default, a dose should be considered to be potent.
   @override
   final Boolean? isSubpotent;
+
+  /// [isSubpotentElement] ("_isSubpotent") Extensions for isSubpotent
   @override
   @JsonKey(name: '_isSubpotent')
   final Element? isSubpotentElement;
+
+  /// [subpotentReason] Reason why a dose is considered to be subpotent.
   final List<CodeableConcept>? _subpotentReason;
+
+  /// [subpotentReason] Reason why a dose is considered to be subpotent.
   @override
   List<CodeableConcept>? get subpotentReason {
     final value = _subpotentReason;
@@ -1399,19 +2229,12 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<ImmunizationEducation>? _education;
-  @override
-  List<ImmunizationEducation>? get education {
-    final value = _education;
-    if (value == null) return null;
-    if (_education is EqualUnmodifiableListView) return _education;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  /// [programEligibility] Indicates a patient's eligibility for a funding program.
+  final List<ImmunizationProgramEligibility>? _programEligibility;
 
-  final List<CodeableConcept>? _programEligibility;
+  /// [programEligibility] Indicates a patient's eligibility for a funding program.
   @override
-  List<CodeableConcept>? get programEligibility {
+  List<ImmunizationProgramEligibility>? get programEligibility {
     final value = _programEligibility;
     if (value == null) return null;
     if (_programEligibility is EqualUnmodifiableListView)
@@ -1420,9 +2243,14 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [fundingSource] Indicates the source of the vaccine actually administered. This may be different than the patient eligibility (e.g. the patient may be eligible for a publically purchased vaccine but due to inventory issues, vaccine purchased with private funds was actually administered).
   @override
   final CodeableConcept? fundingSource;
+
+  /// [reaction] Categorical data indicating that an adverse event is associated in time to an immunization.
   final List<ImmunizationReaction>? _reaction;
+
+  /// [reaction] Categorical data indicating that an adverse event is associated in time to an immunization.
   @override
   List<ImmunizationReaction>? get reaction {
     final value = _reaction;
@@ -1432,7 +2260,10 @@ class _$_Immunization extends _Immunization {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [protocolApplied] The protocol (set of recommendations) being followed by the provider who administered the dose.
   final List<ImmunizationProtocolApplied>? _protocolApplied;
+
+  /// [protocolApplied] The protocol (set of recommendations) being followed by the provider who administered the dose.
   @override
   List<ImmunizationProtocolApplied>? get protocolApplied {
     final value = _protocolApplied;
@@ -1444,7 +2275,7 @@ class _$_Immunization extends _Immunization {
 
   @override
   String toString() {
-    return 'Immunization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, status: $status, statusElement: $statusElement, statusReason: $statusReason, vaccineCode: $vaccineCode, manufacturer: $manufacturer, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, patient: $patient, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrenceString: $occurrenceString, occurrenceStringElement: $occurrenceStringElement, recorded: $recorded, recordedElement: $recordedElement, primarySource: $primarySource, primarySourceElement: $primarySourceElement, informationSource: $informationSource, location: $location, site: $site, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reason: $reason, isSubpotent: $isSubpotent, isSubpotentElement: $isSubpotentElement, subpotentReason: $subpotentReason, education: $education, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
+    return 'Immunization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, status: $status, statusElement: $statusElement, statusReason: $statusReason, vaccineCode: $vaccineCode, administeredProduct: $administeredProduct, manufacturer: $manufacturer, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, patient: $patient, encounter: $encounter, supportingInformation: $supportingInformation, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrenceString: $occurrenceString, occurrenceStringElement: $occurrenceStringElement, primarySource: $primarySource, primarySourceElement: $primarySourceElement, informationSource: $informationSource, location: $location, site: $site, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reason: $reason, isSubpotent: $isSubpotent, isSubpotentElement: $isSubpotentElement, subpotentReason: $subpotentReason, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
   }
 
   @override
@@ -1473,12 +2304,6 @@ class _$_Immunization extends _Immunization {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesUri, _instantiatesUri) &&
-            const DeepCollectionEquality().equals(
-                other._instantiatesUriElement, _instantiatesUriElement) &&
             const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
@@ -1487,6 +2312,8 @@ class _$_Immunization extends _Immunization {
                 other.statusReason == statusReason) &&
             (identical(other.vaccineCode, vaccineCode) ||
                 other.vaccineCode == vaccineCode) &&
+            (identical(other.administeredProduct, administeredProduct) ||
+                other.administeredProduct == administeredProduct) &&
             (identical(other.manufacturer, manufacturer) ||
                 other.manufacturer == manufacturer) &&
             (identical(other.lotNumber, lotNumber) ||
@@ -1500,18 +2327,17 @@ class _$_Immunization extends _Immunization {
             (identical(other.patient, patient) || other.patient == patient) &&
             (identical(other.encounter, encounter) ||
                 other.encounter == encounter) &&
+            const DeepCollectionEquality()
+                .equals(other._supportingInformation, _supportingInformation) &&
             (identical(other.occurrenceDateTime, occurrenceDateTime) ||
                 other.occurrenceDateTime == occurrenceDateTime) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
                 other.occurrenceDateTimeElement == occurrenceDateTimeElement) &&
             (identical(other.occurrenceString, occurrenceString) ||
                 other.occurrenceString == occurrenceString) &&
-            (identical(other.occurrenceStringElement, occurrenceStringElement) ||
+            (identical(
+                    other.occurrenceStringElement, occurrenceStringElement) ||
                 other.occurrenceStringElement == occurrenceStringElement) &&
-            (identical(other.recorded, recorded) ||
-                other.recorded == recorded) &&
-            (identical(other.recordedElement, recordedElement) ||
-                other.recordedElement == recordedElement) &&
             (identical(other.primarySource, primarySource) ||
                 other.primarySource == primarySource) &&
             (identical(other.primarySourceElement, primarySourceElement) ||
@@ -1535,12 +2361,12 @@ class _$_Immunization extends _Immunization {
             const DeepCollectionEquality()
                 .equals(other._subpotentReason, _subpotentReason) &&
             const DeepCollectionEquality()
-                .equals(other._education, _education) &&
-            const DeepCollectionEquality()
                 .equals(other._programEligibility, _programEligibility) &&
-            (identical(other.fundingSource, fundingSource) || other.fundingSource == fundingSource) &&
+            (identical(other.fundingSource, fundingSource) ||
+                other.fundingSource == fundingSource) &&
             const DeepCollectionEquality().equals(other._reaction, _reaction) &&
-            const DeepCollectionEquality().equals(other._protocolApplied, _protocolApplied));
+            const DeepCollectionEquality()
+                .equals(other._protocolApplied, _protocolApplied));
   }
 
   @JsonKey(ignore: true)
@@ -1559,14 +2385,12 @@ class _$_Immunization extends _Immunization {
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_instantiatesCanonical),
-        const DeepCollectionEquality().hash(_instantiatesUri),
-        const DeepCollectionEquality().hash(_instantiatesUriElement),
         const DeepCollectionEquality().hash(_basedOn),
         status,
         statusElement,
         statusReason,
         vaccineCode,
+        administeredProduct,
         manufacturer,
         lotNumber,
         lotNumberElement,
@@ -1574,12 +2398,11 @@ class _$_Immunization extends _Immunization {
         expirationDateElement,
         patient,
         encounter,
+        const DeepCollectionEquality().hash(_supportingInformation),
         occurrenceDateTime,
         occurrenceDateTimeElement,
         occurrenceString,
         occurrenceStringElement,
-        recorded,
-        recordedElement,
         primarySource,
         primarySourceElement,
         informationSource,
@@ -1593,7 +2416,6 @@ class _$_Immunization extends _Immunization {
         isSubpotent,
         isSubpotentElement,
         const DeepCollectionEquality().hash(_subpotentReason),
-        const DeepCollectionEquality().hash(_education),
         const DeepCollectionEquality().hash(_programEligibility),
         fundingSource,
         const DeepCollectionEquality().hash(_reaction),
@@ -1616,7 +2438,8 @@ class _$_Immunization extends _Immunization {
 
 abstract class _Immunization extends Immunization {
   factory _Immunization(
-          {final R5ResourceType resourceType,
+          {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
+              final R5ResourceType resourceType,
           final Id? id,
           final Meta? meta,
           final FhirUri? implicitRules,
@@ -1631,17 +2454,14 @@ abstract class _Immunization extends Immunization {
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
-          final List<Canonical>? instantiatesCanonical,
-          final List<FhirUri>? instantiatesUri,
-          @JsonKey(name: '_instantiatesUri')
-              final List<Element>? instantiatesUriElement,
           final List<Reference>? basedOn,
           final Code? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           final CodeableConcept? statusReason,
           required final CodeableConcept vaccineCode,
-          final Reference? manufacturer,
+          final CodeableReference? administeredProduct,
+          final CodeableReference? manufacturer,
           final String? lotNumber,
           @JsonKey(name: '_lotNumber')
               final Element? lotNumberElement,
@@ -1650,15 +2470,13 @@ abstract class _Immunization extends Immunization {
               final Element? expirationDateElement,
           required final Reference patient,
           final Reference? encounter,
+          final List<Reference>? supportingInformation,
           final FhirDateTime? occurrenceDateTime,
           @JsonKey(name: '_occurrenceDateTime')
               final Element? occurrenceDateTimeElement,
-          final Markdown? occurrenceString,
+          final String? occurrenceString,
           @JsonKey(name: '_occurrenceString')
               final Element? occurrenceStringElement,
-          final FhirDateTime? recorded,
-          @JsonKey(name: '_recorded')
-              final Element? recordedElement,
           final Boolean? primarySource,
           @JsonKey(name: '_primarySource')
               final Element? primarySourceElement,
@@ -1674,8 +2492,7 @@ abstract class _Immunization extends Immunization {
           @JsonKey(name: '_isSubpotent')
               final Element? isSubpotentElement,
           final List<CodeableConcept>? subpotentReason,
-          final List<ImmunizationEducation>? education,
-          final List<CodeableConcept>? programEligibility,
+          final List<ImmunizationProgramEligibility>? programEligibility,
           final CodeableConcept? fundingSource,
           final List<ImmunizationReaction>? reaction,
           final List<ImmunizationProtocolApplied>? protocolApplied}) =
@@ -1686,118 +2503,203 @@ abstract class _Immunization extends Immunization {
       _$_Immunization.fromJson;
 
   @override
+
+  /// [resourceType] This is a Immunization resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A unique identifier assigned to this immunization record.
   List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical;
-  @override
-  List<FhirUri>? get instantiatesUri;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
-  @override
+
+  /// [basedOn] A plan, order or recommendation fulfilled in whole or in part by this immunization.
   List<Reference>? get basedOn;
   @override
+
+  /// [status] Indicates the current status of the immunization event.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [statusReason] Indicates the reason the immunization event was not performed.
   CodeableConcept? get statusReason;
   @override
+
+  /// [vaccineCode] Vaccine that was administered or was to be administered.
   CodeableConcept get vaccineCode;
   @override
-  Reference? get manufacturer;
+
+  /// [administeredProduct] An indication of which product was administered to the patient. This is typically a more detailed representation of the concept conveyed by the vaccineCode data element. If a Medication resource is referenced, it may be to a stand-alone resource or a contained resource within the Immunization resource.
+  CodeableReference? get administeredProduct;
   @override
+
+  /// [manufacturer] Name of vaccine manufacturer.
+  CodeableReference? get manufacturer;
+  @override
+
+  /// [lotNumber] Lot number of the  vaccine product.
   String? get lotNumber;
   @override
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement;
   @override
+
+  /// [expirationDate] Date vaccine batch expires.
   Date? get expirationDate;
   @override
+
+  /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement;
   @override
+
+  /// [patient] The patient who either received or did not receive the immunization.
   Reference get patient;
   @override
+
+  /// [encounter] The visit or admission or other contact between patient and health care provider the immunization was performed as part of.
   Reference? get encounter;
   @override
+
+  /// [supportingInformation] Additional information that is relevant to the immunization (e.g. for a vaccine recipient who is pregnant, the gestational age of the fetus). The reason why a vaccine was given (e.g. occupation, underlying medical condition) should be conveyed in Immunization.reason, not as supporting information. The reason why a vaccine was not given (e.g. contraindication) should be conveyed in Immunization.statusReason, not as supporting information.
+  List<Reference>? get supportingInformation;
+  @override
+
+  /// [occurrenceDateTime] Date vaccine administered or was to be administered.
   FhirDateTime? get occurrenceDateTime;
   @override
+
+  /// [occurrenceDateTimeElement] ("_occurrenceDateTime") Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement;
   @override
-  Markdown? get occurrenceString;
+
+  /// [occurrenceString] Date vaccine administered or was to be administered.
+  String? get occurrenceString;
   @override
+
+  /// [occurrenceStringElement] ("_occurrenceString") Extensions for occurrenceString
   @JsonKey(name: '_occurrenceString')
   Element? get occurrenceStringElement;
   @override
-  FhirDateTime? get recorded;
-  @override
-  @JsonKey(name: '_recorded')
-  Element? get recordedElement;
-  @override
+
+  /// [primarySource] Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.
   Boolean? get primarySource;
   @override
+
+  /// [primarySourceElement] ("_primarySource") Extensions for primarySource
   @JsonKey(name: '_primarySource')
   Element? get primarySourceElement;
   @override
+
+  /// [informationSource] Typically the source of the data when the report of the immunization event is not based on information from the person who administered the vaccine.
   CodeableReference? get informationSource;
   @override
+
+  /// [location] The service delivery location where the vaccine administration occurred.
   Reference? get location;
   @override
+
+  /// [site] Body site where vaccine was administered.
   CodeableConcept? get site;
   @override
+
+  /// [route] The path by which the vaccine product is taken into the body.
   CodeableConcept? get route;
   @override
+
+  /// [doseQuantity] The quantity of vaccine product that was administered.
   Quantity? get doseQuantity;
   @override
+
+  /// [performer] Indicates who performed the immunization event.
   List<ImmunizationPerformer>? get performer;
   @override
+
+  /// [note] Extra information about the immunization that is not conveyed by the other attributes.
   List<Annotation>? get note;
   @override
+
+  /// [reason] Describes why the immunization occurred in coded or textual form, or Indicates another resource (Condition, Observation or DiagnosticReport) whose existence justifies this immunization.
   List<CodeableReference>? get reason;
   @override
+
+  /// [isSubpotent] Indication if a dose is considered to be subpotent. By default, a dose should be considered to be potent.
   Boolean? get isSubpotent;
   @override
+
+  /// [isSubpotentElement] ("_isSubpotent") Extensions for isSubpotent
   @JsonKey(name: '_isSubpotent')
   Element? get isSubpotentElement;
   @override
+
+  /// [subpotentReason] Reason why a dose is considered to be subpotent.
   List<CodeableConcept>? get subpotentReason;
   @override
-  List<ImmunizationEducation>? get education;
+
+  /// [programEligibility] Indicates a patient's eligibility for a funding program.
+  List<ImmunizationProgramEligibility>? get programEligibility;
   @override
-  List<CodeableConcept>? get programEligibility;
-  @override
+
+  /// [fundingSource] Indicates the source of the vaccine actually administered. This may be different than the patient eligibility (e.g. the patient may be eligible for a publically purchased vaccine but due to inventory issues, vaccine purchased with private funds was actually administered).
   CodeableConcept? get fundingSource;
   @override
+
+  /// [reaction] Categorical data indicating that an adverse event is associated in time to an immunization.
   List<ImmunizationReaction>? get reaction;
   @override
+
+  /// [protocolApplied] The protocol (set of recommendations) being followed by the provider who administered the dose.
   List<ImmunizationProtocolApplied>? get protocolApplied;
   @override
   @JsonKey(ignore: true)
@@ -1812,12 +2714,22 @@ ImmunizationPerformer _$ImmunizationPerformerFromJson(
 
 /// @nodoc
 mixin _$ImmunizationPerformer {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get function => throw _privateConstructorUsedError;
+
+  /// [function_] ("function") Describes the type of performance (e.g. ordering provider, administering provider, etc.).
+  @JsonKey(name: 'function')
+  CodeableConcept? get function_ => throw _privateConstructorUsedError;
+
+  /// [actor] The practitioner or organization who performed the action.
   Reference get actor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1836,10 +2748,10 @@ abstract class $ImmunizationPerformerCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
+      @JsonKey(name: 'function') CodeableConcept? function_,
       Reference actor});
 
-  $CodeableConceptCopyWith<$Res>? get function;
+  $CodeableConceptCopyWith<$Res>? get function_;
   $ReferenceCopyWith<$Res> get actor;
 }
 
@@ -1860,7 +2772,7 @@ class _$ImmunizationPerformerCopyWithImpl<$Res,
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? function = freezed,
+    Object? function_ = freezed,
     Object? actor = null,
   }) {
     return _then(_value.copyWith(
@@ -1876,9 +2788,9 @@ class _$ImmunizationPerformerCopyWithImpl<$Res,
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      function: freezed == function
-          ? _value.function
-          : function // ignore: cast_nullable_to_non_nullable
+      function_: freezed == function_
+          ? _value.function_
+          : function_ // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       actor: null == actor
           ? _value.actor
@@ -1889,13 +2801,13 @@ class _$ImmunizationPerformerCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get function {
-    if (_value.function == null) {
+  $CodeableConceptCopyWith<$Res>? get function_ {
+    if (_value.function_ == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.function!, (value) {
-      return _then(_value.copyWith(function: value) as $Val);
+    return $CodeableConceptCopyWith<$Res>(_value.function_!, (value) {
+      return _then(_value.copyWith(function_: value) as $Val);
     });
   }
 
@@ -1920,11 +2832,11 @@ abstract class _$$_ImmunizationPerformerCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
+      @JsonKey(name: 'function') CodeableConcept? function_,
       Reference actor});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get function;
+  $CodeableConceptCopyWith<$Res>? get function_;
   @override
   $ReferenceCopyWith<$Res> get actor;
 }
@@ -1943,7 +2855,7 @@ class __$$_ImmunizationPerformerCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? function = freezed,
+    Object? function_ = freezed,
     Object? actor = null,
   }) {
     return _then(_$_ImmunizationPerformer(
@@ -1959,9 +2871,9 @@ class __$$_ImmunizationPerformerCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      function: freezed == function
-          ? _value.function
-          : function // ignore: cast_nullable_to_non_nullable
+      function_: freezed == function_
+          ? _value.function_
+          : function_ // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       actor: null == actor
           ? _value.actor
@@ -1978,7 +2890,7 @@ class _$_ImmunizationPerformer extends _ImmunizationPerformer {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      this.function,
+      @JsonKey(name: 'function') this.function_,
       required this.actor})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1987,9 +2899,14 @@ class _$_ImmunizationPerformer extends _ImmunizationPerformer {
   factory _$_ImmunizationPerformer.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationPerformerFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -2000,7 +2917,10 @@ class _$_ImmunizationPerformer extends _ImmunizationPerformer {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -2011,14 +2931,18 @@ class _$_ImmunizationPerformer extends _ImmunizationPerformer {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [function_] ("function") Describes the type of performance (e.g. ordering provider, administering provider, etc.).
   @override
-  final CodeableConcept? function;
+  @JsonKey(name: 'function')
+  final CodeableConcept? function_;
+
+  /// [actor] The practitioner or organization who performed the action.
   @override
   final Reference actor;
 
   @override
   String toString() {
-    return 'ImmunizationPerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+    return 'ImmunizationPerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function_: $function_, actor: $actor)';
   }
 
   @override
@@ -2031,8 +2955,8 @@ class _$_ImmunizationPerformer extends _ImmunizationPerformer {
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.function, function) ||
-                other.function == function) &&
+            (identical(other.function_, function_) ||
+                other.function_ == function_) &&
             (identical(other.actor, actor) || other.actor == actor));
   }
 
@@ -2043,7 +2967,7 @@ class _$_ImmunizationPerformer extends _ImmunizationPerformer {
       id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      function,
+      function_,
       actor);
 
   @JsonKey(ignore: true)
@@ -2066,7 +2990,7 @@ abstract class _ImmunizationPerformer extends ImmunizationPerformer {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? function,
+      @JsonKey(name: 'function') final CodeableConcept? function_,
       required final Reference actor}) = _$_ImmunizationPerformer;
   _ImmunizationPerformer._() : super._();
 
@@ -2074,15 +2998,26 @@ abstract class _ImmunizationPerformer extends ImmunizationPerformer {
       _$_ImmunizationPerformer.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get function;
+
+  /// [function_] ("function") Describes the type of performance (e.g. ordering provider, administering provider, etc.).
+  @JsonKey(name: 'function')
+  CodeableConcept? get function_;
   @override
+
+  /// [actor] The practitioner or organization who performed the action.
   Reference get actor;
   @override
   @JsonKey(ignore: true)
@@ -2090,67 +3025,60 @@ abstract class _ImmunizationPerformer extends ImmunizationPerformer {
       throw _privateConstructorUsedError;
 }
 
-ImmunizationEducation _$ImmunizationEducationFromJson(
+ImmunizationProgramEligibility _$ImmunizationProgramEligibilityFromJson(
     Map<String, dynamic> json) {
-  return _ImmunizationEducation.fromJson(json);
+  return _ImmunizationProgramEligibility.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ImmunizationEducation {
+mixin _$ImmunizationProgramEligibility {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  String? get documentType => throw _privateConstructorUsedError;
-  @JsonKey(name: '_documentType')
-  Element? get documentTypeElement => throw _privateConstructorUsedError;
-  FhirUri? get reference => throw _privateConstructorUsedError;
-  @JsonKey(name: '_reference')
-  Element? get referenceElement => throw _privateConstructorUsedError;
-  FhirDateTime? get publicationDate => throw _privateConstructorUsedError;
-  @JsonKey(name: '_publicationDate')
-  Element? get publicationDateElement => throw _privateConstructorUsedError;
-  FhirDateTime? get presentationDate => throw _privateConstructorUsedError;
-  @JsonKey(name: '_presentationDate')
-  Element? get presentationDateElement => throw _privateConstructorUsedError;
+
+  /// [program] Indicates which program the patient had their eligility evaluated for.
+  CodeableConcept get program => throw _privateConstructorUsedError;
+
+  /// [programStatus] Indicates the patient's eligility status for for a specific payment program.
+  CodeableConcept get programStatus => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImmunizationEducationCopyWith<ImmunizationEducation> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ImmunizationProgramEligibilityCopyWith<ImmunizationProgramEligibility>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ImmunizationEducationCopyWith<$Res> {
-  factory $ImmunizationEducationCopyWith(ImmunizationEducation value,
-          $Res Function(ImmunizationEducation) then) =
-      _$ImmunizationEducationCopyWithImpl<$Res, ImmunizationEducation>;
+abstract class $ImmunizationProgramEligibilityCopyWith<$Res> {
+  factory $ImmunizationProgramEligibilityCopyWith(
+          ImmunizationProgramEligibility value,
+          $Res Function(ImmunizationProgramEligibility) then) =
+      _$ImmunizationProgramEligibilityCopyWithImpl<$Res,
+          ImmunizationProgramEligibility>;
   @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? documentType,
-      @JsonKey(name: '_documentType') Element? documentTypeElement,
-      FhirUri? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      FhirDateTime? publicationDate,
-      @JsonKey(name: '_publicationDate') Element? publicationDateElement,
-      FhirDateTime? presentationDate,
-      @JsonKey(name: '_presentationDate') Element? presentationDateElement});
+      CodeableConcept program,
+      CodeableConcept programStatus});
 
-  $ElementCopyWith<$Res>? get documentTypeElement;
-  $ElementCopyWith<$Res>? get referenceElement;
-  $ElementCopyWith<$Res>? get publicationDateElement;
-  $ElementCopyWith<$Res>? get presentationDateElement;
+  $CodeableConceptCopyWith<$Res> get program;
+  $CodeableConceptCopyWith<$Res> get programStatus;
 }
 
 /// @nodoc
-class _$ImmunizationEducationCopyWithImpl<$Res,
-        $Val extends ImmunizationEducation>
-    implements $ImmunizationEducationCopyWith<$Res> {
-  _$ImmunizationEducationCopyWithImpl(this._value, this._then);
+class _$ImmunizationProgramEligibilityCopyWithImpl<$Res,
+        $Val extends ImmunizationProgramEligibility>
+    implements $ImmunizationProgramEligibilityCopyWith<$Res> {
+  _$ImmunizationProgramEligibilityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -2163,14 +3091,8 @@ class _$ImmunizationEducationCopyWithImpl<$Res,
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? documentType = freezed,
-    Object? documentTypeElement = freezed,
-    Object? reference = freezed,
-    Object? referenceElement = freezed,
-    Object? publicationDate = freezed,
-    Object? publicationDateElement = freezed,
-    Object? presentationDate = freezed,
-    Object? presentationDateElement = freezed,
+    Object? program = null,
+    Object? programStatus = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -2185,127 +3107,64 @@ class _$ImmunizationEducationCopyWithImpl<$Res,
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      documentType: freezed == documentType
-          ? _value.documentType
-          : documentType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      documentTypeElement: freezed == documentTypeElement
-          ? _value.documentTypeElement
-          : documentTypeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      reference: freezed == reference
-          ? _value.reference
-          : reference // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      referenceElement: freezed == referenceElement
-          ? _value.referenceElement
-          : referenceElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      publicationDate: freezed == publicationDate
-          ? _value.publicationDate
-          : publicationDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      publicationDateElement: freezed == publicationDateElement
-          ? _value.publicationDateElement
-          : publicationDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      presentationDate: freezed == presentationDate
-          ? _value.presentationDate
-          : presentationDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      presentationDateElement: freezed == presentationDateElement
-          ? _value.presentationDateElement
-          : presentationDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+      program: null == program
+          ? _value.program
+          : program // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      programStatus: null == programStatus
+          ? _value.programStatus
+          : programStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get documentTypeElement {
-    if (_value.documentTypeElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.documentTypeElement!, (value) {
-      return _then(_value.copyWith(documentTypeElement: value) as $Val);
+  $CodeableConceptCopyWith<$Res> get program {
+    return $CodeableConceptCopyWith<$Res>(_value.program, (value) {
+      return _then(_value.copyWith(program: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get referenceElement {
-    if (_value.referenceElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.referenceElement!, (value) {
-      return _then(_value.copyWith(referenceElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get publicationDateElement {
-    if (_value.publicationDateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.publicationDateElement!, (value) {
-      return _then(_value.copyWith(publicationDateElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get presentationDateElement {
-    if (_value.presentationDateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.presentationDateElement!, (value) {
-      return _then(_value.copyWith(presentationDateElement: value) as $Val);
+  $CodeableConceptCopyWith<$Res> get programStatus {
+    return $CodeableConceptCopyWith<$Res>(_value.programStatus, (value) {
+      return _then(_value.copyWith(programStatus: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_ImmunizationEducationCopyWith<$Res>
-    implements $ImmunizationEducationCopyWith<$Res> {
-  factory _$$_ImmunizationEducationCopyWith(_$_ImmunizationEducation value,
-          $Res Function(_$_ImmunizationEducation) then) =
-      __$$_ImmunizationEducationCopyWithImpl<$Res>;
+abstract class _$$_ImmunizationProgramEligibilityCopyWith<$Res>
+    implements $ImmunizationProgramEligibilityCopyWith<$Res> {
+  factory _$$_ImmunizationProgramEligibilityCopyWith(
+          _$_ImmunizationProgramEligibility value,
+          $Res Function(_$_ImmunizationProgramEligibility) then) =
+      __$$_ImmunizationProgramEligibilityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? documentType,
-      @JsonKey(name: '_documentType') Element? documentTypeElement,
-      FhirUri? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      FhirDateTime? publicationDate,
-      @JsonKey(name: '_publicationDate') Element? publicationDateElement,
-      FhirDateTime? presentationDate,
-      @JsonKey(name: '_presentationDate') Element? presentationDateElement});
+      CodeableConcept program,
+      CodeableConcept programStatus});
 
   @override
-  $ElementCopyWith<$Res>? get documentTypeElement;
+  $CodeableConceptCopyWith<$Res> get program;
   @override
-  $ElementCopyWith<$Res>? get referenceElement;
-  @override
-  $ElementCopyWith<$Res>? get publicationDateElement;
-  @override
-  $ElementCopyWith<$Res>? get presentationDateElement;
+  $CodeableConceptCopyWith<$Res> get programStatus;
 }
 
 /// @nodoc
-class __$$_ImmunizationEducationCopyWithImpl<$Res>
-    extends _$ImmunizationEducationCopyWithImpl<$Res, _$_ImmunizationEducation>
-    implements _$$_ImmunizationEducationCopyWith<$Res> {
-  __$$_ImmunizationEducationCopyWithImpl(_$_ImmunizationEducation _value,
-      $Res Function(_$_ImmunizationEducation) _then)
+class __$$_ImmunizationProgramEligibilityCopyWithImpl<$Res>
+    extends _$ImmunizationProgramEligibilityCopyWithImpl<$Res,
+        _$_ImmunizationProgramEligibility>
+    implements _$$_ImmunizationProgramEligibilityCopyWith<$Res> {
+  __$$_ImmunizationProgramEligibilityCopyWithImpl(
+      _$_ImmunizationProgramEligibility _value,
+      $Res Function(_$_ImmunizationProgramEligibility) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2314,16 +3173,10 @@ class __$$_ImmunizationEducationCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? documentType = freezed,
-    Object? documentTypeElement = freezed,
-    Object? reference = freezed,
-    Object? referenceElement = freezed,
-    Object? publicationDate = freezed,
-    Object? publicationDateElement = freezed,
-    Object? presentationDate = freezed,
-    Object? presentationDateElement = freezed,
+    Object? program = null,
+    Object? programStatus = null,
   }) {
-    return _then(_$_ImmunizationEducation(
+    return _then(_$_ImmunizationProgramEligibility(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2336,67 +3189,44 @@ class __$$_ImmunizationEducationCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      documentType: freezed == documentType
-          ? _value.documentType
-          : documentType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      documentTypeElement: freezed == documentTypeElement
-          ? _value.documentTypeElement
-          : documentTypeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      reference: freezed == reference
-          ? _value.reference
-          : reference // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      referenceElement: freezed == referenceElement
-          ? _value.referenceElement
-          : referenceElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      publicationDate: freezed == publicationDate
-          ? _value.publicationDate
-          : publicationDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      publicationDateElement: freezed == publicationDateElement
-          ? _value.publicationDateElement
-          : publicationDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      presentationDate: freezed == presentationDate
-          ? _value.presentationDate
-          : presentationDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      presentationDateElement: freezed == presentationDateElement
-          ? _value.presentationDateElement
-          : presentationDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+      program: null == program
+          ? _value.program
+          : program // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      programStatus: null == programStatus
+          ? _value.programStatus
+          : programStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ImmunizationEducation extends _ImmunizationEducation {
-  _$_ImmunizationEducation(
+class _$_ImmunizationProgramEligibility
+    extends _ImmunizationProgramEligibility {
+  _$_ImmunizationProgramEligibility(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      this.documentType,
-      @JsonKey(name: '_documentType') this.documentTypeElement,
-      this.reference,
-      @JsonKey(name: '_reference') this.referenceElement,
-      this.publicationDate,
-      @JsonKey(name: '_publicationDate') this.publicationDateElement,
-      this.presentationDate,
-      @JsonKey(name: '_presentationDate') this.presentationDateElement})
+      required this.program,
+      required this.programStatus})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImmunizationEducation.fromJson(Map<String, dynamic> json) =>
-      _$$_ImmunizationEducationFromJson(json);
+  factory _$_ImmunizationProgramEligibility.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_ImmunizationProgramEligibilityFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -2407,7 +3237,10 @@ class _$_ImmunizationEducation extends _ImmunizationEducation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -2418,59 +3251,32 @@ class _$_ImmunizationEducation extends _ImmunizationEducation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [program] Indicates which program the patient had their eligility evaluated for.
   @override
-  final String? documentType;
+  final CodeableConcept program;
+
+  /// [programStatus] Indicates the patient's eligility status for for a specific payment program.
   @override
-  @JsonKey(name: '_documentType')
-  final Element? documentTypeElement;
-  @override
-  final FhirUri? reference;
-  @override
-  @JsonKey(name: '_reference')
-  final Element? referenceElement;
-  @override
-  final FhirDateTime? publicationDate;
-  @override
-  @JsonKey(name: '_publicationDate')
-  final Element? publicationDateElement;
-  @override
-  final FhirDateTime? presentationDate;
-  @override
-  @JsonKey(name: '_presentationDate')
-  final Element? presentationDateElement;
+  final CodeableConcept programStatus;
 
   @override
   String toString() {
-    return 'ImmunizationEducation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, documentType: $documentType, documentTypeElement: $documentTypeElement, reference: $reference, referenceElement: $referenceElement, publicationDate: $publicationDate, publicationDateElement: $publicationDateElement, presentationDate: $presentationDate, presentationDateElement: $presentationDateElement)';
+    return 'ImmunizationProgramEligibility(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, program: $program, programStatus: $programStatus)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ImmunizationEducation &&
+            other is _$_ImmunizationProgramEligibility &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.documentType, documentType) ||
-                other.documentType == documentType) &&
-            (identical(other.documentTypeElement, documentTypeElement) ||
-                other.documentTypeElement == documentTypeElement) &&
-            (identical(other.reference, reference) ||
-                other.reference == reference) &&
-            (identical(other.referenceElement, referenceElement) ||
-                other.referenceElement == referenceElement) &&
-            (identical(other.publicationDate, publicationDate) ||
-                other.publicationDate == publicationDate) &&
-            (identical(other.publicationDateElement, publicationDateElement) ||
-                other.publicationDateElement == publicationDateElement) &&
-            (identical(other.presentationDate, presentationDate) ||
-                other.presentationDate == presentationDate) &&
-            (identical(
-                    other.presentationDateElement, presentationDateElement) ||
-                other.presentationDateElement == presentationDateElement));
+            (identical(other.program, program) || other.program == program) &&
+            (identical(other.programStatus, programStatus) ||
+                other.programStatus == programStatus));
   }
 
   @JsonKey(ignore: true)
@@ -2480,84 +3286,63 @@ class _$_ImmunizationEducation extends _ImmunizationEducation {
       id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      documentType,
-      documentTypeElement,
-      reference,
-      referenceElement,
-      publicationDate,
-      publicationDateElement,
-      presentationDate,
-      presentationDateElement);
+      program,
+      programStatus);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ImmunizationEducationCopyWith<_$_ImmunizationEducation> get copyWith =>
-      __$$_ImmunizationEducationCopyWithImpl<_$_ImmunizationEducation>(
-          this, _$identity);
+  _$$_ImmunizationProgramEligibilityCopyWith<_$_ImmunizationProgramEligibility>
+      get copyWith => __$$_ImmunizationProgramEligibilityCopyWithImpl<
+          _$_ImmunizationProgramEligibility>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImmunizationEducationToJson(
+    return _$$_ImmunizationProgramEligibilityToJson(
       this,
     );
   }
 }
 
-abstract class _ImmunizationEducation extends ImmunizationEducation {
-  factory _ImmunizationEducation(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? documentType,
-      @JsonKey(name: '_documentType')
-          final Element? documentTypeElement,
-      final FhirUri? reference,
-      @JsonKey(name: '_reference')
-          final Element? referenceElement,
-      final FhirDateTime? publicationDate,
-      @JsonKey(name: '_publicationDate')
-          final Element? publicationDateElement,
-      final FhirDateTime? presentationDate,
-      @JsonKey(name: '_presentationDate')
-          final Element? presentationDateElement}) = _$_ImmunizationEducation;
-  _ImmunizationEducation._() : super._();
+abstract class _ImmunizationProgramEligibility
+    extends ImmunizationProgramEligibility {
+  factory _ImmunizationProgramEligibility(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept program,
+          required final CodeableConcept programStatus}) =
+      _$_ImmunizationProgramEligibility;
+  _ImmunizationProgramEligibility._() : super._();
 
-  factory _ImmunizationEducation.fromJson(Map<String, dynamic> json) =
-      _$_ImmunizationEducation.fromJson;
+  factory _ImmunizationProgramEligibility.fromJson(Map<String, dynamic> json) =
+      _$_ImmunizationProgramEligibility.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
-  String? get documentType;
+
+  /// [program] Indicates which program the patient had their eligility evaluated for.
+  CodeableConcept get program;
   @override
-  @JsonKey(name: '_documentType')
-  Element? get documentTypeElement;
-  @override
-  FhirUri? get reference;
-  @override
-  @JsonKey(name: '_reference')
-  Element? get referenceElement;
-  @override
-  FhirDateTime? get publicationDate;
-  @override
-  @JsonKey(name: '_publicationDate')
-  Element? get publicationDateElement;
-  @override
-  FhirDateTime? get presentationDate;
-  @override
-  @JsonKey(name: '_presentationDate')
-  Element? get presentationDateElement;
+
+  /// [programStatus] Indicates the patient's eligility status for for a specific payment program.
+  CodeableConcept get programStatus;
   @override
   @JsonKey(ignore: true)
-  _$$_ImmunizationEducationCopyWith<_$_ImmunizationEducation> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ImmunizationProgramEligibilityCopyWith<_$_ImmunizationProgramEligibility>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
@@ -2566,16 +3351,31 @@ ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ImmunizationReaction {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [date] Date of reaction to the immunization.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [manifestation] Details of the reaction.
   CodeableReference? get manifestation => throw _privateConstructorUsedError;
+
+  /// [reported] Self-reported indicator.
   Boolean? get reported => throw _privateConstructorUsedError;
+
+  /// [reportedElement] ("_reported") Extensions for reported
   @JsonKey(name: '_reported')
   Element? get reportedElement => throw _privateConstructorUsedError;
 
@@ -2804,9 +3604,14 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
   factory _$_ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationReactionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -2817,7 +3622,10 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -2828,15 +3636,24 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [date] Date of reaction to the immunization.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [manifestation] Details of the reaction.
   @override
   final CodeableReference? manifestation;
+
+  /// [reported] Self-reported indicator.
   @override
   final Boolean? reported;
+
+  /// [reportedElement] ("_reported") Extensions for reported
   @override
   @JsonKey(name: '_reported')
   final Element? reportedElement;
@@ -2912,22 +3729,38 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
       _$_ImmunizationReaction.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [date] Date of reaction to the immunization.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [manifestation] Details of the reaction.
   CodeableReference? get manifestation;
   @override
+
+  /// [reported] Self-reported indicator.
   Boolean? get reported;
   @override
+
+  /// [reportedElement] ("_reported") Extensions for reported
   @JsonKey(name: '_reported')
   Element? get reportedElement;
   @override
@@ -2943,21 +3776,42 @@ ImmunizationProtocolApplied _$ImmunizationProtocolAppliedFromJson(
 
 /// @nodoc
 mixin _$ImmunizationProtocolApplied {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   String? get series => throw _privateConstructorUsedError;
+
+  /// [seriesElement] ("_series") Extensions for series
   @JsonKey(name: '_series')
   Element? get seriesElement => throw _privateConstructorUsedError;
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP) that is being followed.
   Reference? get authority => throw _privateConstructorUsedError;
+
+  /// [targetDisease] The vaccine preventable disease the dose is being administered against.
   List<CodeableConcept>? get targetDisease =>
       throw _privateConstructorUsedError;
+
+  /// [doseNumber] Nominal position in a series as intended by the practitioner administering the dose.
   String? get doseNumber => throw _privateConstructorUsedError;
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @JsonKey(name: '_doseNumber')
   Element? get doseNumberElement => throw _privateConstructorUsedError;
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as intended by the practitioner administering the dose.
   String? get seriesDoses => throw _privateConstructorUsedError;
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @JsonKey(name: '_seriesDoses')
   Element? get seriesDosesElement => throw _privateConstructorUsedError;
 
@@ -3246,9 +4100,14 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
   factory _$_ImmunizationProtocolApplied.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationProtocolAppliedFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -3259,7 +4118,10 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -3270,14 +4132,23 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   @override
   final String? series;
+
+  /// [seriesElement] ("_series") Extensions for series
   @override
   @JsonKey(name: '_series')
   final Element? seriesElement;
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP) that is being followed.
   @override
   final Reference? authority;
+
+  /// [targetDisease] The vaccine preventable disease the dose is being administered against.
   final List<CodeableConcept>? _targetDisease;
+
+  /// [targetDisease] The vaccine preventable disease the dose is being administered against.
   @override
   List<CodeableConcept>? get targetDisease {
     final value = _targetDisease;
@@ -3287,13 +4158,20 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [doseNumber] Nominal position in a series as intended by the practitioner administering the dose.
   @override
   final String? doseNumber;
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @override
   @JsonKey(name: '_doseNumber')
   final Element? doseNumberElement;
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as intended by the practitioner administering the dose.
   @override
   final String? seriesDoses;
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @override
   @JsonKey(name: '_seriesDoses')
   final Element? seriesDosesElement;
@@ -3382,29 +4260,51 @@ abstract class _ImmunizationProtocolApplied
       _$_ImmunizationProtocolApplied.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   String? get series;
   @override
+
+  /// [seriesElement] ("_series") Extensions for series
   @JsonKey(name: '_series')
   Element? get seriesElement;
   @override
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP) that is being followed.
   Reference? get authority;
   @override
+
+  /// [targetDisease] The vaccine preventable disease the dose is being administered against.
   List<CodeableConcept>? get targetDisease;
   @override
+
+  /// [doseNumber] Nominal position in a series as intended by the practitioner administering the dose.
   String? get doseNumber;
   @override
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @JsonKey(name: '_doseNumber')
   Element? get doseNumberElement;
   @override
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as intended by the practitioner administering the dose.
   String? get seriesDoses;
   @override
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @JsonKey(name: '_seriesDoses')
   Element? get seriesDosesElement;
   @override
@@ -3420,45 +4320,105 @@ ImmunizationEvaluation _$ImmunizationEvaluationFromJson(
 
 /// @nodoc
 mixin _$ImmunizationEvaluation {
+  /// [resourceType] This is a ImmunizationEvaluation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A unique identifier assigned to this immunization evaluation record.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [status] Indicates the current status of the evaluation of the vaccination administration event.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [patient] The individual for whom the evaluation is being done.
   Reference get patient => throw _privateConstructorUsedError;
+
+  /// [date] The date the evaluation of the vaccine administration event was performed.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP).
   Reference? get authority => throw _privateConstructorUsedError;
+
+  /// [targetDisease] The vaccine preventable disease the dose is being evaluated against.
   CodeableConcept get targetDisease => throw _privateConstructorUsedError;
+
+  /// [immunizationEvent] The vaccine administration event being evaluated.
   Reference get immunizationEvent => throw _privateConstructorUsedError;
+
+  /// [doseStatus] Indicates if the dose is valid or not valid with respect to the published recommendations.
   CodeableConcept get doseStatus => throw _privateConstructorUsedError;
+
+  /// [doseStatusReason] Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
   List<CodeableConcept>? get doseStatusReason =>
       throw _privateConstructorUsedError;
+
+  /// [description] Additional information about the evaluation.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   String? get series => throw _privateConstructorUsedError;
+
+  /// [seriesElement] ("_series") Extensions for series
   @JsonKey(name: '_series')
   Element? get seriesElement => throw _privateConstructorUsedError;
+
+  /// [doseNumber] Nominal position in a series as determined by the outcome of the evaluation process.
   String? get doseNumber => throw _privateConstructorUsedError;
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @JsonKey(name: '_doseNumber')
   Element? get doseNumberElement => throw _privateConstructorUsedError;
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as determined by the outcome of the evaluation process.
   String? get seriesDoses => throw _privateConstructorUsedError;
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @JsonKey(name: '_seriesDoses')
   Element? get seriesDosesElement => throw _privateConstructorUsedError;
 
@@ -3475,36 +4435,46 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       _$ImmunizationEvaluationCopyWithImpl<$Res, ImmunizationEvaluation>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       Reference? authority,
       CodeableConcept targetDisease,
       Reference immunizationEvent,
       CodeableConcept doseStatus,
       List<CodeableConcept>? doseStatusReason,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       String? series,
-      @JsonKey(name: '_series') Element? seriesElement,
+      @JsonKey(name: '_series')
+          Element? seriesElement,
       String? doseNumber,
-      @JsonKey(name: '_doseNumber') Element? doseNumberElement,
+      @JsonKey(name: '_doseNumber')
+          Element? doseNumberElement,
       String? seriesDoses,
-      @JsonKey(name: '_seriesDoses') Element? seriesDosesElement});
+      @JsonKey(name: '_seriesDoses')
+          Element? seriesDosesElement});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3866,36 +4836,46 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       Reference? authority,
       CodeableConcept targetDisease,
       Reference immunizationEvent,
       CodeableConcept doseStatus,
       List<CodeableConcept>? doseStatusReason,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       String? series,
-      @JsonKey(name: '_series') Element? seriesElement,
+      @JsonKey(name: '_series')
+          Element? seriesElement,
       String? doseNumber,
-      @JsonKey(name: '_doseNumber') Element? doseNumberElement,
+      @JsonKey(name: '_doseNumber')
+          Element? doseNumberElement,
       String? seriesDoses,
-      @JsonKey(name: '_seriesDoses') Element? seriesDosesElement});
+      @JsonKey(name: '_seriesDoses')
+          Element? seriesDosesElement});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4101,36 +5081,46 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   _$_ImmunizationEvaluation(
-      {this.resourceType = R5ResourceType.ImmunizationEvaluation,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
+          this.resourceType = R5ResourceType.ImmunizationEvaluation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       required this.patient,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.authority,
       required this.targetDisease,
       required this.immunizationEvent,
       required this.doseStatus,
       final List<CodeableConcept>? doseStatusReason,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.series,
-      @JsonKey(name: '_series') this.seriesElement,
+      @JsonKey(name: '_series')
+          this.seriesElement,
       this.doseNumber,
-      @JsonKey(name: '_doseNumber') this.doseNumberElement,
+      @JsonKey(name: '_doseNumber')
+          this.doseNumberElement,
       this.seriesDoses,
-      @JsonKey(name: '_seriesDoses') this.seriesDosesElement})
+      @JsonKey(name: '_seriesDoses')
+          this.seriesDosesElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -4141,26 +5131,45 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   factory _$_ImmunizationEvaluation.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationEvaluationFromJson(json);
 
+  /// [resourceType] This is a ImmunizationEvaluation resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -4170,7 +5179,10 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4181,7 +5193,10 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -4192,7 +5207,10 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] A unique identifier assigned to this immunization evaluation record.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A unique identifier assigned to this immunization evaluation record.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -4202,27 +5220,48 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [status] Indicates the current status of the evaluation of the vaccination administration event.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [patient] The individual for whom the evaluation is being done.
   @override
   final Reference patient;
+
+  /// [date] The date the evaluation of the vaccine administration event was performed.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP).
   @override
   final Reference? authority;
+
+  /// [targetDisease] The vaccine preventable disease the dose is being evaluated against.
   @override
   final CodeableConcept targetDisease;
+
+  /// [immunizationEvent] The vaccine administration event being evaluated.
   @override
   final Reference immunizationEvent;
+
+  /// [doseStatus] Indicates if the dose is valid or not valid with respect to the published recommendations.
   @override
   final CodeableConcept doseStatus;
+
+  /// [doseStatusReason] Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
   final List<CodeableConcept>? _doseStatusReason;
+
+  /// [doseStatusReason] Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
   @override
   List<CodeableConcept>? get doseStatusReason {
     final value = _doseStatusReason;
@@ -4233,23 +5272,38 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] Additional information about the evaluation.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   @override
   final String? series;
+
+  /// [seriesElement] ("_series") Extensions for series
   @override
   @JsonKey(name: '_series')
   final Element? seriesElement;
+
+  /// [doseNumber] Nominal position in a series as determined by the outcome of the evaluation process.
   @override
   final String? doseNumber;
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @override
   @JsonKey(name: '_doseNumber')
   final Element? doseNumberElement;
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as determined by the outcome of the evaluation process.
   @override
   final String? seriesDoses;
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @override
   @JsonKey(name: '_seriesDoses')
   final Element? seriesDosesElement;
@@ -4372,109 +5426,179 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
 
 abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   factory _ImmunizationEvaluation(
-          {final R5ResourceType resourceType,
-          final Id? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
-          final Code? language,
-          @JsonKey(name: '_language') final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Identifier>? identifier,
-          final Code? status,
-          @JsonKey(name: '_status') final Element? statusElement,
-          required final Reference patient,
-          final FhirDateTime? date,
-          @JsonKey(name: '_date') final Element? dateElement,
-          final Reference? authority,
-          required final CodeableConcept targetDisease,
-          required final Reference immunizationEvent,
-          required final CodeableConcept doseStatus,
-          final List<CodeableConcept>? doseStatusReason,
-          final String? description,
-          @JsonKey(name: '_description') final Element? descriptionElement,
-          final String? series,
-          @JsonKey(name: '_series') final Element? seriesElement,
-          final String? doseNumber,
-          @JsonKey(name: '_doseNumber') final Element? doseNumberElement,
-          final String? seriesDoses,
-          @JsonKey(name: '_seriesDoses') final Element? seriesDosesElement}) =
-      _$_ImmunizationEvaluation;
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
+          final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Code? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      required final Reference patient,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
+      final Reference? authority,
+      required final CodeableConcept targetDisease,
+      required final Reference immunizationEvent,
+      required final CodeableConcept doseStatus,
+      final List<CodeableConcept>? doseStatusReason,
+      final String? description,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
+      final String? series,
+      @JsonKey(name: '_series')
+          final Element? seriesElement,
+      final String? doseNumber,
+      @JsonKey(name: '_doseNumber')
+          final Element? doseNumberElement,
+      final String? seriesDoses,
+      @JsonKey(name: '_seriesDoses')
+          final Element? seriesDosesElement}) = _$_ImmunizationEvaluation;
   _ImmunizationEvaluation._() : super._();
 
   factory _ImmunizationEvaluation.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationEvaluation.fromJson;
 
   @override
+
+  /// [resourceType] This is a ImmunizationEvaluation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A unique identifier assigned to this immunization evaluation record.
   List<Identifier>? get identifier;
   @override
+
+  /// [status] Indicates the current status of the evaluation of the vaccination administration event.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [patient] The individual for whom the evaluation is being done.
   Reference get patient;
   @override
+
+  /// [date] The date the evaluation of the vaccine administration event was performed.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP).
   Reference? get authority;
   @override
+
+  /// [targetDisease] The vaccine preventable disease the dose is being evaluated against.
   CodeableConcept get targetDisease;
   @override
+
+  /// [immunizationEvent] The vaccine administration event being evaluated.
   Reference get immunizationEvent;
   @override
+
+  /// [doseStatus] Indicates if the dose is valid or not valid with respect to the published recommendations.
   CodeableConcept get doseStatus;
   @override
+
+  /// [doseStatusReason] Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
   List<CodeableConcept>? get doseStatusReason;
   @override
+
+  /// [description] Additional information about the evaluation.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   String? get series;
   @override
+
+  /// [seriesElement] ("_series") Extensions for series
   @JsonKey(name: '_series')
   Element? get seriesElement;
   @override
+
+  /// [doseNumber] Nominal position in a series as determined by the outcome of the evaluation process.
   String? get doseNumber;
   @override
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @JsonKey(name: '_doseNumber')
   Element? get doseNumberElement;
   @override
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as determined by the outcome of the evaluation process.
   String? get seriesDoses;
   @override
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @JsonKey(name: '_seriesDoses')
   Element? get seriesDosesElement;
   @override
@@ -4490,33 +5614,61 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 
 /// @nodoc
 mixin _$ImmunizationRecommendation {
+  /// [resourceType] This is a ImmunizationRecommendation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A unique identifier assigned to this particular recommendation record.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Canonical>? get instantiatesCanonical =>
-      throw _privateConstructorUsedError;
-  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement =>
-      throw _privateConstructorUsedError;
+
+  /// [patient] The patient the recommendation(s) are for.
   Reference get patient => throw _privateConstructorUsedError;
+
+  /// [date] The date the immunization recommendation(s) were created.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP).
   Reference? get authority => throw _privateConstructorUsedError;
+
+  /// [recommendation] Vaccine administration recommendations.
   List<ImmunizationRecommendationRecommendation> get recommendation =>
       throw _privateConstructorUsedError;
 
@@ -4534,24 +5686,26 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
           ImmunizationRecommendation>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       Reference? authority,
       List<ImmunizationRecommendationRecommendation> recommendation});
 
@@ -4590,9 +5744,6 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? patient = null,
     Object? date = freezed,
     Object? dateElement = freezed,
@@ -4648,18 +5799,6 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res,
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value.instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value.instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value.instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       patient: null == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -4774,24 +5913,26 @@ abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       Reference patient,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       Reference? authority,
       List<ImmunizationRecommendationRecommendation> recommendation});
 
@@ -4836,9 +5977,6 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? patient = null,
     Object? date = freezed,
     Object? dateElement = freezed,
@@ -4894,18 +6032,6 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value._instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value._instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value._instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       patient: null == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -4934,7 +6060,8 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
-      {this.resourceType = R5ResourceType.ImmunizationRecommendation,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
+          this.resourceType = R5ResourceType.ImmunizationRecommendation,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4949,10 +6076,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          final List<Element>? instantiatesUriElement,
       required this.patient,
       this.date,
       @JsonKey(name: '_date')
@@ -4964,35 +6087,51 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
-        _instantiatesCanonical = instantiatesCanonical,
-        _instantiatesUri = instantiatesUri,
-        _instantiatesUriElement = instantiatesUriElement,
         _recommendation = recommendation,
         super._();
 
   factory _$_ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationRecommendationFromJson(json);
 
+  /// [resourceType] This is a ImmunizationRecommendation resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -5002,7 +6141,10 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5013,7 +6155,10 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -5024,7 +6169,10 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] A unique identifier assigned to this particular recommendation record.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A unique identifier assigned to this particular recommendation record.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -5034,49 +6182,27 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
-  @override
-  List<Canonical>? get instantiatesCanonical {
-    final value = _instantiatesCanonical;
-    if (value == null) return null;
-    if (_instantiatesCanonical is EqualUnmodifiableListView)
-      return _instantiatesCanonical;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirUri>? _instantiatesUri;
-  @override
-  List<FhirUri>? get instantiatesUri {
-    final value = _instantiatesUri;
-    if (value == null) return null;
-    if (_instantiatesUri is EqualUnmodifiableListView) return _instantiatesUri;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _instantiatesUriElement;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement {
-    final value = _instantiatesUriElement;
-    if (value == null) return null;
-    if (_instantiatesUriElement is EqualUnmodifiableListView)
-      return _instantiatesUriElement;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  /// [patient] The patient the recommendation(s) are for.
   @override
   final Reference patient;
+
+  /// [date] The date the immunization recommendation(s) were created.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP).
   @override
   final Reference? authority;
+
+  /// [recommendation] Vaccine administration recommendations.
   final List<ImmunizationRecommendationRecommendation> _recommendation;
+
+  /// [recommendation] Vaccine administration recommendations.
   @override
   List<ImmunizationRecommendationRecommendation> get recommendation {
     if (_recommendation is EqualUnmodifiableListView) return _recommendation;
@@ -5086,7 +6212,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
   @override
   String toString() {
-    return 'ImmunizationRecommendation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, patient: $patient, date: $date, dateElement: $dateElement, authority: $authority, recommendation: $recommendation)';
+    return 'ImmunizationRecommendation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, date: $date, dateElement: $dateElement, authority: $authority, recommendation: $recommendation)';
   }
 
   @override
@@ -5115,12 +6241,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesUri, _instantiatesUri) &&
-            const DeepCollectionEquality().equals(
-                other._instantiatesUriElement, _instantiatesUriElement) &&
             (identical(other.patient, patient) || other.patient == patient) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.dateElement, dateElement) ||
@@ -5133,29 +6253,25 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_instantiatesCanonical),
-        const DeepCollectionEquality().hash(_instantiatesUri),
-        const DeepCollectionEquality().hash(_instantiatesUriElement),
-        patient,
-        date,
-        dateElement,
-        authority,
-        const DeepCollectionEquality().hash(_recommendation)
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      resourceType,
+      id,
+      meta,
+      implicitRules,
+      implicitRulesElement,
+      language,
+      languageElement,
+      text,
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_identifier),
+      patient,
+      date,
+      dateElement,
+      authority,
+      const DeepCollectionEquality().hash(_recommendation));
 
   @JsonKey(ignore: true)
   @override
@@ -5174,7 +6290,8 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
 abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   factory _ImmunizationRecommendation(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
@@ -5189,10 +6306,6 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          final List<Element>? instantiatesUriElement,
       required final Reference patient,
       final FhirDateTime? date,
       @JsonKey(name: '_date')
@@ -5206,49 +6319,77 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
       _$_ImmunizationRecommendation.fromJson;
 
   @override
+
+  /// [resourceType] This is a ImmunizationRecommendation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A unique identifier assigned to this particular recommendation record.
   List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical;
-  @override
-  List<FhirUri>? get instantiatesUri;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
-  @override
+
+  /// [patient] The patient the recommendation(s) are for.
   Reference get patient;
   @override
+
+  /// [date] The date the immunization recommendation(s) were created.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [authority] Indicates the authority who published the protocol (e.g. ACIP).
   Reference? get authority;
   @override
+
+  /// [recommendation] Vaccine administration recommendations.
   List<ImmunizationRecommendationRecommendation> get recommendation;
   @override
   @JsonKey(ignore: true)
@@ -5264,35 +6405,72 @@ ImmunizationRecommendationRecommendation
 
 /// @nodoc
 mixin _$ImmunizationRecommendationRecommendation {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [vaccineCode] Vaccine(s) or vaccine group that pertain to the recommendation.
   List<CodeableConcept>? get vaccineCode => throw _privateConstructorUsedError;
+
+  /// [targetDisease] The targeted disease for the recommendation.
   List<CodeableConcept>? get targetDisease =>
       throw _privateConstructorUsedError;
+
+  /// [contraindicatedVaccineCode] Vaccine(s) which should not be used to fulfill the recommendation.
   List<CodeableConcept>? get contraindicatedVaccineCode =>
       throw _privateConstructorUsedError;
+
+  /// [forecastStatus] Indicates the patient status with respect to the path to immunity for the target disease.
   CodeableConcept get forecastStatus => throw _privateConstructorUsedError;
+
+  /// [forecastReason] The reason for the assigned forecast status.
   List<CodeableConcept>? get forecastReason =>
       throw _privateConstructorUsedError;
+
+  /// [dateCriterion] Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
   List<ImmunizationRecommendationDateCriterion>? get dateCriterion =>
       throw _privateConstructorUsedError;
+
+  /// [description] Contains the description about the protocol under which the vaccine was administered.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   String? get series => throw _privateConstructorUsedError;
+
+  /// [seriesElement] ("_series") Extensions for series
   @JsonKey(name: '_series')
   Element? get seriesElement => throw _privateConstructorUsedError;
+
+  /// [doseNumber] Nominal position of the recommended dose in a series as determined by the evaluation and forecasting process (e.g. dose 2 is the next recommended dose).
   String? get doseNumber => throw _privateConstructorUsedError;
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @JsonKey(name: '_doseNumber')
   Element? get doseNumberElement => throw _privateConstructorUsedError;
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as determined by the evaluation and forecasting process.
   String? get seriesDoses => throw _privateConstructorUsedError;
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @JsonKey(name: '_seriesDoses')
   Element? get seriesDosesElement => throw _privateConstructorUsedError;
+
+  /// [supportingImmunization] Immunization event history and/or evaluation that supports the status and recommendation.
   List<Reference>? get supportingImmunization =>
       throw _privateConstructorUsedError;
+
+  /// [supportingPatientInformation] Patient Information that supports the status and recommendation.  This includes patient observations, adverse reactions and allergy/intolerance information.
   List<Reference>? get supportingPatientInformation =>
       throw _privateConstructorUsedError;
 
@@ -5706,9 +6884,14 @@ class _$_ImmunizationRecommendationRecommendation
           Map<String, dynamic> json) =>
       _$$_ImmunizationRecommendationRecommendationFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5719,7 +6902,10 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -5730,7 +6916,10 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [vaccineCode] Vaccine(s) or vaccine group that pertain to the recommendation.
   final List<CodeableConcept>? _vaccineCode;
+
+  /// [vaccineCode] Vaccine(s) or vaccine group that pertain to the recommendation.
   @override
   List<CodeableConcept>? get vaccineCode {
     final value = _vaccineCode;
@@ -5740,7 +6929,10 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [targetDisease] The targeted disease for the recommendation.
   final List<CodeableConcept>? _targetDisease;
+
+  /// [targetDisease] The targeted disease for the recommendation.
   @override
   List<CodeableConcept>? get targetDisease {
     final value = _targetDisease;
@@ -5750,7 +6942,10 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [contraindicatedVaccineCode] Vaccine(s) which should not be used to fulfill the recommendation.
   final List<CodeableConcept>? _contraindicatedVaccineCode;
+
+  /// [contraindicatedVaccineCode] Vaccine(s) which should not be used to fulfill the recommendation.
   @override
   List<CodeableConcept>? get contraindicatedVaccineCode {
     final value = _contraindicatedVaccineCode;
@@ -5761,9 +6956,14 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [forecastStatus] Indicates the patient status with respect to the path to immunity for the target disease.
   @override
   final CodeableConcept forecastStatus;
+
+  /// [forecastReason] The reason for the assigned forecast status.
   final List<CodeableConcept>? _forecastReason;
+
+  /// [forecastReason] The reason for the assigned forecast status.
   @override
   List<CodeableConcept>? get forecastReason {
     final value = _forecastReason;
@@ -5773,7 +6973,10 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [dateCriterion] Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
   final List<ImmunizationRecommendationDateCriterion>? _dateCriterion;
+
+  /// [dateCriterion] Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
   @override
   List<ImmunizationRecommendationDateCriterion>? get dateCriterion {
     final value = _dateCriterion;
@@ -5783,27 +6986,46 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] Contains the description about the protocol under which the vaccine was administered.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   @override
   final String? series;
+
+  /// [seriesElement] ("_series") Extensions for series
   @override
   @JsonKey(name: '_series')
   final Element? seriesElement;
+
+  /// [doseNumber] Nominal position of the recommended dose in a series as determined by the evaluation and forecasting process (e.g. dose 2 is the next recommended dose).
   @override
   final String? doseNumber;
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @override
   @JsonKey(name: '_doseNumber')
   final Element? doseNumberElement;
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as determined by the evaluation and forecasting process.
   @override
   final String? seriesDoses;
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @override
   @JsonKey(name: '_seriesDoses')
   final Element? seriesDosesElement;
+
+  /// [supportingImmunization] Immunization event history and/or evaluation that supports the status and recommendation.
   final List<Reference>? _supportingImmunization;
+
+  /// [supportingImmunization] Immunization event history and/or evaluation that supports the status and recommendation.
   @override
   List<Reference>? get supportingImmunization {
     final value = _supportingImmunization;
@@ -5814,7 +7036,10 @@ class _$_ImmunizationRecommendationRecommendation
     return EqualUnmodifiableListView(value);
   }
 
+  /// [supportingPatientInformation] Patient Information that supports the status and recommendation.  This includes patient observations, adverse reactions and allergy/intolerance information.
   final List<Reference>? _supportingPatientInformation;
+
+  /// [supportingPatientInformation] Patient Information that supports the status and recommendation.  This includes patient observations, adverse reactions and allergy/intolerance information.
   @override
   List<Reference>? get supportingPatientInformation {
     final value = _supportingPatientInformation;
@@ -5946,47 +7171,85 @@ abstract class _ImmunizationRecommendationRecommendation
       _$_ImmunizationRecommendationRecommendation.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [vaccineCode] Vaccine(s) or vaccine group that pertain to the recommendation.
   List<CodeableConcept>? get vaccineCode;
   @override
+
+  /// [targetDisease] The targeted disease for the recommendation.
   List<CodeableConcept>? get targetDisease;
   @override
+
+  /// [contraindicatedVaccineCode] Vaccine(s) which should not be used to fulfill the recommendation.
   List<CodeableConcept>? get contraindicatedVaccineCode;
   @override
+
+  /// [forecastStatus] Indicates the patient status with respect to the path to immunity for the target disease.
   CodeableConcept get forecastStatus;
   @override
+
+  /// [forecastReason] The reason for the assigned forecast status.
   List<CodeableConcept>? get forecastReason;
   @override
+
+  /// [dateCriterion] Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
   List<ImmunizationRecommendationDateCriterion>? get dateCriterion;
   @override
+
+  /// [description] Contains the description about the protocol under which the vaccine was administered.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [series] One possible path to achieve presumed immunity against a disease - within the context of an authority.
   String? get series;
   @override
+
+  /// [seriesElement] ("_series") Extensions for series
   @JsonKey(name: '_series')
   Element? get seriesElement;
   @override
+
+  /// [doseNumber] Nominal position of the recommended dose in a series as determined by the evaluation and forecasting process (e.g. dose 2 is the next recommended dose).
   String? get doseNumber;
   @override
+
+  /// [doseNumberElement] ("_doseNumber") Extensions for doseNumber
   @JsonKey(name: '_doseNumber')
   Element? get doseNumberElement;
   @override
+
+  /// [seriesDoses] The recommended number of doses to achieve immunity as determined by the evaluation and forecasting process.
   String? get seriesDoses;
   @override
+
+  /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   @JsonKey(name: '_seriesDoses')
   Element? get seriesDosesElement;
   @override
+
+  /// [supportingImmunization] Immunization event history and/or evaluation that supports the status and recommendation.
   List<Reference>? get supportingImmunization;
   @override
+
+  /// [supportingPatientInformation] Patient Information that supports the status and recommendation.  This includes patient observations, adverse reactions and allergy/intolerance information.
   List<Reference>? get supportingPatientInformation;
   @override
   @JsonKey(ignore: true)
@@ -6003,13 +7266,24 @@ ImmunizationRecommendationDateCriterion
 
 /// @nodoc
 mixin _$ImmunizationRecommendationDateCriterion {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] Date classification of recommendation.  For example, earliest date to give, latest date to give, etc.
   CodeableConcept get code => throw _privateConstructorUsedError;
+
+  /// [value] The date whose meaning is specified by dateCriterion.code.
   FhirDateTime? get value => throw _privateConstructorUsedError;
+
+  /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
@@ -6202,9 +7476,14 @@ class _$_ImmunizationRecommendationDateCriterion
           Map<String, dynamic> json) =>
       _$$_ImmunizationRecommendationDateCriterionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6215,7 +7494,10 @@ class _$_ImmunizationRecommendationDateCriterion
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -6226,10 +7508,15 @@ class _$_ImmunizationRecommendationDateCriterion
     return EqualUnmodifiableListView(value);
   }
 
+  /// [code] Date classification of recommendation.  For example, earliest date to give, latest date to give, etc.
   @override
   final CodeableConcept code;
+
+  /// [value] The date whose meaning is specified by dateCriterion.code.
   @override
   final FhirDateTime? value;
+
+  /// [valueElement] ("_value") Extensions for value
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -6299,17 +7586,29 @@ abstract class _ImmunizationRecommendationDateCriterion
       _$_ImmunizationRecommendationDateCriterion.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] Date classification of recommendation.  For example, earliest date to give, latest date to give, etc.
   CodeableConcept get code;
   @override
+
+  /// [value] The date whose meaning is specified by dateCriterion.code.
   FhirDateTime? get value;
   @override
+
+  /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement;
   @override
@@ -6325,32 +7624,72 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Medication {
+  /// [resourceType] This is a Medication resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Business identifier for this medication.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [code] A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.
   CodeableConcept? get code => throw _privateConstructorUsedError;
+
+  /// [status] A code to indicate if the medication is in active use.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [marketingAuthorizationHolder] The company or other legal entity that has authorization, from the appropriate drug regulatory authority,  to market a medicine in one or more jurisdictions.  Typically abbreviated MAH.Note:  The MAH may manufacture the product and may also contract the manufacturing of the product to one or more companies (organizations).
   Reference? get marketingAuthorizationHolder =>
       throw _privateConstructorUsedError;
+
+  /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
   CodeableConcept? get doseForm => throw _privateConstructorUsedError;
+
+  /// [totalVolume] When the specified product code does not infer a package size, this is the specific amount of drug in the product.  For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).
   Ratio? get totalVolume => throw _privateConstructorUsedError;
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
   List<MedicationIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
+
+  /// [batch] Information that only applies to packages (not products).
   MedicationBatch? get batch => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6366,21 +7705,26 @@ abstract class $MedicationCopyWith<$Res> {
       _$MedicationCopyWithImpl<$Res, Medication>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Reference? marketingAuthorizationHolder,
       CodeableConcept? doseForm,
       Ratio? totalVolume,
@@ -6649,21 +7993,26 @@ abstract class _$$_MedicationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Reference? marketingAuthorizationHolder,
       CodeableConcept? doseForm,
       Ratio? totalVolume,
@@ -6813,21 +8162,26 @@ class __$$_MedicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Medication extends _Medication {
   _$_Medication(
-      {this.resourceType = R5ResourceType.Medication,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
+          this.resourceType = R5ResourceType.Medication,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.code,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.marketingAuthorizationHolder,
       this.doseForm,
       this.totalVolume,
@@ -6843,26 +8197,45 @@ class _$_Medication extends _Medication {
   factory _$_Medication.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationFromJson(json);
 
+  /// [resourceType] This is a Medication resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -6872,7 +8245,10 @@ class _$_Medication extends _Medication {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6883,7 +8259,10 @@ class _$_Medication extends _Medication {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -6894,7 +8273,10 @@ class _$_Medication extends _Medication {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] Business identifier for this medication.
   final List<Identifier>? _identifier;
+
+  /// [identifier] Business identifier for this medication.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -6904,20 +8286,35 @@ class _$_Medication extends _Medication {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [code] A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.
   @override
   final CodeableConcept? code;
+
+  /// [status] A code to indicate if the medication is in active use.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [marketingAuthorizationHolder] The company or other legal entity that has authorization, from the appropriate drug regulatory authority,  to market a medicine in one or more jurisdictions.  Typically abbreviated MAH.Note:  The MAH may manufacture the product and may also contract the manufacturing of the product to one or more companies (organizations).
   @override
   final Reference? marketingAuthorizationHolder;
+
+  /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
   @override
   final CodeableConcept? doseForm;
+
+  /// [totalVolume] When the specified product code does not infer a package size, this is the specific amount of drug in the product.  For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).
   @override
   final Ratio? totalVolume;
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
   final List<MedicationIngredient>? _ingredient;
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
   @override
   List<MedicationIngredient>? get ingredient {
     final value = _ingredient;
@@ -6927,6 +8324,7 @@ class _$_Medication extends _Medication {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [batch] Information that only applies to packages (not products).
   @override
   final MedicationBatch? batch;
 
@@ -7020,21 +8418,26 @@ class _$_Medication extends _Medication {
 
 abstract class _Medication extends Medication {
   factory _Medication(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final CodeableConcept? code,
       final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
       final Reference? marketingAuthorizationHolder,
       final CodeableConcept? doseForm,
       final Ratio? totalVolume,
@@ -7046,48 +8449,89 @@ abstract class _Medication extends Medication {
       _$_Medication.fromJson;
 
   @override
+
+  /// [resourceType] This is a Medication resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Business identifier for this medication.
   List<Identifier>? get identifier;
   @override
+
+  /// [code] A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.
   CodeableConcept? get code;
   @override
+
+  /// [status] A code to indicate if the medication is in active use.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [marketingAuthorizationHolder] The company or other legal entity that has authorization, from the appropriate drug regulatory authority,  to market a medicine in one or more jurisdictions.  Typically abbreviated MAH.Note:  The MAH may manufacture the product and may also contract the manufacturing of the product to one or more companies (organizations).
   Reference? get marketingAuthorizationHolder;
   @override
+
+  /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
   CodeableConcept? get doseForm;
   @override
+
+  /// [totalVolume] When the specified product code does not infer a package size, this is the specific amount of drug in the product.  For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).
   Ratio? get totalVolume;
   @override
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
   List<MedicationIngredient>? get ingredient;
   @override
+
+  /// [batch] Information that only applies to packages (not products).
   MedicationBatch? get batch;
   @override
   @JsonKey(ignore: true)
@@ -7101,18 +8545,35 @@ MedicationIngredient _$MedicationIngredientFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationIngredient {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [item] The ingredient (substance or medication) that the ingredient.strength relates to.  This is represented as a concept from a code system or described in another resource (Substance or Medication).
   CodeableReference get item => throw _privateConstructorUsedError;
+
+  /// [isActive] Indication of whether this ingredient affects the therapeutic action of the drug.
   Boolean? get isActive => throw _privateConstructorUsedError;
+
+  /// [isActiveElement] ("_isActive") Extensions for isActive
   @JsonKey(name: '_isActive')
   Element? get isActiveElement => throw _privateConstructorUsedError;
+
+  /// [strengthRatio] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Ratio? get strengthRatio => throw _privateConstructorUsedError;
+
+  /// [strengthCodeableConcept] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   CodeableConcept? get strengthCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [strengthQuantity] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Quantity? get strengthQuantity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7380,9 +8841,14 @@ class _$_MedicationIngredient extends _MedicationIngredient {
   factory _$_MedicationIngredient.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationIngredientFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -7393,7 +8859,10 @@ class _$_MedicationIngredient extends _MedicationIngredient {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -7404,17 +8873,28 @@ class _$_MedicationIngredient extends _MedicationIngredient {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [item] The ingredient (substance or medication) that the ingredient.strength relates to.  This is represented as a concept from a code system or described in another resource (Substance or Medication).
   @override
   final CodeableReference item;
+
+  /// [isActive] Indication of whether this ingredient affects the therapeutic action of the drug.
   @override
   final Boolean? isActive;
+
+  /// [isActiveElement] ("_isActive") Extensions for isActive
   @override
   @JsonKey(name: '_isActive')
   final Element? isActiveElement;
+
+  /// [strengthRatio] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   @override
   final Ratio? strengthRatio;
+
+  /// [strengthCodeableConcept] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   @override
   final CodeableConcept? strengthCodeableConcept;
+
+  /// [strengthQuantity] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   @override
   final Quantity? strengthQuantity;
 
@@ -7493,24 +8973,42 @@ abstract class _MedicationIngredient extends MedicationIngredient {
       _$_MedicationIngredient.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [item] The ingredient (substance or medication) that the ingredient.strength relates to.  This is represented as a concept from a code system or described in another resource (Substance or Medication).
   CodeableReference get item;
   @override
+
+  /// [isActive] Indication of whether this ingredient affects the therapeutic action of the drug.
   Boolean? get isActive;
   @override
+
+  /// [isActiveElement] ("_isActive") Extensions for isActive
   @JsonKey(name: '_isActive')
   Element? get isActiveElement;
   @override
+
+  /// [strengthRatio] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Ratio? get strengthRatio;
   @override
+
+  /// [strengthCodeableConcept] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   CodeableConcept? get strengthCodeableConcept;
   @override
+
+  /// [strengthQuantity] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Quantity? get strengthQuantity;
   @override
   @JsonKey(ignore: true)
@@ -7524,15 +9022,28 @@ MedicationBatch _$MedicationBatchFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationBatch {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [lotNumber] The assigned lot number of a batch of the specified product.
   String? get lotNumber => throw _privateConstructorUsedError;
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement => throw _privateConstructorUsedError;
+
+  /// [expirationDate] When this specific batch of product will expire.
   FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
+
+  /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement => throw _privateConstructorUsedError;
 
@@ -7732,9 +9243,14 @@ class _$_MedicationBatch extends _MedicationBatch {
   factory _$_MedicationBatch.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationBatchFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -7745,7 +9261,10 @@ class _$_MedicationBatch extends _MedicationBatch {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -7756,13 +9275,20 @@ class _$_MedicationBatch extends _MedicationBatch {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [lotNumber] The assigned lot number of a batch of the specified product.
   @override
   final String? lotNumber;
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   @override
   @JsonKey(name: '_lotNumber')
   final Element? lotNumberElement;
+
+  /// [expirationDate] When this specific batch of product will expire.
   @override
   final FhirDateTime? expirationDate;
+
+  /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @override
   @JsonKey(name: '_expirationDate')
   final Element? expirationDateElement;
@@ -7836,20 +9362,34 @@ abstract class _MedicationBatch extends MedicationBatch {
       _$_MedicationBatch.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [lotNumber] The assigned lot number of a batch of the specified product.
   String? get lotNumber;
   @override
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement;
   @override
+
+  /// [expirationDate] When this specific batch of product will expire.
   FhirDateTime? get expirationDate;
   @override
+
+  /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement;
   @override
@@ -7865,60 +9405,128 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 
 /// @nodoc
 mixin _$MedicationAdministration {
+  /// [resourceType] This is a MedicationAdministration resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Canonical>? get instantiatesCanonical =>
-      throw _privateConstructorUsedError;
-  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement =>
-      throw _privateConstructorUsedError;
+
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationAdministration.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [partOf] A larger event of which this particular event is a component or step.
   List<Reference>? get partOf => throw _privateConstructorUsedError;
+
+  /// [status] Will generally be set to show that the administration has been completed.  For some long running administrations such as infusions, it is possible for an administration to be started but not completed or it may be paused while some other process is under way.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [statusReason] A code indicating why the administration was not performed.
   List<CodeableConcept>? get statusReason => throw _privateConstructorUsedError;
+
+  /// [category] The type of medication administration (for example, drug classification like ATC, where meds would be administered, legal category of the medication).
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [medication] Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication => throw _privateConstructorUsedError;
+
+  /// [subject] The person or animal or group receiving the medication.
   Reference get subject => throw _privateConstructorUsedError;
+
+  /// [encounter] The visit, admission, or other contact between patient and health care provider during which the medication administration was performed.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [supportingInformation] Additional information (for example, patient height and weight) that supports the administration of the medication.  This attribute can be used to provide documentation of specific characteristics of the patient present at the time of administration.  For example, if the dose says "give "x" if the heartrate exceeds "y"", then the heart rate can be included using this attribute.
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
+
+  /// [occurenceDateTime] A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
   FhirDateTime? get occurenceDateTime => throw _privateConstructorUsedError;
+
+  /// [occurenceDateTimeElement] ("_occurenceDateTime") Extensions for occurenceDateTime
   @JsonKey(name: '_occurenceDateTime')
   Element? get occurenceDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [occurencePeriod] A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
   Period? get occurencePeriod => throw _privateConstructorUsedError;
+
+  /// [recorded] The date the occurrence of the  MedicationAdministration was first captured in the record - potentially significantly after the occurrence of the event.
   FhirDateTime? get recorded => throw _privateConstructorUsedError;
+
+  /// [recordedElement] ("_recorded") Extensions for recorded
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
+
+  /// [isSubPotent] An indication that the full dose was not administered.
   Boolean? get isSubPotent => throw _privateConstructorUsedError;
+
+  /// [isSubPotentElement] ("_isSubPotent") Extensions for isSubPotent
   @JsonKey(name: '_isSubPotent')
   Element? get isSubPotentElement => throw _privateConstructorUsedError;
+
+  /// [subPotentReason] The reason or reasons why the full dose was not administered.
   List<CodeableConcept>? get subPotentReason =>
       throw _privateConstructorUsedError;
+
+  /// [performer] Indicates who or what performed the medication administration and how they were involved. For devices, this is the device that is actually performing the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
   List<MedicationAdministrationPerformer>? get performer =>
       throw _privateConstructorUsedError;
+
+  /// [reason] A code, Condition or observation that supports why the medication was administered.
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+
+  /// [request] The original request, instruction or authority to perform the administration.
   Reference? get request => throw _privateConstructorUsedError;
+
+  /// [device] The device used in administering the medication to the patient.  For example, a particular infusion pump.
   List<Reference>? get device => throw _privateConstructorUsedError;
+
+  /// [note] Extra information about the medication administration that is not conveyed by the other attributes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [dosage] Describes the medication dosage information details e.g. dose, rate, site, route, etc.
   MedicationAdministrationDosage? get dosage =>
       throw _privateConstructorUsedError;
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the administration was verified.
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7934,25 +9542,27 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       _$MedicationAdministrationCopyWithImpl<$Res, MedicationAdministration>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       List<CodeableConcept>? statusReason,
       List<CodeableConcept>? category,
       CodeableReference medication,
@@ -7960,12 +9570,15 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime') Element? occurenceDateTimeElement,
+      @JsonKey(name: '_occurenceDateTime')
+          Element? occurenceDateTimeElement,
       Period? occurencePeriod,
       FhirDateTime? recorded,
-      @JsonKey(name: '_recorded') Element? recordedElement,
+      @JsonKey(name: '_recorded')
+          Element? recordedElement,
       Boolean? isSubPotent,
-      @JsonKey(name: '_isSubPotent') Element? isSubPotentElement,
+      @JsonKey(name: '_isSubPotent')
+          Element? isSubPotentElement,
       List<CodeableConcept>? subPotentReason,
       List<MedicationAdministrationPerformer>? performer,
       List<CodeableReference>? reason,
@@ -8017,9 +9630,6 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? status = freezed,
@@ -8095,18 +9705,6 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value.instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value.instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value.instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -8382,25 +9980,27 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       List<CodeableConcept>? statusReason,
       List<CodeableConcept>? category,
       CodeableReference medication,
@@ -8408,12 +10008,15 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime') Element? occurenceDateTimeElement,
+      @JsonKey(name: '_occurenceDateTime')
+          Element? occurenceDateTimeElement,
       Period? occurencePeriod,
       FhirDateTime? recorded,
-      @JsonKey(name: '_recorded') Element? recordedElement,
+      @JsonKey(name: '_recorded')
+          Element? recordedElement,
       Boolean? isSubPotent,
-      @JsonKey(name: '_isSubPotent') Element? isSubPotentElement,
+      @JsonKey(name: '_isSubPotent')
+          Element? isSubPotentElement,
       List<CodeableConcept>? subPotentReason,
       List<MedicationAdministrationPerformer>? performer,
       List<CodeableReference>? reason,
@@ -8477,9 +10080,6 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? status = freezed,
@@ -8555,18 +10155,6 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value._instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value._instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value._instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       basedOn: freezed == basedOn
           ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -8675,7 +10263,8 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
-      {this.resourceType = R5ResourceType.MedicationAdministration,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
+          this.resourceType = R5ResourceType.MedicationAdministration,
       this.id,
       this.meta,
       this.implicitRules,
@@ -8690,10 +10279,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       this.status,
@@ -8727,9 +10312,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
-        _instantiatesCanonical = instantiatesCanonical,
-        _instantiatesUri = instantiatesUri,
-        _instantiatesUriElement = instantiatesUriElement,
         _basedOn = basedOn,
         _partOf = partOf,
         _statusReason = statusReason,
@@ -8746,26 +10328,45 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   factory _$_MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationAdministrationFromJson(json);
 
+  /// [resourceType] This is a MedicationAdministration resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -8775,7 +10376,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -8786,7 +10390,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -8797,7 +10404,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   final List<Identifier>? _identifier;
+
+  /// [identifier] Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -8807,40 +10417,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
-  @override
-  List<Canonical>? get instantiatesCanonical {
-    final value = _instantiatesCanonical;
-    if (value == null) return null;
-    if (_instantiatesCanonical is EqualUnmodifiableListView)
-      return _instantiatesCanonical;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirUri>? _instantiatesUri;
-  @override
-  List<FhirUri>? get instantiatesUri {
-    final value = _instantiatesUri;
-    if (value == null) return null;
-    if (_instantiatesUri is EqualUnmodifiableListView) return _instantiatesUri;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _instantiatesUriElement;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement {
-    final value = _instantiatesUriElement;
-    if (value == null) return null;
-    if (_instantiatesUriElement is EqualUnmodifiableListView)
-      return _instantiatesUriElement;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationAdministration.
   final List<Reference>? _basedOn;
+
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationAdministration.
   @override
   List<Reference>? get basedOn {
     final value = _basedOn;
@@ -8850,7 +10430,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [partOf] A larger event of which this particular event is a component or step.
   final List<Reference>? _partOf;
+
+  /// [partOf] A larger event of which this particular event is a component or step.
   @override
   List<Reference>? get partOf {
     final value = _partOf;
@@ -8860,12 +10443,19 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [status] Will generally be set to show that the administration has been completed.  For some long running administrations such as infusions, it is possible for an administration to be started but not completed or it may be paused while some other process is under way.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [statusReason] A code indicating why the administration was not performed.
   final List<CodeableConcept>? _statusReason;
+
+  /// [statusReason] A code indicating why the administration was not performed.
   @override
   List<CodeableConcept>? get statusReason {
     final value = _statusReason;
@@ -8875,7 +10465,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [category] The type of medication administration (for example, drug classification like ATC, where meds would be administered, legal category of the medication).
   final List<CodeableConcept>? _category;
+
+  /// [category] The type of medication administration (for example, drug classification like ATC, where meds would be administered, legal category of the medication).
   @override
   List<CodeableConcept>? get category {
     final value = _category;
@@ -8885,13 +10478,22 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [medication] Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   @override
   final CodeableReference medication;
+
+  /// [subject] The person or animal or group receiving the medication.
   @override
   final Reference subject;
+
+  /// [encounter] The visit, admission, or other contact between patient and health care provider during which the medication administration was performed.
   @override
   final Reference? encounter;
+
+  /// [supportingInformation] Additional information (for example, patient height and weight) that supports the administration of the medication.  This attribute can be used to provide documentation of specific characteristics of the patient present at the time of administration.  For example, if the dose says "give "x" if the heartrate exceeds "y"", then the heart rate can be included using this attribute.
   final List<Reference>? _supportingInformation;
+
+  /// [supportingInformation] Additional information (for example, patient height and weight) that supports the administration of the medication.  This attribute can be used to provide documentation of specific characteristics of the patient present at the time of administration.  For example, if the dose says "give "x" if the heartrate exceeds "y"", then the heart rate can be included using this attribute.
   @override
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
@@ -8902,24 +10504,41 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [occurenceDateTime] A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
   @override
   final FhirDateTime? occurenceDateTime;
+
+  /// [occurenceDateTimeElement] ("_occurenceDateTime") Extensions for occurenceDateTime
   @override
   @JsonKey(name: '_occurenceDateTime')
   final Element? occurenceDateTimeElement;
+
+  /// [occurencePeriod] A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
   @override
   final Period? occurencePeriod;
+
+  /// [recorded] The date the occurrence of the  MedicationAdministration was first captured in the record - potentially significantly after the occurrence of the event.
   @override
   final FhirDateTime? recorded;
+
+  /// [recordedElement] ("_recorded") Extensions for recorded
   @override
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
+
+  /// [isSubPotent] An indication that the full dose was not administered.
   @override
   final Boolean? isSubPotent;
+
+  /// [isSubPotentElement] ("_isSubPotent") Extensions for isSubPotent
   @override
   @JsonKey(name: '_isSubPotent')
   final Element? isSubPotentElement;
+
+  /// [subPotentReason] The reason or reasons why the full dose was not administered.
   final List<CodeableConcept>? _subPotentReason;
+
+  /// [subPotentReason] The reason or reasons why the full dose was not administered.
   @override
   List<CodeableConcept>? get subPotentReason {
     final value = _subPotentReason;
@@ -8929,7 +10548,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [performer] Indicates who or what performed the medication administration and how they were involved. For devices, this is the device that is actually performing the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
   final List<MedicationAdministrationPerformer>? _performer;
+
+  /// [performer] Indicates who or what performed the medication administration and how they were involved. For devices, this is the device that is actually performing the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
   @override
   List<MedicationAdministrationPerformer>? get performer {
     final value = _performer;
@@ -8939,7 +10561,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [reason] A code, Condition or observation that supports why the medication was administered.
   final List<CodeableReference>? _reason;
+
+  /// [reason] A code, Condition or observation that supports why the medication was administered.
   @override
   List<CodeableReference>? get reason {
     final value = _reason;
@@ -8949,9 +10574,14 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [request] The original request, instruction or authority to perform the administration.
   @override
   final Reference? request;
+
+  /// [device] The device used in administering the medication to the patient.  For example, a particular infusion pump.
   final List<Reference>? _device;
+
+  /// [device] The device used in administering the medication to the patient.  For example, a particular infusion pump.
   @override
   List<Reference>? get device {
     final value = _device;
@@ -8961,7 +10591,10 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [note] Extra information about the medication administration that is not conveyed by the other attributes.
   final List<Annotation>? _note;
+
+  /// [note] Extra information about the medication administration that is not conveyed by the other attributes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -8971,9 +10604,14 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [dosage] Describes the medication dosage information details e.g. dose, rate, site, route, etc.
   @override
   final MedicationAdministrationDosage? dosage;
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the administration was verified.
   final List<Reference>? _eventHistory;
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the administration was verified.
   @override
   List<Reference>? get eventHistory {
     final value = _eventHistory;
@@ -8985,7 +10623,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 
   @override
   String toString() {
-    return 'MedicationAdministration(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medication: $medication, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, occurenceDateTime: $occurenceDateTime, occurenceDateTimeElement: $occurenceDateTimeElement, occurencePeriod: $occurencePeriod, recorded: $recorded, recordedElement: $recordedElement, isSubPotent: $isSubPotent, isSubPotentElement: $isSubPotentElement, subPotentReason: $subPotentReason, performer: $performer, reason: $reason, request: $request, device: $device, note: $note, dosage: $dosage, eventHistory: $eventHistory)';
+    return 'MedicationAdministration(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medication: $medication, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, occurenceDateTime: $occurenceDateTime, occurenceDateTimeElement: $occurenceDateTimeElement, occurencePeriod: $occurencePeriod, recorded: $recorded, recordedElement: $recordedElement, isSubPotent: $isSubPotent, isSubPotentElement: $isSubPotentElement, subPotentReason: $subPotentReason, performer: $performer, reason: $reason, request: $request, device: $device, note: $note, dosage: $dosage, eventHistory: $eventHistory)';
   }
 
   @override
@@ -9014,12 +10652,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesUri, _instantiatesUri) &&
-            const DeepCollectionEquality().equals(
-                other._instantiatesUriElement, _instantiatesUriElement) &&
             const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             (identical(other.status, status) || other.status == status) &&
@@ -9079,9 +10711,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_instantiatesCanonical),
-        const DeepCollectionEquality().hash(_instantiatesUri),
-        const DeepCollectionEquality().hash(_instantiatesUriElement),
         const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(_partOf),
         status,
@@ -9126,7 +10755,8 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 
 abstract class _MedicationAdministration extends MedicationAdministration {
   factory _MedicationAdministration(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
@@ -9141,10 +10771,6 @@ abstract class _MedicationAdministration extends MedicationAdministration {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       final Code? status,
@@ -9180,92 +10806,160 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       _$_MedicationAdministration.fromJson;
 
   @override
+
+  /// [resourceType] This is a MedicationAdministration resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical;
-  @override
-  List<FhirUri>? get instantiatesUri;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
-  @override
+
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationAdministration.
   List<Reference>? get basedOn;
   @override
+
+  /// [partOf] A larger event of which this particular event is a component or step.
   List<Reference>? get partOf;
   @override
+
+  /// [status] Will generally be set to show that the administration has been completed.  For some long running administrations such as infusions, it is possible for an administration to be started but not completed or it may be paused while some other process is under way.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [statusReason] A code indicating why the administration was not performed.
   List<CodeableConcept>? get statusReason;
   @override
+
+  /// [category] The type of medication administration (for example, drug classification like ATC, where meds would be administered, legal category of the medication).
   List<CodeableConcept>? get category;
   @override
+
+  /// [medication] Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication;
   @override
+
+  /// [subject] The person or animal or group receiving the medication.
   Reference get subject;
   @override
+
+  /// [encounter] The visit, admission, or other contact between patient and health care provider during which the medication administration was performed.
   Reference? get encounter;
   @override
+
+  /// [supportingInformation] Additional information (for example, patient height and weight) that supports the administration of the medication.  This attribute can be used to provide documentation of specific characteristics of the patient present at the time of administration.  For example, if the dose says "give "x" if the heartrate exceeds "y"", then the heart rate can be included using this attribute.
   List<Reference>? get supportingInformation;
   @override
+
+  /// [occurenceDateTime] A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
   FhirDateTime? get occurenceDateTime;
   @override
+
+  /// [occurenceDateTimeElement] ("_occurenceDateTime") Extensions for occurenceDateTime
   @JsonKey(name: '_occurenceDateTime')
   Element? get occurenceDateTimeElement;
   @override
+
+  /// [occurencePeriod] A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
   Period? get occurencePeriod;
   @override
+
+  /// [recorded] The date the occurrence of the  MedicationAdministration was first captured in the record - potentially significantly after the occurrence of the event.
   FhirDateTime? get recorded;
   @override
+
+  /// [recordedElement] ("_recorded") Extensions for recorded
   @JsonKey(name: '_recorded')
   Element? get recordedElement;
   @override
+
+  /// [isSubPotent] An indication that the full dose was not administered.
   Boolean? get isSubPotent;
   @override
+
+  /// [isSubPotentElement] ("_isSubPotent") Extensions for isSubPotent
   @JsonKey(name: '_isSubPotent')
   Element? get isSubPotentElement;
   @override
+
+  /// [subPotentReason] The reason or reasons why the full dose was not administered.
   List<CodeableConcept>? get subPotentReason;
   @override
+
+  /// [performer] Indicates who or what performed the medication administration and how they were involved. For devices, this is the device that is actually performing the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
   List<MedicationAdministrationPerformer>? get performer;
   @override
+
+  /// [reason] A code, Condition or observation that supports why the medication was administered.
   List<CodeableReference>? get reason;
   @override
+
+  /// [request] The original request, instruction or authority to perform the administration.
   Reference? get request;
   @override
+
+  /// [device] The device used in administering the medication to the patient.  For example, a particular infusion pump.
   List<Reference>? get device;
   @override
+
+  /// [note] Extra information about the medication administration that is not conveyed by the other attributes.
   List<Annotation>? get note;
   @override
+
+  /// [dosage] Describes the medication dosage information details e.g. dose, rate, site, route, etc.
   MedicationAdministrationDosage? get dosage;
   @override
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the administration was verified.
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
@@ -9280,12 +10974,22 @@ MedicationAdministrationPerformer _$MedicationAdministrationPerformerFromJson(
 
 /// @nodoc
 mixin _$MedicationAdministrationPerformer {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get function => throw _privateConstructorUsedError;
+
+  /// [function_] ("function") Distinguishes the type of involvement of the performer in the medication administration.
+  @JsonKey(name: 'function')
+  CodeableConcept? get function_ => throw _privateConstructorUsedError;
+
+  /// [actor] Indicates who or what performed the medication administration.
   Reference get actor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9306,10 +11010,10 @@ abstract class $MedicationAdministrationPerformerCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
+      @JsonKey(name: 'function') CodeableConcept? function_,
       Reference actor});
 
-  $CodeableConceptCopyWith<$Res>? get function;
+  $CodeableConceptCopyWith<$Res>? get function_;
   $ReferenceCopyWith<$Res> get actor;
 }
 
@@ -9330,7 +11034,7 @@ class _$MedicationAdministrationPerformerCopyWithImpl<$Res,
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? function = freezed,
+    Object? function_ = freezed,
     Object? actor = null,
   }) {
     return _then(_value.copyWith(
@@ -9346,9 +11050,9 @@ class _$MedicationAdministrationPerformerCopyWithImpl<$Res,
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      function: freezed == function
-          ? _value.function
-          : function // ignore: cast_nullable_to_non_nullable
+      function_: freezed == function_
+          ? _value.function_
+          : function_ // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       actor: null == actor
           ? _value.actor
@@ -9359,13 +11063,13 @@ class _$MedicationAdministrationPerformerCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get function {
-    if (_value.function == null) {
+  $CodeableConceptCopyWith<$Res>? get function_ {
+    if (_value.function_ == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.function!, (value) {
-      return _then(_value.copyWith(function: value) as $Val);
+    return $CodeableConceptCopyWith<$Res>(_value.function_!, (value) {
+      return _then(_value.copyWith(function_: value) as $Val);
     });
   }
 
@@ -9391,11 +11095,11 @@ abstract class _$$_MedicationAdministrationPerformerCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
+      @JsonKey(name: 'function') CodeableConcept? function_,
       Reference actor});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get function;
+  $CodeableConceptCopyWith<$Res>? get function_;
   @override
   $ReferenceCopyWith<$Res> get actor;
 }
@@ -9416,7 +11120,7 @@ class __$$_MedicationAdministrationPerformerCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? function = freezed,
+    Object? function_ = freezed,
     Object? actor = null,
   }) {
     return _then(_$_MedicationAdministrationPerformer(
@@ -9432,9 +11136,9 @@ class __$$_MedicationAdministrationPerformerCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      function: freezed == function
-          ? _value.function
-          : function // ignore: cast_nullable_to_non_nullable
+      function_: freezed == function_
+          ? _value.function_
+          : function_ // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       actor: null == actor
           ? _value.actor
@@ -9452,7 +11156,7 @@ class _$_MedicationAdministrationPerformer
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      this.function,
+      @JsonKey(name: 'function') this.function_,
       required this.actor})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -9462,9 +11166,14 @@ class _$_MedicationAdministrationPerformer
           Map<String, dynamic> json) =>
       _$$_MedicationAdministrationPerformerFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -9475,7 +11184,10 @@ class _$_MedicationAdministrationPerformer
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -9486,14 +11198,18 @@ class _$_MedicationAdministrationPerformer
     return EqualUnmodifiableListView(value);
   }
 
+  /// [function_] ("function") Distinguishes the type of involvement of the performer in the medication administration.
   @override
-  final CodeableConcept? function;
+  @JsonKey(name: 'function')
+  final CodeableConcept? function_;
+
+  /// [actor] Indicates who or what performed the medication administration.
   @override
   final Reference actor;
 
   @override
   String toString() {
-    return 'MedicationAdministrationPerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+    return 'MedicationAdministrationPerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function_: $function_, actor: $actor)';
   }
 
   @override
@@ -9506,8 +11222,8 @@ class _$_MedicationAdministrationPerformer
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.function, function) ||
-                other.function == function) &&
+            (identical(other.function_, function_) ||
+                other.function_ == function_) &&
             (identical(other.actor, actor) || other.actor == actor));
   }
 
@@ -9518,7 +11234,7 @@ class _$_MedicationAdministrationPerformer
       id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      function,
+      function_,
       actor);
 
   @JsonKey(ignore: true)
@@ -9543,7 +11259,7 @@ abstract class _MedicationAdministrationPerformer
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? function,
+      @JsonKey(name: 'function') final CodeableConcept? function_,
       required final Reference actor}) = _$_MedicationAdministrationPerformer;
   _MedicationAdministrationPerformer._() : super._();
 
@@ -9552,15 +11268,26 @@ abstract class _MedicationAdministrationPerformer
       _$_MedicationAdministrationPerformer.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get function;
+
+  /// [function_] ("function") Distinguishes the type of involvement of the performer in the medication administration.
+  @JsonKey(name: 'function')
+  CodeableConcept? get function_;
   @override
+
+  /// [actor] Indicates who or what performed the medication administration.
   Reference get actor;
   @override
   @JsonKey(ignore: true)
@@ -9576,19 +11303,40 @@ MedicationAdministrationDosage _$MedicationAdministrationDosageFromJson(
 
 /// @nodoc
 mixin _$MedicationAdministrationDosage {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [text] Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans. The dosage instructions should reflect the dosage of the medication that was administered.
   String? get text => throw _privateConstructorUsedError;
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
+
+  /// [site] A coded specification of the anatomic site where the medication first entered the body.  For example, "left arm".
   CodeableConcept? get site => throw _privateConstructorUsedError;
+
+  /// [route] A code specifying the route or physiological path of administration of a therapeutic agent into or onto the patient.  For example, topical, intravenous, etc.
   CodeableConcept? get route => throw _privateConstructorUsedError;
+
+  /// [method] A coded value indicating the method by which the medication is intended to be or was introduced into or on the body.  This attribute will most often NOT be populated.  It is most commonly used for injections.  For example, Slow Push, Deep IV.
   CodeableConcept? get method => throw _privateConstructorUsedError;
+
+  /// [dose] The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection.
   Quantity? get dose => throw _privateConstructorUsedError;
+
+  /// [rateRatio] Identifies the speed with which the medication was or will be introduced into the patient.  Typically, the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.
   Ratio? get rateRatio => throw _privateConstructorUsedError;
+
+  /// [rateQuantity] Identifies the speed with which the medication was or will be introduced into the patient.  Typically, the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.
   Quantity? get rateQuantity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9922,9 +11670,14 @@ class _$_MedicationAdministrationDosage
           Map<String, dynamic> json) =>
       _$$_MedicationAdministrationDosageFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -9935,7 +11688,10 @@ class _$_MedicationAdministrationDosage
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -9946,21 +11702,36 @@ class _$_MedicationAdministrationDosage
     return EqualUnmodifiableListView(value);
   }
 
+  /// [text] Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans. The dosage instructions should reflect the dosage of the medication that was administered.
   @override
   final String? text;
+
+  /// [textElement] ("_text") Extensions for text
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
+
+  /// [site] A coded specification of the anatomic site where the medication first entered the body.  For example, "left arm".
   @override
   final CodeableConcept? site;
+
+  /// [route] A code specifying the route or physiological path of administration of a therapeutic agent into or onto the patient.  For example, topical, intravenous, etc.
   @override
   final CodeableConcept? route;
+
+  /// [method] A coded value indicating the method by which the medication is intended to be or was introduced into or on the body.  This attribute will most often NOT be populated.  It is most commonly used for injections.  For example, Slow Push, Deep IV.
   @override
   final CodeableConcept? method;
+
+  /// [dose] The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection.
   @override
   final Quantity? dose;
+
+  /// [rateRatio] Identifies the speed with which the medication was or will be introduced into the patient.  Typically, the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.
   @override
   final Ratio? rateRatio;
+
+  /// [rateQuantity] Identifies the speed with which the medication was or will be introduced into the patient.  Typically, the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.
   @override
   final Quantity? rateQuantity;
 
@@ -10043,28 +11814,50 @@ abstract class _MedicationAdministrationDosage
       _$_MedicationAdministrationDosage.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [text] Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans. The dosage instructions should reflect the dosage of the medication that was administered.
   String? get text;
   @override
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
+
+  /// [site] A coded specification of the anatomic site where the medication first entered the body.  For example, "left arm".
   CodeableConcept? get site;
   @override
+
+  /// [route] A code specifying the route or physiological path of administration of a therapeutic agent into or onto the patient.  For example, topical, intravenous, etc.
   CodeableConcept? get route;
   @override
+
+  /// [method] A coded value indicating the method by which the medication is intended to be or was introduced into or on the body.  This attribute will most often NOT be populated.  It is most commonly used for injections.  For example, Slow Push, Deep IV.
   CodeableConcept? get method;
   @override
+
+  /// [dose] The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection.
   Quantity? get dose;
   @override
+
+  /// [rateRatio] Identifies the speed with which the medication was or will be introduced into the patient.  Typically, the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.
   Ratio? get rateRatio;
   @override
+
+  /// [rateQuantity] Identifies the speed with which the medication was or will be introduced into the patient.  Typically, the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.
   Quantity? get rateQuantity;
   @override
   @JsonKey(ignore: true)
@@ -10078,65 +11871,153 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationDispense {
+  /// [resourceType] This is a MedicationDispense resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifiers associated with this Medication Dispense that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationDispense.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [partOf] The procedure or medication administration that triggered the dispense.
   List<Reference>? get partOf => throw _privateConstructorUsedError;
+
+  /// [status] A code specifying the state of the set of dispense events.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [notPerformedReason] Indicates the reason why a dispense was not performed.
   CodeableReference? get notPerformedReason =>
       throw _privateConstructorUsedError;
+
+  /// [statusChanged] The date (and maybe time) when the status of the dispense record changed.
   FhirDateTime? get statusChanged => throw _privateConstructorUsedError;
+
+  /// [statusChangedElement] ("_statusChanged") Extensions for statusChanged
   @JsonKey(name: '_statusChanged')
   Element? get statusChangedElement => throw _privateConstructorUsedError;
+
+  /// [category] Indicates the type of medication dispense (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [medication] Identifies the medication supplied. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication => throw _privateConstructorUsedError;
+
+  /// [subject] A link to a resource representing the person or the group to whom the medication will be given.
   Reference get subject => throw _privateConstructorUsedError;
+
+  /// [encounter] The encounter that establishes the context for this event.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [supportingInformation] Additional information that supports the medication being dispensed.  For example, there may be requirements that a specific lab test has been completed prior to dispensing or the patient's weight at the time of dispensing is documented.
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
+
+  /// [performer] Indicates who or what performed the event.
   List<MedicationDispensePerformer>? get performer =>
       throw _privateConstructorUsedError;
+
+  /// [location] The principal physical location where the dispense was performed.
   Reference? get location => throw _privateConstructorUsedError;
+
+  /// [authorizingPrescription] Indicates the medication order that is being dispensed against.
   List<Reference>? get authorizingPrescription =>
       throw _privateConstructorUsedError;
+
+  /// [type] Indicates the type of dispensing event that is performed. For example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [quantity] The amount of medication that has been dispensed. Includes unit of measure.
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [daysSupply] The amount of medication expressed as a timing amount.
   Quantity? get daysSupply => throw _privateConstructorUsedError;
+
+  /// [recorded] The date (and maybe time) when the dispense activity started if whenPrepared or whenHandedOver is not populated.
   FhirDateTime? get recorded => throw _privateConstructorUsedError;
+
+  /// [recordedElement] ("_recorded") Extensions for recorded
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
+
+  /// [whenPrepared] The time when the dispensed product was packaged and reviewed.
   FhirDateTime? get whenPrepared => throw _privateConstructorUsedError;
+
+  /// [whenPreparedElement] ("_whenPrepared") Extensions for whenPrepared
   @JsonKey(name: '_whenPrepared')
   Element? get whenPreparedElement => throw _privateConstructorUsedError;
+
+  /// [whenHandedOver] The time the dispensed product was provided to the patient or their representative.
   FhirDateTime? get whenHandedOver => throw _privateConstructorUsedError;
+
+  /// [whenHandedOverElement] ("_whenHandedOver") Extensions for whenHandedOver
   @JsonKey(name: '_whenHandedOver')
   Element? get whenHandedOverElement => throw _privateConstructorUsedError;
+
+  /// [destination] Identification of the facility/location where the medication was shipped to, as part of the dispense event.
   Reference? get destination => throw _privateConstructorUsedError;
+
+  /// [receiver] Identifies the person who picked up the medication or the location of where the medication was delivered.  This will usually be a patient or their caregiver, but some cases exist where it can be a healthcare professional or a location.
   List<Reference>? get receiver => throw _privateConstructorUsedError;
+
+  /// [note] Extra information about the dispense that could not be conveyed in the other attributes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   String? get renderedDosageInstruction => throw _privateConstructorUsedError;
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @JsonKey(name: '_renderedDosageInstruction')
   Element? get renderedDosageInstructionElement =>
       throw _privateConstructorUsedError;
+
+  /// [dosageInstruction] Indicates how the medication is to be used by the patient.
   List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
+
+  /// [substitution] Indicates whether or not substitution was made as part of the dispense.  In some cases, substitution will be expected but does not happen, in other cases substitution is not expected but does happen.  This block explains what substitution did or did not happen and why.  If nothing is specified, substitution was not done.
   MedicationDispenseSubstitution? get substitution =>
       throw _privateConstructorUsedError;
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the dispense was verified.
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10152,7 +12033,8 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       _$MedicationDispenseCopyWithImpl<$Res, MedicationDispense>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -10713,7 +12595,8 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -11051,7 +12934,8 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
-      {this.resourceType = R5ResourceType.MedicationDispense,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
+          this.resourceType = R5ResourceType.MedicationDispense,
       this.id,
       this.meta,
       this.implicitRules,
@@ -11123,26 +13007,45 @@ class _$_MedicationDispense extends _MedicationDispense {
   factory _$_MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationDispenseFromJson(json);
 
+  /// [resourceType] This is a MedicationDispense resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -11152,7 +13055,10 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -11163,7 +13069,10 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -11174,7 +13083,10 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] Identifiers associated with this Medication Dispense that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   final List<Identifier>? _identifier;
+
+  /// [identifier] Identifiers associated with this Medication Dispense that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -11184,7 +13096,10 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationDispense.
   final List<Reference>? _basedOn;
+
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationDispense.
   @override
   List<Reference>? get basedOn {
     final value = _basedOn;
@@ -11194,7 +13109,10 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [partOf] The procedure or medication administration that triggered the dispense.
   final List<Reference>? _partOf;
+
+  /// [partOf] The procedure or medication administration that triggered the dispense.
   @override
   List<Reference>? get partOf {
     final value = _partOf;
@@ -11204,19 +13122,32 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [status] A code specifying the state of the set of dispense events.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [notPerformedReason] Indicates the reason why a dispense was not performed.
   @override
   final CodeableReference? notPerformedReason;
+
+  /// [statusChanged] The date (and maybe time) when the status of the dispense record changed.
   @override
   final FhirDateTime? statusChanged;
+
+  /// [statusChangedElement] ("_statusChanged") Extensions for statusChanged
   @override
   @JsonKey(name: '_statusChanged')
   final Element? statusChangedElement;
+
+  /// [category] Indicates the type of medication dispense (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   final List<CodeableConcept>? _category;
+
+  /// [category] Indicates the type of medication dispense (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   @override
   List<CodeableConcept>? get category {
     final value = _category;
@@ -11226,13 +13157,22 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [medication] Identifies the medication supplied. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   @override
   final CodeableReference medication;
+
+  /// [subject] A link to a resource representing the person or the group to whom the medication will be given.
   @override
   final Reference subject;
+
+  /// [encounter] The encounter that establishes the context for this event.
   @override
   final Reference? encounter;
+
+  /// [supportingInformation] Additional information that supports the medication being dispensed.  For example, there may be requirements that a specific lab test has been completed prior to dispensing or the patient's weight at the time of dispensing is documented.
   final List<Reference>? _supportingInformation;
+
+  /// [supportingInformation] Additional information that supports the medication being dispensed.  For example, there may be requirements that a specific lab test has been completed prior to dispensing or the patient's weight at the time of dispensing is documented.
   @override
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
@@ -11243,7 +13183,10 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [performer] Indicates who or what performed the event.
   final List<MedicationDispensePerformer>? _performer;
+
+  /// [performer] Indicates who or what performed the event.
   @override
   List<MedicationDispensePerformer>? get performer {
     final value = _performer;
@@ -11253,9 +13196,14 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [location] The principal physical location where the dispense was performed.
   @override
   final Reference? location;
+
+  /// [authorizingPrescription] Indicates the medication order that is being dispensed against.
   final List<Reference>? _authorizingPrescription;
+
+  /// [authorizingPrescription] Indicates the medication order that is being dispensed against.
   @override
   List<Reference>? get authorizingPrescription {
     final value = _authorizingPrescription;
@@ -11266,30 +13214,53 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Indicates the type of dispensing event that is performed. For example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
   @override
   final CodeableConcept? type;
+
+  /// [quantity] The amount of medication that has been dispensed. Includes unit of measure.
   @override
   final Quantity? quantity;
+
+  /// [daysSupply] The amount of medication expressed as a timing amount.
   @override
   final Quantity? daysSupply;
+
+  /// [recorded] The date (and maybe time) when the dispense activity started if whenPrepared or whenHandedOver is not populated.
   @override
   final FhirDateTime? recorded;
+
+  /// [recordedElement] ("_recorded") Extensions for recorded
   @override
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
+
+  /// [whenPrepared] The time when the dispensed product was packaged and reviewed.
   @override
   final FhirDateTime? whenPrepared;
+
+  /// [whenPreparedElement] ("_whenPrepared") Extensions for whenPrepared
   @override
   @JsonKey(name: '_whenPrepared')
   final Element? whenPreparedElement;
+
+  /// [whenHandedOver] The time the dispensed product was provided to the patient or their representative.
   @override
   final FhirDateTime? whenHandedOver;
+
+  /// [whenHandedOverElement] ("_whenHandedOver") Extensions for whenHandedOver
   @override
   @JsonKey(name: '_whenHandedOver')
   final Element? whenHandedOverElement;
+
+  /// [destination] Identification of the facility/location where the medication was shipped to, as part of the dispense event.
   @override
   final Reference? destination;
+
+  /// [receiver] Identifies the person who picked up the medication or the location of where the medication was delivered.  This will usually be a patient or their caregiver, but some cases exist where it can be a healthcare professional or a location.
   final List<Reference>? _receiver;
+
+  /// [receiver] Identifies the person who picked up the medication or the location of where the medication was delivered.  This will usually be a patient or their caregiver, but some cases exist where it can be a healthcare professional or a location.
   @override
   List<Reference>? get receiver {
     final value = _receiver;
@@ -11299,7 +13270,10 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [note] Extra information about the dispense that could not be conveyed in the other attributes.
   final List<Annotation>? _note;
+
+  /// [note] Extra information about the dispense that could not be conveyed in the other attributes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -11309,12 +13283,19 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   @override
   final String? renderedDosageInstruction;
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @override
   @JsonKey(name: '_renderedDosageInstruction')
   final Element? renderedDosageInstructionElement;
+
+  /// [dosageInstruction] Indicates how the medication is to be used by the patient.
   final List<Dosage>? _dosageInstruction;
+
+  /// [dosageInstruction] Indicates how the medication is to be used by the patient.
   @override
   List<Dosage>? get dosageInstruction {
     final value = _dosageInstruction;
@@ -11325,9 +13306,14 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [substitution] Indicates whether or not substitution was made as part of the dispense.  In some cases, substitution will be expected but does not happen, in other cases substitution is not expected but does happen.  This block explains what substitution did or did not happen and why.  If nothing is specified, substitution was not done.
   @override
   final MedicationDispenseSubstitution? substitution;
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the dispense was verified.
   final List<Reference>? _eventHistory;
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the dispense was verified.
   @override
   List<Reference>? get eventHistory {
     final value = _eventHistory;
@@ -11496,7 +13482,8 @@ class _$_MedicationDispense extends _MedicationDispense {
 
 abstract class _MedicationDispense extends MedicationDispense {
   factory _MedicationDispense(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
@@ -11555,101 +13542,190 @@ abstract class _MedicationDispense extends MedicationDispense {
       _$_MedicationDispense.fromJson;
 
   @override
+
+  /// [resourceType] This is a MedicationDispense resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifiers associated with this Medication Dispense that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier;
   @override
+
+  /// [basedOn] A plan that is fulfilled in whole or in part by this MedicationDispense.
   List<Reference>? get basedOn;
   @override
+
+  /// [partOf] The procedure or medication administration that triggered the dispense.
   List<Reference>? get partOf;
   @override
+
+  /// [status] A code specifying the state of the set of dispense events.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [notPerformedReason] Indicates the reason why a dispense was not performed.
   CodeableReference? get notPerformedReason;
   @override
+
+  /// [statusChanged] The date (and maybe time) when the status of the dispense record changed.
   FhirDateTime? get statusChanged;
   @override
+
+  /// [statusChangedElement] ("_statusChanged") Extensions for statusChanged
   @JsonKey(name: '_statusChanged')
   Element? get statusChangedElement;
   @override
+
+  /// [category] Indicates the type of medication dispense (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   List<CodeableConcept>? get category;
   @override
+
+  /// [medication] Identifies the medication supplied. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication;
   @override
+
+  /// [subject] A link to a resource representing the person or the group to whom the medication will be given.
   Reference get subject;
   @override
+
+  /// [encounter] The encounter that establishes the context for this event.
   Reference? get encounter;
   @override
+
+  /// [supportingInformation] Additional information that supports the medication being dispensed.  For example, there may be requirements that a specific lab test has been completed prior to dispensing or the patient's weight at the time of dispensing is documented.
   List<Reference>? get supportingInformation;
   @override
+
+  /// [performer] Indicates who or what performed the event.
   List<MedicationDispensePerformer>? get performer;
   @override
+
+  /// [location] The principal physical location where the dispense was performed.
   Reference? get location;
   @override
+
+  /// [authorizingPrescription] Indicates the medication order that is being dispensed against.
   List<Reference>? get authorizingPrescription;
   @override
+
+  /// [type] Indicates the type of dispensing event that is performed. For example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
   CodeableConcept? get type;
   @override
+
+  /// [quantity] The amount of medication that has been dispensed. Includes unit of measure.
   Quantity? get quantity;
   @override
+
+  /// [daysSupply] The amount of medication expressed as a timing amount.
   Quantity? get daysSupply;
   @override
+
+  /// [recorded] The date (and maybe time) when the dispense activity started if whenPrepared or whenHandedOver is not populated.
   FhirDateTime? get recorded;
   @override
+
+  /// [recordedElement] ("_recorded") Extensions for recorded
   @JsonKey(name: '_recorded')
   Element? get recordedElement;
   @override
+
+  /// [whenPrepared] The time when the dispensed product was packaged and reviewed.
   FhirDateTime? get whenPrepared;
   @override
+
+  /// [whenPreparedElement] ("_whenPrepared") Extensions for whenPrepared
   @JsonKey(name: '_whenPrepared')
   Element? get whenPreparedElement;
   @override
+
+  /// [whenHandedOver] The time the dispensed product was provided to the patient or their representative.
   FhirDateTime? get whenHandedOver;
   @override
+
+  /// [whenHandedOverElement] ("_whenHandedOver") Extensions for whenHandedOver
   @JsonKey(name: '_whenHandedOver')
   Element? get whenHandedOverElement;
   @override
+
+  /// [destination] Identification of the facility/location where the medication was shipped to, as part of the dispense event.
   Reference? get destination;
   @override
+
+  /// [receiver] Identifies the person who picked up the medication or the location of where the medication was delivered.  This will usually be a patient or their caregiver, but some cases exist where it can be a healthcare professional or a location.
   List<Reference>? get receiver;
   @override
+
+  /// [note] Extra information about the dispense that could not be conveyed in the other attributes.
   List<Annotation>? get note;
   @override
+
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   String? get renderedDosageInstruction;
   @override
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @JsonKey(name: '_renderedDosageInstruction')
   Element? get renderedDosageInstructionElement;
   @override
+
+  /// [dosageInstruction] Indicates how the medication is to be used by the patient.
   List<Dosage>? get dosageInstruction;
   @override
+
+  /// [substitution] Indicates whether or not substitution was made as part of the dispense.  In some cases, substitution will be expected but does not happen, in other cases substitution is not expected but does happen.  This block explains what substitution did or did not happen and why.  If nothing is specified, substitution was not done.
   MedicationDispenseSubstitution? get substitution;
   @override
+
+  /// [eventHistory] A summary of the events of interest that have occurred, such as when the dispense was verified.
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
@@ -11664,12 +13740,22 @@ MedicationDispensePerformer _$MedicationDispensePerformerFromJson(
 
 /// @nodoc
 mixin _$MedicationDispensePerformer {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get function => throw _privateConstructorUsedError;
+
+  /// [function_] ("function") Distinguishes the type of performer in the dispense.  For example, date enterer, packager, final checker.
+  @JsonKey(name: 'function')
+  CodeableConcept? get function_ => throw _privateConstructorUsedError;
+
+  /// [actor] The device, practitioner, etc. who performed the action.  It should be assumed that the actor is the dispenser of the medication.
   Reference get actor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11690,10 +13776,10 @@ abstract class $MedicationDispensePerformerCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
+      @JsonKey(name: 'function') CodeableConcept? function_,
       Reference actor});
 
-  $CodeableConceptCopyWith<$Res>? get function;
+  $CodeableConceptCopyWith<$Res>? get function_;
   $ReferenceCopyWith<$Res> get actor;
 }
 
@@ -11714,7 +13800,7 @@ class _$MedicationDispensePerformerCopyWithImpl<$Res,
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? function = freezed,
+    Object? function_ = freezed,
     Object? actor = null,
   }) {
     return _then(_value.copyWith(
@@ -11730,9 +13816,9 @@ class _$MedicationDispensePerformerCopyWithImpl<$Res,
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      function: freezed == function
-          ? _value.function
-          : function // ignore: cast_nullable_to_non_nullable
+      function_: freezed == function_
+          ? _value.function_
+          : function_ // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       actor: null == actor
           ? _value.actor
@@ -11743,13 +13829,13 @@ class _$MedicationDispensePerformerCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get function {
-    if (_value.function == null) {
+  $CodeableConceptCopyWith<$Res>? get function_ {
+    if (_value.function_ == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.function!, (value) {
-      return _then(_value.copyWith(function: value) as $Val);
+    return $CodeableConceptCopyWith<$Res>(_value.function_!, (value) {
+      return _then(_value.copyWith(function_: value) as $Val);
     });
   }
 
@@ -11775,11 +13861,11 @@ abstract class _$$_MedicationDispensePerformerCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? function,
+      @JsonKey(name: 'function') CodeableConcept? function_,
       Reference actor});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get function;
+  $CodeableConceptCopyWith<$Res>? get function_;
   @override
   $ReferenceCopyWith<$Res> get actor;
 }
@@ -11800,7 +13886,7 @@ class __$$_MedicationDispensePerformerCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? function = freezed,
+    Object? function_ = freezed,
     Object? actor = null,
   }) {
     return _then(_$_MedicationDispensePerformer(
@@ -11816,9 +13902,9 @@ class __$$_MedicationDispensePerformerCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      function: freezed == function
-          ? _value.function
-          : function // ignore: cast_nullable_to_non_nullable
+      function_: freezed == function_
+          ? _value.function_
+          : function_ // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       actor: null == actor
           ? _value.actor
@@ -11835,7 +13921,7 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      this.function,
+      @JsonKey(name: 'function') this.function_,
       required this.actor})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -11844,9 +13930,14 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
   factory _$_MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationDispensePerformerFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -11857,7 +13948,10 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -11868,14 +13962,18 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [function_] ("function") Distinguishes the type of performer in the dispense.  For example, date enterer, packager, final checker.
   @override
-  final CodeableConcept? function;
+  @JsonKey(name: 'function')
+  final CodeableConcept? function_;
+
+  /// [actor] The device, practitioner, etc. who performed the action.  It should be assumed that the actor is the dispenser of the medication.
   @override
   final Reference actor;
 
   @override
   String toString() {
-    return 'MedicationDispensePerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+    return 'MedicationDispensePerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function_: $function_, actor: $actor)';
   }
 
   @override
@@ -11888,8 +13986,8 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.function, function) ||
-                other.function == function) &&
+            (identical(other.function_, function_) ||
+                other.function_ == function_) &&
             (identical(other.actor, actor) || other.actor == actor));
   }
 
@@ -11900,7 +13998,7 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
       id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      function,
+      function_,
       actor);
 
   @JsonKey(ignore: true)
@@ -11924,7 +14022,7 @@ abstract class _MedicationDispensePerformer
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? function,
+      @JsonKey(name: 'function') final CodeableConcept? function_,
       required final Reference actor}) = _$_MedicationDispensePerformer;
   _MedicationDispensePerformer._() : super._();
 
@@ -11932,15 +14030,26 @@ abstract class _MedicationDispensePerformer
       _$_MedicationDispensePerformer.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get function;
+
+  /// [function_] ("function") Distinguishes the type of performer in the dispense.  For example, date enterer, packager, final checker.
+  @JsonKey(name: 'function')
+  CodeableConcept? get function_;
   @override
+
+  /// [actor] The device, practitioner, etc. who performed the action.  It should be assumed that the actor is the dispenser of the medication.
   Reference get actor;
   @override
   @JsonKey(ignore: true)
@@ -11955,16 +14064,31 @@ MedicationDispenseSubstitution _$MedicationDispenseSubstitutionFromJson(
 
 /// @nodoc
 mixin _$MedicationDispenseSubstitution {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [wasSubstituted] True if the dispenser dispensed a different drug or product from what was prescribed.
   Boolean? get wasSubstituted => throw _privateConstructorUsedError;
+
+  /// [wasSubstitutedElement] ("_wasSubstituted") Extensions for wasSubstituted
   @JsonKey(name: '_wasSubstituted')
   Element? get wasSubstitutedElement => throw _privateConstructorUsedError;
+
+  /// [type] A code signifying whether a different drug was dispensed from what was prescribed.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [reason] Indicates the reason for the substitution (or lack of substitution) from what was prescribed.
   List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
+
+  /// [responsibleParty] The person or organization that has primary responsibility for the substitution.
   Reference? get responsibleParty => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -12200,9 +14324,14 @@ class _$_MedicationDispenseSubstitution
           Map<String, dynamic> json) =>
       _$$_MedicationDispenseSubstitutionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -12213,7 +14342,10 @@ class _$_MedicationDispenseSubstitution
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -12224,14 +14356,23 @@ class _$_MedicationDispenseSubstitution
     return EqualUnmodifiableListView(value);
   }
 
+  /// [wasSubstituted] True if the dispenser dispensed a different drug or product from what was prescribed.
   @override
   final Boolean? wasSubstituted;
+
+  /// [wasSubstitutedElement] ("_wasSubstituted") Extensions for wasSubstituted
   @override
   @JsonKey(name: '_wasSubstituted')
   final Element? wasSubstitutedElement;
+
+  /// [type] A code signifying whether a different drug was dispensed from what was prescribed.
   @override
   final CodeableConcept? type;
+
+  /// [reason] Indicates the reason for the substitution (or lack of substitution) from what was prescribed.
   final List<CodeableConcept>? _reason;
+
+  /// [reason] Indicates the reason for the substitution (or lack of substitution) from what was prescribed.
   @override
   List<CodeableConcept>? get reason {
     final value = _reason;
@@ -12241,6 +14382,7 @@ class _$_MedicationDispenseSubstitution
     return EqualUnmodifiableListView(value);
   }
 
+  /// [responsibleParty] The person or organization that has primary responsibility for the substitution.
   @override
   final Reference? responsibleParty;
 
@@ -12314,22 +14456,38 @@ abstract class _MedicationDispenseSubstitution
       _$_MedicationDispenseSubstitution.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [wasSubstituted] True if the dispenser dispensed a different drug or product from what was prescribed.
   Boolean? get wasSubstituted;
   @override
+
+  /// [wasSubstitutedElement] ("_wasSubstituted") Extensions for wasSubstituted
   @JsonKey(name: '_wasSubstituted')
   Element? get wasSubstitutedElement;
   @override
+
+  /// [type] A code signifying whether a different drug was dispensed from what was prescribed.
   CodeableConcept? get type;
   @override
+
+  /// [reason] Indicates the reason for the substitution (or lack of substitution) from what was prescribed.
   List<CodeableConcept>? get reason;
   @override
+
+  /// [responsibleParty] The person or organization that has primary responsibility for the substitution.
   Reference? get responsibleParty;
   @override
   @JsonKey(ignore: true)
@@ -12343,57 +14501,248 @@ MedicationKnowledge _$MedicationKnowledgeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationKnowledge {
+  /// [resourceType] This is a MedicationKnowledge resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [url] An absolute URI that is used to identify this {{title}} when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this {{title}} is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the {{title}} is stored on different servers.
+  FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [identifier] Business identifier for this medication.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  CodeableConcept? get code => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
-  @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
-  Reference? get author => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get intendedJurisdiction =>
+
+  /// [version] The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+  String? get version => throw _privateConstructorUsedError;
+
+  /// [versionElement] ("_version") Extensions for version
+  @JsonKey(name: '_version')
+  Element? get versionElement => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement =>
       throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding => throw _privateConstructorUsedError;
+
+  /// [name] All of the names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.
   List<String>? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   List<Element>? get nameElement => throw _privateConstructorUsedError;
+
+  /// [title] A short, descriptive, user-friendly title for the {{title}}.
+  String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [status] A code to indicate if the medication referred to by this MedicationKnowledge is in active use within the drug database or inventory system. The status refers to the validity about the information of the medication and not to its medicinal properties.
+  Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
+  Boolean? get experimental => throw _privateConstructorUsedError;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+
+  /// [date] The date  (and optionally time) when the {{title}} was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the {{title}}.
+  String? get publisher => throw _privateConstructorUsedError;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement => throw _privateConstructorUsedError;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+
+  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.
+  Markdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate {{title}} instances.
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
+  Markdown? get purpose => throw _privateConstructorUsedError;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
+  Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel => throw _privateConstructorUsedError;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement => throw _privateConstructorUsedError;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
+  Date? get approvalDate => throw _privateConstructorUsedError;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+
+  /// [author] The creator or owner of the knowledge or information about the medication.
+  Reference? get author => throw _privateConstructorUsedError;
+
+  /// [editor] An individual or organization primarily responsible for internal coherence of the {{title}}.
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the {{title}}.
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+
+  /// [endorser] An individual or organization responsible for officially endorsing the {{title}} for use in some setting.
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+
+  /// [code] A code that specifies this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+
+  /// [intendedJurisdiction] Lists the jurisdictions that this medication knowledge was written for.
+  List<CodeableConcept>? get intendedJurisdiction =>
+      throw _privateConstructorUsedError;
+
+  /// [relatedMedicationKnowledge] Associated or related medications. For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor.
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge => throw _privateConstructorUsedError;
+
+  /// [associatedMedication] Links to associated medications that could be prescribed, dispensed or administered.
   List<Reference>? get associatedMedication =>
       throw _privateConstructorUsedError;
+
+  /// [productType] Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).
   List<CodeableConcept>? get productType => throw _privateConstructorUsedError;
+
+  /// [monograph] Associated documentation about the medication.
   List<MedicationKnowledgeMonograph>? get monograph =>
       throw _privateConstructorUsedError;
+
+  /// [preparationInstruction] The instructions for preparing the medication.
   Markdown? get preparationInstruction => throw _privateConstructorUsedError;
+
+  /// [preparationInstructionElement] ("_preparationInstruction") Extensions for preparationInstruction
   @JsonKey(name: '_preparationInstruction')
   Element? get preparationInstructionElement =>
       throw _privateConstructorUsedError;
+
+  /// [cost] The price of the medication.
   List<MedicationKnowledgeCost>? get cost => throw _privateConstructorUsedError;
+
+  /// [monitoringProgram] The program under which the medication is reviewed.
   List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram =>
       throw _privateConstructorUsedError;
+
+  /// [indicationGuideline] Guidelines or protocols that are applicable for the administration of the medication based on indication.
   List<MedicationKnowledgeIndicationGuideline>? get indicationGuideline =>
       throw _privateConstructorUsedError;
+
+  /// [medicineClassification] Categorization of the medication within a formulary or classification system.
   List<MedicationKnowledgeMedicineClassification>? get medicineClassification =>
       throw _privateConstructorUsedError;
+
+  /// [packaging] Information that only applies to packages (not products).
   List<MedicationKnowledgePackaging>? get packaging =>
       throw _privateConstructorUsedError;
+
+  /// [clinicalUseIssue] Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).
   List<Reference>? get clinicalUseIssue => throw _privateConstructorUsedError;
+
+  /// [storageGuideline] Information on how the medication should be stored, for example, refrigeration temperatures and length of stability at a given temperature.
   List<MedicationKnowledgeStorageGuideline>? get storageGuideline =>
       throw _privateConstructorUsedError;
+
+  /// [regulatory] Regulatory information about a medication.
   List<MedicationKnowledgeRegulatory>? get regulatory =>
       throw _privateConstructorUsedError;
+
+  /// [definitional] Along with the link to a Medicinal Product Definition resource, this information provides common definitional elements that are needed to understand the specific medication that is being described.
   MedicationKnowledgeDefinitional? get definitional =>
       throw _privateConstructorUsedError;
 
@@ -12410,32 +14759,88 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       _$MedicationKnowledgeCopyWithImpl<$Res, MedicationKnowledge>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
-      CodeableConcept? code,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      Reference? author,
-      List<CodeableConcept>? intendedJurisdiction,
+      String? version,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       List<String>? name,
-      @JsonKey(name: '_name') List<Element>? nameElement,
+      @JsonKey(name: '_name')
+          List<Element>? nameElement,
+      String? title,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      Reference? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      CodeableConcept? code,
+      List<CodeableConcept>? intendedJurisdiction,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
       List<CodeableConcept>? productType,
       List<MedicationKnowledgeMonograph>? monograph,
       Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction') Element? preparationInstructionElement,
+      @JsonKey(name: '_preparationInstruction')
+          Element? preparationInstructionElement,
       List<MedicationKnowledgeCost>? cost,
       List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
       List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
@@ -12450,9 +14855,24 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $CodeableConceptCopyWith<$Res>? get code;
+  $ElementCopyWith<$Res>? get urlElement;
+  $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
+  $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get experimentalElement;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get publisherElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get purposeElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  $PeriodCopyWith<$Res>? get effectivePeriod;
   $ReferenceCopyWith<$Res>? get author;
+  $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get preparationInstructionElement;
   $MedicationKnowledgeDefinitionalCopyWith<$Res>? get definitional;
 }
@@ -12481,14 +14901,50 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
     Object? identifier = freezed,
-    Object? code = freezed,
-    Object? status = freezed,
-    Object? statusElement = freezed,
-    Object? author = freezed,
-    Object? intendedJurisdiction = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
+    Object? code = freezed,
+    Object? intendedJurisdiction = freezed,
     Object? relatedMedicationKnowledge = freezed,
     Object? associatedMedication = freezed,
     Object? productType = freezed,
@@ -12550,30 +15006,38 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: freezed == urlElement
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
-      statusElement: freezed == statusElement
-          ? _value.statusElement
-          : statusElement // ignore: cast_nullable_to_non_nullable
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: freezed == versionElement
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: freezed == author
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      intendedJurisdiction: freezed == intendedJurisdiction
-          ? _value.intendedJurisdiction
-          : intendedJurisdiction // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -12582,6 +15046,142 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: freezed == titleElement
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: freezed == experimental
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: freezed == experimentalElement
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: freezed == dateElement
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: freezed == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: freezed == publisherElement
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: freezed == contact
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: freezed == useContext
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: freezed == jurisdiction
+          ? _value.jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: freezed == purpose
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: freezed == purposeElement
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: freezed == copyright
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: freezed == copyrightElement
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: freezed == approvalDate
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: freezed == approvalDateElement
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: freezed == lastReviewDate
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: freezed == lastReviewDateElement
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectivePeriod: freezed == effectivePeriod
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      topic: freezed == topic
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      editor: freezed == editor
+          ? _value.editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: freezed == reviewer
+          ? _value.reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: freezed == endorser
+          ? _value.endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: freezed == relatedArtifact
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      code: freezed == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intendedJurisdiction: freezed == intendedJurisdiction
+          ? _value.intendedJurisdiction
+          : intendedJurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       relatedMedicationKnowledge: freezed == relatedMedicationKnowledge
           ? _value.relatedMedicationKnowledge
           : relatedMedicationKnowledge // ignore: cast_nullable_to_non_nullable
@@ -12695,13 +15295,63 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
 
   @override
   @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
+  $ElementCopyWith<$Res>? get urlElement {
+    if (_value.urlElement == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
-      return _then(_value.copyWith(code: value) as $Val);
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
+      return _then(_value.copyWith(urlElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
+      return _then(_value.copyWith(versionElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement {
+    if (_value.versionAlgorithmStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionAlgorithmStringElement!,
+        (value) {
+      return _then(
+          _value.copyWith(versionAlgorithmStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding {
+    if (_value.versionAlgorithmCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.versionAlgorithmCoding!, (value) {
+      return _then(_value.copyWith(versionAlgorithmCoding: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
+      return _then(_value.copyWith(titleElement: value) as $Val);
     });
   }
 
@@ -12719,6 +15369,126 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.experimentalElement!, (value) {
+      return _then(_value.copyWith(experimentalElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
+      return _then(_value.copyWith(dateElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publisherElement!, (value) {
+      return _then(_value.copyWith(publisherElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.purposeElement!, (value) {
+      return _then(_value.copyWith(purposeElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightLabelElement {
+    if (_value.copyrightLabelElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightLabelElement!, (value) {
+      return _then(_value.copyWith(copyrightLabelElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.approvalDateElement!, (value) {
+      return _then(_value.copyWith(approvalDateElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement!, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeriodCopyWith<$Res>? get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod!, (value) {
+      return _then(_value.copyWith(effectivePeriod: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get author {
     if (_value.author == null) {
       return null;
@@ -12726,6 +15496,18 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
 
     return $ReferenceCopyWith<$Res>(_value.author!, (value) {
       return _then(_value.copyWith(author: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get code {
+    if (_value.code == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+      return _then(_value.copyWith(code: value) as $Val);
     });
   }
 
@@ -12766,32 +15548,88 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
-      CodeableConcept? code,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      Reference? author,
-      List<CodeableConcept>? intendedJurisdiction,
+      String? version,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       List<String>? name,
-      @JsonKey(name: '_name') List<Element>? nameElement,
+      @JsonKey(name: '_name')
+          List<Element>? nameElement,
+      String? title,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      Reference? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      CodeableConcept? code,
+      List<CodeableConcept>? intendedJurisdiction,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
       List<CodeableConcept>? productType,
       List<MedicationKnowledgeMonograph>? monograph,
       Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction') Element? preparationInstructionElement,
+      @JsonKey(name: '_preparationInstruction')
+          Element? preparationInstructionElement,
       List<MedicationKnowledgeCost>? cost,
       List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
       List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
@@ -12811,11 +15649,41 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $ElementCopyWith<$Res>? get urlElement;
+  @override
+  $ElementCopyWith<$Res>? get versionElement;
+  @override
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  @override
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
+  @override
+  $ElementCopyWith<$Res>? get titleElement;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
+  $ElementCopyWith<$Res>? get experimentalElement;
+  @override
+  $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ElementCopyWith<$Res>? get publisherElement;
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ElementCopyWith<$Res>? get purposeElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  @override
+  $PeriodCopyWith<$Res>? get effectivePeriod;
+  @override
   $ReferenceCopyWith<$Res>? get author;
+  @override
+  $CodeableConceptCopyWith<$Res>? get code;
   @override
   $ElementCopyWith<$Res>? get preparationInstructionElement;
   @override
@@ -12844,14 +15712,50 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
     Object? identifier = freezed,
-    Object? code = freezed,
-    Object? status = freezed,
-    Object? statusElement = freezed,
-    Object? author = freezed,
-    Object? intendedJurisdiction = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
+    Object? code = freezed,
+    Object? intendedJurisdiction = freezed,
     Object? relatedMedicationKnowledge = freezed,
     Object? associatedMedication = freezed,
     Object? productType = freezed,
@@ -12913,30 +15817,38 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: freezed == urlElement
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: freezed == identifier
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
-      statusElement: freezed == statusElement
-          ? _value.statusElement
-          : statusElement // ignore: cast_nullable_to_non_nullable
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: freezed == versionElement
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      author: freezed == author
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      intendedJurisdiction: freezed == intendedJurisdiction
-          ? _value._intendedJurisdiction
-          : intendedJurisdiction // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value._name
           : name // ignore: cast_nullable_to_non_nullable
@@ -12945,6 +15857,142 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
           ? _value._nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: freezed == titleElement
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: freezed == experimental
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: freezed == experimentalElement
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: freezed == dateElement
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: freezed == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: freezed == publisherElement
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: freezed == contact
+          ? _value._contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: freezed == useContext
+          ? _value._useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: freezed == jurisdiction
+          ? _value._jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: freezed == purpose
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: freezed == purposeElement
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: freezed == copyright
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: freezed == copyrightElement
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: freezed == approvalDate
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: freezed == approvalDateElement
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: freezed == lastReviewDate
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: freezed == lastReviewDateElement
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectivePeriod: freezed == effectivePeriod
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      topic: freezed == topic
+          ? _value._topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      editor: freezed == editor
+          ? _value._editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: freezed == reviewer
+          ? _value._reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: freezed == endorser
+          ? _value._endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: freezed == relatedArtifact
+          ? _value._relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      code: freezed == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intendedJurisdiction: freezed == intendedJurisdiction
+          ? _value._intendedJurisdiction
+          : intendedJurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       relatedMedicationKnowledge: freezed == relatedMedicationKnowledge
           ? _value._relatedMedicationKnowledge
           : relatedMedicationKnowledge // ignore: cast_nullable_to_non_nullable
@@ -13013,36 +16061,93 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationKnowledge extends _MedicationKnowledge {
   _$_MedicationKnowledge(
-      {this.resourceType = R5ResourceType.MedicationKnowledge,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
+          this.resourceType = R5ResourceType.MedicationKnowledge,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
+      this.url,
+      @JsonKey(name: '_url')
+          this.urlElement,
       final List<Identifier>? identifier,
-      this.code,
-      this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      this.author,
-      final List<CodeableConcept>? intendedJurisdiction,
+      this.version,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      this.versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          this.versionAlgorithmStringElement,
+      this.versionAlgorithmCoding,
       final List<String>? name,
-      @JsonKey(name: '_name') final List<Element>? nameElement,
+      @JsonKey(name: '_name')
+          final List<Element>? nameElement,
+      this.title,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      this.experimental,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      this.date,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      this.publisher,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      final List<ContactDetail>? contact,
+      this.description,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      this.purpose,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      this.copyright,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      this.copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          this.copyrightLabelElement,
+      this.approvalDate,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
+      this.effectivePeriod,
+      final List<CodeableConcept>? topic,
+      this.author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
+      this.code,
+      final List<CodeableConcept>? intendedJurisdiction,
       final List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       final List<Reference>? associatedMedication,
       final List<CodeableConcept>? productType,
       final List<MedicationKnowledgeMonograph>? monograph,
       this.preparationInstruction,
-      @JsonKey(name: '_preparationInstruction') this.preparationInstructionElement,
+      @JsonKey(name: '_preparationInstruction')
+          this.preparationInstructionElement,
       final List<MedicationKnowledgeCost>? cost,
       final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
       final List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
-      final List<MedicationKnowledgeMedicineClassification>? medicineClassification,
+      final List<MedicationKnowledgeMedicineClassification>?
+          medicineClassification,
       final List<MedicationKnowledgePackaging>? packaging,
       final List<Reference>? clinicalUseIssue,
       final List<MedicationKnowledgeStorageGuideline>? storageGuideline,
@@ -13052,9 +16157,17 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
-        _intendedJurisdiction = intendedJurisdiction,
         _name = name,
         _nameElement = nameElement,
+        _contact = contact,
+        _useContext = useContext,
+        _jurisdiction = jurisdiction,
+        _topic = topic,
+        _editor = editor,
+        _reviewer = reviewer,
+        _endorser = endorser,
+        _relatedArtifact = relatedArtifact,
+        _intendedJurisdiction = intendedJurisdiction,
         _relatedMedicationKnowledge = relatedMedicationKnowledge,
         _associatedMedication = associatedMedication,
         _productType = productType,
@@ -13072,26 +16185,45 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   factory _$_MedicationKnowledge.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeFromJson(json);
 
+  /// [resourceType] This is a MedicationKnowledge resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -13101,7 +16233,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -13112,7 +16247,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -13123,7 +16261,19 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [url] An absolute URI that is used to identify this {{title}} when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this {{title}} is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the {{title}} is stored on different servers.
+  @override
+  final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
+  @override
+  @JsonKey(name: '_url')
+  final Element? urlElement;
+
+  /// [identifier] Business identifier for this medication.
   final List<Identifier>? _identifier;
+
+  /// [identifier] Business identifier for this medication.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -13133,27 +16283,32 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [version] The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   @override
-  final CodeableConcept? code;
-  @override
-  final Code? status;
-  @override
-  @JsonKey(name: '_status')
-  final Element? statusElement;
-  @override
-  final Reference? author;
-  final List<CodeableConcept>? _intendedJurisdiction;
-  @override
-  List<CodeableConcept>? get intendedJurisdiction {
-    final value = _intendedJurisdiction;
-    if (value == null) return null;
-    if (_intendedJurisdiction is EqualUnmodifiableListView)
-      return _intendedJurisdiction;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final String? version;
 
+  /// [versionElement] ("_version") Extensions for version
+  @override
+  @JsonKey(name: '_version')
+  final Element? versionElement;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final String? versionAlgorithmString;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @override
+  @JsonKey(name: '_versionAlgorithmString')
+  final Element? versionAlgorithmStringElement;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final Coding? versionAlgorithmCoding;
+
+  /// [name] All of the names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.
   final List<String>? _name;
+
+  /// [name] All of the names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.
   @override
   List<String>? get name {
     final value = _name;
@@ -13163,7 +16318,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [nameElement] ("_name") Extensions for name
   final List<Element>? _nameElement;
+
+  /// [nameElement] ("_name") Extensions for name
   @override
   @JsonKey(name: '_name')
   List<Element>? get nameElement {
@@ -13174,8 +16332,240 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [title] A short, descriptive, user-friendly title for the {{title}}.
+  @override
+  final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
+  @override
+  @JsonKey(name: '_title')
+  final Element? titleElement;
+
+  /// [status] A code to indicate if the medication referred to by this MedicationKnowledge is in active use within the drug database or inventory system. The status refers to the validity about the information of the medication and not to its medicinal properties.
+  @override
+  final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
+  @override
+  final Boolean? experimental;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
+  @override
+  @JsonKey(name: '_experimental')
+  final Element? experimentalElement;
+
+  /// [date] The date  (and optionally time) when the {{title}} was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.
+  @override
+  final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
+  @override
+  @JsonKey(name: '_date')
+  final Element? dateElement;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the {{title}}.
+  @override
+  final String? publisher;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
+  @override
+  @JsonKey(name: '_publisher')
+  final Element? publisherElement;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  final List<ContactDetail>? _contact;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  @override
+  List<ContactDetail>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.
+  @override
+  final Markdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate {{title}} instances.
+  final List<UsageContext>? _useContext;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate {{title}} instances.
+  @override
+  List<UsageContext>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
+  final List<CodeableConcept>? _jurisdiction;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
+  @override
+  List<CodeableConcept>? get jurisdiction {
+    final value = _jurisdiction;
+    if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
+  @override
+  final Markdown? purpose;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
+  @override
+  @JsonKey(name: '_purpose')
+  final Element? purposeElement;
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
+  @override
+  final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  @override
+  final String? copyrightLabel;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @override
+  @JsonKey(name: '_copyrightLabel')
+  final Element? copyrightLabelElement;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
+  @override
+  final Date? approvalDate;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element? approvalDateElement;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
+  @override
+  final Date? lastReviewDate;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element? lastReviewDateElement;
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
+  @override
+  final Period? effectivePeriod;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
+  final List<CodeableConcept>? _topic;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
+  @override
+  List<CodeableConcept>? get topic {
+    final value = _topic;
+    if (value == null) return null;
+    if (_topic is EqualUnmodifiableListView) return _topic;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [author] The creator or owner of the knowledge or information about the medication.
+  @override
+  final Reference? author;
+
+  /// [editor] An individual or organization primarily responsible for internal coherence of the {{title}}.
+  final List<ContactDetail>? _editor;
+
+  /// [editor] An individual or organization primarily responsible for internal coherence of the {{title}}.
+  @override
+  List<ContactDetail>? get editor {
+    final value = _editor;
+    if (value == null) return null;
+    if (_editor is EqualUnmodifiableListView) return _editor;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the {{title}}.
+  final List<ContactDetail>? _reviewer;
+
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the {{title}}.
+  @override
+  List<ContactDetail>? get reviewer {
+    final value = _reviewer;
+    if (value == null) return null;
+    if (_reviewer is EqualUnmodifiableListView) return _reviewer;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [endorser] An individual or organization responsible for officially endorsing the {{title}} for use in some setting.
+  final List<ContactDetail>? _endorser;
+
+  /// [endorser] An individual or organization responsible for officially endorsing the {{title}} for use in some setting.
+  @override
+  List<ContactDetail>? get endorser {
+    final value = _endorser;
+    if (value == null) return null;
+    if (_endorser is EqualUnmodifiableListView) return _endorser;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.
+  final List<RelatedArtifact>? _relatedArtifact;
+
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.
+  @override
+  List<RelatedArtifact>? get relatedArtifact {
+    final value = _relatedArtifact;
+    if (value == null) return null;
+    if (_relatedArtifact is EqualUnmodifiableListView) return _relatedArtifact;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [code] A code that specifies this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.
+  @override
+  final CodeableConcept? code;
+
+  /// [intendedJurisdiction] Lists the jurisdictions that this medication knowledge was written for.
+  final List<CodeableConcept>? _intendedJurisdiction;
+
+  /// [intendedJurisdiction] Lists the jurisdictions that this medication knowledge was written for.
+  @override
+  List<CodeableConcept>? get intendedJurisdiction {
+    final value = _intendedJurisdiction;
+    if (value == null) return null;
+    if (_intendedJurisdiction is EqualUnmodifiableListView)
+      return _intendedJurisdiction;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [relatedMedicationKnowledge] Associated or related medications. For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor.
   final List<MedicationKnowledgeRelatedMedicationKnowledge>?
       _relatedMedicationKnowledge;
+
+  /// [relatedMedicationKnowledge] Associated or related medications. For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor.
   @override
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge {
@@ -13187,7 +16577,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [associatedMedication] Links to associated medications that could be prescribed, dispensed or administered.
   final List<Reference>? _associatedMedication;
+
+  /// [associatedMedication] Links to associated medications that could be prescribed, dispensed or administered.
   @override
   List<Reference>? get associatedMedication {
     final value = _associatedMedication;
@@ -13198,7 +16591,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [productType] Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).
   final List<CodeableConcept>? _productType;
+
+  /// [productType] Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).
   @override
   List<CodeableConcept>? get productType {
     final value = _productType;
@@ -13208,7 +16604,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [monograph] Associated documentation about the medication.
   final List<MedicationKnowledgeMonograph>? _monograph;
+
+  /// [monograph] Associated documentation about the medication.
   @override
   List<MedicationKnowledgeMonograph>? get monograph {
     final value = _monograph;
@@ -13218,12 +16617,19 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [preparationInstruction] The instructions for preparing the medication.
   @override
   final Markdown? preparationInstruction;
+
+  /// [preparationInstructionElement] ("_preparationInstruction") Extensions for preparationInstruction
   @override
   @JsonKey(name: '_preparationInstruction')
   final Element? preparationInstructionElement;
+
+  /// [cost] The price of the medication.
   final List<MedicationKnowledgeCost>? _cost;
+
+  /// [cost] The price of the medication.
   @override
   List<MedicationKnowledgeCost>? get cost {
     final value = _cost;
@@ -13233,7 +16639,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [monitoringProgram] The program under which the medication is reviewed.
   final List<MedicationKnowledgeMonitoringProgram>? _monitoringProgram;
+
+  /// [monitoringProgram] The program under which the medication is reviewed.
   @override
   List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram {
     final value = _monitoringProgram;
@@ -13244,7 +16653,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [indicationGuideline] Guidelines or protocols that are applicable for the administration of the medication based on indication.
   final List<MedicationKnowledgeIndicationGuideline>? _indicationGuideline;
+
+  /// [indicationGuideline] Guidelines or protocols that are applicable for the administration of the medication based on indication.
   @override
   List<MedicationKnowledgeIndicationGuideline>? get indicationGuideline {
     final value = _indicationGuideline;
@@ -13255,8 +16667,11 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [medicineClassification] Categorization of the medication within a formulary or classification system.
   final List<MedicationKnowledgeMedicineClassification>?
       _medicineClassification;
+
+  /// [medicineClassification] Categorization of the medication within a formulary or classification system.
   @override
   List<MedicationKnowledgeMedicineClassification>? get medicineClassification {
     final value = _medicineClassification;
@@ -13267,7 +16682,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [packaging] Information that only applies to packages (not products).
   final List<MedicationKnowledgePackaging>? _packaging;
+
+  /// [packaging] Information that only applies to packages (not products).
   @override
   List<MedicationKnowledgePackaging>? get packaging {
     final value = _packaging;
@@ -13277,7 +16695,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [clinicalUseIssue] Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).
   final List<Reference>? _clinicalUseIssue;
+
+  /// [clinicalUseIssue] Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).
   @override
   List<Reference>? get clinicalUseIssue {
     final value = _clinicalUseIssue;
@@ -13288,7 +16709,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [storageGuideline] Information on how the medication should be stored, for example, refrigeration temperatures and length of stability at a given temperature.
   final List<MedicationKnowledgeStorageGuideline>? _storageGuideline;
+
+  /// [storageGuideline] Information on how the medication should be stored, for example, refrigeration temperatures and length of stability at a given temperature.
   @override
   List<MedicationKnowledgeStorageGuideline>? get storageGuideline {
     final value = _storageGuideline;
@@ -13299,7 +16723,10 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [regulatory] Regulatory information about a medication.
   final List<MedicationKnowledgeRegulatory>? _regulatory;
+
+  /// [regulatory] Regulatory information about a medication.
   @override
   List<MedicationKnowledgeRegulatory>? get regulatory {
     final value = _regulatory;
@@ -13309,12 +16736,13 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [definitional] Along with the link to a Medicinal Product Definition resource, this information provides common definitional elements that are needed to understand the specific medication that is being described.
   @override
   final MedicationKnowledgeDefinitional? definitional;
 
   @override
   String toString() {
-    return 'MedicationKnowledge(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement, author: $author, intendedJurisdiction: $intendedJurisdiction, name: $name, nameElement: $nameElement, relatedMedicationKnowledge: $relatedMedicationKnowledge, associatedMedication: $associatedMedication, productType: $productType, monograph: $monograph, preparationInstruction: $preparationInstruction, preparationInstructionElement: $preparationInstructionElement, cost: $cost, monitoringProgram: $monitoringProgram, indicationGuideline: $indicationGuideline, medicineClassification: $medicineClassification, packaging: $packaging, clinicalUseIssue: $clinicalUseIssue, storageGuideline: $storageGuideline, regulatory: $regulatory, definitional: $definitional)';
+    return 'MedicationKnowledge(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, code: $code, intendedJurisdiction: $intendedJurisdiction, relatedMedicationKnowledge: $relatedMedicationKnowledge, associatedMedication: $associatedMedication, productType: $productType, monograph: $monograph, preparationInstruction: $preparationInstruction, preparationInstructionElement: $preparationInstructionElement, cost: $cost, monitoringProgram: $monitoringProgram, indicationGuideline: $indicationGuideline, medicineClassification: $medicineClassification, packaging: $packaging, clinicalUseIssue: $clinicalUseIssue, storageGuideline: $storageGuideline, regulatory: $regulatory, definitional: $definitional)';
   }
 
   @override
@@ -13341,50 +16769,94 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.urlElement, urlElement) ||
+                other.urlElement == urlElement) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
-            (identical(other.author, author) || other.author == author) &&
-            const DeepCollectionEquality()
-                .equals(other._intendedJurisdiction, _intendedJurisdiction) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.versionElement, versionElement) ||
+                other.versionElement == versionElement) &&
+            (identical(other.versionAlgorithmString, versionAlgorithmString) ||
+                other.versionAlgorithmString == versionAlgorithmString) &&
+            (identical(other.versionAlgorithmStringElement, versionAlgorithmStringElement) ||
+                other.versionAlgorithmStringElement ==
+                    versionAlgorithmStringElement) &&
+            (identical(other.versionAlgorithmCoding, versionAlgorithmCoding) ||
+                other.versionAlgorithmCoding == versionAlgorithmCoding) &&
             const DeepCollectionEquality().equals(other._name, _name) &&
             const DeepCollectionEquality()
                 .equals(other._nameElement, _nameElement) &&
-            const DeepCollectionEquality().equals(
-                other._relatedMedicationKnowledge,
-                _relatedMedicationKnowledge) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.titleElement, titleElement) ||
+                other.titleElement == titleElement) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.experimental, experimental) ||
+                other.experimental == experimental) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                other.experimentalElement == experimentalElement) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.dateElement, dateElement) ||
+                other.dateElement == dateElement) &&
+            (identical(other.publisher, publisher) ||
+                other.publisher == publisher) &&
+            (identical(other.publisherElement, publisherElement) ||
+                other.publisherElement == publisherElement) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other._associatedMedication, _associatedMedication) &&
+                .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality()
-                .equals(other._productType, _productType) &&
-            const DeepCollectionEquality()
-                .equals(other._monograph, _monograph) &&
-            (identical(other.preparationInstruction, preparationInstruction) ||
-                other.preparationInstruction == preparationInstruction) &&
-            (identical(other.preparationInstructionElement,
-                    preparationInstructionElement) ||
-                other.preparationInstructionElement ==
-                    preparationInstructionElement) &&
+                .equals(other._jurisdiction, _jurisdiction) &&
+            (identical(other.purpose, purpose) || other.purpose == purpose) &&
+            (identical(other.purposeElement, purposeElement) ||
+                other.purposeElement == purposeElement) &&
+            (identical(other.copyright, copyright) ||
+                other.copyright == copyright) &&
+            (identical(other.copyrightElement, copyrightElement) ||
+                other.copyrightElement == copyrightElement) &&
+            (identical(other.copyrightLabel, copyrightLabel) ||
+                other.copyrightLabel == copyrightLabel) &&
+            (identical(other.copyrightLabelElement, copyrightLabelElement) ||
+                other.copyrightLabelElement == copyrightLabelElement) &&
+            (identical(other.approvalDate, approvalDate) ||
+                other.approvalDate == approvalDate) &&
+            (identical(other.approvalDateElement, approvalDateElement) ||
+                other.approvalDateElement == approvalDateElement) &&
+            (identical(other.lastReviewDate, lastReviewDate) ||
+                other.lastReviewDate == lastReviewDate) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) ||
+                other.lastReviewDateElement == lastReviewDateElement) &&
+            (identical(other.effectivePeriod, effectivePeriod) ||
+                other.effectivePeriod == effectivePeriod) &&
+            const DeepCollectionEquality().equals(other._topic, _topic) &&
+            (identical(other.author, author) || other.author == author) &&
+            const DeepCollectionEquality().equals(other._editor, _editor) &&
+            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
+            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other._relatedArtifact, _relatedArtifact) &&
+            (identical(other.code, code) || other.code == code) &&
+            const DeepCollectionEquality().equals(other._intendedJurisdiction, _intendedJurisdiction) &&
+            const DeepCollectionEquality().equals(other._relatedMedicationKnowledge, _relatedMedicationKnowledge) &&
+            const DeepCollectionEquality().equals(other._associatedMedication, _associatedMedication) &&
+            const DeepCollectionEquality().equals(other._productType, _productType) &&
+            const DeepCollectionEquality().equals(other._monograph, _monograph) &&
+            (identical(other.preparationInstruction, preparationInstruction) || other.preparationInstruction == preparationInstruction) &&
+            (identical(other.preparationInstructionElement, preparationInstructionElement) || other.preparationInstructionElement == preparationInstructionElement) &&
             const DeepCollectionEquality().equals(other._cost, _cost) &&
-            const DeepCollectionEquality()
-                .equals(other._monitoringProgram, _monitoringProgram) &&
-            const DeepCollectionEquality()
-                .equals(other._indicationGuideline, _indicationGuideline) &&
-            const DeepCollectionEquality().equals(
-                other._medicineClassification, _medicineClassification) &&
-            const DeepCollectionEquality()
-                .equals(other._packaging, _packaging) &&
-            const DeepCollectionEquality()
-                .equals(other._clinicalUseIssue, _clinicalUseIssue) &&
-            const DeepCollectionEquality()
-                .equals(other._storageGuideline, _storageGuideline) &&
-            const DeepCollectionEquality()
-                .equals(other._regulatory, _regulatory) &&
-            (identical(other.definitional, definitional) ||
-                other.definitional == definitional));
+            const DeepCollectionEquality().equals(other._monitoringProgram, _monitoringProgram) &&
+            const DeepCollectionEquality().equals(other._indicationGuideline, _indicationGuideline) &&
+            const DeepCollectionEquality().equals(other._medicineClassification, _medicineClassification) &&
+            const DeepCollectionEquality().equals(other._packaging, _packaging) &&
+            const DeepCollectionEquality().equals(other._clinicalUseIssue, _clinicalUseIssue) &&
+            const DeepCollectionEquality().equals(other._storageGuideline, _storageGuideline) &&
+            const DeepCollectionEquality().equals(other._regulatory, _regulatory) &&
+            (identical(other.definitional, definitional) || other.definitional == definitional));
   }
 
   @JsonKey(ignore: true)
@@ -13402,14 +16874,50 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
+        url,
+        urlElement,
         const DeepCollectionEquality().hash(_identifier),
-        code,
-        status,
-        statusElement,
-        author,
-        const DeepCollectionEquality().hash(_intendedJurisdiction),
+        version,
+        versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
         const DeepCollectionEquality().hash(_name),
         const DeepCollectionEquality().hash(_nameElement),
+        title,
+        titleElement,
+        status,
+        statusElement,
+        experimental,
+        experimentalElement,
+        date,
+        dateElement,
+        publisher,
+        publisherElement,
+        const DeepCollectionEquality().hash(_contact),
+        description,
+        descriptionElement,
+        const DeepCollectionEquality().hash(_useContext),
+        const DeepCollectionEquality().hash(_jurisdiction),
+        purpose,
+        purposeElement,
+        copyright,
+        copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
+        approvalDate,
+        approvalDateElement,
+        lastReviewDate,
+        lastReviewDateElement,
+        effectivePeriod,
+        const DeepCollectionEquality().hash(_topic),
+        author,
+        const DeepCollectionEquality().hash(_editor),
+        const DeepCollectionEquality().hash(_reviewer),
+        const DeepCollectionEquality().hash(_endorser),
+        const DeepCollectionEquality().hash(_relatedArtifact),
+        code,
+        const DeepCollectionEquality().hash(_intendedJurisdiction),
         const DeepCollectionEquality().hash(_relatedMedicationKnowledge),
         const DeepCollectionEquality().hash(_associatedMedication),
         const DeepCollectionEquality().hash(_productType),
@@ -13444,120 +16952,404 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
 abstract class _MedicationKnowledge extends MedicationKnowledge {
   factory _MedicationKnowledge(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
       final List<Identifier>? identifier,
-      final CodeableConcept? code,
-      final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
-      final Reference? author,
-      final List<CodeableConcept>? intendedJurisdiction,
+      final String? version,
+      @JsonKey(name: '_version')
+          final Element? versionElement,
+      final String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          final Element? versionAlgorithmStringElement,
+      final Coding? versionAlgorithmCoding,
       final List<String>? name,
-      @JsonKey(name: '_name') final List<Element>? nameElement,
+      @JsonKey(name: '_name')
+          final List<Element>? nameElement,
+      final String? title,
+      @JsonKey(name: '_title')
+          final Element? titleElement,
+      final Code? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      final Boolean? experimental,
+      @JsonKey(name: '_experimental')
+          final Element? experimentalElement,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
+      final String? publisher,
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
+      final List<ContactDetail>? contact,
+      final Markdown? description,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          final Element? purposeElement,
+      final Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      final String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          final Element? copyrightLabelElement,
+      final Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
+      final Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
+      final Period? effectivePeriod,
+      final List<CodeableConcept>? topic,
+      final Reference? author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
+      final CodeableConcept? code,
+      final List<CodeableConcept>? intendedJurisdiction,
       final List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       final List<Reference>? associatedMedication,
       final List<CodeableConcept>? productType,
       final List<MedicationKnowledgeMonograph>? monograph,
       final Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction') final Element? preparationInstructionElement,
+      @JsonKey(name: '_preparationInstruction')
+          final Element? preparationInstructionElement,
       final List<MedicationKnowledgeCost>? cost,
       final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
       final List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
-      final List<MedicationKnowledgeMedicineClassification>? medicineClassification,
+      final List<MedicationKnowledgeMedicineClassification>?
+          medicineClassification,
       final List<MedicationKnowledgePackaging>? packaging,
       final List<Reference>? clinicalUseIssue,
       final List<MedicationKnowledgeStorageGuideline>? storageGuideline,
       final List<MedicationKnowledgeRegulatory>? regulatory,
-      final MedicationKnowledgeDefinitional? definitional}) = _$_MedicationKnowledge;
+      final MedicationKnowledgeDefinitional?
+          definitional}) = _$_MedicationKnowledge;
   _MedicationKnowledge._() : super._();
 
   factory _MedicationKnowledge.fromJson(Map<String, dynamic> json) =
       _$_MedicationKnowledge.fromJson;
 
   @override
+
+  /// [resourceType] This is a MedicationKnowledge resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [url] An absolute URI that is used to identify this {{title}} when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this {{title}} is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the {{title}} is stored on different servers.
+  FhirUri? get url;
+  @override
+
+  /// [urlElement] ("_url") Extensions for url
+  @JsonKey(name: '_url')
+  Element? get urlElement;
+  @override
+
+  /// [identifier] Business identifier for this medication.
   List<Identifier>? get identifier;
   @override
-  CodeableConcept? get code;
+
+  /// [version] The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+  String? get version;
   @override
-  Code? get status;
+
+  /// [versionElement] ("_version") Extensions for version
+  @JsonKey(name: '_version')
+  Element? get versionElement;
   @override
-  @JsonKey(name: '_status')
-  Element? get statusElement;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString;
   @override
-  Reference? get author;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement;
   @override
-  List<CodeableConcept>? get intendedJurisdiction;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding;
   @override
+
+  /// [name] All of the names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.
   List<String>? get name;
   @override
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   List<Element>? get nameElement;
   @override
+
+  /// [title] A short, descriptive, user-friendly title for the {{title}}.
+  String? get title;
+  @override
+
+  /// [titleElement] ("_title") Extensions for title
+  @JsonKey(name: '_title')
+  Element? get titleElement;
+  @override
+
+  /// [status] A code to indicate if the medication referred to by this MedicationKnowledge is in active use within the drug database or inventory system. The status refers to the validity about the information of the medication and not to its medicinal properties.
+  Code? get status;
+  @override
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement;
+  @override
+
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
+  Boolean? get experimental;
+  @override
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement;
+  @override
+
+  /// [date] The date  (and optionally time) when the {{title}} was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.
+  FhirDateTime? get date;
+  @override
+
+  /// [dateElement] ("_date") Extensions for date
+  @JsonKey(name: '_date')
+  Element? get dateElement;
+  @override
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the {{title}}.
+  String? get publisher;
+  @override
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement;
+  @override
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  List<ContactDetail>? get contact;
+  @override
+
+  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.
+  Markdown? get description;
+  @override
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement;
+  @override
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate {{title}} instances.
+  List<UsageContext>? get useContext;
+  @override
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
+  List<CodeableConcept>? get jurisdiction;
+  @override
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
+  Markdown? get purpose;
+  @override
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement;
+  @override
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
+  Markdown? get copyright;
+  @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement;
+  @override
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel;
+  @override
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement;
+  @override
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
+  Date? get approvalDate;
+  @override
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement;
+  @override
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
+  Date? get lastReviewDate;
+  @override
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement;
+  @override
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
+  Period? get effectivePeriod;
+  @override
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
+  List<CodeableConcept>? get topic;
+  @override
+
+  /// [author] The creator or owner of the knowledge or information about the medication.
+  Reference? get author;
+  @override
+
+  /// [editor] An individual or organization primarily responsible for internal coherence of the {{title}}.
+  List<ContactDetail>? get editor;
+  @override
+
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the {{title}}.
+  List<ContactDetail>? get reviewer;
+  @override
+
+  /// [endorser] An individual or organization responsible for officially endorsing the {{title}} for use in some setting.
+  List<ContactDetail>? get endorser;
+  @override
+
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.
+  List<RelatedArtifact>? get relatedArtifact;
+  @override
+
+  /// [code] A code that specifies this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.
+  CodeableConcept? get code;
+  @override
+
+  /// [intendedJurisdiction] Lists the jurisdictions that this medication knowledge was written for.
+  List<CodeableConcept>? get intendedJurisdiction;
+  @override
+
+  /// [relatedMedicationKnowledge] Associated or related medications. For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor.
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge;
   @override
+
+  /// [associatedMedication] Links to associated medications that could be prescribed, dispensed or administered.
   List<Reference>? get associatedMedication;
   @override
+
+  /// [productType] Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).
   List<CodeableConcept>? get productType;
   @override
+
+  /// [monograph] Associated documentation about the medication.
   List<MedicationKnowledgeMonograph>? get monograph;
   @override
+
+  /// [preparationInstruction] The instructions for preparing the medication.
   Markdown? get preparationInstruction;
   @override
+
+  /// [preparationInstructionElement] ("_preparationInstruction") Extensions for preparationInstruction
   @JsonKey(name: '_preparationInstruction')
   Element? get preparationInstructionElement;
   @override
+
+  /// [cost] The price of the medication.
   List<MedicationKnowledgeCost>? get cost;
   @override
+
+  /// [monitoringProgram] The program under which the medication is reviewed.
   List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram;
   @override
+
+  /// [indicationGuideline] Guidelines or protocols that are applicable for the administration of the medication based on indication.
   List<MedicationKnowledgeIndicationGuideline>? get indicationGuideline;
   @override
+
+  /// [medicineClassification] Categorization of the medication within a formulary or classification system.
   List<MedicationKnowledgeMedicineClassification>? get medicineClassification;
   @override
+
+  /// [packaging] Information that only applies to packages (not products).
   List<MedicationKnowledgePackaging>? get packaging;
   @override
+
+  /// [clinicalUseIssue] Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).
   List<Reference>? get clinicalUseIssue;
   @override
+
+  /// [storageGuideline] Information on how the medication should be stored, for example, refrigeration temperatures and length of stability at a given temperature.
   List<MedicationKnowledgeStorageGuideline>? get storageGuideline;
   @override
+
+  /// [regulatory] Regulatory information about a medication.
   List<MedicationKnowledgeRegulatory>? get regulatory;
   @override
+
+  /// [definitional] Along with the link to a Medicinal Product Definition resource, this information provides common definitional elements that are needed to understand the specific medication that is being described.
   MedicationKnowledgeDefinitional? get definitional;
   @override
   @JsonKey(ignore: true)
@@ -13573,12 +17365,21 @@ MedicationKnowledgeRelatedMedicationKnowledge
 
 /// @nodoc
 mixin _$MedicationKnowledgeRelatedMedicationKnowledge {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The category of the associated medication knowledge reference.
   CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [reference] Associated documentation about the associated medication knowledge.
   List<Reference> get reference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -13744,9 +17545,14 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeRelatedMedicationKnowledgeFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -13757,7 +17563,10 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -13768,9 +17577,14 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The category of the associated medication knowledge reference.
   @override
   final CodeableConcept type;
+
+  /// [reference] Associated documentation about the associated medication knowledge.
   final List<Reference> _reference;
+
+  /// [reference] Associated documentation about the associated medication knowledge.
   @override
   List<Reference> get reference {
     if (_reference is EqualUnmodifiableListView) return _reference;
@@ -13842,15 +17656,25 @@ abstract class _MedicationKnowledgeRelatedMedicationKnowledge
       _$_MedicationKnowledgeRelatedMedicationKnowledge.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The category of the associated medication knowledge reference.
   CodeableConcept get type;
   @override
+
+  /// [reference] Associated documentation about the associated medication knowledge.
   List<Reference> get reference;
   @override
   @JsonKey(ignore: true)
@@ -13866,12 +17690,21 @@ MedicationKnowledgeMonograph _$MedicationKnowledgeMonographFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeMonograph {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The category of documentation about the medication. (e.g. professional monograph, patient education monograph).
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [source] Associated documentation about the medication.
   Reference? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -14050,9 +17883,14 @@ class _$_MedicationKnowledgeMonograph extends _MedicationKnowledgeMonograph {
   factory _$_MedicationKnowledgeMonograph.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeMonographFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -14063,7 +17901,10 @@ class _$_MedicationKnowledgeMonograph extends _MedicationKnowledgeMonograph {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -14074,8 +17915,11 @@ class _$_MedicationKnowledgeMonograph extends _MedicationKnowledgeMonograph {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The category of documentation about the medication. (e.g. professional monograph, patient education monograph).
   @override
   final CodeableConcept? type;
+
+  /// [source] Associated documentation about the medication.
   @override
   final Reference? source;
 
@@ -14137,15 +17981,25 @@ abstract class _MedicationKnowledgeMonograph
       _$_MedicationKnowledgeMonograph.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The category of documentation about the medication. (e.g. professional monograph, patient education monograph).
   CodeableConcept? get type;
   @override
+
+  /// [source] Associated documentation about the medication.
   Reference? get source;
   @override
   @JsonKey(ignore: true)
@@ -14160,17 +18014,34 @@ MedicationKnowledgeCost _$MedicationKnowledgeCostFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeCost {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [effectiveDate] The date range for which the cost information of the medication is effective.
   List<Period>? get effectiveDate => throw _privateConstructorUsedError;
+
+  /// [type] The category of the cost information.  For example, manufacturers' cost, patient cost, claim reimbursement cost, actual acquisition cost.
   CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [source] The source or owner that assigns the price to the medication.
   String? get source => throw _privateConstructorUsedError;
+
+  /// [sourceElement] ("_source") Extensions for source
   @JsonKey(name: '_source')
   Element? get sourceElement => throw _privateConstructorUsedError;
+
+  /// [costMoney] The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.
   Money? get costMoney => throw _privateConstructorUsedError;
+
+  /// [costCodeableConcept] The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.
   CodeableConcept? get costCodeableConcept =>
       throw _privateConstructorUsedError;
 
@@ -14425,9 +18296,14 @@ class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
   factory _$_MedicationKnowledgeCost.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeCostFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -14438,7 +18314,10 @@ class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -14449,7 +18328,10 @@ class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [effectiveDate] The date range for which the cost information of the medication is effective.
   final List<Period>? _effectiveDate;
+
+  /// [effectiveDate] The date range for which the cost information of the medication is effective.
   @override
   List<Period>? get effectiveDate {
     final value = _effectiveDate;
@@ -14459,15 +18341,24 @@ class _$_MedicationKnowledgeCost extends _MedicationKnowledgeCost {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The category of the cost information.  For example, manufacturers' cost, patient cost, claim reimbursement cost, actual acquisition cost.
   @override
   final CodeableConcept type;
+
+  /// [source] The source or owner that assigns the price to the medication.
   @override
   final String? source;
+
+  /// [sourceElement] ("_source") Extensions for source
   @override
   @JsonKey(name: '_source')
   final Element? sourceElement;
+
+  /// [costMoney] The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.
   @override
   final Money? costMoney;
+
+  /// [costCodeableConcept] The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.
   @override
   final CodeableConcept? costCodeableConcept;
 
@@ -14545,24 +18436,42 @@ abstract class _MedicationKnowledgeCost extends MedicationKnowledgeCost {
       _$_MedicationKnowledgeCost.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [effectiveDate] The date range for which the cost information of the medication is effective.
   List<Period>? get effectiveDate;
   @override
+
+  /// [type] The category of the cost information.  For example, manufacturers' cost, patient cost, claim reimbursement cost, actual acquisition cost.
   CodeableConcept get type;
   @override
+
+  /// [source] The source or owner that assigns the price to the medication.
   String? get source;
   @override
+
+  /// [sourceElement] ("_source") Extensions for source
   @JsonKey(name: '_source')
   Element? get sourceElement;
   @override
+
+  /// [costMoney] The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.
   Money? get costMoney;
   @override
+
+  /// [costCodeableConcept] The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.
   CodeableConcept? get costCodeableConcept;
   @override
   @JsonKey(ignore: true)
@@ -14577,13 +18486,24 @@ MedicationKnowledgeMonitoringProgram
 
 /// @nodoc
 mixin _$MedicationKnowledgeMonitoringProgram {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] Type of program under which the medication is monitored.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [name] Name of the reviewing program.
   String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
@@ -14779,9 +18699,14 @@ class _$_MedicationKnowledgeMonitoringProgram
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeMonitoringProgramFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -14792,7 +18717,10 @@ class _$_MedicationKnowledgeMonitoringProgram
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -14803,10 +18731,15 @@ class _$_MedicationKnowledgeMonitoringProgram
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Type of program under which the medication is monitored.
   @override
   final CodeableConcept? type;
+
+  /// [name] Name of the reviewing program.
   @override
   final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
@@ -14876,17 +18809,29 @@ abstract class _MedicationKnowledgeMonitoringProgram
       _$_MedicationKnowledgeMonitoringProgram.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] Type of program under which the medication is monitored.
   CodeableConcept? get type;
   @override
+
+  /// [name] Name of the reviewing program.
   String? get name;
   @override
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
@@ -14904,12 +18849,21 @@ MedicationKnowledgeIndicationGuideline
 
 /// @nodoc
 mixin _$MedicationKnowledgeIndicationGuideline {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [indication] Indication or reason for use of the medication that applies to the specific administration guideline.
   List<CodeableReference>? get indication => throw _privateConstructorUsedError;
+
+  /// [dosingGuideline] The guidelines for the dosage of the medication for the indication.
   List<MedicationKnowledgeDosingGuideline>? get dosingGuideline =>
       throw _privateConstructorUsedError;
 
@@ -15062,9 +19016,14 @@ class _$_MedicationKnowledgeIndicationGuideline
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeIndicationGuidelineFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -15075,7 +19034,10 @@ class _$_MedicationKnowledgeIndicationGuideline
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -15086,7 +19048,10 @@ class _$_MedicationKnowledgeIndicationGuideline
     return EqualUnmodifiableListView(value);
   }
 
+  /// [indication] Indication or reason for use of the medication that applies to the specific administration guideline.
   final List<CodeableReference>? _indication;
+
+  /// [indication] Indication or reason for use of the medication that applies to the specific administration guideline.
   @override
   List<CodeableReference>? get indication {
     final value = _indication;
@@ -15096,7 +19061,10 @@ class _$_MedicationKnowledgeIndicationGuideline
     return EqualUnmodifiableListView(value);
   }
 
+  /// [dosingGuideline] The guidelines for the dosage of the medication for the indication.
   final List<MedicationKnowledgeDosingGuideline>? _dosingGuideline;
+
+  /// [dosingGuideline] The guidelines for the dosage of the medication for the indication.
   @override
   List<MedicationKnowledgeDosingGuideline>? get dosingGuideline {
     final value = _dosingGuideline;
@@ -15169,15 +19137,25 @@ abstract class _MedicationKnowledgeIndicationGuideline
       _$_MedicationKnowledgeIndicationGuideline.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [indication] Indication or reason for use of the medication that applies to the specific administration guideline.
   List<CodeableReference>? get indication;
   @override
+
+  /// [dosingGuideline] The guidelines for the dosage of the medication for the indication.
   List<MedicationKnowledgeDosingGuideline>? get dosingGuideline;
   @override
   @JsonKey(ignore: true)
@@ -15193,16 +19171,29 @@ MedicationKnowledgeDosingGuideline _$MedicationKnowledgeDosingGuidelineFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeDosingGuideline {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [treatmentIntent] The overall intention of the treatment, for example, prophylactic, supporative, curative, etc.
   CodeableConcept? get treatmentIntent => throw _privateConstructorUsedError;
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   List<MedicationKnowledgeDosage>? get dosage =>
       throw _privateConstructorUsedError;
+
+  /// [administrationTreatment] The type of the treatment that the guideline applies to, for example, long term therapy, first line treatment, etc.
   CodeableConcept? get administrationTreatment =>
       throw _privateConstructorUsedError;
+
+  /// [patientCharacteristic] Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
   List<MedicationKnowledgePatientCharacteristic>? get patientCharacteristic =>
       throw _privateConstructorUsedError;
 
@@ -15415,9 +19406,14 @@ class _$_MedicationKnowledgeDosingGuideline
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeDosingGuidelineFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -15428,7 +19424,10 @@ class _$_MedicationKnowledgeDosingGuideline
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -15439,9 +19438,14 @@ class _$_MedicationKnowledgeDosingGuideline
     return EqualUnmodifiableListView(value);
   }
 
+  /// [treatmentIntent] The overall intention of the treatment, for example, prophylactic, supporative, curative, etc.
   @override
   final CodeableConcept? treatmentIntent;
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   final List<MedicationKnowledgeDosage>? _dosage;
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   @override
   List<MedicationKnowledgeDosage>? get dosage {
     final value = _dosage;
@@ -15451,9 +19455,14 @@ class _$_MedicationKnowledgeDosingGuideline
     return EqualUnmodifiableListView(value);
   }
 
+  /// [administrationTreatment] The type of the treatment that the guideline applies to, for example, long term therapy, first line treatment, etc.
   @override
   final CodeableConcept? administrationTreatment;
+
+  /// [patientCharacteristic] Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
   final List<MedicationKnowledgePatientCharacteristic>? _patientCharacteristic;
+
+  /// [patientCharacteristic] Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
   @override
   List<MedicationKnowledgePatientCharacteristic>? get patientCharacteristic {
     final value = _patientCharacteristic;
@@ -15535,19 +19544,33 @@ abstract class _MedicationKnowledgeDosingGuideline
       _$_MedicationKnowledgeDosingGuideline.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [treatmentIntent] The overall intention of the treatment, for example, prophylactic, supporative, curative, etc.
   CodeableConcept? get treatmentIntent;
   @override
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   List<MedicationKnowledgeDosage>? get dosage;
   @override
+
+  /// [administrationTreatment] The type of the treatment that the guideline applies to, for example, long term therapy, first line treatment, etc.
   CodeableConcept? get administrationTreatment;
   @override
+
+  /// [patientCharacteristic] Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
   List<MedicationKnowledgePatientCharacteristic>? get patientCharacteristic;
   @override
   @JsonKey(ignore: true)
@@ -15563,12 +19586,21 @@ MedicationKnowledgeDosage _$MedicationKnowledgeDosageFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeDosage {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The type or category of dosage for a given medication (for example, prophylaxis, maintenance, therapeutic, etc.).
   CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   List<Dosage> get dosage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -15727,9 +19759,14 @@ class _$_MedicationKnowledgeDosage extends _MedicationKnowledgeDosage {
   factory _$_MedicationKnowledgeDosage.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeDosageFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -15740,7 +19777,10 @@ class _$_MedicationKnowledgeDosage extends _MedicationKnowledgeDosage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -15751,9 +19791,14 @@ class _$_MedicationKnowledgeDosage extends _MedicationKnowledgeDosage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The type or category of dosage for a given medication (for example, prophylaxis, maintenance, therapeutic, etc.).
   @override
   final CodeableConcept type;
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   final List<Dosage> _dosage;
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   @override
   List<Dosage> get dosage {
     if (_dosage is EqualUnmodifiableListView) return _dosage;
@@ -15818,15 +19863,25 @@ abstract class _MedicationKnowledgeDosage extends MedicationKnowledgeDosage {
       _$_MedicationKnowledgeDosage.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The type or category of dosage for a given medication (for example, prophylaxis, maintenance, therapeutic, etc.).
   CodeableConcept get type;
   @override
+
+  /// [dosage] Dosage for the medication for the specific guidelines.
   List<Dosage> get dosage;
   @override
   @JsonKey(ignore: true)
@@ -15842,15 +19897,28 @@ MedicationKnowledgePatientCharacteristic
 
 /// @nodoc
 mixin _$MedicationKnowledgePatientCharacteristic {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The categorization of the specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
   CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] The specific characteristic (e.g. height, weight, gender, etc.).
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [valueQuantity] The specific characteristic (e.g. height, weight, gender, etc.).
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] The specific characteristic (e.g. height, weight, gender, etc.).
   Range? get valueRange => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -16086,9 +20154,14 @@ class _$_MedicationKnowledgePatientCharacteristic
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgePatientCharacteristicFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -16099,7 +20172,10 @@ class _$_MedicationKnowledgePatientCharacteristic
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -16110,12 +20186,19 @@ class _$_MedicationKnowledgePatientCharacteristic
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The categorization of the specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
   @override
   final CodeableConcept type;
+
+  /// [valueCodeableConcept] The specific characteristic (e.g. height, weight, gender, etc.).
   @override
   final CodeableConcept? valueCodeableConcept;
+
+  /// [valueQuantity] The specific characteristic (e.g. height, weight, gender, etc.).
   @override
   final Quantity? valueQuantity;
+
+  /// [valueRange] The specific characteristic (e.g. height, weight, gender, etc.).
   @override
   final Range? valueRange;
 
@@ -16188,19 +20271,33 @@ abstract class _MedicationKnowledgePatientCharacteristic
       _$_MedicationKnowledgePatientCharacteristic.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The categorization of the specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
   CodeableConcept get type;
   @override
+
+  /// [valueCodeableConcept] The specific characteristic (e.g. height, weight, gender, etc.).
   CodeableConcept? get valueCodeableConcept;
   @override
+
+  /// [valueQuantity] The specific characteristic (e.g. height, weight, gender, etc.).
   Quantity? get valueQuantity;
   @override
+
+  /// [valueRange] The specific characteristic (e.g. height, weight, gender, etc.).
   Range? get valueRange;
   @override
   @JsonKey(ignore: true)
@@ -16217,18 +20314,35 @@ MedicationKnowledgeMedicineClassification
 
 /// @nodoc
 mixin _$MedicationKnowledgeMedicineClassification {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification).
   CodeableConcept get type => throw _privateConstructorUsedError;
-  Markdown? get sourceString => throw _privateConstructorUsedError;
+
+  /// [sourceString] Either a textual source of the classification or a reference to an online source.
+  String? get sourceString => throw _privateConstructorUsedError;
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
   @JsonKey(name: '_sourceString')
   Element? get sourceStringElement => throw _privateConstructorUsedError;
+
+  /// [sourceUri] Either a textual source of the classification or a reference to an online source.
   FhirUri? get sourceUri => throw _privateConstructorUsedError;
+
+  /// [sourceUriElement] ("_sourceUri") Extensions for sourceUri
   @JsonKey(name: '_sourceUri')
   Element? get sourceUriElement => throw _privateConstructorUsedError;
+
+  /// [classification] Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).
   List<CodeableConcept>? get classification =>
       throw _privateConstructorUsedError;
 
@@ -16252,7 +20366,7 @@ abstract class $MedicationKnowledgeMedicineClassificationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Markdown? sourceString,
+      String? sourceString,
       @JsonKey(name: '_sourceString') Element? sourceStringElement,
       FhirUri? sourceUri,
       @JsonKey(name: '_sourceUri') Element? sourceUriElement,
@@ -16308,7 +20422,7 @@ class _$MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res,
       sourceString: freezed == sourceString
           ? _value.sourceString
           : sourceString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as String?,
       sourceStringElement: freezed == sourceStringElement
           ? _value.sourceStringElement
           : sourceStringElement // ignore: cast_nullable_to_non_nullable
@@ -16375,7 +20489,7 @@ abstract class _$$_MedicationKnowledgeMedicineClassificationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Markdown? sourceString,
+      String? sourceString,
       @JsonKey(name: '_sourceString') Element? sourceStringElement,
       FhirUri? sourceUri,
       @JsonKey(name: '_sourceUri') Element? sourceUriElement,
@@ -16432,7 +20546,7 @@ class __$$_MedicationKnowledgeMedicineClassificationCopyWithImpl<$Res>
       sourceString: freezed == sourceString
           ? _value.sourceString
           : sourceString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as String?,
       sourceStringElement: freezed == sourceStringElement
           ? _value.sourceStringElement
           : sourceStringElement // ignore: cast_nullable_to_non_nullable
@@ -16476,9 +20590,14 @@ class _$_MedicationKnowledgeMedicineClassification
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeMedicineClassificationFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -16489,7 +20608,10 @@ class _$_MedicationKnowledgeMedicineClassification
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -16500,19 +20622,32 @@ class _$_MedicationKnowledgeMedicineClassification
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification).
   @override
   final CodeableConcept type;
+
+  /// [sourceString] Either a textual source of the classification or a reference to an online source.
   @override
-  final Markdown? sourceString;
+  final String? sourceString;
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
   @override
   @JsonKey(name: '_sourceString')
   final Element? sourceStringElement;
+
+  /// [sourceUri] Either a textual source of the classification or a reference to an online source.
   @override
   final FhirUri? sourceUri;
+
+  /// [sourceUriElement] ("_sourceUri") Extensions for sourceUri
   @override
   @JsonKey(name: '_sourceUri')
   final Element? sourceUriElement;
+
+  /// [classification] Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).
   final List<CodeableConcept>? _classification;
+
+  /// [classification] Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).
   @override
   List<CodeableConcept>? get classification {
     final value = _classification;
@@ -16588,7 +20723,7 @@ abstract class _MedicationKnowledgeMedicineClassification
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept type,
-          final Markdown? sourceString,
+          final String? sourceString,
           @JsonKey(name: '_sourceString') final Element? sourceStringElement,
           final FhirUri? sourceUri,
           @JsonKey(name: '_sourceUri') final Element? sourceUriElement,
@@ -16601,25 +20736,43 @@ abstract class _MedicationKnowledgeMedicineClassification
       _$_MedicationKnowledgeMedicineClassification.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification).
   CodeableConcept get type;
   @override
-  Markdown? get sourceString;
+
+  /// [sourceString] Either a textual source of the classification or a reference to an online source.
+  String? get sourceString;
   @override
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
   @JsonKey(name: '_sourceString')
   Element? get sourceStringElement;
   @override
+
+  /// [sourceUri] Either a textual source of the classification or a reference to an online source.
   FhirUri? get sourceUri;
   @override
+
+  /// [sourceUriElement] ("_sourceUri") Extensions for sourceUri
   @JsonKey(name: '_sourceUri')
   Element? get sourceUriElement;
   @override
+
+  /// [classification] Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).
   List<CodeableConcept>? get classification;
   @override
   @JsonKey(ignore: true)
@@ -16635,12 +20788,21 @@ MedicationKnowledgePackaging _$MedicationKnowledgePackagingFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgePackaging {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [cost] The cost of the packaged medication.
   List<MedicationKnowledgeCost>? get cost => throw _privateConstructorUsedError;
+
+  /// [packagedProduct] A reference to a PackagedProductDefinition that provides the details of the product that is in the packaging and is being priced.
   Reference? get packagedProduct => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -16805,9 +20967,14 @@ class _$_MedicationKnowledgePackaging extends _MedicationKnowledgePackaging {
   factory _$_MedicationKnowledgePackaging.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationKnowledgePackagingFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -16818,7 +20985,10 @@ class _$_MedicationKnowledgePackaging extends _MedicationKnowledgePackaging {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -16829,7 +20999,10 @@ class _$_MedicationKnowledgePackaging extends _MedicationKnowledgePackaging {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [cost] The cost of the packaged medication.
   final List<MedicationKnowledgeCost>? _cost;
+
+  /// [cost] The cost of the packaged medication.
   @override
   List<MedicationKnowledgeCost>? get cost {
     final value = _cost;
@@ -16839,6 +21012,7 @@ class _$_MedicationKnowledgePackaging extends _MedicationKnowledgePackaging {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [packagedProduct] A reference to a PackagedProductDefinition that provides the details of the product that is in the packaging and is being priced.
   @override
   final Reference? packagedProduct;
 
@@ -16901,19 +21075,889 @@ abstract class _MedicationKnowledgePackaging
       _$_MedicationKnowledgePackaging.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [cost] The cost of the packaged medication.
   List<MedicationKnowledgeCost>? get cost;
   @override
+
+  /// [packagedProduct] A reference to a PackagedProductDefinition that provides the details of the product that is in the packaging and is being priced.
   Reference? get packagedProduct;
   @override
   @JsonKey(ignore: true)
   _$$_MedicationKnowledgePackagingCopyWith<_$_MedicationKnowledgePackaging>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+MedicationKnowledgeStorageGuideline
+    _$MedicationKnowledgeStorageGuidelineFromJson(Map<String, dynamic> json) {
+  return _MedicationKnowledgeStorageGuideline.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationKnowledgeStorageGuideline {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [reference] Reference to additional information about the storage guidelines.
+  FhirUri? get reference => throw _privateConstructorUsedError;
+
+  /// [referenceElement] ("_reference") Extensions for reference
+  @JsonKey(name: '_reference')
+  Element? get referenceElement => throw _privateConstructorUsedError;
+
+  /// [note] Additional notes about the storage.
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [stabilityDuration] Duration that the medication remains stable if the environmentalSetting is respected.
+  FhirDuration? get stabilityDuration => throw _privateConstructorUsedError;
+
+  /// [environmentalSetting] Describes a setting/value on the environment for the adequate storage of the medication and other substances.  Environment settings may involve temperature, humidity, or exposure to light.
+  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationKnowledgeStorageGuidelineCopyWith<
+          MedicationKnowledgeStorageGuideline>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  factory $MedicationKnowledgeStorageGuidelineCopyWith(
+          MedicationKnowledgeStorageGuideline value,
+          $Res Function(MedicationKnowledgeStorageGuideline) then) =
+      _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res,
+          MedicationKnowledgeStorageGuideline>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? reference,
+      @JsonKey(name: '_reference') Element? referenceElement,
+      List<Annotation>? note,
+      FhirDuration? stabilityDuration,
+      List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
+
+  $ElementCopyWith<$Res>? get referenceElement;
+  $FhirDurationCopyWith<$Res>? get stabilityDuration;
+}
+
+/// @nodoc
+class _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res,
+        $Val extends MedicationKnowledgeStorageGuideline>
+    implements $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  _$MedicationKnowledgeStorageGuidelineCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? reference = freezed,
+    Object? referenceElement = freezed,
+    Object? note = freezed,
+    Object? stabilityDuration = freezed,
+    Object? environmentalSetting = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: freezed == reference
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      referenceElement: freezed == referenceElement
+          ? _value.referenceElement
+          : referenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      note: freezed == note
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      stabilityDuration: freezed == stabilityDuration
+          ? _value.stabilityDuration
+          : stabilityDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      environmentalSetting: freezed == environmentalSetting
+          ? _value.environmentalSetting
+          : environmentalSetting // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeEnvironmentalSetting>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get referenceElement {
+    if (_value.referenceElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.referenceElement!, (value) {
+      return _then(_value.copyWith(referenceElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FhirDurationCopyWith<$Res>? get stabilityDuration {
+    if (_value.stabilityDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.stabilityDuration!, (value) {
+      return _then(_value.copyWith(stabilityDuration: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationKnowledgeStorageGuidelineCopyWith<$Res>
+    implements $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeStorageGuidelineCopyWith(
+          _$_MedicationKnowledgeStorageGuideline value,
+          $Res Function(_$_MedicationKnowledgeStorageGuideline) then) =
+      __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? reference,
+      @JsonKey(name: '_reference') Element? referenceElement,
+      List<Annotation>? note,
+      FhirDuration? stabilityDuration,
+      List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
+
+  @override
+  $ElementCopyWith<$Res>? get referenceElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get stabilityDuration;
+}
+
+/// @nodoc
+class __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res,
+        _$_MedicationKnowledgeStorageGuideline>
+    implements _$$_MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
+  __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl(
+      _$_MedicationKnowledgeStorageGuideline _value,
+      $Res Function(_$_MedicationKnowledgeStorageGuideline) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? reference = freezed,
+    Object? referenceElement = freezed,
+    Object? note = freezed,
+    Object? stabilityDuration = freezed,
+    Object? environmentalSetting = freezed,
+  }) {
+    return _then(_$_MedicationKnowledgeStorageGuideline(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: freezed == reference
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      referenceElement: freezed == referenceElement
+          ? _value.referenceElement
+          : referenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      note: freezed == note
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      stabilityDuration: freezed == stabilityDuration
+          ? _value.stabilityDuration
+          : stabilityDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      environmentalSetting: freezed == environmentalSetting
+          ? _value._environmentalSetting
+          : environmentalSetting // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeEnvironmentalSetting>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationKnowledgeStorageGuideline
+    extends _MedicationKnowledgeStorageGuideline {
+  _$_MedicationKnowledgeStorageGuideline(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.reference,
+      @JsonKey(name: '_reference') this.referenceElement,
+      final List<Annotation>? note,
+      this.stabilityDuration,
+      final List<MedicationKnowledgeEnvironmentalSetting>?
+          environmentalSetting})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _note = note,
+        _environmentalSetting = environmentalSetting,
+        super._();
+
+  factory _$_MedicationKnowledgeStorageGuideline.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_MedicationKnowledgeStorageGuidelineFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [reference] Reference to additional information about the storage guidelines.
+  @override
+  final FhirUri? reference;
+
+  /// [referenceElement] ("_reference") Extensions for reference
+  @override
+  @JsonKey(name: '_reference')
+  final Element? referenceElement;
+
+  /// [note] Additional notes about the storage.
+  final List<Annotation>? _note;
+
+  /// [note] Additional notes about the storage.
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    if (_note is EqualUnmodifiableListView) return _note;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [stabilityDuration] Duration that the medication remains stable if the environmentalSetting is respected.
+  @override
+  final FhirDuration? stabilityDuration;
+
+  /// [environmentalSetting] Describes a setting/value on the environment for the adequate storage of the medication and other substances.  Environment settings may involve temperature, humidity, or exposure to light.
+  final List<MedicationKnowledgeEnvironmentalSetting>? _environmentalSetting;
+
+  /// [environmentalSetting] Describes a setting/value on the environment for the adequate storage of the medication and other substances.  Environment settings may involve temperature, humidity, or exposure to light.
+  @override
+  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting {
+    final value = _environmentalSetting;
+    if (value == null) return null;
+    if (_environmentalSetting is EqualUnmodifiableListView)
+      return _environmentalSetting;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MedicationKnowledgeStorageGuideline(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, referenceElement: $referenceElement, note: $note, stabilityDuration: $stabilityDuration, environmentalSetting: $environmentalSetting)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationKnowledgeStorageGuideline &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.reference, reference) ||
+                other.reference == reference) &&
+            (identical(other.referenceElement, referenceElement) ||
+                other.referenceElement == referenceElement) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            (identical(other.stabilityDuration, stabilityDuration) ||
+                other.stabilityDuration == stabilityDuration) &&
+            const DeepCollectionEquality()
+                .equals(other._environmentalSetting, _environmentalSetting));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      reference,
+      referenceElement,
+      const DeepCollectionEquality().hash(_note),
+      stabilityDuration,
+      const DeepCollectionEquality().hash(_environmentalSetting));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MedicationKnowledgeStorageGuidelineCopyWith<
+          _$_MedicationKnowledgeStorageGuideline>
+      get copyWith => __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<
+          _$_MedicationKnowledgeStorageGuideline>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationKnowledgeStorageGuidelineToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationKnowledgeStorageGuideline
+    extends MedicationKnowledgeStorageGuideline {
+  factory _MedicationKnowledgeStorageGuideline(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? reference,
+      @JsonKey(name: '_reference') final Element? referenceElement,
+      final List<Annotation>? note,
+      final FhirDuration? stabilityDuration,
+      final List<MedicationKnowledgeEnvironmentalSetting>?
+          environmentalSetting}) = _$_MedicationKnowledgeStorageGuideline;
+  _MedicationKnowledgeStorageGuideline._() : super._();
+
+  factory _MedicationKnowledgeStorageGuideline.fromJson(
+          Map<String, dynamic> json) =
+      _$_MedicationKnowledgeStorageGuideline.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [reference] Reference to additional information about the storage guidelines.
+  FhirUri? get reference;
+  @override
+
+  /// [referenceElement] ("_reference") Extensions for reference
+  @JsonKey(name: '_reference')
+  Element? get referenceElement;
+  @override
+
+  /// [note] Additional notes about the storage.
+  List<Annotation>? get note;
+  @override
+
+  /// [stabilityDuration] Duration that the medication remains stable if the environmentalSetting is respected.
+  FhirDuration? get stabilityDuration;
+  @override
+
+  /// [environmentalSetting] Describes a setting/value on the environment for the adequate storage of the medication and other substances.  Environment settings may involve temperature, humidity, or exposure to light.
+  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationKnowledgeStorageGuidelineCopyWith<
+          _$_MedicationKnowledgeStorageGuideline>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+MedicationKnowledgeEnvironmentalSetting
+    _$MedicationKnowledgeEnvironmentalSettingFromJson(
+        Map<String, dynamic> json) {
+  return _MedicationKnowledgeEnvironmentalSetting.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationKnowledgeEnvironmentalSetting {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [type] Identifies the category or type of setting (e.g., type of location, temperature, humidity).
+  CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationKnowledgeEnvironmentalSettingCopyWith<
+          MedicationKnowledgeEnvironmentalSetting>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  factory $MedicationKnowledgeEnvironmentalSettingCopyWith(
+          MedicationKnowledgeEnvironmentalSetting value,
+          $Res Function(MedicationKnowledgeEnvironmentalSetting) then) =
+      _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res,
+          MedicationKnowledgeEnvironmentalSetting>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      CodeableConcept? valueCodeableConcept});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+}
+
+/// @nodoc
+class _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res,
+        $Val extends MedicationKnowledgeEnvironmentalSetting>
+    implements $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl(
+      this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueCodeableConcept = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<$Res>
+    implements $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeEnvironmentalSettingCopyWith(
+          _$_MedicationKnowledgeEnvironmentalSetting value,
+          $Res Function(_$_MedicationKnowledgeEnvironmentalSetting) then) =
+      __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      CodeableConcept? valueCodeableConcept});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+}
+
+/// @nodoc
+class __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res,
+        _$_MedicationKnowledgeEnvironmentalSetting>
+    implements _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
+  __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl(
+      _$_MedicationKnowledgeEnvironmentalSetting _value,
+      $Res Function(_$_MedicationKnowledgeEnvironmentalSetting) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueCodeableConcept = freezed,
+  }) {
+    return _then(_$_MedicationKnowledgeEnvironmentalSetting(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationKnowledgeEnvironmentalSetting
+    extends _MedicationKnowledgeEnvironmentalSetting {
+  _$_MedicationKnowledgeEnvironmentalSetting(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueCodeableConcept})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_MedicationKnowledgeEnvironmentalSetting.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_MedicationKnowledgeEnvironmentalSettingFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] Identifies the category or type of setting (e.g., type of location, temperature, humidity).
+  @override
+  final CodeableConcept type;
+
+  /// [valueQuantity] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  @override
+  final Quantity? valueQuantity;
+
+  /// [valueRange] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  @override
+  final Range? valueRange;
+
+  /// [valueCodeableConcept] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  @override
+  final CodeableConcept? valueCodeableConcept;
+
+  @override
+  String toString() {
+    return 'MedicationKnowledgeEnvironmentalSetting(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueQuantity: $valueQuantity, valueRange: $valueRange, valueCodeableConcept: $valueCodeableConcept)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationKnowledgeEnvironmentalSetting &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                other.valueQuantity == valueQuantity) &&
+            (identical(other.valueRange, valueRange) ||
+                other.valueRange == valueRange) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                other.valueCodeableConcept == valueCodeableConcept));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      valueQuantity,
+      valueRange,
+      valueCodeableConcept);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<
+          _$_MedicationKnowledgeEnvironmentalSetting>
+      get copyWith => __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<
+          _$_MedicationKnowledgeEnvironmentalSetting>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationKnowledgeEnvironmentalSettingToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationKnowledgeEnvironmentalSetting
+    extends MedicationKnowledgeEnvironmentalSetting {
+  factory _MedicationKnowledgeEnvironmentalSetting(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final Quantity? valueQuantity,
+          final Range? valueRange,
+          final CodeableConcept? valueCodeableConcept}) =
+      _$_MedicationKnowledgeEnvironmentalSetting;
+  _MedicationKnowledgeEnvironmentalSetting._() : super._();
+
+  factory _MedicationKnowledgeEnvironmentalSetting.fromJson(
+          Map<String, dynamic> json) =
+      _$_MedicationKnowledgeEnvironmentalSetting.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [type] Identifies the category or type of setting (e.g., type of location, temperature, humidity).
+  CodeableConcept get type;
+  @override
+
+  /// [valueQuantity] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  Quantity? get valueQuantity;
+  @override
+
+  /// [valueRange] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  Range? get valueRange;
+  @override
+
+  /// [valueCodeableConcept] Value associated to the setting. E.g., 40° – 50°F for temperature.
+  CodeableConcept? get valueCodeableConcept;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<
+          _$_MedicationKnowledgeEnvironmentalSetting>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -16924,15 +21968,28 @@ MedicationKnowledgeRegulatory _$MedicationKnowledgeRegulatoryFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeRegulatory {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [regulatoryAuthority] The authority that is specifying the regulations.
   Reference get regulatoryAuthority => throw _privateConstructorUsedError;
+
+  /// [substitution] Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
   List<MedicationKnowledgeSubstitution>? get substitution =>
       throw _privateConstructorUsedError;
+
+  /// [schedule] Specifies the schedule of a medication in jurisdiction.
   List<CodeableConcept>? get schedule => throw _privateConstructorUsedError;
+
+  /// [maxDispense] The maximum number of units of the medication that can be dispensed in a period.
   MedicationKnowledgeMaxDispense? get maxDispense =>
       throw _privateConstructorUsedError;
 
@@ -17138,9 +22195,14 @@ class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeRegulatoryFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -17151,7 +22213,10 @@ class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -17162,9 +22227,14 @@ class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [regulatoryAuthority] The authority that is specifying the regulations.
   @override
   final Reference regulatoryAuthority;
+
+  /// [substitution] Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
   final List<MedicationKnowledgeSubstitution>? _substitution;
+
+  /// [substitution] Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
   @override
   List<MedicationKnowledgeSubstitution>? get substitution {
     final value = _substitution;
@@ -17174,7 +22244,10 @@ class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [schedule] Specifies the schedule of a medication in jurisdiction.
   final List<CodeableConcept>? _schedule;
+
+  /// [schedule] Specifies the schedule of a medication in jurisdiction.
   @override
   List<CodeableConcept>? get schedule {
     final value = _schedule;
@@ -17184,6 +22257,7 @@ class _$_MedicationKnowledgeRegulatory extends _MedicationKnowledgeRegulatory {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [maxDispense] The maximum number of units of the medication that can be dispensed in a period.
   @override
   final MedicationKnowledgeMaxDispense? maxDispense;
 
@@ -17255,19 +22329,33 @@ abstract class _MedicationKnowledgeRegulatory
       _$_MedicationKnowledgeRegulatory.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [regulatoryAuthority] The authority that is specifying the regulations.
   Reference get regulatoryAuthority;
   @override
+
+  /// [substitution] Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
   List<MedicationKnowledgeSubstitution>? get substitution;
   @override
+
+  /// [schedule] Specifies the schedule of a medication in jurisdiction.
   List<CodeableConcept>? get schedule;
   @override
+
+  /// [maxDispense] The maximum number of units of the medication that can be dispensed in a period.
   MedicationKnowledgeMaxDispense? get maxDispense;
   @override
   @JsonKey(ignore: true)
@@ -17282,13 +22370,24 @@ MedicationKnowledgeSubstitution _$MedicationKnowledgeSubstitutionFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeSubstitution {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] Specifies the type of substitution allowed.
   CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [allowed] Specifies if regulation allows for changes in the medication when dispensing.
   Boolean? get allowed => throw _privateConstructorUsedError;
+
+  /// [allowedElement] ("_allowed") Extensions for allowed
   @JsonKey(name: '_allowed')
   Element? get allowedElement => throw _privateConstructorUsedError;
 
@@ -17479,9 +22578,14 @@ class _$_MedicationKnowledgeSubstitution
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeSubstitutionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -17492,7 +22596,10 @@ class _$_MedicationKnowledgeSubstitution
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -17503,10 +22610,15 @@ class _$_MedicationKnowledgeSubstitution
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Specifies the type of substitution allowed.
   @override
   final CodeableConcept type;
+
+  /// [allowed] Specifies if regulation allows for changes in the medication when dispensing.
   @override
   final Boolean? allowed;
+
+  /// [allowedElement] ("_allowed") Extensions for allowed
   @override
   @JsonKey(name: '_allowed')
   final Element? allowedElement;
@@ -17575,17 +22687,29 @@ abstract class _MedicationKnowledgeSubstitution
       _$_MedicationKnowledgeSubstitution.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] Specifies the type of substitution allowed.
   CodeableConcept get type;
   @override
+
+  /// [allowed] Specifies if regulation allows for changes in the medication when dispensing.
   Boolean? get allowed;
   @override
+
+  /// [allowedElement] ("_allowed") Extensions for allowed
   @JsonKey(name: '_allowed')
   Element? get allowedElement;
   @override
@@ -17602,12 +22726,21 @@ MedicationKnowledgeMaxDispense _$MedicationKnowledgeMaxDispenseFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeMaxDispense {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [quantity] The maximum number of units of the medication that can be dispensed.
   Quantity get quantity => throw _privateConstructorUsedError;
+
+  /// [period] The period that applies to the maximum number of units.
   FhirDuration? get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -17784,9 +22917,14 @@ class _$_MedicationKnowledgeMaxDispense
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeMaxDispenseFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -17797,7 +22935,10 @@ class _$_MedicationKnowledgeMaxDispense
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -17808,8 +22949,11 @@ class _$_MedicationKnowledgeMaxDispense
     return EqualUnmodifiableListView(value);
   }
 
+  /// [quantity] The maximum number of units of the medication that can be dispensed.
   @override
   final Quantity quantity;
+
+  /// [period] The period that applies to the maximum number of units.
   @override
   final FhirDuration? period;
 
@@ -17872,19 +23016,473 @@ abstract class _MedicationKnowledgeMaxDispense
       _$_MedicationKnowledgeMaxDispense.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [quantity] The maximum number of units of the medication that can be dispensed.
   Quantity get quantity;
   @override
+
+  /// [period] The period that applies to the maximum number of units.
   FhirDuration? get period;
   @override
   @JsonKey(ignore: true)
   _$$_MedicationKnowledgeMaxDispenseCopyWith<_$_MedicationKnowledgeMaxDispense>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+MedicationKnowledgeDefinitional _$MedicationKnowledgeDefinitionalFromJson(
+    Map<String, dynamic> json) {
+  return _MedicationKnowledgeDefinitional.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MedicationKnowledgeDefinitional {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [definition] Associated definitions for this medication.
+  List<Reference>? get definition => throw _privateConstructorUsedError;
+
+  /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
+  CodeableConcept? get doseForm => throw _privateConstructorUsedError;
+
+  /// [intendedRoute] The intended or approved route of administration.
+  List<CodeableConcept>? get intendedRoute =>
+      throw _privateConstructorUsedError;
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
+  List<MedicationKnowledgeIngredient>? get ingredient =>
+      throw _privateConstructorUsedError;
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
+  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MedicationKnowledgeDefinitionalCopyWith<MedicationKnowledgeDefinitional>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  factory $MedicationKnowledgeDefinitionalCopyWith(
+          MedicationKnowledgeDefinitional value,
+          $Res Function(MedicationKnowledgeDefinitional) then) =
+      _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res,
+          MedicationKnowledgeDefinitional>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? definition,
+      CodeableConcept? doseForm,
+      List<CodeableConcept>? intendedRoute,
+      List<MedicationKnowledgeIngredient>? ingredient,
+      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic});
+
+  $CodeableConceptCopyWith<$Res>? get doseForm;
+}
+
+/// @nodoc
+class _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res,
+        $Val extends MedicationKnowledgeDefinitional>
+    implements $MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  _$MedicationKnowledgeDefinitionalCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? definition = freezed,
+    Object? doseForm = freezed,
+    Object? intendedRoute = freezed,
+    Object? ingredient = freezed,
+    Object? drugCharacteristic = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      definition: freezed == definition
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      doseForm: freezed == doseForm
+          ? _value.doseForm
+          : doseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intendedRoute: freezed == intendedRoute
+          ? _value.intendedRoute
+          : intendedRoute // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      ingredient: freezed == ingredient
+          ? _value.ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeIngredient>?,
+      drugCharacteristic: freezed == drugCharacteristic
+          ? _value.drugCharacteristic
+          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeDrugCharacteristic>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get doseForm {
+    if (_value.doseForm == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.doseForm!, (value) {
+      return _then(_value.copyWith(doseForm: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_MedicationKnowledgeDefinitionalCopyWith<$Res>
+    implements $MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  factory _$$_MedicationKnowledgeDefinitionalCopyWith(
+          _$_MedicationKnowledgeDefinitional value,
+          $Res Function(_$_MedicationKnowledgeDefinitional) then) =
+      __$$_MedicationKnowledgeDefinitionalCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? definition,
+      CodeableConcept? doseForm,
+      List<CodeableConcept>? intendedRoute,
+      List<MedicationKnowledgeIngredient>? ingredient,
+      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get doseForm;
+}
+
+/// @nodoc
+class __$$_MedicationKnowledgeDefinitionalCopyWithImpl<$Res>
+    extends _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res,
+        _$_MedicationKnowledgeDefinitional>
+    implements _$$_MedicationKnowledgeDefinitionalCopyWith<$Res> {
+  __$$_MedicationKnowledgeDefinitionalCopyWithImpl(
+      _$_MedicationKnowledgeDefinitional _value,
+      $Res Function(_$_MedicationKnowledgeDefinitional) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? definition = freezed,
+    Object? doseForm = freezed,
+    Object? intendedRoute = freezed,
+    Object? ingredient = freezed,
+    Object? drugCharacteristic = freezed,
+  }) {
+    return _then(_$_MedicationKnowledgeDefinitional(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      definition: freezed == definition
+          ? _value._definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      doseForm: freezed == doseForm
+          ? _value.doseForm
+          : doseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intendedRoute: freezed == intendedRoute
+          ? _value._intendedRoute
+          : intendedRoute // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      ingredient: freezed == ingredient
+          ? _value._ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeIngredient>?,
+      drugCharacteristic: freezed == drugCharacteristic
+          ? _value._drugCharacteristic
+          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
+              as List<MedicationKnowledgeDrugCharacteristic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MedicationKnowledgeDefinitional
+    extends _MedicationKnowledgeDefinitional {
+  _$_MedicationKnowledgeDefinitional(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Reference>? definition,
+      this.doseForm,
+      final List<CodeableConcept>? intendedRoute,
+      final List<MedicationKnowledgeIngredient>? ingredient,
+      final List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _definition = definition,
+        _intendedRoute = intendedRoute,
+        _ingredient = ingredient,
+        _drugCharacteristic = drugCharacteristic,
+        super._();
+
+  factory _$_MedicationKnowledgeDefinitional.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_MedicationKnowledgeDefinitionalFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [definition] Associated definitions for this medication.
+  final List<Reference>? _definition;
+
+  /// [definition] Associated definitions for this medication.
+  @override
+  List<Reference>? get definition {
+    final value = _definition;
+    if (value == null) return null;
+    if (_definition is EqualUnmodifiableListView) return _definition;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
+  @override
+  final CodeableConcept? doseForm;
+
+  /// [intendedRoute] The intended or approved route of administration.
+  final List<CodeableConcept>? _intendedRoute;
+
+  /// [intendedRoute] The intended or approved route of administration.
+  @override
+  List<CodeableConcept>? get intendedRoute {
+    final value = _intendedRoute;
+    if (value == null) return null;
+    if (_intendedRoute is EqualUnmodifiableListView) return _intendedRoute;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
+  final List<MedicationKnowledgeIngredient>? _ingredient;
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
+  @override
+  List<MedicationKnowledgeIngredient>? get ingredient {
+    final value = _ingredient;
+    if (value == null) return null;
+    if (_ingredient is EqualUnmodifiableListView) return _ingredient;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
+  final List<MedicationKnowledgeDrugCharacteristic>? _drugCharacteristic;
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
+  @override
+  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic {
+    final value = _drugCharacteristic;
+    if (value == null) return null;
+    if (_drugCharacteristic is EqualUnmodifiableListView)
+      return _drugCharacteristic;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MedicationKnowledgeDefinitional(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, definition: $definition, doseForm: $doseForm, intendedRoute: $intendedRoute, ingredient: $ingredient, drugCharacteristic: $drugCharacteristic)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MedicationKnowledgeDefinitional &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._definition, _definition) &&
+            (identical(other.doseForm, doseForm) ||
+                other.doseForm == doseForm) &&
+            const DeepCollectionEquality()
+                .equals(other._intendedRoute, _intendedRoute) &&
+            const DeepCollectionEquality()
+                .equals(other._ingredient, _ingredient) &&
+            const DeepCollectionEquality()
+                .equals(other._drugCharacteristic, _drugCharacteristic));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_definition),
+      doseForm,
+      const DeepCollectionEquality().hash(_intendedRoute),
+      const DeepCollectionEquality().hash(_ingredient),
+      const DeepCollectionEquality().hash(_drugCharacteristic));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MedicationKnowledgeDefinitionalCopyWith<
+          _$_MedicationKnowledgeDefinitional>
+      get copyWith => __$$_MedicationKnowledgeDefinitionalCopyWithImpl<
+          _$_MedicationKnowledgeDefinitional>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MedicationKnowledgeDefinitionalToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MedicationKnowledgeDefinitional
+    extends MedicationKnowledgeDefinitional {
+  factory _MedicationKnowledgeDefinitional(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Reference>? definition,
+      final CodeableConcept? doseForm,
+      final List<CodeableConcept>? intendedRoute,
+      final List<MedicationKnowledgeIngredient>? ingredient,
+      final List<MedicationKnowledgeDrugCharacteristic>?
+          drugCharacteristic}) = _$_MedicationKnowledgeDefinitional;
+  _MedicationKnowledgeDefinitional._() : super._();
+
+  factory _MedicationKnowledgeDefinitional.fromJson(Map<String, dynamic> json) =
+      _$_MedicationKnowledgeDefinitional.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [definition] Associated definitions for this medication.
+  List<Reference>? get definition;
+  @override
+
+  /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
+  CodeableConcept? get doseForm;
+  @override
+
+  /// [intendedRoute] The intended or approved route of administration.
+  List<CodeableConcept>? get intendedRoute;
+  @override
+
+  /// [ingredient] Identifies a particular constituent of interest in the product.
+  List<MedicationKnowledgeIngredient>? get ingredient;
+  @override
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
+  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MedicationKnowledgeDefinitionalCopyWith<
+          _$_MedicationKnowledgeDefinitional>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -17895,16 +23493,31 @@ MedicationKnowledgeIngredient _$MedicationKnowledgeIngredientFromJson(
 
 /// @nodoc
 mixin _$MedicationKnowledgeIngredient {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [item] A reference to the resource that provides information about the ingredient.
   CodeableReference get item => throw _privateConstructorUsedError;
+
+  /// [type] Indication of whether this ingredient affects the therapeutic action of the drug.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [strengthRatio] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Ratio? get strengthRatio => throw _privateConstructorUsedError;
+
+  /// [strengthCodeableConcept] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   CodeableConcept? get strengthCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [strengthQuantity] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Quantity? get strengthQuantity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -18165,9 +23778,14 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeIngredientFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -18178,7 +23796,10 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -18189,14 +23810,23 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [item] A reference to the resource that provides information about the ingredient.
   @override
   final CodeableReference item;
+
+  /// [type] Indication of whether this ingredient affects the therapeutic action of the drug.
   @override
   final CodeableConcept? type;
+
+  /// [strengthRatio] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   @override
   final Ratio? strengthRatio;
+
+  /// [strengthCodeableConcept] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   @override
   final CodeableConcept? strengthCodeableConcept;
+
+  /// [strengthQuantity] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   @override
   final Quantity? strengthQuantity;
 
@@ -18271,21 +23901,37 @@ abstract class _MedicationKnowledgeIngredient
       _$_MedicationKnowledgeIngredient.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [item] A reference to the resource that provides information about the ingredient.
   CodeableReference get item;
   @override
+
+  /// [type] Indication of whether this ingredient affects the therapeutic action of the drug.
   CodeableConcept? get type;
   @override
+
+  /// [strengthRatio] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Ratio? get strengthRatio;
   @override
+
+  /// [strengthCodeableConcept] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   CodeableConcept? get strengthCodeableConcept;
   @override
+
+  /// [strengthQuantity] Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet but can also be expressed a quantity when the denominator is assumed to be 1 tablet.
   Quantity? get strengthQuantity;
   @override
   @JsonKey(ignore: true)
@@ -18300,21 +23946,42 @@ MedicationKnowledgeDrugCharacteristic
 
 /// @nodoc
 mixin _$MedicationKnowledgeDrugCharacteristic {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] A code specifying which characteristic of the medicine is being described (for example, colour, shape, imprint).
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] Description of the characteristic.
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
-  Markdown? get valueString => throw _privateConstructorUsedError;
+
+  /// [valueString] Description of the characteristic.
+  String? get valueString => throw _privateConstructorUsedError;
+
+  /// [valueStringElement] ("_valueString") Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] Description of the characteristic.
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueBase64Binary] Description of the characteristic.
   Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+
+  /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+
+  /// [valueAttachment] Description of the characteristic.
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -18338,7 +24005,7 @@ abstract class $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
       CodeableConcept? valueCodeableConcept,
-      Markdown? valueString,
+      String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
       Base64Binary? valueBase64Binary,
@@ -18403,7 +24070,7 @@ class _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res,
       valueString: freezed == valueString
           ? _value.valueString
           : valueString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as String?,
       valueStringElement: freezed == valueStringElement
           ? _value.valueStringElement
           : valueStringElement // ignore: cast_nullable_to_non_nullable
@@ -18516,7 +24183,7 @@ abstract class _$$_MedicationKnowledgeDrugCharacteristicCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
       CodeableConcept? valueCodeableConcept,
-      Markdown? valueString,
+      String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
       Base64Binary? valueBase64Binary,
@@ -18586,7 +24253,7 @@ class __$$_MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
       valueString: freezed == valueString
           ? _value.valueString
           : valueString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as String?,
       valueStringElement: freezed == valueStringElement
           ? _value.valueStringElement
           : valueStringElement // ignore: cast_nullable_to_non_nullable
@@ -18635,9 +24302,14 @@ class _$_MedicationKnowledgeDrugCharacteristic
           Map<String, dynamic> json) =>
       _$$_MedicationKnowledgeDrugCharacteristicFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -18648,7 +24320,10 @@ class _$_MedicationKnowledgeDrugCharacteristic
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -18659,22 +24334,37 @@ class _$_MedicationKnowledgeDrugCharacteristic
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] A code specifying which characteristic of the medicine is being described (for example, colour, shape, imprint).
   @override
   final CodeableConcept? type;
+
+  /// [valueCodeableConcept] Description of the characteristic.
   @override
   final CodeableConcept? valueCodeableConcept;
+
+  /// [valueString] Description of the characteristic.
   @override
-  final Markdown? valueString;
+  final String? valueString;
+
+  /// [valueStringElement] ("_valueString") Extensions for valueString
   @override
   @JsonKey(name: '_valueString')
   final Element? valueStringElement;
+
+  /// [valueQuantity] Description of the characteristic.
   @override
   final Quantity? valueQuantity;
+
+  /// [valueBase64Binary] Description of the characteristic.
   @override
   final Base64Binary? valueBase64Binary;
+
+  /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
   @override
   @JsonKey(name: '_valueBase64Binary')
   final Element? valueBase64BinaryElement;
+
+  /// [valueAttachment] Description of the characteristic.
   @override
   final Attachment? valueAttachment;
 
@@ -18752,7 +24442,7 @@ abstract class _MedicationKnowledgeDrugCharacteristic
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? type,
           final CodeableConcept? valueCodeableConcept,
-          final Markdown? valueString,
+          final String? valueString,
           @JsonKey(name: '_valueString')
               final Element? valueStringElement,
           final Quantity? valueQuantity,
@@ -18768,1192 +24458,56 @@ abstract class _MedicationKnowledgeDrugCharacteristic
       _$_MedicationKnowledgeDrugCharacteristic.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] A code specifying which characteristic of the medicine is being described (for example, colour, shape, imprint).
   CodeableConcept? get type;
   @override
+
+  /// [valueCodeableConcept] Description of the characteristic.
   CodeableConcept? get valueCodeableConcept;
   @override
-  Markdown? get valueString;
+
+  /// [valueString] Description of the characteristic.
+  String? get valueString;
   @override
+
+  /// [valueStringElement] ("_valueString") Extensions for valueString
   @JsonKey(name: '_valueString')
   Element? get valueStringElement;
   @override
+
+  /// [valueQuantity] Description of the characteristic.
   Quantity? get valueQuantity;
   @override
+
+  /// [valueBase64Binary] Description of the characteristic.
   Base64Binary? get valueBase64Binary;
   @override
+
+  /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement;
   @override
+
+  /// [valueAttachment] Description of the characteristic.
   Attachment? get valueAttachment;
   @override
   @JsonKey(ignore: true)
   _$$_MedicationKnowledgeDrugCharacteristicCopyWith<
           _$_MedicationKnowledgeDrugCharacteristic>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-MedicationKnowledgeStorageGuideline
-    _$MedicationKnowledgeStorageGuidelineFromJson(Map<String, dynamic> json) {
-  return _MedicationKnowledgeStorageGuideline.fromJson(json);
-}
-
-/// @nodoc
-mixin _$MedicationKnowledgeStorageGuideline {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  FhirUri? get reference => throw _privateConstructorUsedError;
-  @JsonKey(name: '_reference')
-  Element? get referenceElement => throw _privateConstructorUsedError;
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  FhirDuration? get stabilityDuration => throw _privateConstructorUsedError;
-  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MedicationKnowledgeStorageGuidelineCopyWith<
-          MedicationKnowledgeStorageGuideline>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
-  factory $MedicationKnowledgeStorageGuidelineCopyWith(
-          MedicationKnowledgeStorageGuideline value,
-          $Res Function(MedicationKnowledgeStorageGuideline) then) =
-      _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res,
-          MedicationKnowledgeStorageGuideline>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      List<Annotation>? note,
-      FhirDuration? stabilityDuration,
-      List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
-
-  $ElementCopyWith<$Res>? get referenceElement;
-  $FhirDurationCopyWith<$Res>? get stabilityDuration;
-}
-
-/// @nodoc
-class _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res,
-        $Val extends MedicationKnowledgeStorageGuideline>
-    implements $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
-  _$MedicationKnowledgeStorageGuidelineCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? reference = freezed,
-    Object? referenceElement = freezed,
-    Object? note = freezed,
-    Object? stabilityDuration = freezed,
-    Object? environmentalSetting = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      reference: freezed == reference
-          ? _value.reference
-          : reference // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      referenceElement: freezed == referenceElement
-          ? _value.referenceElement
-          : referenceElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      stabilityDuration: freezed == stabilityDuration
-          ? _value.stabilityDuration
-          : stabilityDuration // ignore: cast_nullable_to_non_nullable
-              as FhirDuration?,
-      environmentalSetting: freezed == environmentalSetting
-          ? _value.environmentalSetting
-          : environmentalSetting // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeEnvironmentalSetting>?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get referenceElement {
-    if (_value.referenceElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.referenceElement!, (value) {
-      return _then(_value.copyWith(referenceElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FhirDurationCopyWith<$Res>? get stabilityDuration {
-    if (_value.stabilityDuration == null) {
-      return null;
-    }
-
-    return $FhirDurationCopyWith<$Res>(_value.stabilityDuration!, (value) {
-      return _then(_value.copyWith(stabilityDuration: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_MedicationKnowledgeStorageGuidelineCopyWith<$Res>
-    implements $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
-  factory _$$_MedicationKnowledgeStorageGuidelineCopyWith(
-          _$_MedicationKnowledgeStorageGuideline value,
-          $Res Function(_$_MedicationKnowledgeStorageGuideline) then) =
-      __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      List<Annotation>? note,
-      FhirDuration? stabilityDuration,
-      List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
-
-  @override
-  $ElementCopyWith<$Res>? get referenceElement;
-  @override
-  $FhirDurationCopyWith<$Res>? get stabilityDuration;
-}
-
-/// @nodoc
-class __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
-    extends _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res,
-        _$_MedicationKnowledgeStorageGuideline>
-    implements _$$_MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
-  __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl(
-      _$_MedicationKnowledgeStorageGuideline _value,
-      $Res Function(_$_MedicationKnowledgeStorageGuideline) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? reference = freezed,
-    Object? referenceElement = freezed,
-    Object? note = freezed,
-    Object? stabilityDuration = freezed,
-    Object? environmentalSetting = freezed,
-  }) {
-    return _then(_$_MedicationKnowledgeStorageGuideline(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      reference: freezed == reference
-          ? _value.reference
-          : reference // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      referenceElement: freezed == referenceElement
-          ? _value.referenceElement
-          : referenceElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: freezed == note
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      stabilityDuration: freezed == stabilityDuration
-          ? _value.stabilityDuration
-          : stabilityDuration // ignore: cast_nullable_to_non_nullable
-              as FhirDuration?,
-      environmentalSetting: freezed == environmentalSetting
-          ? _value._environmentalSetting
-          : environmentalSetting // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeEnvironmentalSetting>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_MedicationKnowledgeStorageGuideline
-    extends _MedicationKnowledgeStorageGuideline {
-  _$_MedicationKnowledgeStorageGuideline(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.reference,
-      @JsonKey(name: '_reference') this.referenceElement,
-      final List<Annotation>? note,
-      this.stabilityDuration,
-      final List<MedicationKnowledgeEnvironmentalSetting>?
-          environmentalSetting})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _note = note,
-        _environmentalSetting = environmentalSetting,
-        super._();
-
-  factory _$_MedicationKnowledgeStorageGuideline.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicationKnowledgeStorageGuidelineFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final FhirUri? reference;
-  @override
-  @JsonKey(name: '_reference')
-  final Element? referenceElement;
-  final List<Annotation>? _note;
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    if (_note is EqualUnmodifiableListView) return _note;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final FhirDuration? stabilityDuration;
-  final List<MedicationKnowledgeEnvironmentalSetting>? _environmentalSetting;
-  @override
-  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting {
-    final value = _environmentalSetting;
-    if (value == null) return null;
-    if (_environmentalSetting is EqualUnmodifiableListView)
-      return _environmentalSetting;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'MedicationKnowledgeStorageGuideline(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, referenceElement: $referenceElement, note: $note, stabilityDuration: $stabilityDuration, environmentalSetting: $environmentalSetting)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_MedicationKnowledgeStorageGuideline &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.reference, reference) ||
-                other.reference == reference) &&
-            (identical(other.referenceElement, referenceElement) ||
-                other.referenceElement == referenceElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
-            (identical(other.stabilityDuration, stabilityDuration) ||
-                other.stabilityDuration == stabilityDuration) &&
-            const DeepCollectionEquality()
-                .equals(other._environmentalSetting, _environmentalSetting));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      reference,
-      referenceElement,
-      const DeepCollectionEquality().hash(_note),
-      stabilityDuration,
-      const DeepCollectionEquality().hash(_environmentalSetting));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_MedicationKnowledgeStorageGuidelineCopyWith<
-          _$_MedicationKnowledgeStorageGuideline>
-      get copyWith => __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<
-          _$_MedicationKnowledgeStorageGuideline>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeStorageGuidelineToJson(
-      this,
-    );
-  }
-}
-
-abstract class _MedicationKnowledgeStorageGuideline
-    extends MedicationKnowledgeStorageGuideline {
-  factory _MedicationKnowledgeStorageGuideline(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? reference,
-      @JsonKey(name: '_reference') final Element? referenceElement,
-      final List<Annotation>? note,
-      final FhirDuration? stabilityDuration,
-      final List<MedicationKnowledgeEnvironmentalSetting>?
-          environmentalSetting}) = _$_MedicationKnowledgeStorageGuideline;
-  _MedicationKnowledgeStorageGuideline._() : super._();
-
-  factory _MedicationKnowledgeStorageGuideline.fromJson(
-          Map<String, dynamic> json) =
-      _$_MedicationKnowledgeStorageGuideline.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  FhirUri? get reference;
-  @override
-  @JsonKey(name: '_reference')
-  Element? get referenceElement;
-  @override
-  List<Annotation>? get note;
-  @override
-  FhirDuration? get stabilityDuration;
-  @override
-  List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting;
-  @override
-  @JsonKey(ignore: true)
-  _$$_MedicationKnowledgeStorageGuidelineCopyWith<
-          _$_MedicationKnowledgeStorageGuideline>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-MedicationKnowledgeDefinitional _$MedicationKnowledgeDefinitionalFromJson(
-    Map<String, dynamic> json) {
-  return _MedicationKnowledgeDefinitional.fromJson(json);
-}
-
-/// @nodoc
-mixin _$MedicationKnowledgeDefinitional {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  List<Reference>? get definition => throw _privateConstructorUsedError;
-  CodeableConcept? get doseForm => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get intendedRoute =>
-      throw _privateConstructorUsedError;
-  List<MedicationKnowledgeIngredient>? get ingredient =>
-      throw _privateConstructorUsedError;
-  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MedicationKnowledgeDefinitionalCopyWith<MedicationKnowledgeDefinitional>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MedicationKnowledgeDefinitionalCopyWith<$Res> {
-  factory $MedicationKnowledgeDefinitionalCopyWith(
-          MedicationKnowledgeDefinitional value,
-          $Res Function(MedicationKnowledgeDefinitional) then) =
-      _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res,
-          MedicationKnowledgeDefinitional>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? definition,
-      CodeableConcept? doseForm,
-      List<CodeableConcept>? intendedRoute,
-      List<MedicationKnowledgeIngredient>? ingredient,
-      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic});
-
-  $CodeableConceptCopyWith<$Res>? get doseForm;
-}
-
-/// @nodoc
-class _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res,
-        $Val extends MedicationKnowledgeDefinitional>
-    implements $MedicationKnowledgeDefinitionalCopyWith<$Res> {
-  _$MedicationKnowledgeDefinitionalCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? definition = freezed,
-    Object? doseForm = freezed,
-    Object? intendedRoute = freezed,
-    Object? ingredient = freezed,
-    Object? drugCharacteristic = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      definition: freezed == definition
-          ? _value.definition
-          : definition // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      doseForm: freezed == doseForm
-          ? _value.doseForm
-          : doseForm // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      intendedRoute: freezed == intendedRoute
-          ? _value.intendedRoute
-          : intendedRoute // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      ingredient: freezed == ingredient
-          ? _value.ingredient
-          : ingredient // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeIngredient>?,
-      drugCharacteristic: freezed == drugCharacteristic
-          ? _value.drugCharacteristic
-          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeDrugCharacteristic>?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get doseForm {
-    if (_value.doseForm == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.doseForm!, (value) {
-      return _then(_value.copyWith(doseForm: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_MedicationKnowledgeDefinitionalCopyWith<$Res>
-    implements $MedicationKnowledgeDefinitionalCopyWith<$Res> {
-  factory _$$_MedicationKnowledgeDefinitionalCopyWith(
-          _$_MedicationKnowledgeDefinitional value,
-          $Res Function(_$_MedicationKnowledgeDefinitional) then) =
-      __$$_MedicationKnowledgeDefinitionalCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? definition,
-      CodeableConcept? doseForm,
-      List<CodeableConcept>? intendedRoute,
-      List<MedicationKnowledgeIngredient>? ingredient,
-      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get doseForm;
-}
-
-/// @nodoc
-class __$$_MedicationKnowledgeDefinitionalCopyWithImpl<$Res>
-    extends _$MedicationKnowledgeDefinitionalCopyWithImpl<$Res,
-        _$_MedicationKnowledgeDefinitional>
-    implements _$$_MedicationKnowledgeDefinitionalCopyWith<$Res> {
-  __$$_MedicationKnowledgeDefinitionalCopyWithImpl(
-      _$_MedicationKnowledgeDefinitional _value,
-      $Res Function(_$_MedicationKnowledgeDefinitional) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? definition = freezed,
-    Object? doseForm = freezed,
-    Object? intendedRoute = freezed,
-    Object? ingredient = freezed,
-    Object? drugCharacteristic = freezed,
-  }) {
-    return _then(_$_MedicationKnowledgeDefinitional(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      definition: freezed == definition
-          ? _value._definition
-          : definition // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      doseForm: freezed == doseForm
-          ? _value.doseForm
-          : doseForm // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      intendedRoute: freezed == intendedRoute
-          ? _value._intendedRoute
-          : intendedRoute // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      ingredient: freezed == ingredient
-          ? _value._ingredient
-          : ingredient // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeIngredient>?,
-      drugCharacteristic: freezed == drugCharacteristic
-          ? _value._drugCharacteristic
-          : drugCharacteristic // ignore: cast_nullable_to_non_nullable
-              as List<MedicationKnowledgeDrugCharacteristic>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_MedicationKnowledgeDefinitional
-    extends _MedicationKnowledgeDefinitional {
-  _$_MedicationKnowledgeDefinitional(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Reference>? definition,
-      this.doseForm,
-      final List<CodeableConcept>? intendedRoute,
-      final List<MedicationKnowledgeIngredient>? ingredient,
-      final List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _definition = definition,
-        _intendedRoute = intendedRoute,
-        _ingredient = ingredient,
-        _drugCharacteristic = drugCharacteristic,
-        super._();
-
-  factory _$_MedicationKnowledgeDefinitional.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicationKnowledgeDefinitionalFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _definition;
-  @override
-  List<Reference>? get definition {
-    final value = _definition;
-    if (value == null) return null;
-    if (_definition is EqualUnmodifiableListView) return _definition;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept? doseForm;
-  final List<CodeableConcept>? _intendedRoute;
-  @override
-  List<CodeableConcept>? get intendedRoute {
-    final value = _intendedRoute;
-    if (value == null) return null;
-    if (_intendedRoute is EqualUnmodifiableListView) return _intendedRoute;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<MedicationKnowledgeIngredient>? _ingredient;
-  @override
-  List<MedicationKnowledgeIngredient>? get ingredient {
-    final value = _ingredient;
-    if (value == null) return null;
-    if (_ingredient is EqualUnmodifiableListView) return _ingredient;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<MedicationKnowledgeDrugCharacteristic>? _drugCharacteristic;
-  @override
-  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic {
-    final value = _drugCharacteristic;
-    if (value == null) return null;
-    if (_drugCharacteristic is EqualUnmodifiableListView)
-      return _drugCharacteristic;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'MedicationKnowledgeDefinitional(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, definition: $definition, doseForm: $doseForm, intendedRoute: $intendedRoute, ingredient: $ingredient, drugCharacteristic: $drugCharacteristic)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_MedicationKnowledgeDefinitional &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._definition, _definition) &&
-            (identical(other.doseForm, doseForm) ||
-                other.doseForm == doseForm) &&
-            const DeepCollectionEquality()
-                .equals(other._intendedRoute, _intendedRoute) &&
-            const DeepCollectionEquality()
-                .equals(other._ingredient, _ingredient) &&
-            const DeepCollectionEquality()
-                .equals(other._drugCharacteristic, _drugCharacteristic));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_definition),
-      doseForm,
-      const DeepCollectionEquality().hash(_intendedRoute),
-      const DeepCollectionEquality().hash(_ingredient),
-      const DeepCollectionEquality().hash(_drugCharacteristic));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_MedicationKnowledgeDefinitionalCopyWith<
-          _$_MedicationKnowledgeDefinitional>
-      get copyWith => __$$_MedicationKnowledgeDefinitionalCopyWithImpl<
-          _$_MedicationKnowledgeDefinitional>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeDefinitionalToJson(
-      this,
-    );
-  }
-}
-
-abstract class _MedicationKnowledgeDefinitional
-    extends MedicationKnowledgeDefinitional {
-  factory _MedicationKnowledgeDefinitional(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Reference>? definition,
-      final CodeableConcept? doseForm,
-      final List<CodeableConcept>? intendedRoute,
-      final List<MedicationKnowledgeIngredient>? ingredient,
-      final List<MedicationKnowledgeDrugCharacteristic>?
-          drugCharacteristic}) = _$_MedicationKnowledgeDefinitional;
-  _MedicationKnowledgeDefinitional._() : super._();
-
-  factory _MedicationKnowledgeDefinitional.fromJson(Map<String, dynamic> json) =
-      _$_MedicationKnowledgeDefinitional.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  List<Reference>? get definition;
-  @override
-  CodeableConcept? get doseForm;
-  @override
-  List<CodeableConcept>? get intendedRoute;
-  @override
-  List<MedicationKnowledgeIngredient>? get ingredient;
-  @override
-  List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic;
-  @override
-  @JsonKey(ignore: true)
-  _$$_MedicationKnowledgeDefinitionalCopyWith<
-          _$_MedicationKnowledgeDefinitional>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-MedicationKnowledgeEnvironmentalSetting
-    _$MedicationKnowledgeEnvironmentalSettingFromJson(
-        Map<String, dynamic> json) {
-  return _MedicationKnowledgeEnvironmentalSetting.fromJson(json);
-}
-
-/// @nodoc
-mixin _$MedicationKnowledgeEnvironmentalSetting {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept get type => throw _privateConstructorUsedError;
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  Range? get valueRange => throw _privateConstructorUsedError;
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MedicationKnowledgeEnvironmentalSettingCopyWith<
-          MedicationKnowledgeEnvironmentalSetting>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
-  factory $MedicationKnowledgeEnvironmentalSettingCopyWith(
-          MedicationKnowledgeEnvironmentalSetting value,
-          $Res Function(MedicationKnowledgeEnvironmentalSetting) then) =
-      _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res,
-          MedicationKnowledgeEnvironmentalSetting>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept type,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      CodeableConcept? valueCodeableConcept});
-
-  $CodeableConceptCopyWith<$Res> get type;
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  $RangeCopyWith<$Res>? get valueRange;
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-}
-
-/// @nodoc
-class _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res,
-        $Val extends MedicationKnowledgeEnvironmentalSetting>
-    implements $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
-  _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl(
-      this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = null,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
-    Object? valueCodeableConcept = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
-      valueQuantity: freezed == valueQuantity
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueRange: freezed == valueRange
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      valueCodeableConcept: freezed == valueCodeableConcept
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res> get type {
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $QuantityCopyWith<$Res>? get valueQuantity {
-    if (_value.valueQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
-      return _then(_value.copyWith(valueQuantity: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RangeCopyWith<$Res>? get valueRange {
-    if (_value.valueRange == null) {
-      return null;
-    }
-
-    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
-      return _then(_value.copyWith(valueRange: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
-    if (_value.valueCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<$Res>
-    implements $MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
-  factory _$$_MedicationKnowledgeEnvironmentalSettingCopyWith(
-          _$_MedicationKnowledgeEnvironmentalSetting value,
-          $Res Function(_$_MedicationKnowledgeEnvironmentalSetting) then) =
-      __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept type,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      CodeableConcept? valueCodeableConcept});
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  @override
-  $RangeCopyWith<$Res>? get valueRange;
-  @override
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-}
-
-/// @nodoc
-class __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res>
-    extends _$MedicationKnowledgeEnvironmentalSettingCopyWithImpl<$Res,
-        _$_MedicationKnowledgeEnvironmentalSetting>
-    implements _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<$Res> {
-  __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl(
-      _$_MedicationKnowledgeEnvironmentalSetting _value,
-      $Res Function(_$_MedicationKnowledgeEnvironmentalSetting) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = null,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
-    Object? valueCodeableConcept = freezed,
-  }) {
-    return _then(_$_MedicationKnowledgeEnvironmentalSetting(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
-      valueQuantity: freezed == valueQuantity
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueRange: freezed == valueRange
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      valueCodeableConcept: freezed == valueCodeableConcept
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_MedicationKnowledgeEnvironmentalSetting
-    extends _MedicationKnowledgeEnvironmentalSetting {
-  _$_MedicationKnowledgeEnvironmentalSetting(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required this.type,
-      this.valueQuantity,
-      this.valueRange,
-      this.valueCodeableConcept})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_MedicationKnowledgeEnvironmentalSetting.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicationKnowledgeEnvironmentalSettingFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept type;
-  @override
-  final Quantity? valueQuantity;
-  @override
-  final Range? valueRange;
-  @override
-  final CodeableConcept? valueCodeableConcept;
-
-  @override
-  String toString() {
-    return 'MedicationKnowledgeEnvironmentalSetting(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueQuantity: $valueQuantity, valueRange: $valueRange, valueCodeableConcept: $valueCodeableConcept)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_MedicationKnowledgeEnvironmentalSetting &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.valueQuantity, valueQuantity) ||
-                other.valueQuantity == valueQuantity) &&
-            (identical(other.valueRange, valueRange) ||
-                other.valueRange == valueRange) &&
-            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                other.valueCodeableConcept == valueCodeableConcept));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      type,
-      valueQuantity,
-      valueRange,
-      valueCodeableConcept);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<
-          _$_MedicationKnowledgeEnvironmentalSetting>
-      get copyWith => __$$_MedicationKnowledgeEnvironmentalSettingCopyWithImpl<
-          _$_MedicationKnowledgeEnvironmentalSetting>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_MedicationKnowledgeEnvironmentalSettingToJson(
-      this,
-    );
-  }
-}
-
-abstract class _MedicationKnowledgeEnvironmentalSetting
-    extends MedicationKnowledgeEnvironmentalSetting {
-  factory _MedicationKnowledgeEnvironmentalSetting(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          required final CodeableConcept type,
-          final Quantity? valueQuantity,
-          final Range? valueRange,
-          final CodeableConcept? valueCodeableConcept}) =
-      _$_MedicationKnowledgeEnvironmentalSetting;
-  _MedicationKnowledgeEnvironmentalSetting._() : super._();
-
-  factory _MedicationKnowledgeEnvironmentalSetting.fromJson(
-          Map<String, dynamic> json) =
-      _$_MedicationKnowledgeEnvironmentalSetting.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  CodeableConcept get type;
-  @override
-  Quantity? get valueQuantity;
-  @override
-  Range? get valueRange;
-  @override
-  CodeableConcept? get valueCodeableConcept;
-  @override
-  @JsonKey(ignore: true)
-  _$$_MedicationKnowledgeEnvironmentalSettingCopyWith<
-          _$_MedicationKnowledgeEnvironmentalSetting>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -19963,74 +24517,167 @@ MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationRequest {
+  /// [resourceType] This is a MedicationRequest resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Canonical>? get instantiatesCanonical =>
-      throw _privateConstructorUsedError;
-  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement =>
-      throw _privateConstructorUsedError;
+
+  /// [basedOn] A plan or request that is fulfilled in whole or in part by this medication request.
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+
+  /// [priorPrescription] A link to a resource representing an earlier order related order or prescription.
   Reference? get priorPrescription => throw _privateConstructorUsedError;
+
+  /// [groupIdentifier] A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription.
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
+
+  /// [status] A code specifying the current state of the order.  Generally, this will be active or completed state.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [statusReason] Captures the reason for the current state of the MedicationRequest.
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+
+  /// [statusChanged] The date (and perhaps time) when the status was changed.
   FhirDateTime? get statusChanged => throw _privateConstructorUsedError;
+
+  /// [statusChangedElement] ("_statusChanged") Extensions for statusChanged
   @JsonKey(name: '_statusChanged')
   Element? get statusChangedElement => throw _privateConstructorUsedError;
+
+  /// [intent] Whether the request is a proposal, plan, or an original order.
   Code? get intent => throw _privateConstructorUsedError;
+
+  /// [intentElement] ("_intent") Extensions for intent
   @JsonKey(name: '_intent')
   Element? get intentElement => throw _privateConstructorUsedError;
+
+  /// [category] Indicates the grouping or category of medication request (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [priority] Indicates how quickly the Medication Request should be addressed with respect to other requests.
   Code? get priority => throw _privateConstructorUsedError;
+
+  /// [priorityElement] ("_priority") Extensions for priority
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
+
+  /// [doNotPerform] If true, indicates that the provider is asking for the patient to either stop taking or to not start taking the specified medication. For example, the patient is taking an existing medication and the provider is changing their medication. They want to create two seperate requests: one to stop using the current medication and another to start the new medication.
   Boolean? get doNotPerform => throw _privateConstructorUsedError;
+
+  /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement => throw _privateConstructorUsedError;
+
+  /// [medication] Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication => throw _privateConstructorUsedError;
+
+  /// [subject] A link to a resource representing the person or set of individuals to whom the medication will be given.
   Reference get subject => throw _privateConstructorUsedError;
+
+  /// [informationSource] The person or organization who provided the information about this request, if the source is someone other than the requestor.  This is often used when the MedicationRequest is reported by another person.
   List<Reference>? get informationSource => throw _privateConstructorUsedError;
+
+  /// [encounter] The Encounter during which this [x] was created or to which the creation of this record is tightly associated.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [supportingInformation] Information to support fulfilling (i.e. dispensing or administering) of the medication, for example, patient height and weight, a MedicationUsage for the patient).
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
+
+  /// [authoredOn] The date (and perhaps time) when the prescription was initially written or authored on.
   FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
+
+  /// [authoredOnElement] ("_authoredOn") Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
+
+  /// [requester] The individual, organization, or device that initiated the request and has responsibility for its activation.
   Reference? get requester => throw _privateConstructorUsedError;
+
+  /// [reported] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
   Boolean? get reported => throw _privateConstructorUsedError;
+
+  /// [reportedElement] ("_reported") Extensions for reported
   @JsonKey(name: '_reported')
   Element? get reportedElement => throw _privateConstructorUsedError;
+
+  /// [performerType] Indicates the type of performer of the administration of the medication.
   CodeableConcept? get performerType => throw _privateConstructorUsedError;
-  Reference? get performer => throw _privateConstructorUsedError;
+
+  /// [performer] The specified desired performer of the medication treatment (e.g. the performer of the medication administration).  For devices, this is the device that is intended to perform the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
+  List<Reference>? get performer => throw _privateConstructorUsedError;
+
+  /// [device] The intended type of device that is to be used for the administration of the medication (for example, PCA Pump).
+  CodeableReference? get device => throw _privateConstructorUsedError;
+
+  /// [recorder] The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.
   Reference? get recorder => throw _privateConstructorUsedError;
+
+  /// [reason] The reason or the indication for ordering or not ordering the medication.
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+
+  /// [courseOfTherapyType] The description of the overall pattern of the administration of the medication to the patient.
   CodeableConcept? get courseOfTherapyType =>
       throw _privateConstructorUsedError;
+
+  /// [insurance] Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.
   List<Reference>? get insurance => throw _privateConstructorUsedError;
+
+  /// [note] Extra information about the prescription that could not be conveyed by the other attributes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [dose] Indicates how the medication is to be used by the patient.
   MedicationRequestDose? get dose => throw _privateConstructorUsedError;
+
+  /// [dispenseRequest] Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.
   MedicationRequestDispenseRequest? get dispenseRequest =>
       throw _privateConstructorUsedError;
+
+  /// [substitution] Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.
   MedicationRequestSubstitution? get substitution =>
       throw _privateConstructorUsedError;
+
+  /// [eventHistory] Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20046,48 +24693,57 @@ abstract class $MedicationRequestCopyWith<$Res> {
       _$MedicationRequestCopyWithImpl<$Res, MedicationRequest>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       Reference? priorPrescription,
       Identifier? groupIdentifier,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       CodeableConcept? statusReason,
       FhirDateTime? statusChanged,
-      @JsonKey(name: '_statusChanged') Element? statusChangedElement,
+      @JsonKey(name: '_statusChanged')
+          Element? statusChangedElement,
       Code? intent,
-      @JsonKey(name: '_intent') Element? intentElement,
+      @JsonKey(name: '_intent')
+          Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
-      @JsonKey(name: '_priority') Element? priorityElement,
+      @JsonKey(name: '_priority')
+          Element? priorityElement,
       Boolean? doNotPerform,
-      @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
+      @JsonKey(name: '_doNotPerform')
+          Element? doNotPerformElement,
       CodeableReference medication,
       Reference subject,
       List<Reference>? informationSource,
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? authoredOn,
-      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element? authoredOnElement,
       Reference? requester,
       Boolean? reported,
-      @JsonKey(name: '_reported') Element? reportedElement,
+      @JsonKey(name: '_reported')
+          Element? reportedElement,
       CodeableConcept? performerType,
-      Reference? performer,
+      List<Reference>? performer,
+      CodeableReference? device,
       Reference? recorder,
       List<CodeableReference>? reason,
       CodeableConcept? courseOfTherapyType,
@@ -20117,7 +24773,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get requester;
   $ElementCopyWith<$Res>? get reportedElement;
   $CodeableConceptCopyWith<$Res>? get performerType;
-  $ReferenceCopyWith<$Res>? get performer;
+  $CodeableReferenceCopyWith<$Res>? get device;
   $ReferenceCopyWith<$Res>? get recorder;
   $CodeableConceptCopyWith<$Res>? get courseOfTherapyType;
   $MedicationRequestDoseCopyWith<$Res>? get dose;
@@ -20150,9 +24806,6 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? basedOn = freezed,
     Object? priorPrescription = freezed,
     Object? groupIdentifier = freezed,
@@ -20180,6 +24833,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
     Object? reportedElement = freezed,
     Object? performerType = freezed,
     Object? performer = freezed,
+    Object? device = freezed,
     Object? recorder = freezed,
     Object? reason = freezed,
     Object? courseOfTherapyType = freezed,
@@ -20239,18 +24893,6 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value.instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value.instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value.instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -20358,7 +25000,11 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       performer: freezed == performer
           ? _value.performer
           : performer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+              as List<Reference>?,
+      device: freezed == device
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       recorder: freezed == recorder
           ? _value.recorder
           : recorder // ignore: cast_nullable_to_non_nullable
@@ -20620,13 +25266,13 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
 
   @override
   @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get performer {
-    if (_value.performer == null) {
+  $CodeableReferenceCopyWith<$Res>? get device {
+    if (_value.device == null) {
       return null;
     }
 
-    return $ReferenceCopyWith<$Res>(_value.performer!, (value) {
-      return _then(_value.copyWith(performer: value) as $Val);
+    return $CodeableReferenceCopyWith<$Res>(_value.device!, (value) {
+      return _then(_value.copyWith(device: value) as $Val);
     });
   }
 
@@ -20702,48 +25348,57 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       Reference? priorPrescription,
       Identifier? groupIdentifier,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       CodeableConcept? statusReason,
       FhirDateTime? statusChanged,
-      @JsonKey(name: '_statusChanged') Element? statusChangedElement,
+      @JsonKey(name: '_statusChanged')
+          Element? statusChangedElement,
       Code? intent,
-      @JsonKey(name: '_intent') Element? intentElement,
+      @JsonKey(name: '_intent')
+          Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
-      @JsonKey(name: '_priority') Element? priorityElement,
+      @JsonKey(name: '_priority')
+          Element? priorityElement,
       Boolean? doNotPerform,
-      @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
+      @JsonKey(name: '_doNotPerform')
+          Element? doNotPerformElement,
       CodeableReference medication,
       Reference subject,
       List<Reference>? informationSource,
       Reference? encounter,
       List<Reference>? supportingInformation,
       FhirDateTime? authoredOn,
-      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element? authoredOnElement,
       Reference? requester,
       Boolean? reported,
-      @JsonKey(name: '_reported') Element? reportedElement,
+      @JsonKey(name: '_reported')
+          Element? reportedElement,
       CodeableConcept? performerType,
-      Reference? performer,
+      List<Reference>? performer,
+      CodeableReference? device,
       Reference? recorder,
       List<CodeableReference>? reason,
       CodeableConcept? courseOfTherapyType,
@@ -20793,7 +25448,7 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get performerType;
   @override
-  $ReferenceCopyWith<$Res>? get performer;
+  $CodeableReferenceCopyWith<$Res>? get device;
   @override
   $ReferenceCopyWith<$Res>? get recorder;
   @override
@@ -20829,9 +25484,6 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? instantiatesCanonical = freezed,
-    Object? instantiatesUri = freezed,
-    Object? instantiatesUriElement = freezed,
     Object? basedOn = freezed,
     Object? priorPrescription = freezed,
     Object? groupIdentifier = freezed,
@@ -20859,6 +25511,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
     Object? reportedElement = freezed,
     Object? performerType = freezed,
     Object? performer = freezed,
+    Object? device = freezed,
     Object? recorder = freezed,
     Object? reason = freezed,
     Object? courseOfTherapyType = freezed,
@@ -20918,18 +25571,6 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      instantiatesCanonical: freezed == instantiatesCanonical
-          ? _value._instantiatesCanonical
-          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
-      instantiatesUri: freezed == instantiatesUri
-          ? _value._instantiatesUri
-          : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<FhirUri>?,
-      instantiatesUriElement: freezed == instantiatesUriElement
-          ? _value._instantiatesUriElement
-          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element>?,
       basedOn: freezed == basedOn
           ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -21035,9 +25676,13 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
           : performerType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       performer: freezed == performer
-          ? _value.performer
+          ? _value._performer
           : performer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+              as List<Reference>?,
+      device: freezed == device
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       recorder: freezed == recorder
           ? _value.recorder
           : recorder // ignore: cast_nullable_to_non_nullable
@@ -21082,7 +25727,8 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationRequest extends _MedicationRequest {
   _$_MedicationRequest(
-      {this.resourceType = R5ResourceType.MedicationRequest,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
+          this.resourceType = R5ResourceType.MedicationRequest,
       this.id,
       this.meta,
       this.implicitRules,
@@ -21097,10 +25743,6 @@ class _$_MedicationRequest extends _MedicationRequest {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
       this.priorPrescription,
       this.groupIdentifier,
@@ -21134,7 +25776,8 @@ class _$_MedicationRequest extends _MedicationRequest {
       @JsonKey(name: '_reported')
           this.reportedElement,
       this.performerType,
-      this.performer,
+      final List<Reference>? performer,
+      this.device,
       this.recorder,
       final List<CodeableReference>? reason,
       this.courseOfTherapyType,
@@ -21148,13 +25791,11 @@ class _$_MedicationRequest extends _MedicationRequest {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
-        _instantiatesCanonical = instantiatesCanonical,
-        _instantiatesUri = instantiatesUri,
-        _instantiatesUriElement = instantiatesUriElement,
         _basedOn = basedOn,
         _category = category,
         _informationSource = informationSource,
         _supportingInformation = supportingInformation,
+        _performer = performer,
         _reason = reason,
         _insurance = insurance,
         _note = note,
@@ -21164,26 +25805,45 @@ class _$_MedicationRequest extends _MedicationRequest {
   factory _$_MedicationRequest.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationRequestFromJson(json);
 
+  /// [resourceType] This is a MedicationRequest resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -21193,7 +25853,10 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -21204,7 +25867,10 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -21215,7 +25881,10 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   final List<Identifier>? _identifier;
+
+  /// [identifier] Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -21225,40 +25894,10 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
-  @override
-  List<Canonical>? get instantiatesCanonical {
-    final value = _instantiatesCanonical;
-    if (value == null) return null;
-    if (_instantiatesCanonical is EqualUnmodifiableListView)
-      return _instantiatesCanonical;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirUri>? _instantiatesUri;
-  @override
-  List<FhirUri>? get instantiatesUri {
-    final value = _instantiatesUri;
-    if (value == null) return null;
-    if (_instantiatesUri is EqualUnmodifiableListView) return _instantiatesUri;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _instantiatesUriElement;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement {
-    final value = _instantiatesUriElement;
-    if (value == null) return null;
-    if (_instantiatesUriElement is EqualUnmodifiableListView)
-      return _instantiatesUriElement;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  /// [basedOn] A plan or request that is fulfilled in whole or in part by this medication request.
   final List<Reference>? _basedOn;
+
+  /// [basedOn] A plan or request that is fulfilled in whole or in part by this medication request.
   @override
   List<Reference>? get basedOn {
     final value = _basedOn;
@@ -21268,28 +25907,49 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [priorPrescription] A link to a resource representing an earlier order related order or prescription.
   @override
   final Reference? priorPrescription;
+
+  /// [groupIdentifier] A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription.
   @override
   final Identifier? groupIdentifier;
+
+  /// [status] A code specifying the current state of the order.  Generally, this will be active or completed state.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [statusReason] Captures the reason for the current state of the MedicationRequest.
   @override
   final CodeableConcept? statusReason;
+
+  /// [statusChanged] The date (and perhaps time) when the status was changed.
   @override
   final FhirDateTime? statusChanged;
+
+  /// [statusChangedElement] ("_statusChanged") Extensions for statusChanged
   @override
   @JsonKey(name: '_statusChanged')
   final Element? statusChangedElement;
+
+  /// [intent] Whether the request is a proposal, plan, or an original order.
   @override
   final Code? intent;
+
+  /// [intentElement] ("_intent") Extensions for intent
   @override
   @JsonKey(name: '_intent')
   final Element? intentElement;
+
+  /// [category] Indicates the grouping or category of medication request (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   final List<CodeableConcept>? _category;
+
+  /// [category] Indicates the grouping or category of medication request (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   @override
   List<CodeableConcept>? get category {
     final value = _category;
@@ -21299,21 +25959,36 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [priority] Indicates how quickly the Medication Request should be addressed with respect to other requests.
   @override
   final Code? priority;
+
+  /// [priorityElement] ("_priority") Extensions for priority
   @override
   @JsonKey(name: '_priority')
   final Element? priorityElement;
+
+  /// [doNotPerform] If true, indicates that the provider is asking for the patient to either stop taking or to not start taking the specified medication. For example, the patient is taking an existing medication and the provider is changing their medication. They want to create two seperate requests: one to stop using the current medication and another to start the new medication.
   @override
   final Boolean? doNotPerform;
+
+  /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
   @override
   @JsonKey(name: '_doNotPerform')
   final Element? doNotPerformElement;
+
+  /// [medication] Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.
   @override
   final CodeableReference medication;
+
+  /// [subject] A link to a resource representing the person or set of individuals to whom the medication will be given.
   @override
   final Reference subject;
+
+  /// [informationSource] The person or organization who provided the information about this request, if the source is someone other than the requestor.  This is often used when the MedicationRequest is reported by another person.
   final List<Reference>? _informationSource;
+
+  /// [informationSource] The person or organization who provided the information about this request, if the source is someone other than the requestor.  This is often used when the MedicationRequest is reported by another person.
   @override
   List<Reference>? get informationSource {
     final value = _informationSource;
@@ -21324,9 +25999,14 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [encounter] The Encounter during which this [x] was created or to which the creation of this record is tightly associated.
   @override
   final Reference? encounter;
+
+  /// [supportingInformation] Information to support fulfilling (i.e. dispensing or administering) of the medication, for example, patient height and weight, a MedicationUsage for the patient).
   final List<Reference>? _supportingInformation;
+
+  /// [supportingInformation] Information to support fulfilling (i.e. dispensing or administering) of the medication, for example, patient height and weight, a MedicationUsage for the patient).
   @override
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
@@ -21337,25 +26017,57 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [authoredOn] The date (and perhaps time) when the prescription was initially written or authored on.
   @override
   final FhirDateTime? authoredOn;
+
+  /// [authoredOnElement] ("_authoredOn") Extensions for authoredOn
   @override
   @JsonKey(name: '_authoredOn')
   final Element? authoredOnElement;
+
+  /// [requester] The individual, organization, or device that initiated the request and has responsibility for its activation.
   @override
   final Reference? requester;
+
+  /// [reported] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
   @override
   final Boolean? reported;
+
+  /// [reportedElement] ("_reported") Extensions for reported
   @override
   @JsonKey(name: '_reported')
   final Element? reportedElement;
+
+  /// [performerType] Indicates the type of performer of the administration of the medication.
   @override
   final CodeableConcept? performerType;
+
+  /// [performer] The specified desired performer of the medication treatment (e.g. the performer of the medication administration).  For devices, this is the device that is intended to perform the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
+  final List<Reference>? _performer;
+
+  /// [performer] The specified desired performer of the medication treatment (e.g. the performer of the medication administration).  For devices, this is the device that is intended to perform the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
   @override
-  final Reference? performer;
+  List<Reference>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    if (_performer is EqualUnmodifiableListView) return _performer;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [device] The intended type of device that is to be used for the administration of the medication (for example, PCA Pump).
+  @override
+  final CodeableReference? device;
+
+  /// [recorder] The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.
   @override
   final Reference? recorder;
+
+  /// [reason] The reason or the indication for ordering or not ordering the medication.
   final List<CodeableReference>? _reason;
+
+  /// [reason] The reason or the indication for ordering or not ordering the medication.
   @override
   List<CodeableReference>? get reason {
     final value = _reason;
@@ -21365,9 +26077,14 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [courseOfTherapyType] The description of the overall pattern of the administration of the medication to the patient.
   @override
   final CodeableConcept? courseOfTherapyType;
+
+  /// [insurance] Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.
   final List<Reference>? _insurance;
+
+  /// [insurance] Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.
   @override
   List<Reference>? get insurance {
     final value = _insurance;
@@ -21377,7 +26094,10 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [note] Extra information about the prescription that could not be conveyed by the other attributes.
   final List<Annotation>? _note;
+
+  /// [note] Extra information about the prescription that could not be conveyed by the other attributes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -21387,13 +26107,22 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [dose] Indicates how the medication is to be used by the patient.
   @override
   final MedicationRequestDose? dose;
+
+  /// [dispenseRequest] Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.
   @override
   final MedicationRequestDispenseRequest? dispenseRequest;
+
+  /// [substitution] Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.
   @override
   final MedicationRequestSubstitution? substitution;
+
+  /// [eventHistory] Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.
   final List<Reference>? _eventHistory;
+
+  /// [eventHistory] Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.
   @override
   List<Reference>? get eventHistory {
     final value = _eventHistory;
@@ -21405,7 +26134,7 @@ class _$_MedicationRequest extends _MedicationRequest {
 
   @override
   String toString() {
-    return 'MedicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, priorPrescription: $priorPrescription, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, statusChanged: $statusChanged, statusChangedElement: $statusChangedElement, intent: $intent, intentElement: $intentElement, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, medication: $medication, subject: $subject, informationSource: $informationSource, encounter: $encounter, supportingInformation: $supportingInformation, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, reported: $reported, reportedElement: $reportedElement, performerType: $performerType, performer: $performer, recorder: $recorder, reason: $reason, courseOfTherapyType: $courseOfTherapyType, insurance: $insurance, note: $note, dose: $dose, dispenseRequest: $dispenseRequest, substitution: $substitution, eventHistory: $eventHistory)';
+    return 'MedicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, priorPrescription: $priorPrescription, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, statusChanged: $statusChanged, statusChangedElement: $statusChangedElement, intent: $intent, intentElement: $intentElement, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, medication: $medication, subject: $subject, informationSource: $informationSource, encounter: $encounter, supportingInformation: $supportingInformation, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, reported: $reported, reportedElement: $reportedElement, performerType: $performerType, performer: $performer, device: $device, recorder: $recorder, reason: $reason, courseOfTherapyType: $courseOfTherapyType, insurance: $insurance, note: $note, dose: $dose, dispenseRequest: $dispenseRequest, substitution: $substitution, eventHistory: $eventHistory)';
   }
 
   @override
@@ -21434,12 +26163,6 @@ class _$_MedicationRequest extends _MedicationRequest {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesCanonical, _instantiatesCanonical) &&
-            const DeepCollectionEquality()
-                .equals(other._instantiatesUri, _instantiatesUri) &&
-            const DeepCollectionEquality().equals(
-                other._instantiatesUriElement, _instantiatesUriElement) &&
             const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             (identical(other.priorPrescription, priorPrescription) ||
                 other.priorPrescription == priorPrescription) &&
@@ -21487,8 +26210,9 @@ class _$_MedicationRequest extends _MedicationRequest {
                 other.reportedElement == reportedElement) &&
             (identical(other.performerType, performerType) ||
                 other.performerType == performerType) &&
-            (identical(other.performer, performer) ||
-                other.performer == performer) &&
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
+            (identical(other.device, device) || other.device == device) &&
             (identical(other.recorder, recorder) ||
                 other.recorder == recorder) &&
             const DeepCollectionEquality().equals(other._reason, _reason) &&
@@ -21522,9 +26246,6 @@ class _$_MedicationRequest extends _MedicationRequest {
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_instantiatesCanonical),
-        const DeepCollectionEquality().hash(_instantiatesUri),
-        const DeepCollectionEquality().hash(_instantiatesUriElement),
         const DeepCollectionEquality().hash(_basedOn),
         priorPrescription,
         groupIdentifier,
@@ -21551,7 +26272,8 @@ class _$_MedicationRequest extends _MedicationRequest {
         reported,
         reportedElement,
         performerType,
-        performer,
+        const DeepCollectionEquality().hash(_performer),
+        device,
         recorder,
         const DeepCollectionEquality().hash(_reason),
         courseOfTherapyType,
@@ -21580,7 +26302,8 @@ class _$_MedicationRequest extends _MedicationRequest {
 
 abstract class _MedicationRequest extends MedicationRequest {
   factory _MedicationRequest(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
@@ -21595,10 +26318,6 @@ abstract class _MedicationRequest extends MedicationRequest {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri')
-          final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
       final Reference? priorPrescription,
       final Identifier? groupIdentifier,
@@ -21632,7 +26351,8 @@ abstract class _MedicationRequest extends MedicationRequest {
       @JsonKey(name: '_reported')
           final Element? reportedElement,
       final CodeableConcept? performerType,
-      final Reference? performer,
+      final List<Reference>? performer,
+      final CodeableReference? device,
       final Reference? recorder,
       final List<CodeableReference>? reason,
       final CodeableConcept? courseOfTherapyType,
@@ -21648,117 +26368,211 @@ abstract class _MedicationRequest extends MedicationRequest {
       _$_MedicationRequest.fromJson;
 
   @override
+
+  /// [resourceType] This is a MedicationRequest resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical;
-  @override
-  List<FhirUri>? get instantiatesUri;
-  @override
-  @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
-  @override
+
+  /// [basedOn] A plan or request that is fulfilled in whole or in part by this medication request.
   List<Reference>? get basedOn;
   @override
+
+  /// [priorPrescription] A link to a resource representing an earlier order related order or prescription.
   Reference? get priorPrescription;
   @override
+
+  /// [groupIdentifier] A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription.
   Identifier? get groupIdentifier;
   @override
+
+  /// [status] A code specifying the current state of the order.  Generally, this will be active or completed state.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [statusReason] Captures the reason for the current state of the MedicationRequest.
   CodeableConcept? get statusReason;
   @override
+
+  /// [statusChanged] The date (and perhaps time) when the status was changed.
   FhirDateTime? get statusChanged;
   @override
+
+  /// [statusChangedElement] ("_statusChanged") Extensions for statusChanged
   @JsonKey(name: '_statusChanged')
   Element? get statusChangedElement;
   @override
+
+  /// [intent] Whether the request is a proposal, plan, or an original order.
   Code? get intent;
   @override
+
+  /// [intentElement] ("_intent") Extensions for intent
   @JsonKey(name: '_intent')
   Element? get intentElement;
   @override
+
+  /// [category] Indicates the grouping or category of medication request (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   List<CodeableConcept>? get category;
   @override
+
+  /// [priority] Indicates how quickly the Medication Request should be addressed with respect to other requests.
   Code? get priority;
   @override
+
+  /// [priorityElement] ("_priority") Extensions for priority
   @JsonKey(name: '_priority')
   Element? get priorityElement;
   @override
+
+  /// [doNotPerform] If true, indicates that the provider is asking for the patient to either stop taking or to not start taking the specified medication. For example, the patient is taking an existing medication and the provider is changing their medication. They want to create two seperate requests: one to stop using the current medication and another to start the new medication.
   Boolean? get doNotPerform;
   @override
+
+  /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement;
   @override
+
+  /// [medication] Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication;
   @override
+
+  /// [subject] A link to a resource representing the person or set of individuals to whom the medication will be given.
   Reference get subject;
   @override
+
+  /// [informationSource] The person or organization who provided the information about this request, if the source is someone other than the requestor.  This is often used when the MedicationRequest is reported by another person.
   List<Reference>? get informationSource;
   @override
+
+  /// [encounter] The Encounter during which this [x] was created or to which the creation of this record is tightly associated.
   Reference? get encounter;
   @override
+
+  /// [supportingInformation] Information to support fulfilling (i.e. dispensing or administering) of the medication, for example, patient height and weight, a MedicationUsage for the patient).
   List<Reference>? get supportingInformation;
   @override
+
+  /// [authoredOn] The date (and perhaps time) when the prescription was initially written or authored on.
   FhirDateTime? get authoredOn;
   @override
+
+  /// [authoredOnElement] ("_authoredOn") Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement;
   @override
+
+  /// [requester] The individual, organization, or device that initiated the request and has responsibility for its activation.
   Reference? get requester;
   @override
+
+  /// [reported] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
   Boolean? get reported;
   @override
+
+  /// [reportedElement] ("_reported") Extensions for reported
   @JsonKey(name: '_reported')
   Element? get reportedElement;
   @override
+
+  /// [performerType] Indicates the type of performer of the administration of the medication.
   CodeableConcept? get performerType;
   @override
-  Reference? get performer;
+
+  /// [performer] The specified desired performer of the medication treatment (e.g. the performer of the medication administration).  For devices, this is the device that is intended to perform the administration of the medication.  An IV Pump would be an example of a device that is performing the administration.  Both the IV Pump and the practitioner that set the rate or bolus on the pump can be listed as performers.
+  List<Reference>? get performer;
   @override
+
+  /// [device] The intended type of device that is to be used for the administration of the medication (for example, PCA Pump).
+  CodeableReference? get device;
+  @override
+
+  /// [recorder] The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.
   Reference? get recorder;
   @override
+
+  /// [reason] The reason or the indication for ordering or not ordering the medication.
   List<CodeableReference>? get reason;
   @override
+
+  /// [courseOfTherapyType] The description of the overall pattern of the administration of the medication to the patient.
   CodeableConcept? get courseOfTherapyType;
   @override
+
+  /// [insurance] Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.
   List<Reference>? get insurance;
   @override
+
+  /// [note] Extra information about the prescription that could not be conveyed by the other attributes.
   List<Annotation>? get note;
   @override
+
+  /// [dose] Indicates how the medication is to be used by the patient.
   MedicationRequestDose? get dose;
   @override
+
+  /// [dispenseRequest] Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.
   MedicationRequestDispenseRequest? get dispenseRequest;
   @override
+
+  /// [substitution] Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.
   MedicationRequestSubstitution? get substitution;
   @override
+
+  /// [eventHistory] Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
@@ -21773,16 +26587,29 @@ MedicationRequestDose _$MedicationRequestDoseFromJson(
 
 /// @nodoc
 mixin _$MedicationRequestDose {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   String? get renderedDosageInstruction => throw _privateConstructorUsedError;
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @JsonKey(name: '_renderedDosageInstruction')
   Element? get renderedDosageInstructionElement =>
       throw _privateConstructorUsedError;
+
+  /// [effectiveDosePeriod] The period over which the medication is to be taken.  Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions.
   Period? get effectiveDosePeriod => throw _privateConstructorUsedError;
+
+  /// [dosageInstruction] Specific instructions for how the medication is to be used by the patient.
   List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -21993,9 +26820,14 @@ class _$_MedicationRequestDose extends _MedicationRequestDose {
   factory _$_MedicationRequestDose.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationRequestDoseFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -22006,7 +26838,10 @@ class _$_MedicationRequestDose extends _MedicationRequestDose {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -22017,14 +26852,23 @@ class _$_MedicationRequestDose extends _MedicationRequestDose {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   @override
   final String? renderedDosageInstruction;
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @override
   @JsonKey(name: '_renderedDosageInstruction')
   final Element? renderedDosageInstructionElement;
+
+  /// [effectiveDosePeriod] The period over which the medication is to be taken.  Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions.
   @override
   final Period? effectiveDosePeriod;
+
+  /// [dosageInstruction] Specific instructions for how the medication is to be used by the patient.
   final List<Dosage>? _dosageInstruction;
+
+  /// [dosageInstruction] Specific instructions for how the medication is to be used by the patient.
   @override
   List<Dosage>? get dosageInstruction {
     final value = _dosageInstruction;
@@ -22107,20 +26951,34 @@ abstract class _MedicationRequestDose extends MedicationRequestDose {
       _$_MedicationRequestDose.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   String? get renderedDosageInstruction;
   @override
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @JsonKey(name: '_renderedDosageInstruction')
   Element? get renderedDosageInstructionElement;
   @override
+
+  /// [effectiveDosePeriod] The period over which the medication is to be taken.  Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions.
   Period? get effectiveDosePeriod;
   @override
+
+  /// [dosageInstruction] Specific instructions for how the medication is to be used by the patient.
   List<Dosage>? get dosageInstruction;
   @override
   @JsonKey(ignore: true)
@@ -22135,25 +26993,50 @@ MedicationRequestDispenseRequest _$MedicationRequestDispenseRequestFromJson(
 
 /// @nodoc
 mixin _$MedicationRequestDispenseRequest {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [initialFill] Indicates the quantity or duration for the first dispense of the medication.
   MedicationRequestInitialFill? get initialFill =>
       throw _privateConstructorUsedError;
+
+  /// [dispenseInterval] The minimum period of time that must occur between dispenses of the medication.
   FhirDuration? get dispenseInterval => throw _privateConstructorUsedError;
+
+  /// [validityPeriod] This indicates the validity period of a prescription (stale dating the Prescription).
   Period? get validityPeriod => throw _privateConstructorUsedError;
+
+  /// [numberOfRepeatsAllowed] An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus "3 repeats", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.  A prescriber may explicitly say that zero refills are permitted after the initial dispense.
   UnsignedInt? get numberOfRepeatsAllowed => throw _privateConstructorUsedError;
+
+  /// [numberOfRepeatsAllowedElement] ("_numberOfRepeatsAllowed") Extensions for numberOfRepeatsAllowed
   @JsonKey(name: '_numberOfRepeatsAllowed')
   Element? get numberOfRepeatsAllowedElement =>
       throw _privateConstructorUsedError;
+
+  /// [quantity] The amount that is to be dispensed for one fill.
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [expectedSupplyDuration] Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.
   FhirDuration? get expectedSupplyDuration =>
       throw _privateConstructorUsedError;
+
+  /// [dispenser] Indicates the intended performing Organization that will dispense the medication as specified by the prescriber.
   Reference? get dispenser => throw _privateConstructorUsedError;
+
+  /// [dispenserInstruction] Provides additional information to the dispenser, for example, counselling to be provided to the patient.
   List<Annotation>? get dispenserInstruction =>
       throw _privateConstructorUsedError;
+
+  /// [doseAdministrationAid] Provides information about the type of adherence packaging to be supplied for the medication dispense.
   CodeableConcept? get doseAdministrationAid =>
       throw _privateConstructorUsedError;
 
@@ -22540,9 +27423,14 @@ class _$_MedicationRequestDispenseRequest
           Map<String, dynamic> json) =>
       _$$_MedicationRequestDispenseRequestFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -22553,7 +27441,10 @@ class _$_MedicationRequestDispenseRequest
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -22564,24 +27455,43 @@ class _$_MedicationRequestDispenseRequest
     return EqualUnmodifiableListView(value);
   }
 
+  /// [initialFill] Indicates the quantity or duration for the first dispense of the medication.
   @override
   final MedicationRequestInitialFill? initialFill;
+
+  /// [dispenseInterval] The minimum period of time that must occur between dispenses of the medication.
   @override
   final FhirDuration? dispenseInterval;
+
+  /// [validityPeriod] This indicates the validity period of a prescription (stale dating the Prescription).
   @override
   final Period? validityPeriod;
+
+  /// [numberOfRepeatsAllowed] An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus "3 repeats", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.  A prescriber may explicitly say that zero refills are permitted after the initial dispense.
   @override
   final UnsignedInt? numberOfRepeatsAllowed;
+
+  /// [numberOfRepeatsAllowedElement] ("_numberOfRepeatsAllowed") Extensions for numberOfRepeatsAllowed
   @override
   @JsonKey(name: '_numberOfRepeatsAllowed')
   final Element? numberOfRepeatsAllowedElement;
+
+  /// [quantity] The amount that is to be dispensed for one fill.
   @override
   final Quantity? quantity;
+
+  /// [expectedSupplyDuration] Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.
   @override
   final FhirDuration? expectedSupplyDuration;
+
+  /// [dispenser] Indicates the intended performing Organization that will dispense the medication as specified by the prescriber.
   @override
   final Reference? dispenser;
+
+  /// [dispenserInstruction] Provides additional information to the dispenser, for example, counselling to be provided to the patient.
   final List<Annotation>? _dispenserInstruction;
+
+  /// [dispenserInstruction] Provides additional information to the dispenser, for example, counselling to be provided to the patient.
   @override
   List<Annotation>? get dispenserInstruction {
     final value = _dispenserInstruction;
@@ -22592,6 +27502,7 @@ class _$_MedicationRequestDispenseRequest
     return EqualUnmodifiableListView(value);
   }
 
+  /// [doseAdministrationAid] Provides information about the type of adherence packaging to be supplied for the medication dispense.
   @override
   final CodeableConcept? doseAdministrationAid;
 
@@ -22693,32 +27604,58 @@ abstract class _MedicationRequestDispenseRequest
       Map<String, dynamic> json) = _$_MedicationRequestDispenseRequest.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [initialFill] Indicates the quantity or duration for the first dispense of the medication.
   MedicationRequestInitialFill? get initialFill;
   @override
+
+  /// [dispenseInterval] The minimum period of time that must occur between dispenses of the medication.
   FhirDuration? get dispenseInterval;
   @override
+
+  /// [validityPeriod] This indicates the validity period of a prescription (stale dating the Prescription).
   Period? get validityPeriod;
   @override
+
+  /// [numberOfRepeatsAllowed] An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus "3 repeats", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.  A prescriber may explicitly say that zero refills are permitted after the initial dispense.
   UnsignedInt? get numberOfRepeatsAllowed;
   @override
+
+  /// [numberOfRepeatsAllowedElement] ("_numberOfRepeatsAllowed") Extensions for numberOfRepeatsAllowed
   @JsonKey(name: '_numberOfRepeatsAllowed')
   Element? get numberOfRepeatsAllowedElement;
   @override
+
+  /// [quantity] The amount that is to be dispensed for one fill.
   Quantity? get quantity;
   @override
+
+  /// [expectedSupplyDuration] Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.
   FhirDuration? get expectedSupplyDuration;
   @override
+
+  /// [dispenser] Indicates the intended performing Organization that will dispense the medication as specified by the prescriber.
   Reference? get dispenser;
   @override
+
+  /// [dispenserInstruction] Provides additional information to the dispenser, for example, counselling to be provided to the patient.
   List<Annotation>? get dispenserInstruction;
   @override
+
+  /// [doseAdministrationAid] Provides information about the type of adherence packaging to be supplied for the medication dispense.
   CodeableConcept? get doseAdministrationAid;
   @override
   @JsonKey(ignore: true)
@@ -22734,12 +27671,21 @@ MedicationRequestInitialFill _$MedicationRequestInitialFillFromJson(
 
 /// @nodoc
 mixin _$MedicationRequestInitialFill {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [quantity] The amount or quantity to provide as part of the first dispense.
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [duration] The length of time that the first dispense is expected to last.
   FhirDuration? get duration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -22918,9 +27864,14 @@ class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
   factory _$_MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationRequestInitialFillFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -22931,7 +27882,10 @@ class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -22942,8 +27896,11 @@ class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [quantity] The amount or quantity to provide as part of the first dispense.
   @override
   final Quantity? quantity;
+
+  /// [duration] The length of time that the first dispense is expected to last.
   @override
   final FhirDuration? duration;
 
@@ -23007,15 +27964,25 @@ abstract class _MedicationRequestInitialFill
       _$_MedicationRequestInitialFill.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [quantity] The amount or quantity to provide as part of the first dispense.
   Quantity? get quantity;
   @override
+
+  /// [duration] The length of time that the first dispense is expected to last.
   FhirDuration? get duration;
   @override
   @JsonKey(ignore: true)
@@ -23030,16 +27997,29 @@ MedicationRequestSubstitution _$MedicationRequestSubstitutionFromJson(
 
 /// @nodoc
 mixin _$MedicationRequestSubstitution {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [allowedBoolean] True if the prescriber allows a different drug to be dispensed from what was prescribed.
   Boolean? get allowedBoolean => throw _privateConstructorUsedError;
+
+  /// [allowedBooleanElement] ("_allowedBoolean") Extensions for allowedBoolean
   @JsonKey(name: '_allowedBoolean')
   Element? get allowedBooleanElement => throw _privateConstructorUsedError;
+
+  /// [allowedCodeableConcept] True if the prescriber allows a different drug to be dispensed from what was prescribed.
   CodeableConcept? get allowedCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [reason] Indicates the reason for the substitution, or why substitution must or must not be performed.
   CodeableConcept? get reason => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -23261,9 +28241,14 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
           Map<String, dynamic> json) =>
       _$$_MedicationRequestSubstitutionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -23274,7 +28259,10 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -23285,13 +28273,20 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [allowedBoolean] True if the prescriber allows a different drug to be dispensed from what was prescribed.
   @override
   final Boolean? allowedBoolean;
+
+  /// [allowedBooleanElement] ("_allowedBoolean") Extensions for allowedBoolean
   @override
   @JsonKey(name: '_allowedBoolean')
   final Element? allowedBooleanElement;
+
+  /// [allowedCodeableConcept] True if the prescriber allows a different drug to be dispensed from what was prescribed.
   @override
   final CodeableConcept? allowedCodeableConcept;
+
+  /// [reason] Indicates the reason for the substitution, or why substitution must or must not be performed.
   @override
   final CodeableConcept? reason;
 
@@ -23362,20 +28357,34 @@ abstract class _MedicationRequestSubstitution
       _$_MedicationRequestSubstitution.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [allowedBoolean] True if the prescriber allows a different drug to be dispensed from what was prescribed.
   Boolean? get allowedBoolean;
   @override
+
+  /// [allowedBooleanElement] ("_allowedBoolean") Extensions for allowedBoolean
   @JsonKey(name: '_allowedBoolean')
   Element? get allowedBooleanElement;
   @override
+
+  /// [allowedCodeableConcept] True if the prescriber allows a different drug to be dispensed from what was prescribed.
   CodeableConcept? get allowedCodeableConcept;
   @override
+
+  /// [reason] Indicates the reason for the substitution, or why substitution must or must not be performed.
   CodeableConcept? get reason;
   @override
   @JsonKey(ignore: true)
@@ -23389,45 +28398,114 @@ MedicationUsage _$MedicationUsageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationUsage {
+  /// [resourceType] This is a MedicationUsage resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] Identifiers associated with this Medication Usage that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [partOf] A larger event of which this particular MedicationUsage is a component or step.
+  List<Reference>? get partOf => throw _privateConstructorUsedError;
+
+  /// [status] A code representing the status of recording the medication usage.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [category] Type of medication usage (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [medication] Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication => throw _privateConstructorUsedError;
+
+  /// [subject] The person, animal or group who is/was taking the medication.
   Reference get subject => throw _privateConstructorUsedError;
+
+  /// [encounter] The encounter that establishes the context for this MedicationUsage.
   Reference? get encounter => throw _privateConstructorUsedError;
+
+  /// [effectiveDateTime] The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).
   FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+
+  /// [effectiveDateTimeElement] ("_effectiveDateTime") Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [dateAsserted] The date when the Medication Usage was asserted by the information source.
   FhirDateTime? get dateAsserted => throw _privateConstructorUsedError;
+
+  /// [dateAssertedElement] ("_dateAsserted") Extensions for dateAsserted
   @JsonKey(name: '_dateAsserted')
   Element? get dateAssertedElement => throw _privateConstructorUsedError;
+
+  /// [informationSource] The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationUsage is derived from other resources, e.g. Claim or MedicationRequest.
   List<Reference>? get informationSource => throw _privateConstructorUsedError;
+
+  /// [derivedFrom] Allows linking the MedicationUsage to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationUsage.
   List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
+
+  /// [reason] A concept, Condition or observation that supports why the medication is being/was taken.
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+
+  /// [note] Provides extra information about the Medication Usage that is not conveyed by the other attributes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [relatedClinicalInformation] Link to information that is relevant to a medication usage, for example, illicit drug use, gestational age, etc.
+  List<Reference>? get relatedClinicalInformation =>
+      throw _privateConstructorUsedError;
+
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   String? get renderedDosageInstruction => throw _privateConstructorUsedError;
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @JsonKey(name: '_renderedDosageInstruction')
   Element? get renderedDosageInstructionElement =>
       throw _privateConstructorUsedError;
+
+  /// [dosage] Indicates how the medication is/was or should be taken by the patient.
   List<Dosage>? get dosage => throw _privateConstructorUsedError;
+
+  /// [adherence] Indicates if the medication is being consumed or administered as instructed.
   MedicationUsageAdherence? get adherence => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -23443,7 +28521,8 @@ abstract class $MedicationUsageCopyWith<$Res> {
       _$MedicationUsageCopyWithImpl<$Res, MedicationUsage>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -23458,6 +28537,7 @@ abstract class $MedicationUsageCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
+      List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -23476,6 +28556,7 @@ abstract class $MedicationUsageCopyWith<$Res> {
       List<Reference>? derivedFrom,
       List<CodeableReference>? reason,
       List<Annotation>? note,
+      List<Reference>? relatedClinicalInformation,
       String? renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
           Element? renderedDosageInstructionElement,
@@ -23522,6 +28603,7 @@ class _$MedicationUsageCopyWithImpl<$Res, $Val extends MedicationUsage>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
+    Object? partOf = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? category = freezed,
@@ -23537,6 +28619,7 @@ class _$MedicationUsageCopyWithImpl<$Res, $Val extends MedicationUsage>
     Object? derivedFrom = freezed,
     Object? reason = freezed,
     Object? note = freezed,
+    Object? relatedClinicalInformation = freezed,
     Object? renderedDosageInstruction = freezed,
     Object? renderedDosageInstructionElement = freezed,
     Object? dosage = freezed,
@@ -23591,6 +28674,10 @@ class _$MedicationUsageCopyWithImpl<$Res, $Val extends MedicationUsage>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
+      partOf: freezed == partOf
+          ? _value.partOf
+          : partOf // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -23651,6 +28738,10 @@ class _$MedicationUsageCopyWithImpl<$Res, $Val extends MedicationUsage>
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
+      relatedClinicalInformation: freezed == relatedClinicalInformation
+          ? _value.relatedClinicalInformation
+          : relatedClinicalInformation // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       renderedDosageInstruction: freezed == renderedDosageInstruction
           ? _value.renderedDosageInstruction
           : renderedDosageInstruction // ignore: cast_nullable_to_non_nullable
@@ -23831,7 +28922,8 @@ abstract class _$$_MedicationUsageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -23846,6 +28938,7 @@ abstract class _$$_MedicationUsageCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
+      List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -23864,6 +28957,7 @@ abstract class _$$_MedicationUsageCopyWith<$Res>
       List<Reference>? derivedFrom,
       List<CodeableReference>? reason,
       List<Annotation>? note,
+      List<Reference>? relatedClinicalInformation,
       String? renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
           Element? renderedDosageInstructionElement,
@@ -23921,6 +29015,7 @@ class __$$_MedicationUsageCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
+    Object? partOf = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? category = freezed,
@@ -23936,6 +29031,7 @@ class __$$_MedicationUsageCopyWithImpl<$Res>
     Object? derivedFrom = freezed,
     Object? reason = freezed,
     Object? note = freezed,
+    Object? relatedClinicalInformation = freezed,
     Object? renderedDosageInstruction = freezed,
     Object? renderedDosageInstructionElement = freezed,
     Object? dosage = freezed,
@@ -23990,6 +29086,10 @@ class __$$_MedicationUsageCopyWithImpl<$Res>
           ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
+      partOf: freezed == partOf
+          ? _value._partOf
+          : partOf // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -24050,6 +29150,10 @@ class __$$_MedicationUsageCopyWithImpl<$Res>
           ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
+      relatedClinicalInformation: freezed == relatedClinicalInformation
+          ? _value._relatedClinicalInformation
+          : relatedClinicalInformation // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       renderedDosageInstruction: freezed == renderedDosageInstruction
           ? _value.renderedDosageInstruction
           : renderedDosageInstruction // ignore: cast_nullable_to_non_nullable
@@ -24075,7 +29179,8 @@ class __$$_MedicationUsageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationUsage extends _MedicationUsage {
   _$_MedicationUsage(
-      {this.resourceType = R5ResourceType.MedicationUsage,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
+          this.resourceType = R5ResourceType.MedicationUsage,
       this.id,
       this.meta,
       this.implicitRules,
@@ -24090,6 +29195,7 @@ class _$_MedicationUsage extends _MedicationUsage {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
+      final List<Reference>? partOf,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -24108,6 +29214,7 @@ class _$_MedicationUsage extends _MedicationUsage {
       final List<Reference>? derivedFrom,
       final List<CodeableReference>? reason,
       final List<Annotation>? note,
+      final List<Reference>? relatedClinicalInformation,
       this.renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
           this.renderedDosageInstructionElement,
@@ -24117,37 +29224,58 @@ class _$_MedicationUsage extends _MedicationUsage {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
+        _partOf = partOf,
         _category = category,
         _informationSource = informationSource,
         _derivedFrom = derivedFrom,
         _reason = reason,
         _note = note,
+        _relatedClinicalInformation = relatedClinicalInformation,
         _dosage = dosage,
         super._();
 
   factory _$_MedicationUsage.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationUsageFromJson(json);
 
+  /// [resourceType] This is a MedicationUsage resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -24157,7 +29285,10 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -24168,7 +29299,10 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -24179,7 +29313,10 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] Identifiers associated with this Medication Usage that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   final List<Identifier>? _identifier;
+
+  /// [identifier] Identifiers associated with this Medication Usage that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -24189,12 +29326,32 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [partOf] A larger event of which this particular MedicationUsage is a component or step.
+  final List<Reference>? _partOf;
+
+  /// [partOf] A larger event of which this particular MedicationUsage is a component or step.
+  @override
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    if (_partOf is EqualUnmodifiableListView) return _partOf;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] A code representing the status of recording the medication usage.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [category] Type of medication usage (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   final List<CodeableConcept>? _category;
+
+  /// [category] Type of medication usage (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   @override
   List<CodeableConcept>? get category {
     final value = _category;
@@ -24204,25 +29361,44 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [medication] Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   @override
   final CodeableReference medication;
+
+  /// [subject] The person, animal or group who is/was taking the medication.
   @override
   final Reference subject;
+
+  /// [encounter] The encounter that establishes the context for this MedicationUsage.
   @override
   final Reference? encounter;
+
+  /// [effectiveDateTime] The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).
   @override
   final FhirDateTime? effectiveDateTime;
+
+  /// [effectiveDateTimeElement] ("_effectiveDateTime") Extensions for effectiveDateTime
   @override
   @JsonKey(name: '_effectiveDateTime')
   final Element? effectiveDateTimeElement;
+
+  /// [effectivePeriod] The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).
   @override
   final Period? effectivePeriod;
+
+  /// [dateAsserted] The date when the Medication Usage was asserted by the information source.
   @override
   final FhirDateTime? dateAsserted;
+
+  /// [dateAssertedElement] ("_dateAsserted") Extensions for dateAsserted
   @override
   @JsonKey(name: '_dateAsserted')
   final Element? dateAssertedElement;
+
+  /// [informationSource] The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationUsage is derived from other resources, e.g. Claim or MedicationRequest.
   final List<Reference>? _informationSource;
+
+  /// [informationSource] The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationUsage is derived from other resources, e.g. Claim or MedicationRequest.
   @override
   List<Reference>? get informationSource {
     final value = _informationSource;
@@ -24233,7 +29409,10 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [derivedFrom] Allows linking the MedicationUsage to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationUsage.
   final List<Reference>? _derivedFrom;
+
+  /// [derivedFrom] Allows linking the MedicationUsage to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationUsage.
   @override
   List<Reference>? get derivedFrom {
     final value = _derivedFrom;
@@ -24243,7 +29422,10 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [reason] A concept, Condition or observation that supports why the medication is being/was taken.
   final List<CodeableReference>? _reason;
+
+  /// [reason] A concept, Condition or observation that supports why the medication is being/was taken.
   @override
   List<CodeableReference>? get reason {
     final value = _reason;
@@ -24253,7 +29435,10 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [note] Provides extra information about the Medication Usage that is not conveyed by the other attributes.
   final List<Annotation>? _note;
+
+  /// [note] Provides extra information about the Medication Usage that is not conveyed by the other attributes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -24263,12 +29448,33 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedClinicalInformation] Link to information that is relevant to a medication usage, for example, illicit drug use, gestational age, etc.
+  final List<Reference>? _relatedClinicalInformation;
+
+  /// [relatedClinicalInformation] Link to information that is relevant to a medication usage, for example, illicit drug use, gestational age, etc.
+  @override
+  List<Reference>? get relatedClinicalInformation {
+    final value = _relatedClinicalInformation;
+    if (value == null) return null;
+    if (_relatedClinicalInformation is EqualUnmodifiableListView)
+      return _relatedClinicalInformation;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   @override
   final String? renderedDosageInstruction;
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @override
   @JsonKey(name: '_renderedDosageInstruction')
   final Element? renderedDosageInstructionElement;
+
+  /// [dosage] Indicates how the medication is/was or should be taken by the patient.
   final List<Dosage>? _dosage;
+
+  /// [dosage] Indicates how the medication is/was or should be taken by the patient.
   @override
   List<Dosage>? get dosage {
     final value = _dosage;
@@ -24278,12 +29484,13 @@ class _$_MedicationUsage extends _MedicationUsage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [adherence] Indicates if the medication is being consumed or administered as instructed.
   @override
   final MedicationUsageAdherence? adherence;
 
   @override
   String toString() {
-    return 'MedicationUsage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, medication: $medication, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, informationSource: $informationSource, derivedFrom: $derivedFrom, reason: $reason, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosage: $dosage, adherence: $adherence)';
+    return 'MedicationUsage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, partOf: $partOf, status: $status, statusElement: $statusElement, category: $category, medication: $medication, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, informationSource: $informationSource, derivedFrom: $derivedFrom, reason: $reason, note: $note, relatedClinicalInformation: $relatedClinicalInformation, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosage: $dosage, adherence: $adherence)';
   }
 
   @override
@@ -24312,6 +29519,7 @@ class _$_MedicationUsage extends _MedicationUsage {
                 .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -24338,6 +29546,9 @@ class _$_MedicationUsage extends _MedicationUsage {
                 .equals(other._derivedFrom, _derivedFrom) &&
             const DeepCollectionEquality().equals(other._reason, _reason) &&
             const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(
+                other._relatedClinicalInformation,
+                _relatedClinicalInformation) &&
             (identical(other.renderedDosageInstruction,
                     renderedDosageInstruction) ||
                 other.renderedDosageInstruction == renderedDosageInstruction) &&
@@ -24366,6 +29577,7 @@ class _$_MedicationUsage extends _MedicationUsage {
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_partOf),
         status,
         statusElement,
         const DeepCollectionEquality().hash(_category),
@@ -24381,6 +29593,7 @@ class _$_MedicationUsage extends _MedicationUsage {
         const DeepCollectionEquality().hash(_derivedFrom),
         const DeepCollectionEquality().hash(_reason),
         const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_relatedClinicalInformation),
         renderedDosageInstruction,
         renderedDosageInstructionElement,
         const DeepCollectionEquality().hash(_dosage),
@@ -24403,7 +29616,8 @@ class _$_MedicationUsage extends _MedicationUsage {
 
 abstract class _MedicationUsage extends MedicationUsage {
   factory _MedicationUsage(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
@@ -24418,6 +29632,7 @@ abstract class _MedicationUsage extends MedicationUsage {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
+      final List<Reference>? partOf,
       final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
@@ -24436,6 +29651,7 @@ abstract class _MedicationUsage extends MedicationUsage {
       final List<Reference>? derivedFrom,
       final List<CodeableReference>? reason,
       final List<Annotation>? note,
+      final List<Reference>? relatedClinicalInformation,
       final String? renderedDosageInstruction,
       @JsonKey(name: '_renderedDosageInstruction')
           final Element? renderedDosageInstructionElement,
@@ -24447,73 +29663,144 @@ abstract class _MedicationUsage extends MedicationUsage {
       _$_MedicationUsage.fromJson;
 
   @override
+
+  /// [resourceType] This is a MedicationUsage resource
+  @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] Identifiers associated with this Medication Usage that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.
   List<Identifier>? get identifier;
   @override
+
+  /// [partOf] A larger event of which this particular MedicationUsage is a component or step.
+  List<Reference>? get partOf;
+  @override
+
+  /// [status] A code representing the status of recording the medication usage.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [category] Type of medication usage (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).
   List<CodeableConcept>? get category;
   @override
+
+  /// [medication] Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
   CodeableReference get medication;
   @override
+
+  /// [subject] The person, animal or group who is/was taking the medication.
   Reference get subject;
   @override
+
+  /// [encounter] The encounter that establishes the context for this MedicationUsage.
   Reference? get encounter;
   @override
+
+  /// [effectiveDateTime] The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).
   FhirDateTime? get effectiveDateTime;
   @override
+
+  /// [effectiveDateTimeElement] ("_effectiveDateTime") Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement;
   @override
+
+  /// [effectivePeriod] The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).
   Period? get effectivePeriod;
   @override
+
+  /// [dateAsserted] The date when the Medication Usage was asserted by the information source.
   FhirDateTime? get dateAsserted;
   @override
+
+  /// [dateAssertedElement] ("_dateAsserted") Extensions for dateAsserted
   @JsonKey(name: '_dateAsserted')
   Element? get dateAssertedElement;
   @override
+
+  /// [informationSource] The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationUsage is derived from other resources, e.g. Claim or MedicationRequest.
   List<Reference>? get informationSource;
   @override
+
+  /// [derivedFrom] Allows linking the MedicationUsage to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationUsage.
   List<Reference>? get derivedFrom;
   @override
+
+  /// [reason] A concept, Condition or observation that supports why the medication is being/was taken.
   List<CodeableReference>? get reason;
   @override
+
+  /// [note] Provides extra information about the Medication Usage that is not conveyed by the other attributes.
   List<Annotation>? get note;
   @override
+
+  /// [relatedClinicalInformation] Link to information that is relevant to a medication usage, for example, illicit drug use, gestational age, etc.
+  List<Reference>? get relatedClinicalInformation;
+  @override
+
+  /// [renderedDosageInstruction] The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.
   String? get renderedDosageInstruction;
   @override
+
+  /// [renderedDosageInstructionElement] ("_renderedDosageInstruction") Extensions for renderedDosageInstruction
   @JsonKey(name: '_renderedDosageInstruction')
   Element? get renderedDosageInstructionElement;
   @override
+
+  /// [dosage] Indicates how the medication is/was or should be taken by the patient.
   List<Dosage>? get dosage;
   @override
+
+  /// [adherence] Indicates if the medication is being consumed or administered as instructed.
   MedicationUsageAdherence? get adherence;
   @override
   @JsonKey(ignore: true)
@@ -24528,12 +29815,21 @@ MedicationUsageAdherence _$MedicationUsageAdherenceFromJson(
 
 /// @nodoc
 mixin _$MedicationUsageAdherence {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] Type of the adherence for the medication.
   CodeableConcept get code => throw _privateConstructorUsedError;
+
+  /// [reason] Captures the reason for the current use or adherence of a medication.
   CodeableConcept? get reason => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -24705,9 +30001,14 @@ class _$_MedicationUsageAdherence extends _MedicationUsageAdherence {
   factory _$_MedicationUsageAdherence.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationUsageAdherenceFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -24718,7 +30019,10 @@ class _$_MedicationUsageAdherence extends _MedicationUsageAdherence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -24729,8 +30033,11 @@ class _$_MedicationUsageAdherence extends _MedicationUsageAdherence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [code] Type of the adherence for the medication.
   @override
   final CodeableConcept code;
+
+  /// [reason] Captures the reason for the current use or adherence of a medication.
   @override
   final CodeableConcept? reason;
 
@@ -24791,15 +30098,25 @@ abstract class _MedicationUsageAdherence extends MedicationUsageAdherence {
       _$_MedicationUsageAdherence.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] Type of the adherence for the medication.
   CodeableConcept get code;
   @override
+
+  /// [reason] Captures the reason for the current use or adherence of a medication.
   CodeableConcept? get reason;
   @override
   @JsonKey(ignore: true)

@@ -8,9 +8,10 @@ part of 'payment.dart';
 
 _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
     _$_PaymentNotice(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.PaymentNotice,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.PaymentNotice) ??
+          R5ResourceType.PaymentNotice,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -124,6 +125,7 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.ActorDefinition: 'ActorDefinition',
   R5ResourceType.AdministrableProductDefinition:
       'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
@@ -138,7 +140,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.BodyStructure: 'BodyStructure',
   R5ResourceType.Bundle: 'Bundle',
   R5ResourceType.CapabilityStatement: 'CapabilityStatement',
-  R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
   R5ResourceType.ChargeItem: 'ChargeItem',
@@ -154,7 +155,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
-  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -185,6 +185,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
   R5ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
   R5ResourceType.Flag: 'Flag',
+  R5ResourceType.FormularyItem: 'FormularyItem',
+  R5ResourceType.GenomicStudy: 'GenomicStudy',
   R5ResourceType.Goal: 'Goal',
   R5ResourceType.GraphDefinition: 'GraphDefinition',
   R5ResourceType.Group: 'Group',
@@ -243,7 +245,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
   R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
-  R5ResourceType.RequestGroup: 'RequestGroup',
+  R5ResourceType.RequestOrchestration: 'RequestOrchestration',
+  R5ResourceType.Requirements: 'Requirements',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
   R5ResourceType.ResearchSubject: 'ResearchSubject',
   R5ResourceType.RiskAssessment: 'RiskAssessment',
@@ -280,9 +283,10 @@ const _$R5ResourceTypeEnumMap = {
 _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     _$_PaymentReconciliation(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.PaymentReconciliation,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.PaymentReconciliation) ??
+          R5ResourceType.PaymentReconciliation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -313,10 +317,14 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      kind: json['kind'] == null
+          ? null
+          : CodeableConcept.fromJson(json['kind'] as Map<String, dynamic>),
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -326,6 +334,13 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
+      enterer: json['enterer'] == null
+          ? null
+          : Reference.fromJson(json['enterer'] as Map<String, dynamic>),
+      issuerType: json['issuerType'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['issuerType'] as Map<String, dynamic>),
       paymentIssuer: json['paymentIssuer'] == null
           ? null
           : Reference.fromJson(json['paymentIssuer'] as Map<String, dynamic>),
@@ -343,21 +358,56 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
       dispositionElement: json['_disposition'] == null
           ? null
           : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
-      paymentDate: json['paymentDate'] == null
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      dateElement: json['_date'] == null
           ? null
-          : Date.fromJson(json['paymentDate']),
-      paymentDateElement: json['_paymentDate'] == null
+          : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      location: json['location'] == null
           ? null
-          : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
-      paymentAmount:
-          Money.fromJson(json['paymentAmount'] as Map<String, dynamic>),
+          : Reference.fromJson(json['location'] as Map<String, dynamic>),
+      method: json['method'] == null
+          ? null
+          : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
+      cardBrand: json['cardBrand'] as String?,
+      cardBrandElement: json['_cardBrand'] == null
+          ? null
+          : Element.fromJson(json['_cardBrand'] as Map<String, dynamic>),
+      accountNumber: json['accountNumber'] as String?,
+      accountNumberElement: json['_accountNumber'] == null
+          ? null
+          : Element.fromJson(json['_accountNumber'] as Map<String, dynamic>),
+      expirationDate: json['expirationDate'] == null
+          ? null
+          : Date.fromJson(json['expirationDate']),
+      expirationDateElement: json['_expirationDate'] == null
+          ? null
+          : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
+      processor: json['processor'] as String?,
+      processorElement: json['_processor'] == null
+          ? null
+          : Element.fromJson(json['_processor'] as Map<String, dynamic>),
+      referenceNumber: json['referenceNumber'] as String?,
+      referenceNumberElement: json['_referenceNumber'] == null
+          ? null
+          : Element.fromJson(json['_referenceNumber'] as Map<String, dynamic>),
+      authorization: json['authorization'] as String?,
+      authorizationElement: json['_authorization'] == null
+          ? null
+          : Element.fromJson(json['_authorization'] as Map<String, dynamic>),
+      tenderedAmount: json['tenderedAmount'] == null
+          ? null
+          : Money.fromJson(json['tenderedAmount'] as Map<String, dynamic>),
+      returnedAmount: json['returnedAmount'] == null
+          ? null
+          : Money.fromJson(json['returnedAmount'] as Map<String, dynamic>),
+      amount: Money.fromJson(json['amount'] as Map<String, dynamic>),
       paymentIdentifier: json['paymentIdentifier'] == null
           ? null
           : Identifier.fromJson(
               json['paymentIdentifier'] as Map<String, dynamic>),
-      detail: (json['detail'] as List<dynamic>?)
-          ?.map((e) =>
-              PaymentReconciliationDetail.fromJson(e as Map<String, dynamic>))
+      allocation: (json['allocation'] as List<dynamic>?)
+          ?.map((e) => PaymentReconciliationAllocation.fromJson(
+              e as Map<String, dynamic>))
           .toList(),
       formCode: json['formCode'] == null
           ? null
@@ -395,11 +445,15 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('enterer', instance.enterer?.toJson());
+  writeNotNull('issuerType', instance.issuerType?.toJson());
   writeNotNull('paymentIssuer', instance.paymentIssuer?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
@@ -407,20 +461,37 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
-  writeNotNull('paymentDate', instance.paymentDate?.toJson());
-  writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
-  val['paymentAmount'] = instance.paymentAmount.toJson();
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('method', instance.method?.toJson());
+  writeNotNull('cardBrand', instance.cardBrand);
+  writeNotNull('_cardBrand', instance.cardBrandElement?.toJson());
+  writeNotNull('accountNumber', instance.accountNumber);
+  writeNotNull('_accountNumber', instance.accountNumberElement?.toJson());
+  writeNotNull('expirationDate', instance.expirationDate?.toJson());
+  writeNotNull('_expirationDate', instance.expirationDateElement?.toJson());
+  writeNotNull('processor', instance.processor);
+  writeNotNull('_processor', instance.processorElement?.toJson());
+  writeNotNull('referenceNumber', instance.referenceNumber);
+  writeNotNull('_referenceNumber', instance.referenceNumberElement?.toJson());
+  writeNotNull('authorization', instance.authorization);
+  writeNotNull('_authorization', instance.authorizationElement?.toJson());
+  writeNotNull('tenderedAmount', instance.tenderedAmount?.toJson());
+  writeNotNull('returnedAmount', instance.returnedAmount?.toJson());
+  val['amount'] = instance.amount.toJson();
   writeNotNull('paymentIdentifier', instance.paymentIdentifier?.toJson());
-  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'allocation', instance.allocation?.map((e) => e.toJson()).toList());
   writeNotNull('formCode', instance.formCode?.toJson());
   writeNotNull(
       'processNote', instance.processNote?.map((e) => e.toJson()).toList());
   return val;
 }
 
-_$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
+_$_PaymentReconciliationAllocation _$$_PaymentReconciliationAllocationFromJson(
         Map<String, dynamic> json) =>
-    _$_PaymentReconciliationDetail(
+    _$_PaymentReconciliationAllocation(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -434,10 +505,33 @@ _$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
       predecessor: json['predecessor'] == null
           ? null
           : Identifier.fromJson(json['predecessor'] as Map<String, dynamic>),
-      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      request: json['request'] == null
+      target: json['target'] == null
           ? null
-          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+          : Reference.fromJson(json['target'] as Map<String, dynamic>),
+      targetItemString: json['targetItemString'] as String?,
+      targetItemStringElement: json['_targetItemString'] == null
+          ? null
+          : Element.fromJson(json['_targetItemString'] as Map<String, dynamic>),
+      targetItemIdentifier: json['targetItemIdentifier'] == null
+          ? null
+          : Identifier.fromJson(
+              json['targetItemIdentifier'] as Map<String, dynamic>),
+      targetItemPositiveInt: json['targetItemPositiveInt'] == null
+          ? null
+          : PositiveInt.fromJson(json['targetItemPositiveInt']),
+      targetItemPositiveIntElement: json['_targetItemPositiveInt'] == null
+          ? null
+          : Element.fromJson(
+              json['_targetItemPositiveInt'] as Map<String, dynamic>),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+      account: json['account'] == null
+          ? null
+          : Reference.fromJson(json['account'] as Map<String, dynamic>),
+      type: json['type'] == null
+          ? null
+          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       submitter: json['submitter'] == null
           ? null
           : Reference.fromJson(json['submitter'] as Map<String, dynamic>),
@@ -459,8 +553,8 @@ _$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
           : Money.fromJson(json['amount'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
-    _$_PaymentReconciliationDetail instance) {
+Map<String, dynamic> _$$_PaymentReconciliationAllocationToJson(
+    _$_PaymentReconciliationAllocation instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -476,8 +570,17 @@ Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('predecessor', instance.predecessor?.toJson());
-  val['type'] = instance.type.toJson();
-  writeNotNull('request', instance.request?.toJson());
+  writeNotNull('target', instance.target?.toJson());
+  writeNotNull('targetItemString', instance.targetItemString);
+  writeNotNull('_targetItemString', instance.targetItemStringElement?.toJson());
+  writeNotNull('targetItemIdentifier', instance.targetItemIdentifier?.toJson());
+  writeNotNull(
+      'targetItemPositiveInt', instance.targetItemPositiveInt?.toJson());
+  writeNotNull('_targetItemPositiveInt',
+      instance.targetItemPositiveIntElement?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('account', instance.account?.toJson());
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('submitter', instance.submitter?.toJson());
   writeNotNull('response', instance.response?.toJson());
   writeNotNull('date', instance.date?.toJson());

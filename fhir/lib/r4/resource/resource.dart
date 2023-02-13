@@ -9,7 +9,6 @@ import 'package:xml2json/xml2json.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import '../../main.dart';
 import '../../r4.dart';
 
 part 'resource.g.dart';
