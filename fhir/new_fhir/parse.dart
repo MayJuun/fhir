@@ -247,10 +247,12 @@ Future<void> main() async {
           }
         }
       }
+      final mapKey = allTypes[key] ?? allTypes[key.split('_').first];
       currentClass += '''
   }) = _$className;
 
   /// Produces a Yaml formatted String version of the object
+  ${resourceTypes.keys.contains(mapKey) ? "@override" : ""}
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -281,7 +283,6 @@ Future<void> main() async {
   }
 }''';
 
-      final mapKey = allTypes[key] ?? allTypes[key.split('_').first];
       if (resourceTypes.keys.contains(mapKey)) {
         final tempString = ((typeMap['resource_types']!
                 as Map<String, dynamic>)[resourceTypes[mapKey]!]

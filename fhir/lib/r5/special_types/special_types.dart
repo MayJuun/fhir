@@ -12,32 +12,51 @@ part 'special_types.enums.dart';
 part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
-/// [Narrative] A human-readable summary of the resource conveying the essential clinical and business information for the resource.
+/// [Narrative] A human-readable summary of the resource conveying the
+///  essential clinical and business information for the resource.
 @freezed
 class Narrative with _$Narrative {
-  /// [Narrative] A human-readable summary of the resource conveying the essential clinical and business information for the resource.
+  /// [Narrative] A human-readable summary of the resource conveying the
+  ///  essential clinical and business information for the resource.
   Narrative._();
 
-  /// [Narrative] A human-readable summary of the resource conveying the essential clinical and business information for the resource.
+  /// [Narrative] A human-readable summary of the resource conveying the
+  ///  essential clinical and business information for the resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [status] The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
+  /// [status] The status of the narrative - whether it's entirely generated
+  ///  (from just the defined data or the extensions too), or whether a human
+  ///  authored it and it may contain additional data.
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
   ///
   factory Narrative({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict
+    /// set of governance  applied to the definition and use of extensions.
+    /// Though any implementer can define an extension, there is a set of
+    /// requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [status] The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
+    /// [status] The status of the narrative - whether it's entirely generated
+    /// (from just the defined data or the extensions too), or whether a human
+    /// authored it and it may contain additional data.
     NarrativeStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
@@ -78,33 +97,52 @@ class Narrative with _$Narrative {
   }
 }
 
-/// [CodeableReference] A reference to a resource (by instance), or instead, a reference to a concept defined in a terminology or ontology (by class).
+/// [CodeableReference] A reference to a resource (by instance), or instead, a
+///  reference to a concept defined in a terminology or ontology (by class).
 @freezed
 class CodeableReference with _$CodeableReference {
-  /// [CodeableReference] A reference to a resource (by instance), or instead, a reference to a concept defined in a terminology or ontology (by class).
+  /// [CodeableReference] A reference to a resource (by instance), or instead,
+  ///  a reference to a concept defined in a terminology or ontology (by class).
   CodeableReference._();
 
-  /// [CodeableReference] A reference to a resource (by instance), or instead, a reference to a concept defined in a terminology or ontology (by class).
+  /// [CodeableReference] A reference to a resource (by instance), or instead,
+  ///  a reference to a concept defined in a terminology or ontology (by class).
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [concept] A reference to a concept - e.g. the information is identified by its general class to the degree of precision found in the terminology.
+  /// [concept] A reference to a concept - e.g. the information is identified
+  ///  by its general class to the degree of precision found in the terminology.
   ///
-  /// [reference] A reference to a resource the provides exact details about the information being referenced.
+  /// [reference] A reference to a resource the provides exact details about
+  ///  the information being referenced.
   ///
   factory CodeableReference({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict
+    /// set of governance  applied to the definition and use of extensions.
+    /// Though any implementer can define an extension, there is a set of
+    /// requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [concept] A reference to a concept - e.g. the information is identified by its general class to the degree of precision found in the terminology.
+    /// [concept] A reference to a concept - e.g. the information is identified
+    /// by its general class to the degree of precision found in the terminology.
     CodeableConcept? concept,
 
-    /// [reference] A reference to a resource the provides exact details about the information being referenced.
+    /// [reference] A reference to a resource the provides exact details about
+    /// the information being referenced.
     Reference? reference,
   }) = _CodeableReference;
 
@@ -147,29 +185,64 @@ class Reference with _$Reference {
 
   /// [Reference] A reference from one resource to another.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [reference] A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.
+  /// [reference] A reference to a location at which the other resource is
+  ///  found. The reference may be a relative reference, in which case it is
+  ///  relative to the service base URL, or an absolute URL that resolves to
+  ///  the location where the resource is found. The reference may be version
+  ///  specific or not. If the reference is not to a FHIR RESTful server, then
+  ///  it should be assumed to be version specific. Internal fragment
+  ///  references (start with '#') refer to contained resources.
   ///
   /// [referenceElement] ("_reference") Extensions for reference
   ///
-  /// [type] The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent. The type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. "Patient" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).
+  /// [type] The expected type of the target of the reference. If both
+  ///  Reference.type and Reference.reference are populated and
+  ///  Reference.reference is a FHIR URL, both SHALL be consistent. The type is
+  ///  the Canonical URL of Resource Definition that is the type this reference
+  ///  refers to. References are URLs that are relative to
+  ///  http://hl7.org/fhir/StructureDefinition/ e.g. "Patient" is a reference
+  ///  to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are
+  ///  only allowed for logical models (and can only be used in references in
+  ///  logical models, not resources).
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  /// [identifier] An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.
+  /// [identifier] An identifier for the target resource. This is used when
+  ///  there is no way to reference the other resource directly, either because
+  ///  the entity it represents is not available through a FHIR server, or
+  ///  because there is no way for the author of the resource to convert a
+  ///  known identifier to an actual location. There is no requirement that a
+  ///  Reference.identifier point to something that is actually exposed as a
+  ///  FHIR instance, but it SHALL point to a business concept that would be
+  ///  expected to be exposed as a FHIR instance, and that instance would need
+  ///  to be of a FHIR resource type allowed by the reference.
   ///
-  /// [display] Plain text narrative that identifies the resource in addition to the resource reference.
+  /// [display] Plain text narrative that identifies the resource in addition
+  ///  to the resource reference.
   ///
   /// [displayElement] ("_display") Extensions for display
   ///
   factory Reference({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict
+    /// set of governance  applied to the definition and use of extensions.
+    /// Though any implementer can define an extension, there is a set of
+    /// requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [reference] A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.
@@ -225,41 +298,72 @@ class Reference with _$Reference {
   }
 }
 
-/// [Meta] The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+/// [Meta] The metadata about a resource. This is content in the resource that
+///  is maintained by the infrastructure. Changes to the content might not
+///  always be associated with version changes to the resource.
 @freezed
 class Meta with _$Meta {
-  /// [Meta] The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [Meta] The metadata about a resource. This is content in the resource
+  ///  that is maintained by the infrastructure. Changes to the content might
+  ///  not always be associated with version changes to the resource.
   Meta._();
 
-  /// [Meta] The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [Meta] The metadata about a resource. This is content in the resource
+  ///  that is maintained by the infrastructure. Changes to the content might
+  ///  not always be associated with version changes to the resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [versionId] The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.
+  /// [versionId] The version specific identifier, as it appears in the version
+  ///  portion of the URL. This value changes when the resource is created,
+  ///  updated, or deleted.
   ///
   /// [versionIdElement] ("_versionId") Extensions for versionId
   ///
-  /// [lastUpdated] When the resource last changed - e.g. when the version changed.
+  /// [lastUpdated] When the resource last changed - e.g. when the version
+  ///  changed.
   ///
   /// [lastUpdatedElement] ("_lastUpdated") Extensions for lastUpdated
   ///
-  /// [source] A uri that identifies the source system of the resource. This provides a minimal amount of [[[Provenance]]] information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.
+  /// [source] A uri that identifies the source system of the resource. This
+  ///  provides a minimal amount of [[[Provenance]]] information that can be
+  ///  used to track or differentiate the source of information in the
+  ///  resource. The source may identify another FHIR server, document,
+  ///  message, database, etc.
   ///
   /// [sourceElement] ("_source") Extensions for source
   ///
-  /// [profile] A list of profiles (references to [[[StructureDefinition]]] resources) that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].
+  /// [profile] A list of profiles (references to [[[StructureDefinition]]]
+  ///  resources) that this resource claims to conform to. The URL is a
+  ///  reference to [[[StructureDefinition.url]]].
   ///
-  /// [security] Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.
+  /// [security] Security labels applied to this resource. These tags connect
+  ///  specific resources to the overall security policy and infrastructure.
   ///
-  /// [tag] Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.
+  /// [tag] Tags applied to this resource. Tags are intended to be used to
+  ///  identify and relate resources to process and workflow, and applications
+  ///  are not required to consider the tags when interpreting the meaning of a
+  ///  resource.
   ///
   factory Meta({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict
+    /// set of governance  applied to the definition and use of extensions.
+    /// Though any implementer can define an extension, there is a set of
+    /// requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [versionId] The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.
@@ -319,21 +423,43 @@ class Meta with _$Meta {
   }
 }
 
-/// [Dosage] Indicates how the medication is/was taken or should be taken by the patient.
+/// [Dosage] Indicates how the medication is/was taken or should be taken by
+///  the patient.
 @freezed
 class Dosage with _$Dosage {
-  /// [Dosage] Indicates how the medication is/was taken or should be taken by the patient.
+  /// [Dosage] Indicates how the medication is/was taken or should be taken by
+  ///  the patient.
   Dosage._();
 
-  /// [Dosage] Indicates how the medication is/was taken or should be taken by the patient.
+  /// [Dosage] Indicates how the medication is/was taken or should be taken by
+  ///  the patient.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [sequence] Indicates the order in which the dosage instructions should be applied or interpreted.
+  /// [sequence] Indicates the order in which the dosage instructions should be
+  ///  applied or interpreted.
   ///
   /// [sequenceElement] ("_sequence") Extensions for sequence
   ///
@@ -341,19 +467,27 @@ class Dosage with _$Dosage {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  /// [additionalInstruction] Supplemental instructions to the patient on how to take the medication  (e.g. "with meals" or"take half to one hour before food") or warnings for the patient about the medication (e.g. "may cause drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
+  /// [additionalInstruction] Supplemental instructions to the patient on how
+  ///  to take the medication  (e.g. "with meals" or"take half to one hour
+  ///  before food") or warnings for the patient about the medication (e.g.
+  ///  "may cause drowsiness" or "avoid exposure of skin to direct sunlight or
+  ///  sunlamps").
   ///
-  /// [patientInstruction] Instructions in terms that are understood by the patient or consumer.
+  /// [patientInstruction] Instructions in terms that are understood by the
+  ///  patient or consumer.
   ///
-  /// [patientInstructionElement] ("_patientInstruction") Extensions for patientInstruction
+  /// [patientInstructionElement] ("_patientInstruction") Extensions for
+  ///  patientInstruction
   ///
   /// [timing] When medication should be administered.
   ///
-  /// [asNeeded] Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option).
+  /// [asNeeded] Indicates whether the Medication is only taken when needed
+  ///  within a specific dosing schedule (Boolean option).
   ///
   /// [asNeededElement] ("_asNeeded") Extensions for asNeeded
   ///
-  /// [asNeededFor] Indicates whether the Medication is only taken based on a precondition for taking the Medication (CodeableConcept).
+  /// [asNeededFor] Indicates whether the Medication is only taken based on a
+  ///  precondition for taking the Medication (CodeableConcept).
   ///
   /// [site] Body site to administer to.
   ///
@@ -361,22 +495,41 @@ class Dosage with _$Dosage {
   ///
   /// [method] Technique for administering medication.
   ///
-  /// [doseAndRate] Depending on the resource,this is the amount of medication administered, to  be administered or typical amount to be administered.
+  /// [doseAndRate] Depending on the resource,this is the amount of medication
+  ///  administered, to  be administered or typical amount to be administered.
   ///
   /// [maxDosePerPeriod] Upper limit on medication per unit of time.
   ///
   /// [maxDosePerAdministration] Upper limit on medication per administration.
   ///
-  /// [maxDosePerLifetime] Upper limit on medication per lifetime of the patient.
+  /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
+  ///  patient.
   ///
   factory Dosage({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] Indicates the order in which the dosage instructions should be applied or interpreted.
@@ -464,21 +617,43 @@ class Dosage with _$Dosage {
   }
 }
 
-/// [DosageDoseAndRate] Indicates how the medication is/was taken or should be taken by the patient.
+/// [DosageDoseAndRate] Indicates how the medication is/was taken or should be
+///  taken by the patient.
 @freezed
 class DosageDoseAndRate with _$DosageDoseAndRate {
-  /// [DosageDoseAndRate] Indicates how the medication is/was taken or should be taken by the patient.
+  /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
+  ///  be taken by the patient.
   DosageDoseAndRate._();
 
-  /// [DosageDoseAndRate] Indicates how the medication is/was taken or should be taken by the patient.
+  /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
+  ///  be taken by the patient.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] The kind of dose or rate specified, for example, ordered or calculated.
+  /// [type] The kind of dose or rate specified, for example, ordered or
+  ///  calculated.
   ///
   /// [doseRange] Amount of medication per dose.
   ///
@@ -491,13 +666,30 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   /// [rateQuantity] Amount of medication per unit of time.
   ///
   factory DosageDoseAndRate({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [type] The kind of dose or rate specified, for example, ordered or calculated.
@@ -550,1304 +742,2499 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   }
 }
 
-/// [ElementDefinition] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinition] Captures constraints on each element within the
+///  resource, profile, or extension.
 @freezed
 class ElementDefinition with _$ElementDefinition {
-  /// [ElementDefinition] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinition] Captures constraints on each element within the
+  ///  resource, profile, or extension.
   ElementDefinition._();
 
-  /// [ElementDefinition] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinition] Captures constraints on each element within the
+  ///  resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [path] The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
+  /// [path] The path identifies the element and is expressed as a
+  ///  "."-separated list of ancestor elements, beginning with the name of the
+  ///  resource or extension.
   ///
   /// [pathElement] ("_path") Extensions for path
   ///
-  /// [representation] Codes that define how this element is represented in instances, when the deviation varies from the normal case. No extensions are allowed on elements with a representation of 'xmlAttr', no matter what FHIR serialization format is used.
+  /// [representation] Codes that define how this element is represented in
+  ///  instances, when the deviation varies from the normal case. No extensions
+  ///  are allowed on elements with a representation of 'xmlAttr', no matter
+  ///  what FHIR serialization format is used.
   ///
   /// [representationElement] ("_representation") Extensions for representation
   ///
-  /// [sliceName] The name of this element definition slice, when slicing is working. The name must be a token with no dots or spaces. This is a unique name referring to a specific set of constraints applied to this element, used to provide a name to different slices of the same element.
+  /// [sliceName] The name of this element definition slice, when slicing is
+  ///  working. The name must be a token with no dots or spaces. This is a
+  ///  unique name referring to a specific set of constraints applied to this
+  ///  element, used to provide a name to different slices of the same element.
   ///
   /// [sliceNameElement] ("_sliceName") Extensions for sliceName
   ///
-  /// [sliceIsConstraining] If true, indicates that this slice definition is constraining a slice definition with the same name in an inherited profile. If false, the slice is not overriding any slice in an inherited profile. If missing, the slice might or might not be overriding a slice in an inherited profile, depending on the sliceName.
+  /// [sliceIsConstraining] If true, indicates that this slice definition is
+  ///  constraining a slice definition with the same name in an inherited
+  ///  profile. If false, the slice is not overriding any slice in an inherited
+  ///  profile. If missing, the slice might or might not be overriding a slice
+  ///  in an inherited profile, depending on the sliceName.
   ///
-  /// [sliceIsConstrainingElement] ("_sliceIsConstraining") Extensions for sliceIsConstraining
+  /// [sliceIsConstrainingElement] ("_sliceIsConstraining") Extensions for
+  ///  sliceIsConstraining
   ///
-  /// [label] A single preferred label which is the text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.
+  /// [label] A single preferred label which is the text to display beside the
+  ///  element indicating its meaning or to use to prompt for the element in a
+  ///  user display or form.
   ///
   /// [labelElement] ("_label") Extensions for label
   ///
-  /// [code] A code that has the same meaning as the element in a particular terminology.
+  /// [code] A code that has the same meaning as the element in a particular
+  ///  terminology.
   ///
-  /// [slicing] Indicates that the element is sliced into a set of alternative definitions (i.e. in a structure definition, there are multiple different constraints on a single element in the base resource). Slicing can be used in any resource that has cardinality ..* on the base resource, or any resource with a choice of types. The set of slices is any elements that come after this in the element sequence that have the same path, until a shorter path occurs (the shorter path terminates the set).
+  /// [slicing] Indicates that the element is sliced into a set of alternative
+  ///  definitions (i.e. in a structure definition, there are multiple
+  ///  different constraints on a single element in the base resource). Slicing
+  ///  can be used in any resource that has cardinality ..* on the base
+  ///  resource, or any resource with a choice of types. The set of slices is
+  ///  any elements that come after this in the element sequence that have the
+  ///  same path, until a shorter path occurs (the shorter path terminates the
+  ///  set).
   ///
-  /// [short] A concise description of what this element means (e.g. for use in autogenerated summaries).
+  /// [short] A concise description of what this element means (e.g. for use in
+  ///  autogenerated summaries).
   ///
   /// [shortElement] ("_short") Extensions for short
   ///
-  /// [definition] Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).
+  /// [definition] Provides a complete explanation of the meaning of the data
+  ///  element for human readability.  For the case of elements derived from
+  ///  existing elements (e.g. constraints), the definition SHALL be consistent
+  ///  with the base definition, but convey the meaning of the element in the
+  ///  particular context of use of the resource. (Note: The text you are
+  ///  reading is specified in ElementDefinition.definition).
   ///
   /// [definitionElement] ("_definition") Extensions for definition
   ///
-  /// [comment] Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).
+  /// [comment] Explanatory notes and implementation guidance about the data
+  ///  element, including notes about how to use the data properly, exceptions
+  ///  to proper use, etc. (Note: The text you are reading is specified in
+  ///  ElementDefinition.comment).
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  /// [requirements] This element is for traceability of why the element was created and why the constraints exist as they do. This may be used to point to source materials or specifications that drove the structure of this element.
+  /// [requirements] This element is for traceability of why the element was
+  ///  created and why the constraints exist as they do. This may be used to
+  ///  point to source materials or specifications that drove the structure of
+  ///  this element.
   ///
   /// [requirementsElement] ("_requirements") Extensions for requirements
   ///
-  /// [alias] Identifies additional names by which this element might also be known.
+  /// [alias] Identifies additional names by which this element might also be
+  ///  known.
   ///
   /// [aliasElement] ("_alias") Extensions for alias
   ///
-  /// [min] The minimum number of times this element SHALL appear in the instance.
+  /// [min] The minimum number of times this element SHALL appear in the
+  ///  instance.
   ///
   /// [minElement] ("_min") Extensions for min
   ///
-  /// [max] The maximum number of times this element is permitted to appear in the instance.
+  /// [max] The maximum number of times this element is permitted to appear in
+  ///  the instance.
   ///
   /// [maxElement] ("_max") Extensions for max
   ///
-  /// [base] Information about the base definition of the element, provided to make it unnecessary for tools to trace the deviation of the element through the derived and related profiles. When the element definition is not the original definition of an element - i.g. either in a constraint on another type, or for elements from a super type in a snap shot - then the information in provided in the element definition may be different to the base definition. On the original definition of the element, it will be same.
+  /// [base] Information about the base definition of the element, provided to
+  ///  make it unnecessary for tools to trace the deviation of the element
+  ///  through the derived and related profiles. When the element definition is
+  ///  not the original definition of an element - i.g. either in a constraint
+  ///  on another type, or for elements from a super type in a snap shot - then
+  ///  the information in provided in the element definition may be different
+  ///  to the base definition. On the original definition of the element, it
+  ///  will be same.
   ///
-  /// [contentReference] Identifies an element defined elsewhere in the definition whose content rules should be applied to the current element. ContentReferences bring across all the rules that are in the ElementDefinition for the element, including definitions, cardinality constraints, bindings, invariants etc.
+  /// [contentReference] Identifies an element defined elsewhere in the
+  ///  definition whose content rules should be applied to the current element.
+  ///  ContentReferences bring across all the rules that are in the
+  ///  ElementDefinition for the element, including definitions, cardinality
+  ///  constraints, bindings, invariants etc.
   ///
-  /// [contentReferenceElement] ("_contentReference") Extensions for contentReference
+  /// [contentReferenceElement] ("_contentReference") Extensions for
+  ///  contentReference
   ///
-  /// [type] The data type or resource that the value of this element is permitted to be.
+  /// [type] The data type or resource that the value of this element is
+  ///  permitted to be.
   ///
-  /// [defaultValueBase64Binary] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueBase64Binary] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueBase64BinaryElement] ("_defaultValueBase64Binary") Extensions for defaultValueBase64Binary
+  /// [defaultValueBase64BinaryElement] ("_defaultValueBase64Binary")
+  ///  Extensions for defaultValueBase64Binary
   ///
-  /// [defaultValueBoolean] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueBoolean] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueBooleanElement] ("_defaultValueBoolean") Extensions for defaultValueBoolean
+  /// [defaultValueBooleanElement] ("_defaultValueBoolean") Extensions for
+  ///  defaultValueBoolean
   ///
-  /// [defaultValueCanonical] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueCanonical] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueCanonicalElement] ("_defaultValueCanonical") Extensions for defaultValueCanonical
+  /// [defaultValueCanonicalElement] ("_defaultValueCanonical") Extensions for
+  ///  defaultValueCanonical
   ///
-  /// [defaultValueCode] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueCode] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueCodeElement] ("_defaultValueCode") Extensions for defaultValueCode
+  /// [defaultValueCodeElement] ("_defaultValueCode") Extensions for
+  ///  defaultValueCode
   ///
-  /// [defaultValueDate] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueDate] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueDateElement] ("_defaultValueDate") Extensions for defaultValueDate
+  /// [defaultValueDateElement] ("_defaultValueDate") Extensions for
+  ///  defaultValueDate
   ///
-  /// [defaultValueDateTime] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueDateTime] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueDateTimeElement] ("_defaultValueDateTime") Extensions for defaultValueDateTime
+  /// [defaultValueDateTimeElement] ("_defaultValueDateTime") Extensions for
+  ///  defaultValueDateTime
   ///
-  /// [defaultValueDecimal] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueDecimal] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueDecimalElement] ("_defaultValueDecimal") Extensions for defaultValueDecimal
+  /// [defaultValueDecimalElement] ("_defaultValueDecimal") Extensions for
+  ///  defaultValueDecimal
   ///
-  /// [defaultValueId] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueId] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
   /// [defaultValueIdElement] ("_defaultValueId") Extensions for defaultValueId
   ///
-  /// [defaultValueInstant] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueInstant] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueInstantElement] ("_defaultValueInstant") Extensions for defaultValueInstant
+  /// [defaultValueInstantElement] ("_defaultValueInstant") Extensions for
+  ///  defaultValueInstant
   ///
-  /// [defaultValueInteger] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueInteger] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueIntegerElement] ("_defaultValueInteger") Extensions for defaultValueInteger
+  /// [defaultValueIntegerElement] ("_defaultValueInteger") Extensions for
+  ///  defaultValueInteger
   ///
-  /// [defaultValueInteger64] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueInteger64] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueInteger64Element] ("_defaultValueInteger64") Extensions for defaultValueInteger64
+  /// [defaultValueInteger64Element] ("_defaultValueInteger64") Extensions for
+  ///  defaultValueInteger64
   ///
-  /// [defaultValueMarkdown] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueMarkdown] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueMarkdownElement] ("_defaultValueMarkdown") Extensions for defaultValueMarkdown
+  /// [defaultValueMarkdownElement] ("_defaultValueMarkdown") Extensions for
+  ///  defaultValueMarkdown
   ///
-  /// [defaultValueOid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueOid] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueOidElement] ("_defaultValueOid") Extensions for defaultValueOid
+  /// [defaultValueOidElement] ("_defaultValueOid") Extensions for
+  ///  defaultValueOid
   ///
-  /// [defaultValuePositiveInt] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValuePositiveInt] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValuePositiveIntElement] ("_defaultValuePositiveInt") Extensions for defaultValuePositiveInt
+  /// [defaultValuePositiveIntElement] ("_defaultValuePositiveInt") Extensions
+  ///  for defaultValuePositiveInt
   ///
-  /// [defaultValueString] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueString] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueStringElement] ("_defaultValueString") Extensions for defaultValueString
+  /// [defaultValueStringElement] ("_defaultValueString") Extensions for
+  ///  defaultValueString
   ///
-  /// [defaultValueTime] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueTime] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueTimeElement] ("_defaultValueTime") Extensions for defaultValueTime
+  /// [defaultValueTimeElement] ("_defaultValueTime") Extensions for
+  ///  defaultValueTime
   ///
-  /// [defaultValueUnsignedInt] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueUnsignedInt] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueUnsignedIntElement] ("_defaultValueUnsignedInt") Extensions for defaultValueUnsignedInt
+  /// [defaultValueUnsignedIntElement] ("_defaultValueUnsignedInt") Extensions
+  ///  for defaultValueUnsignedInt
   ///
-  /// [defaultValueUri] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueUri] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueUriElement] ("_defaultValueUri") Extensions for defaultValueUri
+  /// [defaultValueUriElement] ("_defaultValueUri") Extensions for
+  ///  defaultValueUri
   ///
-  /// [defaultValueUrl] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueUrl] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueUrlElement] ("_defaultValueUrl") Extensions for defaultValueUrl
+  /// [defaultValueUrlElement] ("_defaultValueUrl") Extensions for
+  ///  defaultValueUrl
   ///
-  /// [defaultValueUuid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueUuid] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueUuidElement] ("_defaultValueUuid") Extensions for defaultValueUuid
+  /// [defaultValueUuidElement] ("_defaultValueUuid") Extensions for
+  ///  defaultValueUuid
   ///
-  /// [defaultValueAddress] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueAddress] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueAge] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueAge] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueAnnotation] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueAnnotation] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueAttachment] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueAttachment] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueCodeableConcept] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueCodeableConcept] The value that should be used if there is
+  ///  no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueCodeableReference] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueCodeableReference] The value that should be used if there is
+  ///  no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueCoding] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueCoding] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueContactPoint] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueContactPoint] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueCount] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueCount] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueDistance] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueDistance] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueDuration] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueDuration] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueHumanName] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueHumanName] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueIdentifier] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueIdentifier] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueMoney] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueMoney] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValuePeriod] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValuePeriod] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueQuantity] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueQuantity] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueRange] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueRange] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueRatio] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueRatio] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueRatioRange] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueRatioRange] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueReference] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueReference] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueSampledData] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueSampledData] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueSignature] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueSignature] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueTiming] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueTiming] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueContactDetail] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueContactDetail] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueDataRequirement] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueDataRequirement] The value that should be used if there is
+  ///  no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueExpression] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueExpression] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueParameterDefinition] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueParameterDefinition] The value that should be used if there
+  ///  is no value stated in the instance (e.g. 'if not otherwise specified,
+  ///  the abstract is false').
   ///
-  /// [defaultValueRelatedArtifact] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueRelatedArtifact] The value that should be used if there is
+  ///  no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueTriggerDefinition] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueTriggerDefinition] The value that should be used if there is
+  ///  no value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueUsageContext] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueUsageContext] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueAvailability] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueAvailability] The value that should be used if there is no
+  ///  value stated in the instance (e.g. 'if not otherwise specified, the
+  ///  abstract is false').
   ///
-  /// [defaultValueExtendedContactDetail] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueExtendedContactDetail] The value that should be used if
+  ///  there is no value stated in the instance (e.g. 'if not otherwise
+  ///  specified, the abstract is false').
   ///
-  /// [defaultValueDosage] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueDosage] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [defaultValueMeta] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
+  /// [defaultValueMeta] The value that should be used if there is no value
+  ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
+  ///  is false').
   ///
-  /// [meaningWhenMissing] The Implicit meaning that is to be understood when this element is missing (e.g. 'when this element is missing, the period is ongoing').
+  /// [meaningWhenMissing] The Implicit meaning that is to be understood when
+  ///  this element is missing (e.g. 'when this element is missing, the period
+  ///  is ongoing').
   ///
-  /// [meaningWhenMissingElement] ("_meaningWhenMissing") Extensions for meaningWhenMissing
+  /// [meaningWhenMissingElement] ("_meaningWhenMissing") Extensions for
+  ///  meaningWhenMissing
   ///
-  /// [orderMeaning] If present, indicates that the order of the repeating element has meaning and describes what that meaning is.  If absent, it means that the order of the element has no meaning.
+  /// [orderMeaning] If present, indicates that the order of the repeating
+  ///  element has meaning and describes what that meaning is.  If absent, it
+  ///  means that the order of the element has no meaning.
   ///
   /// [orderMeaningElement] ("_orderMeaning") Extensions for orderMeaning
   ///
-  /// [fixedBase64Binary] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedBase64Binary] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedBase64BinaryElement] ("_fixedBase64Binary") Extensions for fixedBase64Binary
+  /// [fixedBase64BinaryElement] ("_fixedBase64Binary") Extensions for
+  ///  fixedBase64Binary
   ///
-  /// [fixedBoolean] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedBoolean] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedBooleanElement] ("_fixedBoolean") Extensions for fixedBoolean
   ///
-  /// [fixedCanonical] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedCanonical] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedCanonicalElement] ("_fixedCanonical") Extensions for fixedCanonical
   ///
-  /// [fixedCode] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedCode] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedCodeElement] ("_fixedCode") Extensions for fixedCode
   ///
-  /// [fixedDate] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedDate] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedDateElement] ("_fixedDate") Extensions for fixedDate
   ///
-  /// [fixedDateTime] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedDateTime] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedDateTimeElement] ("_fixedDateTime") Extensions for fixedDateTime
   ///
-  /// [fixedDecimal] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedDecimal] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedDecimalElement] ("_fixedDecimal") Extensions for fixedDecimal
   ///
-  /// [fixedId] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedId] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedIdElement] ("_fixedId") Extensions for fixedId
   ///
-  /// [fixedInstant] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedInstant] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedInstantElement] ("_fixedInstant") Extensions for fixedInstant
   ///
-  /// [fixedInteger] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedInteger] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedIntegerElement] ("_fixedInteger") Extensions for fixedInteger
   ///
-  /// [fixedInteger64] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedInteger64] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedInteger64Element] ("_fixedInteger64") Extensions for fixedInteger64
   ///
-  /// [fixedMarkdown] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedMarkdown] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedMarkdownElement] ("_fixedMarkdown") Extensions for fixedMarkdown
   ///
-  /// [fixedOid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedOid] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedOidElement] ("_fixedOid") Extensions for fixedOid
   ///
-  /// [fixedPositiveInt] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedPositiveInt] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedPositiveIntElement] ("_fixedPositiveInt") Extensions for fixedPositiveInt
+  /// [fixedPositiveIntElement] ("_fixedPositiveInt") Extensions for
+  ///  fixedPositiveInt
   ///
-  /// [fixedString] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedString] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedStringElement] ("_fixedString") Extensions for fixedString
   ///
-  /// [fixedTime] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedTime] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedTimeElement] ("_fixedTime") Extensions for fixedTime
   ///
-  /// [fixedUnsignedInt] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedUnsignedInt] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedUnsignedIntElement] ("_fixedUnsignedInt") Extensions for fixedUnsignedInt
+  /// [fixedUnsignedIntElement] ("_fixedUnsignedInt") Extensions for
+  ///  fixedUnsignedInt
   ///
-  /// [fixedUri] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedUri] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedUriElement] ("_fixedUri") Extensions for fixedUri
   ///
-  /// [fixedUrl] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedUrl] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedUrlElement] ("_fixedUrl") Extensions for fixedUrl
   ///
-  /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
   /// [fixedUuidElement] ("_fixedUuid") Extensions for fixedUuid
   ///
-  /// [fixedAddress] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedAddress] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedAge] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedAge] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedAnnotation] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedAnnotation] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedAttachment] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedAttachment] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedCodeableConcept] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedCodeableConcept] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedCodeableReference] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedCodeableReference] Specifies a value that SHALL be exactly the
+  ///  value  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedCoding] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedCoding] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedContactPoint] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedContactPoint] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedCount] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedCount] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedDistance] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedDistance] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedDuration] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedDuration] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedHumanName] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedHumanName] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedIdentifier] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedIdentifier] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedMoney] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedMoney] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedPeriod] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedPeriod] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedQuantity] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedQuantity] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedRange] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedRange] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedRatio] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedRatio] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedRatioRange] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedRatioRange] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedReference] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedReference] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedSampledData] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedSampledData] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedSignature] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedSignature] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedTiming] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedTiming] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedContactDetail] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedContactDetail] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedDataRequirement] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedDataRequirement] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedExpression] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedExpression] Specifies a value that SHALL be exactly the value  for
+  ///  this element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
+  ///  value  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedRelatedArtifact] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedRelatedArtifact] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedTriggerDefinition] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedTriggerDefinition] Specifies a value that SHALL be exactly the
+  ///  value  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedUsageContext] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedUsageContext] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedAvailability] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedAvailability] Specifies a value that SHALL be exactly the value
+  ///  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedExtendedContactDetail] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedExtendedContactDetail] Specifies a value that SHALL be exactly the
+  ///  value  for this element in the instance, if present. For purposes of
+  ///  comparison, non-significant whitespace is ignored, and all values must
+  ///  be an exact match (case and accent sensitive). Missing
+  ///  elements/attributes must also be missing.
   ///
-  /// [fixedDosage] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedDosage] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [fixedMeta] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+  /// [fixedMeta] Specifies a value that SHALL be exactly the value  for this
+  ///  element in the instance, if present. For purposes of comparison,
+  ///  non-significant whitespace is ignored, and all values must be an exact
+  ///  match (case and accent sensitive). Missing elements/attributes must also
+  ///  be missing.
   ///
-  /// [patternBase64Binary] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternBase64Binary] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternBase64BinaryElement] ("_patternBase64Binary") Extensions for patternBase64Binary
+  /// [patternBase64BinaryElement] ("_patternBase64Binary") Extensions for
+  ///  patternBase64Binary
   ///
-  /// [patternBoolean] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternBoolean] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternBooleanElement] ("_patternBoolean") Extensions for patternBoolean
   ///
-  /// [patternCanonical] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternCanonical] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternCanonicalElement] ("_patternCanonical") Extensions for patternCanonical
+  /// [patternCanonicalElement] ("_patternCanonical") Extensions for
+  ///  patternCanonical
   ///
-  /// [patternCode] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternCode] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternCodeElement] ("_patternCode") Extensions for patternCode
   ///
-  /// [patternDate] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternDate] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternDateElement] ("_patternDate") Extensions for patternDate
   ///
-  /// [patternDateTime] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternDateTime] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternDateTimeElement] ("_patternDateTime") Extensions for patternDateTime
+  /// [patternDateTimeElement] ("_patternDateTime") Extensions for
+  ///  patternDateTime
   ///
-  /// [patternDecimal] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternDecimal] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternDecimalElement] ("_patternDecimal") Extensions for patternDecimal
   ///
-  /// [patternId] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternId] Specifies a value that each occurrence of the element in the
+  ///  instance SHALL follow - that is, any value in the pattern must be found
+  ///  in the instance, if the element has a value. Other additional values may
+  ///  be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternIdElement] ("_patternId") Extensions for patternId
   ///
-  /// [patternInstant] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternInstant] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternInstantElement] ("_patternInstant") Extensions for patternInstant
   ///
-  /// [patternInteger] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternInteger] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternIntegerElement] ("_patternInteger") Extensions for patternInteger
   ///
-  /// [patternInteger64] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternInteger64] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternInteger64Element] ("_patternInteger64") Extensions for patternInteger64
+  /// [patternInteger64Element] ("_patternInteger64") Extensions for
+  ///  patternInteger64
   ///
-  /// [patternMarkdown] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternMarkdown] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternMarkdownElement] ("_patternMarkdown") Extensions for patternMarkdown
+  /// [patternMarkdownElement] ("_patternMarkdown") Extensions for
+  ///  patternMarkdown
   ///
-  /// [patternOid] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternOid] Specifies a value that each occurrence of the element in the
+  ///  instance SHALL follow - that is, any value in the pattern must be found
+  ///  in the instance, if the element has a value. Other additional values may
+  ///  be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternOidElement] ("_patternOid") Extensions for patternOid
   ///
-  /// [patternPositiveInt] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternPositiveInt] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternPositiveIntElement] ("_patternPositiveInt") Extensions for patternPositiveInt
+  /// [patternPositiveIntElement] ("_patternPositiveInt") Extensions for
+  ///  patternPositiveInt
   ///
-  /// [patternString] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternString] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternStringElement] ("_patternString") Extensions for patternString
   ///
-  /// [patternTime] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternTime] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternTimeElement] ("_patternTime") Extensions for patternTime
   ///
-  /// [patternUnsignedInt] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternUnsignedInt] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternUnsignedIntElement] ("_patternUnsignedInt") Extensions for patternUnsignedInt
+  /// [patternUnsignedIntElement] ("_patternUnsignedInt") Extensions for
+  ///  patternUnsignedInt
   ///
-  /// [patternUri] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternUri] Specifies a value that each occurrence of the element in the
+  ///  instance SHALL follow - that is, any value in the pattern must be found
+  ///  in the instance, if the element has a value. Other additional values may
+  ///  be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternUriElement] ("_patternUri") Extensions for patternUri
   ///
-  /// [patternUrl] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternUrl] Specifies a value that each occurrence of the element in the
+  ///  instance SHALL follow - that is, any value in the pattern must be found
+  ///  in the instance, if the element has a value. Other additional values may
+  ///  be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternUrlElement] ("_patternUrl") Extensions for patternUrl
   ///
-  /// [patternUuid] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternUuid] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
   /// [patternUuidElement] ("_patternUuid") Extensions for patternUuid
   ///
-  /// [patternAddress] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternAddress] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternAge] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternAge] Specifies a value that each occurrence of the element in the
+  ///  instance SHALL follow - that is, any value in the pattern must be found
+  ///  in the instance, if the element has a value. Other additional values may
+  ///  be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternAnnotation] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternAnnotation] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternAttachment] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternAttachment] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternCodeableConcept] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternCodeableConcept] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternCodeableReference] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternCodeableReference] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternCoding] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternCoding] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternContactPoint] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternContactPoint] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternCount] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternCount] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternDistance] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternDistance] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternDuration] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternDuration] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternHumanName] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternHumanName] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternIdentifier] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternIdentifier] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternMoney] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternMoney] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternPeriod] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternPeriod] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternQuantity] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternQuantity] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternRange] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternRange] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternRatio] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternRatio] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternRatioRange] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternRatioRange] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternReference] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternReference] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternSampledData] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternSampledData] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternSignature] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternSignature] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternTiming] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternTiming] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternContactDetail] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternContactDetail] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternDataRequirement] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternDataRequirement] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternExpression] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternExpression] Specifies a value that each occurrence of the element
+  ///  in the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternParameterDefinition] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternParameterDefinition] Specifies a value that each occurrence of
+  ///  the element in the instance SHALL follow - that is, any value in the
+  ///  pattern must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternRelatedArtifact] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternRelatedArtifact] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternTriggerDefinition] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternTriggerDefinition] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternUsageContext] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternUsageContext] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternAvailability] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternAvailability] Specifies a value that each occurrence of the
+  ///  element in the instance SHALL follow - that is, any value in the pattern
+  ///  must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternExtendedContactDetail] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternExtendedContactDetail] Specifies a value that each occurrence of
+  ///  the element in the instance SHALL follow - that is, any value in the
+  ///  pattern must be found in the instance, if the element has a value. Other
+  ///  additional values may be found too. This is effectively constraint by
+  ///  example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternDosage] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternDosage] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [patternMeta] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
+  /// [patternMeta] Specifies a value that each occurrence of the element in
+  ///  the instance SHALL follow - that is, any value in the pattern must be
+  ///  found in the instance, if the element has a value. Other additional
+  ///  values may be found too. This is effectively constraint by example.
 
-  /// When pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.
+  /// When pattern[x] is used to constrain a primitive, it means that the value
+  ///  provided in the pattern[x] must match the instance value exactly.
   ///
-  /// When an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.
+  /// When an element within a pattern[x] is used to constrain an array, it
+  ///  means that each element provided in the pattern[x] must (recursively)
+  ///  match at least one element from the instance array.
   ///
-  /// When pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,
+  /// When pattern[x] is used to constrain a complex object, it means that each
+  ///  property in the pattern must be present in the complex object, and its
+  ///  value must recursively match -- i.e.,
   ///
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value
   ///
-  /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
+  /// If a pattern[x] is declared on a repeating element, the pattern applies
+  ///  to all repetitions.  If the desire is for a pattern to apply to only one
+  ///  element or a subset of elements, slicing must be used. See [Examples of
+  ///  Patterns](elementdefinition-examples.html#pattern-examples) for examples
+  ///  of pattern usage and the effect it will have.
   ///
-  /// [example] A sample value for this element demonstrating the type of information that would typically be found in the element.
+  /// [example] A sample value for this element demonstrating the type of
+  ///  information that would typically be found in the element.
   ///
-  /// [minValueDate] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueDate] The minimum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
   /// [minValueDateElement] ("_minValueDate") Extensions for minValueDate
   ///
-  /// [minValueDateTime] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueDateTime] The minimum allowed value for the element. The value
+  ///  is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   ///
-  /// [minValueDateTimeElement] ("_minValueDateTime") Extensions for minValueDateTime
+  /// [minValueDateTimeElement] ("_minValueDateTime") Extensions for
+  ///  minValueDateTime
   ///
-  /// [minValueInstant] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueInstant] The minimum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
-  /// [minValueInstantElement] ("_minValueInstant") Extensions for minValueInstant
+  /// [minValueInstantElement] ("_minValueInstant") Extensions for
+  ///  minValueInstant
   ///
-  /// [minValueTime] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueTime] The minimum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
   /// [minValueTimeElement] ("_minValueTime") Extensions for minValueTime
   ///
-  /// [minValueDecimal] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueDecimal] The minimum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
-  /// [minValueDecimalElement] ("_minValueDecimal") Extensions for minValueDecimal
+  /// [minValueDecimalElement] ("_minValueDecimal") Extensions for
+  ///  minValueDecimal
   ///
-  /// [minValueInteger] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueInteger] The minimum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
-  /// [minValueIntegerElement] ("_minValueInteger") Extensions for minValueInteger
+  /// [minValueIntegerElement] ("_minValueInteger") Extensions for
+  ///  minValueInteger
   ///
-  /// [minValueInteger64] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueInteger64] The minimum allowed value for the element. The value
+  ///  is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   ///
-  /// [minValueInteger64Element] ("_minValueInteger64") Extensions for minValueInteger64
+  /// [minValueInteger64Element] ("_minValueInteger64") Extensions for
+  ///  minValueInteger64
   ///
-  /// [minValuePositiveInt] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValuePositiveInt] The minimum allowed value for the element. The
+  ///  value is inclusive. This is allowed for the types date, dateTime,
+  ///  instant, time, decimal, integer, and Quantity.
   ///
-  /// [minValuePositiveIntElement] ("_minValuePositiveInt") Extensions for minValuePositiveInt
+  /// [minValuePositiveIntElement] ("_minValuePositiveInt") Extensions for
+  ///  minValuePositiveInt
   ///
-  /// [minValueUnsignedInt] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueUnsignedInt] The minimum allowed value for the element. The
+  ///  value is inclusive. This is allowed for the types date, dateTime,
+  ///  instant, time, decimal, integer, and Quantity.
   ///
-  /// [minValueUnsignedIntElement] ("_minValueUnsignedInt") Extensions for minValueUnsignedInt
+  /// [minValueUnsignedIntElement] ("_minValueUnsignedInt") Extensions for
+  ///  minValueUnsignedInt
   ///
-  /// [minValueQuantity] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [minValueQuantity] The minimum allowed value for the element. The value
+  ///  is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   ///
-  /// [maxValueDate] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueDate] The maximum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
   /// [maxValueDateElement] ("_maxValueDate") Extensions for maxValueDate
   ///
-  /// [maxValueDateTime] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueDateTime] The maximum allowed value for the element. The value
+  ///  is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   ///
-  /// [maxValueDateTimeElement] ("_maxValueDateTime") Extensions for maxValueDateTime
+  /// [maxValueDateTimeElement] ("_maxValueDateTime") Extensions for
+  ///  maxValueDateTime
   ///
-  /// [maxValueInstant] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueInstant] The maximum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
-  /// [maxValueInstantElement] ("_maxValueInstant") Extensions for maxValueInstant
+  /// [maxValueInstantElement] ("_maxValueInstant") Extensions for
+  ///  maxValueInstant
   ///
-  /// [maxValueTime] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueTime] The maximum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
   /// [maxValueTimeElement] ("_maxValueTime") Extensions for maxValueTime
   ///
-  /// [maxValueDecimal] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueDecimal] The maximum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
-  /// [maxValueDecimalElement] ("_maxValueDecimal") Extensions for maxValueDecimal
+  /// [maxValueDecimalElement] ("_maxValueDecimal") Extensions for
+  ///  maxValueDecimal
   ///
-  /// [maxValueInteger] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueInteger] The maximum allowed value for the element. The value is
+  ///  inclusive. This is allowed for the types date, dateTime, instant, time,
+  ///  decimal, integer, and Quantity.
   ///
-  /// [maxValueIntegerElement] ("_maxValueInteger") Extensions for maxValueInteger
+  /// [maxValueIntegerElement] ("_maxValueInteger") Extensions for
+  ///  maxValueInteger
   ///
-  /// [maxValueInteger64] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueInteger64] The maximum allowed value for the element. The value
+  ///  is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   ///
-  /// [maxValueInteger64Element] ("_maxValueInteger64") Extensions for maxValueInteger64
+  /// [maxValueInteger64Element] ("_maxValueInteger64") Extensions for
+  ///  maxValueInteger64
   ///
-  /// [maxValuePositiveInt] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValuePositiveInt] The maximum allowed value for the element. The
+  ///  value is inclusive. This is allowed for the types date, dateTime,
+  ///  instant, time, decimal, integer, and Quantity.
   ///
-  /// [maxValuePositiveIntElement] ("_maxValuePositiveInt") Extensions for maxValuePositiveInt
+  /// [maxValuePositiveIntElement] ("_maxValuePositiveInt") Extensions for
+  ///  maxValuePositiveInt
   ///
-  /// [maxValueUnsignedInt] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueUnsignedInt] The maximum allowed value for the element. The
+  ///  value is inclusive. This is allowed for the types date, dateTime,
+  ///  instant, time, decimal, integer, and Quantity.
   ///
-  /// [maxValueUnsignedIntElement] ("_maxValueUnsignedInt") Extensions for maxValueUnsignedInt
+  /// [maxValueUnsignedIntElement] ("_maxValueUnsignedInt") Extensions for
+  ///  maxValueUnsignedInt
   ///
-  /// [maxValueQuantity] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+  /// [maxValueQuantity] The maximum allowed value for the element. The value
+  ///  is inclusive. This is allowed for the types date, dateTime, instant,
+  ///  time, decimal, integer, and Quantity.
   ///
-  /// [maxLength] Indicates the maximum length in characters that is permitted to be present in conformant instances and which is expected to be supported by conformant consumers that support the element. ```maxLength``` SHOULD only be used on primitive data types that have a string representation (see [Datatype characteristics](extension-structuredefinition-type-characteristics.html)).
+  /// [maxLength] Indicates the maximum length in characters that is permitted
+  ///  to be present in conformant instances and which is expected to be
+  ///  supported by conformant consumers that support the element.
+  ///  ```maxLength``` SHOULD only be used on primitive data types that have a
+  ///  string representation (see [Datatype
+  ///  characteristics](extension-structuredefinition-type-characteristics.html)).
+  ///
   ///
   /// [maxLengthElement] ("_maxLength") Extensions for maxLength
   ///
-  /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
+  /// [condition] A reference to an invariant that may make additional
+  ///  statements about the cardinality or value in the instance.
   ///
   /// [conditionElement] ("_condition") Extensions for condition
   ///
-  /// [constraint] Formal constraints such as co-occurrence and other constraints that can be computationally evaluated within the context of the instance.
+  /// [constraint] Formal constraints such as co-occurrence and other
+  ///  constraints that can be computationally evaluated within the context of
+  ///  the instance.
   ///
-  /// [mustHaveValue] Specifies for a primitive data type that the value of the data type cannot be replaced by an extension.
+  /// [mustHaveValue] Specifies for a primitive data type that the value of the
+  ///  data type cannot be replaced by an extension.
   ///
   /// [mustHaveValueElement] ("_mustHaveValue") Extensions for mustHaveValue
   ///
-  /// [valueAlternatives] Specifies a list of extensions that can appear in place of a primitive value.
+  /// [valueAlternatives] Specifies a list of extensions that can appear in
+  ///  place of a primitive value.
   ///
-  /// [mustSupport] If true, implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way. Note that this is being phased out and replaced by obligations (see below).  If false, the element may be ignored and not supported. If false, whether to populate or use the data element in any way is at the discretion of the implementation.
+  /// [mustSupport] If true, implementations that produce or consume resources
+  ///  SHALL provide "support" for the element in some meaningful way. Note
+  ///  that this is being phased out and replaced by obligations (see below).
+  ///  If false, the element may be ignored and not supported. If false,
+  ///  whether to populate or use the data element in any way is at the
+  ///  discretion of the implementation.
   ///
   /// [mustSupportElement] ("_mustSupport") Extensions for mustSupport
   ///
-  /// [obligation] Documents obligations that apply to applications implementing this element. The obligations relate to application behaviour, not the content of the element itself in the resource instances that contain this element.
+  /// [obligation] Documents obligations that apply to applications
+  ///  implementing this element. The obligations relate to application
+  ///  behaviour, not the content of the element itself in the resource
+  ///  instances that contain this element.
   ///
-  /// [isModifier] If true, the value of this element affects the interpretation of the element or resource that contains it, and the value of the element cannot be ignored. Typically, this is used for status, negation and qualification codes. The effect of this is that the element cannot be ignored by systems: they SHALL either recognize the element and process it, and/or a pre-determination has been made that it is not relevant to their particular system.
+  /// [isModifier] If true, the value of this element affects the
+  ///  interpretation of the element or resource that contains it, and the
+  ///  value of the element cannot be ignored. Typically, this is used for
+  ///  status, negation and qualification codes. The effect of this is that the
+  ///  element cannot be ignored by systems: they SHALL either recognize the
+  ///  element and process it, and/or a pre-determination has been made that it
+  ///  is not relevant to their particular system.
   ///
   /// [isModifierElement] ("_isModifier") Extensions for isModifier
   ///
-  /// [isModifierReason] Explains how that element affects the interpretation of the resource or element that contains it.
+  /// [isModifierReason] Explains how that element affects the interpretation
+  ///  of the resource or element that contains it.
   ///
-  /// [isModifierReasonElement] ("_isModifierReason") Extensions for isModifierReason
+  /// [isModifierReasonElement] ("_isModifierReason") Extensions for
+  ///  isModifierReason
   ///
-  /// [isSummary] Whether the element should be included if a client requests a search with the parameter _summary=true.
+  /// [isSummary] Whether the element should be included if a client requests a
+  ///  search with the parameter _summary=true.
   ///
   /// [isSummaryElement] ("_isSummary") Extensions for isSummary
   ///
-  /// [binding] Binds to a value set if this element is coded (code, Coding, CodeableConcept, Quantity), or the data types (string, uri).
+  /// [binding] Binds to a value set if this element is coded (code, Coding,
+  ///  CodeableConcept, Quantity), or the data types (string, uri).
   ///
-  /// [mapping] Identifies a concept from an external specification that roughly corresponds to this element.
+  /// [mapping] Identifies a concept from an external specification that
+  ///  roughly corresponds to this element.
   ///
   factory ElementDefinition({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [path] The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
@@ -3479,42 +4866,91 @@ class ElementDefinition with _$ElementDefinition {
   }
 }
 
-/// [ElementDefinitionSlicing] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionSlicing] Captures constraints on each element within the
+///  resource, profile, or extension.
 @freezed
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
-  /// [ElementDefinitionSlicing] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionSlicing] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ElementDefinitionSlicing._();
 
-  /// [ElementDefinitionSlicing] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionSlicing] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [discriminator] Designates which child elements are used to discriminate between the slices when processing an instance. If one or more discriminators are provided, the value of the child elements in the instance data SHALL completely distinguish which slice the element in the resource matches based on the allowed values for those elements in each of the slices.
+  /// [discriminator] Designates which child elements are used to discriminate
+  ///  between the slices when processing an instance. If one or more
+  ///  discriminators are provided, the value of the child elements in the
+  ///  instance data SHALL completely distinguish which slice the element in
+  ///  the resource matches based on the allowed values for those elements in
+  ///  each of the slices.
   ///
-  /// [description] A human-readable text description of how the slicing works. If there is no discriminator, this is required to be present to provide whatever information is possible about how the slices can be differentiated.
+  /// [description] A human-readable text description of how the slicing works.
+  ///  If there is no discriminator, this is required to be present to provide
+  ///  whatever information is possible about how the slices can be
+  ///  differentiated.
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [ordered] If the matching elements have to occur in the same order as defined in the profile.
+  /// [ordered] If the matching elements have to occur in the same order as
+  ///  defined in the profile.
   ///
   /// [orderedElement] ("_ordered") Extensions for ordered
   ///
-  /// [rules] Whether additional slices are allowed or not. When the slices are ordered, profile authors can also say that additional slices are only allowed at the end.
+  /// [rules] Whether additional slices are allowed or not. When the slices are
+  ///  ordered, profile authors can also say that additional slices are only
+  ///  allowed at the end.
   ///
   /// [rulesElement] ("_rules") Extensions for rules
   ///
   factory ElementDefinitionSlicing({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [discriminator] Designates which child elements are used to discriminate between the slices when processing an instance. If one or more discriminators are provided, the value of the child elements in the instance data SHALL completely distinguish which slice the element in the resource matches based on the allowed values for those elements in each of the slices.
@@ -3570,36 +5006,77 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   }
 }
 
-/// [ElementDefinitionDiscriminator] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionDiscriminator] Captures constraints on each element
+///  within the resource, profile, or extension.
 @freezed
 class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
-  /// [ElementDefinitionDiscriminator] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionDiscriminator] Captures constraints on each element
+  ///  within the resource, profile, or extension.
   ElementDefinitionDiscriminator._();
 
-  /// [ElementDefinitionDiscriminator] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionDiscriminator] Captures constraints on each element
+  ///  within the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] How the element value is interpreted when discrimination is evaluated.
+  /// [type] How the element value is interpreted when discrimination is
+  ///  evaluated.
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  /// [path] A FHIRPath expression, using [the simple subset of FHIRPath](fhirpath.html#simple), that is used to identify the element on which discrimination is based.
+  /// [path] A FHIRPath expression, using [the simple subset of
+  ///  FHIRPath](fhirpath.html#simple), that is used to identify the element on
+  ///  which discrimination is based.
   ///
   /// [pathElement] ("_path") Extensions for path
   ///
   factory ElementDefinitionDiscriminator({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [type] How the element value is interpreted when discrimination is evaluated.
@@ -3634,7 +5111,8 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionDiscriminatorFromJson(json);
 
-  /// Acts like a constructor, returns a [ElementDefinitionDiscriminator], accepts a
+  /// Acts like a constructor, returns a [ElementDefinitionDiscriminator],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionDiscriminator.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -3647,21 +5125,45 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   }
 }
 
-/// [ElementDefinitionBase] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionBase] Captures constraints on each element within the
+///  resource, profile, or extension.
 @freezed
 class ElementDefinitionBase with _$ElementDefinitionBase {
-  /// [ElementDefinitionBase] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionBase] Captures constraints on each element within the
+  ///  resource, profile, or extension.
   ElementDefinitionBase._();
 
-  /// [ElementDefinitionBase] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionBase] Captures constraints on each element within the
+  ///  resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [path] The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [[[StructureDefinition]]] without a StructureDefinition.base.
+  /// [path] The Path that identifies the base element - this matches the
+  ///  ElementDefinition.path for that element. Across FHIR, there is only one
+  ///  base definition of any element - that is, an element definition on a
+  ///  [[[StructureDefinition]]] without a StructureDefinition.base.
   ///
   /// [pathElement] ("_path") Extensions for path
   ///
@@ -3674,13 +5176,30 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// [maxElement] ("_max") Extensions for max
   ///
   factory ElementDefinitionBase({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [path] The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [[[StructureDefinition]]] without a StructureDefinition.base.
@@ -3733,44 +5252,103 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   }
 }
 
-/// [ElementDefinitionType] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionType] Captures constraints on each element within the
+///  resource, profile, or extension.
 @freezed
 class ElementDefinitionType with _$ElementDefinitionType {
-  /// [ElementDefinitionType] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionType] Captures constraints on each element within the
+  ///  resource, profile, or extension.
   ElementDefinitionType._();
 
-  /// [ElementDefinitionType] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionType] Captures constraints on each element within the
+  ///  resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] URL of Data type or Resource that is a(or the) type used for this element. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only allowed in logical models.
+  /// [code] URL of Data type or Resource that is a(or the) type used for this
+  ///  element. References are URLs that are relative to
+  ///  http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
+  ///  http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
+  ///  allowed in logical models.
   ///
   /// [codeElement] ("_code") Extensions for code
   ///
-  /// [profile] Identifies a profile structure or implementation Guide that applies to the datatype this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the type SHALL conform to at least one profile defined in the implementation guide.
+  /// [profile] Identifies a profile structure or implementation Guide that
+  ///  applies to the datatype this element refers to. If any profiles are
+  ///  specified, then the content must conform to at least one of them. The
+  ///  URL can be a local reference - to a contained StructureDefinition, or a
+  ///  reference to another StructureDefinition or Implementation Guide by a
+  ///  canonical URL. When an implementation guide is specified, the type SHALL
+  ///  conform to at least one profile defined in the implementation guide.
   ///
-  /// [targetProfile] Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
+  /// [targetProfile] Used when the type is "Reference" or "canonical", and
+  ///  identifies a profile structure or implementation Guide that applies to
+  ///  the target of the reference this element refers to. If any profiles are
+  ///  specified, then the content must conform to at least one of them. The
+  ///  URL can be a local reference - to a contained StructureDefinition, or a
+  ///  reference to another StructureDefinition or Implementation Guide by a
+  ///  canonical URL. When an implementation guide is specified, the target
+  ///  resource SHALL conform to at least one profile defined in the
+  ///  implementation guide.
   ///
-  /// [aggregation] If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.
+  /// [aggregation] If the type is a reference to another resource, how the
+  ///  resource is or can be aggregated - is it a contained resource, or a
+  ///  reference, and if the context is a bundle, is it included in the bundle.
   ///
   /// [aggregationElement] ("_aggregation") Extensions for aggregation
   ///
-  /// [versioning] Whether this reference needs to be version specific or version independent, or whether either can be used.
+  /// [versioning] Whether this reference needs to be version specific or
+  ///  version independent, or whether either can be used.
   ///
   /// [versioningElement] ("_versioning") Extensions for versioning
   ///
   factory ElementDefinitionType({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [code] URL of Data type or Resource that is a(or the) type used for this element. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only allowed in logical models.
@@ -3829,180 +5407,275 @@ class ElementDefinitionType with _$ElementDefinitionType {
   }
 }
 
-/// [ElementDefinitionExample] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionExample] Captures constraints on each element within the
+///  resource, profile, or extension.
 @freezed
 class ElementDefinitionExample with _$ElementDefinitionExample {
-  /// [ElementDefinitionExample] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionExample] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ElementDefinitionExample._();
 
-  /// [ElementDefinitionExample] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionExample] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [label] Describes the purpose of this example amoung the set of examples.
   ///
   /// [labelElement] ("_label") Extensions for label
   ///
-  /// [valueBase64Binary] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueBase64Binary] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ///
-  /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
+  ///  valueBase64Binary
   ///
-  /// [valueBoolean] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueBoolean] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  /// [valueCanonical] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueCanonical] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   ///
-  /// [valueCode] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueCode] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   ///
-  /// [valueDate] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueDate] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   ///
-  /// [valueDateTime] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueDateTime] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
   /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
   ///
-  /// [valueDecimal] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueDecimal] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   ///
-  /// [valueId] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueId] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueIdElement] ("_valueId") Extensions for valueId
   ///
-  /// [valueInstant] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueInstant] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
   ///
-  /// [valueInteger] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueInteger] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   ///
-  /// [valueInteger64] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueInteger64] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
   /// [valueInteger64Element] ("_valueInteger64") Extensions for valueInteger64
   ///
-  /// [valueMarkdown] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueMarkdown] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
   ///
-  /// [valueOid] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueOid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   ///
-  /// [valuePositiveInt] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valuePositiveInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for valuePositiveInt
+  /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for
+  ///  valuePositiveInt
   ///
-  /// [valueString] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueString] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueStringElement] ("_valueString") Extensions for valueString
   ///
-  /// [valueTime] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueTime] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   ///
-  /// [valueUnsignedInt] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueUnsignedInt] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for valueUnsignedInt
+  /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for
+  ///  valueUnsignedInt
   ///
-  /// [valueUri] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueUri] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueUriElement] ("_valueUri") Extensions for valueUri
   ///
-  /// [valueUrl] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueUrl] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueUrlElement] ("_valueUrl") Extensions for valueUrl
   ///
-  /// [valueUuid] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueUuid] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   ///
-  /// [valueAddress] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueAddress] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueAge] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueAge] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueAnnotation] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueAnnotation] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueAttachment] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueAttachment] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueCodeableConcept] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueCodeableConcept] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   ///
-  /// [valueCodeableReference] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueCodeableReference] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   ///
-  /// [valueCoding] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueCoding] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueContactPoint] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueContactPoint] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ///
-  /// [valueCount] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueCount] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueDistance] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueDistance] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueDuration] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueDuration] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueHumanName] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueHumanName] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueIdentifier] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueIdentifier] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueMoney] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueMoney] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valuePeriod] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valuePeriod] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueQuantity] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueQuantity] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueRange] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueRange] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueRatio] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueRatio] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueRatioRange] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueRatioRange] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueReference] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueReference] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueSampledData] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueSampledData] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueSignature] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueSignature] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueTiming] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueTiming] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueContactDetail] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueContactDetail] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ///
-  /// [valueDataRequirement] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueDataRequirement] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   ///
-  /// [valueExpression] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueExpression] The actual value for the element, which must be one of
+  ///  the types allowed for this element.
   ///
-  /// [valueParameterDefinition] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueParameterDefinition] The actual value for the element, which must
+  ///  be one of the types allowed for this element.
   ///
-  /// [valueRelatedArtifact] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueRelatedArtifact] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   ///
-  /// [valueTriggerDefinition] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueTriggerDefinition] The actual value for the element, which must be
+  ///  one of the types allowed for this element.
   ///
-  /// [valueUsageContext] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueUsageContext] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ///
-  /// [valueAvailability] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueAvailability] The actual value for the element, which must be one
+  ///  of the types allowed for this element.
   ///
-  /// [valueExtendedContactDetail] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueExtendedContactDetail] The actual value for the element, which must
+  ///  be one of the types allowed for this element.
   ///
-  /// [valueDosage] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueDosage] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
-  /// [valueMeta] The actual value for the element, which must be one of the types allowed for this element.
+  /// [valueMeta] The actual value for the element, which must be one of the
+  ///  types allowed for this element.
   ///
   factory ElementDefinitionExample({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [label] Describes the purpose of this example amoung the set of examples.
@@ -4265,54 +5938,100 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   }
 }
 
-/// [ElementDefinitionConstraint] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionConstraint] Captures constraints on each element within
+///  the resource, profile, or extension.
 @freezed
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
-  /// [ElementDefinitionConstraint] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionConstraint] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ElementDefinitionConstraint._();
 
-  /// [ElementDefinitionConstraint] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionConstraint] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [key] Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
+  /// [key] Allows identification of which elements have their cardinalities
+  ///  impacted by the constraint.  Will not be referenced for constraints that
+  ///  do not affect cardinality.
   ///
   /// [keyElement] ("_key") Extensions for key
   ///
-  /// [requirements] Description of why this constraint is necessary or appropriate.
+  /// [requirements] Description of why this constraint is necessary or
+  ///  appropriate.
   ///
   /// [requirementsElement] ("_requirements") Extensions for requirements
   ///
-  /// [severity] Identifies the impact constraint violation has on the conformance of the instance.
+  /// [severity] Identifies the impact constraint violation has on the
+  ///  conformance of the instance.
   ///
   /// [severityElement] ("_severity") Extensions for severity
   ///
-  /// [suppress] If true, indicates that the warning or best practice guideline should be suppressed.
+  /// [suppress] If true, indicates that the warning or best practice guideline
+  ///  should be suppressed.
   ///
   /// [suppressElement] ("_suppress") Extensions for suppress
   ///
-  /// [human] Text that can be used to describe the constraint in messages identifying that the constraint has been violated.
+  /// [human] Text that can be used to describe the constraint in messages
+  ///  identifying that the constraint has been violated.
   ///
   /// [humanElement] ("_human") Extensions for human
   ///
-  /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that can be executed to see if this constraint is met.
+  /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that
+  ///  can be executed to see if this constraint is met.
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  /// [source] A reference to the original source of the constraint, for traceability purposes.
+  /// [source] A reference to the original source of the constraint, for
+  ///  traceability purposes.
   ///
   factory ElementDefinitionConstraint({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [key] Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
@@ -4373,7 +6092,8 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
 
-  /// Acts like a constructor, returns a [ElementDefinitionConstraint], accepts a
+  /// Acts like a constructor, returns a [ElementDefinitionConstraint], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionConstraint.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -4386,50 +6106,98 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   }
 }
 
-/// [ElementDefinitionObligation] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionObligation] Captures constraints on each element within
+///  the resource, profile, or extension.
 @freezed
 class ElementDefinitionObligation with _$ElementDefinitionObligation {
-  /// [ElementDefinitionObligation] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionObligation] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ElementDefinitionObligation._();
 
-  /// [ElementDefinitionObligation] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionObligation] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] Codes, potentially combination code, that describe the obligations that apply to implementing applications.
+  /// [code] Codes, potentially combination code, that describe the obligations
+  ///  that apply to implementing applications.
   ///
   /// [actor] Actor(s) to which the obligation applies.
   ///
-  /// [documentation] Human readable documentation of the purpose or application of the obligation.
+  /// [documentation] Human readable documentation of the purpose or
+  ///  application of the obligation.
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  /// [usage] Qualifies the usage of the obligation. Typically obligations are qualified by jurisdiction, but they may also be qualified by gender, workflow status, clinical domain etc. The information to decide whether a usege context applies is usually outside the resource, determined by context, and this might present challenges for validation tooling.
+  /// [usage] Qualifies the usage of the obligation. Typically obligations are
+  ///  qualified by jurisdiction, but they may also be qualified by gender,
+  ///  workflow status, clinical domain etc. The information to decide whether
+  ///  a usege context applies is usually outside the resource, determined by
+  ///  context, and this might present challenges for validation tooling.
   ///
-  /// [filter] A FHIRPath expression that restricts to the obligation to one of a set of repeats.
+  /// [filter] A FHIRPath expression that restricts to the obligation to one of
+  ///  a set of repeats.
   ///
   /// [filterElement] ("_filter") Extensions for filter
   ///
-  /// [filterDocumentation] Documents the FHIRPath expression for the benefit of users who are not familiar with FHIRPath.
+  /// [filterDocumentation] Documents the FHIRPath expression for the benefit
+  ///  of users who are not familiar with FHIRPath.
   ///
-  /// [filterDocumentationElement] ("_filterDocumentation") Extensions for filterDocumentation
+  /// [filterDocumentationElement] ("_filterDocumentation") Extensions for
+  ///  filterDocumentation
   ///
-  /// [process] A process that the obligation applies to. This might a canonical URL for an OperationDefinition, or some other reference.
+  /// [process] A process that the obligation applies to. This might a
+  ///  canonical URL for an OperationDefinition, or some other reference.
   ///
   /// [processElement] ("_process") Extensions for process
   ///
   factory ElementDefinitionObligation({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [code] Codes, potentially combination code, that describe the obligations that apply to implementing applications.
@@ -4484,7 +6252,8 @@ class ElementDefinitionObligation with _$ElementDefinitionObligation {
   factory ElementDefinitionObligation.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionObligationFromJson(json);
 
-  /// Acts like a constructor, returns a [ElementDefinitionObligation], accepts a
+  /// Acts like a constructor, returns a [ElementDefinitionObligation], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionObligation.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -4497,21 +6266,44 @@ class ElementDefinitionObligation with _$ElementDefinitionObligation {
   }
 }
 
-/// [ElementDefinitionBinding] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionBinding] Captures constraints on each element within the
+///  resource, profile, or extension.
 @freezed
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
-  /// [ElementDefinitionBinding] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionBinding] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ElementDefinitionBinding._();
 
-  /// [ElementDefinitionBinding] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionBinding] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [strength] Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.
+  /// [strength] Indicates the degree of conformance expectations associated
+  ///  with this binding - that is, the degree to which the provided value set
+  ///  must be adhered to in the instances.
   ///
   /// [strengthElement] ("_strength") Extensions for strength
   ///
@@ -4519,18 +6311,38 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [valueSet] Refers to the value set that identifies the set of codes the binding refers to.
+  /// [valueSet] Refers to the value set that identifies the set of codes the
+  ///  binding refers to.
   ///
-  /// [additional] Additional bindings that help applications implementing this element. Additional bindings do not replace the main binding but provide more information and/or context.
+  /// [additional] Additional bindings that help applications implementing this
+  ///  element. Additional bindings do not replace the main binding but provide
+  ///  more information and/or context.
   ///
   factory ElementDefinitionBinding({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [strength] Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.
@@ -4583,19 +6395,40 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   }
 }
 
-/// [ElementDefinitionAdditional] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionAdditional] Captures constraints on each element within
+///  the resource, profile, or extension.
 @freezed
 class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
-  /// [ElementDefinitionAdditional] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionAdditional] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ElementDefinitionAdditional._();
 
-  /// [ElementDefinitionAdditional] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionAdditional] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [purpose] The use of this additional binding.
   ///
@@ -4603,7 +6436,9 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
   ///
   /// [valueSet] The valueSet that is being bound for the purpose.
   ///
-  /// [documentation] Documentation of the purpose of use of the bindingproviding additional information about how it is intended to be used.
+  /// [documentation] Documentation of the purpose of use of the
+  ///  bindingproviding additional information about how it is intended to be
+  ///  used.
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
@@ -4611,20 +6446,42 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
   ///
   /// [shortDocoElement] ("_shortDoco") Extensions for shortDoco
   ///
-  /// [usage] Qualifies the usage of the binding. Typically bindings are qualified by jurisdiction, but they may also be qualified by gender, workflow status, clinical domain etc. The information to decide whether a usege context applies is usually outside the resource, determined by context, and this might present challenges for validation tooling.
+  /// [usage] Qualifies the usage of the binding. Typically bindings are
+  ///  qualified by jurisdiction, but they may also be qualified by gender,
+  ///  workflow status, clinical domain etc. The information to decide whether
+  ///  a usege context applies is usually outside the resource, determined by
+  ///  context, and this might present challenges for validation tooling.
   ///
-  /// [any] Whether the binding applies to all repeats, or just to any one of them. This is only relevant for elements that can repeat.
+  /// [any] Whether the binding applies to all repeats, or just to any one of
+  ///  them. This is only relevant for elements that can repeat.
   ///
   /// [anyElement] ("_any") Extensions for any
   ///
   factory ElementDefinitionAdditional({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [purpose] The use of this additional binding.
@@ -4676,7 +6533,8 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
   factory ElementDefinitionAdditional.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionAdditionalFromJson(json);
 
-  /// Acts like a constructor, returns a [ElementDefinitionAdditional], accepts a
+  /// Acts like a constructor, returns a [ElementDefinitionAdditional], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionAdditional.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -4689,29 +6547,52 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
   }
 }
 
-/// [ElementDefinitionMapping] Captures constraints on each element within the resource, profile, or extension.
+/// [ElementDefinitionMapping] Captures constraints on each element within the
+///  resource, profile, or extension.
 @freezed
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
-  /// [ElementDefinitionMapping] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionMapping] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ElementDefinitionMapping._();
 
-  /// [ElementDefinitionMapping] Captures constraints on each element within the resource, profile, or extension.
+  /// [ElementDefinitionMapping] Captures constraints on each element within
+  ///  the resource, profile, or extension.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [identity] An internal reference to the definition of a mapping.
   ///
   /// [identityElement] ("_identity") Extensions for identity
   ///
-  /// [language] Identifies the computable language in which mapping.map is expressed.
+  /// [language] Identifies the computable language in which mapping.map is
+  ///  expressed.
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [map] Expresses what part of the target specification corresponds to this element.
+  /// [map] Expresses what part of the target specification corresponds to this
+  ///  element.
   ///
   /// [mapElement] ("_map") Extensions for map
   ///
@@ -4720,13 +6601,30 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// [commentElement] ("_comment") Extensions for comment
   ///
   factory ElementDefinitionMapping({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [identity] An internal reference to the definition of a mapping.

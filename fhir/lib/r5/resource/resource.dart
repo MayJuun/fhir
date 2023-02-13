@@ -38,7 +38,8 @@ class Resource {
   List<FhirExtension>? extension_;
   List<FhirExtension>? modifierExtension;
 
-  /// I don't like XML. However, there appears to be times when it's unavoidable.
+  /// I don't like XML. However, there appears to be times when it's
+  ///  unavoidable.
   /// Thus, I'm going to include this so that we can work with it, yuck.
   static Resource fromXml(String xmlString) => _resourceFromXml(xmlString);
 
