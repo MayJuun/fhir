@@ -41,19 +41,76 @@ Map<String, dynamic> reformatXmlJsonMap(
           ? [primitiveValue(fhirField.type, oldValue['@value'], key)]
           : primitiveValue(fhirField!.type, oldValue['@value'], key);
     }
-    if (oldValue.keys.contains('extension')) {
+    if (oldValue.keys.contains('extension') ||
+        oldValue.keys.contains('@extension') ||
+        oldValue.keys.contains('id') ||
+        oldValue.keys.contains('@id')) {
+      final id = oldValue['id'] ?? oldValue['@id'];
+      final fhirExtension = oldValue['extension'] ?? oldValue['@extension'];
       newMap['_${key.replaceAll('@', '')}'] =
+
+          /// Is there a List?
           fhirField != null && fhirField.isList
-              ? [
+
+              /// +List, is there an ID?
+              ? id != null
+
+                  /// +List, +ID, is there an Extension?
+                  ? fhirExtension != null
+
+                      /// +List, +ID, +Extension
+                      ? [
+                          reformatXmlJsonMap(
+                            {'id': id, 'extension': fhirExtension},
+                            fhirFieldMap['Element']!,
+                          )
+                        ]
+                      :
+
+                      /// +List, +ID, -Extension
+                      [
+                          reformatXmlJsonMap(
+                            {'id': id},
+                            fhirFieldMap['Element']!,
+                          )
+                        ]
+                  :
+
+                  /// +List, -ID, +Extension
+                  [
+                      reformatXmlJsonMap(
+                        {'extension': fhirExtension},
+                        fhirFieldMap['Element']!,
+                      )
+                    ]
+
+              /// -List, is there an ID?
+              : id != null
+
+                  /// -List, +ID, is there an Extension?
+                  ? fhirExtension != null
+
+                      /// -List, +ID, +Extension
+                      ? reformatXmlJsonMap(
+                          {'id': id, 'extension': fhirExtension},
+                          fhirFieldMap['Element']!,
+                        )
+                      :
+
+                      /// -List, +ID, -Extension
+
+                      reformatXmlJsonMap(
+                          {'id': id},
+                          fhirFieldMap['Element']!,
+                        )
+                  :
+
+                  /// -List, -ID, +Extension
+
                   reformatXmlJsonMap(
-                    {'extension': oldValue['extension']},
-                    fhirFieldMap['Element']!,
-                  )
-                ]
-              : reformatXmlJsonMap(
-                  {'extension': oldValue['extension']},
-                  fhirFieldMap['Element']!,
-                );
+                      {'extension': fhirExtension},
+                      fhirFieldMap['Element']!,
+                    );
     }
   }
 
@@ -167,35 +224,55 @@ Map<String, dynamic> checkIfResource(
   return {oldType: oldValue};
 }
 
-bool isPrimitive(String oldType, Map<String, dynamic> oldValue) =>
-    [
-          'String',
-          'Base64Binary',
-          'Boolean',
-          'Canonical',
-          'Code',
-          'Date',
-          'FhirDateTime',
-          'Decimal',
-          'Id',
-          'Instant',
-          'Integer',
-          'Integer64',
-          'Markdown',
-          'Oid',
-          'PositiveInt',
-          'Time',
-          'UnsignedInt',
-          'FhirUri',
-          'FhirUrl',
-          'Uuid',
-        ].contains(oldType) &&
-        (oldValue.keys.length == 1 &&
-            (oldValue.keys.first == '@value' ||
-                oldValue.keys.first == 'extension')) ||
-    (oldValue.keys.length == 2 &&
-        oldValue.keys.contains('@value') &&
-        oldValue.keys.contains('extension'));
+bool isPrimitive(String oldType, Map<String, dynamic> oldValue) {
+  final keyLength = oldValue.keys.length;
+  final containsId =
+      oldValue.keys.contains('id') || oldValue.keys.contains('@id');
+  final containsValue =
+      oldValue.keys.contains('value') || oldValue.keys.contains('@value');
+  final containsExtension = oldValue.keys.contains('extension') ||
+      oldValue.keys.contains('@extension');
+  if ([
+    'String',
+    'Base64Binary',
+    'Boolean',
+    'Canonical',
+    'Code',
+    'Date',
+    'FhirDateTime',
+    'Decimal',
+    'Id',
+    'Instant',
+    'Integer',
+    'Integer64',
+    'Markdown',
+    'Oid',
+    'PositiveInt',
+    'Time',
+    'UnsignedInt',
+    'FhirUri',
+    'FhirUrl',
+    'Uuid',
+  ].contains(oldType)) {
+    if (keyLength == 1 && (containsValue || containsId || containsExtension)) {
+      return true;
+    } else if (keyLength == 2 &&
+        ((containsValue && containsId) ||
+            (containsValue && containsExtension) ||
+            (containsExtension && containsId))) {
+      return true;
+    } else if (keyLength == 3 &&
+        containsValue &&
+        containsId &&
+        containsExtension) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
 
 dynamic primitiveValue(
   String fhirFieldType,

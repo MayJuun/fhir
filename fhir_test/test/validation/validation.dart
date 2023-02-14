@@ -11,6 +11,7 @@ part 'dstu2_validation.dart';
 part 'r4_validation.dart';
 part 'r5_validation.dart';
 part 'stu3_validation.dart';
+part 'utils.dart';
 
 Future<List<String>> dstu2JsonValidation() async {
   var tested = <String>[];

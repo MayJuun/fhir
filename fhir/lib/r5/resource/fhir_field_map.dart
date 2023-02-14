@@ -13,7 +13,7 @@ final fhirFieldMap = {
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
   },
-  'Extension': {
+  'FhirExtension': {
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'url': const FhirField(false, 'FhirUri'),
@@ -224,6 +224,19 @@ final fhirFieldMap = {
     'code': const FhirField(false, 'Code'),
     'codeElement': const FhirField(false, 'Element'),
   },
+  'FhirDuration': {
+    'id': const FhirField(false, 'String'),
+    'extension': const FhirField(true, 'FhirExtension'),
+    'value': const FhirField(false, 'Decimal'),
+    'valueElement': const FhirField(false, 'Element'),
+    'comparator': const FhirField(false, 'Code'),
+    'unit': const FhirField(false, 'String'),
+    'unitElement': const FhirField(false, 'Element'),
+    'system': const FhirField(false, 'FhirUri'),
+    'systemElement': const FhirField(false, 'Element'),
+    'code': const FhirField(false, 'Code'),
+    'codeElement': const FhirField(false, 'Element'),
+  },
   'Money': {
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
@@ -411,7 +424,7 @@ final fhirFieldMap = {
     'dayOfWeekElement': const FhirField(true, 'Element'),
     'timeOfDay': const FhirField(true, 'Time'),
     'timeOfDayElement': const FhirField(true, 'Element'),
-    'when': const FhirField(true, 'TimingRepeatWhen'),
+    'when': const FhirField(true, 'Code'),
     'whenElement': const FhirField(true, 'Element'),
     'offset': const FhirField(false, 'UnsignedInt'),
     'offsetElement': const FhirField(false, 'Element'),
@@ -467,8 +480,8 @@ final fhirFieldMap = {
   'Availability': {
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
-    'availableTime': const FhirField(true, 'Time'),
-    'notAvailableTime': const FhirField(true, 'Time'),
+    'availableTime': const FhirField(true, 'AvailabilityAvailableTime'),
+    'notAvailableTime': const FhirField(true, 'AvailabilityNotAvailableTime'),
   },
   'AvailabilityAvailableTime': {
     'id': const FhirField(false, 'String'),
@@ -724,7 +737,7 @@ final fhirFieldMap = {
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'path': const FhirField(false, 'String'),
     'pathElement': const FhirField(false, 'Element'),
-    'representation': const FhirField(true, 'ElementDefinitionRepresentation'),
+    'representation': const FhirField(true, 'Code'),
     'representationElement': const FhirField(true, 'Element'),
     'sliceName': const FhirField(false, 'String'),
     'sliceNameElement': const FhirField(false, 'Element'),
