@@ -4198,6 +4198,8 @@ class TestScriptOrigin with _$TestScriptOrigin {
   ///
   /// [profile] The type of origin profile the test system supports.
   ///
+  /// [profileElement] ("_profile") Extension for profile
+  ///
   /// [url] The explicit url path of the origin server used in this test script.
   ///
   /// [urlElement] ("_url") Extensions for url
@@ -4237,6 +4239,9 @@ class TestScriptOrigin with _$TestScriptOrigin {
 
     /// [profile] The type of origin profile the test system supports.
     required Coding profile,
+
+    /// [profileElement] ("_profile") Extension for profile
+    Element? profileElement,
 
     /// [url] The explicit url path of the origin server used in this test script.
     FhirUrl? url,

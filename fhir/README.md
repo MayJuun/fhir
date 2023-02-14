@@ -10,7 +10,8 @@ It contains packages for the 3 released FHIR versions:
 
 As well as the R5 (constantly in flux as it's actively being balloted):
 
-- [R5 v4.6.0 - FHIR Release #5: Snapshot #1 (Jan 2022 Connectathon)](https://hl7.org/fhir/2021May/)
+- [R5 v5.0.0-snapshot3 - FHIR Release #5 Connectathon 32 Base](https://hl7.org/fhir/2021May/)
+- This most recent version of R5 had a number of test Resources it didn't handle properly. I'm ignoring it for now because, as I said, it's still changing. I will ensure everything works before R5 is released (supposedly in May 2023)
 
 ## Say Hello
 
@@ -21,6 +22,12 @@ As well as the R5 (constantly in flux as it's actively being balloted):
 ### Has made a bunch of contributions to these packages so far
 
 ### Has also created his own awesome Flutter package, faiadashu ([pub.dev](https://pub.dev/packages/faiadashu), [github](https://github.com/tiloc/faiadashu)), so check it out
+
+### FYI
+
+- Also, I doubt anyone cares, but the Yaml parser doesn't tolerate an empty map as mart of a list
+- I'm also considering adding assertions for R5 (if anyone cares one way or another about this, let me know)
+- Lists that include a null value throw an error currently, I could fix it, but that would require setting all lists to be able to contain nulls, and that seems like a pain in the ass for everyone involved. So for now at least, I'm going to leave it
 
 ## How To Use
 

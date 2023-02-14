@@ -54,7 +54,6 @@
   "immutable": true,
   "compose": {
     "include": [
-      {},
       {
         "system": "http://terminology.hl7.org/CodeSystem/v2-0354"
       }

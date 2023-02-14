@@ -217,10 +217,20 @@ mixin _$FhirExtension {
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
 
+  /// [valueAvailability] Value of extension - must be one of a constrained set
+  ///  of the data types (see [Extensibility](extensibility.html) for a list).
+  Availability? get valueAvailability => throw _privateConstructorUsedError;
+
   /// [valueCodeableConcept] Value of extension - must be one of a constrained
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+
+  /// [valueCodeableReference] A reference to a resource (by instance), or
+  /// instead, a reference to a concept defined in a terminology or ontology
+  /// (by class)."
+  CodeableReference? get valueCodeableReference =>
       throw _privateConstructorUsedError;
 
   /// [valueCoding] Value of extension - must be one of a constrained set of
@@ -408,7 +418,9 @@ abstract class $FhirExtensionCopyWith<$Res> {
       Age? valueAge,
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
+      Availability? valueAvailability,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -461,7 +473,9 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $AgeCopyWith<$Res>? get valueAge;
   $AnnotationCopyWith<$Res>? get valueAnnotation;
   $AttachmentCopyWith<$Res>? get valueAttachment;
+  $AvailabilityCopyWith<$Res>? get valueAvailability;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
   $CodingCopyWith<$Res>? get valueCoding;
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
@@ -551,7 +565,9 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     Object? valueAge = freezed,
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
+    Object? valueAvailability = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -772,10 +788,18 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
           ? _value.valueAttachment
           : valueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
+      valueAvailability: freezed == valueAvailability
+          ? _value.valueAvailability
+          : valueAvailability // ignore: cast_nullable_to_non_nullable
+              as Availability?,
       valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: freezed == valueCodeableReference
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: freezed == valueCoding
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -1185,6 +1209,18 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
 
   @override
   @pragma('vm:prefer-inline')
+  $AvailabilityCopyWith<$Res>? get valueAvailability {
+    if (_value.valueAvailability == null) {
+      return null;
+    }
+
+    return $AvailabilityCopyWith<$Res>(_value.valueAvailability!, (value) {
+      return _then(_value.copyWith(valueAvailability: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
     if (_value.valueCodeableConcept == null) {
       return null;
@@ -1193,6 +1229,19 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
         (value) {
       return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference {
+    if (_value.valueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.valueCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableReference: value) as $Val);
     });
   }
 
@@ -1570,7 +1619,9 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       Age? valueAge,
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
+      Availability? valueAvailability,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -1649,7 +1700,11 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
   @override
   $AttachmentCopyWith<$Res>? get valueAttachment;
   @override
+  $AvailabilityCopyWith<$Res>? get valueAvailability;
+  @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
   @override
   $CodingCopyWith<$Res>? get valueCoding;
   @override
@@ -1763,7 +1818,9 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
     Object? valueAge = freezed,
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
+    Object? valueAvailability = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -1984,10 +2041,18 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
           ? _value.valueAttachment
           : valueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
+      valueAvailability: freezed == valueAvailability
+          ? _value.valueAvailability
+          : valueAvailability // ignore: cast_nullable_to_non_nullable
+              as Availability?,
       valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: freezed == valueCodeableReference
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: freezed == valueCoding
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -2148,7 +2213,9 @@ class _$_FhirExtension extends _FhirExtension {
       this.valueAge,
       this.valueAnnotation,
       this.valueAttachment,
+      this.valueAvailability,
       this.valueCodeableConcept,
+      this.valueCodeableReference,
       this.valueCoding,
       this.valueContactPoint,
       this.valueCount,
@@ -2442,11 +2509,22 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   final Attachment? valueAttachment;
 
+  /// [valueAvailability] Value of extension - must be one of a constrained set
+  ///  of the data types (see [Extensibility](extensibility.html) for a list).
+  @override
+  final Availability? valueAvailability;
+
   /// [valueCodeableConcept] Value of extension - must be one of a constrained
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   @override
   final CodeableConcept? valueCodeableConcept;
+
+  /// [valueCodeableReference] A reference to a resource (by instance), or
+  /// instead, a reference to a concept defined in a terminology or ontology
+  /// (by class)."
+  @override
+  final CodeableReference? valueCodeableReference;
 
   /// [valueCoding] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
@@ -2596,7 +2674,7 @@ class _$_FhirExtension extends _FhirExtension {
 
   @override
   String toString() {
-    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, urlElement: $urlElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueInteger64: $valueInteger64, valueInteger64Element: $valueInteger64Element, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, urlElement: $urlElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueInteger64: $valueInteger64, valueInteger64Element: $valueInteger64Element, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueAvailability: $valueAvailability, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
@@ -2684,7 +2762,9 @@ class _$_FhirExtension extends _FhirExtension {
             (identical(other.valueAge, valueAge) || other.valueAge == valueAge) &&
             (identical(other.valueAnnotation, valueAnnotation) || other.valueAnnotation == valueAnnotation) &&
             (identical(other.valueAttachment, valueAttachment) || other.valueAttachment == valueAttachment) &&
+            (identical(other.valueAvailability, valueAvailability) || other.valueAvailability == valueAvailability) &&
             (identical(other.valueCodeableConcept, valueCodeableConcept) || other.valueCodeableConcept == valueCodeableConcept) &&
+            (identical(other.valueCodeableReference, valueCodeableReference) || other.valueCodeableReference == valueCodeableReference) &&
             (identical(other.valueCoding, valueCoding) || other.valueCoding == valueCoding) &&
             (identical(other.valueContactPoint, valueContactPoint) || other.valueContactPoint == valueContactPoint) &&
             (identical(other.valueCount, valueCount) || other.valueCount == valueCount) &&
@@ -2765,7 +2845,9 @@ class _$_FhirExtension extends _FhirExtension {
         valueAge,
         valueAnnotation,
         valueAttachment,
+        valueAvailability,
         valueCodeableConcept,
+        valueCodeableReference,
         valueCoding,
         valueContactPoint,
         valueCount,
@@ -2880,7 +2962,9 @@ abstract class _FhirExtension extends FhirExtension {
       final Age? valueAge,
       final Annotation? valueAnnotation,
       final Attachment? valueAttachment,
+      final Availability? valueAvailability,
       final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
       final Coding? valueCoding,
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
@@ -3159,10 +3243,21 @@ abstract class _FhirExtension extends FhirExtension {
   Attachment? get valueAttachment;
   @override
 
+  /// [valueAvailability] Value of extension - must be one of a constrained set
+  ///  of the data types (see [Extensibility](extensibility.html) for a list).
+  Availability? get valueAvailability;
+  @override
+
   /// [valueCodeableConcept] Value of extension - must be one of a constrained
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   CodeableConcept? get valueCodeableConcept;
+  @override
+
+  /// [valueCodeableReference] A reference to a resource (by instance), or
+  /// instead, a reference to a concept defined in a terminology or ontology
+  /// (by class)."
+  CodeableReference? get valueCodeableReference;
   @override
 
   /// [valueCoding] Value of extension - must be one of a constrained set of

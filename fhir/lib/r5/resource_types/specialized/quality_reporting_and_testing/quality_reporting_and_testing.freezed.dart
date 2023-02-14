@@ -18686,6 +18686,9 @@ mixin _$TestScriptOrigin {
   /// [profile] The type of origin profile the test system supports.
   Coding get profile => throw _privateConstructorUsedError;
 
+  /// [profileElement] ("_profile") Extension for profile
+  Element? get profileElement => throw _privateConstructorUsedError;
+
   /// [url] The explicit url path of the origin server used in this test script.
   FhirUrl? get url => throw _privateConstructorUsedError;
 
@@ -18712,11 +18715,13 @@ abstract class $TestScriptOriginCopyWith<$Res> {
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile,
+      Element? profileElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement});
 
   $ElementCopyWith<$Res>? get indexElement;
   $CodingCopyWith<$Res> get profile;
+  $ElementCopyWith<$Res>? get profileElement;
   $ElementCopyWith<$Res>? get urlElement;
 }
 
@@ -18739,6 +18744,7 @@ class _$TestScriptOriginCopyWithImpl<$Res, $Val extends TestScriptOrigin>
     Object? index = freezed,
     Object? indexElement = freezed,
     Object? profile = null,
+    Object? profileElement = freezed,
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
@@ -18767,6 +18773,10 @@ class _$TestScriptOriginCopyWithImpl<$Res, $Val extends TestScriptOrigin>
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Coding,
+      profileElement: freezed == profileElement
+          ? _value.profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -18800,6 +18810,18 @@ class _$TestScriptOriginCopyWithImpl<$Res, $Val extends TestScriptOrigin>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get profileElement {
+    if (_value.profileElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.profileElement!, (value) {
+      return _then(_value.copyWith(profileElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
@@ -18826,6 +18848,7 @@ abstract class _$$_TestScriptOriginCopyWith<$Res>
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile,
+      Element? profileElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement});
 
@@ -18833,6 +18856,8 @@ abstract class _$$_TestScriptOriginCopyWith<$Res>
   $ElementCopyWith<$Res>? get indexElement;
   @override
   $CodingCopyWith<$Res> get profile;
+  @override
+  $ElementCopyWith<$Res>? get profileElement;
   @override
   $ElementCopyWith<$Res>? get urlElement;
 }
@@ -18854,6 +18879,7 @@ class __$$_TestScriptOriginCopyWithImpl<$Res>
     Object? index = freezed,
     Object? indexElement = freezed,
     Object? profile = null,
+    Object? profileElement = freezed,
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
@@ -18882,6 +18908,10 @@ class __$$_TestScriptOriginCopyWithImpl<$Res>
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Coding,
+      profileElement: freezed == profileElement
+          ? _value.profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -18904,6 +18934,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
       this.index,
       @JsonKey(name: '_index') this.indexElement,
       required this.profile,
+      this.profileElement,
       this.url,
       @JsonKey(name: '_url') this.urlElement})
       : _extension_ = extension_,
@@ -18991,6 +19022,10 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
   @override
   final Coding profile;
 
+  /// [profileElement] ("_profile") Extension for profile
+  @override
+  final Element? profileElement;
+
   /// [url] The explicit url path of the origin server used in this test script.
   @override
   final FhirUrl? url;
@@ -19002,7 +19037,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
 
   @override
   String toString() {
-    return 'TestScriptOrigin(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, index: $index, indexElement: $indexElement, profile: $profile, url: $url, urlElement: $urlElement)';
+    return 'TestScriptOrigin(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, index: $index, indexElement: $indexElement, profile: $profile, profileElement: $profileElement, url: $url, urlElement: $urlElement)';
   }
 
   @override
@@ -19019,6 +19054,8 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
             (identical(other.indexElement, indexElement) ||
                 other.indexElement == indexElement) &&
             (identical(other.profile, profile) || other.profile == profile) &&
+            (identical(other.profileElement, profileElement) ||
+                other.profileElement == profileElement) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement));
@@ -19034,6 +19071,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
       index,
       indexElement,
       profile,
+      profileElement,
       url,
       urlElement);
 
@@ -19059,6 +19097,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
       final Integer? index,
       @JsonKey(name: '_index') final Element? indexElement,
       required final Coding profile,
+      final Element? profileElement,
       final FhirUrl? url,
       @JsonKey(name: '_url') final Element? urlElement}) = _$_TestScriptOrigin;
   _TestScriptOrigin._() : super._();
@@ -19109,6 +19148,10 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
 
   /// [profile] The type of origin profile the test system supports.
   Coding get profile;
+  @override
+
+  /// [profileElement] ("_profile") Extension for profile
+  Element? get profileElement;
   @override
 
   /// [url] The explicit url path of the origin server used in this test script.

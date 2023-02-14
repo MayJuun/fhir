@@ -74,10 +74,10 @@ final fhirFieldMap = {\n''';
                 }
               } else {
                 if (fieldValue.keys.contains('enum')) {
-                  final newName =
-                      '$key${fieldName.substring(0, 1).toUpperCase()}'
-                      '${fieldName.substring(1)}';
-                  fileString += "'${removeUnderscore(newName)}'),\n";
+                  // final newName =
+                  //     '$key${fieldName.substring(0, 1).toUpperCase()}'
+                  //     '${fieldName.substring(1)}';
+                  fileString += "'Code'),\n";
                 } else {
                   fileString += "'String'),\n";
                   print('B $key.$field has no type');

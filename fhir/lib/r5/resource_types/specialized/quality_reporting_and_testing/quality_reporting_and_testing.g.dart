@@ -2017,6 +2017,9 @@ _$_TestScriptOrigin _$$_TestScriptOriginFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_index'] as Map<String, dynamic>),
       profile: Coding.fromJson(json['profile'] as Map<String, dynamic>),
+      profileElement: json['profileElement'] == null
+          ? null
+          : Element.fromJson(json['profileElement'] as Map<String, dynamic>),
       url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
       urlElement: json['_url'] == null
           ? null
@@ -2040,6 +2043,7 @@ Map<String, dynamic> _$$_TestScriptOriginToJson(_$_TestScriptOrigin instance) {
   writeNotNull('index', instance.index?.toJson());
   writeNotNull('_index', instance.indexElement?.toJson());
   val['profile'] = instance.profile.toJson();
+  writeNotNull('profileElement', instance.profileElement?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
