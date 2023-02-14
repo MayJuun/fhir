@@ -1285,7 +1285,9 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      when: $enumDecodeNullable(_$TimingRepeatWhenEnumMap, json['when']),
+      when: (json['when'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$TimingRepeatWhenEnumMap, e))
+          .toList(),
       whenElement: (json['_when'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1343,7 +1345,8 @@ Map<String, dynamic> _$$_TimingRepeatToJson(_$_TimingRepeat instance) {
       'timeOfDay', instance.timeOfDay?.map((e) => e.toJson()).toList());
   writeNotNull(
       '_timeOfDay', instance.timeOfDayElement?.map((e) => e.toJson()).toList());
-  writeNotNull('when', _$TimingRepeatWhenEnumMap[instance.when]);
+  writeNotNull('when',
+      instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]!).toList());
   writeNotNull('_when', instance.whenElement?.map((e) => e.toJson()).toList());
   writeNotNull('offset', instance.offset?.toJson());
   writeNotNull('_offset', instance.offsetElement?.toJson());

@@ -5262,6 +5262,9 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// [questionnaire] The Questionnaire that defines and organizes the questions for which answers are being provided.
     required Canonical questionnaire,
 
+    /// [statusElement] ("_questionnaire") Extensions for questionnaire
+    @JsonKey(name: '_questionnaire') Element? questionnaireElement,
+
     /// [status] The position of the questionnaire response within its overall lifecycle.
     Code? status,
 

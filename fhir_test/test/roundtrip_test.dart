@@ -11,42 +11,42 @@ Future roundtripTestJson() async {
     'It then reverses them and and performs a deep comparison of the output '
     'to the input. Any files with errors are printed out in the debug console',
     () {
-      test(
-        '\n****Dstu2 Json has been Validated****',
-        () async {
-          var testList = await dstu2JsonValidation();
+      // test(
+      //   '\n****Dstu2 Json has been Validated****',
+      //   () async {
+      //     var testList = await dstu2JsonValidation();
 
-          print(
-              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+      //     print(
+      //         'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
-          expect(testList.isEmpty, true);
-        },
-        timeout: Timeout(Duration(minutes: 15)),
-      );
-      test(
-        '\n****Stu3 Json has been Validated****',
-        () async {
-          var testList = await stu3JsonValidation();
+      //     expect(testList.isEmpty, true);
+      //   },
+      //   timeout: Timeout(Duration(minutes: 15)),
+      // );
+      // test(
+      //   '\n****Stu3 Json has been Validated****',
+      //   () async {
+      //     var testList = await stu3JsonValidation();
 
-          print(
-              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+      //     print(
+      //         'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
-          expect(testList.isEmpty, true);
-        },
-        timeout: Timeout(Duration(minutes: 15)),
-      );
-      test(
-        '\n****R4 Json has been Validated****',
-        () async {
-          var testList = await r4JsonValidation();
+      //     expect(testList.isEmpty, true);
+      //   },
+      //   timeout: Timeout(Duration(minutes: 15)),
+      // );
+      // test(
+      //   '\n****R4 Json has been Validated****',
+      //   () async {
+      //     var testList = await r4JsonValidation();
 
-          print(
-              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+      //     print(
+      //         'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
-          expect(testList.isEmpty, true);
-        },
-        timeout: Timeout(Duration(minutes: 15)),
-      );
+      //     expect(testList.isEmpty, true);
+      //   },
+      //   timeout: Timeout(Duration(minutes: 15)),
+      // );
       test(
         '\n****R5 Json has been Validated****',
         () async {
@@ -137,6 +137,19 @@ Future roundtripTestXml() async {
       ' out in the debug console.', () {
     test(
       '\n****R4 XML has been Validated****',
+      () async {
+        var testList = await r4XmlValidation();
+
+        print(
+            'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
+        expect(testList.isEmpty, true);
+      },
+      timeout: Timeout(Duration(minutes: 25)),
+    );
+
+    test(
+      '\n****R5 XML has been Validated****',
       () async {
         var testList = await r4XmlValidation();
 

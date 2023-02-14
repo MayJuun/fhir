@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'primitive_test.dart';
 import 'resource_test.dart';
 import 'roundtrip_test.dart';

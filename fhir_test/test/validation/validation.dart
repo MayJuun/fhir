@@ -74,3 +74,10 @@ Future<List<String>> r4XmlValidation() async {
   print('Completed R4 XML');
   return tested;
 }
+
+Future<List<String>> r5XmlValidation() async {
+  var tested = <String>[];
+  tested.addAll(await r5ValidationXml());
+  print('Completed R5 XML');
+  return tested;
+}

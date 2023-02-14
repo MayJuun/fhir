@@ -2926,7 +2926,7 @@ class TimingRepeat with _$TimingRepeat {
 
     /// [when] An approximate time period during the day, potentially linked to
     ///  an event of daily living that indicates when the action should occur.
-    TimingRepeatWhen? when,
+    List<TimingRepeatWhen>? when,
 
     /// [whenElement] ("_when") Extensions for when
     @JsonKey(name: '_when') List<Element>? whenElement,
