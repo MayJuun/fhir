@@ -4313,6 +4313,7 @@ final fhirFieldMap = {
     'securityLabel': const FhirField(true, 'Coding'),
     'purpose': const FhirField(true, 'Coding'),
     'documentType': const FhirField(true, 'Coding'),
+    'resourceType': const FhirField(true, 'Coding'),
     'code': const FhirField(true, 'CodeableConcept'),
     'dataPeriod': const FhirField(false, 'Period'),
     'data': const FhirField(true, 'ConsentData'),
@@ -9508,7 +9509,7 @@ final fhirFieldMap = {
     'type': const FhirField(false, 'CodeableConcept'),
     'usage': const FhirField(false, 'String'),
     'usageElement': const FhirField(false, 'Element'),
-    'uniqueId': const FhirField(true, 'Id'),
+    'uniqueId': const FhirField(true, 'NamingSystemUniqueId'),
   },
   'NamingSystemUniqueId': {
     'id': const FhirField(false, 'String'),
@@ -12764,7 +12765,7 @@ final fhirFieldMap = {
     'molecularWeight':
         const FhirField(true, 'SubstanceDefinitionMolecularWeight'),
     'structure': const FhirField(false, 'SubstanceDefinitionStructure'),
-    'code': const FhirField(true, 'Code'),
+    'code': const FhirField(true, 'SubstanceDefinitionCode'),
     'name': const FhirField(true, 'SubstanceDefinitionName'),
     'relationship': const FhirField(true, 'SubstanceDefinitionRelationship'),
     'nucleicAcid': const FhirField(false, 'Reference'),

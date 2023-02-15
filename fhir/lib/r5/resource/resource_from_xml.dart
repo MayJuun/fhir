@@ -1,16 +1,11 @@
 part of 'resource.dart';
 
-const jsonEncoder = JsonEncoder.withIndent('    ');
-
-String jsonPrettyPrint(Map<String, dynamic> map) => jsonEncoder.convert(map);
-
-String prettyPrintJson(Map<String, dynamic> map) => jsonEncoder.convert(map);
-
 Resource _resourceFromXml(String xmlString) {
   final myTransformer = Xml2Json();
   myTransformer.parse(xmlString);
   final json = myTransformer.toBadgerfish();
   final map = jsonDecode(json) as Map<String, dynamic>;
+  // print(jsonEncode(map));
   if (map.keys.length == 1 &&
       ResourceUtils.resourceTypeFromStringMap.keys.contains(map.keys.first)) {
     (map[map.keys.first] as Map<String, dynamic>)['resourceType'] =
@@ -23,6 +18,7 @@ Resource _resourceFromXml(String xmlString) {
         map[map.keys.first] as Map<String, dynamic>,
         fhirObjectMap,
       );
+      // print(jsonEncode(newMap));
       return Resource.fromJson(newMap);
     }
   } else {
@@ -165,7 +161,7 @@ Map<String, dynamic> reformatXmlJsonMap(
               if (isPrimitive(oldType, oldValue as Map<String, dynamic>)) {
                 addIfPrimitive(oldValue, key, fhirField);
               } else {
-                print('168: $oldType');
+                // print('168: $oldType $oldValue');
                 newMap[replacedKey] = fhirField != null && fhirField.isList
                     ? [reformatXmlJsonMap(oldValue, fhirFieldMap[oldType]!)]
                     : reformatXmlJsonMap(oldValue, fhirFieldMap[oldType]!);
@@ -189,7 +185,7 @@ Map<String, dynamic> reformatXmlJsonMap(
                       oldValue as Map<String, dynamic>, oldType);
                   oldType = ifResource.keys.first;
                   oldValue = ifResource.values.first;
-                  print('192: $oldType');
+                  // print('192: $oldType');
                   (newMap[replacedKey] as List).add(reformatXmlJsonMap(
                     oldValue as Map<String, dynamic>,
                     fhirFieldMap[oldType]!,
@@ -315,7 +311,11 @@ dynamic primitiveValue(
       fhirFieldType == 'Markdown') {
     value = oldValue.toString().contains(r'[ \r\n\t\S]+')
         ? oldValue.toString()
-        : oldValue.toString().replaceAll(r'\\n', '\n').replaceAll(r'\r', '\r');
+        : oldValue
+            .toString()
+            .replaceAll(r'\\n', '\n')
+            .replaceAll(r'\r', '\r')
+            .replaceAll(r'\t', '\t');
   } else {
     value = oldValue;
   }

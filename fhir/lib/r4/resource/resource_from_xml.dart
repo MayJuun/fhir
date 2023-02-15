@@ -307,7 +307,11 @@ dynamic primitiveValue(
       fhirFieldType == 'Markdown') {
     value = oldValue.toString().contains(r'[ \r\n\t\S]+')
         ? oldValue.toString()
-        : oldValue.toString().replaceAll(r'\\n', '\n').replaceAll(r'\r', '\r');
+        : oldValue
+            .toString()
+            .replaceAll(r'\\n', '\n')
+            .replaceAll(r'\r', '\r')
+            .replaceAll(r'\t', '\t');
   } else {
     value = oldValue;
   }

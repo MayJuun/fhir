@@ -135,18 +135,18 @@ Future roundtripTestXml() async {
       ' us, because unsurprisingly, FHIR does not directly translate from XML to '
       'JSON. If there are any resources that are not equivalent, these aare printed '
       ' out in the debug console.', () {
-    // test(
-    //   '\n****R4 XML has been Validated****',
-    //   () async {
-    //     var testList = await r4XmlValidation();
+    test(
+      '\n****R4 XML has been Validated****',
+      () async {
+        var testList = await r4XmlValidation();
 
-    //     print(
-    //         'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+        print(
+            'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
-    //     expect(testList.isEmpty, true);
-    //   },
-    //   timeout: Timeout(Duration(minutes: 25)),
-    // );
+        expect(testList.isEmpty, true);
+      },
+      timeout: Timeout(Duration(minutes: 25)),
+    );
 
     test(
       '\n****R5 XML has been Validated****',
