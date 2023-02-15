@@ -1,1 +1,62 @@
-const mediaModality = {"resourceType":"ValueSet","id":"media-modality","meta":{"lastUpdated":"2022-05-28T12:47:40.239+10:00","profile":["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]},"text":{"status":"generated","div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html</li><li>Include all codes defined in <a href=\"codesystem-media-modality.html\"><code>http://terminology.hl7.org/CodeSystem/media-modality</code></a></li></ul></div>"},"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-wg","valueCode":"oo"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status","valueCode":"draft"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm","valueInteger":1}],"url":"http://hl7.org/fhir/ValueSet/media-modality","identifier":[{"system":"urn:ietf:rfc:3986","value":"urn:oid:2.16.840.1.113883.4.642.3.1001"}],"version":"4.3.0","name":"MediaModality","title":"Media Modality","status":"draft","experimental":true,"publisher":"FHIR Project team","contact":[{"telecom":[{"system":"url","value":"http://hl7.org/fhir"}]}],"description":"Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it.","copyright":"This resource includes content from the Digital Imaging and Communications in Medicine (DICOM) Standard, Copyright 2011 by the National Electrical Manufacturers Association","compose":{"include":[{"valueSet":["http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"]},{"system":"http://terminology.hl7.org/CodeSystem/media-modality"}]}};
+const mediaModality = {
+  "resourceType": "ValueSet",
+  "id": "media-modality",
+  "meta": {
+    "lastUpdated": "2022-05-28T12:47:40.239+10:00",
+    "profile": ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text": {
+    "status": "generated",
+    "div":
+        "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html</li><li>Include all codes defined in <a href=\"codesystem-media-modality.html\"><code>http://terminology.hl7.org/CodeSystem/media-modality</code></a></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "oo"
+    },
+    {
+      "url":
+          "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/media-modality",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.1001"
+    }
+  ],
+  "version": "4.3.0",
+  "name": "MediaModality",
+  "title": "Media Modality",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "FHIR Project team",
+  "contact": [
+    {
+      "telecom": [
+        {"system": "url", "value": "http://hl7.org/fhir"}
+      ]
+    }
+  ],
+  "description":
+      "Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it.",
+  "copyright":
+      "This resource includes content from the Digital Imaging and Communications in Medicine (DICOM) Standard, Copyright 2011 by the National Electrical Manufacturers Association",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
+        ]
+      },
+      {"system": "http://terminology.hl7.org/CodeSystem/media-modality"}
+    ]
+  }
+};
