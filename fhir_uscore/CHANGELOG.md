@@ -1,5 +1,12 @@
 # fhir_uscore
 
+## [0.9.4]
+
+* Updated dependencies
+* Updated to fhir 0.9.4
+* Updated to Dart 2.14.0
+* Added more comments
+
 ## [0.9.3]
 
 * Updated dependencies

@@ -1,12 +1,17 @@
 # fhir_at_rest
 
+## [0.9.4]
+
+* Updated to fhir 0.9.4
+* Updated to Dart 2.19.0
+
 ## [0.9.3]
 
-* Updated ependencies
+* Updated dependencies
 
 ## [0.9.2]
 
-* Updated ependencies
+* Updated dependencies
 
 ## [0.9.1]
 

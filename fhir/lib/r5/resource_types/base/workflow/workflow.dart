@@ -154,7 +154,7 @@ class Appointment with Resource, _$Appointment {
   /// [minutesDuration] Number of minutes that the appointment is to take. This
   ///  can be less than the duration between the start and end times.  For
   ///  example, where the actual time of appointment is only an estimate or if
-  ///  a 30 minute appointment is being requested, but any time would work. 
+  ///  a 30 minute appointment is being requested, but any time would work.
   ///  Also, if there is, for example, a planned 15 minute break in the middle
   ///  of a long appointment, the duration may be 15 minutes less than the
   ///  difference between the start and end.
@@ -379,7 +379,7 @@ class Appointment with Resource, _$Appointment {
     @JsonKey(name: '_end') Element? endElement,
 
     /// [minutesDuration] Number of minutes that the appointment is to take.
-    ///  This can be less than the duration between the start and end times. 
+    ///  This can be less than the duration between the start and end times.
     ///  For example, where the actual time of appointment is only an estimate
     ///  or if a 30 minute appointment is being requested, but any time would
     ///  work.  Also, if there is, for example, a planned 15 minute break in
@@ -2155,7 +2155,7 @@ class Task with Resource, _$Task {
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Task.
   ///
-  /// [instantiatesUri] The URL pointing to an *externally* maintained 
+  /// [instantiatesUri] The URL pointing to an *externally* maintained
   ///  protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
   ///
@@ -2341,7 +2341,7 @@ class Task with Resource, _$Task {
     ///  in part by this Task.
     Canonical? instantiatesCanonical,
 
-    /// [instantiatesUri] The URL pointing to an *externally* maintained 
+    /// [instantiatesUri] The URL pointing to an *externally* maintained
     ///  protocol, guideline, orderset or other definition that is adhered to
     ///  in whole or in part by this Task.
     FhirUri? instantiatesUri,
@@ -2557,7 +2557,7 @@ class TaskRestriction with _$TaskRestriction {
   /// [repetitionsElement] ("_repetitions") Extensions for repetitions
   ///
   /// [period] The time-period for which fulfillment is sought. This must fall
-  ///  within the overall time period authorized in the referenced request. 
+  ///  within the overall time period authorized in the referenced request.
   ///  E.g. ServiceRequest.occurance[x].
   ///
   /// [recipient] For requests that are targeted to more than one potential
@@ -3680,7 +3680,7 @@ class Transport with Resource, _$Transport {
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Transport.
   ///
-  /// [instantiatesUri] The URL pointing to an *externally* maintained 
+  /// [instantiatesUri] The URL pointing to an *externally* maintained
   ///  protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Transport.
   ///
@@ -3869,7 +3869,7 @@ class Transport with Resource, _$Transport {
     ///  in part by this Transport.
     Canonical? instantiatesCanonical,
 
-    /// [instantiatesUri] The URL pointing to an *externally* maintained 
+    /// [instantiatesUri] The URL pointing to an *externally* maintained
     ///  protocol, guideline, orderset or other definition that is adhered to
     ///  in whole or in part by this Transport.
     FhirUri? instantiatesUri,

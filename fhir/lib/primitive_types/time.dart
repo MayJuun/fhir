@@ -200,7 +200,6 @@ class Time {
     /// If, however, they are equal, then it means that by this stage we have
     /// two equal values, and decide the return value based on the comparator
     switch (comparator) {
-
       /// if we make it here, it means that we found no unequal precisions, so
       /// this is true
       case Comparator.eq:

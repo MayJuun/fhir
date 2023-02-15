@@ -1,5 +1,10 @@
 # fhir_bulk
 
+## [0.9.4]
+
+* Updated to fhir 0.9.4
+* Updated to Dart 2.19.0
+
 ## [0.9.3]
 
 * Updated dependencies

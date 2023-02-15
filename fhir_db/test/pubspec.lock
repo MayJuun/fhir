@@ -116,18 +116,17 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      name: fhir
-      sha256: ef71e9319d66a1a2c608ede347f6cdd843cdfd2b3793bef2bec24d5267112515
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.9.3"
+      path: "../../fhir"
+      relative: true
+    source: path
+    version: "0.9.4"
   fhir_db:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.9.3"
+    version: "0.9.4"
   file:
     dependency: transitive
     description:
@@ -333,6 +332,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.3"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      sha256: "49392a45ced973e8d94a85fdb21293fbb40ba805fc49f2965101ae748a3683b4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.0"
   platform:
     dependency: transitive
     description:
@@ -626,6 +633,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: "979ee37d622dec6365e2efa4d906c37470995871fe9ae080d967e192d88286b5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.2.2"
+  xml2json:
+    dependency: transitive
+    description:
+      name: xml2json
+      sha256: c8cb35b83cce879c2ea86951fd257f4e765b0030a0298b35cf94f2b3d0f32095
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.3.6"
   yaml:
     dependency: transitive
     description:
@@ -635,5 +658,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=2.18.0 <3.0.0"
+  dart: ">=2.19.0 <3.0.0"
   flutter: ">=3.3.0"

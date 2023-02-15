@@ -113,7 +113,7 @@ class EqualsParser extends OperatorParser {
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
-/// ToDo: write test
+// TODO(Dokotela): write test
 class EquivalentParser extends OperatorParser {
   EquivalentParser();
   ParserList before = ParserList([]);

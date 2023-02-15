@@ -1,5 +1,11 @@
 # fhir_path
 
+## [0.9.5]
+
+* Updated dependencies
+* Updated to fhir 0.9.4
+* Updated to Dart 2.19.0
+
 ## [0.9.4]
 
 * Updated dependencies

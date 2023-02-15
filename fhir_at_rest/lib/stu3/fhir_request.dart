@@ -748,7 +748,6 @@ class FhirRequest with _$FhirRequest {
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
   /// [fhirParameter] - any extra fhirParameters
-  ///   ToDo: why did I include this?
   /// [usePost] - defines if you would prefer to use a post request instead of Get
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
