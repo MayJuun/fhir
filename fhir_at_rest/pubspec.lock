@@ -164,9 +164,10 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../fhir"
-      relative: true
-    source: path
+      name: fhir
+      sha256: cd391724af904fddd1ef76b195043cd6e2c7f2c90a780b6d75bc4a333b313c77
+      url: "https://pub.dev"
+    source: hosted
     version: "0.9.4"
   file:
     dependency: transitive
