@@ -71,17 +71,17 @@ Future<Map<String, List<String>?>> validateFhirMaps({
   /// Create a list of all paths in the [mapToValidate]
   final fhirPaths = fhirPathsFromMap(value: mapToValidate, path: type);
   final returnMap =
-      evaluateFromPaths(fhirPaths, structureDefinition, type, startPath);
+      await evaluateFromPaths(fhirPaths, structureDefinition, type, startPath);
 
   return returnMap;
 }
 
-Map<String, List<String>?> evaluateFromPaths(
+Future<Map<String, List<String>?>> evaluateFromPaths(
   Map<String, dynamic> fhirPaths,
   StructureDefinition structureDefinition,
   String type,
   String startPath,
-) {
+) async {
   var returnMap = <String, List<String>?>{};
 
   /// This is because we don't do anything for the value "resourceType" in the
