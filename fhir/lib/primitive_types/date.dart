@@ -15,7 +15,7 @@ enum DatePrecision {
   INVALID,
 }
 
-/// ToDo: Does not accept 'YYYY-MM'
+// TODO(Dokotela): Does not accept 'YYYY-MM'
 class Date extends FhirDateTimeBase {
   const Date._(String valueString, DateTime? valueDateTime, bool isValid,
       this._precision, Exception? parseError)

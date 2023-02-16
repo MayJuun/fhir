@@ -3057,7 +3057,6 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
   }
 }
 
-// Todo
 /// [EvidenceVar] The Evidence Resource provides a machine-interpretable
 @freezed
 class EvidenceVar with _$EvidenceVar {

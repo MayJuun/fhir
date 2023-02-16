@@ -1,3 +1,5 @@
+// ignore_for_file: flutter_style_todos
+
 // Dart imports:
 import 'dart:convert';
 
@@ -8397,6 +8399,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   }) = _SubstancePolymer;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

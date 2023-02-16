@@ -2565,6 +2565,7 @@ class InventoryReport with Resource, _$InventoryReport {
   }) = _InventoryReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

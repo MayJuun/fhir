@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:fhir/r4.dart';
+import 'package:http/http.dart';
 
 import '../structure_definition_maps.dart';
 import '../utils/utils.dart';
@@ -277,7 +280,14 @@ Map<String, List<String>?> evaluateFromPaths(
     }
   }
 
-  fhirPathMatches.forEach((key, value) {
+  final downloadedValueSets = <String, dynamic>{};
+
+  /// We're going to check for bindings to various ValueSets, first there's
+  /// a bunch of checking just to make sure it's available and not null
+  ///
+  for (final key in fhirPathMatches.keys) {
+    final FhirValidationObject value =
+        fhirPathMatches[key] as FhirValidationObject;
     if (value.fullMatch != null && value.fullMatch != '') {
       if (value.type != null) {
         if (!isValueAValidPrimitive(value.type!, fhirPaths[key])) {
@@ -288,10 +298,57 @@ Map<String, List<String>?> evaluateFromPaths(
           if (value.binding?.strength != null &&
               value.binding!.strength !=
                   ElementDefinitionBindingStrength.example) {
-            final valueSetCanonical =
-                value.binding!.valueSet.toString().split('|').first;
-            final valueSetMap = valueSetMaps[valueSetCanonical];
-            if (valueSetMap == null) {}
+            /// As long as it's valid, we check to see if we have it locally
+            /// If we do, great, if not, we see if there's a version at the
+            /// end that's causing us problems. If we still can't find it
+            /// locally, then we go looking for it.
+            /// TODO(Dokotela) should look on local server first
+            /// If we still can't find it however, there are two other domains
+            /// that we're ok looking into (because we trust them...I think)
+            /// 1. https://hl7.org/fhir/
+            /// 2. https://terminology.hl7.org/
+            /// We do temporarily store them locally, so we don't have to
+            /// keep downloading them for every item we need them for
+
+            var valueSetCanonical = value.binding!.valueSet.toString();
+            var valueSetMap = valueSetMaps[valueSetCanonical];
+            if (valueSetMap == null) {
+              valueSetCanonical = valueSetCanonical.split('|').first;
+              valueSetMap = valueSetMaps[valueSetCanonical];
+            }
+            if (valueSetMap == null) {
+              if (downloadedValueSets.keys.contains(valueSetCanonical)) {
+                valueSetMap = downloadedValueSets[valueSetCanonical];
+              } else {
+                String? downloadCanonical;
+                if (valueSetCanonical.startsWith('http://hl7.org/fhir/')) {
+                  downloadCanonical = valueSetCanonical
+                      .replaceAll('ValueSet/', 'valueset-')
+                      .replaceAll('CodeSystem/', 'codesystem-');
+                } else if (valueSetCanonical
+                    .startsWith('http://terminology.hl7.org/')) {
+                  downloadCanonical = valueSetCanonical
+                      .replaceAll('ValueSet/', 'ValueSet-')
+                      .replaceAll('CodeSystem/', 'CodeSystem-');
+                }
+                if (downloadCanonical != null) {
+                  downloadCanonical = '$downloadCanonical.json';
+                  // final response = await get(Uri.parse(downloadCanonical));
+                  Response response = Response('', 200);
+                  if (response.statusCode == 200) {
+                    final downloadedMap = jsonDecode(response.body);
+                    if (downloadedMap['resourceType'] == 'ValueSet') {
+                      valueSetMap = downloadedMap;
+                      downloadedValueSets[valueSetCanonical] = downloadedMap;
+                    }
+                  }
+                }
+              }
+            }
+            if (valueSetMap == null) {
+              returnMap = addToMap(returnMap, startPath, key,
+                  "This value has a binding ValueSet @ ${value.binding!.valueSet} but wasn't found");
+            }
             if (valueSetMap != null) {
               final valueSet = ValueSet.fromJson(valueSetMap);
             }
@@ -299,7 +356,7 @@ Map<String, List<String>?> evaluateFromPaths(
         }
       }
     }
-  });
+  }
 
   final partialMatchMap = <String, dynamic>{};
 

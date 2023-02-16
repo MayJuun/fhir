@@ -258,7 +258,7 @@ abstract class FhirDateTimeBase {
     }
   }
 
-  /// ToDo: may need to fix for precision
+  // TODO(Dokotela): may need to fix for precision
 
   @override
   bool operator ==(Object o) => _compare(Comparator.eq, o);

@@ -1,3 +1,4 @@
+// ignore_for_file: camel_case_types
 // Dart imports:
 import 'dart:convert';
 
