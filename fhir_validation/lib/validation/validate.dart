@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:fhir/r4.dart';
+import 'package:fhir_validation/structure_definitions/structureDefinitions.dart';
 import 'package:http/http.dart';
 
 import '../structure_definition_maps.dart';
@@ -280,7 +281,54 @@ Future<Map<String, List<String>?>> evaluateFromPaths(
     }
   }
 
-  final downloadedValueSets = <String, dynamic>{};
+  final downloads = <String, dynamic>{};
+  final codes = <String, List<String>>{};
+
+  Future<Map<String, dynamic>?> requestValueSetOrCodeSystem(
+    String valueSetCanonical,
+  ) async {
+    String? downloadCanonical;
+    Map<String, dynamic>? downloadedMap;
+
+    /// As above, if the canonicals are hl7.org or terminology
+    /// we're going to accept those as valid and try to retrieve
+    /// them. While we can accept XML (which is typically what is
+    /// returned from these, it's SOOOOOOO much easier if it's
+    /// json). So to get the right url to request, we have to
+    /// format the canonical a little bit.
+    if (valueSetCanonical.startsWith('http://hl7.org/fhir/')) {
+      downloadCanonical = valueSetCanonical
+          .replaceAll('ValueSet/', 'valueset-')
+          .replaceAll('CodeSystem/', 'codesystem-');
+    } else if (valueSetCanonical.startsWith('http://terminology.hl7.org/')) {
+      downloadCanonical = valueSetCanonical
+          .replaceAll('ValueSet/', 'ValueSet-')
+          .replaceAll('CodeSystem/', 'CodeSystem-');
+    }
+    if (!(downloadCanonical?.contains('valueset') ?? false) &&
+        !(downloadCanonical?.contains('codesystem') ?? false)) {
+      final canonicalList = downloadCanonical?.split('/');
+      if (canonicalList != null && canonicalList.isNotEmpty) {
+        canonicalList.last = 'codesystem-${canonicalList.last}';
+      }
+      downloadCanonical = canonicalList?.join('/');
+    }
+
+    if (downloadCanonical != null) {
+      downloadCanonical = '$downloadCanonical.json';
+      final response = await get(Uri.parse(downloadCanonical));
+      // Response response = Response('', 200);
+
+      if (response.statusCode == 200) {
+        downloadedMap = jsonDecode(response.body);
+        if (downloadedMap!['resourceType'] == 'ValueSet' ||
+            downloadedMap['resourceType'] == 'CodeSystem') {
+          downloads[valueSetCanonical] = downloadedMap;
+        }
+      }
+    }
+    return downloadedMap;
+  }
 
   /// We're going to check for bindings to various ValueSets, first there's
   /// a bunch of checking just to make sure it's available and not null
@@ -317,40 +365,84 @@ Future<Map<String, List<String>?>> evaluateFromPaths(
               valueSetMap = valueSetMaps[valueSetCanonical];
             }
             if (valueSetMap == null) {
-              if (downloadedValueSets.keys.contains(valueSetCanonical)) {
-                valueSetMap = downloadedValueSets[valueSetCanonical];
+              if (downloads.keys.contains(valueSetCanonical)) {
+                valueSetMap = downloads[valueSetCanonical];
               } else {
-                String? downloadCanonical;
-                if (valueSetCanonical.startsWith('http://hl7.org/fhir/')) {
-                  downloadCanonical = valueSetCanonical
-                      .replaceAll('ValueSet/', 'valueset-')
-                      .replaceAll('CodeSystem/', 'codesystem-');
-                } else if (valueSetCanonical
-                    .startsWith('http://terminology.hl7.org/')) {
-                  downloadCanonical = valueSetCanonical
-                      .replaceAll('ValueSet/', 'ValueSet-')
-                      .replaceAll('CodeSystem/', 'CodeSystem-');
-                }
-                if (downloadCanonical != null) {
-                  downloadCanonical = '$downloadCanonical.json';
-                  // final response = await get(Uri.parse(downloadCanonical));
-                  Response response = Response('', 200);
-                  if (response.statusCode == 200) {
-                    final downloadedMap = jsonDecode(response.body);
-                    if (downloadedMap['resourceType'] == 'ValueSet') {
-                      valueSetMap = downloadedMap;
-                      downloadedValueSets[valueSetCanonical] = downloadedMap;
+                valueSetMap =
+                    await requestValueSetOrCodeSystem(valueSetCanonical);
+              }
+              if (valueSetMap == null) {
+                returnMap = addToMap(returnMap, startPath, key,
+                    "This value has a binding ValueSet @ ${value.binding!.valueSet} but wasn't found");
+              }
+            }
+
+            /// We're going to go through the ValueSet and make a List of any
+            /// codes that we find
+            if (valueSetMap != null) {
+              final valueSet = ValueSet.fromJson(valueSetMap);
+
+              /// We only have to go through this ValueSet if we don't already
+              /// have the codes
+              if (!codes.keys.contains(valueSetCanonical)) {
+                codes[valueSetCanonical] = [];
+
+                /// For each CodeSystem that might be included in the ValueSet
+                /// we look to see if individual codes are listed first. If
+                /// they are, these are the only codes that we need to include
+                /// from that CodeSystem. However, sometimes it's just the
+                /// Canonical for the CodeSystem and we have to include the
+                /// entire thing. For these we once again have to go and make
+                /// a request to find it.
+                for (var include
+                    in valueSet.compose?.include ?? <ValueSetInclude>[]) {
+                  if (include.concept?.isNotEmpty ?? false) {
+                    for (var concept in include.concept!) {
+                      if (concept.code != null) {
+                        codes[valueSetCanonical]!.add(concept.code.toString());
+                      }
+                    }
+                  } else if (include.system != null) {
+                    Map<String, dynamic>? downloadedCodeSystem;
+                    if (downloads.keys.contains(include.system.toString())) {
+                      downloadedCodeSystem = downloads[include.system];
+                    } else {
+                      downloadedCodeSystem = await requestValueSetOrCodeSystem(
+                          include.system.toString());
+                    }
+                    if (downloadedCodeSystem != null) {
+                      final codeSystem =
+                          CodeSystem.fromJson(downloadedCodeSystem);
+                      for (var concept
+                          in codeSystem.concept ?? <CodeSystemConcept>[]) {
+                        if (concept.code != null) {
+                          codes[valueSetCanonical]!
+                              .add(concept.code.toString());
+                        }
+                      }
                     }
                   }
                 }
               }
-            }
-            if (valueSetMap == null) {
-              returnMap = addToMap(returnMap, startPath, key,
-                  "This value has a binding ValueSet @ ${value.binding!.valueSet} but wasn't found");
-            }
-            if (valueSetMap != null) {
-              final valueSet = ValueSet.fromJson(valueSetMap);
+              if (codes[valueSetCanonical] != null &&
+                  codes[valueSetCanonical]!.isNotEmpty) {
+                if (!(codes[valueSetCanonical]?.contains(fhirPaths[key]) ??
+                    false)) {
+                  if (value.binding!.strength ==
+                      ElementDefinitionBindingStrength.required_) {
+                    returnMap = addToMap(returnMap, startPath, key,
+                        "This code (${fhirPaths[key]}) is not from the ValueSet ${value.binding?.valueSet}, but is required to be");
+                  } else if (value.binding!.strength ==
+                      ElementDefinitionBindingStrength.extensible) {
+                    returnMap = addToMap(returnMap, startPath, key,
+                        "This code (${fhirPaths[key]}) is not from the ValueSet ${value.binding?.valueSet}, and it is extensible, so it probably should be");
+                  } else if (value.binding!.strength ==
+                      ElementDefinitionBindingStrength.extensible) {
+                    returnMap = addToMap(returnMap, startPath, key,
+                        "This code (${fhirPaths[key]}) is not from ValueSet ${value.binding?.valueSet}, it is not required, but it is encouraged");
+                  }
+                }
+              }
             }
           }
         }
@@ -376,9 +468,8 @@ Future<Map<String, List<String>?>> evaluateFromPaths(
         if (!returnMap.keys.contains(key)) {
           returnMap[key] = <String>[];
         }
-        returnMap[key]!.add(
-            'The field ${fullPathFromStartAndCurrent(startPath, key)} is not '
-            'found in the StructureDefinition');
+        returnMap[key]!
+            .add('This field is not found in the StructureDefinition');
       } else {
         if (!partialMatchMap.keys.contains(partialMatch)) {
           partialMatchMap[partialMatch] = <String, dynamic>{};
@@ -444,7 +535,7 @@ Future<Map<String, List<String>?>> evaluateFromPaths(
                           ));
               returnMap = combineMaps(
                 returnMap,
-                evaluateFromPaths(
+                await evaluateFromPaths(
                   newMapToEvaluate,
                   StructureDefinition.fromJson(newStructureDefinition),
                   newType,
@@ -504,8 +595,8 @@ Future<Map<String, List<String>?>> evaluateFromPaths(
             if (!returnMap.keys.contains(fullPath)) {
               returnMap[fullPath] = <String>[];
             }
-            returnMap[fullPath]!.add('The field $fullPath '
-                'is required by this StructureDefinition but has no value');
+            returnMap[fullPath]!.add(
+                'This field is required by this StructureDefinition but has no value');
           }
         } else {
           /// However if it's not required AND we don't find it, we don't need

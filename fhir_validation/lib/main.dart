@@ -130,7 +130,7 @@ final resource = {
             "given": ["Peter", "James"]
           }
         ],
-        "gender": "male",
+        "gender": "cis-het-male",
         "birthDate": "1974-12-25"
       },
       "request": {
@@ -171,7 +171,7 @@ final resource = {
       "fullUrl": "urn:uuid:79378cb8-8f58-48e8-a5e8-60ac2755b674",
       "resource": {
         "resourceType": "Parameters",
-        "id": ['p1', 'p2'],
+        "id": ["p1", "p2"],
         "parameter": [
           {
             "name": "coding",
