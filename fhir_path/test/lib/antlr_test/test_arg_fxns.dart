@@ -769,7 +769,7 @@ void testArgFxns() {
           [false]);
     });
 
-    /// ToDo replaceMatches
+    // TODO(Dokotela): replaceMatches
     test('log', () {
       expect(
           walkFhirPath(
@@ -971,7 +971,7 @@ void testArgFxns() {
               ['VV']));
     });
 
-    /// ToDo: trace
+    // TODO(Dokotela): trace
   });
 }
 
