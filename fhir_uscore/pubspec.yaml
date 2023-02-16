@@ -8,7 +8,7 @@ environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.9.3
+  fhir: ^0.9.4
   # fhir:
   #   path: ../fhir
   fhir_at_rest: ^0.9.3
