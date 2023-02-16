@@ -8,6 +8,7 @@ Future<String> main() async {
   final fileList = await dir.list().map((event) => event.path).toList();
   final structureDefinitions = <StructureDefinition>[];
   final valueSets = <ValueSet>[];
+  final codeSystems = <CodeSystem>[];
   var i = 0;
   for (var file in fileList) {
     if (file.contains('.json')) {
@@ -20,6 +21,8 @@ Future<String> main() async {
           i++;
         } else if (entry.resource?.resourceType == R4ResourceType.ValueSet) {
           valueSets.add(entry.resource as ValueSet);
+        } else if (entry.resource?.resourceType == R4ResourceType.CodeSystem) {
+          codeSystems.add(entry.resource as CodeSystem);
         }
       }
     }
@@ -56,6 +59,18 @@ Future<String> main() async {
     '../value_set_maps.dart',
   );
 
+  await generateFiles(
+    codeSystems,
+    codeSystemName,
+    '../code_systems/',
+    codeSystemCanonical,
+    '../code_systems/codeSystems.dart',
+    "import 'code_systems/codeSystems.dart';",
+    'codeSystemMaps',
+    null,
+    '../code_system_maps.dart',
+  );
+
   return '';
 }
 
@@ -65,11 +80,17 @@ String? structureDefinitionName(Resource resource) =>
 String? valueSetName(Resource resource) =>
     (resource as ValueSet).id ?? resource.title ?? resource.name;
 
+String? codeSystemName(Resource resource) =>
+    (resource as CodeSystem).id ?? resource.title ?? resource.name;
+
 String structureDefinitionCanonical(Resource resource) =>
     (resource as StructureDefinition).url.toString();
 
 String valueSetCanonical(Resource resource) =>
     (resource as ValueSet).url.toString();
+
+String codeSystemCanonical(Resource resource) =>
+    (resource as CodeSystem).url.toString();
 
 Future<void> generateFiles(
   List<Resource> resources,
