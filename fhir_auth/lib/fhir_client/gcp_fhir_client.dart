@@ -20,6 +20,7 @@ class GcpFhirClient extends SecureFhirClient {
       'profile',
       'email',
       'https://www.googleapis.com/auth/cloud-platform',
+      'https://www.googleapis.com/auth/userinfo.profile',
     ],
     super.launch,
   }) : _googleSignIn = GoogleSignIn(
