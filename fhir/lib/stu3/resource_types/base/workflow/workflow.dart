@@ -15,7 +15,7 @@ part 'workflow.g.dart';
 @freezed
 class Appointment with Resource, _$Appointment {
   Appointment._();
-  factory Appointment({
+  const factory Appointment({
     @Default(Stu3ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
         Stu3ResourceType resourceType,
@@ -90,7 +90,7 @@ class Appointment with Resource, _$Appointment {
 @freezed
 class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
-  factory AppointmentParticipant({
+  const factory AppointmentParticipant({
     List<CodeableConcept>? type,
     Reference? actor,
     @JsonKey(name: 'required') AppointmentParticipantRequired? required_,
@@ -133,7 +133,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
 @freezed
 class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
-  factory AppointmentResponse({
+  const factory AppointmentResponse({
     @Default(Stu3ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
         Stu3ResourceType resourceType,
@@ -192,7 +192,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 @freezed
 class ProcessRequest with Resource, _$ProcessRequest {
   ProcessRequest._();
-  factory ProcessRequest({
+  const factory ProcessRequest({
     @Default(Stu3ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
         Stu3ResourceType resourceType,
@@ -261,7 +261,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
 @freezed
 class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
-  factory ProcessRequestItem({
+  const factory ProcessRequestItem({
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
   }) = _ProcessRequestItem;
@@ -300,7 +300,7 @@ class ProcessRequestItem with _$ProcessRequestItem {
 @freezed
 class ProcessResponse with Resource, _$ProcessResponse {
   ProcessResponse._();
-  factory ProcessResponse({
+  const factory ProcessResponse({
     @Default(Stu3ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
         Stu3ResourceType resourceType,
@@ -363,7 +363,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
 @freezed
 class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
   ProcessResponseProcessNote._();
-  factory ProcessResponseProcessNote({
+  const factory ProcessResponseProcessNote({
     CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -403,7 +403,7 @@ class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
 @freezed
 class RequestGroup with Resource, _$RequestGroup {
   RequestGroup._();
-  factory RequestGroup({
+  const factory RequestGroup({
     @Default(Stu3ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
         Stu3ResourceType resourceType,
@@ -470,7 +470,7 @@ class RequestGroup with Resource, _$RequestGroup {
 @freezed
 class RequestGroupAction with _$RequestGroupAction {
   RequestGroupAction._();
-  factory RequestGroupAction({
+  const factory RequestGroupAction({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? title,
@@ -539,7 +539,7 @@ class RequestGroupAction with _$RequestGroupAction {
 @freezed
 class RequestGroupCondition with _$RequestGroupCondition {
   RequestGroupCondition._();
-  factory RequestGroupCondition({
+  const factory RequestGroupCondition({
     String? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? description,
@@ -584,7 +584,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
 @freezed
 class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
-  factory RequestGroupRelatedAction({
+  const factory RequestGroupRelatedAction({
     Id? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     String? relationship,
@@ -627,7 +627,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
 @freezed
 class Schedule with Resource, _$Schedule {
   Schedule._();
-  factory Schedule({
+  const factory Schedule({
     @Default(Stu3ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
         Stu3ResourceType resourceType,
@@ -684,7 +684,7 @@ class Schedule with Resource, _$Schedule {
 @freezed
 class Slot with Resource, _$Slot {
   Slot._();
-  factory Slot({
+  const factory Slot({
     @Default(Stu3ResourceType.Slot)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
         Stu3ResourceType resourceType,
@@ -745,7 +745,7 @@ class Slot with Resource, _$Slot {
 @freezed
 class Task with Resource, _$Task {
   Task._();
-  factory Task({
+  const factory Task({
     @Default(Stu3ResourceType.Task)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
         Stu3ResourceType resourceType,
@@ -825,7 +825,7 @@ class Task with Resource, _$Task {
 @freezed
 class TaskRequester with _$TaskRequester {
   TaskRequester._();
-  factory TaskRequester({
+  const factory TaskRequester({
     required Reference agent,
     Reference? onBehalfOf,
   }) = _TaskRequester;
@@ -864,7 +864,7 @@ class TaskRequester with _$TaskRequester {
 @freezed
 class TaskRestriction with _$TaskRestriction {
   TaskRestriction._();
-  factory TaskRestriction({
+  const factory TaskRestriction({
     Decimal? repetitions,
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
     Period? period,
@@ -905,7 +905,7 @@ class TaskRestriction with _$TaskRestriction {
 @freezed
 class TaskInput with _$TaskInput {
   TaskInput._();
-  factory TaskInput({
+  const factory TaskInput({
     required CodeableConcept type,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -1013,7 +1013,7 @@ class TaskInput with _$TaskInput {
 @freezed
 class TaskOutput with _$TaskOutput {
   TaskOutput._();
-  factory TaskOutput({
+  const factory TaskOutput({
     required CodeableConcept type,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,

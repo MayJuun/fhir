@@ -14,7 +14,7 @@ part 'exchange.g.dart';
 
 @freezed
 class MessageHeader with Resource, _$MessageHeader {
-  const MessageHeader._();
+  MessageHeader._();
   const factory MessageHeader({
     @Default(Dstu2ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
@@ -72,7 +72,7 @@ class MessageHeader with Resource, _$MessageHeader {
 
 @freezed
 class MessageHeaderResponse with _$MessageHeaderResponse {
-  const MessageHeaderResponse._();
+  MessageHeaderResponse._();
   const factory MessageHeaderResponse({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -117,7 +117,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
 @freezed
 class MessageHeaderSource with _$MessageHeaderSource {
-  const MessageHeaderSource._();
+  MessageHeaderSource._();
   const factory MessageHeaderSource({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -166,7 +166,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 
 @freezed
 class MessageHeaderDestination with _$MessageHeaderDestination {
-  const MessageHeaderDestination._();
+  MessageHeaderDestination._();
   const factory MessageHeaderDestination({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -211,7 +211,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
 
 @freezed
 class OperationOutcome with Resource, _$OperationOutcome {
-  const OperationOutcome._();
+  OperationOutcome._();
   const factory OperationOutcome({
     @Default(Dstu2ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
@@ -263,7 +263,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 
 @freezed
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
-  const OperationOutcomeIssue._();
+  OperationOutcomeIssue._();
   const factory OperationOutcomeIssue({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -309,7 +309,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 @freezed
 class Parameters with Resource, _$Parameters {
-  const Parameters._();
+  Parameters._();
   const factory Parameters({
     @Default(Dstu2ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
@@ -353,7 +353,7 @@ class Parameters with Resource, _$Parameters {
 
 @freezed
 class ParametersParameter with _$ParametersParameter {
-  const ParametersParameter._();
+  ParametersParameter._();
   const factory ParametersParameter({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -430,7 +430,7 @@ class ParametersParameter with _$ParametersParameter {
 
 @freezed
 class Subscription with Resource, _$Subscription {
-  const Subscription._();
+  Subscription._();
   const factory Subscription({
     @Default(Dstu2ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
@@ -491,7 +491,7 @@ class Subscription with Resource, _$Subscription {
 
 @freezed
 class SubscriptionChannel with _$SubscriptionChannel {
-  const SubscriptionChannel._();
+  SubscriptionChannel._();
   const factory SubscriptionChannel({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

@@ -53,7 +53,7 @@ class Population with _$Population {
   ///
   /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
-  factory Population({
+  const factory Population({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -147,7 +147,7 @@ class ProductShelfLife with _$ProductShelfLife {
   /// [type] This describes the shelf life, taking into account various scenarios such as shelf life of the packaged Medicinal Product itself, shelf life after transformation where necessary and shelf life after the first opening of a bottle, etc. The shelf life type shall be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
   ///
   /// [specialPrecautionsForStorage] Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
-  factory ProductShelfLife({
+  const factory ProductShelfLife({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -284,7 +284,7 @@ class ProdCharacteristic with _$ProdCharacteristic {
   /// [scoring] Where applicable, the scoring can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  factory ProdCharacteristic({
+  const factory ProdCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -476,7 +476,7 @@ class MarketingStatus with _$MarketingStatus {
   ///  chain.
   ///
   /// [restoreDateElement] Extensions for restoreDate
-  factory MarketingStatus({
+  const factory MarketingStatus({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

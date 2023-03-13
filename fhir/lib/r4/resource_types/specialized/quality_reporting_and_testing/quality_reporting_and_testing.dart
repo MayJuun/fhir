@@ -279,7 +279,7 @@ class Measure with Resource, _$Measure {
   /// [supplementalData] The supplemental data criteria for the measure report,
   /// specified as either the name of a valid CQL expression within a referenced
   ///  library, or a valid FHIR Resource Path.
-  factory Measure({
+  const factory Measure({
     @Default(R4ResourceType.Measure)
     @JsonKey(unknownEnumValue: R4ResourceType.Measure)
 
@@ -720,7 +720,7 @@ class MeasureGroup with _$MeasureGroup {
   /// [stratifier] The stratifier criteria for the measure report, specified as
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
-  factory MeasureGroup({
+  const factory MeasureGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -841,7 +841,7 @@ class MeasurePopulation with _$MeasurePopulation {
   ///
   /// [criteria] An expression that specifies the criteria for the population,
   ///  typically the name of an expression in a library.
-  factory MeasurePopulation({
+  const factory MeasurePopulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -963,7 +963,7 @@ class MeasureStratifier with _$MeasureStratifier {
   /// [component] A component of the stratifier criteria for the measure
   /// report, specified as either the name of a valid CQL expression defined
   ///  within a referenced library or a valid FHIR Resource Path.
-  factory MeasureStratifier({
+  const factory MeasureStratifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1092,7 +1092,7 @@ class MeasureComponent with _$MeasureComponent {
   /// of the stratifier. This is typically the name of an expression defined
   /// within a referenced library, but it may also be a path to a stratifier
   ///  element.
-  factory MeasureComponent({
+  const factory MeasureComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1223,7 +1223,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// name of a valid expression defined within a referenced library, but it may
   /// also be a path to a specific data element. The criteria defines the data
   ///  to be returned for this element.
-  factory MeasureSupplementalData({
+  const factory MeasureSupplementalData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1413,7 +1413,7 @@ class MeasureReport with Resource, _$MeasureReport {
   ///
   /// [evaluatedResource] A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
-  factory MeasureReport({
+  const factory MeasureReport({
     @Default(R4ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
 
@@ -1619,7 +1619,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   ///
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
-  factory MeasureReportGroup({
+  const factory MeasureReportGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1738,7 +1738,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   ///
   /// [subjectResults] This element refers to a List of subject level
   ///  MeasureReport resources, one for each subject in this population.
-  factory MeasureReportPopulation({
+  const factory MeasureReportPopulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1851,7 +1851,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// [stratum] This element contains the results for a single stratum within
   /// the stratifier. For example, when stratifying on administrative gender,
   ///  there will be four strata, one for each possible gender value.
-  factory MeasureReportStratifier({
+  const factory MeasureReportStratifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1966,7 +1966,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// [measureScore] The measure score for this stratum, calculated as
   /// appropriate for the measure type and scoring method, and based on only the
   ///  members of this stratum.
-  factory MeasureReportStratum({
+  const factory MeasureReportStratum({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2080,7 +2080,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
   /// [code] The code for the stratum component value.
   ///
   /// [value] The stratum component value.
-  factory MeasureReportComponent({
+  const factory MeasureReportComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2189,7 +2189,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// [subjectResults] This element refers to a List of subject level
   /// MeasureReport resources, one for each subject in this population in this
   ///  stratum.
-  factory MeasureReportPopulation1({
+  const factory MeasureReportPopulation1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2370,7 +2370,7 @@ class TestReport with Resource, _$TestReport {
   ///
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
-  factory TestReport({
+  const factory TestReport({
     @Default(R4ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
 
@@ -2584,7 +2584,7 @@ class TestReportParticipant with _$TestReportParticipant {
   /// [display] The display name of the participant.
   ///
   /// [displayElement] Extensions for display
-  factory TestReportParticipant({
+  const factory TestReportParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2696,7 +2696,7 @@ class TestReportSetup with _$TestReportSetup {
   ///  modifierExtension itself).
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestReportSetup({
+  const factory TestReportSetup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2796,7 +2796,7 @@ class TestReportAction with _$TestReportAction {
   ///
   /// [assert] The results of the assertion performed on the previous
   ///  operations.
-  factory TestReportAction({
+  const factory TestReportAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2907,7 +2907,7 @@ class TestReportOperation with _$TestReportOperation {
   /// [detail] A link to further details on the result.
   ///
   /// [detailElement] Extensions for detail
-  factory TestReportOperation({
+  const factory TestReportOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3029,7 +3029,7 @@ class TestReportAssert with _$TestReportAssert {
   /// [detail] A link to further details on the result.
   ///
   /// [detailElement] Extensions for detail
-  factory TestReportAssert({
+  const factory TestReportAssert({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3151,7 +3151,7 @@ class TestReportTest with _$TestReportTest {
   /// [descriptionElement] Extensions for description
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestReportTest({
+  const factory TestReportTest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3265,7 +3265,7 @@ class TestReportAction1 with _$TestReportAction1 {
   ///
   /// [assert] The results of the assertion performed on the previous
   ///  operations.
-  factory TestReportAction1({
+  const factory TestReportAction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3366,7 +3366,7 @@ class TestReportTeardown with _$TestReportTeardown {
   ///  modifierExtension itself).
   ///
   /// [action] The teardown action will only contain an operation.
-  factory TestReportTeardown({
+  const factory TestReportTeardown({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3463,7 +3463,7 @@ class TestReportAction2 with _$TestReportAction2 {
   ///  modifierExtension itself).
   ///
   /// [operation] An operation would involve a REST request to a server.
-  factory TestReportAction2({
+  const factory TestReportAction2({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3696,7 +3696,7 @@ class TestScript with Resource, _$TestScript {
   ///
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
-  factory TestScript({
+  const factory TestScript({
     @Default(R4ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
 
@@ -3991,7 +3991,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   /// [indexElement] Extensions for index
   ///
   /// [profile] The type of origin profile the test system supports.
-  factory TestScriptOrigin({
+  const factory TestScriptOrigin({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4101,7 +4101,7 @@ class TestScriptDestination with _$TestScriptDestination {
   /// [indexElement] Extensions for index
   ///
   /// [profile] The type of destination profile the test system supports.
-  factory TestScriptDestination({
+  const factory TestScriptDestination({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4209,7 +4209,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   ///
   /// [capability] Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
-  factory TestScriptMetadata({
+  const factory TestScriptMetadata({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4318,7 +4318,7 @@ class TestScriptLink with _$TestScriptLink {
   /// [description] Short description of the link.
   ///
   /// [descriptionElement] Extensions for description
-  factory TestScriptLink({
+  const factory TestScriptLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4457,7 +4457,7 @@ class TestScriptCapability with _$TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  factory TestScriptCapability({
+  const factory TestScriptCapability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4613,7 +4613,7 @@ class TestScriptFixture with _$TestScriptFixture {
   ///
   /// [resource] Reference to the resource (containing the contents of the
   ///  resource needed for operations).
-  factory TestScriptFixture({
+  const factory TestScriptFixture({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4769,7 +4769,7 @@ class TestScriptVariable with _$TestScriptVariable {
   ///  headerField  against within this variable.
   ///
   /// [sourceIdElement] Extensions for sourceId
-  factory TestScriptVariable({
+  const factory TestScriptVariable({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4921,7 +4921,7 @@ class TestScriptSetup with _$TestScriptSetup {
   ///  modifierExtension itself).
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestScriptSetup({
+  const factory TestScriptSetup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5022,7 +5022,7 @@ class TestScriptAction with _$TestScriptAction {
   ///
   /// [assert] Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
-  factory TestScriptAction({
+  const factory TestScriptAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5200,7 +5200,7 @@ class TestScriptOperation with _$TestScriptOperation {
   /// [url] Complete request URL.
   ///
   /// [urlElement] Extensions for url
-  factory TestScriptOperation({
+  const factory TestScriptOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5411,7 +5411,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   /// [value] The value of the header e.g. "application/fhir+xml".
   ///
   /// [valueElement] Extensions for value
-  factory TestScriptRequestHeader({
+  const factory TestScriptRequestHeader({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5627,7 +5627,7 @@ class TestScriptAssert with _$TestScriptAssert {
   ///  only on error for this assert.
   ///
   /// [warningOnlyElement] Extensions for warningOnly
-  factory TestScriptAssert({
+  const factory TestScriptAssert({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5911,7 +5911,7 @@ class TestScriptTest with _$TestScriptTest {
   /// [descriptionElement] Extensions for description
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestScriptTest({
+  const factory TestScriptTest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6026,7 +6026,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   ///
   /// [assert] Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
-  factory TestScriptAction1({
+  const factory TestScriptAction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6128,7 +6128,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   ///  modifierExtension itself).
   ///
   /// [action] The teardown action will only contain an operation.
-  factory TestScriptTeardown({
+  const factory TestScriptTeardown({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6226,7 +6226,7 @@ class TestScriptAction2 with _$TestScriptAction2 {
   ///  modifierExtension itself).
   ///
   /// [operation] An operation would involve a REST request to a server.
-  factory TestScriptAction2({
+  const factory TestScriptAction2({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

@@ -1191,7 +1191,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatement extends _CapabilityStatement {
-  _$_CapabilityStatement(
+  const _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
           this.resourceType = Stu3ResourceType.CapabilityStatement,
       this.id,
@@ -1763,7 +1763,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 }
 
 abstract class _CapabilityStatement extends CapabilityStatement {
-  factory _CapabilityStatement(
+  const factory _CapabilityStatement(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -1843,7 +1843,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
           final List<CapabilityStatementMessaging>? messaging,
           final List<CapabilityStatementDocument>? document}) =
       _$_CapabilityStatement;
-  _CapabilityStatement._() : super._();
+  const _CapabilityStatement._() : super._();
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatement.fromJson;
@@ -2195,7 +2195,7 @@ class __$$_CapabilityStatementSoftwareCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
-  _$_CapabilityStatementSoftware(
+  const _$_CapabilityStatementSoftware(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.version,
@@ -2267,7 +2267,7 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
 
 abstract class _CapabilityStatementSoftware
     extends CapabilityStatementSoftware {
-  factory _CapabilityStatementSoftware(
+  const factory _CapabilityStatementSoftware(
           {final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final String? version,
@@ -2275,7 +2275,7 @@ abstract class _CapabilityStatementSoftware
           final Date? releaseDate,
           @JsonKey(name: '_releaseDate') final Element? releaseDateElement}) =
       _$_CapabilityStatementSoftware;
-  _CapabilityStatementSoftware._() : super._();
+  const _CapabilityStatementSoftware._() : super._();
 
   factory _CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSoftware.fromJson;
@@ -2467,7 +2467,7 @@ class __$$_CapabilityStatementImplementationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementImplementation
     extends _CapabilityStatementImplementation {
-  _$_CapabilityStatementImplementation(
+  const _$_CapabilityStatementImplementation(
       {this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.url,
@@ -2531,13 +2531,13 @@ class _$_CapabilityStatementImplementation
 
 abstract class _CapabilityStatementImplementation
     extends CapabilityStatementImplementation {
-  factory _CapabilityStatementImplementation(
+  const factory _CapabilityStatementImplementation(
           {final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           final String? url,
           @JsonKey(name: '_url') final Element? urlElement}) =
       _$_CapabilityStatementImplementation;
-  _CapabilityStatementImplementation._() : super._();
+  const _CapabilityStatementImplementation._() : super._();
 
   factory _CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =
@@ -2834,7 +2834,7 @@ class __$$_CapabilityStatementRestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementRest extends _CapabilityStatementRest {
-  _$_CapabilityStatementRest(
+  const _$_CapabilityStatementRest(
       {this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.documentation,
@@ -2996,7 +2996,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
 }
 
 abstract class _CapabilityStatementRest extends CapabilityStatementRest {
-  factory _CapabilityStatementRest(
+  const factory _CapabilityStatementRest(
           {final CapabilityStatementRestMode? mode,
           @JsonKey(name: '_mode')
               final Element? modeElement,
@@ -3012,7 +3012,7 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
           @JsonKey(name: '_compartment')
               final List<Element?>? compartmentElement}) =
       _$_CapabilityStatementRest;
-  _CapabilityStatementRest._() : super._();
+  const _CapabilityStatementRest._() : super._();
 
   factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementRest.fromJson;
@@ -3254,7 +3254,7 @@ class __$$_CapabilityStatementSecurityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
-  _$_CapabilityStatementSecurity(
+  const _$_CapabilityStatementSecurity(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.cors,
       @JsonKey(name: '_cors') this.corsElement,
@@ -3364,7 +3364,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
 
 abstract class _CapabilityStatementSecurity
     extends CapabilityStatementSecurity {
-  factory _CapabilityStatementSecurity(
+  const factory _CapabilityStatementSecurity(
           {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final Boolean? cors,
           @JsonKey(name: '_cors') final Element? corsElement,
@@ -3373,7 +3373,7 @@ abstract class _CapabilityStatementSecurity
           @JsonKey(name: '_description') final Element? descriptionElement,
           final List<CapabilityStatementCertificate>? certificate}) =
       _$_CapabilityStatementSecurity;
-  _CapabilityStatementSecurity._() : super._();
+  const _CapabilityStatementSecurity._() : super._();
 
   factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSecurity.fromJson;
@@ -3567,7 +3567,7 @@ class __$$_CapabilityStatementCertificateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementCertificate
     extends _CapabilityStatementCertificate {
-  _$_CapabilityStatementCertificate(
+  const _$_CapabilityStatementCertificate(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.blob,
@@ -3629,13 +3629,13 @@ class _$_CapabilityStatementCertificate
 
 abstract class _CapabilityStatementCertificate
     extends CapabilityStatementCertificate {
-  factory _CapabilityStatementCertificate(
+  const factory _CapabilityStatementCertificate(
           {final String? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final String? blob,
           @JsonKey(name: '_blob') final Element? blobElement}) =
       _$_CapabilityStatementCertificate;
-  _CapabilityStatementCertificate._() : super._();
+  const _CapabilityStatementCertificate._() : super._();
 
   factory _CapabilityStatementCertificate.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementCertificate.fromJson;
@@ -4283,7 +4283,7 @@ class __$$_CapabilityStatementResourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementResource extends _CapabilityStatementResource {
-  _$_CapabilityStatementResource(
+  const _$_CapabilityStatementResource(
       {this.type,
       @JsonKey(name: '_type')
           this.typeElement,
@@ -4585,7 +4585,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
 
 abstract class _CapabilityStatementResource
     extends CapabilityStatementResource {
-  factory _CapabilityStatementResource(
+  const factory _CapabilityStatementResource(
       {final String? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
@@ -4626,7 +4626,7 @@ abstract class _CapabilityStatementResource
           final List<Element?>? searchRevIncludeElement,
       final List<CapabilityStatementSearchParam>?
           searchParam}) = _$_CapabilityStatementResource;
-  _CapabilityStatementResource._() : super._();
+  const _CapabilityStatementResource._() : super._();
 
   factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementResource.fromJson;
@@ -4870,7 +4870,7 @@ class __$$_CapabilityStatementInteractionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementInteraction
     extends _CapabilityStatementInteraction {
-  _$_CapabilityStatementInteraction(
+  const _$_CapabilityStatementInteraction(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.documentation,
@@ -4933,7 +4933,7 @@ class _$_CapabilityStatementInteraction
 
 abstract class _CapabilityStatementInteraction
     extends CapabilityStatementInteraction {
-  factory _CapabilityStatementInteraction(
+  const factory _CapabilityStatementInteraction(
           {final CapabilityStatementInteractionCode? code,
           @JsonKey(name: '_code')
               final Element? codeElement,
@@ -4941,7 +4941,7 @@ abstract class _CapabilityStatementInteraction
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CapabilityStatementInteraction;
-  _CapabilityStatementInteraction._() : super._();
+  const _CapabilityStatementInteraction._() : super._();
 
   factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementInteraction.fromJson;
@@ -5213,7 +5213,7 @@ class __$$_CapabilityStatementSearchParamCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementSearchParam
     extends _CapabilityStatementSearchParam {
-  _$_CapabilityStatementSearchParam(
+  const _$_CapabilityStatementSearchParam(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.definition,
@@ -5305,7 +5305,7 @@ class _$_CapabilityStatementSearchParam
 
 abstract class _CapabilityStatementSearchParam
     extends CapabilityStatementSearchParam {
-  factory _CapabilityStatementSearchParam(
+  const factory _CapabilityStatementSearchParam(
           {final String? name,
           @JsonKey(name: '_name')
               final Element? nameElement,
@@ -5319,7 +5319,7 @@ abstract class _CapabilityStatementSearchParam
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CapabilityStatementSearchParam;
-  _CapabilityStatementSearchParam._() : super._();
+  const _CapabilityStatementSearchParam._() : super._();
 
   factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSearchParam.fromJson;
@@ -5517,7 +5517,7 @@ class __$$_CapabilityStatementInteraction1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementInteraction1
     extends _CapabilityStatementInteraction1 {
-  _$_CapabilityStatementInteraction1(
+  const _$_CapabilityStatementInteraction1(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.documentation,
@@ -5581,7 +5581,7 @@ class _$_CapabilityStatementInteraction1
 
 abstract class _CapabilityStatementInteraction1
     extends CapabilityStatementInteraction1 {
-  factory _CapabilityStatementInteraction1(
+  const factory _CapabilityStatementInteraction1(
           {final CapabilityStatementInteraction1Code? code,
           @JsonKey(name: '_code')
               final Element? codeElement,
@@ -5589,7 +5589,7 @@ abstract class _CapabilityStatementInteraction1
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CapabilityStatementInteraction1;
-  _CapabilityStatementInteraction1._() : super._();
+  const _CapabilityStatementInteraction1._() : super._();
 
   factory _CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementInteraction1.fromJson;
@@ -5758,7 +5758,7 @@ class __$$_CapabilityStatementOperationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
-  _$_CapabilityStatementOperation(
+  const _$_CapabilityStatementOperation(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       required this.definition})
@@ -5813,11 +5813,11 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
 
 abstract class _CapabilityStatementOperation
     extends CapabilityStatementOperation {
-  factory _CapabilityStatementOperation(
+  const factory _CapabilityStatementOperation(
       {final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       required final Reference definition}) = _$_CapabilityStatementOperation;
-  _CapabilityStatementOperation._() : super._();
+  const _CapabilityStatementOperation._() : super._();
 
   factory _CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementOperation.fromJson;
@@ -6042,7 +6042,7 @@ class __$$_CapabilityStatementMessagingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
-  _$_CapabilityStatementMessaging(
+  const _$_CapabilityStatementMessaging(
       {final List<CapabilityStatementEndpoint>? endpoint,
       this.reliableCache,
       @JsonKey(name: '_reliableCache') this.reliableCacheElement,
@@ -6152,7 +6152,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
 
 abstract class _CapabilityStatementMessaging
     extends CapabilityStatementMessaging {
-  factory _CapabilityStatementMessaging(
+  const factory _CapabilityStatementMessaging(
           {final List<CapabilityStatementEndpoint>? endpoint,
           final Decimal? reliableCache,
           @JsonKey(name: '_reliableCache') final Element? reliableCacheElement,
@@ -6161,7 +6161,7 @@ abstract class _CapabilityStatementMessaging
           final List<CapabilityStatementSupportedMessage>? supportedMessage,
           final List<CapabilityStatementEvent>? event}) =
       _$_CapabilityStatementMessaging;
-  _CapabilityStatementMessaging._() : super._();
+  const _CapabilityStatementMessaging._() : super._();
 
   factory _CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementMessaging.fromJson;
@@ -6335,7 +6335,7 @@ class __$$_CapabilityStatementEndpointCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
-  _$_CapabilityStatementEndpoint(
+  const _$_CapabilityStatementEndpoint(
       {required this.protocol,
       this.address,
       @JsonKey(name: '_address') this.addressElement})
@@ -6391,12 +6391,12 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
 
 abstract class _CapabilityStatementEndpoint
     extends CapabilityStatementEndpoint {
-  factory _CapabilityStatementEndpoint(
+  const factory _CapabilityStatementEndpoint(
           {required final Coding protocol,
           final String? address,
           @JsonKey(name: '_address') final Element? addressElement}) =
       _$_CapabilityStatementEndpoint;
-  _CapabilityStatementEndpoint._() : super._();
+  const _CapabilityStatementEndpoint._() : super._();
 
   factory _CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementEndpoint.fromJson;
@@ -6564,7 +6564,7 @@ class __$$_CapabilityStatementSupportedMessageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementSupportedMessage
     extends _CapabilityStatementSupportedMessage {
-  _$_CapabilityStatementSupportedMessage(
+  const _$_CapabilityStatementSupportedMessage(
       {this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       required this.definition})
@@ -6621,12 +6621,12 @@ class _$_CapabilityStatementSupportedMessage
 
 abstract class _CapabilityStatementSupportedMessage
     extends CapabilityStatementSupportedMessage {
-  factory _CapabilityStatementSupportedMessage(
+  const factory _CapabilityStatementSupportedMessage(
           {final CapabilityStatementSupportedMessageMode? mode,
           @JsonKey(name: '_mode') final Element? modeElement,
           required final Reference definition}) =
       _$_CapabilityStatementSupportedMessage;
-  _CapabilityStatementSupportedMessage._() : super._();
+  const _CapabilityStatementSupportedMessage._() : super._();
 
   factory _CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =
@@ -6965,7 +6965,7 @@ class __$$_CapabilityStatementEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementEvent extends _CapabilityStatementEvent {
-  _$_CapabilityStatementEvent(
+  const _$_CapabilityStatementEvent(
       {required this.code,
       this.category,
       @JsonKey(name: '_category') this.categoryElement,
@@ -7071,7 +7071,7 @@ class _$_CapabilityStatementEvent extends _CapabilityStatementEvent {
 }
 
 abstract class _CapabilityStatementEvent extends CapabilityStatementEvent {
-  factory _CapabilityStatementEvent(
+  const factory _CapabilityStatementEvent(
       {required final Coding code,
       final CapabilityStatementEventCategory? category,
       @JsonKey(name: '_category')
@@ -7087,7 +7087,7 @@ abstract class _CapabilityStatementEvent extends CapabilityStatementEvent {
       final String? documentation,
       @JsonKey(name: '_documentation')
           final Element? documentationElement}) = _$_CapabilityStatementEvent;
-  _CapabilityStatementEvent._() : super._();
+  const _CapabilityStatementEvent._() : super._();
 
   factory _CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementEvent.fromJson;
@@ -7314,7 +7314,7 @@ class __$$_CapabilityStatementDocumentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
-  _$_CapabilityStatementDocument(
+  const _$_CapabilityStatementDocument(
       {this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.documentation,
@@ -7380,13 +7380,13 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
 
 abstract class _CapabilityStatementDocument
     extends CapabilityStatementDocument {
-  factory _CapabilityStatementDocument(
+  const factory _CapabilityStatementDocument(
       {final CapabilityStatementDocumentMode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
       final String? documentation,
       @JsonKey(name: '_documentation') final Element? documentationElement,
       required final Reference profile}) = _$_CapabilityStatementDocument;
-  _CapabilityStatementDocument._() : super._();
+  const _CapabilityStatementDocument._() : super._();
 
   factory _CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementDocument.fromJson;
@@ -8238,7 +8238,7 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CompartmentDefinition extends _CompartmentDefinition {
-  _$_CompartmentDefinition(
+  const _$_CompartmentDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
           this.resourceType = Stu3ResourceType.CompartmentDefinition,
       this.id,
@@ -8581,7 +8581,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 }
 
 abstract class _CompartmentDefinition extends CompartmentDefinition {
-  factory _CompartmentDefinition(
+  const factory _CompartmentDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -8635,7 +8635,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
               final Element? searchElement,
           final List<CompartmentDefinitionResource>? resource}) =
       _$_CompartmentDefinition;
-  _CompartmentDefinition._() : super._();
+  const _CompartmentDefinition._() : super._();
 
   factory _CompartmentDefinition.fromJson(Map<String, dynamic> json) =
       _$_CompartmentDefinition.fromJson;
@@ -8927,7 +8927,7 @@ class __$$_CompartmentDefinitionResourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
-  _$_CompartmentDefinitionResource(
+  const _$_CompartmentDefinitionResource(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       final List<String>? param,
@@ -9024,7 +9024,7 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
 
 abstract class _CompartmentDefinitionResource
     extends CompartmentDefinitionResource {
-  factory _CompartmentDefinitionResource(
+  const factory _CompartmentDefinitionResource(
           {final Code? code,
           @JsonKey(name: '_code')
               final Element? codeElement,
@@ -9035,7 +9035,7 @@ abstract class _CompartmentDefinitionResource
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CompartmentDefinitionResource;
-  _CompartmentDefinitionResource._() : super._();
+  const _CompartmentDefinitionResource._() : super._();
 
   factory _CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =
       _$_CompartmentDefinitionResource.fromJson;
@@ -9869,7 +9869,7 @@ class __$$_DataElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataElement extends _DataElement {
-  _$_DataElement(
+  const _$_DataElement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
           this.resourceType = Stu3ResourceType.DataElement,
       this.id,
@@ -10226,7 +10226,7 @@ class _$_DataElement extends _DataElement {
 }
 
 abstract class _DataElement extends DataElement {
-  factory _DataElement(
+  const factory _DataElement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -10278,7 +10278,7 @@ abstract class _DataElement extends DataElement {
           final Element? stringencyElement,
       final List<DataElementMapping>? mapping,
       required final List<ElementDefinition> element}) = _$_DataElement;
-  _DataElement._() : super._();
+  const _DataElement._() : super._();
 
   factory _DataElement.fromJson(Map<String, dynamic> json) =
       _$_DataElement.fromJson;
@@ -10619,7 +10619,7 @@ class __$$_DataElementMappingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataElementMapping extends _DataElementMapping {
-  _$_DataElementMapping(
+  const _$_DataElementMapping(
       {this.identity,
       @JsonKey(name: '_identity') this.identityElement,
       this.uri,
@@ -10700,7 +10700,7 @@ class _$_DataElementMapping extends _DataElementMapping {
 }
 
 abstract class _DataElementMapping extends DataElementMapping {
-  factory _DataElementMapping(
+  const factory _DataElementMapping(
           {final Id? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final String? uri,
@@ -10710,7 +10710,7 @@ abstract class _DataElementMapping extends DataElementMapping {
           final String? comment,
           @JsonKey(name: '_comment') final Element? commentElement}) =
       _$_DataElementMapping;
-  _DataElementMapping._() : super._();
+  const _DataElementMapping._() : super._();
 
   factory _DataElementMapping.fromJson(Map<String, dynamic> json) =
       _$_DataElementMapping.fromJson;
@@ -11567,7 +11567,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GraphDefinition extends _GraphDefinition {
-  _$_GraphDefinition(
+  const _$_GraphDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
           this.resourceType = Stu3ResourceType.GraphDefinition,
       this.id,
@@ -11909,7 +11909,7 @@ class _$_GraphDefinition extends _GraphDefinition {
 }
 
 abstract class _GraphDefinition extends GraphDefinition {
-  factory _GraphDefinition(
+  const factory _GraphDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -11962,7 +11962,7 @@ abstract class _GraphDefinition extends GraphDefinition {
       @JsonKey(name: '_profile')
           final Element? profileElement,
       final List<GraphDefinitionLink>? link}) = _$_GraphDefinition;
-  _GraphDefinition._() : super._();
+  const _GraphDefinition._() : super._();
 
   factory _GraphDefinition.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinition.fromJson;
@@ -12359,7 +12359,7 @@ class __$$_GraphDefinitionLinkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GraphDefinitionLink extends _GraphDefinitionLink {
-  _$_GraphDefinitionLink(
+  const _$_GraphDefinitionLink(
       {this.path,
       @JsonKey(name: '_path') this.pathElement,
       this.sliceName,
@@ -12472,7 +12472,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
 }
 
 abstract class _GraphDefinitionLink extends GraphDefinitionLink {
-  factory _GraphDefinitionLink(
+  const factory _GraphDefinitionLink(
           {final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
           final String? sliceName,
@@ -12485,7 +12485,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
           @JsonKey(name: '_description') final Element? descriptionElement,
           required final List<GraphDefinitionTarget> target}) =
       _$_GraphDefinitionLink;
-  _GraphDefinitionLink._() : super._();
+  const _GraphDefinitionLink._() : super._();
 
   factory _GraphDefinitionLink.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinitionLink.fromJson;
@@ -12710,7 +12710,7 @@ class __$$_GraphDefinitionTargetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
-  _$_GraphDefinitionTarget(
+  const _$_GraphDefinitionTarget(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.profile,
@@ -12802,14 +12802,14 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
 }
 
 abstract class _GraphDefinitionTarget extends GraphDefinitionTarget {
-  factory _GraphDefinitionTarget(
+  const factory _GraphDefinitionTarget(
       {final String? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final String? profile,
       @JsonKey(name: '_profile') final Element? profileElement,
       final List<GraphDefinitionCompartment>? compartment,
       final List<GraphDefinitionLink>? link}) = _$_GraphDefinitionTarget;
-  _GraphDefinitionTarget._() : super._();
+  const _GraphDefinitionTarget._() : super._();
 
   factory _GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinitionTarget.fromJson;
@@ -13083,7 +13083,7 @@ class __$$_GraphDefinitionCompartmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
-  _$_GraphDefinitionCompartment(
+  const _$_GraphDefinitionCompartment(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.rule,
@@ -13173,7 +13173,7 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
 }
 
 abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
-  factory _GraphDefinitionCompartment(
+  const factory _GraphDefinitionCompartment(
           {final Code? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final GraphDefinitionCompartmentRule? rule,
@@ -13183,7 +13183,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_GraphDefinitionCompartment;
-  _GraphDefinitionCompartment._() : super._();
+  const _GraphDefinitionCompartment._() : super._();
 
   factory _GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinitionCompartment.fromJson;
@@ -14082,7 +14082,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImplementationGuide extends _ImplementationGuide {
-  _$_ImplementationGuide(
+  const _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
           this.resourceType = Stu3ResourceType.ImplementationGuide,
       this.id,
@@ -14480,7 +14480,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 }
 
 abstract class _ImplementationGuide extends ImplementationGuide {
-  factory _ImplementationGuide(
+  const factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -14536,7 +14536,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       @JsonKey(name: '_binary')
           final List<Element?>? binaryElement,
       final ImplementationGuidePage? page}) = _$_ImplementationGuide;
-  _ImplementationGuide._() : super._();
+  const _ImplementationGuide._() : super._();
 
   factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuide.fromJson;
@@ -14808,7 +14808,7 @@ class __$$_ImplementationGuideDependencyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
-  _$_ImplementationGuideDependency(
+  const _$_ImplementationGuideDependency(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.uri,
@@ -14870,13 +14870,13 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 
 abstract class _ImplementationGuideDependency
     extends ImplementationGuideDependency {
-  factory _ImplementationGuideDependency(
+  const factory _ImplementationGuideDependency(
           {final ImplementationGuideDependencyType? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final String? uri,
           @JsonKey(name: '_uri') final Element? uriElement}) =
       _$_ImplementationGuideDependency;
-  _ImplementationGuideDependency._() : super._();
+  const _ImplementationGuideDependency._() : super._();
 
   factory _ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideDependency.fromJson;
@@ -15075,7 +15075,7 @@ class __$$_ImplementationGuidePackageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
-  _$_ImplementationGuidePackage(
+  const _$_ImplementationGuidePackage(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.description,
@@ -15146,14 +15146,14 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
 }
 
 abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
-  factory _ImplementationGuidePackage(
+  const factory _ImplementationGuidePackage(
           {final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           required final List<ImplementationGuideResource> resource}) =
       _$_ImplementationGuidePackage;
-  _ImplementationGuidePackage._() : super._();
+  const _ImplementationGuidePackage._() : super._();
 
   factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuidePackage.fromJson;
@@ -15523,7 +15523,7 @@ class __$$_ImplementationGuideResourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImplementationGuideResource extends _ImplementationGuideResource {
-  _$_ImplementationGuideResource(
+  const _$_ImplementationGuideResource(
       {this.example,
       @JsonKey(name: '_example') this.exampleElement,
       this.name,
@@ -15638,7 +15638,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
 
 abstract class _ImplementationGuideResource
     extends ImplementationGuideResource {
-  factory _ImplementationGuideResource(
+  const factory _ImplementationGuideResource(
       {final Boolean? example,
       @JsonKey(name: '_example') final Element? exampleElement,
       final String? name,
@@ -15651,7 +15651,7 @@ abstract class _ImplementationGuideResource
       @JsonKey(name: '_sourceUri') final Element? sourceUriElement,
       final Reference? sourceReference,
       final Reference? exampleFor}) = _$_ImplementationGuideResource;
-  _ImplementationGuideResource._() : super._();
+  const _ImplementationGuideResource._() : super._();
 
   factory _ImplementationGuideResource.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideResource.fromJson;
@@ -15836,7 +15836,7 @@ class __$$_ImplementationGuideGlobalCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
-  _$_ImplementationGuideGlobal(
+  const _$_ImplementationGuideGlobal(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       required this.profile})
@@ -15889,11 +15889,11 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 }
 
 abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
-  factory _ImplementationGuideGlobal(
+  const factory _ImplementationGuideGlobal(
       {final String? type,
       @JsonKey(name: '_type') final Element? typeElement,
       required final Reference profile}) = _$_ImplementationGuideGlobal;
-  _ImplementationGuideGlobal._() : super._();
+  const _ImplementationGuideGlobal._() : super._();
 
   factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideGlobal.fromJson;
@@ -16223,7 +16223,7 @@ class __$$_ImplementationGuidePageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImplementationGuidePage extends _ImplementationGuidePage {
-  _$_ImplementationGuidePage(
+  const _$_ImplementationGuidePage(
       {this.source,
       @JsonKey(name: '_source') this.sourceElement,
       this.title,
@@ -16385,7 +16385,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 }
 
 abstract class _ImplementationGuidePage extends ImplementationGuidePage {
-  factory _ImplementationGuidePage(
+  const factory _ImplementationGuidePage(
       {final String? source,
       @JsonKey(name: '_source') final Element? sourceElement,
       final String? title,
@@ -16399,7 +16399,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
       final String? format,
       @JsonKey(name: '_format') final Element? formatElement,
       final List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
-  _ImplementationGuidePage._() : super._();
+  const _ImplementationGuidePage._() : super._();
 
   factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuidePage.fromJson;
@@ -17476,7 +17476,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageDefinition extends _MessageDefinition {
-  _$_MessageDefinition(
+  const _$_MessageDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
           this.resourceType = Stu3ResourceType.MessageDefinition,
       this.id,
@@ -17908,7 +17908,7 @@ class _$_MessageDefinition extends _MessageDefinition {
 }
 
 abstract class _MessageDefinition extends MessageDefinition {
-  factory _MessageDefinition(
+  const factory _MessageDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -17974,7 +17974,7 @@ abstract class _MessageDefinition extends MessageDefinition {
               final Element? responseRequiredElement,
           final List<MessageDefinitionAllowedResponse>? allowedResponse}) =
       _$_MessageDefinition;
-  _MessageDefinition._() : super._();
+  const _MessageDefinition._() : super._();
 
   factory _MessageDefinition.fromJson(Map<String, dynamic> json) =
       _$_MessageDefinition.fromJson;
@@ -18327,7 +18327,7 @@ class __$$_MessageDefinitionFocusCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
-  _$_MessageDefinitionFocus(
+  const _$_MessageDefinitionFocus(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.profile,
@@ -18401,7 +18401,7 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
 }
 
 abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
-  factory _MessageDefinitionFocus(
+  const factory _MessageDefinitionFocus(
           {final Code? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final Reference? profile,
@@ -18410,7 +18410,7 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
           final String? max,
           @JsonKey(name: '_max') final Element? maxElement}) =
       _$_MessageDefinitionFocus;
-  _MessageDefinitionFocus._() : super._();
+  const _MessageDefinitionFocus._() : super._();
 
   factory _MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =
       _$_MessageDefinitionFocus.fromJson;
@@ -18586,7 +18586,7 @@ class __$$_MessageDefinitionAllowedResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MessageDefinitionAllowedResponse
     extends _MessageDefinitionAllowedResponse {
-  _$_MessageDefinitionAllowedResponse(
+  const _$_MessageDefinitionAllowedResponse(
       {required this.message,
       this.situation,
       @JsonKey(name: '_situation') this.situationElement})
@@ -18644,12 +18644,12 @@ class _$_MessageDefinitionAllowedResponse
 
 abstract class _MessageDefinitionAllowedResponse
     extends MessageDefinitionAllowedResponse {
-  factory _MessageDefinitionAllowedResponse(
+  const factory _MessageDefinitionAllowedResponse(
           {required final Reference message,
           final String? situation,
           @JsonKey(name: '_situation') final Element? situationElement}) =
       _$_MessageDefinitionAllowedResponse;
-  _MessageDefinitionAllowedResponse._() : super._();
+  const _MessageDefinitionAllowedResponse._() : super._();
 
   factory _MessageDefinitionAllowedResponse.fromJson(
       Map<String, dynamic> json) = _$_MessageDefinitionAllowedResponse.fromJson;
@@ -19786,7 +19786,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationDefinition extends _OperationDefinition {
-  _$_OperationDefinition(
+  const _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
           this.resourceType = Stu3ResourceType.OperationDefinition,
       this.id,
@@ -20247,7 +20247,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 }
 
 abstract class _OperationDefinition extends OperationDefinition {
-  factory _OperationDefinition(
+  const factory _OperationDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -20321,7 +20321,7 @@ abstract class _OperationDefinition extends OperationDefinition {
           final List<OperationDefinitionParameter>? parameter,
           final List<OperationDefinitionOverload>? overload}) =
       _$_OperationDefinition;
-  _OperationDefinition._() : super._();
+  const _OperationDefinition._() : super._();
 
   factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinition.fromJson;
@@ -20903,7 +20903,7 @@ class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
-  _$_OperationDefinitionParameter(
+  const _$_OperationDefinitionParameter(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.use,
@@ -21054,7 +21054,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
-  factory _OperationDefinitionParameter(
+  const factory _OperationDefinitionParameter(
           {final String? name,
           @JsonKey(name: '_name')
               final Element? nameElement,
@@ -21081,7 +21081,7 @@ abstract class _OperationDefinitionParameter
           @JsonKey(name: 'part')
               final List<OperationDefinitionParameter>? part_}) =
       _$_OperationDefinitionParameter;
-  _OperationDefinitionParameter._() : super._();
+  const _OperationDefinitionParameter._() : super._();
 
   factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionParameter.fromJson;
@@ -21341,7 +21341,7 @@ class __$$_OperationDefinitionBindingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
-  _$_OperationDefinitionBinding(
+  const _$_OperationDefinitionBinding(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.strength,
       @JsonKey(name: '_strength') this.strengthElement,
@@ -21429,14 +21429,14 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
 }
 
 abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
-  factory _OperationDefinitionBinding(
+  const factory _OperationDefinitionBinding(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final OperationDefinitionBindingStrength? strength,
       @JsonKey(name: '_strength') final Element? strengthElement,
       final String? valueSetUri,
       @JsonKey(name: '_valueSetUri') final Element? valueSetUriElement,
       final Reference? valueSetReference}) = _$_OperationDefinitionBinding;
-  _OperationDefinitionBinding._() : super._();
+  const _OperationDefinitionBinding._() : super._();
 
   factory _OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionBinding.fromJson;
@@ -21613,7 +21613,7 @@ class __$$_OperationDefinitionOverloadCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
-  _$_OperationDefinitionOverload(
+  const _$_OperationDefinitionOverload(
       {final List<String>? parameterName,
       @JsonKey(name: '_parameterName')
           final List<Element?>? parameterNameElement,
@@ -21700,14 +21700,14 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
 
 abstract class _OperationDefinitionOverload
     extends OperationDefinitionOverload {
-  factory _OperationDefinitionOverload(
+  const factory _OperationDefinitionOverload(
       {final List<String>? parameterName,
       @JsonKey(name: '_parameterName')
           final List<Element?>? parameterNameElement,
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_OperationDefinitionOverload;
-  _OperationDefinitionOverload._() : super._();
+  const _OperationDefinitionOverload._() : super._();
 
   factory _OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionOverload.fromJson;
@@ -22879,7 +22879,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SearchParameter extends _SearchParameter {
-  _$_SearchParameter(
+  const _$_SearchParameter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
           this.resourceType = Stu3ResourceType.SearchParameter,
       this.id,
@@ -23434,7 +23434,7 @@ class _$_SearchParameter extends _SearchParameter {
 }
 
 abstract class _SearchParameter extends SearchParameter {
-  factory _SearchParameter(
+  const factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -23514,7 +23514,7 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(name: '_chain')
           final List<Element?>? chainElement,
       final List<SearchParameterComponent>? component}) = _$_SearchParameter;
-  _SearchParameter._() : super._();
+  const _SearchParameter._() : super._();
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
       _$_SearchParameter.fromJson;
@@ -23803,7 +23803,7 @@ class __$$_SearchParameterComponentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SearchParameterComponent extends _SearchParameterComponent {
-  _$_SearchParameterComponent(
+  const _$_SearchParameterComponent(
       {required this.definition,
       this.expression,
       @JsonKey(name: '_expression') this.expressionElement})
@@ -23859,12 +23859,12 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
 }
 
 abstract class _SearchParameterComponent extends SearchParameterComponent {
-  factory _SearchParameterComponent(
+  const factory _SearchParameterComponent(
           {required final Reference definition,
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement}) =
       _$_SearchParameterComponent;
-  _SearchParameterComponent._() : super._();
+  const _SearchParameterComponent._() : super._();
 
   factory _SearchParameterComponent.fromJson(Map<String, dynamic> json) =
       _$_SearchParameterComponent.fromJson;
@@ -25167,7 +25167,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureDefinition extends _StructureDefinition {
-  _$_StructureDefinition(
+  const _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
           this.resourceType = Stu3ResourceType.StructureDefinition,
       this.id,
@@ -25715,7 +25715,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 }
 
 abstract class _StructureDefinition extends StructureDefinition {
-  factory _StructureDefinition(
+  const factory _StructureDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -25801,7 +25801,7 @@ abstract class _StructureDefinition extends StructureDefinition {
           final StructureDefinitionSnapshot? snapshot,
           final StructureDefinitionDifferential? differential}) =
       _$_StructureDefinition;
-  _StructureDefinition._() : super._();
+  const _StructureDefinition._() : super._();
 
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinition.fromJson;
@@ -26203,7 +26203,7 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
-  _$_StructureDefinitionMapping(
+  const _$_StructureDefinitionMapping(
       {this.identity,
       @JsonKey(name: '_identity') this.identityElement,
       this.uri,
@@ -26284,7 +26284,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 }
 
 abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
-  factory _StructureDefinitionMapping(
+  const factory _StructureDefinitionMapping(
           {final Id? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final String? uri,
@@ -26294,7 +26294,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           final String? comment,
           @JsonKey(name: '_comment') final Element? commentElement}) =
       _$_StructureDefinitionMapping;
-  _StructureDefinitionMapping._() : super._();
+  const _StructureDefinitionMapping._() : super._();
 
   factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionMapping.fromJson;
@@ -26415,7 +26415,7 @@ class __$$_StructureDefinitionSnapshotCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
-  _$_StructureDefinitionSnapshot(
+  const _$_StructureDefinitionSnapshot(
       {required final List<ElementDefinition> element})
       : _element = element,
         super._();
@@ -26466,10 +26466,10 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
 
 abstract class _StructureDefinitionSnapshot
     extends StructureDefinitionSnapshot {
-  factory _StructureDefinitionSnapshot(
+  const factory _StructureDefinitionSnapshot(
           {required final List<ElementDefinition> element}) =
       _$_StructureDefinitionSnapshot;
-  _StructureDefinitionSnapshot._() : super._();
+  const _StructureDefinitionSnapshot._() : super._();
 
   factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionSnapshot.fromJson;
@@ -26573,7 +26573,7 @@ class __$$_StructureDefinitionDifferentialCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StructureDefinitionDifferential
     extends _StructureDefinitionDifferential {
-  _$_StructureDefinitionDifferential(
+  const _$_StructureDefinitionDifferential(
       {required final List<ElementDefinition> element})
       : _element = element,
         super._();
@@ -26626,10 +26626,10 @@ class _$_StructureDefinitionDifferential
 
 abstract class _StructureDefinitionDifferential
     extends StructureDefinitionDifferential {
-  factory _StructureDefinitionDifferential(
+  const factory _StructureDefinitionDifferential(
           {required final List<ElementDefinition> element}) =
       _$_StructureDefinitionDifferential;
-  _StructureDefinitionDifferential._() : super._();
+  const _StructureDefinitionDifferential._() : super._();
 
   factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionDifferential.fromJson;
@@ -27528,7 +27528,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMap extends _StructureMap {
-  _$_StructureMap(
+  const _$_StructureMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
           this.resourceType = Stu3ResourceType.StructureMap,
       this.id,
@@ -27932,7 +27932,7 @@ class _$_StructureMap extends _StructureMap {
 }
 
 abstract class _StructureMap extends StructureMap {
-  factory _StructureMap(
+  const factory _StructureMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -27991,7 +27991,7 @@ abstract class _StructureMap extends StructureMap {
       @JsonKey(name: '_import')
           final List<Element?>? importElement,
       required final List<StructureMapGroup> group}) = _$_StructureMap;
-  _StructureMap._() : super._();
+  const _StructureMap._() : super._();
 
   factory _StructureMap.fromJson(Map<String, dynamic> json) =
       _$_StructureMap.fromJson;
@@ -28345,7 +28345,7 @@ class __$$_StructureMapStructureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapStructure extends _StructureMapStructure {
-  _$_StructureMapStructure(
+  const _$_StructureMapStructure(
       {this.url,
       @JsonKey(name: '_url') this.urlElement,
       this.mode,
@@ -28426,7 +28426,7 @@ class _$_StructureMapStructure extends _StructureMapStructure {
 }
 
 abstract class _StructureMapStructure extends StructureMapStructure {
-  factory _StructureMapStructure(
+  const factory _StructureMapStructure(
       {final String? url,
       @JsonKey(name: '_url')
           final Element? urlElement,
@@ -28439,7 +28439,7 @@ abstract class _StructureMapStructure extends StructureMapStructure {
       final String? documentation,
       @JsonKey(name: '_documentation')
           final Element? documentationElement}) = _$_StructureMapStructure;
-  _StructureMapStructure._() : super._();
+  const _StructureMapStructure._() : super._();
 
   factory _StructureMapStructure.fromJson(Map<String, dynamic> json) =
       _$_StructureMapStructure.fromJson;
@@ -28739,7 +28739,7 @@ class __$$_StructureMapGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapGroup extends _StructureMapGroup {
-  _$_StructureMapGroup(
+  const _$_StructureMapGroup(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       @JsonKey(name: 'extends') this.extends_,
@@ -28854,7 +28854,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
 }
 
 abstract class _StructureMapGroup extends StructureMapGroup {
-  factory _StructureMapGroup(
+  const factory _StructureMapGroup(
       {final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       @JsonKey(name: 'extends') final String? extends_,
@@ -28865,7 +28865,7 @@ abstract class _StructureMapGroup extends StructureMapGroup {
       @JsonKey(name: '_documentation') final Element? documentationElement,
       required final List<StructureMapInput> input,
       required final List<StructureMapRule> rule}) = _$_StructureMapGroup;
-  _StructureMapGroup._() : super._();
+  const _StructureMapGroup._() : super._();
 
   factory _StructureMapGroup.fromJson(Map<String, dynamic> json) =
       _$_StructureMapGroup.fromJson;
@@ -29143,7 +29143,7 @@ class __$$_StructureMapInputCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapInput extends _StructureMapInput {
-  _$_StructureMapInput(
+  const _$_StructureMapInput(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.type,
@@ -29224,7 +29224,7 @@ class _$_StructureMapInput extends _StructureMapInput {
 }
 
 abstract class _StructureMapInput extends StructureMapInput {
-  factory _StructureMapInput(
+  const factory _StructureMapInput(
       {final String? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
@@ -29237,7 +29237,7 @@ abstract class _StructureMapInput extends StructureMapInput {
       final String? documentation,
       @JsonKey(name: '_documentation')
           final Element? documentationElement}) = _$_StructureMapInput;
-  _StructureMapInput._() : super._();
+  const _StructureMapInput._() : super._();
 
   factory _StructureMapInput.fromJson(Map<String, dynamic> json) =
       _$_StructureMapInput.fromJson;
@@ -29479,7 +29479,7 @@ class __$$_StructureMapRuleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapRule extends _StructureMapRule {
-  _$_StructureMapRule(
+  const _$_StructureMapRule(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       required final List<StructureMapSource> source,
@@ -29598,7 +29598,7 @@ class _$_StructureMapRule extends _StructureMapRule {
 }
 
 abstract class _StructureMapRule extends StructureMapRule {
-  factory _StructureMapRule(
+  const factory _StructureMapRule(
       {final String? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
@@ -29609,7 +29609,7 @@ abstract class _StructureMapRule extends StructureMapRule {
       final String? documentation,
       @JsonKey(name: '_documentation')
           final Element? documentationElement}) = _$_StructureMapRule;
-  _StructureMapRule._() : super._();
+  const _StructureMapRule._() : super._();
 
   factory _StructureMapRule.fromJson(Map<String, dynamic> json) =
       _$_StructureMapRule.fromJson;
@@ -31907,7 +31907,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapSource extends _StructureMapSource {
-  _$_StructureMapSource(
+  const _$_StructureMapSource(
       {this.context,
       @JsonKey(name: '_context')
           this.contextElement,
@@ -32469,7 +32469,7 @@ class _$_StructureMapSource extends _StructureMapSource {
 }
 
 abstract class _StructureMapSource extends StructureMapSource {
-  factory _StructureMapSource(
+  const factory _StructureMapSource(
       {final String? context,
       @JsonKey(name: '_context')
           final Element? contextElement,
@@ -32584,7 +32584,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       final String? check,
       @JsonKey(name: '_check')
           final Element? checkElement}) = _$_StructureMapSource;
-  _StructureMapSource._() : super._();
+  const _StructureMapSource._() : super._();
 
   factory _StructureMapSource.fromJson(Map<String, dynamic> json) =
       _$_StructureMapSource.fromJson;
@@ -33167,7 +33167,7 @@ class __$$_StructureMapTargetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapTarget extends _StructureMapTarget {
-  _$_StructureMapTarget(
+  const _$_StructureMapTarget(
       {this.context,
       @JsonKey(name: '_context') this.contextElement,
       this.contextType,
@@ -33327,7 +33327,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 }
 
 abstract class _StructureMapTarget extends StructureMapTarget {
-  factory _StructureMapTarget(
+  const factory _StructureMapTarget(
       {final String? context,
       @JsonKey(name: '_context') final Element? contextElement,
       final StructureMapTargetContextType? contextType,
@@ -33343,7 +33343,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
       final StructureMapTargetTransform? transform,
       @JsonKey(name: '_transform') final Element? transformElement,
       final List<StructureMapParameter>? parameter}) = _$_StructureMapTarget;
-  _StructureMapTarget._() : super._();
+  const _StructureMapTarget._() : super._();
 
   factory _StructureMapTarget.fromJson(Map<String, dynamic> json) =
       _$_StructureMapTarget.fromJson;
@@ -33677,7 +33677,7 @@ class __$$_StructureMapParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapParameter extends _StructureMapParameter {
-  _$_StructureMapParameter(
+  const _$_StructureMapParameter(
       {this.valueId,
       @JsonKey(name: '_valueId') this.valueIdElement,
       this.valueString,
@@ -33781,7 +33781,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 }
 
 abstract class _StructureMapParameter extends StructureMapParameter {
-  factory _StructureMapParameter(
+  const factory _StructureMapParameter(
           {final Id? valueId,
           @JsonKey(name: '_valueId') final Element? valueIdElement,
           final String? valueString,
@@ -33793,7 +33793,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
           final Decimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement}) =
       _$_StructureMapParameter;
-  _StructureMapParameter._() : super._();
+  const _StructureMapParameter._() : super._();
 
   factory _StructureMapParameter.fromJson(Map<String, dynamic> json) =
       _$_StructureMapParameter.fromJson;
@@ -33974,7 +33974,7 @@ class __$$_StructureMapDependentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureMapDependent extends _StructureMapDependent {
-  _$_StructureMapDependent(
+  const _$_StructureMapDependent(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       final List<String>? variable,
@@ -34055,13 +34055,13 @@ class _$_StructureMapDependent extends _StructureMapDependent {
 }
 
 abstract class _StructureMapDependent extends StructureMapDependent {
-  factory _StructureMapDependent(
+  const factory _StructureMapDependent(
           {final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final List<String>? variable,
           @JsonKey(name: '_variable') final List<Element?>? variableElement}) =
       _$_StructureMapDependent;
-  _StructureMapDependent._() : super._();
+  const _StructureMapDependent._() : super._();
 
   factory _StructureMapDependent.fromJson(Map<String, dynamic> json) =
       _$_StructureMapDependent.fromJson;

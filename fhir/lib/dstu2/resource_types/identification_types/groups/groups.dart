@@ -15,7 +15,7 @@ part 'groups.g.dart';
 @freezed
 class Organization with Resource, _$Organization {
   Organization._();
-  factory Organization({
+  const factory Organization({
     @Default(Dstu2ResourceType.Organization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
         Dstu2ResourceType resourceType,
@@ -74,7 +74,7 @@ class Organization with Resource, _$Organization {
 @freezed
 class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
-  factory OrganizationContact({
+  const factory OrganizationContact({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -119,7 +119,7 @@ class OrganizationContact with _$OrganizationContact {
 @freezed
 class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
-  factory HealthcareService({
+  const factory HealthcareService({
     @Default(Dstu2ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
         Dstu2ResourceType resourceType,
@@ -193,7 +193,7 @@ class HealthcareService with Resource, _$HealthcareService {
 @freezed
 class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
   HealthcareServiceServiceType._();
-  factory HealthcareServiceServiceType({
+  const factory HealthcareServiceServiceType({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -235,7 +235,7 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
 @freezed
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
-  factory HealthcareServiceAvailableTime({
+  const factory HealthcareServiceAvailableTime({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -284,7 +284,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 @freezed
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
-  factory HealthcareServiceNotAvailable({
+  const factory HealthcareServiceNotAvailable({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -327,7 +327,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 @freezed
 class Group with Resource, _$Group {
   Group._();
-  factory Group({
+  const factory Group({
     @Default(Dstu2ResourceType.Group)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
         Dstu2ResourceType resourceType,
@@ -384,7 +384,7 @@ class Group with Resource, _$Group {
 @freezed
 class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
-  factory GroupCharacteristic({
+  const factory GroupCharacteristic({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -432,7 +432,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 @freezed
 class GroupMember with _$GroupMember {
   GroupMember._();
-  factory GroupMember({
+  const factory GroupMember({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

@@ -909,7 +909,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Immunization extends _Immunization {
-  _$_Immunization(
+  const _$_Immunization(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
           this.resourceType = Stu3ResourceType.Immunization,
       this.id,
@@ -1260,7 +1260,7 @@ class _$_Immunization extends _Immunization {
 }
 
 abstract class _Immunization extends Immunization {
-  factory _Immunization(
+  const factory _Immunization(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -1310,7 +1310,7 @@ abstract class _Immunization extends Immunization {
           final List<ImmunizationReaction>? reaction,
           final List<ImmunizationVaccinationProtocol>? vaccinationProtocol}) =
       _$_Immunization;
-  _Immunization._() : super._();
+  const _Immunization._() : super._();
 
   factory _Immunization.fromJson(Map<String, dynamic> json) =
       _$_Immunization.fromJson;
@@ -1533,7 +1533,8 @@ class __$$_ImmunizationPractitionerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImmunizationPractitioner extends _ImmunizationPractitioner {
-  _$_ImmunizationPractitioner({this.role, required this.actor}) : super._();
+  const _$_ImmunizationPractitioner({this.role, required this.actor})
+      : super._();
 
   factory _$_ImmunizationPractitioner.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationPractitionerFromJson(json);
@@ -1577,10 +1578,10 @@ class _$_ImmunizationPractitioner extends _ImmunizationPractitioner {
 }
 
 abstract class _ImmunizationPractitioner extends ImmunizationPractitioner {
-  factory _ImmunizationPractitioner(
+  const factory _ImmunizationPractitioner(
       {final CodeableConcept? role,
       required final Reference actor}) = _$_ImmunizationPractitioner;
-  _ImmunizationPractitioner._() : super._();
+  const _ImmunizationPractitioner._() : super._();
 
   factory _ImmunizationPractitioner.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationPractitioner.fromJson;
@@ -1695,7 +1696,7 @@ class __$$_ImmunizationExplanationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImmunizationExplanation extends _ImmunizationExplanation {
-  _$_ImmunizationExplanation(
+  const _$_ImmunizationExplanation(
       {final List<CodeableConcept>? reason,
       final List<CodeableConcept>? reasonNotGiven})
       : _reason = reason,
@@ -1764,11 +1765,11 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
 }
 
 abstract class _ImmunizationExplanation extends ImmunizationExplanation {
-  factory _ImmunizationExplanation(
+  const factory _ImmunizationExplanation(
           {final List<CodeableConcept>? reason,
           final List<CodeableConcept>? reasonNotGiven}) =
       _$_ImmunizationExplanation;
-  _ImmunizationExplanation._() : super._();
+  const _ImmunizationExplanation._() : super._();
 
   factory _ImmunizationExplanation.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationExplanation.fromJson;
@@ -1970,7 +1971,7 @@ class __$$_ImmunizationReactionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImmunizationReaction extends _ImmunizationReaction {
-  _$_ImmunizationReaction(
+  const _$_ImmunizationReaction(
       {this.date,
       @JsonKey(name: '_date') this.dateElement,
       this.detail,
@@ -2035,14 +2036,14 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
 }
 
 abstract class _ImmunizationReaction extends ImmunizationReaction {
-  factory _ImmunizationReaction(
+  const factory _ImmunizationReaction(
           {final Date? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final Reference? detail,
           final Boolean? reported,
           @JsonKey(name: '_reported') final Element? reportedElement}) =
       _$_ImmunizationReaction;
-  _ImmunizationReaction._() : super._();
+  const _ImmunizationReaction._() : super._();
 
   factory _ImmunizationReaction.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationReaction.fromJson;
@@ -2408,7 +2409,7 @@ class __$$_ImmunizationVaccinationProtocolCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationVaccinationProtocol
     extends _ImmunizationVaccinationProtocol {
-  _$_ImmunizationVaccinationProtocol(
+  const _$_ImmunizationVaccinationProtocol(
       {this.doseSequence,
       @JsonKey(name: '_doseSequence') this.doseSequenceElement,
       this.description,
@@ -2533,7 +2534,7 @@ class _$_ImmunizationVaccinationProtocol
 
 abstract class _ImmunizationVaccinationProtocol
     extends ImmunizationVaccinationProtocol {
-  factory _ImmunizationVaccinationProtocol(
+  const factory _ImmunizationVaccinationProtocol(
           {final Decimal? doseSequence,
           @JsonKey(name: '_doseSequence') final Element? doseSequenceElement,
           final String? description,
@@ -2547,7 +2548,7 @@ abstract class _ImmunizationVaccinationProtocol
           required final CodeableConcept doseStatus,
           final CodeableConcept? doseStatusReason}) =
       _$_ImmunizationVaccinationProtocol;
-  _ImmunizationVaccinationProtocol._() : super._();
+  const _ImmunizationVaccinationProtocol._() : super._();
 
   factory _ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationVaccinationProtocol.fromJson;
@@ -2934,7 +2935,7 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
-  _$_ImmunizationRecommendation(
+  const _$_ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
           this.resourceType = Stu3ResourceType.ImmunizationRecommendation,
       this.id,
@@ -3106,7 +3107,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 }
 
 abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
-  factory _ImmunizationRecommendation(
+  const factory _ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -3126,7 +3127,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
       required final Reference patient,
       required final List<ImmunizationRecommendationRecommendation>
           recommendation}) = _$_ImmunizationRecommendation;
-  _ImmunizationRecommendation._() : super._();
+  const _ImmunizationRecommendation._() : super._();
 
   factory _ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationRecommendation.fromJson;
@@ -3490,7 +3491,7 @@ class __$$_ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationRecommendation
     extends _ImmunizationRecommendationRecommendation {
-  _$_ImmunizationRecommendationRecommendation(
+  const _$_ImmunizationRecommendationRecommendation(
       {this.date,
       @JsonKey(name: '_date') this.dateElement,
       this.vaccineCode,
@@ -3629,7 +3630,7 @@ class _$_ImmunizationRecommendationRecommendation
 
 abstract class _ImmunizationRecommendationRecommendation
     extends ImmunizationRecommendationRecommendation {
-  factory _ImmunizationRecommendationRecommendation(
+  const factory _ImmunizationRecommendationRecommendation(
           {final Date? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final CodeableConcept? vaccineCode,
@@ -3642,7 +3643,7 @@ abstract class _ImmunizationRecommendationRecommendation
           final List<Reference>? supportingImmunization,
           final List<Reference>? supportingPatientInformation}) =
       _$_ImmunizationRecommendationRecommendation;
-  _ImmunizationRecommendationRecommendation._() : super._();
+  const _ImmunizationRecommendationRecommendation._() : super._();
 
   factory _ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =
@@ -3830,7 +3831,7 @@ class __$$_ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationDateCriterion
     extends _ImmunizationRecommendationDateCriterion {
-  _$_ImmunizationRecommendationDateCriterion(
+  const _$_ImmunizationRecommendationDateCriterion(
       {required this.code,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
@@ -3886,12 +3887,12 @@ class _$_ImmunizationRecommendationDateCriterion
 
 abstract class _ImmunizationRecommendationDateCriterion
     extends ImmunizationRecommendationDateCriterion {
-  factory _ImmunizationRecommendationDateCriterion(
+  const factory _ImmunizationRecommendationDateCriterion(
           {required final CodeableConcept code,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ImmunizationRecommendationDateCriterion;
-  _ImmunizationRecommendationDateCriterion._() : super._();
+  const _ImmunizationRecommendationDateCriterion._() : super._();
 
   factory _ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =
@@ -4148,7 +4149,7 @@ class __$$_ImmunizationRecommendationProtocolCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationProtocol
     extends _ImmunizationRecommendationProtocol {
-  _$_ImmunizationRecommendationProtocol(
+  const _$_ImmunizationRecommendationProtocol(
       {this.doseSequence,
       @JsonKey(name: '_doseSequence') this.doseSequenceElement,
       this.description,
@@ -4235,7 +4236,7 @@ class _$_ImmunizationRecommendationProtocol
 
 abstract class _ImmunizationRecommendationProtocol
     extends ImmunizationRecommendationProtocol {
-  factory _ImmunizationRecommendationProtocol(
+  const factory _ImmunizationRecommendationProtocol(
           {final Decimal? doseSequence,
           @JsonKey(name: '_doseSequence') final Element? doseSequenceElement,
           final String? description,
@@ -4244,7 +4245,7 @@ abstract class _ImmunizationRecommendationProtocol
           final String? series,
           @JsonKey(name: '_series') final Element? seriesElement}) =
       _$_ImmunizationRecommendationProtocol;
-  _ImmunizationRecommendationProtocol._() : super._();
+  const _ImmunizationRecommendationProtocol._() : super._();
 
   factory _ImmunizationRecommendationProtocol.fromJson(
           Map<String, dynamic> json) =
@@ -4835,7 +4836,7 @@ class __$$_MedicationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Medication extends _Medication {
-  _$_Medication(
+  const _$_Medication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Medication)
           this.resourceType = Stu3ResourceType.Medication,
       this.id,
@@ -5064,7 +5065,7 @@ class _$_Medication extends _Medication {
 }
 
 abstract class _Medication extends Medication {
-  factory _Medication(
+  const factory _Medication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Medication)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -5095,7 +5096,7 @@ abstract class _Medication extends Medication {
       final List<MedicationIngredient>? ingredient,
       final MedicationPackage? package,
       final List<Attachment>? image}) = _$_Medication;
-  _Medication._() : super._();
+  const _Medication._() : super._();
 
   factory _Medication.fromJson(Map<String, dynamic> json) =
       _$_Medication.fromJson;
@@ -5361,7 +5362,7 @@ class __$$_MedicationIngredientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationIngredient extends _MedicationIngredient {
-  _$_MedicationIngredient(
+  const _$_MedicationIngredient(
       {this.itemCodeableConcept,
       this.itemReference,
       this.isActive,
@@ -5426,13 +5427,13 @@ class _$_MedicationIngredient extends _MedicationIngredient {
 }
 
 abstract class _MedicationIngredient extends MedicationIngredient {
-  factory _MedicationIngredient(
+  const factory _MedicationIngredient(
       {final CodeableConcept? itemCodeableConcept,
       final Reference? itemReference,
       final Boolean? isActive,
       @JsonKey(name: '_isActive') final Element? isActiveElement,
       final Ratio? amount}) = _$_MedicationIngredient;
-  _MedicationIngredient._() : super._();
+  const _MedicationIngredient._() : super._();
 
   factory _MedicationIngredient.fromJson(Map<String, dynamic> json) =
       _$_MedicationIngredient.fromJson;
@@ -5582,7 +5583,7 @@ class __$$_MedicationPackageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationPackage extends _MedicationPackage {
-  _$_MedicationPackage(
+  const _$_MedicationPackage(
       {this.container,
       final List<MedicationContent>? content,
       final List<MedicationBatch>? batch})
@@ -5655,11 +5656,11 @@ class _$_MedicationPackage extends _MedicationPackage {
 }
 
 abstract class _MedicationPackage extends MedicationPackage {
-  factory _MedicationPackage(
+  const factory _MedicationPackage(
       {final CodeableConcept? container,
       final List<MedicationContent>? content,
       final List<MedicationBatch>? batch}) = _$_MedicationPackage;
-  _MedicationPackage._() : super._();
+  const _MedicationPackage._() : super._();
 
   factory _MedicationPackage.fromJson(Map<String, dynamic> json) =
       _$_MedicationPackage.fromJson;
@@ -5835,7 +5836,7 @@ class __$$_MedicationContentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationContent extends _MedicationContent {
-  _$_MedicationContent(
+  const _$_MedicationContent(
       {this.itemCodeableConcept, this.itemReference, this.amount})
       : super._();
 
@@ -5887,11 +5888,11 @@ class _$_MedicationContent extends _MedicationContent {
 }
 
 abstract class _MedicationContent extends MedicationContent {
-  factory _MedicationContent(
+  const factory _MedicationContent(
       {final CodeableConcept? itemCodeableConcept,
       final Reference? itemReference,
       final Quantity? amount}) = _$_MedicationContent;
-  _MedicationContent._() : super._();
+  const _MedicationContent._() : super._();
 
   factory _MedicationContent.fromJson(Map<String, dynamic> json) =
       _$_MedicationContent.fromJson;
@@ -6066,7 +6067,7 @@ class __$$_MedicationBatchCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationBatch extends _MedicationBatch {
-  _$_MedicationBatch(
+  const _$_MedicationBatch(
       {this.lotNumber,
       @JsonKey(name: '_lotNumber') this.lotNumberElement,
       this.expirationDate,
@@ -6127,14 +6128,14 @@ class _$_MedicationBatch extends _MedicationBatch {
 }
 
 abstract class _MedicationBatch extends MedicationBatch {
-  factory _MedicationBatch(
+  const factory _MedicationBatch(
       {final String? lotNumber,
       @JsonKey(name: '_lotNumber')
           final Element? lotNumberElement,
       final Date? expirationDate,
       @JsonKey(name: '_expirationDate')
           final Element? expirationDateElement}) = _$_MedicationBatch;
-  _MedicationBatch._() : super._();
+  const _MedicationBatch._() : super._();
 
   factory _MedicationBatch.fromJson(Map<String, dynamic> json) =
       _$_MedicationBatch.fromJson;
@@ -6952,7 +6953,7 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationAdministration extends _MedicationAdministration {
-  _$_MedicationAdministration(
+  const _$_MedicationAdministration(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
           this.resourceType = Stu3ResourceType.MedicationAdministration,
       this.id,
@@ -7342,7 +7343,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 }
 
 abstract class _MedicationAdministration extends MedicationAdministration {
-  factory _MedicationAdministration(
+  const factory _MedicationAdministration(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -7386,7 +7387,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       final List<Annotation>? note,
       final MedicationAdministrationDosage? dosage,
       final List<Reference>? eventHistory}) = _$_MedicationAdministration;
-  _MedicationAdministration._() : super._();
+  const _MedicationAdministration._() : super._();
 
   factory _MedicationAdministration.fromJson(Map<String, dynamic> json) =
       _$_MedicationAdministration.fromJson;
@@ -7606,7 +7607,8 @@ class __$$_MedicationAdministrationPerformerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministrationPerformer
     extends _MedicationAdministrationPerformer {
-  _$_MedicationAdministrationPerformer({required this.actor, this.onBehalfOf})
+  const _$_MedicationAdministrationPerformer(
+      {required this.actor, this.onBehalfOf})
       : super._();
 
   factory _$_MedicationAdministrationPerformer.fromJson(
@@ -7655,10 +7657,10 @@ class _$_MedicationAdministrationPerformer
 
 abstract class _MedicationAdministrationPerformer
     extends MedicationAdministrationPerformer {
-  factory _MedicationAdministrationPerformer(
+  const factory _MedicationAdministrationPerformer(
       {required final Reference actor,
       final Reference? onBehalfOf}) = _$_MedicationAdministrationPerformer;
-  _MedicationAdministrationPerformer._() : super._();
+  const _MedicationAdministrationPerformer._() : super._();
 
   factory _MedicationAdministrationPerformer.fromJson(
           Map<String, dynamic> json) =
@@ -7967,7 +7969,7 @@ class __$$_MedicationAdministrationDosageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministrationDosage
     extends _MedicationAdministrationDosage {
-  _$_MedicationAdministrationDosage(
+  const _$_MedicationAdministrationDosage(
       {this.text,
       @JsonKey(name: '_text') this.textElement,
       this.site,
@@ -8045,7 +8047,7 @@ class _$_MedicationAdministrationDosage
 
 abstract class _MedicationAdministrationDosage
     extends MedicationAdministrationDosage {
-  factory _MedicationAdministrationDosage(
+  const factory _MedicationAdministrationDosage(
       {final String? text,
       @JsonKey(name: '_text') final Element? textElement,
       final CodeableConcept? site,
@@ -8054,7 +8056,7 @@ abstract class _MedicationAdministrationDosage
       final Quantity? dose,
       final Ratio? rateRatio,
       final Quantity? rateSimpleQuantity}) = _$_MedicationAdministrationDosage;
-  _MedicationAdministrationDosage._() : super._();
+  const _MedicationAdministrationDosage._() : super._();
 
   factory _MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =
       _$_MedicationAdministrationDosage.fromJson;
@@ -9024,7 +9026,7 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationDispense extends _MedicationDispense {
-  _$_MedicationDispense(
+  const _$_MedicationDispense(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
           this.resourceType = Stu3ResourceType.MedicationDispense,
       this.id,
@@ -9438,7 +9440,7 @@ class _$_MedicationDispense extends _MedicationDispense {
 }
 
 abstract class _MedicationDispense extends MedicationDispense {
-  factory _MedicationDispense(
+  const factory _MedicationDispense(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -9488,7 +9490,7 @@ abstract class _MedicationDispense extends MedicationDispense {
       final CodeableConcept? notDoneReasonCodeableConcept,
       final Reference? notDoneReasonReference,
       final List<Reference>? eventHistory}) = _$_MedicationDispense;
-  _MedicationDispense._() : super._();
+  const _MedicationDispense._() : super._();
 
   factory _MedicationDispense.fromJson(Map<String, dynamic> json) =
       _$_MedicationDispense.fromJson;
@@ -9718,7 +9720,7 @@ class __$$_MedicationDispensePerformerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
-  _$_MedicationDispensePerformer({required this.actor, this.onBehalfOf})
+  const _$_MedicationDispensePerformer({required this.actor, this.onBehalfOf})
       : super._();
 
   factory _$_MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
@@ -9765,10 +9767,10 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
 
 abstract class _MedicationDispensePerformer
     extends MedicationDispensePerformer {
-  factory _MedicationDispensePerformer(
+  const factory _MedicationDispensePerformer(
       {required final Reference actor,
       final Reference? onBehalfOf}) = _$_MedicationDispensePerformer;
-  _MedicationDispensePerformer._() : super._();
+  const _MedicationDispensePerformer._() : super._();
 
   factory _MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =
       _$_MedicationDispensePerformer.fromJson;
@@ -9961,7 +9963,7 @@ class __$$_MedicationDispenseSubstitutionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationDispenseSubstitution
     extends _MedicationDispenseSubstitution {
-  _$_MedicationDispenseSubstitution(
+  const _$_MedicationDispenseSubstitution(
       {this.wasSubstituted,
       @JsonKey(name: '_wasSubstituted') this.wasSubstitutedElement,
       this.type,
@@ -10050,14 +10052,14 @@ class _$_MedicationDispenseSubstitution
 
 abstract class _MedicationDispenseSubstitution
     extends MedicationDispenseSubstitution {
-  factory _MedicationDispenseSubstitution(
+  const factory _MedicationDispenseSubstitution(
       {final Boolean? wasSubstituted,
       @JsonKey(name: '_wasSubstituted') final Element? wasSubstitutedElement,
       final CodeableConcept? type,
       final List<CodeableConcept>? reason,
       final List<Reference>?
           responsibleParty}) = _$_MedicationDispenseSubstitution;
-  _MedicationDispenseSubstitution._() : super._();
+  const _MedicationDispenseSubstitution._() : super._();
 
   factory _MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =
       _$_MedicationDispenseSubstitution.fromJson;
@@ -10988,7 +10990,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationRequest extends _MedicationRequest {
-  _$_MedicationRequest(
+  const _$_MedicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
           this.resourceType = Stu3ResourceType.MedicationRequest,
       this.id,
@@ -11396,7 +11398,7 @@ class _$_MedicationRequest extends _MedicationRequest {
 }
 
 abstract class _MedicationRequest extends MedicationRequest {
-  factory _MedicationRequest(
+  const factory _MedicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -11445,7 +11447,7 @@ abstract class _MedicationRequest extends MedicationRequest {
       final Reference? priorPrescription,
       final List<Reference>? detectedIssue,
       final List<Reference>? eventHistory}) = _$_MedicationRequest;
-  _MedicationRequest._() : super._();
+  const _MedicationRequest._() : super._();
 
   factory _MedicationRequest.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequest.fromJson;
@@ -11672,7 +11674,7 @@ class __$$_MedicationRequestRequesterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationRequestRequester extends _MedicationRequestRequester {
-  _$_MedicationRequestRequester({required this.agent, this.onBehalfOf})
+  const _$_MedicationRequestRequester({required this.agent, this.onBehalfOf})
       : super._();
 
   factory _$_MedicationRequestRequester.fromJson(Map<String, dynamic> json) =>
@@ -11718,10 +11720,10 @@ class _$_MedicationRequestRequester extends _MedicationRequestRequester {
 }
 
 abstract class _MedicationRequestRequester extends MedicationRequestRequester {
-  factory _MedicationRequestRequester(
+  const factory _MedicationRequestRequester(
       {required final Reference agent,
       final Reference? onBehalfOf}) = _$_MedicationRequestRequester;
-  _MedicationRequestRequester._() : super._();
+  const _MedicationRequestRequester._() : super._();
 
   factory _MedicationRequestRequester.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequestRequester.fromJson;
@@ -11978,7 +11980,7 @@ class __$$_MedicationRequestDispenseRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationRequestDispenseRequest
     extends _MedicationRequestDispenseRequest {
-  _$_MedicationRequestDispenseRequest(
+  const _$_MedicationRequestDispenseRequest(
       {this.validityPeriod,
       this.numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
@@ -12061,7 +12063,7 @@ class _$_MedicationRequestDispenseRequest
 
 abstract class _MedicationRequestDispenseRequest
     extends MedicationRequestDispenseRequest {
-  factory _MedicationRequestDispenseRequest(
+  const factory _MedicationRequestDispenseRequest(
       {final Period? validityPeriod,
       final Decimal? numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
@@ -12069,7 +12071,7 @@ abstract class _MedicationRequestDispenseRequest
       final Quantity? quantity,
       final FhirDuration? expectedSupplyDuration,
       final Reference? performer}) = _$_MedicationRequestDispenseRequest;
-  _MedicationRequestDispenseRequest._() : super._();
+  const _MedicationRequestDispenseRequest._() : super._();
 
   factory _MedicationRequestDispenseRequest.fromJson(
       Map<String, dynamic> json) = _$_MedicationRequestDispenseRequest.fromJson;
@@ -12245,7 +12247,7 @@ class __$$_MedicationRequestSubstitutionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
-  _$_MedicationRequestSubstitution(
+  const _$_MedicationRequestSubstitution(
       {this.allowed,
       @JsonKey(name: '_allowed') this.allowedElement,
       this.reason})
@@ -12300,11 +12302,11 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
 
 abstract class _MedicationRequestSubstitution
     extends MedicationRequestSubstitution {
-  factory _MedicationRequestSubstitution(
+  const factory _MedicationRequestSubstitution(
       {final Boolean? allowed,
       @JsonKey(name: '_allowed') final Element? allowedElement,
       final CodeableConcept? reason}) = _$_MedicationRequestSubstitution;
-  _MedicationRequestSubstitution._() : super._();
+  const _MedicationRequestSubstitution._() : super._();
 
   factory _MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequestSubstitution.fromJson;
@@ -13100,7 +13102,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicationStatement extends _MedicationStatement {
-  _$_MedicationStatement(
+  const _$_MedicationStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)
           this.resourceType = Stu3ResourceType.MedicationStatement,
       this.id,
@@ -13466,7 +13468,7 @@ class _$_MedicationStatement extends _MedicationStatement {
 }
 
 abstract class _MedicationStatement extends MedicationStatement {
-  factory _MedicationStatement(
+  const factory _MedicationStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -13510,7 +13512,7 @@ abstract class _MedicationStatement extends MedicationStatement {
       final List<Reference>? reasonReference,
       final List<Annotation>? note,
       final List<Dosage>? dosage}) = _$_MedicationStatement;
-  _MedicationStatement._() : super._();
+  const _MedicationStatement._() : super._();
 
   factory _MedicationStatement.fromJson(Map<String, dynamic> json) =
       _$_MedicationStatement.fromJson;

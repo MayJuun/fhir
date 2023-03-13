@@ -158,7 +158,7 @@ class Claim with Resource, _$Claim {
   ///  details which can each be a simple items or groups of sub-details.
   ///
   /// [total] The total value of the all the items in the claim.
-  factory Claim({
+  const factory Claim({
     @Default(R4ResourceType.Claim)
     @JsonKey(unknownEnumValue: R4ResourceType.Claim)
 
@@ -414,7 +414,7 @@ class ClaimRelated with _$ClaimRelated {
   ///
   /// [reference] An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
-  factory ClaimRelated({
+  const factory ClaimRelated({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -522,7 +522,7 @@ class ClaimPayee with _$ClaimPayee {
   ///
   /// [party] Reference to the individual or organization to whom any payment
   ///  will be made.
-  factory ClaimPayee({
+  const factory ClaimPayee({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -639,7 +639,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
   ///
   /// [qualification] The qualification of the practitioner which is applicable
   ///  for this service.
-  factory ClaimCareTeam({
+  const factory ClaimCareTeam({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -800,7 +800,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   ///
   /// [reason] Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
-  factory ClaimSupportingInfo({
+  const factory ClaimSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -971,7 +971,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
   /// [packageCode] A package billing code or bundle code used to group
   /// products and services to a particular health condition (such as heart
   ///  attack) which is based on a predetermined grouping code system.
-  factory ClaimDiagnosis({
+  const factory ClaimDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1108,7 +1108,7 @@ class ClaimProcedure with _$ClaimProcedure {
   ///  identifies the clinical intervention performed.
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
-  factory ClaimProcedure({
+  const factory ClaimProcedure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1259,7 +1259,7 @@ class ClaimInsurance with _$ClaimInsurance {
   ///
   /// [claimResponse] The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
-  factory ClaimInsurance({
+  const factory ClaimInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1408,7 +1408,7 @@ class ClaimAccident with _$ClaimAccident {
   /// [locationAddress] The physical location of the accident event.
   ///
   /// [locationReference] The physical location of the accident event.
-  factory ClaimAccident({
+  const factory ClaimAccident({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1598,7 +1598,7 @@ class ClaimItem with _$ClaimItem {
   ///
   /// [detail] A claim detail line. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
-  factory ClaimItem({
+  const factory ClaimItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1849,7 +1849,7 @@ class ClaimDetail with _$ClaimDetail {
   ///
   /// [subDetail] A claim detail line. Either a simple (a product or service)
   ///  or a 'group' of sub-details which are simple items.
-  factory ClaimDetail({
+  const factory ClaimDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2033,7 +2033,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
   ///  product or charge.
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
-  factory ClaimSubDetail({
+  const factory ClaimSubDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2294,7 +2294,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
   ///  products and services specified on the claim.
   ///
   /// [error] Errors encountered during the processing of the adjudication.
-  factory ClaimResponse({
+  const factory ClaimResponse({
     @Default(R4ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
 
@@ -2571,7 +2571,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
   ///
   /// [detail] A claim detail. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
-  factory ClaimResponseItem({
+  const factory ClaimResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2701,7 +2701,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   ///  exclusive to the amount element above.
   ///
   /// [valueElement] Extensions for value
-  factory ClaimResponseAdjudication({
+  const factory ClaimResponseAdjudication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2827,7 +2827,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
   /// [adjudication] The adjudication results.
   ///
   /// [subDetail] A sub-detail adjudication of a simple product or service.
-  factory ClaimResponseDetail({
+  const factory ClaimResponseDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2950,7 +2950,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ClaimResponseSubDetail({
+  const factory ClaimResponseSubDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3130,7 +3130,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   /// [adjudication] The adjudication results.
   ///
   /// [detail] The second-tier service adjudications for payor added services.
-  factory ClaimResponseAddItem({
+  const factory ClaimResponseAddItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3360,7 +3360,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added
   ///  services.
-  factory ClaimResponseDetail1({
+  const factory ClaimResponseDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3526,7 +3526,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ClaimResponseSubDetail1({
+  const factory ClaimResponseSubDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3666,7 +3666,7 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
   ///  by other coverages, and the benefit payable for this item.
   ///
   /// [amount] Monetary total amount associated with the category.
-  factory ClaimResponseTotal({
+  const factory ClaimResponseTotal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3785,7 +3785,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
   /// [amount] Benefits payable less any payment adjustment.
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
-  factory ClaimResponsePayment({
+  const factory ClaimResponsePayment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3915,7 +3915,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   /// [textElement] Extensions for text
   ///
   /// [language] A code to define the language used in the text of the note.
-  factory ClaimResponseProcessNote({
+  const factory ClaimResponseProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4051,7 +4051,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   ///
   /// [claimResponse] The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
-  factory ClaimResponseInsurance({
+  const factory ClaimResponseInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4195,7 +4195,7 @@ class ClaimResponseError with _$ClaimResponseError {
   ///
   /// [code] An error code, from a specified code system, which details why the
   ///  claim could not be adjudicated.
-  factory ClaimResponseError({
+  const factory ClaimResponseError({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4398,7 +4398,7 @@ class Invoice with Resource, _$Invoice {
   ///
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
-  factory Invoice({
+  const factory Invoice({
     @Default(R4ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
 
@@ -4615,7 +4615,7 @@ class InvoiceParticipant with _$InvoiceParticipant {
   ///
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
-  factory InvoiceParticipant({
+  const factory InvoiceParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4737,7 +4737,7 @@ class InvoiceLineItem with _$InvoiceLineItem {
   /// conditions that apply to a billing code is currently under development.
   /// The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice as to how the prices have been calculated.
-  factory InvoiceLineItem({
+  const factory InvoiceLineItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4869,7 +4869,7 @@ class InvoicePriceComponent with _$InvoicePriceComponent {
   /// [factorElement] Extensions for factor
   ///
   /// [amount] The amount calculated for this component.
-  factory InvoicePriceComponent({
+  const factory InvoicePriceComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

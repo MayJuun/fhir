@@ -110,7 +110,7 @@ class Account with Resource, _$Account {
   ///  payment options fall short.
   ///
   /// [partOf] Reference to a parent Account.
-  factory Account({
+  const factory Account({
     @Default(R4ResourceType.Account)
     @JsonKey(unknownEnumValue: R4ResourceType.Account)
 
@@ -307,7 +307,7 @@ class AccountCoverage with _$AccountCoverage {
   /// [priority] The priority of the coverage in the context of this account.
   ///
   /// [priorityElement] Extensions for priority
-  factory AccountCoverage({
+  const factory AccountCoverage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -423,7 +423,7 @@ class AccountGuarantor with _$AccountGuarantor {
   ///
   /// [period] The timeframe during which the guarantor accepts responsibility
   ///  for the account.
-  factory AccountGuarantor({
+  const factory AccountGuarantor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -651,7 +651,7 @@ class ChargeItem with Resource, _$ChargeItem {
   ///  participants.
   ///
   /// [supportingInformation] Further information supporting this charge.
-  factory ChargeItem({
+  const factory ChargeItem({
     @Default(R4ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
 
@@ -923,7 +923,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
   ///
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
-  factory ChargeItemPerformer({
+  const factory ChargeItemPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1173,7 +1173,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// [propertyGroup] Group of properties which are applicable under the same
   /// conditions. If no applicability rules are established for the group, then
   ///  all properties always apply.
-  factory ChargeItemDefinition({
+  const factory ChargeItemDefinition({
     @Default(R4ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
 
@@ -1490,7 +1490,7 @@ class ChargeItemDefinitionApplicability
   ///  resource to which this definition is applied.
   ///
   /// [expressionElement] Extensions for expression
-  factory ChargeItemDefinitionApplicability({
+  const factory ChargeItemDefinitionApplicability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1607,7 +1607,7 @@ class ChargeItemDefinitionPropertyGroup
   /// conditions that apply to a billing code is currently under development.
   /// The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice of how the prices have been calculated.
-  factory ChargeItemDefinitionPropertyGroup({
+  const factory ChargeItemDefinitionPropertyGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1716,7 +1716,7 @@ class ChargeItemDefinitionPriceComponent
   /// [factorElement] Extensions for factor
   ///
   /// [amount] The amount calculated for this component.
-  factory ChargeItemDefinitionPriceComponent({
+  const factory ChargeItemDefinitionPriceComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1998,7 +1998,7 @@ class Contract with Resource, _$Contract {
   /// and legally recognized representation of the Contract, which is considered
   /// the "source of truth" and which would be the basis for legal action
   ///  related to enforcement of this Contract.
-  factory Contract({
+  const factory Contract({
     @Default(R4ResourceType.Contract)
     @JsonKey(unknownEnumValue: R4ResourceType.Contract)
 
@@ -2363,7 +2363,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
   ///  publishing of the Contract precursor content.
   ///
   /// [copyrightElement] Extensions for copyright
-  factory ContractContentDefinition({
+  const factory ContractContentDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2530,7 +2530,7 @@ class ContractTerm with _$ContractTerm {
   ///  assigned some degree of responsibility for the activity taking place.
   ///
   /// [group] Nested group of Contract Provisions.
-  factory ContractTerm({
+  const factory ContractTerm({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2689,7 +2689,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
   ///
   /// [control] Security label privacy tag that species the manner in which
   ///  term and/or term elements are to be protected.
-  factory ContractSecurityLabel({
+  const factory ContractSecurityLabel({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2831,7 +2831,7 @@ class ContractOffer with _$ContractOffer {
   /// [securityLabelNumber] Security labels that protects the offer.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractOffer({
+  const factory ContractOffer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2975,7 +2975,7 @@ class ContractParty with _$ContractParty {
   /// [reference] Participant in the offer.
   ///
   /// [role] How the party participates in the offer.
-  factory ContractParty({
+  const factory ContractParty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3149,7 +3149,7 @@ class ContractAnswer with _$ContractAnswer {
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
-  factory ContractAnswer({
+  const factory ContractAnswer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3381,7 +3381,7 @@ class ContractAsset with _$ContractAsset {
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
   ///
   /// [valuedItem] Contract Valued Item List.
-  factory ContractAsset({
+  const factory ContractAsset({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3552,7 +3552,7 @@ class ContractContext with _$ContractContext {
   /// [text] Context description.
   ///
   /// [textElement] Extensions for text
-  factory ContractContext({
+  const factory ContractContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3720,7 +3720,7 @@ class ContractValuedItem with _$ContractValuedItem {
   ///  are controlled by this condition.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractValuedItem({
+  const factory ContractValuedItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3987,7 +3987,7 @@ class ContractAction with _$ContractAction {
   /// [securityLabelNumber] Security labels that protects the action.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractAction({
+  const factory ContractAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4210,7 +4210,7 @@ class ContractSubject with _$ContractSubject {
   ///  for.
   ///
   /// [role] Role type of agent assigned roles in this Contract.
-  factory ContractSubject({
+  const factory ContractSubject({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4315,7 +4315,7 @@ class ContractSigner with _$ContractSigner {
   /// [party] Party which is a signator to this Contract.
   ///
   /// [signature] Legally binding Contract DSIG signature contents in Base64.
-  factory ContractSigner({
+  const factory ContractSigner({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4424,7 +4424,7 @@ class ContractFriendly with _$ContractFriendly {
   /// [contentReference] Human readable rendering of this Contract in a format
   /// and representation intended to enhance comprehension and ensure
   ///  understandability.
-  factory ContractFriendly({
+  const factory ContractFriendly({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4530,7 +4530,7 @@ class ContractLegal with _$ContractLegal {
   /// [contentAttachment] Contract legal text in human renderable form.
   ///
   /// [contentReference] Contract legal text in human renderable form.
-  factory ContractLegal({
+  const factory ContractLegal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4634,7 +4634,7 @@ class ContractRule with _$ContractRule {
   ///
   /// [contentReference] Computable Contract conveyed using a policy rule
   ///  language (e.g. XACML, DKAL, SecPal).
-  factory ContractRule({
+  const factory ContractRule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4905,7 +4905,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// [benefitPeriod] The term of the benefits documented in this response.
   ///
   /// [benefitBalance] Balance by Benefit Category.
-  factory ExplanationOfBenefit({
+  const factory ExplanationOfBenefit({
     @Default(R4ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
 
@@ -5243,7 +5243,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ///
   /// [reference] An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
-  factory ExplanationOfBenefitRelated({
+  const factory ExplanationOfBenefitRelated({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5352,7 +5352,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ///
   /// [party] Reference to the individual or organization to whom any payment
   ///  will be made.
-  factory ExplanationOfBenefitPayee({
+  const factory ExplanationOfBenefitPayee({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5470,7 +5470,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ///
   /// [qualification] The qualification of the practitioner which is applicable
   ///  for this service.
-  factory ExplanationOfBenefitCareTeam({
+  const factory ExplanationOfBenefitCareTeam({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5631,7 +5631,7 @@ class ExplanationOfBenefitSupportingInfo
   ///
   /// [reason] Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
-  factory ExplanationOfBenefitSupportingInfo({
+  const factory ExplanationOfBenefitSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5792,7 +5792,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   /// [packageCode] A package billing code or bundle code used to group
   /// products and services to a particular health condition (such as heart
   ///  attack) which is based on a predetermined grouping code system.
-  factory ExplanationOfBenefitDiagnosis({
+  const factory ExplanationOfBenefitDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5930,7 +5930,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ///  identifies the clinical intervention performed.
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
-  factory ExplanationOfBenefitProcedure({
+  const factory ExplanationOfBenefitProcedure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6066,7 +6066,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ///  related to the prior authorization.
   ///
   /// [preAuthRefElement] Extensions for preAuthRef
-  factory ExplanationOfBenefitInsurance({
+  const factory ExplanationOfBenefitInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6194,7 +6194,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   /// [locationAddress] The physical location of the accident event.
   ///
   /// [locationReference] The physical location of the accident event.
-  factory ExplanationOfBenefitAccident({
+  const factory ExplanationOfBenefitAccident({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6393,7 +6393,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///  or service then this is the result of the adjudication of this item.
   ///
   /// [detail] Second-tier of goods and services.
-  factory ExplanationOfBenefitItem({
+  const factory ExplanationOfBenefitItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6633,7 +6633,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ///  exclusive to the amount element above.
   ///
   /// [valueElement] Extensions for value
-  factory ExplanationOfBenefitAdjudication({
+  const factory ExplanationOfBenefitAdjudication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6784,7 +6784,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// [adjudication] The adjudication results.
   ///
   /// [subDetail] Third-tier of goods and services.
-  factory ExplanationOfBenefitDetail({
+  const factory ExplanationOfBenefitDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6987,7 +6987,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ExplanationOfBenefitSubDetail({
+  const factory ExplanationOfBenefitSubDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7213,7 +7213,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [adjudication] The adjudication results.
   ///
   /// [detail] The second-tier service adjudications for payor added services.
-  factory ExplanationOfBenefitAddItem({
+  const factory ExplanationOfBenefitAddItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7445,7 +7445,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added
   ///  services.
-  factory ExplanationOfBenefitDetail1({
+  const factory ExplanationOfBenefitDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7613,7 +7613,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ExplanationOfBenefitSubDetail1({
+  const factory ExplanationOfBenefitSubDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7756,7 +7756,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ///  by other coverages, and the benefit payable for this item.
   ///
   /// [amount] Monetary total amount associated with the category.
-  factory ExplanationOfBenefitTotal({
+  const factory ExplanationOfBenefitTotal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7877,7 +7877,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   /// [amount] Benefits payable less any payment adjustment.
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
-  factory ExplanationOfBenefitPayment({
+  const factory ExplanationOfBenefitPayment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8009,7 +8009,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   /// [textElement] Extensions for text
   ///
   /// [language] A code to define the language used in the text of the note.
-  factory ExplanationOfBenefitProcessNote({
+  const factory ExplanationOfBenefitProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8151,7 +8151,7 @@ class ExplanationOfBenefitBenefitBalance
   ///  benefit' or 'maximum annual visits'.
   ///
   /// [financial] Benefits Used to date.
-  factory ExplanationOfBenefitBenefitBalance({
+  const factory ExplanationOfBenefitBenefitBalance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8294,7 +8294,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
   ///
   /// [usedMoney] The quantity of the benefit which have been consumed to date.
-  factory ExplanationOfBenefitFinancial({
+  const factory ExplanationOfBenefitFinancial({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8494,7 +8494,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
   /// [coverage] Details about the coverage offered by the insurance product.
   ///
   /// [plan] Details about an insurance plan.
-  factory InsurancePlan({
+  const factory InsurancePlan({
     @Default(R4ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
 
@@ -8703,7 +8703,7 @@ class InsurancePlanContact with _$InsurancePlanContact {
   ///  by which the party may be contacted.
   ///
   /// [address] Visiting or postal addresses for the contact.
-  factory InsurancePlanContact({
+  const factory InsurancePlanContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8815,7 +8815,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
   /// [network] Reference to the network that providing the type of coverage.
   ///
   /// [benefit] Specific benefits under this type of coverage.
-  factory InsurancePlanCoverage({
+  const factory InsurancePlanCoverage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8927,7 +8927,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
   /// [requirementElement] Extensions for requirement
   ///
   /// [limit] The specific limits on the benefit.
-  factory InsurancePlanBenefit({
+  const factory InsurancePlanBenefit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9038,7 +9038,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
   ///  covered benefit.  For examples. wellness visits, or eyeglasses.
   ///
   /// [code] The specific limit on the benefit.
-  factory InsurancePlanLimit({
+  const factory InsurancePlanLimit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9153,7 +9153,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
   ///
   /// [specificCost] Costs associated with the coverage provided by the
   ///  product.
-  factory InsurancePlanPlan({
+  const factory InsurancePlanPlan({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9280,7 +9280,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   ///  this plan.
   ///
   /// [commentElement] Extensions for comment
-  factory InsurancePlanGeneralCost({
+  const factory InsurancePlanGeneralCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9396,7 +9396,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   ///  Mental Health; Substance Abuse; Hospice, Home Health).
   ///
   /// [benefit] List of the specific benefits under this category of benefit.
-  factory InsurancePlanSpecificCost({
+  const factory InsurancePlanSpecificCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9500,7 +9500,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   ///  speciality office visit; hospitalization; emergency room; urgent care).
   ///
   /// [cost] List of the costs associated with a specific benefit.
-  factory InsurancePlanBenefit1({
+  const factory InsurancePlanBenefit1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9611,7 +9611,7 @@ class InsurancePlanCost with _$InsurancePlanCost {
   ///
   /// [value] The actual cost value. (some of the costs may be represented as
   ///  percentages rather than currency, e.g. 10% coinsurance).
-  factory InsurancePlanCost({
+  const factory InsurancePlanCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

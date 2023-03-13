@@ -704,7 +704,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
 /// @nodoc
 @JsonSerializable()
 class _$_Group extends _Group {
-  _$_Group(
+  const _$_Group(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
           this.resourceType = R4ResourceType.Group,
       this.id,
@@ -1081,7 +1081,7 @@ class _$_Group extends _Group {
 }
 
 abstract class _Group extends Group {
-  factory _Group(
+  const factory _Group(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
           final R4ResourceType resourceType,
       final String? id,
@@ -1117,7 +1117,7 @@ abstract class _Group extends Group {
       final Reference? managingEntity,
       final List<GroupCharacteristic>? characteristic,
       final List<GroupMember>? member}) = _$_Group;
-  _Group._() : super._();
+  const _Group._() : super._();
 
   factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
@@ -1693,7 +1693,7 @@ class __$$_GroupCharacteristicCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GroupCharacteristic extends _GroupCharacteristic {
-  _$_GroupCharacteristic(
+  const _$_GroupCharacteristic(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1898,7 +1898,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
 }
 
 abstract class _GroupCharacteristic extends GroupCharacteristic {
-  factory _GroupCharacteristic(
+  const factory _GroupCharacteristic(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1912,7 +1912,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       final Boolean? exclude,
       @JsonKey(name: '_exclude') final Element? excludeElement,
       final Period? period}) = _$_GroupCharacteristic;
-  _GroupCharacteristic._() : super._();
+  const _GroupCharacteristic._() : super._();
 
   factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_GroupCharacteristic.fromJson;
@@ -2246,7 +2246,7 @@ class __$$_GroupMemberCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GroupMember extends _GroupMember {
-  _$_GroupMember(
+  const _$_GroupMember(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2398,7 +2398,7 @@ class _$_GroupMember extends _GroupMember {
 }
 
 abstract class _GroupMember extends GroupMember {
-  factory _GroupMember(
+  const factory _GroupMember(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2407,7 +2407,7 @@ abstract class _GroupMember extends GroupMember {
           final Boolean? inactive,
           @JsonKey(name: '_inactive') final Element? inactiveElement}) =
       _$_GroupMember;
-  _GroupMember._() : super._();
+  const _GroupMember._() : super._();
 
   factory _GroupMember.fromJson(Map<String, dynamic> json) =
       _$_GroupMember.fromJson;
@@ -3352,7 +3352,7 @@ class __$$_PatientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Patient extends _Patient {
-  _$_Patient(
+  const _$_Patient(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
           this.resourceType = R4ResourceType.Patient,
       this.id,
@@ -3882,7 +3882,7 @@ class _$_Patient extends _Patient {
 }
 
 abstract class _Patient extends Patient {
-  factory _Patient(
+  const factory _Patient(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
           final R4ResourceType resourceType,
       final String? id,
@@ -3930,7 +3930,7 @@ abstract class _Patient extends Patient {
       final List<Reference>? generalPractitioner,
       final Reference? managingOrganization,
       final List<PatientLink>? link}) = _$_Patient;
-  _Patient._() : super._();
+  const _Patient._() : super._();
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
@@ -4474,7 +4474,7 @@ class __$$_PatientContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PatientContact extends _PatientContact {
-  _$_PatientContact(
+  const _$_PatientContact(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4679,7 +4679,7 @@ class _$_PatientContact extends _PatientContact {
 }
 
 abstract class _PatientContact extends PatientContact {
-  factory _PatientContact(
+  const factory _PatientContact(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4691,7 +4691,7 @@ abstract class _PatientContact extends PatientContact {
       @JsonKey(name: '_gender') final Element? genderElement,
       final Reference? organization,
       final Period? period}) = _$_PatientContact;
-  _PatientContact._() : super._();
+  const _PatientContact._() : super._();
 
   factory _PatientContact.fromJson(Map<String, dynamic> json) =
       _$_PatientContact.fromJson;
@@ -4986,7 +4986,7 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PatientCommunication extends _PatientCommunication {
-  _$_PatientCommunication(
+  const _$_PatientCommunication(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5134,7 +5134,7 @@ class _$_PatientCommunication extends _PatientCommunication {
 }
 
 abstract class _PatientCommunication extends PatientCommunication {
-  factory _PatientCommunication(
+  const factory _PatientCommunication(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -5142,7 +5142,7 @@ abstract class _PatientCommunication extends PatientCommunication {
           final Boolean? preferred,
           @JsonKey(name: '_preferred') final Element? preferredElement}) =
       _$_PatientCommunication;
-  _PatientCommunication._() : super._();
+  const _PatientCommunication._() : super._();
 
   factory _PatientCommunication.fromJson(Map<String, dynamic> json) =
       _$_PatientCommunication.fromJson;
@@ -5412,7 +5412,7 @@ class __$$_PatientLinkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PatientLink extends _PatientLink {
-  _$_PatientLink(
+  const _$_PatientLink(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5554,14 +5554,14 @@ class _$_PatientLink extends _PatientLink {
 }
 
 abstract class _PatientLink extends PatientLink {
-  factory _PatientLink(
+  const factory _PatientLink(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference other,
       final Code? type,
       @JsonKey(name: '_type') final Element? typeElement}) = _$_PatientLink;
-  _PatientLink._() : super._();
+  const _PatientLink._() : super._();
 
   factory _PatientLink.fromJson(Map<String, dynamic> json) =
       _$_PatientLink.fromJson;
@@ -6235,7 +6235,7 @@ class __$$_PersonCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Person extends _Person {
-  _$_Person(
+  const _$_Person(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
           this.resourceType = R4ResourceType.Person,
       this.id,
@@ -6605,7 +6605,7 @@ class _$_Person extends _Person {
 }
 
 abstract class _Person extends Person {
-  factory _Person(
+  const factory _Person(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
           final R4ResourceType resourceType,
       final String? id,
@@ -6637,7 +6637,7 @@ abstract class _Person extends Person {
       @JsonKey(name: '_active')
           final Element? activeElement,
       final List<PersonLink>? link}) = _$_Person;
-  _Person._() : super._();
+  const _Person._() : super._();
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
@@ -6993,7 +6993,7 @@ class __$$_PersonLinkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PersonLink extends _PersonLink {
-  _$_PersonLink(
+  const _$_PersonLink(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7136,7 +7136,7 @@ class _$_PersonLink extends _PersonLink {
 }
 
 abstract class _PersonLink extends PersonLink {
-  factory _PersonLink(
+  const factory _PersonLink(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -7144,7 +7144,7 @@ abstract class _PersonLink extends PersonLink {
           final Code? assurance,
           @JsonKey(name: '_assurance') final Element? assuranceElement}) =
       _$_PersonLink;
-  _PersonLink._() : super._();
+  const _PersonLink._() : super._();
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
       _$_PersonLink.fromJson;
@@ -7802,7 +7802,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Practitioner extends _Practitioner {
-  _$_Practitioner(
+  const _$_Practitioner(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
           this.resourceType = R4ResourceType.Practitioner,
       this.id,
@@ -8208,7 +8208,7 @@ class _$_Practitioner extends _Practitioner {
 }
 
 abstract class _Practitioner extends Practitioner {
-  factory _Practitioner(
+  const factory _Practitioner(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
           final R4ResourceType resourceType,
       final String? id,
@@ -8240,7 +8240,7 @@ abstract class _Practitioner extends Practitioner {
       final List<Attachment>? photo,
       final List<PractitionerQualification>? qualification,
       final List<CodeableConcept>? communication}) = _$_Practitioner;
-  _Practitioner._() : super._();
+  const _Practitioner._() : super._();
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$_Practitioner.fromJson;
@@ -8638,7 +8638,7 @@ class __$$_PractitionerQualificationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PractitionerQualification extends _PractitionerQualification {
-  _$_PractitionerQualification(
+  const _$_PractitionerQualification(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8798,7 +8798,7 @@ class _$_PractitionerQualification extends _PractitionerQualification {
 }
 
 abstract class _PractitionerQualification extends PractitionerQualification {
-  factory _PractitionerQualification(
+  const factory _PractitionerQualification(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8806,7 +8806,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
       required final CodeableConcept code,
       final Period? period,
       final Reference? issuer}) = _$_PractitionerQualification;
-  _PractitionerQualification._() : super._();
+  const _PractitionerQualification._() : super._();
 
   factory _PractitionerQualification.fromJson(Map<String, dynamic> json) =
       _$_PractitionerQualification.fromJson;
@@ -9541,7 +9541,7 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PractitionerRole extends _PractitionerRole {
-  _$_PractitionerRole(
+  const _$_PractitionerRole(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
           this.resourceType = R4ResourceType.PractitionerRole,
       this.id,
@@ -9987,7 +9987,7 @@ class _$_PractitionerRole extends _PractitionerRole {
 }
 
 abstract class _PractitionerRole extends PractitionerRole {
-  factory _PractitionerRole(
+  const factory _PractitionerRole(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
           final R4ResourceType resourceType,
       final String? id,
@@ -10021,7 +10021,7 @@ abstract class _PractitionerRole extends PractitionerRole {
       @JsonKey(name: '_availabilityExceptions')
           final Element? availabilityExceptionsElement,
       final List<Reference>? endpoint}) = _$_PractitionerRole;
-  _PractitionerRole._() : super._();
+  const _PractitionerRole._() : super._();
 
   factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRole.fromJson;
@@ -10502,7 +10502,7 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
-  _$_PractitionerRoleAvailableTime(
+  const _$_PractitionerRoleAvailableTime(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10718,7 +10718,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
 
 abstract class _PractitionerRoleAvailableTime
     extends PractitionerRoleAvailableTime {
-  factory _PractitionerRoleAvailableTime(
+  const factory _PractitionerRoleAvailableTime(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -10736,7 +10736,7 @@ abstract class _PractitionerRoleAvailableTime
           @JsonKey(name: '_availableEndTime')
               final Element? availableEndTimeElement}) =
       _$_PractitionerRoleAvailableTime;
-  _PractitionerRoleAvailableTime._() : super._();
+  const _PractitionerRoleAvailableTime._() : super._();
 
   factory _PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRoleAvailableTime.fromJson;
@@ -11041,7 +11041,7 @@ class __$$_PractitionerRoleNotAvailableCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
-  _$_PractitionerRoleNotAvailable(
+  const _$_PractitionerRoleNotAvailable(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11187,14 +11187,14 @@ class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
 
 abstract class _PractitionerRoleNotAvailable
     extends PractitionerRoleNotAvailable {
-  factory _PractitionerRoleNotAvailable(
+  const factory _PractitionerRoleNotAvailable(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Period? during}) = _$_PractitionerRoleNotAvailable;
-  _PractitionerRoleNotAvailable._() : super._();
+  const _PractitionerRoleNotAvailable._() : super._();
 
   factory _PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRoleNotAvailable.fromJson;
@@ -11903,7 +11903,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RelatedPerson extends _RelatedPerson {
-  _$_RelatedPerson(
+  const _$_RelatedPerson(
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
           this.resourceType = R4ResourceType.RelatedPerson,
       this.id,
@@ -12312,7 +12312,7 @@ class _$_RelatedPerson extends _RelatedPerson {
 }
 
 abstract class _RelatedPerson extends RelatedPerson {
-  factory _RelatedPerson(
+  const factory _RelatedPerson(
           {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
               final R4ResourceType resourceType,
           final String? id,
@@ -12347,7 +12347,7 @@ abstract class _RelatedPerson extends RelatedPerson {
           final Period? period,
           final List<RelatedPersonCommunication>? communication}) =
       _$_RelatedPerson;
-  _RelatedPerson._() : super._();
+  const _RelatedPerson._() : super._();
 
   factory _RelatedPerson.fromJson(Map<String, dynamic> json) =
       _$_RelatedPerson.fromJson;
@@ -12723,7 +12723,7 @@ class __$$_RelatedPersonCommunicationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
-  _$_RelatedPersonCommunication(
+  const _$_RelatedPersonCommunication(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12871,7 +12871,7 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
 }
 
 abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
-  factory _RelatedPersonCommunication(
+  const factory _RelatedPersonCommunication(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -12879,7 +12879,7 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
           final Boolean? preferred,
           @JsonKey(name: '_preferred') final Element? preferredElement}) =
       _$_RelatedPersonCommunication;
-  _RelatedPersonCommunication._() : super._();
+  const _RelatedPersonCommunication._() : super._();
 
   factory _RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =
       _$_RelatedPersonCommunication.fromJson;

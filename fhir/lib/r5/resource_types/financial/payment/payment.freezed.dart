@@ -718,7 +718,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PaymentNotice extends _PaymentNotice {
-  _$_PaymentNotice(
+  const _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           this.resourceType = R5ResourceType.PaymentNotice,
       this.id,
@@ -1017,7 +1017,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 }
 
 abstract class _PaymentNotice extends PaymentNotice {
-  factory _PaymentNotice(
+  const factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           final R5ResourceType resourceType,
       final Id? id,
@@ -1051,7 +1051,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       required final Reference recipient,
       required final Money amount,
       final CodeableConcept? paymentStatus}) = _$_PaymentNotice;
-  _PaymentNotice._() : super._();
+  const _PaymentNotice._() : super._();
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
       _$_PaymentNotice.fromJson;
@@ -2515,7 +2515,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PaymentReconciliation extends _PaymentReconciliation {
-  _$_PaymentReconciliation(
+  const _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           this.resourceType = R5ResourceType.PaymentReconciliation,
       this.id,
@@ -3046,7 +3046,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 }
 
 abstract class _PaymentReconciliation extends PaymentReconciliation {
-  factory _PaymentReconciliation(
+  const factory _PaymentReconciliation(
           {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
               final R5ResourceType resourceType,
           final Id? id,
@@ -3114,7 +3114,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final CodeableConcept? formCode,
           final List<PaymentReconciliationProcessNote>? processNote}) =
       _$_PaymentReconciliation;
-  _PaymentReconciliation._() : super._();
+  const _PaymentReconciliation._() : super._();
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliation.fromJson;
@@ -4004,7 +4004,7 @@ class __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PaymentReconciliationAllocation
     extends _PaymentReconciliationAllocation {
-  _$_PaymentReconciliationAllocation(
+  const _$_PaymentReconciliationAllocation(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -4273,7 +4273,7 @@ class _$_PaymentReconciliationAllocation
 
 abstract class _PaymentReconciliationAllocation
     extends PaymentReconciliationAllocation {
-  factory _PaymentReconciliationAllocation(
+  const factory _PaymentReconciliationAllocation(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -4299,7 +4299,7 @@ abstract class _PaymentReconciliationAllocation
       final Reference? responsible,
       final Reference? payee,
       final Money? amount}) = _$_PaymentReconciliationAllocation;
-  _PaymentReconciliationAllocation._() : super._();
+  const _PaymentReconciliationAllocation._() : super._();
 
   factory _PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliationAllocation.fromJson;
@@ -4653,7 +4653,7 @@ class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PaymentReconciliationProcessNote
     extends _PaymentReconciliationProcessNote {
-  _$_PaymentReconciliationProcessNote(
+  const _$_PaymentReconciliationProcessNote(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4805,7 +4805,7 @@ class _$_PaymentReconciliationProcessNote
 
 abstract class _PaymentReconciliationProcessNote
     extends PaymentReconciliationProcessNote {
-  factory _PaymentReconciliationProcessNote(
+  const factory _PaymentReconciliationProcessNote(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4814,7 +4814,7 @@ abstract class _PaymentReconciliationProcessNote
           final String? text,
           @JsonKey(name: '_text') final Element? textElement}) =
       _$_PaymentReconciliationProcessNote;
-  _PaymentReconciliationProcessNote._() : super._();
+  const _PaymentReconciliationProcessNote._() : super._();
 
   factory _PaymentReconciliationProcessNote.fromJson(
       Map<String, dynamic> json) = _$_PaymentReconciliationProcessNote.fromJson;

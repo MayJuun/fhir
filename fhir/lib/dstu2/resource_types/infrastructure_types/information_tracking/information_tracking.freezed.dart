@@ -593,7 +593,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
-  _$_Questionnaire(
+  const _$_Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
           this.resourceType = Dstu2ResourceType.Questionnaire,
       this.id,
@@ -862,7 +862,7 @@ class _$_Questionnaire extends _Questionnaire {
 }
 
 abstract class _Questionnaire extends Questionnaire {
-  factory _Questionnaire(
+  const factory _Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -899,7 +899,7 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_subjectType')
           final List<Element?>? subjectTypeElement,
       required final QuestionnaireGroup group}) = _$_Questionnaire;
-  _Questionnaire._() : super._();
+  const _Questionnaire._() : super._();
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
       _$_Questionnaire.fromJson;
@@ -1264,7 +1264,7 @@ class __$$_QuestionnaireGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireGroup extends _QuestionnaireGroup {
-  _$_QuestionnaireGroup(
+  const _$_QuestionnaireGroup(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1439,7 +1439,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
 }
 
 abstract class _QuestionnaireGroup extends QuestionnaireGroup {
-  factory _QuestionnaireGroup(
+  const factory _QuestionnaireGroup(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -1455,7 +1455,7 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
           final List<QuestionnaireGroup>? group,
           final List<QuestionnaireGroupQuestion>? question}) =
       _$_QuestionnaireGroup;
-  _QuestionnaireGroup._() : super._();
+  const _QuestionnaireGroup._() : super._();
 
   factory _QuestionnaireGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroup.fromJson;
@@ -1797,7 +1797,7 @@ class __$$_QuestionnaireGroupQuestionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
-  _$_QuestionnaireGroupQuestion(
+  const _$_QuestionnaireGroupQuestion(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1971,7 +1971,7 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
 }
 
 abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
-  factory _QuestionnaireGroupQuestion(
+  const factory _QuestionnaireGroupQuestion(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1986,7 +1986,7 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
       final Reference? options,
       final List<Coding>? option,
       final List<QuestionnaireGroup>? group}) = _$_QuestionnaireGroupQuestion;
-  _QuestionnaireGroupQuestion._() : super._();
+  const _QuestionnaireGroupQuestion._() : super._();
 
   factory _QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroupQuestion.fromJson;
@@ -2641,7 +2641,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
-  _$_QuestionnaireResponse(
+  const _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
           this.resourceType = Dstu2ResourceType.QuestionnaireResponse,
       this.id,
@@ -2857,7 +2857,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 }
 
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
-  factory _QuestionnaireResponse(
+  const factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -2889,7 +2889,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       final Reference? source,
       final Reference? encounter,
       final QuestionnaireResponseGroup? group}) = _$_QuestionnaireResponse;
-  _QuestionnaireResponse._() : super._();
+  const _QuestionnaireResponse._() : super._();
 
   factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponse.fromJson;
@@ -3243,7 +3243,7 @@ class __$$_QuestionnaireResponseGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
-  _$_QuestionnaireResponseGroup(
+  const _$_QuestionnaireResponseGroup(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3397,7 +3397,7 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
 }
 
 abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
-  factory _QuestionnaireResponseGroup(
+  const factory _QuestionnaireResponseGroup(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3411,7 +3411,7 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
           final List<QuestionnaireResponseGroup>? group,
           final List<QuestionnaireResponseGroupQuestion>? question}) =
       _$_QuestionnaireResponseGroup;
-  _QuestionnaireResponseGroup._() : super._();
+  const _QuestionnaireResponseGroup._() : super._();
 
   factory _QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponseGroup.fromJson;
@@ -3657,7 +3657,7 @@ class __$$_QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QuestionnaireResponseGroupQuestion
     extends _QuestionnaireResponseGroupQuestion {
-  _$_QuestionnaireResponseGroupQuestion(
+  const _$_QuestionnaireResponseGroupQuestion(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3783,7 +3783,7 @@ class _$_QuestionnaireResponseGroupQuestion
 
 abstract class _QuestionnaireResponseGroupQuestion
     extends QuestionnaireResponseGroupQuestion {
-  factory _QuestionnaireResponseGroupQuestion(
+  const factory _QuestionnaireResponseGroupQuestion(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3793,7 +3793,7 @@ abstract class _QuestionnaireResponseGroupQuestion
           final String? text,
           final List<QuestionnaireResponseQuestionAnswer>? answer}) =
       _$_QuestionnaireResponseGroupQuestion;
-  _QuestionnaireResponseGroupQuestion._() : super._();
+  const _QuestionnaireResponseGroupQuestion._() : super._();
 
   factory _QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =
@@ -4467,7 +4467,7 @@ class __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QuestionnaireResponseQuestionAnswer
     extends _QuestionnaireResponseQuestionAnswer {
-  _$_QuestionnaireResponseQuestionAnswer(
+  const _$_QuestionnaireResponseQuestionAnswer(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4718,7 +4718,7 @@ class _$_QuestionnaireResponseQuestionAnswer
 
 abstract class _QuestionnaireResponseQuestionAnswer
     extends QuestionnaireResponseQuestionAnswer {
-  factory _QuestionnaireResponseQuestionAnswer(
+  const factory _QuestionnaireResponseQuestionAnswer(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4747,7 +4747,7 @@ abstract class _QuestionnaireResponseQuestionAnswer
           final Reference? valueReference,
           final List<QuestionnaireResponseGroup>? group}) =
       _$_QuestionnaireResponseQuestionAnswer;
-  _QuestionnaireResponseQuestionAnswer._() : super._();
+  const _QuestionnaireResponseQuestionAnswer._() : super._();
 
   factory _QuestionnaireResponseQuestionAnswer.fromJson(
           Map<String, dynamic> json) =
@@ -5337,7 +5337,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Provenance extends _Provenance {
-  _$_Provenance(
+  const _$_Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           this.resourceType = Dstu2ResourceType.Provenance,
       this.id,
@@ -5606,7 +5606,7 @@ class _$_Provenance extends _Provenance {
 }
 
 abstract class _Provenance extends Provenance {
-  factory _Provenance(
+  const factory _Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -5636,7 +5636,7 @@ abstract class _Provenance extends Provenance {
       final List<ProvenanceAgent>? agent,
       final List<ProvenanceEntity>? entity,
       final List<Signature>? signature}) = _$_Provenance;
-  _Provenance._() : super._();
+  const _Provenance._() : super._();
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
@@ -5922,7 +5922,7 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceAgent extends _ProvenanceAgent {
-  _$_ProvenanceAgent(
+  const _$_ProvenanceAgent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6043,7 +6043,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 }
 
 abstract class _ProvenanceAgent extends ProvenanceAgent {
-  factory _ProvenanceAgent(
+  const factory _ProvenanceAgent(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6053,7 +6053,7 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
           final Identifier? userId,
           final List<ProvenanceAgentRelatedAgent>? relatedAgent}) =
       _$_ProvenanceAgent;
-  _ProvenanceAgent._() : super._();
+  const _ProvenanceAgent._() : super._();
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgent.fromJson;
@@ -6361,7 +6361,7 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceEntity extends _ProvenanceEntity {
-  _$_ProvenanceEntity(
+  const _$_ProvenanceEntity(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6494,7 +6494,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 }
 
 abstract class _ProvenanceEntity extends ProvenanceEntity {
-  factory _ProvenanceEntity(
+  const factory _ProvenanceEntity(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -6511,7 +6511,7 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
           final Element? referenceElement,
       final String? display,
       final ProvenanceAgent? agent}) = _$_ProvenanceEntity;
-  _ProvenanceEntity._() : super._();
+  const _ProvenanceEntity._() : super._();
 
   factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceEntity.fromJson;
@@ -6708,7 +6708,7 @@ class __$$_ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
-  _$_ProvenanceAgentRelatedAgent(
+  const _$_ProvenanceAgentRelatedAgent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6796,13 +6796,13 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
 
 abstract class _ProvenanceAgentRelatedAgent
     extends ProvenanceAgentRelatedAgent {
-  factory _ProvenanceAgentRelatedAgent(
+  const factory _ProvenanceAgentRelatedAgent(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       required final FhirUri target}) = _$_ProvenanceAgentRelatedAgent;
-  _ProvenanceAgentRelatedAgent._() : super._();
+  const _ProvenanceAgentRelatedAgent._() : super._();
 
   factory _ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgentRelatedAgent.fromJson;
@@ -7189,7 +7189,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEvent extends _AuditEvent {
-  _$_AuditEvent(
+  const _$_AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           this.resourceType = Dstu2ResourceType.AuditEvent,
       this.id,
@@ -7363,7 +7363,7 @@ class _$_AuditEvent extends _AuditEvent {
 }
 
 abstract class _AuditEvent extends AuditEvent {
-  factory _AuditEvent(
+  const factory _AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -7383,7 +7383,7 @@ abstract class _AuditEvent extends AuditEvent {
       required final List<AuditEventParticipant> participant,
       required final AuditEventSource source,
       final List<AuditEventObject>? object}) = _$_AuditEvent;
-  _AuditEvent._() : super._();
+  const _AuditEvent._() : super._();
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEvent.fromJson;
@@ -7645,7 +7645,7 @@ class __$$_AuditEventEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventEvent extends _AuditEventEvent {
-  _$_AuditEventEvent(
+  const _$_AuditEventEvent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7776,7 +7776,7 @@ class _$_AuditEventEvent extends _AuditEventEvent {
 }
 
 abstract class _AuditEventEvent extends AuditEventEvent {
-  factory _AuditEventEvent(
+  const factory _AuditEventEvent(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7787,7 +7787,7 @@ abstract class _AuditEventEvent extends AuditEventEvent {
       final Code? outcome,
       final String? outcomeDesc,
       final List<Coding>? purposeOfEvent}) = _$_AuditEventEvent;
-  _AuditEventEvent._() : super._();
+  const _AuditEventEvent._() : super._();
 
   factory _AuditEventEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEventEvent.fromJson;
@@ -8185,7 +8185,7 @@ class __$$_AuditEventParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventParticipant extends _AuditEventParticipant {
-  _$_AuditEventParticipant(
+  const _$_AuditEventParticipant(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8354,7 +8354,7 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
 }
 
 abstract class _AuditEventParticipant extends AuditEventParticipant {
-  factory _AuditEventParticipant(
+  const factory _AuditEventParticipant(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8370,7 +8370,7 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
       final Coding? media,
       final AuditEventParticipantNetwork? network,
       final List<Coding>? purposeOfUse}) = _$_AuditEventParticipant;
-  _AuditEventParticipant._() : super._();
+  const _AuditEventParticipant._() : super._();
 
   factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipant.fromJson;
@@ -8607,7 +8607,7 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventSource extends _AuditEventSource {
-  _$_AuditEventSource(
+  const _$_AuditEventSource(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8714,7 +8714,7 @@ class _$_AuditEventSource extends _AuditEventSource {
 }
 
 abstract class _AuditEventSource extends AuditEventSource {
-  factory _AuditEventSource(
+  const factory _AuditEventSource(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8722,7 +8722,7 @@ abstract class _AuditEventSource extends AuditEventSource {
       @JsonKey(name: '_site') final Element? siteElement,
       required final Identifier identifier,
       final List<Coding>? type}) = _$_AuditEventSource;
-  _AuditEventSource._() : super._();
+  const _AuditEventSource._() : super._();
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$_AuditEventSource.fromJson;
@@ -9099,7 +9099,7 @@ class __$$_AuditEventObjectCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventObject extends _AuditEventObject {
-  _$_AuditEventObject(
+  const _$_AuditEventObject(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9254,7 +9254,7 @@ class _$_AuditEventObject extends _AuditEventObject {
 }
 
 abstract class _AuditEventObject extends AuditEventObject {
-  factory _AuditEventObject(
+  const factory _AuditEventObject(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9269,7 +9269,7 @@ abstract class _AuditEventObject extends AuditEventObject {
       final Base64Binary? query,
       @JsonKey(name: '_query') final Element? queryElement,
       final List<AuditEventObjectDetail>? detail}) = _$_AuditEventObject;
-  _AuditEventObject._() : super._();
+  const _AuditEventObject._() : super._();
 
   factory _AuditEventObject.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObject.fromJson;
@@ -9516,7 +9516,7 @@ class __$$_AuditEventParticipantNetworkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
-  _$_AuditEventParticipantNetwork(
+  const _$_AuditEventParticipantNetwork(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9618,7 +9618,7 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
 
 abstract class _AuditEventParticipantNetwork
     extends AuditEventParticipantNetwork {
-  factory _AuditEventParticipantNetwork(
+  const factory _AuditEventParticipantNetwork(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -9627,7 +9627,7 @@ abstract class _AuditEventParticipantNetwork
           final Code? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_AuditEventParticipantNetwork;
-  _AuditEventParticipantNetwork._() : super._();
+  const _AuditEventParticipantNetwork._() : super._();
 
   factory _AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipantNetwork.fromJson;
@@ -9828,7 +9828,7 @@ class __$$_AuditEventObjectDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
-  _$_AuditEventObjectDetail(
+  const _$_AuditEventObjectDetail(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9922,14 +9922,14 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
 }
 
 abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
-  factory _AuditEventObjectDetail(
+  const factory _AuditEventObjectDetail(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String type,
       @JsonKey(name: '_type') final Element? typeElement,
       required final Base64Binary value}) = _$_AuditEventObjectDetail;
-  _AuditEventObjectDetail._() : super._();
+  const _AuditEventObjectDetail._() : super._();
 
   factory _AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObjectDetail.fromJson;

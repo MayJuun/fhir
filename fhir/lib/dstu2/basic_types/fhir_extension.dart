@@ -14,7 +14,7 @@ part 'fhir_extension.g.dart';
 @freezed
 class FhirExtension with _$FhirExtension {
   FhirExtension._();
-  factory FhirExtension({
+  const factory FhirExtension({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required FhirUri url,

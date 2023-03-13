@@ -707,7 +707,7 @@ class __$$_EndpointCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Endpoint extends _Endpoint {
-  _$_Endpoint(
+  const _$_Endpoint(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           this.resourceType = R4ResourceType.Endpoint,
       this.id,
@@ -1140,7 +1140,7 @@ class _$_Endpoint extends _Endpoint {
 }
 
 abstract class _Endpoint extends Endpoint {
-  factory _Endpoint(
+  const factory _Endpoint(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           final R4ResourceType resourceType,
       final String? id,
@@ -1177,7 +1177,7 @@ abstract class _Endpoint extends Endpoint {
       final List<String>? header,
       @JsonKey(name: '_header')
           final List<Element?>? headerElement}) = _$_Endpoint;
-  _Endpoint._() : super._();
+  const _Endpoint._() : super._();
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
@@ -2307,7 +2307,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareService extends _HealthcareService {
-  _$_HealthcareService(
+  const _$_HealthcareService(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           this.resourceType = R4ResourceType.HealthcareService,
       this.id,
@@ -2962,7 +2962,7 @@ class _$_HealthcareService extends _HealthcareService {
 }
 
 abstract class _HealthcareService extends HealthcareService {
-  factory _HealthcareService(
+  const factory _HealthcareService(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           final R4ResourceType resourceType,
       final String? id,
@@ -3014,7 +3014,7 @@ abstract class _HealthcareService extends HealthcareService {
       @JsonKey(name: '_availabilityExceptions')
           final Element? availabilityExceptionsElement,
       final List<Reference>? endpoint}) = _$_HealthcareService;
-  _HealthcareService._() : super._();
+  const _HealthcareService._() : super._();
 
   factory _HealthcareService.fromJson(Map<String, dynamic> json) =
       _$_HealthcareService.fromJson;
@@ -3472,7 +3472,7 @@ class __$$_HealthcareServiceEligibilityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareServiceEligibility extends _HealthcareServiceEligibility {
-  _$_HealthcareServiceEligibility(
+  const _$_HealthcareServiceEligibility(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3615,7 +3615,7 @@ class _$_HealthcareServiceEligibility extends _HealthcareServiceEligibility {
 
 abstract class _HealthcareServiceEligibility
     extends HealthcareServiceEligibility {
-  factory _HealthcareServiceEligibility(
+  const factory _HealthcareServiceEligibility(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3623,7 +3623,7 @@ abstract class _HealthcareServiceEligibility
           final Markdown? comment,
           @JsonKey(name: '_comment') final Element? commentElement}) =
       _$_HealthcareServiceEligibility;
-  _HealthcareServiceEligibility._() : super._();
+  const _HealthcareServiceEligibility._() : super._();
 
   factory _HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceEligibility.fromJson;
@@ -3997,7 +3997,7 @@ class __$$_HealthcareServiceAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareServiceAvailableTime
     extends _HealthcareServiceAvailableTime {
-  _$_HealthcareServiceAvailableTime(
+  const _$_HealthcareServiceAvailableTime(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4213,7 +4213,7 @@ class _$_HealthcareServiceAvailableTime
 
 abstract class _HealthcareServiceAvailableTime
     extends HealthcareServiceAvailableTime {
-  factory _HealthcareServiceAvailableTime(
+  const factory _HealthcareServiceAvailableTime(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -4231,7 +4231,7 @@ abstract class _HealthcareServiceAvailableTime
           @JsonKey(name: '_availableEndTime')
               final Element? availableEndTimeElement}) =
       _$_HealthcareServiceAvailableTime;
-  _HealthcareServiceAvailableTime._() : super._();
+  const _HealthcareServiceAvailableTime._() : super._();
 
   factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceAvailableTime.fromJson;
@@ -4536,7 +4536,7 @@ class __$$_HealthcareServiceNotAvailableCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
-  _$_HealthcareServiceNotAvailable(
+  const _$_HealthcareServiceNotAvailable(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4683,14 +4683,14 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
 abstract class _HealthcareServiceNotAvailable
     extends HealthcareServiceNotAvailable {
-  factory _HealthcareServiceNotAvailable(
+  const factory _HealthcareServiceNotAvailable(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Period? during}) = _$_HealthcareServiceNotAvailable;
-  _HealthcareServiceNotAvailable._() : super._();
+  const _HealthcareServiceNotAvailable._() : super._();
 
   factory _HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceNotAvailable.fromJson;
@@ -5636,7 +5636,7 @@ class __$$_LocationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Location extends _Location {
-  _$_Location(
+  const _$_Location(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           this.resourceType = R4ResourceType.Location,
       this.id,
@@ -6132,7 +6132,7 @@ class _$_Location extends _Location {
 }
 
 abstract class _Location extends Location {
-  factory _Location(
+  const factory _Location(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           final R4ResourceType resourceType,
       final String? id,
@@ -6177,7 +6177,7 @@ abstract class _Location extends Location {
       @JsonKey(name: '_availabilityExceptions')
           final Element? availabilityExceptionsElement,
       final List<Reference>? endpoint}) = _$_Location;
-  _Location._() : super._();
+  const _Location._() : super._();
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
@@ -6659,7 +6659,7 @@ class __$$_LocationPositionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LocationPosition extends _LocationPosition {
-  _$_LocationPosition(
+  const _$_LocationPosition(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6831,7 +6831,7 @@ class _$_LocationPosition extends _LocationPosition {
 }
 
 abstract class _LocationPosition extends LocationPosition {
-  factory _LocationPosition(
+  const factory _LocationPosition(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6842,7 +6842,7 @@ abstract class _LocationPosition extends LocationPosition {
           final Decimal? altitude,
           @JsonKey(name: '_altitude') final Element? altitudeElement}) =
       _$_LocationPosition;
-  _LocationPosition._() : super._();
+  const _LocationPosition._() : super._();
 
   factory _LocationPosition.fromJson(Map<String, dynamic> json) =
       _$_LocationPosition.fromJson;
@@ -7226,7 +7226,7 @@ class __$$_LocationHoursOfOperationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
-  _$_LocationHoursOfOperation(
+  const _$_LocationHoursOfOperation(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7435,7 +7435,7 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
 }
 
 abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
-  factory _LocationHoursOfOperation(
+  const factory _LocationHoursOfOperation(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -7448,7 +7448,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
           final Time? closingTime,
           @JsonKey(name: '_closingTime') final Element? closingTimeElement}) =
       _$_LocationHoursOfOperation;
-  _LocationHoursOfOperation._() : super._();
+  const _LocationHoursOfOperation._() : super._();
 
   factory _LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =
       _$_LocationHoursOfOperation.fromJson;
@@ -8120,7 +8120,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Organization extends _Organization {
-  _$_Organization(
+  const _$_Organization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           this.resourceType = R4ResourceType.Organization,
       this.id,
@@ -8520,7 +8520,7 @@ class _$_Organization extends _Organization {
 }
 
 abstract class _Organization extends Organization {
-  factory _Organization(
+  const factory _Organization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           final R4ResourceType resourceType,
       final String? id,
@@ -8552,7 +8552,7 @@ abstract class _Organization extends Organization {
       final Reference? partOf,
       final List<OrganizationContact>? contact,
       final List<Reference>? endpoint}) = _$_Organization;
-  _Organization._() : super._();
+  const _Organization._() : super._();
 
   factory _Organization.fromJson(Map<String, dynamic> json) =
       _$_Organization.fromJson;
@@ -8942,7 +8942,7 @@ class __$$_OrganizationContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OrganizationContact extends _OrganizationContact {
-  _$_OrganizationContact(
+  const _$_OrganizationContact(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9101,7 +9101,7 @@ class _$_OrganizationContact extends _OrganizationContact {
 }
 
 abstract class _OrganizationContact extends OrganizationContact {
-  factory _OrganizationContact(
+  const factory _OrganizationContact(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9109,7 +9109,7 @@ abstract class _OrganizationContact extends OrganizationContact {
       final HumanName? name,
       final List<ContactPoint>? telecom,
       final Address? address}) = _$_OrganizationContact;
-  _OrganizationContact._() : super._();
+  const _OrganizationContact._() : super._();
 
   factory _OrganizationContact.fromJson(Map<String, dynamic> json) =
       _$_OrganizationContact.fromJson;
@@ -9781,7 +9781,7 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OrganizationAffiliation extends _OrganizationAffiliation {
-  _$_OrganizationAffiliation(
+  const _$_OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           this.resourceType = R4ResourceType.OrganizationAffiliation,
       this.id,
@@ -10193,7 +10193,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 }
 
 abstract class _OrganizationAffiliation extends OrganizationAffiliation {
-  factory _OrganizationAffiliation(
+  const factory _OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           final R4ResourceType resourceType,
       final String? id,
@@ -10223,7 +10223,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       final List<Reference>? healthcareService,
       final List<ContactPoint>? telecom,
       final List<Reference>? endpoint}) = _$_OrganizationAffiliation;
-  _OrganizationAffiliation._() : super._();
+  const _OrganizationAffiliation._() : super._();
 
   factory _OrganizationAffiliation.fromJson(Map<String, dynamic> json) =
       _$_OrganizationAffiliation.fromJson;

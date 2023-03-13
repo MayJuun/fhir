@@ -142,7 +142,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
   ///
   /// [dispositionElement] ("_disposition") Extensions for disposition
   ///
-  factory ArtifactAssessment({
+  const factory ArtifactAssessment({
     /// [resourceType] This is a ArtifactAssessment resource
     @Default(R5ResourceType.ArtifactAssessment)
     @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
@@ -355,7 +355,7 @@ class ArtifactAssessmentContent with _$ArtifactAssessmentContent {
   /// [component] If the informationType is container, the components of the
   ///  content.
   ///
-  factory ArtifactAssessmentContent({
+  const factory ArtifactAssessmentContent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -671,7 +671,7 @@ class Citation with Resource, _$Citation {
   ///
   /// [citedArtifact] The article or artifact being described.
   ///
-  factory Citation({
+  const factory Citation({
     /// [resourceType] This is a Citation resource
     @Default(R5ResourceType.Citation)
     @JsonKey(unknownEnumValue: R5ResourceType.Citation)
@@ -941,7 +941,7 @@ class CitationSummary with _$CitationSummary {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory CitationSummary({
+  const factory CitationSummary({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1057,7 +1057,7 @@ class CitationClassification with _$CitationClassification {
   ///
   /// [classifier] The specific classification value.
   ///
-  factory CitationClassification({
+  const factory CitationClassification({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1176,7 +1176,7 @@ class CitationStatusDate with _$CitationStatusDate {
   ///
   /// [period] When the status started and/or ended.
   ///
-  factory CitationStatusDate({
+  const factory CitationStatusDate({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1332,7 +1332,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
   ///
   /// [note] Any additional information or content for the article or artifact.
   ///
-  factory CitationCitedArtifact({
+  const factory CitationCitedArtifact({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1489,7 +1489,7 @@ class CitationVersion with _$CitationVersion {
   ///
   /// [baseCitation] Citation for the main version of the cited artifact.
   ///
-  factory CitationVersion({
+  const factory CitationVersion({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1609,7 +1609,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
   ///
   /// [period] When the status started and/or ended.
   ///
-  factory CitationStatusDate1({
+  const factory CitationStatusDate1({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1732,7 +1732,7 @@ class CitationTitle with _$CitationTitle {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory CitationTitle({
+  const factory CitationTitle({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1859,7 +1859,7 @@ class CitationAbstract with _$CitationAbstract {
   ///
   /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  factory CitationAbstract({
+  const factory CitationAbstract({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1988,7 +1988,7 @@ class CitationPart with _$CitationPart {
   ///
   /// [baseCitation] The citation for the full article or artifact.
   ///
-  factory CitationPart({
+  const factory CitationPart({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2136,7 +2136,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
   /// [resourceReference] The related artifact, if the artifact is not a
   ///  canonical resource, or a resource reference to a canonical resource.
   ///
-  factory CitationRelatesTo({
+  const factory CitationRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2360,7 +2360,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
   ///
   /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  factory CitationPublicationForm({
+  const factory CitationPublicationForm({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2580,7 +2580,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
   /// [publisherLocationElement] ("_publisherLocation") Extensions for
   ///  publisherLocation
   ///
-  factory CitationPublishedIn({
+  const factory CitationPublishedIn({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2711,7 +2711,7 @@ class CitationWebLocation with _$CitationWebLocation {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory CitationWebLocation({
+  const factory CitationWebLocation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2829,7 +2829,7 @@ class CitationClassification1 with _$CitationClassification1 {
   ///
   /// [artifactAssessment] Complex or externally created classification.
   ///
-  factory CitationClassification1({
+  const factory CitationClassification1({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2950,7 +2950,7 @@ class CitationContributorship with _$CitationContributorship {
   /// [summary] Used to record a display of the author/contributor list without
   ///  separate coding for each list member.
   ///
-  factory CitationContributorship({
+  const factory CitationContributorship({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3093,7 +3093,7 @@ class CitationEntry with _$CitationEntry {
   ///
   /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
   ///
-  factory CitationEntry({
+  const factory CitationEntry({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3236,7 +3236,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
   ///
   /// [timeElement] ("_time") Extensions for time
   ///
-  factory CitationContributionInstance({
+  const factory CitationContributionInstance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3362,7 +3362,7 @@ class CitationSummary1 with _$CitationSummary1 {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory CitationSummary1({
+  const factory CitationSummary1({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3672,7 +3672,7 @@ class Evidence with Resource, _$Evidence {
   /// [certainty] Assessment of certainty, confidence in the estimates, or
   ///  quality of the evidence.
   ///
-  factory Evidence({
+  const factory Evidence({
     /// [resourceType] This is a Evidence resource
     @Default(R5ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
@@ -3967,7 +3967,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   /// [directnessMatch] Indication of quality of match between intended
   ///  variable to actual variable.
   ///
-  factory EvidenceVariableDefinition({
+  const factory EvidenceVariableDefinition({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4124,7 +4124,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
   ///
   /// [modelCharacteristic] A component of the method to generate the statistic.
   ///
-  factory EvidenceStatistic({
+  const factory EvidenceStatistic({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4288,7 +4288,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
   ///
   /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
   ///
-  factory EvidenceSampleSize({
+  const factory EvidenceSampleSize({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4441,7 +4441,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
   /// [attributeEstimate] A nested attribute estimate; which is the attribute
   ///  estimate of an attribute estimate.
   ///
-  factory EvidenceAttributeEstimate({
+  const factory EvidenceAttributeEstimate({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4581,7 +4581,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
   /// [attributeEstimate] An attribute of the statistic used as a model
   ///  characteristic.
   ///
-  factory EvidenceModelCharacteristic({
+  const factory EvidenceModelCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4712,7 +4712,7 @@ class Evidencevariable with _$Evidencevariable {
   /// [valueRange] Range of values for grouping of ordinal or polychotomous
   ///  variables.
   ///
-  factory Evidencevariable({
+  const factory Evidencevariable({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4849,7 +4849,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
   ///
   /// [subcomponent] A domain or subdomain of certainty.
   ///
-  factory EvidenceCertainty({
+  const factory EvidenceCertainty({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5162,7 +5162,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
   ///
   /// [section] The root of the sections that make up the composition.
   ///
-  factory EvidenceReport({
+  const factory EvidenceReport({
     /// [resourceType] This is a EvidenceReport resource
     @Default(R5ResourceType.EvidenceReport)
     @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
@@ -5436,7 +5436,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
   ///
   /// [note] Used for general notes and annotations not coded elsewhere.
   ///
-  factory EvidenceReportSubject({
+  const factory EvidenceReportSubject({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5562,7 +5562,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   ///
   /// [period] Timeframe for the characteristic.
   ///
-  factory EvidenceReportCharacteristic({
+  const factory EvidenceReportCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5700,7 +5700,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   ///
   /// [target] The target composition/document of this relationship.
   ///
-  factory EvidenceReportRelatesTo({
+  const factory EvidenceReportRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5821,7 +5821,7 @@ class EvidenceReportTarget with _$EvidenceReportTarget {
   ///
   /// [resource] Target of the relationship Resource reference.
   ///
-  factory EvidenceReportTarget({
+  const factory EvidenceReportTarget({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5985,7 +5985,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
   ///
   /// [section] A nested sub-section within this section.
   ///
-  factory EvidenceReportSection({
+  const factory EvidenceReportSection({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6320,7 +6320,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   ///
   /// [category] A grouping for ordinal or polychotomous variables.
   ///
-  factory EvidenceVariable({
+  const factory EvidenceVariable({
     /// [resourceType] This is a EvidenceVariable resource
     @Default(R5ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
@@ -6630,7 +6630,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   ///
   /// [timeFromEvent] Observation time from study specified event.
   ///
-  factory EvidenceVariableCharacteristic({
+  const factory EvidenceVariableCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6805,7 +6805,7 @@ class EvidenceVariableDefinitionByTypeAndValue
   /// [offset] Defines the reference point for comparison when valueQuantity is
   ///  not compared to zero.
   ///
-  factory EvidenceVariableDefinitionByTypeAndValue({
+  const factory EvidenceVariableDefinitionByTypeAndValue({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6952,7 +6952,7 @@ class EvidenceVariableDefinitionByCombination
   ///
   /// [characteristic] A defining factor of the characteristic.
   ///
-  factory EvidenceVariableDefinitionByCombination({
+  const factory EvidenceVariableDefinitionByCombination({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7091,7 +7091,7 @@ class EvidenceVariableTimeFromEvent with _$EvidenceVariableTimeFromEvent {
   /// [range] Used to express the observation within a period after the study
   ///  start.
   ///
-  factory EvidenceVariableTimeFromEvent({
+  const factory EvidenceVariableTimeFromEvent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7229,7 +7229,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
   ///
   /// [valueRange] Definition of the grouping.
   ///
-  factory EvidenceVariableCategory({
+  const factory EvidenceVariableCategory({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

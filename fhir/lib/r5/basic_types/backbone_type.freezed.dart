@@ -153,7 +153,7 @@ class __$$_BackboneTypeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BackboneType extends _BackboneType {
-  _$_BackboneType(
+  const _$_BackboneType(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension})
@@ -276,11 +276,11 @@ class _$_BackboneType extends _BackboneType {
 }
 
 abstract class _BackboneType extends BackboneType {
-  factory _BackboneType(
+  const factory _BackboneType(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension}) = _$_BackboneType;
-  _BackboneType._() : super._();
+  const _BackboneType._() : super._();
 
   factory _BackboneType.fromJson(Map<String, dynamic> json) =
       _$_BackboneType.fromJson;

@@ -37,7 +37,7 @@ class ContactDetail with _$ContactDetail {
   ///
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
-  factory ContactDetail({
+  const factory ContactDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -122,7 +122,7 @@ class Contributor with _$Contributor {
   ///
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
-  factory Contributor({
+  const factory Contributor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -246,7 +246,7 @@ class DataRequirement with _$DataRequirement {
   /// [limitElement] Extensions for limit
   ///
   /// [sort] Specifies the order of the results to be returned.
-  factory DataRequirement({
+  const factory DataRequirement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -408,7 +408,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
-  factory DataRequirementCodeFilter({
+  const factory DataRequirementCodeFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -575,7 +575,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-  factory DataRequirementDateFilter({
+  const factory DataRequirementDateFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -728,7 +728,7 @@ class DataRequirementSort with _$DataRequirementSort {
   /// [direction] The direction of the sort, ascending or descending.
   ///
   /// [directionElement] Extensions for direction
-  factory DataRequirementSort({
+  const factory DataRequirementSort({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -859,7 +859,7 @@ class ParameterDefinition with _$ParameterDefinition {
   ///
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  factory ParameterDefinition({
+  const factory ParameterDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -996,7 +996,7 @@ class RelatedArtifact with _$RelatedArtifact {
   ///
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-  factory RelatedArtifact({
+  const factory RelatedArtifact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1140,7 +1140,7 @@ class TriggerDefinition with _$TriggerDefinition {
   /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
-  factory TriggerDefinition({
+  const factory TriggerDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1269,7 +1269,7 @@ class UsageContext with _$UsageContext {
   ///
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  factory UsageContext({
+  const factory UsageContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1377,7 +1377,7 @@ class Expression with _$Expression {
   /// [reference] A URI that defines where the expression is found.
   ///
   /// [referenceElement] Extensions for reference
-  factory Expression({
+  const factory Expression({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

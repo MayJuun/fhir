@@ -111,7 +111,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///  infusion.
   ///
   /// [storage] Product storage.
-  factory BiologicallyDerivedProduct({
+  const factory BiologicallyDerivedProduct({
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
 
@@ -309,7 +309,7 @@ class BiologicallyDerivedProductCollection
   /// [collectedDateTimeElement] Extensions for collectedDateTime
   ///
   /// [collectedPeriod] Time of product collection.
-  factory BiologicallyDerivedProductCollection({
+  const factory BiologicallyDerivedProductCollection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -420,7 +420,7 @@ class BiologicallyDerivedProductProcessing
   /// [timeDateTimeElement] Extensions for timeDateTime
   ///
   /// [timePeriod] Time of processing.
-  factory BiologicallyDerivedProductProcessing({
+  const factory BiologicallyDerivedProductProcessing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -533,7 +533,7 @@ class BiologicallyDerivedProductManipulation
   /// [timeDateTimeElement] Extensions for timeDateTime
   ///
   /// [timePeriod] Time of manipulation.
-  factory BiologicallyDerivedProductManipulation({
+  const factory BiologicallyDerivedProductManipulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -643,7 +643,7 @@ class BiologicallyDerivedProductStorage
   /// [scaleElement] Extensions for scale
   ///
   /// [duration] Storage timeperiod.
-  factory BiologicallyDerivedProductStorage({
+  const factory BiologicallyDerivedProductStorage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -867,7 +867,7 @@ class Device with Resource, _$Device {
   ///  device.  For example devices containing latex.
   ///
   /// [parent] The parent device.
-  factory Device({
+  const factory Device({
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
 
@@ -1182,7 +1182,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// [entryType] A coded entry to indicate how the data was entered.
   ///
   /// [entryTypeElement] Extensions for entryType
-  factory DeviceUdiCarrier({
+  const factory DeviceUdiCarrier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1342,7 +1342,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
   ///  ManufactureDeviceName | ModelName.
   ///
   /// [typeElement] Extensions for type
-  factory DeviceDeviceName({
+  const factory DeviceDeviceName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1456,7 +1456,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
   ///  communicate.
   ///
   /// [versionElement] Extensions for version
-  factory DeviceSpecialization({
+  const factory DeviceSpecialization({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1567,7 +1567,7 @@ class DeviceVersion with _$DeviceVersion {
   /// [value] The version text.
   ///
   /// [valueElement] Extensions for value
-  factory DeviceVersion({
+  const factory DeviceVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1679,7 +1679,7 @@ class DeviceProperty with _$DeviceProperty {
   /// [valueQuantity] Property value as a quantity.
   ///
   /// [valueCode] Property value as a code, e.g., NTP4 (synced to NTP).
-  factory DeviceProperty({
+  const factory DeviceProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1862,7 +1862,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   ///
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
-  factory DeviceMetric({
+  const factory DeviceMetric({
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
 
@@ -2074,7 +2074,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// [time] Describes the time last calibration has been performed.
   ///
   /// [timeElement] Extensions for time
-  factory DeviceMetricCalibration({
+  const factory DeviceMetricCalibration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2202,7 +2202,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
   ///
   /// [note] Comments made about the product.;
-  factory NutritionProduct({
+  const factory NutritionProduct({
     /// [resourceType] This is a NutritionProduct resource;
     @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
 
@@ -2315,7 +2315,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   /// [item] The (relevant) nutrients in the product.;
   ///
   /// [amount] The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.;
-  factory NutritionProductNutrient({
+  const factory NutritionProductNutrient({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
 
     String? id,
@@ -2387,7 +2387,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   /// [item] The ingredient contained in the product.;
   ///
   /// [amount] The amount of ingredient that is in the product.;
-  factory NutritionProductIngredient({
+  const factory NutritionProductIngredient({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
 
     String? id,
@@ -2474,7 +2474,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   /// [valueBoolean] The actual characteristic value corresponding to the type.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
-  factory NutritionProductCharacteristic({
+  const factory NutritionProductCharacteristic({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
 
     String? id,
@@ -2595,7 +2595,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
   /// [useByElement] (_useBy): Extensions for useBy;
   ///
   /// [biologicalSource] An identifier that supports traceability to the biological entity that is the source of biological material in the product.;
-  factory NutritionProductInstance({
+  const factory NutritionProductInstance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2724,7 +2724,7 @@ class Substance with Resource, _$Substance {
   ///  specific package/container of the substance: an instance.
   ///
   /// [ingredient] A substance can be composed of other substances.
-  factory Substance({
+  const factory Substance({
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
         R4ResourceType resourceType,
@@ -2824,7 +2824,7 @@ class SubstanceInstance with _$SubstanceInstance {
   /// [expiryElement] Extensions for expiry
   ///
   /// [quantity] The amount of the substance.
-  factory SubstanceInstance({
+  const factory SubstanceInstance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2906,7 +2906,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
   ///
   /// [substanceReference] Another substance that is a component of this
   ///  substance.
-  factory SubstanceIngredient({
+  const factory SubstanceIngredient({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

@@ -157,7 +157,7 @@ class CarePlan with Resource, _$CarePlan {
   ///  education, etc.
   ///
   /// [note] General notes about the care plan not covered elsewhere.
-  factory CarePlan({
+  const factory CarePlan({
     @Default(R4ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
 
@@ -428,7 +428,7 @@ class CarePlanActivity with _$CarePlanActivity {
   /// [detail] A simple summary of a planned activity suitable for a general
   /// care plan system (e.g. form driven) that doesn't know about specific
   ///  resources such as procedure etc.
-  factory CarePlanActivity({
+  const factory CarePlanActivity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -629,7 +629,7 @@ class CarePlanDetail with _$CarePlanDetail {
   ///  route, etc.
   ///
   /// [descriptionElement] Extensions for description
-  factory CarePlanDetail({
+  const factory CarePlanDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -900,7 +900,7 @@ class CareTeam with Resource, _$CareTeam {
   ///  members).
   ///
   /// [note] Comments made about the CareTeam.
-  factory CareTeam({
+  const factory CareTeam({
     @Default(R4ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
 
@@ -1102,7 +1102,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
   ///
   /// [period] Indicates when the specific member or organization did (or is
   ///  intended to) come into effect and end.
-  factory CareTeamParticipant({
+  const factory CareTeamParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1296,7 +1296,7 @@ class Goal with Resource, _$Goal {
   ///  the status of the goal is assessed.
   ///
   /// [outcomeReference] Details of what's changed (or not changed).
-  factory Goal({
+  const factory Goal({
     @Default(R4ResourceType.Goal)
     @JsonKey(unknownEnumValue: R4ResourceType.Goal)
 
@@ -1575,7 +1575,7 @@ class GoalTarget with _$GoalTarget {
   ///
   /// [dueDuration] Indicates either the date or the duration after start by
   ///  which the goal should be met.
-  factory GoalTarget({
+  const factory GoalTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1852,7 +1852,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
   ///
   /// [note] Comments made about the {{title}} by the requester, performer,
   ///  subject or other participants.
-  factory NutritionOrder({
+  const factory NutritionOrder({
     @Default(R4ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
 
@@ -2109,7 +2109,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   ///  pertaining to the oral diet.
   ///
   /// [instructionElement] Extensions for instruction
-  factory NutritionOrderOralDiet({
+  const factory NutritionOrderOralDiet({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2236,7 +2236,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
   ///  sodium.
   ///
   /// [amount] The quantity of the specified nutrient to include in diet.
-  factory NutritionOrderNutrient({
+  const factory NutritionOrderNutrient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2341,7 +2341,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
   ///
   /// [foodType] The food type(s) (e.g. meats, all foods)  that the texture
   ///  modification applies to.  This could be all foods types.
-  factory NutritionOrderTexture({
+  const factory NutritionOrderTexture({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2460,7 +2460,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
   ///  pertaining to the oral supplement.
   ///
   /// [instructionElement] Extensions for instruction
-  factory NutritionOrderSupplement({
+  const factory NutritionOrderSupplement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2619,7 +2619,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   ///  instructions or additional instructions or information.
   ///
   /// [administrationInstructionElement] Extensions for administrationInstruction
-  factory NutritionOrderEnteralFormula({
+  const factory NutritionOrderEnteralFormula({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2780,7 +2780,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
   ///
   /// [rateRatio] The rate of administration of formula via a feeding pump,
   ///  e.g. 60 mL per hour, according to the specified schedule.
-  factory NutritionOrderAdministration({
+  const factory NutritionOrderAdministration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2981,7 +2981,7 @@ class RequestGroup with Resource, _$RequestGroup {
   ///  the response.
   ///
   /// [action] The actions, if any, produced by the evaluation of the artifact.
-  factory RequestGroup({
+  const factory RequestGroup({
     @Default(R4ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
 
@@ -3301,7 +3301,7 @@ class RequestGroupAction with _$RequestGroupAction {
   ///  CommunicationRequest).
   ///
   /// [action] Sub actions.
-  factory RequestGroupAction({
+  const factory RequestGroupAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3530,7 +3530,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
   ///
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
-  factory RequestGroupCondition({
+  const factory RequestGroupCondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3647,7 +3647,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   ///
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
-  factory RequestGroupRelatedAction({
+  const factory RequestGroupRelatedAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3840,7 +3840,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// [mitigationElement] Extensions for mitigation
   ///
   /// [note] Additional comments about the risk assessment.
-  factory RiskAssessment({
+  const factory RiskAssessment({
     @Default(R4ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
 
@@ -4080,7 +4080,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   ///  prediction.
   ///
   /// [rationaleElement] Extensions for rationale
-  factory RiskAssessmentPrediction({
+  const factory RiskAssessmentPrediction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4396,7 +4396,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// [patientInstructionElement] Extensions for patientInstruction
   ///
   /// [relevantHistory] Key events in the history of the request.
-  factory ServiceRequest({
+  const factory ServiceRequest({
     @Default(R4ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
 
@@ -4794,7 +4794,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
   /// [lensSpecification] Contain the details of  the individual lens
   /// specifications and serves as the authorization for the fullfillment by
   ///  certified professionals.
-  factory VisionPrescription({
+  const factory VisionPrescription({
     @Default(R4ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
 
@@ -5020,7 +5020,7 @@ class VisionPrescriptionLensSpecification
   ///
   /// [note] Notes for special requirements such as coatings and lens
   ///  materials.
-  factory VisionPrescriptionLensSpecification({
+  const factory VisionPrescriptionLensSpecification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5186,7 +5186,7 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   /// [base] The relative base, or reference lens edge, for the prism.
   ///
   /// [baseElement] Extensions for base
-  factory VisionPrescriptionPrism({
+  const factory VisionPrescriptionPrism({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

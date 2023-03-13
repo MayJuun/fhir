@@ -47,7 +47,7 @@ class AdministrableProductDefinition
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  factory AdministrableProductDefinition({
+  const factory AdministrableProductDefinition({
     @Default(R4ResourceType.AdministrableProductDefinition)
 
         /// [resourceType] This is a AdministrableProductDefinition resource",
@@ -168,7 +168,7 @@ class AdministrableProductDefinitionProperty
   /// [valueAttachment] A value for the characteristic.;
   ///
   /// [status] The status of characteristic e.g. assigned or pending.;
-  factory AdministrableProductDefinitionProperty({
+  const factory AdministrableProductDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -269,7 +269,7 @@ class AdministrableProductDefinitionRouteOfAdministration
   /// [maxTreatmentPeriod] The maximum treatment period during which the product can be administered.;
   ///
   /// [targetSpecies] A species for which this route applies.;
-  factory AdministrableProductDefinitionRouteOfAdministration({
+  const factory AdministrableProductDefinitionRouteOfAdministration({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -357,7 +357,7 @@ class AdministrableProductDefinitionTargetSpecies
   /// [code] Coded expression for the species.;
   ///
   /// [withdrawalPeriod] A species specific time during which consumption of animal product is not appropriate.;
-  factory AdministrableProductDefinitionTargetSpecies({
+  const factory AdministrableProductDefinitionTargetSpecies({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -432,7 +432,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
   /// [supportingInformation] Extra information about the withdrawal period.;
   ///
   /// [supportingInformationElement] (_supportingInformation): Extensions for supportingInformation;
-  factory AdministrableProductDefinitionWithdrawalPeriod({
+  const factory AdministrableProductDefinitionWithdrawalPeriod({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -547,7 +547,7 @@ class Ingredient with Resource, _$Ingredient {
   /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
   ///
   /// [substance] The substance that comprises this ingredient.;
-  factory Ingredient({
+  const factory Ingredient({
     /// [resourceType] This is a Ingredient resource;
     @Default(R4ResourceType.Ingredient) R4ResourceType resourceType,
 
@@ -664,7 +664,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
   /// [roleElement] (_role): Extensions for role;
   ///
   /// [manufacturer] An organization that manufactures this ingredient.;
-  factory IngredientManufacturer({
+  const factory IngredientManufacturer({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -735,7 +735,7 @@ class IngredientSubstance with _$IngredientSubstance {
   /// [code] A code or full resource that represents the ingredient's substance.;
   ///
   /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
-  factory IngredientSubstance({
+  const factory IngredientSubstance({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -824,7 +824,7 @@ class IngredientStrength with _$IngredientStrength {
   /// [country] The country or countries for which the strength range applies.;
   ///
   /// [referenceStrength] Strength expressed in terms of a reference substance. For when the ingredient strength is additionally expressed as equivalent to the strength of some other closely related substance (e.g. salt vs. base). Reference strength represents the strength (quantitative composition) of the active moiety of the active substance. There are situations when the active substance and active moiety are different, therefore both a strength and a reference strength are needed.;
-  factory IngredientStrength({
+  const factory IngredientStrength({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -933,7 +933,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
   /// [measurementPointElement] (_measurementPoint): Extensions for measurementPoint;
   ///
   /// [country] The country or countries for which the strength range applies.;
-  factory IngredientReferenceStrength({
+  const factory IngredientReferenceStrength({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1051,7 +1051,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
   ///
   /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
-  factory ClinicalUseDefinition({
+  const factory ClinicalUseDefinition({
     /// [resourceType] This is a ClinicalUseDefinition resource;
     @Default(R4ResourceType.ClinicalUseDefinition) R4ResourceType resourceType,
 
@@ -1173,7 +1173,7 @@ class ClinicalUseDefinitionContraindication
   /// [indication] The indication which this is a contraidication for.;
   ///
   /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the contraindication.;
-  factory ClinicalUseDefinitionContraindication({
+  const factory ClinicalUseDefinitionContraindication({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1249,7 +1249,7 @@ class ClinicalUseDefinitionOtherTherapy
   /// [relationshipType] The type of relationship between the medicinal product indication or contraindication and another therapy.;
   ///
   /// [therapy] Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.;
-  factory ClinicalUseDefinitionOtherTherapy({
+  const factory ClinicalUseDefinitionOtherTherapy({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1331,7 +1331,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
   /// [undesirableEffect] An unwanted side effect or negative outcome that may happen if you use the drug (or other subject of this resource) for this indication.;
   ///
   /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the indication.;
-  factory ClinicalUseDefinitionIndication({
+  const factory ClinicalUseDefinitionIndication({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1425,7 +1425,7 @@ class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
   /// [incidence] The incidence of the interaction, e.g. theoretical, observed.;
   ///
   /// [management] Actions for managing the interaction.;
-  factory ClinicalUseDefinitionInteraction({
+  const factory ClinicalUseDefinitionInteraction({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1502,7 +1502,7 @@ class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
   /// [itemReference] The specific medication, food or laboratory test that interacts.;
   ///
   /// [itemCodeableConcept] The specific medication, food or laboratory test that interacts.;
-  factory ClinicalUseDefinitionInteractant({
+  const factory ClinicalUseDefinitionInteractant({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1571,7 +1571,7 @@ class ClinicalUseDefinitionUndesirableEffect
   /// [classification] High level classification of the effect.;
   ///
   /// [frequencyOfOccurrence] How often the effect is seen.;
-  factory ClinicalUseDefinitionUndesirableEffect({
+  const factory ClinicalUseDefinitionUndesirableEffect({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1644,7 +1644,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
   /// [descriptionElement] (_description): Extensions for description;
   ///
   /// [code] A coded or unformatted textual definition of this warning.;
-  factory ClinicalUseDefinitionWarning({
+  const factory ClinicalUseDefinitionWarning({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1743,7 +1743,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
   ///
   /// [property] General characteristics of this item.;
-  factory ManufacturedItemDefinition({
+  const factory ManufacturedItemDefinition({
     @Default(R4ResourceType.ManufacturedItemDefinition)
 
         /// [resourceType] This is a ManufacturedItemDefinition resource;
@@ -1868,7 +1868,7 @@ class ManufacturedItemDefinitionProperty
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the characteristic.;
-  factory ManufacturedItemDefinitionProperty({
+  const factory ManufacturedItemDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2032,7 +2032,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
   ///
   /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
-  factory MedicinalProductDefinition({
+  const factory MedicinalProductDefinition({
     @Default(R4ResourceType.MedicinalProductDefinition)
 
         /// [resourceType] This is a MedicinalProductDefinition resource;
@@ -2220,7 +2220,7 @@ class MedicinalProductDefinitionContact
   /// [type] Allows the contact to be classified, for example QPPV, Pharmacovigilance Enquiry Information.;
   ///
   /// [contact] A product specific contact, person (in a role), or an organization.;
-  factory MedicinalProductDefinitionContact({
+  const factory MedicinalProductDefinitionContact({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2297,7 +2297,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   /// [namePart] Coding words or phrases of the name.;
   ///
   /// [countryLanguage] Country and jurisdiction where the name applies, and associated language.;
-  factory MedicinalProductDefinitionName({
+  const factory MedicinalProductDefinitionName({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2377,7 +2377,7 @@ class MedicinalProductDefinitionNamePart
   /// [partElement] (_part): Extensions for part;
   ///
   /// [type] Identifying type for this part of the name (e.g. strength part).;
-  factory MedicinalProductDefinitionNamePart({
+  const factory MedicinalProductDefinitionNamePart({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2452,7 +2452,7 @@ class MedicinalProductDefinitionCountryLanguage
   /// [jurisdiction] Jurisdiction code for where this name applies. A jurisdiction may be a sub- or supra-national entity (e.g. a state or a geographic region).;
   ///
   /// [language] Language code for this name.;
-  factory MedicinalProductDefinitionCountryLanguage({
+  const factory MedicinalProductDefinitionCountryLanguage({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2526,7 +2526,7 @@ class MedicinalProductDefinitionCrossReference
   /// [product] Reference to another product, e.g. for linking authorised to investigational product.;
   ///
   /// [type] The type of relationship, for instance branded to generic, virtual to actual product, product to development product (investigational), parallel import version.;
-  factory MedicinalProductDefinitionCrossReference({
+  const factory MedicinalProductDefinitionCrossReference({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2601,7 +2601,7 @@ class MedicinalProductDefinitionOperation
   /// [organization] The organization or establishment responsible for (or associated with) the particular process or step, examples include the manufacturer, importer, agent.;
   ///
   /// [confidentialityIndicator] Specifies whether this particular business or manufacturing process is considered proprietary or confidential.;
-  factory MedicinalProductDefinitionOperation({
+  const factory MedicinalProductDefinitionOperation({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2689,7 +2689,7 @@ class MedicinalProductDefinitionCharacteristic
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the characteristic.text.;
-  factory MedicinalProductDefinitionCharacteristic({
+  const factory MedicinalProductDefinitionCharacteristic({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2827,7 +2827,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
   ///
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
-  factory PackagedProductDefinition({
+  const factory PackagedProductDefinition({
     @Default(R4ResourceType.PackagedProductDefinition)
 
         /// [resourceType] This is a PackagedProductDefinition resource;
@@ -2973,7 +2973,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
   /// [code] The actual status of supply. Conveys in what situation this package type may be supplied for use.;
   ///
   /// [jurisdiction] The place where the legal status of supply applies. When not specified, this indicates it is unknown in this context.;
-  factory PackagedProductDefinitionLegalStatusOfSupply({
+  const factory PackagedProductDefinitionLegalStatusOfSupply({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3063,7 +3063,7 @@ class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   /// [containedItem] The item(s) within the packaging.;
   ///
   /// [package] Allows containers (and parts of containers) parwithin containers, still a single packaged product.  See also PackagedProductDefinition.package.containedItem.item(PackagedProductDefinition).;
-  factory PackagedProductDefinitionPackage({
+  const factory PackagedProductDefinitionPackage({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3199,7 +3199,7 @@ class PackagedProductDefinitionShelfLifeStorage
   /// [specialPrecautionsForStorage] Special precautions for storage, if any,
   /// can be specified using an appropriate controlled vocabulary The controlled
   ///  term and the controlled term identifier shall be specified.
-  factory PackagedProductDefinitionShelfLifeStorage({
+  const factory PackagedProductDefinitionShelfLifeStorage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3326,7 +3326,7 @@ class PackagedProductDefinitionProperty
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the characteristic.;
-  factory PackagedProductDefinitionProperty({
+  const factory PackagedProductDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3414,7 +3414,7 @@ class PackagedProductDefinitionContainedItem
   /// [item] The actual item(s) of medication, as manufactured, or a device (typically, but not necessarily, a co-packaged one), or other medically related item (such as food, biologicals, raw materials, medical fluids, gases etc.), as contained in the package. This also allows another whole packaged product to be included, which is solely for the case where a package of other entire packages is wanted - such as a wholesale or distribution pack (for layers within one package, use PackagedProductDefinition.package.package).;
   ///
   /// [amount] The number of this type of item within this packaging.;
-  factory PackagedProductDefinitionContainedItem({
+  const factory PackagedProductDefinitionContainedItem({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3529,7 +3529,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
   ///
   /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
-  factory RegulatedAuthorization({
+  const factory RegulatedAuthorization({
     /// [resourceType] This is a RegulatedAuthorization resource;
     @Default(R4ResourceType.RegulatedAuthorization) R4ResourceType resourceType,
 
@@ -3671,7 +3671,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   /// [dateDateTimeElement] (_dateDateTime): Extensions for dateDateTime;
   ///
   /// [application] A regulatory submission from an organization to a regulator, as part of an assessing case. Multiple applications may occur over time, with more or different information to support or modify the submission or the authorization. The applications can be considered as steps within the longer running case or procedure for this authorization process.;
-  factory RegulatedAuthorizationCase({
+  const factory RegulatedAuthorizationCase({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3809,7 +3809,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   /// [relationship] A link between this substance and another, with details of the relationship.;
   ///
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
-  factory SubstanceDefinition({
+  const factory SubstanceDefinition({
     /// [resourceType] This is a SubstanceDefinition resource;
     @Default(R4ResourceType.SubstanceDefinition) R4ResourceType resourceType,
 
@@ -3976,7 +3976,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   /// [amountStringElement] (_amountString): Extensions for amountString;
   ///
   /// [measurementType] The measurement type of the quantitative value. In capturing the actual relative amounts of substances or molecular fragments it may be necessary to indicate whether the amount refers to, for example, a mole ratio or weight ratio.;
-  factory SubstanceDefinitionMoiety({
+  const factory SubstanceDefinitionMoiety({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4087,7 +4087,7 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the property.;
-  factory SubstanceDefinitionProperty({
+  const factory SubstanceDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4175,7 +4175,7 @@ class SubstanceDefinitionMolecularWeight
   /// [type] Type of molecular weight such as exact, average (also known as. number average), weight average.;
   ///
   /// [amount] Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.;
-  factory SubstanceDefinitionMolecularWeight({
+  const factory SubstanceDefinitionMolecularWeight({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4265,7 +4265,7 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   /// [sourceDocument] The source of information about the structure.;
   ///
   /// [representation] A depiction of the structure or characterization of the substance.;
-  factory SubstanceDefinitionStructure({
+  const factory SubstanceDefinitionStructure({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4366,7 +4366,7 @@ class SubstanceDefinitionRepresentation
   /// [format] The format of the representation e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF. The logical content type rather than the physical file format of a document.;
   ///
   /// [document] An attached file with the structural representation or characterization e.g. a molecular structure graphic of the substance, a JCAMP or AnIML file.;
-  factory SubstanceDefinitionRepresentation({
+  const factory SubstanceDefinitionRepresentation({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4454,7 +4454,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   /// [note] Any comment can be provided in this field, if necessary.;
   ///
   /// [source] Supporting literature.;
-  factory SubstanceDefinitionCode({
+  const factory SubstanceDefinitionCode({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4557,7 +4557,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
   /// [official] Details of the official nature of this name.;
   ///
   /// [source] Supporting literature.;
-  factory SubstanceDefinitionName({
+  const factory SubstanceDefinitionName({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4663,7 +4663,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   /// [date] Date of the official name change.;
   ///
   /// [dateElement] (_date): Extensions for date;
-  factory SubstanceDefinitionOfficial({
+  const factory SubstanceDefinitionOfficial({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4758,7 +4758,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   /// [comparator] An operator for the amount, for example "average", "approximately", "less than".;
   ///
   /// [source] Supporting literature.;
-  factory SubstanceDefinitionRelationship({
+  const factory SubstanceDefinitionRelationship({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -4863,7 +4863,7 @@ class SubstanceDefinitionSourceMaterial
   /// [part_] An anatomical origin of the source material within an organism.;
   ///
   /// [countryOfOrigin] The country or countries where the material is harvested.;
-  factory SubstanceDefinitionSourceMaterial({
+  const factory SubstanceDefinitionSourceMaterial({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 

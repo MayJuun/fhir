@@ -19,7 +19,7 @@ class Basic with Resource, _$Basic {
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   ///  narrative-only resources that don't map to an existing resource, and
   ///  custom resources not appropriate for inclusion in the FHIR specification.
-  const Basic._();
+  Basic._();
 
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   ///  narrative-only resources that don't map to an existing resource, and
@@ -170,7 +170,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json) => _$Basi.fromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -193,7 +193,7 @@ class Binary with Resource, _$Binary {
   /// [Binary] A resource that represents the data of a single raw artifact as
   ///  digital content accessible in its native format.  A Binary resource can
   ///  contain any content, whether text, image, pdf, zip archive, etc.
-  const Binary._();
+  Binary._();
 
   /// [Binary] A resource that represents the data of a single raw artifact as
   ///  digital content accessible in its native format.  A Binary resource can
@@ -302,7 +302,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json) => _$Binar.fromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -321,7 +321,7 @@ class Binary with Resource, _$Binary {
 @freezed
 class Bundle with Resource, _$Bundle {
   /// [Bundle] A container for a collection of resources.
-  const Bundle._();
+  Bundle._();
 
   /// [Bundle] A container for a collection of resources.
   ///
@@ -455,7 +455,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json) => _$Bundl.fromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -474,7 +474,7 @@ class Bundle with Resource, _$Bundle {
 @freezed
 class BundleLink with _$BundleLink {
   /// [BundleLink] A container for a collection of resources.
-  const BundleLink._();
+  BundleLink._();
 
   /// [BundleLink] A container for a collection of resources.
   ///
@@ -588,7 +588,7 @@ class BundleLink with _$BundleLink {
 @freezed
 class BundleEntry with _$BundleEntry {
   /// [BundleEntry] A container for a collection of resources.
-  const BundleEntry._();
+  BundleEntry._();
 
   /// [BundleEntry] A container for a collection of resources.
   ///
@@ -793,7 +793,7 @@ class BundleEntry with _$BundleEntry {
 @freezed
 class BundleSearch with _$BundleSearch {
   /// [BundleSearch] A container for a collection of resources.
-  const BundleSearch._();
+  BundleSearch._();
 
   /// [BundleSearch] A container for a collection of resources.
   ///
@@ -906,7 +906,7 @@ class BundleSearch with _$BundleSearch {
 @freezed
 class BundleRequest with _$BundleRequest {
   /// [BundleRequest] A container for a collection of resources.
-  const BundleRequest._();
+  BundleRequest._();
 
   /// [BundleRequest] A container for a collection of resources.
   ///
@@ -1070,7 +1070,7 @@ class BundleRequest with _$BundleRequest {
 @freezed
 class BundleResponse with _$BundleResponse {
   /// [BundleResponse] A container for a collection of resources.
-  const BundleResponse._();
+  BundleResponse._();
 
   /// [BundleResponse] A container for a collection of resources.
   ///
@@ -1215,7 +1215,7 @@ class BundleResponse with _$BundleResponse {
 class Linkage with Resource, _$Linkage {
   /// [Linkage] Identifies two or more records (resource instances) that refer
   ///  to the same real-world "occurrence".
-  const Linkage._();
+  Linkage._();
 
   /// [Linkage] Identifies two or more records (resource instances) that refer
   ///  to the same real-world "occurrence".
@@ -1380,7 +1380,7 @@ class Linkage with Resource, _$Linkage {
 class LinkageItem with _$LinkageItem {
   /// [LinkageItem] Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
-  const LinkageItem._();
+  LinkageItem._();
 
   /// [LinkageItem] Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
@@ -1496,7 +1496,7 @@ class MessageHeader with Resource, _$MessageHeader {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  const MessageHeader._();
+  MessageHeader._();
 
   /// [MessageHeader] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -1730,7 +1730,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   ///  the subject of the action as well as other information related to the
   ///  action are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  const MessageHeaderDestination._();
+  MessageHeaderDestination._();
 
   /// [MessageHeaderDestination] The header for a message exchange that is
   ///  either requesting or responding to an action.  The reference(s) that are
@@ -1866,7 +1866,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  const MessageHeaderSource._();
+  MessageHeaderSource._();
 
   /// [MessageHeaderSource] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -2017,7 +2017,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  const MessageHeaderResponse._();
+  MessageHeaderResponse._();
 
   /// [MessageHeaderResponse] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -2136,7 +2136,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 class OperationOutcome with Resource, _$OperationOutcome {
   /// [OperationOutcome] A collection of error, warning, or information
   ///  messages that result from a system action.
-  const OperationOutcome._();
+  OperationOutcome._();
 
   /// [OperationOutcome] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -2285,7 +2285,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   ///  messages that result from a system action.
-  const OperationOutcomeIssue._();
+  OperationOutcomeIssue._();
 
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -2451,7 +2451,7 @@ class Parameters with Resource, _$Parameters {
   ///  an operation (whether invoked directly from REST or within a messaging
   ///  environment).  It is not persisted or allowed to be referenced by other
   ///  resources.
-  const Parameters._();
+  Parameters._();
 
   /// [Parameters] This resource is used to pass information into and back from
   ///  an operation (whether invoked directly from REST or within a messaging
@@ -2556,7 +2556,7 @@ class ParametersParameter with _$ParametersParameter {
   ///  back from an operation (whether invoked directly from REST or within a
   ///  messaging environment).  It is not persisted or allowed to be referenced
   ///  by other resources.
-  const ParametersParameter._();
+  ParametersParameter._();
 
   /// [ParametersParameter] This resource is used to pass information into and
   ///  back from an operation (whether invoked directly from REST or within a
@@ -3052,7 +3052,7 @@ class ParametersParameter with _$ParametersParameter {
 class Subscription with Resource, _$Subscription {
   /// [Subscription] The subscription resource describes a particular client's
   ///  request to be notified about a SubscriptionTopic.
-  const Subscription._();
+  Subscription._();
 
   /// [Subscription] The subscription resource describes a particular client's
   ///  request to be notified about a SubscriptionTopic.
@@ -3356,7 +3356,7 @@ class Subscription with Resource, _$Subscription {
 class SubscriptionFilterBy with _$SubscriptionFilterBy {
   /// [SubscriptionFilterBy] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
-  const SubscriptionFilterBy._();
+  SubscriptionFilterBy._();
 
   /// [SubscriptionFilterBy] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
@@ -3499,7 +3499,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
 class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state
   ///  of a Subscription during notifications.
-  const SubscriptionStatus._();
+  SubscriptionStatus._();
 
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state
   ///  of a Subscription during notifications.
@@ -3701,7 +3701,7 @@ class SubscriptionStatusNotificationEvent
     with _$SubscriptionStatusNotificationEvent {
   /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
   ///  describes the state of a Subscription during notifications.
-  const SubscriptionStatusNotificationEvent._();
+  SubscriptionStatusNotificationEvent._();
 
   /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
   ///  describes the state of a Subscription during notifications.
@@ -3835,7 +3835,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [SubscriptionTopic] Describes a stream of resource state changes or
   ///  events and annotated with labels useful to filter projections from this
   ///  topic.
-  const SubscriptionTopic._();
+  SubscriptionTopic._();
 
   /// [SubscriptionTopic] Describes a stream of resource state changes or
   ///  events and annotated with labels useful to filter projections from this
@@ -4234,7 +4234,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  const SubscriptionTopicResourceTrigger._();
+  SubscriptionTopicResourceTrigger._();
 
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4396,7 +4396,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  const SubscriptionTopicQueryCriteria._();
+  SubscriptionTopicQueryCriteria._();
 
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4554,7 +4554,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  const SubscriptionTopicEventTrigger._();
+  SubscriptionTopicEventTrigger._();
 
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4689,7 +4689,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  const SubscriptionTopicCanFilterBy._();
+  SubscriptionTopicCanFilterBy._();
 
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4854,7 +4854,7 @@ class SubscriptionTopicNotificationShape
   /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  const SubscriptionTopicNotificationShape._();
+  SubscriptionTopicNotificationShape._();
 
   /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections

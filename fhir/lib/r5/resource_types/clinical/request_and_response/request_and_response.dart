@@ -157,7 +157,7 @@ class Communication with Resource, _$Communication {
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
   ///
-  factory Communication({
+  const factory Communication({
     /// [resourceType] This is a Communication resource
     @Default(R5ResourceType.Communication)
     @JsonKey(unknownEnumValue: R5ResourceType.Communication)
@@ -365,7 +365,7 @@ class CommunicationPayload with _$CommunicationPayload {
   /// [contentCodeableConcept] A communicated content (or for multi-part
   ///  communications, one portion of the communication).
   ///
-  factory CommunicationPayload({
+  const factory CommunicationPayload({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -586,7 +586,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// [note] Comments made about the request by the requester, sender,
   ///  recipient, subject or other participants.
   ///
-  factory CommunicationRequest({
+  const factory CommunicationRequest({
     /// [resourceType] This is a CommunicationRequest resource
     @Default(R5ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CommunicationRequest)
@@ -798,7 +798,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// [contentCodeableConcept] The communicated content (or for multi-part
   ///  communications, one portion of the communication).
   ///
-  factory CommunicationRequestPayload({
+  const factory CommunicationRequestPayload({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -989,7 +989,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
   ///
-  factory DeviceDispense({
+  const factory DeviceDispense({
     /// [resourceType] This is a DeviceDispense resource
     @Default(R5ResourceType.DeviceDispense)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceDispense)
@@ -1174,7 +1174,7 @@ class DeviceDispensePerformer with _$DeviceDispensePerformer {
   /// [actor] The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the device.
   ///
-  factory DeviceDispensePerformer({
+  const factory DeviceDispensePerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1420,7 +1420,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   ///
   /// [relevantHistory] Key events in the history of the request.
   ///
-  factory DeviceRequest({
+  const factory DeviceRequest({
     /// [resourceType] This is a DeviceRequest resource
     @Default(R5ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceRequest)
@@ -1659,7 +1659,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory DeviceRequestParameter({
+  const factory DeviceRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1861,7 +1861,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
   ///  may include for example a comment, an instruction, or a note associated
   ///  with the statement.
   ///
-  factory DeviceUsage({
+  const factory DeviceUsage({
     /// [resourceType] This is a DeviceUsage resource
     @Default(R5ResourceType.DeviceUsage)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
@@ -2041,7 +2041,7 @@ class DeviceUsageAdherence with _$DeviceUsageAdherence {
   ///
   /// [reason] Reason for adherence type.
   ///
-  factory DeviceUsageAdherence({
+  const factory DeviceUsageAdherence({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2253,7 +2253,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   ///  required in order to proceed with the evaluation. A subsequent request
   ///  to the service should include this data.
   ///
-  factory GuidanceResponse({
+  const factory GuidanceResponse({
     /// [resourceType] This is a GuidanceResponse resource
     @Default(R5ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.GuidanceResponse)
@@ -2482,7 +2482,7 @@ class InventoryReport with Resource, _$InventoryReport {
   ///
   /// [note] A note associated with the InventoryReport.
   ///
-  factory InventoryReport({
+  const factory InventoryReport({
     /// [resourceType] This is a InventoryReport resource
     @Default(R5ResourceType.InventoryReport)
     @JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
@@ -2639,7 +2639,7 @@ class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
   ///
   /// [items] The item or items in this listing.
   ///
-  factory InventoryReportInventoryListing({
+  const factory InventoryReportInventoryListing({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2770,7 +2770,7 @@ class InventoryReportItems with _$InventoryReportItems {
   /// [manufacturingDateElement] ("_manufacturingDate") Extensions for
   ///  manufacturingDate
   ///
-  factory InventoryReportItems({
+  const factory InventoryReportItems({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2963,7 +2963,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   /// [receiver] Identifies the individual or organization that received the
   ///  delivery.
   ///
-  factory SupplyDelivery({
+  const factory SupplyDelivery({
     /// [resourceType] This is a SupplyDelivery resource
     @Default(R5ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R5ResourceType.SupplyDelivery)
@@ -3128,7 +3128,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   ///  resource representing the details of the item or a code that identifies
   ///  the item from a known list.
   ///
-  factory SupplyDeliverySuppliedItem({
+  const factory SupplyDeliverySuppliedItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3317,7 +3317,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   ///
   /// [deliverTo] Where the supply is destined to go.
   ///
-  factory SupplyRequest({
+  const factory SupplyRequest({
     /// [resourceType] This is a SupplyRequest resource
     @Default(R5ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.SupplyRequest)
@@ -3508,7 +3508,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory SupplyRequestParameter({
+  const factory SupplyRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

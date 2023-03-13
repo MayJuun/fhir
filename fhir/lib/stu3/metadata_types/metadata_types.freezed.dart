@@ -143,7 +143,7 @@ class __$$_ContactDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContactDetail extends _ContactDetail {
-  _$_ContactDetail(
+  const _$_ContactDetail(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       final List<ContactPoint>? telecom})
@@ -204,11 +204,11 @@ class _$_ContactDetail extends _ContactDetail {
 }
 
 abstract class _ContactDetail extends ContactDetail {
-  factory _ContactDetail(
+  const factory _ContactDetail(
       {final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final List<ContactPoint>? telecom}) = _$_ContactDetail;
-  _ContactDetail._() : super._();
+  const _ContactDetail._() : super._();
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
@@ -397,7 +397,7 @@ class __$$_ContributorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Contributor extends _Contributor {
-  _$_Contributor(
+  const _$_Contributor(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.name,
@@ -468,13 +468,13 @@ class _$_Contributor extends _Contributor {
 }
 
 abstract class _Contributor extends Contributor {
-  factory _Contributor(
+  const factory _Contributor(
       {final ContributorType? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final List<ContactDetail>? contact}) = _$_Contributor;
-  _Contributor._() : super._();
+  const _Contributor._() : super._();
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
@@ -795,7 +795,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RelatedArtifact extends _RelatedArtifact {
-  _$_RelatedArtifact(
+  const _$_RelatedArtifact(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.display,
@@ -895,7 +895,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 }
 
 abstract class _RelatedArtifact extends RelatedArtifact {
-  factory _RelatedArtifact(
+  const factory _RelatedArtifact(
       {final RelatedArtifactType? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final String? display,
@@ -906,7 +906,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       @JsonKey(name: '_url') final Element? urlElement,
       final Attachment? document,
       final Reference? resource}) = _$_RelatedArtifact;
-  _RelatedArtifact._() : super._();
+  const _RelatedArtifact._() : super._();
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
       _$_RelatedArtifact.fromJson;
@@ -1125,7 +1125,7 @@ class __$$_UsageContextCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_UsageContext extends _UsageContext {
-  _$_UsageContext(
+  const _$_UsageContext(
       {required this.code,
       this.valueCodeableConcept,
       this.valueQuantity,
@@ -1183,12 +1183,12 @@ class _$_UsageContext extends _UsageContext {
 }
 
 abstract class _UsageContext extends UsageContext {
-  factory _UsageContext(
+  const factory _UsageContext(
       {required final Coding code,
       final CodeableConcept? valueCodeableConcept,
       final Quantity? valueQuantity,
       final Range? valueRange}) = _$_UsageContext;
-  _UsageContext._() : super._();
+  const _UsageContext._() : super._();
 
   factory _UsageContext.fromJson(Map<String, dynamic> json) =
       _$_UsageContext.fromJson;
@@ -1405,7 +1405,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirement extends _DataRequirement {
-  _$_DataRequirement(
+  const _$_DataRequirement(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       final List<String>? profile,
@@ -1547,7 +1547,7 @@ class _$_DataRequirement extends _DataRequirement {
 }
 
 abstract class _DataRequirement extends DataRequirement {
-  factory _DataRequirement(
+  const factory _DataRequirement(
       {final String? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final List<String>? profile,
@@ -1556,7 +1556,7 @@ abstract class _DataRequirement extends DataRequirement {
       @JsonKey(name: '_mustSupport') final List<Element?>? mustSupportElement,
       final List<DataRequirementCodeFilter>? codeFilter,
       final List<DataRequirementDateFilter>? dateFilter}) = _$_DataRequirement;
-  _DataRequirement._() : super._();
+  const _DataRequirement._() : super._();
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
@@ -1831,7 +1831,7 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
-  _$_DataRequirementCodeFilter(
+  const _$_DataRequirementCodeFilter(
       {this.path,
       @JsonKey(name: '_path') this.pathElement,
       this.valueSetString,
@@ -1964,7 +1964,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
 }
 
 abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
-  factory _DataRequirementCodeFilter(
+  const factory _DataRequirementCodeFilter(
       {final String? path,
       @JsonKey(name: '_path') final Element? pathElement,
       final String? valueSetString,
@@ -1975,7 +1975,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
       final List<Coding>? valueCoding,
       final List<CodeableConcept>?
           valueCodeableConcept}) = _$_DataRequirementCodeFilter;
-  _DataRequirementCodeFilter._() : super._();
+  const _DataRequirementCodeFilter._() : super._();
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementCodeFilter.fromJson;
@@ -2226,7 +2226,7 @@ class __$$_DataRequirementDateFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
-  _$_DataRequirementDateFilter(
+  const _$_DataRequirementDateFilter(
       {this.path,
       @JsonKey(name: '_path') this.pathElement,
       this.valueDateTime,
@@ -2297,14 +2297,14 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
 }
 
 abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
-  factory _DataRequirementDateFilter(
+  const factory _DataRequirementDateFilter(
       {final String? path,
       @JsonKey(name: '_path') final Element? pathElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Period? valuePeriod,
       final FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
-  _DataRequirementDateFilter._() : super._();
+  const _DataRequirementDateFilter._() : super._();
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementDateFilter.fromJson;
@@ -2683,7 +2683,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ParameterDefinition extends _ParameterDefinition {
-  _$_ParameterDefinition(
+  const _$_ParameterDefinition(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.use,
@@ -2801,7 +2801,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 }
 
 abstract class _ParameterDefinition extends ParameterDefinition {
-  factory _ParameterDefinition(
+  const factory _ParameterDefinition(
       {final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final String? use,
@@ -2815,7 +2815,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       final String? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final Reference? profile}) = _$_ParameterDefinition;
-  _ParameterDefinition._() : super._();
+  const _ParameterDefinition._() : super._();
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
       _$_ParameterDefinition.fromJson;
@@ -3192,7 +3192,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TriggerDefinition extends _TriggerDefinition {
-  _$_TriggerDefinition(
+  const _$_TriggerDefinition(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.eventName,
@@ -3303,7 +3303,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 }
 
 abstract class _TriggerDefinition extends TriggerDefinition {
-  factory _TriggerDefinition(
+  const factory _TriggerDefinition(
       {final TriggerDefinitionType? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
@@ -3319,7 +3319,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       @JsonKey(name: '_eventTimingDateTime')
           final Element? eventTimingDateTimeElement,
       final DataRequirement? eventData}) = _$_TriggerDefinition;
-  _TriggerDefinition._() : super._();
+  const _TriggerDefinition._() : super._();
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
       _$_TriggerDefinition.fromJson;

@@ -98,7 +98,7 @@ class __$$_BackboneElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BackboneElement extends _BackboneElement {
-  _$_BackboneElement({final List<FhirExtension>? modifierExtension})
+  const _$_BackboneElement({final List<FhirExtension>? modifierExtension})
       : _modifierExtension = modifierExtension,
         super._();
 
@@ -150,9 +150,9 @@ class _$_BackboneElement extends _BackboneElement {
 }
 
 abstract class _BackboneElement extends BackboneElement {
-  factory _BackboneElement({final List<FhirExtension>? modifierExtension}) =
-      _$_BackboneElement;
-  _BackboneElement._() : super._();
+  const factory _BackboneElement(
+      {final List<FhirExtension>? modifierExtension}) = _$_BackboneElement;
+  const _BackboneElement._() : super._();
 
   factory _BackboneElement.fromJson(Map<String, dynamic> json) =
       _$_BackboneElement.fromJson;
@@ -393,7 +393,7 @@ class __$$_AnnotationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Annotation extends _Annotation {
-  _$_Annotation(
+  const _$_Annotation(
       {this.authorReference,
       this.authorString,
       @JsonKey(name: '_authorString') this.authorStringElement,
@@ -468,7 +468,7 @@ class _$_Annotation extends _Annotation {
 }
 
 abstract class _Annotation extends Annotation {
-  factory _Annotation(
+  const factory _Annotation(
       {final Reference? authorReference,
       final String? authorString,
       @JsonKey(name: '_authorString') final Element? authorStringElement,
@@ -476,7 +476,7 @@ abstract class _Annotation extends Annotation {
       @JsonKey(name: '_time') final Element? timeElement,
       final String? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_Annotation;
-  _Annotation._() : super._();
+  const _Annotation._() : super._();
 
   factory _Annotation.fromJson(Map<String, dynamic> json) =
       _$_Annotation.fromJson;
@@ -914,7 +914,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Attachment extends _Attachment {
-  _$_Attachment(
+  const _$_Attachment(
       {this.contentType,
       @JsonKey(name: '_contentType') this.contentTypeElement,
       this.language,
@@ -1052,7 +1052,7 @@ class _$_Attachment extends _Attachment {
 }
 
 abstract class _Attachment extends Attachment {
-  factory _Attachment(
+  const factory _Attachment(
           {final String? contentType,
           @JsonKey(name: '_contentType') final Element? contentTypeElement,
           final String? language,
@@ -1070,7 +1070,7 @@ abstract class _Attachment extends Attachment {
           final String? creation,
           @JsonKey(name: '_creation') final Element? creationElement}) =
       _$_Attachment;
-  _Attachment._() : super._();
+  const _Attachment._() : super._();
 
   factory _Attachment.fromJson(Map<String, dynamic> json) =
       _$_Attachment.fromJson;
@@ -1405,7 +1405,7 @@ class __$$_IdentifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Identifier extends _Identifier {
-  _$_Identifier(
+  const _$_Identifier(
       {this.use,
       @JsonKey(name: '_use') this.useElement,
       this.type,
@@ -1487,7 +1487,7 @@ class _$_Identifier extends _Identifier {
 }
 
 abstract class _Identifier extends Identifier {
-  factory _Identifier(
+  const factory _Identifier(
       {final IdentifierUse? use,
       @JsonKey(name: '_use') final Element? useElement,
       final CodeableConcept? type,
@@ -1497,7 +1497,7 @@ abstract class _Identifier extends Identifier {
       @JsonKey(name: '_value') final Element? valueElement,
       final Period? period,
       final Reference? assigner}) = _$_Identifier;
-  _Identifier._() : super._();
+  const _Identifier._() : super._();
 
   factory _Identifier.fromJson(Map<String, dynamic> json) =
       _$_Identifier.fromJson;
@@ -1658,7 +1658,7 @@ class __$$_CodeableConceptCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeableConcept extends _CodeableConcept {
-  _$_CodeableConcept(
+  const _$_CodeableConcept(
       {final List<Coding>? coding,
       this.text,
       @JsonKey(name: '_text') this.textElement})
@@ -1720,11 +1720,11 @@ class _$_CodeableConcept extends _CodeableConcept {
 }
 
 abstract class _CodeableConcept extends CodeableConcept {
-  factory _CodeableConcept(
+  const factory _CodeableConcept(
       {final List<Coding>? coding,
       final String? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_CodeableConcept;
-  _CodeableConcept._() : super._();
+  const _CodeableConcept._() : super._();
 
   factory _CodeableConcept.fromJson(Map<String, dynamic> json) =
       _$_CodeableConcept.fromJson;
@@ -2021,7 +2021,7 @@ class __$$_CodingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Coding extends _Coding {
-  _$_Coding(
+  const _$_Coding(
       {this.system,
       @JsonKey(name: '_system') this.systemElement,
       this.version,
@@ -2121,7 +2121,7 @@ class _$_Coding extends _Coding {
 }
 
 abstract class _Coding extends Coding {
-  factory _Coding(
+  const factory _Coding(
           {final String? system,
           @JsonKey(name: '_system') final Element? systemElement,
           final String? version,
@@ -2133,7 +2133,7 @@ abstract class _Coding extends Coding {
           final Boolean? userSelected,
           @JsonKey(name: '_userSelected') final Element? userSelectedElement}) =
       _$_Coding;
-  _Coding._() : super._();
+  const _Coding._() : super._();
 
   factory _Coding.fromJson(Map<String, dynamic> json) = _$_Coding.fromJson;
 
@@ -2450,7 +2450,7 @@ class __$$_QuantityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Quantity extends _Quantity {
-  _$_Quantity(
+  const _$_Quantity(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.comparator,
@@ -2550,7 +2550,7 @@ class _$_Quantity extends _Quantity {
 }
 
 abstract class _Quantity extends Quantity {
-  factory _Quantity(
+  const factory _Quantity(
       {final Decimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
@@ -2561,7 +2561,7 @@ abstract class _Quantity extends Quantity {
       @JsonKey(name: '_system') final Element? systemElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Quantity;
-  _Quantity._() : super._();
+  const _Quantity._() : super._();
 
   factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
 
@@ -2880,7 +2880,7 @@ class __$$_FhirDurationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FhirDuration extends _FhirDuration {
-  _$_FhirDuration(
+  const _$_FhirDuration(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.comparator,
@@ -2980,7 +2980,7 @@ class _$_FhirDuration extends _FhirDuration {
 }
 
 abstract class _FhirDuration extends FhirDuration {
-  factory _FhirDuration(
+  const factory _FhirDuration(
       {final Decimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
@@ -2991,7 +2991,7 @@ abstract class _FhirDuration extends FhirDuration {
       @JsonKey(name: '_system') final Element? systemElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_FhirDuration;
-  _FhirDuration._() : super._();
+  const _FhirDuration._() : super._();
 
   factory _FhirDuration.fromJson(Map<String, dynamic> json) =
       _$_FhirDuration.fromJson;
@@ -3309,7 +3309,7 @@ class __$$_DistanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Distance extends _Distance {
-  _$_Distance(
+  const _$_Distance(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.comparator,
@@ -3409,7 +3409,7 @@ class _$_Distance extends _Distance {
 }
 
 abstract class _Distance extends Distance {
-  factory _Distance(
+  const factory _Distance(
       {final Decimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
@@ -3420,7 +3420,7 @@ abstract class _Distance extends Distance {
       @JsonKey(name: '_system') final Element? systemElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Distance;
-  _Distance._() : super._();
+  const _Distance._() : super._();
 
   factory _Distance.fromJson(Map<String, dynamic> json) = _$_Distance.fromJson;
 
@@ -3733,7 +3733,7 @@ class __$$_CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res, _$_Count>
 /// @nodoc
 @JsonSerializable()
 class _$_Count extends _Count {
-  _$_Count(
+  const _$_Count(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.comparator,
@@ -3833,7 +3833,7 @@ class _$_Count extends _Count {
 }
 
 abstract class _Count extends Count {
-  factory _Count(
+  const factory _Count(
       {final Decimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
@@ -3844,7 +3844,7 @@ abstract class _Count extends Count {
       @JsonKey(name: '_system') final Element? systemElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Count;
-  _Count._() : super._();
+  const _Count._() : super._();
 
   factory _Count.fromJson(Map<String, dynamic> json) = _$_Count.fromJson;
 
@@ -4157,7 +4157,7 @@ class __$$_MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res, _$_Money>
 /// @nodoc
 @JsonSerializable()
 class _$_Money extends _Money {
-  _$_Money(
+  const _$_Money(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.comparator,
@@ -4257,7 +4257,7 @@ class _$_Money extends _Money {
 }
 
 abstract class _Money extends Money {
-  factory _Money(
+  const factory _Money(
       {final Decimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
@@ -4268,7 +4268,7 @@ abstract class _Money extends Money {
       @JsonKey(name: '_system') final Element? systemElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Money;
-  _Money._() : super._();
+  const _Money._() : super._();
 
   factory _Money.fromJson(Map<String, dynamic> json) = _$_Money.fromJson;
 
@@ -4580,7 +4580,7 @@ class __$$_AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res, _$_Age>
 /// @nodoc
 @JsonSerializable()
 class _$_Age extends _Age {
-  _$_Age(
+  const _$_Age(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.comparator,
@@ -4679,7 +4679,7 @@ class _$_Age extends _Age {
 }
 
 abstract class _Age extends Age {
-  factory _Age(
+  const factory _Age(
       {final Decimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
@@ -4690,7 +4690,7 @@ abstract class _Age extends Age {
       @JsonKey(name: '_system') final Element? systemElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Age;
-  _Age._() : super._();
+  const _Age._() : super._();
 
   factory _Age.fromJson(Map<String, dynamic> json) = _$_Age.fromJson;
 
@@ -4844,7 +4844,7 @@ class __$$_RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res, _$_Range>
 /// @nodoc
 @JsonSerializable()
 class _$_Range extends _Range {
-  _$_Range({this.low, this.high}) : super._();
+  const _$_Range({this.low, this.high}) : super._();
 
   factory _$_Range.fromJson(Map<String, dynamic> json) =>
       _$$_RangeFromJson(json);
@@ -4887,8 +4887,8 @@ class _$_Range extends _Range {
 }
 
 abstract class _Range extends Range {
-  factory _Range({final Quantity? low, final Quantity? high}) = _$_Range;
-  _Range._() : super._();
+  const factory _Range({final Quantity? low, final Quantity? high}) = _$_Range;
+  const _Range._() : super._();
 
   factory _Range.fromJson(Map<String, dynamic> json) = _$_Range.fromJson;
 
@@ -5055,7 +5055,7 @@ class __$$_PeriodCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Period extends _Period {
-  _$_Period(
+  const _$_Period(
       {this.start,
       @JsonKey(name: '_start') this.startElement,
       this.end,
@@ -5114,12 +5114,12 @@ class _$_Period extends _Period {
 }
 
 abstract class _Period extends Period {
-  factory _Period(
+  const factory _Period(
       {final String? start,
       @JsonKey(name: '_start') final Element? startElement,
       final String? end,
       @JsonKey(name: '_end') final Element? endElement}) = _$_Period;
-  _Period._() : super._();
+  const _Period._() : super._();
 
   factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
 
@@ -5259,7 +5259,7 @@ class __$$_RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res, _$_Ratio>
 /// @nodoc
 @JsonSerializable()
 class _$_Ratio extends _Ratio {
-  _$_Ratio({this.numerator, this.denominator}) : super._();
+  const _$_Ratio({this.numerator, this.denominator}) : super._();
 
   factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
       _$$_RatioFromJson(json);
@@ -5304,9 +5304,9 @@ class _$_Ratio extends _Ratio {
 }
 
 abstract class _Ratio extends Ratio {
-  factory _Ratio({final Quantity? numerator, final Quantity? denominator}) =
-      _$_Ratio;
-  _Ratio._() : super._();
+  const factory _Ratio(
+      {final Quantity? numerator, final Quantity? denominator}) = _$_Ratio;
+  const _Ratio._() : super._();
 
   factory _Ratio.fromJson(Map<String, dynamic> json) = _$_Ratio.fromJson;
 
@@ -5670,7 +5670,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SampledData extends _SampledData {
-  _$_SampledData(
+  const _$_SampledData(
       {required this.origin,
       this.period,
       @JsonKey(name: '_period') this.periodElement,
@@ -5789,7 +5789,7 @@ class _$_SampledData extends _SampledData {
 }
 
 abstract class _SampledData extends SampledData {
-  factory _SampledData(
+  const factory _SampledData(
       {required final Quantity origin,
       final Decimal? period,
       @JsonKey(name: '_period') final Element? periodElement,
@@ -5803,7 +5803,7 @@ abstract class _SampledData extends SampledData {
       @JsonKey(name: '_dimensions') final Element? dimensionsElement,
       final String? data,
       @JsonKey(name: '_data') final Element? dataElement}) = _$_SampledData;
-  _SampledData._() : super._();
+  const _SampledData._() : super._();
 
   factory _SampledData.fromJson(Map<String, dynamic> json) =
       _$_SampledData.fromJson;
@@ -6197,7 +6197,7 @@ class __$$_SignatureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Signature extends _Signature {
-  _$_Signature(
+  const _$_Signature(
       {required final List<Coding> type,
       this.when,
       @JsonKey(name: '_when') this.whenElement,
@@ -6322,7 +6322,7 @@ class _$_Signature extends _Signature {
 }
 
 abstract class _Signature extends Signature {
-  factory _Signature(
+  const factory _Signature(
       {required final List<Coding> type,
       final String? when,
       @JsonKey(name: '_when') final Element? whenElement,
@@ -6336,7 +6336,7 @@ abstract class _Signature extends Signature {
       @JsonKey(name: '_contentType') final Element? contentTypeElement,
       final String? blob,
       @JsonKey(name: '_blob') final Element? blobElement}) = _$_Signature;
-  _Signature._() : super._();
+  const _Signature._() : super._();
 
   factory _Signature.fromJson(Map<String, dynamic> json) =
       _$_Signature.fromJson;
@@ -6685,7 +6685,7 @@ class __$$_HumanNameCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HumanName extends _HumanName {
-  _$_HumanName(
+  const _$_HumanName(
       {this.use,
       @JsonKey(name: '_use') this.useElement,
       this.text,
@@ -6855,7 +6855,7 @@ class _$_HumanName extends _HumanName {
 }
 
 abstract class _HumanName extends HumanName {
-  factory _HumanName(
+  const factory _HumanName(
       {final HumanNameUse? use,
       @JsonKey(name: '_use') final Element? useElement,
       final String? text,
@@ -6869,7 +6869,7 @@ abstract class _HumanName extends HumanName {
       final List<String>? suffix,
       @JsonKey(name: '_suffix') final List<Element?>? suffixElement,
       final Period? period}) = _$_HumanName;
-  _HumanName._() : super._();
+  const _HumanName._() : super._();
 
   factory _HumanName.fromJson(Map<String, dynamic> json) =
       _$_HumanName.fromJson;
@@ -7373,7 +7373,7 @@ class __$$_AddressCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Address extends _Address {
-  _$_Address(
+  const _$_Address(
       {this.use,
       @JsonKey(name: '_use') this.useElement,
       this.type,
@@ -7546,7 +7546,7 @@ class _$_Address extends _Address {
 }
 
 abstract class _Address extends Address {
-  factory _Address(
+  const factory _Address(
       {final AddressUse? use,
       @JsonKey(name: '_use') final Element? useElement,
       final AddressType? type,
@@ -7566,7 +7566,7 @@ abstract class _Address extends Address {
       final String? country,
       @JsonKey(name: '_country') final Element? countryElement,
       final Period? period}) = _$_Address;
-  _Address._() : super._();
+  const _Address._() : super._();
 
   factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
 
@@ -7893,7 +7893,7 @@ class __$$_ContactPointCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContactPoint extends _ContactPoint {
-  _$_ContactPoint(
+  const _$_ContactPoint(
       {this.system,
       @JsonKey(name: '_system') this.systemElement,
       this.value,
@@ -7976,7 +7976,7 @@ class _$_ContactPoint extends _ContactPoint {
 }
 
 abstract class _ContactPoint extends ContactPoint {
-  factory _ContactPoint(
+  const factory _ContactPoint(
       {final ContactPointSystem? system,
       @JsonKey(name: '_system') final Element? systemElement,
       final String? value,
@@ -7986,7 +7986,7 @@ abstract class _ContactPoint extends ContactPoint {
       final Decimal? rank,
       @JsonKey(name: '_rank') final Element? rankElement,
       final Period? period}) = _$_ContactPoint;
-  _ContactPoint._() : super._();
+  const _ContactPoint._() : super._();
 
   factory _ContactPoint.fromJson(Map<String, dynamic> json) =
       _$_ContactPoint.fromJson;
@@ -8171,7 +8171,7 @@ class __$$_TimingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Timing extends _Timing {
-  _$_Timing(
+  const _$_Timing(
       {final List<String>? event,
       @JsonKey(name: '_event') final List<Element?>? eventElement,
       this.repeat,
@@ -8250,12 +8250,12 @@ class _$_Timing extends _Timing {
 }
 
 abstract class _Timing extends Timing {
-  factory _Timing(
+  const factory _Timing(
       {final List<String>? event,
       @JsonKey(name: '_event') final List<Element?>? eventElement,
       final TimingRepeat? repeat,
       final CodeableConcept? code}) = _$_Timing;
-  _Timing._() : super._();
+  const _Timing._() : super._();
 
   factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
 
@@ -8976,7 +8976,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TimingRepeat extends _TimingRepeat {
-  _$_TimingRepeat(
+  const _$_TimingRepeat(
       {this.boundsDuration,
       this.boundsRange,
       this.boundsPeriod,
@@ -9268,7 +9268,7 @@ class _$_TimingRepeat extends _TimingRepeat {
 }
 
 abstract class _TimingRepeat extends TimingRepeat {
-  factory _TimingRepeat(
+  const factory _TimingRepeat(
           {final FhirDuration? boundsDuration,
           final Range? boundsRange,
           final Period? boundsPeriod,
@@ -9301,7 +9301,7 @@ abstract class _TimingRepeat extends TimingRepeat {
           final Decimal? offset,
           @JsonKey(name: '_offset') final Element? offsetElement}) =
       _$_TimingRepeat;
-  _TimingRepeat._() : super._();
+  const _TimingRepeat._() : super._();
 
   factory _TimingRepeat.fromJson(Map<String, dynamic> json) =
       _$_TimingRepeat.fromJson;

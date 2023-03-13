@@ -180,7 +180,7 @@ class Composition with Resource, _$Composition {
   ///
   /// [section] The root of the sections that make up the composition.
   ///
-  factory Composition({
+  const factory Composition({
     /// [resourceType] This is a Composition resource
     @Default(R5ResourceType.Composition)
     @JsonKey(unknownEnumValue: R5ResourceType.Composition)
@@ -397,7 +397,7 @@ class CompositionAttester with _$CompositionAttester {
   ///
   /// [party] Who attested the composition in the specified way.
   ///
-  factory CompositionAttester({
+  const factory CompositionAttester({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -541,7 +541,7 @@ class CompositionEvent with _$CompositionEvent {
   ///  documented. For example, this could be used to document such a
   ///  colonoscopy or an appendectomy.
   ///
-  factory CompositionEvent({
+  const factory CompositionEvent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -715,7 +715,7 @@ class CompositionSection with _$CompositionSection {
   ///
   /// [section] A nested sub-section within this section.
   ///
-  factory CompositionSection({
+  const factory CompositionSection({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -923,7 +923,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
   /// [related] Related identifiers or resources associated with the
   ///  DocumentManifest.
   ///
-  factory DocumentManifest({
+  const factory DocumentManifest({
     /// [resourceType] This is a DocumentManifest resource
     @Default(R5ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R5ResourceType.DocumentManifest)
@@ -1087,7 +1087,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   /// [ref] Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
   ///
-  factory DocumentManifestRelated({
+  const factory DocumentManifestRelated({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1321,7 +1321,7 @@ class DocumentReference with Resource, _$DocumentReference {
   ///  content element repetitions, these must all represent the same document
   ///  in different format, or attachment metadata.
   ///
-  factory DocumentReference({
+  const factory DocumentReference({
     /// [resourceType] This is a DocumentReference resource
     @Default(R5ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
@@ -1534,7 +1534,7 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
   ///
   /// [party] Who attested the document in the specified way.
   ///
-  factory DocumentReferenceAttester({
+  const factory DocumentReferenceAttester({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1668,7 +1668,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   ///
   /// [target] The target document of this relationship.
   ///
-  factory DocumentReferenceRelatesTo({
+  const factory DocumentReferenceRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1798,7 +1798,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   ///  and template that the document conforms to beyond the base format
   ///  indicated in the mimeType.
   ///
-  factory DocumentReferenceContent({
+  const factory DocumentReferenceContent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1931,7 +1931,7 @@ class DocumentReferenceProfile with _$DocumentReferenceProfile {
   ///
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   ///
-  factory DocumentReferenceProfile({
+  const factory DocumentReferenceProfile({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

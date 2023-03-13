@@ -247,7 +247,7 @@ class FhirExtension with _$FhirExtension {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  factory FhirExtension({
+  const factory FhirExtension({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

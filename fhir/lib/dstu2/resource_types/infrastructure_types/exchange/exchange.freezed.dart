@@ -560,7 +560,7 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeader extends _MessageHeader {
-  _$_MessageHeader(
+  const _$_MessageHeader(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
           this.resourceType = Dstu2ResourceType.MessageHeader,
       this.id,
@@ -776,7 +776,7 @@ class _$_MessageHeader extends _MessageHeader {
 }
 
 abstract class _MessageHeader extends MessageHeader {
-  factory _MessageHeader(
+  const factory _MessageHeader(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -803,7 +803,7 @@ abstract class _MessageHeader extends MessageHeader {
       final Reference? responsible,
       final CodeableConcept? reason,
       final List<Reference>? data}) = _$_MessageHeader;
-  _MessageHeader._() : super._();
+  const _MessageHeader._() : super._();
 
   factory _MessageHeader.fromJson(Map<String, dynamic> json) =
       _$_MessageHeader.fromJson;
@@ -1092,7 +1092,7 @@ class __$$_MessageHeaderResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeaderResponse extends _MessageHeaderResponse {
-  _$_MessageHeaderResponse(
+  const _$_MessageHeaderResponse(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1200,7 +1200,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 }
 
 abstract class _MessageHeaderResponse extends MessageHeaderResponse {
-  factory _MessageHeaderResponse(
+  const factory _MessageHeaderResponse(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -1213,7 +1213,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
       @JsonKey(name: '_code')
           final Element? codeElement,
       final Reference? details}) = _$_MessageHeaderResponse;
-  _MessageHeaderResponse._() : super._();
+  const _MessageHeaderResponse._() : super._();
 
   factory _MessageHeaderResponse.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderResponse.fromJson;
@@ -1555,7 +1555,7 @@ class __$$_MessageHeaderSourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeaderSource extends _MessageHeaderSource {
-  _$_MessageHeaderSource(
+  const _$_MessageHeaderSource(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1687,7 +1687,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 }
 
 abstract class _MessageHeaderSource extends MessageHeaderSource {
-  factory _MessageHeaderSource(
+  const factory _MessageHeaderSource(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -1701,7 +1701,7 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
           required final FhirUri endpoint,
           @JsonKey(name: '_endpoint') final Element? endpointElement}) =
       _$_MessageHeaderSource;
-  _MessageHeaderSource._() : super._();
+  const _MessageHeaderSource._() : super._();
 
   factory _MessageHeaderSource.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderSource.fromJson;
@@ -1972,7 +1972,7 @@ class __$$_MessageHeaderDestinationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeaderDestination extends _MessageHeaderDestination {
-  _$_MessageHeaderDestination(
+  const _$_MessageHeaderDestination(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2079,7 +2079,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 }
 
 abstract class _MessageHeaderDestination extends MessageHeaderDestination {
-  factory _MessageHeaderDestination(
+  const factory _MessageHeaderDestination(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2089,7 +2089,7 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
           required final FhirUri endpoint,
           @JsonKey(name: '_endpoint') final Element? endpointElement}) =
       _$_MessageHeaderDestination;
-  _MessageHeaderDestination._() : super._();
+  const _MessageHeaderDestination._() : super._();
 
   factory _MessageHeaderDestination.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderDestination.fromJson;
@@ -2453,7 +2453,7 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationOutcome extends _OperationOutcome {
-  _$_OperationOutcome(
+  const _$_OperationOutcome(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
           this.resourceType = Dstu2ResourceType.OperationOutcome,
       this.id,
@@ -2610,7 +2610,7 @@ class _$_OperationOutcome extends _OperationOutcome {
 }
 
 abstract class _OperationOutcome extends OperationOutcome {
-  factory _OperationOutcome(
+  const factory _OperationOutcome(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -2629,7 +2629,7 @@ abstract class _OperationOutcome extends OperationOutcome {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
-  _OperationOutcome._() : super._();
+  const _OperationOutcome._() : super._();
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcome.fromJson;
@@ -2869,7 +2869,7 @@ class __$$_OperationOutcomeIssueCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
-  _$_OperationOutcomeIssue(
+  const _$_OperationOutcomeIssue(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2982,7 +2982,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 }
 
 abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
-  factory _OperationOutcomeIssue(
+  const factory _OperationOutcomeIssue(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -2993,7 +2993,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
       final CodeableConcept? details,
       final String? diagnostics,
       final List<String>? location}) = _$_OperationOutcomeIssue;
-  _OperationOutcomeIssue._() : super._();
+  const _OperationOutcomeIssue._() : super._();
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
@@ -3255,7 +3255,7 @@ class __$$_ParametersCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Parameters extends _Parameters {
-  _$_Parameters(
+  const _$_Parameters(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
           this.resourceType = Dstu2ResourceType.Parameters,
       this.id,
@@ -3354,7 +3354,7 @@ class _$_Parameters extends _Parameters {
 }
 
 abstract class _Parameters extends Parameters {
-  factory _Parameters(
+  const factory _Parameters(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3366,7 +3366,7 @@ abstract class _Parameters extends Parameters {
       @JsonKey(name: '_language')
           final Element? languageElement,
       final List<ParametersParameter>? parameter}) = _$_Parameters;
-  _Parameters._() : super._();
+  const _Parameters._() : super._();
 
   factory _Parameters.fromJson(Map<String, dynamic> json) =
       _$_Parameters.fromJson;
@@ -4366,7 +4366,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ParametersParameter extends _ParametersParameter {
-  _$_ParametersParameter(
+  const _$_ParametersParameter(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4685,7 +4685,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 }
 
 abstract class _ParametersParameter extends ParametersParameter {
-  factory _ParametersParameter(
+  const factory _ParametersParameter(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -4739,7 +4739,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Resource? resource,
       @JsonKey(name: 'part')
           final List<ParametersParameter>? part_}) = _$_ParametersParameter;
-  _ParametersParameter._() : super._();
+  const _ParametersParameter._() : super._();
 
   factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$_ParametersParameter.fromJson;
@@ -5406,7 +5406,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Subscription extends _Subscription {
-  _$_Subscription(
+  const _$_Subscription(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
           this.resourceType = Dstu2ResourceType.Subscription,
       this.id,
@@ -5645,7 +5645,7 @@ class _$_Subscription extends _Subscription {
 }
 
 abstract class _Subscription extends Subscription {
-  factory _Subscription(
+  const factory _Subscription(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -5680,7 +5680,7 @@ abstract class _Subscription extends Subscription {
       @JsonKey(name: '_end')
           final Element? endElement,
       final List<Coding>? tag}) = _$_Subscription;
-  _Subscription._() : super._();
+  const _Subscription._() : super._();
 
   factory _Subscription.fromJson(Map<String, dynamic> json) =
       _$_Subscription.fromJson;
@@ -6018,7 +6018,7 @@ class __$$_SubscriptionChannelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubscriptionChannel extends _SubscriptionChannel {
-  _$_SubscriptionChannel(
+  const _$_SubscriptionChannel(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6153,7 +6153,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
 }
 
 abstract class _SubscriptionChannel extends SubscriptionChannel {
-  factory _SubscriptionChannel(
+  const factory _SubscriptionChannel(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -6171,7 +6171,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
       final String? header,
       @JsonKey(name: '_header')
           final List<Element?>? headerElement}) = _$_SubscriptionChannel;
-  _SubscriptionChannel._() : super._();
+  const _SubscriptionChannel._() : super._();
 
   factory _SubscriptionChannel.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionChannel.fromJson;

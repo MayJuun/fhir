@@ -500,7 +500,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Organization extends _Organization {
-  _$_Organization(
+  const _$_Organization(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
           this.resourceType = Dstu2ResourceType.Organization,
       this.id,
@@ -731,7 +731,7 @@ class _$_Organization extends _Organization {
 }
 
 abstract class _Organization extends Organization {
-  factory _Organization(
+  const factory _Organization(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -759,7 +759,7 @@ abstract class _Organization extends Organization {
       final List<Address>? address,
       final Reference? partOf,
       final List<OrganizationContact>? contact}) = _$_Organization;
-  _Organization._() : super._();
+  const _Organization._() : super._();
 
   factory _Organization.fromJson(Map<String, dynamic> json) =
       _$_Organization.fromJson;
@@ -1044,7 +1044,7 @@ class __$$_OrganizationContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OrganizationContact extends _OrganizationContact {
-  _$_OrganizationContact(
+  const _$_OrganizationContact(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1166,7 +1166,7 @@ class _$_OrganizationContact extends _OrganizationContact {
 }
 
 abstract class _OrganizationContact extends OrganizationContact {
-  factory _OrganizationContact(
+  const factory _OrganizationContact(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1175,7 +1175,7 @@ abstract class _OrganizationContact extends OrganizationContact {
       final HumanName? name,
       final List<ContactPoint>? telecom,
       final Address? address}) = _$_OrganizationContact;
-  _OrganizationContact._() : super._();
+  const _OrganizationContact._() : super._();
 
   factory _OrganizationContact.fromJson(Map<String, dynamic> json) =
       _$_OrganizationContact.fromJson;
@@ -1984,7 +1984,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareService extends _HealthcareService {
-  _$_HealthcareService(
+  const _$_HealthcareService(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
           this.resourceType = Dstu2ResourceType.HealthcareService,
       this.id,
@@ -2380,7 +2380,7 @@ class _$_HealthcareService extends _HealthcareService {
 }
 
 abstract class _HealthcareService extends HealthcareService {
-  factory _HealthcareService(
+  const factory _HealthcareService(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -2426,7 +2426,7 @@ abstract class _HealthcareService extends HealthcareService {
       final String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
           final Element? availabilityExceptionsElement}) = _$_HealthcareService;
-  _HealthcareService._() : super._();
+  const _HealthcareService._() : super._();
 
   factory _HealthcareService.fromJson(Map<String, dynamic> json) =
       _$_HealthcareService.fromJson;
@@ -2678,7 +2678,7 @@ class __$$_HealthcareServiceServiceTypeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
-  _$_HealthcareServiceServiceType(
+  const _$_HealthcareServiceServiceType(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2775,14 +2775,14 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
 
 abstract class _HealthcareServiceServiceType
     extends HealthcareServiceServiceType {
-  factory _HealthcareServiceServiceType(
+  const factory _HealthcareServiceServiceType(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept type,
           final List<CodeableConcept>? specialty}) =
       _$_HealthcareServiceServiceType;
-  _HealthcareServiceServiceType._() : super._();
+  const _HealthcareServiceServiceType._() : super._();
 
   factory _HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceServiceType.fromJson;
@@ -3096,7 +3096,7 @@ class __$$_HealthcareServiceAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareServiceAvailableTime
     extends _HealthcareServiceAvailableTime {
-  _$_HealthcareServiceAvailableTime(
+  const _$_HealthcareServiceAvailableTime(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3237,7 +3237,7 @@ class _$_HealthcareServiceAvailableTime
 
 abstract class _HealthcareServiceAvailableTime
     extends HealthcareServiceAvailableTime {
-  factory _HealthcareServiceAvailableTime(
+  const factory _HealthcareServiceAvailableTime(
           {final Id? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -3255,7 +3255,7 @@ abstract class _HealthcareServiceAvailableTime
           @JsonKey(name: '_availableEndTime')
               final Element? availableEndTimeElement}) =
       _$_HealthcareServiceAvailableTime;
-  _HealthcareServiceAvailableTime._() : super._();
+  const _HealthcareServiceAvailableTime._() : super._();
 
   factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceAvailableTime.fromJson;
@@ -3485,7 +3485,7 @@ class __$$_HealthcareServiceNotAvailableCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
-  _$_HealthcareServiceNotAvailable(
+  const _$_HealthcareServiceNotAvailable(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3582,14 +3582,14 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
 abstract class _HealthcareServiceNotAvailable
     extends HealthcareServiceNotAvailable {
-  factory _HealthcareServiceNotAvailable(
+  const factory _HealthcareServiceNotAvailable(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Period? during}) = _$_HealthcareServiceNotAvailable;
-  _HealthcareServiceNotAvailable._() : super._();
+  const _HealthcareServiceNotAvailable._() : super._();
 
   factory _HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceNotAvailable.fromJson;
@@ -4145,7 +4145,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
 /// @nodoc
 @JsonSerializable()
 class _$_Group extends _Group {
-  _$_Group(
+  const _$_Group(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
           this.resourceType = Dstu2ResourceType.Group,
       this.id,
@@ -4387,7 +4387,7 @@ class _$_Group extends _Group {
 }
 
 abstract class _Group extends Group {
-  factory _Group(
+  const factory _Group(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -4420,7 +4420,7 @@ abstract class _Group extends Group {
           final Element? quantityElement,
       final List<GroupCharacteristic>? characteristic,
       final List<GroupMember>? member}) = _$_Group;
-  _Group._() : super._();
+  const _Group._() : super._();
 
   factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
@@ -4793,7 +4793,7 @@ class __$$_GroupCharacteristicCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GroupCharacteristic extends _GroupCharacteristic {
-  _$_GroupCharacteristic(
+  const _$_GroupCharacteristic(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4916,7 +4916,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
 }
 
 abstract class _GroupCharacteristic extends GroupCharacteristic {
-  factory _GroupCharacteristic(
+  const factory _GroupCharacteristic(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4928,7 +4928,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       final Range? valueRange,
       required final Boolean exclude,
       final Period? period}) = _$_GroupCharacteristic;
-  _GroupCharacteristic._() : super._();
+  const _GroupCharacteristic._() : super._();
 
   factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_GroupCharacteristic.fromJson;
@@ -5172,7 +5172,7 @@ class __$$_GroupMemberCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GroupMember extends _GroupMember {
-  _$_GroupMember(
+  const _$_GroupMember(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5271,7 +5271,7 @@ class _$_GroupMember extends _GroupMember {
 }
 
 abstract class _GroupMember extends GroupMember {
-  factory _GroupMember(
+  const factory _GroupMember(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -5280,7 +5280,7 @@ abstract class _GroupMember extends GroupMember {
           final Boolean? inactive,
           @JsonKey(name: '_inactive') final Element? inactiveElement}) =
       _$_GroupMember;
-  _GroupMember._() : super._();
+  const _GroupMember._() : super._();
 
   factory _GroupMember.fromJson(Map<String, dynamic> json) =
       _$_GroupMember.fromJson;

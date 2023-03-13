@@ -113,7 +113,7 @@ class Group with Resource, _$Group {
   ///  members of the group.
   ///
   /// [member] Identifies the resource instances that are members of the group.
-  factory Group({
+  const factory Group({
     @Default(R4ResourceType.Group)
     @JsonKey(unknownEnumValue: R4ResourceType.Group)
 
@@ -331,7 +331,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
   ///
   /// [period] The period over which the characteristic is tested; e.g. the
   ///  patient had an operation during the month of June.
-  factory GroupCharacteristic({
+  const factory GroupCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -473,7 +473,7 @@ class GroupMember with _$GroupMember {
   ///  but previously may have been a member.
   ///
   /// [inactiveElement] Extensions for inactive
-  factory GroupMember({
+  const factory GroupMember({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -674,7 +674,7 @@ class Patient with Resource, _$Patient {
   ///
   /// [link] Link to another patient resource that concerns the same actual
   ///  patient.
-  factory Patient({
+  const factory Patient({
     @Default(R4ResourceType.Patient)
     @JsonKey(unknownEnumValue: R4ResourceType.Patient)
 
@@ -924,7 +924,7 @@ class PatientContact with _$PatientContact {
   ///
   /// [period] The period during which this contact person or organization is
   ///  valid to be contacted relating to this patient.
-  factory PatientContact({
+  const factory PatientContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1056,7 +1056,7 @@ class PatientCommunication with _$PatientCommunication {
   ///  (over other languages he masters up a certain level).
   ///
   /// [preferredElement] Extensions for preferred
-  factory PatientCommunication({
+  const factory PatientCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1168,7 +1168,7 @@ class PatientLink with _$PatientLink {
   ///  resource.
   ///
   /// [typeElement] Extensions for type
-  factory PatientLink({
+  const factory PatientLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1328,7 +1328,7 @@ class Person with Resource, _$Person {
   /// [activeElement] Extensions for active
   ///
   /// [link] Link to a resource that concerns the same actual person.
-  factory Person({
+  const factory Person({
     @Default(R4ResourceType.Person)
     @JsonKey(unknownEnumValue: R4ResourceType.Person)
 
@@ -1511,7 +1511,7 @@ class PersonLink with _$PersonLink {
   ///  target resource.
   ///
   /// [assuranceElement] Extensions for assurance
-  factory PersonLink({
+  const factory PersonLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1678,7 +1678,7 @@ class Practitioner with Resource, _$Practitioner {
   ///
   /// [communication] A language the practitioner can use in patient
   ///  communication.
-  factory Practitioner({
+  const factory Practitioner({
     @Default(R4ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
 
@@ -1871,7 +1871,7 @@ class PractitionerQualification with _$PractitionerQualification {
   /// [period] Period during which the qualification is valid.
   ///
   /// [issuer] Organization that regulates and issues the qualification.
-  factory PractitionerQualification({
+  const factory PractitionerQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2048,7 +2048,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
-  factory PractitionerRole({
+  const factory PractitionerRole({
     @Default(R4ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
 
@@ -2262,7 +2262,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   ///  set, then this time is ignored.
   ///
   /// [availableEndTimeElement] Extensions for availableEndTime
-  factory PractitionerRoleAvailableTime({
+  const factory PractitionerRoleAvailableTime({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2391,7 +2391,7 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   ///
   /// [during] Service is not available (seasonally or for a public holiday)
   ///  from this date.
-  factory PractitionerRoleNotAvailable({
+  const factory PractitionerRoleNotAvailable({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2559,7 +2559,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
   ///
   /// [communication] A language which may be used to communicate with about
   ///  the patient's health.
-  factory RelatedPerson({
+  const factory RelatedPerson({
     @Default(R4ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
 
@@ -2755,7 +2755,7 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
   ///  (over other languages he masters up a certain level).
   ///
   /// [preferredElement] Extensions for preferred
-  factory RelatedPersonCommunication({
+  const factory RelatedPersonCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

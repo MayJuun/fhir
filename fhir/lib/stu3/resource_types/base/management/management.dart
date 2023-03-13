@@ -17,7 +17,7 @@ part 'management.g.dart';
 @freezed
 class Encounter with Resource, _$Encounter {
   Encounter._();
-  factory Encounter({
+  const factory Encounter({
     @Default(Stu3ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
         Stu3ResourceType resourceType,
@@ -86,7 +86,7 @@ class Encounter with Resource, _$Encounter {
 @freezed
 class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
-  factory EncounterStatusHistory({
+  const factory EncounterStatusHistory({
     EncounterStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
@@ -126,7 +126,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 @freezed
 class EncounterClassHistory with _$EncounterClassHistory {
   EncounterClassHistory._();
-  factory EncounterClassHistory({
+  const factory EncounterClassHistory({
     @JsonKey(name: 'class') required Coding class_,
     required Period period,
   }) = _EncounterClassHistory;
@@ -165,7 +165,7 @@ class EncounterClassHistory with _$EncounterClassHistory {
 @freezed
 class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
-  factory EncounterParticipant({
+  const factory EncounterParticipant({
     List<CodeableConcept>? type,
     Period? period,
     Reference? individual,
@@ -205,7 +205,7 @@ class EncounterParticipant with _$EncounterParticipant {
 @freezed
 class EncounterDiagnosis with _$EncounterDiagnosis {
   EncounterDiagnosis._();
-  factory EncounterDiagnosis({
+  const factory EncounterDiagnosis({
     required Reference condition,
     CodeableConcept? role,
     Decimal? rank,
@@ -246,7 +246,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
 @freezed
 class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
-  factory EncounterHospitalization({
+  const factory EncounterHospitalization({
     Identifier? preAdmissionIdentifier,
     Reference? origin,
     CodeableConcept? admitSource,
@@ -292,7 +292,7 @@ class EncounterHospitalization with _$EncounterHospitalization {
 @freezed
 class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
-  factory EncounterLocation({
+  const factory EncounterLocation({
     required Reference location,
     EncounterLocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -333,7 +333,7 @@ class EncounterLocation with _$EncounterLocation {
 @freezed
 class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
-  factory EpisodeOfCare({
+  const factory EpisodeOfCare({
     @Default(Stu3ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
         Stu3ResourceType resourceType,
@@ -393,7 +393,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 @freezed
 class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
-  factory EpisodeOfCareStatusHistory({
+  const factory EpisodeOfCareStatusHistory({
     EpisodeOfCareStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
@@ -433,7 +433,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 @freezed
 class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   EpisodeOfCareDiagnosis._();
-  factory EpisodeOfCareDiagnosis({
+  const factory EpisodeOfCareDiagnosis({
     required Reference condition,
     CodeableConcept? role,
     Decimal? rank,
@@ -474,7 +474,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 @freezed
 class Flag with Resource, _$Flag {
   Flag._();
-  factory Flag({
+  const factory Flag({
     @Default(Stu3ResourceType.Flag)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
         Stu3ResourceType resourceType,
@@ -528,7 +528,7 @@ class Flag with Resource, _$Flag {
 @freezed
 class Library with Resource, _$Library {
   Library._();
-  factory Library({
+  const factory Library({
     @Default(Stu3ResourceType.Library)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
         Stu3ResourceType resourceType,
@@ -615,7 +615,7 @@ class Library with Resource, _$Library {
 @freezed
 class List_ with Resource, _$List_ {
   List_._();
-  factory List_({
+  const factory List_({
     @Default(Stu3ResourceType.List_)
     @JsonKey(unknownEnumValue: Stu3ResourceType.List_)
         Stu3ResourceType resourceType,
@@ -677,7 +677,7 @@ class List_ with Resource, _$List_ {
 @freezed
 class ListEntry with _$ListEntry {
   ListEntry._();
-  factory ListEntry({
+  const factory ListEntry({
     CodeableConcept? flag,
     Boolean? deleted,
     @JsonKey(name: '_deleted') Element? deletedElement,

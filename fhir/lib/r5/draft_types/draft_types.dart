@@ -54,7 +54,7 @@ class Population with _$Population {
   /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
   ///
-  factory Population({
+  const factory Population({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     /// [id] Unique id for the element within a resource (for internal
@@ -218,7 +218,7 @@ class ProductShelfLife with _$ProductShelfLife {
   ///  can be specified using an appropriate controlled vocabulary The
   ///  controlled term and the controlled term identifier shall be specified.
   ///
-  factory ProductShelfLife({
+  const factory ProductShelfLife({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     /// [id] Unique id for the element within a resource (for internal
@@ -420,7 +420,7 @@ class MarketingStatus with _$MarketingStatus {
   ///
   /// [restoreDateElement] ("_restoreDate") Extensions for restoreDate
   ///
-  factory MarketingStatus({
+  const factory MarketingStatus({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     /// [id] Unique id for the element within a resource (for internal

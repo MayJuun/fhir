@@ -639,7 +639,7 @@ class __$$_AccountCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Account extends _Account {
-  _$_Account(
+  const _$_Account(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           this.resourceType = Stu3ResourceType.Account,
       this.id,
@@ -891,7 +891,7 @@ class _$_Account extends _Account {
 }
 
 abstract class _Account extends Account {
-  factory _Account(
+  const factory _Account(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -925,7 +925,7 @@ abstract class _Account extends Account {
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<AccountGuarantor>? guarantor}) = _$_Account;
-  _Account._() : super._();
+  const _Account._() : super._();
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
@@ -1134,7 +1134,7 @@ class __$$_AccountCoverageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AccountCoverage extends _AccountCoverage {
-  _$_AccountCoverage(
+  const _$_AccountCoverage(
       {required this.coverage,
       this.priority,
       @JsonKey(name: '_priority') this.priorityElement})
@@ -1189,12 +1189,12 @@ class _$_AccountCoverage extends _AccountCoverage {
 }
 
 abstract class _AccountCoverage extends AccountCoverage {
-  factory _AccountCoverage(
+  const factory _AccountCoverage(
           {required final Reference coverage,
           final Decimal? priority,
           @JsonKey(name: '_priority') final Element? priorityElement}) =
       _$_AccountCoverage;
-  _AccountCoverage._() : super._();
+  const _AccountCoverage._() : super._();
 
   factory _AccountCoverage.fromJson(Map<String, dynamic> json) =
       _$_AccountCoverage.fromJson;
@@ -1380,7 +1380,7 @@ class __$$_AccountGuarantorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AccountGuarantor extends _AccountGuarantor {
-  _$_AccountGuarantor(
+  const _$_AccountGuarantor(
       {required this.party,
       this.onHold,
       @JsonKey(name: '_onHold') this.onHoldElement,
@@ -1437,12 +1437,12 @@ class _$_AccountGuarantor extends _AccountGuarantor {
 }
 
 abstract class _AccountGuarantor extends AccountGuarantor {
-  factory _AccountGuarantor(
+  const factory _AccountGuarantor(
       {required final Reference party,
       final Boolean? onHold,
       @JsonKey(name: '_onHold') final Element? onHoldElement,
       final Period? period}) = _$_AccountGuarantor;
-  _AccountGuarantor._() : super._();
+  const _AccountGuarantor._() : super._();
 
   factory _AccountGuarantor.fromJson(Map<String, dynamic> json) =
       _$_AccountGuarantor.fromJson;
@@ -2407,7 +2407,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ChargeItem extends _ChargeItem {
-  _$_ChargeItem(
+  const _$_ChargeItem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           this.resourceType = Stu3ResourceType.ChargeItem,
       this.id,
@@ -2825,7 +2825,7 @@ class _$_ChargeItem extends _ChargeItem {
 }
 
 abstract class _ChargeItem extends ChargeItem {
-  factory _ChargeItem(
+  const factory _ChargeItem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -2878,7 +2878,7 @@ abstract class _ChargeItem extends ChargeItem {
       final List<Reference>? account,
       final List<Annotation>? note,
       final List<Reference>? supportingInformation}) = _$_ChargeItem;
-  _ChargeItem._() : super._();
+  const _ChargeItem._() : super._();
 
   factory _ChargeItem.fromJson(Map<String, dynamic> json) =
       _$_ChargeItem.fromJson;
@@ -3107,7 +3107,7 @@ class __$$_ChargeItemParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ChargeItemParticipant extends _ChargeItemParticipant {
-  _$_ChargeItemParticipant({this.role, required this.actor}) : super._();
+  const _$_ChargeItemParticipant({this.role, required this.actor}) : super._();
 
   factory _$_ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_ChargeItemParticipantFromJson(json);
@@ -3151,10 +3151,10 @@ class _$_ChargeItemParticipant extends _ChargeItemParticipant {
 }
 
 abstract class _ChargeItemParticipant extends ChargeItemParticipant {
-  factory _ChargeItemParticipant(
+  const factory _ChargeItemParticipant(
       {final CodeableConcept? role,
       required final Reference actor}) = _$_ChargeItemParticipant;
-  _ChargeItemParticipant._() : super._();
+  const _ChargeItemParticipant._() : super._();
 
   factory _ChargeItemParticipant.fromJson(Map<String, dynamic> json) =
       _$_ChargeItemParticipant.fromJson;
@@ -3937,7 +3937,7 @@ class __$$_ContractCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Contract extends _Contract {
-  _$_Contract(
+  const _$_Contract(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           this.resourceType = Stu3ResourceType.Contract,
       this.id,
@@ -4355,7 +4355,7 @@ class _$_Contract extends _Contract {
 }
 
 abstract class _Contract extends Contract {
-  factory _Contract(
+  const factory _Contract(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -4399,7 +4399,7 @@ abstract class _Contract extends Contract {
       final List<ContractFriendly>? friendly,
       final List<ContractLegal>? legal,
       final List<ContractRule>? rule}) = _$_Contract;
-  _Contract._() : super._();
+  const _Contract._() : super._();
 
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
@@ -4596,7 +4596,8 @@ class __$$_ContractAgentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractAgent extends _ContractAgent {
-  _$_ContractAgent({required this.actor, final List<CodeableConcept>? role})
+  const _$_ContractAgent(
+      {required this.actor, final List<CodeableConcept>? role})
       : _role = role,
         super._();
 
@@ -4649,10 +4650,10 @@ class _$_ContractAgent extends _ContractAgent {
 }
 
 abstract class _ContractAgent extends ContractAgent {
-  factory _ContractAgent(
+  const factory _ContractAgent(
       {required final Reference actor,
       final List<CodeableConcept>? role}) = _$_ContractAgent;
-  _ContractAgent._() : super._();
+  const _ContractAgent._() : super._();
 
   factory _ContractAgent.fromJson(Map<String, dynamic> json) =
       _$_ContractAgent.fromJson;
@@ -4796,7 +4797,7 @@ class __$$_ContractSignerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractSigner extends _ContractSigner {
-  _$_ContractSigner(
+  const _$_ContractSigner(
       {required this.type,
       required this.party,
       required final List<Signature> signature})
@@ -4854,11 +4855,11 @@ class _$_ContractSigner extends _ContractSigner {
 }
 
 abstract class _ContractSigner extends ContractSigner {
-  factory _ContractSigner(
+  const factory _ContractSigner(
       {required final Coding type,
       required final Reference party,
       required final List<Signature> signature}) = _$_ContractSigner;
-  _ContractSigner._() : super._();
+  const _ContractSigner._() : super._();
 
   factory _ContractSigner.fromJson(Map<String, dynamic> json) =
       _$_ContractSigner.fromJson;
@@ -5245,7 +5246,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractValuedItem extends _ContractValuedItem {
-  _$_ContractValuedItem(
+  const _$_ContractValuedItem(
       {this.entityCodeableConcept,
       this.entityReference,
       this.identifier,
@@ -5357,7 +5358,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
 }
 
 abstract class _ContractValuedItem extends ContractValuedItem {
-  factory _ContractValuedItem(
+  const factory _ContractValuedItem(
       {final CodeableConcept? entityCodeableConcept,
       final Reference? entityReference,
       final Identifier? identifier,
@@ -5370,7 +5371,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       final Decimal? points,
       @JsonKey(name: '_points') final Element? pointsElement,
       final Money? net}) = _$_ContractValuedItem;
-  _ContractValuedItem._() : super._();
+  const _ContractValuedItem._() : super._();
 
   factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
       _$_ContractValuedItem.fromJson;
@@ -5770,7 +5771,7 @@ class __$$_ContractTermCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractTerm extends _ContractTerm {
-  _$_ContractTerm(
+  const _$_ContractTerm(
       {this.identifier,
       this.issued,
       @JsonKey(name: '_issued') this.issuedElement,
@@ -5954,7 +5955,7 @@ class _$_ContractTerm extends _ContractTerm {
 }
 
 abstract class _ContractTerm extends ContractTerm {
-  factory _ContractTerm(
+  const factory _ContractTerm(
       {final Identifier? identifier,
       final String? issued,
       @JsonKey(name: '_issued') final Element? issuedElement,
@@ -5970,7 +5971,7 @@ abstract class _ContractTerm extends ContractTerm {
       @JsonKey(name: '_text') final Element? textElement,
       final List<ContractValuedItem1>? valuedItem,
       final List<ContractTerm>? group}) = _$_ContractTerm;
-  _ContractTerm._() : super._();
+  const _ContractTerm._() : super._();
 
   factory _ContractTerm.fromJson(Map<String, dynamic> json) =
       _$_ContractTerm.fromJson;
@@ -6120,7 +6121,8 @@ class __$$_ContractAgent1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractAgent1 extends _ContractAgent1 {
-  _$_ContractAgent1({required this.actor, final List<CodeableConcept>? role})
+  const _$_ContractAgent1(
+      {required this.actor, final List<CodeableConcept>? role})
       : _role = role,
         super._();
 
@@ -6173,10 +6175,10 @@ class _$_ContractAgent1 extends _ContractAgent1 {
 }
 
 abstract class _ContractAgent1 extends ContractAgent1 {
-  factory _ContractAgent1(
+  const factory _ContractAgent1(
       {required final Reference actor,
       final List<CodeableConcept>? role}) = _$_ContractAgent1;
-  _ContractAgent1._() : super._();
+  const _ContractAgent1._() : super._();
 
   factory _ContractAgent1.fromJson(Map<String, dynamic> json) =
       _$_ContractAgent1.fromJson;
@@ -6561,7 +6563,7 @@ class __$$_ContractValuedItem1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractValuedItem1 extends _ContractValuedItem1 {
-  _$_ContractValuedItem1(
+  const _$_ContractValuedItem1(
       {this.entityCodeableConcept,
       this.entityReference,
       this.identifier,
@@ -6673,7 +6675,7 @@ class _$_ContractValuedItem1 extends _ContractValuedItem1 {
 }
 
 abstract class _ContractValuedItem1 extends ContractValuedItem1 {
-  factory _ContractValuedItem1(
+  const factory _ContractValuedItem1(
       {final CodeableConcept? entityCodeableConcept,
       final Reference? entityReference,
       final Identifier? identifier,
@@ -6686,7 +6688,7 @@ abstract class _ContractValuedItem1 extends ContractValuedItem1 {
       final Decimal? points,
       @JsonKey(name: '_points') final Element? pointsElement,
       final Money? net}) = _$_ContractValuedItem1;
-  _ContractValuedItem1._() : super._();
+  const _ContractValuedItem1._() : super._();
 
   factory _ContractValuedItem1.fromJson(Map<String, dynamic> json) =
       _$_ContractValuedItem1.fromJson;
@@ -6850,7 +6852,7 @@ class __$$_ContractFriendlyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractFriendly extends _ContractFriendly {
-  _$_ContractFriendly({this.contentAttachment, this.contentReference})
+  const _$_ContractFriendly({this.contentAttachment, this.contentReference})
       : super._();
 
   factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
@@ -6897,10 +6899,10 @@ class _$_ContractFriendly extends _ContractFriendly {
 }
 
 abstract class _ContractFriendly extends ContractFriendly {
-  factory _ContractFriendly(
+  const factory _ContractFriendly(
       {final Attachment? contentAttachment,
       final Reference? contentReference}) = _$_ContractFriendly;
-  _ContractFriendly._() : super._();
+  const _ContractFriendly._() : super._();
 
   factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
       _$_ContractFriendly.fromJson;
@@ -7041,7 +7043,8 @@ class __$$_ContractLegalCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractLegal extends _ContractLegal {
-  _$_ContractLegal({this.contentAttachment, this.contentReference}) : super._();
+  const _$_ContractLegal({this.contentAttachment, this.contentReference})
+      : super._();
 
   factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$$_ContractLegalFromJson(json);
@@ -7087,10 +7090,10 @@ class _$_ContractLegal extends _ContractLegal {
 }
 
 abstract class _ContractLegal extends ContractLegal {
-  factory _ContractLegal(
+  const factory _ContractLegal(
       {final Attachment? contentAttachment,
       final Reference? contentReference}) = _$_ContractLegal;
-  _ContractLegal._() : super._();
+  const _ContractLegal._() : super._();
 
   factory _ContractLegal.fromJson(Map<String, dynamic> json) =
       _$_ContractLegal.fromJson;
@@ -7231,7 +7234,8 @@ class __$$_ContractRuleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractRule extends _ContractRule {
-  _$_ContractRule({this.contentAttachment, this.contentReference}) : super._();
+  const _$_ContractRule({this.contentAttachment, this.contentReference})
+      : super._();
 
   factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$$_ContractRuleFromJson(json);
@@ -7277,10 +7281,10 @@ class _$_ContractRule extends _ContractRule {
 }
 
 abstract class _ContractRule extends ContractRule {
-  factory _ContractRule(
+  const factory _ContractRule(
       {final Attachment? contentAttachment,
       final Reference? contentReference}) = _$_ContractRule;
-  _ContractRule._() : super._();
+  const _ContractRule._() : super._();
 
   factory _ContractRule.fromJson(Map<String, dynamic> json) =
       _$_ContractRule.fromJson;
@@ -8591,7 +8595,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
-  _$_ExplanationOfBenefit(
+  const _$_ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           this.resourceType = Stu3ResourceType.ExplanationOfBenefit,
       this.id,
@@ -9079,7 +9083,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 }
 
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
-  factory _ExplanationOfBenefit(
+  const factory _ExplanationOfBenefit(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -9143,7 +9147,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           final List<ExplanationOfBenefitProcessNote>? processNote,
           final List<ExplanationOfBenefitBenefitBalance>? benefitBalance}) =
       _$_ExplanationOfBenefit;
-  _ExplanationOfBenefit._() : super._();
+  const _ExplanationOfBenefit._() : super._();
 
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefit.fromJson;
@@ -9431,7 +9435,7 @@ class __$$_ExplanationOfBenefitRelatedCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
-  _$_ExplanationOfBenefitRelated(
+  const _$_ExplanationOfBenefitRelated(
       {this.claim, this.relationship, this.reference})
       : super._();
 
@@ -9483,11 +9487,11 @@ class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
 
 abstract class _ExplanationOfBenefitRelated
     extends ExplanationOfBenefitRelated {
-  factory _ExplanationOfBenefitRelated(
+  const factory _ExplanationOfBenefitRelated(
       {final Reference? claim,
       final CodeableConcept? relationship,
       final Identifier? reference}) = _$_ExplanationOfBenefitRelated;
-  _ExplanationOfBenefitRelated._() : super._();
+  const _ExplanationOfBenefitRelated._() : super._();
 
   factory _ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitRelated.fromJson;
@@ -9635,7 +9639,7 @@ class __$$_ExplanationOfBenefitPayeeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
-  _$_ExplanationOfBenefitPayee({this.type, this.party}) : super._();
+  const _$_ExplanationOfBenefitPayee({this.type, this.party}) : super._();
 
   factory _$_ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitPayeeFromJson(json);
@@ -9679,10 +9683,10 @@ class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
 }
 
 abstract class _ExplanationOfBenefitPayee extends ExplanationOfBenefitPayee {
-  factory _ExplanationOfBenefitPayee(
+  const factory _ExplanationOfBenefitPayee(
       {final CodeableConcept? type,
       final Reference? party}) = _$_ExplanationOfBenefitPayee;
-  _ExplanationOfBenefitPayee._() : super._();
+  const _ExplanationOfBenefitPayee._() : super._();
 
   factory _ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitPayee.fromJson;
@@ -10097,7 +10101,7 @@ class __$$_ExplanationOfBenefitInformationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitInformation
     extends _ExplanationOfBenefitInformation {
-  _$_ExplanationOfBenefitInformation(
+  const _$_ExplanationOfBenefitInformation(
       {this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       required this.category,
@@ -10219,7 +10223,7 @@ class _$_ExplanationOfBenefitInformation
 
 abstract class _ExplanationOfBenefitInformation
     extends ExplanationOfBenefitInformation {
-  factory _ExplanationOfBenefitInformation(
+  const factory _ExplanationOfBenefitInformation(
       {final Decimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final CodeableConcept category,
@@ -10233,7 +10237,7 @@ abstract class _ExplanationOfBenefitInformation
       final Attachment? valueAttachment,
       final Reference? valueReference,
       final Coding? reason}) = _$_ExplanationOfBenefitInformation;
-  _ExplanationOfBenefitInformation._() : super._();
+  const _ExplanationOfBenefitInformation._() : super._();
 
   factory _ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitInformation.fromJson;
@@ -10519,7 +10523,7 @@ class __$$_ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
-  _$_ExplanationOfBenefitCareTeam(
+  const _$_ExplanationOfBenefitCareTeam(
       {this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       required this.provider,
@@ -10596,7 +10600,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
 
 abstract class _ExplanationOfBenefitCareTeam
     extends ExplanationOfBenefitCareTeam {
-  factory _ExplanationOfBenefitCareTeam(
+  const factory _ExplanationOfBenefitCareTeam(
       {final Decimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Reference provider,
@@ -10604,7 +10608,7 @@ abstract class _ExplanationOfBenefitCareTeam
       @JsonKey(name: '_responsible') final Element? responsibleElement,
       final CodeableConcept? role,
       final CodeableConcept? qualification}) = _$_ExplanationOfBenefitCareTeam;
-  _ExplanationOfBenefitCareTeam._() : super._();
+  const _ExplanationOfBenefitCareTeam._() : super._();
 
   factory _ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitCareTeam.fromJson;
@@ -10853,7 +10857,7 @@ class __$$_ExplanationOfBenefitDiagnosisCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
-  _$_ExplanationOfBenefitDiagnosis(
+  const _$_ExplanationOfBenefitDiagnosis(
       {this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       this.diagnosisCodeableConcept,
@@ -10941,14 +10945,14 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
 
 abstract class _ExplanationOfBenefitDiagnosis
     extends ExplanationOfBenefitDiagnosis {
-  factory _ExplanationOfBenefitDiagnosis(
+  const factory _ExplanationOfBenefitDiagnosis(
       {final Decimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final CodeableConcept? diagnosisCodeableConcept,
       final Reference? diagnosisReference,
       final List<CodeableConcept>? type,
       final CodeableConcept? packageCode}) = _$_ExplanationOfBenefitDiagnosis;
-  _ExplanationOfBenefitDiagnosis._() : super._();
+  const _ExplanationOfBenefitDiagnosis._() : super._();
 
   factory _ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitDiagnosis.fromJson;
@@ -11195,7 +11199,7 @@ class __$$_ExplanationOfBenefitProcedureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
-  _$_ExplanationOfBenefitProcedure(
+  const _$_ExplanationOfBenefitProcedure(
       {this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       this.date,
@@ -11269,14 +11273,14 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
 
 abstract class _ExplanationOfBenefitProcedure
     extends ExplanationOfBenefitProcedure {
-  factory _ExplanationOfBenefitProcedure(
+  const factory _ExplanationOfBenefitProcedure(
       {final Decimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final Date? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final CodeableConcept? procedureCodeableConcept,
       final Reference? procedureReference}) = _$_ExplanationOfBenefitProcedure;
-  _ExplanationOfBenefitProcedure._() : super._();
+  const _ExplanationOfBenefitProcedure._() : super._();
 
   factory _ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitProcedure.fromJson;
@@ -11437,7 +11441,7 @@ class __$$_ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
-  _$_ExplanationOfBenefitInsurance(
+  const _$_ExplanationOfBenefitInsurance(
       {this.coverage,
       final List<String>? preAuthRef,
       @JsonKey(name: '_preAuthRef') final List<Element?>? preAuthRefElement})
@@ -11516,13 +11520,13 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
 
 abstract class _ExplanationOfBenefitInsurance
     extends ExplanationOfBenefitInsurance {
-  factory _ExplanationOfBenefitInsurance(
+  const factory _ExplanationOfBenefitInsurance(
           {final Reference? coverage,
           final List<String>? preAuthRef,
           @JsonKey(name: '_preAuthRef')
               final List<Element?>? preAuthRefElement}) =
       _$_ExplanationOfBenefitInsurance;
-  _ExplanationOfBenefitInsurance._() : super._();
+  const _ExplanationOfBenefitInsurance._() : super._();
 
   factory _ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitInsurance.fromJson;
@@ -11747,7 +11751,7 @@ class __$$_ExplanationOfBenefitAccidentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
-  _$_ExplanationOfBenefitAccident(
+  const _$_ExplanationOfBenefitAccident(
       {this.date,
       @JsonKey(name: '_date') this.dateElement,
       this.type,
@@ -11812,13 +11816,13 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
 
 abstract class _ExplanationOfBenefitAccident
     extends ExplanationOfBenefitAccident {
-  factory _ExplanationOfBenefitAccident(
+  const factory _ExplanationOfBenefitAccident(
       {final Date? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final CodeableConcept? type,
       final Address? locationAddress,
       final Reference? locationReference}) = _$_ExplanationOfBenefitAccident;
-  _ExplanationOfBenefitAccident._() : super._();
+  const _ExplanationOfBenefitAccident._() : super._();
 
   factory _ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitAccident.fromJson;
@@ -12603,7 +12607,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
-  _$_ExplanationOfBenefitItem(
+  const _$_ExplanationOfBenefitItem(
       {this.sequence,
       @JsonKey(name: '_sequence')
           this.sequenceElement,
@@ -13015,7 +13019,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
 }
 
 abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
-  factory _ExplanationOfBenefitItem(
+  const factory _ExplanationOfBenefitItem(
           {final Decimal? sequence,
           @JsonKey(name: '_sequence')
               final Element? sequenceElement,
@@ -13059,7 +13063,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           final List<ExplanationOfBenefitAdjudication>? adjudication,
           final List<ExplanationOfBenefitDetail>? detail}) =
       _$_ExplanationOfBenefitItem;
-  _ExplanationOfBenefitItem._() : super._();
+  const _ExplanationOfBenefitItem._() : super._();
 
   factory _ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitItem.fromJson;
@@ -13350,7 +13354,7 @@ class __$$_ExplanationOfBenefitAdjudicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitAdjudication
     extends _ExplanationOfBenefitAdjudication {
-  _$_ExplanationOfBenefitAdjudication(
+  const _$_ExplanationOfBenefitAdjudication(
       {required this.category,
       this.reason,
       this.amount,
@@ -13416,14 +13420,14 @@ class _$_ExplanationOfBenefitAdjudication
 
 abstract class _ExplanationOfBenefitAdjudication
     extends ExplanationOfBenefitAdjudication {
-  factory _ExplanationOfBenefitAdjudication(
+  const factory _ExplanationOfBenefitAdjudication(
           {required final CodeableConcept category,
           final CodeableConcept? reason,
           final Money? amount,
           final Decimal? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ExplanationOfBenefitAdjudication;
-  _ExplanationOfBenefitAdjudication._() : super._();
+  const _ExplanationOfBenefitAdjudication._() : super._();
 
   factory _ExplanationOfBenefitAdjudication.fromJson(
       Map<String, dynamic> json) = _$_ExplanationOfBenefitAdjudication.fromJson;
@@ -13896,7 +13900,7 @@ class __$$_ExplanationOfBenefitDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
-  _$_ExplanationOfBenefitDetail(
+  const _$_ExplanationOfBenefitDetail(
       {this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       required this.type,
@@ -14103,7 +14107,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
 }
 
 abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
-  factory _ExplanationOfBenefitDetail(
+  const factory _ExplanationOfBenefitDetail(
           {final Decimal? sequence,
           @JsonKey(name: '_sequence') final Element? sequenceElement,
           required final CodeableConcept type,
@@ -14123,7 +14127,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
           final List<ExplanationOfBenefitAdjudication>? adjudication,
           final List<ExplanationOfBenefitSubDetail>? subDetail}) =
       _$_ExplanationOfBenefitDetail;
-  _ExplanationOfBenefitDetail._() : super._();
+  const _ExplanationOfBenefitDetail._() : super._();
 
   factory _ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitDetail.fromJson;
@@ -14610,7 +14614,7 @@ class __$$_ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
-  _$_ExplanationOfBenefitSubDetail(
+  const _$_ExplanationOfBenefitSubDetail(
       {this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       required this.type,
@@ -14804,7 +14808,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
 
 abstract class _ExplanationOfBenefitSubDetail
     extends ExplanationOfBenefitSubDetail {
-  factory _ExplanationOfBenefitSubDetail(
+  const factory _ExplanationOfBenefitSubDetail(
           {final Decimal? sequence,
           @JsonKey(name: '_sequence') final Element? sequenceElement,
           required final CodeableConcept type,
@@ -14823,7 +14827,7 @@ abstract class _ExplanationOfBenefitSubDetail
           @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication}) =
       _$_ExplanationOfBenefitSubDetail;
-  _ExplanationOfBenefitSubDetail._() : super._();
+  const _ExplanationOfBenefitSubDetail._() : super._();
 
   factory _ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitSubDetail.fromJson;
@@ -15160,7 +15164,7 @@ class __$$_ExplanationOfBenefitAddItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
-  _$_ExplanationOfBenefitAddItem(
+  const _$_ExplanationOfBenefitAddItem(
       {final List<Id>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           final List<Element?>? sequenceLinkIdElement,
@@ -15330,7 +15334,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 
 abstract class _ExplanationOfBenefitAddItem
     extends ExplanationOfBenefitAddItem {
-  factory _ExplanationOfBenefitAddItem(
+  const factory _ExplanationOfBenefitAddItem(
           {final List<Id>? sequenceLinkId,
           @JsonKey(name: '_sequenceLinkId')
               final List<Element?>? sequenceLinkIdElement,
@@ -15345,7 +15349,7 @@ abstract class _ExplanationOfBenefitAddItem
           final List<ExplanationOfBenefitAdjudication>? adjudication,
           final List<ExplanationOfBenefitDetail1>? detail}) =
       _$_ExplanationOfBenefitAddItem;
-  _ExplanationOfBenefitAddItem._() : super._();
+  const _ExplanationOfBenefitAddItem._() : super._();
 
   factory _ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitAddItem.fromJson;
@@ -15627,7 +15631,7 @@ class __$$_ExplanationOfBenefitDetail1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
-  _$_ExplanationOfBenefitDetail1(
+  const _$_ExplanationOfBenefitDetail1(
       {this.revenue,
       this.category,
       this.service,
@@ -15749,7 +15753,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
 
 abstract class _ExplanationOfBenefitDetail1
     extends ExplanationOfBenefitDetail1 {
-  factory _ExplanationOfBenefitDetail1(
+  const factory _ExplanationOfBenefitDetail1(
           {final CodeableConcept? revenue,
           final CodeableConcept? category,
           final CodeableConcept? service,
@@ -15759,7 +15763,7 @@ abstract class _ExplanationOfBenefitDetail1
           @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication}) =
       _$_ExplanationOfBenefitDetail1;
-  _ExplanationOfBenefitDetail1._() : super._();
+  const _ExplanationOfBenefitDetail1._() : super._();
 
   factory _ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitDetail1.fromJson;
@@ -16050,7 +16054,7 @@ class __$$_ExplanationOfBenefitPaymentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
-  _$_ExplanationOfBenefitPayment(
+  const _$_ExplanationOfBenefitPayment(
       {this.type,
       this.adjustment,
       this.adjustmentReason,
@@ -16124,7 +16128,7 @@ class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
 
 abstract class _ExplanationOfBenefitPayment
     extends ExplanationOfBenefitPayment {
-  factory _ExplanationOfBenefitPayment(
+  const factory _ExplanationOfBenefitPayment(
       {final CodeableConcept? type,
       final Money? adjustment,
       final CodeableConcept? adjustmentReason,
@@ -16132,7 +16136,7 @@ abstract class _ExplanationOfBenefitPayment
       @JsonKey(name: '_date') final Element? dateElement,
       final Money? amount,
       final Identifier? identifier}) = _$_ExplanationOfBenefitPayment;
-  _ExplanationOfBenefitPayment._() : super._();
+  const _ExplanationOfBenefitPayment._() : super._();
 
   factory _ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitPayment.fromJson;
@@ -16380,7 +16384,7 @@ class __$$_ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitProcessNote
     extends _ExplanationOfBenefitProcessNote {
-  _$_ExplanationOfBenefitProcessNote(
+  const _$_ExplanationOfBenefitProcessNote(
       {this.number,
       @JsonKey(name: '_number') this.numberElement,
       this.type,
@@ -16452,14 +16456,14 @@ class _$_ExplanationOfBenefitProcessNote
 
 abstract class _ExplanationOfBenefitProcessNote
     extends ExplanationOfBenefitProcessNote {
-  factory _ExplanationOfBenefitProcessNote(
+  const factory _ExplanationOfBenefitProcessNote(
       {final Decimal? number,
       @JsonKey(name: '_number') final Element? numberElement,
       final CodeableConcept? type,
       final String? text,
       @JsonKey(name: '_text') final Element? textElement,
       final CodeableConcept? language}) = _$_ExplanationOfBenefitProcessNote;
-  _ExplanationOfBenefitProcessNote._() : super._();
+  const _ExplanationOfBenefitProcessNote._() : super._();
 
   factory _ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitProcessNote.fromJson;
@@ -16844,7 +16848,7 @@ class __$$_ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitBenefitBalance
     extends _ExplanationOfBenefitBenefitBalance {
-  _$_ExplanationOfBenefitBenefitBalance(
+  const _$_ExplanationOfBenefitBenefitBalance(
       {required this.category,
       this.subCategory,
       this.excluded,
@@ -16966,7 +16970,7 @@ class _$_ExplanationOfBenefitBenefitBalance
 
 abstract class _ExplanationOfBenefitBenefitBalance
     extends ExplanationOfBenefitBenefitBalance {
-  factory _ExplanationOfBenefitBenefitBalance(
+  const factory _ExplanationOfBenefitBenefitBalance(
           {required final CodeableConcept category,
           final CodeableConcept? subCategory,
           final Boolean? excluded,
@@ -16980,7 +16984,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
           final CodeableConcept? term,
           final List<ExplanationOfBenefitFinancial>? financial}) =
       _$_ExplanationOfBenefitBenefitBalance;
-  _ExplanationOfBenefitBenefitBalance._() : super._();
+  const _ExplanationOfBenefitBenefitBalance._() : super._();
 
   factory _ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =
@@ -17307,7 +17311,7 @@ class __$$_ExplanationOfBenefitFinancialCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
-  _$_ExplanationOfBenefitFinancial(
+  const _$_ExplanationOfBenefitFinancial(
       {required this.type,
       this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
@@ -17406,7 +17410,7 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
 
 abstract class _ExplanationOfBenefitFinancial
     extends ExplanationOfBenefitFinancial {
-  factory _ExplanationOfBenefitFinancial(
+  const factory _ExplanationOfBenefitFinancial(
       {required final CodeableConcept type,
       final Decimal? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt')
@@ -17419,7 +17423,7 @@ abstract class _ExplanationOfBenefitFinancial
       @JsonKey(name: '_usedUnsignedInt')
           final Element? usedUnsignedIntElement,
       final Money? usedMoney}) = _$_ExplanationOfBenefitFinancial;
-  _ExplanationOfBenefitFinancial._() : super._();
+  const _ExplanationOfBenefitFinancial._() : super._();
 
   factory _ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitFinancial.fromJson;

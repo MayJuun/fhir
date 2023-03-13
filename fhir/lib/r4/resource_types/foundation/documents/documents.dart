@@ -114,7 +114,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
   ///
   /// [relatedEntry] Used for example, to point to a substance, or to a device
   ///  used to administer a medication.
-  factory CatalogEntry({
+  const factory CatalogEntry({
     @Default(R4ResourceType.CatalogEntry)
     @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
 
@@ -316,7 +316,7 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
   /// [relationtypeElement] Extensions for relationtype
   ///
   /// [item] The reference to the related item.
-  factory CatalogEntryRelatedEntry({
+  const factory CatalogEntryRelatedEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -511,7 +511,7 @@ class Composition with Resource, _$Composition {
   ///  being documented.
   ///
   /// [section] The root of the sections that make up the composition.
-  factory Composition({
+  const factory Composition({
     @Default(R4ResourceType.Composition)
     @JsonKey(unknownEnumValue: R4ResourceType.Composition)
 
@@ -740,7 +740,7 @@ class CompositionAttester with _$CompositionAttester {
   /// [timeElement] Extensions for time
   ///
   /// [party] Who attested the composition in the specified way.
-  factory CompositionAttester({
+  const factory CompositionAttester({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -864,7 +864,7 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
   /// [targetIdentifier] The target composition/document of this relationship.
   ///
   /// [targetReference] The target composition/document of this relationship.
-  factory CompositionRelatesTo({
+  const factory CompositionRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -991,7 +991,7 @@ class CompositionEvent with _$CompositionEvent {
   /// [detail] The description and/or reference of the event(s) being
   /// documented. For example, this could be used to document such a colonoscopy
   ///  or an appendectomy.
-  factory CompositionEvent({
+  const factory CompositionEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1154,7 +1154,7 @@ class CompositionSection with _$CompositionSection {
   ///  section typically has some text explaining the empty reason.
   ///
   /// [section] A nested sub-section within this section.
-  factory CompositionSection({
+  const factory CompositionSection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1381,7 +1381,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
   ///
   /// [related] Related identifiers or resources associated with the
   ///  DocumentManifest.
-  factory DocumentManifest({
+  const factory DocumentManifest({
     @Default(R4ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
 
@@ -1587,7 +1587,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   ///
   /// [ref] Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
-  factory DocumentManifestRelated({
+  const factory DocumentManifestRelated({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1781,7 +1781,7 @@ class DocumentReference with Resource, _$DocumentReference {
   ///  content element repetitions, each with a different format.
   ///
   /// [context] The clinical context in which the document was prepared.
-  factory DocumentReference({
+  const factory DocumentReference({
     @Default(R4ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
 
@@ -2009,7 +2009,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   /// [codeElement] Extensions for code
   ///
   /// [target] The target document of this relationship.
-  factory DocumentReferenceRelatesTo({
+  const factory DocumentReferenceRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2122,7 +2122,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   /// [format] An identifier of the document encoding, structure, and template
   /// that the document conforms to beyond the base format indicated in the
   ///  mimeType.
-  factory DocumentReferenceContent({
+  const factory DocumentReferenceContent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2251,7 +2251,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
   ///
   /// [related] Related identifiers or resources associated with the
   ///  DocumentReference.
-  factory DocumentReferenceContext({
+  const factory DocumentReferenceContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

@@ -43,7 +43,7 @@ class BackboneType with _$BackboneType {
   /// required to check for modifier extensions. Modifier extensions SHALL NOT
   /// change the meaning of any elements on Resource or DomainResource
   /// (including cannot change the meaning of modifierExtension itself).
-  factory BackboneType({
+  const factory BackboneType({
     /// [id] Unique id for the element within a resource (for internal
     ///  references).
     /// This may be any string value that does not contain spaces.;

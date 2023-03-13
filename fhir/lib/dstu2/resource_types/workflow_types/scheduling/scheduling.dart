@@ -15,7 +15,7 @@ part 'scheduling.g.dart';
 @freezed
 class Appointment with Resource, _$Appointment {
   Appointment._();
-  factory Appointment({
+  const factory Appointment({
     @Default(Dstu2ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
         Dstu2ResourceType resourceType,
@@ -82,7 +82,7 @@ class Appointment with Resource, _$Appointment {
 @freezed
 class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
-  factory AppointmentParticipant({
+  const factory AppointmentParticipant({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -130,7 +130,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
 @freezed
 class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
-  factory AppointmentResponse({
+  const factory AppointmentResponse({
     @Default(Dstu2ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
         Dstu2ResourceType resourceType,
@@ -190,7 +190,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 @freezed
 class Schedule with Resource, _$Schedule {
   Schedule._();
-  factory Schedule({
+  const factory Schedule({
     @Default(Dstu2ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
         Dstu2ResourceType resourceType,
@@ -243,7 +243,7 @@ class Schedule with Resource, _$Schedule {
 @freezed
 class Slot with Resource, _$Slot {
   Slot._();
-  factory Slot({
+  const factory Slot({
     @Default(Dstu2ResourceType.Slot)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
         Dstu2ResourceType resourceType,

@@ -112,7 +112,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// [paymentStatus] A code indicating whether payment has been sent or
   ///  cleared.
   ///
-  factory PaymentNotice({
+  const factory PaymentNotice({
     /// [resourceType] This is a PaymentNotice resource
     @Default(R5ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
@@ -397,7 +397,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// [processNote] A note that describes or explains the processing in a human
   ///  readable form.
   ///
-  factory PaymentReconciliation({
+  const factory PaymentReconciliation({
     /// [resourceType] This is a PaymentReconciliation resource
     @Default(R5ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
@@ -679,7 +679,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   /// [amount] The monetary amount allocated from the total payment to the
   ///  payable.
   ///
-  factory PaymentReconciliationAllocation({
+  const factory PaymentReconciliationAllocation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -838,7 +838,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory PaymentReconciliationProcessNote({
+  const factory PaymentReconciliationProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

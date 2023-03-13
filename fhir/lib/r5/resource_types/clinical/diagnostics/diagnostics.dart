@@ -104,7 +104,7 @@ class BodyStructure with Resource, _$BodyStructure {
   ///
   /// [patient] The person to which the body site belongs.
   ///
-  factory BodyStructure({
+  const factory BodyStructure({
     /// [resourceType] This is a BodyStructure resource
     @Default(R5ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
@@ -253,7 +253,7 @@ class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
   ///
   /// [qualifier] Code that represents the included structure qualifier.
   ///
-  factory BodyStructureIncludedStructure({
+  const factory BodyStructureIncludedStructure({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -367,7 +367,7 @@ class BodyStructureExcludedStructure with _$BodyStructureExcludedStructure {
   ///
   /// [qualifier] Code that represents the excluded structure qualifier.
   ///
-  factory BodyStructureExcludedStructure({
+  const factory BodyStructureExcludedStructure({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -611,7 +611,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   ///  by the diagnostic service. Multiple formats are allowed but they SHALL
   ///  be semantically equivalent.
   ///
-  factory DiagnosticReport({
+  const factory DiagnosticReport({
     /// [resourceType] This is a DiagnosticReport resource
     @Default(R5ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
@@ -823,7 +823,7 @@ class DiagnosticReportSupportingInfo with _$DiagnosticReportSupportingInfo {
   /// [reference] The reference for the supporting information in the
   ///  diagnostic report.
   ///
-  factory DiagnosticReportSupportingInfo({
+  const factory DiagnosticReportSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -951,7 +951,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   ///
   /// [link] Reference to the image or data source.
   ///
-  factory DiagnosticReportMedia({
+  const factory DiagnosticReportMedia({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1126,7 +1126,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
   /// [analysis] The details about a specific analysis that was performed in
   ///  this GenomicStudy.
   ///
-  factory GenomicStudy({
+  const factory GenomicStudy({
     /// [resourceType] This is a GenomicStudy resource
     @Default(R5ResourceType.GenomicStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
@@ -1341,7 +1341,7 @@ class GenomicStudyAnalysis with _$GenomicStudyAnalysis {
   /// [device] Devices used for the analysis (e.g., instruments, software),
   ///  with settings and parameters.
   ///
-  factory GenomicStudyAnalysis({
+  const factory GenomicStudyAnalysis({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1508,7 +1508,7 @@ class GenomicStudyInput with _$GenomicStudyInput {
   /// [generatedByReference] The analysis event or other GenomicStudy that
   ///  generated this input file.
   ///
-  factory GenomicStudyInput({
+  const factory GenomicStudyInput({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1618,7 +1618,7 @@ class GenomicStudyOutput with _$GenomicStudyOutput {
   ///
   /// [type] Type of output data, e.g., VCF, MAF, or BAM.
   ///
-  factory GenomicStudyOutput({
+  const factory GenomicStudyOutput({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1723,7 +1723,7 @@ class GenomicStudyPerformer with _$GenomicStudyPerformer {
   ///
   /// [role] Role of the actor for this analysis.
   ///
-  factory GenomicStudyPerformer({
+  const factory GenomicStudyPerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1828,7 +1828,7 @@ class GenomicStudyDevice with _$GenomicStudyDevice {
   /// [function_] ("function") Specific function for the device used for the
   ///  analysis.
   ///
-  factory GenomicStudyDevice({
+  const factory GenomicStudyDevice({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2042,7 +2042,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
   /// [imageRegion] Each imaging selection might includes a 3D image region,
   ///  specified by a region type and a set of 3D coordinates.
   ///
-  factory ImagingSelection({
+  const factory ImagingSelection({
     /// [resourceType] This is a ImagingSelection resource
     @Default(R5ResourceType.ImagingSelection)
     @JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
@@ -2238,7 +2238,7 @@ class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
   ///
   /// [actor] Author – human or machine.
   ///
-  factory ImagingSelectionPerformer({
+  const factory ImagingSelectionPerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2375,7 +2375,7 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
   ///  element of type frame, the image region applies to all frames in the
   ///  subset list.
   ///
-  factory ImagingSelectionInstance({
+  const factory ImagingSelectionInstance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2521,7 +2521,7 @@ class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
   ///
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
   ///
-  factory ImagingSelectionImageRegion({
+  const factory ImagingSelectionImageRegion({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2648,7 +2648,7 @@ class ImagingSelectionImageRegion1 with _$ImagingSelectionImageRegion1 {
   ///
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
   ///
-  factory ImagingSelectionImageRegion1({
+  const factory ImagingSelectionImageRegion1({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2870,7 +2870,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   ///
   /// [series] Each study has one or more series of images or other content.
   ///
-  factory ImagingStudy({
+  const factory ImagingStudy({
     /// [resourceType] This is a ImagingStudy resource
     @Default(R5ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
@@ -3114,7 +3114,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   /// [instance] A single SOP instance within the series, e.g. an image, or
   ///  presentation state.
   ///
-  factory ImagingStudySeries({
+  const factory ImagingStudySeries({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3276,7 +3276,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ///
   /// [actor] Indicates who or what performed the series.
   ///
-  factory ImagingStudyPerformer({
+  const factory ImagingStudyPerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3402,7 +3402,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   ///
   /// [titleElement] ("_title") Extensions for title
   ///
-  factory ImagingStudyInstance({
+  const factory ImagingStudyInstance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3568,7 +3568,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   ///
   /// [relative] A sequence defined relative to another sequence.
   ///
-  factory MolecularSequence({
+  const factory MolecularSequence({
     /// [resourceType] This is a MolecularSequence resource
     @Default(R5ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
@@ -3727,7 +3727,7 @@ class MolecularSequenceRelative with _$MolecularSequenceRelative {
   ///
   /// [edit] Changes in sequence from the starting sequence.
   ///
-  factory MolecularSequenceRelative({
+  const factory MolecularSequenceRelative({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3883,7 +3883,7 @@ class MolecularSequenceStartingSequence
   ///
   /// [strandElement] ("_strand") Extensions for strand
   ///
-  factory MolecularSequenceStartingSequence({
+  const factory MolecularSequenceStartingSequence({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4050,7 +4050,7 @@ class MolecularSequenceEdit with _$MolecularSequenceEdit {
   /// [replacedSequenceElement] ("_replacedSequence") Extensions for
   ///  replacedSequence
   ///
-  factory MolecularSequenceEdit({
+  const factory MolecularSequenceEdit({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4380,7 +4380,7 @@ class Observation with Resource, _$Observation {
   ///  component observations for blood pressure measurement and multiple
   ///  component observations for genetics observations.
   ///
-  factory Observation({
+  const factory Observation({
     /// [resourceType] This is a Observation resource
     @Default(R5ResourceType.Observation)
     @JsonKey(unknownEnumValue: R5ResourceType.Observation)
@@ -4658,7 +4658,7 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
   ///
   /// [reasonElement] ("_reason") Extensions for reason
   ///
-  factory ObservationTriggeredBy({
+  const factory ObservationTriggeredBy({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4799,7 +4799,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory ObservationReferenceRange({
+  const factory ObservationReferenceRange({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4975,7 +4975,7 @@ class ObservationComponent with _$ObservationComponent {
   /// [referenceRange] Guidance on how to interpret the value by comparison to
   ///  a normal or recommended range.
   ///
-  factory ObservationComponent({
+  const factory ObservationComponent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5208,7 +5208,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// [item] A group or question item from the original questionnaire for which
   ///  answers are provided.
   ///
-  factory QuestionnaireResponse({
+  const factory QuestionnaireResponse({
     /// [resourceType] This is a QuestionnaireResponse resource
     @Default(R5ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
@@ -5386,7 +5386,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   ///
   /// [item] Sub-questions, sub-groups or display items nested beneath a group.
   ///
-  factory QuestionnaireResponseItem({
+  const factory QuestionnaireResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5564,7 +5564,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   ///
   /// [item] Nested groups and/or questions found within this particular answer.
   ///
-  factory QuestionnaireResponseAnswer({
+  const factory QuestionnaireResponseAnswer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5804,7 +5804,7 @@ class Specimen with Resource, _$Specimen {
   ///  the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
   ///
-  factory Specimen({
+  const factory Specimen({
     /// [resourceType] This is a Specimen resource
     @Default(R5ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R5ResourceType.Specimen)
@@ -5974,7 +5974,7 @@ class SpecimenFeature with _$SpecimenFeature {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory SpecimenFeature({
+  const factory SpecimenFeature({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6111,7 +6111,7 @@ class SpecimenCollection with _$SpecimenCollection {
   /// [fastingStatusDuration] Abstinence or reduction from some or all food,
   ///  drink, or both, for a period of time prior to sample collection.
   ///
-  factory SpecimenCollection({
+  const factory SpecimenCollection({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6256,7 +6256,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
   ///  occurred.  For example the time of sample fixation or the period of time
   ///  the sample was in formalin.
   ///
-  factory SpecimenProcessing({
+  const factory SpecimenProcessing({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6378,7 +6378,7 @@ class SpecimenContainer with _$SpecimenContainer {
   ///  volume, dimensions, or other appropriate measurements, depending on the
   ///  specimen type.
   ///
-  factory SpecimenContainer({
+  const factory SpecimenContainer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

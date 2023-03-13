@@ -727,7 +727,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AdverseEvent extends _AdverseEvent {
-  _$_AdverseEvent(
+  const _$_AdverseEvent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
           this.resourceType = Stu3ResourceType.AdverseEvent,
       this.id,
@@ -1026,7 +1026,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 }
 
 abstract class _AdverseEvent extends AdverseEvent {
-  factory _AdverseEvent(
+  const factory _AdverseEvent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1064,7 +1064,7 @@ abstract class _AdverseEvent extends AdverseEvent {
       final List<Reference>? subjectMedicalHistory,
       final List<Reference>? referenceDocument,
       final List<Reference>? study}) = _$_AdverseEvent;
-  _AdverseEvent._() : super._();
+  const _AdverseEvent._() : super._();
 
   factory _AdverseEvent.fromJson(Map<String, dynamic> json) =
       _$_AdverseEvent.fromJson;
@@ -1452,7 +1452,7 @@ class __$$_AdverseEventSuspectEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
-  _$_AdverseEventSuspectEntity(
+  const _$_AdverseEventSuspectEntity(
       {required this.instance,
       this.causality,
       @JsonKey(name: '_causality')
@@ -1554,7 +1554,7 @@ class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
 }
 
 abstract class _AdverseEventSuspectEntity extends AdverseEventSuspectEntity {
-  factory _AdverseEventSuspectEntity(
+  const factory _AdverseEventSuspectEntity(
       {required final Reference instance,
       final AdverseEventSuspectEntityCausality? causality,
       @JsonKey(name: '_causality')
@@ -1566,7 +1566,7 @@ abstract class _AdverseEventSuspectEntity extends AdverseEventSuspectEntity {
       final CodeableConcept? causalityMethod,
       final Reference? causalityAuthor,
       final CodeableConcept? causalityResult}) = _$_AdverseEventSuspectEntity;
-  _AdverseEventSuspectEntity._() : super._();
+  const _AdverseEventSuspectEntity._() : super._();
 
   factory _AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =
       _$_AdverseEventSuspectEntity.fromJson;
@@ -2504,7 +2504,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AllergyIntolerance extends _AllergyIntolerance {
-  _$_AllergyIntolerance(
+  const _$_AllergyIntolerance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
           this.resourceType = Stu3ResourceType.AllergyIntolerance,
       this.id,
@@ -2869,7 +2869,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 }
 
 abstract class _AllergyIntolerance extends AllergyIntolerance {
-  factory _AllergyIntolerance(
+  const factory _AllergyIntolerance(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -2923,7 +2923,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           final List<Annotation>? note,
           final List<AllergyIntoleranceReaction>? reaction}) =
       _$_AllergyIntolerance;
-  _AllergyIntolerance._() : super._();
+  const _AllergyIntolerance._() : super._();
 
   factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntolerance.fromJson;
@@ -3314,7 +3314,7 @@ class __$$_AllergyIntoleranceReactionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
-  _$_AllergyIntoleranceReaction(
+  const _$_AllergyIntoleranceReaction(
       {this.substance,
       required final List<CodeableConcept> manifestation,
       this.description,
@@ -3430,7 +3430,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
 }
 
 abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
-  factory _AllergyIntoleranceReaction(
+  const factory _AllergyIntoleranceReaction(
       {final CodeableConcept? substance,
       required final List<CodeableConcept> manifestation,
       final String? description,
@@ -3441,7 +3441,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
       @JsonKey(name: '_severity') final Element? severityElement,
       final CodeableConcept? exposureRoute,
       final List<Annotation>? note}) = _$_AllergyIntoleranceReaction;
-  _AllergyIntoleranceReaction._() : super._();
+  const _AllergyIntoleranceReaction._() : super._();
 
   factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntoleranceReaction.fromJson;
@@ -4285,7 +4285,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClinicalImpression extends _ClinicalImpression {
-  _$_ClinicalImpression(
+  const _$_ClinicalImpression(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
           this.resourceType = Stu3ResourceType.ClinicalImpression,
       this.id,
@@ -4674,7 +4674,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 }
 
 abstract class _ClinicalImpression extends ClinicalImpression {
-  factory _ClinicalImpression(
+  const factory _ClinicalImpression(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -4722,7 +4722,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       final List<Reference>? prognosisReference,
       final List<Reference>? action,
       final List<Annotation>? note}) = _$_ClinicalImpression;
-  _ClinicalImpression._() : super._();
+  const _ClinicalImpression._() : super._();
 
   factory _ClinicalImpression.fromJson(Map<String, dynamic> json) =
       _$_ClinicalImpression.fromJson;
@@ -4932,7 +4932,7 @@ class __$$_ClinicalImpressionInvestigationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalImpressionInvestigation
     extends _ClinicalImpressionInvestigation {
-  _$_ClinicalImpressionInvestigation(
+  const _$_ClinicalImpressionInvestigation(
       {required this.code, final List<Reference>? item})
       : _item = item,
         super._();
@@ -4990,10 +4990,10 @@ class _$_ClinicalImpressionInvestigation
 
 abstract class _ClinicalImpressionInvestigation
     extends ClinicalImpressionInvestigation {
-  factory _ClinicalImpressionInvestigation(
+  const factory _ClinicalImpressionInvestigation(
       {required final CodeableConcept code,
       final List<Reference>? item}) = _$_ClinicalImpressionInvestigation;
-  _ClinicalImpressionInvestigation._() : super._();
+  const _ClinicalImpressionInvestigation._() : super._();
 
   factory _ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =
       _$_ClinicalImpressionInvestigation.fromJson;
@@ -5187,7 +5187,7 @@ class __$$_ClinicalImpressionFindingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
-  _$_ClinicalImpressionFinding(
+  const _$_ClinicalImpressionFinding(
       {this.itemCodeableConcept,
       this.itemReference,
       this.basis,
@@ -5247,13 +5247,13 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
 }
 
 abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
-  factory _ClinicalImpressionFinding(
+  const factory _ClinicalImpressionFinding(
           {final CodeableConcept? itemCodeableConcept,
           final Reference? itemReference,
           final String? basis,
           @JsonKey(name: '_basis') final Element? basisElement}) =
       _$_ClinicalImpressionFinding;
-  _ClinicalImpressionFinding._() : super._();
+  const _ClinicalImpressionFinding._() : super._();
 
   factory _ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =
       _$_ClinicalImpressionFinding.fromJson;
@@ -6311,7 +6311,7 @@ class __$$_ConditionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Condition extends _Condition {
-  _$_Condition(
+  const _$_Condition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
           this.resourceType = Stu3ResourceType.Condition,
       this.id,
@@ -6701,7 +6701,7 @@ class _$_Condition extends _Condition {
 }
 
 abstract class _Condition extends Condition {
-  factory _Condition(
+  const factory _Condition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -6758,7 +6758,7 @@ abstract class _Condition extends Condition {
       final ConditionStage? stage,
       final List<ConditionEvidence>? evidence,
       final List<Annotation>? note}) = _$_Condition;
-  _Condition._() : super._();
+  const _Condition._() : super._();
 
   factory _Condition.fromJson(Map<String, dynamic> json) =
       _$_Condition.fromJson;
@@ -6980,7 +6980,7 @@ class __$$_ConditionStageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConditionStage extends _ConditionStage {
-  _$_ConditionStage({this.summary, final List<Reference>? assessment})
+  const _$_ConditionStage({this.summary, final List<Reference>? assessment})
       : _assessment = assessment,
         super._();
 
@@ -7034,10 +7034,10 @@ class _$_ConditionStage extends _ConditionStage {
 }
 
 abstract class _ConditionStage extends ConditionStage {
-  factory _ConditionStage(
+  const factory _ConditionStage(
       {final CodeableConcept? summary,
       final List<Reference>? assessment}) = _$_ConditionStage;
-  _ConditionStage._() : super._();
+  const _ConditionStage._() : super._();
 
   factory _ConditionStage.fromJson(Map<String, dynamic> json) =
       _$_ConditionStage.fromJson;
@@ -7146,7 +7146,7 @@ class __$$_ConditionEvidenceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConditionEvidence extends _ConditionEvidence {
-  _$_ConditionEvidence(
+  const _$_ConditionEvidence(
       {final List<CodeableConcept>? code, final List<Reference>? detail})
       : _code = code,
         _detail = detail,
@@ -7212,10 +7212,10 @@ class _$_ConditionEvidence extends _ConditionEvidence {
 }
 
 abstract class _ConditionEvidence extends ConditionEvidence {
-  factory _ConditionEvidence(
+  const factory _ConditionEvidence(
       {final List<CodeableConcept>? code,
       final List<Reference>? detail}) = _$_ConditionEvidence;
-  _ConditionEvidence._() : super._();
+  const _ConditionEvidence._() : super._();
 
   factory _ConditionEvidence.fromJson(Map<String, dynamic> json) =
       _$_ConditionEvidence.fromJson;
@@ -7879,7 +7879,7 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DetectedIssue extends _DetectedIssue {
-  _$_DetectedIssue(
+  const _$_DetectedIssue(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
           this.resourceType = Stu3ResourceType.DetectedIssue,
       this.id,
@@ -8136,7 +8136,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 }
 
 abstract class _DetectedIssue extends DetectedIssue {
-  factory _DetectedIssue(
+  const factory _DetectedIssue(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -8173,7 +8173,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       @JsonKey(name: '_reference')
           final Element? referenceElement,
       final List<DetectedIssueMitigation>? mitigation}) = _$_DetectedIssue;
-  _DetectedIssue._() : super._();
+  const _DetectedIssue._() : super._();
 
   factory _DetectedIssue.fromJson(Map<String, dynamic> json) =
       _$_DetectedIssue.fromJson;
@@ -8418,7 +8418,7 @@ class __$$_DetectedIssueMitigationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
-  _$_DetectedIssueMitigation(
+  const _$_DetectedIssueMitigation(
       {required this.action,
       this.date,
       @JsonKey(name: '_date') this.dateElement,
@@ -8477,12 +8477,12 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
 }
 
 abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
-  factory _DetectedIssueMitigation(
+  const factory _DetectedIssueMitigation(
       {required final CodeableConcept action,
       final Date? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final Reference? author}) = _$_DetectedIssueMitigation;
-  _DetectedIssueMitigation._() : super._();
+  const _DetectedIssueMitigation._() : super._();
 
   factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =
       _$_DetectedIssueMitigation.fromJson;
@@ -9615,7 +9615,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FamilyMemberHistory extends _FamilyMemberHistory {
-  _$_FamilyMemberHistory(
+  const _$_FamilyMemberHistory(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
           this.resourceType = Stu3ResourceType.FamilyMemberHistory,
       this.id,
@@ -10052,7 +10052,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 }
 
 abstract class _FamilyMemberHistory extends FamilyMemberHistory {
-  factory _FamilyMemberHistory(
+  const factory _FamilyMemberHistory(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -10119,7 +10119,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           final List<Annotation>? note,
           final List<FamilyMemberHistoryCondition>? condition}) =
       _$_FamilyMemberHistory;
-  _FamilyMemberHistory._() : super._();
+  const _FamilyMemberHistory._() : super._();
 
   factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
       _$_FamilyMemberHistory.fromJson;
@@ -10516,7 +10516,7 @@ class __$$_FamilyMemberHistoryConditionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
-  _$_FamilyMemberHistoryCondition(
+  const _$_FamilyMemberHistoryCondition(
       {required this.code,
       this.outcome,
       this.onsetAge,
@@ -10611,7 +10611,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
 
 abstract class _FamilyMemberHistoryCondition
     extends FamilyMemberHistoryCondition {
-  factory _FamilyMemberHistoryCondition(
+  const factory _FamilyMemberHistoryCondition(
       {required final CodeableConcept code,
       final CodeableConcept? outcome,
       final Age? onsetAge,
@@ -10620,7 +10620,7 @@ abstract class _FamilyMemberHistoryCondition
       final String? onsetString,
       @JsonKey(name: '_onsetString') final Element? onsetStringElement,
       final List<Annotation>? note}) = _$_FamilyMemberHistoryCondition;
-  _FamilyMemberHistoryCondition._() : super._();
+  const _FamilyMemberHistoryCondition._() : super._();
 
   factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =
       _$_FamilyMemberHistoryCondition.fromJson;
@@ -11497,7 +11497,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Procedure extends _Procedure {
-  _$_Procedure(
+  const _$_Procedure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
           this.resourceType = Stu3ResourceType.Procedure,
       this.id,
@@ -11954,7 +11954,7 @@ class _$_Procedure extends _Procedure {
 }
 
 abstract class _Procedure extends Procedure {
-  factory _Procedure(
+  const factory _Procedure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -12003,7 +12003,7 @@ abstract class _Procedure extends Procedure {
       final List<ProcedureFocalDevice>? focalDevice,
       final List<Reference>? usedReference,
       final List<CodeableConcept>? usedCode}) = _$_Procedure;
-  _Procedure._() : super._();
+  const _Procedure._() : super._();
 
   factory _Procedure.fromJson(Map<String, dynamic> json) =
       _$_Procedure.fromJson;
@@ -12251,7 +12251,7 @@ class __$$_ProcedurePerformerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcedurePerformer extends _ProcedurePerformer {
-  _$_ProcedurePerformer({this.role, required this.actor, this.onBehalfOf})
+  const _$_ProcedurePerformer({this.role, required this.actor, this.onBehalfOf})
       : super._();
 
   factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
@@ -12300,11 +12300,11 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
 }
 
 abstract class _ProcedurePerformer extends ProcedurePerformer {
-  factory _ProcedurePerformer(
+  const factory _ProcedurePerformer(
       {final CodeableConcept? role,
       required final Reference actor,
       final Reference? onBehalfOf}) = _$_ProcedurePerformer;
-  _ProcedurePerformer._() : super._();
+  const _ProcedurePerformer._() : super._();
 
   factory _ProcedurePerformer.fromJson(Map<String, dynamic> json) =
       _$_ProcedurePerformer.fromJson;
@@ -12444,7 +12444,8 @@ class __$$_ProcedureFocalDeviceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
-  _$_ProcedureFocalDevice({this.action, required this.manipulated}) : super._();
+  const _$_ProcedureFocalDevice({this.action, required this.manipulated})
+      : super._();
 
   factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$$_ProcedureFocalDeviceFromJson(json);
@@ -12489,10 +12490,10 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
 }
 
 abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
-  factory _ProcedureFocalDevice(
+  const factory _ProcedureFocalDevice(
       {final CodeableConcept? action,
       required final Reference manipulated}) = _$_ProcedureFocalDevice;
-  _ProcedureFocalDevice._() : super._();
+  const _ProcedureFocalDevice._() : super._();
 
   factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =
       _$_ProcedureFocalDevice.fromJson;

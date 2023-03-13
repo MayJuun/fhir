@@ -126,7 +126,7 @@ class AuditEvent with Resource, _$AuditEvent {
   ///
   /// [entity] Specific instances of data or objects that have been accessed.
   ///
-  factory AuditEvent({
+  const factory AuditEvent({
     /// [resourceType] This is a AuditEvent resource
     @Default(R5ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
@@ -298,7 +298,7 @@ class AuditEventOutcome with _$AuditEventOutcome {
   /// [detail] Additional details about the error. This may be a text
   ///  description of the error or a system code that identifies the error.
   ///
-  factory AuditEventOutcome({
+  const factory AuditEventOutcome({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -440,7 +440,7 @@ class AuditEventAgent with _$AuditEventAgent {
   /// [authorization] The authorization (e.g., PurposeOfUse) that was used
   ///  during the event being recorded.
   ///
-  factory AuditEventAgent({
+  const factory AuditEventAgent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -584,7 +584,7 @@ class AuditEventSource with _$AuditEventSource {
   ///
   /// [type] Code specifying the type of source where event originated.
   ///
-  factory AuditEventSource({
+  const factory AuditEventSource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -709,7 +709,7 @@ class AuditEventEntity with _$AuditEventEntity {
   ///  in an entity, and the user importing data from that media would be
   ///  indicated as the entity.agent.
   ///
-  factory AuditEventEntity({
+  const factory AuditEventEntity({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -861,7 +861,7 @@ class AuditEventDetail with _$AuditEventDetail {
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
   ///
-  factory AuditEventDetail({
+  const factory AuditEventDetail({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1102,7 +1102,7 @@ class Consent with Resource, _$Consent {
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
   ///
-  factory Consent({
+  const factory Consent({
     /// [resourceType] This is a Consent resource
     @Default(R5ResourceType.Consent)
     @JsonKey(unknownEnumValue: R5ResourceType.Consent)
@@ -1286,7 +1286,7 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory ConsentPolicyBasis({
+  const factory ConsentPolicyBasis({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1416,7 +1416,7 @@ class ConsentVerification with _$ConsentVerification {
   /// [verificationDateElement] ("_verificationDate") Extensions for
   ///  verificationDate
   ///
-  factory ConsentVerification({
+  const factory ConsentVerification({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1581,7 +1581,7 @@ class ConsentProvision with _$ConsentProvision {
   /// [provision] Provisions which provide exceptions to the base provision or
   ///  subprovisions.
   ///
-  factory ConsentProvision({
+  const factory ConsentProvision({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1732,7 +1732,7 @@ class ConsentActor with _$ConsentActor {
   ///  type, use group to identify a set of actors by some property they share
   ///  (e.g. 'admitting officers').
   ///
-  factory ConsentActor({
+  const factory ConsentActor({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1848,7 +1848,7 @@ class ConsentData with _$ConsentData {
   /// [reference] A reference to a specific resource that defines which
   ///  resources are covered by this consent.
   ///
-  factory ConsentData({
+  const factory ConsentData({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2002,7 +2002,7 @@ class Permission with Resource, _$Permission {
   ///
   /// [rule] A set of rules.
   ///
-  factory Permission({
+  const factory Permission({
     /// [resourceType] This is a Permission resource
     @Default(R5ResourceType.Permission)
     @JsonKey(unknownEnumValue: R5ResourceType.Permission)
@@ -2147,7 +2147,7 @@ class PermissionJustification with _$PermissionJustification {
   ///
   /// [evidence] Justifing rational.
   ///
-  factory PermissionJustification({
+  const factory PermissionJustification({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2259,7 +2259,7 @@ class PermissionRule with _$PermissionRule {
   ///
   /// [limit] What limits apply to the use of the data.
   ///
-  factory PermissionRule({
+  const factory PermissionRule({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2378,7 +2378,7 @@ class PermissionData with _$PermissionData {
   ///
   /// [expression] Used when other data selection elements are insufficient.
   ///
-  factory PermissionData({
+  const factory PermissionData({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2492,7 +2492,7 @@ class PermissionResource with _$PermissionResource {
   /// [reference] A reference to a specific resource that defines which
   ///  resources are covered by this consent.
   ///
-  factory PermissionResource({
+  const factory PermissionResource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2601,7 +2601,7 @@ class PermissionActivity with _$PermissionActivity {
   ///
   /// [purpose] The purpose for which the permission is given.
   ///
-  factory PermissionActivity({
+  const factory PermissionActivity({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2811,7 +2811,7 @@ class Provenance with Resource, _$Provenance {
   ///  should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
   ///
-  factory Provenance({
+  const factory Provenance({
     /// [resourceType] This is a Provenance resource
     @Default(R5ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R5ResourceType.Provenance)
@@ -3009,7 +3009,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// [onBehalfOf] The agent that delegated authority to perform the activity
   ///  performed by the agent.who element.
   ///
-  factory ProvenanceAgent({
+  const factory ProvenanceAgent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3153,7 +3153,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   ///  description can be understood as shorthand for saying that the agent was
   ///  responsible for the activity which used the entity.
   ///
-  factory ProvenanceEntity({
+  const factory ProvenanceEntity({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

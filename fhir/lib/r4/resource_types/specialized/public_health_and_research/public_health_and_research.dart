@@ -158,7 +158,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// [objective] A goal that the study is aiming to achieve in terms of a
   /// scientific question to be answered by the analysis of data collected
   ///  during the study.
-  factory ResearchStudy({
+  const factory ResearchStudy({
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
 
@@ -418,7 +418,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   ///  would be followed by a subject adhering to this arm.
   ///
   /// [descriptionElement] Extensions for description
-  factory ResearchStudyArm({
+  const factory ResearchStudyArm({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -538,7 +538,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   /// [nameElement] Extensions for name
   ///
   /// [type] The kind of study objective.
-  factory ResearchStudyObjective({
+  const factory ResearchStudyObjective({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -695,7 +695,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   ///
   /// [consent] A record of the patient's informed agreement to participate in
   ///  the study.
-  factory ResearchSubject({
+  const factory ResearchSubject({
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
 

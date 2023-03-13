@@ -15,7 +15,7 @@ part 'entities.g.dart';
 @freezed
 class Location with Resource, _$Location {
   Location._();
-  factory Location({
+  const factory Location({
     @Default(Dstu2ResourceType.Location)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
         Dstu2ResourceType resourceType,
@@ -78,7 +78,7 @@ class Location with Resource, _$Location {
 @freezed
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
-  factory LocationPosition({
+  const factory LocationPosition({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -124,7 +124,7 @@ class LocationPosition with _$LocationPosition {
 @freezed
 class Substance with Resource, _$Substance {
   Substance._();
-  factory Substance({
+  const factory Substance({
     @Default(Dstu2ResourceType.Substance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
         Dstu2ResourceType resourceType,
@@ -178,7 +178,7 @@ class Substance with Resource, _$Substance {
 @freezed
 class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
-  factory SubstanceInstance({
+  const factory SubstanceInstance({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -222,7 +222,7 @@ class SubstanceInstance with _$SubstanceInstance {
 @freezed
 class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
-  factory SubstanceIngredient({
+  const factory SubstanceIngredient({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -264,7 +264,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
 @freezed
 class Person with Resource, _$Person {
   Person._();
-  factory Person({
+  const factory Person({
     @Default(Dstu2ResourceType.Person)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
         Dstu2ResourceType resourceType,
@@ -323,7 +323,7 @@ class Person with Resource, _$Person {
 @freezed
 class PersonLink with _$PersonLink {
   PersonLink._();
-  factory PersonLink({
+  const factory PersonLink({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -366,7 +366,7 @@ class PersonLink with _$PersonLink {
 @freezed
 class Contract with Resource, _$Contract {
   Contract._();
-  factory Contract({
+  const factory Contract({
     @Default(Dstu2ResourceType.Contract)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
         Dstu2ResourceType resourceType,
@@ -433,7 +433,7 @@ class Contract with Resource, _$Contract {
 @freezed
 class ContractActor with _$ContractActor {
   ContractActor._();
-  factory ContractActor({
+  const factory ContractActor({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -475,7 +475,7 @@ class ContractActor with _$ContractActor {
 @freezed
 class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
-  factory ContractValuedItem({
+  const factory ContractValuedItem({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -528,7 +528,7 @@ class ContractValuedItem with _$ContractValuedItem {
 @freezed
 class ContractSigner with _$ContractSigner {
   ContractSigner._();
-  factory ContractSigner({
+  const factory ContractSigner({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -571,7 +571,7 @@ class ContractSigner with _$ContractSigner {
 @freezed
 class ContractTerm with _$ContractTerm {
   ContractTerm._();
-  factory ContractTerm({
+  const factory ContractTerm({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -625,7 +625,7 @@ class ContractTerm with _$ContractTerm {
 @freezed
 class ContractTermActor with _$ContractTermActor {
   ContractTermActor._();
-  factory ContractTermActor({
+  const factory ContractTermActor({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -667,7 +667,7 @@ class ContractTermActor with _$ContractTermActor {
 @freezed
 class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
-  factory ContractFriendly({
+  const factory ContractFriendly({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -709,7 +709,7 @@ class ContractFriendly with _$ContractFriendly {
 @freezed
 class ContractLegal with _$ContractLegal {
   ContractLegal._();
-  factory ContractLegal({
+  const factory ContractLegal({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -751,7 +751,7 @@ class ContractLegal with _$ContractLegal {
 @freezed
 class ContractRule with _$ContractRule {
   ContractRule._();
-  factory ContractRule({
+  const factory ContractRule({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

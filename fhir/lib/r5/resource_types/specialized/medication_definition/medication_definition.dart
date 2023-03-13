@@ -139,7 +139,7 @@ class AdministrableProductDefinition
   ///  the 'formOf' product already uses MedicinalProductDefinition.route (and
   ///  vice versa).
   ///
-  factory AdministrableProductDefinition({
+  const factory AdministrableProductDefinition({
     /// [resourceType] This is a AdministrableProductDefinition resource
     @Default(R5ResourceType.AdministrableProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
@@ -307,7 +307,7 @@ class AdministrableProductDefinitionProperty
   ///
   /// [status] The status of characteristic e.g. assigned or pending.
   ///
-  factory AdministrableProductDefinitionProperty({
+  const factory AdministrableProductDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -456,7 +456,7 @@ class AdministrableProductDefinitionRouteOfAdministration
   ///
   /// [targetSpecies] A species for which this route applies.
   ///
-  factory AdministrableProductDefinitionRouteOfAdministration({
+  const factory AdministrableProductDefinitionRouteOfAdministration({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -586,7 +586,7 @@ class AdministrableProductDefinitionTargetSpecies
   /// [withdrawalPeriod] A species specific time during which consumption of
   ///  animal product is not appropriate.
   ///
-  factory AdministrableProductDefinitionTargetSpecies({
+  const factory AdministrableProductDefinitionTargetSpecies({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -704,7 +704,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
   /// [supportingInformationElement] ("_supportingInformation") Extensions for
   ///  supportingInformation
   ///
-  factory AdministrableProductDefinitionWithdrawalPeriod({
+  const factory AdministrableProductDefinitionWithdrawalPeriod({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -882,7 +882,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   ///  'Do not operate heavy machinery', 'May cause drowsiness', or 'Get
   ///  medical advice/attention if you feel unwell'.
   ///
-  factory ClinicalUseDefinition({
+  const factory ClinicalUseDefinition({
     /// [resourceType] This is a ClinicalUseDefinition resource
     @Default(R5ResourceType.ClinicalUseDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
@@ -1052,7 +1052,7 @@ class ClinicalUseDefinitionContraindication
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the contraindication.
   ///
-  factory ClinicalUseDefinitionContraindication({
+  const factory ClinicalUseDefinitionContraindication({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1178,7 +1178,7 @@ class ClinicalUseDefinitionOtherTherapy
   ///  medicinal product or class of products) as part of an indication or
   ///  contraindication.
   ///
-  factory ClinicalUseDefinitionOtherTherapy({
+  const factory ClinicalUseDefinitionOtherTherapy({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1318,7 +1318,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the indication.
   ///
-  factory ClinicalUseDefinitionIndication({
+  const factory ClinicalUseDefinitionIndication({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1460,7 +1460,7 @@ class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
   ///
   /// [management] Actions for managing the interaction.
   ///
-  factory ClinicalUseDefinitionInteraction({
+  const factory ClinicalUseDefinitionInteraction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1581,7 +1581,7 @@ class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
   /// [itemCodeableConcept] The specific medication, food or laboratory test
   ///  that interacts.
   ///
-  factory ClinicalUseDefinitionInteractant({
+  const factory ClinicalUseDefinitionInteractant({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1695,7 +1695,7 @@ class ClinicalUseDefinitionUndesirableEffect
   ///
   /// [frequencyOfOccurrence] How often the effect is seen.
   ///
-  factory ClinicalUseDefinitionUndesirableEffect({
+  const factory ClinicalUseDefinitionUndesirableEffect({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1810,7 +1810,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
   ///
   /// [code] A coded or unformatted textual definition of this warning.
   ///
-  factory ClinicalUseDefinitionWarning({
+  const factory ClinicalUseDefinitionWarning({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1983,7 +1983,7 @@ class Ingredient with Resource, _$Ingredient {
   ///
   /// [substance] The substance that comprises this ingredient.
   ///
-  factory Ingredient({
+  const factory Ingredient({
     /// [resourceType] This is a Ingredient resource
     @Default(R5ResourceType.Ingredient)
     @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
@@ -2135,7 +2135,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
   ///
   /// [manufacturer] An organization that manufactures this ingredient.
   ///
-  factory IngredientManufacturer({
+  const factory IngredientManufacturer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2246,7 +2246,7 @@ class IngredientSubstance with _$IngredientSubstance {
   ///  strengths, but are different representations - mathematically equivalent
   ///  - of a single strength.
   ///
-  factory IngredientSubstance({
+  const factory IngredientSubstance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2419,7 +2419,7 @@ class IngredientStrength with _$IngredientStrength {
   ///  situations when the active substance and active moiety are different,
   ///  therefore both a strength and a reference strength are needed.
   ///
-  factory IngredientStrength({
+  const factory IngredientStrength({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2580,7 +2580,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
   ///
   /// [country] The country or countries for which the strength range applies.
   ///
-  factory IngredientReferenceStrength({
+  const factory IngredientReferenceStrength({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2762,7 +2762,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   ///  intrisically made from. This is distinct from the ingredients that are
   ///  part of its chemical makeup.
   ///
-  factory ManufacturedItemDefinition({
+  const factory ManufacturedItemDefinition({
     /// [resourceType] This is a ManufacturedItemDefinition resource
     @Default(R5ResourceType.ManufacturedItemDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
@@ -2928,7 +2928,7 @@ class ManufacturedItemDefinitionProperty
   ///
   /// [valueAttachment] A value for the characteristic.
   ///
-  factory ManufacturedItemDefinitionProperty({
+  const factory ManufacturedItemDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3070,7 +3070,7 @@ class ManufacturedItemDefinitionComponent
   ///
   /// [component] A component that this component contains or is made from.
   ///
-  factory ManufacturedItemDefinitionComponent({
+  const factory ManufacturedItemDefinitionComponent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3203,7 +3203,7 @@ class ManufacturedItemDefinitionConstituent
   /// [hasIngredient] The ingredient that is the constituent of the given
   ///  component.
   ///
-  factory ManufacturedItemDefinitionConstituent({
+  const factory ManufacturedItemDefinitionConstituent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3484,7 +3484,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   /// [characteristic] Allows the key product features to be recorded, such as
   ///  "sugar free", "modified release", "parallel import".
   ///
-  factory MedicinalProductDefinition({
+  const factory MedicinalProductDefinition({
     /// [resourceType] This is a MedicinalProductDefinition resource
     @Default(R5ResourceType.MedicinalProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
@@ -3715,7 +3715,7 @@ class MedicinalProductDefinitionContact
   /// [contact] A product specific contact, person (in a role), or an
   ///  organization.
   ///
-  factory MedicinalProductDefinitionContact({
+  const factory MedicinalProductDefinitionContact({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3845,7 +3845,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   /// [usage] Country and jurisdiction where the name applies, and associated
   ///  language.
   ///
-  factory MedicinalProductDefinitionName({
+  const factory MedicinalProductDefinitionName({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3977,7 +3977,7 @@ class MedicinalProductDefinitionPart with _$MedicinalProductDefinitionPart {
   ///
   /// [type] Identifying type for this part of the name (e.g. strength part).
   ///
-  factory MedicinalProductDefinitionPart({
+  const factory MedicinalProductDefinitionPart({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4105,7 +4105,7 @@ class MedicinalProductDefinitionUsage with _$MedicinalProductDefinitionUsage {
   ///
   /// [language] Language code for this name.
   ///
-  factory MedicinalProductDefinitionUsage({
+  const factory MedicinalProductDefinitionUsage({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4233,7 +4233,7 @@ class MedicinalProductDefinitionCrossReference
   ///  to actual product, product to development product (investigational),
   ///  parallel import version.
   ///
-  factory MedicinalProductDefinitionCrossReference({
+  const factory MedicinalProductDefinitionCrossReference({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4366,7 +4366,7 @@ class MedicinalProductDefinitionOperation
   /// [confidentialityIndicator] Specifies whether this particular business or
   ///  manufacturing process is considered proprietary or confidential.
   ///
-  factory MedicinalProductDefinitionOperation({
+  const factory MedicinalProductDefinitionOperation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4515,7 +4515,7 @@ class MedicinalProductDefinitionCharacteristic
   ///
   /// [valueAttachment] A value for the characteristic.text.
   ///
-  factory MedicinalProductDefinitionCharacteristic({
+  const factory MedicinalProductDefinitionCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4751,7 +4751,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   /// [characteristic] Allows the key features to be recorded, such as
   ///  "hospital pack", "nurse prescribable", "calendar pack".
   ///
-  factory PackagedProductDefinition({
+  const factory PackagedProductDefinition({
     /// [resourceType] This is a PackagedProductDefinition resource
     @Default(R5ResourceType.PackagedProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
@@ -4925,7 +4925,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
   /// [jurisdiction] The place where the legal status of supply applies. When
   ///  not specified, this indicates it is unknown in this context.
   ///
-  factory PackagedProductDefinitionLegalStatusOfSupply({
+  const factory PackagedProductDefinitionLegalStatusOfSupply({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5072,7 +5072,7 @@ class PackagedProductDefinitionPackaging
   ///
   ///
   ///
-  factory PackagedProductDefinitionPackaging({
+  const factory PackagedProductDefinitionPackaging({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5225,7 +5225,7 @@ class PackagedProductDefinitionProperty
   ///
   /// [valueAttachment] A value for the characteristic.
   ///
-  factory PackagedProductDefinitionProperty({
+  const factory PackagedProductDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5358,7 +5358,7 @@ class PackagedProductDefinitionContainedItem
   ///
   /// [amount] The number of this type of item within this packaging.
   ///
-  factory PackagedProductDefinitionContainedItem({
+  const factory PackagedProductDefinitionContainedItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5551,7 +5551,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   ///  ongoing review and the workgroup is seeking implementer feedback on its
   ///  use (see link at bottom of page).
   ///
-  factory RegulatedAuthorization({
+  const factory RegulatedAuthorization({
     /// [resourceType] This is a RegulatedAuthorization resource
     @Default(R5ResourceType.RegulatedAuthorization)
     @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
@@ -5737,7 +5737,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   ///  steps within the longer running case or procedure for this authorization
   ///  process.
   ///
-  factory RegulatedAuthorizationCase({
+  const factory RegulatedAuthorizationCase({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5945,7 +5945,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   /// [sourceMaterial] Material or taxonomic/anatomical source for the
   ///  substance.
   ///
-  factory SubstanceDefinition({
+  const factory SubstanceDefinition({
     /// [resourceType] This is a SubstanceDefinition resource
     @Default(R5ResourceType.SubstanceDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
@@ -6162,7 +6162,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   ///  fragments it may be necessary to indicate whether the amount refers to,
   ///  for example, a mole ratio or weight ratio.
   ///
-  factory SubstanceDefinitionMoiety({
+  const factory SubstanceDefinitionMoiety({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6305,7 +6305,7 @@ class SubstanceDefinitionCharacterization
   ///
   /// [file] An image or data file that characterizes this substance.
   ///
-  factory SubstanceDefinitionCharacterization({
+  const factory SubstanceDefinitionCharacterization({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6433,7 +6433,7 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   ///
   /// [valueAttachment] A value for the property.
   ///
-  factory SubstanceDefinitionProperty({
+  const factory SubstanceDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6563,7 +6563,7 @@ class SubstanceDefinitionMolecularWeight
   ///  only a single definite value for a given element is given, it would be
   ///  captured in this field.
   ///
-  factory SubstanceDefinitionMolecularWeight({
+  const factory SubstanceDefinitionMolecularWeight({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6696,7 +6696,7 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   ///
   /// [representation] A depiction of the structure of the substance.
   ///
-  factory SubstanceDefinitionStructure({
+  const factory SubstanceDefinitionStructure({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6837,7 +6837,7 @@ class SubstanceDefinitionRepresentation
   /// [document] An attached file with the structural representation e.g. a
   ///  molecular structure graphic of the substance, a JCAMP or AnIML file.
   ///
-  factory SubstanceDefinitionRepresentation({
+  const factory SubstanceDefinitionRepresentation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6963,7 +6963,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   ///
   /// [source] Supporting literature.
   ///
-  factory SubstanceDefinitionCode({
+  const factory SubstanceDefinitionCode({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7103,7 +7103,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
   ///
   /// [source] Supporting literature.
   ///
-  factory SubstanceDefinitionName({
+  const factory SubstanceDefinitionName({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7245,7 +7245,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   ///
   /// [dateElement] ("_date") Extensions for date
   ///
-  factory SubstanceDefinitionOfficial({
+  const factory SubstanceDefinitionOfficial({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7388,7 +7388,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   ///
   /// [source] Supporting literature.
   ///
-  factory SubstanceDefinitionRelationship({
+  const factory SubstanceDefinitionRelationship({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7536,7 +7536,7 @@ class SubstanceDefinitionSourceMaterial
   /// [countryOfOrigin] The country or countries where the material is
   ///  harvested.
   ///
-  factory SubstanceDefinitionSourceMaterial({
+  const factory SubstanceDefinitionSourceMaterial({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7711,7 +7711,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   ///  the same length will be ordered by molecular weight; subunits that have
   ///  identical sequences will be repeated multiple times.
   ///
-  factory SubstanceNucleicAcid({
+  const factory SubstanceNucleicAcid({
     /// [resourceType] This is a SubstanceNucleicAcid resource
     @Default(R5ResourceType.SubstanceNucleicAcid)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
@@ -7881,7 +7881,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   ///
   /// [sugar] 5.3.6.8.1 Sugar ID (Mandatory).
   ///
-  factory SubstanceNucleicAcidSubunit({
+  const factory SubstanceNucleicAcidSubunit({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8035,7 +8035,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   ///
   /// [residueSiteElement] ("_residueSite") Extensions for residueSite
   ///
-  factory SubstanceNucleicAcidLinkage({
+  const factory SubstanceNucleicAcidLinkage({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8171,7 +8171,7 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   ///
   /// [residueSiteElement] ("_residueSite") Extensions for residueSite
   ///
-  factory SubstanceNucleicAcidSugar({
+  const factory SubstanceNucleicAcidSugar({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8331,7 +8331,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   /// [repeat] Specifies and quantifies the repeated units and their
   ///  configuration.
   ///
-  factory SubstancePolymer({
+  const factory SubstancePolymer({
     /// [resourceType] This is a SubstancePolymer resource
     @Default(R5ResourceType.SubstancePolymer)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
@@ -8471,7 +8471,7 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   /// [startingMaterial] The starting materials - monomer(s) used in the
   ///  synthesis of the polymer.
   ///
-  factory SubstancePolymerMonomerSet({
+  const factory SubstancePolymerMonomerSet({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8582,7 +8582,7 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   ///
   /// [amount] A percentage.
   ///
-  factory SubstancePolymerStartingMaterial({
+  const factory SubstancePolymerStartingMaterial({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8705,7 +8705,7 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   ///
   /// [repeatUnit] An SRU - Structural Repeat Unit.
   ///
-  factory SubstancePolymerRepeat({
+  const factory SubstancePolymerRepeat({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8829,7 +8829,7 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   ///
   /// [structuralRepresentation] A graphical structure for this SRU.
   ///
-  factory SubstancePolymerRepeatUnit({
+  const factory SubstancePolymerRepeatUnit({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8960,7 +8960,7 @@ class SubstancePolymerDegreeOfPolymerisation
   ///
   /// [highElement] ("_high") Extensions for high
   ///
-  factory SubstancePolymerDegreeOfPolymerisation({
+  const factory SubstancePolymerDegreeOfPolymerisation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9091,7 +9091,7 @@ class SubstancePolymerStructuralRepresentation
   ///
   /// [attachment] An attached file with the structural representation.
   ///
-  factory SubstancePolymerStructuralRepresentation({
+  const factory SubstancePolymerStructuralRepresentation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9286,7 +9286,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   ///  of the same length will be ordered by decreasing molecular weight;
   ///  subunits that have identical sequences will be repeated multiple times.
   ///
-  factory SubstanceProtein({
+  const factory SubstanceProtein({
     /// [resourceType] This is a SubstanceProtein resource
     @Default(R5ResourceType.SubstanceProtein)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
@@ -9484,7 +9484,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// [cTerminalModificationElement] ("_cTerminalModification") Extensions for
   ///  cTerminalModification
   ///
-  factory SubstanceProteinSubunit({
+  const factory SubstanceProteinSubunit({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9657,7 +9657,7 @@ class SubstanceReferenceInformation
   ///
   /// [target] Todo.
   ///
-  factory SubstanceReferenceInformation({
+  const factory SubstanceReferenceInformation({
     /// [resourceType] This is a SubstanceReferenceInformation resource
     @Default(R5ResourceType.SubstanceReferenceInformation)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
@@ -9787,7 +9787,7 @@ class SubstanceReferenceInformationGene
   ///
   /// [source] Todo.
   ///
-  factory SubstanceReferenceInformationGene({
+  const factory SubstanceReferenceInformationGene({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9897,7 +9897,7 @@ class SubstanceReferenceInformationGeneElement
   ///
   /// [source] Todo.
   ///
-  factory SubstanceReferenceInformationGeneElement({
+  const factory SubstanceReferenceInformationGeneElement({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10024,7 +10024,7 @@ class SubstanceReferenceInformationTarget
   ///
   /// [source] Todo.
   ///
-  factory SubstanceReferenceInformationTarget({
+  const factory SubstanceReferenceInformationTarget({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10283,7 +10283,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   ///
   /// [partDescription] To do.
   ///
-  factory SubstanceSourceMaterial({
+  const factory SubstanceSourceMaterial({
     /// [resourceType] This is a SubstanceSourceMaterial resource
     @Default(R5ResourceType.SubstanceSourceMaterial)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
@@ -10492,7 +10492,7 @@ class SubstanceSourceMaterialFractionDescription
   ///  component. For Herbal preparations the particulars of the extracts
   ///  (liquid/dry) is described in Specified Substance Group 1.
   ///
-  factory SubstanceSourceMaterialFractionDescription({
+  const factory SubstanceSourceMaterialFractionDescription({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10665,7 +10665,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   ///
   /// [organismGeneral] 4.9.13.7.1 Kingdom (Conditional).
   ///
-  factory SubstanceSourceMaterialOrganism({
+  const factory SubstanceSourceMaterialOrganism({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10842,7 +10842,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   /// [authorDescriptionElement] ("_authorDescription") Extensions for
   ///  authorDescription
   ///
-  factory SubstanceSourceMaterialAuthor({
+  const factory SubstanceSourceMaterialAuthor({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -11015,7 +11015,7 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   ///
   /// [hybridType] The hybrid type of an organism shall be specified.
   ///
-  factory SubstanceSourceMaterialHybrid({
+  const factory SubstanceSourceMaterialHybrid({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -11187,7 +11187,7 @@ class SubstanceSourceMaterialOrganismGeneral
   ///
   /// [order] The order of an organism shall be specified,.
   ///
-  factory SubstanceSourceMaterialOrganismGeneral({
+  const factory SubstanceSourceMaterialOrganismGeneral({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -11343,7 +11343,7 @@ class SubstanceSourceMaterialPartDescription
   ///  extracted from different anatomical locations of the organism. Multiple
   ///  alternative locations may apply.
   ///
-  factory SubstanceSourceMaterialPartDescription({
+  const factory SubstanceSourceMaterialPartDescription({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

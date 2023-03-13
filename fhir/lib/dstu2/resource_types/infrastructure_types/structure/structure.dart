@@ -14,7 +14,7 @@ part 'structure.g.dart';
 
 @freezed
 class Media with Resource, _$Media {
-  const Media._();
+  Media._();
   const factory Media({
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
@@ -59,7 +59,7 @@ class Media with Resource, _$Media {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Media.fromJson(Map<String, dynamic> json) => _$Medi.fromJson(json);
+  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 
   /// Acts like a constructor, returns a [Media], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -76,7 +76,7 @@ class Media with Resource, _$Media {
 
 @freezed
 class Binary with Resource, _$Binary {
-  const Binary._();
+  Binary._();
   const factory Binary({
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
@@ -104,7 +104,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json) => _$Binar.fromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -121,7 +121,7 @@ class Binary with Resource, _$Binary {
 
 @freezed
 class Bundle with Resource, _$Bundle {
-  const Bundle._();
+  Bundle._();
   const factory Bundle({
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
@@ -153,7 +153,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json) => _$Bundl.fromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -170,7 +170,7 @@ class Bundle with Resource, _$Bundle {
 
 @freezed
 class BundleLink with _$BundleLink {
-  const BundleLink._();
+  BundleLink._();
   const factory BundleLink({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -215,7 +215,7 @@ class BundleLink with _$BundleLink {
 
 @freezed
 class BundleEntry with _$BundleEntry {
-  const BundleEntry._();
+  BundleEntry._();
   const factory BundleEntry({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -306,7 +306,7 @@ class BundleEntry with _$BundleEntry {
 
 @freezed
 class BundleEntrySearch with _$BundleEntrySearch {
-  const BundleEntrySearch._();
+  BundleEntrySearch._();
   const factory BundleEntrySearch({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -351,7 +351,7 @@ class BundleEntrySearch with _$BundleEntrySearch {
 
 @freezed
 class BundleEntryRequest with _$BundleEntryRequest {
-  const BundleEntryRequest._();
+  BundleEntryRequest._();
   const factory BundleEntryRequest({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -405,7 +405,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
 
 @freezed
 class BundleEntryResponse with _$BundleEntryResponse {
-  const BundleEntryResponse._();
+  BundleEntryResponse._();
   const factory BundleEntryResponse({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -454,7 +454,7 @@ class BundleEntryResponse with _$BundleEntryResponse {
 
 @freezed
 class Basic with Resource, _$Basic {
-  const Basic._();
+  Basic._();
   const factory Basic({
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
@@ -488,7 +488,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json) => _$Basi.fromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

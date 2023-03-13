@@ -118,7 +118,7 @@ class Endpoint with Resource, _$Endpoint {
   ///  notification.
   ///
   /// [headerElement] Extensions for header
-  factory Endpoint({
+  const factory Endpoint({
     @Default(R4ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
 
@@ -429,7 +429,7 @@ class HealthcareService with Resource, _$HealthcareService {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the specific healthcare services defined at this resource.
-  factory HealthcareService({
+  const factory HealthcareService({
     @Default(R4ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
 
@@ -688,7 +688,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   /// [comment] Describes the eligibility conditions for the service.
   ///
   /// [commentElement] Extensions for comment
-  factory HealthcareServiceEligibility({
+  const factory HealthcareServiceEligibility({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -809,7 +809,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   ///  set, then this time is ignored.
   ///
   /// [availableEndTimeElement] Extensions for availableEndTime
-  factory HealthcareServiceAvailableTime({
+  const factory HealthcareServiceAvailableTime({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -938,7 +938,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   ///
   /// [during] Service is not available (seasonally or for a public holiday)
   ///  from this date.
-  factory HealthcareServiceNotAvailable({
+  const factory HealthcareServiceNotAvailable({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1137,7 +1137,7 @@ class Location with Resource, _$Location {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the location.
-  factory Location({
+  const factory Location({
     @Default(R4ResourceType.Location)
     @JsonKey(unknownEnumValue: R4ResourceType.Location)
 
@@ -1380,7 +1380,7 @@ class LocationPosition with _$LocationPosition {
   ///  as for the text of the altitude element in KML (see notes below).
   ///
   /// [altitudeElement] Extensions for altitude
-  factory LocationPosition({
+  const factory LocationPosition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1511,7 +1511,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   /// [closingTime] Time that the Location closes.
   ///
   /// [closingTimeElement] Extensions for closingTime
-  factory LocationHoursOfOperation({
+  const factory LocationHoursOfOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1688,7 +1688,7 @@ class Organization with Resource, _$Organization {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the organization.
-  factory Organization({
+  const factory Organization({
     @Default(R4ResourceType.Organization)
     @JsonKey(unknownEnumValue: R4ResourceType.Organization)
 
@@ -1877,7 +1877,7 @@ class OrganizationContact with _$OrganizationContact {
   ///  by which the party may be contacted.
   ///
   /// [address] Visiting or postal addresses for the contact.
-  factory OrganizationContact({
+  const factory OrganizationContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2048,7 +2048,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  this role.
-  factory OrganizationAffiliation({
+  const factory OrganizationAffiliation({
     @Default(R4ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
 

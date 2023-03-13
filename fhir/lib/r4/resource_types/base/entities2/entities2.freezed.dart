@@ -686,7 +686,7 @@ class __$$_BiologicallyDerivedProductCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
-  _$_BiologicallyDerivedProduct(
+  const _$_BiologicallyDerivedProduct(
       {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
           this.resourceType = R4ResourceType.BiologicallyDerivedProduct,
       this.id,
@@ -1080,7 +1080,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 }
 
 abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
-  factory _BiologicallyDerivedProduct(
+  const factory _BiologicallyDerivedProduct(
           {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
               final R4ResourceType resourceType,
           final String? id,
@@ -1114,7 +1114,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
           final BiologicallyDerivedProductManipulation? manipulation,
           final List<BiologicallyDerivedProductStorage>? storage}) =
       _$_BiologicallyDerivedProduct;
-  _BiologicallyDerivedProduct._() : super._();
+  const _BiologicallyDerivedProduct._() : super._();
 
   factory _BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =
       _$_BiologicallyDerivedProduct.fromJson;
@@ -1555,7 +1555,7 @@ class __$$_BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BiologicallyDerivedProductCollection
     extends _BiologicallyDerivedProductCollection {
-  _$_BiologicallyDerivedProductCollection(
+  const _$_BiologicallyDerivedProductCollection(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1719,7 +1719,7 @@ class _$_BiologicallyDerivedProductCollection
 
 abstract class _BiologicallyDerivedProductCollection
     extends BiologicallyDerivedProductCollection {
-  factory _BiologicallyDerivedProductCollection(
+  const factory _BiologicallyDerivedProductCollection(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -1730,7 +1730,7 @@ abstract class _BiologicallyDerivedProductCollection
       @JsonKey(name: '_collectedDateTime')
           final Element? collectedDateTimeElement,
       final Period? collectedPeriod}) = _$_BiologicallyDerivedProductCollection;
-  _BiologicallyDerivedProductCollection._() : super._();
+  const _BiologicallyDerivedProductCollection._() : super._();
 
   factory _BiologicallyDerivedProductCollection.fromJson(
           Map<String, dynamic> json) =
@@ -2125,7 +2125,7 @@ class __$$_BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BiologicallyDerivedProductProcessing
     extends _BiologicallyDerivedProductProcessing {
-  _$_BiologicallyDerivedProductProcessing(
+  const _$_BiologicallyDerivedProductProcessing(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2305,7 +2305,7 @@ class _$_BiologicallyDerivedProductProcessing
 
 abstract class _BiologicallyDerivedProductProcessing
     extends BiologicallyDerivedProductProcessing {
-  factory _BiologicallyDerivedProductProcessing(
+  const factory _BiologicallyDerivedProductProcessing(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2316,7 +2316,7 @@ abstract class _BiologicallyDerivedProductProcessing
       final FhirDateTime? timeDateTime,
       @JsonKey(name: '_timeDateTime') final Element? timeDateTimeElement,
       final Period? timePeriod}) = _$_BiologicallyDerivedProductProcessing;
-  _BiologicallyDerivedProductProcessing._() : super._();
+  const _BiologicallyDerivedProductProcessing._() : super._();
 
   factory _BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =
@@ -2660,7 +2660,7 @@ class __$$_BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BiologicallyDerivedProductManipulation
     extends _BiologicallyDerivedProductManipulation {
-  _$_BiologicallyDerivedProductManipulation(
+  const _$_BiologicallyDerivedProductManipulation(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2824,7 +2824,7 @@ class _$_BiologicallyDerivedProductManipulation
 
 abstract class _BiologicallyDerivedProductManipulation
     extends BiologicallyDerivedProductManipulation {
-  factory _BiologicallyDerivedProductManipulation(
+  const factory _BiologicallyDerivedProductManipulation(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2833,7 +2833,7 @@ abstract class _BiologicallyDerivedProductManipulation
       final FhirDateTime? timeDateTime,
       @JsonKey(name: '_timeDateTime') final Element? timeDateTimeElement,
       final Period? timePeriod}) = _$_BiologicallyDerivedProductManipulation;
-  _BiologicallyDerivedProductManipulation._() : super._();
+  const _BiologicallyDerivedProductManipulation._() : super._();
 
   factory _BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =
@@ -3213,7 +3213,7 @@ class __$$_BiologicallyDerivedProductStorageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BiologicallyDerivedProductStorage
     extends _BiologicallyDerivedProductStorage {
-  _$_BiologicallyDerivedProductStorage(
+  const _$_BiologicallyDerivedProductStorage(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3393,7 +3393,7 @@ class _$_BiologicallyDerivedProductStorage
 
 abstract class _BiologicallyDerivedProductStorage
     extends BiologicallyDerivedProductStorage {
-  factory _BiologicallyDerivedProductStorage(
+  const factory _BiologicallyDerivedProductStorage(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3404,7 +3404,7 @@ abstract class _BiologicallyDerivedProductStorage
       final Code? scale,
       @JsonKey(name: '_scale') final Element? scaleElement,
       final Period? duration}) = _$_BiologicallyDerivedProductStorage;
-  _BiologicallyDerivedProductStorage._() : super._();
+  const _BiologicallyDerivedProductStorage._() : super._();
 
   factory _BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =
@@ -4646,7 +4646,7 @@ class __$$_DeviceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Device extends _Device {
-  _$_Device(
+  const _$_Device(
       {@JsonKey(unknownEnumValue: R4ResourceType.Device)
           this.resourceType = R4ResourceType.Device,
       this.id,
@@ -5292,7 +5292,7 @@ class _$_Device extends _Device {
 }
 
 abstract class _Device extends Device {
-  factory _Device(
+  const factory _Device(
       {@JsonKey(unknownEnumValue: R4ResourceType.Device)
           final R4ResourceType resourceType,
       final String? id,
@@ -5354,7 +5354,7 @@ abstract class _Device extends Device {
       final List<Annotation>? note,
       final List<CodeableConcept>? safety,
       final Reference? parent}) = _$_Device;
-  _Device._() : super._();
+  const _Device._() : super._();
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
@@ -6050,7 +6050,7 @@ class __$$_DeviceUdiCarrierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
-  _$_DeviceUdiCarrier(
+  const _$_DeviceUdiCarrier(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6291,7 +6291,7 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
 }
 
 abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
-  factory _DeviceUdiCarrier(
+  const factory _DeviceUdiCarrier(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -6314,7 +6314,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
       final Code? entryType,
       @JsonKey(name: '_entryType')
           final Element? entryTypeElement}) = _$_DeviceUdiCarrier;
-  _DeviceUdiCarrier._() : super._();
+  const _DeviceUdiCarrier._() : super._();
 
   factory _DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =
       _$_DeviceUdiCarrier.fromJson;
@@ -6663,7 +6663,7 @@ class __$$_DeviceDeviceNameCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceDeviceName extends _DeviceDeviceName {
-  _$_DeviceDeviceName(
+  const _$_DeviceDeviceName(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6815,7 +6815,7 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
 }
 
 abstract class _DeviceDeviceName extends DeviceDeviceName {
-  factory _DeviceDeviceName(
+  const factory _DeviceDeviceName(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6824,7 +6824,7 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
           final Code? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_DeviceDeviceName;
-  _DeviceDeviceName._() : super._();
+  const _DeviceDeviceName._() : super._();
 
   factory _DeviceDeviceName.fromJson(Map<String, dynamic> json) =
       _$_DeviceDeviceName.fromJson;
@@ -7098,7 +7098,7 @@ class __$$_DeviceSpecializationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceSpecialization extends _DeviceSpecialization {
-  _$_DeviceSpecialization(
+  const _$_DeviceSpecialization(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7242,7 +7242,7 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
 }
 
 abstract class _DeviceSpecialization extends DeviceSpecialization {
-  factory _DeviceSpecialization(
+  const factory _DeviceSpecialization(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -7250,7 +7250,7 @@ abstract class _DeviceSpecialization extends DeviceSpecialization {
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement}) =
       _$_DeviceSpecialization;
-  _DeviceSpecialization._() : super._();
+  const _DeviceSpecialization._() : super._();
 
   factory _DeviceSpecialization.fromJson(Map<String, dynamic> json) =
       _$_DeviceSpecialization.fromJson;
@@ -7550,7 +7550,7 @@ class __$$_DeviceVersionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceVersion extends _DeviceVersion {
-  _$_DeviceVersion(
+  const _$_DeviceVersion(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7699,7 +7699,7 @@ class _$_DeviceVersion extends _DeviceVersion {
 }
 
 abstract class _DeviceVersion extends DeviceVersion {
-  factory _DeviceVersion(
+  const factory _DeviceVersion(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7707,7 +7707,7 @@ abstract class _DeviceVersion extends DeviceVersion {
       final Identifier? component,
       final String? value,
       @JsonKey(name: '_value') final Element? valueElement}) = _$_DeviceVersion;
-  _DeviceVersion._() : super._();
+  const _DeviceVersion._() : super._();
 
   factory _DeviceVersion.fromJson(Map<String, dynamic> json) =
       _$_DeviceVersion.fromJson;
@@ -7961,7 +7961,7 @@ class __$$_DevicePropertyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceProperty extends _DeviceProperty {
-  _$_DeviceProperty(
+  const _$_DeviceProperty(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8123,14 +8123,14 @@ class _$_DeviceProperty extends _DeviceProperty {
 }
 
 abstract class _DeviceProperty extends DeviceProperty {
-  factory _DeviceProperty(
+  const factory _DeviceProperty(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       final List<Quantity>? valueQuantity,
       final List<CodeableConcept>? valueCode}) = _$_DeviceProperty;
-  _DeviceProperty._() : super._();
+  const _DeviceProperty._() : super._();
 
   factory _DeviceProperty.fromJson(Map<String, dynamic> json) =
       _$_DeviceProperty.fromJson;
@@ -8873,7 +8873,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceMetric extends _DeviceMetric {
-  _$_DeviceMetric(
+  const _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
           this.resourceType = R4ResourceType.DeviceMetric,
       this.id,
@@ -9241,7 +9241,7 @@ class _$_DeviceMetric extends _DeviceMetric {
 }
 
 abstract class _DeviceMetric extends DeviceMetric {
-  factory _DeviceMetric(
+  const factory _DeviceMetric(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
           final R4ResourceType resourceType,
       final String? id,
@@ -9273,7 +9273,7 @@ abstract class _DeviceMetric extends DeviceMetric {
           final Element? categoryElement,
       final Timing? measurementPeriod,
       final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
-  _DeviceMetric._() : super._();
+  const _DeviceMetric._() : super._();
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -9721,7 +9721,7 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
-  _$_DeviceMetricCalibration(
+  const _$_DeviceMetricCalibration(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9889,7 +9889,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 }
 
 abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
-  factory _DeviceMetricCalibration(
+  const factory _DeviceMetricCalibration(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -9900,7 +9900,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
           final Instant? time,
           @JsonKey(name: '_time') final Element? timeElement}) =
       _$_DeviceMetricCalibration;
-  _DeviceMetricCalibration._() : super._();
+  const _DeviceMetricCalibration._() : super._();
 
   factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetricCalibration.fromJson;
@@ -10465,7 +10465,7 @@ class __$$_NutritionProductCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NutritionProduct extends _NutritionProduct {
-  _$_NutritionProduct(
+  const _$_NutritionProduct(
       {this.resourceType = R4ResourceType.NutritionProduct,
       this.id,
       this.meta,
@@ -10780,7 +10780,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 }
 
 abstract class _NutritionProduct extends NutritionProduct {
-  factory _NutritionProduct(
+  const factory _NutritionProduct(
       {final R4ResourceType resourceType,
       final String? id,
       final Meta? meta,
@@ -10803,7 +10803,7 @@ abstract class _NutritionProduct extends NutritionProduct {
       final List<NutritionProductCharacteristic>? productCharacteristic,
       final List<NutritionProductInstance>? instance,
       final List<Annotation>? note}) = _$_NutritionProduct;
-  _NutritionProduct._() : super._();
+  const _NutritionProduct._() : super._();
 
   factory _NutritionProduct.fromJson(Map<String, dynamic> json) =
       _$_NutritionProduct.fromJson;
@@ -11069,7 +11069,7 @@ class __$$_NutritionProductNutrientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NutritionProductNutrient extends _NutritionProductNutrient {
-  _$_NutritionProductNutrient(
+  const _$_NutritionProductNutrient(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11179,13 +11179,13 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
 }
 
 abstract class _NutritionProductNutrient extends NutritionProductNutrient {
-  factory _NutritionProductNutrient(
+  const factory _NutritionProductNutrient(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableReference? item,
       final List<Ratio>? amount}) = _$_NutritionProductNutrient;
-  _NutritionProductNutrient._() : super._();
+  const _NutritionProductNutrient._() : super._();
 
   factory _NutritionProductNutrient.fromJson(Map<String, dynamic> json) =
       _$_NutritionProductNutrient.fromJson;
@@ -11386,7 +11386,7 @@ class __$$_NutritionProductIngredientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NutritionProductIngredient extends _NutritionProductIngredient {
-  _$_NutritionProductIngredient(
+  const _$_NutritionProductIngredient(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11496,13 +11496,13 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 }
 
 abstract class _NutritionProductIngredient extends NutritionProductIngredient {
-  factory _NutritionProductIngredient(
+  const factory _NutritionProductIngredient(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableReference item,
       final List<Ratio>? amount}) = _$_NutritionProductIngredient;
-  _NutritionProductIngredient._() : super._();
+  const _NutritionProductIngredient._() : super._();
 
   factory _NutritionProductIngredient.fromJson(Map<String, dynamic> json) =
       _$_NutritionProductIngredient.fromJson;
@@ -11919,7 +11919,7 @@ class __$$_NutritionProductCharacteristicCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_NutritionProductCharacteristic
     extends _NutritionProductCharacteristic {
-  _$_NutritionProductCharacteristic(
+  const _$_NutritionProductCharacteristic(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12088,7 +12088,7 @@ class _$_NutritionProductCharacteristic
 
 abstract class _NutritionProductCharacteristic
     extends NutritionProductCharacteristic {
-  factory _NutritionProductCharacteristic(
+  const factory _NutritionProductCharacteristic(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -12107,7 +12107,7 @@ abstract class _NutritionProductCharacteristic
           @JsonKey(name: '_valueBoolean')
               final Element? valueBooleanElement}) =
       _$_NutritionProductCharacteristic;
-  _NutritionProductCharacteristic._() : super._();
+  const _NutritionProductCharacteristic._() : super._();
 
   factory _NutritionProductCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_NutritionProductCharacteristic.fromJson;
@@ -12530,7 +12530,7 @@ class __$$_NutritionProductInstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NutritionProductInstance extends _NutritionProductInstance {
-  _$_NutritionProductInstance(
+  const _$_NutritionProductInstance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12683,7 +12683,7 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
 }
 
 abstract class _NutritionProductInstance extends NutritionProductInstance {
-  factory _NutritionProductInstance(
+  const factory _NutritionProductInstance(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12698,7 +12698,7 @@ abstract class _NutritionProductInstance extends NutritionProductInstance {
       final FhirDateTime? useBy,
       @JsonKey(name: '_useBy') final Element? useByElement,
       final Identifier? biologicalSource}) = _$_NutritionProductInstance;
-  _NutritionProductInstance._() : super._();
+  const _NutritionProductInstance._() : super._();
 
   factory _NutritionProductInstance.fromJson(Map<String, dynamic> json) =
       _$_NutritionProductInstance.fromJson;
@@ -13201,7 +13201,7 @@ class __$$_SubstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Substance extends _Substance {
-  _$_Substance(
+  const _$_Substance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
           this.resourceType = R4ResourceType.Substance,
       this.id,
@@ -13436,7 +13436,7 @@ class _$_Substance extends _Substance {
 }
 
 abstract class _Substance extends Substance {
-  factory _Substance(
+  const factory _Substance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
           final R4ResourceType resourceType,
       final String? id,
@@ -13463,7 +13463,7 @@ abstract class _Substance extends Substance {
           final Element? descriptionElement,
       final List<SubstanceInstance>? instance,
       final List<SubstanceIngredient>? ingredient}) = _$_Substance;
-  _Substance._() : super._();
+  const _Substance._() : super._();
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
@@ -13739,7 +13739,7 @@ class __$$_SubstanceInstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceInstance extends _SubstanceInstance {
-  _$_SubstanceInstance(
+  const _$_SubstanceInstance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13840,7 +13840,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 }
 
 abstract class _SubstanceInstance extends SubstanceInstance {
-  factory _SubstanceInstance(
+  const factory _SubstanceInstance(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13848,7 +13848,7 @@ abstract class _SubstanceInstance extends SubstanceInstance {
       final FhirDateTime? expiry,
       @JsonKey(name: '_expiry') final Element? expiryElement,
       final Quantity? quantity}) = _$_SubstanceInstance;
-  _SubstanceInstance._() : super._();
+  const _SubstanceInstance._() : super._();
 
   factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
       _$_SubstanceInstance.fromJson;
@@ -14076,7 +14076,7 @@ class __$$_SubstanceIngredientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceIngredient extends _SubstanceIngredient {
-  _$_SubstanceIngredient(
+  const _$_SubstanceIngredient(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14172,14 +14172,14 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 }
 
 abstract class _SubstanceIngredient extends SubstanceIngredient {
-  factory _SubstanceIngredient(
+  const factory _SubstanceIngredient(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Ratio? quantity,
       final CodeableConcept? substanceCodeableConcept,
       final Reference? substanceReference}) = _$_SubstanceIngredient;
-  _SubstanceIngredient._() : super._();
+  const _SubstanceIngredient._() : super._();
 
   factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
       _$_SubstanceIngredient.fromJson;

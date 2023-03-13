@@ -44,7 +44,7 @@ class Annotation with _$Annotation {
   /// [text] The text of the annotation in markdown format.
   ///
   /// [textElement] Extensions for text
-  factory Annotation({
+  const factory Annotation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -165,7 +165,7 @@ class Attachment with _$Attachment {
   /// [creation] The date that the attachment was first created.
   ///
   /// [creationElement] Extensions for creation
-  factory Attachment({
+  const factory Attachment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -303,7 +303,7 @@ class Identifier with _$Identifier {
   /// [period] Time period during which identifier is/was valid for use.
   ///
   /// [assigner] Organization that issued/manages the identifier.
-  factory Identifier({
+  const factory Identifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -404,7 +404,7 @@ class CodeableConcept with _$CodeableConcept {
   ///  represents the intended meaning of the user.
   ///
   /// [textElement] Extensions for text
-  factory CodeableConcept({
+  const factory CodeableConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -507,7 +507,7 @@ class Coding with _$Coding {
   ///  e.g. off a pick list of available items (codes or displays).
   ///
   /// [userSelectedElement] Extensions for userSelected
-  factory Coding({
+  const factory Coding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -637,7 +637,7 @@ class Quantity with _$Quantity {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Quantity({
+  const factory Quantity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -768,7 +768,7 @@ class FhirDuration with _$FhirDuration {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory FhirDuration({
+  const factory FhirDuration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -899,7 +899,7 @@ class Distance with _$Distance {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Distance({
+  const factory Distance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1033,7 +1033,7 @@ class Count with _$Count {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Count({
+  const factory Count({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1144,7 +1144,7 @@ class Money with _$Money {
   /// [currency] ISO 4217 Currency Code.
   ///
   /// [currencyElement] Extensions for currency
-  factory Money({
+  const factory Money({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1243,7 +1243,7 @@ class Age with _$Age {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Age({
+  const factory Age({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1342,7 +1342,7 @@ class Range with _$Range {
   /// [low] The low limit. The boundary is inclusive.
   ///
   /// [high] The high limit. The boundary is inclusive.
-  factory Range({
+  const factory Range({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1420,7 +1420,7 @@ class Period with _$Period {
   ///  that period is expected/planned to end at that time.
   ///
   /// [endElement] Extensions for end
-  factory Period({
+  const factory Period({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1501,7 +1501,7 @@ class Ratio with _$Ratio {
   /// [numerator] The value of the numerator.
   ///
   /// [denominator] The value of the denominator.
-  factory Ratio({
+  const factory Ratio({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1562,8 +1562,7 @@ class RatioRange with _$RatioRange {
   /// [lowNumerator] "The value of the low limit numerator."
   /// [highNumerator] "The value of the high limit numerator."
   /// [denominator] "The value of the denominator."
-
-  factory RatioRange({
+  const factory RatioRange({
     /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
     String? id,
 
@@ -1667,7 +1666,7 @@ class SampledData with _$SampledData {
   ///  of a decimal value.
   ///
   /// [dataElement] Extensions for data
-  factory SampledData({
+  const factory SampledData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1816,7 +1815,7 @@ class Signature with _$Signature {
   ///  not recorded electronically this element would be empty.
   ///
   /// [dataElement] Extensions for data
-  factory Signature({
+  const factory Signature({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1955,7 +1954,7 @@ class HumanName with _$HumanName {
   ///
   /// [period] Indicates the period of time when this name was valid for the
   ///  named person.
-  factory HumanName({
+  const factory HumanName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2117,7 +2116,7 @@ class Address with _$Address {
   /// [countryElement] Extensions for country
   ///
   /// [period] Time period when address was/is in use.
-  factory Address({
+  const factory Address({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2270,7 +2269,7 @@ class ContactPoint with _$ContactPoint {
   /// [rankElement] Extensions for rank
   ///
   /// [period] Time period when the contact point was/is in use.
-  factory ContactPoint({
+  const factory ContactPoint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2403,7 +2402,7 @@ class Timing with _$Timing {
   /// and either the code or the data may be used to interpret the Timing, with
   /// the exception that .repeat.bounds still applies over the code (and is not
   ///  contained in the code).
-  factory Timing({
+  const factory Timing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2603,7 +2602,7 @@ class TimingRepeat with _$TimingRepeat {
   ///  is assumed to be after the event.
   ///
   /// [offsetElement] Extensions for offset
-  factory TimingRepeat({
+  const factory TimingRepeat({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

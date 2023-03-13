@@ -1139,7 +1139,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
 /// @nodoc
 @JsonSerializable()
 class _$_Claim extends _Claim {
-  _$_Claim(
+  const _$_Claim(
       {@JsonKey(unknownEnumValue: R5ResourceType.Claim)
           this.resourceType = R5ResourceType.Claim,
       this.id,
@@ -1655,7 +1655,7 @@ class _$_Claim extends _Claim {
 }
 
 abstract class _Claim extends Claim {
-  factory _Claim(
+  const factory _Claim(
       {@JsonKey(unknownEnumValue: R5ResourceType.Claim)
           final R5ResourceType resourceType,
       final Id? id,
@@ -1707,7 +1707,7 @@ abstract class _Claim extends Claim {
       final Money? patientPaid,
       final List<ClaimItem>? item,
       final Money? total}) = _$_Claim;
-  _Claim._() : super._();
+  const _Claim._() : super._();
 
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
@@ -2133,7 +2133,7 @@ class __$$_ClaimRelatedCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimRelated extends _ClaimRelated {
-  _$_ClaimRelated(
+  const _$_ClaimRelated(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2272,14 +2272,14 @@ class _$_ClaimRelated extends _ClaimRelated {
 }
 
 abstract class _ClaimRelated extends ClaimRelated {
-  factory _ClaimRelated(
+  const factory _ClaimRelated(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Reference? claim,
       final CodeableConcept? relationship,
       final Identifier? reference}) = _$_ClaimRelated;
-  _ClaimRelated._() : super._();
+  const _ClaimRelated._() : super._();
 
   factory _ClaimRelated.fromJson(Map<String, dynamic> json) =
       _$_ClaimRelated.fromJson;
@@ -2525,7 +2525,7 @@ class __$$_ClaimPayeeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimPayee extends _ClaimPayee {
-  _$_ClaimPayee(
+  const _$_ClaimPayee(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2655,13 +2655,13 @@ class _$_ClaimPayee extends _ClaimPayee {
 }
 
 abstract class _ClaimPayee extends ClaimPayee {
-  factory _ClaimPayee(
+  const factory _ClaimPayee(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       final Reference? party}) = _$_ClaimPayee;
-  _ClaimPayee._() : super._();
+  const _ClaimPayee._() : super._();
 
   factory _ClaimPayee.fromJson(Map<String, dynamic> json) =
       _$_ClaimPayee.fromJson;
@@ -3025,7 +3025,7 @@ class __$$_ClaimCareTeamCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimCareTeam extends _ClaimCareTeam {
-  _$_ClaimCareTeam(
+  const _$_ClaimCareTeam(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3198,7 +3198,7 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
 }
 
 abstract class _ClaimCareTeam extends ClaimCareTeam {
-  factory _ClaimCareTeam(
+  const factory _ClaimCareTeam(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3209,7 +3209,7 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
       @JsonKey(name: '_responsible') final Element? responsibleElement,
       final CodeableConcept? role,
       final CodeableConcept? specialty}) = _$_ClaimCareTeam;
-  _ClaimCareTeam._() : super._();
+  const _ClaimCareTeam._() : super._();
 
   factory _ClaimCareTeam.fromJson(Map<String, dynamic> json) =
       _$_ClaimCareTeam.fromJson;
@@ -3837,7 +3837,7 @@ class __$$_ClaimSupportingInfoCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
-  _$_ClaimSupportingInfo(
+  const _$_ClaimSupportingInfo(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4085,7 +4085,7 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
 }
 
 abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
-  factory _ClaimSupportingInfo(
+  const factory _ClaimSupportingInfo(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4105,7 +4105,7 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
       final Reference? valueReference,
       final Identifier? valueIdentifier,
       final CodeableConcept? reason}) = _$_ClaimSupportingInfo;
-  _ClaimSupportingInfo._() : super._();
+  const _ClaimSupportingInfo._() : super._();
 
   factory _ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =
       _$_ClaimSupportingInfo.fromJson;
@@ -4504,7 +4504,7 @@ class __$$_ClaimDiagnosisCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimDiagnosis extends _ClaimDiagnosis {
-  _$_ClaimDiagnosis(
+  const _$_ClaimDiagnosis(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4679,7 +4679,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
 }
 
 abstract class _ClaimDiagnosis extends ClaimDiagnosis {
-  factory _ClaimDiagnosis(
+  const factory _ClaimDiagnosis(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4689,7 +4689,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
       final Reference? diagnosisReference,
       final List<CodeableConcept>? type,
       final CodeableConcept? onAdmission}) = _$_ClaimDiagnosis;
-  _ClaimDiagnosis._() : super._();
+  const _ClaimDiagnosis._() : super._();
 
   factory _ClaimDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_ClaimDiagnosis.fromJson;
@@ -5076,7 +5076,7 @@ class __$$_ClaimProcedureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimProcedure extends _ClaimProcedure {
-  _$_ClaimProcedure(
+  const _$_ClaimProcedure(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5276,7 +5276,7 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 }
 
 abstract class _ClaimProcedure extends ClaimProcedure {
-  factory _ClaimProcedure(
+  const factory _ClaimProcedure(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5288,7 +5288,7 @@ abstract class _ClaimProcedure extends ClaimProcedure {
       final CodeableConcept? procedureCodeableConcept,
       final Reference? procedureReference,
       final List<Reference>? udi}) = _$_ClaimProcedure;
-  _ClaimProcedure._() : super._();
+  const _ClaimProcedure._() : super._();
 
   factory _ClaimProcedure.fromJson(Map<String, dynamic> json) =
       _$_ClaimProcedure.fromJson;
@@ -5765,7 +5765,7 @@ class __$$_ClaimInsuranceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimInsurance extends _ClaimInsurance {
-  _$_ClaimInsurance(
+  const _$_ClaimInsurance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5995,7 +5995,7 @@ class _$_ClaimInsurance extends _ClaimInsurance {
 }
 
 abstract class _ClaimInsurance extends ClaimInsurance {
-  factory _ClaimInsurance(
+  const factory _ClaimInsurance(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -6015,7 +6015,7 @@ abstract class _ClaimInsurance extends ClaimInsurance {
       @JsonKey(name: '_preAuthRef')
           final List<Element>? preAuthRefElement,
       final Reference? claimResponse}) = _$_ClaimInsurance;
-  _ClaimInsurance._() : super._();
+  const _ClaimInsurance._() : super._();
 
   factory _ClaimInsurance.fromJson(Map<String, dynamic> json) =
       _$_ClaimInsurance.fromJson;
@@ -6377,7 +6377,7 @@ class __$$_ClaimAccidentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimAccident extends _ClaimAccident {
-  _$_ClaimAccident(
+  const _$_ClaimAccident(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6532,7 +6532,7 @@ class _$_ClaimAccident extends _ClaimAccident {
 }
 
 abstract class _ClaimAccident extends ClaimAccident {
-  factory _ClaimAccident(
+  const factory _ClaimAccident(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6541,7 +6541,7 @@ abstract class _ClaimAccident extends ClaimAccident {
       final CodeableConcept? type,
       final Address? locationAddress,
       final Reference? locationReference}) = _$_ClaimAccident;
-  _ClaimAccident._() : super._();
+  const _ClaimAccident._() : super._();
 
   factory _ClaimAccident.fromJson(Map<String, dynamic> json) =
       _$_ClaimAccident.fromJson;
@@ -7506,7 +7506,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimItem extends _ClaimItem {
-  _$_ClaimItem(
+  const _$_ClaimItem(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -8044,7 +8044,7 @@ class _$_ClaimItem extends _ClaimItem {
 }
 
 abstract class _ClaimItem extends ClaimItem {
-  factory _ClaimItem(
+  const factory _ClaimItem(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -8089,7 +8089,7 @@ abstract class _ClaimItem extends ClaimItem {
       final List<ClaimBodySite>? bodySite,
       final List<Reference>? encounter,
       final List<ClaimDetail>? detail}) = _$_ClaimItem;
-  _ClaimItem._() : super._();
+  const _ClaimItem._() : super._();
 
   factory _ClaimItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimItem.fromJson;
@@ -8434,7 +8434,7 @@ class __$$_ClaimBodySiteCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimBodySite extends _ClaimBodySite {
-  _$_ClaimBodySite(
+  const _$_ClaimBodySite(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8582,13 +8582,13 @@ class _$_ClaimBodySite extends _ClaimBodySite {
 }
 
 abstract class _ClaimBodySite extends ClaimBodySite {
-  factory _ClaimBodySite(
+  const factory _ClaimBodySite(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<CodeableReference> site,
       final List<CodeableConcept>? subSite}) = _$_ClaimBodySite;
-  _ClaimBodySite._() : super._();
+  const _ClaimBodySite._() : super._();
 
   factory _ClaimBodySite.fromJson(Map<String, dynamic> json) =
       _$_ClaimBodySite.fromJson;
@@ -9197,7 +9197,7 @@ class __$$_ClaimDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimDetail extends _ClaimDetail {
-  _$_ClaimDetail(
+  const _$_ClaimDetail(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9486,7 +9486,7 @@ class _$_ClaimDetail extends _ClaimDetail {
 }
 
 abstract class _ClaimDetail extends ClaimDetail {
-  factory _ClaimDetail(
+  const factory _ClaimDetail(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9507,7 +9507,7 @@ abstract class _ClaimDetail extends ClaimDetail {
       final Money? net,
       final List<Reference>? udi,
       final List<ClaimSubDetail>? subDetail}) = _$_ClaimDetail;
-  _ClaimDetail._() : super._();
+  const _ClaimDetail._() : super._();
 
   factory _ClaimDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimDetail.fromJson;
@@ -10163,7 +10163,7 @@ class __$$_ClaimSubDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimSubDetail extends _ClaimSubDetail {
-  _$_ClaimSubDetail(
+  const _$_ClaimSubDetail(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10434,7 +10434,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
 }
 
 abstract class _ClaimSubDetail extends ClaimSubDetail {
-  factory _ClaimSubDetail(
+  const factory _ClaimSubDetail(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10454,7 +10454,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
       final Money? tax,
       final Money? net,
       final List<Reference>? udi}) = _$_ClaimSubDetail;
-  _ClaimSubDetail._() : super._();
+  const _ClaimSubDetail._() : super._();
 
   factory _ClaimSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimSubDetail.fromJson;
@@ -11734,7 +11734,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponse extends _ClaimResponse {
-  _$_ClaimResponse(
+  const _$_ClaimResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
           this.resourceType = R5ResourceType.ClaimResponse,
       this.id,
@@ -12289,7 +12289,7 @@ class _$_ClaimResponse extends _ClaimResponse {
 }
 
 abstract class _ClaimResponse extends ClaimResponse {
-  factory _ClaimResponse(
+  const factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
           final R5ResourceType resourceType,
       final Id? id,
@@ -12347,7 +12347,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       final List<Reference>? communicationRequest,
       final List<ClaimResponseInsurance>? insurance,
       final List<ClaimResponseError>? error}) = _$_ClaimResponse;
-  _ClaimResponse._() : super._();
+  const _ClaimResponse._() : super._();
 
   factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponse.fromJson;
@@ -12837,7 +12837,7 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseItem extends _ClaimResponseItem {
-  _$_ClaimResponseItem(
+  const _$_ClaimResponseItem(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13052,7 +13052,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 }
 
 abstract class _ClaimResponseItem extends ClaimResponseItem {
-  factory _ClaimResponseItem(
+  const factory _ClaimResponseItem(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13063,7 +13063,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       final CodeableConcept? decision,
       final List<ClaimResponseAdjudication>? adjudication,
       final List<ClaimResponseDetail>? detail}) = _$_ClaimResponseItem;
-  _ClaimResponseItem._() : super._();
+  const _ClaimResponseItem._() : super._();
 
   factory _ClaimResponseItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseItem.fromJson;
@@ -13408,7 +13408,7 @@ class __$$_ClaimResponseAdjudicationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
-  _$_ClaimResponseAdjudication(
+  const _$_ClaimResponseAdjudication(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13563,7 +13563,7 @@ class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
 }
 
 abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
-  factory _ClaimResponseAdjudication(
+  const factory _ClaimResponseAdjudication(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -13573,7 +13573,7 @@ abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
           final Decimal? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ClaimResponseAdjudication;
-  _ClaimResponseAdjudication._() : super._();
+  const _ClaimResponseAdjudication._() : super._();
 
   factory _ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseAdjudication.fromJson;
@@ -13911,7 +13911,7 @@ class __$$_ClaimResponseDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseDetail extends _ClaimResponseDetail {
-  _$_ClaimResponseDetail(
+  const _$_ClaimResponseDetail(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14127,7 +14127,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
 }
 
 abstract class _ClaimResponseDetail extends ClaimResponseDetail {
-  factory _ClaimResponseDetail(
+  const factory _ClaimResponseDetail(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14138,7 +14138,7 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
       final CodeableConcept? decision,
       final List<ClaimResponseAdjudication>? adjudication,
       final List<ClaimResponseSubDetail>? subDetail}) = _$_ClaimResponseDetail;
-  _ClaimResponseDetail._() : super._();
+  const _ClaimResponseDetail._() : super._();
 
   factory _ClaimResponseDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseDetail.fromJson;
@@ -14472,7 +14472,7 @@ class __$$_ClaimResponseSubDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
-  _$_ClaimResponseSubDetail(
+  const _$_ClaimResponseSubDetail(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14671,7 +14671,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
 }
 
 abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
-  factory _ClaimResponseSubDetail(
+  const factory _ClaimResponseSubDetail(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -14685,7 +14685,7 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
           final CodeableConcept? decision,
           final List<ClaimResponseAdjudication>? adjudication}) =
       _$_ClaimResponseSubDetail;
-  _ClaimResponseSubDetail._() : super._();
+  const _ClaimResponseSubDetail._() : super._();
 
   factory _ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseSubDetail.fromJson;
@@ -15578,7 +15578,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
-  _$_ClaimResponseAddItem(
+  const _$_ClaimResponseAddItem(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -16087,7 +16087,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
 }
 
 abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
-  factory _ClaimResponseAddItem(
+  const factory _ClaimResponseAddItem(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -16128,7 +16128,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       final CodeableConcept? decision,
       final List<ClaimResponseAdjudication>? adjudication,
       final List<ClaimResponseDetail1>? detail}) = _$_ClaimResponseAddItem;
-  _ClaimResponseAddItem._() : super._();
+  const _ClaimResponseAddItem._() : super._();
 
   factory _ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseAddItem.fromJson;
@@ -16462,7 +16462,7 @@ class __$$_ClaimResponseBodySiteCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseBodySite extends _ClaimResponseBodySite {
-  _$_ClaimResponseBodySite(
+  const _$_ClaimResponseBodySite(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16611,13 +16611,13 @@ class _$_ClaimResponseBodySite extends _ClaimResponseBodySite {
 }
 
 abstract class _ClaimResponseBodySite extends ClaimResponseBodySite {
-  factory _ClaimResponseBodySite(
+  const factory _ClaimResponseBodySite(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<CodeableReference> site,
       final List<CodeableConcept>? subSite}) = _$_ClaimResponseBodySite;
-  _ClaimResponseBodySite._() : super._();
+  const _ClaimResponseBodySite._() : super._();
 
   factory _ClaimResponseBodySite.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseBodySite.fromJson;
@@ -17169,7 +17169,7 @@ class __$$_ClaimResponseDetail1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
-  _$_ClaimResponseDetail1(
+  const _$_ClaimResponseDetail1(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -17454,7 +17454,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
 }
 
 abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
-  factory _ClaimResponseDetail1(
+  const factory _ClaimResponseDetail1(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -17474,7 +17474,7 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
           final List<ClaimResponseAdjudication>? adjudication,
           final List<ClaimResponseSubDetail1>? subDetail}) =
       _$_ClaimResponseDetail1;
-  _ClaimResponseDetail1._() : super._();
+  const _ClaimResponseDetail1._() : super._();
 
   factory _ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseDetail1.fromJson;
@@ -18066,7 +18066,7 @@ class __$$_ClaimResponseSubDetail1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
-  _$_ClaimResponseSubDetail1(
+  const _$_ClaimResponseSubDetail1(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18334,7 +18334,7 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
 }
 
 abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
-  factory _ClaimResponseSubDetail1(
+  const factory _ClaimResponseSubDetail1(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -18353,7 +18353,7 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
           final CodeableConcept? decision,
           final List<ClaimResponseAdjudication>? adjudication}) =
       _$_ClaimResponseSubDetail1;
-  _ClaimResponseSubDetail1._() : super._();
+  const _ClaimResponseSubDetail1._() : super._();
 
   factory _ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseSubDetail1.fromJson;
@@ -18641,7 +18641,7 @@ class __$$_ClaimResponseTotalCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseTotal extends _ClaimResponseTotal {
-  _$_ClaimResponseTotal(
+  const _$_ClaimResponseTotal(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18773,13 +18773,13 @@ class _$_ClaimResponseTotal extends _ClaimResponseTotal {
 }
 
 abstract class _ClaimResponseTotal extends ClaimResponseTotal {
-  factory _ClaimResponseTotal(
+  const factory _ClaimResponseTotal(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept category,
       required final Money amount}) = _$_ClaimResponseTotal;
-  _ClaimResponseTotal._() : super._();
+  const _ClaimResponseTotal._() : super._();
 
   factory _ClaimResponseTotal.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseTotal.fromJson;
@@ -19154,7 +19154,7 @@ class __$$_ClaimResponsePaymentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponsePayment extends _ClaimResponsePayment {
-  _$_ClaimResponsePayment(
+  const _$_ClaimResponsePayment(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19325,7 +19325,7 @@ class _$_ClaimResponsePayment extends _ClaimResponsePayment {
 }
 
 abstract class _ClaimResponsePayment extends ClaimResponsePayment {
-  factory _ClaimResponsePayment(
+  const factory _ClaimResponsePayment(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19336,7 +19336,7 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
       @JsonKey(name: '_date') final Element? dateElement,
       required final Money amount,
       final Identifier? identifier}) = _$_ClaimResponsePayment;
-  _ClaimResponsePayment._() : super._();
+  const _ClaimResponsePayment._() : super._();
 
   factory _ClaimResponsePayment.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponsePayment.fromJson;
@@ -19715,7 +19715,7 @@ class __$$_ClaimResponseProcessNoteCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
-  _$_ClaimResponseProcessNote(
+  const _$_ClaimResponseProcessNote(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19888,7 +19888,7 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
 }
 
 abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
-  factory _ClaimResponseProcessNote(
+  const factory _ClaimResponseProcessNote(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19899,7 +19899,7 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
       final String? text,
       @JsonKey(name: '_text') final Element? textElement,
       final CodeableConcept? language}) = _$_ClaimResponseProcessNote;
-  _ClaimResponseProcessNote._() : super._();
+  const _ClaimResponseProcessNote._() : super._();
 
   factory _ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseProcessNote.fromJson;
@@ -20313,7 +20313,7 @@ class __$$_ClaimResponseInsuranceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
-  _$_ClaimResponseInsurance(
+  const _$_ClaimResponseInsurance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20498,7 +20498,7 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
 }
 
 abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
-  factory _ClaimResponseInsurance(
+  const factory _ClaimResponseInsurance(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -20514,7 +20514,7 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
       @JsonKey(name: '_businessArrangement')
           final Element? businessArrangementElement,
       final Reference? claimResponse}) = _$_ClaimResponseInsurance;
-  _ClaimResponseInsurance._() : super._();
+  const _ClaimResponseInsurance._() : super._();
 
   factory _ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseInsurance.fromJson;
@@ -20891,7 +20891,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClaimResponseError extends _ClaimResponseError {
-  _$_ClaimResponseError(
+  const _$_ClaimResponseError(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -21067,7 +21067,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
 }
 
 abstract class _ClaimResponseError extends ClaimResponseError {
-  factory _ClaimResponseError(
+  const factory _ClaimResponseError(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -21082,7 +21082,7 @@ abstract class _ClaimResponseError extends ClaimResponseError {
       @JsonKey(name: '_subDetailSequence')
           final Element? subDetailSequenceElement,
       required final CodeableConcept code}) = _$_ClaimResponseError;
-  _ClaimResponseError._() : super._();
+  const _ClaimResponseError._() : super._();
 
   factory _ClaimResponseError.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseError.fromJson;
@@ -22072,7 +22072,7 @@ class __$$_InvoiceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Invoice extends _Invoice {
-  _$_Invoice(
+  const _$_Invoice(
       {@JsonKey(unknownEnumValue: R5ResourceType.Invoice)
           this.resourceType = R5ResourceType.Invoice,
       this.id,
@@ -22496,7 +22496,7 @@ class _$_Invoice extends _Invoice {
 }
 
 abstract class _Invoice extends Invoice {
-  factory _Invoice(
+  const factory _Invoice(
       {@JsonKey(unknownEnumValue: R5ResourceType.Invoice)
           final R5ResourceType resourceType,
       final Id? id,
@@ -22543,7 +22543,7 @@ abstract class _Invoice extends Invoice {
       @JsonKey(name: '_paymentTerms')
           final Element? paymentTermsElement,
       final List<Annotation>? note}) = _$_Invoice;
-  _Invoice._() : super._();
+  const _Invoice._() : super._();
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
@@ -22906,7 +22906,7 @@ class __$$_InvoiceParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_InvoiceParticipant extends _InvoiceParticipant {
-  _$_InvoiceParticipant(
+  const _$_InvoiceParticipant(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -23037,13 +23037,13 @@ class _$_InvoiceParticipant extends _InvoiceParticipant {
 }
 
 abstract class _InvoiceParticipant extends InvoiceParticipant {
-  factory _InvoiceParticipant(
+  const factory _InvoiceParticipant(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? role,
       required final Reference actor}) = _$_InvoiceParticipant;
-  _InvoiceParticipant._() : super._();
+  const _InvoiceParticipant._() : super._();
 
   factory _InvoiceParticipant.fromJson(Map<String, dynamic> json) =
       _$_InvoiceParticipant.fromJson;
@@ -23429,7 +23429,7 @@ class __$$_InvoiceLineItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_InvoiceLineItem extends _InvoiceLineItem {
-  _$_InvoiceLineItem(
+  const _$_InvoiceLineItem(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -23622,7 +23622,7 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
 }
 
 abstract class _InvoiceLineItem extends InvoiceLineItem {
-  factory _InvoiceLineItem(
+  const factory _InvoiceLineItem(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -23634,7 +23634,7 @@ abstract class _InvoiceLineItem extends InvoiceLineItem {
       final Reference? chargeItemReference,
       final CodeableConcept? chargeItemCodeableConcept,
       final List<MonetaryComponent>? priceComponent}) = _$_InvoiceLineItem;
-  _InvoiceLineItem._() : super._();
+  const _InvoiceLineItem._() : super._();
 
   factory _InvoiceLineItem.fromJson(Map<String, dynamic> json) =
       _$_InvoiceLineItem.fromJson;

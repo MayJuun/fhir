@@ -718,7 +718,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudy extends _ResearchStudy {
-  _$_ResearchStudy(
+  const _$_ResearchStudy(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
           this.resourceType = Stu3ResourceType.ResearchStudy,
       this.id,
@@ -1104,7 +1104,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 }
 
 abstract class _ResearchStudy extends ResearchStudy {
-  factory _ResearchStudy(
+  const factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1146,7 +1146,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       final CodeableConcept? reasonStopped,
       final List<Annotation>? note,
       final List<ResearchStudyArm>? arm}) = _$_ResearchStudy;
-  _ResearchStudy._() : super._();
+  const _ResearchStudy._() : super._();
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudy.fromJson;
@@ -1418,7 +1418,7 @@ class __$$_ResearchStudyArmCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyArm extends _ResearchStudyArm {
-  _$_ResearchStudyArm(
+  const _$_ResearchStudyArm(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.code,
@@ -1482,14 +1482,14 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
 }
 
 abstract class _ResearchStudyArm extends ResearchStudyArm {
-  factory _ResearchStudyArm(
+  const factory _ResearchStudyArm(
           {final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final CodeableConcept? code,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ResearchStudyArm;
-  _ResearchStudyArm._() : super._();
+  const _ResearchStudyArm._() : super._();
 
   factory _ResearchStudyArm.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyArm.fromJson;
@@ -2066,7 +2066,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchSubject extends _ResearchSubject {
-  _$_ResearchSubject(
+  const _$_ResearchSubject(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
           this.resourceType = Stu3ResourceType.ResearchSubject,
       this.id,
@@ -2273,7 +2273,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 }
 
 abstract class _ResearchSubject extends ResearchSubject {
-  factory _ResearchSubject(
+  const factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -2303,7 +2303,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       @JsonKey(name: '_actualArm')
           final Element? actualArmElement,
       final Reference? consent}) = _$_ResearchSubject;
-  _ResearchSubject._() : super._();
+  const _ResearchSubject._() : super._();
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubject.fromJson;

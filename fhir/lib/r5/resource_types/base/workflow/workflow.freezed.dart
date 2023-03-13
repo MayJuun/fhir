@@ -1246,7 +1246,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Appointment extends _Appointment {
-  _$_Appointment(
+  const _$_Appointment(
       {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
           this.resourceType = R5ResourceType.Appointment,
       this.id,
@@ -2043,7 +2043,7 @@ class _$_Appointment extends _Appointment {
 }
 
 abstract class _Appointment extends Appointment {
-  factory _Appointment(
+  const factory _Appointment(
           {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
               final R5ResourceType resourceType,
           final Id? id,
@@ -2108,7 +2108,7 @@ abstract class _Appointment extends Appointment {
               final Element? occurrenceChangedElement,
           final List<AppointmentRecurrenceTemplate>? recurrenceTemplate}) =
       _$_Appointment;
-  _Appointment._() : super._();
+  const _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -2736,7 +2736,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
-  _$_AppointmentParticipant(
+  const _$_AppointmentParticipant(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2924,7 +2924,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 }
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
-  factory _AppointmentParticipant(
+  const factory _AppointmentParticipant(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2936,7 +2936,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           final Code? status,
           @JsonKey(name: '_status') final Element? statusElement}) =
       _$_AppointmentParticipant;
-  _AppointmentParticipant._() : super._();
+  const _AppointmentParticipant._() : super._();
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
@@ -3518,7 +3518,7 @@ class __$$_AppointmentRecurrenceTemplateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentRecurrenceTemplate extends _AppointmentRecurrenceTemplate {
-  _$_AppointmentRecurrenceTemplate(
+  const _$_AppointmentRecurrenceTemplate(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -3851,7 +3851,7 @@ class _$_AppointmentRecurrenceTemplate extends _AppointmentRecurrenceTemplate {
 
 abstract class _AppointmentRecurrenceTemplate
     extends AppointmentRecurrenceTemplate {
-  factory _AppointmentRecurrenceTemplate(
+  const factory _AppointmentRecurrenceTemplate(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -3877,7 +3877,7 @@ abstract class _AppointmentRecurrenceTemplate
           @JsonKey(name: '_excludingRecurrenceId')
               final List<Element>? excludingRecurrenceIdElement}) =
       _$_AppointmentRecurrenceTemplate;
-  _AppointmentRecurrenceTemplate._() : super._();
+  const _AppointmentRecurrenceTemplate._() : super._();
 
   factory _AppointmentRecurrenceTemplate.fromJson(Map<String, dynamic> json) =
       _$_AppointmentRecurrenceTemplate.fromJson;
@@ -4512,7 +4512,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
-  _$_AppointmentWeeklyTemplate(
+  const _$_AppointmentWeeklyTemplate(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4773,7 +4773,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
 }
 
 abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
-  factory _AppointmentWeeklyTemplate(
+  const factory _AppointmentWeeklyTemplate(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4794,7 +4794,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
           final PositiveInt? weekInterval,
           @JsonKey(name: '_weekInterval') final Element? weekIntervalElement}) =
       _$_AppointmentWeeklyTemplate;
-  _AppointmentWeeklyTemplate._() : super._();
+  const _AppointmentWeeklyTemplate._() : super._();
 
   factory _AppointmentWeeklyTemplate.fromJson(Map<String, dynamic> json) =
       _$_AppointmentWeeklyTemplate.fromJson;
@@ -5217,7 +5217,7 @@ class __$$_AppointmentMonthlyTemplateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentMonthlyTemplate extends _AppointmentMonthlyTemplate {
-  _$_AppointmentMonthlyTemplate(
+  const _$_AppointmentMonthlyTemplate(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5392,7 +5392,7 @@ class _$_AppointmentMonthlyTemplate extends _AppointmentMonthlyTemplate {
 }
 
 abstract class _AppointmentMonthlyTemplate extends AppointmentMonthlyTemplate {
-  factory _AppointmentMonthlyTemplate(
+  const factory _AppointmentMonthlyTemplate(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -5405,7 +5405,7 @@ abstract class _AppointmentMonthlyTemplate extends AppointmentMonthlyTemplate {
       final PositiveInt? monthInterval,
       @JsonKey(name: '_monthInterval')
           final Element? monthIntervalElement}) = _$_AppointmentMonthlyTemplate;
-  _AppointmentMonthlyTemplate._() : super._();
+  const _AppointmentMonthlyTemplate._() : super._();
 
   factory _AppointmentMonthlyTemplate.fromJson(Map<String, dynamic> json) =
       _$_AppointmentMonthlyTemplate.fromJson;
@@ -5668,7 +5668,7 @@ class __$$_AppointmentYearlyTemplateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentYearlyTemplate extends _AppointmentYearlyTemplate {
-  _$_AppointmentYearlyTemplate(
+  const _$_AppointmentYearlyTemplate(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5806,14 +5806,14 @@ class _$_AppointmentYearlyTemplate extends _AppointmentYearlyTemplate {
 }
 
 abstract class _AppointmentYearlyTemplate extends AppointmentYearlyTemplate {
-  factory _AppointmentYearlyTemplate(
+  const factory _AppointmentYearlyTemplate(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final PositiveInt? yearInterval,
           @JsonKey(name: '_yearInterval') final Element? yearIntervalElement}) =
       _$_AppointmentYearlyTemplate;
-  _AppointmentYearlyTemplate._() : super._();
+  const _AppointmentYearlyTemplate._() : super._();
 
   factory _AppointmentYearlyTemplate.fromJson(Map<String, dynamic> json) =
       _$_AppointmentYearlyTemplate.fromJson;
@@ -6704,7 +6704,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentResponse extends _AppointmentResponse {
-  _$_AppointmentResponse(
+  const _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
           this.resourceType = R5ResourceType.AppointmentResponse,
       this.id,
@@ -7143,7 +7143,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 }
 
 abstract class _AppointmentResponse extends AppointmentResponse {
-  factory _AppointmentResponse(
+  const factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
           final R5ResourceType resourceType,
       final Id? id,
@@ -7187,7 +7187,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final PositiveInt? recurrenceId,
       @JsonKey(name: '_recurrenceId')
           final Element? recurrenceIdElement}) = _$_AppointmentResponse;
-  _AppointmentResponse._() : super._();
+  const _AppointmentResponse._() : super._();
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -7998,7 +7998,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Schedule extends _Schedule {
-  _$_Schedule(
+  const _$_Schedule(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
           this.resourceType = R5ResourceType.Schedule,
       this.id,
@@ -8380,7 +8380,7 @@ class _$_Schedule extends _Schedule {
 }
 
 abstract class _Schedule extends Schedule {
-  factory _Schedule(
+  const factory _Schedule(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
           final R5ResourceType resourceType,
       final Id? id,
@@ -8411,7 +8411,7 @@ abstract class _Schedule extends Schedule {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Schedule;
-  _Schedule._() : super._();
+  const _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
@@ -9261,7 +9261,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
 /// @nodoc
 @JsonSerializable()
 class _$_Slot extends _Slot {
-  _$_Slot(
+  const _$_Slot(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
           this.resourceType = R5ResourceType.Slot,
       this.id,
@@ -9680,7 +9680,7 @@ class _$_Slot extends _Slot {
 }
 
 abstract class _Slot extends Slot {
-  factory _Slot(
+  const factory _Slot(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
           final R5ResourceType resourceType,
       final Id? id,
@@ -9717,7 +9717,7 @@ abstract class _Slot extends Slot {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Slot;
-  _Slot._() : super._();
+  const _Slot._() : super._();
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
@@ -11206,7 +11206,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
 /// @nodoc
 @JsonSerializable()
 class _$_Task extends _Task {
-  _$_Task(
+  const _$_Task(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
           this.resourceType = R5ResourceType.Task,
       this.id,
@@ -11899,7 +11899,7 @@ class _$_Task extends _Task {
 }
 
 abstract class _Task extends Task {
-  factory _Task(
+  const factory _Task(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
           final R5ResourceType resourceType,
       final Id? id,
@@ -11964,7 +11964,7 @@ abstract class _Task extends Task {
       final TaskRestriction? restriction,
       final List<TaskInput>? input,
       final List<TaskOutput>? output}) = _$_Task;
-  _Task._() : super._();
+  const _Task._() : super._();
 
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
@@ -12494,7 +12494,7 @@ class __$$_TaskRestrictionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskRestriction extends _TaskRestriction {
-  _$_TaskRestriction(
+  const _$_TaskRestriction(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12661,7 +12661,7 @@ class _$_TaskRestriction extends _TaskRestriction {
 }
 
 abstract class _TaskRestriction extends TaskRestriction {
-  factory _TaskRestriction(
+  const factory _TaskRestriction(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12669,7 +12669,7 @@ abstract class _TaskRestriction extends TaskRestriction {
       @JsonKey(name: '_repetitions') final Element? repetitionsElement,
       final Period? period,
       final List<Reference>? recipient}) = _$_TaskRestriction;
-  _TaskRestriction._() : super._();
+  const _TaskRestriction._() : super._();
 
   factory _TaskRestriction.fromJson(Map<String, dynamic> json) =
       _$_TaskRestriction.fromJson;
@@ -14860,7 +14860,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskInput extends _TaskInput {
-  _$_TaskInput(
+  const _$_TaskInput(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -15566,7 +15566,7 @@ class _$_TaskInput extends _TaskInput {
 }
 
 abstract class _TaskInput extends TaskInput {
-  factory _TaskInput(
+  const factory _TaskInput(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -15666,7 +15666,7 @@ abstract class _TaskInput extends TaskInput {
       final ExtendedContactDetail? valueExtendedContactDetail,
       final Dosage? valueDosage,
       final Meta? valueMeta}) = _$_TaskInput;
-  _TaskInput._() : super._();
+  const _TaskInput._() : super._();
 
   factory _TaskInput.fromJson(Map<String, dynamic> json) =
       _$_TaskInput.fromJson;
@@ -18170,7 +18170,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskOutput extends _TaskOutput {
-  _$_TaskOutput(
+  const _$_TaskOutput(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18878,7 +18878,7 @@ class _$_TaskOutput extends _TaskOutput {
 }
 
 abstract class _TaskOutput extends TaskOutput {
-  factory _TaskOutput(
+  const factory _TaskOutput(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -18978,7 +18978,7 @@ abstract class _TaskOutput extends TaskOutput {
       final ExtendedContactDetail? valueExtendedContactDetail,
       final Dosage? valueDosage,
       final Meta? valueMeta}) = _$_TaskOutput;
-  _TaskOutput._() : super._();
+  const _TaskOutput._() : super._();
 
   factory _TaskOutput.fromJson(Map<String, dynamic> json) =
       _$_TaskOutput.fromJson;
@@ -20715,7 +20715,7 @@ class __$$_TransportCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Transport extends _Transport {
-  _$_Transport(
+  const _$_Transport(
       {@JsonKey(unknownEnumValue: R5ResourceType.Transport)
           this.resourceType = R5ResourceType.Transport,
       this.id,
@@ -21412,7 +21412,7 @@ class _$_Transport extends _Transport {
 }
 
 abstract class _Transport extends Transport {
-  factory _Transport(
+  const factory _Transport(
       {@JsonKey(unknownEnumValue: R5ResourceType.Transport)
           final R5ResourceType resourceType,
       final Id? id,
@@ -21478,7 +21478,7 @@ abstract class _Transport extends Transport {
       final CodeableConcept? reasonCode,
       final Reference? reasonReference,
       final Reference? history}) = _$_Transport;
-  _Transport._() : super._();
+  const _Transport._() : super._();
 
   factory _Transport.fromJson(Map<String, dynamic> json) =
       _$_Transport.fromJson;
@@ -22016,7 +22016,7 @@ class __$$_TransportRestrictionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TransportRestriction extends _TransportRestriction {
-  _$_TransportRestriction(
+  const _$_TransportRestriction(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -22182,7 +22182,7 @@ class _$_TransportRestriction extends _TransportRestriction {
 }
 
 abstract class _TransportRestriction extends TransportRestriction {
-  factory _TransportRestriction(
+  const factory _TransportRestriction(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -22190,7 +22190,7 @@ abstract class _TransportRestriction extends TransportRestriction {
       @JsonKey(name: '_repetitions') final Element? repetitionsElement,
       final Period? period,
       final List<Reference>? recipient}) = _$_TransportRestriction;
-  _TransportRestriction._() : super._();
+  const _TransportRestriction._() : super._();
 
   factory _TransportRestriction.fromJson(Map<String, dynamic> json) =
       _$_TransportRestriction.fromJson;
@@ -24381,7 +24381,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TransportInput extends _TransportInput {
-  _$_TransportInput(
+  const _$_TransportInput(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -25087,7 +25087,7 @@ class _$_TransportInput extends _TransportInput {
 }
 
 abstract class _TransportInput extends TransportInput {
-  factory _TransportInput(
+  const factory _TransportInput(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -25187,7 +25187,7 @@ abstract class _TransportInput extends TransportInput {
       final ExtendedContactDetail? valueExtendedContactDetail,
       final Dosage? valueDosage,
       final Meta? valueMeta}) = _$_TransportInput;
-  _TransportInput._() : super._();
+  const _TransportInput._() : super._();
 
   factory _TransportInput.fromJson(Map<String, dynamic> json) =
       _$_TransportInput.fromJson;
@@ -27691,7 +27691,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TransportOutput extends _TransportOutput {
-  _$_TransportOutput(
+  const _$_TransportOutput(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -28399,7 +28399,7 @@ class _$_TransportOutput extends _TransportOutput {
 }
 
 abstract class _TransportOutput extends TransportOutput {
-  factory _TransportOutput(
+  const factory _TransportOutput(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -28499,7 +28499,7 @@ abstract class _TransportOutput extends TransportOutput {
       final ExtendedContactDetail? valueExtendedContactDetail,
       final Dosage? valueDosage,
       final Meta? valueMeta}) = _$_TransportOutput;
-  _TransportOutput._() : super._();
+  const _TransportOutput._() : super._();
 
   factory _TransportOutput.fromJson(Map<String, dynamic> json) =
       _$_TransportOutput.fromJson;
@@ -29672,7 +29672,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_VerificationResult extends _VerificationResult {
-  _$_VerificationResult(
+  const _$_VerificationResult(
       {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
           this.resourceType = R5ResourceType.VerificationResult,
       this.id,
@@ -30130,7 +30130,7 @@ class _$_VerificationResult extends _VerificationResult {
 }
 
 abstract class _VerificationResult extends VerificationResult {
-  factory _VerificationResult(
+  const factory _VerificationResult(
           {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
               final R5ResourceType resourceType,
           final Id? id,
@@ -30171,7 +30171,7 @@ abstract class _VerificationResult extends VerificationResult {
           final VerificationResultAttestation? attestation,
           final List<VerificationResultValidator>? validator}) =
       _$_VerificationResult;
-  _VerificationResult._() : super._();
+  const _VerificationResult._() : super._();
 
   factory _VerificationResult.fromJson(Map<String, dynamic> json) =
       _$_VerificationResult.fromJson;
@@ -30695,7 +30695,7 @@ class __$$_VerificationResultPrimarySourceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_VerificationResultPrimarySource
     extends _VerificationResultPrimarySource {
-  _$_VerificationResultPrimarySource(
+  const _$_VerificationResultPrimarySource(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30926,7 +30926,7 @@ class _$_VerificationResultPrimarySource
 
 abstract class _VerificationResultPrimarySource
     extends VerificationResultPrimarySource {
-  factory _VerificationResultPrimarySource(
+  const factory _VerificationResultPrimarySource(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30939,7 +30939,7 @@ abstract class _VerificationResultPrimarySource
       final CodeableConcept? canPushUpdates,
       final List<CodeableConcept>?
           pushTypeAvailable}) = _$_VerificationResultPrimarySource;
-  _VerificationResultPrimarySource._() : super._();
+  const _VerificationResultPrimarySource._() : super._();
 
   factory _VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultPrimarySource.fromJson;
@@ -31487,7 +31487,7 @@ class __$$_VerificationResultAttestationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_VerificationResultAttestation extends _VerificationResultAttestation {
-  _$_VerificationResultAttestation(
+  const _$_VerificationResultAttestation(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -31719,7 +31719,7 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 
 abstract class _VerificationResultAttestation
     extends VerificationResultAttestation {
-  factory _VerificationResultAttestation(
+  const factory _VerificationResultAttestation(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -31738,7 +31738,7 @@ abstract class _VerificationResultAttestation
           final Element? proxyIdentityCertificateElement,
       final Signature? proxySignature,
       final Signature? sourceSignature}) = _$_VerificationResultAttestation;
-  _VerificationResultAttestation._() : super._();
+  const _VerificationResultAttestation._() : super._();
 
   factory _VerificationResultAttestation.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultAttestation.fromJson;
@@ -32093,7 +32093,7 @@ class __$$_VerificationResultValidatorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_VerificationResultValidator extends _VerificationResultValidator {
-  _$_VerificationResultValidator(
+  const _$_VerificationResultValidator(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -32253,7 +32253,7 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
 
 abstract class _VerificationResultValidator
     extends VerificationResultValidator {
-  factory _VerificationResultValidator(
+  const factory _VerificationResultValidator(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -32263,7 +32263,7 @@ abstract class _VerificationResultValidator
       @JsonKey(name: '_identityCertificate')
           final Element? identityCertificateElement,
       final Signature? attestationSignature}) = _$_VerificationResultValidator;
-  _VerificationResultValidator._() : super._();
+  const _VerificationResultValidator._() : super._();
 
   factory _VerificationResultValidator.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultValidator.fromJson;

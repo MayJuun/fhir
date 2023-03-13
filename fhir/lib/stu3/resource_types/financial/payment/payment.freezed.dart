@@ -617,7 +617,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PaymentNotice extends _PaymentNotice {
-  _$_PaymentNotice(
+  const _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
           this.resourceType = Stu3ResourceType.PaymentNotice,
       this.id,
@@ -845,7 +845,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 }
 
 abstract class _PaymentNotice extends PaymentNotice {
-  factory _PaymentNotice(
+  const factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -877,7 +877,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       final Reference? provider,
       final Reference? organization,
       final CodeableConcept? paymentStatus}) = _$_PaymentNotice;
-  _PaymentNotice._() : super._();
+  const _PaymentNotice._() : super._();
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
       _$_PaymentNotice.fromJson;
@@ -1632,7 +1632,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PaymentReconciliation extends _PaymentReconciliation {
-  _$_PaymentReconciliation(
+  const _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
           this.resourceType = Stu3ResourceType.PaymentReconciliation,
       this.id,
@@ -1898,7 +1898,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 }
 
 abstract class _PaymentReconciliation extends PaymentReconciliation {
-  factory _PaymentReconciliation(
+  const factory _PaymentReconciliation(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
               final Stu3ResourceType resourceType,
           final Id? id,
@@ -1935,7 +1935,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final Money? total,
           final List<PaymentReconciliationProcessNote>? processNote}) =
       _$_PaymentReconciliation;
-  _PaymentReconciliation._() : super._();
+  const _PaymentReconciliation._() : super._();
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliation.fromJson;
@@ -2296,7 +2296,7 @@ class __$$_PaymentReconciliationDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
-  _$_PaymentReconciliationDetail(
+  const _$_PaymentReconciliationDetail(
       {required this.type,
       this.request,
       this.response,
@@ -2373,7 +2373,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
 
 abstract class _PaymentReconciliationDetail
     extends PaymentReconciliationDetail {
-  factory _PaymentReconciliationDetail(
+  const factory _PaymentReconciliationDetail(
       {required final CodeableConcept type,
       final Reference? request,
       final Reference? response,
@@ -2382,7 +2382,7 @@ abstract class _PaymentReconciliationDetail
       final Date? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final Money? amount}) = _$_PaymentReconciliationDetail;
-  _PaymentReconciliationDetail._() : super._();
+  const _PaymentReconciliationDetail._() : super._();
 
   factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliationDetail.fromJson;
@@ -2562,7 +2562,7 @@ class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PaymentReconciliationProcessNote
     extends _PaymentReconciliationProcessNote {
-  _$_PaymentReconciliationProcessNote(
+  const _$_PaymentReconciliationProcessNote(
       {this.type, this.text, @JsonKey(name: '_text') this.textElement})
       : super._();
 
@@ -2616,12 +2616,12 @@ class _$_PaymentReconciliationProcessNote
 
 abstract class _PaymentReconciliationProcessNote
     extends PaymentReconciliationProcessNote {
-  factory _PaymentReconciliationProcessNote(
+  const factory _PaymentReconciliationProcessNote(
           {final CodeableConcept? type,
           final String? text,
           @JsonKey(name: '_text') final Element? textElement}) =
       _$_PaymentReconciliationProcessNote;
-  _PaymentReconciliationProcessNote._() : super._();
+  const _PaymentReconciliationProcessNote._() : super._();
 
   factory _PaymentReconciliationProcessNote.fromJson(
       Map<String, dynamic> json) = _$_PaymentReconciliationProcessNote.fromJson;

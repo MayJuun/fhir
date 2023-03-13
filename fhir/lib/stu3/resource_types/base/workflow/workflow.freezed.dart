@@ -844,7 +844,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Appointment extends _Appointment {
-  _$_Appointment(
+  const _$_Appointment(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
           this.resourceType = Stu3ResourceType.Appointment,
       this.id,
@@ -1249,7 +1249,7 @@ class _$_Appointment extends _Appointment {
 }
 
 abstract class _Appointment extends Appointment {
-  factory _Appointment(
+  const factory _Appointment(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1301,7 +1301,7 @@ abstract class _Appointment extends Appointment {
       final List<Reference>? incomingReferral,
       required final List<AppointmentParticipant> participant,
       final List<Period>? requestedPeriod}) = _$_Appointment;
-  _Appointment._() : super._();
+  const _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -1607,7 +1607,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
-  _$_AppointmentParticipant(
+  const _$_AppointmentParticipant(
       {final List<CodeableConcept>? type,
       this.actor,
       @JsonKey(name: 'required') this.required_,
@@ -1692,7 +1692,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 }
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
-  factory _AppointmentParticipant(
+  const factory _AppointmentParticipant(
       {final List<CodeableConcept>? type,
       final Reference? actor,
       @JsonKey(name: 'required')
@@ -1702,7 +1702,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
       final AppointmentParticipantStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement}) = _$_AppointmentParticipant;
-  _AppointmentParticipant._() : super._();
+  const _AppointmentParticipant._() : super._();
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
@@ -2273,7 +2273,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentResponse extends _AppointmentResponse {
-  _$_AppointmentResponse(
+  const _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
           this.resourceType = Stu3ResourceType.AppointmentResponse,
       this.id,
@@ -2508,7 +2508,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 }
 
 abstract class _AppointmentResponse extends AppointmentResponse {
-  factory _AppointmentResponse(
+  const factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -2540,7 +2540,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_AppointmentResponse;
-  _AppointmentResponse._() : super._();
+  const _AppointmentResponse._() : super._();
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -3367,7 +3367,7 @@ class __$$_ProcessRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessRequest extends _ProcessRequest {
-  _$_ProcessRequest(
+  const _$_ProcessRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
           this.resourceType = Stu3ResourceType.ProcessRequest,
       this.id,
@@ -3696,7 +3696,7 @@ class _$_ProcessRequest extends _ProcessRequest {
 }
 
 abstract class _ProcessRequest extends ProcessRequest {
-  factory _ProcessRequest(
+  const factory _ProcessRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -3741,7 +3741,7 @@ abstract class _ProcessRequest extends ProcessRequest {
       @JsonKey(name: '_exclude')
           final List<Element?>? excludeElement,
       final Period? period}) = _$_ProcessRequest;
-  _ProcessRequest._() : super._();
+  const _ProcessRequest._() : super._();
 
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequest.fromJson;
@@ -3945,7 +3945,7 @@ class __$$_ProcessRequestItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessRequestItem extends _ProcessRequestItem {
-  _$_ProcessRequestItem(
+  const _$_ProcessRequestItem(
       {this.sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement})
       : super._();
@@ -3996,11 +3996,11 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
 }
 
 abstract class _ProcessRequestItem extends ProcessRequestItem {
-  factory _ProcessRequestItem(
+  const factory _ProcessRequestItem(
       {final Id? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           final Element? sequenceLinkIdElement}) = _$_ProcessRequestItem;
-  _ProcessRequestItem._() : super._();
+  const _ProcessRequestItem._() : super._();
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequestItem.fromJson;
@@ -4660,7 +4660,7 @@ class __$$_ProcessResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessResponse extends _ProcessResponse {
-  _$_ProcessResponse(
+  const _$_ProcessResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
           this.resourceType = Stu3ResourceType.ProcessResponse,
       this.id,
@@ -4931,7 +4931,7 @@ class _$_ProcessResponse extends _ProcessResponse {
 }
 
 abstract class _ProcessResponse extends ProcessResponse {
-  factory _ProcessResponse(
+  const factory _ProcessResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -4966,7 +4966,7 @@ abstract class _ProcessResponse extends ProcessResponse {
       final List<ProcessResponseProcessNote>? processNote,
       final List<CodeableConcept>? error,
       final List<Reference>? communicationRequest}) = _$_ProcessResponse;
-  _ProcessResponse._() : super._();
+  const _ProcessResponse._() : super._();
 
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponse.fromJson;
@@ -5188,7 +5188,7 @@ class __$$_ProcessResponseProcessNoteCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
-  _$_ProcessResponseProcessNote(
+  const _$_ProcessResponseProcessNote(
       {this.type, this.text, @JsonKey(name: '_text') this.textElement})
       : super._();
 
@@ -5239,12 +5239,12 @@ class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
 }
 
 abstract class _ProcessResponseProcessNote extends ProcessResponseProcessNote {
-  factory _ProcessResponseProcessNote(
+  const factory _ProcessResponseProcessNote(
           {final CodeableConcept? type,
           final String? text,
           @JsonKey(name: '_text') final Element? textElement}) =
       _$_ProcessResponseProcessNote;
-  _ProcessResponseProcessNote._() : super._();
+  const _ProcessResponseProcessNote._() : super._();
 
   factory _ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponseProcessNote.fromJson;
@@ -5976,7 +5976,7 @@ class __$$_RequestGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RequestGroup extends _RequestGroup {
-  _$_RequestGroup(
+  const _$_RequestGroup(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
           this.resourceType = Stu3ResourceType.RequestGroup,
       this.id,
@@ -6287,7 +6287,7 @@ class _$_RequestGroup extends _RequestGroup {
 }
 
 abstract class _RequestGroup extends RequestGroup {
-  factory _RequestGroup(
+  const factory _RequestGroup(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -6327,7 +6327,7 @@ abstract class _RequestGroup extends RequestGroup {
       final Reference? reasonReference,
       final List<Annotation>? note,
       final List<RequestGroupAction>? action}) = _$_RequestGroup;
-  _RequestGroup._() : super._();
+  const _RequestGroup._() : super._();
 
   factory _RequestGroup.fromJson(Map<String, dynamic> json) =
       _$_RequestGroup.fromJson;
@@ -7171,7 +7171,7 @@ class __$$_RequestGroupActionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RequestGroupAction extends _RequestGroupAction {
-  _$_RequestGroupAction(
+  const _$_RequestGroupAction(
       {this.label,
       @JsonKey(name: '_label') this.labelElement,
       this.title,
@@ -7466,7 +7466,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
 }
 
 abstract class _RequestGroupAction extends RequestGroupAction {
-  factory _RequestGroupAction(
+  const factory _RequestGroupAction(
       {final String? label,
       @JsonKey(name: '_label')
           final Element? labelElement,
@@ -7509,7 +7509,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
           final Element? cardinalityBehaviorElement,
       final Reference? resource,
       final List<RequestGroupAction>? action}) = _$_RequestGroupAction;
-  _RequestGroupAction._() : super._();
+  const _RequestGroupAction._() : super._();
 
   factory _RequestGroupAction.fromJson(Map<String, dynamic> json) =
       _$_RequestGroupAction.fromJson;
@@ -7838,7 +7838,7 @@ class __$$_RequestGroupConditionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RequestGroupCondition extends _RequestGroupCondition {
-  _$_RequestGroupCondition(
+  const _$_RequestGroupCondition(
       {this.kind,
       @JsonKey(name: '_kind') this.kindElement,
       this.description,
@@ -7929,7 +7929,7 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
 }
 
 abstract class _RequestGroupCondition extends RequestGroupCondition {
-  factory _RequestGroupCondition(
+  const factory _RequestGroupCondition(
           {final String? kind,
           @JsonKey(name: '_kind') final Element? kindElement,
           final String? description,
@@ -7939,7 +7939,7 @@ abstract class _RequestGroupCondition extends RequestGroupCondition {
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement}) =
       _$_RequestGroupCondition;
-  _RequestGroupCondition._() : super._();
+  const _RequestGroupCondition._() : super._();
 
   factory _RequestGroupCondition.fromJson(Map<String, dynamic> json) =
       _$_RequestGroupCondition.fromJson;
@@ -8189,7 +8189,7 @@ class __$$_RequestGroupRelatedActionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
-  _$_RequestGroupRelatedAction(
+  const _$_RequestGroupRelatedAction(
       {this.actionId,
       @JsonKey(name: '_actionId') this.actionIdElement,
       this.relationship,
@@ -8261,14 +8261,14 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
 }
 
 abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
-  factory _RequestGroupRelatedAction(
+  const factory _RequestGroupRelatedAction(
       {final Id? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final String? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
       final FhirDuration? offsetDuration,
       final Range? offsetRange}) = _$_RequestGroupRelatedAction;
-  _RequestGroupRelatedAction._() : super._();
+  const _RequestGroupRelatedAction._() : super._();
 
   factory _RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =
       _$_RequestGroupRelatedAction.fromJson;
@@ -8777,7 +8777,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Schedule extends _Schedule {
-  _$_Schedule(
+  const _$_Schedule(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
           this.resourceType = Stu3ResourceType.Schedule,
       this.id,
@@ -9011,7 +9011,7 @@ class _$_Schedule extends _Schedule {
 }
 
 abstract class _Schedule extends Schedule {
-  factory _Schedule(
+  const factory _Schedule(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -9039,7 +9039,7 @@ abstract class _Schedule extends Schedule {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Schedule;
-  _Schedule._() : super._();
+  const _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
@@ -9720,7 +9720,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
 /// @nodoc
 @JsonSerializable()
 class _$_Slot extends _Slot {
-  _$_Slot(
+  const _$_Slot(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
           this.resourceType = Stu3ResourceType.Slot,
       this.id,
@@ -9987,7 +9987,7 @@ class _$_Slot extends _Slot {
 }
 
 abstract class _Slot extends Slot {
-  factory _Slot(
+  const factory _Slot(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -10024,7 +10024,7 @@ abstract class _Slot extends Slot {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Slot;
-  _Slot._() : super._();
+  const _Slot._() : super._();
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
@@ -11160,7 +11160,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
 /// @nodoc
 @JsonSerializable()
 class _$_Task extends _Task {
-  _$_Task(
+  const _$_Task(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
           this.resourceType = Stu3ResourceType.Task,
       this.id,
@@ -11582,7 +11582,7 @@ class _$_Task extends _Task {
 }
 
 abstract class _Task extends Task {
-  factory _Task(
+  const factory _Task(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -11641,7 +11641,7 @@ abstract class _Task extends Task {
       final TaskRestriction? restriction,
       final List<TaskInput>? input,
       final List<TaskOutput>? output}) = _$_Task;
-  _Task._() : super._();
+  const _Task._() : super._();
 
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
@@ -11876,7 +11876,7 @@ class __$$_TaskRequesterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskRequester extends _TaskRequester {
-  _$_TaskRequester({required this.agent, this.onBehalfOf}) : super._();
+  const _$_TaskRequester({required this.agent, this.onBehalfOf}) : super._();
 
   factory _$_TaskRequester.fromJson(Map<String, dynamic> json) =>
       _$$_TaskRequesterFromJson(json);
@@ -11920,10 +11920,10 @@ class _$_TaskRequester extends _TaskRequester {
 }
 
 abstract class _TaskRequester extends TaskRequester {
-  factory _TaskRequester(
+  const factory _TaskRequester(
       {required final Reference agent,
       final Reference? onBehalfOf}) = _$_TaskRequester;
-  _TaskRequester._() : super._();
+  const _TaskRequester._() : super._();
 
   factory _TaskRequester.fromJson(Map<String, dynamic> json) =
       _$_TaskRequester.fromJson;
@@ -12095,7 +12095,7 @@ class __$$_TaskRestrictionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskRestriction extends _TaskRestriction {
-  _$_TaskRestriction(
+  const _$_TaskRestriction(
       {this.repetitions,
       @JsonKey(name: '_repetitions') this.repetitionsElement,
       this.period,
@@ -12162,12 +12162,12 @@ class _$_TaskRestriction extends _TaskRestriction {
 }
 
 abstract class _TaskRestriction extends TaskRestriction {
-  factory _TaskRestriction(
+  const factory _TaskRestriction(
       {final Decimal? repetitions,
       @JsonKey(name: '_repetitions') final Element? repetitionsElement,
       final Period? period,
       final List<Reference>? recipient}) = _$_TaskRestriction;
-  _TaskRestriction._() : super._();
+  const _TaskRestriction._() : super._();
 
   factory _TaskRestriction.fromJson(Map<String, dynamic> json) =
       _$_TaskRestriction.fromJson;
@@ -14019,7 +14019,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskInput extends _TaskInput {
-  _$_TaskInput(
+  const _$_TaskInput(
       {required this.type,
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
@@ -14465,7 +14465,7 @@ class _$_TaskInput extends _TaskInput {
 }
 
 abstract class _TaskInput extends TaskInput {
-  factory _TaskInput(
+  const factory _TaskInput(
       {required final CodeableConcept type,
       final Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
@@ -14554,7 +14554,7 @@ abstract class _TaskInput extends TaskInput {
       final DataRequirement? valueDataRequirement,
       final ParameterDefinition? valueParameterDefinition,
       final TriggerDefinition? valueTriggerDefinition}) = _$_TaskInput;
-  _TaskInput._() : super._();
+  const _TaskInput._() : super._();
 
   factory _TaskInput.fromJson(Map<String, dynamic> json) =
       _$_TaskInput.fromJson;
@@ -16558,7 +16558,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskOutput extends _TaskOutput {
-  _$_TaskOutput(
+  const _$_TaskOutput(
       {required this.type,
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
@@ -17004,7 +17004,7 @@ class _$_TaskOutput extends _TaskOutput {
 }
 
 abstract class _TaskOutput extends TaskOutput {
-  factory _TaskOutput(
+  const factory _TaskOutput(
       {required final CodeableConcept type,
       final Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
@@ -17093,7 +17093,7 @@ abstract class _TaskOutput extends TaskOutput {
       final DataRequirement? valueDataRequirement,
       final ParameterDefinition? valueParameterDefinition,
       final TriggerDefinition? valueTriggerDefinition}) = _$_TaskOutput;
-  _TaskOutput._() : super._();
+  const _TaskOutput._() : super._();
 
   factory _TaskOutput.fromJson(Map<String, dynamic> json) =
       _$_TaskOutput.fromJson;

@@ -155,7 +155,7 @@ class Communication with Resource, _$Communication {
   ///
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
-  factory Communication({
+  const factory Communication({
     @Default(R4ResourceType.Communication)
     @JsonKey(unknownEnumValue: R4ResourceType.Communication)
 
@@ -414,7 +414,7 @@ class CommunicationPayload with _$CommunicationPayload {
   ///
   /// [contentReference] A communicated content (or for multi-part
   ///  communications, one portion of the communication).
-  factory CommunicationPayload({
+  const factory CommunicationPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -631,7 +631,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   ///
   /// [note] Comments made about the request by the requester, sender,
   ///  recipient, subject or other participants.
-  factory CommunicationRequest({
+  const factory CommunicationRequest({
     @Default(R4ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
 
@@ -888,7 +888,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   ///
   /// [contentReference] The communicated content (or for multi-part
   ///  communications, one portion of the communication).
-  factory CommunicationRequestPayload({
+  const factory CommunicationRequestPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1119,7 +1119,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   ///  the statement.
   ///
   /// [relevantHistory] Key events in the history of the request.
-  factory DeviceRequest({
+  const factory DeviceRequest({
     @Default(R4ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
 
@@ -1397,7 +1397,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   /// [valueBoolean] The value of the device detail.
   ///
   /// [valueBooleanElement] Extensions for valueBoolean
-  factory DeviceRequestParameter({
+  const factory DeviceRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1583,7 +1583,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// all or sufficiently in one of the attributes provided in a class. These
   /// may include for example a comment, an instruction, or a note associated
   ///  with the statement.
-  factory DeviceUseStatement({
+  const factory DeviceUseStatement({
     @Default(R4ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
 
@@ -1889,7 +1889,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// accurate response, this element will a description of the data required in
   /// order to proceed with the evaluation. A subsequent request to the service
   ///  should include this data.
-  factory GuidanceResponse({
+  const factory GuidanceResponse({
     @Default(R4ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
 
@@ -2188,7 +2188,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   ///  was shipped to, as part of the dispense event.
   ///
   /// [receiver] Identifies the person who picked up the Supply.
-  factory SupplyDelivery({
+  const factory SupplyDelivery({
     @Default(R4ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
 
@@ -2385,7 +2385,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// [itemReference] Identifies the medication, substance or device being
   /// dispensed. This is either a link to a resource representing the details of
   ///  the item or a code that identifies the item from a known list.
-  factory SupplyDeliverySuppliedItem({
+  const factory SupplyDeliverySuppliedItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2573,7 +2573,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// [deliverFrom] Where the supply is expected to come from.
   ///
   /// [deliverTo] Where the supply is destined to go.
-  factory SupplyRequest({
+  const factory SupplyRequest({
     @Default(R4ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
 
@@ -2796,7 +2796,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   /// [valueBoolean] The value of the device detail.
   ///
   /// [valueBooleanElement] Extensions for valueBoolean
-  factory SupplyRequestParameter({
+  const factory SupplyRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

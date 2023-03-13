@@ -14,7 +14,7 @@ part 'other.g.dart';
 
 @freezed
 class Basic with Resource, _$Basic {
-  const Basic._();
+  Basic._();
   const factory Basic({
     @Default(Stu3ResourceType.Basic)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
@@ -48,7 +48,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json) => _$Basi.fromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -65,7 +65,7 @@ class Basic with Resource, _$Basic {
 
 @freezed
 class Binary with Resource, _$Binary {
-  const Binary._();
+  Binary._();
   const factory Binary({
     @Default(Stu3ResourceType.Binary)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
@@ -99,7 +99,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json) => _$Binar.fromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -116,7 +116,7 @@ class Binary with Resource, _$Binary {
 
 @freezed
 class Bundle with Resource, _$Bundle {
-  const Bundle._();
+  Bundle._();
   const factory Bundle({
     @Default(Stu3ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
@@ -153,7 +153,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json) => _$Bundl.fromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -170,7 +170,7 @@ class Bundle with Resource, _$Bundle {
 
 @freezed
 class BundleLink with _$BundleLink {
-  const BundleLink._();
+  BundleLink._();
   const factory BundleLink({
     String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
@@ -211,7 +211,7 @@ class BundleLink with _$BundleLink {
 
 @freezed
 class BundleEntry with _$BundleEntry {
-  const BundleEntry._();
+  BundleEntry._();
   const factory BundleEntry({
     List<BundleLink>? link,
     String? fullUrl,
@@ -300,7 +300,7 @@ class BundleEntry with _$BundleEntry {
 
 @freezed
 class BundleSearch with _$BundleSearch {
-  const BundleSearch._();
+  BundleSearch._();
   const factory BundleSearch({
     BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -341,7 +341,7 @@ class BundleSearch with _$BundleSearch {
 
 @freezed
 class BundleRequest with _$BundleRequest {
-  const BundleRequest._();
+  BundleRequest._();
   const factory BundleRequest({
     BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
@@ -390,7 +390,7 @@ class BundleRequest with _$BundleRequest {
 
 @freezed
 class BundleResponse with _$BundleResponse {
-  const BundleResponse._();
+  BundleResponse._();
   const factory BundleResponse({
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -436,7 +436,7 @@ class BundleResponse with _$BundleResponse {
 
 @freezed
 class Linkage with Resource, _$Linkage {
-  const Linkage._();
+  Linkage._();
   const factory Linkage({
     @Default(Stu3ResourceType.Linkage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
@@ -487,7 +487,7 @@ class Linkage with Resource, _$Linkage {
 
 @freezed
 class LinkageItem with _$LinkageItem {
-  const LinkageItem._();
+  LinkageItem._();
   const factory LinkageItem({
     LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -527,7 +527,7 @@ class LinkageItem with _$LinkageItem {
 
 @freezed
 class Media with Resource, _$Media {
-  const Media._();
+  Media._();
   const factory Media({
     @Default(Stu3ResourceType.Media)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
@@ -580,7 +580,7 @@ class Media with Resource, _$Media {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Media.fromJson(Map<String, dynamic> json) => _$Medi.fromJson(json);
+  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 
   /// Acts like a constructor, returns a [Media], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -597,7 +597,7 @@ class Media with Resource, _$Media {
 
 @freezed
 class MessageHeader with Resource, _$MessageHeader {
-  const MessageHeader._();
+  MessageHeader._();
   const factory MessageHeader({
     @Default(Stu3ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
@@ -657,7 +657,7 @@ class MessageHeader with Resource, _$MessageHeader {
 
 @freezed
 class MessageHeaderDestination with _$MessageHeaderDestination {
-  const MessageHeaderDestination._();
+  MessageHeaderDestination._();
   const factory MessageHeaderDestination({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -699,7 +699,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
 
 @freezed
 class MessageHeaderSource with _$MessageHeaderSource {
-  const MessageHeaderSource._();
+  MessageHeaderSource._();
   const factory MessageHeaderSource({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -745,7 +745,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 
 @freezed
 class MessageHeaderResponse with _$MessageHeaderResponse {
-  const MessageHeaderResponse._();
+  MessageHeaderResponse._();
   const factory MessageHeaderResponse({
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
@@ -787,7 +787,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
 @freezed
 class OperationOutcome with Resource, _$OperationOutcome {
-  const OperationOutcome._();
+  OperationOutcome._();
   const factory OperationOutcome({
     @Default(Stu3ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
@@ -838,7 +838,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 
 @freezed
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
-  const OperationOutcomeIssue._();
+  OperationOutcomeIssue._();
   const factory OperationOutcomeIssue({
     OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
@@ -886,7 +886,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 @freezed
 class Parameters with Resource, _$Parameters {
-  const Parameters._();
+  Parameters._();
   const factory Parameters({
     @Default(Stu3ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
@@ -934,7 +934,7 @@ class Parameters with Resource, _$Parameters {
 
 @freezed
 class ParametersParameter with _$ParametersParameter {
-  const ParametersParameter._();
+  ParametersParameter._();
   const factory ParametersParameter({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1045,7 +1045,7 @@ class ParametersParameter with _$ParametersParameter {
 
 @freezed
 class Subscription with Resource, _$Subscription {
-  const Subscription._();
+  Subscription._();
   const factory Subscription({
     @Default(Stu3ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
@@ -1105,7 +1105,7 @@ class Subscription with Resource, _$Subscription {
 
 @freezed
 class SubscriptionChannel with _$SubscriptionChannel {
-  const SubscriptionChannel._();
+  SubscriptionChannel._();
   const factory SubscriptionChannel({
     SubscriptionChannelType? type,
     @JsonKey(name: '_type') Element? typeElement,

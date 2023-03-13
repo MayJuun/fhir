@@ -15,7 +15,7 @@ part 'payment.g.dart';
 @freezed
 class PaymentNotice with Resource, _$PaymentNotice {
   PaymentNotice._();
-  factory PaymentNotice({
+  const factory PaymentNotice({
     @Default(Dstu2ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
         Dstu2ResourceType resourceType,
@@ -73,7 +73,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 @freezed
 class PaymentReconciliation with Resource, _$PaymentReconciliation {
   PaymentReconciliation._();
-  factory PaymentReconciliation({
+  const factory PaymentReconciliation({
     @Default(Dstu2ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
         Dstu2ResourceType resourceType,
@@ -139,7 +139,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 @freezed
 class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
-  factory PaymentReconciliationDetail({
+  const factory PaymentReconciliationDetail({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -187,7 +187,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 @freezed
 class PaymentReconciliationNote with _$PaymentReconciliationNote {
   PaymentReconciliationNote._();
-  factory PaymentReconciliationNote({
+  const factory PaymentReconciliationNote({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

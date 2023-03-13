@@ -15,7 +15,7 @@ part 'special_types.g.dart';
 @freezed
 class Narrative with _$Narrative {
   Narrative._();
-  factory Narrative({
+  const factory Narrative({
     NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required String div,
@@ -55,7 +55,7 @@ class Narrative with _$Narrative {
 @freezed
 class Reference with _$Reference {
   Reference._();
-  factory Reference({
+  const factory Reference({
     String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     Identifier? identifier,
@@ -97,7 +97,7 @@ class Reference with _$Reference {
 @freezed
 class Meta with _$Meta {
   Meta._();
-  factory Meta({
+  const factory Meta({
     Id? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
@@ -140,7 +140,7 @@ class Meta with _$Meta {
 @freezed
 class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
-  factory ElementDefinition({
+  const factory ElementDefinition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? path,
@@ -474,7 +474,7 @@ class ElementDefinition with _$ElementDefinition {
 @freezed
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
-  factory ElementDefinitionSlicing({
+  const factory ElementDefinitionSlicing({
     List<ElementDefinitionDiscriminator>? discriminator,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -518,7 +518,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 @freezed
 class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ElementDefinitionDiscriminator._();
-  factory ElementDefinitionDiscriminator({
+  const factory ElementDefinitionDiscriminator({
     ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? path,
@@ -560,7 +560,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
 @freezed
 class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
-  factory ElementDefinitionBase({
+  const factory ElementDefinitionBase({
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     Decimal? min,
@@ -603,7 +603,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 @freezed
 class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
-  factory ElementDefinitionType({
+  const factory ElementDefinitionType({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -651,7 +651,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
 @freezed
 class ElementDefinitionExample with _$ElementDefinitionExample {
   ElementDefinitionExample._();
-  factory ElementDefinitionExample({
+  const factory ElementDefinitionExample({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     Boolean? valueBoolean,
@@ -760,7 +760,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 @freezed
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
-  factory ElementDefinitionConstraint({
+  const factory ElementDefinitionConstraint({
     String? key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
@@ -811,7 +811,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 @freezed
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
-  factory ElementDefinitionBinding({
+  const factory ElementDefinitionBinding({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
@@ -856,7 +856,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 @freezed
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
-  factory ElementDefinitionMapping({
+  const factory ElementDefinitionMapping({
     Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? language,
@@ -901,7 +901,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
 @freezed
 class Dosage with _$Dosage {
   Dosage._();
-  factory Dosage({
+  const factory Dosage({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     String? text,

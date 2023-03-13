@@ -15,7 +15,7 @@ part 'payment.g.dart';
 @freezed
 class PaymentNotice with Resource, _$PaymentNotice {
   PaymentNotice._();
-  factory PaymentNotice({
+  const factory PaymentNotice({
     @Default(Stu3ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
         Stu3ResourceType resourceType,
@@ -75,7 +75,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 @freezed
 class PaymentReconciliation with Resource, _$PaymentReconciliation {
   PaymentReconciliation._();
-  factory PaymentReconciliation({
+  const factory PaymentReconciliation({
     @Default(Stu3ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
         Stu3ResourceType resourceType,
@@ -139,7 +139,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 @freezed
 class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
-  factory PaymentReconciliationDetail({
+  const factory PaymentReconciliationDetail({
     required CodeableConcept type,
     Reference? request,
     Reference? response,
@@ -184,7 +184,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 @freezed
 class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   PaymentReconciliationProcessNote._();
-  factory PaymentReconciliationProcessNote({
+  const factory PaymentReconciliationProcessNote({
     CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,

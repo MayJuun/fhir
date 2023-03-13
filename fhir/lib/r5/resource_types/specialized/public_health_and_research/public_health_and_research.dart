@@ -213,7 +213,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   ///  Could also link to a research registry holding the results such as
   ///  ClinicalTrials.gov.
   ///
-  factory ResearchStudy({
+  const factory ResearchStudy({
     /// [resourceType] This is a ResearchStudy resource
     @Default(R5ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
@@ -461,7 +461,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ResearchStudyLabel({
+  const factory ResearchStudyLabel({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -590,7 +590,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   /// [party] Individual or organization associated with study (use
   ///  practitionerRole to specify their organisation).
   ///
-  factory ResearchStudyAssociatedParty({
+  const factory ResearchStudyAssociatedParty({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -725,7 +725,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
   ///
   /// [period] Date range.
   ///
-  factory ResearchStudyProgressStatus({
+  const factory ResearchStudyProgressStatus({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -856,7 +856,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   ///
   /// [actualGroup] Group of participants who were enrolled in study.
   ///
-  factory ResearchStudyRecruitment({
+  const factory ResearchStudyRecruitment({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1001,7 +1001,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   /// [observedGroup] Group of participants who were enrolled in study
   ///  comparisonGroup.
   ///
-  factory ResearchStudyComparisonGroup({
+  const factory ResearchStudyComparisonGroup({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1144,7 +1144,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory ResearchStudyObjective({
+  const factory ResearchStudyObjective({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1278,7 +1278,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   ///
   /// [reference] Structured outcome definition.
   ///
-  factory ResearchStudyOutcomeMeasure({
+  const factory ResearchStudyOutcomeMeasure({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1451,7 +1451,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// [consent] A record of the patient's informed agreement to participate in
   ///  the study.
   ///
-  factory ResearchSubject({
+  const factory ResearchSubject({
     /// [resourceType] This is a ResearchSubject resource
     @Default(R5ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
@@ -1615,7 +1615,7 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
   ///
   /// [endDateElement] ("_endDate") Extensions for endDate
   ///
-  factory ResearchSubjectProgress({
+  const factory ResearchSubjectProgress({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
