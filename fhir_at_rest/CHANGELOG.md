@@ -1,5 +1,10 @@
 # fhir_at_rest
 
+## [0.9.5]
+
+* Updates for parsing bundles
+* Changed all classes to const, because freezed is immutable anyway and hopefully this can give a little performance boost
+
 ## [0.9.4]
 
 * Updated to fhir 0.9.4

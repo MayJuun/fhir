@@ -1,2 +1,2 @@
-export 'dstu2/fhir_request.dart';
+export 'dstu2/dstu2.dart';
 export 'enums/enums.dart';

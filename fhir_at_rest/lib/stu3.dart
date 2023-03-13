@@ -1,2 +1,2 @@
 export 'enums/enums.dart';
-export 'stu3/fhir_request.dart';
+export 'stu3/stu3.dart';
