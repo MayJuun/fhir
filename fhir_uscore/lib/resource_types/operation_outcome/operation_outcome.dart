@@ -21,6 +21,9 @@ class OperationOutcomeUsCore extends Resource {
         issue: issue,
       ));
 
+  bool get isInformational =>
+      issue.first.code.toString().toLowerCase() == 'informational';
+
   OperationOutcome _operationOutcome;
   OperationOutcome get value => _operationOutcome;
   String? get id => _operationOutcome.id;

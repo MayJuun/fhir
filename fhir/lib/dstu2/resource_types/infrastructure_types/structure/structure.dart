@@ -14,8 +14,8 @@ part 'structure.g.dart';
 
 @freezed
 class Media with Resource, _$Media {
-  Media._();
-  factory Media({
+  const Media._();
+  const factory Media({
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
         Dstu2ResourceType resourceType,
@@ -59,7 +59,7 @@ class Media with Resource, _$Media {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
+  factory Media.fromJson(Map<String, dynamic> json) => _$Medi.fromJson(json);
 
   /// Acts like a constructor, returns a [Media], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -76,8 +76,8 @@ class Media with Resource, _$Media {
 
 @freezed
 class Binary with Resource, _$Binary {
-  Binary._();
-  factory Binary({
+  const Binary._();
+  const factory Binary({
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
         Dstu2ResourceType resourceType,
@@ -104,7 +104,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$Binar.fromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -121,8 +121,8 @@ class Binary with Resource, _$Binary {
 
 @freezed
 class Bundle with Resource, _$Bundle {
-  Bundle._();
-  factory Bundle({
+  const Bundle._();
+  const factory Bundle({
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
         Dstu2ResourceType resourceType,
@@ -153,7 +153,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$Bundl.fromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -170,8 +170,8 @@ class Bundle with Resource, _$Bundle {
 
 @freezed
 class BundleLink with _$BundleLink {
-  BundleLink._();
-  factory BundleLink({
+  const BundleLink._();
+  const factory BundleLink({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -215,8 +215,8 @@ class BundleLink with _$BundleLink {
 
 @freezed
 class BundleEntry with _$BundleEntry {
-  BundleEntry._();
-  factory BundleEntry({
+  const BundleEntry._();
+  const factory BundleEntry({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -229,6 +229,49 @@ class BundleEntry with _$BundleEntry {
     BundleEntryRequest? request,
     BundleEntryResponse? response,
   }) = _BundleEntry;
+
+  factory BundleEntry.get(String resourcePath, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleEntryRequest(
+            method: RequestMethod.get_,
+            url: FhirUri(resourcePath),
+          ));
+
+  factory BundleEntry.post(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleEntryRequest(
+            method: RequestMethod.post,
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.put(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleEntryRequest(
+            method: RequestMethod.put,
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.delete(String resourcePath,
+          [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleEntryRequest(
+            method: RequestMethod.delete,
+            url: FhirUri(resourcePath),
+          ));
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -263,8 +306,8 @@ class BundleEntry with _$BundleEntry {
 
 @freezed
 class BundleEntrySearch with _$BundleEntrySearch {
-  BundleEntrySearch._();
-  factory BundleEntrySearch({
+  const BundleEntrySearch._();
+  const factory BundleEntrySearch({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -308,8 +351,8 @@ class BundleEntrySearch with _$BundleEntrySearch {
 
 @freezed
 class BundleEntryRequest with _$BundleEntryRequest {
-  BundleEntryRequest._();
-  factory BundleEntryRequest({
+  const BundleEntryRequest._();
+  const factory BundleEntryRequest({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -362,8 +405,8 @@ class BundleEntryRequest with _$BundleEntryRequest {
 
 @freezed
 class BundleEntryResponse with _$BundleEntryResponse {
-  BundleEntryResponse._();
-  factory BundleEntryResponse({
+  const BundleEntryResponse._();
+  const factory BundleEntryResponse({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -411,8 +454,8 @@ class BundleEntryResponse with _$BundleEntryResponse {
 
 @freezed
 class Basic with Resource, _$Basic {
-  Basic._();
-  factory Basic({
+  const Basic._();
+  const factory Basic({
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
         Dstu2ResourceType resourceType,
@@ -445,7 +488,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$Basi.fromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

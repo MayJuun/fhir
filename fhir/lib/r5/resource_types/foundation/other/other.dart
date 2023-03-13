@@ -19,7 +19,7 @@ class Basic with Resource, _$Basic {
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   ///  narrative-only resources that don't map to an existing resource, and
   ///  custom resources not appropriate for inclusion in the FHIR specification.
-  Basic._();
+  const Basic._();
 
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   ///  narrative-only resources that don't map to an existing resource, and
@@ -94,7 +94,7 @@ class Basic with Resource, _$Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource instance.
   ///
-  factory Basic({
+  const factory Basic({
     /// [resourceType] This is a Basic resource
     @Default(R5ResourceType.Basic)
     @JsonKey(unknownEnumValue: R5ResourceType.Basic)
@@ -170,7 +170,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$Basi.fromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -193,7 +193,7 @@ class Binary with Resource, _$Binary {
   /// [Binary] A resource that represents the data of a single raw artifact as
   ///  digital content accessible in its native format.  A Binary resource can
   ///  contain any content, whether text, image, pdf, zip archive, etc.
-  Binary._();
+  const Binary._();
 
   /// [Binary] A resource that represents the data of a single raw artifact as
   ///  digital content accessible in its native format.  A Binary resource can
@@ -240,7 +240,7 @@ class Binary with Resource, _$Binary {
   ///
   /// [dataElement] ("_data") Extensions for data
   ///
-  factory Binary({
+  const factory Binary({
     /// [resourceType] This is a Binary resource
     @Default(R5ResourceType.Binary)
     @JsonKey(unknownEnumValue: R5ResourceType.Binary)
@@ -302,7 +302,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$Binar.fromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -321,7 +321,7 @@ class Binary with Resource, _$Binary {
 @freezed
 class Bundle with Resource, _$Bundle {
   /// [Bundle] A container for a collection of resources.
-  Bundle._();
+  const Bundle._();
 
   /// [Bundle] A container for a collection of resources.
   ///
@@ -375,7 +375,7 @@ class Bundle with Resource, _$Bundle {
   /// [issues] Captures issues and warnings that relate to the construction of
   ///  the Bundle and the content within it.
   ///
-  factory Bundle({
+  const factory Bundle({
     /// [resourceType] This is a Bundle resource
     @Default(R5ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
@@ -455,7 +455,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$Bundl.fromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -474,7 +474,7 @@ class Bundle with Resource, _$Bundle {
 @freezed
 class BundleLink with _$BundleLink {
   /// [BundleLink] A container for a collection of resources.
-  BundleLink._();
+  const BundleLink._();
 
   /// [BundleLink] A container for a collection of resources.
   ///
@@ -513,7 +513,7 @@ class BundleLink with _$BundleLink {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory BundleLink({
+  const factory BundleLink({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -588,7 +588,7 @@ class BundleLink with _$BundleLink {
 @freezed
 class BundleEntry with _$BundleEntry {
   /// [BundleEntry] A container for a collection of resources.
-  BundleEntry._();
+  const BundleEntry._();
 
   /// [BundleEntry] A container for a collection of resources.
   ///
@@ -650,7 +650,7 @@ class BundleEntry with _$BundleEntry {
   ///  'request' entry in the batch or transaction being responded to or what
   ///  the results of an operation where when returning history.
   ///
-  factory BundleEntry({
+  const factory BundleEntry({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -702,6 +702,62 @@ class BundleEntry with _$BundleEntry {
     BundleResponse? response,
   }) = _BundleEntry;
 
+  factory BundleEntry.get(String resourcePath, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleRequest(
+            method: Code('GET'),
+            url: FhirUri(resourcePath),
+          ));
+
+  factory BundleEntry.post(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleRequest(
+            method: Code('POST'),
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.put(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleRequest(
+            method: Code('PUT'),
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.delete(
+    String resourcePath, [
+    FhirUri? canonicalBaseUrl,
+  ]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleRequest(
+            method: Code('DELETE'),
+            url: FhirUri(resourcePath),
+          ));
+
+  factory BundleEntry.patch(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleRequest(
+            method: Code('PATCH'),
+            url: FhirUri(resource.path),
+          ));
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
@@ -737,7 +793,7 @@ class BundleEntry with _$BundleEntry {
 @freezed
 class BundleSearch with _$BundleSearch {
   /// [BundleSearch] A container for a collection of resources.
-  BundleSearch._();
+  const BundleSearch._();
 
   /// [BundleSearch] A container for a collection of resources.
   ///
@@ -775,7 +831,7 @@ class BundleSearch with _$BundleSearch {
   ///
   /// [scoreElement] ("_score") Extensions for score
   ///
-  factory BundleSearch({
+  const factory BundleSearch({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -850,7 +906,7 @@ class BundleSearch with _$BundleSearch {
 @freezed
 class BundleRequest with _$BundleRequest {
   /// [BundleRequest] A container for a collection of resources.
-  BundleRequest._();
+  const BundleRequest._();
 
   /// [BundleRequest] A container for a collection of resources.
   ///
@@ -915,7 +971,7 @@ class BundleRequest with _$BundleRequest {
   ///
   /// [ifNoneExistElement] ("_ifNoneExist") Extensions for ifNoneExist
   ///
-  factory BundleRequest({
+  const factory BundleRequest({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1014,7 +1070,7 @@ class BundleRequest with _$BundleRequest {
 @freezed
 class BundleResponse with _$BundleResponse {
   /// [BundleResponse] A container for a collection of resources.
-  BundleResponse._();
+  const BundleResponse._();
 
   /// [BundleResponse] A container for a collection of resources.
   ///
@@ -1067,7 +1123,7 @@ class BundleResponse with _$BundleResponse {
   /// [outcome] An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
   ///
-  factory BundleResponse({
+  const factory BundleResponse({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1159,7 +1215,7 @@ class BundleResponse with _$BundleResponse {
 class Linkage with Resource, _$Linkage {
   /// [Linkage] Identifies two or more records (resource instances) that refer
   ///  to the same real-world "occurrence".
-  Linkage._();
+  const Linkage._();
 
   /// [Linkage] Identifies two or more records (resource instances) that refer
   ///  to the same real-world "occurrence".
@@ -1231,7 +1287,7 @@ class Linkage with Resource, _$Linkage {
   ///  real-world occurrence as well as how the items should be evaluated
   ///  within the collection of linked items.
   ///
-  factory Linkage({
+  const factory Linkage({
     /// [resourceType] This is a Linkage resource
     @Default(R5ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
@@ -1324,7 +1380,7 @@ class Linkage with Resource, _$Linkage {
 class LinkageItem with _$LinkageItem {
   /// [LinkageItem] Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
-  LinkageItem._();
+  const LinkageItem._();
 
   /// [LinkageItem] Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
@@ -1360,7 +1416,7 @@ class LinkageItem with _$LinkageItem {
   ///
   /// [resource] The resource instance being linked as part of the group.
   ///
-  factory LinkageItem({
+  const factory LinkageItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1440,7 +1496,7 @@ class MessageHeader with Resource, _$MessageHeader {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeader._();
+  const MessageHeader._();
 
   /// [MessageHeader] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -1548,7 +1604,7 @@ class MessageHeader with Resource, _$MessageHeader {
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
   ///
-  factory MessageHeader({
+  const factory MessageHeader({
     /// [resourceType] This is a MessageHeader resource
     @Default(R5ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
@@ -1674,7 +1730,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   ///  the subject of the action as well as other information related to the
   ///  action are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeaderDestination._();
+  const MessageHeaderDestination._();
 
   /// [MessageHeaderDestination] The header for a message exchange that is
   ///  either requesting or responding to an action.  The reference(s) that are
@@ -1721,7 +1777,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   ///  particular person or department when routing to a specific application
   ///  isn't sufficient.
   ///
-  factory MessageHeaderDestination({
+  const factory MessageHeaderDestination({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1810,7 +1866,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeaderSource._();
+  const MessageHeaderSource._();
 
   /// [MessageHeaderSource] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -1863,7 +1919,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   ///
   /// [endpointElement] ("_endpoint") Extensions for endpoint
   ///
-  factory MessageHeaderSource({
+  const factory MessageHeaderSource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1961,7 +2017,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeaderResponse._();
+  const MessageHeaderResponse._();
 
   /// [MessageHeaderResponse] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -2003,7 +2059,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   ///
   /// [details] Full details of any issues found in the message.
   ///
-  factory MessageHeaderResponse({
+  const factory MessageHeaderResponse({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2080,7 +2136,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 class OperationOutcome with Resource, _$OperationOutcome {
   /// [OperationOutcome] A collection of error, warning, or information
   ///  messages that result from a system action.
-  OperationOutcome._();
+  const OperationOutcome._();
 
   /// [OperationOutcome] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -2142,7 +2198,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
   ///
-  factory OperationOutcome({
+  const factory OperationOutcome({
     /// [resourceType] This is a OperationOutcome resource
     @Default(R5ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
@@ -2188,6 +2244,9 @@ class OperationOutcome with Resource, _$OperationOutcome {
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
+  bool get isInformational =>
+      issue.first.code.toString().toLowerCase() == 'informational';
+
   /// Produces a Yaml formatted String version of the object
   @override
   String toYaml() => json2yaml(toJson());
@@ -2226,7 +2285,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   ///  messages that result from a system action.
-  OperationOutcomeIssue._();
+  const OperationOutcomeIssue._();
 
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -2290,7 +2349,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory OperationOutcomeIssue({
+  const factory OperationOutcomeIssue({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2392,7 +2451,7 @@ class Parameters with Resource, _$Parameters {
   ///  an operation (whether invoked directly from REST or within a messaging
   ///  environment).  It is not persisted or allowed to be referenced by other
   ///  resources.
-  Parameters._();
+  const Parameters._();
 
   /// [Parameters] This resource is used to pass information into and back from
   ///  an operation (whether invoked directly from REST or within a messaging
@@ -2421,7 +2480,7 @@ class Parameters with Resource, _$Parameters {
   ///
   /// [parameter] A parameter passed to or received from the operation.
   ///
-  factory Parameters({
+  const factory Parameters({
     /// [resourceType] This is a Parameters resource
     @Default(R5ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
@@ -2497,7 +2556,7 @@ class ParametersParameter with _$ParametersParameter {
   ///  back from an operation (whether invoked directly from REST or within a
   ///  messaging environment).  It is not persisted or allowed to be referenced
   ///  by other resources.
-  ParametersParameter._();
+  const ParametersParameter._();
 
   /// [ParametersParameter] This resource is used to pass information into and
   ///  back from an operation (whether invoked directly from REST or within a
@@ -2694,7 +2753,7 @@ class ParametersParameter with _$ParametersParameter {
   ///
   /// [part_] ("part") A named part of a multi-part parameter.
   ///
-  factory ParametersParameter({
+  const factory ParametersParameter({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2993,7 +3052,7 @@ class ParametersParameter with _$ParametersParameter {
 class Subscription with Resource, _$Subscription {
   /// [Subscription] The subscription resource describes a particular client's
   ///  request to be notified about a SubscriptionTopic.
-  Subscription._();
+  const Subscription._();
 
   /// [Subscription] The subscription resource describes a particular client's
   ///  request to be notified about a SubscriptionTopic.
@@ -3132,7 +3191,7 @@ class Subscription with Resource, _$Subscription {
   ///
   /// [maxCountElement] ("_maxCount") Extensions for maxCount
   ///
-  factory Subscription({
+  const factory Subscription({
     /// [resourceType] This is a Subscription resource
     @Default(R5ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
@@ -3297,7 +3356,7 @@ class Subscription with Resource, _$Subscription {
 class SubscriptionFilterBy with _$SubscriptionFilterBy {
   /// [SubscriptionFilterBy] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
-  SubscriptionFilterBy._();
+  const SubscriptionFilterBy._();
 
   /// [SubscriptionFilterBy] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
@@ -3351,7 +3410,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory SubscriptionFilterBy({
+  const factory SubscriptionFilterBy({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3440,7 +3499,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
 class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state
   ///  of a Subscription during notifications.
-  SubscriptionStatus._();
+  const SubscriptionStatus._();
 
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state
   ///  of a Subscription during notifications.
@@ -3529,7 +3588,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [error] A record of errors that occurred when the server processed a
   ///  notification.
   ///
-  factory SubscriptionStatus({
+  const factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource
     @Default(R5ResourceType.SubscriptionStatus)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
@@ -3642,7 +3701,7 @@ class SubscriptionStatusNotificationEvent
     with _$SubscriptionStatusNotificationEvent {
   /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
   ///  describes the state of a Subscription during notifications.
-  SubscriptionStatusNotificationEvent._();
+  const SubscriptionStatusNotificationEvent._();
 
   /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
   ///  describes the state of a Subscription during notifications.
@@ -3689,7 +3748,7 @@ class SubscriptionStatusNotificationEvent
   ///  with the event (e.g., the Patient relevant to an Encounter), however it
   ///  MAY refer to non-FHIR objects.
   ///
-  factory SubscriptionStatusNotificationEvent({
+  const factory SubscriptionStatusNotificationEvent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3776,7 +3835,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [SubscriptionTopic] Describes a stream of resource state changes or
   ///  events and annotated with labels useful to filter projections from this
   ///  topic.
-  SubscriptionTopic._();
+  const SubscriptionTopic._();
 
   /// [SubscriptionTopic] Describes a stream of resource state changes or
   ///  events and annotated with labels useful to filter projections from this
@@ -3968,7 +4027,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [notificationShape] List of properties to describe the shape (e.g.,
   ///  resources) included in notifications from this Subscription Topic.
   ///
-  factory SubscriptionTopic({
+  const factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource
     @Default(R5ResourceType.SubscriptionTopic)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
@@ -4175,7 +4234,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicResourceTrigger._();
+  const SubscriptionTopicResourceTrigger._();
 
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4239,7 +4298,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [fhirPathCriteriaElement] ("_fhirPathCriteria") Extensions for
   ///  fhirPathCriteria
   ///
-  factory SubscriptionTopicResourceTrigger({
+  const factory SubscriptionTopicResourceTrigger({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4337,7 +4396,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicQueryCriteria._();
+  const SubscriptionTopicQueryCriteria._();
 
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4396,7 +4455,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   ///
   /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
   ///
-  factory SubscriptionTopicQueryCriteria({
+  const factory SubscriptionTopicQueryCriteria({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4495,7 +4554,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicEventTrigger._();
+  const SubscriptionTopicEventTrigger._();
 
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4547,7 +4606,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   ///
   /// [resourceElement] ("_resource") Extensions for resource
   ///
-  factory SubscriptionTopicEventTrigger({
+  const factory SubscriptionTopicEventTrigger({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4630,7 +4689,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicCanFilterBy._();
+  const SubscriptionTopicCanFilterBy._();
 
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4696,7 +4755,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   ///
   /// [modifierElement] ("_modifier") Extensions for modifier
   ///
-  factory SubscriptionTopicCanFilterBy({
+  const factory SubscriptionTopicCanFilterBy({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4795,7 +4854,7 @@ class SubscriptionTopicNotificationShape
   /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicNotificationShape._();
+  const SubscriptionTopicNotificationShape._();
 
   /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4850,7 +4909,7 @@ class SubscriptionTopicNotificationShape
   ///
   /// [revIncludeElement] ("_revInclude") Extensions for revInclude
   ///
-  factory SubscriptionTopicNotificationShape({
+  const factory SubscriptionTopicNotificationShape({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

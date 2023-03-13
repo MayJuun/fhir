@@ -14,8 +14,8 @@ part 'other.g.dart';
 
 @freezed
 class Basic with Resource, _$Basic {
-  Basic._();
-  factory Basic({
+  const Basic._();
+  const factory Basic({
     @Default(Stu3ResourceType.Basic)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
         Stu3ResourceType resourceType,
@@ -48,7 +48,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$Basi.fromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -65,8 +65,8 @@ class Basic with Resource, _$Basic {
 
 @freezed
 class Binary with Resource, _$Binary {
-  Binary._();
-  factory Binary({
+  const Binary._();
+  const factory Binary({
     @Default(Stu3ResourceType.Binary)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
         Stu3ResourceType resourceType,
@@ -99,7 +99,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$Binar.fromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -116,8 +116,8 @@ class Binary with Resource, _$Binary {
 
 @freezed
 class Bundle with Resource, _$Bundle {
-  Bundle._();
-  factory Bundle({
+  const Bundle._();
+  const factory Bundle({
     @Default(Stu3ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
         Stu3ResourceType resourceType,
@@ -153,7 +153,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$Bundl.fromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -170,8 +170,8 @@ class Bundle with Resource, _$Bundle {
 
 @freezed
 class BundleLink with _$BundleLink {
-  BundleLink._();
-  factory BundleLink({
+  const BundleLink._();
+  const factory BundleLink({
     String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
     String? url,
@@ -211,8 +211,8 @@ class BundleLink with _$BundleLink {
 
 @freezed
 class BundleEntry with _$BundleEntry {
-  BundleEntry._();
-  factory BundleEntry({
+  const BundleEntry._();
+  const factory BundleEntry({
     List<BundleLink>? link,
     String? fullUrl,
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
@@ -221,6 +221,51 @@ class BundleEntry with _$BundleEntry {
     BundleRequest? request,
     BundleResponse? response,
   }) = _BundleEntry;
+
+  factory BundleEntry.get(String resourcePath, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/$resourcePath',
+          request: BundleRequest(
+            method: BundleRequestMethod.get_,
+            url: resourcePath,
+          ));
+
+  factory BundleEntry.post(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/${resource.path}',
+          request: BundleRequest(
+            method: BundleRequestMethod.post,
+            url: resource.path,
+          ));
+
+  factory BundleEntry.put(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/${resource.path}',
+          request: BundleRequest(
+            method: BundleRequestMethod.put,
+            url: resource.path,
+          ));
+
+  factory BundleEntry.delete(
+    String resourcePath, [
+    FhirUri? canonicalBaseUrl,
+  ]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/$resourcePath',
+          request: BundleRequest(
+            method: BundleRequestMethod.delete,
+            url: resourcePath,
+          ));
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -255,8 +300,8 @@ class BundleEntry with _$BundleEntry {
 
 @freezed
 class BundleSearch with _$BundleSearch {
-  BundleSearch._();
-  factory BundleSearch({
+  const BundleSearch._();
+  const factory BundleSearch({
     BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
@@ -296,8 +341,8 @@ class BundleSearch with _$BundleSearch {
 
 @freezed
 class BundleRequest with _$BundleRequest {
-  BundleRequest._();
-  factory BundleRequest({
+  const BundleRequest._();
+  const factory BundleRequest({
     BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
     String? url,
@@ -345,8 +390,8 @@ class BundleRequest with _$BundleRequest {
 
 @freezed
 class BundleResponse with _$BundleResponse {
-  BundleResponse._();
-  factory BundleResponse({
+  const BundleResponse._();
+  const factory BundleResponse({
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? location,
@@ -391,8 +436,8 @@ class BundleResponse with _$BundleResponse {
 
 @freezed
 class Linkage with Resource, _$Linkage {
-  Linkage._();
-  factory Linkage({
+  const Linkage._();
+  const factory Linkage({
     @Default(Stu3ResourceType.Linkage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
         Stu3ResourceType resourceType,
@@ -442,8 +487,8 @@ class Linkage with Resource, _$Linkage {
 
 @freezed
 class LinkageItem with _$LinkageItem {
-  LinkageItem._();
-  factory LinkageItem({
+  const LinkageItem._();
+  const factory LinkageItem({
     LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference resource,
@@ -482,8 +527,8 @@ class LinkageItem with _$LinkageItem {
 
 @freezed
 class Media with Resource, _$Media {
-  Media._();
-  factory Media({
+  const Media._();
+  const factory Media({
     @Default(Stu3ResourceType.Media)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
         Stu3ResourceType resourceType,
@@ -535,7 +580,7 @@ class Media with Resource, _$Media {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
+  factory Media.fromJson(Map<String, dynamic> json) => _$Medi.fromJson(json);
 
   /// Acts like a constructor, returns a [Media], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -552,8 +597,8 @@ class Media with Resource, _$Media {
 
 @freezed
 class MessageHeader with Resource, _$MessageHeader {
-  MessageHeader._();
-  factory MessageHeader({
+  const MessageHeader._();
+  const factory MessageHeader({
     @Default(Stu3ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
         Stu3ResourceType resourceType,
@@ -612,8 +657,8 @@ class MessageHeader with Resource, _$MessageHeader {
 
 @freezed
 class MessageHeaderDestination with _$MessageHeaderDestination {
-  MessageHeaderDestination._();
-  factory MessageHeaderDestination({
+  const MessageHeaderDestination._();
+  const factory MessageHeaderDestination({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? target,
@@ -654,8 +699,8 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
 
 @freezed
 class MessageHeaderSource with _$MessageHeaderSource {
-  MessageHeaderSource._();
-  factory MessageHeaderSource({
+  const MessageHeaderSource._();
+  const factory MessageHeaderSource({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? software,
@@ -700,8 +745,8 @@ class MessageHeaderSource with _$MessageHeaderSource {
 
 @freezed
 class MessageHeaderResponse with _$MessageHeaderResponse {
-  MessageHeaderResponse._();
-  factory MessageHeaderResponse({
+  const MessageHeaderResponse._();
+  const factory MessageHeaderResponse({
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     MessageHeaderResponseCode? code,
@@ -742,8 +787,8 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
 @freezed
 class OperationOutcome with Resource, _$OperationOutcome {
-  OperationOutcome._();
-  factory OperationOutcome({
+  const OperationOutcome._();
+  const factory OperationOutcome({
     @Default(Stu3ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
         Stu3ResourceType resourceType,
@@ -759,6 +804,9 @@ class OperationOutcome with Resource, _$OperationOutcome {
     List<FhirExtension>? modifierExtension,
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
+
+  bool get isInformational =>
+      issue.first.code.toString().toLowerCase() == 'informational';
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
@@ -790,8 +838,8 @@ class OperationOutcome with Resource, _$OperationOutcome {
 
 @freezed
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
-  OperationOutcomeIssue._();
-  factory OperationOutcomeIssue({
+  const OperationOutcomeIssue._();
+  const factory OperationOutcomeIssue({
     OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     OperationOutcomeIssueCode? code,
@@ -838,8 +886,8 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 @freezed
 class Parameters with Resource, _$Parameters {
-  Parameters._();
-  factory Parameters({
+  const Parameters._();
+  const factory Parameters({
     @Default(Stu3ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
         Stu3ResourceType resourceType,
@@ -886,8 +934,8 @@ class Parameters with Resource, _$Parameters {
 
 @freezed
 class ParametersParameter with _$ParametersParameter {
-  ParametersParameter._();
-  factory ParametersParameter({
+  const ParametersParameter._();
+  const factory ParametersParameter({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Boolean? valueBoolean,
@@ -997,8 +1045,8 @@ class ParametersParameter with _$ParametersParameter {
 
 @freezed
 class Subscription with Resource, _$Subscription {
-  Subscription._();
-  factory Subscription({
+  const Subscription._();
+  const factory Subscription({
     @Default(Stu3ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
         Stu3ResourceType resourceType,
@@ -1057,8 +1105,8 @@ class Subscription with Resource, _$Subscription {
 
 @freezed
 class SubscriptionChannel with _$SubscriptionChannel {
-  SubscriptionChannel._();
-  factory SubscriptionChannel({
+  const SubscriptionChannel._();
+  const factory SubscriptionChannel({
     SubscriptionChannelType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? endpoint,
