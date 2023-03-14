@@ -165,18 +165,18 @@ packages:
     dependency: "direct main"
     description:
       name: fhir
-      sha256: cd391724af904fddd1ef76b195043cd6e2c7f2c90a780b6d75bc4a333b313c77
+      sha256: "852c533fd5f29b31692af9264df7bddd23e1103e14db0c42c1693b343b6cbe44"
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.4"
+    version: "0.9.5"
   fhir_at_rest:
     dependency: "direct main"
     description:
       name: fhir_at_rest
-      sha256: "22c76879bca3a0d3b833a71793627cf6b9ac8b6116dd162b8eaa078cbfa229d4"
+      sha256: e62645e6e619df5a5b66c480d5e8872dd87f0e748965e80739363fb7ec62e5cf
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.3"
+    version: "0.9.5"
   file:
     dependency: transitive
     description:

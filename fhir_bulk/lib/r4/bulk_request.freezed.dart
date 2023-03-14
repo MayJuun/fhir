@@ -195,7 +195,7 @@ class __$$_BulkPatientRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_BulkPatientRequest extends _BulkPatientRequest {
-  _$_BulkPatientRequest(
+  const _$_BulkPatientRequest(
       {required this.base,
       this.since,
       final List<WhichResource>? types,
@@ -335,12 +335,12 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
 }
 
 abstract class _BulkPatientRequest extends BulkRequest {
-  factory _BulkPatientRequest(
+  const factory _BulkPatientRequest(
       {required final Uri base,
       final FhirDateTime? since,
       final List<WhichResource>? types,
       final Client? client}) = _$_BulkPatientRequest;
-  _BulkPatientRequest._() : super._();
+  const _BulkPatientRequest._() : super._();
 
   @override
   Uri get base;
@@ -417,7 +417,7 @@ class __$$_BulkGroupRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_BulkGroupRequest extends _BulkGroupRequest {
-  _$_BulkGroupRequest(
+  const _$_BulkGroupRequest(
       {required this.base,
       required this.id,
       this.since,
@@ -560,13 +560,13 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
 }
 
 abstract class _BulkGroupRequest extends BulkRequest {
-  factory _BulkGroupRequest(
+  const factory _BulkGroupRequest(
       {required final Uri base,
       required final Id id,
       final FhirDateTime? since,
       final List<WhichResource>? types,
       final Client? client}) = _$_BulkGroupRequest;
-  _BulkGroupRequest._() : super._();
+  const _BulkGroupRequest._() : super._();
 
   @override
   Uri get base;
@@ -638,7 +638,7 @@ class __$$_BulkSystemRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_BulkSystemRequest extends _BulkSystemRequest {
-  _$_BulkSystemRequest(
+  const _$_BulkSystemRequest(
       {required this.base,
       this.since,
       final List<WhichResource>? types,
@@ -778,12 +778,12 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
 }
 
 abstract class _BulkSystemRequest extends BulkRequest {
-  factory _BulkSystemRequest(
+  const factory _BulkSystemRequest(
       {required final Uri base,
       final FhirDateTime? since,
       final List<WhichResource>? types,
       final Client? client}) = _$_BulkSystemRequest;
-  _BulkSystemRequest._() : super._();
+  const _BulkSystemRequest._() : super._();
 
   @override
   Uri get base;

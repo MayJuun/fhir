@@ -1,5 +1,10 @@
 # fhir_bulk
 
+## [0.9.5]
+
+* Updated dependencies
+* Made some factories const
+
 ## [0.9.4]
 
 * Updated to fhir 0.9.4
