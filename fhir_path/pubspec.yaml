@@ -1,6 +1,6 @@
 name: fhir_path
 description: FHIRPath navigation and extraction language implemented in pure Dart to be used with base FHIR packages.
-version: 0.9.5
+version: 0.9.6
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_path
 
@@ -8,9 +8,9 @@ environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
-  antlr4: ^4.11.1
+  antlr4: ^4.12.0
   collection: ^1.17.0
-  fhir: ^0.9.4
+  fhir: ^0.9.5
   # fhir:
   #   path: ../fhir
   units_converter: ^2.1.0
@@ -19,6 +19,7 @@ dependencies:
   petitparser: ^5.1.0
 
 dev_dependencies:
+  # flutter pub run import_sorter:main
   import_sorter: ^4.6.0
   lints: ^2.0.1
   test: ^1.23.1
