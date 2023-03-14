@@ -1,5 +1,10 @@
 # fhir_auth
 
+## [0.9.5]
+
+* Updated dependencies
+* Notably, google login is updated, which means there's now a CORS error if you login from a PWA
+
 ## [0.9.4]
 
 * Updated dependencies
