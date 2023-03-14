@@ -4,6 +4,7 @@
 import 'dart:developer';
 
 // Package imports:
+import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 // Project imports:
@@ -25,7 +26,8 @@ class GcpFhirClient extends SecureFhirClient {
     super.launch,
   }) : _googleSignIn = GoogleSignIn(
           scopes: scopes ?? [],
-          clientId: clientId,
+          clientId: kIsWeb ? clientId : null,
+          serverClientId: kIsWeb ? null : clientId,
         );
 
   final GoogleSignIn _googleSignIn;

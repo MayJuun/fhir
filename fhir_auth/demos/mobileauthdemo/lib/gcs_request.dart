@@ -1,12 +1,23 @@
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
+import 'package:flutter/foundation.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import 'api.dart';
 import 'new_patient.dart';
 
 Future gcsRequest() async {
+  final _googleSignIn = GoogleSignIn(
+      // scopes: scopes ?? [],
+      // clientId: kIsWeb ? Api.gcsClientId : null,
+      // serverClientId: kIsWeb ? null : Api.gcsClientId,
+      );
+
+  await _googleSignIn.signIn();
+  print('signed in');
   final client = GcpFhirClient(
+    clientId: Api.gcsClientId,
     redirectUri: Api.fhirCallback,
     fhirUri: FhirUri(Api.gcsUrl),
   );
