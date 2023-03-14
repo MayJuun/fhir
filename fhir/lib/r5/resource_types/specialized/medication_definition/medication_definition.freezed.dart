@@ -573,7 +573,7 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AdministrableProductDefinition
     extends _AdministrableProductDefinition {
-  const _$_AdministrableProductDefinition(
+  _$_AdministrableProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
           this.resourceType = R5ResourceType.AdministrableProductDefinition,
       this.id,
@@ -893,7 +893,7 @@ class _$_AdministrableProductDefinition
 
 abstract class _AdministrableProductDefinition
     extends AdministrableProductDefinition {
-  const factory _AdministrableProductDefinition(
+  factory _AdministrableProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
           final R5ResourceType resourceType,
       final Id? id,
@@ -922,7 +922,7 @@ abstract class _AdministrableProductDefinition
       final List<AdministrableProductDefinitionProperty>? property,
       required final List<AdministrableProductDefinitionRouteOfAdministration>
           routeOfAdministration}) = _$_AdministrableProductDefinition;
-  const _AdministrableProductDefinition._() : super._();
+  _AdministrableProductDefinition._() : super._();
 
   factory _AdministrableProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_AdministrableProductDefinition.fromJson;
@@ -1420,7 +1420,7 @@ class __$$_AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AdministrableProductDefinitionProperty
     extends _AdministrableProductDefinitionProperty {
-  const _$_AdministrableProductDefinitionProperty(
+  _$_AdministrableProductDefinitionProperty(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1612,7 +1612,7 @@ class _$_AdministrableProductDefinitionProperty
 
 abstract class _AdministrableProductDefinitionProperty
     extends AdministrableProductDefinitionProperty {
-  const factory _AdministrableProductDefinitionProperty(
+  factory _AdministrableProductDefinitionProperty(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -1626,7 +1626,7 @@ abstract class _AdministrableProductDefinitionProperty
           final Attachment? valueAttachment,
           final CodeableConcept? status}) =
       _$_AdministrableProductDefinitionProperty;
-  const _AdministrableProductDefinitionProperty._() : super._();
+  _AdministrableProductDefinitionProperty._() : super._();
 
   factory _AdministrableProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =
@@ -2056,7 +2056,7 @@ class __$$_AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AdministrableProductDefinitionRouteOfAdministration
     extends _AdministrableProductDefinitionRouteOfAdministration {
-  const _$_AdministrableProductDefinitionRouteOfAdministration(
+  _$_AdministrableProductDefinitionRouteOfAdministration(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2244,7 +2244,7 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
 
 abstract class _AdministrableProductDefinitionRouteOfAdministration
     extends AdministrableProductDefinitionRouteOfAdministration {
-  const factory _AdministrableProductDefinitionRouteOfAdministration(
+  factory _AdministrableProductDefinitionRouteOfAdministration(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2257,7 +2257,7 @@ abstract class _AdministrableProductDefinitionRouteOfAdministration
           final List<AdministrableProductDefinitionTargetSpecies>?
               targetSpecies}) =
       _$_AdministrableProductDefinitionRouteOfAdministration;
-  const _AdministrableProductDefinitionRouteOfAdministration._() : super._();
+  _AdministrableProductDefinitionRouteOfAdministration._() : super._();
 
   factory _AdministrableProductDefinitionRouteOfAdministration.fromJson(
           Map<String, dynamic> json) =
@@ -2518,7 +2518,7 @@ class __$$_AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AdministrableProductDefinitionTargetSpecies
     extends _AdministrableProductDefinitionTargetSpecies {
-  const _$_AdministrableProductDefinitionTargetSpecies(
+  _$_AdministrableProductDefinitionTargetSpecies(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2666,14 +2666,14 @@ class _$_AdministrableProductDefinitionTargetSpecies
 
 abstract class _AdministrableProductDefinitionTargetSpecies
     extends AdministrableProductDefinitionTargetSpecies {
-  const factory _AdministrableProductDefinitionTargetSpecies(
+  factory _AdministrableProductDefinitionTargetSpecies(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
       final List<AdministrableProductDefinitionWithdrawalPeriod>?
           withdrawalPeriod}) = _$_AdministrableProductDefinitionTargetSpecies;
-  const _AdministrableProductDefinitionTargetSpecies._() : super._();
+  _AdministrableProductDefinitionTargetSpecies._() : super._();
 
   factory _AdministrableProductDefinitionTargetSpecies.fromJson(
           Map<String, dynamic> json) =
@@ -2979,7 +2979,7 @@ class __$$_AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AdministrableProductDefinitionWithdrawalPeriod
     extends _AdministrableProductDefinitionWithdrawalPeriod {
-  const _$_AdministrableProductDefinitionWithdrawalPeriod(
+  _$_AdministrableProductDefinitionWithdrawalPeriod(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -3136,7 +3136,7 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
 
 abstract class _AdministrableProductDefinitionWithdrawalPeriod
     extends AdministrableProductDefinitionWithdrawalPeriod {
-  const factory _AdministrableProductDefinitionWithdrawalPeriod(
+  factory _AdministrableProductDefinitionWithdrawalPeriod(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -3147,7 +3147,7 @@ abstract class _AdministrableProductDefinitionWithdrawalPeriod
           @JsonKey(name: '_supportingInformation')
               final Element? supportingInformationElement}) =
       _$_AdministrableProductDefinitionWithdrawalPeriod;
-  const _AdministrableProductDefinitionWithdrawalPeriod._() : super._();
+  _AdministrableProductDefinitionWithdrawalPeriod._() : super._();
 
   factory _AdministrableProductDefinitionWithdrawalPeriod.fromJson(
           Map<String, dynamic> json) =
@@ -3842,7 +3842,7 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
-  const _$_ClinicalUseDefinition(
+  _$_ClinicalUseDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
           this.resourceType = R5ResourceType.ClinicalUseDefinition,
       this.id,
@@ -4164,7 +4164,7 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 }
 
 abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
-  const factory _ClinicalUseDefinition(
+  factory _ClinicalUseDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
           final R5ResourceType resourceType,
       final Id? id,
@@ -4195,7 +4195,7 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
           final List<Canonical>? library_,
       final ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
       final ClinicalUseDefinitionWarning? warning}) = _$_ClinicalUseDefinition;
-  const _ClinicalUseDefinition._() : super._();
+  _ClinicalUseDefinition._() : super._();
 
   factory _ClinicalUseDefinition.fromJson(Map<String, dynamic> json) =
       _$_ClinicalUseDefinition.fromJson;
@@ -4599,7 +4599,7 @@ class __$$_ClinicalUseDefinitionContraindicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalUseDefinitionContraindication
     extends _ClinicalUseDefinitionContraindication {
-  const _$_ClinicalUseDefinitionContraindication(
+  _$_ClinicalUseDefinitionContraindication(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4798,7 +4798,7 @@ class _$_ClinicalUseDefinitionContraindication
 
 abstract class _ClinicalUseDefinitionContraindication
     extends ClinicalUseDefinitionContraindication {
-  const factory _ClinicalUseDefinitionContraindication(
+  factory _ClinicalUseDefinitionContraindication(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4809,7 +4809,7 @@ abstract class _ClinicalUseDefinitionContraindication
           final Expression? applicability,
           final List<ClinicalUseDefinitionOtherTherapy>? otherTherapy}) =
       _$_ClinicalUseDefinitionContraindication;
-  const _ClinicalUseDefinitionContraindication._() : super._();
+  _ClinicalUseDefinitionContraindication._() : super._();
 
   factory _ClinicalUseDefinitionContraindication.fromJson(
           Map<String, dynamic> json) =
@@ -5073,7 +5073,7 @@ class __$$_ClinicalUseDefinitionOtherTherapyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalUseDefinitionOtherTherapy
     extends _ClinicalUseDefinitionOtherTherapy {
-  const _$_ClinicalUseDefinitionOtherTherapy(
+  _$_ClinicalUseDefinitionOtherTherapy(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5209,14 +5209,14 @@ class _$_ClinicalUseDefinitionOtherTherapy
 
 abstract class _ClinicalUseDefinitionOtherTherapy
     extends ClinicalUseDefinitionOtherTherapy {
-  const factory _ClinicalUseDefinitionOtherTherapy(
+  factory _ClinicalUseDefinitionOtherTherapy(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept relationshipType,
           required final CodeableReference treatment}) =
       _$_ClinicalUseDefinitionOtherTherapy;
-  const _ClinicalUseDefinitionOtherTherapy._() : super._();
+  _ClinicalUseDefinitionOtherTherapy._() : super._();
 
   factory _ClinicalUseDefinitionOtherTherapy.fromJson(
           Map<String, dynamic> json) =
@@ -5657,7 +5657,7 @@ class __$$_ClinicalUseDefinitionIndicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalUseDefinitionIndication
     extends _ClinicalUseDefinitionIndication {
-  const _$_ClinicalUseDefinitionIndication(
+  _$_ClinicalUseDefinitionIndication(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5890,7 +5890,7 @@ class _$_ClinicalUseDefinitionIndication
 
 abstract class _ClinicalUseDefinitionIndication
     extends ClinicalUseDefinitionIndication {
-  const factory _ClinicalUseDefinitionIndication(
+  factory _ClinicalUseDefinitionIndication(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5905,7 +5905,7 @@ abstract class _ClinicalUseDefinitionIndication
       final Expression? applicability,
       final List<ClinicalUseDefinitionOtherTherapy>?
           otherTherapy}) = _$_ClinicalUseDefinitionIndication;
-  const _ClinicalUseDefinitionIndication._() : super._();
+  _ClinicalUseDefinitionIndication._() : super._();
 
   factory _ClinicalUseDefinitionIndication.fromJson(Map<String, dynamic> json) =
       _$_ClinicalUseDefinitionIndication.fromJson;
@@ -6254,7 +6254,7 @@ class __$$_ClinicalUseDefinitionInteractionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalUseDefinitionInteraction
     extends _ClinicalUseDefinitionInteraction {
-  const _$_ClinicalUseDefinitionInteraction(
+  _$_ClinicalUseDefinitionInteraction(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6432,7 +6432,7 @@ class _$_ClinicalUseDefinitionInteraction
 
 abstract class _ClinicalUseDefinitionInteraction
     extends ClinicalUseDefinitionInteraction {
-  const factory _ClinicalUseDefinitionInteraction(
+  factory _ClinicalUseDefinitionInteraction(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6442,7 +6442,7 @@ abstract class _ClinicalUseDefinitionInteraction
           final CodeableConcept? incidence,
           final List<CodeableConcept>? management}) =
       _$_ClinicalUseDefinitionInteraction;
-  const _ClinicalUseDefinitionInteraction._() : super._();
+  _ClinicalUseDefinitionInteraction._() : super._();
 
   factory _ClinicalUseDefinitionInteraction.fromJson(
       Map<String, dynamic> json) = _$_ClinicalUseDefinitionInteraction.fromJson;
@@ -6710,7 +6710,7 @@ class __$$_ClinicalUseDefinitionInteractantCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalUseDefinitionInteractant
     extends _ClinicalUseDefinitionInteractant {
-  const _$_ClinicalUseDefinitionInteractant(
+  _$_ClinicalUseDefinitionInteractant(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6846,14 +6846,14 @@ class _$_ClinicalUseDefinitionInteractant
 
 abstract class _ClinicalUseDefinitionInteractant
     extends ClinicalUseDefinitionInteractant {
-  const factory _ClinicalUseDefinitionInteractant(
+  factory _ClinicalUseDefinitionInteractant(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final Reference? itemReference,
           final CodeableConcept? itemCodeableConcept}) =
       _$_ClinicalUseDefinitionInteractant;
-  const _ClinicalUseDefinitionInteractant._() : super._();
+  _ClinicalUseDefinitionInteractant._() : super._();
 
   factory _ClinicalUseDefinitionInteractant.fromJson(
       Map<String, dynamic> json) = _$_ClinicalUseDefinitionInteractant.fromJson;
@@ -7144,7 +7144,7 @@ class __$$_ClinicalUseDefinitionUndesirableEffectCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalUseDefinitionUndesirableEffect
     extends _ClinicalUseDefinitionUndesirableEffect {
-  const _$_ClinicalUseDefinitionUndesirableEffect(
+  _$_ClinicalUseDefinitionUndesirableEffect(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7288,7 +7288,7 @@ class _$_ClinicalUseDefinitionUndesirableEffect
 
 abstract class _ClinicalUseDefinitionUndesirableEffect
     extends ClinicalUseDefinitionUndesirableEffect {
-  const factory _ClinicalUseDefinitionUndesirableEffect(
+  factory _ClinicalUseDefinitionUndesirableEffect(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -7296,7 +7296,7 @@ abstract class _ClinicalUseDefinitionUndesirableEffect
           final CodeableConcept? classification,
           final CodeableConcept? frequencyOfOccurrence}) =
       _$_ClinicalUseDefinitionUndesirableEffect;
-  const _ClinicalUseDefinitionUndesirableEffect._() : super._();
+  _ClinicalUseDefinitionUndesirableEffect._() : super._();
 
   factory _ClinicalUseDefinitionUndesirableEffect.fromJson(
           Map<String, dynamic> json) =
@@ -7571,7 +7571,7 @@ class __$$_ClinicalUseDefinitionWarningCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ClinicalUseDefinitionWarning extends _ClinicalUseDefinitionWarning {
-  const _$_ClinicalUseDefinitionWarning(
+  _$_ClinicalUseDefinitionWarning(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7713,14 +7713,14 @@ class _$_ClinicalUseDefinitionWarning extends _ClinicalUseDefinitionWarning {
 
 abstract class _ClinicalUseDefinitionWarning
     extends ClinicalUseDefinitionWarning {
-  const factory _ClinicalUseDefinitionWarning(
+  factory _ClinicalUseDefinitionWarning(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Markdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final CodeableConcept? code}) = _$_ClinicalUseDefinitionWarning;
-  const _ClinicalUseDefinitionWarning._() : super._();
+  _ClinicalUseDefinitionWarning._() : super._();
 
   factory _ClinicalUseDefinitionWarning.fromJson(Map<String, dynamic> json) =
       _$_ClinicalUseDefinitionWarning.fromJson;
@@ -8351,7 +8351,7 @@ class __$$_IngredientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Ingredient extends _Ingredient {
-  const _$_Ingredient(
+  _$_Ingredient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
           this.resourceType = R5ResourceType.Ingredient,
       this.id,
@@ -8644,7 +8644,7 @@ class _$_Ingredient extends _Ingredient {
 }
 
 abstract class _Ingredient extends Ingredient {
-  const factory _Ingredient(
+  factory _Ingredient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
           final R5ResourceType resourceType,
       final Id? id,
@@ -8675,7 +8675,7 @@ abstract class _Ingredient extends Ingredient {
           final Element? allergenicIndicatorElement,
       final List<IngredientManufacturer>? manufacturer,
       required final IngredientSubstance substance}) = _$_Ingredient;
-  const _Ingredient._() : super._();
+  _Ingredient._() : super._();
 
   factory _Ingredient.fromJson(Map<String, dynamic> json) =
       _$_Ingredient.fromJson;
@@ -9000,7 +9000,7 @@ class __$$_IngredientManufacturerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_IngredientManufacturer extends _IngredientManufacturer {
-  const _$_IngredientManufacturer(
+  _$_IngredientManufacturer(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9141,14 +9141,14 @@ class _$_IngredientManufacturer extends _IngredientManufacturer {
 }
 
 abstract class _IngredientManufacturer extends IngredientManufacturer {
-  const factory _IngredientManufacturer(
+  factory _IngredientManufacturer(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Code? role,
       @JsonKey(name: '_role') final Element? roleElement,
       required final Reference manufacturer}) = _$_IngredientManufacturer;
-  const _IngredientManufacturer._() : super._();
+  _IngredientManufacturer._() : super._();
 
   factory _IngredientManufacturer.fromJson(Map<String, dynamic> json) =
       _$_IngredientManufacturer.fromJson;
@@ -9380,7 +9380,7 @@ class __$$_IngredientSubstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_IngredientSubstance extends _IngredientSubstance {
-  const _$_IngredientSubstance(
+  _$_IngredientSubstance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9521,13 +9521,13 @@ class _$_IngredientSubstance extends _IngredientSubstance {
 }
 
 abstract class _IngredientSubstance extends IngredientSubstance {
-  const factory _IngredientSubstance(
+  factory _IngredientSubstance(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableReference code,
       final List<IngredientStrength>? strength}) = _$_IngredientSubstance;
-  const _IngredientSubstance._() : super._();
+  _IngredientSubstance._() : super._();
 
   factory _IngredientSubstance.fromJson(Map<String, dynamic> json) =
       _$_IngredientSubstance.fromJson;
@@ -10157,7 +10157,7 @@ class __$$_IngredientStrengthCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_IngredientStrength extends _IngredientStrength {
-  const _$_IngredientStrength(
+  _$_IngredientStrength(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10438,7 +10438,7 @@ class _$_IngredientStrength extends _IngredientStrength {
 }
 
 abstract class _IngredientStrength extends IngredientStrength {
-  const factory _IngredientStrength(
+  factory _IngredientStrength(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -10464,7 +10464,7 @@ abstract class _IngredientStrength extends IngredientStrength {
           final List<CodeableConcept>? country,
           final List<IngredientReferenceStrength>? referenceStrength}) =
       _$_IngredientStrength;
-  const _IngredientStrength._() : super._();
+  _IngredientStrength._() : super._();
 
   factory _IngredientStrength.fromJson(Map<String, dynamic> json) =
       _$_IngredientStrength.fromJson;
@@ -10901,7 +10901,7 @@ class __$$_IngredientReferenceStrengthCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
-  const _$_IngredientReferenceStrength(
+  _$_IngredientReferenceStrength(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11086,7 +11086,7 @@ class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
 
 abstract class _IngredientReferenceStrength
     extends IngredientReferenceStrength {
-  const factory _IngredientReferenceStrength(
+  factory _IngredientReferenceStrength(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -11099,7 +11099,7 @@ abstract class _IngredientReferenceStrength
       @JsonKey(name: '_measurementPoint')
           final Element? measurementPointElement,
       final List<CodeableConcept>? country}) = _$_IngredientReferenceStrength;
-  const _IngredientReferenceStrength._() : super._();
+  _IngredientReferenceStrength._() : super._();
 
   factory _IngredientReferenceStrength.fromJson(Map<String, dynamic> json) =
       _$_IngredientReferenceStrength.fromJson;
@@ -11738,7 +11738,7 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
-  const _$_ManufacturedItemDefinition(
+  _$_ManufacturedItemDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
           this.resourceType = R5ResourceType.ManufacturedItemDefinition,
       this.id,
@@ -12065,7 +12065,7 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 }
 
 abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
-  const factory _ManufacturedItemDefinition(
+  factory _ManufacturedItemDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
               final R5ResourceType resourceType,
           final Id? id,
@@ -12096,7 +12096,7 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
           final List<ManufacturedItemDefinitionProperty>? property,
           final List<ManufacturedItemDefinitionComponent>? component}) =
       _$_ManufacturedItemDefinition;
-  const _ManufacturedItemDefinition._() : super._();
+  _ManufacturedItemDefinition._() : super._();
 
   factory _ManufacturedItemDefinition.fromJson(Map<String, dynamic> json) =
       _$_ManufacturedItemDefinition.fromJson;
@@ -12567,7 +12567,7 @@ class __$$_ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ManufacturedItemDefinitionProperty
     extends _ManufacturedItemDefinitionProperty {
-  const _$_ManufacturedItemDefinitionProperty(
+  _$_ManufacturedItemDefinitionProperty(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12752,7 +12752,7 @@ class _$_ManufacturedItemDefinitionProperty
 
 abstract class _ManufacturedItemDefinitionProperty
     extends ManufacturedItemDefinitionProperty {
-  const factory _ManufacturedItemDefinitionProperty(
+  factory _ManufacturedItemDefinitionProperty(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -12765,7 +12765,7 @@ abstract class _ManufacturedItemDefinitionProperty
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Attachment? valueAttachment}) =
       _$_ManufacturedItemDefinitionProperty;
-  const _ManufacturedItemDefinitionProperty._() : super._();
+  _ManufacturedItemDefinitionProperty._() : super._();
 
   factory _ManufacturedItemDefinitionProperty.fromJson(
           Map<String, dynamic> json) =
@@ -13093,7 +13093,7 @@ class __$$_ManufacturedItemDefinitionComponentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ManufacturedItemDefinitionComponent
     extends _ManufacturedItemDefinitionComponent {
-  const _$_ManufacturedItemDefinitionComponent(
+  _$_ManufacturedItemDefinitionComponent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13309,7 +13309,7 @@ class _$_ManufacturedItemDefinitionComponent
 
 abstract class _ManufacturedItemDefinitionComponent
     extends ManufacturedItemDefinitionComponent {
-  const factory _ManufacturedItemDefinitionComponent(
+  factory _ManufacturedItemDefinitionComponent(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -13320,7 +13320,7 @@ abstract class _ManufacturedItemDefinitionComponent
           final List<ManufacturedItemDefinitionProperty>? property,
           final List<ManufacturedItemDefinitionComponent>? component}) =
       _$_ManufacturedItemDefinitionComponent;
-  const _ManufacturedItemDefinitionComponent._() : super._();
+  _ManufacturedItemDefinitionComponent._() : super._();
 
   factory _ManufacturedItemDefinitionComponent.fromJson(
           Map<String, dynamic> json) =
@@ -13594,7 +13594,7 @@ class __$$_ManufacturedItemDefinitionConstituentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ManufacturedItemDefinitionConstituent
     extends _ManufacturedItemDefinitionConstituent {
-  const _$_ManufacturedItemDefinitionConstituent(
+  _$_ManufacturedItemDefinitionConstituent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13785,7 +13785,7 @@ class _$_ManufacturedItemDefinitionConstituent
 
 abstract class _ManufacturedItemDefinitionConstituent
     extends ManufacturedItemDefinitionConstituent {
-  const factory _ManufacturedItemDefinitionConstituent(
+  factory _ManufacturedItemDefinitionConstituent(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -13794,7 +13794,7 @@ abstract class _ManufacturedItemDefinitionConstituent
           @JsonKey(name: 'function') final List<CodeableConcept>? function_,
           final List<CodeableReference>? hasIngredient}) =
       _$_ManufacturedItemDefinitionConstituent;
-  const _ManufacturedItemDefinitionConstituent._() : super._();
+  _ManufacturedItemDefinitionConstituent._() : super._();
 
   factory _ManufacturedItemDefinitionConstituent.fromJson(
           Map<String, dynamic> json) =
@@ -14867,7 +14867,7 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
-  const _$_MedicinalProductDefinition(
+  _$_MedicinalProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
           this.resourceType = R5ResourceType.MedicinalProductDefinition,
       this.id,
@@ -15481,7 +15481,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 }
 
 abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
-  const factory _MedicinalProductDefinition(
+  factory _MedicinalProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
           final R5ResourceType resourceType,
       final Id? id,
@@ -15535,7 +15535,7 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
       final List<MedicinalProductDefinitionOperation>? operation,
       final List<MedicinalProductDefinitionCharacteristic>?
           characteristic}) = _$_MedicinalProductDefinition;
-  const _MedicinalProductDefinition._() : super._();
+  _MedicinalProductDefinition._() : super._();
 
   factory _MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductDefinition.fromJson;
@@ -15937,7 +15937,7 @@ class __$$_MedicinalProductDefinitionContactCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicinalProductDefinitionContact
     extends _MedicinalProductDefinitionContact {
-  const _$_MedicinalProductDefinitionContact(
+  _$_MedicinalProductDefinitionContact(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16071,13 +16071,13 @@ class _$_MedicinalProductDefinitionContact
 
 abstract class _MedicinalProductDefinitionContact
     extends MedicinalProductDefinitionContact {
-  const factory _MedicinalProductDefinitionContact(
+  factory _MedicinalProductDefinitionContact(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? type,
       required final Reference contact}) = _$_MedicinalProductDefinitionContact;
-  const _MedicinalProductDefinitionContact._() : super._();
+  _MedicinalProductDefinitionContact._() : super._();
 
   factory _MedicinalProductDefinitionContact.fromJson(
           Map<String, dynamic> json) =
@@ -16382,7 +16382,7 @@ class __$$_MedicinalProductDefinitionNameCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicinalProductDefinitionName
     extends _MedicinalProductDefinitionName {
-  const _$_MedicinalProductDefinitionName(
+  _$_MedicinalProductDefinitionName(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16560,7 +16560,7 @@ class _$_MedicinalProductDefinitionName
 
 abstract class _MedicinalProductDefinitionName
     extends MedicinalProductDefinitionName {
-  const factory _MedicinalProductDefinitionName(
+  factory _MedicinalProductDefinitionName(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16570,7 +16570,7 @@ abstract class _MedicinalProductDefinitionName
       @JsonKey(name: 'part') final List<MedicinalProductDefinitionPart>? part_,
       final List<MedicinalProductDefinitionUsage>?
           usage}) = _$_MedicinalProductDefinitionName;
-  const _MedicinalProductDefinitionName._() : super._();
+  _MedicinalProductDefinitionName._() : super._();
 
   factory _MedicinalProductDefinitionName.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductDefinitionName.fromJson;
@@ -16851,7 +16851,7 @@ class __$$_MedicinalProductDefinitionPartCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicinalProductDefinitionPart
     extends _MedicinalProductDefinitionPart {
-  const _$_MedicinalProductDefinitionPart(
+  _$_MedicinalProductDefinitionPart(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16994,14 +16994,14 @@ class _$_MedicinalProductDefinitionPart
 
 abstract class _MedicinalProductDefinitionPart
     extends MedicinalProductDefinitionPart {
-  const factory _MedicinalProductDefinitionPart(
+  factory _MedicinalProductDefinitionPart(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'part') final String? part_,
       @JsonKey(name: '_part') final Element? partElement,
       required final CodeableConcept type}) = _$_MedicinalProductDefinitionPart;
-  const _MedicinalProductDefinitionPart._() : super._();
+  _MedicinalProductDefinitionPart._() : super._();
 
   factory _MedicinalProductDefinitionPart.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductDefinitionPart.fromJson;
@@ -17283,7 +17283,7 @@ class __$$_MedicinalProductDefinitionUsageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicinalProductDefinitionUsage
     extends _MedicinalProductDefinitionUsage {
-  const _$_MedicinalProductDefinitionUsage(
+  _$_MedicinalProductDefinitionUsage(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -17426,7 +17426,7 @@ class _$_MedicinalProductDefinitionUsage
 
 abstract class _MedicinalProductDefinitionUsage
     extends MedicinalProductDefinitionUsage {
-  const factory _MedicinalProductDefinitionUsage(
+  factory _MedicinalProductDefinitionUsage(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -17434,7 +17434,7 @@ abstract class _MedicinalProductDefinitionUsage
           final CodeableConcept? jurisdiction,
           required final CodeableConcept language}) =
       _$_MedicinalProductDefinitionUsage;
-  const _MedicinalProductDefinitionUsage._() : super._();
+  _MedicinalProductDefinitionUsage._() : super._();
 
   factory _MedicinalProductDefinitionUsage.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductDefinitionUsage.fromJson;
@@ -17692,7 +17692,7 @@ class __$$_MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicinalProductDefinitionCrossReference
     extends _MedicinalProductDefinitionCrossReference {
-  const _$_MedicinalProductDefinitionCrossReference(
+  _$_MedicinalProductDefinitionCrossReference(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -17826,14 +17826,14 @@ class _$_MedicinalProductDefinitionCrossReference
 
 abstract class _MedicinalProductDefinitionCrossReference
     extends MedicinalProductDefinitionCrossReference {
-  const factory _MedicinalProductDefinitionCrossReference(
+  factory _MedicinalProductDefinitionCrossReference(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableReference product,
           final CodeableConcept? type}) =
       _$_MedicinalProductDefinitionCrossReference;
-  const _MedicinalProductDefinitionCrossReference._() : super._();
+  _MedicinalProductDefinitionCrossReference._() : super._();
 
   factory _MedicinalProductDefinitionCrossReference.fromJson(
           Map<String, dynamic> json) =
@@ -18137,7 +18137,7 @@ class __$$_MedicinalProductDefinitionOperationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicinalProductDefinitionOperation
     extends _MedicinalProductDefinitionOperation {
-  const _$_MedicinalProductDefinitionOperation(
+  _$_MedicinalProductDefinitionOperation(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18299,7 +18299,7 @@ class _$_MedicinalProductDefinitionOperation
 
 abstract class _MedicinalProductDefinitionOperation
     extends MedicinalProductDefinitionOperation {
-  const factory _MedicinalProductDefinitionOperation(
+  factory _MedicinalProductDefinitionOperation(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -18308,7 +18308,7 @@ abstract class _MedicinalProductDefinitionOperation
           final List<Reference>? organization,
           final CodeableConcept? confidentialityIndicator}) =
       _$_MedicinalProductDefinitionOperation;
-  const _MedicinalProductDefinitionOperation._() : super._();
+  _MedicinalProductDefinitionOperation._() : super._();
 
   factory _MedicinalProductDefinitionOperation.fromJson(
           Map<String, dynamic> json) =
@@ -18817,7 +18817,7 @@ class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicinalProductDefinitionCharacteristic
     extends _MedicinalProductDefinitionCharacteristic {
-  const _$_MedicinalProductDefinitionCharacteristic(
+  _$_MedicinalProductDefinitionCharacteristic(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19036,7 +19036,7 @@ class _$_MedicinalProductDefinitionCharacteristic
 
 abstract class _MedicinalProductDefinitionCharacteristic
     extends MedicinalProductDefinitionCharacteristic {
-  const factory _MedicinalProductDefinitionCharacteristic(
+  factory _MedicinalProductDefinitionCharacteristic(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -19053,7 +19053,7 @@ abstract class _MedicinalProductDefinitionCharacteristic
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Attachment? valueAttachment}) =
       _$_MedicinalProductDefinitionCharacteristic;
-  const _MedicinalProductDefinitionCharacteristic._() : super._();
+  _MedicinalProductDefinitionCharacteristic._() : super._();
 
   factory _MedicinalProductDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =
@@ -19878,7 +19878,7 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PackagedProductDefinition extends _PackagedProductDefinition {
-  const _$_PackagedProductDefinition(
+  _$_PackagedProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
           this.resourceType = R5ResourceType.PackagedProductDefinition,
       this.id,
@@ -20292,7 +20292,7 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 }
 
 abstract class _PackagedProductDefinition extends PackagedProductDefinition {
-  const factory _PackagedProductDefinition(
+  factory _PackagedProductDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
               final R5ResourceType resourceType,
           final Id? id,
@@ -20333,7 +20333,7 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
           final PackagedProductDefinitionPackaging? packaging,
           final List<PackagedProductDefinitionProperty>? characteristic}) =
       _$_PackagedProductDefinition;
-  const _PackagedProductDefinition._() : super._();
+  _PackagedProductDefinition._() : super._();
 
   factory _PackagedProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_PackagedProductDefinition.fromJson;
@@ -20686,7 +20686,7 @@ class __$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PackagedProductDefinitionLegalStatusOfSupply
     extends _PackagedProductDefinitionLegalStatusOfSupply {
-  const _$_PackagedProductDefinitionLegalStatusOfSupply(
+  _$_PackagedProductDefinitionLegalStatusOfSupply(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20823,14 +20823,14 @@ class _$_PackagedProductDefinitionLegalStatusOfSupply
 
 abstract class _PackagedProductDefinitionLegalStatusOfSupply
     extends PackagedProductDefinitionLegalStatusOfSupply {
-  const factory _PackagedProductDefinitionLegalStatusOfSupply(
+  factory _PackagedProductDefinitionLegalStatusOfSupply(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? code,
           final CodeableConcept? jurisdiction}) =
       _$_PackagedProductDefinitionLegalStatusOfSupply;
-  const _PackagedProductDefinitionLegalStatusOfSupply._() : super._();
+  _PackagedProductDefinitionLegalStatusOfSupply._() : super._();
 
   factory _PackagedProductDefinitionLegalStatusOfSupply.fromJson(
           Map<String, dynamic> json) =
@@ -21274,7 +21274,7 @@ class __$$_PackagedProductDefinitionPackagingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PackagedProductDefinitionPackaging
     extends _PackagedProductDefinitionPackaging {
-  const _$_PackagedProductDefinitionPackaging(
+  _$_PackagedProductDefinitionPackaging(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -21579,7 +21579,7 @@ class _$_PackagedProductDefinitionPackaging
 
 abstract class _PackagedProductDefinitionPackaging
     extends PackagedProductDefinitionPackaging {
-  const factory _PackagedProductDefinitionPackaging(
+  factory _PackagedProductDefinitionPackaging(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -21597,7 +21597,7 @@ abstract class _PackagedProductDefinitionPackaging
           final List<PackagedProductDefinitionContainedItem>? containedItem,
           final List<PackagedProductDefinitionPackaging>? packaging}) =
       _$_PackagedProductDefinitionPackaging;
-  const _PackagedProductDefinitionPackaging._() : super._();
+  _PackagedProductDefinitionPackaging._() : super._();
 
   factory _PackagedProductDefinitionPackaging.fromJson(
           Map<String, dynamic> json) =
@@ -22049,7 +22049,7 @@ class __$$_PackagedProductDefinitionPropertyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PackagedProductDefinitionProperty
     extends _PackagedProductDefinitionProperty {
-  const _$_PackagedProductDefinitionProperty(
+  _$_PackagedProductDefinitionProperty(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -22234,7 +22234,7 @@ class _$_PackagedProductDefinitionProperty
 
 abstract class _PackagedProductDefinitionProperty
     extends PackagedProductDefinitionProperty {
-  const factory _PackagedProductDefinitionProperty(
+  factory _PackagedProductDefinitionProperty(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -22247,7 +22247,7 @@ abstract class _PackagedProductDefinitionProperty
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Attachment? valueAttachment}) =
       _$_PackagedProductDefinitionProperty;
-  const _PackagedProductDefinitionProperty._() : super._();
+  _PackagedProductDefinitionProperty._() : super._();
 
   factory _PackagedProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =
@@ -22527,7 +22527,7 @@ class __$$_PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PackagedProductDefinitionContainedItem
     extends _PackagedProductDefinitionContainedItem {
-  const _$_PackagedProductDefinitionContainedItem(
+  _$_PackagedProductDefinitionContainedItem(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -22661,13 +22661,13 @@ class _$_PackagedProductDefinitionContainedItem
 
 abstract class _PackagedProductDefinitionContainedItem
     extends PackagedProductDefinitionContainedItem {
-  const factory _PackagedProductDefinitionContainedItem(
+  factory _PackagedProductDefinitionContainedItem(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableReference item,
       final Quantity? amount}) = _$_PackagedProductDefinitionContainedItem;
-  const _PackagedProductDefinitionContainedItem._() : super._();
+  _PackagedProductDefinitionContainedItem._() : super._();
 
   factory _PackagedProductDefinitionContainedItem.fromJson(
           Map<String, dynamic> json) =
@@ -23437,7 +23437,7 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RegulatedAuthorization extends _RegulatedAuthorization {
-  const _$_RegulatedAuthorization(
+  _$_RegulatedAuthorization(
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
           this.resourceType = R5ResourceType.RegulatedAuthorization,
       this.id,
@@ -23803,7 +23803,7 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 }
 
 abstract class _RegulatedAuthorization extends RegulatedAuthorization {
-  const factory _RegulatedAuthorization(
+  factory _RegulatedAuthorization(
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
           final R5ResourceType resourceType,
       final Id? id,
@@ -23839,7 +23839,7 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
       final List<Reference>? attachedDocument,
       @JsonKey(name: 'case')
           final RegulatedAuthorizationCase? case_}) = _$_RegulatedAuthorization;
-  const _RegulatedAuthorization._() : super._();
+  _RegulatedAuthorization._() : super._();
 
   factory _RegulatedAuthorization.fromJson(Map<String, dynamic> json) =
       _$_RegulatedAuthorization.fromJson;
@@ -24300,7 +24300,7 @@ class __$$_RegulatedAuthorizationCaseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
-  const _$_RegulatedAuthorizationCase(
+  _$_RegulatedAuthorizationCase(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -24482,7 +24482,7 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
 }
 
 abstract class _RegulatedAuthorizationCase extends RegulatedAuthorizationCase {
-  const factory _RegulatedAuthorizationCase(
+  factory _RegulatedAuthorizationCase(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -24494,7 +24494,7 @@ abstract class _RegulatedAuthorizationCase extends RegulatedAuthorizationCase {
           @JsonKey(name: '_dateDateTime') final Element? dateDateTimeElement,
           final List<RegulatedAuthorizationCase>? application}) =
       _$_RegulatedAuthorizationCase;
-  const _RegulatedAuthorizationCase._() : super._();
+  _RegulatedAuthorizationCase._() : super._();
 
   factory _RegulatedAuthorizationCase.fromJson(Map<String, dynamic> json) =
       _$_RegulatedAuthorizationCase.fromJson;
@@ -25437,7 +25437,7 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceDefinition extends _SubstanceDefinition {
-  const _$_SubstanceDefinition(
+  _$_SubstanceDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
           this.resourceType = R5ResourceType.SubstanceDefinition,
       this.id,
@@ -25949,7 +25949,7 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 }
 
 abstract class _SubstanceDefinition extends SubstanceDefinition {
-  const factory _SubstanceDefinition(
+  factory _SubstanceDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
               final R5ResourceType resourceType,
           final Id? id,
@@ -25994,7 +25994,7 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
           final Reference? protein,
           final SubstanceDefinitionSourceMaterial? sourceMaterial}) =
       _$_SubstanceDefinition;
-  const _SubstanceDefinition._() : super._();
+  _SubstanceDefinition._() : super._();
 
   factory _SubstanceDefinition.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinition.fromJson;
@@ -26625,7 +26625,7 @@ class __$$_SubstanceDefinitionMoietyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
-  const _$_SubstanceDefinitionMoiety(
+  _$_SubstanceDefinitionMoiety(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -26840,7 +26840,7 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
 }
 
 abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
-  const factory _SubstanceDefinitionMoiety(
+  factory _SubstanceDefinitionMoiety(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -26860,7 +26860,7 @@ abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
       @JsonKey(name: '_amountString')
           final Element? amountStringElement,
       final CodeableConcept? measurementType}) = _$_SubstanceDefinitionMoiety;
-  const _SubstanceDefinitionMoiety._() : super._();
+  _SubstanceDefinitionMoiety._() : super._();
 
   factory _SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionMoiety.fromJson;
@@ -27219,7 +27219,7 @@ class __$$_SubstanceDefinitionCharacterizationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceDefinitionCharacterization
     extends _SubstanceDefinitionCharacterization {
-  const _$_SubstanceDefinitionCharacterization(
+  _$_SubstanceDefinitionCharacterization(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -27388,7 +27388,7 @@ class _$_SubstanceDefinitionCharacterization
 
 abstract class _SubstanceDefinitionCharacterization
     extends SubstanceDefinitionCharacterization {
-  const factory _SubstanceDefinitionCharacterization(
+  factory _SubstanceDefinitionCharacterization(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -27397,7 +27397,7 @@ abstract class _SubstanceDefinitionCharacterization
       final Markdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<Attachment>? file}) = _$_SubstanceDefinitionCharacterization;
-  const _SubstanceDefinitionCharacterization._() : super._();
+  _SubstanceDefinitionCharacterization._() : super._();
 
   factory _SubstanceDefinitionCharacterization.fromJson(
           Map<String, dynamic> json) =
@@ -27815,7 +27815,7 @@ class __$$_SubstanceDefinitionPropertyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
-  const _$_SubstanceDefinitionProperty(
+  _$_SubstanceDefinitionProperty(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -27998,7 +27998,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 
 abstract class _SubstanceDefinitionProperty
     extends SubstanceDefinitionProperty {
-  const factory _SubstanceDefinitionProperty(
+  factory _SubstanceDefinitionProperty(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -28010,7 +28010,7 @@ abstract class _SubstanceDefinitionProperty
       final Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final Attachment? valueAttachment}) = _$_SubstanceDefinitionProperty;
-  const _SubstanceDefinitionProperty._() : super._();
+  _SubstanceDefinitionProperty._() : super._();
 
   factory _SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionProperty.fromJson;
@@ -28317,7 +28317,7 @@ class __$$_SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceDefinitionMolecularWeight
     extends _SubstanceDefinitionMolecularWeight {
-  const _$_SubstanceDefinitionMolecularWeight(
+  _$_SubstanceDefinitionMolecularWeight(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -28458,14 +28458,14 @@ class _$_SubstanceDefinitionMolecularWeight
 
 abstract class _SubstanceDefinitionMolecularWeight
     extends SubstanceDefinitionMolecularWeight {
-  const factory _SubstanceDefinitionMolecularWeight(
+  factory _SubstanceDefinitionMolecularWeight(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? method,
       final CodeableConcept? type,
       required final Quantity amount}) = _$_SubstanceDefinitionMolecularWeight;
-  const _SubstanceDefinitionMolecularWeight._() : super._();
+  _SubstanceDefinitionMolecularWeight._() : super._();
 
   factory _SubstanceDefinitionMolecularWeight.fromJson(
           Map<String, dynamic> json) =
@@ -28905,7 +28905,7 @@ class __$$_SubstanceDefinitionStructureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
-  const _$_SubstanceDefinitionStructure(
+  _$_SubstanceDefinitionStructure(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -29142,7 +29142,7 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
 
 abstract class _SubstanceDefinitionStructure
     extends SubstanceDefinitionStructure {
-  const factory _SubstanceDefinitionStructure(
+  factory _SubstanceDefinitionStructure(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -29160,7 +29160,7 @@ abstract class _SubstanceDefinitionStructure
           final List<Reference>? sourceDocument,
           final List<SubstanceDefinitionRepresentation>? representation}) =
       _$_SubstanceDefinitionStructure;
-  const _SubstanceDefinitionStructure._() : super._();
+  _SubstanceDefinitionStructure._() : super._();
 
   factory _SubstanceDefinitionStructure.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionStructure.fromJson;
@@ -29524,7 +29524,7 @@ class __$$_SubstanceDefinitionRepresentationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceDefinitionRepresentation
     extends _SubstanceDefinitionRepresentation {
-  const _$_SubstanceDefinitionRepresentation(
+  _$_SubstanceDefinitionRepresentation(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -29683,7 +29683,7 @@ class _$_SubstanceDefinitionRepresentation
 
 abstract class _SubstanceDefinitionRepresentation
     extends SubstanceDefinitionRepresentation {
-  const factory _SubstanceDefinitionRepresentation(
+  factory _SubstanceDefinitionRepresentation(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -29692,7 +29692,7 @@ abstract class _SubstanceDefinitionRepresentation
       @JsonKey(name: '_representation') final Element? representationElement,
       final CodeableConcept? format,
       final Reference? document}) = _$_SubstanceDefinitionRepresentation;
-  const _SubstanceDefinitionRepresentation._() : super._();
+  _SubstanceDefinitionRepresentation._() : super._();
 
   factory _SubstanceDefinitionRepresentation.fromJson(
           Map<String, dynamic> json) =
@@ -30032,7 +30032,7 @@ class __$$_SubstanceDefinitionCodeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
-  const _$_SubstanceDefinitionCode(
+  _$_SubstanceDefinitionCode(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30215,7 +30215,7 @@ class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
 }
 
 abstract class _SubstanceDefinitionCode extends SubstanceDefinitionCode {
-  const factory _SubstanceDefinitionCode(
+  factory _SubstanceDefinitionCode(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30225,7 +30225,7 @@ abstract class _SubstanceDefinitionCode extends SubstanceDefinitionCode {
       @JsonKey(name: '_statusDate') final Element? statusDateElement,
       final List<Annotation>? note,
       final List<Reference>? source}) = _$_SubstanceDefinitionCode;
-  const _SubstanceDefinitionCode._() : super._();
+  _SubstanceDefinitionCode._() : super._();
 
   factory _SubstanceDefinitionCode.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionCode.fromJson;
@@ -30691,7 +30691,7 @@ class __$$_SubstanceDefinitionNameCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
-  const _$_SubstanceDefinitionName(
+  _$_SubstanceDefinitionName(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30977,7 +30977,7 @@ class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
 }
 
 abstract class _SubstanceDefinitionName extends SubstanceDefinitionName {
-  const factory _SubstanceDefinitionName(
+  factory _SubstanceDefinitionName(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30994,7 +30994,7 @@ abstract class _SubstanceDefinitionName extends SubstanceDefinitionName {
       final List<SubstanceDefinitionName>? translation,
       final List<SubstanceDefinitionOfficial>? official,
       final List<Reference>? source}) = _$_SubstanceDefinitionName;
-  const _SubstanceDefinitionName._() : super._();
+  _SubstanceDefinitionName._() : super._();
 
   factory _SubstanceDefinitionName.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionName.fromJson;
@@ -31339,7 +31339,7 @@ class __$$_SubstanceDefinitionOfficialCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
-  const _$_SubstanceDefinitionOfficial(
+  _$_SubstanceDefinitionOfficial(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -31488,7 +31488,7 @@ class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
 
 abstract class _SubstanceDefinitionOfficial
     extends SubstanceDefinitionOfficial {
-  const factory _SubstanceDefinitionOfficial(
+  factory _SubstanceDefinitionOfficial(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -31497,7 +31497,7 @@ abstract class _SubstanceDefinitionOfficial
           final FhirDateTime? date,
           @JsonKey(name: '_date') final Element? dateElement}) =
       _$_SubstanceDefinitionOfficial;
-  const _SubstanceDefinitionOfficial._() : super._();
+  _SubstanceDefinitionOfficial._() : super._();
 
   factory _SubstanceDefinitionOfficial.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionOfficial.fromJson;
@@ -32021,7 +32021,7 @@ class __$$_SubstanceDefinitionRelationshipCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceDefinitionRelationship
     extends _SubstanceDefinitionRelationship {
-  const _$_SubstanceDefinitionRelationship(
+  _$_SubstanceDefinitionRelationship(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -32251,7 +32251,7 @@ class _$_SubstanceDefinitionRelationship
 
 abstract class _SubstanceDefinitionRelationship
     extends SubstanceDefinitionRelationship {
-  const factory _SubstanceDefinitionRelationship(
+  factory _SubstanceDefinitionRelationship(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -32267,7 +32267,7 @@ abstract class _SubstanceDefinitionRelationship
       final Ratio? ratioHighLimitAmount,
       final CodeableConcept? comparator,
       final List<Reference>? source}) = _$_SubstanceDefinitionRelationship;
-  const _SubstanceDefinitionRelationship._() : super._();
+  _SubstanceDefinitionRelationship._() : super._();
 
   factory _SubstanceDefinitionRelationship.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionRelationship.fromJson;
@@ -32641,7 +32641,7 @@ class __$$_SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceDefinitionSourceMaterial
     extends _SubstanceDefinitionSourceMaterial {
-  const _$_SubstanceDefinitionSourceMaterial(
+  _$_SubstanceDefinitionSourceMaterial(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -32808,7 +32808,7 @@ class _$_SubstanceDefinitionSourceMaterial
 
 abstract class _SubstanceDefinitionSourceMaterial
     extends SubstanceDefinitionSourceMaterial {
-  const factory _SubstanceDefinitionSourceMaterial(
+  factory _SubstanceDefinitionSourceMaterial(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -32818,7 +32818,7 @@ abstract class _SubstanceDefinitionSourceMaterial
           @JsonKey(name: 'part') final CodeableConcept? part_,
           final List<CodeableConcept>? countryOfOrigin}) =
       _$_SubstanceDefinitionSourceMaterial;
-  const _SubstanceDefinitionSourceMaterial._() : super._();
+  _SubstanceDefinitionSourceMaterial._() : super._();
 
   factory _SubstanceDefinitionSourceMaterial.fromJson(
           Map<String, dynamic> json) =
@@ -33373,7 +33373,7 @@ class __$$_SubstanceNucleicAcidCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
-  const _$_SubstanceNucleicAcid(
+  _$_SubstanceNucleicAcid(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
           this.resourceType = R5ResourceType.SubstanceNucleicAcid,
       this.id,
@@ -33614,7 +33614,7 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
 }
 
 abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
-  const factory _SubstanceNucleicAcid(
+  factory _SubstanceNucleicAcid(
           {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
               final R5ResourceType resourceType,
           final Id? id,
@@ -33640,7 +33640,7 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
           final CodeableConcept? oligoNucleotideType,
           final List<SubstanceNucleicAcidSubunit>? subunit}) =
       _$_SubstanceNucleicAcid;
-  const _SubstanceNucleicAcid._() : super._();
+  _SubstanceNucleicAcid._() : super._();
 
   factory _SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcid.fromJson;
@@ -34139,7 +34139,7 @@ class __$$_SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
-  const _$_SubstanceNucleicAcidSubunit(
+  _$_SubstanceNucleicAcidSubunit(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -34364,7 +34364,7 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
 
 abstract class _SubstanceNucleicAcidSubunit
     extends SubstanceNucleicAcidSubunit {
-  const factory _SubstanceNucleicAcidSubunit(
+  factory _SubstanceNucleicAcidSubunit(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -34380,7 +34380,7 @@ abstract class _SubstanceNucleicAcidSubunit
           final List<SubstanceNucleicAcidLinkage>? linkage,
           final List<SubstanceNucleicAcidSugar>? sugar}) =
       _$_SubstanceNucleicAcidSubunit;
-  const _SubstanceNucleicAcidSubunit._() : super._();
+  _SubstanceNucleicAcidSubunit._() : super._();
 
   factory _SubstanceNucleicAcidSubunit.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcidSubunit.fromJson;
@@ -34780,7 +34780,7 @@ class __$$_SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
-  const _$_SubstanceNucleicAcidLinkage(
+  _$_SubstanceNucleicAcidLinkage(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -34956,7 +34956,7 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
 
 abstract class _SubstanceNucleicAcidLinkage
     extends SubstanceNucleicAcidLinkage {
-  const factory _SubstanceNucleicAcidLinkage(
+  factory _SubstanceNucleicAcidLinkage(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -34968,7 +34968,7 @@ abstract class _SubstanceNucleicAcidLinkage
           final String? residueSite,
           @JsonKey(name: '_residueSite') final Element? residueSiteElement}) =
       _$_SubstanceNucleicAcidLinkage;
-  const _SubstanceNucleicAcidLinkage._() : super._();
+  _SubstanceNucleicAcidLinkage._() : super._();
 
   factory _SubstanceNucleicAcidLinkage.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcidLinkage.fromJson;
@@ -35304,7 +35304,7 @@ class __$$_SubstanceNucleicAcidSugarCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
-  const _$_SubstanceNucleicAcidSugar(
+  _$_SubstanceNucleicAcidSugar(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -35462,7 +35462,7 @@ class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
 }
 
 abstract class _SubstanceNucleicAcidSugar extends SubstanceNucleicAcidSugar {
-  const factory _SubstanceNucleicAcidSugar(
+  factory _SubstanceNucleicAcidSugar(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -35472,7 +35472,7 @@ abstract class _SubstanceNucleicAcidSugar extends SubstanceNucleicAcidSugar {
           final String? residueSite,
           @JsonKey(name: '_residueSite') final Element? residueSiteElement}) =
       _$_SubstanceNucleicAcidSugar;
-  const _SubstanceNucleicAcidSugar._() : super._();
+  _SubstanceNucleicAcidSugar._() : super._();
 
   factory _SubstanceNucleicAcidSugar.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcidSugar.fromJson;
@@ -36041,7 +36041,7 @@ class __$$_SubstancePolymerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstancePolymer extends _SubstancePolymer {
-  const _$_SubstancePolymer(
+  _$_SubstancePolymer(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
           this.resourceType = R5ResourceType.SubstancePolymer,
       this.id,
@@ -36307,7 +36307,7 @@ class _$_SubstancePolymer extends _SubstancePolymer {
 }
 
 abstract class _SubstancePolymer extends SubstancePolymer {
-  const factory _SubstancePolymer(
+  factory _SubstancePolymer(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
           final R5ResourceType resourceType,
       final Id? id,
@@ -36333,7 +36333,7 @@ abstract class _SubstancePolymer extends SubstancePolymer {
           final Element? modificationElement,
       final List<SubstancePolymerMonomerSet>? monomerSet,
       final List<SubstancePolymerRepeat>? repeat}) = _$_SubstancePolymer;
-  const _SubstancePolymer._() : super._();
+  _SubstancePolymer._() : super._();
 
   factory _SubstancePolymer.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymer.fromJson;
@@ -36621,7 +36621,7 @@ class __$$_SubstancePolymerMonomerSetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
-  const _$_SubstancePolymerMonomerSet(
+  _$_SubstancePolymerMonomerSet(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -36765,14 +36765,14 @@ class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
 }
 
 abstract class _SubstancePolymerMonomerSet extends SubstancePolymerMonomerSet {
-  const factory _SubstancePolymerMonomerSet(
+  factory _SubstancePolymerMonomerSet(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? ratioType,
           final List<SubstancePolymerStartingMaterial>? startingMaterial}) =
       _$_SubstancePolymerMonomerSet;
-  const _SubstancePolymerMonomerSet._() : super._();
+  _SubstancePolymerMonomerSet._() : super._();
 
   factory _SubstancePolymerMonomerSet.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymerMonomerSet.fromJson;
@@ -37102,7 +37102,7 @@ class __$$_SubstancePolymerStartingMaterialCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstancePolymerStartingMaterial
     extends _SubstancePolymerStartingMaterial {
-  const _$_SubstancePolymerStartingMaterial(
+  _$_SubstancePolymerStartingMaterial(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -37261,7 +37261,7 @@ class _$_SubstancePolymerStartingMaterial
 
 abstract class _SubstancePolymerStartingMaterial
     extends SubstancePolymerStartingMaterial {
-  const factory _SubstancePolymerStartingMaterial(
+  factory _SubstancePolymerStartingMaterial(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -37270,7 +37270,7 @@ abstract class _SubstancePolymerStartingMaterial
       final Boolean? isDefining,
       @JsonKey(name: '_isDefining') final Element? isDefiningElement,
       final Quantity? amount}) = _$_SubstancePolymerStartingMaterial;
-  const _SubstancePolymerStartingMaterial._() : super._();
+  _SubstancePolymerStartingMaterial._() : super._();
 
   factory _SubstancePolymerStartingMaterial.fromJson(
       Map<String, dynamic> json) = _$_SubstancePolymerStartingMaterial.fromJson;
@@ -37574,7 +37574,7 @@ class __$$_SubstancePolymerRepeatCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
-  const _$_SubstancePolymerRepeat(
+  _$_SubstancePolymerRepeat(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -37739,7 +37739,7 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
 }
 
 abstract class _SubstancePolymerRepeat extends SubstancePolymerRepeat {
-  const factory _SubstancePolymerRepeat(
+  factory _SubstancePolymerRepeat(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -37750,7 +37750,7 @@ abstract class _SubstancePolymerRepeat extends SubstancePolymerRepeat {
           final CodeableConcept? repeatUnitAmountType,
           final List<SubstancePolymerRepeatUnit>? repeatUnit}) =
       _$_SubstancePolymerRepeat;
-  const _SubstancePolymerRepeat._() : super._();
+  _SubstancePolymerRepeat._() : super._();
 
   factory _SubstancePolymerRepeat.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymerRepeat.fromJson;
@@ -38107,7 +38107,7 @@ class __$$_SubstancePolymerRepeatUnitCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
-  const _$_SubstancePolymerRepeatUnit(
+  _$_SubstancePolymerRepeatUnit(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -38305,7 +38305,7 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
 }
 
 abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
-  const factory _SubstancePolymerRepeatUnit(
+  factory _SubstancePolymerRepeatUnit(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -38318,7 +38318,7 @@ abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
           degreeOfPolymerisation,
       final List<SubstancePolymerStructuralRepresentation>?
           structuralRepresentation}) = _$_SubstancePolymerRepeatUnit;
-  const _SubstancePolymerRepeatUnit._() : super._();
+  _SubstancePolymerRepeatUnit._() : super._();
 
   factory _SubstancePolymerRepeatUnit.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymerRepeatUnit.fromJson;
@@ -38704,7 +38704,7 @@ class __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstancePolymerDegreeOfPolymerisation
     extends _SubstancePolymerDegreeOfPolymerisation {
-  const _$_SubstancePolymerDegreeOfPolymerisation(
+  _$_SubstancePolymerDegreeOfPolymerisation(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -38879,7 +38879,7 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 
 abstract class _SubstancePolymerDegreeOfPolymerisation
     extends SubstancePolymerDegreeOfPolymerisation {
-  const factory _SubstancePolymerDegreeOfPolymerisation(
+  factory _SubstancePolymerDegreeOfPolymerisation(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -38891,7 +38891,7 @@ abstract class _SubstancePolymerDegreeOfPolymerisation
           final Integer? high,
           @JsonKey(name: '_high') final Element? highElement}) =
       _$_SubstancePolymerDegreeOfPolymerisation;
-  const _SubstancePolymerDegreeOfPolymerisation._() : super._();
+  _SubstancePolymerDegreeOfPolymerisation._() : super._();
 
   factory _SubstancePolymerDegreeOfPolymerisation.fromJson(
           Map<String, dynamic> json) =
@@ -39249,7 +39249,7 @@ class __$$_SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstancePolymerStructuralRepresentation
     extends _SubstancePolymerStructuralRepresentation {
-  const _$_SubstancePolymerStructuralRepresentation(
+  _$_SubstancePolymerStructuralRepresentation(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -39408,7 +39408,7 @@ class _$_SubstancePolymerStructuralRepresentation
 
 abstract class _SubstancePolymerStructuralRepresentation
     extends SubstancePolymerStructuralRepresentation {
-  const factory _SubstancePolymerStructuralRepresentation(
+  factory _SubstancePolymerStructuralRepresentation(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -39418,7 +39418,7 @@ abstract class _SubstancePolymerStructuralRepresentation
       final CodeableConcept? format,
       final Attachment?
           attachment}) = _$_SubstancePolymerStructuralRepresentation;
-  const _SubstancePolymerStructuralRepresentation._() : super._();
+  _SubstancePolymerStructuralRepresentation._() : super._();
 
   factory _SubstancePolymerStructuralRepresentation.fromJson(
           Map<String, dynamic> json) =
@@ -39927,7 +39927,7 @@ class __$$_SubstanceProteinCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceProtein extends _SubstanceProtein {
-  const _$_SubstanceProtein(
+  _$_SubstanceProtein(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
           this.resourceType = R5ResourceType.SubstanceProtein,
       this.id,
@@ -40179,7 +40179,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
 }
 
 abstract class _SubstanceProtein extends SubstanceProtein {
-  const factory _SubstanceProtein(
+  factory _SubstanceProtein(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
           final R5ResourceType resourceType,
       final Id? id,
@@ -40203,7 +40203,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
       @JsonKey(name: '_disulfideLinkage')
           final List<Element>? disulfideLinkageElement,
       final List<SubstanceProteinSubunit>? subunit}) = _$_SubstanceProtein;
-  const _SubstanceProtein._() : super._();
+  _SubstanceProtein._() : super._();
 
   factory _SubstanceProtein.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProtein.fromJson;
@@ -40772,7 +40772,7 @@ class __$$_SubstanceProteinSubunitCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
-  const _$_SubstanceProteinSubunit(
+  _$_SubstanceProteinSubunit(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -41009,7 +41009,7 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
 }
 
 abstract class _SubstanceProteinSubunit extends SubstanceProteinSubunit {
-  const factory _SubstanceProteinSubunit(
+  factory _SubstanceProteinSubunit(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -41033,7 +41033,7 @@ abstract class _SubstanceProteinSubunit extends SubstanceProteinSubunit {
           @JsonKey(name: '_cTerminalModification')
               final Element? cTerminalModificationElement}) =
       _$_SubstanceProteinSubunit;
-  const _SubstanceProteinSubunit._() : super._();
+  _SubstanceProteinSubunit._() : super._();
 
   factory _SubstanceProteinSubunit.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProteinSubunit.fromJson;
@@ -41551,7 +41551,7 @@ class __$$_SubstanceReferenceInformationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
-  const _$_SubstanceReferenceInformation(
+  _$_SubstanceReferenceInformation(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
           this.resourceType = R5ResourceType.SubstanceReferenceInformation,
       this.id,
@@ -41791,7 +41791,7 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
 
 abstract class _SubstanceReferenceInformation
     extends SubstanceReferenceInformation {
-  const factory _SubstanceReferenceInformation(
+  factory _SubstanceReferenceInformation(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
           final R5ResourceType resourceType,
       final Id? id,
@@ -41814,7 +41814,7 @@ abstract class _SubstanceReferenceInformation
       final List<SubstanceReferenceInformationGeneElement>? geneElement,
       final List<SubstanceReferenceInformationTarget>?
           target}) = _$_SubstanceReferenceInformation;
-  const _SubstanceReferenceInformation._() : super._();
+  _SubstanceReferenceInformation._() : super._();
 
   factory _SubstanceReferenceInformation.fromJson(Map<String, dynamic> json) =
       _$_SubstanceReferenceInformation.fromJson;
@@ -42120,7 +42120,7 @@ class __$$_SubstanceReferenceInformationGeneCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceReferenceInformationGene
     extends _SubstanceReferenceInformationGene {
-  const _$_SubstanceReferenceInformationGene(
+  _$_SubstanceReferenceInformationGene(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -42272,14 +42272,14 @@ class _$_SubstanceReferenceInformationGene
 
 abstract class _SubstanceReferenceInformationGene
     extends SubstanceReferenceInformationGene {
-  const factory _SubstanceReferenceInformationGene(
+  factory _SubstanceReferenceInformationGene(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? geneSequenceOrigin,
       final CodeableConcept? gene,
       final List<Reference>? source}) = _$_SubstanceReferenceInformationGene;
-  const _SubstanceReferenceInformationGene._() : super._();
+  _SubstanceReferenceInformationGene._() : super._();
 
   factory _SubstanceReferenceInformationGene.fromJson(
           Map<String, dynamic> json) =
@@ -42557,7 +42557,7 @@ class __$$_SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceReferenceInformationGeneElement
     extends _SubstanceReferenceInformationGeneElement {
-  const _$_SubstanceReferenceInformationGeneElement(
+  _$_SubstanceReferenceInformationGeneElement(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -42708,7 +42708,7 @@ class _$_SubstanceReferenceInformationGeneElement
 
 abstract class _SubstanceReferenceInformationGeneElement
     extends SubstanceReferenceInformationGeneElement {
-  const factory _SubstanceReferenceInformationGeneElement(
+  factory _SubstanceReferenceInformationGeneElement(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -42716,7 +42716,7 @@ abstract class _SubstanceReferenceInformationGeneElement
           final Identifier? element,
           final List<Reference>? source}) =
       _$_SubstanceReferenceInformationGeneElement;
-  const _SubstanceReferenceInformationGeneElement._() : super._();
+  _SubstanceReferenceInformationGeneElement._() : super._();
 
   factory _SubstanceReferenceInformationGeneElement.fromJson(
           Map<String, dynamic> json) =
@@ -43218,7 +43218,7 @@ class __$$_SubstanceReferenceInformationTargetCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceReferenceInformationTarget
     extends _SubstanceReferenceInformationTarget {
-  const _$_SubstanceReferenceInformationTarget(
+  _$_SubstanceReferenceInformationTarget(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -43434,7 +43434,7 @@ class _$_SubstanceReferenceInformationTarget
 
 abstract class _SubstanceReferenceInformationTarget
     extends SubstanceReferenceInformationTarget {
-  const factory _SubstanceReferenceInformationTarget(
+  factory _SubstanceReferenceInformationTarget(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -43449,7 +43449,7 @@ abstract class _SubstanceReferenceInformationTarget
       @JsonKey(name: '_amountString') final Element? amountStringElement,
       final CodeableConcept? amountType,
       final List<Reference>? source}) = _$_SubstanceReferenceInformationTarget;
-  const _SubstanceReferenceInformationTarget._() : super._();
+  _SubstanceReferenceInformationTarget._() : super._();
 
   factory _SubstanceReferenceInformationTarget.fromJson(
           Map<String, dynamic> json) =
@@ -44220,7 +44220,7 @@ class __$$_SubstanceSourceMaterialCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
-  const _$_SubstanceSourceMaterial(
+  _$_SubstanceSourceMaterial(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
           this.resourceType = R5ResourceType.SubstanceSourceMaterial,
       this.id,
@@ -44614,7 +44614,7 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
 }
 
 abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
-  const factory _SubstanceSourceMaterial(
+  factory _SubstanceSourceMaterial(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
           final R5ResourceType resourceType,
       final Id? id,
@@ -44651,7 +44651,7 @@ abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
       final SubstanceSourceMaterialOrganism? organism,
       final List<SubstanceSourceMaterialPartDescription>?
           partDescription}) = _$_SubstanceSourceMaterial;
-  const _SubstanceSourceMaterial._() : super._();
+  _SubstanceSourceMaterial._() : super._();
 
   factory _SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterial.fromJson;
@@ -45007,7 +45007,7 @@ class __$$_SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceSourceMaterialFractionDescription
     extends _SubstanceSourceMaterialFractionDescription {
-  const _$_SubstanceSourceMaterialFractionDescription(
+  _$_SubstanceSourceMaterialFractionDescription(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -45153,7 +45153,7 @@ class _$_SubstanceSourceMaterialFractionDescription
 
 abstract class _SubstanceSourceMaterialFractionDescription
     extends SubstanceSourceMaterialFractionDescription {
-  const factory _SubstanceSourceMaterialFractionDescription(
+  factory _SubstanceSourceMaterialFractionDescription(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -45161,7 +45161,7 @@ abstract class _SubstanceSourceMaterialFractionDescription
           @JsonKey(name: '_fraction') final Element? fractionElement,
           final CodeableConcept? materialType}) =
       _$_SubstanceSourceMaterialFractionDescription;
-  const _SubstanceSourceMaterialFractionDescription._() : super._();
+  _SubstanceSourceMaterialFractionDescription._() : super._();
 
   factory _SubstanceSourceMaterialFractionDescription.fromJson(
           Map<String, dynamic> json) =
@@ -45617,7 +45617,7 @@ class __$$_SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceSourceMaterialOrganism
     extends _SubstanceSourceMaterialOrganism {
-  const _$_SubstanceSourceMaterialOrganism(
+  _$_SubstanceSourceMaterialOrganism(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -45820,7 +45820,7 @@ class _$_SubstanceSourceMaterialOrganism
 
 abstract class _SubstanceSourceMaterialOrganism
     extends SubstanceSourceMaterialOrganism {
-  const factory _SubstanceSourceMaterialOrganism(
+  factory _SubstanceSourceMaterialOrganism(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -45836,7 +45836,7 @@ abstract class _SubstanceSourceMaterialOrganism
           final SubstanceSourceMaterialHybrid? hybrid,
           final SubstanceSourceMaterialOrganismGeneral? organismGeneral}) =
       _$_SubstanceSourceMaterialOrganism;
-  const _SubstanceSourceMaterialOrganism._() : super._();
+  _SubstanceSourceMaterialOrganism._() : super._();
 
   factory _SubstanceSourceMaterialOrganism.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialOrganism.fromJson;
@@ -46135,7 +46135,7 @@ class __$$_SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
-  const _$_SubstanceSourceMaterialAuthor(
+  _$_SubstanceSourceMaterialAuthor(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -46280,7 +46280,7 @@ class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
 
 abstract class _SubstanceSourceMaterialAuthor
     extends SubstanceSourceMaterialAuthor {
-  const factory _SubstanceSourceMaterialAuthor(
+  factory _SubstanceSourceMaterialAuthor(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -46290,7 +46290,7 @@ abstract class _SubstanceSourceMaterialAuthor
           @JsonKey(name: '_authorDescription')
               final Element? authorDescriptionElement}) =
       _$_SubstanceSourceMaterialAuthor;
-  const _SubstanceSourceMaterialAuthor._() : super._();
+  _SubstanceSourceMaterialAuthor._() : super._();
 
   factory _SubstanceSourceMaterialAuthor.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialAuthor.fromJson;
@@ -46714,7 +46714,7 @@ class __$$_SubstanceSourceMaterialHybridCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
-  const _$_SubstanceSourceMaterialHybrid(
+  _$_SubstanceSourceMaterialHybrid(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -46915,7 +46915,7 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
 
 abstract class _SubstanceSourceMaterialHybrid
     extends SubstanceSourceMaterialHybrid {
-  const factory _SubstanceSourceMaterialHybrid(
+  factory _SubstanceSourceMaterialHybrid(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -46933,7 +46933,7 @@ abstract class _SubstanceSourceMaterialHybrid
       @JsonKey(name: '_paternalOrganismName')
           final Element? paternalOrganismNameElement,
       final CodeableConcept? hybridType}) = _$_SubstanceSourceMaterialHybrid;
-  const _SubstanceSourceMaterialHybrid._() : super._();
+  _SubstanceSourceMaterialHybrid._() : super._();
 
   factory _SubstanceSourceMaterialHybrid.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialHybrid.fromJson;
@@ -47282,7 +47282,7 @@ class __$$_SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceSourceMaterialOrganismGeneral
     extends _SubstanceSourceMaterialOrganismGeneral {
-  const _$_SubstanceSourceMaterialOrganismGeneral(
+  _$_SubstanceSourceMaterialOrganismGeneral(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -47431,7 +47431,7 @@ class _$_SubstanceSourceMaterialOrganismGeneral
 
 abstract class _SubstanceSourceMaterialOrganismGeneral
     extends SubstanceSourceMaterialOrganismGeneral {
-  const factory _SubstanceSourceMaterialOrganismGeneral(
+  factory _SubstanceSourceMaterialOrganismGeneral(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -47440,7 +47440,7 @@ abstract class _SubstanceSourceMaterialOrganismGeneral
           @JsonKey(name: 'class') final CodeableConcept? class_,
           final CodeableConcept? order}) =
       _$_SubstanceSourceMaterialOrganismGeneral;
-  const _SubstanceSourceMaterialOrganismGeneral._() : super._();
+  _SubstanceSourceMaterialOrganismGeneral._() : super._();
 
   factory _SubstanceSourceMaterialOrganismGeneral.fromJson(
           Map<String, dynamic> json) =
@@ -47708,7 +47708,7 @@ class __$$_SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceSourceMaterialPartDescription
     extends _SubstanceSourceMaterialPartDescription {
-  const _$_SubstanceSourceMaterialPartDescription(
+  _$_SubstanceSourceMaterialPartDescription(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -47844,14 +47844,14 @@ class _$_SubstanceSourceMaterialPartDescription
 
 abstract class _SubstanceSourceMaterialPartDescription
     extends SubstanceSourceMaterialPartDescription {
-  const factory _SubstanceSourceMaterialPartDescription(
+  factory _SubstanceSourceMaterialPartDescription(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'part') final CodeableConcept? part_,
           final CodeableConcept? partLocation}) =
       _$_SubstanceSourceMaterialPartDescription;
-  const _SubstanceSourceMaterialPartDescription._() : super._();
+  _SubstanceSourceMaterialPartDescription._() : super._();
 
   factory _SubstanceSourceMaterialPartDescription.fromJson(
           Map<String, dynamic> json) =

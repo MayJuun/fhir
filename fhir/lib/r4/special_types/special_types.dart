@@ -41,7 +41,7 @@ class Narrative with _$Narrative {
   /// [statusElement] (_status) Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
-  const factory Narrative({
+  factory Narrative({
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.
     String? id,
@@ -125,7 +125,7 @@ class CodeableReference with _$CodeableReference {
   ///
   /// [reference] A reference to a resource the provides exact details about the
   /// information being referenced.
-  const factory CodeableReference({
+  factory CodeableReference({
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.",
     String? id,
@@ -232,7 +232,7 @@ class Reference with _$Reference {
   ///  to the resource reference.
   ///
   /// [displayElement] Extensions for display
-  const factory Reference({
+  factory Reference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -371,7 +371,7 @@ class Meta with _$Meta {
   /// identify and relate resources to process and workflow, and applications
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
-  const factory Meta({
+  factory Meta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -532,7 +532,7 @@ class Dosage with _$Dosage {
   ///
   /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
   ///  patient.
-  const factory Dosage({
+  factory Dosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -700,7 +700,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   /// [rateRange] Amount of medication per unit of time.
   ///
   /// [rateQuantity] Amount of medication per unit of time.
-  const factory DosageDoseAndRate({
+  factory DosageDoseAndRate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2433,7 +2433,7 @@ class ElementDefinition with _$ElementDefinition {
   ///
   /// [mapping] Identifies a concept from an external specification that
   ///  roughly corresponds to this element.
-  const factory ElementDefinition({
+  factory ElementDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4561,7 +4561,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ///  allowed at the end.
   ///
   /// [rulesElement] Extensions for rules
-  const factory ElementDefinitionSlicing({
+  factory ElementDefinitionSlicing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4701,7 +4701,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ///  which discrimination is based.
   ///
   /// [pathElement] Extensions for path
-  const factory ElementDefinitionDiscriminator({
+  factory ElementDefinitionDiscriminator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4828,7 +4828,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// [max] Maximum cardinality of the base element identified by the path.
   ///
   /// [maxElement] Extensions for max
-  const factory ElementDefinitionBase({
+  factory ElementDefinitionBase({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4978,7 +4978,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
   ///  version independent, or whether either can be used.
   ///
   /// [versioningElement] Extensions for versioning
-  const factory ElementDefinitionType({
+  factory ElementDefinitionType({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5314,7 +5314,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   ///
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  const factory ElementDefinitionExample({
+  factory ElementDefinitionExample({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5705,7 +5705,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ///
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-  const factory ElementDefinitionConstraint({
+  factory ElementDefinitionConstraint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5865,7 +5865,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ///
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-  const factory ElementDefinitionBinding({
+  factory ElementDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5997,7 +5997,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// [comment] Comments that provide information about the mapping or its use.
   ///
   /// [commentElement] Extensions for comment
-  const factory ElementDefinitionMapping({
+  factory ElementDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

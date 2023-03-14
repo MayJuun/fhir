@@ -15,7 +15,7 @@ part 'summary.g.dart';
 @freezed
 class AdverseEvent with Resource, _$AdverseEvent {
   AdverseEvent._();
-  const factory AdverseEvent({
+  factory AdverseEvent({
     @Default(Stu3ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
         Stu3ResourceType resourceType,
@@ -81,7 +81,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
 @freezed
 class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
-  const factory AdverseEventSuspectEntity({
+  factory AdverseEventSuspectEntity({
     required Reference instance,
     AdverseEventSuspectEntityCausality? causality,
     @JsonKey(name: '_causality') Element? causalityElement,
@@ -128,7 +128,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
 @freezed
 class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
-  const factory AllergyIntolerance({
+  factory AllergyIntolerance({
     @Default(Stu3ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
         Stu3ResourceType resourceType,
@@ -203,7 +203,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
 @freezed
 class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
-  const factory AllergyIntoleranceReaction({
+  factory AllergyIntoleranceReaction({
     CodeableConcept? substance,
     required List<CodeableConcept> manifestation,
     String? description,
@@ -250,7 +250,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 @freezed
 class ClinicalImpression with Resource, _$ClinicalImpression {
   ClinicalImpression._();
-  const factory ClinicalImpression({
+  factory ClinicalImpression({
     @Default(Stu3ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
         Stu3ResourceType resourceType,
@@ -323,7 +323,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
 @freezed
 class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   ClinicalImpressionInvestigation._();
-  const factory ClinicalImpressionInvestigation({
+  factory ClinicalImpressionInvestigation({
     required CodeableConcept code,
     List<Reference>? item,
   }) = _ClinicalImpressionInvestigation;
@@ -363,7 +363,7 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
 @freezed
 class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
-  const factory ClinicalImpressionFinding({
+  factory ClinicalImpressionFinding({
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     String? basis,
@@ -404,7 +404,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 @freezed
 class Condition with Resource, _$Condition {
   Condition._();
-  const factory Condition({
+  factory Condition({
     @Default(Stu3ResourceType.Condition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
         Stu3ResourceType resourceType,
@@ -484,7 +484,7 @@ class Condition with Resource, _$Condition {
 @freezed
 class ConditionStage with _$ConditionStage {
   ConditionStage._();
-  const factory ConditionStage({
+  factory ConditionStage({
     CodeableConcept? summary,
     List<Reference>? assessment,
   }) = _ConditionStage;
@@ -523,7 +523,7 @@ class ConditionStage with _$ConditionStage {
 @freezed
 class ConditionEvidence with _$ConditionEvidence {
   ConditionEvidence._();
-  const factory ConditionEvidence({
+  factory ConditionEvidence({
     List<CodeableConcept>? code,
     List<Reference>? detail,
   }) = _ConditionEvidence;
@@ -562,7 +562,7 @@ class ConditionEvidence with _$ConditionEvidence {
 @freezed
 class DetectedIssue with Resource, _$DetectedIssue {
   DetectedIssue._();
-  const factory DetectedIssue({
+  factory DetectedIssue({
     @Default(Stu3ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
         Stu3ResourceType resourceType,
@@ -625,7 +625,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
 @freezed
 class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
-  const factory DetectedIssueMitigation({
+  factory DetectedIssueMitigation({
     required CodeableConcept action,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -666,7 +666,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
 @freezed
 class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   FamilyMemberHistory._();
-  const factory FamilyMemberHistory({
+  factory FamilyMemberHistory({
     @Default(Stu3ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
         Stu3ResourceType resourceType,
@@ -751,7 +751,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
 @freezed
 class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
-  const factory FamilyMemberHistoryCondition({
+  factory FamilyMemberHistoryCondition({
     required CodeableConcept code,
     CodeableConcept? outcome,
     Age? onsetAge,
@@ -796,7 +796,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
 @freezed
 class Procedure with Resource, _$Procedure {
   Procedure._();
-  const factory Procedure({
+  factory Procedure({
     @Default(Stu3ResourceType.Procedure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
         Stu3ResourceType resourceType,
@@ -873,7 +873,7 @@ class Procedure with Resource, _$Procedure {
 @freezed
 class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
-  const factory ProcedurePerformer({
+  factory ProcedurePerformer({
     CodeableConcept? role,
     required Reference actor,
     Reference? onBehalfOf,
@@ -913,7 +913,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
 @freezed
 class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
-  const factory ProcedureFocalDevice({
+  factory ProcedureFocalDevice({
     CodeableConcept? action,
     required Reference manipulated,
   }) = _ProcedureFocalDevice;

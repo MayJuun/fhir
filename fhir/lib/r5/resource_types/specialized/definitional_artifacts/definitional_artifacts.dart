@@ -354,7 +354,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   ///  value would be used to specify an expression that calculated the weight,
   ///  and the path on the request resource that would contain the result.
   ///
-  const factory ActivityDefinition({
+  factory ActivityDefinition({
     /// [resourceType] This is a ActivityDefinition resource
     @Default(R5ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
@@ -722,7 +722,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   /// [function_] ("function") Indicates how the actor will be involved in the
   ///  action - author, reviewer, witness, etc.
   ///
-  const factory ActivityDefinitionParticipant({
+  factory ActivityDefinitionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -852,7 +852,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  const factory ActivityDefinitionDynamicValue({
+  factory ActivityDefinitionDynamicValue({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1112,7 +1112,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
   ///  another IG (which IG must be listed in the dependencies). This actor
   ///  inherits all the obligations etc as defined in the other IG.
   ///
-  const factory ActorDefinition({
+  factory ActorDefinition({
     /// [resourceType] This is a ActorDefinition resource
     @Default(R5ResourceType.ActorDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
@@ -1554,7 +1554,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
   ///
   /// [plan] Plan that is appropriate.
   ///
-  const factory ConditionDefinition({
+  factory ConditionDefinition({
     /// [resourceType] This is a ConditionDefinition resource
     @Default(R5ResourceType.ConditionDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
@@ -1855,7 +1855,7 @@ class ConditionDefinitionObservation with _$ConditionDefinitionObservation {
   ///
   /// [code] Code for relevant Observation.
   ///
-  const factory ConditionDefinitionObservation({
+  factory ConditionDefinitionObservation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1961,7 +1961,7 @@ class ConditionDefinitionMedication with _$ConditionDefinitionMedication {
   ///
   /// [code] Code for relevant Medication.
   ///
-  const factory ConditionDefinitionMedication({
+  factory ConditionDefinitionMedication({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2072,7 +2072,7 @@ class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
   ///
   /// [valueQuantity] Value of Observation.
   ///
-  const factory ConditionDefinitionPrecondition({
+  factory ConditionDefinitionPrecondition({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2189,7 +2189,7 @@ class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
   ///
   /// [reference] Specific Questionnaire.
   ///
-  const factory ConditionDefinitionQuestionnaire({
+  factory ConditionDefinitionQuestionnaire({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2299,7 +2299,7 @@ class ConditionDefinitionPlan with _$ConditionDefinitionPlan {
   ///
   /// [reference] The actual plan.
   ///
-  const factory ConditionDefinitionPlan({
+  factory ConditionDefinitionPlan({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2521,7 +2521,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [chargeItem] Billing code or reference associated with the device.
   ///
-  const factory DeviceDefinition({
+  factory DeviceDefinition({
     /// [resourceType] This is a DeviceDefinition resource
     @Default(R5ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
@@ -2746,7 +2746,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// [marketDistribution] Indicates where and when the device is available on
   ///  the market.
   ///
-  const factory DeviceDefinitionUdiDeviceIdentifier({
+  factory DeviceDefinitionUdiDeviceIdentifier({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2876,7 +2876,7 @@ class DeviceDefinitionMarketDistribution
   /// [subJurisdictionElement] ("_subJurisdiction") Extensions for
   ///  subJurisdiction
   ///
-  const factory DeviceDefinitionMarketDistribution({
+  factory DeviceDefinitionMarketDistribution({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3002,7 +3002,7 @@ class DeviceDefinitionRegulatoryIdentifier
   ///
   /// [jurisdictionElement] ("_jurisdiction") Extensions for jurisdiction
   ///
-  const factory DeviceDefinitionRegulatoryIdentifier({
+  factory DeviceDefinitionRegulatoryIdentifier({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3134,7 +3134,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  const factory DeviceDefinitionDeviceName({
+  factory DeviceDefinitionDeviceName({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3245,7 +3245,7 @@ class DeviceDefinitionClassification with _$DeviceDefinitionClassification {
   /// [justification] Further information qualifying this classification of the
   ///  device model.
   ///
-  const factory DeviceDefinitionClassification({
+  factory DeviceDefinitionClassification({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3353,7 +3353,7 @@ class DeviceDefinitionHasPart with _$DeviceDefinitionHasPart {
   ///
   /// [countElement] ("_count") Extensions for count
   ///
-  const factory DeviceDefinitionHasPart({
+  factory DeviceDefinitionHasPart({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3472,7 +3472,7 @@ class DeviceDefinitionPackaging with _$DeviceDefinitionPackaging {
   ///
   /// [packaging] Allows packages within packages.
   ///
-  const factory DeviceDefinitionPackaging({
+  factory DeviceDefinitionPackaging({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3593,7 +3593,7 @@ class DeviceDefinitionDistributor with _$DeviceDefinitionDistributor {
   ///
   /// [organizationReference] Distributor as an Organization resource.
   ///
-  const factory DeviceDefinitionDistributor({
+  factory DeviceDefinitionDistributor({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3707,7 +3707,7 @@ class DeviceDefinitionVersion with _$DeviceDefinitionVersion {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  const factory DeviceDefinitionVersion({
+  factory DeviceDefinitionVersion({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3840,7 +3840,7 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   /// [valueAttachment] Property value - the data type depends on the property
   ///  type.
   ///
-  const factory DeviceDefinitionProperty({
+  factory DeviceDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3972,7 +3972,7 @@ class DeviceDefinitionLink with _$DeviceDefinitionLink {
   ///
   /// [relatedDevice] A reference to the linked device.
   ///
-  const factory DeviceDefinitionLink({
+  factory DeviceDefinitionLink({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4087,7 +4087,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   /// [allergenicIndicatorElement] ("_allergenicIndicator") Extensions for
   ///  allergenicIndicator
   ///
-  const factory DeviceDefinitionMaterial({
+  factory DeviceDefinitionMaterial({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4220,7 +4220,7 @@ class DeviceDefinitionGuideline with _$DeviceDefinitionGuideline {
   ///
   /// [intendedUseElement] ("_intendedUse") Extensions for intendedUse
   ///
-  const factory DeviceDefinitionGuideline({
+  factory DeviceDefinitionGuideline({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4357,7 +4357,7 @@ class DeviceDefinitionCorrectiveAction with _$DeviceDefinitionCorrectiveAction {
   ///
   /// [period] Start and end dates of the  corrective action.
   ///
-  const factory DeviceDefinitionCorrectiveAction({
+  factory DeviceDefinitionCorrectiveAction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4478,7 +4478,7 @@ class DeviceDefinitionChargeItem with _$DeviceDefinitionChargeItem {
   ///
   /// [useContext] The context to which this charge item applies.
   ///
-  const factory DeviceDefinitionChargeItem({
+  factory DeviceDefinitionChargeItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4771,7 +4771,7 @@ class EventDefinition with Resource, _$EventDefinition {
   ///  one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
   ///
-  const factory EventDefinition({
+  factory EventDefinition({
     /// [resourceType] This is a EventDefinition resource
     @Default(R5ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
@@ -5166,7 +5166,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// [process] A group of operations that represents a significant step within
   ///  a scenario.
   ///
-  const factory ExampleScenario({
+  factory ExampleScenario({
     /// [resourceType] This is a ExampleScenario resource
     @Default(R5ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
@@ -5395,7 +5395,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  const factory ExampleScenarioActor({
+  factory ExampleScenarioActor({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5555,7 +5555,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   /// [containedInstance] References to other instances that can be found
   ///  within this instance (e.g. the observations contained in a bundle).
   ///
-  const factory ExampleScenarioInstance({
+  factory ExampleScenarioInstance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5713,7 +5713,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// [content] Points to an instance (typically an example) that shows the
   ///  data that would flow at this point in the scenario.
   ///
-  const factory ExampleScenarioVersion({
+  factory ExampleScenarioVersion({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5837,7 +5837,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   /// [versionReferenceElement] ("_versionReference") Extensions for
   ///  versionReference
   ///
-  const factory ExampleScenarioContainedInstance({
+  factory ExampleScenarioContainedInstance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5965,7 +5965,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   ///
   /// [step] A significant action that occurs as part of the process.
   ///
-  const factory ExampleScenarioProcess({
+  factory ExampleScenarioProcess({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6106,7 +6106,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   ///
   /// [pauseElement] ("_pause") Extensions for pause
   ///
-  const factory ExampleScenarioStep({
+  factory ExampleScenarioStep({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6258,7 +6258,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// [response] A reference to the instance that is transmitted from receiver
   ///  to requester as part of the operation's synchronous response (if any).
   ///
-  const factory ExampleScenarioOperation({
+  factory ExampleScenarioOperation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6407,7 +6407,7 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// [step] Indicates the operation, sub-process or scenario that happens if
   ///  the alternative option is selected.
   ///
-  const factory ExampleScenarioAlternative({
+  factory ExampleScenarioAlternative({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6749,7 +6749,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// [component] Some observations have multiple component observations,
   ///  expressed as separate code value pairs.
   ///
-  const factory ObservationDefinition({
+  factory ObservationDefinition({
     /// [resourceType] This is a ObservationDefinition resource
     @Default(R5ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
@@ -7073,7 +7073,7 @@ class ObservationDefinitionQuantitativeDetails
   /// [decimalPrecisionElement] ("_decimalPrecision") Extensions for
   ///  decimalPrecision
   ///
-  const factory ObservationDefinitionQuantitativeDetails({
+  factory ObservationDefinitionQuantitativeDetails({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7232,7 +7232,7 @@ class ObservationDefinitionQualifiedValue
   /// [criticalCodedValueSet] The set of critical coded results for qualitative
   ///  observations  that match the criteria of this set of qualified values.
   ///
-  const factory ObservationDefinitionQualifiedValue({
+  factory ObservationDefinitionQualifiedValue({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7392,7 +7392,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
   ///  a set of conditions -  provides a range for quantitative and ordinal
   ///  observations and a collection of value sets for qualitative observations.
   ///
-  const factory ObservationDefinitionComponent({
+  factory ObservationDefinitionComponent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7753,7 +7753,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   ///  the pre-condition for performing the service.  For example "pain", "on
   ///  flare-up", etc.
   ///
-  const factory PlanDefinition({
+  factory PlanDefinition({
     /// [resourceType] This is a PlanDefinition resource
     @Default(R5ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
@@ -8068,7 +8068,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   ///
   /// [target] Indicates what should be done and within what timeframe.
   ///
-  const factory PlanDefinitionGoal({
+  factory PlanDefinitionGoal({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8262,7 +8262,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   /// [due] Indicates the timeframe after the start of the goal in which the
   ///  goal should be met.
   ///
-  const factory PlanDefinitionTarget({
+  factory PlanDefinitionTarget({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8413,7 +8413,7 @@ class PlanDefinitionActor with _$PlanDefinitionActor {
   /// [option] The characteristics of the candidates that could serve as the
   ///  actor.
   ///
-  const factory PlanDefinitionActor({
+  factory PlanDefinitionActor({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8542,7 +8542,7 @@ class PlanDefinitionOption with _$PlanDefinitionOption {
   /// [role] The role the participant should play in performing the described
   ///  action.
   ///
-  const factory PlanDefinitionOption({
+  factory PlanDefinitionOption({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8835,7 +8835,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   ///  sub-actions, at most one may be chosen as part of realizing the action
   ///  definition.
   ///
-  const factory PlanDefinitionAction({
+  factory PlanDefinitionAction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9097,7 +9097,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   /// [expression] An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
   ///
-  const factory PlanDefinitionCondition({
+  factory PlanDefinitionCondition({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9224,7 +9224,7 @@ class PlanDefinitionInput with _$PlanDefinitionInput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  const factory PlanDefinitionInput({
+  factory PlanDefinitionInput({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9356,7 +9356,7 @@ class PlanDefinitionOutput with _$PlanDefinitionOutput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  const factory PlanDefinitionOutput({
+  factory PlanDefinitionOutput({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9490,7 +9490,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
   ///
-  const factory PlanDefinitionRelatedAction({
+  factory PlanDefinitionRelatedAction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9633,7 +9633,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   /// [function_] ("function") Indicates how the actor will be involved in the
   ///  action - author, reviewer, witness, etc.
   ///
-  const factory PlanDefinitionParticipant({
+  factory PlanDefinitionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9776,7 +9776,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  const factory PlanDefinitionDynamicValue({
+  factory PlanDefinitionDynamicValue({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10065,7 +10065,7 @@ class Questionnaire with Resource, _$Questionnaire {
   /// [item] A particular question, question grouping or display text that is
   ///  part of the questionnaire.
   ///
-  const factory Questionnaire({
+  factory Questionnaire({
     /// [resourceType] This is a Questionnaire resource
     @Default(R5ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
@@ -10414,7 +10414,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// [item] Text, questions and other groups to be nested beneath a question
   ///  or group.
   ///
-  const factory QuestionnaireItem({
+  factory QuestionnaireItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10688,7 +10688,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   ///  different behavior is desired (all must match, at least 2 must match,
   ///  etc.), consider using the enableWhenExpression extension.
   ///
-  const factory QuestionnaireEnableWhen({
+  factory QuestionnaireEnableWhen({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10883,7 +10883,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// [initialSelectedElement] ("_initialSelected") Extensions for
   ///  initialSelected
   ///
-  const factory QuestionnaireAnswerOption({
+  factory QuestionnaireAnswerOption({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -11059,7 +11059,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   ///
   /// [valueReference] The actual value to for an initial answer.
   ///
-  const factory QuestionnaireInitial({
+  factory QuestionnaireInitial({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -11353,7 +11353,7 @@ class Requirements with Resource, _$Requirements {
   ///
   /// [statement] The actual statement of requirement, in markdown format.
   ///
-  const factory Requirements({
+  factory Requirements({
     /// [resourceType] This is a Requirements resource
     @Default(R5ResourceType.Requirements)
     @JsonKey(unknownEnumValue: R5ResourceType.Requirements)
@@ -11618,7 +11618,7 @@ class RequirementsStatement with _$RequirementsStatement {
   /// [source] Who asked for this statement to be a requirement. By default,
   ///  it's assumed that the publisher knows who it is if it matters.
   ///
-  const factory RequirementsStatement({
+  factory RequirementsStatement({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -11953,7 +11953,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// [typeTested] Specimen conditioned in a container as expected by the
   ///  testing laboratory.
   ///
-  const factory SpecimenDefinition({
+  factory SpecimenDefinition({
     /// [resourceType] This is a SpecimenDefinition resource
     @Default(R5ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
@@ -12258,7 +12258,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   /// [testingDestination] Where the specimen will be tested: e.g., lab,
   ///  sector, device or any combination of these.
   ///
-  const factory SpecimenDefinitionTypeTested({
+  factory SpecimenDefinitionTypeTested({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -12425,7 +12425,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   ///
   /// [preparationElement] ("_preparation") Extensions for preparation
   ///
-  const factory SpecimenDefinitionContainer({
+  factory SpecimenDefinitionContainer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -12564,7 +12564,7 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   ///  preserve, maintain or enhance the specimen. Examples: Formalin, Citrate,
   ///  EDTA.
   ///
-  const factory SpecimenDefinitionAdditive({
+  factory SpecimenDefinitionAdditive({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -12679,7 +12679,7 @@ class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   ///
   /// [instructionElement] ("_instruction") Extensions for instruction
   ///
-  const factory SpecimenDefinitionHandling({
+  factory SpecimenDefinitionHandling({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

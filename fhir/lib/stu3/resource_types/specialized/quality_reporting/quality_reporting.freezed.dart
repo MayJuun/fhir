@@ -1540,7 +1540,7 @@ class __$$_MeasureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Measure extends _Measure {
-  const _$_Measure(
+  _$_Measure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           this.resourceType = Stu3ResourceType.Measure,
       this.id,
@@ -2182,7 +2182,7 @@ class _$_Measure extends _Measure {
 }
 
 abstract class _Measure extends Measure {
-  const factory _Measure(
+  factory _Measure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -2283,7 +2283,7 @@ abstract class _Measure extends Measure {
           final Element? setElement,
       final List<MeasureGroup>? group,
       final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
-  const _Measure._() : super._();
+  _Measure._() : super._();
 
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
@@ -2672,7 +2672,7 @@ class __$$_MeasureGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureGroup extends _MeasureGroup {
-  const _$_MeasureGroup(
+  _$_MeasureGroup(
       {required this.identifier,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
@@ -2771,7 +2771,7 @@ class _$_MeasureGroup extends _MeasureGroup {
 }
 
 abstract class _MeasureGroup extends MeasureGroup {
-  const factory _MeasureGroup(
+  factory _MeasureGroup(
       {required final Identifier identifier,
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
@@ -2779,7 +2779,7 @@ abstract class _MeasureGroup extends MeasureGroup {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<MeasurePopulation>? population,
       final List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
-  const _MeasureGroup._() : super._();
+  _MeasureGroup._() : super._();
 
   factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureGroup.fromJson;
@@ -3062,7 +3062,7 @@ class __$$_MeasurePopulationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasurePopulation extends _MeasurePopulation {
-  const _$_MeasurePopulation(
+  _$_MeasurePopulation(
       {this.identifier,
       this.code,
       this.name,
@@ -3143,7 +3143,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
 }
 
 abstract class _MeasurePopulation extends MeasurePopulation {
-  const factory _MeasurePopulation(
+  factory _MeasurePopulation(
           {final Identifier? identifier,
           final CodeableConcept? code,
           final String? name,
@@ -3153,7 +3153,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
           final String? criteria,
           @JsonKey(name: '_criteria') final Element? criteriaElement}) =
       _$_MeasurePopulation;
-  const _MeasurePopulation._() : super._();
+  _MeasurePopulation._() : super._();
 
   factory _MeasurePopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasurePopulation.fromJson;
@@ -3369,7 +3369,7 @@ class __$$_MeasureStratifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureStratifier extends _MeasureStratifier {
-  const _$_MeasureStratifier(
+  _$_MeasureStratifier(
       {this.identifier,
       this.criteria,
       @JsonKey(name: '_criteria') this.criteriaElement,
@@ -3435,14 +3435,14 @@ class _$_MeasureStratifier extends _MeasureStratifier {
 }
 
 abstract class _MeasureStratifier extends MeasureStratifier {
-  const factory _MeasureStratifier(
+  factory _MeasureStratifier(
           {final Identifier? identifier,
           final String? criteria,
           @JsonKey(name: '_criteria') final Element? criteriaElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement}) =
       _$_MeasureStratifier;
-  const _MeasureStratifier._() : super._();
+  _MeasureStratifier._() : super._();
 
   factory _MeasureStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureStratifier.fromJson;
@@ -3667,7 +3667,7 @@ class __$$_MeasureSupplementalDataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
-  const _$_MeasureSupplementalData(
+  _$_MeasureSupplementalData(
       {this.identifier,
       final List<CodeableConcept>? usage,
       this.criteria,
@@ -3753,7 +3753,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
 }
 
 abstract class _MeasureSupplementalData extends MeasureSupplementalData {
-  const factory _MeasureSupplementalData(
+  factory _MeasureSupplementalData(
           {final Identifier? identifier,
           final List<CodeableConcept>? usage,
           final String? criteria,
@@ -3761,7 +3761,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement}) =
       _$_MeasureSupplementalData;
-  const _MeasureSupplementalData._() : super._();
+  _MeasureSupplementalData._() : super._();
 
   factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json) =
       _$_MeasureSupplementalData.fromJson;
@@ -4381,7 +4381,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReport extends _MeasureReport {
-  const _$_MeasureReport(
+  _$_MeasureReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           this.resourceType = Stu3ResourceType.MeasureReport,
       this.id,
@@ -4606,7 +4606,7 @@ class _$_MeasureReport extends _MeasureReport {
 }
 
 abstract class _MeasureReport extends MeasureReport {
-  const factory _MeasureReport(
+  factory _MeasureReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -4638,7 +4638,7 @@ abstract class _MeasureReport extends MeasureReport {
       required final Period period,
       final List<MeasureReportGroup>? group,
       final Reference? evaluatedResources}) = _$_MeasureReport;
-  const _MeasureReport._() : super._();
+  _MeasureReport._() : super._();
 
   factory _MeasureReport.fromJson(Map<String, dynamic> json) =
       _$_MeasureReport.fromJson;
@@ -4872,7 +4872,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportGroup extends _MeasureReportGroup {
-  const _$_MeasureReportGroup(
+  _$_MeasureReportGroup(
       {required this.identifier,
       final List<MeasureReportPopulation>? population,
       this.measureScore,
@@ -4960,13 +4960,13 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
 }
 
 abstract class _MeasureReportGroup extends MeasureReportGroup {
-  const factory _MeasureReportGroup(
+  factory _MeasureReportGroup(
       {required final Identifier identifier,
       final List<MeasureReportPopulation>? population,
       final Decimal? measureScore,
       @JsonKey(name: '_measureScore') final Element? measureScoreElement,
       final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
-  const _MeasureReportGroup._() : super._();
+  _MeasureReportGroup._() : super._();
 
   factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportGroup.fromJson;
@@ -5191,7 +5191,7 @@ class __$$_MeasureReportPopulationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportPopulation extends _MeasureReportPopulation {
-  const _$_MeasureReportPopulation(
+  _$_MeasureReportPopulation(
       {this.identifier,
       this.code,
       this.count,
@@ -5256,13 +5256,13 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
 }
 
 abstract class _MeasureReportPopulation extends MeasureReportPopulation {
-  const factory _MeasureReportPopulation(
+  factory _MeasureReportPopulation(
       {final Identifier? identifier,
       final CodeableConcept? code,
       final Decimal? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? patients}) = _$_MeasureReportPopulation;
-  const _MeasureReportPopulation._() : super._();
+  _MeasureReportPopulation._() : super._();
 
   factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation.fromJson;
@@ -5398,7 +5398,7 @@ class __$$_MeasureReportStratifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
-  const _$_MeasureReportStratifier(
+  _$_MeasureReportStratifier(
       {this.identifier, final List<MeasureReportStratum>? stratum})
       : _stratum = stratum,
         super._();
@@ -5455,10 +5455,10 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
 }
 
 abstract class _MeasureReportStratifier extends MeasureReportStratifier {
-  const factory _MeasureReportStratifier(
+  factory _MeasureReportStratifier(
       {final Identifier? identifier,
       final List<MeasureReportStratum>? stratum}) = _$_MeasureReportStratifier;
-  const _MeasureReportStratifier._() : super._();
+  _MeasureReportStratifier._() : super._();
 
   factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratifier.fromJson;
@@ -5646,7 +5646,7 @@ class __$$_MeasureReportStratumCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportStratum extends _MeasureReportStratum {
-  const _$_MeasureReportStratum(
+  _$_MeasureReportStratum(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       final List<MeasureReportPopulation1>? population,
@@ -5726,14 +5726,14 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
 }
 
 abstract class _MeasureReportStratum extends MeasureReportStratum {
-  const factory _MeasureReportStratum(
+  factory _MeasureReportStratum(
           {final String? value,
           @JsonKey(name: '_value') final Element? valueElement,
           final List<MeasureReportPopulation1>? population,
           final Decimal? measureScore,
           @JsonKey(name: '_measureScore') final Element? measureScoreElement}) =
       _$_MeasureReportStratum;
-  const _MeasureReportStratum._() : super._();
+  _MeasureReportStratum._() : super._();
 
   factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratum.fromJson;
@@ -5960,7 +5960,7 @@ class __$$_MeasureReportPopulation1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
-  const _$_MeasureReportPopulation1(
+  _$_MeasureReportPopulation1(
       {this.identifier,
       this.code,
       this.count,
@@ -6024,13 +6024,13 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
 }
 
 abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
-  const factory _MeasureReportPopulation1(
+  factory _MeasureReportPopulation1(
       {final Identifier? identifier,
       final CodeableConcept? code,
       final Decimal? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? patients}) = _$_MeasureReportPopulation1;
-  const _MeasureReportPopulation1._() : super._();
+  _MeasureReportPopulation1._() : super._();
 
   factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation1.fromJson;

@@ -137,7 +137,7 @@ class Endpoint with Resource, _$Endpoint {
   ///
   /// [headerElement] ("_header") Extensions for header
   ///
-  const factory Endpoint({
+  factory Endpoint({
     /// [resourceType] This is a Endpoint resource
     @Default(R5ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
@@ -463,7 +463,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the specific healthcare services defined at this resource.
   ///
-  const factory HealthcareService({
+  factory HealthcareService({
     /// [resourceType] This is a HealthcareService resource
     @Default(R5ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
@@ -721,7 +721,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  const factory HealthcareServiceEligibility({
+  factory HealthcareServiceEligibility({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -923,7 +923,7 @@ class Location with Resource, _$Location {
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the location.
   ///
-  const factory Location({
+  factory Location({
     /// [resourceType] This is a Location resource
     @Default(R5ResourceType.Location)
     @JsonKey(unknownEnumValue: R5ResourceType.Location)
@@ -1174,7 +1174,7 @@ class LocationPosition with _$LocationPosition {
   ///
   /// [altitudeElement] ("_altitude") Extensions for altitude
   ///
-  const factory LocationPosition({
+  factory LocationPosition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1371,7 +1371,7 @@ class Organization with Resource, _$Organization {
   ///  provide a type of services issued by a certifying body (such as the US
   ///  Joint Commission) to an organization.
   ///
-  const factory Organization({
+  factory Organization({
     /// [resourceType] This is a Organization resource
     @Default(R5ResourceType.Organization)
     @JsonKey(unknownEnumValue: R5ResourceType.Organization)
@@ -1582,7 +1582,7 @@ class OrganizationQualification with _$OrganizationQualification {
   ///
   /// [issuer] Organization that regulates and issues the qualification.
   ///
-  const factory OrganizationQualification({
+  factory OrganizationQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1759,7 +1759,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  this role.
   ///
-  const factory OrganizationAffiliation({
+  factory OrganizationAffiliation({
     /// [resourceType] This is a OrganizationAffiliation resource
     @Default(R5ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)

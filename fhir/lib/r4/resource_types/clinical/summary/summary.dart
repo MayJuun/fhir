@@ -144,7 +144,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
   /// [referenceDocument] AdverseEvent.referenceDocument.
   ///
   /// [study] AdverseEvent.study.
-  const factory AdverseEvent({
+  factory AdverseEvent({
     @Default(R4ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
         R4ResourceType resourceType,
@@ -253,7 +253,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   ///  medication statement or a device.
   ///
   /// [causality] Information on the possible cause of the event.
-  const factory AdverseEventSuspectEntity({
+  factory AdverseEventSuspectEntity({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -338,7 +338,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
   /// [author] AdverseEvent.suspectEntity.causalityAuthor.
   ///
   /// [method] ProbabilityScale | Bayesian | Checklist.
-  const factory AdverseEventCausality({
+  factory AdverseEventCausality({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -529,7 +529,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   ///
   /// [reaction] Details about each adverse reaction event linked to exposure
   ///  to the identified substance.
-  const factory AllergyIntolerance({
+  factory AllergyIntolerance({
     @Default(R4ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
         R4ResourceType resourceType,
@@ -668,7 +668,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   ///
   /// [note] Additional text about the adverse reaction event not captured in
   ///  other fields.
-  const factory AllergyIntoleranceReaction({
+  factory AllergyIntoleranceReaction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -856,7 +856,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   /// [note] Commentary about the impression, typically recorded after the
   /// impression itself was made, though supplemental notes by the original
   ///  author could also appear.
-  const factory ClinicalImpression({
+  factory ClinicalImpression({
     @Default(R4ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
         R4ResourceType resourceType,
@@ -972,7 +972,7 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   ///  (exposure|family|travel|nutritional) history may be used.
   ///
   /// [item] A record of a specific investigation that was undertaken.
-  const factory ClinicalImpressionInvestigation({
+  factory ClinicalImpressionInvestigation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1060,7 +1060,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   /// [basis] Which investigations support finding or diagnosis.
   ///
   /// [basisElement] Extensions for basis
-  const factory ClinicalImpressionFinding({
+  factory ClinicalImpressionFinding({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1256,7 +1256,7 @@ class Condition with Resource, _$Condition {
   /// [note] Additional information about the Condition. This is a general
   /// notes/comments entry  for description of the Condition, its diagnosis and
   ///  prognosis.
-  const factory Condition({
+  factory Condition({
     @Default(R4ResourceType.Condition)
     @JsonKey(unknownEnumValue: R4ResourceType.Condition)
         R4ResourceType resourceType,
@@ -1371,7 +1371,7 @@ class ConditionStage with _$ConditionStage {
   ///  staging assessment is based.
   ///
   /// [type] The kind of staging, such as pathological or clinical staging.
-  const factory ConditionStage({
+  factory ConditionStage({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1450,7 +1450,7 @@ class ConditionEvidence with _$ConditionEvidence {
   ///
   /// [detail] Links to other relevant information, including pathology
   ///  reports.
-  const factory ConditionEvidence({
+  factory ConditionEvidence({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1602,7 +1602,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
   /// reduce or eliminate the likelihood of the risk identified by the detected
   /// issue from manifesting.  Can also reflect an observation of known
   ///  mitigating factors that may reduce/eliminate the need for any action.
-  const factory DetectedIssue({
+  factory DetectedIssue({
     @Default(R4ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
         R4ResourceType resourceType,
@@ -1703,7 +1703,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
   ///
   /// [detail] Links to resources that constitute evidence for the detected
   ///  issue such as a GuidanceResponse or MeasureReport.
-  const factory DetectedIssueEvidence({
+  factory DetectedIssueEvidence({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1787,7 +1787,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   ///
   /// [author] Identifies the practitioner who determined the mitigation and
   ///  takes responsibility for the mitigation step occurring.
-  const factory DetectedIssueMitigation({
+  factory DetectedIssueMitigation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1990,7 +1990,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// member had. This is a repeating section to allow a system to represent
   /// more than one condition per resource, though there is nothing stopping
   ///  multiple resources - one per condition.
-  const factory FamilyMemberHistory({
+  factory FamilyMemberHistory({
     @Default(R4ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
         R4ResourceType resourceType,
@@ -2139,7 +2139,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   ///
   /// [note] An area where general notes can be placed about this specific
   ///  condition.
-  const factory FamilyMemberHistoryCondition({
+  factory FamilyMemberHistoryCondition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2368,7 +2368,7 @@ class Procedure with Resource, _$Procedure {
   ///
   /// [usedCode] Identifies coded items that were used as part of the
   ///  procedure.
-  const factory Procedure({
+  factory Procedure({
     @Default(R4ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
         R4ResourceType resourceType,
@@ -2489,7 +2489,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
   ///
   /// [onBehalfOf] The organization the device or practitioner was acting on
   ///  behalf of.
-  const factory ProcedurePerformer({
+  factory ProcedurePerformer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2568,7 +2568,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ///
   /// [manipulated] The device that was manipulated (changed) during the
   ///  procedure.
-  const factory ProcedureFocalDevice({
+  factory ProcedureFocalDevice({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

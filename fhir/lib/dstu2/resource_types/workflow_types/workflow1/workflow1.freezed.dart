@@ -445,7 +445,7 @@ class __$$_OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res, _$_Order>
 /// @nodoc
 @JsonSerializable()
 class _$_Order extends _Order {
-  const _$_Order(
+  _$_Order(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
           this.resourceType = Dstu2ResourceType.Order,
       this.id,
@@ -630,7 +630,7 @@ class _$_Order extends _Order {
 }
 
 abstract class _Order extends Order {
-  const factory _Order(
+  factory _Order(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -651,7 +651,7 @@ abstract class _Order extends Order {
       final Reference? reasonReference,
       final OrderWhen? when,
       required final List<Reference> detail}) = _$_Order;
-  const _Order._() : super._();
+  _Order._() : super._();
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
 
@@ -882,7 +882,7 @@ class __$$_OrderWhenCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OrderWhen extends _OrderWhen {
-  const _$_OrderWhen(
+  _$_OrderWhen(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -985,14 +985,14 @@ class _$_OrderWhen extends _OrderWhen {
 }
 
 abstract class _OrderWhen extends OrderWhen {
-  const factory _OrderWhen(
+  factory _OrderWhen(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final CodeableConcept? code,
       final Timing? schedule}) = _$_OrderWhen;
-  const _OrderWhen._() : super._();
+  _OrderWhen._() : super._();
 
   factory _OrderWhen.fromJson(Map<String, dynamic> json) =
       _$_OrderWhen.fromJson;
@@ -1397,7 +1397,7 @@ class __$$_OrderResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OrderResponse extends _OrderResponse {
-  const _$_OrderResponse(
+  _$_OrderResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
           this.resourceType = Dstu2ResourceType.OrderResponse,
       this.id,
@@ -1585,7 +1585,7 @@ class _$_OrderResponse extends _OrderResponse {
 }
 
 abstract class _OrderResponse extends OrderResponse {
-  const factory _OrderResponse(
+  factory _OrderResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -1607,7 +1607,7 @@ abstract class _OrderResponse extends OrderResponse {
           final Element? orderStatusElement,
       final String? description,
       final List<Reference>? fulfillment}) = _$_OrderResponse;
-  const _OrderResponse._() : super._();
+  _OrderResponse._() : super._();
 
   factory _OrderResponse.fromJson(Map<String, dynamic> json) =
       _$_OrderResponse.fromJson;
@@ -2328,7 +2328,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CommunicationRequest extends _CommunicationRequest {
-  const _$_CommunicationRequest(
+  _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
           this.resourceType = Dstu2ResourceType.CommunicationRequest,
       this.id,
@@ -2606,7 +2606,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 }
 
 abstract class _CommunicationRequest extends CommunicationRequest {
-  const factory _CommunicationRequest(
+  factory _CommunicationRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -2642,7 +2642,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final CodeableConcept? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement}) = _$_CommunicationRequest;
-  const _CommunicationRequest._() : super._();
+  _CommunicationRequest._() : super._();
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequest.fromJson;
@@ -2936,7 +2936,7 @@ class __$$_CommunicationRequestPayloadCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
-  const _$_CommunicationRequestPayload(
+  _$_CommunicationRequestPayload(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3039,7 +3039,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
 
 abstract class _CommunicationRequestPayload
     extends CommunicationRequestPayload {
-  const factory _CommunicationRequestPayload(
+  factory _CommunicationRequestPayload(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3047,7 +3047,7 @@ abstract class _CommunicationRequestPayload
       @JsonKey(name: '_contentString') final Element? contentStringElement,
       final Attachment? contentAttachment,
       final Reference? contentReference}) = _$_CommunicationRequestPayload;
-  const _CommunicationRequestPayload._() : super._();
+  _CommunicationRequestPayload._() : super._();
 
   factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestPayload.fromJson;
@@ -3739,7 +3739,7 @@ class __$$_DeviceUseRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceUseRequest extends _DeviceUseRequest {
-  const _$_DeviceUseRequest(
+  _$_DeviceUseRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
           this.resourceType = Dstu2ResourceType.DeviceUseRequest,
       this.id,
@@ -4018,7 +4018,7 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
 }
 
 abstract class _DeviceUseRequest extends DeviceUseRequest {
-  const factory _DeviceUseRequest(
+  factory _DeviceUseRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -4056,7 +4056,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
           final DeviceUseRequestPriority? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement}) = _$_DeviceUseRequest;
-  const _DeviceUseRequest._() : super._();
+  _DeviceUseRequest._() : super._();
 
   factory _DeviceUseRequest.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseRequest.fromJson;
@@ -4740,7 +4740,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceUseStatement extends _DeviceUseStatement {
-  const _$_DeviceUseStatement(
+  _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
           this.resourceType = Dstu2ResourceType.DeviceUseStatement,
       this.id,
@@ -4993,7 +4993,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 }
 
 abstract class _DeviceUseStatement extends DeviceUseStatement {
-  const factory _DeviceUseStatement(
+  factory _DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -5025,7 +5025,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           final Element? timingDateTimeElement}) = _$_DeviceUseStatement;
-  const _DeviceUseStatement._() : super._();
+  _DeviceUseStatement._() : super._();
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseStatement.fromJson;

@@ -748,7 +748,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Communication extends _Communication {
-  const _$_Communication(
+  _$_Communication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
           this.resourceType = Stu3ResourceType.Communication,
       this.id,
@@ -1133,7 +1133,7 @@ class _$_Communication extends _Communication {
 }
 
 abstract class _Communication extends Communication {
-  const factory _Communication(
+  factory _Communication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1177,7 +1177,7 @@ abstract class _Communication extends Communication {
       final List<Reference>? reasonReference,
       final List<CommunicationPayload>? payload,
       final List<Annotation>? note}) = _$_Communication;
-  const _Communication._() : super._();
+  _Communication._() : super._();
 
   factory _Communication.fromJson(Map<String, dynamic> json) =
       _$_Communication.fromJson;
@@ -1439,7 +1439,7 @@ class __$$_CommunicationPayloadCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CommunicationPayload extends _CommunicationPayload {
-  const _$_CommunicationPayload(
+  _$_CommunicationPayload(
       {this.contentString,
       @JsonKey(name: '_contentString') this.contentStringElement,
       this.contentAttachment,
@@ -1500,12 +1500,12 @@ class _$_CommunicationPayload extends _CommunicationPayload {
 }
 
 abstract class _CommunicationPayload extends CommunicationPayload {
-  const factory _CommunicationPayload(
+  factory _CommunicationPayload(
       {final String? contentString,
       @JsonKey(name: '_contentString') final Element? contentStringElement,
       final Attachment? contentAttachment,
       final Reference? contentReference}) = _$_CommunicationPayload;
-  const _CommunicationPayload._() : super._();
+  _CommunicationPayload._() : super._();
 
   factory _CommunicationPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationPayload.fromJson;
@@ -2306,7 +2306,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CommunicationRequest extends _CommunicationRequest {
-  const _$_CommunicationRequest(
+  _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
           this.resourceType = Stu3ResourceType.CommunicationRequest,
       this.id,
@@ -2692,7 +2692,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 }
 
 abstract class _CommunicationRequest extends CommunicationRequest {
-  const factory _CommunicationRequest(
+  factory _CommunicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -2737,7 +2737,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final List<CodeableConcept>? reasonCode,
       final List<Reference>? reasonReference,
       final List<Annotation>? note}) = _$_CommunicationRequest;
-  const _CommunicationRequest._() : super._();
+  _CommunicationRequest._() : super._();
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequest.fromJson;
@@ -3007,7 +3007,7 @@ class __$$_CommunicationRequestPayloadCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
-  const _$_CommunicationRequestPayload(
+  _$_CommunicationRequestPayload(
       {this.contentString,
       @JsonKey(name: '_contentString') this.contentStringElement,
       this.contentAttachment,
@@ -3069,12 +3069,12 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
 
 abstract class _CommunicationRequestPayload
     extends CommunicationRequestPayload {
-  const factory _CommunicationRequestPayload(
+  factory _CommunicationRequestPayload(
       {final String? contentString,
       @JsonKey(name: '_contentString') final Element? contentStringElement,
       final Attachment? contentAttachment,
       final Reference? contentReference}) = _$_CommunicationRequestPayload;
-  const _CommunicationRequestPayload._() : super._();
+  _CommunicationRequestPayload._() : super._();
 
   factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestPayload.fromJson;
@@ -3223,7 +3223,7 @@ class __$$_CommunicationRequestRequesterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
-  const _$_CommunicationRequestRequester({required this.agent, this.onBehalfOf})
+  _$_CommunicationRequestRequester({required this.agent, this.onBehalfOf})
       : super._();
 
   factory _$_CommunicationRequestRequester.fromJson(
@@ -3271,10 +3271,10 @@ class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
 
 abstract class _CommunicationRequestRequester
     extends CommunicationRequestRequester {
-  const factory _CommunicationRequestRequester(
+  factory _CommunicationRequestRequester(
       {required final Reference agent,
       final Reference? onBehalfOf}) = _$_CommunicationRequestRequester;
-  const _CommunicationRequestRequester._() : super._();
+  _CommunicationRequestRequester._() : super._();
 
   factory _CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestRequester.fromJson;
@@ -4173,7 +4173,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceRequest extends _DeviceRequest {
-  const _$_DeviceRequest(
+  _$_DeviceRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
           this.resourceType = Stu3ResourceType.DeviceRequest,
       this.id,
@@ -4563,7 +4563,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 }
 
 abstract class _DeviceRequest extends DeviceRequest {
-  const factory _DeviceRequest(
+  factory _DeviceRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -4611,7 +4611,7 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<Reference>? supportingInfo,
       final List<Annotation>? note,
       final List<Reference>? relevantHistory}) = _$_DeviceRequest;
-  const _DeviceRequest._() : super._();
+  _DeviceRequest._() : super._();
 
   factory _DeviceRequest.fromJson(Map<String, dynamic> json) =
       _$_DeviceRequest.fromJson;
@@ -4833,8 +4833,7 @@ class __$$_DeviceRequestRequesterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceRequestRequester extends _DeviceRequestRequester {
-  const _$_DeviceRequestRequester({required this.agent, this.onBehalfOf})
-      : super._();
+  _$_DeviceRequestRequester({required this.agent, this.onBehalfOf}) : super._();
 
   factory _$_DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceRequestRequesterFromJson(json);
@@ -4879,10 +4878,10 @@ class _$_DeviceRequestRequester extends _DeviceRequestRequester {
 }
 
 abstract class _DeviceRequestRequester extends DeviceRequestRequester {
-  const factory _DeviceRequestRequester(
+  factory _DeviceRequestRequester(
       {required final Reference agent,
       final Reference? onBehalfOf}) = _$_DeviceRequestRequester;
-  const _DeviceRequestRequester._() : super._();
+  _DeviceRequestRequester._() : super._();
 
   factory _DeviceRequestRequester.fromJson(Map<String, dynamic> json) =
       _$_DeviceRequestRequester.fromJson;
@@ -5546,7 +5545,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceUseStatement extends _DeviceUseStatement {
-  const _$_DeviceUseStatement(
+  _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
           this.resourceType = Stu3ResourceType.DeviceUseStatement,
       this.id,
@@ -5809,7 +5808,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 }
 
 abstract class _DeviceUseStatement extends DeviceUseStatement {
-  const factory _DeviceUseStatement(
+  factory _DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -5844,7 +5843,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final List<CodeableConcept>? indication,
       final CodeableConcept? bodySite,
       final List<Annotation>? note}) = _$_DeviceUseStatement;
-  const _DeviceUseStatement._() : super._();
+  _DeviceUseStatement._() : super._();
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseStatement.fromJson;
@@ -6559,7 +6558,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyDelivery extends _SupplyDelivery {
-  const _$_SupplyDelivery(
+  _$_SupplyDelivery(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
           this.resourceType = Stu3ResourceType.SupplyDelivery,
       this.id,
@@ -6813,7 +6812,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 }
 
 abstract class _SupplyDelivery extends SupplyDelivery {
-  const factory _SupplyDelivery(
+  factory _SupplyDelivery(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -6846,7 +6845,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final Reference? supplier,
       final Reference? destination,
       final List<Reference>? receiver}) = _$_SupplyDelivery;
-  const _SupplyDelivery._() : super._();
+  _SupplyDelivery._() : super._();
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
       _$_SupplyDelivery.fromJson;
@@ -7080,7 +7079,7 @@ class __$$_SupplyDeliverySuppliedItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
-  const _$_SupplyDeliverySuppliedItem(
+  _$_SupplyDeliverySuppliedItem(
       {this.quantity, this.itemCodeableConcept, this.itemReference})
       : super._();
 
@@ -7133,11 +7132,11 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
 }
 
 abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
-  const factory _SupplyDeliverySuppliedItem(
+  factory _SupplyDeliverySuppliedItem(
       {final Quantity? quantity,
       final CodeableConcept? itemCodeableConcept,
       final Reference? itemReference}) = _$_SupplyDeliverySuppliedItem;
-  const _SupplyDeliverySuppliedItem._() : super._();
+  _SupplyDeliverySuppliedItem._() : super._();
 
   factory _SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =
       _$_SupplyDeliverySuppliedItem.fromJson;
@@ -7917,7 +7916,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyRequest extends _SupplyRequest {
-  const _$_SupplyRequest(
+  _$_SupplyRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
           this.resourceType = Stu3ResourceType.SupplyRequest,
       this.id,
@@ -8186,7 +8185,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 }
 
 abstract class _SupplyRequest extends SupplyRequest {
-  const factory _SupplyRequest(
+  factory _SupplyRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -8225,7 +8224,7 @@ abstract class _SupplyRequest extends SupplyRequest {
       final Reference? reasonReference,
       final Reference? deliverFrom,
       final Reference? deliverTo}) = _$_SupplyRequest;
-  const _SupplyRequest._() : super._();
+  _SupplyRequest._() : super._();
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequest.fromJson;
@@ -8463,7 +8462,7 @@ class __$$_SupplyRequestOrderedItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
-  const _$_SupplyRequestOrderedItem(
+  _$_SupplyRequestOrderedItem(
       {required this.quantity, this.itemCodeableConcept, this.itemReference})
       : super._();
 
@@ -8516,11 +8515,11 @@ class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
 }
 
 abstract class _SupplyRequestOrderedItem extends SupplyRequestOrderedItem {
-  const factory _SupplyRequestOrderedItem(
+  factory _SupplyRequestOrderedItem(
       {required final Quantity quantity,
       final CodeableConcept? itemCodeableConcept,
       final Reference? itemReference}) = _$_SupplyRequestOrderedItem;
-  const _SupplyRequestOrderedItem._() : super._();
+  _SupplyRequestOrderedItem._() : super._();
 
   factory _SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequestOrderedItem.fromJson;
@@ -8662,8 +8661,7 @@ class __$$_SupplyRequestRequesterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyRequestRequester extends _SupplyRequestRequester {
-  const _$_SupplyRequestRequester({required this.agent, this.onBehalfOf})
-      : super._();
+  _$_SupplyRequestRequester({required this.agent, this.onBehalfOf}) : super._();
 
   factory _$_SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyRequestRequesterFromJson(json);
@@ -8708,10 +8706,10 @@ class _$_SupplyRequestRequester extends _SupplyRequestRequester {
 }
 
 abstract class _SupplyRequestRequester extends SupplyRequestRequester {
-  const factory _SupplyRequestRequester(
+  factory _SupplyRequestRequester(
       {required final Reference agent,
       final Reference? onBehalfOf}) = _$_SupplyRequestRequester;
-  const _SupplyRequestRequester._() : super._();
+  _SupplyRequestRequester._() : super._();
 
   factory _SupplyRequestRequester.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequestRequester.fromJson;

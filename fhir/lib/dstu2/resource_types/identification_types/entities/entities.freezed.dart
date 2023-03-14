@@ -678,7 +678,7 @@ class __$$_LocationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Location extends _Location {
-  const _$_Location(
+  _$_Location(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
           this.resourceType = Dstu2ResourceType.Location,
       this.id,
@@ -936,7 +936,7 @@ class _$_Location extends _Location {
 }
 
 abstract class _Location extends Location {
-  const factory _Location(
+  factory _Location(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -974,7 +974,7 @@ abstract class _Location extends Location {
       final LocationPosition? position,
       final Reference? managingOrganization,
       final Reference? partOf}) = _$_Location;
-  const _Location._() : super._();
+  _Location._() : super._();
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
@@ -1289,7 +1289,7 @@ class __$$_LocationPositionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LocationPosition extends _LocationPosition {
-  const _$_LocationPosition(
+  _$_LocationPosition(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1404,7 +1404,7 @@ class _$_LocationPosition extends _LocationPosition {
 }
 
 abstract class _LocationPosition extends LocationPosition {
-  const factory _LocationPosition(
+  factory _LocationPosition(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -1415,7 +1415,7 @@ abstract class _LocationPosition extends LocationPosition {
           final Decimal? altitude,
           @JsonKey(name: '_altitude') final Element? altitudeElement}) =
       _$_LocationPosition;
-  const _LocationPosition._() : super._();
+  _LocationPosition._() : super._();
 
   factory _LocationPosition.fromJson(Map<String, dynamic> json) =
       _$_LocationPosition.fromJson;
@@ -1857,7 +1857,7 @@ class __$$_SubstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Substance extends _Substance {
-  const _$_Substance(
+  _$_Substance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
           this.resourceType = Dstu2ResourceType.Substance,
       this.id,
@@ -2071,7 +2071,7 @@ class _$_Substance extends _Substance {
 }
 
 abstract class _Substance extends Substance {
-  const factory _Substance(
+  factory _Substance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -2095,7 +2095,7 @@ abstract class _Substance extends Substance {
           final Element? descriptionElement,
       final List<SubstanceInstance>? instance,
       final List<SubstanceIngredient>? ingredient}) = _$_Substance;
-  const _Substance._() : super._();
+  _Substance._() : super._();
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
@@ -2360,7 +2360,7 @@ class __$$_SubstanceInstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceInstance extends _SubstanceInstance {
-  const _$_SubstanceInstance(
+  _$_SubstanceInstance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2461,7 +2461,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 }
 
 abstract class _SubstanceInstance extends SubstanceInstance {
-  const factory _SubstanceInstance(
+  factory _SubstanceInstance(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2469,7 +2469,7 @@ abstract class _SubstanceInstance extends SubstanceInstance {
       final FhirDateTime? expiry,
       @JsonKey(name: '_expiry') final Element? expiryElement,
       final Quantity? quantity}) = _$_SubstanceInstance;
-  const _SubstanceInstance._() : super._();
+  _SubstanceInstance._() : super._();
 
   factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
       _$_SubstanceInstance.fromJson;
@@ -2663,7 +2663,7 @@ class __$$_SubstanceIngredientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceIngredient extends _SubstanceIngredient {
-  const _$_SubstanceIngredient(
+  _$_SubstanceIngredient(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2752,13 +2752,13 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 }
 
 abstract class _SubstanceIngredient extends SubstanceIngredient {
-  const factory _SubstanceIngredient(
+  factory _SubstanceIngredient(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Ratio? quantity,
       required final Reference substance}) = _$_SubstanceIngredient;
-  const _SubstanceIngredient._() : super._();
+  _SubstanceIngredient._() : super._();
 
   factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
       _$_SubstanceIngredient.fromJson;
@@ -3321,7 +3321,7 @@ class __$$_PersonCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Person extends _Person {
-  const _$_Person(
+  _$_Person(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
           this.resourceType = Dstu2ResourceType.Person,
       this.id,
@@ -3583,7 +3583,7 @@ class _$_Person extends _Person {
 }
 
 abstract class _Person extends Person {
-  const factory _Person(
+  factory _Person(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3616,7 +3616,7 @@ abstract class _Person extends Person {
       @JsonKey(name: '_active')
           final Element? activeElement,
       final List<PersonLink>? link}) = _$_Person;
-  const _Person._() : super._();
+  _Person._() : super._();
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
@@ -3870,7 +3870,7 @@ class __$$_PersonLinkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PersonLink extends _PersonLink {
-  const _$_PersonLink(
+  _$_PersonLink(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3965,7 +3965,7 @@ class _$_PersonLink extends _PersonLink {
 }
 
 abstract class _PersonLink extends PersonLink {
-  const factory _PersonLink(
+  factory _PersonLink(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -3975,7 +3975,7 @@ abstract class _PersonLink extends PersonLink {
           final LinkAssurance? assurance,
       @JsonKey(name: '_assurance')
           final Element? assuranceElement}) = _$_PersonLink;
-  const _PersonLink._() : super._();
+  _PersonLink._() : super._();
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
       _$_PersonLink.fromJson;
@@ -4643,7 +4643,7 @@ class __$$_ContractCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Contract extends _Contract {
-  const _$_Contract(
+  _$_Contract(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
           this.resourceType = Dstu2ResourceType.Contract,
       this.id,
@@ -5007,7 +5007,7 @@ class _$_Contract extends _Contract {
 }
 
 abstract class _Contract extends Contract {
-  const factory _Contract(
+  factory _Contract(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -5044,7 +5044,7 @@ abstract class _Contract extends Contract {
       final List<ContractFriendly>? friendly,
       final List<ContractLegal>? legal,
       final List<ContractRule>? rule}) = _$_Contract;
-  const _Contract._() : super._();
+  _Contract._() : super._();
 
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
@@ -5273,7 +5273,7 @@ class __$$_ContractActorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractActor extends _ContractActor {
-  const _$_ContractActor(
+  _$_ContractActor(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5367,13 +5367,13 @@ class _$_ContractActor extends _ContractActor {
 }
 
 abstract class _ContractActor extends ContractActor {
-  const factory _ContractActor(
+  factory _ContractActor(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference entity,
       final List<CodeableConcept>? role}) = _$_ContractActor;
-  const _ContractActor._() : super._();
+  _ContractActor._() : super._();
 
   factory _ContractActor.fromJson(Map<String, dynamic> json) =
       _$_ContractActor.fromJson;
@@ -5820,7 +5820,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractValuedItem extends _ContractValuedItem {
-  const _$_ContractValuedItem(
+  _$_ContractValuedItem(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5985,7 +5985,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
 }
 
 abstract class _ContractValuedItem extends ContractValuedItem {
-  const factory _ContractValuedItem(
+  factory _ContractValuedItem(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6002,7 +6002,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       @JsonKey(name: '_points') final Element? pointsElement,
       final Quantity? net,
       final List<Element>? securityLabelNumberElement}) = _$_ContractValuedItem;
-  const _ContractValuedItem._() : super._();
+  _ContractValuedItem._() : super._();
 
   factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
       _$_ContractValuedItem.fromJson;
@@ -6225,7 +6225,7 @@ class __$$_ContractSignerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractSigner extends _ContractSigner {
-  const _$_ContractSigner(
+  _$_ContractSigner(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6317,14 +6317,14 @@ class _$_ContractSigner extends _ContractSigner {
 }
 
 abstract class _ContractSigner extends ContractSigner {
-  const factory _ContractSigner(
+  factory _ContractSigner(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Coding type,
       required final Reference party,
       required final String signature}) = _$_ContractSigner;
-  const _ContractSigner._() : super._();
+  _ContractSigner._() : super._();
 
   factory _ContractSigner.fromJson(Map<String, dynamic> json) =
       _$_ContractSigner.fromJson;
@@ -6753,7 +6753,7 @@ class __$$_ContractTermCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractTerm extends _ContractTerm {
-  const _$_ContractTerm(
+  _$_ContractTerm(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6950,7 +6950,7 @@ class _$_ContractTerm extends _ContractTerm {
 }
 
 abstract class _ContractTerm extends ContractTerm {
-  const factory _ContractTerm(
+  factory _ContractTerm(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6968,7 +6968,7 @@ abstract class _ContractTerm extends ContractTerm {
       @JsonKey(name: '_text') final Element? textElement,
       final List<ContractValuedItem>? valuedItem,
       final List<ContractTerm>? group}) = _$_ContractTerm;
-  const _ContractTerm._() : super._();
+  _ContractTerm._() : super._();
 
   factory _ContractTerm.fromJson(Map<String, dynamic> json) =
       _$_ContractTerm.fromJson;
@@ -7168,7 +7168,7 @@ class __$$_ContractTermActorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractTermActor extends _ContractTermActor {
-  const _$_ContractTermActor(
+  _$_ContractTermActor(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7263,13 +7263,13 @@ class _$_ContractTermActor extends _ContractTermActor {
 }
 
 abstract class _ContractTermActor extends ContractTermActor {
-  const factory _ContractTermActor(
+  factory _ContractTermActor(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference entity,
       final List<CodeableConcept>? role}) = _$_ContractTermActor;
-  const _ContractTermActor._() : super._();
+  _ContractTermActor._() : super._();
 
   factory _ContractTermActor.fromJson(Map<String, dynamic> json) =
       _$_ContractTermActor.fromJson;
@@ -7462,7 +7462,7 @@ class __$$_ContractFriendlyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractFriendly extends _ContractFriendly {
-  const _$_ContractFriendly(
+  _$_ContractFriendly(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7550,13 +7550,13 @@ class _$_ContractFriendly extends _ContractFriendly {
 }
 
 abstract class _ContractFriendly extends ContractFriendly {
-  const factory _ContractFriendly(
+  factory _ContractFriendly(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Attachment? contentAttachment,
       final Reference? contactReference}) = _$_ContractFriendly;
-  const _ContractFriendly._() : super._();
+  _ContractFriendly._() : super._();
 
   factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
       _$_ContractFriendly.fromJson;
@@ -7749,7 +7749,7 @@ class __$$_ContractLegalCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractLegal extends _ContractLegal {
-  const _$_ContractLegal(
+  _$_ContractLegal(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7836,13 +7836,13 @@ class _$_ContractLegal extends _ContractLegal {
 }
 
 abstract class _ContractLegal extends ContractLegal {
-  const factory _ContractLegal(
+  factory _ContractLegal(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Attachment? contentAttachment,
       final Reference? content}) = _$_ContractLegal;
-  const _ContractLegal._() : super._();
+  _ContractLegal._() : super._();
 
   factory _ContractLegal.fromJson(Map<String, dynamic> json) =
       _$_ContractLegal.fromJson;
@@ -8035,7 +8035,7 @@ class __$$_ContractRuleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContractRule extends _ContractRule {
-  const _$_ContractRule(
+  _$_ContractRule(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8123,13 +8123,13 @@ class _$_ContractRule extends _ContractRule {
 }
 
 abstract class _ContractRule extends ContractRule {
-  const factory _ContractRule(
+  factory _ContractRule(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Attachment? contentAttachment,
       final Reference? contentReference}) = _$_ContractRule;
-  const _ContractRule._() : super._();
+  _ContractRule._() : super._();
 
   factory _ContractRule.fromJson(Map<String, dynamic> json) =
       _$_ContractRule.fromJson;

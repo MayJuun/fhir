@@ -89,7 +89,7 @@ class Basic with Resource, _$Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource
   ///  instance.
-  const factory Basic({
+  factory Basic({
     @Default(R4ResourceType.Basic)
     @JsonKey(unknownEnumValue: R4ResourceType.Basic)
 
@@ -260,7 +260,7 @@ class Binary with Resource, _$Binary {
   /// [data] The actual content, base64 encoded.
   ///
   /// [dataElement] Extensions for data
-  const factory Binary({
+  factory Binary({
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
 
@@ -403,7 +403,7 @@ class Bundle with Resource, _$Bundle {
   ///  information about a resource (transactions and history only).
   ///
   /// [signature] Digital Signature - base64 encoded. XML-DSig or a JWT.
-  const factory Bundle({
+  factory Bundle({
     @Default(R4ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
 
@@ -544,7 +544,7 @@ class BundleLink with _$BundleLink {
   /// [url] The reference details for the link.
   ///
   /// [urlElement] Extensions for url
-  const factory BundleLink({
+  factory BundleLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -675,7 +675,7 @@ class BundleEntry with _$BundleEntry {
   /// [response] Indicates the results of processing the corresponding
   /// 'request' entry in the batch or transaction being responded to or what the
   ///  results of an operation where when returning history.
-  const factory BundleEntry({
+  factory BundleEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -866,7 +866,7 @@ class BundleSearch with _$BundleSearch {
   /// [score] When searching, the server's search ranking score for the entry.
   ///
   /// [scoreElement] Extensions for score
-  const factory BundleSearch({
+  factory BundleSearch({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1007,7 +1007,7 @@ class BundleRequest with _$BundleRequest {
   ///  "?").
   ///
   /// [ifNoneExistElement] Extensions for ifNoneExist
-  const factory BundleRequest({
+  factory BundleRequest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1172,7 +1172,7 @@ class BundleResponse with _$BundleResponse {
   ///
   /// [outcome] An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
-  const factory BundleResponse({
+  factory BundleResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1341,7 +1341,7 @@ class Linkage with Resource, _$Linkage {
   /// [item] Identifies which record considered as the reference to the same
   /// real-world occurrence as well as how the items should be evaluated within
   ///  the collection of linked items.
-  const factory Linkage({
+  factory Linkage({
     @Default(R4ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
 
@@ -1498,7 +1498,7 @@ class LinkageItem with _$LinkageItem {
   /// [typeElement] Extensions for type
   ///
   /// [resource] The resource instance being linked as part of the group.
-  const factory LinkageItem({
+  factory LinkageItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1678,7 +1678,7 @@ class MessageHeader with Resource, _$MessageHeader {
   ///  class of the event.
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
-  const factory MessageHeader({
+  factory MessageHeader({
     @Default(R4ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
 
@@ -1888,7 +1888,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   /// [receiver] Allows data conveyed by a message to be addressed to a
   /// particular person or department when routing to a specific application
   ///  isn't sufficient.
-  const factory MessageHeaderDestination({
+  factory MessageHeaderDestination({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2025,7 +2025,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// [endpoint] Identifies the routing target to send acknowledgements to.
   ///
   /// [endpointElement] Extensions for endpoint
-  const factory MessageHeaderSource({
+  factory MessageHeaderSource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2162,7 +2162,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   /// [codeElement] Extensions for code
   ///
   /// [details] Full details of any issues found in the message.
-  const factory MessageHeaderResponse({
+  factory MessageHeaderResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2303,7 +2303,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   ///
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
-  const factory OperationOutcome({
+  factory OperationOutcome({
     @Default(R4ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
 
@@ -2478,7 +2478,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   ///  to be raised.
   ///
   /// [expressionElement] Extensions for expression
-  const factory OperationOutcomeIssue({
+  factory OperationOutcomeIssue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2616,7 +2616,7 @@ class Parameters with Resource, _$Parameters {
   /// [languageElement] Extensions for language
   ///
   /// [parameter] A parameter passed to or received from the operation.
-  const factory Parameters({
+  factory Parameters({
     @Default(R4ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
 
@@ -2860,7 +2860,7 @@ class ParametersParameter with _$ParametersParameter {
   /// [resource] If the parameter is a whole resource.
   ///
   /// [part_] A named part of a multi-part parameter.
-  const factory ParametersParameter({
+  factory ParametersParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3233,7 +3233,7 @@ class Subscription with Resource, _$Subscription {
   ///
   /// [channel] Details where to send notifications when resources are received
   ///  that meet the criteria.
-  const factory Subscription({
+  factory Subscription({
     @Default(R4ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
 
@@ -3437,7 +3437,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
   ///  notification.
   ///
   /// [headerElement] Extensions for header
-  const factory SubscriptionChannel({
+  factory SubscriptionChannel({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3579,7 +3579,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
   ///
   /// [error] A record of errors that occurred when the server processed a notification.;
-  const factory SubscriptionStatus({
+  factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource;
     @Default(R4ResourceType.SubscriptionStatus)
         R4ResourceType resourceType,
@@ -3705,7 +3705,7 @@ class SubscriptionStatusNotificationEvent
   /// [focus] The focus of this event. While this will usually be a reference to the focus resource of the event, it MAY contain a reference to a non-FHIR object.;
   ///
   /// [additionalContext] Additional context information for this event. Generally, this will contain references to additional resources included with the event (e.g., the Patient relevant to an Encounter), however it MAY refer to non-FHIR objects.;
-  const factory SubscriptionStatusNotificationEvent({
+  factory SubscriptionStatusNotificationEvent({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3867,7 +3867,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [canFilterBy] List of properties by which Subscriptions on the SubscriptionTopic can be filtered. May be defined Search Parameters (e.g., Encounter.patient) or parameters defined within this SubscriptionTopic context (e.g., hub.event).;
   ///
   /// [notificationShape] List of properties to describe the shape (e.g., resources) included in notifications from this Subscription Topic.;
-  const factory SubscriptionTopic({
+  factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource;
     @Default(R4ResourceType.SubscriptionTopic) R4ResourceType resourceType,
 
@@ -4047,7 +4047,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [fhirPathCriteria] The FHIRPath based rules that the server should use to determine when to trigger a notification for this topic.;
   ///
   /// [fhirPathCriteriaElement] (_fhirPathCriteria): Extensions for fhirPathCriteria;
-  const factory SubscriptionTopicResourceTrigger({
+  factory SubscriptionTopicResourceTrigger({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4132,7 +4132,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   /// [requireBoth] If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.;
   ///
   /// [requireBothElement] (_requireBoth): Extensions for requireBoth;
-  const factory SubscriptionTopicQueryCriteria({
+  factory SubscriptionTopicQueryCriteria({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4206,7 +4206,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   /// [resource] URL of the Resource that is the focus type used in this event trigger.  Relative URLs are relative to the StructureDefinition root of the implemented FHIR version (e.g., http://hl7.org/fhir/StructureDefinition). For example, "Patient" maps to http://hl7.org/fhir/StructureDefinition/Patient.  For more information, see <a href="elementdefinition-definitions.html#ElementDefinition.type.code">ElementDefinition.type.code</a>.;
   ///
   /// [resourceElement] (_resource): Extensions for resource;
-  const factory SubscriptionTopicEventTrigger({
+  factory SubscriptionTopicEventTrigger({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4284,7 +4284,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   /// [modifier] Allowable operators to apply when determining matches (Search Modifiers).  If the filterParameter is a SearchParameter, this list of modifiers SHALL be a strict subset of the modifiers defined on that SearchParameter.;
   ///
   /// [modifierElement] (_modifier): Extensions for modifier;
-  const factory SubscriptionTopicCanFilterBy({
+  factory SubscriptionTopicCanFilterBy({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4358,7 +4358,7 @@ class SubscriptionTopicNotificationShape
   /// [revInclude] Search-style _revinclude directives, rooted in the resource for this shape. Servers SHOULD include resources listed here, if they exist and the user is authorized to receive them.  Clients SHOULD be prepared to receive these additional resources, but SHALL function properly without them.;
   ///
   /// [revIncludeElement] (_revInclude): Extensions for revInclude;
-  const factory SubscriptionTopicNotificationShape({
+  factory SubscriptionTopicNotificationShape({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

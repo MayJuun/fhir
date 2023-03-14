@@ -698,7 +698,7 @@ class __$$_CompositionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Composition extends _Composition {
-  const _$_Composition(
+  _$_Composition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
           this.resourceType = Dstu2ResourceType.Composition,
       this.id,
@@ -980,7 +980,7 @@ class _$_Composition extends _Composition {
 }
 
 abstract class _Composition extends Composition {
-  const factory _Composition(
+  factory _Composition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -1020,7 +1020,7 @@ abstract class _Composition extends Composition {
       final List<CompositionEvent>? event,
       final Reference? encounter,
       final List<CompositionSection>? section}) = _$_Composition;
-  const _Composition._() : super._();
+  _Composition._() : super._();
 
   factory _Composition.fromJson(Map<String, dynamic> json) =
       _$_Composition.fromJson;
@@ -1326,7 +1326,7 @@ class __$$_CompositionAttesterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CompositionAttester extends _CompositionAttester {
-  const _$_CompositionAttester(
+  _$_CompositionAttester(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1439,7 +1439,7 @@ class _$_CompositionAttester extends _CompositionAttester {
 }
 
 abstract class _CompositionAttester extends CompositionAttester {
-  const factory _CompositionAttester(
+  factory _CompositionAttester(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1448,7 +1448,7 @@ abstract class _CompositionAttester extends CompositionAttester {
       final FhirDateTime? time,
       @JsonKey(name: '_time') final Element? timeElement,
       final Reference? party}) = _$_CompositionAttester;
-  const _CompositionAttester._() : super._();
+  _CompositionAttester._() : super._();
 
   factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
       _$_CompositionAttester.fromJson;
@@ -1647,7 +1647,7 @@ class __$$_CompositionEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CompositionEvent extends _CompositionEvent {
-  const _$_CompositionEvent(
+  _$_CompositionEvent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1755,14 +1755,14 @@ class _$_CompositionEvent extends _CompositionEvent {
 }
 
 abstract class _CompositionEvent extends CompositionEvent {
-  const factory _CompositionEvent(
+  factory _CompositionEvent(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? code,
       final Period? period,
       final List<Reference>? detail}) = _$_CompositionEvent;
-  const _CompositionEvent._() : super._();
+  _CompositionEvent._() : super._();
 
   factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
       _$_CompositionEvent.fromJson;
@@ -2138,7 +2138,7 @@ class __$$_CompositionSectionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CompositionSection extends _CompositionSection {
-  const _$_CompositionSection(
+  _$_CompositionSection(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2305,7 +2305,7 @@ class _$_CompositionSection extends _CompositionSection {
 }
 
 abstract class _CompositionSection extends CompositionSection {
-  const factory _CompositionSection(
+  factory _CompositionSection(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2320,7 +2320,7 @@ abstract class _CompositionSection extends CompositionSection {
       final List<Reference>? entry,
       final CodeableConcept? emptyReason,
       final List<CompositionSection>? section}) = _$_CompositionSection;
-  const _CompositionSection._() : super._();
+  _CompositionSection._() : super._();
 
   factory _CompositionSection.fromJson(Map<String, dynamic> json) =
       _$_CompositionSection.fromJson;
@@ -2984,7 +2984,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DocumentManifest extends _DocumentManifest {
-  const _$_DocumentManifest(
+  _$_DocumentManifest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
           this.resourceType = Dstu2ResourceType.DocumentManifest,
       this.id,
@@ -3263,7 +3263,7 @@ class _$_DocumentManifest extends _DocumentManifest {
 }
 
 abstract class _DocumentManifest extends DocumentManifest {
-  const factory _DocumentManifest(
+  factory _DocumentManifest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3300,7 +3300,7 @@ abstract class _DocumentManifest extends DocumentManifest {
           final Element? descriptionElement,
       required final List<DocumentManifestContent> content,
       final List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
-  const _DocumentManifest._() : super._();
+  _DocumentManifest._() : super._();
 
   factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
       _$_DocumentManifest.fromJson;
@@ -3548,7 +3548,7 @@ class __$$_DocumentManifestContentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DocumentManifestContent extends _DocumentManifestContent {
-  const _$_DocumentManifestContent(
+  _$_DocumentManifestContent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3638,13 +3638,13 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
 }
 
 abstract class _DocumentManifestContent extends DocumentManifestContent {
-  const factory _DocumentManifestContent(
+  factory _DocumentManifestContent(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Attachment? pAttachment,
       final Reference? pReference}) = _$_DocumentManifestContent;
-  const _DocumentManifestContent._() : super._();
+  _DocumentManifestContent._() : super._();
 
   factory _DocumentManifestContent.fromJson(Map<String, dynamic> json) =
       _$_DocumentManifestContent.fromJson;
@@ -3840,7 +3840,7 @@ class __$$_DocumentManifestRelatedCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DocumentManifestRelated extends _DocumentManifestRelated {
-  const _$_DocumentManifestRelated(
+  _$_DocumentManifestRelated(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3929,13 +3929,13 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
 }
 
 abstract class _DocumentManifestRelated extends DocumentManifestRelated {
-  const factory _DocumentManifestRelated(
+  factory _DocumentManifestRelated(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final Reference? ref}) = _$_DocumentManifestRelated;
-  const _DocumentManifestRelated._() : super._();
+  _DocumentManifestRelated._() : super._();
 
   factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json) =
       _$_DocumentManifestRelated.fromJson;
@@ -4686,7 +4686,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DocumentReference extends _DocumentReference {
-  const _$_DocumentReference(
+  _$_DocumentReference(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
           this.resourceType = Dstu2ResourceType.DocumentReference,
       this.id,
@@ -4990,7 +4990,7 @@ class _$_DocumentReference extends _DocumentReference {
 }
 
 abstract class _DocumentReference extends DocumentReference {
-  const factory _DocumentReference(
+  factory _DocumentReference(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -5031,7 +5031,7 @@ abstract class _DocumentReference extends DocumentReference {
       final List<CodeableConcept>? securityLabel,
       required final List<DocumentReferenceContent> content,
       final DocumentReferenceContext? context}) = _$_DocumentReference;
-  const _DocumentReference._() : super._();
+  _DocumentReference._() : super._();
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
       _$_DocumentReference.fromJson;
@@ -5301,7 +5301,7 @@ class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
-  const _$_DocumentReferenceRelatesTo(
+  _$_DocumentReferenceRelatesTo(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5396,7 +5396,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
 }
 
 abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
-  const factory _DocumentReferenceRelatesTo(
+  factory _DocumentReferenceRelatesTo(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -5406,7 +5406,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
       @JsonKey(name: '_code')
           final Element? codeElement,
       required final Reference target}) = _$_DocumentReferenceRelatesTo;
-  const _DocumentReferenceRelatesTo._() : super._();
+  _DocumentReferenceRelatesTo._() : super._();
 
   factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceRelatesTo.fromJson;
@@ -5588,7 +5588,7 @@ class __$$_DocumentReferenceContentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DocumentReferenceContent extends _DocumentReferenceContent {
-  const _$_DocumentReferenceContent(
+  _$_DocumentReferenceContent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5684,13 +5684,13 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
 }
 
 abstract class _DocumentReferenceContent extends DocumentReferenceContent {
-  const factory _DocumentReferenceContent(
+  factory _DocumentReferenceContent(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Attachment attachment,
       final List<Coding>? format}) = _$_DocumentReferenceContent;
-  const _DocumentReferenceContent._() : super._();
+  _DocumentReferenceContent._() : super._();
 
   factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceContent.fromJson;
@@ -5998,7 +5998,7 @@ class __$$_DocumentReferenceContextCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DocumentReferenceContext extends _DocumentReferenceContext {
-  const _$_DocumentReferenceContext(
+  _$_DocumentReferenceContext(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6131,7 +6131,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
 }
 
 abstract class _DocumentReferenceContext extends DocumentReferenceContext {
-  const factory _DocumentReferenceContext(
+  factory _DocumentReferenceContext(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6143,7 +6143,7 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
           final Reference? sourcePatientInfo,
           final List<DocumentReferenceContextRelated>? related}) =
       _$_DocumentReferenceContext;
-  const _DocumentReferenceContext._() : super._();
+  _DocumentReferenceContext._() : super._();
 
   factory _DocumentReferenceContext.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceContext.fromJson;
@@ -6354,7 +6354,7 @@ class __$$_DocumentReferenceContextRelatedCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DocumentReferenceContextRelated
     extends _DocumentReferenceContextRelated {
-  const _$_DocumentReferenceContextRelated(
+  _$_DocumentReferenceContextRelated(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6445,13 +6445,13 @@ class _$_DocumentReferenceContextRelated
 
 abstract class _DocumentReferenceContextRelated
     extends DocumentReferenceContextRelated {
-  const factory _DocumentReferenceContextRelated(
+  factory _DocumentReferenceContextRelated(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final Reference? ref}) = _$_DocumentReferenceContextRelated;
-  const _DocumentReferenceContextRelated._() : super._();
+  _DocumentReferenceContextRelated._() : super._();
 
   factory _DocumentReferenceContextRelated.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceContextRelated.fromJson;
@@ -7147,7 +7147,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
 /// @nodoc
 @JsonSerializable()
 class _$_List_ extends _List_ {
-  const _$_List_(
+  _$_List_(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
           this.resourceType = Dstu2ResourceType.List_,
       this.id,
@@ -7409,7 +7409,7 @@ class _$_List_ extends _List_ {
 }
 
 abstract class _List_ extends List_ {
-  const factory _List_(
+  factory _List_(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -7448,7 +7448,7 @@ abstract class _List_ extends List_ {
       final String? note,
       final List<ListEntry>? entry,
       final CodeableConcept? emptyReason}) = _$_List_;
-  const _List_._() : super._();
+  _List_._() : super._();
 
   factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
 
@@ -7787,7 +7787,7 @@ class __$$_ListEntryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ListEntry extends _ListEntry {
-  const _$_ListEntry(
+  _$_ListEntry(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7913,7 +7913,7 @@ class _$_ListEntry extends _ListEntry {
 }
 
 abstract class _ListEntry extends ListEntry {
-  const factory _ListEntry(
+  factory _ListEntry(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7924,7 +7924,7 @@ abstract class _ListEntry extends ListEntry {
       final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       required final Reference item}) = _$_ListEntry;
-  const _ListEntry._() : super._();
+  _ListEntry._() : super._();
 
   factory _ListEntry.fromJson(Map<String, dynamic> json) =
       _$_ListEntry.fromJson;

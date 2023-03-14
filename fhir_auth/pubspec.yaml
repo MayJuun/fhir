@@ -10,9 +10,9 @@ environment:
 dependencies:
   crypto: ^3.0.2
   collection: ^1.17.0
-  fhir: ^0.9.4
-  # fhir:
-  #   path: ../fhir
+  # fhir: ^0.9.4
+  fhir:
+    path: ../fhir
   flutter:
     sdk: flutter
   flutter_web_plugins:

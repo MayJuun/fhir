@@ -915,7 +915,7 @@ class __$$_CoverageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Coverage extends _Coverage {
-  const _$_Coverage(
+  _$_Coverage(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           this.resourceType = R4ResourceType.Coverage,
       this.id,
@@ -1389,7 +1389,7 @@ class _$_Coverage extends _Coverage {
 }
 
 abstract class _Coverage extends Coverage {
-  const factory _Coverage(
+  factory _Coverage(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           final R4ResourceType resourceType,
       final String? id,
@@ -1435,7 +1435,7 @@ abstract class _Coverage extends Coverage {
       @JsonKey(name: '_subrogation')
           final Element? subrogationElement,
       final List<Reference>? contract}) = _$_Coverage;
-  const _Coverage._() : super._();
+  _Coverage._() : super._();
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
@@ -1899,7 +1899,7 @@ class __$$_CoverageClassCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CoverageClass extends _CoverageClass {
-  const _$_CoverageClass(
+  _$_CoverageClass(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2059,7 +2059,7 @@ class _$_CoverageClass extends _CoverageClass {
 }
 
 abstract class _CoverageClass extends CoverageClass {
-  const factory _CoverageClass(
+  factory _CoverageClass(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2068,7 +2068,7 @@ abstract class _CoverageClass extends CoverageClass {
       @JsonKey(name: '_value') final Element? valueElement,
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement}) = _$_CoverageClass;
-  const _CoverageClass._() : super._();
+  _CoverageClass._() : super._();
 
   factory _CoverageClass.fromJson(Map<String, dynamic> json) =
       _$_CoverageClass.fromJson;
@@ -2384,7 +2384,7 @@ class __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
-  const _$_CoverageCostToBeneficiary(
+  _$_CoverageCostToBeneficiary(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2546,7 +2546,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
 }
 
 abstract class _CoverageCostToBeneficiary extends CoverageCostToBeneficiary {
-  const factory _CoverageCostToBeneficiary(
+  factory _CoverageCostToBeneficiary(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2554,7 +2554,7 @@ abstract class _CoverageCostToBeneficiary extends CoverageCostToBeneficiary {
       final Quantity? valueQuantity,
       final Money? valueMoney,
       final List<CoverageException>? exception}) = _$_CoverageCostToBeneficiary;
-  const _CoverageCostToBeneficiary._() : super._();
+  _CoverageCostToBeneficiary._() : super._();
 
   factory _CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =
       _$_CoverageCostToBeneficiary.fromJson;
@@ -2807,7 +2807,7 @@ class __$$_CoverageExceptionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CoverageException extends _CoverageException {
-  const _$_CoverageException(
+  _$_CoverageException(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2940,13 +2940,13 @@ class _$_CoverageException extends _CoverageException {
 }
 
 abstract class _CoverageException extends CoverageException {
-  const factory _CoverageException(
+  factory _CoverageException(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       final Period? period}) = _$_CoverageException;
-  const _CoverageException._() : super._();
+  _CoverageException._() : super._();
 
   factory _CoverageException.fromJson(Map<String, dynamic> json) =
       _$_CoverageException.fromJson;
@@ -3800,7 +3800,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
-  const _$_CoverageEligibilityRequest(
+  _$_CoverageEligibilityRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
           this.resourceType = R4ResourceType.CoverageEligibilityRequest,
       this.id,
@@ -4252,7 +4252,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 }
 
 abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
-  const factory _CoverageEligibilityRequest(
+  factory _CoverageEligibilityRequest(
           {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
               final R4ResourceType resourceType,
           final String? id,
@@ -4292,7 +4292,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           final List<CoverageEligibilityRequestInsurance>? insurance,
           final List<CoverageEligibilityRequestItem>? item}) =
       _$_CoverageEligibilityRequest;
-  const _CoverageEligibilityRequest._() : super._();
+  _CoverageEligibilityRequest._() : super._();
 
   factory _CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityRequest.fromJson;
@@ -4745,7 +4745,7 @@ class __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityRequestSupportingInfo
     extends _CoverageEligibilityRequestSupportingInfo {
-  const _$_CoverageEligibilityRequestSupportingInfo(
+  _$_CoverageEligibilityRequestSupportingInfo(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4912,7 +4912,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
 abstract class _CoverageEligibilityRequestSupportingInfo
     extends CoverageEligibilityRequestSupportingInfo {
-  const factory _CoverageEligibilityRequestSupportingInfo(
+  factory _CoverageEligibilityRequestSupportingInfo(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4922,7 +4922,7 @@ abstract class _CoverageEligibilityRequestSupportingInfo
           final Boolean? appliesToAll,
           @JsonKey(name: '_appliesToAll') final Element? appliesToAllElement}) =
       _$_CoverageEligibilityRequestSupportingInfo;
-  const _CoverageEligibilityRequestSupportingInfo._() : super._();
+  _CoverageEligibilityRequestSupportingInfo._() : super._();
 
   factory _CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =
@@ -5267,7 +5267,7 @@ class __$$_CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityRequestInsurance
     extends _CoverageEligibilityRequestInsurance {
-  const _$_CoverageEligibilityRequestInsurance(
+  _$_CoverageEligibilityRequestInsurance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5437,7 +5437,7 @@ class _$_CoverageEligibilityRequestInsurance
 
 abstract class _CoverageEligibilityRequestInsurance
     extends CoverageEligibilityRequestInsurance {
-  const factory _CoverageEligibilityRequestInsurance(
+  factory _CoverageEligibilityRequestInsurance(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -5450,7 +5450,7 @@ abstract class _CoverageEligibilityRequestInsurance
           @JsonKey(name: '_businessArrangement')
               final Element? businessArrangementElement}) =
       _$_CoverageEligibilityRequestInsurance;
-  const _CoverageEligibilityRequestInsurance._() : super._();
+  _CoverageEligibilityRequestInsurance._() : super._();
 
   factory _CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =
@@ -5935,7 +5935,7 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityRequestItem
     extends _CoverageEligibilityRequestItem {
-  const _$_CoverageEligibilityRequestItem(
+  _$_CoverageEligibilityRequestItem(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -6205,7 +6205,7 @@ class _$_CoverageEligibilityRequestItem
 
 abstract class _CoverageEligibilityRequestItem
     extends CoverageEligibilityRequestItem {
-  const factory _CoverageEligibilityRequestItem(
+  factory _CoverageEligibilityRequestItem(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -6222,7 +6222,7 @@ abstract class _CoverageEligibilityRequestItem
       final Reference? facility,
       final List<CoverageEligibilityRequestDiagnosis>? diagnosis,
       final List<Reference>? detail}) = _$_CoverageEligibilityRequestItem;
-  const _CoverageEligibilityRequestItem._() : super._();
+  _CoverageEligibilityRequestItem._() : super._();
 
   factory _CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityRequestItem.fromJson;
@@ -6525,7 +6525,7 @@ class __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityRequestDiagnosis
     extends _CoverageEligibilityRequestDiagnosis {
-  const _$_CoverageEligibilityRequestDiagnosis(
+  _$_CoverageEligibilityRequestDiagnosis(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6666,14 +6666,14 @@ class _$_CoverageEligibilityRequestDiagnosis
 
 abstract class _CoverageEligibilityRequestDiagnosis
     extends CoverageEligibilityRequestDiagnosis {
-  const factory _CoverageEligibilityRequestDiagnosis(
+  factory _CoverageEligibilityRequestDiagnosis(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? diagnosisCodeableConcept,
           final Reference? diagnosisReference}) =
       _$_CoverageEligibilityRequestDiagnosis;
-  const _CoverageEligibilityRequestDiagnosis._() : super._();
+  _CoverageEligibilityRequestDiagnosis._() : super._();
 
   factory _CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =
@@ -7624,7 +7624,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
-  const _$_CoverageEligibilityResponse(
+  _$_CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           this.resourceType = R4ResourceType.CoverageEligibilityResponse,
       this.id,
@@ -8097,7 +8097,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 
 abstract class _CoverageEligibilityResponse
     extends CoverageEligibilityResponse {
-  const factory _CoverageEligibilityResponse(
+  factory _CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           final R4ResourceType resourceType,
       final String? id,
@@ -8144,7 +8144,7 @@ abstract class _CoverageEligibilityResponse
       final CodeableConcept? form,
       final List<CoverageEligibilityResponseError>?
           error}) = _$_CoverageEligibilityResponse;
-  const _CoverageEligibilityResponse._() : super._();
+  _CoverageEligibilityResponse._() : super._();
 
   factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityResponse.fromJson;
@@ -8615,7 +8615,7 @@ class __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityResponseInsurance
     extends _CoverageEligibilityResponseInsurance {
-  const _$_CoverageEligibilityResponseInsurance(
+  _$_CoverageEligibilityResponseInsurance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8793,7 +8793,7 @@ class _$_CoverageEligibilityResponseInsurance
 
 abstract class _CoverageEligibilityResponseInsurance
     extends CoverageEligibilityResponseInsurance {
-  const factory _CoverageEligibilityResponseInsurance(
+  factory _CoverageEligibilityResponseInsurance(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -8803,7 +8803,7 @@ abstract class _CoverageEligibilityResponseInsurance
           final Period? benefitPeriod,
           final List<CoverageEligibilityResponseItem>? item}) =
       _$_CoverageEligibilityResponseInsurance;
-  const _CoverageEligibilityResponseInsurance._() : super._();
+  _CoverageEligibilityResponseInsurance._() : super._();
 
   factory _CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =
@@ -9501,7 +9501,7 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityResponseItem
     extends _CoverageEligibilityResponseItem {
-  const _$_CoverageEligibilityResponseItem(
+  _$_CoverageEligibilityResponseItem(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -9826,7 +9826,7 @@ class _$_CoverageEligibilityResponseItem
 
 abstract class _CoverageEligibilityResponseItem
     extends CoverageEligibilityResponseItem {
-  const factory _CoverageEligibilityResponseItem(
+  factory _CoverageEligibilityResponseItem(
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
@@ -9856,7 +9856,7 @@ abstract class _CoverageEligibilityResponseItem
           @JsonKey(name: '_authorizationUrl')
               final Element? authorizationUrlElement}) =
       _$_CoverageEligibilityResponseItem;
-  const _CoverageEligibilityResponseItem._() : super._();
+  _CoverageEligibilityResponseItem._() : super._();
 
   factory _CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityResponseItem.fromJson;
@@ -10411,7 +10411,7 @@ class __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityResponseBenefit
     extends _CoverageEligibilityResponseBenefit {
-  const _$_CoverageEligibilityResponseBenefit(
+  _$_CoverageEligibilityResponseBenefit(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10630,7 +10630,7 @@ class _$_CoverageEligibilityResponseBenefit
 
 abstract class _CoverageEligibilityResponseBenefit
     extends CoverageEligibilityResponseBenefit {
-  const factory _CoverageEligibilityResponseBenefit(
+  factory _CoverageEligibilityResponseBenefit(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -10650,7 +10650,7 @@ abstract class _CoverageEligibilityResponseBenefit
       @JsonKey(name: '_usedString')
           final Element? usedStringElement,
       final Money? usedMoney}) = _$_CoverageEligibilityResponseBenefit;
-  const _CoverageEligibilityResponseBenefit._() : super._();
+  _CoverageEligibilityResponseBenefit._() : super._();
 
   factory _CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =
@@ -10920,7 +10920,7 @@ class __$$_CoverageEligibilityResponseErrorCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CoverageEligibilityResponseError
     extends _CoverageEligibilityResponseError {
-  const _$_CoverageEligibilityResponseError(
+  _$_CoverageEligibilityResponseError(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11050,13 +11050,13 @@ class _$_CoverageEligibilityResponseError
 
 abstract class _CoverageEligibilityResponseError
     extends CoverageEligibilityResponseError {
-  const factory _CoverageEligibilityResponseError(
+  factory _CoverageEligibilityResponseError(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept code}) =
       _$_CoverageEligibilityResponseError;
-  const _CoverageEligibilityResponseError._() : super._();
+  _CoverageEligibilityResponseError._() : super._();
 
   factory _CoverageEligibilityResponseError.fromJson(
       Map<String, dynamic> json) = _$_CoverageEligibilityResponseError.fromJson;
@@ -11678,7 +11678,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
-  const _$_EnrollmentRequest(
+  _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           this.resourceType = R4ResourceType.EnrollmentRequest,
       this.id,
@@ -11977,7 +11977,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 }
 
 abstract class _EnrollmentRequest extends EnrollmentRequest {
-  const factory _EnrollmentRequest(
+  factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           final R4ResourceType resourceType,
       final String? id,
@@ -12004,7 +12004,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? provider,
       final Reference? candidate,
       final Reference? coverage}) = _$_EnrollmentRequest;
-  const _EnrollmentRequest._() : super._();
+  _EnrollmentRequest._() : super._();
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -12772,7 +12772,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
-  const _$_EnrollmentResponse(
+  _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           this.resourceType = R4ResourceType.EnrollmentResponse,
       this.id,
@@ -13098,7 +13098,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 }
 
 abstract class _EnrollmentResponse extends EnrollmentResponse {
-  const factory _EnrollmentResponse(
+  factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           final R4ResourceType resourceType,
       final String? id,
@@ -13130,7 +13130,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
           final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider}) = _$_EnrollmentResponse;
-  const _EnrollmentResponse._() : super._();
+  _EnrollmentResponse._() : super._();
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;

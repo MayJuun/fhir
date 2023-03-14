@@ -3,7 +3,6 @@
 ## [0.9.5]
 * Added a few constructors to BundleRequest to more easily create them
 * One convenience method for OperationOutcome to check if it's informational
-* Changed all factory constructors to const, since all freezed classes are immutable anyway, hopefully this can give a slight performance boost
 
 ## [0.9.4]
 

@@ -191,7 +191,7 @@ class Encounter with Resource, _$Encounter {
   /// [location] List of locations where  the patient has been during this
   ///  encounter.
   ///
-  const factory Encounter({
+  factory Encounter({
     /// [resourceType] This is a Encounter resource
     @Default(R5ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
@@ -485,7 +485,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
   ///
   /// [period] The time that the episode was in the specified status.
   ///
-  const factory EncounterStatusHistory({
+  factory EncounterStatusHistory({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -604,7 +604,7 @@ class EncounterClassHistory with _$EncounterClassHistory {
   ///
   /// [period] The time that the episode was in the specified class.
   ///
-  const factory EncounterClassHistory({
+  factory EncounterClassHistory({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -726,7 +726,7 @@ class EncounterParticipant with _$EncounterParticipant {
   ///  the encounter. Not including the patient here covers use cases such as a
   ///  case meeting between practitioners about a patient - non contact times.
   ///
-  const factory EncounterParticipant({
+  factory EncounterParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -858,7 +858,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   ///
   /// [rankElement] ("_rank") Extensions for rank
   ///
-  const factory EncounterDiagnosis({
+  factory EncounterDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1002,7 +1002,7 @@ class EncounterAdmission with _$EncounterAdmission {
   ///
   /// [dischargeDisposition] Category or kind of location after discharge.
   ///
-  const factory EncounterAdmission({
+  factory EncounterAdmission({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1152,7 +1152,7 @@ class EncounterLocation with _$EncounterLocation {
   ///
   /// [period] Time period during which the patient was present at the location.
   ///
-  const factory EncounterLocation({
+  factory EncounterLocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1341,7 +1341,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
   ///
-  const factory EpisodeOfCare({
+  factory EpisodeOfCare({
     /// [resourceType] This is a EpisodeOfCare resource
     @Default(R5ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
@@ -1543,7 +1543,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   /// [period] The period during this EpisodeOfCare that the specific status
   ///  applied.
   ///
-  const factory EpisodeOfCareStatusHistory({
+  factory EpisodeOfCareStatusHistory({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1665,7 +1665,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   ///
   /// [rankElement] ("_rank") Extensions for rank
   ///
-  const factory EpisodeOfCareDiagnosis({
+  factory EpisodeOfCareDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1832,7 +1832,7 @@ class Flag with Resource, _$Flag {
   ///
   /// [author] The person, organization or device that created the flag.
   ///
-  const factory Flag({
+  factory Flag({
     /// [resourceType] This is a Flag resource
     @Default(R5ResourceType.Flag)
     @JsonKey(unknownEnumValue: R5ResourceType.Flag)
@@ -2212,7 +2212,7 @@ class Library with Resource, _$Library {
   ///  Either way, the contentType of the attachment determines how to
   ///  interpret the content.
   ///
-  const factory Library({
+  factory Library({
     /// [resourceType] This is a Library resource
     @Default(R5ResourceType.Library)
     @JsonKey(unknownEnumValue: R5ResourceType.Library)
@@ -2650,7 +2650,7 @@ class List_ with Resource, _$List_ {
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
   ///
-  const factory List_({
+  factory List_({
     /// [resourceType] This is a List resource
     @Default(R5ResourceType.List_)
     @JsonKey(unknownEnumValue: R5ResourceType.List_)
@@ -2861,7 +2861,7 @@ class ListEntry with _$ListEntry {
   ///
   /// [item] A reference to the actual resource from which data was derived.
   ///
-  const factory ListEntry({
+  factory ListEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

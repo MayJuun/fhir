@@ -1203,7 +1203,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeSystem extends _CodeSystem {
-  const _$_CodeSystem(
+  _$_CodeSystem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
           this.resourceType = Stu3ResourceType.CodeSystem,
       this.id,
@@ -1677,7 +1677,7 @@ class _$_CodeSystem extends _CodeSystem {
 }
 
 abstract class _CodeSystem extends CodeSystem {
-  const factory _CodeSystem(
+  factory _CodeSystem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1754,7 +1754,7 @@ abstract class _CodeSystem extends CodeSystem {
       final List<CodeSystemFilter>? filter,
       final List<CodeSystemProperty>? property,
       final List<CodeSystemConcept>? concept}) = _$_CodeSystem;
-  const _CodeSystem._() : super._();
+  _CodeSystem._() : super._();
 
   factory _CodeSystem.fromJson(Map<String, dynamic> json) =
       _$_CodeSystem.fromJson;
@@ -2123,7 +2123,7 @@ class __$$_CodeSystemFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeSystemFilter extends _CodeSystemFilter {
-  const _$_CodeSystemFilter(
+  _$_CodeSystemFilter(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.description,
@@ -2231,7 +2231,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
 }
 
 abstract class _CodeSystemFilter extends CodeSystemFilter {
-  const factory _CodeSystemFilter(
+  factory _CodeSystemFilter(
           {final Code? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? description,
@@ -2241,7 +2241,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_CodeSystemFilter;
-  const _CodeSystemFilter._() : super._();
+  _CodeSystemFilter._() : super._();
 
   factory _CodeSystemFilter.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemFilter.fromJson;
@@ -2515,7 +2515,7 @@ class __$$_CodeSystemPropertyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeSystemProperty extends _CodeSystemProperty {
-  const _$_CodeSystemProperty(
+  _$_CodeSystemProperty(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.uri,
@@ -2596,7 +2596,7 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
 }
 
 abstract class _CodeSystemProperty extends CodeSystemProperty {
-  const factory _CodeSystemProperty(
+  factory _CodeSystemProperty(
           {final Code? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? uri,
@@ -2606,7 +2606,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
           final CodeSystemPropertyType? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_CodeSystemProperty;
-  const _CodeSystemProperty._() : super._();
+  _CodeSystemProperty._() : super._();
 
   factory _CodeSystemProperty.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemProperty.fromJson;
@@ -2891,7 +2891,7 @@ class __$$_CodeSystemConceptCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeSystemConcept extends _CodeSystemConcept {
-  const _$_CodeSystemConcept(
+  _$_CodeSystemConcept(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
@@ -3026,7 +3026,7 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
 }
 
 abstract class _CodeSystemConcept extends CodeSystemConcept {
-  const factory _CodeSystemConcept(
+  factory _CodeSystemConcept(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement,
@@ -3037,7 +3037,7 @@ abstract class _CodeSystemConcept extends CodeSystemConcept {
       final List<CodeSystemDesignation>? designation,
       final List<CodeSystemProperty1>? property,
       final List<CodeSystemConcept>? concept}) = _$_CodeSystemConcept;
-  const _CodeSystemConcept._() : super._();
+  _CodeSystemConcept._() : super._();
 
   factory _CodeSystemConcept.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemConcept.fromJson;
@@ -3260,7 +3260,7 @@ class __$$_CodeSystemDesignationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeSystemDesignation extends _CodeSystemDesignation {
-  const _$_CodeSystemDesignation(
+  _$_CodeSystemDesignation(
       {this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.use,
@@ -3325,14 +3325,14 @@ class _$_CodeSystemDesignation extends _CodeSystemDesignation {
 }
 
 abstract class _CodeSystemDesignation extends CodeSystemDesignation {
-  const factory _CodeSystemDesignation(
+  factory _CodeSystemDesignation(
           {final String? language,
           @JsonKey(name: '_language') final Element? languageElement,
           final Coding? use,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_CodeSystemDesignation;
-  const _CodeSystemDesignation._() : super._();
+  _CodeSystemDesignation._() : super._();
 
   factory _CodeSystemDesignation.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemDesignation.fromJson;
@@ -3709,7 +3709,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
-  const _$_CodeSystemProperty1(
+  _$_CodeSystemProperty1(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.valueCode,
@@ -3832,7 +3832,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 }
 
 abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
-  const factory _CodeSystemProperty1(
+  factory _CodeSystemProperty1(
       {final Code? code,
       @JsonKey(name: '_code')
           final Element? codeElement,
@@ -3852,7 +3852,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement}) = _$_CodeSystemProperty1;
-  const _CodeSystemProperty1._() : super._();
+  _CodeSystemProperty1._() : super._();
 
   factory _CodeSystemProperty1.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemProperty1.fromJson;
@@ -4893,7 +4893,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMap extends _ConceptMap {
-  const _$_ConceptMap(
+  _$_ConceptMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
           this.resourceType = Stu3ResourceType.ConceptMap,
       this.id,
@@ -5282,7 +5282,7 @@ class _$_ConceptMap extends _ConceptMap {
 }
 
 abstract class _ConceptMap extends ConceptMap {
-  const factory _ConceptMap(
+  factory _ConceptMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -5344,7 +5344,7 @@ abstract class _ConceptMap extends ConceptMap {
           final Element? targetUriElement,
       final Reference? targetReference,
       final List<ConceptMapGroup>? group}) = _$_ConceptMap;
-  const _ConceptMap._() : super._();
+  _ConceptMap._() : super._();
 
   factory _ConceptMap.fromJson(Map<String, dynamic> json) =
       _$_ConceptMap.fromJson;
@@ -5743,7 +5743,7 @@ class __$$_ConceptMapGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapGroup extends _ConceptMapGroup {
-  const _$_ConceptMapGroup(
+  _$_ConceptMapGroup(
       {this.source,
       @JsonKey(name: '_source') this.sourceElement,
       this.sourceVersion,
@@ -5850,7 +5850,7 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
 }
 
 abstract class _ConceptMapGroup extends ConceptMapGroup {
-  const factory _ConceptMapGroup(
+  factory _ConceptMapGroup(
       {final String? source,
       @JsonKey(name: '_source') final Element? sourceElement,
       final String? sourceVersion,
@@ -5861,7 +5861,7 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
       @JsonKey(name: '_targetVersion') final Element? targetVersionElement,
       required final List<ConceptMapElement> element,
       final ConceptMapUnmapped? unmapped}) = _$_ConceptMapGroup;
-  const _ConceptMapGroup._() : super._();
+  _ConceptMapGroup._() : super._();
 
   factory _ConceptMapGroup.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapGroup.fromJson;
@@ -6067,7 +6067,7 @@ class __$$_ConceptMapElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapElement extends _ConceptMapElement {
-  const _$_ConceptMapElement(
+  _$_ConceptMapElement(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.display,
@@ -6139,13 +6139,13 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 }
 
 abstract class _ConceptMapElement extends ConceptMapElement {
-  const factory _ConceptMapElement(
+  factory _ConceptMapElement(
       {final Code? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
       final List<ConceptMapTarget>? target}) = _$_ConceptMapElement;
-  const _ConceptMapElement._() : super._();
+  _ConceptMapElement._() : super._();
 
   factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElement.fromJson;
@@ -6438,7 +6438,7 @@ class __$$_ConceptMapTargetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapTarget extends _ConceptMapTarget {
-  const _$_ConceptMapTarget(
+  _$_ConceptMapTarget(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.display,
@@ -6554,7 +6554,7 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
 }
 
 abstract class _ConceptMapTarget extends ConceptMapTarget {
-  const factory _ConceptMapTarget(
+  factory _ConceptMapTarget(
       {final Code? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
@@ -6565,7 +6565,7 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
       @JsonKey(name: '_comment') final Element? commentElement,
       final List<ConceptMapDependsOn>? dependsOn,
       final List<ConceptMapDependsOn>? product}) = _$_ConceptMapTarget;
-  const _ConceptMapTarget._() : super._();
+  _ConceptMapTarget._() : super._();
 
   factory _ConceptMapTarget.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapTarget.fromJson;
@@ -6842,7 +6842,7 @@ class __$$_ConceptMapDependsOnCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
-  const _$_ConceptMapDependsOn(
+  _$_ConceptMapDependsOn(
       {this.property,
       @JsonKey(name: '_property') this.propertyElement,
       this.system,
@@ -6923,7 +6923,7 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 }
 
 abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
-  const factory _ConceptMapDependsOn(
+  factory _ConceptMapDependsOn(
           {final String? property,
           @JsonKey(name: '_property') final Element? propertyElement,
           final String? system,
@@ -6933,7 +6933,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
           final String? display,
           @JsonKey(name: '_display') final Element? displayElement}) =
       _$_ConceptMapDependsOn;
-  const _ConceptMapDependsOn._() : super._();
+  _ConceptMapDependsOn._() : super._();
 
   factory _ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapDependsOn.fromJson;
@@ -7206,7 +7206,7 @@ class __$$_ConceptMapUnmappedCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
-  const _$_ConceptMapUnmapped(
+  _$_ConceptMapUnmapped(
       {this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.code,
@@ -7286,7 +7286,7 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
 }
 
 abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
-  const factory _ConceptMapUnmapped(
+  factory _ConceptMapUnmapped(
           {final ConceptMapUnmappedMode? mode,
           @JsonKey(name: '_mode') final Element? modeElement,
           final Code? code,
@@ -7296,7 +7296,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
           final String? url,
           @JsonKey(name: '_url') final Element? urlElement}) =
       _$_ConceptMapUnmapped;
-  const _ConceptMapUnmapped._() : super._();
+  _ConceptMapUnmapped._() : super._();
 
   factory _ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapUnmapped.fromJson;
@@ -8465,7 +8465,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExpansionProfile extends _ExpansionProfile {
-  const _$_ExpansionProfile(
+  _$_ExpansionProfile(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
           this.resourceType = Stu3ResourceType.ExpansionProfile,
       this.id,
@@ -8899,7 +8899,7 @@ class _$_ExpansionProfile extends _ExpansionProfile {
 }
 
 abstract class _ExpansionProfile extends ExpansionProfile {
-  const factory _ExpansionProfile(
+  factory _ExpansionProfile(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -8970,7 +8970,7 @@ abstract class _ExpansionProfile extends ExpansionProfile {
       final Boolean? limitedExpansion,
       @JsonKey(name: '_limitedExpansion')
           final Element? limitedExpansionElement}) = _$_ExpansionProfile;
-  const _ExpansionProfile._() : super._();
+  _ExpansionProfile._() : super._();
 
   factory _ExpansionProfile.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfile.fromJson;
@@ -9309,7 +9309,7 @@ class __$$_ExpansionProfileFixedVersionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExpansionProfileFixedVersion extends _ExpansionProfileFixedVersion {
-  const _$_ExpansionProfileFixedVersion(
+  _$_ExpansionProfileFixedVersion(
       {this.system,
       @JsonKey(name: '_system') this.systemElement,
       this.version,
@@ -9380,7 +9380,7 @@ class _$_ExpansionProfileFixedVersion extends _ExpansionProfileFixedVersion {
 
 abstract class _ExpansionProfileFixedVersion
     extends ExpansionProfileFixedVersion {
-  const factory _ExpansionProfileFixedVersion(
+  factory _ExpansionProfileFixedVersion(
           {final String? system,
           @JsonKey(name: '_system') final Element? systemElement,
           final String? version,
@@ -9388,7 +9388,7 @@ abstract class _ExpansionProfileFixedVersion
           final ExpansionProfileFixedVersionMode? mode,
           @JsonKey(name: '_mode') final Element? modeElement}) =
       _$_ExpansionProfileFixedVersion;
-  const _ExpansionProfileFixedVersion._() : super._();
+  _ExpansionProfileFixedVersion._() : super._();
 
   factory _ExpansionProfileFixedVersion.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfileFixedVersion.fromJson;
@@ -9580,7 +9580,7 @@ class __$$_ExpansionProfileExcludedSystemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExpansionProfileExcludedSystem
     extends _ExpansionProfileExcludedSystem {
-  const _$_ExpansionProfileExcludedSystem(
+  _$_ExpansionProfileExcludedSystem(
       {this.system,
       @JsonKey(name: '_system') this.systemElement,
       this.version,
@@ -9642,13 +9642,13 @@ class _$_ExpansionProfileExcludedSystem
 
 abstract class _ExpansionProfileExcludedSystem
     extends ExpansionProfileExcludedSystem {
-  const factory _ExpansionProfileExcludedSystem(
+  factory _ExpansionProfileExcludedSystem(
           {final String? system,
           @JsonKey(name: '_system') final Element? systemElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement}) =
       _$_ExpansionProfileExcludedSystem;
-  const _ExpansionProfileExcludedSystem._() : super._();
+  _ExpansionProfileExcludedSystem._() : super._();
 
   factory _ExpansionProfileExcludedSystem.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfileExcludedSystem.fromJson;
@@ -9804,8 +9804,7 @@ class __$$_ExpansionProfileDesignationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExpansionProfileDesignation extends _ExpansionProfileDesignation {
-  const _$_ExpansionProfileDesignation({this.include, this.exclude})
-      : super._();
+  _$_ExpansionProfileDesignation({this.include, this.exclude}) : super._();
 
   factory _$_ExpansionProfileDesignation.fromJson(Map<String, dynamic> json) =>
       _$$_ExpansionProfileDesignationFromJson(json);
@@ -9850,10 +9849,10 @@ class _$_ExpansionProfileDesignation extends _ExpansionProfileDesignation {
 
 abstract class _ExpansionProfileDesignation
     extends ExpansionProfileDesignation {
-  const factory _ExpansionProfileDesignation(
+  factory _ExpansionProfileDesignation(
       {final ExpansionProfileInclude? include,
       final ExpansionProfileExclude? exclude}) = _$_ExpansionProfileDesignation;
-  const _ExpansionProfileDesignation._() : super._();
+  _ExpansionProfileDesignation._() : super._();
 
   factory _ExpansionProfileDesignation.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfileDesignation.fromJson;
@@ -9955,7 +9954,7 @@ class __$$_ExpansionProfileIncludeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExpansionProfileInclude extends _ExpansionProfileInclude {
-  const _$_ExpansionProfileInclude(
+  _$_ExpansionProfileInclude(
       {final List<ExpansionProfileDesignation1>? designation})
       : _designation = designation,
         super._();
@@ -10009,10 +10008,10 @@ class _$_ExpansionProfileInclude extends _ExpansionProfileInclude {
 }
 
 abstract class _ExpansionProfileInclude extends ExpansionProfileInclude {
-  const factory _ExpansionProfileInclude(
+  factory _ExpansionProfileInclude(
           {final List<ExpansionProfileDesignation1>? designation}) =
       _$_ExpansionProfileInclude;
-  const _ExpansionProfileInclude._() : super._();
+  _ExpansionProfileInclude._() : super._();
 
   factory _ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfileInclude.fromJson;
@@ -10176,7 +10175,7 @@ class __$$_ExpansionProfileDesignation1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExpansionProfileDesignation1 extends _ExpansionProfileDesignation1 {
-  const _$_ExpansionProfileDesignation1(
+  _$_ExpansionProfileDesignation1(
       {this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.use})
@@ -10231,11 +10230,11 @@ class _$_ExpansionProfileDesignation1 extends _ExpansionProfileDesignation1 {
 
 abstract class _ExpansionProfileDesignation1
     extends ExpansionProfileDesignation1 {
-  const factory _ExpansionProfileDesignation1(
+  factory _ExpansionProfileDesignation1(
       {final String? language,
       @JsonKey(name: '_language') final Element? languageElement,
       final Coding? use}) = _$_ExpansionProfileDesignation1;
-  const _ExpansionProfileDesignation1._() : super._();
+  _ExpansionProfileDesignation1._() : super._();
 
   factory _ExpansionProfileDesignation1.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfileDesignation1.fromJson;
@@ -10340,7 +10339,7 @@ class __$$_ExpansionProfileExcludeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExpansionProfileExclude extends _ExpansionProfileExclude {
-  const _$_ExpansionProfileExclude(
+  _$_ExpansionProfileExclude(
       {final List<ExpansionProfileDesignation2>? designation})
       : _designation = designation,
         super._();
@@ -10394,10 +10393,10 @@ class _$_ExpansionProfileExclude extends _ExpansionProfileExclude {
 }
 
 abstract class _ExpansionProfileExclude extends ExpansionProfileExclude {
-  const factory _ExpansionProfileExclude(
+  factory _ExpansionProfileExclude(
           {final List<ExpansionProfileDesignation2>? designation}) =
       _$_ExpansionProfileExclude;
-  const _ExpansionProfileExclude._() : super._();
+  _ExpansionProfileExclude._() : super._();
 
   factory _ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfileExclude.fromJson;
@@ -10561,7 +10560,7 @@ class __$$_ExpansionProfileDesignation2CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExpansionProfileDesignation2 extends _ExpansionProfileDesignation2 {
-  const _$_ExpansionProfileDesignation2(
+  _$_ExpansionProfileDesignation2(
       {this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.use})
@@ -10616,11 +10615,11 @@ class _$_ExpansionProfileDesignation2 extends _ExpansionProfileDesignation2 {
 
 abstract class _ExpansionProfileDesignation2
     extends ExpansionProfileDesignation2 {
-  const factory _ExpansionProfileDesignation2(
+  factory _ExpansionProfileDesignation2(
       {final String? language,
       @JsonKey(name: '_language') final Element? languageElement,
       final Coding? use}) = _$_ExpansionProfileDesignation2;
-  const _ExpansionProfileDesignation2._() : super._();
+  _ExpansionProfileDesignation2._() : super._();
 
   factory _ExpansionProfileDesignation2.fromJson(Map<String, dynamic> json) =
       _$_ExpansionProfileDesignation2.fromJson;
@@ -11388,7 +11387,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NamingSystem extends _NamingSystem {
-  const _$_NamingSystem(
+  _$_NamingSystem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
           this.resourceType = Stu3ResourceType.NamingSystem,
       this.id,
@@ -11701,7 +11700,7 @@ class _$_NamingSystem extends _NamingSystem {
 }
 
 abstract class _NamingSystem extends NamingSystem {
-  const factory _NamingSystem(
+  factory _NamingSystem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -11747,7 +11746,7 @@ abstract class _NamingSystem extends NamingSystem {
           final Element? usageElement,
       required final List<NamingSystemUniqueId> uniqueId,
       final Reference? replacedBy}) = _$_NamingSystem;
-  const _NamingSystem._() : super._();
+  _NamingSystem._() : super._();
 
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
       _$_NamingSystem.fromJson;
@@ -12107,7 +12106,7 @@ class __$$_NamingSystemUniqueIdCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
-  const _$_NamingSystemUniqueId(
+  _$_NamingSystemUniqueId(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.value,
@@ -12201,7 +12200,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 }
 
 abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
-  const factory _NamingSystemUniqueId(
+  factory _NamingSystemUniqueId(
       {final NamingSystemUniqueIdType? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final String? value,
@@ -12211,7 +12210,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
       final String? comment,
       @JsonKey(name: '_comment') final Element? commentElement,
       final Period? period}) = _$_NamingSystemUniqueId;
-  const _NamingSystemUniqueId._() : super._();
+  _NamingSystemUniqueId._() : super._();
 
   factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemUniqueId.fromJson;
@@ -13212,7 +13211,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSet extends _ValueSet {
-  const _$_ValueSet(
+  _$_ValueSet(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
           this.resourceType = Stu3ResourceType.ValueSet,
       this.id,
@@ -13596,7 +13595,7 @@ class _$_ValueSet extends _ValueSet {
 }
 
 abstract class _ValueSet extends ValueSet {
-  const factory _ValueSet(
+  factory _ValueSet(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -13657,7 +13656,7 @@ abstract class _ValueSet extends ValueSet {
           final Element? extensibleElement,
       final ValueSetCompose? compose,
       final ValueSetExpansion? expansion}) = _$_ValueSet;
-  const _ValueSet._() : super._();
+  _ValueSet._() : super._();
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
@@ -13954,7 +13953,7 @@ class __$$_ValueSetComposeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetCompose extends _ValueSetCompose {
-  const _$_ValueSetCompose(
+  _$_ValueSetCompose(
       {this.lockedDate,
       @JsonKey(name: '_lockedDate') this.lockedDateElement,
       this.inactive,
@@ -14044,14 +14043,14 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 }
 
 abstract class _ValueSetCompose extends ValueSetCompose {
-  const factory _ValueSetCompose(
+  factory _ValueSetCompose(
       {final Date? lockedDate,
       @JsonKey(name: '_lockedDate') final Element? lockedDateElement,
       final Boolean? inactive,
       @JsonKey(name: '_inactive') final Element? inactiveElement,
       required final List<ValueSetInclude> include,
       final List<ValueSetInclude>? exclude}) = _$_ValueSetCompose;
-  const _ValueSetCompose._() : super._();
+  _ValueSetCompose._() : super._();
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCompose.fromJson;
@@ -14301,7 +14300,7 @@ class __$$_ValueSetIncludeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetInclude extends _ValueSetInclude {
-  const _$_ValueSetInclude(
+  _$_ValueSetInclude(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.system,
       @JsonKey(name: '_system') this.systemElement,
@@ -14437,7 +14436,7 @@ class _$_ValueSetInclude extends _ValueSetInclude {
 }
 
 abstract class _ValueSetInclude extends ValueSetInclude {
-  const factory _ValueSetInclude(
+  factory _ValueSetInclude(
           {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final String? system,
           @JsonKey(name: '_system') final Element? systemElement,
@@ -14448,7 +14447,7 @@ abstract class _ValueSetInclude extends ValueSetInclude {
           final List<String>? valueSet,
           @JsonKey(name: '_valueSet') final List<Element?>? valueSetElement}) =
       _$_ValueSetInclude;
-  const _ValueSetInclude._() : super._();
+  _ValueSetInclude._() : super._();
 
   factory _ValueSetInclude.fromJson(Map<String, dynamic> json) =
       _$_ValueSetInclude.fromJson;
@@ -14667,7 +14666,7 @@ class __$$_ValueSetConceptCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetConcept extends _ValueSetConcept {
-  const _$_ValueSetConcept(
+  _$_ValueSetConcept(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
@@ -14760,14 +14759,14 @@ class _$_ValueSetConcept extends _ValueSetConcept {
 }
 
 abstract class _ValueSetConcept extends ValueSetConcept {
-  const factory _ValueSetConcept(
+  factory _ValueSetConcept(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
       final List<ValueSetDesignation>? designation}) = _$_ValueSetConcept;
-  const _ValueSetConcept._() : super._();
+  _ValueSetConcept._() : super._();
 
   factory _ValueSetConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetConcept.fromJson;
@@ -14979,7 +14978,7 @@ class __$$_ValueSetDesignationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetDesignation extends _ValueSetDesignation {
-  const _$_ValueSetDesignation(
+  _$_ValueSetDesignation(
       {this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.use,
@@ -15044,14 +15043,14 @@ class _$_ValueSetDesignation extends _ValueSetDesignation {
 }
 
 abstract class _ValueSetDesignation extends ValueSetDesignation {
-  const factory _ValueSetDesignation(
+  factory _ValueSetDesignation(
           {final String? language,
           @JsonKey(name: '_language') final Element? languageElement,
           final Coding? use,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ValueSetDesignation;
-  const _ValueSetDesignation._() : super._();
+  _ValueSetDesignation._() : super._();
 
   factory _ValueSetDesignation.fromJson(Map<String, dynamic> json) =
       _$_ValueSetDesignation.fromJson;
@@ -15274,7 +15273,7 @@ class __$$_ValueSetFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetFilter extends _ValueSetFilter {
-  const _$_ValueSetFilter(
+  _$_ValueSetFilter(
       {this.property,
       @JsonKey(name: '_property') this.propertyElement,
       this.op,
@@ -15344,7 +15343,7 @@ class _$_ValueSetFilter extends _ValueSetFilter {
 }
 
 abstract class _ValueSetFilter extends ValueSetFilter {
-  const factory _ValueSetFilter(
+  factory _ValueSetFilter(
           {final String? property,
           @JsonKey(name: '_property') final Element? propertyElement,
           final ValueSetFilterOp? op,
@@ -15352,7 +15351,7 @@ abstract class _ValueSetFilter extends ValueSetFilter {
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ValueSetFilter;
-  const _ValueSetFilter._() : super._();
+  _ValueSetFilter._() : super._();
 
   factory _ValueSetFilter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetFilter.fromJson;
@@ -15646,7 +15645,7 @@ class __$$_ValueSetExpansionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetExpansion extends _ValueSetExpansion {
-  const _$_ValueSetExpansion(
+  _$_ValueSetExpansion(
       {this.identifier,
       @JsonKey(name: '_identifier') this.identifierElement,
       this.timestamp,
@@ -15764,7 +15763,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 }
 
 abstract class _ValueSetExpansion extends ValueSetExpansion {
-  const factory _ValueSetExpansion(
+  factory _ValueSetExpansion(
       {final String? identifier,
       @JsonKey(name: '_identifier') final Element? identifierElement,
       final FhirDateTime? timestamp,
@@ -15775,7 +15774,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
       @JsonKey(name: '_offset') final Element? offsetElement,
       final List<ValueSetParameter>? parameter,
       final List<ValueSetContains>? contains}) = _$_ValueSetExpansion;
-  const _ValueSetExpansion._() : super._();
+  _ValueSetExpansion._() : super._();
 
   factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansion.fromJson;
@@ -16178,7 +16177,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetParameter extends _ValueSetParameter {
-  const _$_ValueSetParameter(
+  _$_ValueSetParameter(
       {this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.valueString,
@@ -16308,7 +16307,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
 }
 
 abstract class _ValueSetParameter extends ValueSetParameter {
-  const factory _ValueSetParameter(
+  factory _ValueSetParameter(
           {final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final String? valueString,
@@ -16324,7 +16323,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
           final Code? valueCode,
           @JsonKey(name: '_valueCode') final Element? valueCodeElement}) =
       _$_ValueSetParameter;
-  const _ValueSetParameter._() : super._();
+  _ValueSetParameter._() : super._();
 
   factory _ValueSetParameter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetParameter.fromJson;
@@ -16724,7 +16723,7 @@ class __$$_ValueSetContainsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetContains extends _ValueSetContains {
-  const _$_ValueSetContains(
+  _$_ValueSetContains(
       {this.system,
       @JsonKey(name: '_system') this.systemElement,
       @JsonKey(name: 'abstract') this.abstract_,
@@ -16866,7 +16865,7 @@ class _$_ValueSetContains extends _ValueSetContains {
 }
 
 abstract class _ValueSetContains extends ValueSetContains {
-  const factory _ValueSetContains(
+  factory _ValueSetContains(
       {final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
       @JsonKey(name: 'abstract') final Boolean? abstract_,
@@ -16881,7 +16880,7 @@ abstract class _ValueSetContains extends ValueSetContains {
       @JsonKey(name: '_display') final Element? displayElement,
       final List<ValueSetDesignation>? designation,
       final List<ValueSetContains>? contains}) = _$_ValueSetContains;
-  const _ValueSetContains._() : super._();
+  _ValueSetContains._() : super._();
 
   factory _ValueSetContains.fromJson(Map<String, dynamic> json) =
       _$_ValueSetContains.fromJson;

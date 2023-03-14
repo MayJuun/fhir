@@ -15,7 +15,7 @@ part 'information_tracking.g.dart';
 @freezed
 class Questionnaire with Resource, _$Questionnaire {
   Questionnaire._();
-  const factory Questionnaire({
+  factory Questionnaire({
     @Default(Dstu2ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
         Dstu2ResourceType resourceType,
@@ -77,7 +77,7 @@ class Questionnaire with Resource, _$Questionnaire {
 @freezed
 class QuestionnaireGroup with _$QuestionnaireGroup {
   QuestionnaireGroup._();
-  const factory QuestionnaireGroup({
+  factory QuestionnaireGroup({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -128,7 +128,7 @@ class QuestionnaireGroup with _$QuestionnaireGroup {
 @freezed
 class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
   QuestionnaireGroupQuestion._();
-  const factory QuestionnaireGroupQuestion({
+  factory QuestionnaireGroupQuestion({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -179,7 +179,7 @@ class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
 @freezed
 class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
-  const factory QuestionnaireResponse({
+  factory QuestionnaireResponse({
     @Default(Dstu2ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
         Dstu2ResourceType resourceType,
@@ -239,7 +239,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 @freezed
 class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
   QuestionnaireResponseGroup._();
-  const factory QuestionnaireResponseGroup({
+  factory QuestionnaireResponseGroup({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -289,7 +289,7 @@ class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
 class QuestionnaireResponseGroupQuestion
     with _$QuestionnaireResponseGroupQuestion {
   QuestionnaireResponseGroupQuestion._();
-  const factory QuestionnaireResponseGroupQuestion({
+  factory QuestionnaireResponseGroupQuestion({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -324,7 +324,7 @@ class QuestionnaireResponseGroupQuestion
 class QuestionnaireResponseQuestionAnswer
     with _$QuestionnaireResponseQuestionAnswer {
   QuestionnaireResponseQuestionAnswer._();
-  const factory QuestionnaireResponseQuestionAnswer({
+  factory QuestionnaireResponseQuestionAnswer({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -377,7 +377,7 @@ class QuestionnaireResponseQuestionAnswer
 @freezed
 class Provenance with Resource, _$Provenance {
   Provenance._();
-  const factory Provenance({
+  factory Provenance({
     @Default(Dstu2ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
         Dstu2ResourceType resourceType,
@@ -436,7 +436,7 @@ class Provenance with Resource, _$Provenance {
 @freezed
 class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
-  const factory ProvenanceAgent({
+  factory ProvenanceAgent({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -481,7 +481,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 @freezed
 class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
-  const factory ProvenanceEntity({
+  factory ProvenanceEntity({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -529,7 +529,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
 @freezed
 class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
   ProvenanceAgentRelatedAgent._();
-  const factory ProvenanceAgentRelatedAgent({
+  factory ProvenanceAgentRelatedAgent({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -571,7 +571,7 @@ class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
 @freezed
 class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
-  const factory AuditEvent({
+  factory AuditEvent({
     @Default(Dstu2ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
         Dstu2ResourceType resourceType,
@@ -622,7 +622,7 @@ class AuditEvent with Resource, _$AuditEvent {
 @freezed
 class AuditEventEvent with _$AuditEventEvent {
   AuditEventEvent._();
-  const factory AuditEventEvent({
+  factory AuditEventEvent({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -669,7 +669,7 @@ class AuditEventEvent with _$AuditEventEvent {
 @freezed
 class AuditEventParticipant with _$AuditEventParticipant {
   AuditEventParticipant._();
-  const factory AuditEventParticipant({
+  factory AuditEventParticipant({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -721,7 +721,7 @@ class AuditEventParticipant with _$AuditEventParticipant {
 @freezed
 class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
-  const factory AuditEventSource({
+  factory AuditEventSource({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -765,7 +765,7 @@ class AuditEventSource with _$AuditEventSource {
 @freezed
 class AuditEventObject with _$AuditEventObject {
   AuditEventObject._();
-  const factory AuditEventObject({
+  factory AuditEventObject({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -816,7 +816,7 @@ class AuditEventObject with _$AuditEventObject {
 @freezed
 class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork {
   AuditEventParticipantNetwork._();
-  const factory AuditEventParticipantNetwork({
+  factory AuditEventParticipantNetwork({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -860,7 +860,7 @@ class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork {
 @freezed
 class AuditEventObjectDetail with _$AuditEventObjectDetail {
   AuditEventObjectDetail._();
-  const factory AuditEventObjectDetail({
+  factory AuditEventObjectDetail({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

@@ -248,7 +248,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   ///
   /// [document] A document definition.
   ///
-  const factory CapabilityStatement({
+  factory CapabilityStatement({
     /// [resourceType] This is a CapabilityStatement resource
     @Default(R5ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
@@ -527,7 +527,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   ///
   /// [releaseDateElement] ("_releaseDate") Extensions for releaseDate
   ///
-  const factory CapabilityStatementSoftware({
+  factory CapabilityStatementSoftware({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -662,7 +662,7 @@ class CapabilityStatementImplementation
   /// [custodian] The organization responsible for the management of the
   ///  instance and oversight of the data on the server at the specified URL.
   ///
-  const factory CapabilityStatementImplementation({
+  factory CapabilityStatementImplementation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -814,7 +814,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   ///  compartment that the system supports. The reference is to a
   ///  CompartmentDefinition resource by its canonical URL .
   ///
-  const factory CapabilityStatementRest({
+  factory CapabilityStatementRest({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -958,7 +958,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  const factory CapabilityStatementSecurity({
+  factory CapabilityStatementSecurity({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1179,7 +1179,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   ///  operation for details about how to invoke the operation, and the
   ///  parameters.
   ///
-  const factory CapabilityStatementResource({
+  factory CapabilityStatementResource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1387,7 +1387,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  const factory CapabilityStatementInteraction({
+  factory CapabilityStatementInteraction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1531,7 +1531,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  const factory CapabilityStatementSearchParam({
+  factory CapabilityStatementSearchParam({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1682,7 +1682,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  const factory CapabilityStatementOperation({
+  factory CapabilityStatementOperation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1810,7 +1810,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  const factory CapabilityStatementInteraction1({
+  factory CapabilityStatementInteraction1({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1945,7 +1945,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// [supportedMessage] References to message definitions for messages this
   ///  system can send or receive.
   ///
-  const factory CapabilityStatementMessaging({
+  factory CapabilityStatementMessaging({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2074,7 +2074,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   ///
   /// [addressElement] ("_address") Extensions for address
   ///
-  const factory CapabilityStatementEndpoint({
+  factory CapabilityStatementEndpoint({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2196,7 +2196,7 @@ class CapabilityStatementSupportedMessage
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
   ///
-  const factory CapabilityStatementSupportedMessage({
+  factory CapabilityStatementSupportedMessage({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2324,7 +2324,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
   ///
-  const factory CapabilityStatementDocument({
+  factory CapabilityStatementDocument({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2578,7 +2578,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   ///
   /// [resource] Information about how a resource is related to the compartment.
   ///
-  const factory CompartmentDefinition({
+  factory CompartmentDefinition({
     /// [resourceType] This is a CompartmentDefinition resource
     @Default(R5ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
@@ -2824,7 +2824,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   ///
   /// [endParamElement] ("_endParam") Extensions for endParam
   ///
-  const factory CompartmentDefinitionResource({
+  factory CompartmentDefinitionResource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3097,7 +3097,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   ///
   /// [link] Links this graph makes rules about.
   ///
-  const factory GraphDefinition({
+  factory GraphDefinition({
     /// [resourceType] This is a GraphDefinition resource
     @Default(R5ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
@@ -3334,7 +3334,7 @@ class GraphDefinitionNode with _$GraphDefinitionNode {
   ///
   /// [profile] Profile for the target resource.
   ///
-  const factory GraphDefinitionNode({
+  factory GraphDefinitionNode({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3491,7 +3491,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   ///
   /// [compartment] Compartment Consistency Rules.
   ///
-  const factory GraphDefinitionLink({
+  factory GraphDefinitionLink({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3664,7 +3664,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  const factory GraphDefinitionCompartment({
+  factory GraphDefinitionCompartment({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3963,7 +3963,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
   ///
-  const factory ImplementationGuide({
+  factory ImplementationGuide({
     /// [resourceType] This is a ImplementationGuide resource
     @Default(R5ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
@@ -4224,7 +4224,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   ///
   /// [reasonElement] ("_reason") Extensions for reason
   ///
-  const factory ImplementationGuideDependsOn({
+  factory ImplementationGuideDependsOn({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4355,7 +4355,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ///
   /// [profile] A reference to the profile that all instances must conform to.
   ///
-  const factory ImplementationGuideGlobal({
+  factory ImplementationGuideGlobal({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4484,7 +4484,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   ///
   /// [template] A template for building resources.
   ///
-  const factory ImplementationGuideDefinition({
+  factory ImplementationGuideDefinition({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4612,7 +4612,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  const factory ImplementationGuideGrouping({
+  factory ImplementationGuideGrouping({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4757,7 +4757,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   ///
   /// [groupingIdElement] ("_groupingId") Extensions for groupingId
   ///
-  const factory ImplementationGuideResource({
+  factory ImplementationGuideResource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4927,7 +4927,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   ///
   /// [page] Nested Pages/Sections under this page.
   ///
-  const factory ImplementationGuidePage({
+  factory ImplementationGuidePage({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5075,7 +5075,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  const factory ImplementationGuideParameter({
+  factory ImplementationGuideParameter({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5200,7 +5200,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   ///
   /// [scopeElement] ("_scope") Extensions for scope
   ///
-  const factory ImplementationGuideTemplate({
+  factory ImplementationGuideTemplate({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5344,7 +5344,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   ///
   /// [otherElement] ("_other") Extensions for other
   ///
-  const factory ImplementationGuideManifest({
+  factory ImplementationGuideManifest({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5485,7 +5485,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   ///
   /// [relativePathElement] ("_relativePath") Extensions for relativePath
   ///
-  const factory ImplementationGuideResource1({
+  factory ImplementationGuideResource1({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5619,7 +5619,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   ///
   /// [anchorElement] ("_anchor") Extensions for anchor
   ///
-  const factory ImplementationGuidePage1({
+  factory ImplementationGuidePage1({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5904,7 +5904,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   ///  GraphDefinition can also specify profiles that apply to the various
   ///  resources.
   ///
-  const factory MessageDefinition({
+  factory MessageDefinition({
     /// [resourceType] This is a MessageDefinition resource
     @Default(R5ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
@@ -6172,7 +6172,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   ///
   /// [maxElement] ("_max") Extensions for max
   ///
-  const factory MessageDefinitionFocus({
+  factory MessageDefinitionFocus({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6301,7 +6301,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   ///
   /// [situationElement] ("_situation") Extensions for situation
   ///
-  const factory MessageDefinitionAllowedResponse({
+  factory MessageDefinitionAllowedResponse({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6599,7 +6599,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   ///  invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
   ///
-  const factory OperationDefinition({
+  factory OperationDefinition({
     /// [resourceType] This is a OperationDefinition resource
     @Default(R5ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
@@ -6928,7 +6928,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   ///
   /// [part_] ("part") The parts of a nested Parameter.
   ///
-  const factory OperationDefinitionParameter({
+  factory OperationDefinitionParameter({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7100,7 +7100,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
   ///
-  const factory OperationDefinitionBinding({
+  factory OperationDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7218,7 +7218,7 @@ class OperationDefinitionReferencedFrom
   ///
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   ///
-  const factory OperationDefinitionReferencedFrom({
+  factory OperationDefinitionReferencedFrom({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7338,7 +7338,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  const factory OperationDefinitionOverload({
+  factory OperationDefinitionOverload({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7651,7 +7651,7 @@ class SearchParameter with Resource, _$SearchParameter {
   ///
   /// [component] Used to define the parts of a composite search parameter.
   ///
-  const factory SearchParameter({
+  factory SearchParameter({
     /// [resourceType] This is a SearchParameter resource
     @Default(R5ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
@@ -7941,7 +7941,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  const factory SearchParameterComponent({
+  factory SearchParameterComponent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8244,7 +8244,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
   ///
-  const factory StructureDefinition({
+  factory StructureDefinition({
     /// [resourceType] This is a StructureDefinition resource
     @Default(R5ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
@@ -8527,7 +8527,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  const factory StructureDefinitionMapping({
+  factory StructureDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8661,7 +8661,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  const factory StructureDefinitionContext({
+  factory StructureDefinitionContext({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8775,7 +8775,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   ///
   /// [element] Captures constraints on each element within the resource.
   ///
-  const factory StructureDefinitionSnapshot({
+  factory StructureDefinitionSnapshot({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8881,7 +8881,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   ///
   /// [element] Captures constraints on each element within the resource.
   ///
-  const factory StructureDefinitionDifferential({
+  factory StructureDefinitionDifferential({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9120,7 +9120,7 @@ class StructureMap with Resource, _$StructureMap {
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
   ///
-  const factory StructureMap({
+  factory StructureMap({
     /// [resourceType] This is a StructureMap resource
     @Default(R5ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
@@ -9348,7 +9348,7 @@ class StructureMapStructure with _$StructureMapStructure {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  const factory StructureMapStructure({
+  factory StructureMapStructure({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9486,7 +9486,7 @@ class StructureMapGroup with _$StructureMapGroup {
   ///
   /// [rule] Transform Rule from source to target.
   ///
-  const factory StructureMapGroup({
+  factory StructureMapGroup({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9626,7 +9626,7 @@ class StructureMapInput with _$StructureMapInput {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  const factory StructureMapInput({
+  factory StructureMapInput({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9760,7 +9760,7 @@ class StructureMapRule with _$StructureMapRule {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  const factory StructureMapRule({
+  factory StructureMapRule({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9930,7 +9930,7 @@ class StructureMapSource with _$StructureMapSource {
   ///
   /// [logMessageElement] ("_logMessage") Extensions for logMessage
   ///
-  const factory StructureMapSource({
+  factory StructureMapSource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10116,7 +10116,7 @@ class StructureMapTarget with _$StructureMapTarget {
   ///
   /// [parameter] Parameters to the transform.
   ///
-  const factory StructureMapTarget({
+  factory StructureMapTarget({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10281,7 +10281,7 @@ class StructureMapParameter with _$StructureMapParameter {
   ///
   /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
   ///
-  const factory StructureMapParameter({
+  factory StructureMapParameter({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10429,7 +10429,7 @@ class StructureMapDependent with _$StructureMapDependent {
   ///
   /// [parameter] Parameter to pass to the rule or group.
   ///
-  const factory StructureMapDependent({
+  factory StructureMapDependent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

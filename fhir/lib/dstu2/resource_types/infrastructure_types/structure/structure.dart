@@ -15,7 +15,7 @@ part 'structure.g.dart';
 @freezed
 class Media with Resource, _$Media {
   Media._();
-  const factory Media({
+  factory Media({
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
         Dstu2ResourceType resourceType,
@@ -77,7 +77,7 @@ class Media with Resource, _$Media {
 @freezed
 class Binary with Resource, _$Binary {
   Binary._();
-  const factory Binary({
+  factory Binary({
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
         Dstu2ResourceType resourceType,
@@ -122,7 +122,7 @@ class Binary with Resource, _$Binary {
 @freezed
 class Bundle with Resource, _$Bundle {
   Bundle._();
-  const factory Bundle({
+  factory Bundle({
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
         Dstu2ResourceType resourceType,
@@ -171,7 +171,7 @@ class Bundle with Resource, _$Bundle {
 @freezed
 class BundleLink with _$BundleLink {
   BundleLink._();
-  const factory BundleLink({
+  factory BundleLink({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -216,7 +216,7 @@ class BundleLink with _$BundleLink {
 @freezed
 class BundleEntry with _$BundleEntry {
   BundleEntry._();
-  const factory BundleEntry({
+  factory BundleEntry({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -307,7 +307,7 @@ class BundleEntry with _$BundleEntry {
 @freezed
 class BundleEntrySearch with _$BundleEntrySearch {
   BundleEntrySearch._();
-  const factory BundleEntrySearch({
+  factory BundleEntrySearch({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -352,7 +352,7 @@ class BundleEntrySearch with _$BundleEntrySearch {
 @freezed
 class BundleEntryRequest with _$BundleEntryRequest {
   BundleEntryRequest._();
-  const factory BundleEntryRequest({
+  factory BundleEntryRequest({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -406,7 +406,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
 @freezed
 class BundleEntryResponse with _$BundleEntryResponse {
   BundleEntryResponse._();
-  const factory BundleEntryResponse({
+  factory BundleEntryResponse({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -455,7 +455,7 @@ class BundleEntryResponse with _$BundleEntryResponse {
 @freezed
 class Basic with Resource, _$Basic {
   Basic._();
-  const factory Basic({
+  factory Basic({
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
         Dstu2ResourceType resourceType,

@@ -199,7 +199,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
   /// [note] Comments made about the adverse event by the performer, subject or
   ///  other participants.
   ///
-  const factory AdverseEvent({
+  factory AdverseEvent({
     /// [resourceType] This is a AdverseEvent resource
     @Default(R5ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
@@ -441,7 +441,7 @@ class AdverseEventParticipant with _$AdverseEventParticipant {
   ///
   /// [actor] Indicates who or what participated in the event.
   ///
-  const factory AdverseEventParticipant({
+  factory AdverseEventParticipant({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -581,7 +581,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   ///
   /// [causality] Information on the possible cause of the event.
   ///
-  const factory AdverseEventSuspectEntity({
+  factory AdverseEventSuspectEntity({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -722,7 +722,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
   ///
   /// [author] The author of the information on the possible cause of the event.
   ///
-  const factory AdverseEventCausality({
+  factory AdverseEventCausality({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -861,7 +861,7 @@ class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
   /// [itemCodeableConcept] The item that is suspected to have increased the
   ///  probability or severity of the adverse event.
   ///
-  const factory AdverseEventContributingFactor({
+  factory AdverseEventContributingFactor({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -998,7 +998,7 @@ class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
   /// [itemCodeableConcept] The action that contributed to avoiding the adverse
   ///  event.
   ///
-  const factory AdverseEventPreventiveAction({
+  factory AdverseEventPreventiveAction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1135,7 +1135,7 @@ class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
   /// [itemCodeableConcept] The ameliorating action taken after the adverse
   ///  event occured in order to reduce the extent of harm.
   ///
-  const factory AdverseEventMitigatingAction({
+  factory AdverseEventMitigatingAction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1288,7 +1288,7 @@ class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
   ///  (MSDS).  Supporting information is not a contributing factor, preventive
   ///  action, or mitigating action.
   ///
-  const factory AdverseEventSupportingInfo({
+  factory AdverseEventSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1505,7 +1505,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   /// [reaction] Details about each adverse reaction event linked to exposure
   ///  to the identified substance.
   ///
-  const factory AllergyIntolerance({
+  factory AllergyIntolerance({
     /// [resourceType] This is a AllergyIntolerance resource
     @Default(R5ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R5ResourceType.AllergyIntolerance)
@@ -1699,7 +1699,7 @@ class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
   /// [actor] Indicates who or what participated in the activities related to
   ///  the allergy or intolerance.
   ///
-  const factory AllergyIntoleranceParticipant({
+  factory AllergyIntoleranceParticipant({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1838,7 +1838,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// [note] Additional text about the adverse reaction event not captured in
   ///  other fields.
   ///
-  const factory AllergyIntoleranceReaction({
+  factory AllergyIntoleranceReaction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2082,7 +2082,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   ///  impression itself was made, though supplemental notes by the original
   ///  author could also appear.
   ///
-  const factory ClinicalImpression({
+  factory ClinicalImpression({
     /// [resourceType] This is a ClinicalImpression resource
     @Default(R5ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R5ResourceType.ClinicalImpression)
@@ -2295,7 +2295,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ///
   /// [basisElement] ("_basis") Extensions for basis
   ///
-  const factory ClinicalImpressionFinding({
+  factory ClinicalImpressionFinding({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2531,7 +2531,7 @@ class Condition with Resource, _$Condition {
   ///  notes/comments entry  for description of the Condition, its diagnosis
   ///  and prognosis.
   ///
-  const factory Condition({
+  factory Condition({
     /// [resourceType] This is a Condition resource
     @Default(R5ResourceType.Condition)
     @JsonKey(unknownEnumValue: R5ResourceType.Condition)
@@ -2737,7 +2737,7 @@ class ConditionParticipant with _$ConditionParticipant {
   /// [actor] Indicates who or what participated in the activities related to
   ///  the condition.
   ///
-  const factory ConditionParticipant({
+  factory ConditionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2849,7 +2849,7 @@ class ConditionStage with _$ConditionStage {
   ///
   /// [type] The kind of staging, such as pathological or clinical staging.
   ///
-  const factory ConditionStage({
+  factory ConditionStage({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3042,7 +3042,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
   ///  known mitigating factors that may reduce/eliminate the need for any
   ///  action.
   ///
-  const factory DetectedIssue({
+  factory DetectedIssue({
     /// [resourceType] This is a DetectedIssue resource
     @Default(R5ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R5ResourceType.DetectedIssue)
@@ -3220,7 +3220,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
   /// [detail] Links to resources that constitute evidence for the detected
   ///  issue such as a GuidanceResponse or MeasureReport.
   ///
-  const factory DetectedIssueEvidence({
+  factory DetectedIssueEvidence({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3337,7 +3337,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   /// [author] Identifies the practitioner who determined the mitigation and
   ///  takes responsibility for the mitigation step occurring.
   ///
-  const factory DetectedIssueMitigation({
+  factory DetectedIssueMitigation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3582,7 +3582,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   ///  more than one procedure per resource, though there is nothing stopping
   ///  multiple resources - one per procedure.
   ///
-  const factory FamilyMemberHistory({
+  factory FamilyMemberHistory({
     /// [resourceType] This is a FamilyMemberHistory resource
     @Default(R5ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R5ResourceType.FamilyMemberHistory)
@@ -3814,7 +3814,7 @@ class FamilyMemberHistoryParticipant with _$FamilyMemberHistoryParticipant {
   /// [actor] Indicates who or what participated in the activities related to
   ///  the family member history.
   ///
-  const factory FamilyMemberHistoryParticipant({
+  factory FamilyMemberHistoryParticipant({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3952,7 +3952,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// [note] An area where general notes can be placed about this specific
   ///  condition.
   ///
-  const factory FamilyMemberHistoryCondition({
+  factory FamilyMemberHistoryCondition({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4125,7 +4125,7 @@ class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
   /// [note] An area where general notes can be placed about this specific
   ///  procedure.
   ///
-  const factory FamilyMemberHistoryProcedure({
+  factory FamilyMemberHistoryProcedure({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4457,7 +4457,7 @@ class Procedure with Resource, _$Procedure {
   ///  interpretation. This extension should not be used if more specific
   ///  inline elements or extensions are available.
   ///
-  const factory Procedure({
+  factory Procedure({
     /// [resourceType] This is a Procedure resource
     @Default(R5ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R5ResourceType.Procedure)
@@ -4713,7 +4713,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
   ///
   /// [period] Time period during which the performer performed the procedure.
   ///
-  const factory ProcedurePerformer({
+  factory ProcedurePerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4840,7 +4840,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
   /// [manipulated] The device that was manipulated (changed) during the
   ///  procedure.
   ///
-  const factory ProcedureFocalDevice({
+  factory ProcedureFocalDevice({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

@@ -726,7 +726,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GuidanceResponse extends _GuidanceResponse {
-  const _$_GuidanceResponse(
+  _$_GuidanceResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           this.resourceType = Stu3ResourceType.GuidanceResponse,
       this.id,
@@ -1001,7 +1001,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 }
 
 abstract class _GuidanceResponse extends GuidanceResponse {
-  const factory _GuidanceResponse(
+  factory _GuidanceResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1038,7 +1038,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final Reference? outputParameters,
       final Reference? result,
       final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
-  const _GuidanceResponse._() : super._();
+  _GuidanceResponse._() : super._();
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
       _$_GuidanceResponse.fromJson;

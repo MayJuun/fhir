@@ -15,7 +15,7 @@ part 'content.g.dart';
 @freezed
 class StructureDefinition with Resource, _$StructureDefinition {
   StructureDefinition._();
-  const factory StructureDefinition({
+  factory StructureDefinition({
     @Default(Dstu2ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
         Dstu2ResourceType resourceType,
@@ -103,7 +103,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 @freezed
 class StructureDefinitionContact with _$StructureDefinitionContact {
   StructureDefinitionContact._();
-  const factory StructureDefinitionContact({
+  factory StructureDefinitionContact({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -145,7 +145,7 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
 @freezed
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
-  const factory StructureDefinitionMapping({
+  factory StructureDefinitionMapping({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -194,7 +194,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 @freezed
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
-  const factory StructureDefinitionSnapshot({
+  factory StructureDefinitionSnapshot({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -235,7 +235,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 @freezed
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
-  const factory StructureDefinitionDifferential({
+  factory StructureDefinitionDifferential({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -277,7 +277,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 @freezed
 class DataElement with Resource, _$DataElement {
   DataElement._();
-  const factory DataElement({
+  factory DataElement({
     @Default(Dstu2ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
         Dstu2ResourceType resourceType,
@@ -338,7 +338,7 @@ class DataElement with Resource, _$DataElement {
 @freezed
 class DataElementContact with _$DataElementContact {
   DataElementContact._();
-  const factory DataElementContact({
+  factory DataElementContact({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -380,7 +380,7 @@ class DataElementContact with _$DataElementContact {
 @freezed
 class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
-  const factory DataElementMapping({
+  factory DataElementMapping({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

@@ -133,7 +133,7 @@ class Group with Resource, _$Group {
   ///
   /// [member] Identifies the resource instances that are members of the group.
   ///
-  const factory Group({
+  factory Group({
     /// [resourceType] This is a Group resource
     @Default(R5ResourceType.Group)
     @JsonKey(unknownEnumValue: R5ResourceType.Group)
@@ -372,7 +372,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
   /// [period] The period over which the characteristic is tested; e.g. the
   ///  patient had an operation during the month of June.
   ///
-  const factory GroupCharacteristic({
+  factory GroupCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -522,7 +522,7 @@ class GroupMember with _$GroupMember {
   ///
   /// [inactiveElement] ("_inactive") Extensions for inactive
   ///
-  const factory GroupMember({
+  factory GroupMember({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -731,7 +731,7 @@ class Patient with Resource, _$Patient {
   /// [link] Link to a Patient or RelatedPerson resource that concerns the same
   ///  actual individual.
   ///
-  const factory Patient({
+  factory Patient({
     /// [resourceType] This is a Patient resource
     @Default(R5ResourceType.Patient)
     @JsonKey(unknownEnumValue: R5ResourceType.Patient)
@@ -986,7 +986,7 @@ class PatientContact with _$PatientContact {
   /// [period] The period during which this contact person or organization is
   ///  valid to be contacted relating to this patient.
   ///
-  const factory PatientContact({
+  factory PatientContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1124,7 +1124,7 @@ class PatientCommunication with _$PatientCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  const factory PatientCommunication({
+  factory PatientCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1241,7 +1241,7 @@ class PatientLink with _$PatientLink {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  const factory PatientLink({
+  factory PatientLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1423,7 +1423,7 @@ class Person with Resource, _$Person {
   ///
   /// [link] Link to a resource that concerns the same actual person.
   ///
-  const factory Person({
+  factory Person({
     /// [resourceType] This is a Person resource
     @Default(R5ResourceType.Person)
     @JsonKey(unknownEnumValue: R5ResourceType.Person)
@@ -1635,7 +1635,7 @@ class PersonCommunication with _$PersonCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  const factory PersonCommunication({
+  factory PersonCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1751,7 +1751,7 @@ class PersonLink with _$PersonLink {
   ///
   /// [assuranceElement] ("_assurance") Extensions for assurance
   ///
-  const factory PersonLink({
+  factory PersonLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1933,7 +1933,7 @@ class Practitioner with Resource, _$Practitioner {
   /// [communication] A language the practitioner can use in patient
   ///  communication.
   ///
-  const factory Practitioner({
+  factory Practitioner({
     /// [resourceType] This is a Practitioner resource
     @Default(R5ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
@@ -2143,7 +2143,7 @@ class PractitionerQualification with _$PractitionerQualification {
   ///
   /// [issuer] Organization that regulates and issues the qualification.
   ///
-  const factory PractitionerQualification({
+  factory PractitionerQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2317,7 +2317,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
   ///
-  const factory PractitionerRole({
+  factory PractitionerRole({
     /// [resourceType] This is a PractitionerRole resource
     @Default(R5ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
@@ -2575,7 +2575,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
   /// [communication] A language which may be used to communicate with the
   ///  related person about the patient's health.
   ///
-  const factory RelatedPerson({
+  factory RelatedPerson({
     /// [resourceType] This is a RelatedPerson resource
     @Default(R5ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
@@ -2779,7 +2779,7 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  const factory RelatedPersonCommunication({
+  factory RelatedPersonCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

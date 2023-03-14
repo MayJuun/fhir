@@ -175,7 +175,7 @@ class Appointment with Resource, _$Appointment {
   /// length of the appointment to fill and populate the start/end times for the
   /// actual allocated time. However, in other situations the duration may be
   ///  calculated by the scheduling system.
-  const factory Appointment({
+  factory Appointment({
     @Default(R4ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
 
@@ -468,7 +468,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// [statusElement] Extensions for status
   ///
   /// [period] Participation period of the actor.
-  const factory AppointmentParticipant({
+  factory AppointmentParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -649,7 +649,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   /// [comment] Additional comments about the appointment.
   ///
   /// [commentElement] Extensions for comment
-  const factory AppointmentResponse({
+  factory AppointmentResponse({
     @Default(R4ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
 
@@ -892,7 +892,7 @@ class Schedule with Resource, _$Schedule {
   ///  associated.
   ///
   /// [commentElement] Extensions for comment
-  const factory Schedule({
+  factory Schedule({
     @Default(R4ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
 
@@ -1138,7 +1138,7 @@ class Slot with Resource, _$Slot {
   ///  as custom constraints on the slot.
   ///
   /// [commentElement] Extensions for comment
-  const factory Slot({
+  factory Slot({
     @Default(R4ResourceType.Slot)
     @JsonKey(unknownEnumValue: R4ResourceType.Slot)
 
@@ -1467,7 +1467,7 @@ class Task with Resource, _$Task {
   ///  task.
   ///
   /// [output] Outputs produced by the Task.
-  const factory Task({
+  factory Task({
     @Default(R4ResourceType.Task)
     @JsonKey(unknownEnumValue: R4ResourceType.Task)
 
@@ -1760,7 +1760,7 @@ class TaskRestriction with _$TaskRestriction {
   ///
   /// [recipient] For requests that are targeted to more than on potential
   ///  recipient/target, for whom is fulfillment sought?
-  const factory TaskRestriction({
+  factory TaskRestriction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2008,7 +2008,7 @@ class TaskInput with _$TaskInput {
   /// [valueDosage] The value of the input parameter as a basic type.
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
-  const factory TaskInput({
+  factory TaskInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2454,7 +2454,7 @@ class TaskOutput with _$TaskOutput {
   /// [valueDosage] The value of the Output parameter as a basic type.
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
-  const factory TaskOutput({
+  factory TaskOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2834,7 +2834,7 @@ class VerificationResult with Resource, _$VerificationResult {
   /// [attestation] Information about the entity attesting to information.
   ///
   /// [validator] Information about the entity validating information.
-  const factory VerificationResult({
+  factory VerificationResult({
     @Default(R4ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
 
@@ -3060,7 +3060,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   ///
   /// [pushTypeAvailable] Type of alerts/updates the primary source can send
   ///  (specific requested changes; any changes; as defined by source).
-  const factory VerificationResultPrimarySource({
+  factory VerificationResultPrimarySource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3214,7 +3214,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   ///
   /// [sourceSignature] Signed assertion by the attestation source that they
   ///  have attested to the information.
-  const factory VerificationResultAttestation({
+  factory VerificationResultAttestation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3361,7 +3361,7 @@ class VerificationResultValidator with _$VerificationResultValidator {
   ///
   /// [attestationSignature] Signed assertion by the validator that they have
   ///  validated the information.
-  const factory VerificationResultValidator({
+  factory VerificationResultValidator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

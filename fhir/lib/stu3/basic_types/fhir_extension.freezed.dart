@@ -1893,7 +1893,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FhirExtension extends _FhirExtension {
-  const _$_FhirExtension(
+  _$_FhirExtension(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.url,
@@ -2365,7 +2365,7 @@ class _$_FhirExtension extends _FhirExtension {
 }
 
 abstract class _FhirExtension extends FhirExtension {
-  const factory _FhirExtension(
+  factory _FhirExtension(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -2459,7 +2459,7 @@ abstract class _FhirExtension extends FhirExtension {
       final DataRequirement? valueDataRequirement,
       final ParameterDefinition? valueParameterDefinition,
       final TriggerDefinition? valueTriggerDefinition}) = _$_FhirExtension;
-  const _FhirExtension._() : super._();
+  _FhirExtension._() : super._();
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
       _$_FhirExtension.fromJson;

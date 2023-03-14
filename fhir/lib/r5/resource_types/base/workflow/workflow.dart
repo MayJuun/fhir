@@ -211,7 +211,7 @@ class Appointment with Resource, _$Appointment {
   /// [recurrenceTemplate] The details of the recurrence pattern or template
   ///  that is used to generate recurring appointments.
   ///
-  const factory Appointment({
+  factory Appointment({
     /// [resourceType] This is a Appointment resource
     @Default(R5ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R5ResourceType.Appointment)
@@ -543,7 +543,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  const factory AppointmentParticipant({
+  factory AppointmentParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -702,7 +702,7 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
   /// [excludingRecurrenceIdElement] ("_excludingRecurrenceId") Extensions for
   ///  excludingRecurrenceId
   ///
-  const factory AppointmentRecurrenceTemplate({
+  factory AppointmentRecurrenceTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -894,7 +894,7 @@ class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
   ///
   /// [weekIntervalElement] ("_weekInterval") Extensions for weekInterval
   ///
-  const factory AppointmentWeeklyTemplate({
+  factory AppointmentWeeklyTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1064,7 +1064,7 @@ class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
   ///
   /// [monthIntervalElement] ("_monthInterval") Extensions for monthInterval
   ///
-  const factory AppointmentMonthlyTemplate({
+  factory AppointmentMonthlyTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1189,7 +1189,7 @@ class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
   ///
   /// [yearIntervalElement] ("_yearInterval") Extensions for yearInterval
   ///
-  const factory AppointmentYearlyTemplate({
+  factory AppointmentYearlyTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1381,7 +1381,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   ///
   /// [recurrenceIdElement] ("_recurrenceId") Extensions for recurrenceId
   ///
-  const factory AppointmentResponse({
+  factory AppointmentResponse({
     /// [resourceType] This is a AppointmentResponse resource
     @Default(R5ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
@@ -1668,7 +1668,7 @@ class Schedule with Resource, _$Schedule {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  const factory Schedule({
+  factory Schedule({
     /// [resourceType] This is a Schedule resource
     @Default(R5ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R5ResourceType.Schedule)
@@ -1927,7 +1927,7 @@ class Slot with Resource, _$Slot {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  const factory Slot({
+  factory Slot({
     /// [resourceType] This is a Slot resource
     @Default(R5ResourceType.Slot)
     @JsonKey(unknownEnumValue: R5ResourceType.Slot)
@@ -2262,7 +2262,7 @@ class Task with Resource, _$Task {
   ///
   /// [output] Outputs produced by the Task.
   ///
-  const factory Task({
+  factory Task({
     /// [resourceType] This is a Task resource
     @Default(R5ResourceType.Task)
     @JsonKey(unknownEnumValue: R5ResourceType.Task)
@@ -2563,7 +2563,7 @@ class TaskRestriction with _$TaskRestriction {
   /// [recipient] For requests that are targeted to more than one potential
   ///  recipient/target, to identify who is fulfillment is sought for.
   ///
-  const factory TaskRestriction({
+  factory TaskRestriction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2828,7 +2828,7 @@ class TaskInput with _$TaskInput {
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
   ///
-  const factory TaskInput({
+  factory TaskInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3313,7 +3313,7 @@ class TaskOutput with _$TaskOutput {
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
   ///
-  const factory TaskOutput({
+  factory TaskOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3789,7 +3789,7 @@ class Transport with Resource, _$Transport {
   ///
   /// [history] The transport event prior to this one.
   ///
-  const factory Transport({
+  factory Transport({
     /// [resourceType] This is a Transport resource
     @Default(R5ResourceType.Transport)
     @JsonKey(unknownEnumValue: R5ResourceType.Transport)
@@ -4096,7 +4096,7 @@ class TransportRestriction with _$TransportRestriction {
   /// [recipient] For requests that are targeted to more than one potential
   ///  recipient/target, to identify who is fulfillment is sought for.
   ///
-  const factory TransportRestriction({
+  factory TransportRestriction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4359,7 +4359,7 @@ class TransportInput with _$TransportInput {
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
   ///
-  const factory TransportInput({
+  factory TransportInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4844,7 +4844,7 @@ class TransportOutput with _$TransportOutput {
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
   ///
-  const factory TransportOutput({
+  factory TransportOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5254,7 +5254,7 @@ class VerificationResult with Resource, _$VerificationResult {
   ///
   /// [validator] Information about the entity validating information.
   ///
-  const factory VerificationResult({
+  factory VerificationResult({
     /// [resourceType] This is a VerificationResult resource
     @Default(R5ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
@@ -5483,7 +5483,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   /// [pushTypeAvailable] Type of alerts/updates the primary source can send
   ///  (specific requested changes; any changes; as defined by source).
   ///
-  const factory VerificationResultPrimarySource({
+  factory VerificationResultPrimarySource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5645,7 +5645,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   /// [sourceSignature] Signed assertion by the attestation source that they
   ///  have attested to the information.
   ///
-  const factory VerificationResultAttestation({
+  factory VerificationResultAttestation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5798,7 +5798,7 @@ class VerificationResultValidator with _$VerificationResultValidator {
   /// [attestationSignature] Signed assertion by the validator that they have
   ///  validated the information.
   ///
-  const factory VerificationResultValidator({
+  factory VerificationResultValidator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

@@ -109,7 +109,7 @@ class __$$_ElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Element extends _Element {
-  const _$_Element(
+  _$_Element(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
       : _extension_ = extension_,
@@ -166,11 +166,11 @@ class _$_Element extends _Element {
 }
 
 abstract class _Element extends Element {
-  const factory _Element(
+  factory _Element(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_}) =
       _$_Element;
-  const _Element._() : super._();
+  _Element._() : super._();
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 

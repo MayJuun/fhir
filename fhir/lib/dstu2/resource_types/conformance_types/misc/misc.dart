@@ -15,7 +15,7 @@ part 'misc.g.dart';
 @freezed
 class ImplementationGuide with Resource, _$ImplementationGuide {
   ImplementationGuide._();
-  const factory ImplementationGuide({
+  factory ImplementationGuide({
     @Default(Dstu2ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
         Dstu2ResourceType resourceType,
@@ -90,7 +90,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 @freezed
 class ImplementationGuideContact with _$ImplementationGuideContact {
   ImplementationGuideContact._();
-  const factory ImplementationGuideContact({
+  factory ImplementationGuideContact({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -132,7 +132,7 @@ class ImplementationGuideContact with _$ImplementationGuideContact {
 @freezed
 class ImplementationGuideDependency with _$ImplementationGuideDependency {
   ImplementationGuideDependency._();
-  const factory ImplementationGuideDependency({
+  factory ImplementationGuideDependency({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -176,7 +176,7 @@ class ImplementationGuideDependency with _$ImplementationGuideDependency {
 @freezed
 class ImplementationGuidePackage with _$ImplementationGuidePackage {
   ImplementationGuidePackage._();
-  const factory ImplementationGuidePackage({
+  factory ImplementationGuidePackage({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -220,7 +220,7 @@ class ImplementationGuidePackage with _$ImplementationGuidePackage {
 @freezed
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
-  const factory ImplementationGuideGlobal({
+  factory ImplementationGuideGlobal({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -263,7 +263,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 @freezed
 class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
-  const factory ImplementationGuidePage({
+  factory ImplementationGuidePage({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -311,7 +311,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
 class ImplementationGuidePackageResource
     with _$ImplementationGuidePackageResource {
   ImplementationGuidePackageResource._();
-  const factory ImplementationGuidePackageResource({
+  factory ImplementationGuidePackageResource({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -349,7 +349,7 @@ class ImplementationGuidePackageResource
 @freezed
 class TestScript with Resource, _$TestScript {
   TestScript._();
-  const factory TestScript({
+  factory TestScript({
     @Default(Dstu2ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
         Dstu2ResourceType resourceType,
@@ -426,7 +426,7 @@ class TestScript with Resource, _$TestScript {
 @freezed
 class TestScriptContact with _$TestScriptContact {
   TestScriptContact._();
-  const factory TestScriptContact({
+  factory TestScriptContact({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -468,7 +468,7 @@ class TestScriptContact with _$TestScriptContact {
 @freezed
 class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
-  const factory TestScriptMetadata({
+  factory TestScriptMetadata({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -511,7 +511,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
 @freezed
 class TestScriptMetadataLink with _$TestScriptMetadataLink {
   TestScriptMetadataLink._();
-  const factory TestScriptMetadataLink({
+  factory TestScriptMetadataLink({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -555,7 +555,7 @@ class TestScriptMetadataLink with _$TestScriptMetadataLink {
 @freezed
 class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
   TestScriptMetadataCapability._();
-  const factory TestScriptMetadataCapability({
+  factory TestScriptMetadataCapability({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -606,7 +606,7 @@ class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
 @freezed
 class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
-  const factory TestScriptFixture({
+  factory TestScriptFixture({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -651,7 +651,7 @@ class TestScriptFixture with _$TestScriptFixture {
 @freezed
 class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
-  const factory TestScriptVariable({
+  factory TestScriptVariable({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -699,7 +699,7 @@ class TestScriptVariable with _$TestScriptVariable {
 @freezed
 class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
-  const factory TestScriptSetup({
+  factory TestScriptSetup({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -741,7 +741,7 @@ class TestScriptSetup with _$TestScriptSetup {
 @freezed
 class TestScriptSetupAction with _$TestScriptSetupAction {
   TestScriptSetupAction._();
-  const factory TestScriptSetupAction({
+  factory TestScriptSetupAction({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -784,7 +784,7 @@ class TestScriptSetupAction with _$TestScriptSetupAction {
 @freezed
 class TestScriptActionOperation with _$TestScriptActionOperation {
   TestScriptActionOperation._();
-  const factory TestScriptActionOperation({
+  factory TestScriptActionOperation({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -852,7 +852,7 @@ class TestScriptActionOperation with _$TestScriptActionOperation {
 @freezed
 class TestScriptOperationRequestHeader with _$TestScriptOperationRequestHeader {
   TestScriptOperationRequestHeader._();
-  const factory TestScriptOperationRequestHeader({
+  factory TestScriptOperationRequestHeader({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExtension,
@@ -885,7 +885,7 @@ class TestScriptOperationRequestHeader with _$TestScriptOperationRequestHeader {
 @freezed
 class TestScriptActionAssert with _$TestScriptActionAssert {
   TestScriptActionAssert._();
-  const factory TestScriptActionAssert({
+  factory TestScriptActionAssert({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -963,7 +963,7 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
 @freezed
 class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
-  const factory TestScriptTest({
+  factory TestScriptTest({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1009,7 +1009,7 @@ class TestScriptTest with _$TestScriptTest {
 @freezed
 class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
-  const factory TestScriptTeardown({
+  factory TestScriptTeardown({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1050,7 +1050,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
 @freezed
 class TestScriptTeardownAction with _$TestScriptTeardownAction {
   TestScriptTeardownAction._();
-  const factory TestScriptTeardownAction({
+  factory TestScriptTeardownAction({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

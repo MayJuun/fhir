@@ -252,7 +252,7 @@ class FhirExtension with _$FhirExtension {
   /// [statusElement] Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
-  const factory FhirExtension({
+  factory FhirExtension({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

@@ -15,7 +15,7 @@ part 'workflow1.g.dart';
 @freezed
 class Order with Resource, _$Order {
   Order._();
-  const factory Order({
+  factory Order({
     @Default(Dstu2ResourceType.Order)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
         Dstu2ResourceType resourceType,
@@ -67,7 +67,7 @@ class Order with Resource, _$Order {
 @freezed
 class OrderWhen with _$OrderWhen {
   OrderWhen._();
-  const factory OrderWhen({
+  factory OrderWhen({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -110,7 +110,7 @@ class OrderWhen with _$OrderWhen {
 @freezed
 class OrderResponse with Resource, _$OrderResponse {
   OrderResponse._();
-  const factory OrderResponse({
+  factory OrderResponse({
     @Default(Dstu2ResourceType.OrderResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
         Dstu2ResourceType resourceType,
@@ -164,7 +164,7 @@ class OrderResponse with Resource, _$OrderResponse {
 @freezed
 class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
-  const factory CommunicationRequest({
+  factory CommunicationRequest({
     @Default(Dstu2ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
         Dstu2ResourceType resourceType,
@@ -229,7 +229,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 @freezed
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
-  const factory CommunicationRequestPayload({
+  factory CommunicationRequestPayload({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -273,7 +273,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 @freezed
 class DeviceUseRequest with Resource, _$DeviceUseRequest {
   DeviceUseRequest._();
-  const factory DeviceUseRequest({
+  factory DeviceUseRequest({
     @Default(Dstu2ResourceType.DeviceUseRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
         Dstu2ResourceType resourceType,
@@ -340,7 +340,7 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
 @freezed
 class DeviceUseStatement with Resource, _$DeviceUseStatement {
   DeviceUseStatement._();
-  const factory DeviceUseStatement({
+  factory DeviceUseStatement({
     @Default(Dstu2ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
         Dstu2ResourceType resourceType,

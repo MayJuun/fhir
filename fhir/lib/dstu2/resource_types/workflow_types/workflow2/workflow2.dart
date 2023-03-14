@@ -15,7 +15,7 @@ part 'workflow2.g.dart';
 @freezed
 class ProcessRequest with Resource, _$ProcessRequest {
   ProcessRequest._();
-  const factory ProcessRequest({
+  factory ProcessRequest({
     @Default(Dstu2ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
         Dstu2ResourceType resourceType,
@@ -77,7 +77,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
 @freezed
 class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
-  const factory ProcessRequestItem({
+  factory ProcessRequestItem({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -118,7 +118,7 @@ class ProcessRequestItem with _$ProcessRequestItem {
 @freezed
 class ProcessResponse with Resource, _$ProcessResponse {
   ProcessResponse._();
-  const factory ProcessResponse({
+  factory ProcessResponse({
     @Default(Dstu2ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
         Dstu2ResourceType resourceType,
@@ -176,7 +176,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
 @freezed
 class ProcessResponseNotes with _$ProcessResponseNotes {
   ProcessResponseNotes._();
-  const factory ProcessResponseNotes({
+  factory ProcessResponseNotes({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -218,7 +218,7 @@ class ProcessResponseNotes with _$ProcessResponseNotes {
 @freezed
 class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
-  const factory SupplyRequest({
+  factory SupplyRequest({
     @Default(Dstu2ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
         Dstu2ResourceType resourceType,
@@ -278,7 +278,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 @freezed
 class SupplyRequestWhen with _$SupplyRequestWhen {
   SupplyRequestWhen._();
-  const factory SupplyRequestWhen({
+  factory SupplyRequestWhen({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -320,7 +320,7 @@ class SupplyRequestWhen with _$SupplyRequestWhen {
 @freezed
 class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
-  const factory SupplyDelivery({
+  factory SupplyDelivery({
     @Default(Dstu2ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
         Dstu2ResourceType resourceType,

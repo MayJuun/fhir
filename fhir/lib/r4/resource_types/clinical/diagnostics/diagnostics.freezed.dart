@@ -589,7 +589,7 @@ class __$$_BodyStructureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BodyStructure extends _BodyStructure {
-  const _$_BodyStructure(
+  _$_BodyStructure(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
           this.resourceType = R4ResourceType.BodyStructure,
       this.id,
@@ -922,7 +922,7 @@ class _$_BodyStructure extends _BodyStructure {
 }
 
 abstract class _BodyStructure extends BodyStructure {
-  const factory _BodyStructure(
+  factory _BodyStructure(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
           final R4ResourceType resourceType,
       final String? id,
@@ -950,7 +950,7 @@ abstract class _BodyStructure extends BodyStructure {
           final Element? descriptionElement,
       final List<Attachment>? image,
       required final Reference patient}) = _$_BodyStructure;
-  const _BodyStructure._() : super._();
+  _BodyStructure._() : super._();
 
   factory _BodyStructure.fromJson(Map<String, dynamic> json) =
       _$_BodyStructure.fromJson;
@@ -1931,7 +1931,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DiagnosticReport extends _DiagnosticReport {
-  const _$_DiagnosticReport(
+  _$_DiagnosticReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
           this.resourceType = R4ResourceType.DiagnosticReport,
       this.id,
@@ -2486,7 +2486,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
 }
 
 abstract class _DiagnosticReport extends DiagnosticReport {
-  const factory _DiagnosticReport(
+  factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
           final R4ResourceType resourceType,
       final String? id,
@@ -2529,7 +2529,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
           final Element? conclusionElement,
       final List<CodeableConcept>? conclusionCode,
       final List<Attachment>? presentedForm}) = _$_DiagnosticReport;
-  const _DiagnosticReport._() : super._();
+  _DiagnosticReport._() : super._();
 
   factory _DiagnosticReport.fromJson(Map<String, dynamic> json) =
       _$_DiagnosticReport.fromJson;
@@ -2957,7 +2957,7 @@ class __$$_DiagnosticReportMediaCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DiagnosticReportMedia extends _DiagnosticReportMedia {
-  const _$_DiagnosticReportMedia(
+  _$_DiagnosticReportMedia(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3101,14 +3101,14 @@ class _$_DiagnosticReportMedia extends _DiagnosticReportMedia {
 }
 
 abstract class _DiagnosticReportMedia extends DiagnosticReportMedia {
-  const factory _DiagnosticReportMedia(
+  factory _DiagnosticReportMedia(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? comment,
       @JsonKey(name: '_comment') final Element? commentElement,
       required final Reference link}) = _$_DiagnosticReportMedia;
-  const _DiagnosticReportMedia._() : super._();
+  _DiagnosticReportMedia._() : super._();
 
   factory _DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =
       _$_DiagnosticReportMedia.fromJson;
@@ -4067,7 +4067,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImagingStudy extends _ImagingStudy {
-  const _$_ImagingStudy(
+  _$_ImagingStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
           this.resourceType = R4ResourceType.ImagingStudy,
       this.id,
@@ -4621,7 +4621,7 @@ class _$_ImagingStudy extends _ImagingStudy {
 }
 
 abstract class _ImagingStudy extends ImagingStudy {
-  const factory _ImagingStudy(
+  factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
           final R4ResourceType resourceType,
       final String? id,
@@ -4667,7 +4667,7 @@ abstract class _ImagingStudy extends ImagingStudy {
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<ImagingStudySeries>? series}) = _$_ImagingStudy;
-  const _ImagingStudy._() : super._();
+  _ImagingStudy._() : super._();
 
   factory _ImagingStudy.fromJson(Map<String, dynamic> json) =
       _$_ImagingStudy.fromJson;
@@ -5416,7 +5416,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImagingStudySeries extends _ImagingStudySeries {
-  const _$_ImagingStudySeries(
+  _$_ImagingStudySeries(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5734,7 +5734,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 }
 
 abstract class _ImagingStudySeries extends ImagingStudySeries {
-  const factory _ImagingStudySeries(
+  factory _ImagingStudySeries(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -5761,7 +5761,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
           final Element? startedElement,
       final List<ImagingStudyPerformer>? performer,
       final List<ImagingStudyInstance>? instance}) = _$_ImagingStudySeries;
-  const _ImagingStudySeries._() : super._();
+  _ImagingStudySeries._() : super._();
 
   factory _ImagingStudySeries.fromJson(Map<String, dynamic> json) =
       _$_ImagingStudySeries.fromJson;
@@ -6089,7 +6089,7 @@ class __$$_ImagingStudyPerformerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImagingStudyPerformer extends _ImagingStudyPerformer {
-  const _$_ImagingStudyPerformer(
+  _$_ImagingStudyPerformer(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6224,13 +6224,13 @@ class _$_ImagingStudyPerformer extends _ImagingStudyPerformer {
 }
 
 abstract class _ImagingStudyPerformer extends ImagingStudyPerformer {
-  const factory _ImagingStudyPerformer(
+  factory _ImagingStudyPerformer(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? function,
       required final Reference actor}) = _$_ImagingStudyPerformer;
-  const _ImagingStudyPerformer._() : super._();
+  _ImagingStudyPerformer._() : super._();
 
   factory _ImagingStudyPerformer.fromJson(Map<String, dynamic> json) =
       _$_ImagingStudyPerformer.fromJson;
@@ -6584,7 +6584,7 @@ class __$$_ImagingStudyInstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ImagingStudyInstance extends _ImagingStudyInstance {
-  const _$_ImagingStudyInstance(
+  _$_ImagingStudyInstance(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6759,7 +6759,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 }
 
 abstract class _ImagingStudyInstance extends ImagingStudyInstance {
-  const factory _ImagingStudyInstance(
+  factory _ImagingStudyInstance(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6771,7 +6771,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement}) =
       _$_ImagingStudyInstance;
-  const _ImagingStudyInstance._() : super._();
+  _ImagingStudyInstance._() : super._();
 
   factory _ImagingStudyInstance.fromJson(Map<String, dynamic> json) =
       _$_ImagingStudyInstance.fromJson;
@@ -7956,7 +7956,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
 /// @nodoc
 @JsonSerializable()
 class _$_Media extends _Media {
-  const _$_Media(
+  _$_Media(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
           this.resourceType = R4ResourceType.Media,
       this.id,
@@ -8497,7 +8497,7 @@ class _$_Media extends _Media {
 }
 
 abstract class _Media extends Media {
-  const factory _Media(
+  factory _Media(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
           final R4ResourceType resourceType,
       final String? id,
@@ -8553,7 +8553,7 @@ abstract class _Media extends Media {
           final Element? durationElement,
       required final Attachment content,
       final List<Annotation>? note}) = _$_Media;
-  const _Media._() : super._();
+  _Media._() : super._();
 
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
@@ -9620,7 +9620,7 @@ class __$$_MolecularSequenceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequence extends _MolecularSequence {
-  const _$_MolecularSequence(
+  _$_MolecularSequence(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
           this.resourceType = R4ResourceType.MolecularSequence,
       this.id,
@@ -10088,7 +10088,7 @@ class _$_MolecularSequence extends _MolecularSequence {
 }
 
 abstract class _MolecularSequence extends MolecularSequence {
-  const factory _MolecularSequence(
+  factory _MolecularSequence(
           {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
               final R4ResourceType resourceType,
           final String? id,
@@ -10129,7 +10129,7 @@ abstract class _MolecularSequence extends MolecularSequence {
           final List<Reference>? pointer,
           final List<MolecularSequenceStructureVariant>? structureVariant}) =
       _$_MolecularSequence;
-  const _MolecularSequence._() : super._();
+  _MolecularSequence._() : super._();
 
   factory _MolecularSequence.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequence.fromJson;
@@ -10850,7 +10850,7 @@ class __$$_MolecularSequenceReferenceSeqCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
-  const _$_MolecularSequenceReferenceSeq(
+  _$_MolecularSequenceReferenceSeq(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11116,7 +11116,7 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
 
 abstract class _MolecularSequenceReferenceSeq
     extends MolecularSequenceReferenceSeq {
-  const factory _MolecularSequenceReferenceSeq(
+  factory _MolecularSequenceReferenceSeq(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -11142,7 +11142,7 @@ abstract class _MolecularSequenceReferenceSeq
       final Integer? windowEnd,
       @JsonKey(name: '_windowEnd')
           final Element? windowEndElement}) = _$_MolecularSequenceReferenceSeq;
-  const _MolecularSequenceReferenceSeq._() : super._();
+  _MolecularSequenceReferenceSeq._() : super._();
 
   factory _MolecularSequenceReferenceSeq.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceReferenceSeq.fromJson;
@@ -11691,7 +11691,7 @@ class __$$_MolecularSequenceVariantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
-  const _$_MolecularSequenceVariant(
+  _$_MolecularSequenceVariant(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11920,7 +11920,7 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
 }
 
 abstract class _MolecularSequenceVariant extends MolecularSequenceVariant {
-  const factory _MolecularSequenceVariant(
+  factory _MolecularSequenceVariant(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11935,7 +11935,7 @@ abstract class _MolecularSequenceVariant extends MolecularSequenceVariant {
       final String? cigar,
       @JsonKey(name: '_cigar') final Element? cigarElement,
       final Reference? variantPointer}) = _$_MolecularSequenceVariant;
-  const _MolecularSequenceVariant._() : super._();
+  _MolecularSequenceVariant._() : super._();
 
   factory _MolecularSequenceVariant.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceVariant.fromJson;
@@ -12838,7 +12838,7 @@ class __$$_MolecularSequenceQualityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
-  const _$_MolecularSequenceQuality(
+  _$_MolecularSequenceQuality(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13188,7 +13188,7 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
 }
 
 abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
-  const factory _MolecularSequenceQuality(
+  factory _MolecularSequenceQuality(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13218,7 +13218,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
       final Decimal? fScore,
       @JsonKey(name: '_fScore') final Element? fScoreElement,
       final MolecularSequenceRoc? roc}) = _$_MolecularSequenceQuality;
-  const _MolecularSequenceQuality._() : super._();
+  _MolecularSequenceQuality._() : super._();
 
   factory _MolecularSequenceQuality.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceQuality.fromJson;
@@ -13760,7 +13760,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
-  const _$_MolecularSequenceRoc(
+  _$_MolecularSequenceRoc(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14149,7 +14149,7 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 }
 
 abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
-  const factory _MolecularSequenceRoc(
+  factory _MolecularSequenceRoc(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -14175,7 +14175,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
       final List<Decimal>? fMeasure,
       @JsonKey(name: '_fMeasure')
           final List<Element?>? fMeasureElement}) = _$_MolecularSequenceRoc;
-  const _MolecularSequenceRoc._() : super._();
+  _MolecularSequenceRoc._() : super._();
 
   factory _MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceRoc.fromJson;
@@ -14715,7 +14715,7 @@ class __$$_MolecularSequenceRepositoryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
-  const _$_MolecularSequenceRepository(
+  _$_MolecularSequenceRepository(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14941,7 +14941,7 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
 
 abstract class _MolecularSequenceRepository
     extends MolecularSequenceRepository {
-  const factory _MolecularSequenceRepository(
+  factory _MolecularSequenceRepository(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -14958,7 +14958,7 @@ abstract class _MolecularSequenceRepository
           final String? readsetId,
           @JsonKey(name: '_readsetId') final Element? readsetIdElement}) =
       _$_MolecularSequenceRepository;
-  const _MolecularSequenceRepository._() : super._();
+  _MolecularSequenceRepository._() : super._();
 
   factory _MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceRepository.fromJson;
@@ -15391,7 +15391,7 @@ class __$$_MolecularSequenceStructureVariantCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MolecularSequenceStructureVariant
     extends _MolecularSequenceStructureVariant {
-  const _$_MolecularSequenceStructureVariant(
+  _$_MolecularSequenceStructureVariant(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -15569,7 +15569,7 @@ class _$_MolecularSequenceStructureVariant
 
 abstract class _MolecularSequenceStructureVariant
     extends MolecularSequenceStructureVariant {
-  const factory _MolecularSequenceStructureVariant(
+  factory _MolecularSequenceStructureVariant(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -15581,7 +15581,7 @@ abstract class _MolecularSequenceStructureVariant
           final MolecularSequenceOuter? outer,
           final MolecularSequenceInner? inner}) =
       _$_MolecularSequenceStructureVariant;
-  const _MolecularSequenceStructureVariant._() : super._();
+  _MolecularSequenceStructureVariant._() : super._();
 
   factory _MolecularSequenceStructureVariant.fromJson(
           Map<String, dynamic> json) =
@@ -15894,7 +15894,7 @@ class __$$_MolecularSequenceOuterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
-  const _$_MolecularSequenceOuter(
+  _$_MolecularSequenceOuter(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16049,7 +16049,7 @@ class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
 }
 
 abstract class _MolecularSequenceOuter extends MolecularSequenceOuter {
-  const factory _MolecularSequenceOuter(
+  factory _MolecularSequenceOuter(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -16058,7 +16058,7 @@ abstract class _MolecularSequenceOuter extends MolecularSequenceOuter {
           final Integer? end,
           @JsonKey(name: '_end') final Element? endElement}) =
       _$_MolecularSequenceOuter;
-  const _MolecularSequenceOuter._() : super._();
+  _MolecularSequenceOuter._() : super._();
 
   factory _MolecularSequenceOuter.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceOuter.fromJson;
@@ -16359,7 +16359,7 @@ class __$$_MolecularSequenceInnerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MolecularSequenceInner extends _MolecularSequenceInner {
-  const _$_MolecularSequenceInner(
+  _$_MolecularSequenceInner(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16514,7 +16514,7 @@ class _$_MolecularSequenceInner extends _MolecularSequenceInner {
 }
 
 abstract class _MolecularSequenceInner extends MolecularSequenceInner {
-  const factory _MolecularSequenceInner(
+  factory _MolecularSequenceInner(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -16523,7 +16523,7 @@ abstract class _MolecularSequenceInner extends MolecularSequenceInner {
           final Integer? end,
           @JsonKey(name: '_end') final Element? endElement}) =
       _$_MolecularSequenceInner;
-  const _MolecularSequenceInner._() : super._();
+  _MolecularSequenceInner._() : super._();
 
   factory _MolecularSequenceInner.fromJson(Map<String, dynamic> json) =
       _$_MolecularSequenceInner.fromJson;
@@ -18085,7 +18085,7 @@ class __$$_ObservationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Observation extends _Observation {
-  const _$_Observation(
+  _$_Observation(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
           this.resourceType = R4ResourceType.Observation,
       this.id,
@@ -18872,7 +18872,7 @@ class _$_Observation extends _Observation {
 }
 
 abstract class _Observation extends Observation {
-  const factory _Observation(
+  factory _Observation(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
           final R4ResourceType resourceType,
       final String? id,
@@ -18943,7 +18943,7 @@ abstract class _Observation extends Observation {
       final List<Reference>? hasMember,
       final List<Reference>? derivedFrom,
       final List<ObservationComponent>? component}) = _$_Observation;
-  const _Observation._() : super._();
+  _Observation._() : super._();
 
   factory _Observation.fromJson(Map<String, dynamic> json) =
       _$_Observation.fromJson;
@@ -19628,7 +19628,7 @@ class __$$_ObservationReferenceRangeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ObservationReferenceRange extends _ObservationReferenceRange {
-  const _$_ObservationReferenceRange(
+  _$_ObservationReferenceRange(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19830,7 +19830,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
 }
 
 abstract class _ObservationReferenceRange extends ObservationReferenceRange {
-  const factory _ObservationReferenceRange(
+  factory _ObservationReferenceRange(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -19842,7 +19842,7 @@ abstract class _ObservationReferenceRange extends ObservationReferenceRange {
           final String? text,
           @JsonKey(name: '_text') final Element? textElement}) =
       _$_ObservationReferenceRange;
-  const _ObservationReferenceRange._() : super._();
+  _ObservationReferenceRange._() : super._();
 
   factory _ObservationReferenceRange.fromJson(Map<String, dynamic> json) =
       _$_ObservationReferenceRange.fromJson;
@@ -20583,7 +20583,7 @@ class __$$_ObservationComponentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ObservationComponent extends _ObservationComponent {
-  const _$_ObservationComponent(
+  _$_ObservationComponent(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20904,7 +20904,7 @@ class _$_ObservationComponent extends _ObservationComponent {
 }
 
 abstract class _ObservationComponent extends ObservationComponent {
-  const factory _ObservationComponent(
+  factory _ObservationComponent(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -20929,7 +20929,7 @@ abstract class _ObservationComponent extends ObservationComponent {
           final List<CodeableConcept>? interpretation,
           final List<ObservationReferenceRange>? referenceRange}) =
       _$_ObservationComponent;
-  const _ObservationComponent._() : super._();
+  _ObservationComponent._() : super._();
 
   factory _ObservationComponent.fromJson(Map<String, dynamic> json) =
       _$_ObservationComponent.fromJson;
@@ -21768,7 +21768,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
-  const _$_QuestionnaireResponse(
+  _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
           this.resourceType = R4ResourceType.QuestionnaireResponse,
       this.id,
@@ -22143,7 +22143,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 }
 
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
-  const factory _QuestionnaireResponse(
+  factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
           final R4ResourceType resourceType,
       final String? id,
@@ -22176,7 +22176,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       final Reference? author,
       final Reference? source,
       final List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponse;
-  const _QuestionnaireResponse._() : super._();
+  _QuestionnaireResponse._() : super._();
 
   factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponse.fromJson;
@@ -22653,7 +22653,7 @@ class __$$_QuestionnaireResponseItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
-  const _$_QuestionnaireResponseItem(
+  _$_QuestionnaireResponseItem(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -22858,7 +22858,7 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
 }
 
 abstract class _QuestionnaireResponseItem extends QuestionnaireResponseItem {
-  const factory _QuestionnaireResponseItem(
+  factory _QuestionnaireResponseItem(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -22871,7 +22871,7 @@ abstract class _QuestionnaireResponseItem extends QuestionnaireResponseItem {
           final List<QuestionnaireResponseAnswer>? answer,
           final List<QuestionnaireResponseItem>? item}) =
       _$_QuestionnaireResponseItem;
-  const _QuestionnaireResponseItem._() : super._();
+  _QuestionnaireResponseItem._() : super._();
 
   factory _QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponseItem.fromJson;
@@ -23613,7 +23613,7 @@ class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
-  const _$_QuestionnaireResponseAnswer(
+  _$_QuestionnaireResponseAnswer(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -23933,7 +23933,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
 
 abstract class _QuestionnaireResponseAnswer
     extends QuestionnaireResponseAnswer {
-  const factory _QuestionnaireResponseAnswer(
+  factory _QuestionnaireResponseAnswer(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -23959,7 +23959,7 @@ abstract class _QuestionnaireResponseAnswer
           final Reference? valueReference,
           final List<QuestionnaireResponseItem>? item}) =
       _$_QuestionnaireResponseAnswer;
-  const _QuestionnaireResponseAnswer._() : super._();
+  _QuestionnaireResponseAnswer._() : super._();
 
   factory _QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponseAnswer.fromJson;
@@ -24778,7 +24778,7 @@ class __$$_SpecimenCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Specimen extends _Specimen {
-  const _$_Specimen(
+  _$_Specimen(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
           this.resourceType = R4ResourceType.Specimen,
       this.id,
@@ -25197,7 +25197,7 @@ class _$_Specimen extends _Specimen {
 }
 
 abstract class _Specimen extends Specimen {
-  const factory _Specimen(
+  factory _Specimen(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
           final R4ResourceType resourceType,
       final String? id,
@@ -25230,7 +25230,7 @@ abstract class _Specimen extends Specimen {
       final List<SpecimenContainer>? container,
       final List<CodeableConcept>? condition,
       final List<Annotation>? note}) = _$_Specimen;
-  const _Specimen._() : super._();
+  _Specimen._() : super._();
 
   factory _Specimen.fromJson(Map<String, dynamic> json) = _$_Specimen.fromJson;
 
@@ -25827,7 +25827,7 @@ class __$$_SpecimenCollectionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SpecimenCollection extends _SpecimenCollection {
-  const _$_SpecimenCollection(
+  _$_SpecimenCollection(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -26039,7 +26039,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 }
 
 abstract class _SpecimenCollection extends SpecimenCollection {
-  const factory _SpecimenCollection(
+  factory _SpecimenCollection(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -26055,7 +26055,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
       final CodeableConcept? bodySite,
       final CodeableConcept? fastingStatusCodeableConcept,
       final FhirDuration? fastingStatusDuration}) = _$_SpecimenCollection;
-  const _SpecimenCollection._() : super._();
+  _SpecimenCollection._() : super._();
 
   factory _SpecimenCollection.fromJson(Map<String, dynamic> json) =
       _$_SpecimenCollection.fromJson;
@@ -26458,7 +26458,7 @@ class __$$_SpecimenProcessingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SpecimenProcessing extends _SpecimenProcessing {
-  const _$_SpecimenProcessing(
+  _$_SpecimenProcessing(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -26649,7 +26649,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
 }
 
 abstract class _SpecimenProcessing extends SpecimenProcessing {
-  const factory _SpecimenProcessing(
+  factory _SpecimenProcessing(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -26660,7 +26660,7 @@ abstract class _SpecimenProcessing extends SpecimenProcessing {
       final FhirDateTime? timeDateTime,
       @JsonKey(name: '_timeDateTime') final Element? timeDateTimeElement,
       final Period? timePeriod}) = _$_SpecimenProcessing;
-  const _SpecimenProcessing._() : super._();
+  _SpecimenProcessing._() : super._();
 
   factory _SpecimenProcessing.fromJson(Map<String, dynamic> json) =
       _$_SpecimenProcessing.fromJson;
@@ -27096,7 +27096,7 @@ class __$$_SpecimenContainerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SpecimenContainer extends _SpecimenContainer {
-  const _$_SpecimenContainer(
+  _$_SpecimenContainer(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -27300,7 +27300,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
 }
 
 abstract class _SpecimenContainer extends SpecimenContainer {
-  const factory _SpecimenContainer(
+  factory _SpecimenContainer(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -27312,7 +27312,7 @@ abstract class _SpecimenContainer extends SpecimenContainer {
       final Quantity? specimenQuantity,
       final CodeableConcept? additiveCodeableConcept,
       final Reference? additiveReference}) = _$_SpecimenContainer;
-  const _SpecimenContainer._() : super._();
+  _SpecimenContainer._() : super._();
 
   factory _SpecimenContainer.fromJson(Map<String, dynamic> json) =
       _$_SpecimenContainer.fromJson;

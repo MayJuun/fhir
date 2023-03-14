@@ -15,7 +15,7 @@ part 'general_types.g.dart';
 @freezed
 class Period with _$Period {
   Period._();
-  const factory Period({
+  factory Period({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -58,7 +58,7 @@ class Period with _$Period {
 @freezed
 class Coding with _$Coding {
   Coding._();
-  const factory Coding({
+  factory Coding({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -107,7 +107,7 @@ class Coding with _$Coding {
 @freezed
 class Range with _$Range {
   Range._();
-  const factory Range({
+  factory Range({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? low,
@@ -146,7 +146,7 @@ class Range with _$Range {
 @freezed
 class Quantity with _$Quantity {
   Quantity._();
-  const factory Quantity({
+  factory Quantity({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -197,7 +197,7 @@ class Quantity with _$Quantity {
 @freezed
 class Attachment with _$Attachment {
   Attachment._();
-  const factory Attachment({
+  factory Attachment({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -253,7 +253,7 @@ class Attachment with _$Attachment {
 @freezed
 class Ratio with _$Ratio {
   Ratio._();
-  const factory Ratio({
+  factory Ratio({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? numerator,
@@ -292,7 +292,7 @@ class Ratio with _$Ratio {
 @freezed
 class Annotation with _$Annotation {
   Annotation._();
-  const factory Annotation({
+  factory Annotation({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -339,7 +339,7 @@ class Annotation with _$Annotation {
 @freezed
 class SampledData with _$SampledData {
   SampledData._();
-  const factory SampledData({
+  factory SampledData({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Quantity origin,
@@ -391,7 +391,7 @@ class SampledData with _$SampledData {
 @freezed
 class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
-  const factory CodeableConcept({
+  factory CodeableConcept({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -434,7 +434,7 @@ class CodeableConcept with _$CodeableConcept {
 @freezed
 class Identifier with _$Identifier {
   Identifier._();
-  const factory Identifier({
+  factory Identifier({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -483,7 +483,7 @@ class Identifier with _$Identifier {
 @freezed
 class Signature with _$Signature {
   Signature._();
-  const factory Signature({
+  factory Signature({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required List<Coding> type,
@@ -533,7 +533,7 @@ class Signature with _$Signature {
 @freezed
 class Timing with _$Timing {
   Timing._();
-  const factory Timing({
+  factory Timing({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -576,7 +576,7 @@ class Timing with _$Timing {
 @freezed
 class Address with _$Address {
   Address._();
-  const factory Address({
+  factory Address({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -635,7 +635,7 @@ class Address with _$Address {
 @freezed
 class HumanName with _$HumanName {
   HumanName._();
-  const factory HumanName({
+  factory HumanName({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -688,7 +688,7 @@ class HumanName with _$HumanName {
 @freezed
 class ContactPoint with _$ContactPoint {
   ContactPoint._();
-  const factory ContactPoint({
+  factory ContactPoint({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -738,7 +738,7 @@ class ContactPoint with _$ContactPoint {
 @freezed
 class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
-  const factory TimingRepeat({
+  factory TimingRepeat({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,

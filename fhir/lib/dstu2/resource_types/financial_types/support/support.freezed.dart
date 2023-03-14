@@ -682,7 +682,7 @@ class __$$_CoverageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Coverage extends _Coverage {
-  const _$_Coverage(
+  _$_Coverage(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
           this.resourceType = Dstu2ResourceType.Coverage,
       this.id,
@@ -937,7 +937,7 @@ class _$_Coverage extends _Coverage {
 }
 
 abstract class _Coverage extends Coverage {
-  const factory _Coverage(
+  factory _Coverage(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -973,7 +973,7 @@ abstract class _Coverage extends Coverage {
       @JsonKey(name: '_network')
           final Element? networkElement,
       final List<Reference>? contract}) = _$_Coverage;
-  const _Coverage._() : super._();
+  _Coverage._() : super._();
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
@@ -1533,7 +1533,7 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityRequest extends _EligibilityRequest {
-  const _$_EligibilityRequest(
+  _$_EligibilityRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
           this.resourceType = Dstu2ResourceType.EligibilityRequest,
       this.id,
@@ -1729,7 +1729,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 }
 
 abstract class _EligibilityRequest extends EligibilityRequest {
-  const factory _EligibilityRequest(
+  factory _EligibilityRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -1754,7 +1754,7 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       final Reference? target,
       final Reference? provider,
       final Reference? organization}) = _$_EligibilityRequest;
-  const _EligibilityRequest._() : super._();
+  _EligibilityRequest._() : super._();
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_EligibilityRequest.fromJson;
@@ -2414,7 +2414,7 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponse extends _EligibilityResponse {
-  const _$_EligibilityResponse(
+  _$_EligibilityResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
           this.resourceType = Dstu2ResourceType.EligibilityResponse,
       this.id,
@@ -2645,7 +2645,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 }
 
 abstract class _EligibilityResponse extends EligibilityResponse {
-  const factory _EligibilityResponse(
+  factory _EligibilityResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -2678,7 +2678,7 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       final Reference? organization,
       final Reference? requestProvider,
       final Reference? requestOrganization}) = _$_EligibilityResponse;
-  const _EligibilityResponse._() : super._();
+  _EligibilityResponse._() : super._();
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponse.fromJson;
@@ -3304,7 +3304,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
-  const _$_EnrollmentRequest(
+  _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
           this.resourceType = Dstu2ResourceType.EnrollmentRequest,
       this.id,
@@ -3517,7 +3517,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 }
 
 abstract class _EnrollmentRequest extends EnrollmentRequest {
-  const factory _EnrollmentRequest(
+  factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3545,7 +3545,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       required final Reference subject,
       required final Reference coverage,
       required final Coding relationship}) = _$_EnrollmentRequest;
-  const _EnrollmentRequest._() : super._();
+  _EnrollmentRequest._() : super._();
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -4211,7 +4211,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
-  const _$_EnrollmentResponse(
+  _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
           this.resourceType = Dstu2ResourceType.EnrollmentResponse,
       this.id,
@@ -4442,7 +4442,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 }
 
 abstract class _EnrollmentResponse extends EnrollmentResponse {
-  const factory _EnrollmentResponse(
+  factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -4475,7 +4475,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final Reference? organization,
       final Reference? requestProvider,
       final Reference? requestOrganization}) = _$_EnrollmentResponse;
-  const _EnrollmentResponse._() : super._();
+  _EnrollmentResponse._() : super._();
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;

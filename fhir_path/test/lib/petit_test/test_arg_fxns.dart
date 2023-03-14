@@ -773,7 +773,14 @@ void testArgFxns() {
           [false]);
     });
 
-    // TODO(Dokotela):  replaceMatches
+    test('replacesMatches', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  r"'11/30/1972'.replace('\\b(?<month>\\d{1,2})/(?<day>\\d{1,2})/(?<year>\\d{2,4})\\b','${day}-${month}-${year}')"),
+          ['11/30/1972']);
+    });
     test('log', () {
       expect(
           walkFhirPath(

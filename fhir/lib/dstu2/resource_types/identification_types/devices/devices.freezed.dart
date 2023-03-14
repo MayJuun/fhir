@@ -752,7 +752,7 @@ class __$$_DeviceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Device extends _Device {
-  const _$_Device(
+  _$_Device(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
           this.resourceType = Dstu2ResourceType.Device,
       this.id,
@@ -1053,7 +1053,7 @@ class _$_Device extends _Device {
 }
 
 abstract class _Device extends Device {
-  const factory _Device(
+  factory _Device(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -1098,7 +1098,7 @@ abstract class _Device extends Device {
       final FhirUri? url,
       @JsonKey(name: '_url')
           final Element? urlElement}) = _$_Device;
-  const _Device._() : super._();
+  _Device._() : super._();
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
@@ -1662,7 +1662,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceComponent extends _DeviceComponent {
-  const _$_DeviceComponent(
+  _$_DeviceComponent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
           this.resourceType = Dstu2ResourceType.DeviceComponent,
       this.id,
@@ -1873,7 +1873,7 @@ class _$_DeviceComponent extends _DeviceComponent {
 }
 
 abstract class _DeviceComponent extends DeviceComponent {
-  const factory _DeviceComponent(
+  factory _DeviceComponent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -1899,7 +1899,7 @@ abstract class _DeviceComponent extends DeviceComponent {
       final List<DeviceComponentProductionSpecification>?
           productionSpecification,
       final CodeableConcept? languageCode}) = _$_DeviceComponent;
-  const _DeviceComponent._() : super._();
+  _DeviceComponent._() : super._();
 
   factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
       _$_DeviceComponent.fromJson;
@@ -2148,7 +2148,7 @@ class __$$_DeviceComponentProductionSpecificationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceComponentProductionSpecification
     extends _DeviceComponentProductionSpecification {
-  const _$_DeviceComponentProductionSpecification(
+  _$_DeviceComponentProductionSpecification(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2246,7 +2246,7 @@ class _$_DeviceComponentProductionSpecification
 
 abstract class _DeviceComponentProductionSpecification
     extends DeviceComponentProductionSpecification {
-  const factory _DeviceComponentProductionSpecification(
+  factory _DeviceComponentProductionSpecification(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2254,7 +2254,7 @@ abstract class _DeviceComponentProductionSpecification
           final Identifier? componentId,
           final String? productionSpec}) =
       _$_DeviceComponentProductionSpecification;
-  const _DeviceComponentProductionSpecification._() : super._();
+  _DeviceComponentProductionSpecification._() : super._();
 
   factory _DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =
@@ -2886,7 +2886,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceMetric extends _DeviceMetric {
-  const _$_DeviceMetric(
+  _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
           this.resourceType = Dstu2ResourceType.DeviceMetric,
       this.id,
@@ -3119,7 +3119,7 @@ class _$_DeviceMetric extends _DeviceMetric {
 }
 
 abstract class _DeviceMetric extends DeviceMetric {
-  const factory _DeviceMetric(
+  factory _DeviceMetric(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3154,7 +3154,7 @@ abstract class _DeviceMetric extends DeviceMetric {
           final Element? categoryElement,
       final Timing? measurementPeriod,
       final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
-  const _DeviceMetric._() : super._();
+  _DeviceMetric._() : super._();
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -3481,7 +3481,7 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
-  const _$_DeviceMetricCalibration(
+  _$_DeviceMetricCalibration(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3597,7 +3597,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 }
 
 abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
-  const factory _DeviceMetricCalibration(
+  factory _DeviceMetricCalibration(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -3613,7 +3613,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
       final Instant? time,
       @JsonKey(name: '_time')
           final Element? timeElement}) = _$_DeviceMetricCalibration;
-  const _DeviceMetricCalibration._() : super._();
+  _DeviceMetricCalibration._() : super._();
 
   factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetricCalibration.fromJson;

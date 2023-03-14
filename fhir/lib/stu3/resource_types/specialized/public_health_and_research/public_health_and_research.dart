@@ -15,7 +15,7 @@ part 'public_health_and_research.g.dart';
 @freezed
 class ResearchStudy with Resource, _$ResearchStudy {
   ResearchStudy._();
-  const factory ResearchStudy({
+  factory ResearchStudy({
     @Default(Stu3ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
         Stu3ResourceType resourceType,
@@ -85,7 +85,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
 @freezed
 class ResearchStudyArm with _$ResearchStudyArm {
   ResearchStudyArm._();
-  const factory ResearchStudyArm({
+  factory ResearchStudyArm({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? code,
@@ -127,7 +127,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
 @freezed
 class ResearchSubject with Resource, _$ResearchSubject {
   ResearchSubject._();
-  const factory ResearchSubject({
+  factory ResearchSubject({
     @Default(Stu3ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
         Stu3ResourceType resourceType,

@@ -94,7 +94,7 @@ class Basic with Resource, _$Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource instance.
   ///
-  const factory Basic({
+  factory Basic({
     /// [resourceType] This is a Basic resource
     @Default(R5ResourceType.Basic)
     @JsonKey(unknownEnumValue: R5ResourceType.Basic)
@@ -240,7 +240,7 @@ class Binary with Resource, _$Binary {
   ///
   /// [dataElement] ("_data") Extensions for data
   ///
-  const factory Binary({
+  factory Binary({
     /// [resourceType] This is a Binary resource
     @Default(R5ResourceType.Binary)
     @JsonKey(unknownEnumValue: R5ResourceType.Binary)
@@ -375,7 +375,7 @@ class Bundle with Resource, _$Bundle {
   /// [issues] Captures issues and warnings that relate to the construction of
   ///  the Bundle and the content within it.
   ///
-  const factory Bundle({
+  factory Bundle({
     /// [resourceType] This is a Bundle resource
     @Default(R5ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
@@ -513,7 +513,7 @@ class BundleLink with _$BundleLink {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  const factory BundleLink({
+  factory BundleLink({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -650,7 +650,7 @@ class BundleEntry with _$BundleEntry {
   ///  'request' entry in the batch or transaction being responded to or what
   ///  the results of an operation where when returning history.
   ///
-  const factory BundleEntry({
+  factory BundleEntry({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -831,7 +831,7 @@ class BundleSearch with _$BundleSearch {
   ///
   /// [scoreElement] ("_score") Extensions for score
   ///
-  const factory BundleSearch({
+  factory BundleSearch({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -971,7 +971,7 @@ class BundleRequest with _$BundleRequest {
   ///
   /// [ifNoneExistElement] ("_ifNoneExist") Extensions for ifNoneExist
   ///
-  const factory BundleRequest({
+  factory BundleRequest({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1123,7 +1123,7 @@ class BundleResponse with _$BundleResponse {
   /// [outcome] An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
   ///
-  const factory BundleResponse({
+  factory BundleResponse({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1287,7 +1287,7 @@ class Linkage with Resource, _$Linkage {
   ///  real-world occurrence as well as how the items should be evaluated
   ///  within the collection of linked items.
   ///
-  const factory Linkage({
+  factory Linkage({
     /// [resourceType] This is a Linkage resource
     @Default(R5ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
@@ -1416,7 +1416,7 @@ class LinkageItem with _$LinkageItem {
   ///
   /// [resource] The resource instance being linked as part of the group.
   ///
-  const factory LinkageItem({
+  factory LinkageItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1604,7 +1604,7 @@ class MessageHeader with Resource, _$MessageHeader {
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
   ///
-  const factory MessageHeader({
+  factory MessageHeader({
     /// [resourceType] This is a MessageHeader resource
     @Default(R5ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
@@ -1777,7 +1777,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   ///  particular person or department when routing to a specific application
   ///  isn't sufficient.
   ///
-  const factory MessageHeaderDestination({
+  factory MessageHeaderDestination({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1919,7 +1919,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   ///
   /// [endpointElement] ("_endpoint") Extensions for endpoint
   ///
-  const factory MessageHeaderSource({
+  factory MessageHeaderSource({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2059,7 +2059,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   ///
   /// [details] Full details of any issues found in the message.
   ///
-  const factory MessageHeaderResponse({
+  factory MessageHeaderResponse({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2198,7 +2198,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
   ///
-  const factory OperationOutcome({
+  factory OperationOutcome({
     /// [resourceType] This is a OperationOutcome resource
     @Default(R5ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
@@ -2349,7 +2349,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  const factory OperationOutcomeIssue({
+  factory OperationOutcomeIssue({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2480,7 +2480,7 @@ class Parameters with Resource, _$Parameters {
   ///
   /// [parameter] A parameter passed to or received from the operation.
   ///
-  const factory Parameters({
+  factory Parameters({
     /// [resourceType] This is a Parameters resource
     @Default(R5ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
@@ -2753,7 +2753,7 @@ class ParametersParameter with _$ParametersParameter {
   ///
   /// [part_] ("part") A named part of a multi-part parameter.
   ///
-  const factory ParametersParameter({
+  factory ParametersParameter({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3191,7 +3191,7 @@ class Subscription with Resource, _$Subscription {
   ///
   /// [maxCountElement] ("_maxCount") Extensions for maxCount
   ///
-  const factory Subscription({
+  factory Subscription({
     /// [resourceType] This is a Subscription resource
     @Default(R5ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
@@ -3410,7 +3410,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  const factory SubscriptionFilterBy({
+  factory SubscriptionFilterBy({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3588,7 +3588,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [error] A record of errors that occurred when the server processed a
   ///  notification.
   ///
-  const factory SubscriptionStatus({
+  factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource
     @Default(R5ResourceType.SubscriptionStatus)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
@@ -3748,7 +3748,7 @@ class SubscriptionStatusNotificationEvent
   ///  with the event (e.g., the Patient relevant to an Encounter), however it
   ///  MAY refer to non-FHIR objects.
   ///
-  const factory SubscriptionStatusNotificationEvent({
+  factory SubscriptionStatusNotificationEvent({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4027,7 +4027,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [notificationShape] List of properties to describe the shape (e.g.,
   ///  resources) included in notifications from this Subscription Topic.
   ///
-  const factory SubscriptionTopic({
+  factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource
     @Default(R5ResourceType.SubscriptionTopic)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
@@ -4298,7 +4298,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [fhirPathCriteriaElement] ("_fhirPathCriteria") Extensions for
   ///  fhirPathCriteria
   ///
-  const factory SubscriptionTopicResourceTrigger({
+  factory SubscriptionTopicResourceTrigger({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4455,7 +4455,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   ///
   /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
   ///
-  const factory SubscriptionTopicQueryCriteria({
+  factory SubscriptionTopicQueryCriteria({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4606,7 +4606,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   ///
   /// [resourceElement] ("_resource") Extensions for resource
   ///
-  const factory SubscriptionTopicEventTrigger({
+  factory SubscriptionTopicEventTrigger({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4755,7 +4755,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   ///
   /// [modifierElement] ("_modifier") Extensions for modifier
   ///
-  const factory SubscriptionTopicCanFilterBy({
+  factory SubscriptionTopicCanFilterBy({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4909,7 +4909,7 @@ class SubscriptionTopicNotificationShape
   ///
   /// [revIncludeElement] ("_revInclude") Extensions for revInclude
   ///
-  const factory SubscriptionTopicNotificationShape({
+  factory SubscriptionTopicNotificationShape({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

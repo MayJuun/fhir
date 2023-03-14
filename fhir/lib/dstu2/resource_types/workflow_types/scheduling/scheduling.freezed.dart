@@ -711,7 +711,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Appointment extends _Appointment {
-  const _$_Appointment(
+  _$_Appointment(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           this.resourceType = Dstu2ResourceType.Appointment,
       this.id,
@@ -997,7 +997,7 @@ class _$_Appointment extends _Appointment {
 }
 
 abstract class _Appointment extends Appointment {
-  const factory _Appointment(
+  factory _Appointment(
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
               final Dstu2ResourceType resourceType,
           final Id? id,
@@ -1041,7 +1041,7 @@ abstract class _Appointment extends Appointment {
               final Element? commentElement,
           required final List<AppointmentParticipant> participant}) =
       _$_Appointment;
-  const _Appointment._() : super._();
+  _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -1379,7 +1379,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
-  const _$_AppointmentParticipant(
+  _$_AppointmentParticipant(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -1507,7 +1507,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 }
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
-  const factory _AppointmentParticipant(
+  factory _AppointmentParticipant(
       {final Id? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -1522,7 +1522,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           required final ParticipantStatus status,
       @JsonKey(name: '_status')
           final Element? statusElement}) = _$_AppointmentParticipant;
-  const _AppointmentParticipant._() : super._();
+  _AppointmentParticipant._() : super._();
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
@@ -2107,7 +2107,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentResponse extends _AppointmentResponse {
-  const _$_AppointmentResponse(
+  _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           this.resourceType = Dstu2ResourceType.AppointmentResponse,
       this.id,
@@ -2346,7 +2346,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 }
 
 abstract class _AppointmentResponse extends AppointmentResponse {
-  const factory _AppointmentResponse(
+  factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -2379,7 +2379,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_AppointmentResponse;
-  const _AppointmentResponse._() : super._();
+  _AppointmentResponse._() : super._();
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -2857,7 +2857,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Schedule extends _Schedule {
-  const _$_Schedule(
+  _$_Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           this.resourceType = Dstu2ResourceType.Schedule,
       this.id,
@@ -3048,7 +3048,7 @@ class _$_Schedule extends _Schedule {
 }
 
 abstract class _Schedule extends Schedule {
-  const factory _Schedule(
+  factory _Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3071,7 +3071,7 @@ abstract class _Schedule extends Schedule {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Schedule;
-  const _Schedule._() : super._();
+  _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
@@ -3661,7 +3661,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
 /// @nodoc
 @JsonSerializable()
 class _$_Slot extends _Slot {
-  const _$_Slot(
+  _$_Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           this.resourceType = Dstu2ResourceType.Slot,
       this.id,
@@ -3886,7 +3886,7 @@ class _$_Slot extends _Slot {
 }
 
 abstract class _Slot extends Slot {
-  const factory _Slot(
+  factory _Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3919,7 +3919,7 @@ abstract class _Slot extends Slot {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Slot;
-  const _Slot._() : super._();
+  _Slot._() : super._();
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 

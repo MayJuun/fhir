@@ -15,7 +15,7 @@ part 'devices.g.dart';
 @freezed
 class Device with Resource, _$Device {
   Device._();
-  const factory Device({
+  factory Device({
     @Default(Dstu2ResourceType.Device)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
         Dstu2ResourceType resourceType,
@@ -83,7 +83,7 @@ class Device with Resource, _$Device {
 @freezed
 class DeviceComponent with Resource, _$DeviceComponent {
   DeviceComponent._();
-  const factory DeviceComponent({
+  factory DeviceComponent({
     @Default(Dstu2ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
         Dstu2ResourceType resourceType,
@@ -141,7 +141,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
 class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
-  const factory DeviceComponentProductionSpecification({
+  factory DeviceComponentProductionSpecification({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -173,7 +173,7 @@ class DeviceComponentProductionSpecification
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
-  const factory DeviceMetric({
+  factory DeviceMetric({
     @Default(Dstu2ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
         Dstu2ResourceType resourceType,
@@ -236,7 +236,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
-  const factory DeviceMetricCalibration({
+  factory DeviceMetricCalibration({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

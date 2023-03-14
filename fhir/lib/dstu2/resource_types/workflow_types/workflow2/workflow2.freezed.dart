@@ -573,7 +573,7 @@ class __$$_ProcessRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessRequest extends _ProcessRequest {
-  const _$_ProcessRequest(
+  _$_ProcessRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
           this.resourceType = Dstu2ResourceType.ProcessRequest,
       this.id,
@@ -820,7 +820,7 @@ class _$_ProcessRequest extends _ProcessRequest {
 }
 
 abstract class _ProcessRequest extends ProcessRequest {
-  const factory _ProcessRequest(
+  factory _ProcessRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -849,7 +849,7 @@ abstract class _ProcessRequest extends ProcessRequest {
       final List<String>? include,
       final List<String>? exclude,
       final Period? period}) = _$_ProcessRequest;
-  const _ProcessRequest._() : super._();
+  _ProcessRequest._() : super._();
 
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequest.fromJson;
@@ -1039,7 +1039,7 @@ class __$$_ProcessRequestItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessRequestItem extends _ProcessRequestItem {
-  const _$_ProcessRequestItem(
+  _$_ProcessRequestItem(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1122,12 +1122,12 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
 }
 
 abstract class _ProcessRequestItem extends ProcessRequestItem {
-  const factory _ProcessRequestItem(
+  factory _ProcessRequestItem(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Integer sequenceLinkId}) = _$_ProcessRequestItem;
-  const _ProcessRequestItem._() : super._();
+  _ProcessRequestItem._() : super._();
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequestItem.fromJson;
@@ -1664,7 +1664,7 @@ class __$$_ProcessResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessResponse extends _ProcessResponse {
-  const _$_ProcessResponse(
+  _$_ProcessResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
           this.resourceType = Dstu2ResourceType.ProcessResponse,
       this.id,
@@ -1884,7 +1884,7 @@ class _$_ProcessResponse extends _ProcessResponse {
 }
 
 abstract class _ProcessResponse extends ProcessResponse {
-  const factory _ProcessResponse(
+  factory _ProcessResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -1909,7 +1909,7 @@ abstract class _ProcessResponse extends ProcessResponse {
       final Coding? form,
       final List<ProcessResponseNotes>? notes,
       final List<Coding>? error}) = _$_ProcessResponse;
-  const _ProcessResponse._() : super._();
+  _ProcessResponse._() : super._();
 
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponse.fromJson;
@@ -2123,7 +2123,7 @@ class __$$_ProcessResponseNotesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProcessResponseNotes extends _ProcessResponseNotes {
-  const _$_ProcessResponseNotes(
+  _$_ProcessResponseNotes(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2210,13 +2210,13 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
 }
 
 abstract class _ProcessResponseNotes extends ProcessResponseNotes {
-  const factory _ProcessResponseNotes(
+  factory _ProcessResponseNotes(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Coding? type,
       final String? text}) = _$_ProcessResponseNotes;
-  const _ProcessResponseNotes._() : super._();
+  _ProcessResponseNotes._() : super._();
 
   factory _ProcessResponseNotes.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponseNotes.fromJson;
@@ -2827,7 +2827,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyRequest extends _SupplyRequest {
-  const _$_SupplyRequest(
+  _$_SupplyRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
           this.resourceType = Dstu2ResourceType.SupplyRequest,
       this.id,
@@ -3044,7 +3044,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 }
 
 abstract class _SupplyRequest extends SupplyRequest {
-  const factory _SupplyRequest(
+  factory _SupplyRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3074,7 +3074,7 @@ abstract class _SupplyRequest extends SupplyRequest {
       final CodeableConcept? reasonCodeableConcept,
       final Reference? reasonReference,
       final SupplyRequestWhen? when}) = _$_SupplyRequest;
-  const _SupplyRequest._() : super._();
+  _SupplyRequest._() : super._();
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequest.fromJson;
@@ -3308,7 +3308,7 @@ class __$$_SupplyRequestWhenCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyRequestWhen extends _SupplyRequestWhen {
-  const _$_SupplyRequestWhen(
+  _$_SupplyRequestWhen(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3396,13 +3396,13 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
 }
 
 abstract class _SupplyRequestWhen extends SupplyRequestWhen {
-  const factory _SupplyRequestWhen(
+  factory _SupplyRequestWhen(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
       final Timing? schedule}) = _$_SupplyRequestWhen;
-  const _SupplyRequestWhen._() : super._();
+  _SupplyRequestWhen._() : super._();
 
   factory _SupplyRequestWhen.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequestWhen.fromJson;
@@ -4011,7 +4011,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SupplyDelivery extends _SupplyDelivery {
-  const _$_SupplyDelivery(
+  _$_SupplyDelivery(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
           this.resourceType = Dstu2ResourceType.SupplyDelivery,
       this.id,
@@ -4229,7 +4229,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 }
 
 abstract class _SupplyDelivery extends SupplyDelivery {
-  const factory _SupplyDelivery(
+  factory _SupplyDelivery(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -4259,7 +4259,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final FhirDateTime? time,
       final Reference? destination,
       final List<Reference>? receiver}) = _$_SupplyDelivery;
-  const _SupplyDelivery._() : super._();
+  _SupplyDelivery._() : super._();
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
       _$_SupplyDelivery.fromJson;

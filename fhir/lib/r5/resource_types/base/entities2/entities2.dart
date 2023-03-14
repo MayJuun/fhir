@@ -125,7 +125,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   /// [property] A property that is specific to this BiologicallyDerviedProduct
   ///  instance.
   ///
-  const factory BiologicallyDerivedProduct({
+  factory BiologicallyDerivedProduct({
     /// [resourceType] This is a BiologicallyDerivedProduct resource
     @Default(R5ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
@@ -342,7 +342,7 @@ class BiologicallyDerivedProductCollection
   ///
   /// [collectedPeriod] Time of product collection.
   ///
-  const factory BiologicallyDerivedProductCollection({
+  factory BiologicallyDerivedProductCollection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -493,7 +493,7 @@ class BiologicallyDerivedProductProperty
   ///
   /// [valueAttachment] Property values.
   ///
-  const factory BiologicallyDerivedProductProperty({
+  factory BiologicallyDerivedProductProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -785,7 +785,7 @@ class Device with Resource, _$Device {
   /// [parent] The higher level or encompassing device that this device is a
   ///  logical part of.
   ///
-  const factory Device({
+  factory Device({
     /// [resourceType] This is a Device resource
     @Default(R5ResourceType.Device)
     @JsonKey(unknownEnumValue: R5ResourceType.Device)
@@ -1135,7 +1135,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   ///
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   ///
-  const factory DeviceUdiCarrier({
+  factory DeviceUdiCarrier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1305,7 +1305,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  const factory DeviceDeviceName({
+  factory DeviceDeviceName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1433,7 +1433,7 @@ class DeviceVersion with _$DeviceVersion {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  const factory DeviceVersion({
+  factory DeviceVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1563,7 +1563,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
   /// [category] Kind of standards that the device adheres to, e.g.,
   ///  communication, performance or communication.
   ///
-  const factory DeviceSpecialization({
+  factory DeviceSpecialization({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1708,7 +1708,7 @@ class DeviceProperty with _$DeviceProperty {
   /// [valueAttachment] Property value - can be a code, quantity, boolean,
   ///  string or attachment.
   ///
-  const factory DeviceProperty({
+  factory DeviceProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1865,7 +1865,7 @@ class DeviceOperation with _$DeviceOperation {
   /// [duration] A measurement of time during the device's operation (e.g.,
   ///  days, hours, mins, etc).
   ///
-  const factory DeviceOperation({
+  factory DeviceOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1997,7 +1997,7 @@ class DeviceAssociation with _$DeviceAssociation {
   /// [bodyStructure] The current anatomical location of the device in/on the
   ///  humanSubject where it is attached or placed.
   ///
-  const factory DeviceAssociation({
+  factory DeviceAssociation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2191,7 +2191,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
   ///
-  const factory DeviceMetric({
+  factory DeviceMetric({
     /// [resourceType] This is a DeviceMetric resource
     @Default(R5ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
@@ -2411,7 +2411,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   ///
   /// [timeElement] ("_time") Extensions for time
   ///
-  const factory DeviceMetricCalibration({
+  factory DeviceMetricCalibration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2582,7 +2582,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
   ///
   /// [note] Comments made about the product.
   ///
-  const factory NutritionProduct({
+  factory NutritionProduct({
     /// [resourceType] This is a NutritionProduct resource
     @Default(R5ResourceType.NutritionProduct)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
@@ -2767,7 +2767,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   /// [amount] The amount of nutrient expressed in one or more units: X per
   ///  pack / per serving / per dose.
   ///
-  const factory NutritionProductNutrient({
+  factory NutritionProductNutrient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2874,7 +2874,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   ///
   /// [amount] The amount of ingredient that is in the product.
   ///
-  const factory NutritionProductIngredient({
+  factory NutritionProductIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3001,7 +3001,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  const factory NutritionProductCharacteristic({
+  factory NutritionProductCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3164,7 +3164,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
   ///  event during which material in this product from one or more biological
   ///  entities was obtained or pooled.
   ///
-  const factory NutritionProductInstance({
+  factory NutritionProductInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3358,7 +3358,7 @@ class Substance with Resource, _$Substance {
   ///
   /// [ingredient] A substance can be composed of other substances.
   ///
-  const factory Substance({
+  factory Substance({
     /// [resourceType] This is a Substance resource
     @Default(R5ResourceType.Substance)
     @JsonKey(unknownEnumValue: R5ResourceType.Substance)
@@ -3548,7 +3548,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
   /// [substanceReference] Another substance that is a component of this
   ///  substance.
   ///
-  const factory SubstanceIngredient({
+  factory SubstanceIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

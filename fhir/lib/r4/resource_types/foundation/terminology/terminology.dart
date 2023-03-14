@@ -207,7 +207,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// [concept] Concepts that are in the code system. The concept definitions
   /// are inherently hierarchical, but the definitions must be consulted to
   ///  determine what the meanings of the hierarchical relationships are.
-  const factory CodeSystem({
+  factory CodeSystem({
     @Default(R4ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
 
@@ -551,7 +551,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
   /// [value] A description of what the value for the filter should be.
   ///
   /// [valueElement] Extensions for value
-  const factory CodeSystemFilter({
+  factory CodeSystemFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -692,7 +692,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
   ///  concept).
   ///
   /// [typeElement] Extensions for type
-  const factory CodeSystemProperty({
+  factory CodeSystemProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -843,7 +843,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
   /// [concept] Defines children of a concept to produce a hierarchy of
   /// concepts. The nature of the relationships is variable
   ///  (is-a/contains/categorizes) - see hierarchyMeaning.
-  const factory CodeSystemConcept({
+  factory CodeSystemConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -982,7 +982,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
   /// [value] The text value for this designation.
   ///
   /// [valueElement] Extensions for value
-  const factory CodeSystemDesignation({
+  factory CodeSystemDesignation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1120,7 +1120,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
   /// [valueDecimal] The value of this property.
   ///
   /// [valueDecimalElement] Extensions for valueDecimal
-  const factory CodeSystemProperty1({
+  factory CodeSystemProperty1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1399,7 +1399,7 @@ class ConceptMap with Resource, _$ConceptMap {
   ///
   /// [group] A group of mappings that all have the same source and target
   ///  system.
-  const factory ConceptMap({
+  factory ConceptMap({
     @Default(R4ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
 
@@ -1722,7 +1722,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
   /// "Unmapped" does not include codes that are unmatched, and the unmapped
   /// element is ignored in a code is specified to have equivalence =
   ///  unmatched.
-  const factory ConceptMapGroup({
+  factory ConceptMapGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1864,7 +1864,7 @@ class ConceptMapElement with _$ConceptMapElement {
   /// [displayElement] Extensions for display
   ///
   /// [target] A concept from the target value set that this concept maps to.
-  const factory ConceptMapElement({
+  factory ConceptMapElement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2004,7 +2004,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
   /// mapped to some data element or source that is in context. The mapping may
   /// still be useful without a place for the additional data elements, but the
   ///  equivalence cannot be relied on.
-  const factory ConceptMapTarget({
+  factory ConceptMapTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2159,7 +2159,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ///  editors when editing the concept map.
   ///
   /// [displayElement] Extensions for display
-  const factory ConceptMapDependsOn({
+  factory ConceptMapDependsOn({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2303,7 +2303,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
   /// [url] The canonical reference to an additional ConceptMap resource
   /// instance to use for mapping if this ConceptMap resource contains no
   ///  matching mapping for the source concept.
-  const factory ConceptMapUnmapped({
+  factory ConceptMapUnmapped({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2518,7 +2518,7 @@ class NamingSystem with Resource, _$NamingSystem {
   ///
   /// [uniqueId] Indicates how the system may be identified when referenced in
   ///  electronic exchange.
-  const factory NamingSystem({
+  factory NamingSystem({
     @Default(R4ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
 
@@ -2767,7 +2767,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// [period] Identifies the period of time over which this identifier is
   /// considered appropriate to refer to the naming system.  Outside of this
   ///  window, the identifier might be non-deterministic.
-  const factory NamingSystemUniqueId({
+  factory NamingSystemUniqueId({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3041,7 +3041,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [codeSearchElement] Extensions for codeSearch
   ///
   /// [validateCode] Information about the
-  const factory TerminologyCapabilities({
+  factory TerminologyCapabilities({
     @Default(R4ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
 
@@ -3356,7 +3356,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   ///
   /// [versionElement] Extensions for version
   ///
-  const factory TerminologyCapabilitiesSoftware({
+  factory TerminologyCapabilitiesSoftware({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3472,7 +3472,7 @@ class TerminologyCapabilitiesImplementation
   /// [url] An absolute base URL for the implementation.
   ///
   /// [urlElement] Extensions for url
-  const factory TerminologyCapabilitiesImplementation({
+  factory TerminologyCapabilitiesImplementation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3577,7 +3577,7 @@ class TerminologyCapabilitiesCodeSystem
   ///  code system.
   ///
   /// [subsumptionElement] Extensions for subsumption
-  const factory TerminologyCapabilitiesCodeSystem({
+  factory TerminologyCapabilitiesCodeSystem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3698,7 +3698,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   /// [property] Properties supported for $lookup.
   ///
   /// [propertyElement] Extensions for property
-  const factory TerminologyCapabilitiesVersion({
+  factory TerminologyCapabilitiesVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3836,7 +3836,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   /// [op] Operations supported for the property.
   ///
   /// [opElement] Extensions for op
-  const factory TerminologyCapabilitiesFilter({
+  factory TerminologyCapabilitiesFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3960,7 +3960,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   /// [textFilter] Documentation about text searching works.
   ///
   /// [textFilterElement] Extensions for textFilter
-  const factory TerminologyCapabilitiesExpansion({
+  factory TerminologyCapabilitiesExpansion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4078,7 +4078,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   /// [documentation] Description of support for parameter.
   ///
   /// [documentationElement] Extensions for documentation
-  const factory TerminologyCapabilitiesParameter({
+  factory TerminologyCapabilitiesParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4176,7 +4176,7 @@ class TerminologyCapabilitiesValidateCode
   /// [translations] Whether translations are validated.
   ///
   /// [translationsElement] Extensions for translations
-  const factory TerminologyCapabilitiesValidateCode({
+  factory TerminologyCapabilitiesValidateCode({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4268,7 +4268,7 @@ class TerminologyCapabilitiesTranslation
   /// [needsMap] Whether the client must identify the map.
   ///
   /// [needsMapElement] Extensions for needsMap
-  const factory TerminologyCapabilitiesTranslation({
+  factory TerminologyCapabilitiesTranslation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4361,7 +4361,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   /// [translation] If cross-system closure is supported.
   ///
   /// [translationElement] Extensions for translation
-  const factory TerminologyCapabilitiesClosure({
+  factory TerminologyCapabilitiesClosure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4593,7 +4593,7 @@ class ValueSet with Resource, _$ValueSet {
   /// [expansion] A value set can also be "expanded", where the value set is
   /// turned into a simple collection of enumerated codes. This element holds
   ///  the expansion, if it has been performed.
-  const factory ValueSet({
+  factory ValueSet({
     @Default(R4ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
 
@@ -4893,7 +4893,7 @@ class ValueSetCompose with _$ValueSetCompose {
   ///
   /// [exclude] Exclude one or more codes from the value set based on code
   ///  system filters and/or other value sets.
-  const factory ValueSetCompose({
+  factory ValueSetCompose({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5037,7 +5037,7 @@ class ValueSetInclude with _$ValueSetInclude {
   /// value set definition). This is an absolute URI that is a reference to
   /// ValueSet.url.  If multiple value sets are specified this includes the
   ///  union of the contents of all of the referenced value sets.
-  const factory ValueSetInclude({
+  factory ValueSetInclude({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5174,7 +5174,7 @@ class ValueSetConcept with _$ValueSetConcept {
   /// [designation] Additional representations for this concept when used in
   /// this value set - other languages, aliases, specialized purposes, used for
   ///  particular purposes, etc.
-  const factory ValueSetConcept({
+  factory ValueSetConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5297,7 +5297,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
   /// [value] The text value for this designation.
   ///
   /// [valueElement] Extensions for value
-  const factory ValueSetDesignation({
+  factory ValueSetDesignation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5424,7 +5424,7 @@ class ValueSetFilter with _$ValueSetFilter {
   ///  false), when the operation is 'exists'.
   ///
   /// [valueElement] Extensions for value
-  const factory ValueSetFilter({
+  factory ValueSetFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5575,7 +5575,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
   ///  expansion.
   ///
   /// [contains] The codes that are contained in the value set expansion.
-  const factory ValueSetExpansion({
+  factory ValueSetExpansion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5746,7 +5746,7 @@ class ValueSetParameter with _$ValueSetParameter {
   /// [valueDateTime] The value of the parameter.
   ///
   /// [valueDateTimeElement] Extensions for valueDateTime
-  const factory ValueSetParameter({
+  factory ValueSetParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5935,7 +5935,7 @@ class ValueSetContains with _$ValueSetContains {
   ///
   /// [contains] Other codes and entries contained under this entry in the
   ///  hierarchy.
-  const factory ValueSetContains({
+  factory ValueSetContains({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

@@ -15,7 +15,7 @@ part 'terminology.g.dart';
 @freezed
 class CodeSystem with Resource, _$CodeSystem {
   CodeSystem._();
-  const factory CodeSystem({
+  factory CodeSystem({
     @Default(Stu3ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
         Stu3ResourceType resourceType,
@@ -105,7 +105,7 @@ class CodeSystem with Resource, _$CodeSystem {
 @freezed
 class CodeSystemFilter with _$CodeSystemFilter {
   CodeSystemFilter._();
-  const factory CodeSystemFilter({
+  factory CodeSystemFilter({
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? description,
@@ -150,7 +150,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
 @freezed
 class CodeSystemProperty with _$CodeSystemProperty {
   CodeSystemProperty._();
-  const factory CodeSystemProperty({
+  factory CodeSystemProperty({
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? uri,
@@ -195,7 +195,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
 @freezed
 class CodeSystemConcept with _$CodeSystemConcept {
   CodeSystemConcept._();
-  const factory CodeSystemConcept({
+  factory CodeSystemConcept({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -242,7 +242,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
 @freezed
 class CodeSystemDesignation with _$CodeSystemDesignation {
   CodeSystemDesignation._();
-  const factory CodeSystemDesignation({
+  factory CodeSystemDesignation({
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
@@ -284,7 +284,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
 @freezed
 class CodeSystemProperty1 with _$CodeSystemProperty1 {
   CodeSystemProperty1._();
-  const factory CodeSystemProperty1({
+  factory CodeSystemProperty1({
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Code? valueCode,
@@ -334,7 +334,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
 @freezed
 class ConceptMap with Resource, _$ConceptMap {
   ConceptMap._();
-  const factory ConceptMap({
+  factory ConceptMap({
     @Default(Stu3ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
         Stu3ResourceType resourceType,
@@ -414,7 +414,7 @@ class ConceptMap with Resource, _$ConceptMap {
 @freezed
 class ConceptMapGroup with _$ConceptMapGroup {
   ConceptMapGroup._();
-  const factory ConceptMapGroup({
+  factory ConceptMapGroup({
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? sourceVersion,
@@ -461,7 +461,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
 @freezed
 class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
-  const factory ConceptMapElement({
+  factory ConceptMapElement({
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
@@ -503,7 +503,7 @@ class ConceptMapElement with _$ConceptMapElement {
 @freezed
 class ConceptMapTarget with _$ConceptMapTarget {
   ConceptMapTarget._();
-  const factory ConceptMapTarget({
+  factory ConceptMapTarget({
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
@@ -550,7 +550,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
 @freezed
 class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
-  const factory ConceptMapDependsOn({
+  factory ConceptMapDependsOn({
     String? property,
     @JsonKey(name: '_property') Element? propertyElement,
     String? system,
@@ -595,7 +595,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
 @freezed
 class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
-  const factory ConceptMapUnmapped({
+  factory ConceptMapUnmapped({
     ConceptMapUnmappedMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Code? code,
@@ -640,7 +640,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
 @freezed
 class ExpansionProfile with Resource, _$ExpansionProfile {
   ExpansionProfile._();
-  const factory ExpansionProfile({
+  factory ExpansionProfile({
     @Default(Stu3ResourceType.ExpansionProfile)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
         Stu3ResourceType resourceType,
@@ -727,7 +727,7 @@ class ExpansionProfile with Resource, _$ExpansionProfile {
 @freezed
 class ExpansionProfileFixedVersion with _$ExpansionProfileFixedVersion {
   ExpansionProfileFixedVersion._();
-  const factory ExpansionProfileFixedVersion({
+  factory ExpansionProfileFixedVersion({
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
@@ -770,7 +770,7 @@ class ExpansionProfileFixedVersion with _$ExpansionProfileFixedVersion {
 @freezed
 class ExpansionProfileExcludedSystem with _$ExpansionProfileExcludedSystem {
   ExpansionProfileExcludedSystem._();
-  const factory ExpansionProfileExcludedSystem({
+  factory ExpansionProfileExcludedSystem({
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
@@ -812,7 +812,7 @@ class ExpansionProfileExcludedSystem with _$ExpansionProfileExcludedSystem {
 @freezed
 class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
   ExpansionProfileDesignation._();
-  const factory ExpansionProfileDesignation({
+  factory ExpansionProfileDesignation({
     ExpansionProfileInclude? include,
     ExpansionProfileExclude? exclude,
   }) = _ExpansionProfileDesignation;
@@ -851,7 +851,7 @@ class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
 @freezed
 class ExpansionProfileInclude with _$ExpansionProfileInclude {
   ExpansionProfileInclude._();
-  const factory ExpansionProfileInclude({
+  factory ExpansionProfileInclude({
     List<ExpansionProfileDesignation1>? designation,
   }) = _ExpansionProfileInclude;
 
@@ -889,7 +889,7 @@ class ExpansionProfileInclude with _$ExpansionProfileInclude {
 @freezed
 class ExpansionProfileDesignation1 with _$ExpansionProfileDesignation1 {
   ExpansionProfileDesignation1._();
-  const factory ExpansionProfileDesignation1({
+  factory ExpansionProfileDesignation1({
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
@@ -929,7 +929,7 @@ class ExpansionProfileDesignation1 with _$ExpansionProfileDesignation1 {
 @freezed
 class ExpansionProfileExclude with _$ExpansionProfileExclude {
   ExpansionProfileExclude._();
-  const factory ExpansionProfileExclude({
+  factory ExpansionProfileExclude({
     List<ExpansionProfileDesignation2>? designation,
   }) = _ExpansionProfileExclude;
 
@@ -967,7 +967,7 @@ class ExpansionProfileExclude with _$ExpansionProfileExclude {
 @freezed
 class ExpansionProfileDesignation2 with _$ExpansionProfileDesignation2 {
   ExpansionProfileDesignation2._();
-  const factory ExpansionProfileDesignation2({
+  factory ExpansionProfileDesignation2({
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
@@ -1007,7 +1007,7 @@ class ExpansionProfileDesignation2 with _$ExpansionProfileDesignation2 {
 @freezed
 class NamingSystem with Resource, _$NamingSystem {
   NamingSystem._();
-  const factory NamingSystem({
+  factory NamingSystem({
     @Default(Stu3ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
         Stu3ResourceType resourceType,
@@ -1076,7 +1076,7 @@ class NamingSystem with Resource, _$NamingSystem {
 @freezed
 class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
-  const factory NamingSystemUniqueId({
+  factory NamingSystemUniqueId({
     NamingSystemUniqueIdType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
@@ -1122,7 +1122,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 @freezed
 class ValueSet with Resource, _$ValueSet {
   ValueSet._();
-  const factory ValueSet({
+  factory ValueSet({
     @Default(Stu3ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
         Stu3ResourceType resourceType,
@@ -1201,7 +1201,7 @@ class ValueSet with Resource, _$ValueSet {
 @freezed
 class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
-  const factory ValueSetCompose({
+  factory ValueSetCompose({
     Date? lockedDate,
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     Boolean? inactive,
@@ -1244,7 +1244,7 @@ class ValueSetCompose with _$ValueSetCompose {
 @freezed
 class ValueSetInclude with _$ValueSetInclude {
   ValueSetInclude._();
-  const factory ValueSetInclude({
+  factory ValueSetInclude({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
@@ -1290,7 +1290,7 @@ class ValueSetInclude with _$ValueSetInclude {
 @freezed
 class ValueSetConcept with _$ValueSetConcept {
   ValueSetConcept._();
-  const factory ValueSetConcept({
+  factory ValueSetConcept({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1333,7 +1333,7 @@ class ValueSetConcept with _$ValueSetConcept {
 @freezed
 class ValueSetDesignation with _$ValueSetDesignation {
   ValueSetDesignation._();
-  const factory ValueSetDesignation({
+  factory ValueSetDesignation({
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
@@ -1375,7 +1375,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
 @freezed
 class ValueSetFilter with _$ValueSetFilter {
   ValueSetFilter._();
-  const factory ValueSetFilter({
+  factory ValueSetFilter({
     String? property,
     @JsonKey(name: '_property') Element? propertyElement,
     ValueSetFilterOp? op,
@@ -1418,7 +1418,7 @@ class ValueSetFilter with _$ValueSetFilter {
 @freezed
 class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
-  const factory ValueSetExpansion({
+  factory ValueSetExpansion({
     String? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     FhirDateTime? timestamp,
@@ -1465,7 +1465,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
 @freezed
 class ValueSetParameter with _$ValueSetParameter {
   ValueSetParameter._();
-  const factory ValueSetParameter({
+  factory ValueSetParameter({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? valueString,
@@ -1516,7 +1516,7 @@ class ValueSetParameter with _$ValueSetParameter {
 @freezed
 class ValueSetContains with _$ValueSetContains {
   ValueSetContains._();
-  const factory ValueSetContains({
+  factory ValueSetContains({
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,

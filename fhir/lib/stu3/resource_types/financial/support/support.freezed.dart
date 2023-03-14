@@ -801,7 +801,7 @@ class __$$_CoverageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Coverage extends _Coverage {
-  const _$_Coverage(
+  _$_Coverage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
           this.resourceType = Stu3ResourceType.Coverage,
       this.id,
@@ -1103,7 +1103,7 @@ class _$_Coverage extends _Coverage {
 }
 
 abstract class _Coverage extends Coverage {
-  const factory _Coverage(
+  factory _Coverage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1147,7 +1147,7 @@ abstract class _Coverage extends Coverage {
       @JsonKey(name: '_network')
           final Element? networkElement,
       final List<Reference>? contract}) = _$_Coverage;
-  const _Coverage._() : super._();
+  _Coverage._() : super._();
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
@@ -1812,7 +1812,7 @@ class __$$_CoverageGroupingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CoverageGrouping extends _CoverageGrouping {
-  const _$_CoverageGrouping(
+  _$_CoverageGrouping(
       {this.group,
       @JsonKey(name: '_group') this.groupElement,
       this.groupDisplay,
@@ -2005,7 +2005,7 @@ class _$_CoverageGrouping extends _CoverageGrouping {
 }
 
 abstract class _CoverageGrouping extends CoverageGrouping {
-  const factory _CoverageGrouping(
+  factory _CoverageGrouping(
       {final String? group,
       @JsonKey(name: '_group')
           final Element? groupElement,
@@ -2043,7 +2043,7 @@ abstract class _CoverageGrouping extends CoverageGrouping {
       final String? subClassDisplay,
       @JsonKey(name: '_subClassDisplay')
           final Element? subClassDisplayElement}) = _$_CoverageGrouping;
-  const _CoverageGrouping._() : super._();
+  _CoverageGrouping._() : super._();
 
   factory _CoverageGrouping.fromJson(Map<String, dynamic> json) =
       _$_CoverageGrouping.fromJson;
@@ -2902,7 +2902,7 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityRequest extends _EligibilityRequest {
-  const _$_EligibilityRequest(
+  _$_EligibilityRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
           this.resourceType = Stu3ResourceType.EligibilityRequest,
       this.id,
@@ -3176,7 +3176,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 }
 
 abstract class _EligibilityRequest extends EligibilityRequest {
-  const factory _EligibilityRequest(
+  factory _EligibilityRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -3216,7 +3216,7 @@ abstract class _EligibilityRequest extends EligibilityRequest {
           final Element? businessArrangementElement,
       final CodeableConcept? benefitCategory,
       final CodeableConcept? benefitSubCategory}) = _$_EligibilityRequest;
-  const _EligibilityRequest._() : super._();
+  _EligibilityRequest._() : super._();
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_EligibilityRequest.fromJson;
@@ -3972,7 +3972,7 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponse extends _EligibilityResponse {
-  const _$_EligibilityResponse(
+  _$_EligibilityResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
           this.resourceType = Stu3ResourceType.EligibilityResponse,
       this.id,
@@ -4240,7 +4240,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 }
 
 abstract class _EligibilityResponse extends EligibilityResponse {
-  const factory _EligibilityResponse(
+  factory _EligibilityResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -4277,7 +4277,7 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       final List<EligibilityResponseInsurance>? insurance,
       final CodeableConcept? form,
       final List<EligibilityResponseError>? error}) = _$_EligibilityResponse;
-  const _EligibilityResponse._() : super._();
+  _EligibilityResponse._() : super._();
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponse.fromJson;
@@ -4503,7 +4503,7 @@ class __$$_EligibilityResponseInsuranceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
-  const _$_EligibilityResponseInsurance(
+  _$_EligibilityResponseInsurance(
       {this.coverage,
       this.contract,
       final List<EligibilityResponseBenefitBalance>? benefitBalance})
@@ -4567,12 +4567,12 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
 
 abstract class _EligibilityResponseInsurance
     extends EligibilityResponseInsurance {
-  const factory _EligibilityResponseInsurance(
+  factory _EligibilityResponseInsurance(
           {final Reference? coverage,
           final Reference? contract,
           final List<EligibilityResponseBenefitBalance>? benefitBalance}) =
       _$_EligibilityResponseInsurance;
-  const _EligibilityResponseInsurance._() : super._();
+  _EligibilityResponseInsurance._() : super._();
 
   factory _EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseInsurance.fromJson;
@@ -4947,7 +4947,7 @@ class __$$_EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EligibilityResponseBenefitBalance
     extends _EligibilityResponseBenefitBalance {
-  const _$_EligibilityResponseBenefitBalance(
+  _$_EligibilityResponseBenefitBalance(
       {required this.category,
       this.subCategory,
       this.excluded,
@@ -5069,7 +5069,7 @@ class _$_EligibilityResponseBenefitBalance
 
 abstract class _EligibilityResponseBenefitBalance
     extends EligibilityResponseBenefitBalance {
-  const factory _EligibilityResponseBenefitBalance(
+  factory _EligibilityResponseBenefitBalance(
           {required final CodeableConcept category,
           final CodeableConcept? subCategory,
           final Boolean? excluded,
@@ -5083,7 +5083,7 @@ abstract class _EligibilityResponseBenefitBalance
           final CodeableConcept? term,
           final List<EligibilityResponseFinancial>? financial}) =
       _$_EligibilityResponseBenefitBalance;
-  const _EligibilityResponseBenefitBalance._() : super._();
+  _EligibilityResponseBenefitBalance._() : super._();
 
   factory _EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =
@@ -5410,7 +5410,7 @@ class __$$_EligibilityResponseFinancialCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
-  const _$_EligibilityResponseFinancial(
+  _$_EligibilityResponseFinancial(
       {required this.type,
       this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
@@ -5508,7 +5508,7 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
 
 abstract class _EligibilityResponseFinancial
     extends EligibilityResponseFinancial {
-  const factory _EligibilityResponseFinancial(
+  factory _EligibilityResponseFinancial(
       {required final CodeableConcept type,
       final Decimal? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt')
@@ -5521,7 +5521,7 @@ abstract class _EligibilityResponseFinancial
       @JsonKey(name: '_usedUnsignedInt')
           final Element? usedUnsignedIntElement,
       final Money? usedMoney}) = _$_EligibilityResponseFinancial;
-  const _EligibilityResponseFinancial._() : super._();
+  _EligibilityResponseFinancial._() : super._();
 
   factory _EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseFinancial.fromJson;
@@ -5653,7 +5653,7 @@ class __$$_EligibilityResponseErrorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponseError extends _EligibilityResponseError {
-  const _$_EligibilityResponseError({required this.code}) : super._();
+  _$_EligibilityResponseError({required this.code}) : super._();
 
   factory _$_EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
       _$$_EligibilityResponseErrorFromJson(json);
@@ -5694,9 +5694,9 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
 }
 
 abstract class _EligibilityResponseError extends EligibilityResponseError {
-  const factory _EligibilityResponseError(
-      {required final CodeableConcept code}) = _$_EligibilityResponseError;
-  const _EligibilityResponseError._() : super._();
+  factory _EligibilityResponseError({required final CodeableConcept code}) =
+      _$_EligibilityResponseError;
+  _EligibilityResponseError._() : super._();
 
   factory _EligibilityResponseError.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseError.fromJson;
@@ -6240,7 +6240,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
-  const _$_EnrollmentRequest(
+  _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
           this.resourceType = Stu3ResourceType.EnrollmentRequest,
       this.id,
@@ -6449,7 +6449,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 }
 
 abstract class _EnrollmentRequest extends EnrollmentRequest {
-  const factory _EnrollmentRequest(
+  factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -6477,7 +6477,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? organization,
       final Reference? subject,
       final Reference? coverage}) = _$_EnrollmentRequest;
-  const _EnrollmentRequest._() : super._();
+  _EnrollmentRequest._() : super._();
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -7111,7 +7111,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
-  const _$_EnrollmentResponse(
+  _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
           this.resourceType = Stu3ResourceType.EnrollmentResponse,
       this.id,
@@ -7334,7 +7334,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 }
 
 abstract class _EnrollmentResponse extends EnrollmentResponse {
-  const factory _EnrollmentResponse(
+  factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -7365,7 +7365,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final Reference? organization,
       final Reference? requestProvider,
       final Reference? requestOrganization}) = _$_EnrollmentResponse;
-  const _EnrollmentResponse._() : super._();
+  _EnrollmentResponse._() : super._();
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;

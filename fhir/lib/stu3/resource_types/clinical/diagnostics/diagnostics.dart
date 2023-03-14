@@ -15,7 +15,7 @@ part 'diagnostics.g.dart';
 @freezed
 class BodySite with Resource, _$BodySite {
   BodySite._();
-  const factory BodySite({
+  factory BodySite({
     @Default(Stu3ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
         Stu3ResourceType resourceType,
@@ -71,7 +71,7 @@ class BodySite with Resource, _$BodySite {
 @freezed
 class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
-  const factory DiagnosticReport({
+  factory DiagnosticReport({
     @Default(Stu3ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
         Stu3ResourceType resourceType,
@@ -140,7 +140,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 @freezed
 class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
   DiagnosticReportPerformer._();
-  const factory DiagnosticReportPerformer({
+  factory DiagnosticReportPerformer({
     CodeableConcept? role,
     required Reference actor,
   }) = _DiagnosticReportPerformer;
@@ -179,7 +179,7 @@ class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
 @freezed
 class DiagnosticReportImage with _$DiagnosticReportImage {
   DiagnosticReportImage._();
-  const factory DiagnosticReportImage({
+  factory DiagnosticReportImage({
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     required Reference link,
@@ -219,7 +219,7 @@ class DiagnosticReportImage with _$DiagnosticReportImage {
 @freezed
 class ImagingManifest with Resource, _$ImagingManifest {
   ImagingManifest._();
-  const factory ImagingManifest({
+  factory ImagingManifest({
     @Default(Stu3ResourceType.ImagingManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
         Stu3ResourceType resourceType,
@@ -274,7 +274,7 @@ class ImagingManifest with Resource, _$ImagingManifest {
 @freezed
 class ImagingManifestStudy with _$ImagingManifestStudy {
   ImagingManifestStudy._();
-  const factory ImagingManifestStudy({
+  factory ImagingManifestStudy({
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Reference? imagingStudy,
@@ -316,7 +316,7 @@ class ImagingManifestStudy with _$ImagingManifestStudy {
 @freezed
 class ImagingManifestSeries with _$ImagingManifestSeries {
   ImagingManifestSeries._();
-  const factory ImagingManifestSeries({
+  factory ImagingManifestSeries({
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     List<Reference>? endpoint,
@@ -357,7 +357,7 @@ class ImagingManifestSeries with _$ImagingManifestSeries {
 @freezed
 class ImagingManifestInstance with _$ImagingManifestInstance {
   ImagingManifestInstance._();
-  const factory ImagingManifestInstance({
+  factory ImagingManifestInstance({
     String? sopClass,
     @JsonKey(name: '_sopClass') Element? sopClassElement,
     Id? uid,
@@ -398,7 +398,7 @@ class ImagingManifestInstance with _$ImagingManifestInstance {
 @freezed
 class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
-  const factory ImagingStudy({
+  factory ImagingStudy({
     @Default(Stu3ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
         Stu3ResourceType resourceType,
@@ -470,7 +470,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 @freezed
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
-  const factory ImagingStudySeries({
+  factory ImagingStudySeries({
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Decimal? number,
@@ -525,7 +525,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 @freezed
 class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
-  const factory ImagingStudyInstance({
+  factory ImagingStudyInstance({
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Decimal? number,
@@ -570,7 +570,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
 @freezed
 class Observation with Resource, _$Observation {
   Observation._();
-  const factory Observation({
+  factory Observation({
     @Default(Stu3ResourceType.Observation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
         Stu3ResourceType resourceType,
@@ -657,7 +657,7 @@ class Observation with Resource, _$Observation {
 @freezed
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
-  const factory ObservationReferenceRange({
+  factory ObservationReferenceRange({
     Quantity? low,
     Quantity? high,
     CodeableConcept? type,
@@ -701,7 +701,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 @freezed
 class ObservationRelated with _$ObservationRelated {
   ObservationRelated._();
-  const factory ObservationRelated({
+  factory ObservationRelated({
     ObservationRelatedType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference target,
@@ -741,7 +741,7 @@ class ObservationRelated with _$ObservationRelated {
 @freezed
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
-  const factory ObservationComponent({
+  factory ObservationComponent({
     required CodeableConcept code,
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
@@ -795,7 +795,7 @@ class ObservationComponent with _$ObservationComponent {
 @freezed
 class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
-  const factory QuestionnaireResponse({
+  factory QuestionnaireResponse({
     @Default(Stu3ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
         Stu3ResourceType resourceType,
@@ -855,7 +855,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 @freezed
 class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
-  const factory QuestionnaireResponseItem({
+  factory QuestionnaireResponseItem({
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     String? definition,
@@ -901,7 +901,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 @freezed
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
-  const factory QuestionnaireResponseAnswer({
+  factory QuestionnaireResponseAnswer({
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Decimal? valueDecimal,
@@ -959,7 +959,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 @freezed
 class Sequence with Resource, _$Sequence {
   Sequence._();
-  const factory Sequence({
+  factory Sequence({
     @Default(Stu3ResourceType.Sequence)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
         Stu3ResourceType resourceType,
@@ -1025,7 +1025,7 @@ class Sequence with Resource, _$Sequence {
 @freezed
 class SequenceReferenceSeq with _$SequenceReferenceSeq {
   SequenceReferenceSeq._();
-  const factory SequenceReferenceSeq({
+  factory SequenceReferenceSeq({
     CodeableConcept? chromosome,
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
@@ -1075,7 +1075,7 @@ class SequenceReferenceSeq with _$SequenceReferenceSeq {
 @freezed
 class SequenceVariant with _$SequenceVariant {
   SequenceVariant._();
-  const factory SequenceVariant({
+  factory SequenceVariant({
     Decimal? start,
     @JsonKey(name: '_start') Element? startElement,
     Decimal? end,
@@ -1123,7 +1123,7 @@ class SequenceVariant with _$SequenceVariant {
 @freezed
 class SequenceQuality with _$SequenceQuality {
   SequenceQuality._();
-  const factory SequenceQuality({
+  factory SequenceQuality({
     SequenceQualityType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
@@ -1185,7 +1185,7 @@ class SequenceQuality with _$SequenceQuality {
 @freezed
 class SequenceRepository with _$SequenceRepository {
   SequenceRepository._();
-  const factory SequenceRepository({
+  factory SequenceRepository({
     SequenceRepositoryType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? url,
@@ -1234,7 +1234,7 @@ class SequenceRepository with _$SequenceRepository {
 @freezed
 class Specimen with Resource, _$Specimen {
   Specimen._();
-  const factory Specimen({
+  factory Specimen({
     @Default(Stu3ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
         Stu3ResourceType resourceType,
@@ -1295,7 +1295,7 @@ class Specimen with Resource, _$Specimen {
 @freezed
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
-  const factory SpecimenCollection({
+  factory SpecimenCollection({
     Reference? collector,
     FhirDateTime? collectedDateTime,
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
@@ -1339,7 +1339,7 @@ class SpecimenCollection with _$SpecimenCollection {
 @freezed
 class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
-  const factory SpecimenProcessing({
+  factory SpecimenProcessing({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? procedure,
@@ -1383,7 +1383,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
 @freezed
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
-  const factory SpecimenContainer({
+  factory SpecimenContainer({
     List<Identifier>? identifier,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,

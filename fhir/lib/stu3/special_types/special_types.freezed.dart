@@ -141,7 +141,7 @@ class __$$_NarrativeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Narrative extends _Narrative {
-  const _$_Narrative(
+  _$_Narrative(
       {this.status,
       @JsonKey(name: '_status') this.statusElement,
       required this.div})
@@ -193,11 +193,11 @@ class _$_Narrative extends _Narrative {
 }
 
 abstract class _Narrative extends Narrative {
-  const factory _Narrative(
+  factory _Narrative(
       {final NarrativeStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       required final String div}) = _$_Narrative;
-  const _Narrative._() : super._();
+  _Narrative._() : super._();
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
@@ -399,7 +399,7 @@ class __$$_ReferenceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Reference extends _Reference {
-  const _$_Reference(
+  _$_Reference(
       {this.reference,
       @JsonKey(name: '_reference') this.referenceElement,
       this.identifier,
@@ -464,13 +464,13 @@ class _$_Reference extends _Reference {
 }
 
 abstract class _Reference extends Reference {
-  const factory _Reference(
+  factory _Reference(
       {final String? reference,
       @JsonKey(name: '_reference') final Element? referenceElement,
       final Identifier? identifier,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement}) = _$_Reference;
-  const _Reference._() : super._();
+  _Reference._() : super._();
 
   factory _Reference.fromJson(Map<String, dynamic> json) =
       _$_Reference.fromJson;
@@ -698,7 +698,7 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
 /// @nodoc
 @JsonSerializable()
 class _$_Meta extends _Meta {
-  const _$_Meta(
+  _$_Meta(
       {this.versionId,
       @JsonKey(name: '_versionId') this.versionIdElement,
       this.lastUpdated,
@@ -819,7 +819,7 @@ class _$_Meta extends _Meta {
 }
 
 abstract class _Meta extends Meta {
-  const factory _Meta(
+  factory _Meta(
       {final Id? versionId,
       @JsonKey(name: '_versionId') final Element? versionIdElement,
       final Instant? lastUpdated,
@@ -828,7 +828,7 @@ abstract class _Meta extends Meta {
       @JsonKey(name: '_profile') final List<Element?>? profileElement,
       final List<Coding>? security,
       final List<Coding>? tag}) = _$_Meta;
-  const _Meta._() : super._();
+  _Meta._() : super._();
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
@@ -8002,7 +8002,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinition extends _ElementDefinition {
-  const _$_ElementDefinition(
+  _$_ElementDefinition(
       {this.id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -9822,7 +9822,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 }
 
 abstract class _ElementDefinition extends ElementDefinition {
-  const factory _ElementDefinition(
+  factory _ElementDefinition(
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -10202,7 +10202,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           final Element? isSummaryElement,
       final ElementDefinitionBinding? binding,
       final List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
-  const _ElementDefinition._() : super._();
+  _ElementDefinition._() : super._();
 
   factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinition.fromJson;
@@ -11103,7 +11103,7 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
-  const _$_ElementDefinitionSlicing(
+  _$_ElementDefinitionSlicing(
       {final List<ElementDefinitionDiscriminator>? discriminator,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
@@ -11195,7 +11195,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 }
 
 abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
-  const factory _ElementDefinitionSlicing(
+  factory _ElementDefinitionSlicing(
           {final List<ElementDefinitionDiscriminator>? discriminator,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
@@ -11204,7 +11204,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
           final ElementDefinitionSlicingRules? rules,
           @JsonKey(name: '_rules') final Element? rulesElement}) =
       _$_ElementDefinitionSlicing;
-  const _ElementDefinitionSlicing._() : super._();
+  _ElementDefinitionSlicing._() : super._();
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionSlicing.fromJson;
@@ -11399,7 +11399,7 @@ class __$$_ElementDefinitionDiscriminatorCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionDiscriminator
     extends _ElementDefinitionDiscriminator {
-  const _$_ElementDefinitionDiscriminator(
+  _$_ElementDefinitionDiscriminator(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.path,
@@ -11461,13 +11461,13 @@ class _$_ElementDefinitionDiscriminator
 
 abstract class _ElementDefinitionDiscriminator
     extends ElementDefinitionDiscriminator {
-  const factory _ElementDefinitionDiscriminator(
+  factory _ElementDefinitionDiscriminator(
           {final ElementDefinitionDiscriminatorType? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement}) =
       _$_ElementDefinitionDiscriminator;
-  const _ElementDefinitionDiscriminator._() : super._();
+  _ElementDefinitionDiscriminator._() : super._();
 
   factory _ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionDiscriminator.fromJson;
@@ -11690,7 +11690,7 @@ class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinitionBase extends _ElementDefinitionBase {
-  const _$_ElementDefinitionBase(
+  _$_ElementDefinitionBase(
       {this.path,
       @JsonKey(name: '_path') this.pathElement,
       this.min,
@@ -11760,7 +11760,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 }
 
 abstract class _ElementDefinitionBase extends ElementDefinitionBase {
-  const factory _ElementDefinitionBase(
+  factory _ElementDefinitionBase(
           {final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
           final Decimal? min,
@@ -11768,7 +11768,7 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
           final String? max,
           @JsonKey(name: '_max') final Element? maxElement}) =
       _$_ElementDefinitionBase;
-  const _ElementDefinitionBase._() : super._();
+  _ElementDefinitionBase._() : super._();
 
   factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBase.fromJson;
@@ -12081,7 +12081,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinitionType extends _ElementDefinitionType {
-  const _$_ElementDefinitionType(
+  _$_ElementDefinitionType(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
@@ -12219,7 +12219,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 }
 
 abstract class _ElementDefinitionType extends ElementDefinitionType {
-  const factory _ElementDefinitionType(
+  factory _ElementDefinitionType(
       {@JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final String? code,
@@ -12237,7 +12237,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       final ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
           final Element? versioningElement}) = _$_ElementDefinitionType;
-  const _ElementDefinitionType._() : super._();
+  _ElementDefinitionType._() : super._();
 
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionType.fromJson;
@@ -14132,7 +14132,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinitionExample extends _ElementDefinitionExample {
-  const _$_ElementDefinitionExample(
+  _$_ElementDefinitionExample(
       {this.label,
       @JsonKey(name: '_label') this.labelElement,
       this.valueBoolean,
@@ -14585,7 +14585,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 }
 
 abstract class _ElementDefinitionExample extends ElementDefinitionExample {
-  const factory _ElementDefinitionExample(
+  factory _ElementDefinitionExample(
           {final String? label,
           @JsonKey(name: '_label')
               final Element? labelElement,
@@ -14677,7 +14677,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
           final ParameterDefinition? valueParameterDefinition,
           final TriggerDefinition? valueTriggerDefinition}) =
       _$_ElementDefinitionExample;
-  const _ElementDefinitionExample._() : super._();
+  _ElementDefinitionExample._() : super._();
 
   factory _ElementDefinitionExample.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionExample.fromJson;
@@ -15226,7 +15226,7 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
-  const _$_ElementDefinitionConstraint(
+  _$_ElementDefinitionConstraint(
       {this.key,
       @JsonKey(name: '_key') this.keyElement,
       this.requirements,
@@ -15354,7 +15354,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
 abstract class _ElementDefinitionConstraint
     extends ElementDefinitionConstraint {
-  const factory _ElementDefinitionConstraint(
+  factory _ElementDefinitionConstraint(
           {final String? key,
           @JsonKey(name: '_key') final Element? keyElement,
           final String? requirements,
@@ -15370,7 +15370,7 @@ abstract class _ElementDefinitionConstraint
           final String? source,
           @JsonKey(name: '_source') final Element? sourceElement}) =
       _$_ElementDefinitionConstraint;
-  const _ElementDefinitionConstraint._() : super._();
+  _ElementDefinitionConstraint._() : super._();
 
   factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionConstraint.fromJson;
@@ -15663,7 +15663,7 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
-  const _$_ElementDefinitionBinding(
+  _$_ElementDefinitionBinding(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.strength,
       @JsonKey(name: '_strength') this.strengthElement,
@@ -15764,7 +15764,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 }
 
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
-  const factory _ElementDefinitionBinding(
+  factory _ElementDefinitionBinding(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final ElementDefinitionBindingStrength? strength,
       @JsonKey(name: '_strength') final Element? strengthElement,
@@ -15773,7 +15773,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       final String? valueSetUri,
       @JsonKey(name: '_valueSetUri') final Element? valueSetUriElement,
       final Reference? valueSetReference}) = _$_ElementDefinitionBinding;
-  const _ElementDefinitionBinding._() : super._();
+  _ElementDefinitionBinding._() : super._();
 
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBinding.fromJson;
@@ -16050,7 +16050,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
-  const _$_ElementDefinitionMapping(
+  _$_ElementDefinitionMapping(
       {this.identity,
       @JsonKey(name: '_identity') this.identityElement,
       this.language,
@@ -16132,7 +16132,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 }
 
 abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
-  const factory _ElementDefinitionMapping(
+  factory _ElementDefinitionMapping(
           {final Id? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final String? language,
@@ -16142,7 +16142,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
           final String? comment,
           @JsonKey(name: '_comment') final Element? commentElement}) =
       _$_ElementDefinitionMapping;
-  const _ElementDefinitionMapping._() : super._();
+  _ElementDefinitionMapping._() : super._();
 
   factory _ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionMapping.fromJson;
@@ -16790,7 +16790,7 @@ class __$$_DosageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Dosage extends _Dosage {
-  const _$_Dosage(
+  _$_Dosage(
       {this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       this.text,
@@ -16974,7 +16974,7 @@ class _$_Dosage extends _Dosage {
 }
 
 abstract class _Dosage extends Dosage {
-  const factory _Dosage(
+  factory _Dosage(
       {final Decimal? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
@@ -17001,7 +17001,7 @@ abstract class _Dosage extends Dosage {
       final Ratio? rateRatio,
       final Range? rateRange,
       final Quantity? rateSimpleQuantity}) = _$_Dosage;
-  const _Dosage._() : super._();
+  _Dosage._() : super._();
 
   factory _Dosage.fromJson(Map<String, dynamic> json) = _$_Dosage.fromJson;
 

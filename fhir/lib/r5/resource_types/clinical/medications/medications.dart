@@ -95,7 +95,7 @@ class FormularyItem with Resource, _$FormularyItem {
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  const factory FormularyItem({
+  factory FormularyItem({
     /// [resourceType] This is a FormularyItem resource
     @Default(R5ResourceType.FormularyItem)
     @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
@@ -357,7 +357,7 @@ class Immunization with Resource, _$Immunization {
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
   ///
-  const factory Immunization({
+  factory Immunization({
     /// [resourceType] This is a Immunization resource
     @Default(R5ResourceType.Immunization)
     @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
@@ -583,7 +583,7 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
   ///
   /// [actor] The practitioner or organization who performed the action.
   ///
-  const factory ImmunizationPerformer({
+  factory ImmunizationPerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -692,7 +692,7 @@ class ImmunizationProgramEligibility with _$ImmunizationProgramEligibility {
   /// [programStatus] Indicates the patient's eligility status for for a
   ///  specific payment program.
   ///
-  const factory ImmunizationProgramEligibility({
+  factory ImmunizationProgramEligibility({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -807,7 +807,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
   ///
   /// [reportedElement] ("_reported") Extensions for reported
   ///
-  const factory ImmunizationReaction({
+  factory ImmunizationReaction({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -940,7 +940,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ///
   /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   ///
-  const factory ImmunizationProtocolApplied({
+  factory ImmunizationProtocolApplied({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1141,7 +1141,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   ///
   /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   ///
-  const factory ImmunizationEvaluation({
+  factory ImmunizationEvaluation({
     /// [resourceType] This is a ImmunizationEvaluation resource
     @Default(R5ResourceType.ImmunizationEvaluation)
     @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
@@ -1355,7 +1355,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ///
   /// [recommendation] Vaccine administration recommendations.
   ///
-  const factory ImmunizationRecommendation({
+  factory ImmunizationRecommendation({
     /// [resourceType] This is a ImmunizationRecommendation resource
     @Default(R5ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
@@ -1531,7 +1531,7 @@ class ImmunizationRecommendationRecommendation
   ///  status and recommendation.  This includes patient observations, adverse
   ///  reactions and allergy/intolerance information.
   ///
-  const factory ImmunizationRecommendationRecommendation({
+  factory ImmunizationRecommendationRecommendation({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1688,7 +1688,7 @@ class ImmunizationRecommendationDateCriterion
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  const factory ImmunizationRecommendationDateCriterion({
+  factory ImmunizationRecommendationDateCriterion({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1863,7 +1863,7 @@ class Medication with Resource, _$Medication {
   ///
   /// [batch] Information that only applies to packages (not products).
   ///
-  const factory Medication({
+  factory Medication({
     /// [resourceType] This is a Medication resource
     @Default(R5ResourceType.Medication)
     @JsonKey(unknownEnumValue: R5ResourceType.Medication)
@@ -2033,7 +2033,7 @@ class MedicationIngredient with _$MedicationIngredient {
   ///  1 tablet but can also be expressed a quantity when the denominator is
   ///  assumed to be 1 tablet.
   ///
-  const factory MedicationIngredient({
+  factory MedicationIngredient({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2159,7 +2159,7 @@ class MedicationBatch with _$MedicationBatch {
   ///
   /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   ///
-  const factory MedicationBatch({
+  factory MedicationBatch({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2399,7 +2399,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the administration was verified.
   ///
-  const factory MedicationAdministration({
+  factory MedicationAdministration({
     /// [resourceType] This is a MedicationAdministration resource
     @Default(R5ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
@@ -2602,7 +2602,7 @@ class MedicationAdministrationPerformer
   ///
   /// [actor] Indicates who or what performed the medication administration.
   ///
-  const factory MedicationAdministrationPerformer({
+  factory MedicationAdministrationPerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2750,7 +2750,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   ///  per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min
   ///  or 200 mcg/1 minute; 1 liter/8 hours.
   ///
-  const factory MedicationAdministrationDosage({
+  factory MedicationAdministrationDosage({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3016,7 +3016,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
   ///
-  const factory MedicationDispense({
+  factory MedicationDispense({
     /// [resourceType] This is a MedicationDispense resource
     @Default(R5ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
@@ -3241,7 +3241,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   /// [actor] The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the medication.
   ///
-  const factory MedicationDispensePerformer({
+  factory MedicationDispensePerformer({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3365,7 +3365,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   /// [responsibleParty] The person or organization that has primary
   ///  responsibility for the substitution.
   ///
-  const factory MedicationDispenseSubstitution({
+  factory MedicationDispenseSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3696,7 +3696,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   ///  resource, this information provides common definitional elements that
   ///  are needed to understand the specific medication that is being described.
   ///
-  const factory MedicationKnowledge({
+  factory MedicationKnowledge({
     /// [resourceType] This is a MedicationKnowledge resource
     @Default(R5ResourceType.MedicationKnowledge)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
@@ -3992,7 +3992,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
   ///
-  const factory MedicationKnowledgeRelatedMedicationKnowledge({
+  factory MedicationKnowledgeRelatedMedicationKnowledge({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4102,7 +4102,7 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   ///
   /// [source] Associated documentation about the medication.
   ///
-  const factory MedicationKnowledgeMonograph({
+  factory MedicationKnowledgeMonograph({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4219,7 +4219,7 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   /// [costCodeableConcept] The price or representation of the cost (for
   ///  example, Band A, Band B or $, $$) of the medication.
   ///
-  const factory MedicationKnowledgeCost({
+  factory MedicationKnowledgeCost({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4338,7 +4338,7 @@ class MedicationKnowledgeMonitoringProgram
   ///
   /// [nameElement] ("_name") Extensions for name
   ///
-  const factory MedicationKnowledgeMonitoringProgram({
+  factory MedicationKnowledgeMonitoringProgram({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4451,7 +4451,7 @@ class MedicationKnowledgeIndicationGuideline
   /// [dosingGuideline] The guidelines for the dosage of the medication for the
   ///  indication.
   ///
-  const factory MedicationKnowledgeIndicationGuideline({
+  factory MedicationKnowledgeIndicationGuideline({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4567,7 +4567,7 @@ class MedicationKnowledgeDosingGuideline
   ///  to the administration guidelines (for example, height, weight, gender,
   ///  etc.).
   ///
-  const factory MedicationKnowledgeDosingGuideline({
+  factory MedicationKnowledgeDosingGuideline({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4681,7 +4681,7 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   ///
   /// [dosage] Dosage for the medication for the specific guidelines.
   ///
-  const factory MedicationKnowledgeDosage({
+  factory MedicationKnowledgeDosage({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4794,7 +4794,7 @@ class MedicationKnowledgePatientCharacteristic
   /// [valueRange] The specific characteristic (e.g. height, weight, gender,
   ///  etc.).
   ///
-  const factory MedicationKnowledgePatientCharacteristic({
+  factory MedicationKnowledgePatientCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4921,7 +4921,7 @@ class MedicationKnowledgeMedicineClassification
   /// [classification] Specific category assigned to the medication (e.g.
   ///  anti-infective, anti-hypertensive, antibiotic, etc.).
   ///
-  const factory MedicationKnowledgeMedicineClassification({
+  factory MedicationKnowledgeMedicineClassification({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5043,7 +5043,7 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   ///  provides the details of the product that is in the packaging and is
   ///  being priced.
   ///
-  const factory MedicationKnowledgePackaging({
+  factory MedicationKnowledgePackaging({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5160,7 +5160,7 @@ class MedicationKnowledgeStorageGuideline
   ///  Environment settings may involve temperature, humidity, or exposure to
   ///  light.
   ///
-  const factory MedicationKnowledgeStorageGuideline({
+  factory MedicationKnowledgeStorageGuideline({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5285,7 +5285,7 @@ class MedicationKnowledgeEnvironmentalSetting
   /// [valueCodeableConcept] Value associated to the setting. E.g., 40° – 50°F
   ///  for temperature.
   ///
-  const factory MedicationKnowledgeEnvironmentalSetting({
+  factory MedicationKnowledgeEnvironmentalSetting({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5405,7 +5405,7 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   /// [maxDispense] The maximum number of units of the medication that can be
   ///  dispensed in a period.
   ///
-  const factory MedicationKnowledgeRegulatory({
+  factory MedicationKnowledgeRegulatory({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5519,7 +5519,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   ///
   /// [allowedElement] ("_allowed") Extensions for allowed
   ///
-  const factory MedicationKnowledgeSubstitution({
+  factory MedicationKnowledgeSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5629,7 +5629,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   ///
   /// [period] The period that applies to the maximum number of units.
   ///
-  const factory MedicationKnowledgeMaxDispense({
+  factory MedicationKnowledgeMaxDispense({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5743,7 +5743,7 @@ class MedicationKnowledgeDefinitional with _$MedicationKnowledgeDefinitional {
   /// [drugCharacteristic] Specifies descriptive properties of the medicine,
   ///  such as color, shape, imprints, etc.
   ///
-  const factory MedicationKnowledgeDefinitional({
+  factory MedicationKnowledgeDefinitional({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5878,7 +5878,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   ///  1 tablet but can also be expressed a quantity when the denominator is
   ///  assumed to be 1 tablet.
   ///
-  const factory MedicationKnowledgeIngredient({
+  factory MedicationKnowledgeIngredient({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6007,7 +6007,7 @@ class MedicationKnowledgeDrugCharacteristic
   ///
   /// [valueAttachment] Description of the characteristic.
   ///
-  const factory MedicationKnowledgeDrugCharacteristic({
+  factory MedicationKnowledgeDrugCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6303,7 +6303,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   ///  state transitions or updates that are likely to be relevant to a user
   ///  looking at the current version of the resource.
   ///
-  const factory MedicationRequest({
+  factory MedicationRequest({
     /// [resourceType] This is a MedicationRequest resource
     @Default(R5ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
@@ -6555,7 +6555,7 @@ class MedicationRequestDose with _$MedicationRequestDose {
   /// [dosageInstruction] Specific instructions for how the medication is to be
   ///  used by the patient.
   ///
-  const factory MedicationRequestDose({
+  factory MedicationRequestDose({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6710,7 +6710,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   /// [doseAdministrationAid] Provides information about the type of adherence
   ///  packaging to be supplied for the medication dispense.
   ///
-  const factory MedicationRequestDispenseRequest({
+  factory MedicationRequestDispenseRequest({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6855,7 +6855,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   ///
   /// [duration] The length of time that the first dispense is expected to last.
   ///
-  const factory MedicationRequestInitialFill({
+  factory MedicationRequestInitialFill({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6979,7 +6979,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   /// [reason] Indicates the reason for the substitution, or why substitution
   ///  must or must not be performed.
   ///
-  const factory MedicationRequestSubstitution({
+  factory MedicationRequestSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7255,7 +7255,7 @@ class MedicationUsage with Resource, _$MedicationUsage {
   /// [adherence] Indicates if the medication is being consumed or administered
   ///  as instructed.
   ///
-  const factory MedicationUsage({
+  factory MedicationUsage({
     /// [resourceType] This is a MedicationUsage resource
     @Default(R5ResourceType.MedicationUsage)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
@@ -7502,7 +7502,7 @@ class MedicationUsageAdherence with _$MedicationUsageAdherence {
   /// [reason] Captures the reason for the current use or adherence of a
   ///  medication.
   ///
-  const factory MedicationUsageAdherence({
+  factory MedicationUsageAdherence({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,

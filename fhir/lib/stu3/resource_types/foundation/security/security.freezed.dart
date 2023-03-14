@@ -581,7 +581,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEvent extends _AuditEvent {
-  const _$_AuditEvent(
+  _$_AuditEvent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
           this.resourceType = Stu3ResourceType.AuditEvent,
       this.id,
@@ -838,7 +838,7 @@ class _$_AuditEvent extends _AuditEvent {
 }
 
 abstract class _AuditEvent extends AuditEvent {
-  const factory _AuditEvent(
+  factory _AuditEvent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -872,7 +872,7 @@ abstract class _AuditEvent extends AuditEvent {
       required final List<AuditEventAgent> agent,
       required final AuditEventSource source,
       final List<AuditEventEntity>? entity}) = _$_AuditEvent;
-  const _AuditEvent._() : super._();
+  _AuditEvent._() : super._();
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEvent.fromJson;
@@ -1334,7 +1334,7 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventAgent extends _AuditEventAgent {
-  const _$_AuditEventAgent(
+  _$_AuditEventAgent(
       {final List<CodeableConcept>? role,
       this.reference,
       this.userId,
@@ -1495,7 +1495,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
 }
 
 abstract class _AuditEventAgent extends AuditEventAgent {
-  const factory _AuditEventAgent(
+  factory _AuditEventAgent(
       {final List<CodeableConcept>? role,
       final Reference? reference,
       final Identifier? userId,
@@ -1511,7 +1511,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       final Coding? media,
       final AuditEventNetwork? network,
       final List<CodeableConcept>? purposeOfUse}) = _$_AuditEventAgent;
-  const _AuditEventAgent._() : super._();
+  _AuditEventAgent._() : super._();
 
   factory _AuditEventAgent.fromJson(Map<String, dynamic> json) =
       _$_AuditEventAgent.fromJson;
@@ -1714,7 +1714,7 @@ class __$$_AuditEventNetworkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventNetwork extends _AuditEventNetwork {
-  const _$_AuditEventNetwork(
+  _$_AuditEventNetwork(
       {this.address,
       @JsonKey(name: '_address') this.addressElement,
       this.type,
@@ -1774,13 +1774,13 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
 }
 
 abstract class _AuditEventNetwork extends AuditEventNetwork {
-  const factory _AuditEventNetwork(
+  factory _AuditEventNetwork(
           {final String? address,
           @JsonKey(name: '_address') final Element? addressElement,
           final AuditEventNetworkType? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_AuditEventNetwork;
-  const _AuditEventNetwork._() : super._();
+  _AuditEventNetwork._() : super._();
 
   factory _AuditEventNetwork.fromJson(Map<String, dynamic> json) =
       _$_AuditEventNetwork.fromJson;
@@ -1954,7 +1954,7 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventSource extends _AuditEventSource {
-  const _$_AuditEventSource(
+  _$_AuditEventSource(
       {this.site,
       @JsonKey(name: '_site') this.siteElement,
       required this.identifier,
@@ -2020,12 +2020,12 @@ class _$_AuditEventSource extends _AuditEventSource {
 }
 
 abstract class _AuditEventSource extends AuditEventSource {
-  const factory _AuditEventSource(
+  factory _AuditEventSource(
       {final String? site,
       @JsonKey(name: '_site') final Element? siteElement,
       required final Identifier identifier,
       final List<Coding>? type}) = _$_AuditEventSource;
-  const _AuditEventSource._() : super._();
+  _AuditEventSource._() : super._();
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$_AuditEventSource.fromJson;
@@ -2411,7 +2411,7 @@ class __$$_AuditEventEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventEntity extends _AuditEventEntity {
-  const _$_AuditEventEntity(
+  _$_AuditEventEntity(
       {this.identifier,
       this.reference,
       this.type,
@@ -2543,7 +2543,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
 }
 
 abstract class _AuditEventEntity extends AuditEventEntity {
-  const factory _AuditEventEntity(
+  factory _AuditEventEntity(
       {final Identifier? identifier,
       final Reference? reference,
       final Coding? type,
@@ -2557,7 +2557,7 @@ abstract class _AuditEventEntity extends AuditEventEntity {
       final String? query,
       @JsonKey(name: '_query') final Element? queryElement,
       final List<AuditEventDetail>? detail}) = _$_AuditEventEntity;
-  const _AuditEventEntity._() : super._();
+  _AuditEventEntity._() : super._();
 
   factory _AuditEventEntity.fromJson(Map<String, dynamic> json) =
       _$_AuditEventEntity.fromJson;
@@ -2755,7 +2755,7 @@ class __$$_AuditEventDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventDetail extends _AuditEventDetail {
-  const _$_AuditEventDetail(
+  _$_AuditEventDetail(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.value,
@@ -2814,13 +2814,13 @@ class _$_AuditEventDetail extends _AuditEventDetail {
 }
 
 abstract class _AuditEventDetail extends AuditEventDetail {
-  const factory _AuditEventDetail(
+  factory _AuditEventDetail(
           {final String? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_AuditEventDetail;
-  const _AuditEventDetail._() : super._();
+  _AuditEventDetail._() : super._();
 
   factory _AuditEventDetail.fromJson(Map<String, dynamic> json) =
       _$_AuditEventDetail.fromJson;
@@ -3581,7 +3581,7 @@ class __$$_ConsentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Consent extends _Consent {
-  const _$_Consent(
+  _$_Consent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
           this.resourceType = Stu3ResourceType.Consent,
       this.id,
@@ -3943,7 +3943,7 @@ class _$_Consent extends _Consent {
 }
 
 abstract class _Consent extends Consent {
-  const factory _Consent(
+  factory _Consent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -3985,7 +3985,7 @@ abstract class _Consent extends Consent {
       final Period? dataPeriod,
       final List<ConsentData>? data,
       final List<ConsentExcept>? except}) = _$_Consent;
-  const _Consent._() : super._();
+  _Consent._() : super._();
 
   factory _Consent.fromJson(Map<String, dynamic> json) = _$_Consent.fromJson;
 
@@ -4188,8 +4188,7 @@ class __$$_ConsentActorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConsentActor extends _ConsentActor {
-  const _$_ConsentActor({required this.role, required this.reference})
-      : super._();
+  _$_ConsentActor({required this.role, required this.reference}) : super._();
 
   factory _$_ConsentActor.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentActorFromJson(json);
@@ -4233,10 +4232,10 @@ class _$_ConsentActor extends _ConsentActor {
 }
 
 abstract class _ConsentActor extends ConsentActor {
-  const factory _ConsentActor(
+  factory _ConsentActor(
       {required final CodeableConcept role,
       required final Reference reference}) = _$_ConsentActor;
-  const _ConsentActor._() : super._();
+  _ConsentActor._() : super._();
 
   factory _ConsentActor.fromJson(Map<String, dynamic> json) =
       _$_ConsentActor.fromJson;
@@ -4409,7 +4408,7 @@ class __$$_ConsentPolicyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConsentPolicy extends _ConsentPolicy {
-  const _$_ConsentPolicy(
+  _$_ConsentPolicy(
       {this.authority,
       @JsonKey(name: '_authority') this.authorityElement,
       this.uri,
@@ -4469,12 +4468,12 @@ class _$_ConsentPolicy extends _ConsentPolicy {
 }
 
 abstract class _ConsentPolicy extends ConsentPolicy {
-  const factory _ConsentPolicy(
+  factory _ConsentPolicy(
       {final String? authority,
       @JsonKey(name: '_authority') final Element? authorityElement,
       final String? uri,
       @JsonKey(name: '_uri') final Element? uriElement}) = _$_ConsentPolicy;
-  const _ConsentPolicy._() : super._();
+  _ConsentPolicy._() : super._();
 
   factory _ConsentPolicy.fromJson(Map<String, dynamic> json) =
       _$_ConsentPolicy.fromJson;
@@ -4635,7 +4634,7 @@ class __$$_ConsentDataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConsentData extends _ConsentData {
-  const _$_ConsentData(
+  _$_ConsentData(
       {this.meaning,
       @JsonKey(name: '_meaning') this.meaningElement,
       required this.reference})
@@ -4689,11 +4688,11 @@ class _$_ConsentData extends _ConsentData {
 }
 
 abstract class _ConsentData extends ConsentData {
-  const factory _ConsentData(
+  factory _ConsentData(
       {final ConsentDataMeaning? meaning,
       @JsonKey(name: '_meaning') final Element? meaningElement,
       required final Reference reference}) = _$_ConsentData;
-  const _ConsentData._() : super._();
+  _ConsentData._() : super._();
 
   factory _ConsentData.fromJson(Map<String, dynamic> json) =
       _$_ConsentData.fromJson;
@@ -4975,7 +4974,7 @@ class __$$_ConsentExceptCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConsentExcept extends _ConsentExcept {
-  const _$_ConsentExcept(
+  _$_ConsentExcept(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.period,
@@ -5136,7 +5135,7 @@ class _$_ConsentExcept extends _ConsentExcept {
 }
 
 abstract class _ConsentExcept extends ConsentExcept {
-  const factory _ConsentExcept(
+  factory _ConsentExcept(
       {final ConsentExceptType? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final Period? period,
@@ -5148,7 +5147,7 @@ abstract class _ConsentExcept extends ConsentExcept {
       final List<Coding>? code,
       final Period? dataPeriod,
       final List<ConsentData1>? data}) = _$_ConsentExcept;
-  const _ConsentExcept._() : super._();
+  _ConsentExcept._() : super._();
 
   factory _ConsentExcept.fromJson(Map<String, dynamic> json) =
       _$_ConsentExcept.fromJson;
@@ -5301,8 +5300,7 @@ class __$$_ConsentActor1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConsentActor1 extends _ConsentActor1 {
-  const _$_ConsentActor1({required this.role, required this.reference})
-      : super._();
+  _$_ConsentActor1({required this.role, required this.reference}) : super._();
 
   factory _$_ConsentActor1.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentActor1FromJson(json);
@@ -5346,10 +5344,10 @@ class _$_ConsentActor1 extends _ConsentActor1 {
 }
 
 abstract class _ConsentActor1 extends ConsentActor1 {
-  const factory _ConsentActor1(
+  factory _ConsentActor1(
       {required final CodeableConcept role,
       required final Reference reference}) = _$_ConsentActor1;
-  const _ConsentActor1._() : super._();
+  _ConsentActor1._() : super._();
 
   factory _ConsentActor1.fromJson(Map<String, dynamic> json) =
       _$_ConsentActor1.fromJson;
@@ -5504,7 +5502,7 @@ class __$$_ConsentData1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConsentData1 extends _ConsentData1 {
-  const _$_ConsentData1(
+  _$_ConsentData1(
       {this.meaning,
       @JsonKey(name: '_meaning') this.meaningElement,
       required this.reference})
@@ -5558,11 +5556,11 @@ class _$_ConsentData1 extends _ConsentData1 {
 }
 
 abstract class _ConsentData1 extends ConsentData1 {
-  const factory _ConsentData1(
+  factory _ConsentData1(
       {final ConsentData1Meaning? meaning,
       @JsonKey(name: '_meaning') final Element? meaningElement,
       required final Reference reference}) = _$_ConsentData1;
-  const _ConsentData1._() : super._();
+  _ConsentData1._() : super._();
 
   factory _ConsentData1.fromJson(Map<String, dynamic> json) =
       _$_ConsentData1.fromJson;
@@ -6092,7 +6090,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Provenance extends _Provenance {
-  const _$_Provenance(
+  _$_Provenance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
           this.resourceType = Stu3ResourceType.Provenance,
       this.id,
@@ -6359,7 +6357,7 @@ class _$_Provenance extends _Provenance {
 }
 
 abstract class _Provenance extends Provenance {
-  const factory _Provenance(
+  factory _Provenance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -6389,7 +6387,7 @@ abstract class _Provenance extends Provenance {
       required final List<ProvenanceAgent> agent,
       final List<ProvenanceEntity>? entity,
       final List<Signature>? signature}) = _$_Provenance;
-  const _Provenance._() : super._();
+  _Provenance._() : super._();
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
@@ -6707,7 +6705,7 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceAgent extends _ProvenanceAgent {
-  const _$_ProvenanceAgent(
+  _$_ProvenanceAgent(
       {final List<CodeableConcept>? role,
       this.whoUri,
       @JsonKey(name: '_whoUri') this.whoUriElement,
@@ -6803,7 +6801,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 }
 
 abstract class _ProvenanceAgent extends ProvenanceAgent {
-  const factory _ProvenanceAgent(
+  factory _ProvenanceAgent(
       {final List<CodeableConcept>? role,
       final String? whoUri,
       @JsonKey(name: '_whoUri') final Element? whoUriElement,
@@ -6812,7 +6810,7 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
       @JsonKey(name: '_onBehalfOfUri') final Element? onBehalfOfUriElement,
       final Reference? onBehalfOfReference,
       final CodeableConcept? relatedAgentType}) = _$_ProvenanceAgent;
-  const _ProvenanceAgent._() : super._();
+  _ProvenanceAgent._() : super._();
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgent.fromJson;
@@ -7068,7 +7066,7 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceEntity extends _ProvenanceEntity {
-  const _$_ProvenanceEntity(
+  _$_ProvenanceEntity(
       {this.role,
       @JsonKey(name: '_role') this.roleElement,
       this.whatUri,
@@ -7156,7 +7154,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 }
 
 abstract class _ProvenanceEntity extends ProvenanceEntity {
-  const factory _ProvenanceEntity(
+  factory _ProvenanceEntity(
       {final ProvenanceEntityRole? role,
       @JsonKey(name: '_role') final Element? roleElement,
       final String? whatUri,
@@ -7164,7 +7162,7 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
       final Reference? whatReference,
       final Identifier? whatIdentifier,
       final List<ProvenanceAgent>? agent}) = _$_ProvenanceEntity;
-  const _ProvenanceEntity._() : super._();
+  _ProvenanceEntity._() : super._();
 
   factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceEntity.fromJson;

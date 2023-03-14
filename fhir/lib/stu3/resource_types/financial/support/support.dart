@@ -15,7 +15,7 @@ part 'support.g.dart';
 @freezed
 class Coverage with Resource, _$Coverage {
   Coverage._();
-  const factory Coverage({
+  factory Coverage({
     @Default(Stu3ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
         Stu3ResourceType resourceType,
@@ -84,7 +84,7 @@ class Coverage with Resource, _$Coverage {
 @freezed
 class CoverageGrouping with _$CoverageGrouping {
   CoverageGrouping._();
-  const factory CoverageGrouping({
+  factory CoverageGrouping({
     String? group,
     @JsonKey(name: '_group') Element? groupElement,
     String? groupDisplay,
@@ -145,7 +145,7 @@ class CoverageGrouping with _$CoverageGrouping {
 @freezed
 class EligibilityRequest with Resource, _$EligibilityRequest {
   EligibilityRequest._();
-  const factory EligibilityRequest({
+  factory EligibilityRequest({
     @Default(Stu3ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
         Stu3ResourceType resourceType,
@@ -212,7 +212,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
 @freezed
 class EligibilityResponse with Resource, _$EligibilityResponse {
   EligibilityResponse._();
-  const factory EligibilityResponse({
+  factory EligibilityResponse({
     @Default(Stu3ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
         Stu3ResourceType resourceType,
@@ -276,7 +276,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
 @freezed
 class EligibilityResponseInsurance with _$EligibilityResponseInsurance {
   EligibilityResponseInsurance._();
-  const factory EligibilityResponseInsurance({
+  factory EligibilityResponseInsurance({
     Reference? coverage,
     Reference? contract,
     List<EligibilityResponseBenefitBalance>? benefitBalance,
@@ -317,7 +317,7 @@ class EligibilityResponseInsurance with _$EligibilityResponseInsurance {
 class EligibilityResponseBenefitBalance
     with _$EligibilityResponseBenefitBalance {
   EligibilityResponseBenefitBalance._();
-  const factory EligibilityResponseBenefitBalance({
+  factory EligibilityResponseBenefitBalance({
     required CodeableConcept category,
     CodeableConcept? subCategory,
     Boolean? excluded,
@@ -355,7 +355,7 @@ class EligibilityResponseBenefitBalance
 @freezed
 class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
   EligibilityResponseFinancial._();
-  const factory EligibilityResponseFinancial({
+  factory EligibilityResponseFinancial({
     required CodeableConcept type,
     Decimal? allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
@@ -401,7 +401,7 @@ class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
 @freezed
 class EligibilityResponseError with _$EligibilityResponseError {
   EligibilityResponseError._();
-  const factory EligibilityResponseError({
+  factory EligibilityResponseError({
     required CodeableConcept code,
   }) = _EligibilityResponseError;
 
@@ -439,7 +439,7 @@ class EligibilityResponseError with _$EligibilityResponseError {
 @freezed
 class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
-  const factory EnrollmentRequest({
+  factory EnrollmentRequest({
     @Default(Stu3ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
         Stu3ResourceType resourceType,
@@ -496,7 +496,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 @freezed
 class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();
-  const factory EnrollmentResponse({
+  factory EnrollmentResponse({
     @Default(Stu3ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
         Stu3ResourceType resourceType,

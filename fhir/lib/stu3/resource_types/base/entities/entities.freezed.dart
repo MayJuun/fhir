@@ -843,7 +843,7 @@ class __$$_DeviceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Device extends _Device {
-  const _$_Device(
+  _$_Device(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Device)
           this.resourceType = Stu3ResourceType.Device,
       this.id,
@@ -1172,7 +1172,7 @@ class _$_Device extends _Device {
 }
 
 abstract class _Device extends Device {
-  const factory _Device(
+  factory _Device(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Device)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -1221,7 +1221,7 @@ abstract class _Device extends Device {
           final Element? urlElement,
       final List<Annotation>? note,
       final List<CodeableConcept>? safety}) = _$_Device;
-  const _Device._() : super._();
+  _Device._() : super._();
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
@@ -1681,7 +1681,7 @@ class __$$_DeviceUdiCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceUdi extends _DeviceUdi {
-  const _$_DeviceUdi(
+  _$_DeviceUdi(
       {this.deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') this.deviceIdentifierElement,
       this.name,
@@ -1810,7 +1810,7 @@ class _$_DeviceUdi extends _DeviceUdi {
 }
 
 abstract class _DeviceUdi extends DeviceUdi {
-  const factory _DeviceUdi(
+  factory _DeviceUdi(
       {final String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           final Element? deviceIdentifierElement,
@@ -1832,7 +1832,7 @@ abstract class _DeviceUdi extends DeviceUdi {
       final DeviceUdiEntryType? entryType,
       @JsonKey(name: '_entryType')
           final Element? entryTypeElement}) = _$_DeviceUdi;
-  const _DeviceUdi._() : super._();
+  _DeviceUdi._() : super._();
 
   factory _DeviceUdi.fromJson(Map<String, dynamic> json) =
       _$_DeviceUdi.fromJson;
@@ -2446,7 +2446,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceComponent extends _DeviceComponent {
-  const _$_DeviceComponent(
+  _$_DeviceComponent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
           this.resourceType = Stu3ResourceType.DeviceComponent,
       this.id,
@@ -2682,7 +2682,7 @@ class _$_DeviceComponent extends _DeviceComponent {
 }
 
 abstract class _DeviceComponent extends DeviceComponent {
-  const factory _DeviceComponent(
+  factory _DeviceComponent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -2713,7 +2713,7 @@ abstract class _DeviceComponent extends DeviceComponent {
       final List<DeviceComponentProductionSpecification>?
           productionSpecification,
       final CodeableConcept? languageCode}) = _$_DeviceComponent;
-  const _DeviceComponent._() : super._();
+  _DeviceComponent._() : super._();
 
   factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
       _$_DeviceComponent.fromJson;
@@ -2958,7 +2958,7 @@ class __$$_DeviceComponentProductionSpecificationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceComponentProductionSpecification
     extends _DeviceComponentProductionSpecification {
-  const _$_DeviceComponentProductionSpecification(
+  _$_DeviceComponentProductionSpecification(
       {this.specType,
       this.componentId,
       this.productionSpec,
@@ -3022,14 +3022,14 @@ class _$_DeviceComponentProductionSpecification
 
 abstract class _DeviceComponentProductionSpecification
     extends DeviceComponentProductionSpecification {
-  const factory _DeviceComponentProductionSpecification(
+  factory _DeviceComponentProductionSpecification(
           {final CodeableConcept? specType,
           final Identifier? componentId,
           final String? productionSpec,
           @JsonKey(name: '_productionSpec')
               final Element? productionSpecElement}) =
       _$_DeviceComponentProductionSpecification;
-  const _DeviceComponentProductionSpecification._() : super._();
+  _DeviceComponentProductionSpecification._() : super._();
 
   factory _DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =
@@ -3648,7 +3648,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceMetric extends _DeviceMetric {
-  const _$_DeviceMetric(
+  _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
           this.resourceType = Stu3ResourceType.DeviceMetric,
       this.id,
@@ -3875,7 +3875,7 @@ class _$_DeviceMetric extends _DeviceMetric {
 }
 
 abstract class _DeviceMetric extends DeviceMetric {
-  const factory _DeviceMetric(
+  factory _DeviceMetric(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -3907,7 +3907,7 @@ abstract class _DeviceMetric extends DeviceMetric {
           final Element? categoryElement,
       final Timing? measurementPeriod,
       final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
-  const _DeviceMetric._() : super._();
+  _DeviceMetric._() : super._();
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -4176,7 +4176,7 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
-  const _$_DeviceMetricCalibration(
+  _$_DeviceMetricCalibration(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.state,
@@ -4247,7 +4247,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 }
 
 abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
-  const factory _DeviceMetricCalibration(
+  factory _DeviceMetricCalibration(
           {final DeviceMetricCalibrationType? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final DeviceMetricCalibrationState? state,
@@ -4255,7 +4255,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
           final String? time,
           @JsonKey(name: '_time') final Element? timeElement}) =
       _$_DeviceMetricCalibration;
-  const _DeviceMetricCalibration._() : super._();
+  _DeviceMetricCalibration._() : super._();
 
   factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetricCalibration.fromJson;
@@ -4879,7 +4879,7 @@ class __$$_EndpointCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Endpoint extends _Endpoint {
-  const _$_Endpoint(
+  _$_Endpoint(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
           this.resourceType = Stu3ResourceType.Endpoint,
       this.id,
@@ -5179,7 +5179,7 @@ class _$_Endpoint extends _Endpoint {
 }
 
 abstract class _Endpoint extends Endpoint {
-  const factory _Endpoint(
+  factory _Endpoint(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -5216,7 +5216,7 @@ abstract class _Endpoint extends Endpoint {
       final List<String>? header,
       @JsonKey(name: '_header')
           final List<Element?>? headerElement}) = _$_Endpoint;
-  const _Endpoint._() : super._();
+  _Endpoint._() : super._();
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
@@ -6192,7 +6192,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareService extends _HealthcareService {
-  const _$_HealthcareService(
+  _$_HealthcareService(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
           this.resourceType = Stu3ResourceType.HealthcareService,
       this.id,
@@ -6663,7 +6663,7 @@ class _$_HealthcareService extends _HealthcareService {
 }
 
 abstract class _HealthcareService extends HealthcareService {
-  const factory _HealthcareService(
+  factory _HealthcareService(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -6719,7 +6719,7 @@ abstract class _HealthcareService extends HealthcareService {
       @JsonKey(name: '_availabilityExceptions')
           final Element? availabilityExceptionsElement,
       final List<Reference>? endpoint}) = _$_HealthcareService;
-  const _HealthcareService._() : super._();
+  _HealthcareService._() : super._();
 
   factory _HealthcareService.fromJson(Map<String, dynamic> json) =
       _$_HealthcareService.fromJson;
@@ -7064,7 +7064,7 @@ class __$$_HealthcareServiceAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareServiceAvailableTime
     extends _HealthcareServiceAvailableTime {
-  const _$_HealthcareServiceAvailableTime(
+  _$_HealthcareServiceAvailableTime(
       {final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') final List<Element?>? daysOfWeekElement,
       this.allDay,
@@ -7178,7 +7178,7 @@ class _$_HealthcareServiceAvailableTime
 
 abstract class _HealthcareServiceAvailableTime
     extends HealthcareServiceAvailableTime {
-  const factory _HealthcareServiceAvailableTime(
+  factory _HealthcareServiceAvailableTime(
           {final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element?>? daysOfWeekElement,
@@ -7192,7 +7192,7 @@ abstract class _HealthcareServiceAvailableTime
           @JsonKey(name: '_availableEndTime')
               final Element? availableEndTimeElement}) =
       _$_HealthcareServiceAvailableTime;
-  const _HealthcareServiceAvailableTime._() : super._();
+  _HealthcareServiceAvailableTime._() : super._();
 
   factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceAvailableTime.fromJson;
@@ -7374,7 +7374,7 @@ class __$$_HealthcareServiceNotAvailableCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
-  const _$_HealthcareServiceNotAvailable(
+  _$_HealthcareServiceNotAvailable(
       {this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.during})
@@ -7431,11 +7431,11 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
 abstract class _HealthcareServiceNotAvailable
     extends HealthcareServiceNotAvailable {
-  const factory _HealthcareServiceNotAvailable(
+  factory _HealthcareServiceNotAvailable(
       {final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Period? during}) = _$_HealthcareServiceNotAvailable;
-  const _HealthcareServiceNotAvailable._() : super._();
+  _HealthcareServiceNotAvailable._() : super._();
 
   factory _HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceNotAvailable.fromJson;
@@ -8181,7 +8181,7 @@ class __$$_LocationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Location extends _Location {
-  const _$_Location(
+  _$_Location(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Location)
           this.resourceType = Stu3ResourceType.Location,
       this.id,
@@ -8485,7 +8485,7 @@ class _$_Location extends _Location {
 }
 
 abstract class _Location extends Location {
-  const factory _Location(
+  factory _Location(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Location)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -8526,7 +8526,7 @@ abstract class _Location extends Location {
       final Reference? managingOrganization,
       final Reference? partOf,
       final List<Reference>? endpoint}) = _$_Location;
-  const _Location._() : super._();
+  _Location._() : super._();
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
@@ -8807,7 +8807,7 @@ class __$$_LocationPositionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LocationPosition extends _LocationPosition {
-  const _$_LocationPosition(
+  _$_LocationPosition(
       {this.longitude,
       @JsonKey(name: '_longitude') this.longitudeElement,
       this.latitude,
@@ -8879,7 +8879,7 @@ class _$_LocationPosition extends _LocationPosition {
 }
 
 abstract class _LocationPosition extends LocationPosition {
-  const factory _LocationPosition(
+  factory _LocationPosition(
           {final Decimal? longitude,
           @JsonKey(name: '_longitude') final Element? longitudeElement,
           final Decimal? latitude,
@@ -8887,7 +8887,7 @@ abstract class _LocationPosition extends LocationPosition {
           final Decimal? altitude,
           @JsonKey(name: '_altitude') final Element? altitudeElement}) =
       _$_LocationPosition;
-  const _LocationPosition._() : super._();
+  _LocationPosition._() : super._();
 
   factory _LocationPosition.fromJson(Map<String, dynamic> json) =
       _$_LocationPosition.fromJson;
@@ -9426,7 +9426,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Organization extends _Organization {
-  const _$_Organization(
+  _$_Organization(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
           this.resourceType = Stu3ResourceType.Organization,
       this.id,
@@ -9711,7 +9711,7 @@ class _$_Organization extends _Organization {
 }
 
 abstract class _Organization extends Organization {
-  const factory _Organization(
+  factory _Organization(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -9743,7 +9743,7 @@ abstract class _Organization extends Organization {
       final Reference? partOf,
       final List<OrganizationContact>? contact,
       final List<Reference>? endpoint}) = _$_Organization;
-  const _Organization._() : super._();
+  _Organization._() : super._();
 
   factory _Organization.fromJson(Map<String, dynamic> json) =
       _$_Organization.fromJson;
@@ -9980,7 +9980,7 @@ class __$$_OrganizationContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OrganizationContact extends _OrganizationContact {
-  const _$_OrganizationContact(
+  _$_OrganizationContact(
       {this.purpose,
       this.name,
       final List<ContactPoint>? telecom,
@@ -10045,12 +10045,12 @@ class _$_OrganizationContact extends _OrganizationContact {
 }
 
 abstract class _OrganizationContact extends OrganizationContact {
-  const factory _OrganizationContact(
+  factory _OrganizationContact(
       {final CodeableConcept? purpose,
       final HumanName? name,
       final List<ContactPoint>? telecom,
       final Address? address}) = _$_OrganizationContact;
-  const _OrganizationContact._() : super._();
+  _OrganizationContact._() : super._();
 
   factory _OrganizationContact.fromJson(Map<String, dynamic> json) =
       _$_OrganizationContact.fromJson;
@@ -10522,7 +10522,7 @@ class __$$_SubstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Substance extends _Substance {
-  const _$_Substance(
+  _$_Substance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
           this.resourceType = Stu3ResourceType.Substance,
       this.id,
@@ -10750,7 +10750,7 @@ class _$_Substance extends _Substance {
 }
 
 abstract class _Substance extends Substance {
-  const factory _Substance(
+  factory _Substance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
           final Stu3ResourceType resourceType,
       final Id? id,
@@ -10777,7 +10777,7 @@ abstract class _Substance extends Substance {
           final Element? descriptionElement,
       final List<SubstanceInstance>? instance,
       final List<SubstanceIngredient>? ingredient}) = _$_Substance;
-  const _Substance._() : super._();
+  _Substance._() : super._();
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
@@ -11006,7 +11006,7 @@ class __$$_SubstanceInstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceInstance extends _SubstanceInstance {
-  const _$_SubstanceInstance(
+  _$_SubstanceInstance(
       {this.identifier,
       this.expiry,
       @JsonKey(name: '_expiry') this.expiryElement,
@@ -11066,12 +11066,12 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 }
 
 abstract class _SubstanceInstance extends SubstanceInstance {
-  const factory _SubstanceInstance(
+  factory _SubstanceInstance(
       {final Identifier? identifier,
       final String? expiry,
       @JsonKey(name: '_expiry') final Element? expiryElement,
       final Quantity? quantity}) = _$_SubstanceInstance;
-  const _SubstanceInstance._() : super._();
+  _SubstanceInstance._() : super._();
 
   factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
       _$_SubstanceInstance.fromJson;
@@ -11251,7 +11251,7 @@ class __$$_SubstanceIngredientCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubstanceIngredient extends _SubstanceIngredient {
-  const _$_SubstanceIngredient(
+  _$_SubstanceIngredient(
       {this.quantity, this.substanceCodeableConcept, this.substanceReference})
       : super._();
 
@@ -11305,11 +11305,11 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 }
 
 abstract class _SubstanceIngredient extends SubstanceIngredient {
-  const factory _SubstanceIngredient(
+  factory _SubstanceIngredient(
       {final Ratio? quantity,
       final CodeableConcept? substanceCodeableConcept,
       final Reference? substanceReference}) = _$_SubstanceIngredient;
-  const _SubstanceIngredient._() : super._();
+  _SubstanceIngredient._() : super._();
 
   factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
       _$_SubstanceIngredient.fromJson;

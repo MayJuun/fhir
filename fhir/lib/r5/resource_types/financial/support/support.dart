@@ -157,7 +157,7 @@ class Coverage with Resource, _$Coverage {
   /// [insurancePlan] The insurance plan details, benefits and costs, which
   ///  constitute this insurance coverage.
   ///
-  const factory Coverage({
+  factory Coverage({
     /// [resourceType] This is a Coverage resource
     @Default(R5ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
@@ -355,7 +355,7 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
   ///
   /// [responsibilityElement] ("_responsibility") Extensions for responsibility
   ///
-  const factory CoveragePaymentBy({
+  factory CoveragePaymentBy({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -472,7 +472,7 @@ class CoverageClass with _$CoverageClass {
   ///
   /// [nameElement] ("_name") Extensions for name
   ///
-  const factory CoverageClass({
+  factory CoverageClass({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -601,7 +601,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// [exception] A suite of codes indicating exceptions or reductions to
   ///  patient costs and their effective periods.
   ///
-  const factory CoverageCostToBeneficiary({
+  factory CoverageCostToBeneficiary({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -726,7 +726,7 @@ class CoverageException with _$CoverageException {
   ///
   /// [period] The timeframe the exception is in force.
   ///
-  const factory CoverageException({
+  factory CoverageException({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -918,7 +918,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   ///  and/or an authorization prior to service delivery may be required by the
   ///  payor.
   ///
-  const factory CoverageEligibilityRequest({
+  factory CoverageEligibilityRequest({
     /// [resourceType] This is a CoverageEligibilityRequest resource
     @Default(R5ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
@@ -1108,7 +1108,7 @@ class CoverageEligibilityRequestSupportingInfo
   ///
   /// [appliesToAllElement] ("_appliesToAll") Extensions for appliesToAll
   ///
-  const factory CoverageEligibilityRequestSupportingInfo({
+  factory CoverageEligibilityRequestSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1247,7 +1247,7 @@ class CoverageEligibilityRequestInsurance
   /// [businessArrangementElement] ("_businessArrangement") Extensions for
   ///  businessArrangement
   ///
-  const factory CoverageEligibilityRequestInsurance({
+  factory CoverageEligibilityRequestInsurance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1398,7 +1398,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// [detail] The plan/proposal/order describing the proposed service in
   ///  detail.
   ///
-  const factory CoverageEligibilityRequestItem({
+  factory CoverageEligibilityRequestItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1544,7 +1544,7 @@ class CoverageEligibilityRequestDiagnosis
   /// [diagnosisReference] The nature of illness or problem in a coded form or
   ///  as a reference to an external defined Condition.
   ///
-  const factory CoverageEligibilityRequestDiagnosis({
+  factory CoverageEligibilityRequestDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1736,7 +1736,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   ///
   /// [error] Errors encountered during the processing of the request.
   ///
-  const factory CoverageEligibilityResponse({
+  factory CoverageEligibilityResponse({
     /// [resourceType] This is a CoverageEligibilityResponse resource
     @Default(R5ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
@@ -1936,7 +1936,7 @@ class CoverageEligibilityResponseInsurance
   /// [item] Benefits and optionally current balances, and authorization
   ///  details by category or service.
   ///
-  const factory CoverageEligibilityResponseInsurance({
+  factory CoverageEligibilityResponseInsurance({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2101,7 +2101,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// [authorizationUrlElement] ("_authorizationUrl") Extensions for
   ///  authorizationUrl
   ///
-  const factory CoverageEligibilityResponseItem({
+  factory CoverageEligibilityResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2286,7 +2286,7 @@ class CoverageEligibilityResponseBenefit
   ///
   /// [usedMoney] The quantity of the benefit which have been consumed to date.
   ///
-  const factory CoverageEligibilityResponseBenefit({
+  factory CoverageEligibilityResponseBenefit({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2421,7 +2421,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   /// [code] An error code,from a specified code system, which details why the
   ///  eligibility check could not be performed.
   ///
-  const factory CoverageEligibilityResponseError({
+  factory CoverageEligibilityResponseError({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2571,7 +2571,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// [coverage] Reference to the program or plan identification, underwriter
   ///  or payor.
   ///
-  const factory EnrollmentRequest({
+  factory EnrollmentRequest({
     /// [resourceType] This is a EnrollmentRequest resource
     @Default(R5ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
@@ -2764,7 +2764,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// [requestProvider] The practitioner who is responsible for the services
   ///  rendered to the patient.
   ///
-  const factory EnrollmentResponse({
+  factory EnrollmentResponse({
     /// [resourceType] This is a EnrollmentResponse resource
     @Default(R5ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)

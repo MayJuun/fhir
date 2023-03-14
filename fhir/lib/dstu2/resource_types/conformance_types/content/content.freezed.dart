@@ -1081,7 +1081,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureDefinition extends _StructureDefinition {
-  const _$_StructureDefinition(
+  _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
           this.resourceType = Dstu2ResourceType.StructureDefinition,
       this.id,
@@ -1525,7 +1525,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 }
 
 abstract class _StructureDefinition extends StructureDefinition {
-  const factory _StructureDefinition(
+  factory _StructureDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -1596,7 +1596,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       final FhirUri? base,
       final StructureDefinitionSnapshot? snapshot,
       final StructureDefinitionDifferential? differential}) = _$_StructureDefinition;
-  const _StructureDefinition._() : super._();
+  _StructureDefinition._() : super._();
 
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinition.fromJson;
@@ -1871,7 +1871,7 @@ class __$$_StructureDefinitionContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureDefinitionContact extends _StructureDefinitionContact {
-  const _$_StructureDefinitionContact(
+  _$_StructureDefinitionContact(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1966,13 +1966,13 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
 }
 
 abstract class _StructureDefinitionContact extends StructureDefinitionContact {
-  const factory _StructureDefinitionContact(
+  factory _StructureDefinitionContact(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_StructureDefinitionContact;
-  const _StructureDefinitionContact._() : super._();
+  _StructureDefinitionContact._() : super._();
 
   factory _StructureDefinitionContact.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionContact.fromJson;
@@ -2297,7 +2297,7 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
-  const _$_StructureDefinitionMapping(
+  _$_StructureDefinitionMapping(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2440,7 +2440,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 }
 
 abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
-  const factory _StructureDefinitionMapping(
+  factory _StructureDefinitionMapping(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2454,7 +2454,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           final String? comments,
           @JsonKey(name: '_comments') final Element? commentElement}) =
       _$_StructureDefinitionMapping;
-  const _StructureDefinitionMapping._() : super._();
+  _StructureDefinitionMapping._() : super._();
 
   factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionMapping.fromJson;
@@ -2628,7 +2628,7 @@ class __$$_StructureDefinitionSnapshotCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
-  const _$_StructureDefinitionSnapshot(
+  _$_StructureDefinitionSnapshot(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2717,13 +2717,13 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
 
 abstract class _StructureDefinitionSnapshot
     extends StructureDefinitionSnapshot {
-  const factory _StructureDefinitionSnapshot(
+  factory _StructureDefinitionSnapshot(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final List<ElementDefinition> element}) =
       _$_StructureDefinitionSnapshot;
-  const _StructureDefinitionSnapshot._() : super._();
+  _StructureDefinitionSnapshot._() : super._();
 
   factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionSnapshot.fromJson;
@@ -2877,7 +2877,7 @@ class __$$_StructureDefinitionDifferentialCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StructureDefinitionDifferential
     extends _StructureDefinitionDifferential {
-  const _$_StructureDefinitionDifferential(
+  _$_StructureDefinitionDifferential(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2968,13 +2968,13 @@ class _$_StructureDefinitionDifferential
 
 abstract class _StructureDefinitionDifferential
     extends StructureDefinitionDifferential {
-  const factory _StructureDefinitionDifferential(
+  factory _StructureDefinitionDifferential(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final List<ElementDefinition> element}) =
       _$_StructureDefinitionDifferential;
-  const _StructureDefinitionDifferential._() : super._();
+  _StructureDefinitionDifferential._() : super._();
 
   factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionDifferential.fromJson;
@@ -3411,7 +3411,7 @@ class __$$_DataElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataElement extends _DataElement {
-  const _$_DataElement(
+  _$_DataElement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
           this.resourceType = Dstu2ResourceType.DataElement,
       this.id,
@@ -3656,7 +3656,7 @@ class _$_DataElement extends _DataElement {
 }
 
 abstract class _DataElement extends DataElement {
-  const factory _DataElement(
+  factory _DataElement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -3684,7 +3684,7 @@ abstract class _DataElement extends DataElement {
           final DataElementStringency? stringency,
       final List<DataElementMapping>? mapping,
       required final List<ElementDefinition> element}) = _$_DataElement;
-  const _DataElement._() : super._();
+  _DataElement._() : super._();
 
   factory _DataElement.fromJson(Map<String, dynamic> json) =
       _$_DataElement.fromJson;
@@ -3884,7 +3884,7 @@ class __$$_DataElementContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataElementContact extends _DataElementContact {
-  const _$_DataElementContact(
+  _$_DataElementContact(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3979,13 +3979,13 @@ class _$_DataElementContact extends _DataElementContact {
 }
 
 abstract class _DataElementContact extends DataElementContact {
-  const factory _DataElementContact(
+  factory _DataElementContact(
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_DataElementContact;
-  const _DataElementContact._() : super._();
+  _DataElementContact._() : super._();
 
   factory _DataElementContact.fromJson(Map<String, dynamic> json) =
       _$_DataElementContact.fromJson;
@@ -4304,7 +4304,7 @@ class __$$_DataElementMappingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataElementMapping extends _DataElementMapping {
-  const _$_DataElementMapping(
+  _$_DataElementMapping(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4447,7 +4447,7 @@ class _$_DataElementMapping extends _DataElementMapping {
 }
 
 abstract class _DataElementMapping extends DataElementMapping {
-  const factory _DataElementMapping(
+  factory _DataElementMapping(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4461,7 +4461,7 @@ abstract class _DataElementMapping extends DataElementMapping {
           final String? comments,
           @JsonKey(name: '_comment') final Element? commentElement}) =
       _$_DataElementMapping;
-  const _DataElementMapping._() : super._();
+  _DataElementMapping._() : super._();
 
   factory _DataElementMapping.fromJson(Map<String, dynamic> json) =
       _$_DataElementMapping.fromJson;

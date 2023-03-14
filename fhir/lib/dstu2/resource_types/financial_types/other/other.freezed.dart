@@ -622,7 +622,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
-  const _$_ExplanationOfBenefit(
+  _$_ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           this.resourceType = Dstu2ResourceType.ExplanationOfBenefit,
       this.id,
@@ -853,7 +853,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 }
 
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
-  const factory _ExplanationOfBenefit(
+  factory _ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           final Dstu2ResourceType resourceType,
       final Id? id,
@@ -886,7 +886,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       final Reference? organization,
       final Reference? requestProvider,
       final Reference? requestOrganization}) = _$_ExplanationOfBenefit;
-  const _ExplanationOfBenefit._() : super._();
+  _ExplanationOfBenefit._() : super._();
 
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefit.fromJson;

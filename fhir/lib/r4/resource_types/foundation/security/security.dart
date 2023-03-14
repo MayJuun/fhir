@@ -108,7 +108,7 @@ class AuditEvent with Resource, _$AuditEvent {
   /// [source] The system that is reporting the event.
   ///
   /// [entity] Specific instances of data or objects that have been accessed.
-  const factory AuditEvent({
+  factory AuditEvent({
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
 
@@ -338,7 +338,7 @@ class AuditEventAgent with _$AuditEventAgent {
   ///
   /// [purposeOfUse] The reason (purpose of use), specific to this agent, that
   ///  was used during the event being recorded.
-  const factory AuditEventAgent({
+  factory AuditEventAgent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -499,7 +499,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
   ///  the audit event.
   ///
   /// [typeElement] Extensions for type
-  const factory AuditEventNetwork({
+  factory AuditEventNetwork({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -616,7 +616,7 @@ class AuditEventSource with _$AuditEventSource {
   /// [observer] Identifier of the source where the event was detected.
   ///
   /// [type] Code specifying the type of source where event originated.
-  const factory AuditEventSource({
+  factory AuditEventSource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -750,7 +750,7 @@ class AuditEventEntity with _$AuditEventEntity {
   ///
   /// [detail] Tagged value pairs for conveying additional information about
   ///  the entity.
-  const factory AuditEventEntity({
+  factory AuditEventEntity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -894,7 +894,7 @@ class AuditEventDetail with _$AuditEventDetail {
   /// [valueBase64Binary] The  value of the extra detail.
   ///
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-  const factory AuditEventDetail({
+  factory AuditEventDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1087,7 +1087,7 @@ class Consent with Resource, _$Consent {
   ///
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
-  const factory Consent({
+  factory Consent({
     @Default(R4ResourceType.Consent)
     @JsonKey(unknownEnumValue: R4ResourceType.Consent)
 
@@ -1302,7 +1302,7 @@ class ConsentPolicy with _$ConsentPolicy {
   ///  jurisdictionally, or in law.
   ///
   /// [uriElement] Extensions for uri
-  const factory ConsentPolicy({
+  factory ConsentPolicy({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1422,7 +1422,7 @@ class ConsentVerification with _$ConsentVerification {
   /// [verificationDate] Date verification was collected.
   ///
   /// [verificationDateElement] Extensions for verificationDate
-  const factory ConsentVerification({
+  factory ConsentVerification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1565,7 +1565,7 @@ class ConsentProvision with _$ConsentProvision {
   ///  referenced.
   ///
   /// [provision] Rules which provide exceptions to the base rule or subrules.
-  const factory ConsentProvision({
+  factory ConsentProvision({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1711,7 +1711,7 @@ class ConsentActor with _$ConsentActor {
   /// [reference] The resource that identifies the actor. To identify actors by
   /// type, use group to identify a set of actors by some property they share
   ///  (e.g. 'admitting officers').
-  const factory ConsentActor({
+  factory ConsentActor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1822,7 +1822,7 @@ class ConsentData with _$ConsentData {
   ///
   /// [reference] A reference to a specific resource that defines which
   ///  resources are covered by this consent.
-  const factory ConsentData({
+  factory ConsentData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1999,7 +1999,7 @@ class Provenance with Resource, _$Provenance {
   /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
-  const factory Provenance({
+  factory Provenance({
     @Default(R4ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
 
@@ -2204,7 +2204,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   ///
   /// [onBehalfOf] The individual, device, or organization for whom the change
   ///  was made.
-  const factory ProvenanceAgent({
+  factory ProvenanceAgent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2331,7 +2331,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// responsibility for that entity, possibly along with other agents. This
   /// description can be understood as shorthand for saying that the agent was
   ///  responsible for the activity which generated the entity.
-  const factory ProvenanceEntity({
+  factory ProvenanceEntity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,

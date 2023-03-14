@@ -15,7 +15,7 @@ part 'clinical_decision_support.g.dart';
 @freezed
 class GuidanceResponse with Resource, _$GuidanceResponse {
   GuidanceResponse._();
-  const factory GuidanceResponse({
+  factory GuidanceResponse({
     @Default(Stu3ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
         Stu3ResourceType resourceType,
