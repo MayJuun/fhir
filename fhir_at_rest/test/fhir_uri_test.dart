@@ -151,7 +151,7 @@ Future<void> fhirUriTest() async {
 
   group('FHIR URI - TRANSACTION:', () {
     test('transaction/batch', () async {
-      const Bundle bundle = Bundle(id: '12345');
+      final Bundle bundle = Bundle(id: '12345');
       final request = FhirRequest.transaction(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         bundle: bundle,
@@ -220,7 +220,7 @@ Future<void> fhirUriTest() async {
 
   group('FHIR URI - UPDATE:', () {
     test('update patient by id', () async {
-      const patient = Patient(id: '12345');
+      final patient = Patient(id: '12345');
       final request = FhirRequest.update(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,
@@ -234,7 +234,7 @@ Future<void> fhirUriTest() async {
 
   group('FHIR URI - PATCH:', () {
     test('patch patient by id', () async {
-      const patient = Patient(id: '12345');
+      final patient = Patient(id: '12345');
       final request = FhirRequest.patch(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,
@@ -262,7 +262,7 @@ Future<void> fhirUriTest() async {
 
   group('FHIR URI - CREATE:', () {
     test('create patient', () async {
-      const patient = Patient(id: '12345');
+      final patient = Patient(id: '12345');
       final request = FhirRequest.create(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,

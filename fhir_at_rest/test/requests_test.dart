@@ -200,7 +200,7 @@ Future<void> requestsTest() async {
           resourceType: R4ResourceType.Bundle,
           type: Code('batch'),
           id: '12345',
-          entry: [const BundleEntry(request: BundleRequest())]);
+          entry: [BundleEntry(request: BundleRequest())]);
       final request = FhirRequest.batch(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         bundle: bundle,
@@ -300,7 +300,7 @@ Future<void> requestsTest() async {
 
   group('FhirRequest - UPDATE:', () {
     test('update patient by id', () async {
-      const patient = Patient(id: '12345');
+      final patient = Patient(id: '12345');
       final request = FhirRequest.update(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,
@@ -316,7 +316,7 @@ Future<void> requestsTest() async {
 
   group('FhirRequest - PATCH:', () {
     test('patch patient by id', () async {
-      const patient = Patient(id: '12345');
+      final patient = Patient(id: '12345');
       final request = FhirRequest.patch(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,
@@ -348,7 +348,7 @@ Future<void> requestsTest() async {
 
   group('FhirRequest - CREATE:', () {
     test('create patient', () async {
-      const patient = Patient(id: '12345');
+      final patient = Patient(id: '12345');
       final request = FhirRequest.create(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         resource: patient,

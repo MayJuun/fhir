@@ -1320,7 +1320,7 @@ class FhirRequest with _$FhirRequest {
         OperationOutcomeIssue(
           severity: IssueSeverity.error,
           code: Code('unknown'),
-          details: const CodeableConcept(
+          details: CodeableConcept(
               text: 'Failed to complete a restful request.\n'
                   'The request was made, and a failing status code of some kind was returned.\n'
                   'See details below.'),
@@ -1368,7 +1368,7 @@ class FhirRequest with _$FhirRequest {
             OperationOutcomeIssue(
               severity: IssueSeverity.error,
               code: Code('unknown'),
-              details: const CodeableConcept(
+              details: CodeableConcept(
                   text:
                       'Request was made, but the result body had no defined response'),
               diagnostics: '\nStatus Code: ${result.statusCode} -'
@@ -1400,7 +1400,7 @@ class FhirRequest with _$FhirRequest {
               OperationOutcomeIssue(
                 severity: IssueSeverity.error,
                 code: Code('unknown'),
-                details: const CodeableConcept(
+                details: CodeableConcept(
                     text: 'Request was made and seemed to return a Resource,\n'
                         'but the ResourceType returned was unrecognized'),
                 diagnostics: '\nStatus Code: ${result.statusCode} -'

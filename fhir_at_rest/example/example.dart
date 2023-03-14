@@ -142,14 +142,14 @@ Future<void> main() async {
   );
   response = await request.request(headers: {'example': 'headers'});
 
-  var patient = const Patient(id: '12345');
+  var patient = Patient(id: '12345');
   request = FhirRequest.update(
     base: Uri.parse('http://hapi.fhir.org/baseR4'),
     resource: patient,
   );
   response = await request.request(headers: {'example': 'headers'});
 
-  patient = const Patient(id: '12345');
+  patient = Patient(id: '12345');
   request = FhirRequest.patch(
     base: Uri.parse('http://hapi.fhir.org/baseR4'),
     resource: patient,
@@ -163,7 +163,7 @@ Future<void> main() async {
   );
   response = await request.request(headers: {'example': 'headers'});
 
-  patient = const Patient(id: '12345');
+  patient = Patient(id: '12345');
   request = FhirRequest.create(
     base: Uri.parse('http://hapi.fhir.org/baseR4'),
     resource: patient,
